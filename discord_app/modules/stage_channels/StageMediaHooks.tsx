@@ -1,10 +1,10 @@
-// === Module 6850: StageMediaHooks ===
+// === Module 6792: StageMediaHooks ===
 
-// Module 6850 (StageMediaHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 6897 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import VoiceStateStore from "VoiceStateStore" /* 5815 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6851 */;
+// Module 6792 (StageMediaHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 6839 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import VoiceStateStore from "VoiceStateStore" /* 5833 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6793 */;
 
 const require = globalThis.__r;
 
@@ -48,8 +48,8 @@ export function getStageHasStream(id) {
   const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(id, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
   return null != mutableParticipants.find((type) => type.type === require("StageChannelParticipants").StageChannelParticipantTypes.STREAM);
 }
-export function useIsStageVideoEnabled(arg0) {
-  _require = arg0;
+export function useIsStageVideoEnabled(guild_id) {
+  _require = guild_id;
   items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   let tmp2 = null != stateFromStores;

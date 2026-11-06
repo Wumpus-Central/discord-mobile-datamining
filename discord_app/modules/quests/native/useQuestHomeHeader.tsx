@@ -1,13 +1,13 @@
-// === Module 17170: useQuestHomeHeader ===
+// === Module 17158: useQuestHomeHeader ===
 
-// Module 17170 (useQuestHomeHeader)
+// Module 17158 (useQuestHomeHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
-import QuestsIcon from "QuestsIcon" /* 14943 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
+import QuestsIcon from "QuestsIcon" /* 14920 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,15 +28,15 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let balance;
   const tmp2 = closure_11();
   const tmp3 = balance;
-  balance = balance(9711).useFetchVirtualCurrencyBalance().balance;
-  let obj = balance(9711);
-  const orbBalanceEntrypoint = balance(17171).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
+  balance = balance(9660).useFetchVirtualCurrencyBalance().balance;
+  let obj = balance(9660);
+  const orbBalanceEntrypoint = balance(17159).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
   items = [balance, openBalanceWidgetActionSheet];
   let obj3 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     const obj4 = { balance, onPress: tmp6, showNotificationBadge: orbBalanceEntrypoint.hasUnreadUpdate };
-    isVirtualCurrencyEnabled = closure_9(tmp3(14726).BalanceWidgetPillButton, obj4);
+    isVirtualCurrencyEnabled = closure_9(tmp3(14703).BalanceWidgetPillButton, obj4);
   }
   const items1 = [isVirtualCurrencyEnabled, ];
   const merged1 = Object.assign(merged);
@@ -67,7 +67,7 @@ function FiltersButton(setSelectedSortMethod) {
   }
   items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17190, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17178, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
   }, items);
   const obj = { icon: closure_9(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, { size: "sm", color: INTERACTIVE_TEXT_DEFAULT }), size: "sm", variant: str, onPress: callback, accessibilityLabel: null, scaleAmountInPx: 4 };
   const intl = setSelectedSortMethod(tmp3[10]).intl;
@@ -75,13 +75,13 @@ function FiltersButton(setSelectedSortMethod) {
   return closure_9(setSelectedSortMethod(tmp3[20]).BaseIconButton, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6919).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(6861).QuestHomeSortMethods;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, AnalyticsPages: metroImportDefault } = Constants);
 let closure_8 = fn(1074).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { headerTitleContainer: { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, headerTitle: { flexShrink: 1 }, headerRightContainer: null };
 let obj3 = { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.headerRightContainer = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };

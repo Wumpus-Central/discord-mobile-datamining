@@ -1,12 +1,12 @@
-// === Module 11495: useShouldShowSafetyToolsButtonTooltipForChannel ===
+// === Module 11457: useShouldShowSafetyToolsButtonTooltipForChannel ===
 
-// Module 11495 (useShouldShowSafetyToolsButtonTooltipForChannel)
+// Module 11457 (useShouldShowSafetyToolsButtonTooltipForChannel)
 import DurationsDefault from "Durations" /* 1089 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10988 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11457 */;
-import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 11496 */;
-import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 11497 */;
-import InappropriateConversationUtils from "InappropriateConversationUtils" /* 11498 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10940 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11419 */;
+import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 11458 */;
+import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 11459 */;
+import InappropriateConversationUtils from "InappropriateConversationUtils" /* 11460 */;
 import size from "module_2" /* 2 */;
 
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;

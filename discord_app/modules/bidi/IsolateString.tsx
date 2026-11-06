@@ -1,6 +1,6 @@
-// === Module 7973: IsolateString ===
+// === Module 7927: IsolateString ===
 
-// Module 7973 (IsolateString)
+// Module 7927 (IsolateString)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/bidi/IsolateString.tsx");

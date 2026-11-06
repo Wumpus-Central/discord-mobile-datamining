@@ -1,19 +1,19 @@
-// === Module 20026: GuildSettingsAuditLogStore ===
+// === Module 20033: GuildSettingsAuditLogStore ===
 
-// Module 20026 (GuildSettingsAuditLogStore)
+// Module 20033 (GuildSettingsAuditLogStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AuditLogRecord from "AuditLogRecord" /* 20027 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildRoleStore from "GuildRoleStore" /* 5049 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import AuditLogRecord from "AuditLogRecord" /* 20034 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildRoleStore from "GuildRoleStore" /* 5076 */;
+import GuildStore from "GuildStore" /* 5041 */;
 import BigFlagUtils from "BigFlagUtils" /* 1084 */;
 
 const require = globalThis.__r;
 
-const AuditLogChange = fn(20027).AuditLogChange;
-let closure_4 = fn(4996).isGuildSelectableChannelType;
-const hasAnyPermission = fn(5050).hasAnyPermission;
+const AuditLogChange = fn(20034).AuditLogChange;
+let closure_4 = fn(5023).isGuildSelectableChannelType;
+const hasAnyPermission = fn(5077).hasAnyPermission;
 const Constants = fn(1072);
 const AuditLogActions = Constants.AuditLogActions;
 ({ AuditLogActionTypes: closure_10, AuditLogTargetTypes: closure_11, AuditLogChangeKeys: closure_12, AUDIT_LOG_PAGE_LIMIT: map1, GuildSettingsSections: closure_14, Permissions } = Constants);
@@ -566,7 +566,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
       if (null != c16) {
         unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(c16);
       }
-      const found = require("module_12")(members).filter((roles) => {
+      const found = require("apply")(members).filter((roles) => {
         const userId = roles;
         roles = roles.roles;
         return roles.some((item) => {
@@ -587,7 +587,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           }
         });
       });
-      const arr = require("module_12")(members);
+      const arr = require("apply")(members);
       closure_19 = found.map((userId) => userId.userId).value();
       const iter = found.map((userId) => userId.userId);
     }
@@ -604,7 +604,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
       if (null != guildId) {
         unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guildId);
       }
-      const found = require("module_12")(members).filter((roles) => {
+      const found = require("apply")(members).filter((roles) => {
         const userId = roles;
         roles = roles.roles;
         return roles.some((item) => {
@@ -625,7 +625,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           }
         });
       });
-      const arr = require("module_12")(members);
+      const arr = require("apply")(members);
       closure_19 = found.map((userId) => userId.userId).value();
       const iter = found.map((userId) => userId.userId);
     }

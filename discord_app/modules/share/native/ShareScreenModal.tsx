@@ -1,19 +1,19 @@
-// === Module 15981: ShareScreenModal ===
+// === Module 15976: ShareScreenModal ===
 
-// Module 15981 (ShareScreenModal)
+// Module 15976 (ShareScreenModal)
 import LoggerDefault from "Logger" /* 3 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 require = fn;
 function onClose() {
   ModalActionCreatorsDefault.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
-const SHARE_SCREEN_MODAL_KEY = fn(15930).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15925).SHARE_SCREEN_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_9 = new LoggerDefault("ShareScreenModal");
 const size = fn(2);

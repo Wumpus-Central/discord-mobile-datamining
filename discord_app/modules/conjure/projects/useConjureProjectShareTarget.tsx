@@ -1,8 +1,8 @@
-// === Module 13235: useConjureProjectShareTarget ===
+// === Module 13208: useConjureProjectShareTarget ===
 
-// Module 13235 (useConjureProjectShareTarget)
-import _modDef3995 from "module_3995" /* 3995 */;
-import GuildStore from "GuildStore" /* 5014 */;
+// Module 13208 (useConjureProjectShareTarget)
+import _modDef4024 from "module_4024" /* 4024 */;
+import GuildStore from "GuildStore" /* 5041 */;
 
 const require = fn;
 function useConjureProjectShareTargetDetails(project) {
@@ -32,7 +32,7 @@ function useConjureProjectShareTargetDetails(project) {
       if ("user" === project.install_scope) {
         const obj2 = { kind: "user", label: null };
         intl = intl(1113).intl;
-        stringResult = intl.string(_modDef3995.KxFFKT);
+        stringResult = intl.string(_modDef4024.KxFFKT);
         obj2.label = stringResult;
       } else if ("guild" === project.install_scope) {
         if (null != stateFromStores) {

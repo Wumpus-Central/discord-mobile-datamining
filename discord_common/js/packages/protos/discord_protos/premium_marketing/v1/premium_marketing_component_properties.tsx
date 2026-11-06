@@ -1,44 +1,45 @@
-// === Module 9785: premium_marketing_component_properties ===
+// === Module 9735: premium_marketing_component_properties ===
 
-// Module 9785 (premium_marketing_component_properties)
+// Module 9735 (premium_marketing_component_properties)
 import _mod1197 from "module_1197" /* 1197 */;
-import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 9786 */;
-import premium_tab from "premium_tab" /* 9790 */;
-import marketing_page_banner from "marketing_page_banner" /* 9791 */;
-import payment_modal_banner from "payment_modal_banner" /* 9792 */;
-import mobile_bottom_sheet from "mobile_bottom_sheet" /* 9793 */;
-import gift_icon from "gift_icon" /* 9794 */;
-import gift_icon_coachmark from "gift_icon_coachmark" /* 9796 */;
-import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 9798 */;
-import gift_customization_banner from "gift_customization_banner" /* 9799 */;
-import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 9800 */;
-import gift_reminder_nagbar from "gift_reminder_nagbar" /* 9801 */;
-import gift_reminder_coachmark from "gift_reminder_coachmark" /* 9802 */;
-import premium_tab_tooltip from "premium_tab_tooltip" /* 9803 */;
-import premium_tab_popover from "premium_tab_popover" /* 9804 */;
-import nagbar from "nagbar" /* 9805 */;
-import plan_select_card_banner from "plan_select_card_banner" /* 9806 */;
-import billing_settings_banner from "billing_settings_banner" /* 9807 */;
-import shop_nagbar from "shop_nagbar" /* 9808 */;
-import admin_editor_test_component from "admin_editor_test_component" /* 9809 */;
-import guild_header_coachmark from "guild_header_coachmark" /* 9810 */;
-import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 9811 */;
-import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 9812 */;
-import guild_boost_tab_banner from "guild_boost_tab_banner" /* 9813 */;
-import shop_tab_tooltip from "shop_tab_tooltip" /* 9814 */;
-import premium_home_perk_card from "premium_home_perk_card" /* 9815 */;
-import marketing_page_bento_box from "marketing_page_bento_box" /* 9816 */;
-import outbound_promotion_popover from "outbound_promotion_popover" /* 9817 */;
-import outbound_promotion_claim_modal_card from "outbound_promotion_claim_modal_card" /* 9818 */;
-import shop_coachmark from "shop_coachmark" /* 9819 */;
-import nitro_perk_card from "nitro_perk_card" /* 9820 */;
+import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 9736 */;
+import premium_tab from "premium_tab" /* 9740 */;
+import marketing_page_banner from "marketing_page_banner" /* 9741 */;
+import payment_modal_banner from "payment_modal_banner" /* 9742 */;
+import mobile_bottom_sheet from "mobile_bottom_sheet" /* 9743 */;
+import gift_icon from "gift_icon" /* 9744 */;
+import gift_icon_coachmark from "gift_icon_coachmark" /* 9746 */;
+import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 9748 */;
+import gift_customization_banner from "gift_customization_banner" /* 9749 */;
+import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 9750 */;
+import gift_reminder_nagbar from "gift_reminder_nagbar" /* 9751 */;
+import gift_reminder_coachmark from "gift_reminder_coachmark" /* 9752 */;
+import premium_tab_tooltip from "premium_tab_tooltip" /* 9753 */;
+import premium_tab_popover from "premium_tab_popover" /* 9754 */;
+import nagbar from "nagbar" /* 9755 */;
+import plan_select_card_banner from "plan_select_card_banner" /* 9756 */;
+import billing_settings_banner from "billing_settings_banner" /* 9757 */;
+import shop_nagbar from "shop_nagbar" /* 9758 */;
+import admin_editor_test_component from "admin_editor_test_component" /* 9759 */;
+import guild_header_coachmark from "guild_header_coachmark" /* 9760 */;
+import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 9761 */;
+import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 9762 */;
+import guild_boost_tab_banner from "guild_boost_tab_banner" /* 9763 */;
+import shop_tab_tooltip from "shop_tab_tooltip" /* 9764 */;
+import premium_home_perk_card from "premium_home_perk_card" /* 9765 */;
+import marketing_page_bento_box from "marketing_page_bento_box" /* 9766 */;
+import outbound_promotion_popover from "outbound_promotion_popover" /* 9767 */;
+import outbound_promotion_claim_modal_card from "outbound_promotion_claim_modal_card" /* 9768 */;
+import shop_coachmark from "shop_coachmark" /* 9769 */;
+import nitro_perk_card from "nitro_perk_card" /* 9770 */;
+import collection_page_marketing_block from "collection_page_marketing_block" /* 9771 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const MessageType = fn(1197).MessageType;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
     items[0] = { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 };
     items[1] = {
       no: 2,
@@ -292,32 +293,41 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
             return require("outbound_promotion_claim_modal_card").OutboundPromotionClaimModalCard;
           }
     };
-    obj = { no: 32, name: "shop_coachmark", kind: "message", oneof: "properties", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[30]).ShopCoachmark;
-      }
-    }
-    obj.T = T;
-    items[29] = obj;
-    items[30] = {
-      no: 33,
-      name: "nitro_perk_card",
+    items[29] = {
+      no: 32,
+      name: "shop_coachmark",
       kind: "message",
       oneof: "properties",
       T() {
-            return require("nitro_perk_card").NitroPerkCard;
+            return require("shop_coachmark").ShopCoachmark;
           }
     };
-    items[31] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
-    items[32] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
+    obj = { no: 33, name: "nitro_perk_card", kind: "message", oneof: "properties", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[31]).NitroPerkCard;
+      }
+    }
+    obj.T = T;
+    items[30] = obj;
+    items[31] = {
+      no: 34,
+      name: "collection_page_marketing_block",
+      kind: "message",
+      oneof: "properties",
+      T() {
+            return require("collection_page_marketing_block").CollectionPageMarketingBlock;
+          }
+    };
+    items[32] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
+    items[33] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", items, T);
     return tmp1;
   }
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { properties: { oneofKind: "ti" }, contentIdentifier: "", isDefaultBase: false };
+  const obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -523,13 +533,19 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
     const joined29 = NitroPerkCard.internalBinaryWrite(properties.properties.nitroPerkCard, tag.tag(33, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult29 = NitroPerkCard.internalBinaryWrite(properties.properties.nitroPerkCard, tag.tag(33, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if ("collectionPageMarketingBlock" === properties.properties.oneofKind) {
+    const CollectionPageMarketingBlock = collection_page_marketing_block.CollectionPageMarketingBlock;
+    const tagResult31 = tag.tag(34, _mod1197.WireType.LengthDelimited);
+    const joined30 = CollectionPageMarketingBlock.internalBinaryWrite(properties.properties.collectionPageMarketingBlock, tag.tag(34, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult30 = CollectionPageMarketingBlock.internalBinaryWrite(properties.properties.collectionPageMarketingBlock, tag.tag(34, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
   if ("" !== properties.contentIdentifier) {
     tag.tag(3, _mod1197.WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult31 = tag.tag(3, _mod1197.WireType.LengthDelimited);
+    const tagResult32 = tag.tag(3, _mod1197.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
     tag.tag(18, _mod1197.WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult32 = tag.tag(18, _mod1197.WireType.Varint);
+    const tagResult33 = tag.tag(18, _mod1197.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

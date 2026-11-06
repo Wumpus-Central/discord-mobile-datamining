@@ -1,19 +1,19 @@
-// === Module 12155: VolumeSlider ===
+// === Module 12124: VolumeSlider ===
 
-// Module 12155 (VolumeSlider)
+// Module 12124 (VolumeSlider)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
-import useToken from "useToken" /* 5734 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6061 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8819 */;
-import _modDef8998 from "module_8998" /* 8998 */;
-import VoiceXIcon from "VoiceXIcon" /* 12156 */;
+import useToken from "useToken" /* 5754 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6081 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8765 */;
+import _modDef8944 from "module_8944" /* 8944 */;
+import VoiceXIcon from "VoiceXIcon" /* 12125 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(5905).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_4 = fn(5924).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const PlatformUtils = fn(1377);
@@ -21,7 +21,7 @@ let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_7 = createStyles.createStyles({ volumerSlider: { flexDirection: "row", alignItems: "center" }, leftIcon: { marginRight: num }, rightIcon: { marginLeft: num }, volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/VolumeSlider.tsx");
@@ -49,7 +49,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   const obj4 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
   obj = useToken;
   const obj3 = { style: tmp4.leftIcon };
-  const tmp7Result = _modDef8998;
+  const tmp7Result = _modDef8944;
   obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
   obj4.maximumValue = maxVolume;
   obj4.minimumTrackTintColor = minTrackColor;

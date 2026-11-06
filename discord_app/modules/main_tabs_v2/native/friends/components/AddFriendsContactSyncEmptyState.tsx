@@ -1,20 +1,20 @@
-// === Module 19152: AddFriendsContactSyncEmptyState ===
+// === Module 19141: AddFriendsContactSyncEmptyState ===
 
-// Module 19152 (AddFriendsContactSyncEmptyState)
+// Module 19141 (AddFriendsContactSyncEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import components_Button_Button from "components/Button/Button" /* 5770 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14472 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14476 */;
-import CompassSpotIllustration from "CompassSpotIllustration" /* 19153 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import components_Button_Button from "components/Button/Button" /* 5788 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14449 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14453 */;
+import CompassSpotIllustration from "CompassSpotIllustration" /* 19142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { content: { alignItems: "center", marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg }, headerIllustration: null, title: null, subtitle: null, subtitleText: null, trailing: null };
 let obj3 = { alignItems: "center", marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg };
 obj2.headerIllustration = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_16 };

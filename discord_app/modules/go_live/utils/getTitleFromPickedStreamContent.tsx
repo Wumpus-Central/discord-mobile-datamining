@@ -1,6 +1,6 @@
-// === Module 6857: getTitleFromPickedStreamContent ===
+// === Module 6799: getTitleFromPickedStreamContent ===
 
-// Module 6857 (getTitleFromPickedStreamContent)
+// Module 6799 (getTitleFromPickedStreamContent)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 18386: AddFriendsScreenUtils ===
+// === Module 18378: AddFriendsScreenUtils ===
 
-// Module 18386 (AddFriendsScreenUtils)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7630 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10924 */;
+// Module 18378 (AddFriendsScreenUtils)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7575 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10876 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 const require = fn;
 let closure_7 = async function _sendWave(arg0) {
@@ -139,7 +139,7 @@ let closure_7 = async function _sendWave(arg0) {
   }
 };
 const AnalyticsSections = fn(1072).AnalyticsSections;
-const MessageSendLocation = fn(5148).MessageSendLocation;
+const MessageSendLocation = fn(5175).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
 

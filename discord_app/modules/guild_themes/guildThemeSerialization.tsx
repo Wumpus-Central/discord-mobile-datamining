@@ -1,6 +1,6 @@
-// === Module 5013: guildThemeSerialization ===
+// === Module 5040: guildThemeSerialization ===
 
-// Module 5013 (guildThemeSerialization)
+// Module 5040 (guildThemeSerialization)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");

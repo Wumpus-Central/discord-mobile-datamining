@@ -1,6 +1,6 @@
-// === Module 4974: UserSettingsProtoUtils ===
+// === Module 5001: UserSettingsProtoUtils ===
 
-// Module 4974 (UserSettingsProtoUtils)
+// Module 5001 (UserSettingsProtoUtils)
 import ProtoUtils from "ProtoUtils" /* 1234 */;
 import size from "module_2" /* 2 */;
 

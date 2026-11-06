@@ -1,13 +1,13 @@
-// === Module 16801: useTryItOutProfileTheme ===
+// === Module 16797: useTryItOutProfileTheme ===
 
-// Module 16801 (useTryItOutProfileTheme)
+// Module 16797 (useTryItOutProfileTheme)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useAvatarColor from "useAvatarColor" /* 8861 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8886 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8903 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8946 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8877 */;
+import useAvatarColor from "useAvatarColor" /* 8807 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8832 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8849 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8892 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8823 */;
 
 require = fn;
 const size = fn(2);

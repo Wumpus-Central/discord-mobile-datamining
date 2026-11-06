@@ -1,9 +1,9 @@
-// === Module 7981: applicationDirectoryAnalytics ===
+// === Module 7935: applicationDirectoryAnalytics ===
 
-// Module 7981 (applicationDirectoryAnalytics)
+// Module 7935 (applicationDirectoryAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

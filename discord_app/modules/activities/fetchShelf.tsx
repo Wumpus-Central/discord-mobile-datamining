@@ -1,10 +1,10 @@
-// === Module 11928: fetchShelf ===
+// === Module 11894: fetchShelf ===
 
-// Module 11928 (fetchShelf)
+// Module 11894 (fetchShelf)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2167 */;
-import ApplicationRecord from "ApplicationRecord" /* 2145 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
+import ApplicationStore from "ApplicationStore" /* 2162 */;
+import ApplicationRecord from "ApplicationRecord" /* 2140 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
 
 const require = fn;
 function handleFetchDone(arg0, fn, guildId) {

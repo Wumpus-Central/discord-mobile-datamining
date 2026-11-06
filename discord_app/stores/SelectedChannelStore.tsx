@@ -1,23 +1,23 @@
-// === Module 5046: SelectedChannelStore ===
+// === Module 5073: SelectedChannelStore ===
 
-// Module 5046 (SelectedChannelStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 5073 (SelectedChannelStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import router_utils from "router_utils" /* 1099 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5324 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 5789 */;
-import GatedChannelStore from "GatedChannelStore" /* 5047 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5344 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 5807 */;
+import GatedChannelStore from "GatedChannelStore" /* 5074 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildChannelStore from "GuildChannelStore" /* 5073 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import MediaEngineStore from "MediaEngineStore" /* 2135 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildChannelStore from "GuildChannelStore" /* 5100 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import MediaEngineStore from "MediaEngineStore" /* 2130 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
 
 require = fn;
 function handleConnectionOpen(sessionId) {
@@ -38,7 +38,7 @@ function handleConnectionOpen(sessionId) {
   }
   _require = false;
   const guildsArray = GuildStore.getGuildsArray();
-  _modDef12.each(selectedChannelIds, (channelId, arg1) => {
+  applyDefault.each(selectedChannelIds, (channelId, arg1) => {
     let tmp4 = null != channelId;
     if (tmp4) {
       let hasChannelResult = ChannelStore.hasChannel(channelId);
@@ -59,7 +59,7 @@ function handleConnectionOpen(sessionId) {
       c0 = true;
     }
   });
-  _modDef12.each(mostRecentSelectedTextChannelIds, (arg0, arg1) => {
+  applyDefault.each(mostRecentSelectedTextChannelIds, (arg0, arg1) => {
     let tmp3 = null != arg0;
     if (tmp3) {
       let hasChannelResult = ChannelStore.hasChannel(arg0);
@@ -111,11 +111,11 @@ function handleConnectionOpen(sessionId) {
   if (_require) {
     const Storage = require("Storage").Storage;
     const obj = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-    const values = _modDef12(selectedChannelIds).values();
-    const obj6 = _modDef12(selectedChannelIds);
-    const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+    const values = applyDefault(selectedChannelIds).values();
+    const obj6 = applyDefault(selectedChannelIds);
+    const combined = values.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
     const found = combined.filter(require("GlobalUtils").isNotNullish);
-    const tmp9Result = _modDef12;
+    const tmp9Result = applyDefault;
     const uniqResult = found.uniq();
     obj.knownThreadIds = found.uniq().filter((item) => {
       basicChannel = basicChannel.getBasicChannel(item);
@@ -211,9 +211,9 @@ function navigateAwayFromChannel(id, guild_id, id2) {
   if (flag3) {
     const Storage = Storage3.Storage;
     const obj2 = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-    const values = _modDef12(selectedChannelIds).values();
-    const obj3 = _modDef12(selectedChannelIds);
-    const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+    const values = applyDefault(selectedChannelIds).values();
+    const obj3 = applyDefault(selectedChannelIds);
+    const combined = values.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
     const found = combined.filter(GlobalUtils.isNotNullish);
     const uniqResult = found.uniq();
     obj2.knownThreadIds = found.uniq().filter((item) => {
@@ -311,11 +311,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(4999).isGuildHomeChannel;
+const isGuildHomeChannel = fn(5026).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};
@@ -459,7 +459,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
     }
     c0 = false;
     const guildsArray = GuildStore.getGuildsArray();
-    _modDef12.each(closure_27, (channelId, arg1) => {
+    applyDefault.each(closure_27, (channelId, arg1) => {
       let tmp4 = null != channelId;
       if (tmp4) {
         let hasChannelResult = ChannelStore.hasChannel(channelId);
@@ -480,7 +480,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
         c0 = true;
       }
     });
-    _modDef12.each(mostRecentSelectedTextChannelIds, (arg0, arg1) => {
+    applyDefault.each(mostRecentSelectedTextChannelIds, (arg0, arg1) => {
       let tmp3 = null != arg0;
       if (tmp3) {
         let hasChannelResult = ChannelStore.hasChannel(arg0);
@@ -588,9 +588,9 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
       }
       const Storage = Storage3.Storage;
       const obj = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-      const values = _modDef12(selectedChannelIds).values();
-      const obj3 = _modDef12(selectedChannelIds);
-      const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+      const values = applyDefault(selectedChannelIds).values();
+      const obj3 = applyDefault(selectedChannelIds);
+      const combined = values.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
       const found = combined.filter(GlobalUtils.isNotNullish);
       const uniqResult = found.uniq();
       obj.knownThreadIds = found.uniq().filter((item) => {
@@ -708,9 +708,9 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
       }
       const Storage = Storage3.Storage;
       const obj = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-      const values = _modDef12(selectedChannelIds).values();
-      const obj3 = _modDef12(selectedChannelIds);
-      const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+      const values = applyDefault(selectedChannelIds).values();
+      const obj3 = applyDefault(selectedChannelIds);
+      const combined = values.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
       const found = combined.filter(GlobalUtils.isNotNullish);
       const uniqResult = found.uniq();
       obj.knownThreadIds = found.uniq().filter((item) => {
@@ -752,9 +752,9 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
       delete tmp[tmp2];
       const Storage = Storage3.Storage;
       const obj = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-      const values = _modDef12(selectedChannelIds).values();
-      const obj2 = _modDef12(selectedChannelIds);
-      const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+      const values = applyDefault(selectedChannelIds).values();
+      const obj2 = applyDefault(selectedChannelIds);
+      const combined = values.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
       const found = combined.filter(GlobalUtils.isNotNullish);
       const uniqResult = found.uniq();
       obj.knownThreadIds = found.uniq().filter((item) => {
@@ -822,9 +822,9 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
     selectedVoiceChannelId = channelId;
     const Storage = Storage3.Storage;
     const obj = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-    const values = _modDef12(selectedChannelIds).values();
-    const obj2 = _modDef12(selectedChannelIds);
-    const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+    const values = applyDefault(selectedChannelIds).values();
+    const obj2 = applyDefault(selectedChannelIds);
+    const combined = values.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
     const found = combined.filter(GlobalUtils.isNotNullish);
     const uniqResult = found.uniq();
     obj.knownThreadIds = found.uniq().filter((item) => {
@@ -898,10 +898,10 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
         }
         const Storage2 = require("Storage").Storage;
         let obj = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-        let values = _modDef12(selectedChannelIds).values();
-        const obj9 = _modDef12(selectedChannelIds);
+        let values = applyDefault(selectedChannelIds).values();
+        const obj9 = applyDefault(selectedChannelIds);
         tmp26 = sessionId.guildId !== guildId && null == sessionId.channelId;
-        let combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+        let combined = values.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
         let found = combined.filter(require("GlobalUtils").isNotNullish);
         let uniqResult = found.uniq();
         obj.knownThreadIds = found.uniq().filter((item) => {
@@ -955,9 +955,9 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
         }
         let Storage = require("Storage").Storage;
         let obj2 = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-        const values2 = _modDef12(selectedChannelIds).values();
-        const obj3 = _modDef12(selectedChannelIds);
-        const combined1 = values2.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+        const values2 = applyDefault(selectedChannelIds).values();
+        const obj3 = applyDefault(selectedChannelIds);
+        const combined1 = values2.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
         const found1 = combined1.filter(require("GlobalUtils").isNotNullish);
         const uniqResult1 = found1.uniq();
         obj2.knownThreadIds = found1.uniq().filter((item) => {
@@ -1000,9 +1000,9 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
       lastChannelFollowingDestination = obj;
       const Storage = Storage3.Storage;
       const obj2 = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-      const values = _modDef12(selectedChannelIds).values();
-      const obj3 = _modDef12(selectedChannelIds);
-      const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+      const values = applyDefault(selectedChannelIds).values();
+      const obj3 = applyDefault(selectedChannelIds);
+      const combined = values.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
       const found = combined.filter(GlobalUtils.isNotNullish);
       const uniqResult = found.uniq();
       obj2.knownThreadIds = found.uniq().filter((item) => {
@@ -1042,9 +1042,9 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
       lastConnectedTime = Date.now();
       const Storage = Storage3.Storage;
       const obj = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
-      const values = _modDef12(selectedChannelIds).values();
-      const obj2 = _modDef12(selectedChannelIds);
-      const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+      const values = applyDefault(selectedChannelIds).values();
+      const obj2 = applyDefault(selectedChannelIds);
+      const combined = values.concat(applyDefault.values(mostRecentSelectedTextChannelIds));
       const found = combined.filter(GlobalUtils.isNotNullish);
       const uniqResult = found.uniq();
       obj.knownThreadIds = found.uniq().filter((item) => {
@@ -1092,7 +1092,7 @@ let result = size.fileFinishedImporting("stores/SelectedChannelStore.tsx");
 export default selectedChannelStore;
 export function findFirstVoiceChannelId(id) {
   const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(id);
-  const found = _modDef12.find(mutableBasicGuildChannelsForGuild, (type) => type.type === constants.GUILD_VOICE);
+  const found = applyDefault.find(mutableBasicGuildChannelsForGuild, (type) => type.type === constants.GUILD_VOICE);
   id = undefined;
   if (found != null) {
     id = found.id;

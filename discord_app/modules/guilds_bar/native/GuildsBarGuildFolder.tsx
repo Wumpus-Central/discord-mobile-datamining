@@ -1,27 +1,28 @@
-// === Module 18653: GuildsBarGuildFolder ===
+// === Module 18643: GuildsBarGuildFolder ===
 
-// Module 18653 (GuildsBarGuildFolder)
+// Module 18643 (GuildsBarGuildFolder)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import ColorUtils from "ColorUtils" /* 5140 */;
-import native from "native" /* 5209 */;
-import useToken from "useToken" /* 5734 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import GuildIcon from "GuildIcon" /* 7101 */;
-import NativeViewDefault from "NativeView" /* 7104 */;
-import _modDef8752 from "module_8752" /* 8752 */;
-import ListUtils from "ListUtils" /* 13028 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 18647 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18654 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 18657 */;
-import isGuildsBarGuildLabelEqualDefault from "isGuildsBarGuildLabelEqual" /* 18664 */;
+import util from "util" /* 1113 */;
+import ColorUtils from "ColorUtils" /* 5167 */;
+import native from "native" /* 5229 */;
+import useToken from "useToken" /* 5754 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import GuildIcon from "GuildIcon" /* 7045 */;
+import NativeViewDefault from "NativeView" /* 7048 */;
+import _modDef8698 from "module_8698" /* 8698 */;
+import ListUtils from "ListUtils" /* 12993 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 18637 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18644 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 18647 */;
+import isGuildsBarGuildLabelEqualDefault from "isGuildsBarGuildLabelEqual" /* 18654 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7024 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
-import SortedGuildStore from "SortedGuildStore" /* 6910 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6966 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
+import SortedGuildStore from "SortedGuildStore" /* 6852 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -188,7 +189,7 @@ function GuildFolderIcon(item) {
   item = item.item;
   let tmp = null;
   if ("icon" === item.type) {
-    const obj = { source: _modDef8752, style: item.tintStyle };
+    const obj = { source: _modDef8698, style: item.tintStyle };
     tmp = closure_1_17(FastImageDefault, obj);
   }
   return tmp;
@@ -227,16 +228,16 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
     return closure_17(TransitionWrapper, obj, arg0);
   }
 }
-const GuildsNodeType = fn(6910).GuildsNodeType;
-const GuildsBarDnDStore = fn(18645);
+const GuildsNodeType = fn(6852).GuildsNodeType;
+const GuildsBarDnDStore = fn(18635);
 ({ useItemDragState: closure_10, useFolderBGHeightOffset: closure_11 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(18650);
+let GuildsBarConstants = fn(18640);
 ({ DEFAULT_FOLDER_COLOR: closure_12, isDefaultFolderColor: map1, normalizeFolderColor: closure_14 } = GuildsBarConstants);
-GuildsBarConstants = fn(18642);
+GuildsBarConstants = fn(18632);
 ({ TRANSITION_PHYSICS: closure_15, FOLDER_SPRING_PHYSICS: closure_16 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_19 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -294,7 +295,7 @@ const memoResult = noop.memo(function FolderBGInner(color) {
   GuildsBarGuildFolderTsx1.__initData = tmp8;
   const callback = noop.useCallback(GuildsBarGuildFolderTsx1, []);
   const tmp7 = closure_11(folderId);
-  token2 = tmp(5734).useToken(tmp3(575).modules.mobile.GUILD_FOLDER_COLOR_OPACITY);
+  token2 = tmp(5754).useToken(tmp3(575).modules.mobile.GUILD_FOLDER_COLOR_OPACITY);
   const items2 = [color, token2];
   const memo = noop.useMemo(() => {
     const tmp = gesture(c0);
@@ -337,8 +338,6 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
   }
   const foldersChanged = id.foldersChanged;
   c5 = foldersChanged;
-  let selectedPreviewId;
-  let token;
   let tmp4 = closure_19(require("useToken").useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE));
   const guildPreviewWrapper = tmp4;
   let obj = require("useToken");
@@ -370,7 +369,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
           mentionCount.mentionCount = mentionCount.mentionCount + num + num2;
           let flag = mentionCount.unread;
           if (!flag) {
-            let unread;
+            unread = undefined;
             if (dependencyMap[id.id] != null) {
               unread = tmp2.unread;
             }
@@ -390,9 +389,10 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
       }, { unread: false, mentionCount: 0, isMentionLowImportance: true });
     }
   });
-  ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
+  let unread = stateFromStoresObject.unread;
+  const mentionCount = stateFromStoresObject.mentionCount;
   let obj3 = require("initialize");
-  let items1 = [selectedPreviewId, token];
+  let items1 = [unread, mentionCount];
   let items2 = [expanded, id, childNodes];
   const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items1, () => {
     let num = 0;
@@ -429,18 +429,62 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
       return obj;
     }
   }, items2);
-  selectedPreviewId = stateFromStoresObject1.selectedPreviewId;
+  const selectedPreviewId = stateFromStoresObject1.selectedPreviewId;
   let obj4 = require("initialize");
-  ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount, isMentionLowImportance }));
-  let tmp8 = useGuildsBarBottomRightBadgeDefault({ mentionCount, isMentionLowImportance });
+  ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount, isMentionLowImportance: stateFromStoresObject.isMentionLowImportance }));
+  let tmp8 = useGuildsBarBottomRightBadgeDefault({ mentionCount, isMentionLowImportance: stateFromStoresObject.isMentionLowImportance });
   const items3 = [guildPreviewWrapper];
   const items4 = [name, childNodes];
+  const label = require("initialize").useStateFromStores(items3, () => {
+    if (null != label) {
+      const obj3 = { count: 1, names: null, label: null };
+      items = [label];
+      obj3.names = items;
+      obj3.label = label;
+      return obj3;
+    } else {
+      const items1 = [];
+      let num = 0;
+      const obj4 = _undefined3[Symbol.iterator]();
+      while (obj4 !== undefined) {
+        guild = GuildStore.getGuild(tmp3.id);
+        if (null != guild) {
+          let arr = items1.push(tmp7.name);
+        }
+        let sum = num + 1;
+        num = sum;
+        if (3 <= sum) {
+          obj4.return();
+          break;
+        }
+        let obj = { names: items1, count: _undefined3.length, label: null };
+        let obj2 = ListUtils;
+        obj.label = obj2.getListSummaryLabel(items1, _undefined3.length);
+        return obj;
+      }
+    }
+  }, items4, isGuildsBarGuildLabelEqualDefault).label;
+  const items5 = [label, mentionCount, unread];
+  const memo = noop.useMemo(() => {
+    if (mentionCount > 0) {
+      const intl2 = util.intl;
+      const obj2 = { guildName: label, mentions: tmp };
+      let formatToPlainStringResult = intl2.formatToPlainString(util.t["/uzRss"], obj2);
+    } else if (unread) {
+      const intl = util.intl;
+      const obj = { guildName: label };
+      formatToPlainStringResult = intl.formatToPlainString(util.t.lzqe42, obj);
+    } else {
+      formatToPlainStringResult = label;
+    }
+    return formatToPlainStringResult;
+  }, items5);
   let obj5 = require("initialize");
-  token = require("useToken").useToken(nativeDefault.colors.GUILD_FOLDER_BACKGROUND);
+  const token = require("useToken").useToken(nativeDefault.colors.GUILD_FOLDER_BACKGROUND);
   const obj6 = require("useToken");
   const token1 = require("useToken").useToken(nativeDefault.modules.mobile.GUILD_FOLDER_PREVIEW_OPACITY);
-  const items5 = [color, token, token1];
-  const memo = noop.useMemo(() => {
+  const items6 = [color, token, token1];
+  const memo1 = noop.useMemo(() => {
     let tmp4 = c3;
     if (c3 == null) {
       tmp4 = application_id;
@@ -455,12 +499,12 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
     }
     obj2.folderPreviewStyle = { backgroundColor: hexWithOpacityResult };
     return obj2;
-  }, items5);
-  const tintStyle = memo.tintStyle;
-  const folderPreviewStyle = memo.folderPreviewStyle;
-  const items6 = [id, foldersChanged];
-  const items7 = [expanded, childNodes, tintStyle, selectedPreviewId];
-  const memo1 = noop.useMemo(() => ({
+  }, items6);
+  const tintStyle = memo1.tintStyle;
+  const folderPreviewStyle = memo1.folderPreviewStyle;
+  const items7 = [id, foldersChanged];
+  const items8 = [expanded, childNodes, tintStyle, selectedPreviewId];
+  const memo2 = noop.useMemo(() => ({
     onPress() {
       if (null != closure_1_5) {
         value = closure_1_5.get();
@@ -473,14 +517,14 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
           const result = closure_1_5.set(set);
         }
       }
-      const result1 = c0(5386).triggerHapticFeedback(c0(5386).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj4 = c0(5386);
-      const result2 = c1(7040).toggleGuildFolderExpand(_undefined);
-      const obj5 = c1(7040);
+      const result1 = c0(5406).triggerHapticFeedback(c0(5406).HapticFeedbackTypes.IMPACT_LIGHT);
+      const obj4 = c0(5406);
+      const result2 = c1(6982).toggleGuildFolderExpand(_undefined);
+      const obj5 = c1(6982);
     }
-  }), items6);
-  const items8 = [expanded, tmp4.guildPreviewWrapper, folderPreviewStyle];
-  const memo2 = noop.useMemo(() => {
+  }), items7);
+  const items9 = [expanded, tmp4.guildPreviewWrapper, folderPreviewStyle];
+  const memo3 = noop.useMemo(() => {
     if (c1) {
       const obj2 = { type: "icon", tintStyle };
       items = [obj2];
@@ -503,7 +547,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
         continue;
       }
     }
-  }, items7);
+  }, items8);
   const callback = noop.useCallback((arg0) => {
     items = [guildPreviewWrapper.guildPreviewWrapper, ];
     let tmp4;
@@ -515,12 +559,12 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
     const items1 = [closure_2_17(NativeViewDefault, { style: items }), arg0];
     obj.children = items1;
     return collapsedCategories(noop.Fragment, obj, "wrapper");
-  }, items8);
-  const tmp16 = tintStyle(id, flag);
-  ({ isDragTarget, dragDropInProgress } = tmp16);
-  const items9 = [id];
-  ({ dragState, overState, itemSize } = tmp16);
-  const memo3 = noop.useMemo(() => {
+  }, items9);
+  const tmp17 = label(id, flag);
+  ({ isDragTarget, dragDropInProgress } = tmp17);
+  const items10 = [id];
+  ({ dragState, overState, itemSize } = tmp17);
+  const memo4 = noop.useMemo(() => {
     const guildFolderMenuItems = GuildsBarFolderMenuItems.getGuildFolderMenuItems(c0);
     return {
       accessibilityActions: guildFolderMenuItems.map((label) => ({ name: label.label, label: label.label })),
@@ -535,18 +579,18 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
         }
       }
     };
-  }, items9);
-  ({ accessibilityActions, onAccessibilityAction } = memo3);
+  }, items10);
+  ({ accessibilityActions, onAccessibilityAction } = memo4);
   const obj7 = require("useToken");
   const sharedValue = require("module_1652").useSharedValue("" + id);
-  const items10 = [closure_29, dragDropInProgress, sharedValue, id, isDragTarget, require("spring/spring").withSpring, closure_15];
+  const items11 = [closure_29, dragDropInProgress, sharedValue, id, isDragTarget, require("spring/spring").withSpring, closure_15];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
   noop = undefined;
   c4 = undefined;
   c5 = undefined;
-  [tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25] = items10;
+  [tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26] = items11;
   class GuildsBarGuildFolderTsx4 {
     constructor(arg0) {
       value = closure_0.get();
@@ -591,12 +635,12 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
       return obj1;
     }
   }
-  const items11 = [tmp20, tmp21, tmp22, tmp23, tmp24, tmp25];
-  GuildsBarGuildFolderTsx4.__closure = items11;
+  const items12 = [tmp21, tmp22, tmp23, tmp24, tmp25, tmp26];
+  GuildsBarGuildFolderTsx4.__closure = items12;
   GuildsBarGuildFolderTsx4.__workletHash = 4596060370334;
-  GuildsBarGuildFolderTsx4.__initData = tmp19;
-  const items12 = [id, sharedValue, isDragTarget, dragDropInProgress];
-  const callback1 = noop.useCallback(GuildsBarGuildFolderTsx4, items12);
+  GuildsBarGuildFolderTsx4.__initData = tmp20;
+  const items13 = [id, sharedValue, isDragTarget, dragDropInProgress];
+  const callback1 = noop.useCallback(GuildsBarGuildFolderTsx4, items13);
   const obj9 = { id: null, draggedItemSize: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: null, circle: false, styles: null, label: null, isDragTarget: null, dragState: null, sharedId: null, cutouts: null, config: null, isDragPreview: null, overState: null, preventClipping: true, expanded: null, layout: null, externalChildren: null, expandedChildren: null, children: null };
   const obj8 = require("module_1652");
   obj9.id = "" + id;
@@ -604,66 +648,38 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
   obj9.accessibilityActions = accessibilityActions;
   obj9.onAccessibilityAction = onAccessibilityAction;
   obj9.selected = stateFromStoresObject1.hasGuildSelected;
-  let tmp29 = !expanded;
+  let tmp30 = !expanded;
   if (!expanded) {
-    tmp29 = unread;
+    tmp30 = unread;
   }
-  obj9.unread = tmp29;
+  obj9.unread = tmp30;
   obj9.styles = guildsBarAnimatedWrapperStyles;
-  obj9.label = obj5.useStateFromStores(items3, () => {
-    if (null != label) {
-      const obj3 = { count: 1, names: null, label: null };
-      items = [label];
-      obj3.names = items;
-      obj3.label = label;
-      return obj3;
-    } else {
-      const items1 = [];
-      let num = 0;
-      const obj4 = _undefined3[Symbol.iterator]();
-      while (obj4 !== undefined) {
-        guild = GuildStore.getGuild(tmp3.id);
-        if (null != guild) {
-          let arr = items1.push(tmp7.name);
-        }
-        let sum = num + 1;
-        num = sum;
-        if (3 <= sum) {
-          obj4.return();
-          break;
-        }
-        let obj = { names: items1, count: _undefined3.length, label: null };
-        let obj2 = ListUtils;
-        obj.label = obj2.getListSummaryLabel(items1, _undefined3.length);
-        return obj;
-      }
-    }
-  }, items4, isGuildsBarGuildLabelEqualDefault).label;
+  obj9.label = memo;
   obj9.isDragTarget = isDragTarget;
   obj9.dragState = dragState;
   obj9.sharedId = sharedValue;
   obj9.cutouts = cutouts;
-  obj9.config = memo1;
+  obj9.config = memo2;
   obj9.isDragPreview = flag;
   obj9.overState = overState;
   obj9.expanded = expanded;
   obj9.layout = callback1;
-  let tmp27Result = badge;
+  let tmp28Result = badge;
   if (expanded) {
-    tmp27Result = badge;
+    tmp28Result = badge;
     if (!flag) {
       const obj10 = { color, folderId: id, totalItems: childNodes.length };
-      tmp27Result = closure_17(closure_22, obj10);
+      tmp28Result = closure_17(closure_22, obj10);
     }
   }
-  obj9.externalChildren = tmp27Result;
-  let tmp27Result2;
+  obj9.externalChildren = tmp28Result;
+  let tmp28Result2;
   if (!flag2) {
     const obj11 = { folderId: id, expanded };
-    tmp27Result2 = closure_17(tmp3(18665), obj11);
+    tmp28Result2 = closure_17(tmp3(18655), obj11);
   }
-  obj9.expandedChildren = tmp27Result2;
-  obj9.children = closure_17(tmp(5209).TransitionGroup, { renderItem: renderGuildFolderContent, getItemKey, items: memo2, wrapChildren: callback });
+  obj9.expandedChildren = tmp28Result2;
+  obj9.children = closure_17(tmp(5229).TransitionGroup, { renderItem: renderGuildFolderContent, getItemKey, items: memo3, wrapChildren: callback });
   return closure_17(GuildsBarAnimatedItemWrapperDefault, obj9);
 });
 export const GuildsBarGuildFolderBG = memoResult;

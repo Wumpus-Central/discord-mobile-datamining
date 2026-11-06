@@ -1,11 +1,11 @@
-// === Module 8948: UserProfileGradientUtils ===
+// === Module 8894: UserProfileGradientUtils ===
 
-// Module 8948 (UserProfileGradientUtils)
-import _mod12 from "module_12" /* 12 */;
+// Module 8894 (UserProfileGradientUtils)
+import apply2 from "apply" /* 12 */;
 import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import utils_ColorDefault from "utils/Color" /* 5141 */;
-import shared from "shared" /* 5150 */;
+import utils_ColorDefault from "utils/Color" /* 5168 */;
+import shared from "shared" /* 5177 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -82,9 +82,9 @@ export const calculateModalV2BackgroundColor = apply.memoize((hex2intResult, arg
   const mixResult = obj2.mix(_modDef671(hex2intResult), _modDef671(arg1), 0.5, "lab");
   const result = Math.round(100 * mixResult.get("hsl.l")) / 100;
   if (tmp !== ThemeTypes.LIGHT) {
-    let clampResult = _mod12.clamp(result, 0, 0.1);
+    let clampResult = apply2.clamp(result, 0, 0.1);
   } else {
-    clampResult = _mod12.clamp(result, 0.8, 1);
+    clampResult = apply2.clamp(result, 0.8, 1);
   }
   const tmp10 = _modDef671(hex2intResult);
   const result1 = _modDef671(mixResult).set("hsl.l", clampResult);

@@ -1,6 +1,6 @@
-// === Module 7026: isSystemMessage ===
+// === Module 6968: isSystemMessage ===
 
-// Module 7026 (isSystemMessage)
+// Module 6968 (isSystemMessage)
 import MessageTypes from "MessageTypes" /* 1088 */;
 import size from "module_2" /* 2 */;
 

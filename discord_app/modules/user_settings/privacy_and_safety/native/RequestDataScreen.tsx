@@ -1,14 +1,14 @@
-// === Module 17036: RequestDataScreen ===
+// === Module 17024: RequestDataScreen ===
 
-// Module 17036 (RequestDataScreen)
+// Module 17024 (RequestDataScreen)
 import nativeDefault from "native" /* 575 */;
-import RequestDataContentDefault from "RequestDataContent" /* 17037 */;
+import RequestDataContentDefault from "RequestDataContent" /* 17025 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj = { container: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

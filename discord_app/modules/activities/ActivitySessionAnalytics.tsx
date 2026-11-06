@@ -1,29 +1,29 @@
-// === Module 16570: ActivitySessionAnalytics ===
+// === Module 16567: ActivitySessionAnalytics ===
 
-// Module 16570 (ActivitySessionAnalytics)
+// Module 16567 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import getPlatformDefault from "getPlatform" /* 5818 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 6092 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6678 */;
-import MetricEvents from "MetricEvents" /* 6683 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7021 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9923 */;
-import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 11128 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 11939 */;
-import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11940 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 11947 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14912 */;
+import getPlatformDefault from "getPlatform" /* 5836 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 6112 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6619 */;
+import MetricEvents from "MetricEvents" /* 6624 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6963 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9873 */;
+import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 11081 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 11905 */;
+import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11906 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 11913 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14889 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2167 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6981 */;
-import QuestStore from "QuestStore" /* 7991 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5901 */;
+import ApplicationStore from "ApplicationStore" /* 2162 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6923 */;
+import QuestStore from "QuestStore" /* 7945 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
 import UserStore from "UserStore" /* 1385 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 16571 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 16568 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
 
 require = fn;
 function resolveFrameLaunchContext(applicationId, arg1) {

@@ -1,6 +1,6 @@
-// === Module 19939: sendStageRequestToSpeakEphemeralMessage ===
+// === Module 19945: sendStageRequestToSpeakEphemeralMessage ===
 
-// Module 19939 (sendStageRequestToSpeakEphemeralMessage)
+// Module 19945 (sendStageRequestToSpeakEphemeralMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;

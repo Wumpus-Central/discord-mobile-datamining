@@ -1,7 +1,7 @@
-// === Module 5903: SessionsStore ===
+// === Module 5922: SessionsStore ===
 
-// Module 5903 (SessionsStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 5922 (SessionsStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -36,7 +36,7 @@ prototype["getSession"] = function getSession() {
 };
 prototype["getRemoteActivities"] = function getRemoteActivities() {
   const sessionId = AuthenticationStore.getSessionId();
-  const found = _modDef12.find(closure_4, (active) => {
+  const found = applyDefault.find(closure_4, (active) => {
     active = active.active;
     if (active) {
       active = active.sessionId !== closure_0;
@@ -47,7 +47,7 @@ prototype["getRemoteActivities"] = function getRemoteActivities() {
 };
 prototype["getHiddenActivities"] = function getHiddenActivities() {
   const sessionId = AuthenticationStore.getSessionId();
-  const found = _modDef12.find(closure_4, (active) => {
+  const found = applyDefault.find(closure_4, (active) => {
     active = active.active;
     if (active) {
       active = active.sessionId !== closure_0;
@@ -66,7 +66,7 @@ prototype["getSessionById"] = function getSessionById(sessionId) {
   return closure_4[sessionId];
 };
 prototype["getActiveSession"] = function getActiveSession() {
-  return _modDef12.find(closure_4, (active) => active.active);
+  return applyDefault.find(closure_4, (active) => active.active);
 };
 prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivity(application_id) {
   closure_0 = application_id;
@@ -74,7 +74,7 @@ prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivit
     return null;
   } else {
     const sessionId = AuthenticationStore.getSessionId();
-    const found = _modDef12.find(closure_4, (active) => {
+    const found = applyDefault.find(closure_4, (active) => {
       active = active.active;
       if (active) {
         active = active.sessionId !== closure_1;

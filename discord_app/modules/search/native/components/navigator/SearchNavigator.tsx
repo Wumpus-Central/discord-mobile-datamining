@@ -1,33 +1,27 @@
-// === Module 19259: SearchNavigator ===
+// === Module 19251: SearchNavigator ===
 
-// Module 19259 (SearchNavigator)
-import nativeDefault from "native" /* 575 */;
+// Module 19251 (SearchNavigator)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 10053 */;
-import TrackingDefault from "Tracking" /* 14138 */;
-import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 19254 */;
+import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 10004 */;
+import TrackingDefault from "Tracking" /* 14115 */;
+import AppFrameContainerDefault from "AppFrameContainer" /* 19155 */;
+import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 19246 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const View = fn(17).View;
-let closure_5 = fn(9981).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(19014).SearchNavigatorScreens;
+let closure_4 = fn(9932).SearchEntrypointAnalyticsLocations;
+const SearchNavigatorScreens = fn(19003).SearchNavigatorScreens;
 const SearchTypes = fn(1072).SearchTypes;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5143);
-let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
-let closure_10 = createStyles.createStyles(obj);
-const NativeStackNavigator = fn(10041);
-let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const NativeStackNavigator = fn(9992);
+let closure_9 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigator.tsx");
 
 export default noop.memo(function SearchNavigator(route) {
   const searchContext = route.route.params.searchContext;
-  const accessibilityNativeStackOptions = searchContext(7309).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = searchContext(7256).useAccessibilityNativeStackOptions();
   items = [searchContext];
   const effect = noop.useEffect(() => {
     if (searchContext.type === SearchTypes.GUILD) {
@@ -40,51 +34,48 @@ export default noop.memo(function SearchNavigator(route) {
       TrackingDefault.trackSearchClosed({ searchContext });
     };
   }, items);
-  let obj = searchContext(7309);
-  const rect = useSafeAreaInsetsDefault();
-  const obj2 = { style: null, children: null };
-  const items1 = [closure_10().container, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj2.style = items1;
+  const obj2 = { children: null };
   const obj3 = { id: "search-navigator", screenOptions: null, children: null };
+  let obj = searchContext(7256);
+  const obj4 = {};
   const merged = Object.assign(accessibilityNativeStackOptions);
-  obj3.screenOptions = {};
-  const items2 = [
-    closure_8(closure_11.Screen, {
+  obj3.screenOptions = obj4;
+  const items1 = [
+    closure_7(closure_9.Screen, {
       initialParams: { searchContext },
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(19260).default;
+        return searchContext(19252).default;
       }
     }),
-    closure_8(closure_11.Screen, {
+    closure_7(closure_9.Screen, {
       name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
       options(route) {
         route = route.route;
         const obj = {
           headerShown: true,
-          header: route(9967).renderHeader,
-          headerLeft: route(9967).getRenderBackImage(route.navigation),
+          header: route(9918).renderHeader,
+          headerLeft: route(9918).getRenderBackImage(route.navigation),
           headerTitle() {
-            return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
+            return closure_2_7(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
           },
           fullScreenGestureEnabled: true
         };
         return obj;
       },
       getComponent() {
-        return searchContext(19255).default;
+        return searchContext(19247).default;
       }
     }),
 
   ];
-  const obj4 = {};
   const obj5 = {
     initialParams: { searchContext },
     name: SearchNavigatorScreens.SEARCH_TABS,
     options: { headerShown: false, fullScreenGestureEnabled: true },
     getComponent() {
-      return searchContext(19260).default;
+      return searchContext(19252).default;
     }
   };
   const obj6 = {
@@ -93,22 +84,22 @@ export default noop.memo(function SearchNavigator(route) {
       route = route.route;
       const obj = {
         headerShown: true,
-        header: route(9967).renderHeader,
-        headerLeft: route(9967).getRenderBackImage(route.navigation),
+        header: route(9918).renderHeader,
+        headerLeft: route(9918).getRenderBackImage(route.navigation),
         headerTitle() {
-          return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
+          return closure_2_7(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
         },
         fullScreenGestureEnabled: true
       };
       return obj;
     },
     getComponent() {
-      return searchContext(19255).default;
+      return searchContext(19247).default;
     }
   };
-  const tmp3 = closure_10();
-  items2[2] = closure_8(closure_11.Screen, {
-    name: searchContext(10052).ConversationNavigatorScreens.FOCUS,
+  const tmp3 = AppFrameContainerDefault;
+  items1[2] = closure_7(closure_9.Screen, {
+    name: searchContext(10003).ConversationNavigatorScreens.FOCUS,
     options(arg0) {
       ({ route, navigation } = arg0);
       const obj = ConversationNavigatorHeader;
@@ -119,10 +110,10 @@ export default noop.memo(function SearchNavigator(route) {
       return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
     },
     getComponent() {
-      return searchContext(10076).default;
+      return searchContext(10027).default;
     }
   });
-  obj3.children = items2;
-  obj2.children = closure_9(closure_11.Navigator, obj3);
-  return closure_8(View, obj2);
+  obj3.children = items1;
+  obj2.children = closure_8(closure_9.Navigator, obj3);
+  return closure_7(tmp3, obj2);
 });

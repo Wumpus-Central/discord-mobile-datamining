@@ -1,24 +1,24 @@
-// === Module 20094: GuildSettingsRolesStore ===
+// === Module 20101: GuildSettingsRolesStore ===
 
-// Module 20094 (GuildSettingsRolesStore)
+// Module 20101 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import PlainRecord from "PlainRecord" /* 5007 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 5050 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5052 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6178 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 14211 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 20089 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 20095 */;
-import GuildRoleStore from "GuildRoleStore" /* 5049 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9227 */;
+import PlainRecord from "PlainRecord" /* 5034 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 5077 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5079 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5107 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6198 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 14188 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 20096 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 20102 */;
+import GuildRoleStore from "GuildRoleStore" /* 5076 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9173 */;
 import Constants from "Constants" /* 1072 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20096 */;
-import apply from "module_12" /* 12 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20103 */;
+import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
 function handleSetSection(arg0) {

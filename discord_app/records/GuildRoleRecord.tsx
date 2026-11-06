@@ -1,9 +1,9 @@
-// === Module 5050: GuildRoleRecord ===
+// === Module 5077: GuildRoleRecord ===
 
-// Module 5050 (GuildRoleRecord)
-import _modDef12 from "module_12" /* 12 */;
+// Module 5077 (GuildRoleRecord)
+import applyDefault from "apply" /* 12 */;
 import BigFlagUtils from "BigFlagUtils" /* 1084 */;
-import PlainRecord from "PlainRecord" /* 5007 */;
+import PlainRecord from "PlainRecord" /* 5034 */;
 import size from "module_2" /* 2 */;
 
 const TypeTag = PlainRecord.TypeTag;
@@ -20,7 +20,7 @@ export function hasAnyPermission(permissions, RESTRICTED_TO_ADULT) {
   return BigFlagUtils.hasAny(permissions.permissions, RESTRICTED_TO_ADULT);
 }
 export function isRoleEqual(found, arg1) {
-  return _modDef12.isEqualWith(found, arg1, (arg0, arg1, arg2) => {
+  return applyDefault.isEqualWith(found, arg1, (arg0, arg1, arg2) => {
     let equalsResult;
     if ("permissions" === arg2) {
       equalsResult = BigFlagUtils.equals(arg0, arg1);

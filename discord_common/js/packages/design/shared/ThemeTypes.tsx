@@ -1,6 +1,6 @@
-// === Module 16740: shared/ThemeTypes ===
+// === Module 16736: shared/ThemeTypes ===
 
-// Module 16740 (shared/ThemeTypes)
+// Module 16736 (shared/ThemeTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { ASH: "dark", LIGHT: "light", ONYX: "midnight", DARK: "darker" };

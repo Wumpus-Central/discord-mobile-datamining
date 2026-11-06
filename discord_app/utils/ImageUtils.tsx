@@ -5,7 +5,7 @@ import _modDef38 from "module_38" /* 38 */;
 import PQueueDefault from "PQueue" /* 1491 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1492 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import apply from "module_12" /* 12 */;
+import apply from "apply" /* 12 */;
 
 require = fn;
 function fit(size) {

@@ -1,14 +1,14 @@
-// === Module 11931: IgnoreThermalStateAlert ===
+// === Module 11897: IgnoreThermalStateAlert ===
 
-// Module 11931 (IgnoreThermalStateAlert)
-import common_AlertDefault from "common/Alert" /* 6168 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11932 */;
+// Module 11897 (IgnoreThermalStateAlert)
+import common_AlertDefault from "common/Alert" /* 6188 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11898 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_5 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/IgnoreThermalStateAlert.tsx");
@@ -32,11 +32,11 @@ export function IgnoreThermalStateAlert(onConfirm) {
   const obj2 = { style: tmp2.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = onConfirm(1113).intl;
   obj2.children = intl3.string(onConfirm(1113).t.v5X4fZ);
-  items = [closure_3(onConfirm(5763).Text, obj2), ];
+  items = [closure_3(onConfirm(5781).Text, obj2), ];
   const obj3 = { style: tmp2.text, variant: "body-md/medium", children: null };
   const intl4 = onConfirm(1113).intl;
   obj3.children = intl4.string(onConfirm(1113).t.VOgTjy);
-  items[1] = closure_3(onConfirm(5763).Text, obj3);
+  items[1] = closure_3(onConfirm(5781).Text, obj3);
   obj.children = items;
   return closure_4(common_AlertDefault, obj);
 }

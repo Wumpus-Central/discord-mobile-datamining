@@ -1,6 +1,6 @@
-// === Module 9635: StorefrontPromotionStore ===
+// === Module 9584: StorefrontPromotionStore ===
 
-// Module 9635 (StorefrontPromotionStore)
+// Module 9584 (StorefrontPromotionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

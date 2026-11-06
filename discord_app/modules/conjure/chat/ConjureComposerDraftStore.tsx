@@ -1,11 +1,11 @@
-// === Module 12809: ConjureComposerDraftStore ===
+// === Module 12774: ConjureComposerDraftStore ===
 
-// Module 12809 (ConjureComposerDraftStore)
+// Module 12774 (ConjureComposerDraftStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
-import apply from "module_12" /* 12 */;
+import apply from "apply" /* 12 */;
 
 require = fn;
 function readStoredDrafts() {

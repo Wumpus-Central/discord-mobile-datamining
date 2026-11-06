@@ -1,9 +1,9 @@
-// === Module 10395: ForegroundServiceManager ===
+// === Module 10347: ForegroundServiceManager ===
 
-// Module 10395 (ForegroundServiceManager)
+// Module 10347 (ForegroundServiceManager)
 import _mod17 from "module_17" /* 17 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10396 */;
-import LifecycleManager from "LifecycleManager" /* 2125 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10348 */;
+import LifecycleManager from "LifecycleManager" /* 2120 */;
 import size from "module_2" /* 2 */;
 
 let obj = importDefault;

@@ -1,14 +1,14 @@
-// === Module 18187: DataAndPrivacyScreen ===
+// === Module 18179: DataAndPrivacyScreen ===
 
-// Module 18187 (DataAndPrivacyScreen)
+// Module 18179 (DataAndPrivacyScreen)
 import util from "util" /* 1113 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9417 */;
-import SettingBuilders from "SettingBuilders" /* 11737 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9363 */;
+import SettingBuilders from "SettingBuilders" /* 11703 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6880 */;
+import ConsentStore from "ConsentStore" /* 6822 */;
 
 require = fn;
-const MobileUserSettings = fn(8578).MobileUserSettings;
+const MobileUserSettings = fn(8524).MobileUserSettings;
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsxProd = fn(21);
@@ -20,14 +20,14 @@ export default function DataAndPrivacySettings() {
   stackNavigation = stackNavigation(1499).useStackNavigation();
   closure_129_0 = stackNavigation;
   let obj = stackNavigation(1499);
-  const pinotDataPrivacySections = stackNavigation(18179).usePinotDataPrivacySections();
+  const pinotDataPrivacySections = stackNavigation(18171).usePinotDataPrivacySections();
   let obj3 = { settings: null, subLabel: null };
   items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   obj3.settings = items;
   let intl = stackNavigation(1113).intl;
   let obj4 = { helpdeskArticle: null };
-  let obj2 = stackNavigation(18179);
-  obj4.helpdeskArticle = items1(2190).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
+  let obj2 = stackNavigation(18171);
+  obj4.helpdeskArticle = items1(2185).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj3.subLabel = intl.format(stackNavigation(1113).t["igTSG/"], obj4);
   items1 = [obj3, , , ];
   let obj6 = { settings: null, subLabel: null };
@@ -35,8 +35,8 @@ export default function DataAndPrivacySettings() {
   obj6.settings = items2;
   let intl2 = stackNavigation(1113).intl;
   const obj7 = { helpdeskArticle: null };
-  const obj5 = items1(2190);
-  obj7.helpdeskArticle = items1(2190).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
+  const obj5 = items1(2185);
+  obj7.helpdeskArticle = items1(2185).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
   obj6.subLabel = intl2.format(stackNavigation(1113).t["eQL/Mr"], obj7);
   items1[1] = obj6;
   const obj9 = { settings: null, subLabel: null };
@@ -44,8 +44,8 @@ export default function DataAndPrivacySettings() {
   obj9.settings = items3;
   let intl3 = stackNavigation(1113).intl;
   const obj10 = { helpdeskArticle: null };
-  const obj8 = items1(2190);
-  obj10.helpdeskArticle = items1(2190).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
+  const obj8 = items1(2185);
+  obj10.helpdeskArticle = items1(2185).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
   obj9.subLabel = intl3.format(stackNavigation(1113).t.cf9mvV, obj10);
   items1[2] = obj9;
   const obj12 = { settings: null, subLabel: null };
@@ -53,8 +53,8 @@ export default function DataAndPrivacySettings() {
   obj12.settings = items4;
   let intl4 = stackNavigation(1113).intl;
   const obj13 = { helpdeskArticle: null };
-  const obj11 = items1(2190);
-  obj13.helpdeskArticle = items1(2190).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
+  const obj11 = items1(2185);
+  obj13.helpdeskArticle = items1(2185).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
   obj12.subLabel = intl4.format(stackNavigation(1113).t["2QFDU/"], obj13);
   items1[3] = obj12;
   HermesBuiltin.arraySpread(pinotDataPrivacySections, 4);
@@ -65,8 +65,8 @@ export default function DataAndPrivacySettings() {
   obj15.settings = items5;
   const intl6 = stackNavigation(1113).intl;
   const obj16 = { helpdeskArticle: null };
-  const obj14 = items1(2190);
-  obj16.helpdeskArticle = items1(2190).getArticleURL(constants.GDPR_REQUEST_DATA);
+  const obj14 = items1(2185);
+  obj16.helpdeskArticle = items1(2185).getArticleURL(constants.GDPR_REQUEST_DATA);
   obj15.subLabel = intl6.format(stackNavigation(1113).t.P3kNfr, obj16);
   items1.push(obj15);
   const obj18 = { settings: null, subLabel: null };
@@ -85,11 +85,11 @@ export default function DataAndPrivacySettings() {
   items1.push(obj20);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(17030).fetchConsents();
-      const obj = stackNavigation(17030);
+      const consents = stackNavigation(17018).fetchConsents();
+      const obj = stackNavigation(17018);
     }
-    const harvestStatus = stackNavigation(17033).fetchHarvestStatus();
-    const obj2 = stackNavigation(17033);
+    const harvestStatus = stackNavigation(17021).fetchHarvestStatus();
+    const obj2 = stackNavigation(17021);
   }, []);
   const items8 = [stackNavigation, items1];
   const obj21 = { children: null };
@@ -127,14 +127,14 @@ export default function DataAndPrivacySettings() {
     return obj.createList(obj2);
   }, items8);
   const obj22 = { screen: null };
-  const obj17 = items1(2190);
+  const obj17 = items1(2185);
   const obj19 = {
     onClick() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     }
   };
-  obj22.screen = stackNavigation(16987).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(16987), obj22), closure_8(items1(16858), { node: memo })];
+  obj22.screen = stackNavigation(16975).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(16975), obj22), closure_8(items1(16846), { node: memo })];
   obj21.children = items9;
   return closure_10(closure_9, obj21);
 };

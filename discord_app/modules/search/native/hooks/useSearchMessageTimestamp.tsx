@@ -1,8 +1,8 @@
-// === Module 19045: useSearchMessageTimestamp ===
+// === Module 19034: useSearchMessageTimestamp ===
 
-// Module 19045 (useSearchMessageTimestamp)
+// Module 19034 (useSearchMessageTimestamp)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6998 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6940 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

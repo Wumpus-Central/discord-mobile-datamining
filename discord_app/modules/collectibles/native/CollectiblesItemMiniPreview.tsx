@@ -1,31 +1,31 @@
-// === Module 15267: CollectiblesItemMiniPreview ===
+// === Module 15261: CollectiblesItemMiniPreview ===
 
-// Module 15267 (CollectiblesItemMiniPreview)
+// Module 15261 (CollectiblesItemMiniPreview)
 import nativeDefault from "native" /* 575 */;
-import utils from "utils" /* 2113 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import ProfileEffectDefault from "ProfileEffect" /* 9650 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9659 */;
-import NameplateDefault from "Nameplate" /* 9667 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9671 */;
-import _modDef9672 from "module_9672" /* 9672 */;
+import utils from "utils" /* 2108 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import ProfileEffectDefault from "ProfileEffect" /* 9599 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9608 */;
+import NameplateDefault from "Nameplate" /* 9616 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9620 */;
+import _modDef9621 from "module_9621" /* 9621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7870).isAvatarDecorationRecord;
-const isNameplateRecord = fn(2114).isNameplateRecord;
-const isProfileEffectRecord = fn(7871).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7872).isProfileFrameRecord;
-let closure_8 = fn(8940).PROFILE_FRAME_ASPECT_RATIO;
+const isAvatarDecorationRecord = fn(7824).isAvatarDecorationRecord;
+const isNameplateRecord = fn(2109).isNameplateRecord;
+const isProfileEffectRecord = fn(7825).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7826).isProfileFrameRecord;
+let closure_8 = fn(8886).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj = { tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, framePreview: { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" }, profileEffect: null, sampleProfile: null, nameplate: null, nameplateTile: null, nameplateStrip: null };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(9647).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9596).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.nameplate = { overflow: "hidden", borderTopRightRadius: nativeDefault.radii.xs, borderBottomRightRadius: nativeDefault.radii.xs };
 obj.nameplateTile = { alignItems: "flex-start" };
 obj.nameplateStrip = { width: "90%", aspectRatio: 1.6, position: "relative" };
@@ -54,7 +54,7 @@ export default noop.memo(function CollectiblesItemMiniPreview(arg0) {
     const obj7 = { style: items, children: null };
     const obj8 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
     const obj9 = { source: null, style: null, resizeMode: "cover" };
-    const obj10 = { uri: _modDef9672 };
+    const obj10 = { uri: _modDef9621 };
     obj9.source = obj10;
     obj9.style = tmp.sampleProfile;
     const items1 = [React6(FastImageDefault, obj9), ];

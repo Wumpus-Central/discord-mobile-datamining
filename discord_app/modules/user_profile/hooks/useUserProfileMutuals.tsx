@@ -1,12 +1,12 @@
-// === Module 14412: useUserProfileMutuals ===
+// === Module 14389: useUserProfileMutuals ===
 
-// Module 14412 (useUserProfileMutuals)
-import _mod12 from "module_12" /* 12 */;
-import usePrevValueDefault from "usePrevValue" /* 9250 */;
+// Module 14389 (useUserProfileMutuals)
+import apply from "apply" /* 12 */;
+import usePrevValueDefault from "usePrevValue" /* 9196 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7946 */;
-import SortedGuildStore from "SortedGuildStore" /* 6910 */;
-import UserProfileStore from "UserProfileStore" /* 7917 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7900 */;
+import SortedGuildStore from "SortedGuildStore" /* 6852 */;
+import UserProfileStore from "UserProfileStore" /* 7871 */;
 
 const require = globalThis.__r;
 
@@ -37,7 +37,7 @@ export default function useUserProfileMutuals(arg0) {
     if (null != tmp3) {
       sortByResult = tmp3;
       if (tmp3.length >= 2) {
-        sortByResult = _mod12.sortBy(tmp3, (user) => {
+        sortByResult = apply.sortBy(tmp3, (user) => {
           value = stateFromStores.get(user.user.id);
           let num;
           if (value != null) {

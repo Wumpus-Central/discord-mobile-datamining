@@ -1,15 +1,15 @@
-// === Module 14893: AppStoreOverlayStatsCarousel ===
+// === Module 14870: AppStoreOverlayStatsCarousel ===
 
-// Module 14893 (AppStoreOverlayStatsCarousel)
+// Module 14870 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5430 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import AnalyticsActions from "AnalyticsActions" /* 8007 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8016 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 14894 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 14895 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import AnalyticsActions from "AnalyticsActions" /* 7961 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7970 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 14871 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 14872 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -118,19 +118,19 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };
-let size = { width: 130, height: 92, borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
-obj2.statCard = size;
-obj2.statCardExpanded = { flex: 1, minWidth: 0 };
 let obj4 = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };
+obj2.statCard = { minWidth: 130, height: 92, borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
+obj2.statCardExpanded = { flex: 1 };
+let obj5 = { minWidth: 130, height: 92, borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.expandedCarouselContent = { flexDirection: "row", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
-let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj6 = { flexDirection: "row", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.secondaryRow = { height: nativeDefault.space.PX_16, justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj2);
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx");
 
 export default function AppStoreOverlayStatsCarousel(arg0) {

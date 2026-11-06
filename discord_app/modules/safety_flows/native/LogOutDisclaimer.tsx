@@ -1,12 +1,12 @@
-// === Module 20403: LogOutDisclaimer ===
+// === Module 20411: LogOutDisclaimer ===
 
-// Module 20403 (LogOutDisclaimer)
+// Module 20411 (LogOutDisclaimer)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
-import _modDef2963 from "module_2963" /* 2963 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6878 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 16132 */;
+import _modDef2960 from "module_2960" /* 2960 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6820 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 16127 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export default function LogOutDisclaimer() {
   const obj = { children: null };
   const obj2 = { variant: "body-xs/medium", children: null };
   const intl = util.intl;
-  obj2.children = intl.format(_modDef2963["0DHxym"], {
+  obj2.children = intl.format(_modDef2960["0DHxym"], {
     handleLogOut() {
       AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
     }

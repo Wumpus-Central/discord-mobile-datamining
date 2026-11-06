@@ -1,11 +1,11 @@
-// === Module 16638: discordEnvironmentEvents ===
+// === Module 16635: discordEnvironmentEvents ===
 
-// Module 16638 (discordEnvironmentEvents)
+// Module 16635 (discordEnvironmentEvents)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
 
 let closure_3 = ["uiDensity"];
-const Constants = fn(6588);
+const Constants = fn(6608);
 const RPC_AUTHENTICATED_SCOPE = Constants.RPC_AUTHENTICATED_SCOPE;
 const RPC_EMBEDDED_APP_SCOPE = Constants.RPC_EMBEDDED_APP_SCOPE;
 const RPC_SCOPE_CONFIG = Constants.RPC_SCOPE_CONFIG;

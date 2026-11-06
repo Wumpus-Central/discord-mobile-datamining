@@ -1,6 +1,6 @@
-// === Module 12355: openConjureNativeImages ===
+// === Module 12320: openConjureNativeImages ===
 
-// Module 12355 (openConjureNativeImages)
+// Module 12320 (openConjureNativeImages)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

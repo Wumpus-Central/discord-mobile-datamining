@@ -1,6 +1,6 @@
-// === Module 7145: DesignTogglesStore ===
+// === Module 7092: DesignTogglesStore ===
 
-// Module 7145 (DesignTogglesStore)
+// Module 7092 (DesignTogglesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

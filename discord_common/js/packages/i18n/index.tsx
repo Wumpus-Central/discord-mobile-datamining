@@ -2,7 +2,7 @@
 
 // Module 2026 (i18n)
 import i18n_i18n from "i18n/i18n" /* 2027 */;
-import parse from "parse" /* 2070 */;
+import parse from "parse" /* 2065 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/index.tsx");

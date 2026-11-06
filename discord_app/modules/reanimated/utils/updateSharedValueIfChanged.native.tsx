@@ -1,6 +1,6 @@
-// === Module 11423: updateSharedValueIfChanged ===
+// === Module 11385: updateSharedValueIfChanged ===
 
-// Module 11423 (updateSharedValueIfChanged)
+// Module 11385 (updateSharedValueIfChanged)
 import _mod1705 from "module_1705" /* 1705 */;
 import size from "module_2" /* 2 */;
 

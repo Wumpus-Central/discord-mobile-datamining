@@ -1,10 +1,10 @@
-// === Module 7479: CircleCheckIcon ===
+// === Module 7424: CircleCheckIcon ===
 
-// Module 7479 (CircleCheckIcon)
+// Module 7424 (CircleCheckIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5853 */;
-import _mod7480 from "module_7480" /* 7480 */;
-import _mod7481 from "module_7481" /* 7481 */;
+import BaseIconImage from "BaseIconImage" /* 5871 */;
+import _mod7425 from "module_7425" /* 7425 */;
+import _mod7426 from "module_7426" /* 7426 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,8 +26,8 @@ export function CircleCheckIcon(color) {
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  items = [React4(BaseIconImage.BaseIconImage, { source: _mod7480, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod7481, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  items = [React4(BaseIconImage.BaseIconImage, { source: _mod7425, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod7426, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

@@ -1,8 +1,8 @@
-// === Module 15376: SpotifyApplicationRecord ===
+// === Module 15371: SpotifyApplicationRecord ===
 
-// Module 15376 (SpotifyApplicationRecord)
-import ApplicationRecord from "ApplicationRecord" /* 2145 */;
-import Platforms from "Platforms" /* 6712 */;
+// Module 15371 (SpotifyApplicationRecord)
+import ApplicationRecord from "ApplicationRecord" /* 2140 */;
+import Platforms from "Platforms" /* 6654 */;
 
 const spotify = "spotify";
 const value = Platforms.get("spotify");

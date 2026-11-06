@@ -1,8 +1,8 @@
-// === Module 18758: YouBarUser ===
+// === Module 18748: YouBarUser ===
 
-// Module 18758 (YouBarUser)
+// Module 18748 (YouBarUser)
 import nativeDefault from "native" /* 575 */;
-import spring_spring from "spring/spring" /* 5773 */;
+import spring_spring from "spring/spring" /* 5791 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -10,11 +10,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17348);
+const YouBarConstants = fn(17337);
 ({ YOU_BAR_SPRING_CONFIG: closure_6, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: metroImportDefault, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { youButton: { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS }, userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, placeholder: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.round, height: 16, width: 80 };
 obj.placeholder = size;
@@ -54,24 +54,24 @@ export default noop.memo(function YouBarUser(isCondensed) {
   YouBarUserTsx1.__initData = tmp8;
   const animatedStyle = tmp2(1652).useAnimatedStyle(YouBarUserTsx1);
   const tmp2Result = tmp2(1652);
-  const name = sharedValue(5197).useName(stateFromStores);
+  const name = sharedValue(5224).useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isCondensed.onAvatarPress };
-      const items4 = [closure_9(tmp11(18760), obj5), ];
+      const items4 = [closure_9(tmp11(18750), obj5), ];
       const obj6 = { style: null, children: null };
       const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items5;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp11(18761), obj7);
+      obj6.children = closure_9(tmp11(18751), obj7);
       items4[1] = closure_9(tmp11(1652).View, obj6);
       obj3.children = items4;
     }
     return tmp13(View, obj3);
   }
   const obj8 = { style: tmp.youButton, children: null };
-  const items6 = [closure_9(sharedValue(18759), { isLarge: !isCondensed }), ];
+  const items6 = [closure_9(sharedValue(18749), { isLarge: !isCondensed }), ];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items7 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items7;
@@ -79,5 +79,5 @@ export default noop.memo(function YouBarUser(isCondensed) {
   obj8.children = items6;
   obj3 = obj8;
   const obj10 = { style: tmp.placeholder };
-  const obj4 = sharedValue(5197);
+  const obj4 = sharedValue(5224);
 });

@@ -1,12 +1,12 @@
-// === Module 18731: GuildsBarDragPreview ===
+// === Module 18721: GuildsBarDragPreview ===
 
-// Module 18731 (GuildsBarDragPreview)
+// Module 18721 (GuildsBarDragPreview)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import _mod5058 from "module_5058" /* 5058 */;
-import native from "native" /* 5209 */;
+import _mod5085 from "module_5085" /* 5085 */;
+import native from "native" /* 5229 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18645 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18635 */;
 
 require = fn;
 function PreviewItem(overState) {
@@ -167,7 +167,7 @@ function PreviewItem(overState) {
   const memo = noop.useMemo(() => {
     if ("convert-after" === c1) {
       if (null != c0) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flexDirection", name: "Array", color: "applicationId", expanded: "<string:2785018821>", children: "<string:1107297207>" };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flexDirection", name: "Array", color: "channel", expanded: null, children: null };
         items = [tmp2];
         element.children = items;
         return element;
@@ -359,26 +359,26 @@ function AnimatedItemPreview(cleanUp) {
     let obj5 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(18653), obj5);
+    let tmp22Result = tmp22(tmp4(18643), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
     if (isHomeDrawerEnabled) {
-      tmp25 = transitionState === tmp2(5209).TransitionStates.YEETED;
+      tmp25 = transitionState === tmp2(5229).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(18674), obj6);
-    const tmp4Result = tmp4(18674);
+    tmp22Result = tmp22(tmp4(18664), obj6);
+    const tmp4Result = tmp4(18664);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1652.View, obj4);
 }
-let GuildsNodeType = fn(6910).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(18642).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6852).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(18632).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
-let createStyles = fn(5143);
+let createStyles = fn(5170);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-createStyles = fn(5143);
+createStyles = fn(5170);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -422,7 +422,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "handshake_tone1_tone2", scrollPosition: "handshake_light_skin_tone_medium_light_skin_tone", dragRegion: "1f3fb", windowSize: "1f3fc", dropComplete: "handshake_tone1_tone3", listInsets: "handshake_light_skin_tone_medium_skin_tone" };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "safety-tools-button", scrollPosition: "PINOT_MEMBER_NOTICE_ACK", dragRegion: null, windowSize: "HOSTED_FIELDS_FIELDS_EMPTY", dropComplete: "All fields are empty. Cannot tokenize empty card fields.", listInsets: "heading-md/semibold" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;
@@ -441,7 +441,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod5058.shallow);
+  }, _mod5085.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

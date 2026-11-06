@@ -1,27 +1,27 @@
-// === Module 7917: UserProfileStore ===
+// === Module 7871: UserProfileStore ===
 
-// Module 7917 (UserProfileStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7871 (UserProfileStore)
+import applyDefault from "apply" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
-import Timers from "Timers" /* 4987 */;
-import WidgetType from "WidgetType" /* 7918 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7919 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7922 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7923 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7925 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7926 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7927 */;
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7928 */;
-import LocaleStore from "LocaleStore" /* 2191 */;
-import UserRecord from "UserRecord" /* 1399 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
+import Timers from "Timers" /* 5014 */;
+import WidgetType from "WidgetType" /* 7872 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7873 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7876 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7877 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7879 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7880 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7881 */;
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7882 */;
+import LocaleStore from "LocaleStore" /* 2186 */;
+import UserRecord from "UserRecord" /* 1404 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildStore from "GuildStore" /* 5041 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
-import PresenceStore from "PresenceStore" /* 5898 */;
-import SortedGuildStore from "SortedGuildStore" /* 6910 */;
+import PresenceStore from "PresenceStore" /* 5917 */;
+import SortedGuildStore from "SortedGuildStore" /* 6852 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -73,8 +73,8 @@ function createUserWidgetFromServer(data) {
   }
   const games = data.data.games;
   const mapped1 = games.map((gameId) => ({ gameId: gameId.game_id, comment: gameId.comment, tags: gameId.tags }));
-  const uniqByResult = _modDef12.uniqBy(mapped1, "gameId");
-  const baseGameWidget = new UserProfileGameWidgetTypes.BaseGameWidget({ id: data.id, type, games: _modDef12.uniqBy(mapped1, "gameId") });
+  const uniqByResult = applyDefault.uniqBy(mapped1, "gameId");
+  const baseGameWidget = new UserProfileGameWidgetTypes.BaseGameWidget({ id: data.id, type, games: applyDefault.uniqBy(mapped1, "gameId") });
   return baseGameWidget;
 }
 function createUserWidgetFromSnapshot(type) {
@@ -229,7 +229,7 @@ function handleMutualFriendsFetchFailure(userId) {
 function handleMutualFriendsFetchSuccess(userId) {
   set.delete(userId.userId);
   ({ userId, mutualFriends } = userId);
-  const mapped = _modDef12(mutualFriends).map((id) => {
+  const mapped = applyDefault(mutualFriends).map((id) => {
     obj = { key: id.id, user: null, status: null };
     const obj2 = {};
     const merged = Object.assign(id);
@@ -239,7 +239,7 @@ function handleMutualFriendsFetchSuccess(userId) {
     obj.status = status.getStatus(id.id);
     return obj;
   });
-  const arr = _modDef12(mutualFriends);
+  const arr = applyDefault(mutualFriends);
   const result = map3.set(userId, mapped.sortBy((user) => user.user.username.toLowerCase()).value());
   const result1 = map4.set(userId.userId, userId.mutualFriends.length);
 }
@@ -534,7 +534,7 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   let value4 = map1.get(userId);
   if (value4 == null) {
-    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "children" };
+    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "channelId" };
     value4 = obj;
   }
   const timestamp = Date.now();
@@ -905,8 +905,8 @@ prototype["getWishlistSettings"] = function getWishlistSettings(id, firstWishlis
   }
   return tmp2;
 };
-prototype["getProfileReadState"] = function getProfileReadState(ownerId) {
-  value = map1.get(ownerId);
+prototype["getProfileReadState"] = function getProfileReadState(id) {
+  value = map1.get(id);
   let profileReadState;
   if (value != null) {
     profileReadState = value.profileReadState;

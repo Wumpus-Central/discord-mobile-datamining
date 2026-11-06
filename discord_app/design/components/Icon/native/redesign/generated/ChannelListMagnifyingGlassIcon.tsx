@@ -1,9 +1,9 @@
-// === Module 15921: ChannelListMagnifyingGlassIcon ===
+// === Module 15915: ChannelListMagnifyingGlassIcon ===
 
-// Module 15921 (ChannelListMagnifyingGlassIcon)
+// Module 15915 (ChannelListMagnifyingGlassIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5853 */;
-import _mod15922 from "module_15922" /* 15922 */;
+import BaseIconImage from "BaseIconImage" /* 5871 */;
+import _mod15916 from "module_15916" /* 15916 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ChannelListMagnifyingGlassIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15922, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15916, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

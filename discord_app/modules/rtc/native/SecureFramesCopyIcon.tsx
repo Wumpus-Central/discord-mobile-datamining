@@ -1,8 +1,8 @@
-// === Module 9434: SecureFramesCopyIcon ===
+// === Module 9380: SecureFramesCopyIcon ===
 
-// Module 9434 (SecureFramesCopyIcon)
-import ToastUtils from "ToastUtils" /* 5848 */;
-import ClipboardUtils from "ClipboardUtils" /* 7496 */;
+// Module 9380 (SecureFramesCopyIcon)
+import ToastUtils from "ToastUtils" /* 5866 */;
+import ClipboardUtils from "ClipboardUtils" /* 7441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

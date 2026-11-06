@@ -1,7 +1,7 @@
-// === Module 17609: useColorPresetsWithA11yLabels ===
+// === Module 17598: useColorPresetsWithA11yLabels ===
 
-// Module 17609 (useColorPresetsWithA11yLabels)
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1402 */;
+// Module 17598 (useColorPresetsWithA11yLabels)
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1393 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export default function useColorPresetsWithA11yLabels(arg0, arg1) {
       const obj2 = { number: index + 1, hexList: null };
       const mapped = colors.map(closure_1_0(1090).int2hex);
       obj2.hexList = mapped.join(", ");
-      obj.a11yLabel = intl.formatToPlainString(closure_1_1(3059).FHfTsV, obj2);
+      obj.a11yLabel = intl.formatToPlainString(closure_1_1(3056).FHfTsV, obj2);
       return obj;
     });
   }, items);

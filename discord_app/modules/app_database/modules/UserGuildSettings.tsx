@@ -1,12 +1,12 @@
-// === Module 7815: UserGuildSettings ===
+// === Module 7769: UserGuildSettings ===
 
-// Module 7815 (UserGuildSettings)
+// Module 7769 (UserGuildSettings)
 import LoggerDefault from "Logger" /* 3 */;
-import _modDef12 from "module_12" /* 12 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5021 */;
+import applyDefault from "apply" /* 12 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5048 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const UserGuildSettingsStore = fn(6913);
+const UserGuildSettingsStore = fn(6855);
 ({ convertChannelOverridesToMap: c3, getGuildDefaults: closure_4 } = UserGuildSettingsStore);
 let closure_5 = new LoggerDefault("ReadStates");
 class UserGuildSettings {
@@ -52,7 +52,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(userGuildSetti
 };
 prototype["handleUserGuildSettingsUpdate"] = function handleUserGuildSettingsUpdate(userGuildSettings, arg1) {
   userGuildSettings = userGuildSettings.userGuildSettings;
-  const maxResult = _modDef12.max(userGuildSettings.map((version) => {
+  const maxResult = applyDefault.max(userGuildSettings.map((version) => {
     let num = version.version;
     if (num == null) {
       num = -1;

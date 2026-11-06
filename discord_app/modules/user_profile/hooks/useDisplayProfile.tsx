@@ -1,16 +1,16 @@
-// === Module 8903: useDisplayProfile ===
+// === Module 8849: useDisplayProfile ===
 
-// Module 8903 (useDisplayProfile)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8904 */;
-import DisplayProfileDefault from "DisplayProfile" /* 8906 */;
+// Module 8849 (useDisplayProfile)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8850 */;
+import DisplayProfileDefault from "DisplayProfile" /* 8852 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import UserProfileStore from "UserProfileStore" /* 7917 */;
+import UserProfileStore from "UserProfileStore" /* 7871 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const FunctionUtils = fn(2163);
+const FunctionUtils = fn(2158);
 let closure_6 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");

@@ -1,13 +1,13 @@
-// === Module 7589: GuildSubscriptions ===
+// === Module 7534: GuildSubscriptions ===
 
-// Module 7589 (GuildSubscriptions)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7534 (GuildSubscriptions)
+import applyDefault from "apply" /* 12 */;
 import Constants from "Constants" /* 1072 */;
-import Timers from "Timers" /* 4987 */;
-import FavoritesUtils from "FavoritesUtils" /* 5017 */;
-import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions" /* 7590 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7591 */;
-import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions" /* 7592 */;
+import Timers from "Timers" /* 5014 */;
+import FavoritesUtils from "FavoritesUtils" /* 5044 */;
+import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions" /* 7535 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7536 */;
+import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions" /* 7537 */;
 import size from "module_2" /* 2 */;
 
 const ME = Constants.ME;
@@ -151,7 +151,7 @@ prototype["clearWithoutFlushing"] = function clearWithoutFlushing(id, c0) {
 };
 prototype["flush"] = function flush() {
   const self = this;
-  const item = _modDef12.forEach(this._pending, (arg0, arg1) => {
+  const item = applyDefault.forEach(this._pending, (arg0, arg1) => {
     const _subscribed = self._subscribed;
     _subscribed.add(arg1);
   });

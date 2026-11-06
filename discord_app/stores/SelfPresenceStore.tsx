@@ -1,25 +1,25 @@
-// === Module 6708: SelfPresenceStore ===
+// === Module 6650: SelfPresenceStore ===
 
-// Module 6708 (SelfPresenceStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6650 (SelfPresenceStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import UserSettings from "UserSettings" /* 4968 */;
-import ActivityTypes from "ActivityTypes" /* 5899 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7725 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10946 */;
-import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 15767 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
-import SpotifyStore from "SpotifyStore" /* 6709 */;
+import UserSettings from "UserSettings" /* 4995 */;
+import ActivityTypes from "ActivityTypes" /* 5918 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7678 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10898 */;
+import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 15761 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
+import SpotifyStore from "SpotifyStore" /* 6651 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import DetectableGameStore from "DetectableGameStore" /* 2161 */;
-import IdleStore from "IdleStore" /* 6843 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2165 */;
-import LocalActivityStore from "LocalActivityStore" /* 11722 */;
-import PresenceStore from "PresenceStore" /* 5898 */;
-import SessionsStore from "SessionsStore" /* 5903 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import DetectableGameStore from "DetectableGameStore" /* 2156 */;
+import IdleStore from "IdleStore" /* 6785 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2160 */;
+import LocalActivityStore from "LocalActivityStore" /* 11688 */;
+import PresenceStore from "PresenceStore" /* 5917 */;
+import SessionsStore from "SessionsStore" /* 5922 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -141,7 +141,7 @@ function handleUpdate() {
     hiddenActivities = SessionsStore.getHiddenActivities();
     if (flag) {
       items = [];
-      const tmp12Result = _modDef12;
+      const tmp12Result = applyDefault;
       HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== ActivityTypes.ActivityTypes.CUSTOM_STATUS), HermesBuiltin.arraySpread(found, 0));
       const arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
       const tmp12ResultResult = tmp12Result(items.sort(sortActivity));
@@ -158,7 +158,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5898).sortActivity;
+const sortActivity = fn(5917).sortActivity;
 const Constants = fn(1072);
 const StatusTypes = Constants.StatusTypes;
 const AppStates = Constants.AppStates;

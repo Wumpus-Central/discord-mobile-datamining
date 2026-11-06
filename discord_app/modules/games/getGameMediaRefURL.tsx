@@ -1,9 +1,9 @@
-// === Module 2154: getGameMediaRefURL ===
+// === Module 2149: getGameMediaRefURL ===
 
-// Module 2154 (getGameMediaRefURL)
+// Module 2149 (getGameMediaRefURL)
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import StringUtils from "StringUtils" /* 2155 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2159 */;
+import StringUtils from "StringUtils" /* 2150 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2154 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");

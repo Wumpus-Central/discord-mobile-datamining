@@ -1,16 +1,16 @@
-// === Module 18431: HappeningNowCardVoice ===
+// === Module 18423: HappeningNowCardVoice ===
 
-// Module 18431 (HappeningNowCardVoice)
-import _modDef12 from "module_12" /* 12 */;
+// Module 18423 (HappeningNowCardVoice)
+import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6179 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6199 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7946 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7900 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5815 */;
+import VoiceStateStore from "VoiceStateStore" /* 5833 */;
 
 const require = globalThis.__r;
 
@@ -34,11 +34,11 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(17559).HappeningNowCardTrackingType;
+let closure_8 = fn(17548).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");
@@ -60,7 +60,7 @@ export default noop.memo(function VoiceChannelCard(guildId) {
   const items1 = [voiceUserAffinitySortType, voiceState.channelId];
   const stateFromStoresArray = guildId(voiceState[18]).useStateFromStoresArray(items, () => {
     const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(guildId.channelId);
-    const mapped = _modDef12(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
+    const mapped = applyDefault(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
     const found = mapped.filter(GlobalUtils.isNotNullish);
     items = [
       function userAffinitySort(id) {
@@ -86,7 +86,7 @@ export default noop.memo(function VoiceChannelCard(guildId) {
         return num;
       }
     ];
-    const arr = _modDef12(voiceStatesForChannel);
+    const arr = applyDefault(voiceStatesForChannel);
     return found.orderBy(items, ["desc"]).value();
   }, items1);
   const items2 = [index, guildId, voiceState.channelId, stateFromStoresArray];
@@ -128,7 +128,7 @@ export function useVoiceChannelUsers(channelId) {
   const items1 = [voiceUserAffinitySortType, channelId.channelId];
   return require("initialize").useStateFromStoresArray(items, () => {
     const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(guildId.channelId);
-    const mapped = _modDef12(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
+    const mapped = applyDefault(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
     const found = mapped.filter(GlobalUtils.isNotNullish);
     items = [
       function userAffinitySort(id) {
@@ -154,7 +154,7 @@ export function useVoiceChannelUsers(channelId) {
         return num;
       }
     ];
-    const arr = _modDef12(voiceStatesForChannel);
+    const arr = applyDefault(voiceStatesForChannel);
     return found.orderBy(items, ["desc"]).value();
   }, items1);
 }

@@ -1,24 +1,24 @@
-// === Module 5212: getNodeText ===
+// === Module 5232: getNodeText ===
 
-// Module 5212 (getNodeText)
+// Module 5232 (getNodeText)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/utils/getNodeText.tsx");
-function getNodeText(label) {
-  if (typeof label !== "string") {
-    if (typeof label !== "number") {
+function getNodeText(children) {
+  if (typeof children !== "string") {
+    if (typeof children !== "number") {
       const _Array = Array;
-      if (label instanceof Array) {
-        const mapped = label.map(getNodeText);
+      if (children instanceof Array) {
+        const mapped = children.map(getNodeText);
         let joined = mapped.join("");
-      } else if (noop.isValidElement(label)) {
-        joined = getNodeText(label.props.children);
+      } else if (noop.isValidElement(children)) {
+        joined = getNodeText(children.props.children);
       }
     }
     return joined;
   }
-  joined = label.toString();
+  joined = children.toString();
 }
 
 export { getNodeText };

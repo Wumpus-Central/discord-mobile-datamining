@@ -1,16 +1,16 @@
-// === Module 18986: useChannelAppFrameTeardown ===
+// === Module 18975: useChannelAppFrameTeardown ===
 
-// Module 18986 (useChannelAppFrameTeardown)
-import leaveFrame from "leaveFrame" /* 11078 */;
+// Module 18975 (useChannelAppFrameTeardown)
+import leaveFrame from "leaveFrame" /* 11031 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import FramesStore from "FramesStore" /* 6984 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import FramesStore from "FramesStore" /* 6926 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const getFrameSurfaceForChannel = fn(6985).getFrameSurfaceForChannel;
+const getFrameSurfaceForChannel = fn(6927).getFrameSurfaceForChannel;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/useChannelAppFrameTeardown.tsx");

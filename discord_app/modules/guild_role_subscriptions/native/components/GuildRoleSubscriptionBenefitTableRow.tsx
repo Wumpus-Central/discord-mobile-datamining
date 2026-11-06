@@ -1,13 +1,13 @@
-// === Module 20293: GuildRoleSubscriptionBenefitTableRow ===
+// === Module 20300: GuildRoleSubscriptionBenefitTableRow ===
 
-// Module 20293 (GuildRoleSubscriptionBenefitTableRow)
+// Module 20300 (GuildRoleSubscriptionBenefitTableRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import TableRow from "TableRow" /* 7119 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 17494 */;
-import EmojiIconDefault from "EmojiIcon" /* 17502 */;
-import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 17505 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import TableRow from "TableRow" /* 7063 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 17483 */;
+import EmojiIconDefault from "EmojiIcon" /* 17491 */;
+import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 17494 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,10 +33,10 @@ function ChannelBenefitLabel(benefit) {
   return tmp8;
 }
 const View = fn(17).View;
-const constants = fn(17468).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(17457).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { channelLabel: { flexDirection: "row", alignItems: "center" }, channelIcon: { marginEnd: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

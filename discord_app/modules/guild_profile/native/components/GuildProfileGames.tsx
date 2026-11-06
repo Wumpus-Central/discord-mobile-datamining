@@ -1,13 +1,13 @@
-// === Module 9468: GuildProfileGames ===
+// === Module 9414: GuildProfileGames ===
 
-// Module 9468 (GuildProfileGames)
+// Module 9414 (GuildProfileGames)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9469 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9493 */;
-import components_GameIconDefault from "components/GameIcon" /* 14948 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9415 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9439 */;
+import components_GameIconDefault from "components/GameIcon" /* 14925 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ function FavoriteGame(activityLevel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.xs };
 obj2.lastItemOverlay = rect;

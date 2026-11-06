@@ -1,8 +1,8 @@
-// === Module 15030: MediaViewerItemTransformPresenter ===
+// === Module 15007: MediaViewerItemTransformPresenter ===
 
-// Module 15030 (MediaViewerItemTransformPresenter)
+// Module 15007 (MediaViewerItemTransformPresenter)
 import _modDef1652 from "module_1652" /* 1652 */;
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 15027 */;
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 15004 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

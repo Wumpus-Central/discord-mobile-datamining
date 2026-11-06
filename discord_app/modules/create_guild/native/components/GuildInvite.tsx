@@ -1,24 +1,24 @@
-// === Module 14545: GuildInvite ===
+// === Module 14522: GuildInvite ===
 
-// Module 14545 (GuildInvite)
+// Module 14522 (GuildInvite)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5897 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6159 */;
-import TableRow from "TableRow" /* 7119 */;
-import NavigatorHeader from "NavigatorHeader" /* 7142 */;
-import _mod7433 from "module_7433" /* 7433 */;
-import GroupIcon from "GroupIcon" /* 8807 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9270 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9302 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 9350 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14505 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5916 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6179 */;
+import TableRow from "TableRow" /* 7063 */;
+import NavigatorHeader from "NavigatorHeader" /* 7089 */;
+import _mod7380 from "module_7380" /* 7380 */;
+import GroupIcon from "GroupIcon" /* 8753 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9216 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9248 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 9296 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14482 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9271 */;
-import GuildChannelStore from "GuildChannelStore" /* 5073 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9285 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9217 */;
+import GuildChannelStore from "GuildChannelStore" /* 5100 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9231 */;
 
 require = fn;
 function SeeMoreFooter(openInviteSheet) {
@@ -65,22 +65,22 @@ function GuildInviteSuggestionRows(openInviteSheet) {
     obj3.getItemType = function getItemType(type) {
       return type.type;
     };
-    obj2.children = closure_17(_mod7433.FlashList, obj3);
+    obj2.children = closure_17(_mod7380.FlashList, obj3);
     tmp6Result2 = closure_17(closure_5, obj2);
   }
   return tmp6Result2;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(9351).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(7289).CreateGuildModalStates;
+let closure_6 = fn(9297).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(7236).CreateGuildModalStates;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, Permissions: closure_15, SearchTypes: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5143);
-let obj2 = { container: { marginTop: fn(5724).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" }, header: { marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" }, headerIllustration: { alignItems: "center", marginTop: 8, marginBottom: -32 }, linkContainer: { paddingHorizontal: 16, width: "100%", zIndex: 1 }, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
-let obj3 = { marginTop: fn(5724).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
+const createStyles = fn(5170);
+let obj2 = { container: { marginTop: fn(5744).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" }, header: { marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" }, headerIllustration: { alignItems: "center", marginTop: 8, marginBottom: -32 }, linkContainer: { paddingHorizontal: 16, width: "100%", zIndex: 1 }, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
+let obj3 = { marginTop: fn(5744).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
 obj2.linkButton = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 12, justifyContent: "space-between" };
 let obj4 = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 12, justifyContent: "space-between" };
 obj2.linkButtonIcon = { flexShrink: 0, marginLeft: 8, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };

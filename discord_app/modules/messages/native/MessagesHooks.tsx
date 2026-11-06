@@ -1,26 +1,26 @@
-// === Module 11743: MessagesHooks ===
+// === Module 11709: MessagesHooks ===
 
-// Module 11743 (MessagesHooks)
-import _modDef12 from "module_12" /* 12 */;
+// Module 11709 (MessagesHooks)
+import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7019 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8023 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 10081 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11744 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11745 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6961 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7977 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10032 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11710 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11711 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10302 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6912 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PresenceStore from "PresenceStore" /* 5898 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10254 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6854 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PresenceStore from "PresenceStore" /* 5917 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(10082).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(10033).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 
@@ -39,7 +39,7 @@ export function useMessageAuthorActivities(arg0) {
   }, items);
   const items1 = [PresenceStore];
   const items2 = [memo];
-  return require("initialize").useStateFromStoresObject(items1, () => _modDef12.mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
+  return require("initialize").useStateFromStoresObject(items1, () => applyDefault.mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
 }
 export function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
@@ -59,8 +59,8 @@ export function useFetchMessageApplications(arg0) {
   const effect = noop.useEffect(() => {
     if (!obj.areArraysShallowEqual(memo, ref.current)) {
       const obj2 = ApplicationActionCreatorsDefault;
-      const found = _modDef12(memo).filter(GlobalUtils.isNotNullish);
-      const arr = _modDef12(memo);
+      const found = applyDefault(memo).filter(GlobalUtils.isNotNullish);
+      const arr = applyDefault(memo);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
       ref.current = memo;
       const iter = found.uniq();

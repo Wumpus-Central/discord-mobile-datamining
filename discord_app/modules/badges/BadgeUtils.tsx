@@ -1,11 +1,11 @@
-// === Module 11657: BadgeUtils ===
+// === Module 11619: BadgeUtils ===
 
-// Module 11657 (BadgeUtils)
+// Module 11619 (BadgeUtils)
 import util from "util" /* 1113 */;
-import StringUtils from "StringUtils" /* 2155 */;
-import Constants from "Constants" /* 8900 */;
-import BadgeId from "BadgeId" /* 8901 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8910 */;
+import StringUtils from "StringUtils" /* 2150 */;
+import Constants from "Constants" /* 8846 */;
+import BadgeId from "BadgeId" /* 8847 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8856 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -172,14 +172,29 @@ export function getLegacyIconUrlByBadgeId(badges) {
   }
   return map;
 }
-export function findTier(viewerBadge, next_tier) {
+export function findTier(badge, next_tier) {
   closure_0 = next_tier;
   let found;
   if (null != next_tier) {
-    const tiers = viewerBadge.tiers;
+    const tiers = badge.tiers;
     found = tiers.find((key) => key.key === closure_0);
   }
   return found;
+}
+export function getBadgeUnlockLabel(badge, c1) {
+  const intl = util.intl;
+  closure_0 = c1;
+  let found;
+  if (null != c1) {
+    const tiers = badge.tiers;
+    found = tiers.find((key) => key.key === closure_0);
+  }
+  if (null != found) {
+    let K3TdAp = util.t.K3TdAp;
+  } else {
+    K3TdAp = util.t["4oIsxf"];
+  }
+  return intl.string(K3TdAp);
 }
 export function getTierRowSubtitle(isUnlocked) {
   if (!isUnlocked.isUnlocked) {

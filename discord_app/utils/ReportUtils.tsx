@@ -1,8 +1,8 @@
-// === Module 7602: ReportUtils ===
+// === Module 7547: ReportUtils ===
 
-// Module 7602 (ReportUtils)
-import ChannelStore from "ChannelStore" /* 4992 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
+// Module 7547 (ReportUtils)
+import ChannelStore from "ChannelStore" /* 5019 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const Constants = fn(1072);

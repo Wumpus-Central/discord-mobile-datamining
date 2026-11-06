@@ -1,6 +1,6 @@
-// === Module 10235: analytics ===
+// === Module 10187: analytics ===
 
-// Module 10235 (analytics)
+// Module 10187 (analytics)
 import AnalyticsUtils from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
 

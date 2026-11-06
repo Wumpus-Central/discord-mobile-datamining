@@ -1,12 +1,12 @@
-// === Module 10365: FeedbackActionSheet ===
+// === Module 10317: FeedbackActionSheet ===
 
-// Module 10365 (FeedbackActionSheet)
-import _modDef12 from "module_12" /* 12 */;
+// Module 10317 (FeedbackActionSheet)
+import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
-import FeedbackUtils from "FeedbackUtils" /* 10347 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
+import FeedbackUtils from "FeedbackUtils" /* 10299 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,10 +15,10 @@ function closeActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet();
 }
 const View = fn(17).View;
-const FeedbackRating = fn(10344).FeedbackRating;
+const FeedbackRating = fn(10296).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, ratingsHeader: { textAlign: "center" }, reasonsList: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.reasonsList = { marginBottom: nativeDefault.space.PX_16 };
@@ -52,7 +52,7 @@ export default function FeedbackActionSheet(feedbackReasons) {
     if (!obj.isEqual(closure_7, reasons)) {
       _undefined(FeedbackUtils.shuffleProblems(reasons, otherKey));
     }
-    obj = _modDef12;
+    obj = applyDefault;
   }, items);
   [selectedRating, onPress] = noop.useState(null);
   const tmp6 = _slicedToArray(noop.useState(feedbackReasons(otherKey[9]).shuffle(reasons)), 2);
@@ -76,8 +76,8 @@ export default function FeedbackActionSheet(feedbackReasons) {
         tmp14 = View(reason);
       }
       obj3.descriptionLabel = tmp14;
-      obj2.pushLazy(asyncRequireImpl(10366, dependencyMap.paths), obj3);
-      const tmp9 = asyncRequireImpl(10366, dependencyMap.paths);
+      obj2.pushLazy(asyncRequireImpl(10318, dependencyMap.paths), obj3);
+      const tmp9 = asyncRequireImpl(10318, dependencyMap.paths);
     } else {
       const obj = { rating, reason, dontShowAgain: first1 };
       trackReport(obj);

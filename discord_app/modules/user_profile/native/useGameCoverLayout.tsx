@@ -1,8 +1,8 @@
-// === Module 15192: useGameCoverLayout ===
+// === Module 15171: useGameCoverLayout ===
 
-// Module 15192 (useGameCoverLayout)
+// Module 15171 (useGameCoverLayout)
 import nativeDefault from "native" /* 575 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9141 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9087 */;
 
 const PX_16 = nativeDefault.space.PX_16;
 const size = fn(2);

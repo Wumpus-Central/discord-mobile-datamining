@@ -1,20 +1,20 @@
-// === Module 16702: UserProfileEditForm ===
+// === Module 16699: UserProfileEditForm ===
 
-// Module 16702 (UserProfileEditForm)
+// Module 16699 (UserProfileEditForm)
 import util from "util" /* 1113 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7465 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8883 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8914 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 15215 */;
-import _modDef16704 from "module_16704" /* 16704 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 16705 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16718 */;
-import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 16720 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7410 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8829 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8860 */;
+import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 15142 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 15209 */;
+import _modDef16701 from "module_16701" /* 16701 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 16702 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16715 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8909 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11656 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8855 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11618 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -62,7 +62,7 @@ function MainUserProfileEditForm(arg0) {
 }
 function UserProfileEditFormContent(currentUser) {
   _require = str;
-  ({ autoFocusElement, isTryItOut } = currentUser);
+  ({ header, autoFocusElement, isTryItOut } = currentUser);
   if (isTryItOut === undefined) {
     isTryItOut = false;
   }
@@ -235,7 +235,7 @@ function UserProfileEditFormContent(currentUser) {
   const tmp41 = tmp(obj[46])(sharedValue, sum1);
   closure_8 = tmp41;
   const tmp38 = tmp(obj[45])(width);
-  const items6 = [closure_21, tmp41.isScrolledAboveTryItOutSection, sharedValue1];
+  const items6 = [closure_22, tmp41.isScrolledAboveTryItOutSection, sharedValue1];
   _require = undefined;
   importDefault = undefined;
   [tmp42, tmp43, tmp44] = items6;
@@ -482,7 +482,7 @@ function UserProfileEditFormContent(currentUser) {
     const obj37 = { ref, style: tmp3.container, onLayout, children: null };
     const obj38 = { gradientHeight: num, bannerHeight: tmp38 };
     const items12 = [closure_15(tmp(obj[66]), obj38), , ];
-    const obj39 = { ref: ref1, onScroll: null, onContentSizeChange: null, onLayout: null, scrollEventThrottle: null, children: null };
+    const obj39 = { ref: ref1, onScroll: null, onContentSizeChange: null, onLayout: null, scrollEventThrottle: null, stickyHeaderIndices: null, stickyHeaderHiddenOnScroll: null, keyboardShouldPersistTaps: null, children: null };
     let tmp81;
     if (tmp47) {
       tmp81 = callback;
@@ -503,10 +503,21 @@ function UserProfileEditFormContent(currentUser) {
       num3 = 16;
     }
     obj39.scrollEventThrottle = num3;
+    let tmp84;
+    if (null != header) {
+      tmp84 = closure_18;
+    }
+    obj39.stickyHeaderIndices = tmp84;
+    obj39.stickyHeaderHiddenOnScroll = null != header;
+    let str8;
+    if (null != header) {
+      str8 = "handled";
+    }
+    obj39.keyboardShouldPersistTaps = str8;
     const obj40 = { style: tmp3.bounceOffset };
-    const items13 = [closure_15(tmp58, obj40), , ];
+    const items13 = [closure_15(tmp58, obj40), header, , ];
     const obj41 = { user: str, displayProfile: tmp17Result, pendingAvatarSrc, pendingBanner, pendingAccentColor, pendingThemeColors, tryItOutBanner, isTryItOut, disabled: isSubmitting };
-    items13[1] = closure_15(EditUserProfileBanner, obj41);
+    items13[2] = closure_15(EditUserProfileBanner, obj41);
     const obj42 = { style: null, children: null };
     const items14 = [, , , ];
     ({ avatarBackground: arr15[0], avatarPosition: arr15[1] } = tmp2);
@@ -542,7 +553,7 @@ function UserProfileEditFormContent(currentUser) {
     let tmp61Result11 = tmp56Result;
     if (flag) {
       const obj48 = { value: tmp56Result, children: null };
-      const obj49 = { userId: str.id, containerBackground, hasCustomProfileTheme: tmp35, scrollPosition: sharedValue, scrollViewRef: ref1, isBoardTabOnScreen: sharedValue1 };
+      const obj49 = { userId: str.id, initialTab: currentUser.initialTab, containerBackground, hasCustomProfileTheme: tmp35, scrollPosition: sharedValue, scrollViewRef: ref1, isBoardTabOnScreen: sharedValue1 };
       obj48.children = closure_15(tmp(obj[71]), obj49);
       tmp61Result11 = closure_15(tmp(obj[70]).Provider, obj48);
     }
@@ -551,7 +562,7 @@ function UserProfileEditFormContent(currentUser) {
     obj44.children = items17;
     items15[1] = closure_16(tmp58, obj44);
     obj50.children = items15;
-    items13[2] = closure_16(tmp58, obj50);
+    items13[3] = closure_16(tmp58, obj50);
     obj39.children = items13;
     items12[1] = closure_16(tmp80, obj39);
     if (!tmp29) {
@@ -579,17 +590,18 @@ function UserProfileEditFormContent(currentUser) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7515).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7460).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1072);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: closure_10 } = Constants);
-const HexagonCampaignConstants = fn(5168);
+const HexagonCampaignConstants = fn(5195);
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-const constants3 = fn(16703).UserProfileEditAutoFocusElement;
+const constants3 = fn(16700).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let obj = { assetOrigin: fn(7300).AssetOriginTypes.NEW_ASSET, imageUri: _modDef16704, staticImageUri: _modDef16704, description: "", originalAsset: "applicationId" };
-let closure_21 = { code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})" };
+let closure_18 = [1];
+let obj = { assetOrigin: fn(7247).AssetOriginTypes.NEW_ASSET, imageUri: _modDef16701, staticImageUri: _modDef16701, description: "", originalAsset: "disabled" };
+let closure_22 = { code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 

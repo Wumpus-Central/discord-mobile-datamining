@@ -1,25 +1,25 @@
-// === Module 17576: AndroidFontScaleSetting ===
+// === Module 17565: AndroidFontScaleSetting ===
 
-// Module 17576 (AndroidFontScaleSetting)
+// Module 17565 (AndroidFontScaleSetting)
 import util from "util" /* 1113 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11686 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17577 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11652 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17566 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function formatFontScale(arg0) {
   return 100 * FontScales[Math.round(Math, arg0)] + "%";
 }
-const useFontScaleStore = fn(17528).useFontScaleStore;
+const useFontScaleStore = fn(17517).useFontScaleStore;
 const FontScales = fn(1082).FontScales;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.i19n5L);
   },
-  parent: fn(8578).MobileUserSettings.APPEARANCE,
+  parent: fn(8524).MobileUserSettings.APPEARANCE,
   useProps: function useFontScaleSliderProps() {
     const tmp = useFontScaleStore();
     closure_0 = tmp;

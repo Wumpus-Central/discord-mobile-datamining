@@ -1,11 +1,11 @@
-// === Module 12406: ConjureNativeMarkdown ===
+// === Module 12371: ConjureNativeMarkdown ===
 
-// Module 12406 (ConjureNativeMarkdown)
+// Module 12371 (ConjureNativeMarkdown)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import conjureMarkup from "conjureMarkup" /* 12347 */;
-import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12407 */;
-import useConjureRevealedText from "useConjureRevealedText" /* 12408 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import conjureMarkup from "conjureMarkup" /* 12312 */;
+import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12372 */;
+import useConjureRevealedText from "useConjureRevealedText" /* 12373 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -56,7 +56,7 @@ let obj2 = {};
 const merged = Object.assign(CONJURE_MARKUP_OPTIONS);
 obj2.allowList = false;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj4 = { blocks: { gap: nativeDefault.space.PX_8 }, list: null, item: null, marker: null, itemText: null };
 let obj5 = { gap: nativeDefault.space.PX_8 };
 obj4.list = { gap: nativeDefault.space.PX_4 };

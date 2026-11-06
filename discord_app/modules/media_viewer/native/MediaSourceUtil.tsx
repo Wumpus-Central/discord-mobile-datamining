@@ -1,30 +1,30 @@
-// === Module 8985: MediaSourceUtil ===
+// === Module 8931: MediaSourceUtil ===
 
-// Module 8985 (MediaSourceUtil)
+// Module 8931 (MediaSourceUtil)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
-import FlagUtils from "FlagUtils" /* 1398 */;
+import FlagUtils from "FlagUtils" /* 1403 */;
 import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1441 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
-import Server from "Server" /* 2121 */;
-import ToastUtils from "ToastUtils" /* 5848 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6097 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6189 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6203 */;
-import EmbedUtils from "EmbedUtils" /* 6696 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6891 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7605 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7611 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8542 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8728 */;
-import transformMessageComponents from "transformMessageComponents" /* 8840 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8856 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8981 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8986 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8987 */;
-import MediaModalPortal from "MediaModalPortal" /* 8988 */;
+import Server from "Server" /* 2116 */;
+import ToastUtils from "ToastUtils" /* 5866 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6117 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6209 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6223 */;
+import EmbedUtils from "EmbedUtils" /* 6638 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6833 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7550 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7556 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8488 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8674 */;
+import transformMessageComponents from "transformMessageComponents" /* 8786 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8802 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8927 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8932 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8933 */;
+import MediaModalPortal from "MediaModalPortal" /* 8934 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 const require = globalThis.__r;
 
@@ -715,12 +715,12 @@ export function extractMediaFromMessageComponents(getContentMessage, contentMess
       let type = nextResult.type;
       if (Server.ComponentType.MEDIA_GALLERY === type) {
         items = tmp4.items;
-        for (const item10029 of items) {
-          let tmp16 = toMediaSourceFromUnfurledMedia(arg0, arg2, item10029.media, item10029.description, item10029.spoiler);
-          if (null != tmp16) {
+        for (const item10035 of items) {
+          let tmp18 = toMediaSourceFromUnfurledMedia(arg0, arg2, item10035.media, item10035.description, item10035.spoiler);
+          if (null != tmp18) {
             let obj = { sources: null, unfurledMediaItem: null };
-            obj.sources = tmp17;
-            obj.unfurledMediaItem = item10029.media;
+            obj.sources = tmp19;
+            obj.unfurledMediaItem = item10035.media;
             let arr = items1.push(obj);
           }
           continue;
@@ -805,7 +805,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
     return null;
   } else {
     const type = value.type;
-    if (tmp(2121).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(2116).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -828,7 +828,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
       });
       const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1380).isNotNullish) };
       return obj2;
-    } else if (tmp(2121).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(2116).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {

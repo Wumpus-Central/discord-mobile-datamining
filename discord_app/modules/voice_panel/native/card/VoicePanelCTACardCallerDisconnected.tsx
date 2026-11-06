@@ -1,18 +1,18 @@
-// === Module 19568: VoicePanelCTACardCallerDisconnected ===
+// === Module 19561: VoicePanelCTACardCallerDisconnected ===
 
-// Module 19568 (VoicePanelCTACardCallerDisconnected)
+// Module 19561 (VoicePanelCTACardCallerDisconnected)
 import nativeDefault from "native" /* 575 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6179 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { container: null, avatarContainer: null, avatarWrapper: null, avatar: null, disconnectedAvatar: null, textContainer: null, text: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.container = size;

@@ -1,12 +1,12 @@
-// === Module 20441: LocalPushNotificationActionCreators ===
+// === Module 20449: LocalPushNotificationActionCreators ===
 
-// Module 20441 (LocalPushNotificationActionCreators)
+// Module 20449 (LocalPushNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7040 */;
-import Constants2 from "Constants" /* 11091 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6982 */;
+import Constants2 from "Constants" /* 11044 */;
 import size from "module_2" /* 2 */;
 
 const LocalNotificationTypes = Constants2.LocalNotificationTypes;
@@ -15,7 +15,7 @@ let result = size.fileFinishedImporting("modules/local_push_notification/native/
 
 export function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(7799).trackAppOpened("notification");
+    data(7753).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -35,21 +35,21 @@ export function receiveLocalNotification(getData) {
         const result = GuildActionCreatorsDefault.transitionToGuildSync(tmp4.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(2123)(13411, dependencyMap.paths).then((result) => result.default(projectId.channelId));
-        const promise2 = data(2123)(13411, dependencyMap.paths);
+        data(2118)(13385, dependencyMap.paths).then((result) => result.default(projectId.channelId));
+        const promise2 = data(2118)(13385, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
-        data(2123)(5893, dependencyMap.paths).then((transitionToMessage) => {
+        data(2118)(5912, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = projectId);
-          return transitionToMessage.transitionToMessage(channelId, messageId, { jumpType: data(5375).JumpType.INSTANT });
+          return transitionToMessage.transitionToMessage(channelId, messageId, { jumpType: data(5395).JumpType.INSTANT });
         });
-        const promise = data(2123)(5893, dependencyMap.paths);
+        const promise = data(2118)(5912, dependencyMap.paths);
       } else if (constants.CONJURE === type) {
         projectId = tmp4.projectId;
-        data(2123)(11165, dependencyMap.paths).then((openConjureHomeScreenWhenReady) => openConjureHomeScreenWhenReady.openConjureHomeScreenWhenReady(projectId));
-        const promise3 = data(2123)(11165, dependencyMap.paths);
+        data(2118)(11118, dependencyMap.paths).then((openConjureHomeScreenWhenReady) => openConjureHomeScreenWhenReady.openConjureHomeScreenWhenReady(projectId));
+        const promise3 = data(2118)(11118, dependencyMap.paths);
       }
     }
-    let obj2 = data(7799);
+    let obj2 = data(7753);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

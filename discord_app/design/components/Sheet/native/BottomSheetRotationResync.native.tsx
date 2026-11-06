@@ -1,8 +1,8 @@
-// === Module 5749: BottomSheetRotationResync ===
+// === Module 5767: BottomSheetRotationResync ===
 
-// Module 5749 (BottomSheetRotationResync)
-import BottomSheetSnapPoints from "BottomSheetSnapPoints" /* 5401 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5430 */;
+// Module 5767 (BottomSheetRotationResync)
+import BottomSheetSnapPoints from "BottomSheetSnapPoints" /* 5421 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

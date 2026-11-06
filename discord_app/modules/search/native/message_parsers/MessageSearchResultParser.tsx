@@ -1,12 +1,12 @@
-// === Module 19064: MessageSearchResultParser ===
+// === Module 19053: MessageSearchResultParser ===
 
-// Module 19064 (MessageSearchResultParser)
-import _mod12 from "module_12" /* 12 */;
-import MessageRecord from "MessageRecord" /* 5086 */;
+// Module 19053 (MessageSearchResultParser)
+import apply from "apply" /* 12 */;
+import MessageRecord from "MessageRecord" /* 5113 */;
 
 require = fn;
-let closure_3 = fn(9982).EMBED_TYPES_WITHOUT_DESCRIPTION;
-fn(19065).CachedSearchResultParser;
+let closure_3 = fn(9933).EMBED_TYPES_WITHOUT_DESCRIPTION;
+fn(19054).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
   _require = tmp4;
@@ -21,9 +21,9 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     } else {
       const str4 = content.replace(/(\r\n|\n|\r)/gm, " ");
       const _Set = Set;
-      set = new Set(set(19066).analyze(tokenizedQueryContent));
+      set = new Set(set(19055).analyze(tokenizedQueryContent));
       const parts = str4.split(/(\W+)/g);
-      const found = parts.find((item) => set(19066).shouldHighlight(item, set));
+      const found = parts.find((item) => set(19055).shouldHighlight(item, set));
       if (null == found) {
         return null;
       } else {
@@ -43,7 +43,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           return "" + str2 + str4.substring(bound);
         }
       }
-      const obj = set(19066);
+      const obj = set(19055);
     }
   };
   tmp4.getSearchResults = function getSearchResults(content) {
@@ -55,7 +55,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           tmp18.content = truncateMessageResult;
           return tmp18;
         } else {
-          const mapped = _mod12.chain(content.embeds).map((rawTitle, index) => {
+          const mapped = apply.chain(content.embeds).map((rawTitle, index) => {
             const truncateMessageResult = closure_1_0.truncateMessage(rawTitle.rawTitle, closure_1_0.tokenizedQueryContent, closure_1_0.lineClamp);
             if (null != truncateMessageResult) {
               const obj2 = { truncated: truncateMessageResult, index, contentType: "title" };
@@ -70,7 +70,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
             }
             return obj3;
           });
-          const chainResult = _mod12.chain(content.embeds);
+          const chainResult = apply.chain(content.embeds);
           const valueResult = mapped.find((truncated) => null != truncated.truncated).value();
           if (null != valueResult) {
             const tmp5 = new MessageRecord(content);

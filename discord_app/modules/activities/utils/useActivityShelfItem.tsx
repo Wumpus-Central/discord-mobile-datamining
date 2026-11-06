@@ -1,21 +1,21 @@
-// === Module 12610: useActivityShelfItem ===
+// === Module 12575: useActivityShelfItem ===
 
-// Module 12610 (useActivityShelfItem)
+// Module 12575 (useActivityShelfItem)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import Server from "Server" /* 2121 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5064 */;
-import getPlatformDefault from "getPlatform" /* 5818 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7021 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7465 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7469 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11127 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11994 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11995 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12048 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12611 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12612 */;
+import Server from "Server" /* 2116 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5091 */;
+import getPlatformDefault from "getPlatform" /* 5836 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6963 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7410 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7414 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11080 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11960 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11961 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12014 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12576 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12577 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
 
 require = fn;
 function useActivityAction(applicationId) {
@@ -252,7 +252,7 @@ function useOnActivityItemSelected(arg0) {
     }) : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2147).STAFF_RELEASE_PHASES;
+const STAFF_RELEASE_PHASES = fn(2142).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1072).ApplicationFlags;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 const size = fn(2);

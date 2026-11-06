@@ -1,10 +1,10 @@
-// === Module 7086: MemberVerificationFormStore ===
+// === Module 7028: MemberVerificationFormStore ===
 
-// Module 7086 (MemberVerificationFormStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7028 (MemberVerificationFormStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5177 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5204 */;
 
 require = fn;
 const NO_MEMBER_VERIFICATION_FORM = { version: "", description: "", formFields: [] };
@@ -23,7 +23,7 @@ prototype["getRulesPrompt"] = function getRulesPrompt(guildId) {
   if (dependencyMap[guildId] != null) {
     formFields = tmp2.formFields;
   }
-  return _modDef12.find(formFields, MemberVerificationTypes.isTermsFormField);
+  return applyDefault.find(formFields, MemberVerificationTypes.isTermsFormField);
 };
 MemberVerificationFormStore.displayName = "MemberVerificationFormStore";
 const memberVerificationFormStore = new MemberVerificationFormStore(DispatcherDefault, {

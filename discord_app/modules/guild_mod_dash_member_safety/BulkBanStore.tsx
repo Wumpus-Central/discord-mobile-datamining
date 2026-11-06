@@ -1,6 +1,6 @@
-// === Module 7041: BulkBanStore ===
+// === Module 6983: BulkBanStore ===
 
-// Module 7041 (BulkBanStore)
+// Module 6983 (BulkBanStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

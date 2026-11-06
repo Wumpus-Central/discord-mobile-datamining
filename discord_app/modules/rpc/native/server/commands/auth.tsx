@@ -1,11 +1,11 @@
-// === Module 16620: auth ===
+// === Module 16617: auth ===
 
-// Module 16620 (auth)
+// Module 16617 (auth)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2153 */;
-import RPCErrorDefault from "RPCError" /* 9486 */;
-import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 16621 */;
-import ApplicationStore from "ApplicationStore" /* 2167 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2148 */;
+import RPCErrorDefault from "RPCError" /* 9432 */;
+import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 16618 */;
+import ApplicationStore from "ApplicationStore" /* 2162 */;
 
 require = fn;
 const Constants = fn(1072);

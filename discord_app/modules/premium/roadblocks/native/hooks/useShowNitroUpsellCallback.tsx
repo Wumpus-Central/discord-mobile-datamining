@@ -1,6 +1,6 @@
-// === Module 10219: useShowNitroUpsellCallback ===
+// === Module 10171: useShowNitroUpsellCallback ===
 
-// Module 10219 (useShowNitroUpsellCallback)
+// Module 10171 (useShowNitroUpsellCallback)
 import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 

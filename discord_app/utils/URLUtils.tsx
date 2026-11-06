@@ -1,7 +1,7 @@
 // === Module 1378: URLUtils ===
 
 // Module 1378 (URLUtils)
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import Constants from "Constants" /* 1072 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -316,13 +316,13 @@ export default {
   formatPathWithQuery(pathname, arg1) {
     const obj2 = { pathname, query: null };
     const obj = UrlAll;
-    obj2.query = _modDef12.pickBy(arg1);
+    obj2.query = applyDefault.pickBy(arg1);
     return obj.format(obj2);
   },
   formatSearch(arg0) {
     const obj2 = { query: null };
     const obj = UrlAll;
-    obj2.query = _modDef12.pickBy(arg0);
+    obj2.query = applyDefault.pickBy(arg0);
     return obj.format(obj2);
   },
   safeParseWithQuery(target) {

@@ -1,15 +1,15 @@
-// === Module 18450: useFavoritesGuildCategoryFullNotice ===
+// === Module 18442: useFavoritesGuildCategoryFullNotice ===
 
-// Module 18450 (useFavoritesGuildCategoryFullNotice)
+// Module 18442 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import _modDef3577 from "module_3577" /* 3577 */;
-import FavoritesUtils from "FavoritesUtils" /* 5017 */;
-import FavoritesHooks from "FavoritesHooks" /* 11016 */;
-import FavoriteStore from "FavoriteStore" /* 4995 */;
+import _modDef3606 from "module_3606" /* 3606 */;
+import FavoritesUtils from "FavoritesUtils" /* 5044 */;
+import FavoritesHooks from "FavoritesHooks" /* 10968 */;
+import FavoriteStore from "FavoriteStore" /* 5022 */;
 
 require = fn;
-let closure_4 = fn(5005).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
+let closure_4 = fn(5032).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
@@ -34,9 +34,9 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             if (formatted === closure_4.toLowerCase()) {
               const obj2 = { label: null, tooltip: null };
               const intl = util.intl;
-              obj2.label = intl.string(_modDef3577.WsUrMD);
+              obj2.label = intl.string(_modDef3606.WsUrMD);
               const intl2 = util.intl;
-              obj2.tooltip = intl2.string(_modDef3577.dW9Kov);
+              obj2.tooltip = intl2.string(_modDef3606.dW9Kov);
               tmp6 = obj2;
             }
           }

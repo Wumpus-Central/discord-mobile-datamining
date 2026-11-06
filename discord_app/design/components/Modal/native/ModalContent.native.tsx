@@ -1,11 +1,11 @@
-// === Module 8118: ModalContent ===
+// === Module 8064: ModalContent ===
 
-// Module 8118 (ModalContent)
+// Module 8064 (ModalContent)
 import noop from "module_19" /* 19 */;
 
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_2 = createStyles.createStyles({ scrollContainer: { flex: 1 }, contentContainer: { flexDirection: "column", paddingTop: 24, paddingHorizontal: 16, alignItems: "center", flexGrow: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalContent.native.tsx");

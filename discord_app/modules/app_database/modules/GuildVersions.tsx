@@ -1,12 +1,12 @@
-// === Module 7940: GuildVersions ===
+// === Module 7894: GuildVersions ===
 
-// Module 7940 (GuildVersions)
+// Module 7894 (GuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5021 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5048 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildStore from "GuildStore" /* 5041 */;
 
 require = fn;
 let closure_6 = new LoggerDefault("GuildVersions");

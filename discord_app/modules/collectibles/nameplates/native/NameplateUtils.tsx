@@ -1,7 +1,7 @@
-// === Module 9668: NameplateUtils ===
+// === Module 9617: NameplateUtils ===
 
-// Module 9668 (NameplateUtils)
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2110 */;
+// Module 9617 (NameplateUtils)
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2105 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");

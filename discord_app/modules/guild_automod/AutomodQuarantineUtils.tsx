@@ -1,24 +1,24 @@
-// === Module 13533: AutomodQuarantineUtils ===
+// === Module 13508: AutomodQuarantineUtils ===
 
-// Module 13533 (AutomodQuarantineUtils)
+// Module 13508 (AutomodQuarantineUtils)
 import util from "util" /* 1113 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5081 */;
-import openUserSettings2 from "openUserSettings" /* 7705 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11717 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5108 */;
+import openUserSettings2 from "openUserSettings" /* 7658 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11683 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11656 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11618 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
 ({ Permissions: closure_9, UserSettingsSections: closure_10 } = Constants);
-const GuildMemberFlags = fn(5061).GuildMemberFlags;
+const GuildMemberFlags = fn(5088).GuildMemberFlags;
 let closure_12 = fn(1082).ProfileCustomizationSubsection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");
@@ -45,7 +45,7 @@ export function useGuildAutomodProfileQuarantineErrors(id) {
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "Path", bio: "count" };
+    const obj = { nick: "Array", bio: "channel" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

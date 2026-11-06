@@ -1,11 +1,11 @@
-// === Module 6057: CertifiedDeviceStore ===
+// === Module 6077: CertifiedDeviceStore ===
 
-// Module 6057 (CertifiedDeviceStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6077 (CertifiedDeviceStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Constants from "Constants" /* 5905 */;
+import Constants from "Constants" /* 5924 */;
 import size from "module_2" /* 2 */;
 
 const DeviceTypes = Constants.DeviceTypes;
@@ -21,7 +21,7 @@ prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
   value = Storage.get(CertifiedDeviceStore);
   if (null != value) {
-    let item = _modDef12.forEach(value, (arr, arg1) => {
+    let item = applyDefault.forEach(value, (arr, arg1) => {
       const item = arr.forEach((type) => {
         if (tmp) {
           type.hardwareMute = false;
@@ -58,7 +58,7 @@ prototype["getCertifiedDeviceName"] = function getCertifiedDeviceName(inputDevic
 };
 prototype["getCertifiedDeviceByType"] = function getCertifiedDeviceByType(arg0) {
   closure_0 = arg0;
-  return _modDef12.find(closure_6, (type) => type.type === closure_0);
+  return applyDefault.find(closure_6, (type) => type.type === closure_0);
 };
 prototype["isHardwareMute"] = function isHardwareMute(arg0) {
   let flag = false;

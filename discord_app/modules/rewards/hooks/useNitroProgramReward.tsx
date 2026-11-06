@@ -1,11 +1,11 @@
-// === Module 17178: useNitroProgramReward ===
+// === Module 17166: useNitroProgramReward ===
 
-// Module 17178 (useNitroProgramReward)
+// Module 17166 (useNitroProgramReward)
 import initialize from "initialize" /* 504 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15874 */;
-import getShouldFetchProgramRewards from "getShouldFetchProgramRewards" /* 17179 */;
-import nitroProgramRewardInvariants from "nitroProgramRewardInvariants" /* 17181 */;
-import ProgramRewardsStore from "ProgramRewardsStore" /* 15871 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15868 */;
+import getShouldFetchProgramRewards from "getShouldFetchProgramRewards" /* 17167 */;
+import nitroProgramRewardInvariants from "nitroProgramRewardInvariants" /* 17169 */;
+import ProgramRewardsStore from "ProgramRewardsStore" /* 15865 */;
 
 require = fn;
 const size = fn(2);

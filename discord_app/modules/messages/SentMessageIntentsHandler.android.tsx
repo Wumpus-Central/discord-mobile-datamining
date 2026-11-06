@@ -1,6 +1,6 @@
-// === Module 15459: SentMessageIntentsHandler ===
+// === Module 15453: SentMessageIntentsHandler ===
 
-// Module 15459 (SentMessageIntentsHandler)
+// Module 15453 (SentMessageIntentsHandler)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/SentMessageIntentsHandler.android.tsx");

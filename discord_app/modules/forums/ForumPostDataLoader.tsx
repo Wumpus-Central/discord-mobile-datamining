@@ -1,12 +1,12 @@
-// === Module 7617: ForumPostDataLoader ===
+// === Module 7562: ForumPostDataLoader ===
 
-// Module 7617 (ForumPostDataLoader)
+// Module 7562 (ForumPostDataLoader)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7600 */;
-import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 7621 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7545 */;
+import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 7566 */;
 
 const require = globalThis.__r;
 
@@ -195,7 +195,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
     }
   }
 };
-const computeThreadIdsSnapshot = fn(7618).computeThreadIdsSnapshot;
+const computeThreadIdsSnapshot = fn(7563).computeThreadIdsSnapshot;
 const Endpoints = fn(1072).Endpoints;
 class DefaultDict {
   constructor(arg0) {
@@ -218,7 +218,7 @@ prototype["delete"] = function delete(arg0) {
   delete tmp2[tmp];
 };
 prototype["hasNext"] = function hasNext() {
-  return !_modDef12.isEmpty(this._set);
+  return !applyDefault.isEmpty(this._set);
 };
 prototype["next"] = function next() {
   return SnowflakeUtilsDefault.keys(this._set)[0];

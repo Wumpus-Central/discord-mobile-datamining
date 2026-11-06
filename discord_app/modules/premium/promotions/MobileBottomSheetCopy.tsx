@@ -1,9 +1,9 @@
-// === Module 19364: MobileBottomSheetCopy ===
+// === Module 19356: MobileBottomSheetCopy ===
 
-// Module 19364 (MobileBottomSheetCopy)
+// Module 19356 (MobileBottomSheetCopy)
 import util from "util" /* 1113 */;
-import PromotionStringUtils from "PromotionStringUtils" /* 15556 */;
-import MarketingStringFormat from "MarketingStringFormat" /* 17157 */;
+import PromotionStringUtils from "PromotionStringUtils" /* 15550 */;
+import MarketingStringFormat from "MarketingStringFormat" /* 17145 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/premium/promotions/MobileBottomSheetCopy.tsx");

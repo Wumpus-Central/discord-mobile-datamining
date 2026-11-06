@@ -1,11 +1,12 @@
-// === Module 16134: PremiumPerkGates ===
+// === Module 16129: PremiumPerkGates ===
 
-// Module 16134 (PremiumPerkGates)
+// Module 16129 (PremiumPerkGates)
 import PerksStateUtils from "PerksStateUtils" /* 1391 */;
-import user2 from "user" /* 1393 */;
-import ProductCatalog from "ProductCatalog" /* 5200 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5204 */;
-import FileSizeUtils from "FileSizeUtils" /* 6589 */;
+import user2 from "user" /* 1398 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
+import FileSizeUtils from "FileSizeUtils" /* 6609 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8303 */;
+import ProductCatalog from "ProductCatalog" /* 16130 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +20,7 @@ export function getMaxFileSizeForPremiumType(TIER_2, arg1) {
   if (arg1 === undefined) {
     obj = { useSpace: true };
   }
-  if (TIER_2 === TIER_2.TIER_2) {
+  if (TIER_2 === React2.TIER_2) {
     let fileSize = NitroFileUploadExperiments.getNitroFileUploadLimitBytes({ location: "getMaxFileSizeForPremiumType" });
   } else {
     fileSize = React3[TIER_2].fileSize;
@@ -27,82 +28,86 @@ export function getMaxFileSizeForPremiumType(TIER_2, arg1) {
   return FileSizeUtils.formatSize(fileSize / 1024, { useKibibytes: true, useSpace: obj.useSpace });
 }
 export function canUseAnimatedEmojis(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.ANIMATED_EMOJIS, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.ANIMATED_EMOJIS, currentUser);
 }
 export function canUseEmojisEverywhere(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.EMOJIS_EVERYWHERE, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.EMOJIS_EVERYWHERE, currentUser);
 }
 export function canUseSoundboardEverywhere(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.SOUNDBOARD_EVERYWHERE, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.SOUNDBOARD_EVERYWHERE, currentUser);
 }
 export function canUseCustomCallSounds(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.CUSTOM_CALL_SOUNDS, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.CUSTOM_CALL_SOUNDS, currentUser);
 }
 export function canUploadLargeFiles(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.UPLOAD_LARGE_FILES, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.INCREASED_FILE_UPLOAD_SIZE, currentUser);
 }
 export function canUseBadges(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.PROFILE_BADGES, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.PROFILE_BADGES, currentUser);
 }
 export function canUseHighVideoUploadQuality(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.INCREASED_VIDEO_UPLOAD_QUALITY, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.INCREASED_VIDEO_UPLOAD_QUALITY, currentUser);
 }
 export function canEditDiscriminator(stateFromStores) {
-  return ProductCatalog.canUserUse(ProductCatalog.CUSTOM_DISCRIMINATOR, stateFromStores);
+  return ProductCatalog.canUserUse(user2.Perk.CUSTOM_DISCRIMINATOR, stateFromStores);
 }
 export function hasBoostDiscount(stateFromStores) {
-  return ProductCatalog.canUserUse(ProductCatalog.BOOST_DISCOUNT, stateFromStores);
+  return ProductCatalog.canUserUse(user2.Perk.BOOST_DISCOUNT, stateFromStores);
 }
 export function canUseAnimatedAvatar(user) {
-  return ProductCatalog.canUserUse(ProductCatalog.ANIMATED_AVATAR, user);
+  return ProductCatalog.canUserUse(user2.Perk.ANIMATED_AVATAR, user);
 }
-export function canInstallPremiumApplications(isPremiumWithFractionalPremiumOnly) {
-  return ProductCatalog.canUserUse(ProductCatalog.INSTALL_PREMIUM_APPLICATIONS, isPremiumWithFractionalPremiumOnly);
+export function canInstallPremiumApplications(stateFromStores) {
+  return ProductCatalog.canUserUse(user2.Perk.INSTALL_PREMIUM_APPLICATIONS, stateFromStores);
 }
 export function canUseIncreasedMessageLength(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.INCREASED_MESSAGE_LENGTH, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.INCREASED_MESSAGE_LENGTH, currentUser);
 }
 export function canUseIncreasedGuildCap(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.INCREASED_GUILD_LIMIT, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.INCREASED_GUILD_LIMIT, currentUser);
 }
-export function canRedeemPremiumPerks(isPremiumWithFractionalPremiumOnly) {
-  return ProductCatalog.canUserUse(ProductCatalog.REDEEM_PREMIUM_PERKS, isPremiumWithFractionalPremiumOnly);
+export function canRedeemPremiumPerks(currentUser) {
+  return PremiumTypeUtils.isPremiumExactly(currentUser, React2.TIER_2);
 }
-export function canUsePremiumProfileCustomization(isPremiumWithFractionalPremiumOnly) {
-  return ProductCatalog.canUserUse(ProductCatalog.PROFILE_PREMIUM_FEATURES, isPremiumWithFractionalPremiumOnly);
+export function canUsePremiumProfileCustomization(stateFromStores) {
+  return ProductCatalog.canUserUse(user2.Perk.PROFILE_PREMIUM_FEATURES, stateFromStores);
 }
 export function canUsePremiumAppIcons(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.APP_ICONS, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.APP_ICONS, currentUser);
 }
 export function canUsePremiumGuildMemberProfile(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.PREMIUM_GUILD_MEMBER_PROFILE, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.PREMIUM_GUILD_MEMBER_PROFILE, currentUser);
 }
 export function canUseClientThemes(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.CLIENT_THEMES, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.CLIENT_THEMES, currentUser);
 }
 export function canStreamQuality(MID, currentUser) {
   if (MID === obj.HIGH) {
-    let canUserUseResult = ProductCatalog.canUserUse(ProductCatalog.STREAM_HIGH_QUALITY, currentUser);
+    let canUserUseResult = ProductCatalog.canUserUse(user2.Perk.STREAM_HIGH_QUALITY, currentUser);
   } else {
     obj = ProductCatalog;
-    canUserUseResult = obj.canUserUse(ProductCatalog.STREAM_MID_QUALITY, currentUser);
+    canUserUseResult = obj.canUserUse(user2.Perk.STREAM_MID_QUALITY, currentUser);
   }
   return canUserUseResult;
 }
-export function canUseQuestOrbMultiplier(perks) {
-  return ProductCatalog.canUserUse(ProductCatalog.QUEST_ORB_MULTIPLIER, perks);
+export function canUseQuestOrbMultiplier(isFractionalPremiumWithNoStandardSub) {
+  let isPremiumExactlyResult = null != isFractionalPremiumWithNoStandardSub && !isFractionalPremiumWithNoStandardSub.isFractionalPremiumWithNoStandardSub();
+  if (isPremiumExactlyResult) {
+    isPremiumExactlyResult = PremiumTypeUtils.isPremiumExactly(isFractionalPremiumWithNoStandardSub, React2.TIER_2);
+  }
+  return isPremiumExactlyResult;
 }
 export function hasFreeBoosts(stateFromStores) {
-  return ProductCatalog.canUserUse(ProductCatalog.FREE_BOOSTS, stateFromStores);
+  return ProductCatalog.canUserUse(user2.Perk.FREE_BOOSTS, stateFromStores);
 }
 export function canUseCustomStickersEverywhere(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.STICKERS_EVERYWHERE, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.STICKERS_EVERYWHERE, currentUser);
 }
 export function canUseCustomBackgrounds(currentUser) {
-  return ProductCatalog.canUserUse(ProductCatalog.VIDEO_FILTER_ASSETS, currentUser);
+  return ProductCatalog.canUserUse(user2.Perk.VIDEO_FILTER_ASSETS, currentUser);
 }
 export function canUseCollectibles(user) {
-  return ProductCatalog.canUserUse(ProductCatalog.COLLECTIBLES, user);
+  return ProductCatalog.canUserUse(user2.Perk.PREMIUM_COLLECTIBLES, user);
 }
 export function canUseMonthlyOrbs(stateFromStores) {
   let perks;
@@ -118,7 +123,7 @@ export function canUseShopDiscounts(currentUser) {
   }
   let hasPerkResult = PerksStateUtils.hasPerk(perks, user2.Perk.SHOP_DISCOUNTS);
   if (!hasPerkResult) {
-    hasPerkResult = ProductCatalog.canUserUse(ProductCatalog.COLLECTIBLES, currentUser);
+    hasPerkResult = ProductCatalog.canUserUse(user2.Perk.PREMIUM_COLLECTIBLES, currentUser);
     const tmpResult = ProductCatalog;
   }
   return hasPerkResult;
@@ -130,8 +135,12 @@ export function canUseMoreQuestOrbs(perks) {
   }
   let hasPerkResult = PerksStateUtils.hasPerk(perks, user2.Perk.MORE_QUEST_ORBS);
   if (!hasPerkResult) {
-    hasPerkResult = ProductCatalog.canUserUse(ProductCatalog.QUEST_ORB_MULTIPLIER, perks);
-    const tmpResult = ProductCatalog;
+    let isPremiumExactlyResult = null != perks && !perks.isFractionalPremiumWithNoStandardSub();
+    if (isPremiumExactlyResult) {
+      isPremiumExactlyResult = PremiumTypeUtils.isPremiumExactly(perks, React2.TIER_2);
+      const tmpResult = PremiumTypeUtils;
+    }
+    hasPerkResult = isPremiumExactlyResult;
   }
   return hasPerkResult;
 }

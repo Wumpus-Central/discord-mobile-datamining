@@ -1,9 +1,9 @@
-// === Module 18976: ConjureFrameUpdateStore ===
+// === Module 18965: ConjureFrameUpdateStore ===
 
-// Module 18976 (ConjureFrameUpdateStore)
+// Module 18965 (ConjureFrameUpdateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FramesStore from "FramesStore" /* 6984 */;
+import FramesStore from "FramesStore" /* 6926 */;
 
 const require = globalThis.__r;
 

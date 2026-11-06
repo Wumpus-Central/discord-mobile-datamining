@@ -1,15 +1,15 @@
-// === Module 6913: UserGuildSettingsStore ===
+// === Module 6855: UserGuildSettingsStore ===
 
-// Module 6913 (UserGuildSettingsStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6855 (UserGuildSettingsStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtilsAll from "FlagUtils" /* 1398 */;
-import MuteTimers from "MuteTimers" /* 5078 */;
-import ImpersonateStore from "ImpersonateStore" /* 5048 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import MuteTimers from "MuteTimers" /* 5105 */;
+import ImpersonateStore from "ImpersonateStore" /* 5075 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildStore from "GuildStore" /* 5041 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const MuteTimersDefault = MuteTimers;
@@ -29,7 +29,7 @@ function updateUserGuildSettingsInternal(guild_id, channel_overrides) {
   }
   let keyByResult = channel_overrides1;
   if (channel_overrides1 instanceof Array) {
-    keyByResult = _modDef12.keyBy(channel_overrides1, "channel_id");
+    keyByResult = applyDefault.keyBy(channel_overrides1, "channel_id");
   }
   guild = GuildStore.getGuild(guild_id);
   if (null != guild) {
@@ -43,7 +43,7 @@ function updateUserGuildSettingsInternal(guild_id, channel_overrides) {
   const merged2 = Object.assign(channel_overrides);
   obj.channel_overrides = keyByResult;
   navigation.clearTimer(guild_id);
-  const item = _modDef12.forEach(channel_overrides, (channel_id) => {
+  const item = applyDefault.forEach(channel_overrides, (channel_id) => {
     navigation2.clearTimer(channel_id.channel_id);
   });
   closure_0 = guild_id;
@@ -64,7 +64,7 @@ function updateUserGuildSettingsInternal(guild_id, channel_overrides) {
       obj.muted = false;
     }
   }
-  const item1 = _modDef12.forEach(obj.channel_overrides, (muted) => {
+  const item1 = applyDefault.forEach(obj.channel_overrides, (muted) => {
     if (true === muted.muted) {
       if (timer.setTimer(muted.channel_id, muted.mute_config, () => {
         const channel_id = muted.channel_id;
@@ -105,22 +105,22 @@ function updateUserGuildSettingsInternal(guild_id, channel_overrides) {
   userGuildSettings[guild_id] = obj;
   let valueResult = null;
   if (null != userGuildSettings[guild_id].channel_overrides) {
-    const found = _modDef12(tmp19.channel_overrides).filter((item) => closure_1_0(closure_1_3[10]).computeIsMuted(item));
-    const arr3 = _modDef12(tmp19.channel_overrides);
+    const found = applyDefault(tmp19.channel_overrides).filter((item) => closure_1_0(closure_1_3[10]).computeIsMuted(item));
+    const arr3 = applyDefault(tmp19.channel_overrides);
     valueResult = found.map((channel_id) => channel_id.channel_id).value();
     const iter = found.map((channel_id) => channel_id.channel_id);
   }
-  const tmp14Result = _modDef12;
+  const tmp14Result = applyDefault;
   closure_24[guild_id] = new Set(valueResult);
   set = new Set(valueResult);
-  const found1 = _modDef12.filter(obj.channel_overrides, (flags) => {
+  const found1 = applyDefault.filter(obj.channel_overrides, (flags) => {
     let num = flags.flags;
     if (num == null) {
       num = 0;
     }
     return FlagUtilsAll.hasFlag(num, constants.OPT_IN_ENABLED);
   });
-  const tmp14Result2 = _modDef12;
+  const tmp14Result2 = applyDefault;
   optedInChannelsByGuild[guild_id] = new Set(found1.map((channel_id) => channel_id.channel_id));
   if (null != guild_id) {
     const _Set = Set;
@@ -206,12 +206,12 @@ function updateUserGuildChannelSettingsBulk(guildId, channel_overrides) {
 function handleGuildUpdate() {
   return true;
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ THREAD_CHANNEL_TYPES: closure_6, isPrivate: metroImportDefault } = ChannelRecord);
 const Constants = fn(1072);
 const UserNotificationSettings = Constants.UserNotificationSettings;
-const AccountNotificationFlags = fn(5088).AccountNotificationFlags;
-const UnreadSetting = fn(6914).UnreadSetting;
+const AccountNotificationFlags = fn(5115).AccountNotificationFlags;
+const UnreadSetting = fn(6856).UnreadSetting;
 const UserSettingsConstants = fn(1082);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};
@@ -256,19 +256,19 @@ prototype["initialize"] = function initialize(useNewNotifications) {
       if (prop == null) {
         prop = {};
       }
-      closure_25 = _modDef12.mapValues(prop, (items) => new Set(items));
-      const item = _modDef12.forEach(userGuildSettings, (channel_overrides, arg1) => {
+      closure_25 = applyDefault.mapValues(prop, (items) => new Set(items));
+      const item = applyDefault.forEach(userGuildSettings, (channel_overrides, arg1) => {
         let valueResult = null;
         if (null != channel_overrides.channel_overrides) {
-          const found = _modDef12(channel_overrides.channel_overrides).filter((item) => closure_1_0(closure_1_3[10]).computeIsMuted(item));
-          const arr = _modDef12(channel_overrides.channel_overrides);
+          const found = applyDefault(channel_overrides.channel_overrides).filter((item) => closure_1_0(closure_1_3[10]).computeIsMuted(item));
+          const arr = applyDefault(channel_overrides.channel_overrides);
           valueResult = found.map((channel_id) => channel_id.channel_id).value();
           const iter = found.map((channel_id) => channel_id.channel_id);
         }
         mutedChannels[arg1] = new Set(valueResult);
         set = new Set(valueResult);
       });
-      const tmp2Result = _modDef12;
+      const tmp2Result = applyDefault;
     }
   }
 };
@@ -667,7 +667,7 @@ prototype["getGuildFavorites"] = function getGuildFavorites(id) {
   } else {
     if (null == dependencyMap[id]) {
       const self = this;
-      const found = _modDef12.filter(this.getChannelOverrides(id), (flags) => {
+      const found = applyDefault.filter(this.getChannelOverrides(id), (flags) => {
         let num = flags.flags;
         if (num == null) {
           num = 0;
@@ -903,7 +903,7 @@ const userGuildSettingsStoreClass = new UserGuildSettingsStoreClass(DispatcherDe
             tmp5.muted = false;
           }
         }
-        let arr2 = _modDef12;
+        let arr2 = applyDefault;
         let item1 = arr2.forEach(tmp5.channel_overrides, (muted) => {
           if (true === muted.muted) {
             if (timer.setTimer(muted.channel_id, muted.mute_config, () => {
@@ -1035,7 +1035,7 @@ const userGuildSettingsStoreClass = new UserGuildSettingsStoreClass(DispatcherDe
       return false;
     } else {
       for (const key10009 in updates) {
-        let obj = _modDef12;
+        let obj = applyDefault;
         if (!obj.isEqual(updates[key10009], tmp4[key10009])) {
           continue;
         } else {
@@ -1086,7 +1086,7 @@ export function convertChannelOverridesToMap() {
   }
   let keyByResult = obj;
   if (obj instanceof Array) {
-    keyByResult = _modDef12.keyBy(obj, "channel_id");
+    keyByResult = applyDefault.keyBy(obj, "channel_id");
   }
   return keyByResult;
 }

@@ -1,14 +1,14 @@
-// === Module 19108: useAutoSearchGuildChannelTab ===
+// === Module 19097: useAutoSearchGuildChannelTab ===
 
-// Module 19108 (useAutoSearchGuildChannelTab)
-import _mod12 from "module_12" /* 12 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14117 */;
-import SearchUtils from "SearchUtils" /* 14124 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14142 */;
+// Module 19097 (useAutoSearchGuildChannelTab)
+import apply from "apply" /* 12 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14094 */;
+import SearchUtils from "SearchUtils" /* 14101 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14119 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(14133).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_4 = fn(14110).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
 
@@ -31,7 +31,7 @@ export function useAutoSearchGuildChannelTab(searchContext, arg1) {
   const items2 = [searchContext, arg1, callback];
   const effect1 = noop.useEffect(() => {
     if (!closure_1) {
-      const debounceResult = _mod12.debounce(callback, closure_4);
+      const debounceResult = apply.debounce(callback, closure_4);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult, true);
     }
   }, items2);

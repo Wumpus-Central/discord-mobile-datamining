@@ -1,6 +1,6 @@
-// === Module 9908: permissions ===
+// === Module 9858: permissions ===
 
-// Module 9908 (permissions)
+// Module 9858 (permissions)
 import Constants from "Constants" /* 1072 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import util from "util" /* 1113 */;

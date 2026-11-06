@@ -1,11 +1,11 @@
-// === Module 18232: FriendRequestsNotesSetting ===
+// === Module 18224: FriendRequestsNotesSetting ===
 
-// Module 18232 (FriendRequestsNotesSetting)
+// Module 18224 (FriendRequestsNotesSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4968 */;
-import SettingsConstants from "SettingsConstants" /* 8578 */;
-import HideFriendRequestNotesUtils from "HideFriendRequestNotesUtils" /* 15246 */;
-import SettingBuilders from "SettingBuilders" /* 11737 */;
+import UserSettings from "UserSettings" /* 4995 */;
+import SettingsConstants from "SettingsConstants" /* 8524 */;
+import HideFriendRequestNotesUtils from "HideFriendRequestNotesUtils" /* 15240 */;
+import SettingBuilders from "SettingBuilders" /* 11703 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

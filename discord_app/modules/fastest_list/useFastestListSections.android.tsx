@@ -1,7 +1,7 @@
-// === Module 7371: useFastestListSections ===
+// === Module 7318: useFastestListSections ===
 
-// Module 7371 (useFastestListSections)
-import FastestListItemTypeDefault from "FastestListItemType" /* 7372 */;
+// Module 7318 (useFastestListSections)
+import FastestListItemTypeDefault from "FastestListItemType" /* 7319 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/fastest_list/useFastestListSe
 export default function useFastestListSections(fastestListId) {
   fastestListId = fastestListId.fastestListId;
   const itemSize = fastestListId.itemSize;
-  const keyExtractor = fastestListId.keyExtractor;
+  keyExtractor = fastestListId.keyExtractor;
   let num = fastestListId.listFooterSize;
   if (num === undefined) {
     num = 0;

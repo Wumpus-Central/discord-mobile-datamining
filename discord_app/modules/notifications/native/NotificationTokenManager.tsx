@@ -1,6 +1,6 @@
-// === Module 16536: NotificationTokenManager ===
+// === Module 16533: NotificationTokenManager ===
 
-// Module 16536 (NotificationTokenManager)
+// Module 16533 (NotificationTokenManager)
 import _mod17 from "module_17" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
@@ -8,17 +8,17 @@ import util from "util" /* 1113 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import _modDef2995 from "module_2995" /* 2995 */;
-import PushNotificationDefault from "PushNotification" /* 11102 */;
-import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 14207 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16537 */;
-import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 16543 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 16544 */;
+import _modDef2992 from "module_2992" /* 2992 */;
+import PushNotificationDefault from "PushNotification" /* 11055 */;
+import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 14184 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16534 */;
+import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 16540 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 16541 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import MultiAccountStore from "MultiAccountStore" /* 14208 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15769 */;
+import MultiAccountStore from "MultiAccountStore" /* 14185 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15763 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import LifecycleManager from "LifecycleManager" /* 2125 */;
+import LifecycleManager from "LifecycleManager" /* 2120 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;
@@ -100,8 +100,8 @@ const prototype = NotificationTokenManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const self = this;
   if (obj.isAndroid()) {
-    self._denylistUnsubscribe = tmp(16540).initializeClientNotifDenylist();
-    const tmpResult = tmp(16540);
+    self._denylistUnsubscribe = tmp(16537).initializeClientNotifDenylist();
+    const tmpResult = tmp(16537);
   }
   if (null != self.token) {
     self.handleToken(self.token);
@@ -164,44 +164,44 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
   if (null != registerNotificationCategoriesAndGroups) {
     const obj = { calls: null, mediaConnections: null, messages: null, directMessages: null, friendRequests: null, polls: null, social: null, stageLive: null, guildEventLive: null, guildHighlights: null, forumThreadCreated: null, systemMessages: null, other: null, default: null, reactions: null };
     const intl = util.intl;
-    obj.calls = intl.string(_modDef2995["IUH/Oe"]);
+    obj.calls = intl.string(_modDef2992["IUH/Oe"]);
     const intl2 = util.intl;
-    obj.mediaConnections = intl2.string(_modDef2995.VeBD1N);
+    obj.mediaConnections = intl2.string(_modDef2992.VeBD1N);
     const intl3 = util.intl;
-    obj.messages = intl3.string(_modDef2995["4qWUAO"]);
+    obj.messages = intl3.string(_modDef2992["4qWUAO"]);
     const intl4 = util.intl;
-    obj.directMessages = intl4.string(_modDef2995.NGdNZb);
+    obj.directMessages = intl4.string(_modDef2992.NGdNZb);
     const intl5 = util.intl;
-    obj.friendRequests = intl5.string(_modDef2995.NxgGZA);
+    obj.friendRequests = intl5.string(_modDef2992.NxgGZA);
     const intl6 = util.intl;
-    obj.polls = intl6.string(_modDef2995.MOjygY);
+    obj.polls = intl6.string(_modDef2992.MOjygY);
     const intl7 = util.intl;
-    obj.social = intl7.string(_modDef2995["UzRF+8"]);
+    obj.social = intl7.string(_modDef2992["UzRF+8"]);
     const intl8 = util.intl;
-    obj.stageLive = intl8.string(_modDef2995["4n388K"]);
+    obj.stageLive = intl8.string(_modDef2992["4n388K"]);
     const intl9 = util.intl;
-    obj.guildEventLive = intl9.string(_modDef2995["40TIqW"]);
+    obj.guildEventLive = intl9.string(_modDef2992["40TIqW"]);
     const intl10 = util.intl;
     obj.guildHighlights = intl10.string(util.t.p5jg9S);
     const intl11 = util.intl;
-    obj.forumThreadCreated = intl11.string(_modDef2995.HibKoy);
+    obj.forumThreadCreated = intl11.string(_modDef2992.HibKoy);
     const intl12 = util.intl;
-    obj.systemMessages = intl12.string(_modDef2995.zJlwvV);
+    obj.systemMessages = intl12.string(_modDef2992.zJlwvV);
     const intl13 = util.intl;
-    obj.other = intl13.string(_modDef2995.kIrLfg);
+    obj.other = intl13.string(_modDef2992.kIrLfg);
     const intl14 = util.intl;
-    obj.default = intl14.string(_modDef2995["T+79Eo"]);
+    obj.default = intl14.string(_modDef2992["T+79Eo"]);
     const intl15 = util.intl;
     obj.reactions = intl15.string(util.t.gHp0C4);
     const obj2 = { realtime: null, social: null, server: null, other: null };
     const intl16 = util.intl;
-    obj2.realtime = intl16.string(_modDef2995.S5cB9e);
+    obj2.realtime = intl16.string(_modDef2992.S5cB9e);
     const intl17 = util.intl;
-    obj2.social = intl17.string(_modDef2995["UzRF+8"]);
+    obj2.social = intl17.string(_modDef2992["UzRF+8"]);
     const intl18 = util.intl;
-    obj2.server = intl18.string(_modDef2995.zRKbpz);
+    obj2.server = intl18.string(_modDef2992.zRKbpz);
     const intl19 = util.intl;
-    obj2.other = intl19.string(_modDef2995.q5M7HV);
+    obj2.other = intl19.string(_modDef2992.q5M7HV);
     const result = registerNotificationCategoriesAndGroups(obj, obj2);
   } else if (null != registerNotificationCategories) {
     const obj3 = { calls: null, mediaConnections: null, messages: null, directMessages: null, social: null, gameDetection: null, stageLive: null, guildEventLive: null, guildHighlights: null, forumThreadCreated: null, other: null, otherHighPriority: null };

@@ -1,21 +1,21 @@
-// === Module 9290: UserSearchManager ===
+// === Module 9236: UserSearchManager ===
 
-// Module 9290 (UserSearchManager)
+// Module 9236 (UserSearchManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import Constants from "Constants" /* 1072 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import FlagUtilsAll from "FlagUtils" /* 1398 */;
-import ChannelRecord from "ChannelRecord" /* 4996 */;
-import UserUtilsDefault from "UserUtils" /* 5197 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9291 */;
-import UserRecord from "UserRecord" /* 1399 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import ChannelRecord from "ChannelRecord" /* 5023 */;
+import UserUtilsDefault from "UserUtils" /* 5224 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9237 */;
+import UserRecord from "UserRecord" /* 1404 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
 import size from "module_2" /* 2 */;
 
 function getTransformedUser(user) {
@@ -445,7 +445,7 @@ class UserSearchManager extends tmp2 {
     applyArgumentsResult._handleConnectionOpenSupplemental = function _handleConnectionOpenSupplemental(guilds) {
       guilds = guilds.guilds;
       const timerId = setTimeout(() => {
-        _modDef12.flatMap(guilds, (arg0) => {
+        applyDefault.flatMap(guilds, (arg0) => {
           ({ members, id: closure_0 } = arg0);
           items = [];
           const item = members.forEach((user) => {
@@ -468,7 +468,7 @@ class UserSearchManager extends tmp2 {
           return items;
         });
         items = [
-          ..._modDef12.flatMap(guilds, (activity_instances) => {
+          ...applyDefault.flatMap(guilds, (activity_instances) => {
             closure_0 = activity_instances;
             items = [];
             activity_instances = activity_instances.activity_instances;

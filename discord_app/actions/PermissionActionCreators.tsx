@@ -1,6 +1,6 @@
-// === Module 19319: PermissionActionCreators ===
+// === Module 19311: PermissionActionCreators ===
 
-// Module 19319 (PermissionActionCreators)
+// Module 19311 (PermissionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

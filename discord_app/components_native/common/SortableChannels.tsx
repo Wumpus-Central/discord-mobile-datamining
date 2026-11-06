@@ -1,8 +1,8 @@
-// === Module 18491: SortableChannels ===
+// === Module 18481: SortableChannels ===
 
-// Module 18491 (SortableChannels)
+// Module 18481 (SortableChannels)
 import noop from "module_19" /* 19 */;
-import apply from "module_12" /* 12 */;
+import apply from "apply" /* 12 */;
 
 let require = fn;
 get_ActivityIndicator = fn(17);

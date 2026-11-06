@@ -1,12 +1,12 @@
-// === Module 18158: ShopFlashList ===
+// === Module 18150: ShopFlashList ===
 
-// Module 18158 (ShopFlashList)
+// Module 18150 (ShopFlashList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import _mod7433 from "module_7433" /* 7433 */;
-import generated_NoResults from "generated/NoResults" /* 8951 */;
-import useScrollToInitialIndexOnce from "useScrollToInitialIndexOnce" /* 18121 */;
+import _mod7380 from "module_7380" /* 7380 */;
+import generated_NoResults from "generated/NoResults" /* 8897 */;
+import useScrollToInitialIndexOnce from "useScrollToInitialIndexOnce" /* 18109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ function ShopEmptyState() {
   return jsx(native.EmptyState, { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -34,5 +34,5 @@ export default function ShopFlashList(initialScrollIndex) {
   }
   const obj = useScrollToInitialIndexOnce;
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce({ shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS });
-  return jsx(_mod7433.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, keyExtractor, onViewableItemsChanged, maintainVisibleContentPosition: { disabled: true }, contentContainerStyle: tmp2.contentContainer });
+  return jsx(_mod7380.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, keyExtractor, onViewableItemsChanged, maintainVisibleContentPosition: { disabled: true }, contentContainerStyle: tmp2.contentContainer });
 };

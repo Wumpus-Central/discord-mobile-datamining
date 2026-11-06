@@ -1,9 +1,9 @@
-// === Module 14722: useCollectiblesShopStyles ===
+// === Module 14699: useCollectiblesShopStyles ===
 
-// Module 14722 (useCollectiblesShopStyles)
+// Module 14699 (useCollectiblesShopStyles)
 import nativeDefault from "native" /* 575 */;
-import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles" /* 14723 */;
-import tinycolor_mod from "tinycolor" /* 7875 */;
+import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles" /* 14700 */;
+import tinycolor_mod from "tinycolor" /* 7829 */;
 
 let tinycolor = tinycolor_mod;
 const importDefaultResultResult = tinycolor(nativeDefault.unsafe_rawColors.WHITE);

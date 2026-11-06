@@ -1,8 +1,8 @@
-// === Module 14635: canManageChannelList ===
+// === Module 14612: canManageChannelList ===
 
-// Module 14635 (canManageChannelList)
-import ChannelStore from "ChannelStore" /* 4992 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
+// Module 14612 (canManageChannelList)
+import ChannelStore from "ChannelStore" /* 5019 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
 
 const Permissions = fn(1072).Permissions;
 const size = fn(2);

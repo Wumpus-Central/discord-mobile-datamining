@@ -1,15 +1,15 @@
-// === Module 17974: PremiumTrialOfferActionSheet ===
+// === Module 17962: PremiumTrialOfferActionSheet ===
 
-// Module 17974 (PremiumTrialOfferActionSheet)
+// Module 17962 (PremiumTrialOfferActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10092 */;
-import UserTrialActionCreatorsDefault from "UserTrialActionCreators" /* 15480 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10043 */;
+import UserTrialActionCreatorsDefault from "UserTrialActionCreators" /* 15474 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const PremiumTypes = fn(1387).PremiumTypes;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx");

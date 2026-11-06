@@ -1,23 +1,23 @@
-// === Module 11034: ConjureConnectionStore ===
+// === Module 10986: ConjureConnectionStore ===
 
-// Module 11034 (ConjureConnectionStore)
+// Module 10986 (ConjureConnectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import createNonce from "createNonce" /* 10499 */;
-import conjureChatConnection from "conjureChatConnection" /* 11056 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11059 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11090 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 11116 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 11135 */;
-import conjurePublishConnection from "conjurePublishConnection" /* 11144 */;
-import conjurePublishScheduleRequests from "conjurePublishScheduleRequests" /* 11150 */;
-import conjureLinkEmbeds from "conjureLinkEmbeds" /* 11163 */;
+import createNonce from "createNonce" /* 10451 */;
+import conjureChatConnection from "conjureChatConnection" /* 11008 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11011 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11043 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 11069 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 11088 */;
+import conjurePublishConnection from "conjurePublishConnection" /* 11097 */;
+import conjurePublishScheduleRequests from "conjurePublishScheduleRequests" /* 11103 */;
+import conjureLinkEmbeds from "conjureLinkEmbeds" /* 11116 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureChatStore from "ConjureChatStore" /* 11035 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 11041 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
+import ConjureChatStore from "ConjureChatStore" /* 10987 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10993 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
 
 require = fn;
 function setConnState(projectId, open) {
@@ -55,7 +55,7 @@ function appendFailedUserMessage(projectId, nonce, message) {
     id = currentUser.id;
   }
   const result = map2.set(nonce, id);
-  const obj3 = { type: "CONJURE_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null, held: "sa" };
+  const obj3 = { type: "CONJURE_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null, held: "description" };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
   if (currentUser1 != null) {
@@ -178,8 +178,8 @@ function handleEvent(projectId, pendingEvents, type) {
           if (attachments != null) {
             mapped = attachments.map((id) => id.id);
           }
-          obj = { templateId: null, remix: null, clarificationAnswers: null, linkEmbeds: null };
-          ({ templateId: obj.templateId, remix: obj.remix, clarificationAnswers: obj.clarificationAnswers, linkEmbeds: obj.linkEmbeds } = tmp6);
+          obj = { templateId: null, remix: null, copy: null, clarificationAnswers: null, linkEmbeds: null };
+          ({ templateId: obj.templateId, remix: obj.remix, copy: obj.copy, clarificationAnswers: obj.clarificationAnswers, linkEmbeds: obj.linkEmbeds } = tmp6);
           ws.sendUserMessage(content, nonce, mapped, obj);
         } catch (tmp18) {
           let message = tmp2;
@@ -564,43 +564,43 @@ function closeAllConnections() {
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
   conjureMediaTickets.clearMediaTickets();
 }
-const getOlderHistoryCursor = fn(11035).getOlderHistoryCursor;
-const ConjureBrowserSessionsStore = fn(11044);
-const ConjureSmartContextStore = fn(11045);
-const ConjureDebugLogStore = fn(11046);
-const ConjureLiveReloadStore = fn(11048);
-const ConjureModelSettingsStore = fn(11049);
-const ConjureOverlayBackgroundStore = fn(11050);
-const ConjurePublishStatusStore = fn(11051);
-const ConjureRemixStore = fn(11052);
-const ConjureSettingsStore = fn(11053);
-const ConjureSpendLimitStore = fn(11054);
-const ConjureVoiceChannelPinStore = fn(11055);
+const getOlderHistoryCursor = fn(10987).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(10996);
+const ConjureSmartContextStore = fn(10997);
+const ConjureDebugLogStore = fn(10998);
+const ConjureLiveReloadStore = fn(11000);
+const ConjureModelSettingsStore = fn(11001);
+const ConjureOverlayBackgroundStore = fn(11002);
+const ConjurePublishStatusStore = fn(11003);
+const ConjureRemixStore = fn(11004);
+const ConjureSettingsStore = fn(11005);
+const ConjureSpendLimitStore = fn(11006);
+const ConjureVoiceChannelPinStore = fn(11007);
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(11080).browserSessionsFrameHandlers);
-let merged1 = Object.assign(fn(11056).chatFrameHandlers);
-const merged2 = Object.assign(fn(11081).debugFrameHandlers);
-const merged3 = Object.assign(fn(11083).hostAccessFrameHandlers);
-const merged4 = Object.assign(fn(11085).liveReloadFrameHandlers);
-const merged5 = Object.assign(fn(11086).modelSettingsFrameHandlers);
-const merged6 = Object.assign(fn(11087).previewFrameHandlers);
-const merged7 = Object.assign(fn(11144).publishFrameHandlers);
-const merged8 = Object.assign(fn(11150).publishScheduleFrameHandlers);
-const merged9 = Object.assign(fn(11152).remixFrameHandlers);
-const merged10 = Object.assign(fn(11153).settingsFrameHandlers);
-const merged11 = Object.assign(fn(11155).smartContextFrameHandlers);
+let merged = Object.assign(fn(11033).browserSessionsFrameHandlers);
+let merged1 = Object.assign(fn(11008).chatFrameHandlers);
+const merged2 = Object.assign(fn(11034).debugFrameHandlers);
+const merged3 = Object.assign(fn(11036).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(11038).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(11039).modelSettingsFrameHandlers);
+const merged6 = Object.assign(fn(11040).previewFrameHandlers);
+const merged7 = Object.assign(fn(11097).publishFrameHandlers);
+const merged8 = Object.assign(fn(11103).publishScheduleFrameHandlers);
+const merged9 = Object.assign(fn(11105).remixFrameHandlers);
+const merged10 = Object.assign(fn(11106).settingsFrameHandlers);
+const merged11 = Object.assign(fn(11108).smartContextFrameHandlers);
 let obj2 = {};
-const merged12 = Object.assign(fn(11156).appBuildRequestStepHandlers);
-const merged13 = Object.assign(fn(11056).chatStepHandlers);
-const merged14 = Object.assign(fn(11081).debugStepHandlers);
-const merged15 = Object.assign(fn(11087).previewStepHandlers);
-const merged16 = Object.assign(fn(11157).projectStepHandlers);
-const merged17 = Object.assign(fn(11144).publishStepHandlers);
-const merged18 = Object.assign(fn(11158).usageStepHandlers);
+const merged12 = Object.assign(fn(11109).appBuildRequestStepHandlers);
+const merged13 = Object.assign(fn(11008).chatStepHandlers);
+const merged14 = Object.assign(fn(11034).debugStepHandlers);
+const merged15 = Object.assign(fn(11040).previewStepHandlers);
+const merged16 = Object.assign(fn(11110).projectStepHandlers);
+const merged17 = Object.assign(fn(11097).publishStepHandlers);
+const merged18 = Object.assign(fn(11111).usageStepHandlers);
 const set1 = new Set(["hello", "history", "capture_preview", "control_preview", "control_claim", "control_abort", "capture_claim", "preview_operation", "request_upstream_ticket", "host_approvals"]);
 const map3 = new Map();
 const map4 = new Map();
@@ -740,7 +740,7 @@ export function sendUserMessage(projectId, trimmed, arg2) {
   if (arg3 === undefined) {
     obj = {};
   }
-  ({ clarificationAnswers, nonce, templateId, remix } = obj);
+  ({ copy, clarificationAnswers, nonce, templateId, remix } = obj);
   trimmed = trimmed.trim();
   let tmp8;
   if (null != arg2) {
@@ -750,11 +750,13 @@ export function sendUserMessage(projectId, trimmed, arg2) {
   }
   if ("" === trimmed) {
     if (null == tmp8) {
-      return false;
+      if (true !== copy) {
+        return false;
+      }
     }
   }
   const result = conjureLinkEmbeds.readyConjureLinkEmbeds(trimmed);
-  const obj3 = { content: trimmed, nonce: null, attachments: null, templateId: null, remix: null };
+  const obj3 = { content: trimmed, nonce: null, attachments: null, templateId: null, remix: null, copy: null };
   let nonce1 = nonce;
   if (nonce == null) {
     nonce1 = createNonce.createNonce();
@@ -764,6 +766,7 @@ export function sendUserMessage(projectId, trimmed, arg2) {
   obj3.attachments = tmp8;
   obj3.templateId = templateId;
   obj3.remix = remix;
+  obj3.copy = copy;
   if (null != clarificationAnswers) {
     const obj4 = { clarificationAnswers };
     let obj5 = obj4;
@@ -797,8 +800,8 @@ export function sendUserMessage(projectId, trimmed, arg2) {
       if (attachments != null) {
         mapped = attachments.map((id) => id.id);
       }
-      const obj8 = { templateId: null, remix: null, clarificationAnswers: null, linkEmbeds: null };
-      ({ templateId: obj9.templateId, remix: obj9.remix, clarificationAnswers: obj9.clarificationAnswers, linkEmbeds: obj9.linkEmbeds } = obj3);
+      const obj8 = { templateId: null, remix: null, copy: null, clarificationAnswers: null, linkEmbeds: null };
+      ({ templateId: obj9.templateId, remix: obj9.remix, copy: obj9.copy, clarificationAnswers: obj9.clarificationAnswers, linkEmbeds: obj9.linkEmbeds } = obj3);
       ws.sendUserMessage(content, nonce2, mapped, obj8);
       return true;
     }

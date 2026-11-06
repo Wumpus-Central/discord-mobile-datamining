@@ -1,16 +1,16 @@
-// === Module 12746: PrivateChannelUserList ===
+// === Module 12711: PrivateChannelUserList ===
 
-// Module 12746 (PrivateChannelUserList)
-import _modDef12 from "module_12" /* 12 */;
+// Module 12711 (PrivateChannelUserList)
+import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8896 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9681 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12748 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8842 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9630 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12713 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -54,8 +54,8 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
   const items2 = [stateFromStores];
   const stateFromStoresArray = channelId(onUserPress[9]).useStateFromStoresArray(items1, () => {
     if (null != stateFromStores) {
-      const mapped = _modDef12(tmp.recipients).map(UserStore.getUser);
-      const arr2 = _modDef12(tmp.recipients);
+      const mapped = applyDefault(tmp.recipients).map(UserStore.getUser);
+      const arr2 = applyDefault(tmp.recipients);
       const found = mapped.unshift(UserStore.getCurrentUser()).filter(GlobalUtils.isNotNullish);
       const arr = mapped.unshift(UserStore.getCurrentUser());
       items = found.sortBy((username) => username.username.toLowerCase()).value();

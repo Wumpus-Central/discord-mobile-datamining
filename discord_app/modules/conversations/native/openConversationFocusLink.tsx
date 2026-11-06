@@ -1,6 +1,6 @@
-// === Module 10370: openConversationFocusLink ===
+// === Module 10322: openConversationFocusLink ===
 
-// Module 10370 (openConversationFocusLink)
+// Module 10322 (openConversationFocusLink)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

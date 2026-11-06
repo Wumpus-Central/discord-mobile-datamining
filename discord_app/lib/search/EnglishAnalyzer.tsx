@@ -1,9 +1,9 @@
-// === Module 19066: EnglishAnalyzer ===
+// === Module 19055: EnglishAnalyzer ===
 
-// Module 19066 (EnglishAnalyzer)
-import _modDef12 from "module_12" /* 12 */;
-import snowballStemmer from "snowballStemmer" /* 19067 */;
-import Search from "Search" /* 19069 */;
+// Module 19055 (EnglishAnalyzer)
+import applyDefault from "apply" /* 12 */;
+import snowballStemmer from "snowballStemmer" /* 19056 */;
+import Search from "Search" /* 19058 */;
 import size from "module_2" /* 2 */;
 
 function stripPossessive(item10009) {
@@ -97,8 +97,8 @@ function createHighlightMatcher(str) {
     tmp3 = str.length <= Search.SEARCH_PARTIAL_NAME_MATCH_MAX_QUERY_LENGTH;
   }
   const obj = { words: null, supportPartialMatches: null };
-  const mapped = _modDef12(str.split(/\W+/)).map(stripPossessive);
-  const tmp4Result = _modDef12(str.split(/\W+/));
+  const mapped = applyDefault(str.split(/\W+/)).map(stripPossessive);
+  const tmp4Result = applyDefault(str.split(/\W+/));
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
@@ -149,8 +149,8 @@ const set = new Set(["a", "an", "and", "are", "as", "at", "be", "but", "by", "fo
 const result = size.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
 
 export function analyze(str) {
-  const mapped = _modDef12(str.split(/\W+/)).map(stripPossessive);
-  const tmpResult = _modDef12(str.split(/\W+/));
+  const mapped = applyDefault(str.split(/\W+/)).map(stripPossessive);
+  const tmpResult = applyDefault(str.split(/\W+/));
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);

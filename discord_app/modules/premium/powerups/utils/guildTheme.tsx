@@ -1,13 +1,13 @@
-// === Module 14306: guildTheme ===
+// === Module 14283: guildTheme ===
 
-// Module 14306 (guildTheme)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14307 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5355 */;
+// Module 14283 (guildTheme)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14284 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5375 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(5356).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5376).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/guildTheme.tsx");
 
@@ -30,7 +30,7 @@ export function useShouldShowGuildThemeRollback(guildId, useGuildPowerupNewPerkM
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 5359).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 5379).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const obj = require("initialize");
   const tmp5 = usePowerupActiveStatusDefault(guildId, tmp4);

@@ -1,26 +1,28 @@
-// === Module 7627: ChannelActionCreators ===
+// === Module 7572: ChannelActionCreators ===
 
-// Module 7627 (ChannelActionCreators)
+// Module 7572 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import shared from "shared" /* 5150 */;
-import RootNavigationRef from "RootNavigationRef" /* 5325 */;
-import transitionToChannel from "transitionToChannel" /* 5893 */;
-import preloadChannelDefault from "preloadChannel" /* 5895 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6844 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 7031 */;
+import shared from "shared" /* 5177 */;
+import RootNavigationRef from "RootNavigationRef" /* 5345 */;
+import transitionToChannel from "transitionToChannel" /* 5912 */;
+import preloadChannelDefault from "preloadChannel" /* 5914 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6786 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6973 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 7582 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 7589 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7628 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
+import ChangelogStore from "ChangelogStore" /* 7573 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4996).createChannelRecordFromServer;
+let closure_6 = fn(5023).createChannelRecordFromServer;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AbortCodes: closure_10, Endpoints: closure_11, Routes: closure_12, ChannelTypes: map1 } = Constants);
 const size = fn(2);
@@ -100,13 +102,13 @@ export default {
                 }
               }
               v0 = 1;
-              const HTTP = closure_0(tmp43[8]).HTTP;
+              const HTTP = closure_0(tmp52[8]).HTTP;
               const request = { url: constants2.USER_CHANNELS, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
               const obj5 = { recipients: _getRecipientsResult };
               request.body = obj5;
-              const obj7 = { location: _location };
-              request.context = obj7;
-              request.rejectWithError = closure_0(tmp43[8]).rejectWithMigratedError();
+              const obj6 = { location: _location };
+              request.context = obj6;
+              request.rejectWithError = closure_0(tmp52[8]).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
               const obj8 = { value: HTTP.post(request), done: false };
@@ -114,7 +116,7 @@ export default {
             }
           } else if (1 === tmp7) {
             v0 = 0;
-            closure_128_2 = tmp43;
+            closure_128_2 = tmp52;
             let code;
             if (closure_128_2 != null) {
               const body = closure_128_2.body;
@@ -123,7 +125,7 @@ export default {
               }
             }
             if (code === constants.QUARANTINED) {
-              tmp3(tmp43[9])();
+              tmp3(tmp52[11])();
             }
             throw closure_128_2;
           } else if (arg0 === 1) {
@@ -136,6 +138,10 @@ export default {
             return obj9;
           } else {
             closure_128_1 = value;
+            if (closure_128_1.body.type === constants3.GROUP_DM) {
+              tmp3(tmp52[9]).fireSurveyAction(closure_0(tmp52[10]).SurveyActionTypes.GROUP_DM_CREATED);
+              const obj = tmp3(tmp52[9]);
+            }
             if (closure_129_5) {
               if (closure_129_4 != null) {
                 closure_129_4();
@@ -144,13 +150,13 @@ export default {
             }
             v0 = 0;
             c5 = 3;
-            const obj = { value: closure_128_1.body.id, done: true };
-            return obj;
+            const obj10 = { value: closure_128_1.body.id, done: true };
+            return obj10;
           }
-        } catch (tmp43) {
+        } catch (tmp52) {
           if (tmp4 === v0) {
             c5 = tmp2;
-            throw tmp43;
+            throw tmp52;
           } else {
             c4 = tmp;
           }
@@ -192,13 +198,13 @@ export default {
               closure_0 = tmp7;
               closure_128_0 = undefined;
               c3 = 1;
-              const HTTP = closure_0(tmp31[8]).HTTP;
+              const HTTP = closure_0(tmp36[8]).HTTP;
               const request = { url: constants2.USER_GROUP_DM_SHELL, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
               const obj4 = { recipient_id };
               request.body = obj4;
               const obj5 = { location: _location };
               request.context = obj5;
-              request.rejectWithError = closure_0(tmp31[8]).rejectWithMigratedError();
+              request.rejectWithError = closure_0(tmp36[8]).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
               const obj6 = { value: HTTP.post(request), done: false };
@@ -206,7 +212,7 @@ export default {
             }
           } else if (1 === tmp7) {
             c3 = 0;
-            closure_128_1 = tmp31;
+            closure_128_1 = tmp36;
             let code;
             if (closure_128_1 != null) {
               const body = closure_128_1.body;
@@ -215,7 +221,7 @@ export default {
               }
             }
             if (code === constants.QUARANTINED) {
-              tmp3(tmp31[9])();
+              tmp3(tmp36[11])();
             }
             throw closure_128_1;
           } else if (arg0 === 1) {
@@ -228,6 +234,10 @@ export default {
             return obj7;
           } else {
             closure_128_0 = value;
+            if (closure_128_0.body.type === constants3.GROUP_DM) {
+              tmp3(tmp36[9]).fireSurveyAction(closure_0(tmp36[10]).SurveyActionTypes.GROUP_DM_CREATED);
+              const obj = tmp3(tmp36[9]);
+            }
             if (closure_129_3) {
               if (closure_129_2 != null) {
                 closure_129_2();
@@ -236,13 +246,13 @@ export default {
             }
             c3 = 0;
             c5 = 3;
-            const obj = { value: closure_128_0.body.id, done: true };
-            return obj;
+            const obj8 = { value: closure_128_0.body.id, done: true };
+            return obj8;
           }
-        } catch (tmp31) {
+        } catch (tmp36) {
           if (tmp4 === c3) {
             c5 = tmp2;
-            throw tmp31;
+            throw tmp36;
           } else {
             c4 = tmp;
           }
@@ -294,6 +304,10 @@ export default {
       request.rejectWithError = tmp2(1282).rejectWithMigratedError();
       await HTTP.post(request);
       closure_128_0 = value;
+      if (closure_128_0.body.type === constants2.GROUP_DM) {
+        tmp5(7582).fireSurveyAction(tmp2(7589).SurveyActionTypes.GROUP_DM_CREATED);
+        tmp5(7582);
+      }
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp5(572).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
       return closure_128_1.id;
@@ -421,14 +435,14 @@ export default {
     if (flag3 == null) {
       flag3 = false;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "ao" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "isArray" }, silent: flag2 });
     if (flag) {
       flag3(1099).transitionTo(constants2.FRIENDS);
       const obj6 = flag3(1099);
     }
     const HTTP = flag3(1282).HTTP;
     const request = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "ao" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "isArray" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1282).rejectWithMigratedError();
     const obj8 = flag3(1282);
@@ -479,7 +493,7 @@ export default {
     closure_1 = arg0;
     _require = arg3;
     const HTTP = require("HTTPUtils").HTTP;
-    const obj = { url: closure_11.CHANNEL_RECIPIENT(arg0, arg1), context: { location }, oldFormErrors: true, rejectWithError: true };
+    let obj = { url: closure_11.CHANNEL_RECIPIENT(arg0, arg1), context: { location }, oldFormErrors: true, rejectWithError: true };
     const obj2 = { location };
     const putResult = HTTP.put(obj);
     return HTTP.put(obj).then((status) => {
@@ -490,6 +504,7 @@ export default {
         closure_0();
       }
       if (201 === status.status) {
+        QualtricsActionCreatorsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.GROUP_DM_CREATED);
         let id = self._openPrivateChannel(status.body).id;
       } else {
         id = closure_1;
@@ -544,8 +559,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7640).checkGuildTemplateDirty(closure_128_2);
-        name(7640);
+        const result = name(7593).checkGuildTemplateDirty(closure_128_2);
+        name(7593);
       }
       return closure_128_1;
     })();
@@ -604,7 +619,7 @@ export default {
               const obj8 = {};
               const merged = Object.assign(obj6);
               obj8.status = "initiated";
-              icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
+              icon(_location[17]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
               c3 = 1;
               const HTTP = channel_id(_location[8]).HTTP;
               const request = { url: closure_1_11.CHANNEL(channel_id), body: null, oldFormErrors: true, rejectWithError: true, failImmediatelyWhenRateLimited: true };
@@ -637,7 +652,7 @@ export default {
               }
             }
             obj11.error_message = message;
-            icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj11);
+            icon(_location[17]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj11);
             throw closure_128_4;
           } else if (arg0 === 1) {
             c5 = 3;
@@ -652,7 +667,7 @@ export default {
             const obj13 = {};
             const merged2 = Object.assign(closure_128_1);
             obj13.status = "success";
-            icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj13);
+            icon(_location[17]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj13);
             let guildId;
             if (closure_128_0 != null) {
               guildId = closure_128_0.getGuildId();
@@ -668,8 +683,8 @@ export default {
               obj = closure_128_0;
             }
             if (!tmp11) {
-              const result = icon(_location[19]).checkGuildTemplateDirty(closure_128_3);
-              const obj2 = icon(_location[19]);
+              const result = icon(_location[21]).checkGuildTemplateDirty(closure_128_3);
+              const obj2 = icon(_location[21]);
             }
             c3 = 0;
             c5 = 3;
@@ -744,8 +759,8 @@ export default {
                 const obj8 = {};
                 const merged = Object.assign(obj6);
                 obj8.status = "initiated";
-                tmp3(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
-                const obj9 = tmp3(_location[15]);
+                tmp3(_location[17]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
+                const obj9 = tmp3(_location[17]);
               }
               c3 = 1;
               const HTTP = channel_id(_location[8]).HTTP;
@@ -782,8 +797,8 @@ export default {
                 }
               }
               obj12.error_message = message;
-              tmp3(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj12);
-              const obj7 = tmp3(_location[15]);
+              tmp3(_location[17]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj12);
+              const obj7 = tmp3(_location[17]);
             }
             throw closure_128_5;
           } else if (arg0 === 1) {
@@ -811,15 +826,15 @@ export default {
               obj = closure_128_1;
             }
             if (!tmp12) {
-              const result = tmp3(_location[19]).checkGuildTemplateDirty(closure_128_4);
-              const obj2 = tmp3(_location[19]);
+              const result = tmp3(_location[21]).checkGuildTemplateDirty(closure_128_4);
+              const obj2 = tmp3(_location[21]);
             }
             if (closure_128_0) {
               const obj14 = {};
               const merged2 = Object.assign(closure_128_2);
               obj14.status = "success";
-              tmp3(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj14);
-              const obj3 = tmp3(_location[15]);
+              tmp3(_location[17]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj14);
+              const obj3 = tmp3(_location[17]);
             }
             c3 = 0;
             c5 = 3;
@@ -873,7 +888,7 @@ export default {
       const request = { url: closure_1_11.GUILD_CHANNELS(tmp5), body: obj4, oldFormErrors: true, rejectWithError: tmp5(parent_id[8]).rejectWithMigratedError() };
       await HTTP.post(request);
       closure_128_0 = value;
-      const result = name(parent_id[19]).checkGuildTemplateDirty(closure_129_0);
+      const result = name(parent_id[21]).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -894,7 +909,7 @@ export default {
       await "HermesInternal";
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0);
-      tmp3(c2[13]).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
+      tmp3(c2[15]).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
       c2 = 0;
       return closure_128_1;
     })();

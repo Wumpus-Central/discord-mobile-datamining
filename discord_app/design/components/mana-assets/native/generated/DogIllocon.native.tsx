@@ -1,20 +1,20 @@
-// === Module 12925: DogIllocon ===
+// === Module 12890: DogIllocon ===
 
-// Module 12925 (DogIllocon)
-import FastImageDefault from "FastImage" /* 5854 */;
-import assetHelpers from "assetHelpers" /* 7213 */;
-import _modDef12926 from "module_12926" /* 12926 */;
-import _modDef12927 from "module_12927" /* 12927 */;
-import _modDef12928 from "module_12928" /* 12928 */;
+// Module 12890 (DogIllocon)
+import FastImageDefault from "FastImage" /* 5872 */;
+import assetHelpers from "assetHelpers" /* 7160 */;
+import _modDef12891 from "module_12891" /* 12891 */;
+import _modDef12892 from "module_12892" /* 12892 */;
+import _modDef12893 from "module_12893" /* 12893 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12926 }, 3: null };
-const obj2 = { uri: _modDef12926 };
-obj[2] = { uri: _modDef12927 };
-const obj3 = { uri: _modDef12927 };
-obj[3] = { uri: _modDef12928 };
+let obj = { 1: null, 2: { uri: _modDef12891 }, 3: null };
+const obj2 = { uri: _modDef12891 };
+obj[2] = { uri: _modDef12892 };
+const obj3 = { uri: _modDef12892 };
+obj[3] = { uri: _modDef12893 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DogIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function DogIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7213).getAssetSource(obj);
+  obj.source = num(7160).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

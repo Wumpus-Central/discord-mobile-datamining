@@ -1,13 +1,13 @@
-// === Module 19834: MessageCodedLinkManager ===
+// === Module 19840: MessageCodedLinkManager ===
 
-// Module 19834 (MessageCodedLinkManager)
-import findCodedLinksDefault from "findCodedLinks" /* 5885 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19844 */;
+// Module 19840 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 5904 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19850 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7782 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import InviteStore from "InviteStore" /* 5886 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7736 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import InviteStore from "InviteStore" /* 5905 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {
@@ -136,76 +136,80 @@ function resolveMessageCodedLinks(content) {
                                 if (code(dependencyMap[6]).CodedLinkType.EXPERIMENT !== type) {
                                   if (code(dependencyMap[6]).CodedLinkType.GAME_PROFILE !== type) {
                                     if (code(dependencyMap[6]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                      if (code(dependencyMap[6]).CodedLinkType.USER_PROFILE !== type) {
-                                        if (code(dependencyMap[6]).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
-                                          if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
-                                            const result2 = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
-                                              if (dependencyMap === 2) {
-                                                dependencyMap = 3;
-                                                throw new TypeError("Generator functions may not be called on executing generators");
-                                              } else if (tmp3 === 3) {
-                                                if (arg0 === 1) {
-                                                  throw value;
-                                                } else if (arg0 === 2) {
-                                                  const obj2 = { value, done: true };
-                                                  return obj2;
-                                                } else {
-                                                  return { value: "HermesInternal", done: null };
-                                                }
-                                              } else {
-                                                try {
-                                                  dependencyMap = 2;
-                                                  if (0 === v1) {
+                                      if (code(dependencyMap[6]).CodedLinkType.CONJURE_PROJECT !== type) {
+                                        if (code(dependencyMap[6]).CodedLinkType.USER_WISHLIST !== type) {
+                                          if (code(dependencyMap[6]).CodedLinkType.USER_PROFILE !== type) {
+                                            if (code(dependencyMap[6]).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
+                                              if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
+                                                const result2 = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
+                                                  if (dependencyMap === 2) {
+                                                    dependencyMap = 3;
+                                                    throw new TypeError("Generator functions may not be called on executing generators");
+                                                  } else if (tmp3 === 3) {
                                                     if (arg0 === 1) {
-                                                      dependencyMap = 3;
                                                       throw value;
                                                     } else if (arg0 === 2) {
-                                                      dependencyMap = 3;
-                                                      const obj3 = { value, done: true };
-                                                      return obj3;
+                                                      const obj2 = { value, done: true };
+                                                      return obj2;
                                                     } else {
-                                                      const useGameOrganizationInviteFetch = tmp4(19842).useGameOrganizationInviteFetch;
-                                                      items = [code];
-                                                      v1 = 1;
-                                                      dependencyMap = 1;
-                                                      const obj4 = { value: useGameOrganizationInviteFetch.fetchMany(items), done: false };
-                                                      return obj4;
+                                                      return { value: "HermesInternal", done: null };
                                                     }
-                                                  } else if (arg0 === 1) {
-                                                    dependencyMap = 3;
-                                                    throw value;
-                                                  } else if (arg0 === 2) {
-                                                    dependencyMap = 3;
-                                                    const obj = { value, done: true };
-                                                    return obj;
                                                   } else {
-                                                    v1(13461)(closure_128_0).catch(closure_1_6);
-                                                    dependencyMap = 3;
-                                                    return { value: "HermesInternal", done: null };
+                                                    try {
+                                                      dependencyMap = 2;
+                                                      if (0 === v1) {
+                                                        if (arg0 === 1) {
+                                                          dependencyMap = 3;
+                                                          throw value;
+                                                        } else if (arg0 === 2) {
+                                                          dependencyMap = 3;
+                                                          const obj3 = { value, done: true };
+                                                          return obj3;
+                                                        } else {
+                                                          const useGameOrganizationInviteFetch = tmp4(19848).useGameOrganizationInviteFetch;
+                                                          items = [code];
+                                                          v1 = 1;
+                                                          dependencyMap = 1;
+                                                          const obj4 = { value: useGameOrganizationInviteFetch.fetchMany(items), done: false };
+                                                          return obj4;
+                                                        }
+                                                      } else if (arg0 === 1) {
+                                                        dependencyMap = 3;
+                                                        throw value;
+                                                      } else if (arg0 === 2) {
+                                                        dependencyMap = 3;
+                                                        const obj = { value, done: true };
+                                                        return obj;
+                                                      } else {
+                                                        v1(13436)(closure_128_0).catch(closure_1_6);
+                                                        dependencyMap = 3;
+                                                        return { value: "HermesInternal", done: null };
+                                                      }
+                                                    } catch (tmp14) {
+                                                      dependencyMap = tmp;
+                                                      throw tmp14;
+                                                    }
                                                   }
-                                                } catch (tmp14) {
-                                                  dependencyMap = tmp;
-                                                  throw tmp14;
+                                                }));
+                                                const tmpResult7 = code(dependencyMap[7]);
+                                              }
+                                              tmpResult6 = code(dependencyMap[10]);
+                                            } else {
+                                              if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                                                if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
+                                                  if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
+                                                    const embedApplication = code(dependencyMap[14]).getEmbedApplication(code);
+                                                    const tmpResult8 = code(dependencyMap[14]);
+                                                  } else {
+                                                    const _Error = Error;
+                                                    const _HermesInternal = HermesInternal;
+                                                    throw Error("Unknown coded link type: " + type);
+                                                  }
                                                 }
                                               }
-                                            }));
-                                            const tmpResult7 = code(dependencyMap[7]);
-                                          }
-                                          tmpResult6 = code(dependencyMap[10]);
-                                        } else {
-                                          if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                                            if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                                              if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                const embedApplication = code(dependencyMap[14]).getEmbedApplication(code);
-                                                const tmpResult8 = code(dependencyMap[14]);
-                                              } else {
-                                                const _Error = Error;
-                                                const _HermesInternal = HermesInternal;
-                                                throw Error("Unknown coded link type: " + type);
-                                              }
+                                              closure_1(dependencyMap[13])(type, code);
                                             }
                                           }
-                                          closure_1(dependencyMap[13])(type, code);
                                         }
                                       }
                                     }
@@ -349,76 +353,80 @@ function resolveMessageCodedLinks(content) {
                                     if (code(dependencyMap[6]).CodedLinkType.EXPERIMENT !== type) {
                                       if (code(dependencyMap[6]).CodedLinkType.GAME_PROFILE !== type) {
                                         if (code(dependencyMap[6]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                          if (code(dependencyMap[6]).CodedLinkType.USER_PROFILE !== type) {
-                                            if (code(dependencyMap[6]).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
-                                              if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
-                                                const result2 = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
-                                                  if (dependencyMap === 2) {
-                                                    dependencyMap = 3;
-                                                    throw new TypeError("Generator functions may not be called on executing generators");
-                                                  } else if (tmp3 === 3) {
-                                                    if (arg0 === 1) {
-                                                      throw value;
-                                                    } else if (arg0 === 2) {
-                                                      const obj2 = { value, done: true };
-                                                      return obj2;
-                                                    } else {
-                                                      return { value: "HermesInternal", done: null };
-                                                    }
-                                                  } else {
-                                                    try {
-                                                      dependencyMap = 2;
-                                                      if (0 === v1) {
+                                          if (code(dependencyMap[6]).CodedLinkType.CONJURE_PROJECT !== type) {
+                                            if (code(dependencyMap[6]).CodedLinkType.USER_WISHLIST !== type) {
+                                              if (code(dependencyMap[6]).CodedLinkType.USER_PROFILE !== type) {
+                                                if (code(dependencyMap[6]).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
+                                                  if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
+                                                    const result2 = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
+                                                      if (dependencyMap === 2) {
+                                                        dependencyMap = 3;
+                                                        throw new TypeError("Generator functions may not be called on executing generators");
+                                                      } else if (tmp3 === 3) {
                                                         if (arg0 === 1) {
-                                                          dependencyMap = 3;
                                                           throw value;
                                                         } else if (arg0 === 2) {
-                                                          dependencyMap = 3;
-                                                          const obj3 = { value, done: true };
-                                                          return obj3;
+                                                          const obj2 = { value, done: true };
+                                                          return obj2;
                                                         } else {
-                                                          const useGameOrganizationInviteFetch = tmp4(19842).useGameOrganizationInviteFetch;
-                                                          items = [code];
-                                                          v1 = 1;
-                                                          dependencyMap = 1;
-                                                          const obj4 = { value: useGameOrganizationInviteFetch.fetchMany(items), done: false };
-                                                          return obj4;
+                                                          return { value: "HermesInternal", done: null };
                                                         }
-                                                      } else if (arg0 === 1) {
-                                                        dependencyMap = 3;
-                                                        throw value;
-                                                      } else if (arg0 === 2) {
-                                                        dependencyMap = 3;
-                                                        const obj = { value, done: true };
-                                                        return obj;
                                                       } else {
-                                                        v1(13461)(closure_128_0).catch(closure_1_6);
-                                                        dependencyMap = 3;
-                                                        return { value: "HermesInternal", done: null };
+                                                        try {
+                                                          dependencyMap = 2;
+                                                          if (0 === v1) {
+                                                            if (arg0 === 1) {
+                                                              dependencyMap = 3;
+                                                              throw value;
+                                                            } else if (arg0 === 2) {
+                                                              dependencyMap = 3;
+                                                              const obj3 = { value, done: true };
+                                                              return obj3;
+                                                            } else {
+                                                              const useGameOrganizationInviteFetch = tmp4(19848).useGameOrganizationInviteFetch;
+                                                              items = [code];
+                                                              v1 = 1;
+                                                              dependencyMap = 1;
+                                                              const obj4 = { value: useGameOrganizationInviteFetch.fetchMany(items), done: false };
+                                                              return obj4;
+                                                            }
+                                                          } else if (arg0 === 1) {
+                                                            dependencyMap = 3;
+                                                            throw value;
+                                                          } else if (arg0 === 2) {
+                                                            dependencyMap = 3;
+                                                            const obj = { value, done: true };
+                                                            return obj;
+                                                          } else {
+                                                            v1(13436)(closure_128_0).catch(closure_1_6);
+                                                            dependencyMap = 3;
+                                                            return { value: "HermesInternal", done: null };
+                                                          }
+                                                        } catch (tmp14) {
+                                                          dependencyMap = tmp;
+                                                          throw tmp14;
+                                                        }
                                                       }
-                                                    } catch (tmp14) {
-                                                      dependencyMap = tmp;
-                                                      throw tmp14;
+                                                    }));
+                                                    const tmpResult7 = code(dependencyMap[7]);
+                                                  }
+                                                  tmpResult6 = code(dependencyMap[10]);
+                                                } else {
+                                                  if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                                                    if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
+                                                      if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
+                                                        const embedApplication = code(dependencyMap[14]).getEmbedApplication(code);
+                                                        const tmpResult8 = code(dependencyMap[14]);
+                                                      } else {
+                                                        const _Error = Error;
+                                                        const _HermesInternal = HermesInternal;
+                                                        throw Error("Unknown coded link type: " + type);
+                                                      }
                                                     }
                                                   }
-                                                }));
-                                                const tmpResult7 = code(dependencyMap[7]);
-                                              }
-                                              tmpResult6 = code(dependencyMap[10]);
-                                            } else {
-                                              if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                                                if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                                                  if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                    const embedApplication = code(dependencyMap[14]).getEmbedApplication(code);
-                                                    const tmpResult8 = code(dependencyMap[14]);
-                                                  } else {
-                                                    const _Error = Error;
-                                                    const _HermesInternal = HermesInternal;
-                                                    throw Error("Unknown coded link type: " + type);
-                                                  }
+                                                  closure_1(dependencyMap[13])(type, code);
                                                 }
                                               }
-                                              closure_1(dependencyMap[13])(type, code);
                                             }
                                           }
                                         }

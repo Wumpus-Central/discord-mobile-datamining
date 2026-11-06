@@ -1,8 +1,8 @@
-// === Module 19358: NitroFileUploadUpsellPromoSheet ===
+// === Module 19350: NitroFileUploadUpsellPromoSheet ===
 
-// Module 19358 (NitroFileUploadUpsellPromoSheet)
+// Module 19350 (NitroFileUploadUpsellPromoSheet)
 import nativeDefault from "native" /* 575 */;
-import openUserSettings from "openUserSettings" /* 7705 */;
+import openUserSettings from "openUserSettings" /* 7658 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,9 +11,9 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticsPages: hasOwnProperty, UserSettingsSections: closure_6 } = Constants);
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -56,13 +56,13 @@ export default function NitroFileUploadUpsellPromoSheet(markAsDismissed) {
   const tmp5 = require("usePremiumFeatureUpsellGetNitro")(false, callback1, constants.PREMIUM_UPSELL_FILE_UPLOAD);
   obj2.illustration = <onPress style={tmp.illustration}>{jsx(markAsDismissed(callback[11]).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}</onPress>;
   const intl = markAsDismissed(callback[12]).intl;
-  obj2.title = intl.string(require("module_2769")["Uty2/X"]);
+  obj2.title = intl.string(require("module_2766")["Uty2/X"]);
   const intl2 = markAsDismissed(callback[12]).intl;
-  obj2.description = intl2.string(require("module_2769").VAgI8Q);
+  obj2.description = intl2.string(require("module_2766").VAgI8Q);
   obj2.onDismiss = callback3;
   const obj4 = { grow: true, size: "lg", variant: "primary", loading, text: null, onPress: null };
   const intl3 = markAsDismissed(callback[12]).intl;
-  obj4.text = intl3.string(require("module_2769").mRy6sO);
+  obj4.text = intl3.string(require("module_2766").mRy6sO);
   let tmp9 = null;
   if (!loading) {
     tmp9 = callback2;

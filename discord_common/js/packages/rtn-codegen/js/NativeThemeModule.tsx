@@ -1,6 +1,6 @@
-// === Module 16530: NativeThemeModule ===
+// === Module 16527: NativeThemeModule ===
 
-// Module 16530 (NativeThemeModule)
+// Module 16527 (NativeThemeModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

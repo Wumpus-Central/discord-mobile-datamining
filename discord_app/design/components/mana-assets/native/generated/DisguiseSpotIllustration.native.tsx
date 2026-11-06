@@ -1,19 +1,19 @@
-// === Module 19683: DisguiseSpotIllustration ===
+// === Module 19689: DisguiseSpotIllustration ===
 
-// Module 19683 (DisguiseSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7213 */;
-import _modDef19684 from "module_19684" /* 19684 */;
-import _modDef19685 from "module_19685" /* 19685 */;
-import _modDef19686 from "module_19686" /* 19686 */;
+// Module 19689 (DisguiseSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7160 */;
+import _modDef19690 from "module_19690" /* 19690 */;
+import _modDef19691 from "module_19691" /* 19691 */;
+import _modDef19692 from "module_19692" /* 19692 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19684 }, 3: null };
-let obj2 = { uri: _modDef19684 };
-obj[2] = { uri: _modDef19685 };
-const obj3 = { uri: _modDef19685 };
-obj[3] = { uri: _modDef19686 };
+let obj = { 1: null, 2: { uri: _modDef19690 }, 3: null };
+let obj2 = { uri: _modDef19690 };
+obj[2] = { uri: _modDef19691 };
+const obj3 = { uri: _modDef19691 };
+obj[3] = { uri: _modDef19692 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisguiseSpotIllustration.native.tsx");
 

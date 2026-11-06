@@ -1,17 +1,17 @@
-// === Module 19371: LaunchPadContainer ===
+// === Module 19363: LaunchPadContainer ===
 
-// Module 19371 (LaunchPadContainer)
+// Module 19363 (LaunchPadContainer)
 import _mod1652 from "module_1652" /* 1652 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5330 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5430 */;
-import spring_spring from "spring/spring" /* 5773 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8987 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11734 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13040 */;
-import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 18343 */;
-import useLaunchPadStateDefault from "useLaunchPadState" /* 19372 */;
-import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19374 */;
-import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19375 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5350 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
+import spring_spring from "spring/spring" /* 5791 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8933 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11700 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13005 */;
+import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 18335 */;
+import useLaunchPadStateDefault from "useLaunchPadState" /* 19364 */;
+import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19366 */;
+import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19367 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -19,11 +19,11 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11733);
+const LaunchPadConstants = fn(11699);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { wrapper: null, container: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,32 +1,32 @@
-// === Module 12377: ConjureModelLabels ===
+// === Module 12342: ConjureModelLabels ===
 
-// Module 12377 (ConjureModelLabels)
+// Module 12342 (ConjureModelLabels)
 import util from "util" /* 1113 */;
-import _modDef3995 from "module_3995" /* 3995 */;
+import _modDef4024 from "module_4024" /* 4024 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureModelLabels.tsx");
 
 export function modelTierMessage(value) {
   if ("simple" === value) {
-    return _modDef3995["/tlOR5"];
+    return _modDef4024["/tlOR5"];
   } else if ("balanced" === value) {
-    return _modDef3995.wNhuGQ;
+    return _modDef4024.wNhuGQ;
   } else if ("complex" === value) {
-    return _modDef3995.FxoUwB;
+    return _modDef4024.FxoUwB;
   } else {
     return null;
   }
 }
 export function tierTooltip(title, arg1) {
   if ("simple" === arg1) {
-    let prop = _modDef3995["/tlOR5"];
+    let prop = _modDef4024["/tlOR5"];
   } else if ("balanced" === arg1) {
-    prop = _modDef3995.wNhuGQ;
+    prop = _modDef4024.wNhuGQ;
   } else {
     prop = null;
     if ("complex" === arg1) {
-      prop = _modDef3995.FxoUwB;
+      prop = _modDef4024.FxoUwB;
     }
   }
   if (null != prop) {

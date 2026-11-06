@@ -1,6 +1,6 @@
-// === Module 12606: FrecencySectionStore ===
+// === Module 12571: FrecencySectionStore ===
 
-// Module 12606 (FrecencySectionStore)
+// Module 12571 (FrecencySectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

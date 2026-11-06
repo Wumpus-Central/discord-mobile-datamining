@@ -1,24 +1,24 @@
-// === Module 15644: BoostingUnavailablePill ===
+// === Module 15638: BoostingUnavailablePill ===
 
-// Module 15644 (BoostingUnavailablePill)
+// Module 15638 (BoostingUnavailablePill)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 2189 */;
-import _modDef3415 from "module_3415" /* 3415 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import Text_Text from "Text/Text" /* 5763 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 2184 */;
+import _modDef3444 from "module_3444" /* 3444 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import Text_Text from "Text/Text" /* 5781 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 5143 */;
+import createStyles from "createStyles" /* 5170 */;
 import size from "module_2" /* 2 */;
 
 function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(15645, dependencyMap.paths);
-  obj2.aboutText = intl.formatToPlainString(_modDef3415["5xN/C1"], { premiumGroupProductName: closure_5() });
+  const tmp = asyncRequireImpl(15639, dependencyMap.paths);
+  obj2.aboutText = intl.formatToPlainString(_modDef3444["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);

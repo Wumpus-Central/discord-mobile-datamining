@@ -1,8 +1,8 @@
-// === Module 1403: DisplayNameStylesConstants ===
+// === Module 1394: DisplayNameStylesConstants ===
 
-// Module 1403 (DisplayNameStylesConstants)
-import DisplayNameFont from "DisplayNameFont" /* 1404 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1405 */;
+// Module 1394 (DisplayNameStylesConstants)
+import DisplayNameFont from "DisplayNameFont" /* 1395 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
 import size from "module_2" /* 2 */;
 
 let items = [DisplayNameFont.DisplayNameFont.PLAYPEN_SANS, DisplayNameFont.DisplayNameFont.ORBITRON, DisplayNameFont.DisplayNameFont.NEW_ROCKER, DisplayNameFont.DisplayNameFont.KALAM];

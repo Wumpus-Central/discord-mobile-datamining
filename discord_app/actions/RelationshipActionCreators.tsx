@@ -1,20 +1,24 @@
-// === Module 7630: RelationshipActionCreators ===
+// === Module 7575: RelationshipActionCreators ===
 
-// Module 7630 (RelationshipActionCreators)
+// Module 7575 (RelationshipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import shared from "shared" /* 5150 */;
-import UserUtilsDefault from "UserUtils" /* 5197 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6096 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 7042 */;
-import ContextMenuActionCreators from "ContextMenuActionCreators" /* 7066 */;
-import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7633 */;
-import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7634 */;
-import FriendsUtils from "FriendsUtils" /* 7635 */;
-import SafetyToastsUtils from "SafetyToastsUtils" /* 7637 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7638 */;
+import shared from "shared" /* 5177 */;
+import UserUtilsDefault from "UserUtils" /* 5224 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6116 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6984 */;
+import ContextMenuActionCreators from "ContextMenuActionCreators" /* 7008 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7578 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7579 */;
+import FriendsUtils from "FriendsUtils" /* 7580 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 7582 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 7589 */;
+import SafetyToastsUtils from "SafetyToastsUtils" /* 7590 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7591 */;
 import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -87,61 +91,152 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
   }
   throw error;
 }
+function fireFriendRequestSurveyAction(arg0) {
+  if (arg0 === constants2.PENDING_INCOMING) {
+    QualtricsActionCreatorsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.FRIEND_REQUEST_ACCEPTED);
+  } else if (arg0 === tmp.NONE) {
+    QualtricsActionCreatorsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.FRIEND_REQUEST_SENT);
+  }
+}
 const Constants = fn(1072);
-({ Endpoints: closure_6, AbortCodes: metroImportDefault, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(7631).ClearFriendRequestFilters;
-const SafetyToastType = fn(7632).SafetyToastType;
+({ Endpoints: closure_8, AbortCodes: closure_9, RelationshipTypes: closure_10 } = Constants);
+const ClearFriendRequestFilters = fn(7576).ClearFriendRequestFilters;
+const SafetyToastType = fn(7577).SafetyToastType;
 const RelationshipErrorUXConfig = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 let obj2 = {
-  sendRequest(discordTag) {
-    const str = discordTag.discordTag;
-    ({ captchaPayload, errorUxConfig } = discordTag);
-    ({ context, note } = discordTag);
+  sendRequest(arg0) {
+    ({ discordTag: require, context: importDefault, captchaPayload: importAll, note: dependencyMap, errorUxConfig } = arg0);
     if (errorUxConfig === undefined) {
-      errorUxConfig = body.SHOW_ALWAYS;
+      errorUxConfig = obj.SHOW_ALWAYS;
     }
-    [tmp3, tmp4] = str.split("#");
-    const HTTP = str(1282).HTTP;
-    const request = { url: closure_6.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
-    body = { username: tmp3, discriminator: parseInt(tmp4), note };
-    const merged = Object.assign(captchaPayload);
-    request.body = body;
-    request.context = context;
-    const tmp2 = _slicedToArray(str.split("#"), 2);
-    request.rejectWithError = str(1282).rejectWithMigratedError();
-    const obj3 = str(1282);
-    return HTTP.post(request).catch((error) => {
-      handleRelationshipAddError(error, errorUxConfig, str);
-    });
+    return (async () => {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 !== v2) {
+            if (1 === v2) {
+              dependencyMap = 0;
+              handleRelationshipAddError(closure_2, closure_129_4, closure_129_0);
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              dependencyMap = 0;
+              c5 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_128_1 = value;
+              fireFriendRequestSurveyAction(closure_128_0);
+              dependencyMap = 0;
+              c5 = 3;
+              obj = { value: closure_128_1, done: true };
+              return obj;
+            }
+          }
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_1 = tmp3;
+            closure_0 = closure_129_4;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            [tmp27, tmp42] = v2(_require.split("#"), 2);
+            let HTTP = UserStore.findByTag(merged, tmp42);
+            if (null != HTTP) {
+              let NONE = relationshipType.getRelationshipType(HTTP.id);
+            } else {
+              NONE = constants.NONE;
+            }
+            closure_128_0 = NONE;
+            dependencyMap = 1;
+            HTTP = closure_0(1282).HTTP;
+            const request = { url: closure_1_8.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
+            const obj6 = { username: merged, discriminator: null, note: null };
+            const _parseInt = parseInt;
+            obj6.discriminator = parseInt(tmp42);
+            obj6.note = note;
+            merged = Object.assign(importAll);
+            request.body = obj6;
+            request.context = context;
+            const tmp41 = v2(_require.split("#"), 2);
+            request.rejectWithError = closure_0(1282).rejectWithMigratedError();
+            HTTP.post(request);
+            v2 = 2;
+            c5 = 1;
+            const obj5 = closure_0(1282);
+          }
+        } catch (tmp30) {
+          closure_2 = tmp30;
+          if (tmp4 === dependencyMap) {
+            c5 = tmp2;
+            throw tmp30;
+          } else {
+            v2 = tmp;
+          }
+        }
+      }
+    })();
   },
-  addRelationship(arg0, arg1) {
-    ({ userId, captchaPayload } = arg0);
-    const _require = arg1;
+  addRelationship(captchaPayload, arg1) {
+    ({ userId, type } = captchaPayload);
+    closure_1 = arg1;
     let SHOW_ALWAYS = arg2;
-    ({ context, type, fromFriendSuggestion, confirmStrangerRequest } = arg0);
+    ({ context, fromFriendSuggestion, confirmStrangerRequest } = captchaPayload);
     if (arg2 === undefined) {
       SHOW_ALWAYS = body.SHOW_ALWAYS;
     }
-    const user = UserStore.getUser(userId);
-    const HTTP = require("HTTPUtils").HTTP;
-    const request = { url: closure_6.USER_RELATIONSHIP(userId), body: null, context: null, oldFormErrors: true, rejectWithError: null };
+    dependencyMap = UserStore.getUser(userId);
+    const relationshipType = RelationshipStore.getRelationshipType(userId);
+    const HTTP = type(1282).HTTP;
+    const request = { url: closure_8.USER_RELATIONSHIP(userId), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     body = { type, from_friend_suggestion: fromFriendSuggestion, confirm_stranger_request: confirmStrangerRequest };
-    const merged = Object.assign(captchaPayload);
+    const merged = Object.assign(captchaPayload.captchaPayload);
     request.body = body;
     request.context = context;
-    request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
-    const obj3 = require("HTTPUtils");
+    request.rejectWithError = type(1282).rejectWithMigratedError();
+    let obj3 = type(1282);
     const putResult = HTTP.put(request);
     return HTTP.put(request).then(() => {
-      if (closure_0 != null) {
-        tmp();
+      if (type === constants2.BLOCKED) {
+        if (closure_4 !== constants2.BLOCKED) {
+          QualtricsActionCreatorsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.USER_BLOCKED);
+        }
+        if (closure_1 != null) {
+          tmp14();
+        }
       }
+      if (!tmp4) {
+        if (closure_4 === constants2.PENDING_INCOMING) {
+          QualtricsActionCreatorsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.FRIEND_REQUEST_ACCEPTED);
+        } else if (tmp5 === constants2.NONE) {
+          QualtricsActionCreatorsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.FRIEND_REQUEST_SENT);
+        }
+      }
+      tmp4 = null != type && type !== constants2.FRIEND;
     }).catch((error) => {
-      handleRelationshipAddError(error, SHOW_ALWAYS, UserUtilsDefault.getUserTag(closure_2));
+      handleRelationshipAddError(error, SHOW_ALWAYS, UserUtilsDefault.getUserTag(closure_3));
     });
   },
-  acceptFriendRequest(arg0) {
-    return obj2.addRelationship(arg0, function onSuccess() {
+  acceptFriendRequest(captchaPayload) {
+    return obj2.addRelationship(captchaPayload, function onSuccess() {
       const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
       const intl = require("util").intl;
       AccessibilityAnnouncer.announce(intl.string(require("util").t["3goNa5"]));
@@ -180,7 +275,7 @@ let obj2 = {
   removeRelationship(userId, context, arg2) {
     const _require = arg2;
     const HTTP = require("HTTPUtils").HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    obj = { url: closure_8.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     obj2 = require("HTTPUtils");
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
@@ -188,26 +283,26 @@ let obj2 = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = closure_0(5150).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_0(5177).AccessibilityAnnouncer;
       const intl = closure_0(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1113).t.n6Jo3E));
     });
   },
   updateRelationship(userId, c0) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: timestampProducer.USER_RELATIONSHIP(userId), body: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: React5.USER_RELATIONSHIP(userId), body: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     const body = { nickname };
     request.body = body;
     return HTTP.patch(request);
   },
   fetchRelationships() {
     const HTTP = HTTPUtils.HTTP;
-    value = HTTP.get({ url: timestampProducer.USER_RELATIONSHIPS(), oldFormErrors: true, rejectWithError: true });
+    value = HTTP.get({ url: React5.USER_RELATIONSHIPS(), oldFormErrors: true, rejectWithError: true });
     value.then((body) => DispatcherDefault.dispatch({ type: "LOAD_RELATIONSHIPS_SUCCESS", relationships: body.body }), () => DispatcherDefault.dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }));
   },
   clearPendingRelationships() {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: timestampProducer.USER_RELATIONSHIPS(), query: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: React5.USER_RELATIONSHIPS(), query: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     const query = { relationship_type: constants2.PENDING_INCOMING };
     request.query = query;
     const delResult = HTTP.del(request);
@@ -221,7 +316,7 @@ let obj2 = {
   },
   clearPendingSpamAndIgnored() {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: timestampProducer.USER_RELATIONSHIPS(), query: null, body: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: React5.USER_RELATIONSHIPS(), query: null, body: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     const query = { relationship_type: constants2.PENDING_INCOMING };
     request.query = query;
     obj2 = { filters: null };
@@ -241,7 +336,7 @@ let obj2 = {
   ignoreUser(id, IGNORE_CONFIRMATION_ACTION_SHEET, channelId) {
     const _require = id;
     const HTTP = require("HTTPUtils").HTTP;
-    obj = { url: closure_6.IGNORE_USER(id), context: { location: IGNORE_CONFIRMATION_ACTION_SHEET }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    obj = { url: closure_8.IGNORE_USER(id), context: { location: IGNORE_CONFIRMATION_ACTION_SHEET }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     obj2 = { location: IGNORE_CONFIRMATION_ACTION_SHEET };
     let obj3 = require("HTTPUtils");
     const putResult = HTTP.put(obj);
@@ -253,8 +348,8 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.IGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(7638).showFailedToast();
-      const AccessibilityAnnouncer = userId(5150).AccessibilityAnnouncer;
+      channelId(7591).showFailedToast();
+      const AccessibilityAnnouncer = userId(5177).AccessibilityAnnouncer;
       const intl = userId(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
     });
@@ -262,7 +357,7 @@ let obj2 = {
   unignoreUser(id, UserProfileRemediatedNotice, channelId) {
     const _require = id;
     const HTTP = require("HTTPUtils").HTTP;
-    obj = { url: closure_6.IGNORE_USER(id), context: { location: UserProfileRemediatedNotice }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    obj = { url: closure_8.IGNORE_USER(id), context: { location: UserProfileRemediatedNotice }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     obj2 = { location: UserProfileRemediatedNotice };
     let obj3 = require("HTTPUtils");
     const delResult = HTTP.del(obj);
@@ -273,8 +368,8 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(7638).showFailedToast();
-      const AccessibilityAnnouncer = userId(5150).AccessibilityAnnouncer;
+      channelId(7591).showFailedToast();
+      const AccessibilityAnnouncer = userId(5177).AccessibilityAnnouncer;
       const intl = userId(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
     });

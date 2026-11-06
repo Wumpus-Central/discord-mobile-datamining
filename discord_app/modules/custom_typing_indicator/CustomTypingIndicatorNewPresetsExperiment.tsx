@@ -1,6 +1,6 @@
-// === Module 17624: CustomTypingIndicatorNewPresetsExperiment ===
+// === Module 17610: CustomTypingIndicatorNewPresetsExperiment ===
 
-// Module 17624 (CustomTypingIndicatorNewPresetsExperiment)
+// Module 17610 (CustomTypingIndicatorNewPresetsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
@@ -8,6 +8,6 @@ const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name:
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorNewPresetsExperiment.tsx");
 
 export const CustomTypingIndicatorNewPresetsExperiment = apexExperiment;
-export function useCustomTypingIndicatorNewPresetsConfig(CustomTypingIndicatorEditScreen) {
-  return apexExperiment.useConfig({ location: CustomTypingIndicatorEditScreen });
+export function useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting) {
+  return apexExperiment.useConfig({ location: TypingIndicatorSetting });
 }

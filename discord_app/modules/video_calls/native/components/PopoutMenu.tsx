@@ -1,16 +1,16 @@
-// === Module 11957: PopoutMenu ===
+// === Module 11923: PopoutMenu ===
 
-// Module 11957 (PopoutMenu)
-import _modDef12 from "module_12" /* 12 */;
+// Module 11923 (PopoutMenu)
+import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import Patterns from "Patterns" /* 5388 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5430 */;
-import FormRowDefault from "FormRow" /* 7448 */;
-import Form from "Form" /* 8322 */;
+import Patterns from "Patterns" /* 5408 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
+import FormRowDefault from "FormRow" /* 7393 */;
+import Form from "Form" /* 8267 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -42,7 +42,7 @@ function PopoutMenuRow(onClose) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm }, popoutMenuRow: { flex: 1 }, popoutMenuRowLabel: { width: "100%" } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_11 = { code: "(function PopoutMenuTsx1(finished){let[scheduleOnRN,handleClose]=this.__closure;if(finished){scheduleOnRN(handleClose);}})" };
@@ -135,7 +135,7 @@ export default function PopoutMenu(onClose) {
     }
   }), items2);
   let items3 = [tmp4[1]];
-  closure_16 = noop.useMemo(() => _modDef12.debounce((arg0) => {
+  closure_16 = noop.useMemo(() => applyDefault.debounce((arg0) => {
     closure_1_5(arg0);
   }, 16), items3);
   const items4 = [first, onClose];
@@ -221,7 +221,7 @@ export default function PopoutMenu(onClose) {
     const obj3 = { gesture: tmp33, children: null };
     const obj4 = { ref: ref1, children: trigger };
     obj3.children = c6(c5, obj4);
-    const items8 = [c6(tmp21(5430).GestureDetector, obj3), ];
+    const items8 = [c6(tmp21(5450).GestureDetector, obj3), ];
     let tmp35Result = null;
     if (first1) {
       const obj5 = { ref: ref2, style: null, onLayout: null, children: null };
@@ -241,7 +241,7 @@ export default function PopoutMenu(onClose) {
       const items10 = [tmp37Result, , ];
       let tmp37Result2 = null;
       if (null != title) {
-        tmp37Result2 = tmp37(tmp21(8322).FormDivider, {});
+        tmp37Result2 = tmp37(tmp21(8267).FormDivider, {});
       }
       items10[1] = tmp37Result2;
       items10[2] = rows.map((item, index) => {

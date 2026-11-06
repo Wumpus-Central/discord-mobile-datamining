@@ -1,10 +1,10 @@
-// === Module 6005: RTCConnectionStats ===
+// === Module 6024: RTCConnectionStats ===
 
-// Module 6005 (RTCConnectionStats)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6024 (RTCConnectionStats)
+import applyDefault from "apply" /* 12 */;
 import Constants from "Constants" /* 1072 */;
-import TimeUtils from "TimeUtils" /* 5909 */;
-import zipWithNextDefault from "zipWithNext" /* 6006 */;
+import TimeUtils from "TimeUtils" /* 5928 */;
+import zipWithNextDefault from "zipWithNext" /* 6025 */;
 import size from "module_2" /* 2 */;
 
 const RTCConnectionStates = Constants.RTCConnectionStates;
@@ -48,7 +48,7 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
   }
   const stateDurations = this.getStateDurations(nowResult);
   const obj2 = {
-    state_awaiting_endpoint_ms: _modDef12.sumBy(stateDurations, (state) => {
+    state_awaiting_endpoint_ms: applyDefault.sumBy(stateDurations, (state) => {
       let num = 0;
       if (state.state === RTC_DISCONNECTED) {
         num = state.durationMs;
@@ -63,42 +63,42 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     state_rtc_connecting_ms: null,
     state_rtc_disconnected_ms: null
   };
-  obj2.state_authenticating_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_authenticating_ms = applyDefault.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj2.state_connecting_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_connecting_ms = applyDefault.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj2.state_disconnected_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_disconnected_ms = applyDefault.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj2.state_ice_checking_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_ice_checking_ms = applyDefault.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj2.state_no_route_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_no_route_ms = applyDefault.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj2.state_rtc_connecting_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_rtc_connecting_ms = applyDefault.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -106,7 +106,7 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     return num;
   });
   const RTC_DISCONNECTED = RTCConnectionStates.RTC_DISCONNECTED;
-  obj2.state_rtc_disconnected_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_rtc_disconnected_ms = applyDefault.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -121,7 +121,7 @@ prototype["getStateDurations"] = function getStateDurations(nowResult) {
     return [];
   } else {
     const arr = zipWithNextDefault(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
-    const lastResult = _modDef12.last(self.history);
+    const lastResult = applyDefault.last(self.history);
     const obj2 = { state: lastResult.state, durationMs: nowResult - lastResult.startTime };
     arr.push(obj2);
     return arr;

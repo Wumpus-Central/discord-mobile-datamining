@@ -1,14 +1,14 @@
-// === Module 9078: parseWaterwheelsCard ===
+// === Module 9024: parseWaterwheelsCard ===
 
-// Module 9078 (parseWaterwheelsCard)
+// Module 9024 (parseWaterwheelsCard)
 import LoggerDefault from "Logger" /* 3 */;
-import _mod12 from "module_12" /* 12 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9079 */;
+import apply from "apply" /* 12 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9025 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 function isRecord(arg0) {
-  return _mod12.isPlainObject(arg0);
+  return apply.isPlainObject(arg0);
 }
 function isActionValid(value) {
   if (obj.isPlainObject(value.value)) {
@@ -32,7 +32,7 @@ function isActionValid(value) {
   } else {
     return false;
   }
-  obj = _mod12;
+  obj = apply;
 }
 function mapLayout(layout) {
   const type = layout.type;
@@ -108,7 +108,7 @@ export function parseWaterwheelsCard(id) {
               if (closure_5.includes(id.layout.type)) {
                 const actions = id.actions;
                 if (actions.every((type) => {
-                  let isPlainObjectResult = _mod12.isPlainObject(type);
+                  let isPlainObjectResult = apply.isPlainObject(type);
                   if (isPlainObjectResult) {
                     const _Object = Object;
                     const values = Object.values(WaterwheelsCardTypes.WaterwheelsActionType);

@@ -1,9 +1,9 @@
-// === Module 7417: useFlattenedChannels ===
+// === Module 7364: useFlattenedChannels ===
 
-// Module 7417 (useFlattenedChannels)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7364 (useFlattenedChannels)
+import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 const require = globalThis.__r;
 
@@ -15,14 +15,14 @@ function getFlattenedChannels(c0, set, found) {
     flag = false;
   }
   ChannelStore = undefined;
-  const tmp = require("module_12");
-  const values = require("module_12")(ChannelStore.getMutableGuildChannelsForGuild(c0)).values();
-  const tmpResult = require("module_12")(ChannelStore.getMutableGuildChannelsForGuild(c0));
+  const tmp = require("apply");
+  const values = require("apply")(ChannelStore.getMutableGuildChannelsForGuild(c0)).values();
+  const tmpResult = require("apply")(ChannelStore.getMutableGuildChannelsForGuild(c0));
   ChannelStore = values.groupBy("parent_id").value();
   const iter = values.groupBy("parent_id");
-  const mapped = require("module_12")(found).map((isCategory) => isCategory.isCategory() ? isCategory.id : isCategory.parent_id);
+  const mapped = require("apply")(found).map((isCategory) => isCategory.isCategory() ? isCategory.id : isCategory.parent_id);
   found = mapped.filter(require("GlobalUtils").isNotNullish);
-  const arr = require("module_12")(found);
+  const arr = require("apply")(found);
   const mapped1 = found.uniq().map((item) => channel.getChannel(item));
   const found1 = mapped1.filter(require("GlobalUtils").isNotNullish);
   const uniqResult = found.uniq();
@@ -40,7 +40,7 @@ function getFlattenedChannels(c0, set, found) {
     return !isCategoryResult;
   });
   const iter2 = found1.sortBy("position");
-  const sortByResult = require("module_12").sortBy(found2, (position) => {
+  const sortByResult = require("apply").sortBy(found2, (position) => {
     position = position.position;
     if (position.isGuildVocal()) {
       let sum = position + 10000;
@@ -63,7 +63,7 @@ function getFlattenedChannels(c0, set, found) {
       found = [];
     }
     items = [
-      ..._modDef12.sortBy(found, (position) => {
+      ...applyDefault.sortBy(found, (position) => {
         position = position.position;
         if (position.isGuildVocal()) {
           let sum = position + 10000;

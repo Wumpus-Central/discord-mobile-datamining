@@ -1,8 +1,8 @@
-// === Module 14361: useGuildPowerupTier3OverrideConfig ===
+// === Module 14338: useGuildPowerupTier3OverrideConfig ===
 
-// Module 14361 (useGuildPowerupTier3OverrideConfig)
-import _modDef2699 from "module_2699" /* 2699 */;
-import GuildStore from "GuildStore" /* 5014 */;
+// Module 14338 (useGuildPowerupTier3OverrideConfig)
+import _modDef2696 from "module_2696" /* 2696 */;
+import GuildStore from "GuildStore" /* 5041 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ export default function useGuildPowerupTier3OverrideConfig(arg0) {
   })) {
     const obj2 = { shouldShow: true, text: null };
     const intl = require("util").intl;
-    obj2.text = intl.string(_modDef2699.l9n4QZ);
+    obj2.text = intl.string(_modDef2696.l9n4QZ);
     let obj3 = obj2;
   } else {
     obj3 = { shouldShow: false, text: "" };

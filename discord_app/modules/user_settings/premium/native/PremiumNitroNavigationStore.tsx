@@ -1,10 +1,10 @@
-// === Module 15526: PremiumNitroNavigationStore ===
+// === Module 15520: PremiumNitroNavigationStore ===
 
-// Module 15526 (PremiumNitroNavigationStore)
-import ZustandStore from "ZustandStore" /* 5337 */;
+// Module 15520 (PremiumNitroNavigationStore)
+import ZustandStore from "ZustandStore" /* 5357 */;
 import size from "module_2" /* 2 */;
 
-const zustandStore = ZustandStore.createZustandStore(() => ({ scrollToSectionId: "ti" }));
+const zustandStore = ZustandStore.createZustandStore(() => ({ scrollToSectionId: "r" }));
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumNitroNavigationStore.tsx");
 
 export default zustandStore;

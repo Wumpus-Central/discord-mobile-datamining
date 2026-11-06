@@ -1,14 +1,14 @@
-// === Module 7407: GuildOnboardingPromptsStore ===
+// === Module 7354: GuildOnboardingPromptsStore ===
 
-// Module 7407 (GuildOnboardingPromptsStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7354 (GuildOnboardingPromptsStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 7409 */;
-import ImpersonateStore from "ImpersonateStore" /* 5048 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7403 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7356 */;
+import ImpersonateStore from "ImpersonateStore" /* 5075 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7350 */;
 
 require = fn;
 function handleUpdate(arg0) {
@@ -81,8 +81,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(7403).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(7408).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(7350).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(7355).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -155,7 +155,7 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       const self = this;
       const options = found.options;
       const mapped = options.map((id) => id.id);
-      intersectionResult = _modDef12.intersection(mapped, this.getOnboardingResponses(c0));
+      intersectionResult = applyDefault.intersection(mapped, this.getOnboardingResponses(c0));
     }
     return intersectionResult;
   }
@@ -434,13 +434,13 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
           tmp4 = removedOptionIds.length > 0;
         }
         if (tmp4) {
-          _modDef12.pullAll(dependencyMap[guildId].responses, removedOptionIds);
+          applyDefault.pullAll(dependencyMap[guildId].responses, removedOptionIds);
         }
         if (selected) {
           const responses = dependencyMap[guildId].responses;
           responses.push(optionId);
         } else {
-          _modDef12.pull(dependencyMap[guildId].responses, optionId);
+          applyDefault.pull(dependencyMap[guildId].responses, optionId);
         }
         if (null == dependencyMap2[guildId]) {
           dependencyMap2[guildId] = {};

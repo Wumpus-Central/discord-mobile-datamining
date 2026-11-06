@@ -1,6 +1,6 @@
-// === Module 8829: StaticMentionRoutes ===
+// === Module 8775: StaticMentionRoutes ===
 
-// Module 8829 (StaticMentionRoutes)
+// Module 8775 (StaticMentionRoutes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/StaticMentionRoutes.tsx");

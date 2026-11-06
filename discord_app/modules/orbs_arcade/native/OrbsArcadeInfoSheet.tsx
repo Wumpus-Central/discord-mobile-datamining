@@ -1,10 +1,10 @@
-// === Module 17325: OrbsArcadeInfoSheet ===
+// === Module 17313: OrbsArcadeInfoSheet ===
 
-// Module 17325 (OrbsArcadeInfoSheet)
-import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 17307 */;
-import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17308 */;
+// Module 17313 (OrbsArcadeInfoSheet)
+import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 17295 */;
+import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17296 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17294 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17282 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -30,9 +30,9 @@ export default function OrbsArcadeInfoSheet(gameId) {
     obj3.title = intl.string(tmp(1113).t["3AT3DL"]);
     const intl2 = tmp(1113).intl;
     obj3.description = intl2.string(tmp(1113).t.GSj8gp);
-    const obj4 = { game: stateFromStores, sheetKey: "OrbsArcadeInfoSheet", location: tmp(17304).OrbsArcadeCtaLocation.INFO_SHEET, surface: gameId.surface, secondaryAction: tmp(17308).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" };
-    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: "OrbsArcadeInfoSheet", location: tmp(17304).OrbsArcadeCtaLocation.INFO_SHEET, surface: gameId.surface, secondaryAction: tmp(17308).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" });
-    return jsx(tmp(11021).PromoSheet, { gradientColor: "blue", illustration: tmp8Result, title: null, description: null, actions: null });
+    const obj4 = { game: stateFromStores, sheetKey: "OrbsArcadeInfoSheet", location: tmp(17292).OrbsArcadeCtaLocation.INFO_SHEET, surface: gameId.surface, secondaryAction: tmp(17296).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" };
+    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: "OrbsArcadeInfoSheet", location: tmp(17292).OrbsArcadeCtaLocation.INFO_SHEET, surface: gameId.surface, secondaryAction: tmp(17296).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" });
+    return jsx(tmp(10973).PromoSheet, { gradientColor: "blue", illustration: tmp8Result, title: null, description: null, actions: null });
   }
   const obj = gameId(504);
 };

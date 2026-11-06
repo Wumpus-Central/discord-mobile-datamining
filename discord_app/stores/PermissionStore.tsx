@@ -1,22 +1,22 @@
-// === Module 5075: PermissionStore ===
+// === Module 5102: PermissionStore ===
 
-// Module 5075 (PermissionStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 5102 (PermissionStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5006 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 5083 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5084 */;
-import ImpersonateStore from "ImpersonateStore" /* 5048 */;
-import LurkingStore from "LurkingStore" /* 5076 */;
-import StageInstanceStore from "StageInstanceStore" /* 4997 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
-import UserRecord from "UserRecord" /* 1399 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5033 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5107 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 5110 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5111 */;
+import ImpersonateStore from "ImpersonateStore" /* 5075 */;
+import LurkingStore from "LurkingStore" /* 5103 */;
+import StageInstanceStore from "StageInstanceStore" /* 5024 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
+import UserRecord from "UserRecord" /* 1404 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildStore from "GuildStore" /* 5041 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -71,7 +71,7 @@ function getUncachedChannelPermissions(id, arg1) {
             }
             return NONE2;
           }
-          obj2 = _modDef12;
+          obj2 = applyDefault;
         }
       }
       const obj6 = { user: currentUser, context: channel, checkElevated: flag };
@@ -142,7 +142,7 @@ function handleGuildRole(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = _modDef12.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = applyDefault.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -174,7 +174,7 @@ function handleImpersonateUpdate(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = _modDef12.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = applyDefault.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -242,12 +242,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
   NONE = tmpResult4.computePermissions({ user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions });
   const obj3 = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(5010);
+const GuildRecord = fn(5037);
 ({ isGuildOwner: closure_10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1072).Permissions;
-let closure_18 = fn(5079).MemberSafetyPagePermissions;
+let closure_18 = fn(5106).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

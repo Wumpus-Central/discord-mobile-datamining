@@ -1,7 +1,7 @@
-// === Module 7420: getFlattedChannelList ===
+// === Module 7367: getFlattedChannelList ===
 
-// Module 7420 (getFlattedChannelList)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7367 (getFlattedChannelList)
+import applyDefault from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
@@ -14,7 +14,7 @@ export default function getFlattenedChannelList(arg0, arg1) {
       return true;
     };
   }
-  const mapped = _modDef12(arg0).map((channel) => {
+  const mapped = applyDefault(arg0).map((channel) => {
     if ("null" === channel.channel.id) {
       items = dependencyMap[channel.channel.id];
     } else {
@@ -22,7 +22,7 @@ export default function getFlattenedChannelList(arg0, arg1) {
     }
     return items;
   });
-  const arr = _modDef12(arg0);
+  const arr = applyDefault(arg0);
   const flattenDeepResult = mapped.flattenDeep();
   return mapped.flattenDeep().filter(fn).value();
 };

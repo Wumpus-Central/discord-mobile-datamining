@@ -1,18 +1,18 @@
-// === Module 13457: OutcomeStep ===
+// === Module 13432: OutcomeStep ===
 
-// Module 13457 (OutcomeStep)
-import transitionToGuild from "transitionToGuild" /* 7664 */;
+// Module 13432 (OutcomeStep)
+import transitionToGuild from "transitionToGuild" /* 7617 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildStore from "GuildStore" /* 5041 */;
 
 require = fn;
-const GameOrganizationInviteConstants = fn(11560);
+const GameOrganizationInviteConstants = fn(11522);
 ({ GameOrganizationInviteAcceptFailureReason: closure_6, GameOrganizationInviteAcceptStatus: metroImportDefault, GameOrganizationLinkedGuildJoinStatus: closure_8 } = GameOrganizationInviteConstants);
-const onPress = fn(13447).closeGameOrganizationJoinModal;
+const onPress = fn(13422).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_12 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/steps/OutcomeStep.tsx");
@@ -23,7 +23,7 @@ export function OutcomeStep(code) {
   dependencyMap = undefined;
   let flag;
   const tmp = closure_12();
-  const tmp4 = stateFromStores(13444)(code.code);
+  const tmp4 = stateFromStores(13419)(code.code);
   let guildId;
   if (tmp4 != null) {
     guildId = tmp4.guildId;
@@ -82,7 +82,7 @@ export function OutcomeStep(code) {
   if (displayNoun == null) {
     displayNoun = null;
   }
-  const tmp2ResultResult = stateFromStores(13445)({ displayNoun, lowercase: true });
+  const tmp2ResultResult = stateFromStores(13420)({ displayNoun, lowercase: true });
   let str;
   if (tmp4 != null) {
     str = tmp4.organization.name;
@@ -103,21 +103,21 @@ export function OutcomeStep(code) {
   if (null != tmp18) {
     const obj4 = { text: null, onPress: null };
     const intl2 = tmp6(1113).intl;
-    obj4.text = intl2.string(tmp2(2533).H1wMHV);
+    obj4.text = intl2.string(tmp2(2530).H1wMHV);
     obj4.onPress = tmp18;
     tmp19 = obj4;
   }
   if (joinStatus === constants2.JOINED) {
     const intl9 = tmp6(1113).intl;
     const obj5 = { noun: tmp2ResultResult };
-    const formatToPlainStringResult = intl9.formatToPlainString(tmp2(2533)["w/spGp"], obj5);
+    const formatToPlainStringResult = intl9.formatToPlainString(tmp2(2530)["w/spGp"], obj5);
     if (constants3.NEW_MEMBER !== guildJoinStatus) {
       if (constants3.ALREADY_MEMBER !== guildJoinStatus) {
         if (constants3.PENDING_VERIFICATION === guildJoinStatus) {
           const obj6 = { title: formatToPlainStringResult, subtitle: null, cta: null };
           const intl12 = tmp6(1113).intl;
           const obj7 = { noun: tmp2ResultResult, orgName: str };
-          obj3 = intl12.formatToPlainString(tmp2(2533)["9K7Jdt"], obj7);
+          obj3 = intl12.formatToPlainString(tmp2(2530)["9K7Jdt"], obj7);
           obj6.subtitle = obj3;
           obj6.cta = tmp19;
           let obj8 = obj6;
@@ -126,13 +126,13 @@ export function OutcomeStep(code) {
           obj8 = { title: formatToPlainStringResult, subtitle: null, cta: null };
           const intl10 = tmp6(1113).intl;
           const obj9 = { noun: tmp2ResultResult, orgName: str };
-          obj8.subtitle = intl10.formatToPlainString(tmp2(2533).Qo94hd, obj9);
+          obj8.subtitle = intl10.formatToPlainString(tmp2(2530).Qo94hd, obj9);
           obj8.cta = obj3;
         }
         const obj10 = { title: formatToPlainStringResult, subtitle: null, cta: null };
         const intl11 = tmp6(1113).intl;
         const obj11 = { noun: tmp2ResultResult, orgName: str };
-        obj10.subtitle = intl11.formatToPlainString(tmp2(2533).ODHuua, obj11);
+        obj10.subtitle = intl11.formatToPlainString(tmp2(2530).ODHuua, obj11);
         obj10.cta = obj3;
         obj8 = obj10;
       }
@@ -141,11 +141,11 @@ export function OutcomeStep(code) {
     if (null != characterName) {
       const intl14 = tmp6(1113).intl;
       const obj13 = { noun: tmp2ResultResult, orgName: str, characterName };
-      let formatToPlainStringResult1 = intl14.formatToPlainString(tmp2(2533).PLA9Om, obj13);
+      let formatToPlainStringResult1 = intl14.formatToPlainString(tmp2(2530).PLA9Om, obj13);
     } else {
       const intl13 = tmp6(1113).intl;
       const obj14 = { noun: tmp2ResultResult, orgName: str };
-      formatToPlainStringResult1 = intl13.formatToPlainString(tmp2(2533).WF9Qgb, obj14);
+      formatToPlainStringResult1 = intl13.formatToPlainString(tmp2(2530).WF9Qgb, obj14);
     }
     obj12.subtitle = formatToPlainStringResult1;
     obj12.cta = tmp19;
@@ -154,58 +154,58 @@ export function OutcomeStep(code) {
       const obj15 = { title: null, cta: null };
       const intl8 = tmp6(1113).intl;
       const obj16 = { noun: tmp2ResultResult };
-      obj15.title = intl8.formatToPlainString(tmp2(2533)["1PMPYk"], obj16);
+      obj15.title = intl8.formatToPlainString(tmp2(2530)["1PMPYk"], obj16);
       obj15.cta = tmp19;
       let obj22 = obj15;
     } else if (constants.IN_ANOTHER_ORGANIZATION === failureReason) {
       const obj17 = { title: null, subtitle: null, cta: null };
       const intl6 = tmp6(1113).intl;
       const obj18 = { noun: tmp2ResultResult };
-      obj17.title = intl6.formatToPlainString(tmp2(2533).vSlR1j, obj18);
+      obj17.title = intl6.formatToPlainString(tmp2(2530).vSlR1j, obj18);
       const intl7 = tmp6(1113).intl;
       const obj19 = { noun: tmp2ResultResult };
-      obj17.subtitle = intl7.formatToPlainString(tmp2(2533).kvDHqp, obj19);
+      obj17.subtitle = intl7.formatToPlainString(tmp2(2530).kvDHqp, obj19);
       obj17.cta = obj3;
       obj22 = obj17;
     } else if (constants.GUILD_FULL === failureReason) {
       const obj20 = { title: null, subtitle: null, cta: null };
       const intl4 = tmp6(1113).intl;
       const obj21 = { noun: tmp2ResultResult };
-      obj20.title = intl4.formatToPlainString(tmp2(2533)["/7Gy4g"], obj21);
+      obj20.title = intl4.formatToPlainString(tmp2(2530)["/7Gy4g"], obj21);
       const intl5 = tmp6(1113).intl;
-      obj20.subtitle = intl5.string(tmp2(2533)["8TGo9L"]);
+      obj20.subtitle = intl5.string(tmp2(2530)["8TGo9L"]);
       obj20.cta = obj3;
       obj22 = obj20;
     } else {
       const OTHER = constants.OTHER;
       obj22 = { title: null, cta: null };
       const intl3 = tmp6(1113).intl;
-      obj22.title = intl3.string(tmp2(2533).sXbaMb);
+      obj22.title = intl3.string(tmp2(2530).sXbaMb);
       obj22.cta = obj3;
     }
     ({ subtitle, cta } = obj22);
     const obj23 = { spacing: tmp2(575).space.PX_8, children: null };
     const obj24 = { variant: "heading-xl/semibold", style: tmp.text, accessibilityRole: "header", children: obj22.title };
-    const items3 = [closure_10(tmp6(5763).Text, obj24), ];
+    const items3 = [closure_10(tmp6(5781).Text, obj24), ];
     let tmp27Result = null != subtitle;
     if (tmp27Result) {
       const obj25 = { variant: "body-md/normal", color: "text-muted", style: tmp.text, children: subtitle };
-      tmp27Result = closure_10(tmp6(5763).Text, obj25);
+      tmp27Result = closure_10(tmp6(5781).Text, obj25);
     }
     const obj26 = { children: null };
     const obj27 = { children: null };
     items3[1] = tmp27Result;
     obj23.children = items3;
-    obj27.children = closure_11(tmp6(6165).Stack, obj23);
-    const items4 = [closure_10(tmp6(8118).ModalContent, obj27), ];
+    obj27.children = closure_11(tmp6(6185).Stack, obj23);
+    const items4 = [closure_10(tmp6(8064).ModalContent, obj27), ];
     const obj28 = { children: null };
     const obj56 = { text: null, size: "lg", onPress: null, disabled: null };
     ({ text: obj29.text, onPress: obj29.onPress } = cta);
     obj56.disabled = tmp9;
-    obj28.children = closure_10(tmp6(5770).Button, obj56);
-    items4[1] = closure_10(tmp6(13453).ModalFooter, obj28);
+    obj28.children = closure_10(tmp6(5788).Button, obj56);
+    items4[1] = closure_10(tmp6(13428).ModalFooter, obj28);
     obj26.children = items4;
-    return closure_11(tmp2(13449), obj26);
+    return closure_11(tmp2(13424), obj26);
   }
-  const tmp2Result = stateFromStores(13445);
+  const tmp2Result = stateFromStores(13420);
 }

@@ -1,7 +1,7 @@
-// === Module 7215: VerificationUtils ===
+// === Module 7162: VerificationUtils ===
 
-// Module 7215 (VerificationUtils)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7162 (VerificationUtils)
+import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -65,6 +65,6 @@ export default {
     }
   },
   areVerificationTypesEqual(arg0, arg1) {
-    return _modDef12.isEqual(arg0, arg1);
+    return applyDefault.isEqual(arg0, arg1);
   }
 };

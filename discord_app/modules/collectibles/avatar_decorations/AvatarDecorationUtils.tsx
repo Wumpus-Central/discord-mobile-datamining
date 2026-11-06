@@ -1,8 +1,8 @@
-// === Module 2108: AvatarDecorationUtils ===
+// === Module 2103: AvatarDecorationUtils ===
 
-// Module 2108 (AvatarDecorationUtils)
-import _mod12 from "module_12" /* 12 */;
-import mappers from "mappers" /* 2109 */;
+// Module 2103 (AvatarDecorationUtils)
+import apply from "apply" /* 12 */;
+import mappers from "mappers" /* 2104 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
@@ -98,7 +98,7 @@ export function isEqualAvatarDecoration(avatarDecoration, asset2) {
           const tmp12Result2 = mappers;
         }
       }
-      let isEqualResult = _mod12.isEqual(tmp2, tmp6);
+      let isEqualResult = apply.isEqual(tmp2, tmp6);
     }
     return isEqualResult;
   }

@@ -1,12 +1,12 @@
-// === Module 14936: useConjureWandStatus ===
+// === Module 14913: useConjureWandStatus ===
 
-// Module 14936 (useConjureWandStatus)
+// Module 14913 (useConjureWandStatus)
 import util from "util" /* 1113 */;
-import _modDef3995 from "module_3995" /* 3995 */;
-import useMountEffectDefault from "useMountEffect" /* 5731 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11060 */;
-import useConjureTitleBarStatusDefault from "useConjureTitleBarStatus" /* 14937 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
+import _modDef4024 from "module_4024" /* 4024 */;
+import useMountEffectDefault from "useMountEffect" /* 5751 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11012 */;
+import useConjureTitleBarStatusDefault from "useConjureTitleBarStatus" /* 14914 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
 
 require = fn;
 const size = fn(2);
@@ -31,11 +31,11 @@ export default function useConjureWandStatus() {
   }
   obj.hasBadge = hasUnread;
   const intl = util.intl;
-  items = [intl.string(_modDef3995.uk6jhJ), , , ];
+  items = [intl.string(_modDef4024.uk6jhJ), , , ];
   let stringResult = null;
   if ("working" === kind) {
     const intl2 = util.intl;
-    stringResult = intl2.string(_modDef3995["Y8pS+n"]);
+    stringResult = intl2.string(_modDef4024["Y8pS+n"]);
   }
   items[1] = stringResult;
   let kind1;
@@ -45,7 +45,7 @@ export default function useConjureWandStatus() {
   let stringResult1 = null;
   if ("needs_input" === kind1) {
     const intl3 = util.intl;
-    stringResult1 = intl3.string(_modDef3995.hfIuc7);
+    stringResult1 = intl3.string(_modDef4024.hfIuc7);
   }
   items[2] = stringResult1;
   let kind2;
@@ -55,7 +55,7 @@ export default function useConjureWandStatus() {
   let stringResult2 = null;
   if ("unread" === kind2) {
     const intl4 = util.intl;
-    stringResult2 = intl4.string(_modDef3995["6XGnHJ"]);
+    stringResult2 = intl4.string(_modDef4024["6XGnHJ"]);
   }
   items[3] = stringResult2;
   const found = items.filter((item) => null != item);

@@ -1,28 +1,28 @@
-// === Module 14124: SearchUtils ===
+// === Module 14101: SearchUtils ===
 
-// Module 14124 (SearchUtils)
+// Module 14101 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import _modDef2171 from "module_2171" /* 2171 */;
-import UserUtilsDefault from "UserUtils" /* 5197 */;
-import useChannelName from "useChannelName" /* 5788 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 14123 */;
-import SearchTokens from "SearchTokens" /* 14125 */;
+import _modDef2166 from "module_2166" /* 2166 */;
+import UserUtilsDefault from "UserUtils" /* 5224 */;
+import useChannelName from "useChannelName" /* 5806 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 14100 */;
+import SearchTokens from "SearchTokens" /* 14102 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildChannelStore from "GuildChannelStore" /* 5073 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6873 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildChannelStore from "GuildChannelStore" /* 5100 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6815 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(9982).SearchTabs;
+const SearchTabs = fn(9933).SearchTabs;
 const Constants = fn(1072);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({ SearchPopoutModes: map1, IS_SEARCH_ANSWER_TOKEN: closure_14, IS_SEARCH_FILTER_TOKEN: closure_15, SearchModes: closure_16, ME, GuildFeatures: closure_17 } = Constants);
@@ -87,7 +87,7 @@ export function getSearchTabFetchId(searchContext, MESSAGES, searchResultsQuery)
   return "" + channelId + "-" + MESSAGES + "-" + searchResultsQuery;
 }
 export function getChannelActiveAgoTimestamp(arg0) {
-  const diffResult = _modDef2171().diff(_modDef2171(arg0), "s");
+  const diffResult = _modDef2166().diff(_modDef2166(arg0), "s");
   if (diffResult > c19) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -125,7 +125,7 @@ export function getChannelActiveAgoTimestamp(arg0) {
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef2171();
+  const obj = _modDef2166();
 }
 export function getIndexingErrorText(searchContext) {
   const type = searchContext.type;
@@ -493,7 +493,7 @@ export function quoteChannelName(channelName) {
 export function getFlattenedAutocompleteResults(arg0, arg1) {
   closure_0 = arg1;
   importDefault = [];
-  const item = _modDef12(arg0).forEach((results) => {
+  const item = applyDefault(arg0).forEach((results) => {
     closure_0 = results;
     if (null != results) {
       if (0 !== results.results.length) {
@@ -579,18 +579,18 @@ export function filterHasAnswer(type, type2) {
 export function refreshSearchTokens() {
   const result = SearchTokens.rebuildSearchTokenConfigs();
   navigation.reset();
-  _modDef12(SearchTokensDefault).forOwn((arg0, type) => {
+  applyDefault(SearchTokensDefault).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return navigation.addRule({ type });
   });
   navigation2.reset();
-  const tmp3Result = _modDef12(SearchTokensDefault);
+  const tmp3Result = applyDefault(SearchTokensDefault);
   const crossDMSearchTokensConfig = SearchTokens.buildCrossDMSearchTokensConfig();
-  _modDef12(crossDMSearchTokensConfig).forOwn((arg0, type) => {
+  applyDefault(crossDMSearchTokensConfig).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return navigation2.addRule({ type });
   });
-  const obj4 = _modDef12(crossDMSearchTokensConfig);
+  const obj4 = applyDefault(crossDMSearchTokensConfig);
   DispatcherDefault.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
 }
 export function getChannelDisplayName(isDM) {

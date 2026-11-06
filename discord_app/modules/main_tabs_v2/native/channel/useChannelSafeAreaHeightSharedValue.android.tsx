@@ -1,16 +1,16 @@
-// === Module 11434: useChannelSafeAreaHeightSharedValue ===
+// === Module 11396: useChannelSafeAreaHeightSharedValue ===
 
-// Module 11434 (useChannelSafeAreaHeightSharedValue)
+// Module 11396 (useChannelSafeAreaHeightSharedValue)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import useToken from "useToken" /* 5734 */;
-import spring_spring from "spring/spring" /* 5773 */;
-import useChannelDockHeightDefault from "useChannelDockHeight" /* 11435 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11440 */;
-import useSafeAreaBottomKeyboardInfoControllerDefault from "useSafeAreaBottomKeyboardInfoController" /* 11442 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11443 */;
-import useIsChannelFullyOpenDefault from "useIsChannelFullyOpen" /* 11444 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11445 */;
+import useToken from "useToken" /* 5754 */;
+import spring_spring from "spring/spring" /* 5791 */;
+import useChannelDockHeightDefault from "useChannelDockHeight" /* 11397 */;
+import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11401 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11402 */;
+import useSafeAreaBottomKeyboardInfoControllerDefault from "useSafeAreaBottomKeyboardInfoController" /* 11404 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11405 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11407 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -37,8 +37,9 @@ export default function useChannelSafeAreaHeightSharedValue() {
   _require = tmp7;
   const obj5 = require("useToken");
   const sharedValue1 = require("module_1652").useSharedValue(tmp7);
-  const tmp9 = useIsChannelFullyOpenDefault();
-  items = [tmp7, sharedValue1, tmp9];
+  const obj6 = require("module_1652");
+  const isChannelFullyOpen = require("useIsChannelFullyOpen").getIsChannelFullyOpen(noop.useContext(MainTabsNavigatorPanelContextDefault));
+  items = [tmp7, sharedValue1, isChannelFullyOpen];
   const effect = noop.useEffect(() => {
     if (c2) {
       let withSpringResult = spring_spring.withSpring(c0, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG);
@@ -47,7 +48,7 @@ export default function useChannelSafeAreaHeightSharedValue() {
     }
     const result = _undefined2.set(withSpringResult);
   }, items);
-  const obj6 = require("module_1652");
+  const obj7 = require("useIsChannelFullyOpen");
   const items1 = [c4, sharedValue1, token, keyboardOpenOrOpening, keyboardWillOpenSharedValue, keyboardOpenedHeight, tmp, keyboardTypeSharedValue, require("KeyboardTypes").KeyboardTypes, sharedValue];
   _require = undefined;
   importDefault = undefined;

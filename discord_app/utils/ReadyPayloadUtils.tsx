@@ -1,15 +1,15 @@
-// === Module 15812: ReadyPayloadUtils ===
+// === Module 15806: ReadyPayloadUtils ===
 
-// Module 15812 (ReadyPayloadUtils)
-import _modDef12 from "module_12" /* 12 */;
+// Module 15806 (ReadyPayloadUtils)
+import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import ChannelRecord from "ChannelRecord" /* 4996 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5021 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 5038 */;
-import ChannelReaderDefault from "ChannelReader" /* 5042 */;
-import isCacheEnabled from "isCacheEnabled" /* 7936 */;
-import GuildVersionsDefault from "GuildVersions" /* 7940 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7941 */;
+import ChannelRecord from "ChannelRecord" /* 5023 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5048 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 5065 */;
+import ChannelReaderDefault from "ChannelReader" /* 5069 */;
+import isCacheEnabled from "isCacheEnabled" /* 7890 */;
+import GuildVersionsDefault from "GuildVersions" /* 7894 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7895 */;
 import size from "module_2" /* 2 */;
 
 function hydrateGuild(guild) {
@@ -381,7 +381,7 @@ export function hydrateReadyPayloadPrioritized(pinotReadyAction, identifyStartTi
     const result = DatabaseManagerDefault.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok");
     const tmp2Result = DatabaseManagerDefault;
   }
-  closure_5 = _modDef12.keyBy(users, (id) => id.id);
+  closure_5 = applyDefault.keyBy(users, (id) => id.id);
   if (private_channels != null) {
     let item = private_channels.forEach((recipient_ids) => {
       recipient_ids = recipient_ids.recipient_ids;

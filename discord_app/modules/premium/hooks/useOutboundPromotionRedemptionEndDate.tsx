@@ -1,9 +1,9 @@
-// === Module 15690: useOutboundPromotionRedemptionEndDate ===
+// === Module 15684: useOutboundPromotionRedemptionEndDate ===
 
-// Module 15690 (useOutboundPromotionRedemptionEndDate)
-import DateUtils from "DateUtils" /* 4965 */;
+// Module 15684 (useOutboundPromotionRedemptionEndDate)
+import DateUtils from "DateUtils" /* 4992 */;
 import noop from "module_19" /* 19 */;
-import hooks from "module_2171" /* 2171 */;
+import hooks from "module_2166" /* 2166 */;
 
 require = fn;
 let closure_4 = hooks.duration(30, "days");

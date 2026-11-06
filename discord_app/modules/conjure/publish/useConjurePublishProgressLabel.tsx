@@ -1,15 +1,15 @@
-// === Module 12305: useConjurePublishProgressLabel ===
+// === Module 12272: useConjurePublishProgressLabel ===
 
-// Module 12305 (useConjurePublishProgressLabel)
-import _modDef3995 from "module_3995" /* 3995 */;
+// Module 12272 (useConjurePublishProgressLabel)
+import _modDef4024 from "module_4024" /* 4024 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11051 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11003 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let obj = { preparing: _modDef3995.GQeas1, approval: _modDef3995["TkHHD+"], approved_by_grant: _modDef3995["9+kNt8"], setup: _modDef3995["F+AxgM"], build: _modDef3995.oQeMIy, deploy: _modDef3995.LqZvZ2, discord: _modDef3995.LFcGAT, activating: _modDef3995.ff1Fq1 };
+let obj = { preparing: _modDef4024.GQeas1, approval: _modDef4024["TkHHD+"], approved_by_grant: _modDef4024["9+kNt8"], setup: _modDef4024["F+AxgM"], build: _modDef4024.oQeMIy, deploy: _modDef4024.LqZvZ2, discord: _modDef4024.LFcGAT, activating: _modDef4024.ff1Fq1 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishProgressLabel.tsx");
 
@@ -42,9 +42,9 @@ export default function useConjurePublishProgressLabel(arg0) {
     const obj2 = { action: null, detail: null };
     const intl2 = tmp(1113).intl;
     obj2.action = intl2.string(obj[stateFromStores.stage]);
-    obj2.detail = tmp(12306).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
-    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3995)["ndkR+x"], obj2);
-    const tmpResult = tmp(12306);
+    obj2.detail = tmp(12273).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(4024)["ndkR+x"], obj2);
+    const tmpResult = tmp(12273);
   }
   return formatToPlainStringResult;
 };

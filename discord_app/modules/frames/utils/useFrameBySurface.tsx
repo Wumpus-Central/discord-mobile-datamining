@@ -1,7 +1,7 @@
-// === Module 12413: useFrameBySurface ===
+// === Module 12378: useFrameBySurface ===
 
-// Module 12413 (useFrameBySurface)
-import FramesStore from "FramesStore" /* 6984 */;
+// Module 12378 (useFrameBySurface)
+import FramesStore from "FramesStore" /* 6926 */;
 
 const require = globalThis.__r;
 

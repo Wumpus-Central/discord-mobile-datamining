@@ -1,11 +1,11 @@
-// === Module 15100: useCanRequestStreamFromUser ===
+// === Module 15077: useCanRequestStreamFromUser ===
 
-// Module 15100 (useCanRequestStreamFromUser)
-import _modDef12 from "module_12" /* 12 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildRoleStore from "GuildRoleStore" /* 5049 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
+// Module 15077 (useCanRequestStreamFromUser)
+import applyDefault from "apply" /* 12 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildRoleStore from "GuildRoleStore" /* 5076 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ export default function useCanRequestStreamFromUser(user, arg1) {
           if (roles == null) {
             roles = [];
           }
-          const keyByResult = _modDef12.keyBy(GuildRoleStore.getManyRoles(channel.guild_id, roles), "id");
+          const keyByResult = applyDefault.keyBy(GuildRoleStore.getManyRoles(channel.guild_id, roles), "id");
           const obj3 = { permission: Permissions.STREAM, user, context: channel, roles: keyByResult };
           if (canResult) {
             canResult = obj2.can(obj3);

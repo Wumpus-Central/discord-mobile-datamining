@@ -1,8 +1,8 @@
-// === Module 16129: useAccessibilityNativeStackFocusTracking ===
+// === Module 16124: useAccessibilityNativeStackFocusTracking ===
 
-// Module 16129 (useAccessibilityNativeStackFocusTracking)
-import setAccessibilityFocusPreviousDefault from "setAccessibilityFocusPrevious" /* 6099 */;
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 6101 */;
+// Module 16124 (useAccessibilityNativeStackFocusTracking)
+import setAccessibilityFocusPreviousDefault from "setAccessibilityFocusPrevious" /* 6119 */;
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 6121 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

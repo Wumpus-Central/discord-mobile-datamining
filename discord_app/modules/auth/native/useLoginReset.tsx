@@ -1,6 +1,6 @@
-// === Module 7270: useLoginReset ===
+// === Module 7217: useLoginReset ===
 
-// Module 7270 (useLoginReset)
+// Module 7217 (useLoginReset)
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

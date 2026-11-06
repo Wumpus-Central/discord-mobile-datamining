@@ -1,19 +1,19 @@
-// === Module 19520: VoicePanelDockStatusViews ===
+// === Module 19512: VoicePanelDockStatusViews ===
 
-// Module 19520 (VoicePanelDockStatusViews)
+// Module 19512 (VoicePanelDockStatusViews)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5380 */;
-import spring_spring from "spring/spring" /* 5773 */;
-import useChannelName from "useChannelName" /* 5788 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7414 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11418 */;
+import timing_timing from "timing/timing" /* 5400 */;
+import spring_spring from "spring/spring" /* 5791 */;
+import useChannelName from "useChannelName" /* 5806 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7361 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11380 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
-import SpeakingStore from "SpeakingStore" /* 6894 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
+import SpeakingStore from "SpeakingStore" /* 6836 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -21,12 +21,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockConstants = fn(11437);
+const VoicePanelDockConstants = fn(11399);
 ({ DOCK_FADE_TIMING: closure_10, DOCK_TILE_RADIUS, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const sum = DOCK_TILE_SIZE + 4;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { face: null, avatar: null, avatarImage: null, ring: null, guildIcon: null, guildIconAsset: null, avatarShadow: null, titleRow: null, title: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -100,11 +100,11 @@ export function DockChannelIcon(streaming) {
   let channelId;
   let guildId;
   const tmp = closure_15();
-  const tmp4Result = guildId(19521)(channelId(575).Shadow.SHADOW_MEDIUM);
-  const context = noop.useContext(guildId(11418));
+  const tmp4Result = guildId(19513)(channelId(575).Shadow.SHADOW_MEDIUM);
+  const context = noop.useContext(guildId(11380));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp4 = guildId(19521);
+  const tmp4 = guildId(19513);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
@@ -138,13 +138,13 @@ export function DockChannelIcon(streaming) {
     obj3.style = items4;
     const obj5 = { streaming, children: null };
     const obj6 = { guild: stateFromStores, size: null, style: null };
-    const tmp2Result = tmp2(19522);
-    obj6.size = tmp5(7101).GuildIconSizes.SMALL_32;
+    const tmp2Result = tmp2(19514);
+    obj6.size = tmp5(7045).GuildIconSizes.SMALL_32;
     obj6.style = tmp.guildIconAsset;
-    obj5.children = closure_12(tmp2(7101), obj6);
+    obj5.children = closure_12(tmp2(7045), obj6);
     obj3.children = closure_12(tmp2Result, obj5);
     let tmp13 = closure_12(closure_4, obj3);
-    const tmp2Result3 = tmp2(7101);
+    const tmp2Result3 = tmp2(7045);
   } else {
     tmp13 = null;
     if (null != stateFromStores1) {
@@ -156,9 +156,9 @@ export function DockChannelIcon(streaming) {
       const obj9 = { streaming, children: null };
       const obj10 = { user: stateFromStores1, guildId: "Array", size: tmp5(1187).AvatarSizes.REFRESH_MEDIUM_32 };
       obj9.children = closure_12(tmp5(1187).Avatar, obj10);
-      obj7.children = closure_12(tmp2(19522), obj9);
+      obj7.children = closure_12(tmp2(19514), obj9);
       tmp13 = closure_12(closure_4, obj7);
-      const tmp2Result4 = tmp2(19522);
+      const tmp2Result4 = tmp2(19514);
     }
   }
   return tmp13;
@@ -184,12 +184,12 @@ export function DockChannelTitle() {
     return channelName;
   }, items3);
   if (stateFromStores) {
-    let VoiceNormalIcon = tmp4(8816).VoiceLockIcon;
+    let VoiceNormalIcon = tmp4(8762).VoiceLockIcon;
   } else {
-    VoiceNormalIcon = tmp4(8819).VoiceNormalIcon;
+    VoiceNormalIcon = tmp4(8765).VoiceNormalIcon;
   }
   const obj2 = channelId(504);
-  const items4 = [closure_12(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }), closure_12(channelId(5763).Text, { variant: "body-md/medium", color: "text-default", lineClamp: 1, style: tmp.title, children: stateFromStores1 })];
+  const items4 = [closure_12(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }), closure_12(channelId(5781).Text, { variant: "body-md/medium", color: "text-default", lineClamp: 1, style: tmp.title, children: stateFromStores1 })];
   obj3.children = items4;
   return closure_13(closure_4, obj3);
 }
@@ -203,12 +203,12 @@ export function DockUserTitle(userId) {
   const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId), items1);
   const obj = userId(504);
   const obj3 = { style: tmp.titleRow, children: null };
-  const name = userId(6179).useName(guildId, channelId, stateFromStores);
+  const name = userId(6199).useName(guildId, channelId, stateFromStores);
   let str = "text-default";
   if (userId.dimmed) {
     str = "text-subtle";
   }
-  obj3.children = closure_12(userId(5763).Text, { variant: "body-md/medium", color: str, lineClamp: 1, style: tmp.title, children: name });
+  obj3.children = closure_12(userId(5781).Text, { variant: "body-md/medium", color: str, lineClamp: 1, style: tmp.title, children: name });
   return closure_12(closure_4, obj3);
 }
 export function DockFace(userId) {
@@ -284,7 +284,7 @@ export function DockFace(userId) {
   if (null != memo) {
     const obj7 = { style: tmp.avatar, children: null };
     const obj8 = { style: tmp.avatarImage, source: memo };
-    obj7.children = closure_12(tmp2(5854), obj8);
+    obj7.children = closure_12(tmp2(5872), obj8);
     tmp18 = closure_12(sharedValue, obj7);
   }
   items9[1] = tmp18;

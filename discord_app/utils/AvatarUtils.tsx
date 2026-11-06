@@ -10,9 +10,9 @@ import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import _modDef1487 from "module_1487" /* 1487 */;
 import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 2023 */;
 import NumberUtils from "NumberUtils" /* 2024 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2108 */;
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2110 */;
-import _modDef2111 from "module_2111" /* 2111 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2103 */;
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2105 */;
+import _modDef2106 from "module_2106" /* 2106 */;
 import Constants from "Constants" /* 1072 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
@@ -357,7 +357,7 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp6;
     if (fallbackAvatar) {
-      tmp6 = _modDef2111;
+      tmp6 = _modDef2106;
     }
     return tmp6;
   }

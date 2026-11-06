@@ -1,8 +1,8 @@
-// === Module 8079: SurveyActionSamplePercents ===
+// === Module 7588: SurveyActionSamplePercents ===
 
-// Module 8079 (SurveyActionSamplePercents)
+// Module 7588 (SurveyActionSamplePercents)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SurveyActionSamplePercents.tsx");
 
-export const SURVEY_ACTION_SAMPLE_PERCENTS = { nitro_unsubbed: 100, checkpoint_completed: 10, quest_completed: 25, quest_dismissed: 25, ad_impression_quest_bar_opt_in: 10, ad_impression_quest_bar_opt_out: 100, bounty_session_completed: 100, bounty_immediate_dismissal: 5, bounty_abandoned: 25, hangout_window_set: 100, populated_clip_gallery_closed: 100, topical_navigation_multiple_impressions: 100, guild_room_joined: 100, youtube_3pp_modal_dismissed: 100 };
+export const SURVEY_ACTION_SAMPLE_PERCENTS = { nitro_unsubbed: 100, checkpoint_completed: 10, quest_completed: 25, quest_dismissed: 25, ad_impression_quest_bar_opt_in: 10, ad_impression_quest_bar_opt_out: 100, bounty_session_completed: 100, bounty_immediate_dismissal: 5, bounty_abandoned: 25, hangout_window_set: 100, populated_clip_gallery_closed: 100, topical_navigation_multiple_impressions: 100, guild_room_joined: 100, youtube_3pp_modal_dismissed: 100, guild_created: 25, friend_request_sent: 1, friend_request_accepted: 1, user_blocked: 1, report_submitted: 2, group_dm_created: 2 };

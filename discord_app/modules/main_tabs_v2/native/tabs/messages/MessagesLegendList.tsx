@@ -1,15 +1,15 @@
-// === Module 18400: MessagesLegendList ===
+// === Module 18392: MessagesLegendList ===
 
-// Module 18400 (MessagesLegendList)
-import MessagesItemChannel from "MessagesItemChannel" /* 18373 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18383 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18384 */;
-import useMessagesData from "useMessagesData" /* 18387 */;
-import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18402 */;
-import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18439 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 18440 */;
-import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 18441 */;
-import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18442 */;
+// Module 18392 (MessagesLegendList)
+import MessagesItemChannel from "MessagesItemChannel" /* 18365 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18375 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18376 */;
+import useMessagesData from "useMessagesData" /* 18379 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18394 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18431 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 18432 */;
+import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 18433 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18434 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
@@ -96,7 +96,7 @@ export default noop.memo(function MessagesLegendList(listItemHeight) {
     return estimatedItemSize;
   }, items2);
   const items4 = [renderHeader, listRefHappeningNow];
-  const keyExtractor = listLeft.useCallback((kind) => {
+  keyExtractor = listLeft.useCallback((kind) => {
     kind = kind.kind;
     if ("favorite" === kind) {
       const _HermesInternal4 = HermesInternal;

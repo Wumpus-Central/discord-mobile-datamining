@@ -1,6 +1,6 @@
-// === Module 7013: VoicePanelStore ===
+// === Module 6955: VoicePanelStore ===
 
-// Module 7013 (VoicePanelStore)
+// Module 6955 (VoicePanelStore)
 import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
@@ -169,9 +169,9 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       });
     });
   };
-  obj.isChannelOpen = function isChannelOpen(arg0) {
+  obj.isChannelOpen = function isChannelOpen(id) {
     const voicePanelsOpened = dependencyMap().voicePanelsOpened;
-    return voicePanelsOpened.has(arg0);
+    return voicePanelsOpened.has(id);
   };
   obj.setChannelPanelPIP = function setChannelPanelPIP(c0, arg1) {
     dependencyMap = arg1;

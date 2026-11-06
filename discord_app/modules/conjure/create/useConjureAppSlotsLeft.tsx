@@ -1,10 +1,10 @@
-// === Module 13217: useConjureAppSlotsLeft ===
+// === Module 13182: useConjureAppSlotsLeft ===
 
-// Module 13217 (useConjureAppSlotsLeft)
+// Module 13182 (useConjureAppSlotsLeft)
 import initialize from "initialize" /* 504 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11060 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11012 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
 
 require = fn;
 const size = fn(2);

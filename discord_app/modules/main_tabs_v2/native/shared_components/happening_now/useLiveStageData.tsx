@@ -1,11 +1,11 @@
-// === Module 18416: useLiveStageData ===
+// === Module 18408: useLiveStageData ===
 
-// Module 18416 (useLiveStageData)
-import _modDef12 from "module_12" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6897 */;
+// Module 18408 (useLiveStageData)
+import applyDefault from "apply" /* 12 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6839 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6851 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6793 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 const require = globalThis.__r;
 
@@ -42,11 +42,11 @@ export function useLiveStageData(stage) {
   const items7 = [stateFromStoresArray, stateFromStoresArray1];
   const memo = stateFromStoresArray2.useMemo(() => {
     items = [...stateFromStoresArray1];
-    return _modDef12.uniqBy(items, (id) => id.id);
+    return applyDefault.uniqBy(items, (id) => id.id);
   }, items6);
-  memo1 = stateFromStoresArray2.useMemo(() => _modDef12.differenceBy(stateFromStoresArray, stateFromStoresArray1, "id"), items7);
+  memo1 = stateFromStoresArray2.useMemo(() => applyDefault.differenceBy(stateFromStoresArray, stateFromStoresArray1, "id"), items7);
   const items8 = [stateFromStoresArray, stateFromStoresArray2];
-  const memo2 = stateFromStoresArray2.useMemo(() => _modDef12.differenceBy(stateFromStoresArray2, stateFromStoresArray, "id"), items8);
+  const memo2 = stateFromStoresArray2.useMemo(() => applyDefault.differenceBy(stateFromStoresArray2, stateFromStoresArray, "id"), items8);
   const items9 = [memo1, memo2];
   const memo3 = stateFromStoresArray2.useMemo(() => {
     items = [...memo2];

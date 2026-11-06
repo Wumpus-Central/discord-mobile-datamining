@@ -1,17 +1,17 @@
-// === Module 19218: AddModeratorsActionSheet ===
+// === Module 19210: AddModeratorsActionSheet ===
 
-// Module 19218 (AddModeratorsActionSheet)
+// Module 19210 (AddModeratorsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildStore from "GuildStore" /* 5041 */;
 
 const require = fn;
 const View = fn(17).View;
-const RowType = fn(8092).RowType;
+const RowType = fn(8038).RowType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,12 +31,12 @@ export default function AddModeratorsActionSheet(channel) {
         row = row.row;
         if (row.rowType === constants.ROLE) {
           closure_1 = closure_1 + 1;
-          let moderatorOverwrite = channel(6848).createModeratorOverwrite(row.id, channel(2121).PermissionOverwriteType.ROLE, closure_0);
-          const obj2 = channel(6848);
+          let moderatorOverwrite = channel(6790).createModeratorOverwrite(row.id, channel(2116).PermissionOverwriteType.ROLE, closure_0);
+          const obj2 = channel(6790);
         } else {
           closure_0 = closure_0 + 1;
-          moderatorOverwrite = channel(6848).createModeratorOverwrite(row.id, channel(2121).PermissionOverwriteType.MEMBER, closure_0);
-          const obj = channel(6848);
+          moderatorOverwrite = channel(6790).createModeratorOverwrite(row.id, channel(2116).PermissionOverwriteType.MEMBER, closure_0);
+          const obj = channel(6790);
         }
         return moderatorOverwrite;
       });
@@ -76,7 +76,7 @@ export default function AddModeratorsActionSheet(channel) {
     }
     return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(5788)(channel, true);
+  let str = pendingAdditions(5806)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -101,12 +101,12 @@ export default function AddModeratorsActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = <tmp13 {...obj7} />;
-      obj4.header = jsx(tmp4(7460).BottomSheetTitleHeader, obj2);
+      obj4.header = jsx(tmp4(7405).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
-      const obj6 = { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(5000).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] };
-      obj5.children = jsx(tmp7(9223), { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(5000).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] });
+      const obj6 = { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(5027).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] };
+      obj5.children = jsx(tmp7(9169), { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(5027).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] });
       obj4.children = <View style={tmp.container}>{null}</View>;
-      return jsx(tmp4(5398).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
+      return jsx(tmp4(5418).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
     }
     obj7 = { size: "sm", disabled: tmp11, text: null, onPress: null };
     const intl = tmp4(1113).intl;

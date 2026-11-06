@@ -1,11 +1,11 @@
-// === Module 9066: ICYMIUnreadStateStore ===
+// === Module 9012: ICYMIUnreadStateStore ===
 
-// Module 9066 (ICYMIUnreadStateStore)
+// Module 9012 (ICYMIUnreadStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import ICYMITypes from "ICYMITypes" /* 9065 */;
-import isItemUnreadInChannel from "isItemUnreadInChannel" /* 9067 */;
+import ICYMITypes from "ICYMITypes" /* 9011 */;
+import isItemUnreadInChannel from "isItemUnreadInChannel" /* 9013 */;
 
 require = fn;
 let closure_2 = 7 * DurationsDefault.Millis.DAY;
@@ -78,9 +78,6 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(DispatcherDefault, {
       }
       continue;
     }
-  },
-  CLEAR_ICYMI_READ_STATES: function handleClearReadStates() {
-    closure_3.readIdToTimestampMap = {};
   }
 });
 const size = fn(2);

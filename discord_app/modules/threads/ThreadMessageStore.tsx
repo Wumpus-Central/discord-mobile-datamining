@@ -1,18 +1,18 @@
-// === Module 7619: ThreadMessageStore ===
+// === Module 7564: ThreadMessageStore ===
 
-// Module 7619 (ThreadMessageStore)
+// Module 7564 (ThreadMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import ThreadConstants from "ThreadConstants" /* 1112 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6201 */;
-import ChannelRecord from "ChannelRecord" /* 4996 */;
-import MessageRecord from "MessageRecord" /* 5086 */;
-import UserRecord from "UserRecord" /* 1399 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import MessageStore from "MessageStore" /* 6199 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6221 */;
+import ChannelRecord from "ChannelRecord" /* 5023 */;
+import MessageRecord from "MessageRecord" /* 5113 */;
+import UserRecord from "UserRecord" /* 1404 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import MessageStore from "MessageStore" /* 6219 */;
 import size from "module_2" /* 2 */;
 
 function updateState(type, fn) {
@@ -378,7 +378,7 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    closure_12 = _modDef12.omitBy(closure_12, (guildId) => {
+    closure_12 = applyDefault.omitBy(closure_12, (guildId) => {
       if (guildId.guildId === id) {
         const parentId = guildId.parentId;
         delete tmp2[tmp];
@@ -436,7 +436,7 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     const id = channel.channel.id;
-    closure_12 = _modDef12.omitBy(closure_12, (parentId) => parentId.parentId === id);
+    closure_12 = applyDefault.omitBy(closure_12, (parentId) => parentId.parentId === id);
     delete tmp[tmp2];
   },
   MESSAGE_CREATE: function handleMessageCreate(message) {

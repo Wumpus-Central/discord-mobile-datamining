@@ -1,8 +1,8 @@
-// === Module 9610: navigateToGameAnnouncement ===
+// === Module 9556: navigateToGameAnnouncement ===
 
-// Module 9610 (navigateToGameAnnouncement)
+// Module 9556 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildStore from "GuildStore" /* 5041 */;
 
 const require = fn;
 let closure_8 = async function _navigateToGameAnnouncement(arg0) {

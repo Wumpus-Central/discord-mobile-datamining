@@ -1,10 +1,10 @@
-// === Module 15463: trackPoggermodeSettingsUpdated ===
+// === Module 15457: trackPoggermodeSettingsUpdated ===
 
-// Module 15463 (trackPoggermodeSettingsUpdated)
+// Module 15457 (trackPoggermodeSettingsUpdated)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 7966 */;
-import apply from "module_12" /* 12 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7920 */;
+import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
 function getScreenshakeLocationName(arg0) {

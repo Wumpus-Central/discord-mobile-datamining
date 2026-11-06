@@ -1,11 +1,11 @@
-// === Module 17399: VideoQuestModalCloseButton ===
+// === Module 17388: VideoQuestModalCloseButton ===
 
-// Module 17399 (VideoQuestModalCloseButton)
+// Module 17388 (VideoQuestModalCloseButton)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 7124 */;
-import XSmallIcon from "XSmallIcon" /* 7198 */;
+import Pressables from "Pressables" /* 7068 */;
+import XSmallIcon from "XSmallIcon" /* 7145 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

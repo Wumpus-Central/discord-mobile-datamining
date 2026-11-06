@@ -1,22 +1,22 @@
-// === Module 15170: ConjureCustomWidgetAddOption ===
+// === Module 15159: ConjureCustomWidgetAddOption ===
 
-// Module 15170 (ConjureCustomWidgetAddOption)
+// Module 15159 (ConjureCustomWidgetAddOption)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3995 from "module_3995" /* 3995 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5384 */;
-import RowButton from "RowButton" /* 8324 */;
-import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9832 */;
-import MagicWandIcon from "MagicWandIcon" /* 12328 */;
-import ConjureCustomWidget from "ConjureCustomWidget" /* 15171 */;
-import ConjureCustomWidgetSheet from "ConjureCustomWidgetSheet" /* 15172 */;
+import _modDef4024 from "module_4024" /* 4024 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5404 */;
+import RowButton from "RowButton" /* 8269 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9783 */;
+import MagicWandIcon from "MagicWandIcon" /* 11119 */;
+import ConjureCustomWidget from "ConjureCustomWidget" /* 15160 */;
+import ConjureCustomWidgetSheet from "ConjureCustomWidgetSheet" /* 15161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const ConjureCustomWidgetAddOption = "ConjureCustomWidgetAddOption";
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj2 = { container: { marginBottom: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -33,9 +33,9 @@ export default function ConjureCustomWidgetAddOption() {
     const obj5 = { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" };
     obj4.icon = jsx(RowButton.RowButton.Icon, { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" });
     const intl = util.intl;
-    obj4.label = intl.string(_modDef3995["5WHmVU"]);
+    obj4.label = intl.string(_modDef4024["5WHmVU"]);
     const intl2 = util.intl;
-    obj4.subLabel = intl2.string(_modDef3995.yI85oV);
+    obj4.subLabel = intl2.string(_modDef4024.yI85oV);
     obj4.onPress = tmp6;
     obj3.children = jsx(RowButton.RowButton, { icon: null, label: null, subLabel: null, onPress: null });
     tmp7 = <View style={tmp.container}>{null}</View>;

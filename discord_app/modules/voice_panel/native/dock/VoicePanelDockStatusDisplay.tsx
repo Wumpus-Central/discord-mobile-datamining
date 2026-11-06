@@ -1,10 +1,10 @@
-// === Module 19519: VoicePanelDockStatusDisplay ===
+// === Module 19511: VoicePanelDockStatusDisplay ===
 
-// Module 19519 (VoicePanelDockStatusDisplay)
+// Module 19511 (VoicePanelDockStatusDisplay)
 import _mod1652 from "module_1652" /* 1652 */;
-import _modDef4125 from "module_4125" /* 4125 */;
-import timing_timing from "timing/timing" /* 5380 */;
-import spring_spring from "spring/spring" /* 5773 */;
+import _modDef3184 from "module_3184" /* 3184 */;
+import timing_timing from "timing/timing" /* 5400 */;
+import spring_spring from "spring/spring" /* 5791 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,13 +22,13 @@ function StatusText(status) {
     if ("speaker" !== kind) {
       if ("joined" === kind) {
         const intl3 = require("util").intl;
-        stringResult = intl3.string(_modDef4125.f9Cdb5);
+        stringResult = intl3.string(_modDef3184.f9Cdb5);
       } else if ("left" === kind) {
         const intl2 = require("util").intl;
-        stringResult = intl2.string(_modDef4125.aZoM2c);
+        stringResult = intl2.string(_modDef3184.aZoM2c);
       } else if ("streaming" === kind) {
         const intl = require("util").intl;
-        stringResult = intl.string(_modDef4125.syN59i);
+        stringResult = intl.string(_modDef3184.syN59i);
       }
     }
   }
@@ -51,13 +51,13 @@ function StatusText(status) {
     if ("speaker" !== kind2) {
       if ("joined" === kind2) {
         const intl6 = require("util").intl;
-        stringResult1 = intl6.string(_modDef4125.f9Cdb5);
+        stringResult1 = intl6.string(_modDef3184.f9Cdb5);
       } else if ("left" === kind2) {
         const intl5 = require("util").intl;
-        stringResult1 = intl5.string(_modDef4125.aZoM2c);
+        stringResult1 = intl5.string(_modDef3184.aZoM2c);
       } else if ("streaming" === kind2) {
         const intl4 = require("util").intl;
-        stringResult1 = intl4.string(_modDef4125.syN59i);
+        stringResult1 = intl4.string(_modDef3184.syN59i);
       }
     }
   }
@@ -123,10 +123,10 @@ function StatusText(status) {
   let obj3 = { style: animatedStyle, children: null };
   if (null != status.userId) {
     const obj4 = { userId: status.userId, dimmed: "left" === status.kind };
-    let tmp43 = closure_8(tmp26(19520).DockUserTitle, obj4);
+    let tmp43 = closure_8(tmp26(19512).DockUserTitle, obj4);
     let tmp44 = closure_8;
   } else {
-    tmp43 = closure_8(tmp26(19520).DockChannelTitle, {});
+    tmp43 = closure_8(tmp26(19512).DockChannelTitle, {});
     tmp44 = closure_8;
   }
   const items5 = [tmp43, ];
@@ -140,7 +140,7 @@ function StatusText(status) {
       str4 = "text-muted";
     }
     const obj6 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
-    obj5.children = tmp44(tmp26(5763).Text, obj6);
+    obj5.children = tmp44(tmp26(5781).Text, obj6);
     tmp44Result = tmp44(_modDef1652.View, obj5);
   }
   items5[1] = tmp44Result;
@@ -430,10 +430,10 @@ function StatusLayer(exit) {
   obj3.style = items5;
   if (null != status.userId) {
     let obj4 = { userId: status.userId, dimmed: "left" === status.kind, entered: tmp12[0] };
-    let tmp32Result = tmp32(tmp2(19520).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(19512).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(19520).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(19512).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue2(_modDef1652.View, obj3), ];
@@ -453,17 +453,17 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(19518);
+const VoicePanelDockStatusStore = fn(19510);
 ({ useDockHasStreamers: closure_6, useDockSubject: metroImportDefault } = VoicePanelDockStatusStore);
-const VoicePanelDockConstants = fn(11437);
+const VoicePanelDockConstants = fn(11399);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const spring = { mass: 0.6, stiffness: 560, damping: 24 };
-const lineHeight = fn(5763).TextStyleSheet["body-xs/medium"].lineHeight;
+const lineHeight = fn(5781).TextStyleSheet["body-xs/medium"].lineHeight;
 let closure_11 = (lineHeight + 1) / 2;
-const sum = fn(5763).TextStyleSheet["body-md/medium"].lineHeight + 1;
-const createStyles = fn(5143);
+const sum = fn(5781).TextStyleSheet["body-md/medium"].lineHeight + 1;
+const createStyles = fn(5170);
 let obj = { display: { flexGrow: 1, flexShrink: 1, height: DOCK_TILE_SIZE }, layer: null, tile: null, textSlot: null, subtext: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

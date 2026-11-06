@@ -1,15 +1,15 @@
-// === Module 15072: ContentInventoryActivityStore ===
+// === Module 15049: ContentInventoryActivityStore ===
 
-// Module 15072 (ContentInventoryActivityStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 15049 (ContentInventoryActivityStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ActivityTypes from "ActivityTypes" /* 5899 */;
-import utils from "utils" /* 8864 */;
-import matchUtils from "matchUtils" /* 9054 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 9058 */;
-import PresenceStore from "PresenceStore" /* 5898 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 9053 */;
+import ActivityTypes from "ActivityTypes" /* 5918 */;
+import utils from "utils" /* 8810 */;
+import matchUtils from "matchUtils" /* 9000 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9004 */;
+import PresenceStore from "PresenceStore" /* 5917 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8999 */;
 
 require = fn;
 function entryToKey(content) {
@@ -21,7 +21,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(9076).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(9022).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === ActivityTypes.ActivityTypes.PLAYING) {
@@ -45,7 +45,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8864);
+    tmpResult = tmp(8810);
   }
   return tmp3;
 }
@@ -81,7 +81,7 @@ function handlePresenceUpdates() {
   while (true) {
     let nextResult = iter.next();
     if (iter === undefined) {
-      let obj2 = _modDef12;
+      let obj2 = applyDefault;
       items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(set1, 0);
       let differenceResult = obj2.difference(arr, items);
@@ -111,7 +111,7 @@ function handlePresenceUpdates() {
   }
   set = new Set();
 }
-let items = [fn(8860).ContentInventoryEntryType.LISTENED_SESSION];
+let items = [fn(8806).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
 const Store = initializeDefault.Store;

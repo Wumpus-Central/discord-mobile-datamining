@@ -1,7 +1,7 @@
-// === Module 12625: ApplicationDirectoryCollectionsStore ===
+// === Module 12590: ApplicationDirectoryCollectionsStore ===
 
-// Module 12625 (ApplicationDirectoryCollectionsStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 12590 (ApplicationDirectoryCollectionsStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -37,10 +37,10 @@ obj2 = {
     collections = collections.collections;
     const combined = "surface:" + collections.surface + " activeState:" + collections.activeState;
     const mapped = collections.map((application_directory_collection_items) => {
-      application_directory_collection_items.application_directory_collection_items = _modDef12.sortBy(application_directory_collection_items.application_directory_collection_items, ["position", "id"]);
+      application_directory_collection_items.application_directory_collection_items = applyDefault.sortBy(application_directory_collection_items.application_directory_collection_items, ["position", "id"]);
       return application_directory_collection_items;
     });
-    obj = _modDef12;
+    obj = applyDefault;
     obj2 = {};
     const merged = Object.assign(obj2);
     obj2[combined] = obj.sortBy(mapped, ["position", "id"]);

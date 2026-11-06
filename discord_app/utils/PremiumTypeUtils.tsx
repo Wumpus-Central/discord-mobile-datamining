@@ -1,6 +1,6 @@
-// === Module 2112: PremiumTypeUtils ===
+// === Module 2107: PremiumTypeUtils ===
 
-// Module 2112 (PremiumTypeUtils)
+// Module 2107 (PremiumTypeUtils)
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 

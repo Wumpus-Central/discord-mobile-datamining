@@ -1,12 +1,12 @@
-// === Module 7827: ConnectionsHooks ===
+// === Module 7781: ConnectionsHooks ===
 
-// Module 7827 (ConnectionsHooks)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7781 (ConnectionsHooks)
+import applyDefault from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import PlatformsDefault from "Platforms" /* 6712 */;
+import PlatformsDefault from "Platforms" /* 6654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6710 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6652 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1072);
 ({ ACTIVITY_PLATFORM_TYPES: metroImportDefault, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(7828).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(7782).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -107,7 +107,7 @@ export function usePlatforms() {
   }, items2);
   const items3 = [memo, fn];
   return noop.useMemo(() => {
-    const obj = _modDef12;
+    const obj = applyDefault;
     items = [
       (type) => {
         let hasItem = set3.has(type.type);
@@ -134,7 +134,7 @@ export function useEmptyStatePlatforms() {
   closure_129_0 = false;
   items = [UserStore];
   closure_129_1 = fn(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const PlayStationVoiceExperiment = fn(7830).PlayStationVoiceExperiment;
+  const PlayStationVoiceExperiment = fn(7784).PlayStationVoiceExperiment;
   closure_129_2 = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   fn = (dependencyMap) => {
     if (dependencyMap.type === PlatformTypes.PLAYSTATION_STAGING) {
@@ -162,7 +162,7 @@ export function useEmptyStatePlatforms() {
   };
   const items1 = [fn];
   return noop.useMemo(() => {
-    const obj = _modDef12;
+    const obj = applyDefault;
     items = [
       (type) => {
         let num = closure_1_13.get(type.type);

@@ -1,8 +1,8 @@
-// === Module 18202: useShouldDisableMessageRequestSettings ===
+// === Module 18194: useShouldDisableMessageRequestSettings ===
 
-// Module 18202 (useShouldDisableMessageRequestSettings)
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5837 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6864 */;
+// Module 18194 (useShouldDisableMessageRequestSettings)
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5855 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6806 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/message_request/hooks/useShouldDisableMessageRequestSettings.tsx");

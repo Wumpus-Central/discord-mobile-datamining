@@ -1,8 +1,8 @@
-// === Module 8080: SurveyActionTypes ===
+// === Module 7589: SurveyActionTypes ===
 
-// Module 8080 (SurveyActionTypes)
+// Module 7589 (SurveyActionTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx");
 
-export const SurveyActionTypes = { NITRO_UNSUBBED: "nitro_unsubbed", CHECKPOINT_COMPLETED: "checkpoint_completed", QUEST_COMPLETED: "quest_completed", QUEST_DISMISSED: "quest_dismissed", AD_IMPRESSION_QUEST_BAR_OPT_IN: "ad_impression_quest_bar_opt_in", AD_IMPRESSION_QUEST_BAR_OPT_OUT: "ad_impression_quest_bar_opt_out", BOUNTY_SESSION_COMPLETED: "bounty_session_completed", BOUNTY_IMMEDIATE_DISMISSAL: "bounty_immediate_dismissal", BOUNTY_ABANDONED: "bounty_abandoned", HANGOUT_WINDOW_SET: "hangout_window_set", POPULATED_CLIP_GALLERY_CLOSED: "populated_clip_gallery_closed", TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS: "topical_navigation_multiple_impressions", GUILD_ROOM_JOINED: "guild_room_joined", YOUTUBE_3PP_MODAL_DISMISSED: "youtube_3pp_modal_dismissed" };
+export const SurveyActionTypes = { NITRO_UNSUBBED: "nitro_unsubbed", CHECKPOINT_COMPLETED: "checkpoint_completed", QUEST_COMPLETED: "quest_completed", QUEST_DISMISSED: "quest_dismissed", AD_IMPRESSION_QUEST_BAR_OPT_IN: "ad_impression_quest_bar_opt_in", AD_IMPRESSION_QUEST_BAR_OPT_OUT: "ad_impression_quest_bar_opt_out", BOUNTY_SESSION_COMPLETED: "bounty_session_completed", BOUNTY_IMMEDIATE_DISMISSAL: "bounty_immediate_dismissal", BOUNTY_ABANDONED: "bounty_abandoned", HANGOUT_WINDOW_SET: "hangout_window_set", POPULATED_CLIP_GALLERY_CLOSED: "populated_clip_gallery_closed", TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS: "topical_navigation_multiple_impressions", GUILD_ROOM_JOINED: "guild_room_joined", YOUTUBE_3PP_MODAL_DISMISSED: "youtube_3pp_modal_dismissed", GUILD_CREATED: "guild_created", FRIEND_REQUEST_SENT: "friend_request_sent", FRIEND_REQUEST_ACCEPTED: "friend_request_accepted", USER_BLOCKED: "user_blocked", REPORT_SUBMITTED: "report_submitted", GROUP_DM_CREATED: "group_dm_created" };

@@ -1,13 +1,13 @@
-// === Module 12559: MarkupLiteralImageRule ===
+// === Module 12524: MarkupLiteralImageRule ===
 
-// Module 12559 (MarkupLiteralImageRule)
-import _modDef2072 from "module_2072" /* 2072 */;
-import MarkupTypes from "MarkupTypes" /* 6170 */;
+// Module 12524 (MarkupLiteralImageRule)
+import _modDef2067 from "module_2067" /* 2067 */;
+import MarkupTypes from "MarkupTypes" /* 6190 */;
 
 require = fn;
 const obj = {};
-const merged = Object.assign(_modDef2072.defaultRules.image);
-obj.order = _modDef2072.defaultRules.link.order - 0.5;
+const merged = Object.assign(_modDef2067.defaultRules.image);
+obj.order = _modDef2067.defaultRules.link.order - 0.5;
 obj.requiredFirstCharacters = ["!"];
 obj.parse = function parse(content) {
   return { type: MarkupTypes.AST_KEY.TEXT, content: content[0] };

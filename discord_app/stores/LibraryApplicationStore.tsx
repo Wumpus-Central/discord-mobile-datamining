@@ -1,12 +1,12 @@
-// === Module 2165: LibraryApplicationStore ===
+// === Module 2160: LibraryApplicationStore ===
 
-// Module 2165 (LibraryApplicationStore)
+// Module 2160 (LibraryApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtilsAll from "FlagUtils" /* 1398 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7725 */;
-import LibraryApplicationRecord from "LibraryApplicationRecord" /* 2166 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7678 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 2161 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -198,10 +198,10 @@ Object.defineProperty(prototype, "entitledBranchIds", {
     const merged = Object.assign(closure_10);
     const merged1 = Object.assign(closure_9);
     const obj = {};
-    const tmp = require("module_12");
-    const values = require("module_12")({}).values();
+    const tmp = require("apply");
+    const values = require("apply")({}).values();
     const found = values.filter((item) => LibraryApplicationUtils.isUserEntitledToLibraryApplication(item));
-    const tmpResult = require("module_12")({});
+    const tmpResult = require("apply")({});
     return found.map((branchId) => branchId.branchId).value();
   },
   set: undefined

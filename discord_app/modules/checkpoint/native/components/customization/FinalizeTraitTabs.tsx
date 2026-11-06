@@ -1,14 +1,14 @@
-// === Module 13928: FinalizeTraitTabs ===
+// === Module 13904: FinalizeTraitTabs ===
 
-// Module 13928 (FinalizeTraitTabs)
+// Module 13904 (FinalizeTraitTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import CheckpointPressable from "CheckpointPressable" /* 13906 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 13931 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import CheckpointPressable from "CheckpointPressable" /* 13881 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 13907 */;
 import noop from "module_19" /* 19 */;
 
 const CheckpointPressableDefault = CheckpointPressable;
@@ -79,11 +79,11 @@ function TraitTab(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6204);
+const CheckpointConstants = fn(6224);
 ({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { scroll: { flexGrow: 0 }, scrollContent: { paddingHorizontal: nativeDefault.space.PX_16 }, row: null, tabContainerActive: null, tab: null, tabActive: null, tabDisabled: null, tabLabel: null, tabLabelActive: null, tabLabelDisabled: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -206,7 +206,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
         showNitroLockedToastDefault(closure_4);
       } else {
         const obj = { selectedOption: activeCustomizationOption, onSelectOption };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13929, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13905, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
       }
     }
   };

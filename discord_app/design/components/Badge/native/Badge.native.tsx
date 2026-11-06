@@ -1,15 +1,15 @@
-// === Module 7445: Badge ===
+// === Module 7075: Badge ===
 
-// Module 7445 (Badge)
+// Module 7075 (Badge)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import LinearGradientDefault from "LinearGradient" /* 5725 */;
-import useToken from "useToken" /* 5734 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import BadgeShared from "BadgeShared" /* 7446 */;
+import LinearGradientDefault from "LinearGradient" /* 5745 */;
+import useToken from "useToken" /* 5754 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import BadgeShared from "BadgeShared" /* 7076 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5143 */;
+import createStyles from "createStyles" /* 5170 */;
 import size from "module_2" /* 2 */;
 
 function getBadgeColors(variant) {
@@ -90,6 +90,23 @@ let closure_7 = createStyles.createStyles((variant) => {
 });
 const result = size.fileFinishedImporting("design/components/Badge/native/Badge.native.tsx");
 
+export function getBadgeText(type) {
+  if ("new" === type) {
+    const intl4 = util.intl;
+    return intl4.string(util.t.y2b7CA);
+  } else if ("beta" === type) {
+    const intl3 = util.intl;
+    return intl3.string(util.t.oW0eUd);
+  } else if ("early_access" === type) {
+    const intl2 = util.intl;
+    return intl2.string(util.t.EYxi0o);
+  } else if ("free_trial" === type) {
+    const intl = util.intl;
+    return intl.string(util.t.IBYG5U);
+  } else {
+    return type.text;
+  }
+}
 export function Badge(icon) {
   ({ type, variant } = icon);
   if (variant === undefined) {

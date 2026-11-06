@@ -1,15 +1,15 @@
-// === Module 16051: GameOrganizationInviteRow ===
+// === Module 16046: GameOrganizationInviteRow ===
 
-// Module 16051 (GameOrganizationInviteRow)
+// Module 16046 (GameOrganizationInviteRow)
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5197 */;
-import TableRow from "TableRow" /* 7119 */;
-import DiscordTagDefault from "DiscordTag" /* 9353 */;
-import InviteButtonDefault from "InviteButton" /* 9356 */;
+import UserUtilsDefault from "UserUtils" /* 5224 */;
+import TableRow from "TableRow" /* 7063 */;
+import DiscordTagDefault from "DiscordTag" /* 9299 */;
+import InviteButtonDefault from "InviteButton" /* 9302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const InviteSendStates = fn(8024).InviteSendStates;
+const InviteSendStates = fn(7978).InviteSendStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationInviteRow.tsx");

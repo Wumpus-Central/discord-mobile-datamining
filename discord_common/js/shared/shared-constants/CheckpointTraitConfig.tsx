@@ -1,6 +1,6 @@
-// === Module 6247: CheckpointTraitConfig ===
+// === Module 6267: CheckpointTraitConfig ===
 
-// Module 6247 (CheckpointTraitConfig)
+// Module 6267 (CheckpointTraitConfig)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointTraitConfig.tsx");

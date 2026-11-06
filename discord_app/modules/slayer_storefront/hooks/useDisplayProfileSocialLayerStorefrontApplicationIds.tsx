@@ -1,11 +1,11 @@
-// === Module 9638: useDisplayProfileSocialLayerStorefrontApplicationIds ===
+// === Module 9587: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
-// Module 9638 (useDisplayProfileSocialLayerStorefrontApplicationIds)
-import _mod12 from "module_12" /* 12 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7919 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7922 */;
+// Module 9587 (useDisplayProfileSocialLayerStorefrontApplicationIds)
+import apply from "apply" /* 12 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7873 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7876 */;
 import noop from "module_19" /* 19 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7548 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7493 */;
 
 const require = globalThis.__r;
 
@@ -95,7 +95,7 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
     } else {
       const items1 = [];
       HermesBuiltin.arraySpread(stateFromStoresArray, HermesBuiltin.arraySpread(areUsersInSocialLayerStorefrontMutualGuildsApplicationIds, HermesBuiltin.arraySpread(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds, HermesBuiltin.arraySpread(usersPlayingStorefrontEnabledGamesApplicationIds, 0))));
-      items = _mod12.uniq(items1);
+      items = apply.uniq(items1);
     }
     return items;
   }, items3);

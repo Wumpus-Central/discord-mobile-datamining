@@ -1,7 +1,7 @@
-// === Module 7591: GuildChannelSubscriptions ===
+// === Module 7536: GuildChannelSubscriptions ===
 
-// Module 7591 (GuildChannelSubscriptions)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7536 (GuildChannelSubscriptions)
+import applyDefault from "apply" /* 12 */;
 import privDefault from "priv" /* 1453 */;
 import size from "module_2" /* 2 */;
 
@@ -48,7 +48,7 @@ prototype["subscribe"] = function subscribe(arg0, arg1, arg2) {
     tmp2 = null == value;
   }
   if (tmp2) {
-    const isEqualResult = _modDef12.isEqual(value, arg2);
+    const isEqualResult = applyDefault.isEqual(value, arg2);
     let flag2 = !isEqualResult;
     if (!isEqualResult) {
       const result = _getResult.set(arg1, arg2);

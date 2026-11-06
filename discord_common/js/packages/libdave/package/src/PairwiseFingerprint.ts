@@ -1,7 +1,7 @@
-// === Module 9406: PairwiseFingerprint ===
+// === Module 9352: PairwiseFingerprint ===
 
-// Module 9406 (PairwiseFingerprint)
-import KeyFingerprint from "KeyFingerprint" /* 9405 */;
+// Module 9352 (PairwiseFingerprint)
+import KeyFingerprint from "KeyFingerprint" /* 9351 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

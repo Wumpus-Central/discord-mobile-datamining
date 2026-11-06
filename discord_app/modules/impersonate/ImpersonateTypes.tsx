@@ -1,6 +1,6 @@
-// === Module 5054: ImpersonateTypes ===
+// === Module 5081: ImpersonateTypes ===
 
-// Module 5054 (ImpersonateTypes)
+// Module 5081 (ImpersonateTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/impersonate/ImpersonateTypes.tsx");

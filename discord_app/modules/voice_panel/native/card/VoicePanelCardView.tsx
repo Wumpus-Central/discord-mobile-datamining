@@ -1,17 +1,17 @@
-// === Module 19557: VoicePanelCardView ===
+// === Module 19550: VoicePanelCardView ===
 
-// Module 19557 (VoicePanelCardView)
-import _modDef12 from "module_12" /* 12 */;
+// Module 19550 (VoicePanelCardView)
+import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5152 */;
-import native from "native" /* 5209 */;
-import Suspender from "Suspender" /* 6127 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 19558 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5179 */;
+import native from "native" /* 5229 */;
+import Suspender from "Suspender" /* 6147 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 19551 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6981 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5901 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6923 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
 
 const require = globalThis.__r;
 
@@ -270,12 +270,12 @@ function CardContentFreezer(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11419);
+const VoicePanelConstants = fn(11381);
 ({ LAYOUT_PHYSICS: closure_9, VoicePanelModes: closure_10, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11417).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19422).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11422).EDGE_GUTTER;
-const isUserParticipant = fn(5817).isUserParticipant;
+const VoicePanelControlsModes = fn(11379).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19414).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11384).EDGE_GUTTER;
+const isUserParticipant = fn(5835).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);
@@ -356,7 +356,7 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   const items6 = [stateFromStoresArray, channelId];
   const effect = noop.useEffect(() => {
     if (!obj.isEqual(ref.current, stateFromStoresArray)) {
-      const differenceWithResult = _modDef12.differenceWith(ref.current, stateFromStoresArray, (id, id2) => id.id === id2.id);
+      const differenceWithResult = applyDefault.differenceWith(ref.current, stateFromStoresArray, (id, id2) => id.id === id2.id);
       let user = null;
       if (differenceWithResult.length > 0) {
         user = differenceWithResult[0].user;
@@ -367,10 +367,10 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
         const obj2 = { username: user.username };
         AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t["9NqwWZ"], obj2));
       }
-      const tmpResult = _modDef12;
+      const tmpResult = applyDefault;
     }
     ref.current = stateFromStoresArray;
-    obj = _modDef12;
+    obj = applyDefault;
   }, items6);
   const items7 = [chunkedParticipants];
   return noop.useMemo(() => {

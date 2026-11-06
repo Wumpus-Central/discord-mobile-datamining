@@ -1,19 +1,19 @@
-// === Module 18096: UserSettingsDesignSystemFormPrimitives ===
+// === Module 18084: UserSettingsDesignSystemFormPrimitives ===
 
-// Module 18096 (UserSettingsDesignSystemFormPrimitives)
-import Text_Text from "Text/Text" /* 5763 */;
-import Stack_Stack from "Stack/Stack" /* 6165 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7118 */;
-import TableRow from "TableRow" /* 7119 */;
-import TableRadioGroup from "TableRadioGroup" /* 7202 */;
-import TableRowGroup from "TableRowGroup" /* 7204 */;
-import TableRadioRow from "TableRadioRow" /* 7205 */;
-import TableSwitchRow from "TableSwitchRow" /* 7507 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8819 */;
-import VoiceXIcon from "VoiceXIcon" /* 12156 */;
-import Checkbox from "Checkbox" /* 14846 */;
-import TableSliderRow from "TableSliderRow" /* 16115 */;
-import Slider from "Slider" /* 16116 */;
+// Module 18084 (UserSettingsDesignSystemFormPrimitives)
+import Text_Text from "Text/Text" /* 5781 */;
+import Stack_Stack from "Stack/Stack" /* 6185 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7062 */;
+import TableRow from "TableRow" /* 7063 */;
+import TableRadioGroup from "TableRadioGroup" /* 7149 */;
+import TableRowGroup from "TableRowGroup" /* 7151 */;
+import TableRadioRow from "TableRadioRow" /* 7152 */;
+import TableSwitchRow from "TableSwitchRow" /* 7452 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8765 */;
+import VoiceXIcon from "VoiceXIcon" /* 12125 */;
+import Checkbox from "Checkbox" /* 14822 */;
+import TableSliderRow from "TableSliderRow" /* 16110 */;
+import Slider from "Slider" /* 16111 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -143,7 +143,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");

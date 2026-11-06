@@ -1,10 +1,11 @@
-// === Module 13232: openConjureProjectsSheet ===
+// === Module 13197: openConjureProjectsSheet ===
 
-// Module 13232 (openConjureProjectsSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11165 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
+// Module 13197 (openConjureProjectsSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11118 */;
+import useConjureProjectGroups from "useConjureProjectGroups" /* 13198 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
 
 require = fn;
 const size = fn(2);
@@ -12,14 +13,13 @@ const result = size.fileFinishedImporting("modules/conjure/projects/native/openC
 
 export default function openConjureProjectsSheet() {
   if ("success" === ConjureProjectStore.getOwnedProjectsFetchState()) {
-    if (0 === ConjureProjectStore.getOwnedProjects().length) {
-      if (0 === ConjureProjectStore.getSharedWithMeProjects().length) {
-        openConjureHomeScreenDefault();
-      }
+    if (0 === obj.getListedConjureProjects().length) {
+      openConjureHomeScreenDefault();
     }
+    obj = useConjureProjectGroups;
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13233, dependencyMap.paths), "ConjureProjectsSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13201, dependencyMap.paths), "ConjureProjectsSheet");
 };
-export function openConjureProjectsSheetForGuild(guildId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13233, dependencyMap.paths), "ConjureProjectsSheet", { guildId });
+export function showConjureProjectsSheet() {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13201, dependencyMap.paths), "ConjureProjectsSheet");
 }

@@ -1,10 +1,10 @@
-// === Module 10016: AttachmentUrlUtils ===
+// === Module 9967: AttachmentUrlUtils ===
 
-// Module 10016 (AttachmentUrlUtils)
+// Module 9967 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2159 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2154 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -302,7 +302,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(6194).ATTACHMENT_PATH_PREFIXES;
+const ATTACHMENT_PATH_PREFIXES = fn(6214).ATTACHMENT_PATH_PREFIXES;
 const Endpoints = fn(1072).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];
@@ -363,7 +363,7 @@ function getSignedAttachmentExpiration(searchParams) {
   }
   return result;
 }
-const mapped = items.map(fn(2160).getHostWithoutPort);
+const mapped = items.map(fn(2155).getHostWithoutPort);
 let closure_7 = mapped.filter((item) => {
   let tmp = null != item;
   if (tmp) {

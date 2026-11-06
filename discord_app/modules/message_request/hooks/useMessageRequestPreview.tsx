@@ -1,12 +1,12 @@
-// === Module 14400: useMessageRequestPreview ===
+// === Module 14377: useMessageRequestPreview ===
 
-// Module 14400 (useMessageRequestPreview)
-import _modDef12 from "module_12" /* 12 */;
+// Module 14377 (useMessageRequestPreview)
+import applyDefault from "apply" /* 12 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MessageStore from "MessageStore" /* 6199 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 14401 */;
+import MessageStore from "MessageStore" /* 6219 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 14378 */;
 
 require = fn;
 function loadMessageRequestData() {
@@ -56,7 +56,7 @@ let closure_11 = async function _loadMessageRequestData() {
             c1 = 2;
             c4 = 1;
           }
-          obj3 = _modDef12;
+          obj3 = applyDefault;
         }
       } else if (1 === tmp7) {
         c3 = 0;

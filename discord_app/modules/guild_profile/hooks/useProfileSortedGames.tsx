@@ -1,14 +1,14 @@
-// === Module 15187: useProfileSortedGames ===
+// === Module 15166: useProfileSortedGames ===
 
-// Module 15187 (useProfileSortedGames)
-import _modDef12 from "module_12" /* 12 */;
+// Module 15166 (useProfileSortedGames)
+import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildProfileConstants = fn(9450);
+const GuildProfileConstants = fn(9396);
 ({ HOISTED_SEARCH_GAME_IDS: closure_4, HOISTED_SEARCH_GAME_IDS_BY_PRIORITY: hasOwnProperty } = GuildProfileConstants);
 let closure_6 = [];
 const size = fn(2);
@@ -42,11 +42,11 @@ export function useProfileSortedGames(surface) {
   })), items1);
   const items2 = [memo1];
   let memo2 = baseSort.useMemo(() => {
-    const mapped = _modDef12(args).map((item) => memo1.get(item));
+    const mapped = applyDefault(args).map((item) => memo1.get(item));
     const found = mapped.filter(GlobalUtils.isNotNullish);
     const found1 = found.filter((item) => selectedGameIds(memo1[6]).isGameAllowedInGameWidgets(item));
     const mapped1 = found1.map((id) => ({ id: id.id, value: id.id, label: id.name }));
-    const arr = _modDef12(args);
+    const arr = applyDefault(args);
     const sortByResult = mapped1.sortBy((value) => {
       let num = memo4.get(value.value);
       if (num == null) {

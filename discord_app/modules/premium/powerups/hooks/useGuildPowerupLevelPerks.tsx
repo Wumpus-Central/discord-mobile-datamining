@@ -1,14 +1,14 @@
-// === Module 14331: useGuildPowerupLevelPerks ===
+// === Module 14308: useGuildPowerupLevelPerks ===
 
-// Module 14331 (useGuildPowerupLevelPerks)
+// Module 14308 (useGuildPowerupLevelPerks)
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import _modDef2699 from "module_2699" /* 2699 */;
+import _modDef2696 from "module_2696" /* 2696 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const PerkIcons = fn(1387).PerkIcons;
-const GUILD_FEATURE_TO_PERK = fn(5356).GUILD_FEATURE_TO_PERK;
+const GUILD_FEATURE_TO_PERK = fn(5376).GUILD_FEATURE_TO_PERK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
 
@@ -29,21 +29,21 @@ export default function useGuildPowerupLevelPerks(arg0) {
       const obj = { perkIcon: PerkIcons.EMOJI, description: null };
       const intl = util.intl;
       const obj2 = { totalEmojis: closure_0.features.total_emoji_slots, additionalEmojis: closure_0.features.additional_emoji_slots };
-      obj.description = intl.formatToPlainString(_modDef2699["NXvV0+"], obj2);
+      obj.description = intl.formatToPlainString(_modDef2696["NXvV0+"], obj2);
       items.push(obj);
     }
     if (includeStickers) {
       const obj3 = { perkIcon: PerkIcons.STICKER, description: null };
       const intl2 = util.intl;
       const obj4 = { totalStickers: closure_0.features.total_sticker_slots, additionalStickers: closure_0.features.additional_sticker_slots };
-      obj3.description = intl2.formatToPlainString(_modDef2699.ZEvvPz, obj4);
+      obj3.description = intl2.formatToPlainString(_modDef2696.ZEvvPz, obj4);
       items.push(obj3);
     }
     if (includeSoundboards) {
       const obj5 = { perkIcon: PerkIcons.SOUNDBOARD, description: null };
       const intl3 = util.intl;
       const obj6 = { totalSoundboards: closure_0.features.total_sound_slots, additionalSoundboards: closure_0.features.additional_sound_slots };
-      obj5.description = intl3.formatToPlainString(_modDef2699["s9u/E7"], obj6);
+      obj5.description = intl3.formatToPlainString(_modDef2696["s9u/E7"], obj6);
       items.push(obj5);
     }
     const features = closure_0.features.features;

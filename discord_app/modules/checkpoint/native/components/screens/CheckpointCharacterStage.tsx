@@ -1,17 +1,17 @@
-// === Module 13697: CheckpointCharacterStage ===
+// === Module 13672: CheckpointCharacterStage ===
 
-// Module 13697 (CheckpointCharacterStage)
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13699 */;
-import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 13865 */;
+// Module 13672 (CheckpointCharacterStage)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13674 */;
+import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 13840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13668 */;
+import CheckpointStore from "CheckpointStore" /* 13643 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { flexGrow: 1 }, rive: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.rive = {};

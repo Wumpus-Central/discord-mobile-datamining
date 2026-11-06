@@ -1,6 +1,6 @@
-// === Module 18423: utils/EmojiColorUtils ===
+// === Module 18415: utils/EmojiColorUtils ===
 
-// Module 18423 (utils/EmojiColorUtils)
+// Module 18415 (utils/EmojiColorUtils)
 import privDefault from "priv" /* 1453 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

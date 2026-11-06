@@ -1,13 +1,13 @@
-// === Module 19768: feedback/FeedbackManager ===
+// === Module 19774: feedback/FeedbackManager ===
 
-// Module 19768 (feedback/FeedbackManager)
-import _mod12 from "module_12" /* 12 */;
+// Module 19774 (feedback/FeedbackManager)
+import apply from "apply" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
-import UserSettings from "UserSettings" /* 4968 */;
-import FeedbackConfig from "FeedbackConfig" /* 19770 */;
-import HotspotStore from "hotspot/HotspotStore" /* 7520 */;
-import FeedbackOverrideStore from "FeedbackOverrideStore" /* 19769 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
+import UserSettings from "UserSettings" /* 4995 */;
+import FeedbackConfig from "FeedbackConfig" /* 19776 */;
+import HotspotStore from "hotspot/HotspotStore" /* 7465 */;
+import FeedbackOverrideStore from "FeedbackOverrideStore" /* 19775 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
 
 require = fn;
 function optOutEligibilityCheck(hotspot) {
@@ -94,7 +94,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     });
   }
   items = [lastImpressionTime, tmp7];
-  let num = _mod12.max(items);
+  let num = apply.max(items);
   if (num == null) {
     num = 0;
   }
@@ -117,7 +117,7 @@ function groupRecencyEligibilityCheck(cooldown) {
   }
   return true;
 }
-const Constants = fn(10344);
+const Constants = fn(10296);
 ({ FeedbackTypePrecedence: closure_4, MAX_REPRESENTABLE_DATE: hasOwnProperty } = Constants);
 class FeedbackManager extends tmp3 {
   constructor() {

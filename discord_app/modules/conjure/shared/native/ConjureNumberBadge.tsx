@@ -1,9 +1,9 @@
-// === Module 13240: ConjureNumberBadge ===
+// === Module 13214: ConjureNumberBadge ===
 
-// Module 13240 (ConjureNumberBadge)
+// Module 13214 (ConjureNumberBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import LinearGradientDefault from "LinearGradient" /* 5725 */;
+import LinearGradientDefault from "LinearGradient" /* 5745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 let items = [nativeDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_1, nativeDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_2, nativeDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_3];
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 1 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { root: { borderRadius: nativeDefault.space.PX_8, overflow: "hidden" }, badge: { backgroundColor: "transparent" }, number: null };
 const obj3 = { borderRadius: nativeDefault.space.PX_8, overflow: "hidden" };
 obj2.number = { textShadowColor: nativeDefault.unsafe_rawColors.OPACITY_BLACK_40, textShadowOffset: { width: 0, height: 1 }, textShadowRadius: 2 };

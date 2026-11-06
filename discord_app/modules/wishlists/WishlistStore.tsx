@@ -1,11 +1,11 @@
-// === Module 9624: WishlistStore ===
+// === Module 9573: WishlistStore ===
 
-// Module 9624 (WishlistStore)
+// Module 9573 (WishlistStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import UserProfileStore from "UserProfileStore" /* 7917 */;
-import WishlistRecord_mod from "WishlistRecord" /* 9625 */;
+import UserProfileStore from "UserProfileStore" /* 7871 */;
+import WishlistRecord_mod from "WishlistRecord" /* 9574 */;
 import size from "module_2" /* 2 */;
 
 let WishlistRecord = WishlistRecord_mod;
@@ -55,8 +55,8 @@ prototype["hasError"] = function hasError(arg0) {
 prototype["getError"] = function getError(arg0) {
   return this.get(arg0).error;
 };
-prototype["getUpdatedAt"] = function getUpdatedAt(wishlistId) {
-  return this.get(wishlistId).updatedAt;
+prototype["getUpdatedAt"] = function getUpdatedAt(firstWishlistId) {
+  return this.get(firstWishlistId).updatedAt;
 };
 prototype["getLastFetchedAt"] = function getLastFetchedAt(arg0) {
   return this.get(arg0).lastFetchedAt;

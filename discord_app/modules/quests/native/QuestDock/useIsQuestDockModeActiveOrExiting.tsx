@@ -1,14 +1,14 @@
-// === Module 17448: useIsQuestDockModeActiveOrExiting ===
+// === Module 17437: useIsQuestDockModeActiveOrExiting ===
 
-// Module 17448 (useIsQuestDockModeActiveOrExiting)
+// Module 17437 (useIsQuestDockModeActiveOrExiting)
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5773 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8987 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17346 */;
+import spring_spring from "spring/spring" /* 5791 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8933 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(17345).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let closure_4 = fn(17334).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 let closure_5 = { code: "(function useIsQuestDockModeActiveOrExitingTsx1(){let[activeQuestDockMode,mode]=this.__closure;return activeQuestDockMode.get()===mode;})" };
 let closure_6 = { code: "(function useIsQuestDockModeActiveOrExitingTsx2(finished){let[activeQuestDockMode,mode,isActiveOrExiting]=this.__closure;if(finished===true&&activeQuestDockMode.get()!==mode){isActiveOrExiting.set(false);}})" };
 let closure_7 = { code: "(function useIsQuestDockModeActiveOrExitingTsx3(isActive,wasActive){let[isActiveOrExiting,transitionProgress,withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS,_worklet_1770169018036_init_data,activeQuestDockMode,mode]=this.__closure;if(isActive===wasActive)return;if(wasActive==null&&isActiveOrExiting.get()===isActive)return;if(isActive){isActiveOrExiting.set(true);return;}transitionProgress.set(0);transitionProgress.set(withSpring(1,QUEST_DOCK_MODE_CHANGE_PHYSICS,'respect-motion-settings',function useIsQuestDockModeActiveOrExitingTsx2Factory([_worklet_1770169018036_init_data,activeQuestDockMode,mode,isActiveOrExiting]){const useIsQuestDockModeActiveOrExitingTsx2=function(finished){if(finished===true&&activeQuestDockMode.get()!==mode){isActiveOrExiting.set(false);}};useIsQuestDockModeActiveOrExitingTsx2.__closure=[activeQuestDockMode,mode,isActiveOrExiting];useIsQuestDockModeActiveOrExitingTsx2.__workletHash=1770169018036;useIsQuestDockModeActiveOrExitingTsx2.__initData=_worklet_1770169018036_init_data;return useIsQuestDockModeActiveOrExitingTsx2;}([_worklet_1770169018036_init_data,activeQuestDockMode,mode,isActiveOrExiting])));})" };

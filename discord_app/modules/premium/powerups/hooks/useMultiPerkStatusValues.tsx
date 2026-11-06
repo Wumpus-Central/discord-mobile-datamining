@@ -1,10 +1,10 @@
-// === Module 14378: useMultiPerkStatusValues ===
+// === Module 14355: useMultiPerkStatusValues ===
 
-// Module 14378 (useMultiPerkStatusValues)
+// Module 14355 (useMultiPerkStatusValues)
 import util from "util" /* 1113 */;
-import _modDef2699 from "module_2699" /* 2699 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5356 */;
-import usePowerupActiveStatus from "usePowerupActiveStatus" /* 14307 */;
+import _modDef2696 from "module_2696" /* 2696 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5376 */;
+import usePowerupActiveStatus from "usePowerupActiveStatus" /* 14284 */;
 import size from "module_2" /* 2 */;
 
 const PowerupActiveStatusType = GuildPowerupsConstants.PowerupActiveStatusType;
@@ -40,7 +40,7 @@ export default function useMultiPerkStatusValues(powerups) {
     } else if (someResult) {
       const obj3 = { type: "active", statusText: null };
       const intl = util.intl;
-      obj3.statusText = intl.string(_modDef2699.FFLkmx);
+      obj3.statusText = intl.string(_modDef2696.FFLkmx);
       tmp4 = obj3;
     }
     const reduced1 = powerupsActiveStatuses.reduce((acc, type) => {

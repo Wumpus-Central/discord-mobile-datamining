@@ -1,7 +1,7 @@
-// === Module 6000: RTCRegionStore ===
+// === Module 6019: RTCRegionStore ===
 
-// Module 6000 (RTCRegionStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6019 (RTCRegionStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
@@ -52,7 +52,7 @@ prototype["shouldPerformLatencyTest"] = function shouldPerformLatencyTest(mapped
     if (lastGeoRankedOrder == null) {
       lastGeoRankedOrder = [];
     }
-    tmp = !_modDef12.isEqual(mapped, lastGeoRankedOrder);
+    tmp = !applyDefault.isEqual(mapped, lastGeoRankedOrder);
   }
   if (!tmp) {
     const _Date = Date;

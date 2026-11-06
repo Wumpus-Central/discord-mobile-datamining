@@ -1,22 +1,22 @@
-// === Module 19722: background_sync/BackgroundSync ===
+// === Module 19728: background_sync/BackgroundSync ===
 
-// Module 19722 (background_sync/BackgroundSync)
+// Module 19728 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5021 */;
-import modules_Messages from "modules/Messages" /* 7801 */;
-import GuildVersionsDefault from "GuildVersions" /* 7940 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7941 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7943 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5048 */;
+import modules_Messages from "modules/Messages" /* 7755 */;
+import GuildVersionsDefault from "GuildVersions" /* 7894 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7895 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7897 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import "ChannelStore";
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import AppStateStore from "AppStateStore" /* 2122 */;
-import FileSystemStore from "FileSystemStore" /* 7803 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import AppStateStore from "AppStateStore" /* 2117 */;
+import FileSystemStore from "FileSystemStore" /* 7757 */;
 
 require = fn;
 let closure_17 = async function _backgroundSync(arg0) {
@@ -652,7 +652,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
           closure_145_4 = messagesResult;
           if (null != messagesResult) {
             let _Array = Array;
-            let tmp128 = _modDef12;
+            let tmp128 = applyDefault;
             readStatesByChannel = readStatesByChannel.getReadStatesByChannel();
             let tmp128Result = tmp128(Array.from(readStatesByChannel.values()));
             let found = tmp128Result.filter((channelId) => {
@@ -946,7 +946,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
               deleted_message_ids = [];
             }
             closure_135_5 = deleted_message_ids;
-            let obj3 = _modDef12;
+            let obj3 = applyDefault;
             let tmp26 = _slicedToArray(obj3.partition(modified_messages, modules_Messages.isLikelyNotDelta), 2);
             let arr4 = tmp26[1];
             closure_135_6 = arr4;
@@ -1024,14 +1024,14 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ isPrivate: hasOwnProperty, isThread: closure_6 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(6975);
-const ChannelStore = fn(4992);
-const EmojiStore = fn(6934);
-const GuildStore = fn(5014);
+const StickersStore = fn(6917);
+const ChannelStore = fn(5019);
+const EmojiStore = fn(6876);
+const GuildStore = fn(5041);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;
 const lastSyncTime = "lastSyncTime";

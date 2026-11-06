@@ -1,6 +1,6 @@
-// === Module 1394: safety_state ===
+// === Module 1399: safety_state ===
 
-// Module 1394 (safety_state)
+// Module 1399 (safety_state)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import wrappers from "wrappers" /* 1227 */;
@@ -642,7 +642,7 @@ class SafetyState$Type extends MessageType6 {
 }
 const prototype6 = SafetyState$Type.prototype;
 prototype6["create"] = function create(partialSettings) {
-  obj = { state: { oneofKind: "ti" }, reason: 0, annotations: [] };
+  obj = { state: { oneofKind: "r" }, reason: 0, annotations: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {

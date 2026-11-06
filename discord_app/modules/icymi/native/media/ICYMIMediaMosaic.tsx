@@ -1,28 +1,28 @@
-// === Module 18875: ICYMIMediaMosaic ===
+// === Module 18863: ICYMIMediaMosaic ===
 
-// Module 18875 (ICYMIMediaMosaic)
-import _mod12 from "module_12" /* 12 */;
+// Module 18863 (ICYMIMediaMosaic)
+import apply from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useChannelName from "useChannelName" /* 5788 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7418 */;
-import openMediaModal from "openMediaModal" /* 8979 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8985 */;
-import common_VideoDefault from "common/Video" /* 9019 */;
-import ICYMITypes from "ICYMITypes" /* 9065 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9070 */;
-import ICYMIContext from "ICYMIContext" /* 18828 */;
-import ThumbhashUtils from "ThumbhashUtils" /* 18876 */;
+import useChannelName from "useChannelName" /* 5806 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7365 */;
+import openMediaModal from "openMediaModal" /* 8925 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8931 */;
+import common_VideoDefault from "common/Video" /* 8965 */;
+import ICYMITypes from "ICYMITypes" /* 9011 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9016 */;
+import ICYMIContext from "ICYMIContext" /* 18816 */;
+import ThumbhashUtils from "ThumbhashUtils" /* 18864 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
-import ICYMIStore from "ICYMIStore" /* 9052 */;
+import ICYMIStore from "ICYMIStore" /* 8998 */;
 
 require = fn;
 function MediaMosaicVideo(source) {
@@ -511,7 +511,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const collapsedCategories = createStyles.createStyles(() => {
   const obj = { media: { borderRadius: nativeDefault.radii.xs }, video: null, thumbhashMedia: null, container: null, imagesContainer: null, imageRow: null, topRow: null, bottomRow: null, videoIcon: null, muteIcon: null, spoilerText: null, leftColumn: null, rightColumn: null, singleImage: null, centerContainer: null, absoluteContainer: null, iconBg: null, iconBgSelected: null };
   const obj2 = { borderRadius: nativeDefault.radii.xs };
@@ -570,7 +570,7 @@ export default function ICYMIMediaMosaic(message) {
     const result = MediaSourceUtil.extractMediaSourcesFromMessage(message, message, undefined, ICYMITypes.GRAVITY_VALID_EMBED_TYPES);
     const mapped = result.map((item) => message(itemType[29]).flattenSource(item));
     const found = mapped.filter(GlobalUtils.isNotNullish);
-    const tmp2 = _slicedToArray(_mod12.partition(found, (accessoryType) => "embed" === accessoryType.accessoryType), 2);
+    const tmp2 = _slicedToArray(apply.partition(found, (accessoryType) => "embed" === accessoryType.accessoryType), 2);
     return { allMediaSources: found, nonEmbedSources: tmp2[1], embedSources: tmp2[0] };
   }, items1);
   allMediaSources = memo.allMediaSources;

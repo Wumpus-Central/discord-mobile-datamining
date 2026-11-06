@@ -1,22 +1,22 @@
-// === Module 16562: definitions ===
+// === Module 16559: definitions ===
 
-// Module 16562 (definitions)
+// Module 16559 (definitions)
 import Constants2 from "Constants" /* 1083 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2148 */;
-import EntitlementTypes from "EntitlementTypes" /* 2175 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5811 */;
-import ActivityTypes from "ActivityTypes" /* 5899 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 8025 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 9056 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9894 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10944 */;
-import ActivityPlatform from "ActivityPlatform" /* 12015 */;
-import ThermalStates from "ThermalStates" /* 16559 */;
-import SKUTypes from "SKUTypes" /* 16563 */;
-import discord_common_helpers from "discord_common/helpers" /* 16564 */;
-import contextMenuIcons from "contextMenuIcons" /* 16565 */;
-import Constants from "Constants" /* 11898 */;
+import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2143 */;
+import EntitlementTypes from "EntitlementTypes" /* 2170 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5829 */;
+import ActivityTypes from "ActivityTypes" /* 5918 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7979 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9002 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9844 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10896 */;
+import ActivityPlatform from "ActivityPlatform" /* 11981 */;
+import ThermalStates from "ThermalStates" /* 16556 */;
+import SKUTypes from "SKUTypes" /* 16560 */;
+import discord_common_helpers from "discord_common/helpers" /* 16561 */;
+import contextMenuIcons from "contextMenuIcons" /* 16562 */;
+import Constants from "Constants" /* 11864 */;
 import size from "module_2" /* 2 */;
 
 function joiEnum(number, EmbeddedActivityOrientationLockState, arg2) {
@@ -2345,7 +2345,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "concat", response: "add" },
+  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "unicodeVersion", response: "add" },
   [discord_common_helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

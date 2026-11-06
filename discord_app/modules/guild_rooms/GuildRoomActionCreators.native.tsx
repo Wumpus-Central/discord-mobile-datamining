@@ -1,7 +1,7 @@
-// === Module 8049: GuildRoomActionCreators ===
+// === Module 8003: GuildRoomActionCreators ===
 
-// Module 8049 (GuildRoomActionCreators)
-import _guildRoomConnectAll from "_guildRoomConnect" /* 8050 */;
+// Module 8003 (GuildRoomActionCreators)
+import _guildRoomConnectAll from "_guildRoomConnect" /* 8004 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

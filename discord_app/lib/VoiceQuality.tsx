@@ -1,14 +1,14 @@
-// === Module 6031: VoiceQuality ===
+// === Module 6051: VoiceQuality ===
 
-// Module 6031 (VoiceQuality)
+// Module 6051 (VoiceQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5926 */;
-import Histogram from "Histogram" /* 6032 */;
-import NetworkQualityDefault from "NetworkQuality" /* 6038 */;
-import SystemResourcesDefault from "SystemResources" /* 6040 */;
+import applyDefault from "apply" /* 12 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5945 */;
+import Histogram from "Histogram" /* 6052 */;
+import NetworkQualityDefault from "NetworkQuality" /* 6058 */;
+import SystemResourcesDefault from "SystemResources" /* 6060 */;
 import _slicedToArray from "module_32" /* 32 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5929 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5948 */;
 
 require = fn;
 function explodePlayoutMetrics(obj) {
@@ -238,12 +238,12 @@ class VoiceQuality extends tmp2 {
     tmp5.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
         const networkQuality = num.networkQuality;
-        const result = networkQuality.incrementNetworkStats(num(5909).now());
+        const result = networkQuality.incrementNetworkStats(num(5928).now());
         const systemResources = num.systemResources;
         systemResources.takeSample();
         num = 0;
-        let obj3 = num(5909);
-        let item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
+        let obj3 = num(5928);
+        let item = applyDefault.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             num = type.bitrateTarget;
             if (num == null) {
@@ -336,7 +336,7 @@ class VoiceQuality extends tmp2 {
         let merged = Object.assign(carriedFragmentTotals(closure_1_11, obj2.transportBaseline, rtp.transport, obj2.transportStats));
         num.transportStats = transportStats;
         num.appendTargetRates(num.outboundStats, rtp.transport.availableOutgoingBitrate, num);
-        const item1 = _modDef12.forEach(rtp.rtp.inbound, (arg0, arg1) => {
+        const item1 = applyDefault.forEach(rtp.rtp.inbound, (arg0, arg1) => {
           closure_0 = arg1;
           const item = closure_1_1(dependencyMap[5]).forEach(arg0, (type) => {
             if ("audio" === type.type) {
@@ -497,7 +497,7 @@ class VoiceQuality extends tmp2 {
                 prop = tmp67.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new closure_0(6032).Histogram();
+                prop = new closure_0(6052).Histogram();
               }
               obj7.audioJitterBufferHistogram = prop;
               obj7.audioJitterTarget = type.audioJitterTarget;
@@ -506,7 +506,7 @@ class VoiceQuality extends tmp2 {
                 prop1 = tmp67.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new closure_0(6032).Histogram();
+                prop1 = new closure_0(6052).Histogram();
               }
               obj7.audioJitterTargetHistogram = prop1;
               obj7.audioJitterDelay = type.audioJitterDelay;
@@ -515,7 +515,7 @@ class VoiceQuality extends tmp2 {
                 prop2 = tmp67.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new closure_0(6032).Histogram();
+                prop2 = new closure_0(6052).Histogram();
               }
               obj7.audioJitterDelayHistogram = prop2;
               ({ relativeReceptionDelay: obj4.relativeReceptionDelay, relativePlayoutDelay: obj4.relativePlayoutDelay } = type);
@@ -538,7 +538,7 @@ class VoiceQuality extends tmp2 {
               }
               audioJitterTargetHistogram.addSamples(prop5);
               const obj12 = {};
-              const merged = Object.assign(_modDef12.omit(tmp13, closure_3_12));
+              const merged = Object.assign(applyDefault.omit(tmp13, closure_3_12));
               const merged1 = Object.assign(tmp26);
               if (null != num.inboundStats[closure_0]) {
                 if (!tmp45) {
@@ -668,7 +668,7 @@ class VoiceQuality extends tmp2 {
           obj2.sampleAudioDevice(rtp.audioDevice.input, obj2.inputDeviceStats);
           obj2.sampleAudioDevice(rtp.audioDevice.output, obj2.outputDeviceStats);
         }
-        const tmp16Result = _modDef12;
+        const tmp16Result = applyDefault;
       }
     };
     tmp5.connection = global;
@@ -716,10 +716,10 @@ prototype["seedFrom"] = function seedFrom(outboundBaseline) {
   const self = this;
   outboundBaseline = outboundBaseline.outboundBaseline;
   this.outboundBaseline = { baseline: outboundBaseline.lastRaw, lastRaw: outboundBaseline.lastRaw };
-  this.outboundLatencyBaseline = _modDef12.mapValues(outboundBaseline.outboundLatencyBaseline, (baseline) => ({ baseline: baseline.lastRaw, lastRaw: baseline.lastRaw }));
-  this.transportBaseline = _modDef12.mapValues(outboundBaseline.transportBaseline, (baseline) => ({ baseline: baseline.lastRaw, lastRaw: baseline.lastRaw }));
-  this.inboundBaselines = _modDef12.mapValues(outboundBaseline.inboundBaselines, (baseline) => ({ baseline: baseline.lastRaw, lastRaw: baseline.lastRaw }));
-  this.inboundLatencyBaselines = _modDef12.mapValues(outboundBaseline.inboundLatencyBaselines, (arg0) => _modDef12.mapValues(arg0, (baseline) => ({ baseline: baseline.lastRaw, lastRaw: baseline.lastRaw })));
+  this.outboundLatencyBaseline = applyDefault.mapValues(outboundBaseline.outboundLatencyBaseline, (baseline) => ({ baseline: baseline.lastRaw, lastRaw: baseline.lastRaw }));
+  this.transportBaseline = applyDefault.mapValues(outboundBaseline.transportBaseline, (baseline) => ({ baseline: baseline.lastRaw, lastRaw: baseline.lastRaw }));
+  this.inboundBaselines = applyDefault.mapValues(outboundBaseline.inboundBaselines, (baseline) => ({ baseline: baseline.lastRaw, lastRaw: baseline.lastRaw }));
+  this.inboundLatencyBaselines = applyDefault.mapValues(outboundBaseline.inboundLatencyBaselines, (arg0) => applyDefault.mapValues(arg0, (baseline) => ({ baseline: baseline.lastRaw, lastRaw: baseline.lastRaw })));
   const inputDeviceStats = outboundBaseline.inputDeviceStats;
   let tmp;
   if (null != inputDeviceStats.restartCount) {
@@ -760,7 +760,7 @@ prototype["stop"] = function stop() {
   connection.off(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["getPacketStats"] = function getPacketStats() {
-  const reduced = _modDef12.reduce(this.inboundStats, (packetsReceived, packetsReceived2) => {
+  const reduced = applyDefault.reduce(this.inboundStats, (packetsReceived, packetsReceived2) => {
     packetsReceived.packetsReceived = packetsReceived.packetsReceived + packetsReceived2.packetsReceived;
     packetsReceived.packetsReceivedLost = packetsReceived.packetsReceivedLost + packetsReceived2.packetsLost;
     packetsReceived.nackCount = packetsReceived.nackCount + packetsReceived2.nackCount;
@@ -785,7 +785,7 @@ prototype["getOutboundPacketsStats"] = function getOutboundPacketsStats() {
 prototype["getBytesStats"] = function getBytesStats() {
   const self = this;
   const result = this.outboundStats.aggregationDurationMs / 1000;
-  obj = { bytes_sent: this.outboundStats.bytesSent, bytes_received: _modDef12.reduce(this.inboundStats, (arg0, bytesReceived) => arg0 + bytesReceived.bytesReceived, 0), outbound_bandwidth_estimate: null, audio_target_bitrate: null };
+  obj = { bytes_sent: this.outboundStats.bytesSent, bytes_received: applyDefault.reduce(this.inboundStats, (arg0, bytesReceived) => arg0 + bytesReceived.bytesReceived, 0), outbound_bandwidth_estimate: null, audio_target_bitrate: null };
   let num = 0;
   if (0 < result) {
     const _Math = Math;
@@ -887,7 +887,7 @@ prototype["getSystemResourceStats"] = function getSystemResourceStats() {
   return systemResources.getStats();
 };
 prototype["getBufferStats"] = function getBufferStats() {
-  const reduced = _modDef12.reduce(this.inboundStats, (arg0, bufferStats) => {
+  const reduced = applyDefault.reduce(this.inboundStats, (arg0, bufferStats) => {
     const audioJitterBufferHistogram = bufferStats.bufferStats.audioJitterBufferHistogram;
     if (audioJitterBufferHistogram.getSamples() > 0) {
       const audioJitterBufferHistogram2 = bufferStats.bufferStats.audioJitterBufferHistogram;
@@ -980,7 +980,7 @@ prototype["getBufferStats"] = function getBufferStats() {
   }
 };
 prototype["getFrameOpStats"] = function getFrameOpStats() {
-  const reduced = _modDef12.reduce(this.inboundStats, (silent, frameOpStats) => {
+  const reduced = applyDefault.reduce(this.inboundStats, (silent, frameOpStats) => {
     if (null != frameOpStats.frameOpStats.silent) {
       silent.silent = silent.silent + frameOpStats.frameOpStats.silent;
     }
@@ -1010,7 +1010,7 @@ prototype["getTransportStats"] = function getTransportStats() {
   return { decryption_failures: this.transportStats.decryptionFailures, routing_failures: this.transportStats.routingFailures, transport_delay_ms: this.transportStats.transportDelayMs, transport_packet_count: this.transportStats.transportPacketCount };
 };
 prototype["getE2EEStats"] = function getE2EEStats() {
-  const reduced = _modDef12.reduce(this.inboundStats, (passthroughCount, passthroughCount2) => {
+  const reduced = applyDefault.reduce(this.inboundStats, (passthroughCount, passthroughCount2) => {
     let num = passthroughCount2.passthroughCount;
     if (num == null) {
       num = 0;

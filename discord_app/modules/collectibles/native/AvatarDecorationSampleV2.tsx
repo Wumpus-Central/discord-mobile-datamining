@@ -1,12 +1,12 @@
-// === Module 9659: AvatarDecorationSampleV2 ===
+// === Module 9608: AvatarDecorationSampleV2 ===
 
-// Module 9659 (AvatarDecorationSampleV2)
+// Module 9608 (AvatarDecorationSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import _modDef9660 from "module_9660" /* 9660 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9661 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import _modDef9609 from "module_9609" /* 9609 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9610 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 0.8333333333333334;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
   const size = { position: "absolute", height: arg0 * c7, width: arg0 * c7, borderRadius: arg0 * c7 / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -42,7 +42,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef9660;
+    avatarSource = _modDef9609;
   }
   const obj2 = { children: null };
   obj.source = avatarSource;

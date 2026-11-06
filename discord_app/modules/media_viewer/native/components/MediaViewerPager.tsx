@@ -1,10 +1,10 @@
-// === Module 15033: MediaViewerPager ===
+// === Module 15010: MediaViewerPager ===
 
-// Module 15033 (MediaViewerPager)
+// Module 15010 (MediaViewerPager)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5430 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8980 */;
-import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter" /* 15029 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8926 */;
+import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter" /* 15006 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

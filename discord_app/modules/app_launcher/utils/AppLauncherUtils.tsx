@@ -1,22 +1,22 @@
-// === Module 9917: AppLauncherUtils ===
+// === Module 9867: AppLauncherUtils ===
 
-// Module 9917 (AppLauncherUtils)
+// Module 9867 (AppLauncherUtils)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import Server from "Server" /* 2121 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2153 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5811 */;
-import getPlatformDefault from "getPlatform" /* 5818 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7021 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7845 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11699 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11944 */;
+import Server from "Server" /* 2116 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2148 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5829 */;
+import getPlatformDefault from "getPlatform" /* 5836 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6963 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7799 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11665 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11910 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9918 */;
-import ApplicationRecord from "ApplicationRecord" /* 2145 */;
-import AppLauncherStore from "AppLauncherStore" /* 12641 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9868 */;
+import ApplicationRecord from "ApplicationRecord" /* 2140 */;
+import AppLauncherStore from "AppLauncherStore" /* 12606 */;
 
 const require = globalThis.__r;
 
@@ -67,8 +67,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1072).ApplicationFlags;
-const BuiltInSectionId = fn(6173).BuiltInSectionId;
-const MessageSendLocation = fn(5148).MessageSendLocation;
+const BuiltInSectionId = fn(6193).BuiltInSectionId;
+const MessageSendLocation = fn(5175).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 

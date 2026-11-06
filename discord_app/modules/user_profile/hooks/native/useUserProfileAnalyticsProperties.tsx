@@ -1,9 +1,9 @@
-// === Module 8916: useUserProfileAnalyticsProperties ===
+// === Module 8862: useUserProfileAnalyticsProperties ===
 
-// Module 8916 (useUserProfileAnalyticsProperties)
+// Module 8862 (useUserProfileAnalyticsProperties)
 import noop from "module_19" /* 19 */;
 
-const UserProfileAnalyticsTypes = fn(8900).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8846).UserProfileAnalyticsTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
 

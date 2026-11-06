@@ -1,7 +1,7 @@
-// === Module 16045: GuildActionSheetUtils ===
+// === Module 16040: GuildActionSheetUtils ===
 
-// Module 16045 (GuildActionSheetUtils)
-import PermissionStore from "PermissionStore" /* 5075 */;
+// Module 16040 (GuildActionSheetUtils)
+import PermissionStore from "PermissionStore" /* 5102 */;
 
 const require = globalThis.__r;
 

@@ -1,6 +1,6 @@
-// === Module 7081: FileExtensionUtils ===
+// === Module 7023: FileExtensionUtils ===
 
-// Module 7081 (FileExtensionUtils)
+// Module 7023 (FileExtensionUtils)
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 

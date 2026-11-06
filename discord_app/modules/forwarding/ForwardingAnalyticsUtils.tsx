@@ -1,11 +1,11 @@
-// === Module 13612: ForwardingAnalyticsUtils ===
+// === Module 13587: ForwardingAnalyticsUtils ===
 
-// Module 13612 (ForwardingAnalyticsUtils)
-import _mod12 from "module_12" /* 12 */;
+// Module 13587 (ForwardingAnalyticsUtils)
+import apply from "apply" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5897 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5916 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -41,17 +41,17 @@ export function trackForwardCopyLink(channel_id, id) {
   AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_COPY_LINK, { channel_id, message_id: id });
 }
 export function useTrackForwardAddRecipientOnce() {
-  return noop.useMemo(() => _mod12.once((channel_id, message_id, has_query) => {
+  return noop.useMemo(() => apply.once((channel_id, message_id, has_query) => {
     closure_1_1(closure_1_2[3]).track(constants.FORWARD_ADD_RECIPIENT, { channel_id, message_id, has_query });
   }), []);
 }
 export function useTrackForwardEditSearchOnce() {
-  return noop.useMemo(() => _mod12.once((channel_id, message_id) => {
+  return noop.useMemo(() => apply.once((channel_id, message_id) => {
     closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_SEARCH, { channel_id, message_id });
   }), []);
 }
 export function useTrackForwardEditContextMessageOnce() {
-  return noop.useMemo(() => _mod12.once((channel_id, message_id) => {
+  return noop.useMemo(() => apply.once((channel_id, message_id) => {
     closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_CONTEXT_MESSAGE, { channel_id, message_id });
   }), []);
 }

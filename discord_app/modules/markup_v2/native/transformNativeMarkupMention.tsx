@@ -1,11 +1,11 @@
-// === Module 8747: transformNativeMarkupMention ===
+// === Module 8693: transformNativeMarkupMention ===
 
-// Module 8747 (transformNativeMarkupMention)
-import MarkupTypes from "MarkupTypes" /* 6170 */;
-import MarkupRules from "MarkupRules" /* 6172 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 6182 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 8748 */;
-import StaticMentionRoutes from "StaticMentionRoutes" /* 8829 */;
+// Module 8693 (transformNativeMarkupMention)
+import MarkupTypes from "MarkupTypes" /* 6190 */;
+import MarkupRules from "MarkupRules" /* 6192 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 6202 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 8694 */;
+import StaticMentionRoutes from "StaticMentionRoutes" /* 8775 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
@@ -27,9 +27,9 @@ export function transformNativeMention(value, allowGameMentions) {
     obj5.id = str1;
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "ao", everyoneOrHere: "props" }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "add", everyoneOrHere: "<string:1090519490>" }, allowGameMentions);
   } else if ("here" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "ao", everyoneOrHere: "props" }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "add", everyoneOrHere: "<string:1358954946>" }, allowGameMentions);
   } else if ("role" === type) {
     return MarkupRules.hydrateRoleMention(value.value.toString(), allowGameMentions);
   } else if ("game" === type) {

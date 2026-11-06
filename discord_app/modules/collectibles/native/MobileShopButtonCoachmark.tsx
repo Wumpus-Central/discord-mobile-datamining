@@ -1,14 +1,14 @@
-// === Module 14946: MobileShopButtonCoachmark ===
+// === Module 14923: MobileShopButtonCoachmark ===
 
-// Module 14946 (MobileShopButtonCoachmark)
+// Module 14923 (MobileShopButtonCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj2 = { image: null };
 let size = { height: 80, width: 80, marginTop: nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_16 };
 obj2.image = size;

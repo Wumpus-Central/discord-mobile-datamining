@@ -1,9 +1,9 @@
-// === Module 15193: UserProfileWidgetExpandableItems ===
+// === Module 15173: UserProfileWidgetExpandableItems ===
 
-// Module 15193 (UserProfileWidgetExpandableItems)
+// Module 15173 (UserProfileWidgetExpandableItems)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5763 */;
+import Text_Text from "Text/Text" /* 5781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { viewMore: { marginTop: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

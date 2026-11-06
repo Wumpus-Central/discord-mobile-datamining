@@ -1,9 +1,9 @@
-// === Module 20404: EnterEmailScreen ===
+// === Module 20412: EnterEmailScreen ===
 
-// Module 20404 (EnterEmailScreen)
-import _modDef2963 from "module_2963" /* 2963 */;
-import types from "types" /* 20396 */;
-import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 20405 */;
+// Module 20412 (EnterEmailScreen)
+import _modDef2960 from "module_2960" /* 2960 */;
+import types from "types" /* 20404 */;
+import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 20413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,9 +21,9 @@ export default function EnterEmailScreen() {
   const obj2 = { title: null, action: null, onAction: null, children: null };
   const tmp = _slicedToArray(noop.useState(""), 2);
   const intl = require("util").intl;
-  obj2.title = intl.string(_modDef2963.bFbsV6);
+  obj2.title = intl.string(_modDef2960.bFbsV6);
   const intl2 = require("util").intl;
-  obj2.action = intl2.string(_modDef2963.RRBNpv);
+  obj2.action = intl2.string(_modDef2960.RRBNpv);
   obj2.onAction = function onAction() {
     closure_0.push(types.SafetyFlowScreens.VERIFY_EMAIL);
   };

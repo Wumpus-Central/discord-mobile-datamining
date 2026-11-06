@@ -1,9 +1,9 @@
-// === Module 10057: ThumbsDownIcon ===
+// === Module 10008: ThumbsDownIcon ===
 
-// Module 10057 (ThumbsDownIcon)
+// Module 10008 (ThumbsDownIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5853 */;
-import _mod10058 from "module_10058" /* 10058 */;
+import BaseIconImage from "BaseIconImage" /* 5871 */;
+import _mod10009 from "module_10009" /* 10009 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ThumbsDownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10058, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10009, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

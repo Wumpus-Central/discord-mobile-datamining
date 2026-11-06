@@ -1,15 +1,15 @@
-// === Module 7814: ReadStates ===
+// === Module 7768: ReadStates ===
 
-// Module 7814 (ReadStates)
+// Module 7768 (ReadStates)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5021 */;
+import applyDefault from "apply" /* 12 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5048 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
 
-const ReadStateTypes = fn(6914).ReadStateTypes;
+const ReadStateTypes = fn(6856).ReadStateTypes;
 const logger = new LoggerDefault("ReadStates");
 class ReadStates {
   constructor() {
@@ -78,8 +78,8 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
       const keys = Object.keys(ChannelStore.getMutablePrivateChannels());
       const _Set = Set;
       const set = new Set(keys);
-      const sorted = _modDef12(keys).sort(SnowflakeUtilsDefault.compare);
-      const obj11 = _modDef12(keys);
+      const sorted = applyDefault(keys).sort(SnowflakeUtilsDefault.compare);
+      const obj11 = applyDefault(keys);
       let str = sorted.reverse().value()[0];
       if (str == null) {
         str = "0";

@@ -1,21 +1,21 @@
-// === Module 18698: GuildsBarDirectMessage ===
+// === Module 18688: GuildsBarDirectMessage ===
 
-// Module 18698 (GuildsBarDirectMessage)
+// Module 18688 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9237 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9183 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6707 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7024 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+import CallStore from "CallStore" /* 6649 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6966 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { dm: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.dm = size;
@@ -101,7 +101,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
   if (channel != null) {
     isMultiUserDMResult = channel.isMultiUserDM();
   }
-  const obj4 = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: null, children: "secondary" };
+  const obj4 = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: null, children: null };
   let tmp11Result = null;
   if (null != channel) {
     const obj5 = { channel };
@@ -124,5 +124,5 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     }
   }
   obj4.children = tmp11Result2;
-  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: null, children: "secondary" });
+  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: null, children: null });
 });

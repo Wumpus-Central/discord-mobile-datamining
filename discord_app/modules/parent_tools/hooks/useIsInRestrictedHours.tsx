@@ -1,9 +1,9 @@
-// === Module 19695: useIsInRestrictedHours ===
+// === Module 19701: useIsInRestrictedHours ===
 
-// Module 19695 (useIsInRestrictedHours)
+// Module 19701 (useIsInRestrictedHours)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1385 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7860 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7814 */;
 
 require = fn;
 const size = fn(2);

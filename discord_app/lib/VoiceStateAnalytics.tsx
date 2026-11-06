@@ -1,12 +1,12 @@
-// === Module 15916: VoiceStateAnalytics ===
+// === Module 15910: VoiceStateAnalytics ===
 
-// Module 15916 (VoiceStateAnalytics)
-import _mod12 from "module_12" /* 12 */;
-import VoiceStateStore from "VoiceStateStore" /* 5815 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5904 */;
+// Module 15910 (VoiceStateAnalytics)
+import apply from "apply" /* 12 */;
+import VoiceStateStore from "VoiceStateStore" /* 5833 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5923 */;
 
 require = fn;
-const SpeakingFlags = fn(5905).SpeakingFlags;
+const SpeakingFlags = fn(5924).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {
@@ -51,10 +51,10 @@ prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(loca
   set1.delete(this.userId);
   set.delete(this.userId);
   const obj = { num_local_voice_user_mutes: null, num_local_voice_volumes: null };
-  const obj4 = _mod12;
+  const obj4 = apply;
   obj.num_local_voice_user_mutes = obj4.intersection(Array.from(set), Array.from(this.totalParticipants)).length;
   const arr = Array.from(set);
-  const obj5 = _mod12;
+  const obj5 = apply;
   obj.num_local_voice_volumes = obj5.intersection(Array.from(set1), Array.from(this.totalParticipants)).length;
   return obj;
 };

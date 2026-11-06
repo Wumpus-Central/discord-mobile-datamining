@@ -1,6 +1,6 @@
-// === Module 12574: WidgetActionCreators ===
+// === Module 12539: WidgetActionCreators ===
 
-// Module 12574 (WidgetActionCreators)
+// Module 12539 (WidgetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -15,8 +15,8 @@ export default {
   setPendingWidgets(items) {
     DispatcherDefault.dispatch({ type: "WIDGET_PENDING_SET", widgets: items });
   },
-  savePendingWidgets(saveablePendingWidgets) {
-    closure_0 = saveablePendingWidgets;
+  savePendingWidgets(arg0) {
+    closure_0 = arg0;
     return (async () => {
       if (constants === 2) {
         constants = 3;
@@ -215,7 +215,7 @@ export default {
       const request1 = {
         url: upload_url,
         body: closure_129_0,
-        headers: { "Content-Type": closure_0(7925).WIDGET_CLIP_CONTENT_TYPE },
+        headers: { "Content-Type": closure_0(7879).WIDGET_CLIP_CONTENT_TYPE },
         onRequestProgress(direction) {
           let tmp = "upload" === direction.direction;
           if (tmp) {

@@ -1,7 +1,7 @@
-// === Module 2074: i18n/updateRules ===
+// === Module 2069: i18n/updateRules ===
 
-// Module 2074 (i18n/updateRules)
-import _mod2072 from "module_2072" /* 2072 */;
+// Module 2069 (i18n/updateRules)
+import _mod2067 from "module_2067" /* 2067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,9 +10,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");
 
 export default function updateRules(paragraph) {
-  paragraph.heading = _mod2072.defaultRules.heading;
-  paragraph.lheading = _mod2072.defaultRules.lheading;
-  paragraph.list = _mod2072.defaultRules.list;
+  paragraph.heading = _mod2067.defaultRules.heading;
+  paragraph.lheading = _mod2067.defaultRules.lheading;
+  paragraph.list = _mod2067.defaultRules.list;
   let obj = {};
   let merged = Object.assign(paragraph.paragraph);
   obj.react = function Paragraph(content, fn, key) {
@@ -32,9 +32,9 @@ export default function updateRules(paragraph) {
       obj.onClick = context.context[context.target];
     }
     if (null == obj.onClick) {
-      obj.href = _mod2072.sanitizeUrl(context.target);
+      obj.href = _mod2067.sanitizeUrl(context.target);
       obj.target = "_blank";
-      const sanitizeUrlResult = _mod2072.sanitizeUrl(context.target);
+      const sanitizeUrlResult = _mod2067.sanitizeUrl(context.target);
     }
     const obj3 = { title: context.title };
     const merged = Object.assign(obj);

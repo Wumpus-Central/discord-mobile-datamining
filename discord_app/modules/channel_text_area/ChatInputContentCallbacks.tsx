@@ -1,13 +1,13 @@
-// === Module 13988: ChatInputContentCallbacks ===
+// === Module 13964: ChatInputContentCallbacks ===
 
-// Module 13988 (ChatInputContentCallbacks)
-import _modDef12 from "module_12" /* 12 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7591 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7593 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9931 */;
+// Module 13964 (ChatInputContentCallbacks)
+import applyDefault from "apply" /* 12 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7536 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7538 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9881 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7588 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7533 */;
 
 require = fn;
 let c6 = "@here";
@@ -51,7 +51,7 @@ export function useHereMentionCallback(arg0, arg1, arg2) {
   _slicedToArray = tmp;
   [first, closure_5] = first.useState(false);
   items = [tmp, arg1, arg2];
-  const memo = first.useMemo(() => _modDef12.debounce((arr) => {
+  const memo = first.useMemo(() => applyDefault.debounce((arr) => {
     const groups = props.getProps(closure_1_1, dependencyMap).groups;
     let tmp4 = groups.length > 1;
     if (!tmp4) {
@@ -67,9 +67,9 @@ export function useHereMentionCallback(arg0, arg1, arg2) {
       if (!(arr.length < 5 || arr.length > closure_1_3)) {
         let flag = -1 !== arr.indexOf(memo);
         if (flag) {
-          closure_0(7593).subscribeChannel(closure_1_1, dependencyMap, closure_0(7591).DEFAULT_RANGES);
+          closure_0(7538).subscribeChannel(closure_1_1, dependencyMap, closure_0(7536).DEFAULT_RANGES);
           flag = true;
-          const obj = closure_0(7593);
+          const obj = closure_0(7538);
         }
         tmp9 = flag;
       }

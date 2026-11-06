@@ -1,6 +1,6 @@
-// === Module 6185: ChannelListUtils ===
+// === Module 6205: ChannelListUtils ===
 
-// Module 6185 (ChannelListUtils)
+// Module 6205 (ChannelListUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");

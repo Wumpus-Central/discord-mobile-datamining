@@ -1,6 +1,6 @@
-// === Module 18608: GameServerTabAlwaysOnExperiment ===
+// === Module 18598: GameServerTabAlwaysOnExperiment ===
 
-// Module 18608 (GameServerTabAlwaysOnExperiment)
+// Module 18598 (GameServerTabAlwaysOnExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

@@ -1,56 +1,63 @@
-// === Module 13935: useMaybeFetchCheckpointData ===
+// === Module 13911: useMaybeFetchCheckpointData ===
 
-// Module 13935 (useMaybeFetchCheckpointData)
-import GameActionCreators from "GameActionCreators" /* 7623 */;
-import CheckpointStore2 from "CheckpointStore" /* 13668 */;
+// Module 13911 (useMaybeFetchCheckpointData)
+import GameActionCreators from "GameActionCreators" /* 7568 */;
 import noop from "module_19" /* 19 */;
-import size from "module_2" /* 2 */;
+import CheckpointStore from "CheckpointStore" /* 13643 */;
 
-const CheckpointStore = CheckpointStore2;
-
-({ useEffect: c2, useMemo: c3 } = noop);
-const CheckpointFetchStates = CheckpointStore2.CheckpointFetchStates;
+require = fn;
+const CheckpointFetchStates = fn(13643).CheckpointFetchStates;
+let closure_5 = fn(6224).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/useMaybeFetchCheckpointData.tsx");
 
 export function useMaybeFetchCheckpointData() {
   items = [CheckpointStore];
-  const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => CheckpointStore.fetchState);
-  let obj = stateFromStores1(504);
+  const stateFromStores = stateFromStoresArray(504).useStateFromStores(items, () => CheckpointStore.fetchState);
+  let obj = stateFromStoresArray(504);
   const items1 = [CheckpointStore];
-  stateFromStores1 = stateFromStores1(504).useStateFromStores(items1, () => {
-    const stats = CheckpointStore.stats;
+  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items1, () => {
+    ({ stats, globalStats } = CheckpointStore);
     let games1;
+    if (globalStats != null) {
+      games1 = globalStats.games;
+    }
+    if (!obj.hasCheckpointGames(stats)) {
+      if (null != games1) {
+        items = [];
+        const item = closure_1_5.forEach((item) => {
+          const first = games1[item.list][0];
+          if (null != first) {
+            items.push(first.id);
+          }
+        });
+        return items;
+      }
+    }
+    let mapped;
     if (stats != null) {
       const games = stats.games;
       if (games != null) {
-        games1 = games.games;
+        const games2 = games.games;
+        mapped = games2.map((game) => game.game.id);
       }
-    }
-    return games1;
-  });
-  const items2 = [stateFromStores1];
-  const tmp3 = closure_3(() => {
-    let mapped;
-    if (stateFromStores1 != null) {
-      mapped = stateFromStores1.map((game) => game.game.id);
     }
     if (mapped == null) {
       mapped = [];
     }
     return mapped;
-  }, items2);
-  dependencyMap = tmp3;
-  closure_2(() => {
+  });
+  const effect = noop.useEffect(() => {
     const fetchState = CheckpointStore.fetchState;
     if (!tmp) {
-      const checkpointData = stateFromStores1(dependencyMap[3]).fetchCheckpointData();
-      const obj = stateFromStores1(dependencyMap[3]);
+      const checkpointData = stateFromStoresArray(13645).fetchCheckpointData();
+      const obj = stateFromStoresArray(13645);
     }
     tmp = fetchState !== constants.INIT && fetchState !== constants.ERROR;
   }, []);
-  const items3 = [tmp3];
-  closure_2(() => {
-    const gamesWithSupplementalData = GameActionCreators.fetchGamesWithSupplementalData(closure_1);
-  }, items3);
+  const items2 = [stateFromStoresArray];
+  const effect1 = noop.useEffect(() => {
+    const gamesWithSupplementalData = GameActionCreators.fetchGamesWithSupplementalData(stateFromStoresArray);
+  }, items2);
   return stateFromStores;
 }

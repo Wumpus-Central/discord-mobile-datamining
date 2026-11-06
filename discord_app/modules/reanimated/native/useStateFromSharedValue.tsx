@@ -1,6 +1,6 @@
-// === Module 8987: useStateFromSharedValue ===
+// === Module 8933: useStateFromSharedValue ===
 
-// Module 8987 (useStateFromSharedValue)
+// Module 8933 (useStateFromSharedValue)
 import _mod1705 from "module_1705" /* 1705 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,10 +1,10 @@
-// === Module 8732: ExperimentUtils ===
+// === Module 8678: ExperimentUtils ===
 
-// Module 8732 (ExperimentUtils)
-import _modDef12 from "module_12" /* 12 */;
-import ExperimentManager from "ExperimentManager" /* 5369 */;
+// Module 8678 (ExperimentUtils)
+import applyDefault from "apply" /* 12 */;
+import ExperimentManager from "ExperimentManager" /* 5389 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5364 */;
+import ExperimentStore from "ExperimentStore" /* 5384 */;
 
 require = fn;
 function getFirstEligibleUserExperiment(arg0) {
@@ -21,7 +21,7 @@ function getFirstEligibleUserExperiment(arg0) {
   }
   return null;
 }
-const ExperimentConstants = fn(5365);
+const ExperimentConstants = fn(5385);
 ({ ExperimentTypes: hasOwnProperty, ExperimentBuckets: closure_6 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/ExperimentUtils.tsx");
@@ -60,7 +60,7 @@ export default {
             return false;
           } else if (type.type === constants.USER) {
             if (type2.type === tmp.USER) {
-              return _modDef12.isEqual(type.context, type2.context);
+              return applyDefault.isEqual(type.context, type2.context);
             }
           }
         }

@@ -1,7 +1,7 @@
-// === Module 2185: PremiumSubscriptionInvoiceItem ===
+// === Module 2180: PremiumSubscriptionInvoiceItem ===
 
-// Module 2185 (PremiumSubscriptionInvoiceItem)
-import _modDef12 from "module_12" /* 12 */;
+// Module 2180 (PremiumSubscriptionInvoiceItem)
+import applyDefault from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
@@ -14,7 +14,7 @@ export function coalesceInvoiceItems(arr) {
       if (item10009.subscriptionPlanId === arg0.subscriptionPlanId) {
         if (item10009.subscriptionPlanPrice === arg0.subscriptionPlanPrice) {
           if (item10009.amount === arg0.amount) {
-            let obj2 = _modDef12;
+            let obj2 = applyDefault;
             if (obj2.isEqual(item10009.discounts, arg0.discounts)) {
               let addResult = set.add(item10009.subscriptionPlanId);
               item10009.quantity = item10009.quantity + arg0.quantity;

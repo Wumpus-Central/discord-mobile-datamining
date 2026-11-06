@@ -1,6 +1,6 @@
-// === Module 7416: ConnectedAppsStore ===
+// === Module 7363: ConnectedAppsStore ===
 
-// Module 7416 (ConnectedAppsStore)
+// Module 7363 (ConnectedAppsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -26,7 +26,7 @@ prototype["isChildConnected"] = function isChildConnected(arg0) {
 };
 Object.defineProperty(prototype, "connections", {
   get: function connections() {
-    obj = require("module_12");
+    obj = require("apply");
     return obj.values(obj);
   },
   set: undefined

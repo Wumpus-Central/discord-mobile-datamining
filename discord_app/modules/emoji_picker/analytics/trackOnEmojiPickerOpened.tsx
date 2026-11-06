@@ -1,14 +1,14 @@
-// === Module 10157: trackOnEmojiPickerOpened ===
+// === Module 10108: trackOnEmojiPickerOpened ===
 
-// Module 10157 (trackOnEmojiPickerOpened)
-import EmojiUtilsDefault from "EmojiUtils" /* 5093 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5897 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 10134 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 10135 */;
+// Module 10108 (trackOnEmojiPickerOpened)
+import EmojiUtilsDefault from "EmojiUtils" /* 5120 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5916 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 10085 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 10086 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6934 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
+import EmojiStore from "EmojiStore" /* 6876 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
 
 require = fn;
 function trackOnEmojiPickerOpened(current) {

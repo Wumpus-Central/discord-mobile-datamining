@@ -1,18 +1,18 @@
-// === Module 13880: CheckpointIntroScreen ===
+// === Module 13855: CheckpointIntroScreen ===
 
-// Module 13880 (CheckpointIntroScreen)
+// Module 13855 (CheckpointIntroScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3219 from "module_3219" /* 3219 */;
-import CheckpointStore2 from "CheckpointStore" /* 13668 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13876 */;
-import CheckpointTextDefault from "CheckpointText" /* 13878 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13881 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13882 */;
+import _modDef3248 from "module_3248" /* 3248 */;
+import CheckpointStore2 from "CheckpointStore" /* 13643 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13851 */;
+import CheckpointTextDefault from "CheckpointText" /* 13853 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13856 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13857 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5143 */;
+import createStyles from "createStyles" /* 5170 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointStore = CheckpointStore2;
@@ -53,14 +53,14 @@ export default function CheckpointIntroScreen() {
   const obj5 = { style: tmp.descriptions, children: null };
   const tmp7 = CheckpointScreenDefault;
   const intl = util.intl;
-  const tmp6Result3 = _modDef3219;
+  const tmp6Result3 = _modDef3248;
   const tmp6Result = CheckpointTextDefault;
   const items3 = [timestampProducer(tmp6Result, { variant: "heading-lg/medium", children: intl.string(stateFromStores ? tmp6Result3["7YmUVu"] : tmp6Result3["Fyr+NW"]) }), ];
   let tmp5Result2 = !stateFromStores;
   if (!stateFromStores) {
     const obj7 = { variant: "heading-lg/medium", children: null };
     const intl2 = util.intl;
-    obj7.children = intl2.string(_modDef3219["2GRr6H"]);
+    obj7.children = intl2.string(_modDef3248["2GRr6H"]);
     tmp5Result2 = timestampProducer(CheckpointTextDefault, obj7);
     const tmp6Result4 = CheckpointTextDefault;
   }

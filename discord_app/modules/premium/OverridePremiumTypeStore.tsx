@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PerksStateUtils from "PerksStateUtils" /* 1391 */;
-import UserStoreUtils from "UserStoreUtils" /* 1396 */;
+import UserStoreUtils from "UserStoreUtils" /* 1401 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -76,16 +76,16 @@ prototype["initialize"] = function initialize(premiumTypeActual) {
 prototype["getPremiumTypeOverride"] = function getPremiumTypeOverride() {
   return closure_5.premiumTypeOverride;
 };
-prototype["hasPremiumTypeOverride"] = function hasPremiumTypeOverride(id) {
+prototype["hasPremiumTypeOverride"] = function hasPremiumTypeOverride(warnResult) {
   let isStaffEnvResult = closure_5.premiumTypeOverride !== UNSELECTED_PREMIUM_TYPE_OVERRIDE;
   if (isStaffEnvResult) {
-    isStaffEnvResult = null != id;
+    isStaffEnvResult = null != warnResult;
   }
   if (isStaffEnvResult) {
-    isStaffEnvResult = id.id === AuthenticationStore.getId();
+    isStaffEnvResult = warnResult.id === AuthenticationStore.getId();
   }
   if (isStaffEnvResult) {
-    isStaffEnvResult = UserStoreUtils.isStaffEnv(id);
+    isStaffEnvResult = UserStoreUtils.isStaffEnv(warnResult);
   }
   return isStaffEnvResult;
 };

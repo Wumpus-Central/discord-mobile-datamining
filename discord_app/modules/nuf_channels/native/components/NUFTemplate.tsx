@@ -1,17 +1,17 @@
-// === Module 15432: NUFTemplate ===
+// === Module 15427: NUFTemplate ===
 
-// Module 15432 (NUFTemplate)
+// Module 15427 (NUFTemplate)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import components_Button_Button from "components/Button/Button" /* 5770 */;
-import FastImageDefault from "FastImage" /* 5854 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import components_Button_Button from "components/Button/Button" /* 5788 */;
+import FastImageDefault from "FastImage" /* 5872 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj2 = { container: { padding: 16, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", lineHeight: 18, marginBottom: 24 }, image: { marginBottom: 24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

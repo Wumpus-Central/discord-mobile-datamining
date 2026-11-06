@@ -1,15 +1,15 @@
-// === Module 6984: FramesStore ===
+// === Module 6926: FramesStore ===
 
-// Module 6984 (FramesStore)
+// Module 6926 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1083 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5793 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5808 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6986 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6987 */;
-import FramesConstants from "FramesConstants" /* 6985 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5811 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5826 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6928 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6929 */;
+import FramesConstants from "FramesConstants" /* 6927 */;
 import size from "module_2" /* 2 */;
 
 function computeMuted(poolVisibility, userMuted) {

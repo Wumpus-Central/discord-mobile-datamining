@@ -1,12 +1,12 @@
-// === Module 17363: QuestDisclosureModalInner ===
+// === Module 17352: QuestDisclosureModalInner ===
 
-// Module 17363 (QuestDisclosureModalInner)
+// Module 17352 (QuestDisclosureModalInner)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
-import Text_Text from "Text/Text" /* 5763 */;
+import Text_Text from "Text/Text" /* 5781 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5143 */;
+import createStyles from "createStyles" /* 5170 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -38,22 +38,22 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
-    obj.icon = closure_6(tmp2(9914).ServerIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(9864).ServerIcon, { size: "xs" });
     const intl4 = tmp2(1113).intl;
     obj.text = intl4.string(tmp2(1113).t["2bL0wT"]);
     items = [obj];
     let tmp6 = closure_6;
     items1 = items;
   } else {
-    obj.icon = closure_6(tmp2(9202).GlobeEarthIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(9148).GlobeEarthIcon, { size: "xs" });
     const intl = tmp2(1113).intl;
     obj.text = intl.string(tmp2(1113).t.xQSdPv);
     items1 = [obj, , ];
-    const obj2 = { icon: closure_6(tmp2(12330).UserIcon, { size: "xs" }), text: null };
+    const obj2 = { icon: closure_6(tmp2(12295).UserIcon, { size: "xs" }), text: null };
     const intl2 = tmp2(1113).intl;
     obj2.text = intl2.string(tmp2(1113).t.mYt7hQ);
     items1[1] = obj2;
-    const obj3 = { icon: closure_6(tmp2(9883).GameControllerIcon, { size: "xs" }), text: null };
+    const obj3 = { icon: closure_6(tmp2(9833).GameControllerIcon, { size: "xs" }), text: null };
     const intl3 = tmp2(1113).intl;
     obj3.text = intl3.string(tmp2(1113).t.XAsWxQ);
     items1[2] = obj3;
@@ -83,14 +83,14 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
           return metroImportDefault(React4, obj, index);
         })
     };
-    isTargetedDisclosure = tmp6(tmp2(7121).Card, obj7);
+    isTargetedDisclosure = tmp6(tmp2(7065).Card, obj7);
   }
   items2[2] = isTargetedDisclosure;
   const obj8 = { variant: "body-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl5 = tmp2(1113).intl;
   const obj9 = { privacySettingsUrl: null };
   const tmp2Result = require("QuestCopyUtils");
-  obj9.privacySettingsUrl = items1(2190).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
+  obj9.privacySettingsUrl = items1(2185).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
   obj8.children = intl5.format(require("util").t.tzq9Wa, obj9);
   items2[3] = tmp6(require("Text/Text").Text, obj8);
   const obj10 = { style: tmp.closeButton, children: null };

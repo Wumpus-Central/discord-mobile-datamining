@@ -1,6 +1,6 @@
-// === Module 9527: useGameProfileHeroBackgroundURL ===
+// === Module 9473: useGameProfileHeroBackgroundURL ===
 
-// Module 9527 (useGameProfileHeroBackgroundURL)
+// Module 9473 (useGameProfileHeroBackgroundURL)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

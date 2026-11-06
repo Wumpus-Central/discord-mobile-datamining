@@ -1,18 +1,18 @@
-// === Module 18880: ICYMIShareModal ===
+// === Module 18868: ICYMIShareModal ===
 
-// Module 18880 (ICYMIShareModal)
+// Module 18868 (ICYMIShareModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5745 */;
-import components_Button_Button from "components/Button/Button" /* 5770 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5849 */;
-import ShareEventUtils from "ShareEventUtils" /* 9135 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 13637 */;
-import ShareChatInputDefault from "ShareChatInput" /* 13650 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5765 */;
+import components_Button_Button from "components/Button/Button" /* 5788 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5867 */;
+import ShareEventUtils from "ShareEventUtils" /* 9081 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 13612 */;
+import ShareChatInputDefault from "ShareChatInput" /* 13625 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 const require = globalThis.__r;
 
@@ -242,11 +242,11 @@ class ICYMIShareModal {
 }
 const View = fn(17).View;
 const AbortCodes = fn(1072).AbortCodes;
-const UserRowModes = fn(10911).UserRowModes;
-const MessageSendLocation = fn(5148).MessageSendLocation;
+const UserRowModes = fn(10863).UserRowModes;
+const MessageSendLocation = fn(5175).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { footer: { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -305,7 +305,7 @@ export function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18881).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18869).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

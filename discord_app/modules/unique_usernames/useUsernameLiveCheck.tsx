@@ -1,10 +1,10 @@
-// === Module 16878: useUsernameLiveCheck ===
+// === Module 16866: useUsernameLiveCheck ===
 
-// Module 16878 (useUsernameLiveCheck)
-import _mod12 from "module_12" /* 12 */;
-import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 16881 */;
+// Module 16866 (useUsernameLiveCheck)
+import apply from "apply" /* 12 */;
+import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 16869 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16879 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16867 */;
 
 const require = globalThis.__r;
 
@@ -32,7 +32,7 @@ export function useUsernameLiveCheck(username) {
   const items2 = [stateFromStores];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items2, () => stateFromStores.isRateLimited());
   const items3 = [flag2, flag3];
-  const memo = flag3.useMemo(() => _mod12.debounce((arg0) => {
+  const memo = flag3.useMemo(() => apply.debounce((arg0) => {
     let str = "modal";
     if (closure_1_2) {
       str = "registration";

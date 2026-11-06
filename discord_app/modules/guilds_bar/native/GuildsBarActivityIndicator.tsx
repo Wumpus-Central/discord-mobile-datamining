@@ -1,53 +1,53 @@
-// === Module 18689: GuildsBarActivityIndicator ===
+// === Module 18679: GuildsBarActivityIndicator ===
 
-// Module 18689 (GuildsBarActivityIndicator)
+// Module 18679 (GuildsBarActivityIndicator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useToken from "useToken" /* 5734 */;
-import NativeViewDefault from "NativeView" /* 7104 */;
-import _modDef8341 from "module_8341" /* 8341 */;
-import _modDef8754 from "module_8754" /* 8754 */;
-import StageIcon from "StageIcon" /* 8815 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8819 */;
-import AppsIcon from "AppsIcon" /* 8824 */;
-import CalendarIcon from "CalendarIcon" /* 9267 */;
-import _modDef9364 from "module_9364" /* 9364 */;
-import ScreenIcon from "ScreenIcon" /* 9743 */;
-import VideoIcon from "VideoIcon" /* 11231 */;
-import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 18688 */;
-import _modDef18690 from "module_18690" /* 18690 */;
-import _modDef18691 from "module_18691" /* 18691 */;
-import _modDef18692 from "module_18692" /* 18692 */;
+import useToken from "useToken" /* 5754 */;
+import NativeViewDefault from "NativeView" /* 7048 */;
+import _modDef8286 from "module_8286" /* 8286 */;
+import _modDef8700 from "module_8700" /* 8700 */;
+import StageIcon from "StageIcon" /* 8761 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8765 */;
+import AppsIcon from "AppsIcon" /* 8770 */;
+import CalendarIcon from "CalendarIcon" /* 9213 */;
+import _modDef9310 from "module_9310" /* 9310 */;
+import ScreenIcon from "ScreenIcon" /* 9693 */;
+import VideoIcon from "VideoIcon" /* 11186 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 18678 */;
+import _modDef18680 from "module_18680" /* 18680 */;
+import _modDef18681 from "module_18681" /* 18681 */;
+import _modDef18682 from "module_18682" /* 18682 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef9364 };
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef9310 };
     let tmp6 = obj2;
   } else if (tmp4) {
-    const obj3 = { icon: StageIcon.StageIcon, source: _modDef8341 };
+    const obj3 = { icon: StageIcon.StageIcon, source: _modDef8286 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18690 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18680 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18691 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18681 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18692 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18682 };
     tmp6 = obj6;
   } else {
     tmp6 = null;
     if (tmp5) {
-      const obj = { icon: AppsIcon.AppsIcon, source: _modDef8754 };
+      const obj = { icon: AppsIcon.AppsIcon, source: _modDef8700 };
       tmp6 = obj;
     }
   }
   return tmp6;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { activityWrapper: null, activityIconWrapper: null, activityIconWrapperActive: null, activityIcon: null };
 let size = { position: "absolute", top: -3, right: -3, justifyContent: "center", width: 22, height: 22, padding: 3, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj.activityWrapper = size;

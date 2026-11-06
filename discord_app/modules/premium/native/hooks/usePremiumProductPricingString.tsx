@@ -1,7 +1,7 @@
-// === Module 10805: usePremiumProductPricingString ===
+// === Module 10757: usePremiumProductPricingString ===
 
-// Module 10805 (usePremiumProductPricingString)
-import IAPStore from "IAPStore" /* 7742 */;
+// Module 10757 (usePremiumProductPricingString)
+import IAPStore from "IAPStore" /* 7696 */;
 
 const require = globalThis.__r;
 

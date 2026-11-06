@@ -1,12 +1,12 @@
-// === Module 8353: UploadAttachmentStore ===
+// === Module 8298: UploadAttachmentStore ===
 
-// Module 8353 (UploadAttachmentStore)
+// Module 8298 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DraftStore from "DraftStore" /* 7846 */;
-import CloudUpload from "CloudUpload" /* 8354 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8363 */;
+import DraftStore from "DraftStore" /* 7800 */;
+import CloudUpload from "CloudUpload" /* 8299 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8309 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -180,7 +180,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
         }
       }
     }
-    const item = require("module_12").forEach(files, (file) => {
+    const item = require("apply").forEach(files, (file) => {
       const cloudUpload = new CloudUpload.CloudUpload(file, channelId, items.length, importDefault);
       items.push(cloudUpload);
     });
@@ -191,7 +191,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     }
     const result = value4.set(draftType, items);
     const result1 = obj.set(channelId, value4);
-    const arr2 = require("module_12");
+    const arr2 = require("apply");
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
     ({ channelId, id: require, filename: importDefault, description: dependencyMap, spoiler: DraftType, thumbnail: closure_4, draftType } = arg0);

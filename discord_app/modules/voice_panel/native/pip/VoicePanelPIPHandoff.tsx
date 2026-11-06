@@ -1,6 +1,6 @@
-// === Module 11427: VoicePanelPIPHandoff ===
+// === Module 11389: VoicePanelPIPHandoff ===
 
-// Module 11427 (VoicePanelPIPHandoff)
+// Module 11389 (VoicePanelPIPHandoff)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

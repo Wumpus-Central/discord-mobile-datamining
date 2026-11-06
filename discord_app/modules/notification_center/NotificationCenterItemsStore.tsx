@@ -1,15 +1,15 @@
-// === Module 6996: NotificationCenterItemsStore ===
+// === Module 6938: NotificationCenterItemsStore ===
 
-// Module 6996 (NotificationCenterItemsStore)
+// Module 6938 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6201 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6997 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6998 */;
-import ExperimentStore from "ExperimentStore" /* 5364 */;
-import MessageRecord from "MessageRecord" /* 5086 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6221 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6939 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6940 */;
+import ExperimentStore from "ExperimentStore" /* 5384 */;
+import MessageRecord from "MessageRecord" /* 5113 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -195,9 +195,9 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6993).isGuildEventEnded;
+const isGuildEventEnded = fn(6935).isGuildEventEnded;
 const RelationshipTypes = fn(1072).RelationshipTypes;
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "icon", notifCenterTabFocused: "unicodeEmoji" };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
@@ -369,7 +369,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "icon", notifCenterTabFocused: "unicodeEmoji" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -495,7 +495,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "icon", notifCenterTabFocused: "unicodeEmoji" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -551,7 +551,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         items = [];
-        obj = id(6998);
+        obj = id(6940);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -645,7 +645,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "icon", notifCenterTabFocused: "unicodeEmoji" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {

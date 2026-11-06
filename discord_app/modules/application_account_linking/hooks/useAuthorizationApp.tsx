@@ -1,9 +1,9 @@
-// === Module 7468: useAuthorizationApp ===
+// === Module 7413: useAuthorizationApp ===
 
-// Module 7468 (useAuthorizationApp)
+// Module 7413 (useAuthorizationApp)
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2167 */;
-import ApplicationRecord from "ApplicationRecord" /* 2145 */;
+import ApplicationStore from "ApplicationStore" /* 2162 */;
+import ApplicationRecord from "ApplicationRecord" /* 2140 */;
 
 const require = globalThis.__r;
 

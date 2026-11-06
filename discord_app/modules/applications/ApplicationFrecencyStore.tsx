@@ -1,11 +1,11 @@
-// === Module 9919: ApplicationFrecencyStore ===
+// === Module 9869: ApplicationFrecencyStore ===
 
-// Module 9919 (ApplicationFrecencyStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 9869 (ApplicationFrecencyStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5917 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
+import FrecencyDefault from "Frecency" /* 5936 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 function handleUserSettingsProtoStoreChange() {
@@ -17,7 +17,7 @@ function handleUserSettingsProtoStoreChange() {
   if (applications == null) {
     applications = {};
   }
-  closure_7.overwriteHistory(_modDef12.mapValues(applications, (recentUses) => {
+  closure_7.overwriteHistory(applyDefault.mapValues(applications, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
@@ -27,7 +27,7 @@ function handleUserSettingsProtoStoreChange() {
   }), global.pendingUsages);
 }
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
-let items = [fn(2121).ApplicationCommandType.CHAT, fn(2121).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(2116).ApplicationCommandType.CHAT, fn(2116).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 let global = { pendingUsages: [] };
 let obj = {
   computeBonus() {

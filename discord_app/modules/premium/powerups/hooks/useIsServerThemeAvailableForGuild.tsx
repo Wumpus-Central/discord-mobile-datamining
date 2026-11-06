@@ -1,8 +1,8 @@
-// === Module 15994: useIsServerThemeAvailableForGuild ===
+// === Module 15989: useIsServerThemeAvailableForGuild ===
 
-// Module 15994 (useIsServerThemeAvailableForGuild)
-import GuildThemeResolver from "GuildThemeResolver" /* 5351 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 5361 */;
+// Module 15989 (useIsServerThemeAvailableForGuild)
+import GuildThemeResolver from "GuildThemeResolver" /* 5371 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 5381 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useIsServerThemeAvailableForGuild.tsx");

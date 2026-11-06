@@ -1,13 +1,13 @@
-// === Module 8361: FileUtils ===
+// === Module 8307: FileUtils ===
 
-// Module 8361 (FileUtils)
-import _modDef12 from "module_12" /* 12 */;
+// Module 8307 (FileUtils)
+import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
-import PremiumUtils from "PremiumUtils" /* 2176 */;
-import FileSizeUtils from "FileSizeUtils" /* 6589 */;
-import UploadUtils from "UploadUtils" /* 8357 */;
-import noConflictDefault from "noConflict" /* 8362 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import PremiumUtils from "PremiumUtils" /* 2171 */;
+import FileSizeUtils from "FileSizeUtils" /* 6609 */;
+import UploadUtils from "UploadUtils" /* 8302 */;
+import noConflictDefault from "noConflict" /* 8308 */;
+import GuildStore from "GuildStore" /* 5041 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -62,7 +62,7 @@ export function classifyFile(file) {
   if (str2 == null) {
     str2 = "";
   }
-  const found = _modDef12.find(items, (reType) => {
+  const found = applyDefault.find(items, (reType) => {
     if (null != reType.reType) {
       if (null != type) {
         reType = reType.reType;
@@ -94,7 +94,7 @@ export function classifyFileName(str, arg1) {
   if (str == null) {
     str = "";
   }
-  const found = _modDef12.find(items, (reType) => {
+  const found = applyDefault.find(items, (reType) => {
     if (null != reType.reType) {
       if (null != type) {
         reType = reType.reType;

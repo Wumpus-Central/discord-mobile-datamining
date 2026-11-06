@@ -1,6 +1,6 @@
-// === Module 2152: ApplicationOverlayMethodFlags ===
+// === Module 2147: ApplicationOverlayMethodFlags ===
 
-// Module 2152 (ApplicationOverlayMethodFlags)
+// Module 2147 (ApplicationOverlayMethodFlags)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx");

@@ -1,7 +1,7 @@
-// === Module 6086: RTCBandwidthMonitor ===
+// === Module 6106: RTCBandwidthMonitor ===
 
-// Module 6086 (RTCBandwidthMonitor)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6106 (RTCBandwidthMonitor)
+import applyDefault from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = [];
@@ -87,11 +87,11 @@ RTCBandwidthMonitor["create"] = function create() {
   }
 };
 RTCBandwidthMonitor.prototype["getTotalBytes"] = function getTotalBytes() {
-  return _modDef12.sum(Object.values(this.bytes));
+  return applyDefault.sum(Object.values(this.bytes));
 };
 const result = size.fileFinishedImporting("lib/RTCBandwidthMonitor.tsx");
 
 export default RTCBandwidthMonitor;
 export function getRTCTotalBytes() {
-  return _modDef12.sum(closure_2.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
+  return applyDefault.sum(closure_2.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
 }

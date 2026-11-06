@@ -1,16 +1,16 @@
-// === Module 9483: RPCServer ===
+// === Module 9429: RPCServer ===
 
-// Module 9483 (RPCServer)
-import _modDef12 from "module_12" /* 12 */;
+// Module 9429 (RPCServer)
+import applyDefault from "apply" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import transformUserDefault from "transformUser" /* 9484 */;
-import RPCErrorDefault from "RPCError" /* 9486 */;
-import validateScopeDefault from "validateScope" /* 9488 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 9491 */;
+import transformUserDefault from "transformUser" /* 9430 */;
+import RPCErrorDefault from "RPCError" /* 9432 */;
+import validateScopeDefault from "validateScope" /* 9434 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 9437 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const TransportTypes = fn(6588).TransportTypes;
+const TransportTypes = fn(6608).TransportTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: closure_6, RPCCommands: metroImportDefault, RPCErrors: closure_8, RPCEvents: closure_9 } = Constants);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
@@ -616,7 +616,7 @@ prototype["getSubscription"] = function getSubscription(socket, evt, c3) {
       isEqualResult = socket.evt === closure_1;
     }
     if (isEqualResult) {
-      isEqualResult = _modDef12.isEqual(socket.args, closure_2);
+      isEqualResult = applyDefault.isEqual(socket.args, closure_2);
     }
     return isEqualResult;
   });
@@ -652,13 +652,13 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
   closure_0 = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
-  _modDef12.remove(this.subscriptions, (socket) => {
+  applyDefault.remove(this.subscriptions, (socket) => {
     let isEqualResult = socket.socket === closure_0;
     if (isEqualResult) {
       isEqualResult = socket.evt === closure_1;
     }
     if (isEqualResult) {
-      isEqualResult = _modDef12.isEqual(socket.args, closure_2);
+      isEqualResult = applyDefault.isEqual(socket.args, closure_2);
     }
     return isEqualResult;
   });
@@ -666,7 +666,7 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
 };
 prototype["removeSubscriptions"] = function removeSubscriptions(authorization) {
   closure_0 = authorization;
-  _modDef12.remove(this.subscriptions, (socket) => socket.socket === closure_0);
+  applyDefault.remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };
 prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATIONSHIP_UPDATE, targetsFrame, constants, combined) {
@@ -703,8 +703,8 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
             if (args == null) {
               args = {};
             }
-            _modDef12;
-            _modDef12;
+            applyDefault;
+            applyDefault;
             const _Object = Object;
           }
         }
@@ -728,7 +728,7 @@ prototype["storeWait"] = function storeWait(socket, fn, timeout) {
   let tmp = fn();
   if (!tmp) {
     if (0 !== timeout) {
-      const uniqueId = _modDef12.uniqueId();
+      const uniqueId = applyDefault.uniqueId();
       function removeSubscription() {
 
       }

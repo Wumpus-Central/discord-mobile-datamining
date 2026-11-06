@@ -1,6 +1,7 @@
-// === Module 9615: CollectiblesAnalyticsContext ===
+// === Module 9561: CollectiblesAnalyticsContext ===
 
-// Module 9615 (CollectiblesAnalyticsContext)
+// Module 9561 (CollectiblesAnalyticsContext)
+import useShallowObjectMemoDefault from "useShallowObjectMemo" /* 9562 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -12,14 +13,16 @@ export const CollectiblesAnalyticsContext = context;
 export function useCollectiblesAnalyticsContext() {
   return noop.useContext(context);
 }
-export function CollectiblesAnalyticsProvider(children) {
-  const newValue = children.newValue;
+export function CollectiblesAnalyticsProvider(arg0) {
   context = undefined;
+  ({ newValue, children } = arg0);
   context = noop.useContext(context);
-  items = [context, newValue];
+  const tmp2 = useShallowObjectMemoDefault(newValue);
+  closure_1 = tmp2;
+  items = [context, tmp2];
   return <context.Provider value={noop.useMemo(() => {
     const merged = Object.assign(context);
-    const merged1 = Object.assign(newValue);
+    const merged1 = Object.assign(closure_1);
     return {};
-  }, items)}>{children.children}</context.Provider>;
+  }, items)}>{children}</context.Provider>;
 }

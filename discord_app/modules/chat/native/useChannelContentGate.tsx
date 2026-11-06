@@ -1,12 +1,12 @@
-// === Module 11411: useChannelContentGate ===
+// === Module 11373: useChannelContentGate ===
 
-// Module 11411 (useChannelContentGate)
-import AgeGateUtils from "AgeGateUtils" /* 6872 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6891 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10159 */;
-import NsfwGateChatDefault from "NsfwGateChat" /* 11412 */;
-import GuildNSFWDefault from "GuildNSFW" /* 11414 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 11416 */;
+// Module 11373 (useChannelContentGate)
+import AgeGateUtils from "AgeGateUtils" /* 6814 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6833 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10110 */;
+import NsfwGateChatDefault from "NsfwGateChat" /* 11374 */;
+import GuildNSFWDefault from "GuildNSFW" /* 11376 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 11378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

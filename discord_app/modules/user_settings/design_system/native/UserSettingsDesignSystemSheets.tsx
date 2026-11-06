@@ -1,18 +1,18 @@
-// === Module 18093: UserSettingsDesignSystemSheets ===
+// === Module 18081: UserSettingsDesignSystemSheets ===
 
-// Module 18093 (UserSettingsDesignSystemSheets)
+// Module 18081 (UserSettingsDesignSystemSheets)
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import components_Button_Button from "components/Button/Button" /* 5770 */;
-import Stack_Stack from "Stack/Stack" /* 6165 */;
-import Card from "Card" /* 7121 */;
-import TextInput from "TextInput" /* 7226 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7460 */;
-import ActionSheet from "ActionSheet" /* 7504 */;
-import ActionSheetRow from "ActionSheetRow" /* 7506 */;
-import PromoSheet from "PromoSheet" /* 11021 */;
-import _modDef18094 from "module_18094" /* 18094 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import components_Button_Button from "components/Button/Button" /* 5788 */;
+import Stack_Stack from "Stack/Stack" /* 6185 */;
+import Card from "Card" /* 7065 */;
+import TextInput from "TextInput" /* 7173 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7405 */;
+import ActionSheet from "ActionSheet" /* 7449 */;
+import ActionSheetRow from "ActionSheetRow" /* 7451 */;
+import PromoSheet from "PromoSheet" /* 10973 */;
+import _modDef18082 from "module_18082" /* 18082 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,13 +38,13 @@ function DemoActionSheet() {
   let tmp14Result = first;
   if (first) {
     const obj2 = { onPress: NOOP, label: tmp12 };
-    tmp14Result = metroImportDefault(tmp15(9162).ActionSheetHeaderPressableText, obj2);
+    tmp14Result = metroImportDefault(tmp15(9108).ActionSheetHeaderPressableText, obj2);
   }
   obj.leading = tmp14Result;
   let tmp14Result2 = tmp2;
   if (tmp2) {
     const obj3 = { onPress: NOOP };
-    tmp14Result2 = metroImportDefault(tmp15(7505).ActionSheetCloseButton, obj3);
+    tmp14Result2 = metroImportDefault(tmp15(7450).ActionSheetCloseButton, obj3);
   }
   const obj4 = { header: metroImportDefault(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
   obj.trailing = tmp14Result2;
@@ -99,7 +99,7 @@ function DemoPromoSheet() {
   const obj2 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = metroImportDefault(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef18094 };
+  obj3.src = { uri: _modDef18082 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
   return metroImportDefault(PromoSheet.PromoSheet, obj2);
@@ -108,7 +108,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSheets.tsx");

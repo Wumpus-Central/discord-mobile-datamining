@@ -1,35 +1,35 @@
-// === Module 7852: ChannelListState ===
+// === Module 7806: ChannelListState ===
 
-// Module 7852 (ChannelListState)
+// Module 7806 (ChannelListState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ChannelListUtils from "ChannelListUtils" /* 6185 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7582 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7603 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
-import ApplicationStore from "ApplicationStore" /* 2167 */;
-import ChannelStatusStore from "ChannelStatusStore" /* 7853 */;
-import GatedChannelStore from "GatedChannelStore" /* 5047 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6993 */;
-import ImpersonateStore from "ImpersonateStore" /* 5048 */;
-import FavoritesSuggestionStore from "FavoritesSuggestionStore" /* 7854 */;
-import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7855 */;
-import NewChannelsStore from "NewChannelsStore" /* 7856 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6979 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7425 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7851 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6913 */;
-import VoiceStateStore from "VoiceStateStore" /* 5815 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5904 */;
-import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7857 */;
+import ChannelListUtils from "ChannelListUtils" /* 6205 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7527 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7548 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
+import ApplicationStore from "ApplicationStore" /* 2162 */;
+import ChannelStatusStore from "ChannelStatusStore" /* 7807 */;
+import GatedChannelStore from "GatedChannelStore" /* 5074 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6935 */;
+import ImpersonateStore from "ImpersonateStore" /* 5075 */;
+import FavoritesSuggestionStore from "FavoritesSuggestionStore" /* 7808 */;
+import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7809 */;
+import NewChannelsStore from "NewChannelsStore" /* 7810 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6921 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7372 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7805 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
+import VoiceStateStore from "VoiceStateStore" /* 5833 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5923 */;
+import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7811 */;
 
 require = fn;
 function computeSubtitle(type, arg1, arg2) {
@@ -96,7 +96,7 @@ function computeThreadIds(record, activeJoinedRelevantThreads, selectedChannel, 
   }
   if (set.has(record.type)) {
     const _Object = Object;
-    const mapped = _modDef12.sortBy(Object.values(activeJoinedRelevantThreads), (joinTimestamp) => -joinTimestamp.joinTimestamp).map((channel) => channel.channel.id);
+    const mapped = applyDefault.sortBy(Object.values(activeJoinedRelevantThreads), (joinTimestamp) => -joinTimestamp.joinTimestamp).map((channel) => channel.channel.id);
     if (tmp) {
       return mapped;
     } else if (tmp4) {
@@ -118,7 +118,7 @@ function computeThreadIds(record, activeJoinedRelevantThreads, selectedChannel, 
         });
       }
     }
-    const sortByResult = _modDef12.sortBy(Object.values(activeJoinedRelevantThreads), (joinTimestamp) => -joinTimestamp.joinTimestamp);
+    const sortByResult = applyDefault.sortBy(Object.values(activeJoinedRelevantThreads), (joinTimestamp) => -joinTimestamp.joinTimestamp);
   } else {
     return [];
   }
@@ -176,7 +176,7 @@ function shouldShowInRecents(guild, record, initializationData) {
           if (obj.some(VoiceStateStore.getVoiceStatesForChannel(record.id))) {
             return false;
           }
-          obj = _modDef12;
+          obj = applyDefault;
         } else {
           return false;
         }
@@ -223,15 +223,15 @@ function shouldShowInRecents(guild, record, initializationData) {
     return false;
   }
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ ChannelRecordBase: closure_14, isGuildReadableType: closure_15, isThread: closure_16, THREADED_CHANNEL_TYPES: closure_17 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7858).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7812).ChannelListGuildActionRow;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_30, GuildFeatures: closure_31 } = Constants);
-const ChannelFlags = fn(4999).ChannelFlags;
+const ChannelFlags = fn(5026).ChannelFlags;
 const Permissions = fn(1083).Permissions;
 let c34 = "placeholder-channel-id";
-let closure_35 = { CannotShow: 1, [1]: "CannotShow", DoNotShow: 2, [2]: "DoNotShow", WouldShowIfUncollapsed: 3, [3]: "WouldShowIfUncollapsed", Show: 4, [4]: "Show" };
+const keyExtractor = { CannotShow: 1, [1]: "CannotShow", DoNotShow: 2, [2]: "DoNotShow", WouldShowIfUncollapsed: 3, [3]: "WouldShowIfUncollapsed", Show: 4, [4]: "Show" };
 let obj = { CHANNEL_NOTICES: 0, [0]: "CHANNEL_NOTICES", GUILD_ACTIONS: 1, [1]: "GUILD_ACTIONS", FAVORITES: 2, [2]: "FAVORITES", RECENTS: 3, [3]: "RECENTS", UNCATEGORIZED_CHANNELS: 4, [4]: "UNCATEGORIZED_CHANNELS", FIRST_NAMED_CATEGORY: 5, [5]: "FIRST_NAMED_CATEGORY" };
 const CHANNEL_NOTICES = obj.CHANNEL_NOTICES;
 const GUILD_ACTIONS = obj.GUILD_ACTIONS;
@@ -243,7 +243,7 @@ let items = [String(ChannelListGuildActionRow.GUILD_DIRECTORY)];
 let set = new Set(items);
 class ChannelListImpl {
   constructor(arg0, arg1, arg2) {
-    merged = Object.assign({ sortedNamedCategories: null, sections: null, rows: null, firstVoiceChannel: "Array", allChannelsById: 0, version: "asc" });
+    merged = Object.assign({ sortedNamedCategories: null, sections: null, rows: null, firstVoiceChannel: "Array", allChannelsById: 0, version: 8 });
     merged.id = global;
     obj = closure_25;
     merged.hideMutedChannels = closure_25.isGuildCollapsed(merged.id);
@@ -567,7 +567,7 @@ prototype["getRows"] = function getRows() {
   const self = this;
   if (null == this.rows) {
     const _Object = Object;
-    self.sortedNamedCategories = _modDef12.sortBy(Object.values(self.categories), (record) => record.record.position);
+    self.sortedNamedCategories = applyDefault.sortBy(Object.values(self.categories), (record) => record.record.position);
     items = [, , , , , ];
     ({ channelNoticeSection: arr[0], guildActionSection: arr[1], favoritesCategory: arr[2], recentsCategory: arr[3], noParentCategory: arr[4] } = self);
     items[HermesBuiltin.arraySpread(self.sortedNamedCategories, 5)] = self.voiceChannelsCategory;
@@ -735,7 +735,7 @@ prototype["getSectionRowsFromChannel"] = function getSectionRowsFromChannel(arg0
           }
           if (tmp7.type === constants.GUILD_CATEGORY) {
             const obj4 = {
-              section: _modDef12.findIndex(self.getSortedNamedCategories(), (id) => {
+              section: applyDefault.findIndex(self.getSortedNamedCategories(), (id) => {
                           id = undefined;
                           if (channel2 != null) {
                             id = channel2.id;
@@ -933,8 +933,8 @@ prototype["updateSubtitles"] = function updateSubtitles(arg0) {
       }
     }
   } else {
-    const mapped = _modDef12(self.getSortedCategories()).map((channels) => Object.values(channels.channels));
-    const tmp3Result = _modDef12(self.getSortedCategories());
+    const mapped = applyDefault(self.getSortedCategories()).map((channels) => Object.values(channels.channels));
+    const tmp3Result = applyDefault(self.getSortedCategories());
     valueResult = mapped.flatten().value();
     const iter = mapped.flatten();
   }
@@ -1037,14 +1037,14 @@ prototype2["getRows"] = function getRows() {
   return tmp;
 };
 prototype2["shouldShowEmptyCategory"] = function shouldShowEmptyCategory() {
-  return _modDef12.some(this.channels, (renderLevel) => renderLevel.renderLevel >= closure_1_35.WouldShowIfUncollapsed);
+  return applyDefault.some(this.channels, (renderLevel) => renderLevel.renderLevel >= closure_1_35.WouldShowIfUncollapsed);
 };
 prototype2["getShownChannelIds"] = function getShownChannelIds() {
   const self = this;
   if (null == this.shownChannelIds) {
-    const values = _modDef12(self.channels).values();
+    const values = applyDefault(self.channels).values();
     const found = values.filter((renderLevel) => renderLevel.renderLevel === Show.Show);
-    const obj = _modDef12(self.channels);
+    const obj = applyDefault(self.channels);
     const sortByResult = found.sortBy((record) => {
       record = record.record;
       const position = record.position;
@@ -1079,8 +1079,8 @@ prototype2["getShownChannelIds"] = function getShownChannelIds() {
   return self.shownChannelIds;
 };
 prototype2["getShownChannelAndThreadIds"] = function getShownChannelAndThreadIds() {
-  const values = _modDef12(this.channels).values();
-  const obj = _modDef12(this.channels);
+  const values = applyDefault(this.channels).values();
+  const obj = applyDefault(this.channels);
   const iter = values.flatMap((threadIds) => threadIds.threadIds);
   const shownChannelIds = this.getShownChannelIds();
   return shownChannelIds.concat(values.flatMap((threadIds) => threadIds.threadIds).value());
@@ -1089,9 +1089,9 @@ prototype2["isEmpty"] = function isEmpty() {
   return 0 === this.getShownChannelIds().length;
 };
 prototype2["getChannelRecords"] = function getChannelRecords() {
-  const values = _modDef12(this.channels).values();
+  const values = applyDefault(this.channels).values();
   const found = values.filter((renderLevel) => renderLevel.renderLevel > CannotShow.CannotShow);
-  const obj = _modDef12(this.channels);
+  const obj = applyDefault(this.channels);
   return found.map((record) => record.record).value();
 };
 prototype2["getFirstVoiceChannel"] = function getFirstVoiceChannel(arg0) {
@@ -1120,8 +1120,8 @@ const prototype3 = function ChannelListCategoryNoParent(arg0, arg1, arg2) {
   closure_0 = arg2;
   const tmp22 = new tmp2(arg0, new.target, tmp2, new.target, undefined, tmp);
   importDefault = tmp22;
-  const mapped = _modDef12(arg1).map((item) => new ChannelListChannelImpl(closure_1, item, closure_0));
-  const arr = _modDef12(arg1);
+  const mapped = applyDefault(arg1).map((item) => new ChannelListChannelImpl(closure_1, item, closure_0));
+  const arr = applyDefault(arg1);
   tmp22.channels = mapped.keyBy((id) => id.id).value();
   return tmp22;
 }.prototype;
@@ -1337,7 +1337,7 @@ prototype5["getShownChannelIds"] = function getShownChannelIds() {
   } else {
     closure_0 = self.isCollapsed ? closure_35.Show : closure_35.WouldShowIfUncollapsed;
     if (self.enabled) {
-      const found = _modDef12(self.channels).filter((renderLevel) => renderLevel.renderLevel >= closure_0);
+      const found = applyDefault(self.channels).filter((renderLevel) => renderLevel.renderLevel >= closure_0);
       const mapped = found.map((item) => {
         items = [, , ];
         ({ id: arr[0], lastMessageTimestamp: arr[1], renderLevel: arr[2] } = item);
@@ -1356,7 +1356,7 @@ prototype5["getShownChannelIds"] = function getShownChannelIds() {
         }
         return tmp3;
       });
-      const arr2 = _modDef12(self.channels);
+      const arr2 = applyDefault(self.channels);
       const sortByResult = found1.sortBy((arg0) => {
         [, tmp, tmp2] = arg0;
         let num = 0;
@@ -1516,9 +1516,9 @@ prototype6["getFirstVoiceChannel"] = function getFirstVoiceChannel() {
 prototype6["getShownChannelIds"] = function getShownChannelIds() {
   const self = this;
   if (null == this.shownChannelIds) {
-    const values = _modDef12(self.channels).values();
+    const values = applyDefault(self.channels).values();
     const found = values.filter((renderLevel) => renderLevel.renderLevel === closure_1_35.Show || renderLevel.renderLevel === tmp.WouldShowIfUncollapsed);
-    const obj = _modDef12(self.channels);
+    const obj = applyDefault(self.channels);
     const sortByResult = found.sortBy((record) => record.record.position);
     const valueResult = found.sortBy((record) => record.record.position).take(5).value();
     const iter = found.sortBy((record) => record.record.position).take(5);
@@ -1529,10 +1529,10 @@ prototype6["getShownChannelIds"] = function getShownChannelIds() {
     const items1 = [];
     const iter2 = found.filter((renderLevel) => renderLevel.renderLevel === closure_1_35.Show);
     HermesBuiltin.arraySpread(set, 0);
-    const tmp13Result = _modDef12(items1);
-    const sortByResult1 = _modDef12(items1).sortBy((record) => record.record.position);
-    self.shownChannelIds = _modDef12(items1).sortBy((record) => record.record.position).map((id) => id.id).value();
-    const iter3 = _modDef12(items1).sortBy((record) => record.record.position).map((id) => id.id);
+    const tmp13Result = applyDefault(items1);
+    const sortByResult1 = applyDefault(items1).sortBy((record) => record.record.position);
+    self.shownChannelIds = applyDefault(items1).sortBy((record) => record.record.position).map((id) => id.id).value();
+    const iter3 = applyDefault(items1).sortBy((record) => record.record.position).map((id) => id.id);
   }
   return self.shownChannelIds;
 };
@@ -1571,8 +1571,8 @@ prototype7["getHiddenChannelIds"] = function getHiddenChannelIds() {
   const self = this;
   if (this.guild.optInEnabled) {
     if (null == self.hiddenChannelIds) {
-      const arr = _modDef12(self.channels);
-      const valueResult = _modDef12(self.channels).filter((renderLevel) => renderLevel.renderLevel === closure_1_35.WouldShowIfUncollapsed).value();
+      const arr = applyDefault(self.channels);
+      const valueResult = applyDefault(self.channels).filter((renderLevel) => renderLevel.renderLevel === closure_1_35.WouldShowIfUncollapsed).value();
       if (valueResult.every((record) => {
         record = record.record;
         return record.isCategory();
@@ -1582,7 +1582,7 @@ prototype7["getHiddenChannelIds"] = function getHiddenChannelIds() {
       } else {
         self.hiddenChannelIds = valueResult.map((id) => id.id);
       }
-      const iter = _modDef12(self.channels).filter((renderLevel) => renderLevel.renderLevel === closure_1_35.WouldShowIfUncollapsed);
+      const iter = applyDefault(self.channels).filter((renderLevel) => renderLevel.renderLevel === closure_1_35.WouldShowIfUncollapsed);
     }
     return self.hiddenChannelIds;
   } else {
@@ -1610,7 +1610,7 @@ prototype7["getShownChannelIds"] = function getShownChannelIds() {
   const self = this;
   if (this.guild.optInEnabled) {
     if (null == self.shownChannelIds) {
-      const found = _modDef12(self.channels).filter((renderLevel) => renderLevel.renderLevel === Show.Show);
+      const found = applyDefault(self.channels).filter((renderLevel) => renderLevel.renderLevel === Show.Show);
       items = [
         (record) => {
               if (record.record.type === constants.GUILD_CATEGORY) {
@@ -1638,7 +1638,7 @@ prototype7["getShownChannelIds"] = function getShownChannelIds() {
               return num;
             }
       ];
-      const arr2 = _modDef12(self.channels);
+      const arr2 = applyDefault(self.channels);
       const valueResult = found.orderBy(items, ["asc", "asc"]).value();
       self.shownChannelIds = [];
       for (let num = 0; num < valueResult.length; num = num + 1) {
@@ -1777,11 +1777,11 @@ prototype10["updateChannel"] = function updateChannel(record, arg1) {
   state = self.computeState(arg1);
   let isEqualResult = state.renderLevel === self.renderLevel;
   if (isEqualResult) {
-    isEqualResult = _modDef12.isEqual(state.threadIds, self.threadIds);
+    isEqualResult = applyDefault.isEqual(state.threadIds, self.threadIds);
   }
   if (!isEqualResult) {
     ({ renderLevel: self.renderLevel, threadIds: self.threadIds } = state);
-    self.threadCount = _modDef12.size(state.threadIds);
+    self.threadCount = applyDefault.size(state.threadIds);
     flag = true;
   }
   if (tmp8) {
@@ -1791,7 +1791,7 @@ prototype10["updateChannel"] = function updateChannel(record, arg1) {
 };
 prototype10["updateSubtitle"] = function updateSubtitle() {
   const subtitle = this.computeSubtitle();
-  const isEqualResult = _modDef12.isEqual(this.subtitle, subtitle);
+  const isEqualResult = applyDefault.isEqual(this.subtitle, subtitle);
   let flag = !isEqualResult;
   if (!isEqualResult) {
     this.subtitle = subtitle;
@@ -1903,7 +1903,7 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
                 return obj14;
               }
             }
-            obj5 = _modDef12;
+            obj5 = applyDefault;
           }
         }
         const obj15 = { renderLevel: closure_35.Show, threadIds: tmp12 };
@@ -2038,7 +2038,7 @@ prototype11["getRenderLevel"] = function getRenderLevel(renderLevel) {
         const favoriteChannelIds = this.category.guild.favoriteChannelIds;
         if (!favoriteChannelIds.has(self.record.id)) {
           if (self.category.isCollapsed) {
-            _modDef12.some(VoiceStateStore.getVoiceStatesForChannel(self.record.id)) ? closure_35.Show : closure_35.WouldShowIfUncollapsed;
+            applyDefault.some(VoiceStateStore.getVoiceStatesForChannel(self.record.id)) ? closure_35.Show : closure_35.WouldShowIfUncollapsed;
           } else {
             let CannotShow = closure_35.Show;
           }
@@ -2068,7 +2068,7 @@ prototype12["_areGuildActionRowsUpdated"] = function _areGuildActionRowsUpdated(
     const rows = guildActionSection.getRows();
     found = rows.filter((item) => !set.has(item));
   }
-  return !_modDef12.isEqual(found, arr);
+  return !applyDefault.isEqual(found, arr);
 };
 prototype12["_areChannelNoticeRowsUpdated"] = function _areChannelNoticeRowsUpdated(id, rows) {
   rows = undefined;
@@ -2076,7 +2076,7 @@ prototype12["_areChannelNoticeRowsUpdated"] = function _areChannelNoticeRowsUpda
     const channelNoticeSection = obj2.getChannelNoticeSection();
     rows = channelNoticeSection.getRows();
   }
-  return !_modDef12.isEqual(rows, rows);
+  return !applyDefault.isEqual(rows, rows);
 };
 prototype12["_areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow"] = function _areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow(id) {
   if (null == this.guilds[id]) {
@@ -2096,7 +2096,7 @@ prototype12["_areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow"] = fun
           if (null != categoryFromSection.channels[tmp8.id]) {
             continue;
           } else {
-            let obj2 = _modDef12;
+            let obj2 = applyDefault;
             if (!obj2.some(VoiceStateStore.getVoiceStatesForChannel(tmp8.id))) {
               continue;
             } else if (ReadStateStore.getMentionCount(tmp8.id) <= 0) {

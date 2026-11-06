@@ -1,20 +1,20 @@
-// === Module 6979: ActiveJoinedThreadsStore ===
+// === Module 6921: ActiveJoinedThreadsStore ===
 
-// Module 6979 (ActiveJoinedThreadsStore)
+// Module 6921 (ActiveJoinedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelConstants from "ChannelConstants" /* 4999 */;
-import AgeGateUtils from "AgeGateUtils" /* 6872 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 7032 */;
-import ChannelRecord from "ChannelRecord" /* 4996 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6999 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
+import ChannelConstants from "ChannelConstants" /* 5026 */;
+import AgeGateUtils from "AgeGateUtils" /* 6814 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6974 */;
+import ChannelRecord from "ChannelRecord" /* 5023 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6941 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
 import size from "module_2" /* 2 */;
 
 function rebuild() {
@@ -271,7 +271,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj3.isEmpty(dependencyMap[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj3 = _modDef12;
+      obj3 = applyDefault;
     }
     let tmp19 = null != guild_id && null != parent_id && null != id;
     if (tmp19) {
@@ -289,7 +289,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj6.isEmpty(dependencyMap5[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj6 = _modDef12;
+      obj6 = applyDefault;
     }
     let tmp30 = null != guild_id && null != parent_id && null != id;
     if (tmp30) {
@@ -307,7 +307,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj9.isEmpty(dependencyMap2[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj9 = _modDef12;
+      obj9 = applyDefault;
     }
     let tmp41 = null != guild_id && null != parent_id && null != id;
     if (tmp41) {
@@ -325,7 +325,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj12.isEmpty(dependencyMap3[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj12 = _modDef12;
+      obj12 = applyDefault;
     }
     let tmp52 = null != guild_id && null != parent_id && null != id;
     if (tmp52) {
@@ -343,7 +343,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj15.isEmpty(dependencyMap4[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj15 = _modDef12;
+      obj15 = applyDefault;
     }
     if (id in dependencyMap7) {
       const _clearTimeout = clearTimeout;
@@ -709,7 +709,7 @@ function updateIn(dependencyMap2, _Date, _Date2, arg3) {
       if (obj3.isEmpty(dependencyMap2[guild_id][parent_id])) {
         delete tmp[tmp2];
       }
-      obj3 = _modDef12;
+      obj3 = applyDefault;
     } else {
       dependencyMap2[guild_id][parent_id][id] = _Date2;
     }
@@ -884,7 +884,7 @@ prototype["getActiveThreadCount"] = function getActiveThreadCount(arg0, arg1) {
   if (obj2 == null) {
     obj2 = {};
   }
-  const sizeResult = _modDef12.size(obj2);
+  const sizeResult = applyDefault.size(obj2);
   let obj3;
   if (dependencyMap3[arg0] != null) {
     obj3 = tmp5[arg1];
@@ -892,7 +892,7 @@ prototype["getActiveThreadCount"] = function getActiveThreadCount(arg0, arg1) {
   if (obj3 == null) {
     obj3 = {};
   }
-  return sizeResult + _modDef12.size(obj3);
+  return sizeResult + applyDefault.size(obj3);
 };
 ActiveJoinedThreadsStore.displayName = "ActiveJoinedThreadsStore";
 const activeJoinedThreadsStore = new ActiveJoinedThreadsStore(DispatcherDefault, {

@@ -1,8 +1,8 @@
-// === Module 9555: GameProfileSummary ===
+// === Module 9501: GameProfileSummary ===
 
-// Module 9555 (GameProfileSummary)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9493 */;
-import findTextStart from "findTextStart" /* 9557 */;
+// Module 9501 (GameProfileSummary)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9439 */;
+import findTextStart from "findTextStart" /* 9503 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "column", overflow: "hidden" }, measurement: { position: "absolute", top: 0, left: 0, right: 0, opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");

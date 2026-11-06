@@ -1,9 +1,9 @@
-// === Module 12367: conjureLinkedApps ===
+// === Module 12332: conjureLinkedApps ===
 
-// Module 12367 (conjureLinkedApps)
+// Module 12332 (conjureLinkedApps)
 import util from "util" /* 1113 */;
-import _modDef3995 from "module_3995" /* 3995 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 11142 */;
+import _modDef4024 from "module_4024" /* 4024 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 11095 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -150,11 +150,11 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
     }
   })();
 };
-let obj = { auto: { label: _modDef3995["2TTprm"], description: _modDef3995["1ck6o0"] }, preview: null, published: null };
-let obj2 = { label: _modDef3995["2TTprm"], description: _modDef3995["1ck6o0"] };
-obj.preview = { label: _modDef3995.bUZ6jT, description: _modDef3995.DP2NVW };
-let obj3 = { label: _modDef3995.bUZ6jT, description: _modDef3995.DP2NVW };
-obj.published = { label: _modDef3995.yXd0cc, description: _modDef3995["YY+UD8"] };
+let obj = { auto: { label: _modDef4024["2TTprm"], description: _modDef4024["1ck6o0"] }, preview: null, published: null };
+let obj2 = { label: _modDef4024["2TTprm"], description: _modDef4024["1ck6o0"] };
+obj.preview = { label: _modDef4024.bUZ6jT, description: _modDef4024.DP2NVW };
+let obj3 = { label: _modDef4024.bUZ6jT, description: _modDef4024.DP2NVW };
+obj.published = { label: _modDef4024.yXd0cc, description: _modDef4024["YY+UD8"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/linked_apps/conjureLinkedApps.tsx");
 

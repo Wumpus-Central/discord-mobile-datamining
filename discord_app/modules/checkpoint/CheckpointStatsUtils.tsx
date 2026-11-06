@@ -1,11 +1,11 @@
-// === Module 6574: CheckpointStatsUtils ===
+// === Module 6594: CheckpointStatsUtils ===
 
-// Module 6574 (CheckpointStatsUtils)
+// Module 6594 (CheckpointStatsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
-import StringUtils from "StringUtils" /* 2155 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5006 */;
-import UserRecord from "UserRecord" /* 1399 */;
+import StringUtils from "StringUtils" /* 2150 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5033 */;
+import UserRecord from "UserRecord" /* 1404 */;
 
 require = fn;
 let closure_4 = { hour: "numeric", minute: "2-digit", numberingSystem: "latn" };
@@ -255,7 +255,7 @@ export function globalStatsFromServer(global_stats) {
   const emojis1 = emojis.emojis;
   obj3.emojis = emojis1.map((emoji) => emoji.emoji);
   obj.emojis = obj3;
-  const obj4 = { gamesByPlayers: null, newGamesByPlayers: null, indieGamesByPlayers: null, gamesByStreamWatchMinutes: null, gamesByCoplayUsers: null, numUsersPlayedEveryDay: games.num_users_played_every_day };
+  const obj4 = { gamesByPlayers: null, newGamesByPlayers: null, indieGamesByPlayers: null, gamesByStreamWatchMinutes: null, numUsersPlayedEveryDay: games.num_users_played_every_day };
   const games_by_players = games.games_by_players;
   obj4.gamesByPlayers = games_by_players.map((game) => {
     game = game.game;
@@ -291,17 +291,6 @@ export function globalStatsFromServer(global_stats) {
   });
   const prop1 = games.games_by_stream_watch_minutes;
   obj4.gamesByStreamWatchMinutes = prop1.map((game) => {
-    game = game.game;
-    const obj = { id: SnowflakeUtilsDefault.cast(game.id), name: null, iconHash: icon_hash, bannerHash: null, coverImageHash: null };
-    ({ name: obj.name, icon_hash } = game);
-    const banner_hash = game.banner_hash;
-    obj.bannerHash = banner_hash;
-    const cover_image_hash = game.cover_image_hash;
-    obj.coverImageHash = cover_image_hash;
-    return obj;
-  });
-  const prop2 = games.games_by_coplay_users;
-  obj4.gamesByCoplayUsers = prop2.map((game) => {
     game = game.game;
     const obj = { id: SnowflakeUtilsDefault.cast(game.id), name: null, iconHash: icon_hash, bannerHash: null, coverImageHash: null };
     ({ name: obj.name, icon_hash } = game);

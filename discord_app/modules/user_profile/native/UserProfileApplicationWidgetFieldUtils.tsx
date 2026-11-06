@@ -1,34 +1,34 @@
-// === Module 12556: UserProfileApplicationWidgetFieldUtils ===
+// === Module 12521: UserProfileApplicationWidgetFieldUtils ===
 
-// Module 12556 (UserProfileApplicationWidgetFieldUtils)
+// Module 12521 (UserProfileApplicationWidgetFieldUtils)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12557 */;
-import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 12558 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12522 */;
+import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 12523 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, fieldIcon: { width: 16, height: 16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
 
-export function formatDurationNarrow(value) {
+export function formatDurationNarrow(result1) {
   let num = 0;
-  if (Number.isFinite(value)) {
+  if (Number.isFinite(result1)) {
     const _Math = Math;
     const _Math2 = Math;
-    num = Math.max(0, Math.floor(value));
+    num = Math.max(0, Math.floor(result1));
   }
   const rounded = Math.floor(num / 3600000);
   const result = Math.floor(num / 60000) % 60;
-  const result1 = Math.floor(num / 1000) % 60;
+  result1 = Math.floor(num / 1000) % 60;
   items = [];
   if (rounded > 0) {
     const intl = util.intl;

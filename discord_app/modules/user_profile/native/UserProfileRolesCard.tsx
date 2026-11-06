@@ -1,16 +1,16 @@
-// === Module 7493: UserProfileRolesCard ===
+// === Module 7438: UserProfileRolesCard ===
 
-// Module 7493 (UserProfileRolesCard)
+// Module 7438 (UserProfileRolesCard)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import ToastUtils from "ToastUtils" /* 5848 */;
-import ClipboardUtils from "ClipboardUtils" /* 7496 */;
-import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7510 */;
-import RoleIconDefault from "RoleIcon" /* 7512 */;
-import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7513 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import ToastUtils from "ToastUtils" /* 5866 */;
+import ClipboardUtils from "ClipboardUtils" /* 7441 */;
+import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7455 */;
+import RoleIconDefault from "RoleIcon" /* 7457 */;
+import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7458 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildRoleStore from "GuildRoleStore" /* 5049 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildRoleStore from "GuildRoleStore" /* 5076 */;
 
 require = fn;
 function RoleDot(color) {
@@ -150,7 +150,7 @@ const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR_HEX: metroImportDefault, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm }, roleDot: null };
 let size = { borderRadius: nativeDefault.radii.round, height: 12, width: 12 };
 obj2.roleDot = size;
@@ -179,8 +179,8 @@ export default function UserProfileRolesCard(userId) {
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(7514), obj2);
-    const tmp7 = guildId(7514);
+    tmp4 = closure_9(guildId(7459), obj2);
+    const tmp7 = guildId(7459);
   }
   return tmp4;
 };

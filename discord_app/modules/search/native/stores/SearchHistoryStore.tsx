@@ -1,10 +1,10 @@
-// === Module 19012: SearchHistoryStore ===
+// === Module 19001: SearchHistoryStore ===
 
-// Module 19012 (SearchHistoryStore)
-import _mod12 from "module_12" /* 12 */;
+// Module 19001 (SearchHistoryStore)
+import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SearchConstants from "SearchConstants" /* 9982 */;
+import SearchConstants from "SearchConstants" /* 9933 */;
 import size from "module_2" /* 2 */;
 
 const SearchHistoryItemTypes = SearchConstants.SearchHistoryItemTypes;
@@ -58,7 +58,7 @@ prototype["add"] = function add(type) {
 prototype["remove"] = function remove(arg0) {
   closure_0 = arg0;
   items = this.items;
-  this.items = items.filter((item) => !_mod12.isEqual(item, closure_0));
+  this.items = items.filter((item) => !apply.isEqual(item, closure_0));
 };
 const dependencyMap = {};
 ({ NATIVE_SEARCH_HISTORY_STORAGE_KEY, NATIVE_SEARCH_HISTORY_STORE_DISPLAY_NAME } = SearchConstants);
@@ -83,7 +83,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
     searchHistories = searchHistories.searchHistories;
   }
   if (null != searchHistories) {
-    closure_4 = _mod12.mapValues(searchHistories, (arg0) => {
+    closure_4 = apply.mapValues(searchHistories, (arg0) => {
       if (typeof SearchHistory === "function") {
         const deserializer = Object.assign({ items: null });
         deserializer[0] = [];

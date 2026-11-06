@@ -1,8 +1,8 @@
-// === Module 16018: GuildBadgeSmoke ===
+// === Module 16013: GuildBadgeSmoke ===
 
-// Module 16018 (GuildBadgeSmoke)
-import inlineStyles from "inlineStyles" /* 8176 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 16001 */;
+// Module 16013 (GuildBadgeSmoke)
+import inlineStyles from "inlineStyles" /* 8122 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15996 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

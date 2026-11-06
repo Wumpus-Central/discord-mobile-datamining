@@ -1,12 +1,12 @@
-// === Module 6696: EmbedUtils ===
+// === Module 6638: EmbedUtils ===
 
-// Module 6696 (EmbedUtils)
+// Module 6638 (EmbedUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
-import FlagUtils from "FlagUtils" /* 1398 */;
-import _modDef2171 from "module_2171" /* 2171 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6203 */;
-import EmbedConstants from "EmbedConstants" /* 6697 */;
+import applyDefault from "apply" /* 12 */;
+import FlagUtils from "FlagUtils" /* 1403 */;
+import _modDef2166 from "module_2166" /* 2166 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6223 */;
+import EmbedConstants from "EmbedConstants" /* 6639 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -48,7 +48,7 @@ const re18 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/
 let result = size.fileFinishedImporting("utils/EmbedUtils.tsx");
 
 export function sanitizeEmbed(channel_id, id, footer) {
-  const obj = { id: _modDef12.uniqueId("embed_"), url: null, type: null, rawTitle: null, rawDescription: null, referenceId: null, flags: null, contentScanVersion: null };
+  const obj = { id: applyDefault.uniqueId("embed_"), url: null, type: null, rawTitle: null, rawDescription: null, referenceId: null, flags: null, contentScanVersion: null };
   ({ url: obj.url, type: obj.type, title: obj.rawTitle, description: obj.rawDescription, reference_id: obj.referenceId, flags: obj.flags, content_scan_version: obj.contentScanVersion } = footer);
   if (null != footer.footer) {
     const obj3 = { text: footer.footer.text, iconURL: footer.footer.icon_url, iconProxyURL: footer.footer.proxy_icon_url };
@@ -65,8 +65,8 @@ export function sanitizeEmbed(channel_id, id, footer) {
   if (null != footer.timestamp) {
     const _Date = Date;
     const date = new Date(footer.timestamp);
-    obj.timestamp = _modDef2171(date);
-    const tmpResult = _modDef2171;
+    obj.timestamp = _modDef2166(date);
+    const tmpResult = _modDef2166;
   }
   if (null != footer.color) {
     obj.color = footer.color;

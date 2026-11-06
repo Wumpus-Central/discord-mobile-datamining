@@ -1,20 +1,20 @@
-// === Module 17123: PlayStationTwoWayLinkUpsell ===
+// === Module 17111: PlayStationTwoWayLinkUpsell ===
 
-// Module 17123 (PlayStationTwoWayLinkUpsell)
+// Module 17111 (PlayStationTwoWayLinkUpsell)
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import dismissible_content from "dismissible_content" /* 4976 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 14861 */;
-import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 17121 */;
-import _modDef17124 from "module_17124" /* 17124 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
+import dismissible_content from "dismissible_content" /* 5003 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 14837 */;
+import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 17109 */;
+import _modDef17112 from "module_17112" /* 17112 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_7 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx");
@@ -28,7 +28,7 @@ export function PlayStationTwoWayLinkUpsell() {
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef17124;
+  obj3.source = _modDef17112;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

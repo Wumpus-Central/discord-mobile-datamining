@@ -1,8 +1,8 @@
-// === Module 11252: useFormattedTimestamp ===
+// === Module 11207: useFormattedTimestamp ===
 
-// Module 11252 (useFormattedTimestamp)
+// Module 11207 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1089 */;
-import _modDef2171 from "module_2171" /* 2171 */;
+import _modDef2166 from "module_2166" /* 2166 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = fn;
 function getTimestampUpdateInterval(parsed) {
   let tmp = timestamp;
   if (timestamp === undefined) {
-    tmp = _modDef2171();
+    tmp = _modDef2166();
   }
   const absolute = Math.abs(parsed.diff(tmp));
   const obj = items1[Symbol.iterator]();

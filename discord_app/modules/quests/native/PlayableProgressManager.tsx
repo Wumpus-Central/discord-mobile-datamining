@@ -1,44 +1,70 @@
-// === Module 20425: PlayableProgressManager ===
+// === Module 20433: PlayableProgressManager ===
 
-// Module 20425 (PlayableProgressManager)
+// Module 20433 (PlayableProgressManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PlayableStore from "PlayableStore" /* 20426 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import PlayableStore from "PlayableStore" /* 17330 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
 
-let closure_1 = new LoggerDefault("PlayableProgressManager");
+let require = fn;
+let closure_5 = new LoggerDefault("PlayableProgressManager");
 const prototype = function PlayableProgressManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  PlayableStore = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.timeout = null;
   applyArgumentsResult.handlePlayableStoreChange = function handlePlayableStoreChange() {
-    const playingPlayableId = applyArgumentsResult.getPlayingPlayableId();
-    let tmp2 = null != playingPlayableId && applyArgumentsResult.isRunning(playingPlayableId);
-    logger.log("PlayableStore changed", { playableId: playingPlayableId, isRunning: tmp2, hasTimeout: null != playingPlayableId.timeout });
-    if (tmp2) {
-      if (null == tmp3.timeout) {
-        const remainingMs = applyArgumentsResult.getRemainingMs(playingPlayableId);
+    closure_0 = applyArgumentsResult;
+    const playingPlayableId = PlayableStore.getPlayingPlayableId();
+    const tmp3 = null != playingPlayableId && PlayableStore.isRunning(playingPlayableId);
+    let remainingMs = null;
+    if (null != playingPlayableId) {
+      remainingMs = PlayableStore.getRemainingMs(playingPlayableId);
+    }
+    logger.log("PlayableStore changed", { playableId: playingPlayableId, isRunning: tmp3, hasTimeout: null != applyArgumentsResult.timeout });
+    if (tmp3) {
+      if (null == applyArgumentsResult.timeout) {
         if (null != remainingMs) {
-          const _setTimeout = setTimeout;
-          tmp3.timeout = setTimeout(() => {
-            applyArgumentsResult.timeout = null;
-            logger.log("Playable reward timer reached", { playableId: playingPlayableId });
-          }, remainingMs);
-          const obj4 = { playableId: playingPlayableId, remainingMs };
-          logger.log("Playable timer started", obj4);
+          if (remainingMs > 0) {
+            const _setTimeout = setTimeout;
+            applyArgumentsResult.timeout = setTimeout(asyncGeneratorStep(async () => {
+              closure_0.timeout = null;
+              logger.log("Playable reward timer reached", { playableId: playingPlayableId });
+              tmp3(tmp18[4]).dispatch({ type: "PLAYABLE_REWARD_TIMER_COMPLETE", playableId: playingPlayableId });
+              tmp3(tmp18[4]);
+              await closure_0(tmp18[5]).claimPlayableReward(playingPlayableId, closure_0(tmp18[6]).QuestContent.QUEST_BAR_MOBILE);
+              if (1 === tmp7) {
+                c3 = 0;
+                closure_128_0 = tmp18;
+                const obj10 = { text: null, variant: "critical" };
+                obj10.text = closure_0(tmp18[8]).resolveBountyRewardClaimErrorMessage(closure_128_0);
+                tmp3(tmp18[7]).open("QUESTS_PLAYABLE_REWARD_CLAIM", obj10);
+                logger = 3;
+                closure_0(tmp18[8]);
+                tmp3(tmp18[7]);
+              } else if (arg0 === 1) {
+                logger = 3;
+                throw value;
+              } else if (arg0 !== 2) {
+                c3 = 0;
+              }
+              return value;
+            }), remainingMs);
+            const obj4 = { playableId: playingPlayableId, remainingMs };
+            logger.log("Playable timer started", obj4);
+          }
         }
       }
     }
-    if (!tmp2) {
-      tmp2 = null == tmp3.timeout;
+    if (!tmp3) {
+      if (null != applyArgumentsResult.timeout) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(applyArgumentsResult.timeout);
+        applyArgumentsResult.timeout = null;
+        const obj5 = { playableId: playingPlayableId };
+        logger.log("Playable timer cleared", obj5);
+      }
     }
-    if (!tmp2) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(tmp3.timeout);
-      tmp3.timeout = null;
-      const obj5 = { playableId: playingPlayableId };
-      logger.log("Playable timer cleared", obj5);
-    }
-    const obj3 = { playableId: playingPlayableId, isRunning: tmp2, hasTimeout: null != playingPlayableId.timeout };
+    const obj3 = { playableId: playingPlayableId, isRunning: tmp3, hasTimeout: null != applyArgumentsResult.timeout };
   };
   items = [PlayableStore, applyArgumentsResult.handlePlayableStoreChange];
   const items1 = [items];

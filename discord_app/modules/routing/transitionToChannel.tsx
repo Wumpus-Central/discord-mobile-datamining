@@ -1,12 +1,12 @@
-// === Module 5893: transitionToChannel ===
+// === Module 5912: transitionToChannel ===
 
-// Module 5893 (transitionToChannel)
+// Module 5912 (transitionToChannel)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1099 */;
-import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 5894 */;
-import preloadChannelDefault from "preloadChannel" /* 5895 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5896 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 5913 */;
+import preloadChannelDefault from "preloadChannel" /* 5914 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5915 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 require = fn;
 const Routes = fn(1072).Routes;

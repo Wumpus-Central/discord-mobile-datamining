@@ -1,7 +1,7 @@
-// === Module 17298: useFetchOrbsArcadeGames ===
+// === Module 17286: useFetchOrbsArcadeGames ===
 
-// Module 17298 (useFetchOrbsArcadeGames)
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17300 */;
+// Module 17286 (useFetchOrbsArcadeGames)
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17288 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/hooks/useFetchOrbsArcadeGames.tsx");
 
 export default function useFetchOrbsArcadeGames(location) {
-  const OrbsArcadeExperiment = enabled(17299).OrbsArcadeExperiment;
+  const OrbsArcadeExperiment = enabled(17287).OrbsArcadeExperiment;
   enabled = OrbsArcadeExperiment.useConfig({ location }).enabled;
   items = [enabled];
   const effect = noop.useEffect(() => {

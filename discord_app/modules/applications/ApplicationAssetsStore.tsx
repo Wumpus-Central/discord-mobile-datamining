@@ -1,7 +1,7 @@
-// === Module 8868: ApplicationAssetsStore ===
+// === Module 8814: ApplicationAssetsStore ===
 
-// Module 8868 (ApplicationAssetsStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 8814 (ApplicationAssetsStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -11,7 +11,7 @@ function handleFetchEmbeddedActivityShelfSuccess(assets) {
   const merged = Object.assign(obj);
   for (const key10012 in assets) {
     obj[key10012] = obj.FETCH_SUCCESS;
-    let obj4 = _modDef12;
+    let obj4 = applyDefault;
     let keyByResult = obj4.keyBy(assets[key10012], "name");
     if (keyByResult == null) {
       keyByResult = {};
@@ -69,7 +69,7 @@ const applicationAssetsStore = new ApplicationAssetsStore(DispatcherDefault, {
   APPLICATION_ASSETS_UPDATE: function handleUpdateApplicationAssets(assets) {
     assets = assets.assets;
     if (null != assets) {
-      let keyByResult = _modDef12.keyBy(assets, "name");
+      let keyByResult = applyDefault.keyBy(assets, "name");
       if (keyByResult == null) {
         keyByResult = {};
       }

@@ -1,8 +1,8 @@
-// === Module 5917: Frecency ===
+// === Module 5936: Frecency ===
 
-// Module 5917 (Frecency)
-import _modDef12 from "module_12" /* 12 */;
-import _modDef2171 from "module_2171" /* 2171 */;
+// Module 5936 (Frecency)
+import applyDefault from "apply" /* 12 */;
+import _modDef2166 from "module_2166" /* 2166 */;
 import size from "module_2" /* 2 */;
 
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
@@ -73,7 +73,7 @@ prototype["overwriteHistory"] = function overwriteHistory(dependencyMap, pending
   if (dependencyMap == null) {
     obj = {};
   }
-  self.usageHistory = _modDef12.mapValues(obj, (arg0) => {
+  self.usageHistory = applyDefault.mapValues(obj, (arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.frecency = -1;
@@ -188,7 +188,7 @@ prototype["getFrecency"] = function getFrecency(id) {
 };
 prototype["compute"] = function compute() {
   const self = this;
-  dependencyMap = _modDef2171();
+  dependencyMap = _modDef2166();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
     const _Object = Object;
@@ -196,7 +196,7 @@ prototype["compute"] = function compute() {
     const tmpResult = tmp(12);
   }
   importDefault = maxByResult;
-  let item = _modDef12.forEach(self.usageHistory, (recentUses, arg1) => {
+  let item = applyDefault.forEach(self.usageHistory, (recentUses, arg1) => {
     recentUses = recentUses.recentUses;
     if (-1 === recentUses.frecency) {
       dependencyMap = self.computeBonus(arg1) / 100;
@@ -205,7 +205,7 @@ prototype["compute"] = function compute() {
         if (arg1 >= self.maxSamples) {
           return false;
         } else {
-          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef2171(arg0), "days"));
+          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef2166(arg0), "days"));
         }
       });
       if (recentUses.score > 0) {
@@ -226,8 +226,8 @@ prototype["compute"] = function compute() {
       const arr2 = maxByResult(dependencyMap[0]);
     }
   });
-  const tmpResult2 = _modDef12;
-  const mapped = _modDef12(self.usageHistory).map((frecency, index) => {
+  const tmpResult2 = applyDefault;
+  const mapped = applyDefault(self.usageHistory).map((frecency, index) => {
     const lookupKeyResult = self.lookupKey(index);
     let tmp2 = null;
     if (null != lookupKeyResult) {
@@ -237,7 +237,7 @@ prototype["compute"] = function compute() {
     return tmp2;
   });
   const found = mapped.filter((item) => null !== item);
-  let arr2 = _modDef12(self.usageHistory);
+  let arr2 = applyDefault(self.usageHistory);
   const mapped1 = found.sortBy((arg0) => {
     [, tmp] = arg0;
     return -tmp;

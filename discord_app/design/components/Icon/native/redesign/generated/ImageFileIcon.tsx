@@ -1,9 +1,9 @@
-// === Module 12735: ImageFileIcon ===
+// === Module 12700: ImageFileIcon ===
 
-// Module 12735 (ImageFileIcon)
+// Module 12700 (ImageFileIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5853 */;
-import _mod12736 from "module_12736" /* 12736 */;
+import BaseIconImage from "BaseIconImage" /* 5871 */;
+import _mod12701 from "module_12701" /* 12701 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ImageFileIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12736, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12701, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

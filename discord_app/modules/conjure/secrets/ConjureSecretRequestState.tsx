@@ -1,9 +1,9 @@
-// === Module 12816: ConjureSecretRequestState ===
+// === Module 12781: ConjureSecretRequestState ===
 
-// Module 12816 (ConjureSecretRequestState)
+// Module 12781 (ConjureSecretRequestState)
 import util from "util" /* 1113 */;
-import _modDef3995 from "module_3995" /* 3995 */;
-import conjureChatTurns from "conjureChatTurns" /* 11036 */;
+import _modDef4024 from "module_4024" /* 4024 */;
+import conjureChatTurns from "conjureChatTurns" /* 10988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,10 +11,10 @@ require = fn;
 function isSecretsSavedMessage(content) {
   const trimmed = content.content.trim();
   const intl = util.intl;
-  let tmp5 = trimmed === intl.string(_modDef3995.UGqnoV);
+  let tmp5 = trimmed === intl.string(_modDef4024.UGqnoV);
   if (!tmp5) {
     const intl2 = util.intl;
-    tmp5 = trimmed === intl2.string(_modDef3995.sMQt5O);
+    tmp5 = trimmed === intl2.string(_modDef4024.sMQt5O);
   }
   return tmp5;
 }

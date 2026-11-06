@@ -1,6 +1,6 @@
-// === Module 11760: storefrontCodedLink ===
+// === Module 11726: storefrontCodedLink ===
 
-// Module 11760 (storefrontCodedLink)
+// Module 11726 (storefrontCodedLink)
 import _slicedToArray from "module_32" /* 32 */;
 
 function normalizeStorefrontSkuIds(items) {
@@ -28,8 +28,8 @@ const result = size.fileFinishedImporting("modules/slayer_storefront/storefrontC
 
 export const MAX_STOREFRONT_EMBED_SKUS = 6;
 export { normalizeStorefrontSkuIds };
-export function makeStorefrontCodedLink(items, applicationId) {
-  return "" + items.join(",") + "-" + applicationId;
+export function makeStorefrontCodedLink(items, applicationId1) {
+  return "" + items.join(",") + "-" + applicationId1;
 }
 export function parseStorefrontCodedLink(code) {
   const parts = code.split("-");

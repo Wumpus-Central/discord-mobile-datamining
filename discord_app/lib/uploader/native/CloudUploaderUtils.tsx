@@ -1,16 +1,16 @@
-// === Module 8385: CloudUploaderUtils ===
+// === Module 8331: CloudUploaderUtils ===
 
-// Module 8385 (CloudUploaderUtils)
-import _modDef12 from "module_12" /* 12 */;
+// Module 8331 (CloudUploaderUtils)
+import applyDefault from "apply" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UploadUtils from "UploadUtils" /* 8357 */;
-import LocaleStore from "LocaleStore" /* 2191 */;
+import UploadUtils from "UploadUtils" /* 8302 */;
+import LocaleStore from "LocaleStore" /* 2186 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1359 */;
 
 require = fn;
 function getUploadPayload(self) {
-  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "a" };
+  const obj = { filename: self.filename, file_size: self.currentSize, id: applyDefault.uniqueId(), original_content_type: "a" };
   return obj;
 }
 const size = fn(2);
@@ -28,8 +28,8 @@ export function prepareMessagePayload(Authorization, arr, arg2, arg3) {
       const obj = {};
       let merged = Object.assign(arg2);
       const items1 = [];
-      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(_modDef12.get(obj, arg3, []), 0));
-      let result = _modDef12.set(obj, arg3, items1);
+      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(applyDefault.get(obj, arg3, []), 0));
+      let result = applyDefault.set(obj, arg3, items1);
     }
     const obj2 = { Authorization, "X-Debug-Options": DeveloperOptionsStore.getDebugOptionsHeaderValue(), "Accept-Language": LocaleStore.locale };
     const superPropertiesBase64 = AnalyticsUtilsDefault.getSuperPropertiesBase64();

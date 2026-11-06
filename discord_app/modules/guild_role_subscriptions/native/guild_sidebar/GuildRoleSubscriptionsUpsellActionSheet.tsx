@@ -1,22 +1,22 @@
-// === Module 18588: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 18578: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 18588 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 18578 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5398 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import components_Button_Button from "components/Button/Button" /* 5770 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9226 */;
-import _modDef18589 from "module_18589" /* 18589 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5418 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import components_Button_Button from "components/Button/Button" /* 5788 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9172 */;
+import _modDef18579 from "module_18579" /* 18579 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_8 = createStyles.createStyles({ title: { marginTop: 24, textAlign: "center" }, description: { marginTop: 8, marginBottom: 24, textAlign: "center" }, dismissButton: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx");
@@ -31,7 +31,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     children: null
   };
-  const obj2 = { source: _modDef18589 };
+  const obj2 = { source: _modDef18579 };
   items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

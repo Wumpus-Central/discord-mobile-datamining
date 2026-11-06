@@ -1,21 +1,21 @@
-// === Module 12588: AppLauncherKeyboard ===
+// === Module 12553: AppLauncherKeyboard ===
 
-// Module 12588 (AppLauncherKeyboard)
+// Module 12553 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1497 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
-import native from "native" /* 5209 */;
-import BottomSheetModal from "BottomSheetModal" /* 5402 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5897 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6159 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11443 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12590 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12599 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12600 */;
-import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 12631 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12634 */;
+import native from "native" /* 5229 */;
+import BottomSheetModal from "BottomSheetModal" /* 5422 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5916 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6179 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11405 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12555 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12564 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12565 */;
+import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 12596 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12599 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,11 +23,11 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12589).KEYBOARD_ANIMATION_CONFIG;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
+const KEYBOARD_ANIMATION_CONFIG = fn(12554).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { onboardingRoundingView: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, onboardingHeader: null, onboardingNavigatorContent: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
 obj.onboardingHeader = { borderWidth: 2, borderBottomWidth: 0, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderBottomColor: "transparent", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -160,20 +160,20 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(11698).AppLauncherBottomSheetExpandReason.KEYBOARD;
-        } else if (arg2 === trackWithMetadata(5402).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(11698).AppLauncherBottomSheetExpandReason.GESTURE;
-        } else if (arg2 !== trackWithMetadata(5402).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(11698).AppLauncherBottomSheetExpandReason.OTHER;
+          let current = trackWithMetadata(11664).AppLauncherBottomSheetExpandReason.KEYBOARD;
+        } else if (arg2 === trackWithMetadata(5422).ANIMATION_SOURCE.GESTURE) {
+          current = trackWithMetadata(11664).AppLauncherBottomSheetExpandReason.GESTURE;
+        } else if (arg2 !== trackWithMetadata(5422).ANIMATION_SOURCE.USER) {
+          current = trackWithMetadata(11664).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
-        trackWithMetadata = trackWithMetadata(5897).trackWithMetadata;
+        trackWithMetadata = trackWithMetadata(5916).trackWithMetadata;
         APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
         const obj = { reason: current };
         trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
         ref1.current = undefined;
-        const trackWithMetadataResult = trackWithMetadata(5897);
+        const trackWithMetadataResult = trackWithMetadata(5916);
       }
     }
   }, items8);
@@ -225,7 +225,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   obj8.backdropComponent = callback2;
   let tmp29 = onboardingNavigatorContent;
   if (!onboardingNavigatorContent) {
-    tmp29 = entrypoint === tmp(11699).AppLauncherEntrypoint.VOICE;
+    tmp29 = entrypoint === tmp(11665).AppLauncherEntrypoint.VOICE;
   }
   obj8.disableHeaderRoundingAnimation = tmp29;
   let onboardingRoundingView = onboardingNavigatorContent;

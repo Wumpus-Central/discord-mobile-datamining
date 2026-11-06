@@ -1,12 +1,12 @@
-// === Module 7469: useGetOrFetchApplications ===
+// === Module 7414: useGetOrFetchApplications ===
 
-// Module 7469 (useGetOrFetchApplications)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7414 (useGetOrFetchApplications)
+import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7019 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6961 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2167 */;
+import ApplicationStore from "ApplicationStore" /* 2162 */;
 
 const require = globalThis.__r;
 
@@ -31,8 +31,8 @@ export default function useGetOrFetchApplications(items) {
     }
     if (tmp) {
       const obj2 = ApplicationActionCreatorsDefault;
-      const found = _modDef12(items1).filter(GlobalUtils.isNotNullish);
-      const arr = _modDef12(items1);
+      const found = applyDefault(items1).filter(GlobalUtils.isNotNullish);
+      const arr = applyDefault(items1);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
       applications.catch(NOOP);
       ref.current = items1;
@@ -71,8 +71,8 @@ export function useGetOrFetchApplication(applicationId) {
     }
     if (tmp) {
       const obj2 = ApplicationActionCreatorsDefault;
-      const found = _modDef12(items1).filter(GlobalUtils.isNotNullish);
-      const arr = _modDef12(items1);
+      const found = applyDefault(items1).filter(GlobalUtils.isNotNullish);
+      const arr = applyDefault(items1);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
       applications.catch(NOOP);
       ref.current = items1;

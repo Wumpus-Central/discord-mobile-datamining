@@ -1,13 +1,13 @@
-// === Module 9470: useShouldOpenGameProfileModal ===
+// === Module 9416: useShouldOpenGameProfileModal ===
 
-// Module 9470 (useShouldOpenGameProfileModal)
+// Module 9416 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import FlagUtilsAll from "FlagUtils" /* 1398 */;
-import utils from "utils" /* 5796 */;
-import GameFlags from "GameFlags" /* 9471 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import utils from "utils" /* 5814 */;
+import GameFlags from "GameFlags" /* 9417 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2143 */;
+import GameStore from "GameStore" /* 2138 */;
 
 const require = globalThis.__r;
 

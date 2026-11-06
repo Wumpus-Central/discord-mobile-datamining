@@ -1,14 +1,14 @@
-// === Module 16834: UserProfilePremiumUpsellCard ===
+// === Module 16819: UserProfilePremiumUpsellCard ===
 
-// Module 16834 (UserProfilePremiumUpsellCard)
+// Module 16819 (UserProfilePremiumUpsellCard)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7301 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7465 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10092 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10093 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16751 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7248 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7410 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10043 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10044 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7771).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7725).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
@@ -57,7 +57,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_10 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;

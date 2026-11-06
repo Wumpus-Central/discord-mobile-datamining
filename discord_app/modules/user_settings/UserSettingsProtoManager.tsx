@@ -1,12 +1,12 @@
-// === Module 16547: UserSettingsProtoManager ===
+// === Module 16544: UserSettingsProtoManager ===
 
-// Module 16547 (UserSettingsProtoManager)
-import _modDef12 from "module_12" /* 12 */;
+// Module 16544 (UserSettingsProtoManager)
+import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1235 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4973 */;
-import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 16548 */;
-import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 16549 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5000 */;
+import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 16545 */;
+import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 16546 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function handleConnectionOpen() {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     let result = PreloadedUserSettingsActionCreators.markDirtyFromMigration(tmp2.proto, tmp2.editInfo.cleanupFuncs);
   }
-  const item = _modDef12.forEach(UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType, (scheduleSaveFromOfflineEdit, arg1) => {
+  const item = applyDefault.forEach(UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType, (scheduleSaveFromOfflineEdit, arg1) => {
     const tmp = fullState[Number(undefined, arg1)];
     if (tmp2) {
       const result = scheduleSaveFromOfflineEdit.scheduleSaveFromOfflineEdit();
@@ -38,7 +38,7 @@ function handleAppStateUpdate(state) {
     tmp = "background" !== state;
   }
   if (!tmp) {
-    const item = _modDef12.forEach(UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType, (persistChanges, arg1) => {
+    const item = applyDefault.forEach(UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType, (persistChanges, arg1) => {
       fullState = fullState.getFullState();
       if (null != fullState[Number(undefined, arg1)].editInfo.timeout) {
         persistChanges.persistChanges();

@@ -1,6 +1,6 @@
-// === Module 11716: UserProfileWYSIWYGEditingExperiment ===
+// === Module 11682: UserProfileWYSIWYGEditingExperiment ===
 
-// Module 11716 (UserProfileWYSIWYGEditingExperiment)
+// Module 11682 (UserProfileWYSIWYGEditingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

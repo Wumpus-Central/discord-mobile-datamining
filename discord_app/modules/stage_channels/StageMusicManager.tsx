@@ -1,15 +1,15 @@
-// === Module 12083: StageMusicManager ===
+// === Module 12048: StageMusicManager ===
 
-// Module 12083 (StageMusicManager)
-import StageChannelParticipants from "StageChannelParticipants" /* 6897 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import MediaEngineStore from "MediaEngineStore" /* 2135 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
-import VoiceStateStore from "VoiceStateStore" /* 5815 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6851 */;
-import StageInstanceStore from "StageInstanceStore" /* 4997 */;
-import StageMusicStore from "StageMusicStore" /* 12081 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
+// Module 12048 (StageMusicManager)
+import StageChannelParticipants from "StageChannelParticipants" /* 6839 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import MediaEngineStore from "MediaEngineStore" /* 2130 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import VoiceStateStore from "VoiceStateStore" /* 5833 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6793 */;
+import StageInstanceStore from "StageInstanceStore" /* 5024 */;
+import StageMusicStore from "StageMusicStore" /* 12046 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
 
 const require = globalThis.__r;
 
@@ -69,7 +69,7 @@ function checkVoiceStates() {
   }
 }
 let c9 = false;
-const SoundUtils = fn(11219);
+const SoundUtils = fn(11174);
 let closure_10 = SoundUtils.createSound("stage_waiting", "stage_waiting", MediaEngineStore.getOutputVolume() / 400);
 class StageMusicManager extends tmp2 {
   constructor() {

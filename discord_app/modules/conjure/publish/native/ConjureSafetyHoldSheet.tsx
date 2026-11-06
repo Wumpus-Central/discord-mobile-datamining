@@ -1,11 +1,11 @@
-// === Module 12298: ConjureSafetyHoldSheet ===
+// === Module 12265: ConjureSafetyHoldSheet ===
 
-// Module 12298 (ConjureSafetyHoldSheet)
+// Module 12265 (ConjureSafetyHoldSheet)
 import nativeDefault from "native" /* 575 */;
-import _modDef3995 from "module_3995" /* 3995 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5384 */;
-import conjurePublishConnection from "conjurePublishConnection" /* 11144 */;
-import useConjureSafetyRecheckDefault from "useConjureSafetyRecheck" /* 12299 */;
+import _modDef4024 from "module_4024" /* 4024 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5404 */;
+import conjurePublishConnection from "conjurePublishConnection" /* 11097 */;
+import useConjureSafetyRecheckDefault from "useConjureSafetyRecheck" /* 12266 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -15,16 +15,16 @@ function ConjureSafetyHoldSheet(projectId) {
   projectId = projectId.projectId;
   const tmp4 = useConjureSafetyRecheckDefault(projectId);
   const tmp = closure_8();
-  const conjureSafetyRecheckNotice = projectId(12299).getConjureSafetyRecheckNotice(tmp4);
-  const obj = projectId(12299);
-  const conjureSafetyHoldCopy = projectId(12299).getConjureSafetyHoldCopy(tmp4);
+  const conjureSafetyRecheckNotice = projectId(12266).getConjureSafetyRecheckNotice(tmp4);
+  const obj = projectId(12266);
+  const conjureSafetyHoldCopy = projectId(12266).getConjureSafetyHoldCopy(tmp4);
   let status;
   if (tmp4 != null) {
     status = tmp4.status;
   }
-  const obj3 = { header: closure_4(projectId(7460).BottomSheetTitleHeader, { title: conjureSafetyHoldCopy.title }), children: null };
+  const obj3 = { header: closure_4(projectId(7405).BottomSheetTitleHeader, { title: conjureSafetyHoldCopy.title }), children: null };
   const obj5 = { style: tmp.content, children: null };
-  items = [closure_4(projectId(5763).Text, { variant: "body-md/normal", color: "text-muted", children: conjureSafetyHoldCopy.body }), , , ];
+  items = [closure_4(projectId(5781).Text, { variant: "body-md/normal", color: "text-muted", children: conjureSafetyHoldCopy.body }), , , ];
   let tmp9Result = null;
   if (null != conjureSafetyRecheckNotice) {
     const obj7 = { variant: "body-md/medium", color: closure_7[conjureSafetyRecheckNotice.type], accessibilityRole: null, accessibilityLiveRegion: "polite", children: null };
@@ -34,14 +34,14 @@ function ConjureSafetyHoldSheet(projectId) {
     }
     obj7.accessibilityRole = str2;
     obj7.children = conjureSafetyRecheckNotice.message;
-    tmp9Result = closure_4(tmp5(5763).Text, obj7);
+    tmp9Result = closure_4(tmp5(5781).Text, obj7);
   }
   items[1] = tmp9Result;
   let tmp9Result2 = null;
   if ("cleared" !== status) {
     const obj8 = { variant: "primary", text: null, loading: null, onPress: null };
     const intl = tmp5(1113).intl;
-    obj8.text = intl.string(_modDef3995["nmwy0/"]);
+    obj8.text = intl.string(_modDef4024["nmwy0/"]);
     let status1;
     if (tmp4 != null) {
       status1 = tmp4.status;
@@ -50,7 +50,7 @@ function ConjureSafetyHoldSheet(projectId) {
     obj8.onPress = function onPress() {
       return conjurePublishConnection.requestConjureSafetyRecheck(projectId);
     };
-    tmp9Result2 = closure_4(tmp5(5770).Button, obj8);
+    tmp9Result2 = closure_4(tmp5(5788).Button, obj8);
   }
   items[2] = tmp9Result2;
   let str4 = "secondary";
@@ -63,17 +63,17 @@ function ConjureSafetyHoldSheet(projectId) {
   obj9.onPress = function close() {
     ActionSheetActionCreatorsDefault.hideActionSheet(ConjureSafetyHoldSheet);
   };
-  items[3] = closure_4(projectId(5770).Button, obj9);
+  items[3] = closure_4(projectId(5788).Button, obj9);
   obj5.children = items;
   obj3.children = closure_5(View, obj5);
-  return closure_4(projectId(7504).ActionSheet, obj3);
+  return closure_4(projectId(7449).ActionSheet, obj3);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 ConjureSafetyHoldSheet = "ConjureSafetyHoldSheet";
 let closure_7 = { critical: "text-feedback-critical", warning: "text-feedback-warning", info: "text-muted" };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

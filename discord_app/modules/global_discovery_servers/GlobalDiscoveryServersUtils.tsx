@@ -1,11 +1,11 @@
-// === Module 20360: GlobalDiscoveryServersUtils ===
+// === Module 20368: GlobalDiscoveryServersUtils ===
 
-// Module 20360 (GlobalDiscoveryServersUtils)
+// Module 20368 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1266 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2191 */;
+import LocaleStore from "LocaleStore" /* 2186 */;
 
 require = fn;
 let closure_13 = async function _navigateToGuild() {
@@ -20,7 +20,7 @@ let closure_13 = async function _navigateToGuild() {
   ({ loadId: closure_129_0, guildId: closure_129_1, index: closure_129_2, categoryId: closure_129_3, analyticsLocation: closure_129_4, options: closure_129_5 } = closure_0);
   return "flexDirection";
 };
-const GlobalDiscoveryServersConstants = fn(9228);
+const GlobalDiscoveryServersConstants = fn(9174);
 ({ GlobalDiscoveryServerTab: closure_6, FEATURED_GUILDS_CACHE_DURATION: metroImportDefault, CategoryId: closure_8, DISCOVERY_ALL_CATEGORIES_ID: closure_9, getLanguageOptions: closure_10, HUBS_CATEGORY_ID: closure_11 } = GlobalDiscoveryServersConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -164,7 +164,7 @@ export function fromDiscoverableGuildServer(id) {
   return obj;
 }
 export function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "id", discoverySplash: false, emojis: false };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "isArray", discoverySplash: "(function computeOffsetIfDataChanged_Pnpm_computeOffsetIfDataChangedTs2(params){let[omitZero]=this.__closure;const{direction:direction,handlerOffset:_handlerOffset,size:size,previousLength:previousLength,currentLength:currentLength}=params;let handlerOffset=_handlerOffset;let positionIndex;let round;const isPositive=direction<0;if(isPositive){positionIndex=Math.abs(handlerOffset)/size;round=Number.parseInt(String(omitZero(previousLength,positionIndex/previousLength)));}else{positionIndex=(Math.abs(handlerOffset)-size)/size;round=Number.parseInt(String(omitZero(previousLength,positionIndex/previousLength)))+1;}const prevOffset=omitZero(previousLength,positionIndex%previousLength);const prevIndex=isPositive?prevOffset:previousLength-prevOffset-1;const changedLength=round*(currentLength-previousLength);const changedOffset=changedLength*size;if(prevIndex>currentLength-1&&currentLength<previousLength){if(isPositive)handlerOffset=(currentLength-1)*size*direction;else handlerOffset=(currentLength-1)*size*-1;}else{handlerOffset+=changedOffset*direction;}return handlerOffset;})", emojis: "(function computeOffsetIfSizeChanged_Pnpm_computeOffsetIfSizeChangedTs1(params){const{handlerOffset:handlerOffset,prevSize:prevSize,size:size}=params;return handlerOffset/prevSize*size;})" };
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, discovery_splash: obj.discoverySplash } = id);
   obj.emojis = [];
   return obj;

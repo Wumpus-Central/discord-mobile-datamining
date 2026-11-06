@@ -1,9 +1,9 @@
-// === Module 12801: useConjureIncompleteAppNotice ===
+// === Module 12766: useConjureIncompleteAppNotice ===
 
-// Module 12801 (useConjureIncompleteAppNotice)
+// Module 12766 (useConjureIncompleteAppNotice)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildStore from "GuildStore" /* 5041 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjureInc
 
 export default function useConjureIncompleteAppNotice(arg0) {
   _require = arg0;
-  const tmp3 = guildId(12302)(arg0);
+  const tmp3 = guildId(12269)(arg0);
   guildId = undefined;
   if (tmp3 != null) {
     guildId = tmp3.guildId;
@@ -52,9 +52,9 @@ export default function useConjureIncompleteAppNotice(arg0) {
     if (tmp7[0] !== arg0) {
       const intl = require("util").intl;
       if ("channel" === missingSurface) {
-        let Lm7IRC = tmp(3995)["1cm4fj"];
+        let Lm7IRC = tmp(4024)["1cm4fj"];
       } else {
-        Lm7IRC = tmp(3995).Lm7IRC;
+        Lm7IRC = tmp(4024).Lm7IRC;
       }
       let str2 = stateFromStores;
       if (stateFromStores == null) {

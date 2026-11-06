@@ -1,7 +1,7 @@
-// === Module 2130: TelemetryRingNative ===
+// === Module 2125: TelemetryRingNative ===
 
-// Module 2130 (TelemetryRingNative)
-import NativeTelemetryRingModuleDefault from "NativeTelemetryRingModule" /* 2131 */;
+// Module 2125 (TelemetryRingNative)
+import NativeTelemetryRingModuleDefault from "NativeTelemetryRingModule" /* 2126 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingNative.android.tsx");

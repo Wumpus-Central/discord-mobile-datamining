@@ -1,20 +1,20 @@
-// === Module 12917: CaterpillarIllocon ===
+// === Module 12882: CaterpillarIllocon ===
 
-// Module 12917 (CaterpillarIllocon)
-import FastImageDefault from "FastImage" /* 5854 */;
-import assetHelpers from "assetHelpers" /* 7213 */;
-import _modDef12918 from "module_12918" /* 12918 */;
-import _modDef12919 from "module_12919" /* 12919 */;
-import _modDef12920 from "module_12920" /* 12920 */;
+// Module 12882 (CaterpillarIllocon)
+import FastImageDefault from "FastImage" /* 5872 */;
+import assetHelpers from "assetHelpers" /* 7160 */;
+import _modDef12883 from "module_12883" /* 12883 */;
+import _modDef12884 from "module_12884" /* 12884 */;
+import _modDef12885 from "module_12885" /* 12885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12918 }, 3: null };
-const obj2 = { uri: _modDef12918 };
-obj[2] = { uri: _modDef12919 };
-const obj3 = { uri: _modDef12919 };
-obj[3] = { uri: _modDef12920 };
+let obj = { 1: null, 2: { uri: _modDef12883 }, 3: null };
+const obj2 = { uri: _modDef12883 };
+obj[2] = { uri: _modDef12884 };
+const obj3 = { uri: _modDef12884 };
+obj[3] = { uri: _modDef12885 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function CaterpillarIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7213).getAssetSource(obj);
+  obj.source = num(7160).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

@@ -1,6 +1,6 @@
-// === Module 15968: ActivateDeviceSharedStyles ===
+// === Module 15963: ActivateDeviceSharedStyles ===
 
-// Module 15968 (ActivateDeviceSharedStyles)
+// Module 15963 (ActivateDeviceSharedStyles)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSharedStyles.tsx");

@@ -1,14 +1,14 @@
-// === Module 7865: CollectiblesCategoryStore ===
+// === Module 7819: CollectiblesCategoryStore ===
 
-// Module 7865 (CollectiblesCategoryStore)
-import _mod12 from "module_12" /* 12 */;
+// Module 7819 (CollectiblesCategoryStore)
+import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7877 */;
-import LocaleStore from "LocaleStore" /* 2191 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7866 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7831 */;
+import LocaleStore from "LocaleStore" /* 2186 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7820 */;
 
 require = fn;
 function updateCategoriesAndProducts(map) {
@@ -245,7 +245,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
           const date = new Date();
         }
       }
-      obj = _mod12;
+      obj = apply;
     }
     closure_18 = Date.now();
     c16 = false;

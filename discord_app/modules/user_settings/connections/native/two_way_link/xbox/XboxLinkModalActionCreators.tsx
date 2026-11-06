@@ -1,8 +1,8 @@
-// === Module 9877: XboxLinkModalActionCreators ===
+// === Module 9827: XboxLinkModalActionCreators ===
 
-// Module 9877 (XboxLinkModalActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+// Module 9827 (XboxLinkModalActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "USER_SETTINGS_CONNECTIONS_XBOX_LINK_MODAL_KEY";
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 
 export default {
   showModal(locationStack) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9878, dependencyMap.paths), { locationStack }, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9828, dependencyMap.paths), { locationStack }, c3);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(c3);

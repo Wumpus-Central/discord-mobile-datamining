@@ -1,8 +1,8 @@
-// === Module 19432: ActivityPanelContainer ===
+// === Module 19424: ActivityPanelContainer ===
 
-// Module 19432 (ActivityPanelContainer)
-import ActivityPanelControllerDefault from "ActivityPanelController" /* 19434 */;
-import ActivityPanelUIDefault from "ActivityPanelUI" /* 19439 */;
+// Module 19424 (ActivityPanelContainer)
+import ActivityPanelControllerDefault from "ActivityPanelController" /* 19426 */;
+import ActivityPanelUIDefault from "ActivityPanelUI" /* 19431 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

@@ -1,7 +1,7 @@
-// === Module 13023: ChatInputParser ===
+// === Module 12988: ChatInputParser ===
 
-// Module 13023 (ChatInputParser)
-import _modDef12 from "module_12" /* 12 */;
+// Module 12988 (ChatInputParser)
+import applyDefault from "apply" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ prototype["removeRule"] = function removeRule(arg0) {
 prototype["parse"] = function parse(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return _modDef12.valuesIn(this.rules).reduce((arr, matchFunction) => arr.concat(matchFunction.matchFunction(matchFunction, closure_1).map((item) => {
+  return applyDefault.valuesIn(this.rules).reduce((arr, matchFunction) => arr.concat(matchFunction.matchFunction(matchFunction, closure_1).map((item) => {
     if (typeof matchFunction.deleteNodeOnBackspace === "function") {
       let deleteNodeOnBackspace = matchFunction.deleteNodeOnBackspace(item);
     } else {

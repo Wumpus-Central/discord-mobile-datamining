@@ -1,24 +1,24 @@
-// === Module 7024: GuildReadStateStore ===
+// === Module 6966: GuildReadStateStore ===
 
-// Module 7024 (GuildReadStateStore)
+// Module 6966 (GuildReadStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
-import FavoritesUtils from "FavoritesUtils" /* 5017 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 5083 */;
-import NSFWContentGate from "NSFWContentGate" /* 6890 */;
-import isOptInEnabled from "isOptInEnabled" /* 7023 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 7025 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6996 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6979 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
+import applyDefault from "apply" /* 12 */;
+import FavoritesUtils from "FavoritesUtils" /* 5044 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 5110 */;
+import NSFWContentGate from "NSFWContentGate" /* 6832 */;
+import isOptInEnabled from "isOptInEnabled" /* 6965 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 6967 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6938 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6921 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildStore from "GuildStore" /* 5041 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6913 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -836,13 +836,13 @@ function handleChannelUpdate(channel) {
   return recountChannels(channel.getGuildId(), items);
 }
 function handleChannelUpdates(channels) {
-  const obj = _modDef12(channels.channels);
-  return _modDef12(channels.channels).groupBy((getGuildId) => getGuildId.getGuildId()).reduce((acc, arr, index) => recountChannels(index, arr.map((id) => id.id)) || acc, false);
+  const obj = applyDefault(channels.channels);
+  return applyDefault(channels.channels).groupBy((getGuildId) => getGuildId.getGuildId()).reduce((acc, arr, index) => recountChannels(index, arr.map((id) => id.id)) || acc, false);
 }
 function handleBulkAck(channels) {
-  const mapped = _modDef12(channels.channels).map((channelId) => channelId.channelId);
+  const mapped = applyDefault(channels.channels).map((channelId) => channelId.channelId);
   const found = mapped.filter((item) => null != ChannelStore.getChannel(item));
-  const arr = _modDef12(channels.channels);
+  const arr = applyDefault(channels.channels);
   return found.groupBy((arg0) => {
     const channel = ChannelStore.getChannel(arg0);
     let guildId;
@@ -959,11 +959,11 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: closure_10 } = ChannelRecord);
-const isGuildNSFW = fn(5010).isGuildNSFW;
-const ChannelFlags = fn(4999).ChannelFlags;
-const ReadStateConstants = fn(6914);
+const isGuildNSFW = fn(5037).isGuildNSFW;
+const ChannelFlags = fn(5026).ChannelFlags;
+const ReadStateConstants = fn(6856);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
 let guilds = {};

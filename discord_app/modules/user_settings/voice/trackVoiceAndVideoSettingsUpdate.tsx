@@ -1,6 +1,6 @@
-// === Module 6018: trackVoiceAndVideoSettingsUpdate ===
+// === Module 6037: trackVoiceAndVideoSettingsUpdate ===
 
-// Module 6018 (trackVoiceAndVideoSettingsUpdate)
+// Module 6037 (trackVoiceAndVideoSettingsUpdate)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import size from "module_2" /* 2 */;

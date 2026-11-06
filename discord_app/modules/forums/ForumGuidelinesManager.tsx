@@ -1,8 +1,8 @@
-// === Module 10415: ForumGuidelinesManager ===
+// === Module 10367: ForumGuidelinesManager ===
 
-// Module 10415 (ForumGuidelinesManager)
+// Module 10367 (ForumGuidelinesManager)
 import Storage2 from "Storage" /* 510 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
 
 require = fn;
 const formGuidelinesStorageKey = "formGuidelinesStorageKey";

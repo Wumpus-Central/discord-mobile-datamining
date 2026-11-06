@@ -1,8 +1,7 @@
-// === Module 18750: SortableListView ===
+// === Module 18740: SortableListView ===
 
-// Module 18750 (SortableListView)
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5747 */;
-import _mod7433 from "module_7433" /* 7433 */;
+// Module 18740 (SortableListView)
+import _mod7380 from "module_7380" /* 7380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -282,9 +281,8 @@ class SortableListView extends Component {
         sum = bound + 1;
       }
       if (sum !== obj.state.hoverIndex) {
-        const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
-        const obj3 = { hovering: true, hoverIndex: sum };
-        obj.setState(obj3);
+        const obj2 = { hovering: true, hoverIndex: sum };
+        obj.setState(obj2);
       }
     };
     tmp21.cancel = function cancel() {
@@ -369,7 +367,6 @@ class SortableListView extends Component {
             active.wrapperLayout = { frameX, frameY, frameWidth, frameHeight, pageX, pageY };
             const pan = active.state.pan;
             pan.setValue({ x: 0, y: 0 });
-            const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
             active.moveY = active.layout.pageY;
             active.setState({ active, hovering: true, hoverIndex: active.rowData.index }, active.scrollAnimation);
           });
@@ -421,36 +418,35 @@ class SortableListView extends Component {
             }
             if (null == state.state.active) {
               if (state.state.hovering) {
-                const obj3 = { hovering: false, hoverIndex };
-                state.setState(obj3);
+                const obj2 = { hovering: false, hoverIndex };
+                state.setState(obj2);
               }
               state.moveY = null;
             } else {
               const index = state.state.active.rowData.index;
               if (false === state.state.hovering) {
-                const obj4 = { active: null, hoverIndex };
-                return state.setState(obj4);
+                const obj3 = { active: null, hoverIndex };
+                return state.setState(obj3);
               } else {
                 hoverIndex = state.state.hoverIndex;
                 let diff = hoverIndex;
                 if (hoverIndex > index) {
                   diff = hoverIndex - 1;
                 }
-                const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation({ duration: 0 });
                 const props2 = state.props;
                 const onRowMoved = props2.onRowMoved;
                 if (onRowMoved != null) {
-                  const obj5 = { row: state.state.active.rowData, from: index, to: diff };
-                  onRowMoved(obj5);
+                  const obj4 = { row: state.state.active.rowData, from: index, to: diff };
+                  onRowMoved(obj4);
                 }
-                const obj6 = { active: null, hovering: false, hoverIndex };
-                state.setState(obj6);
+                const obj5 = { active: null, hovering: false, hoverIndex };
+                state.setState(obj5);
                 const _Math = Math;
-                const bound = Math.max(0, state.scrollContainerHeight - state.listLayout.height + tmp15);
+                const bound = Math.max(0, state.scrollContainerHeight - state.listLayout.height + tmp12);
                 if (state.scrollValue > bound) {
                   const scrollResponder = state.scrollResponder;
-                  const obj7 = { y: bound };
-                  scrollResponder.scrollTo(obj7);
+                  const obj6 = { y: bound };
+                  scrollResponder.scrollTo(obj6);
                 }
               }
             }
@@ -534,12 +530,12 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [timestampProducer(_mod7433.FlashList, obj3), self.renderActive()];
+  const items1 = [timestampProducer(_mod7380.FlashList, obj3), self.renderActive()];
   obj.children = items1;
   return metroImportDefault(React3, obj);
 };
 SortableListView.defaultProps = { disableSorting: false };
 let size = fn(2);
-let result = size.fileFinishedImporting("components_native/common/SortableListView.tsx");
+const result = size.fileFinishedImporting("components_native/common/SortableListView.tsx");
 
 export default SortableListView;

@@ -1,6 +1,6 @@
-// === Module 12594: useActivityShelfItemsSorting ===
+// === Module 12559: useActivityShelfItemsSorting ===
 
-// Module 12594 (useActivityShelfItemsSorting)
+// Module 12559 (useActivityShelfItemsSorting)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -52,16 +52,16 @@ export default function useActivityShelfItemsSorting(arg0) {
       let label_type;
       if (embeddedActivityConfig != null) {
         const obj = items(1377);
-        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(5818)(undefined, obj.getOS(obj))];
+        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(5836)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = closure_1(5818);
+        const tmp5 = closure_1(5836);
       }
       let tmp8 = null != label_type;
       if (tmp8) {
-        tmp8 = label_type === items(2121).EmbeddedActivityLabelTypes.NEW || label_type === items(2121).EmbeddedActivityLabelTypes.UPDATED;
-        const tmp11 = label_type === items(2121).EmbeddedActivityLabelTypes.NEW || label_type === items(2121).EmbeddedActivityLabelTypes.UPDATED;
+        tmp8 = label_type === items(2116).EmbeddedActivityLabelTypes.NEW || label_type === items(2116).EmbeddedActivityLabelTypes.UPDATED;
+        const tmp11 = label_type === items(2116).EmbeddedActivityLabelTypes.NEW || label_type === items(2116).EmbeddedActivityLabelTypes.UPDATED;
       }
       return tmp8;
     });

@@ -1,15 +1,15 @@
-// === Module 17072: FamilyCenterTopUsersBottomSheet ===
+// === Module 17060: FamilyCenterTopUsersBottomSheet ===
 
-// Module 17072 (FamilyCenterTopUsersBottomSheet)
+// Module 17060 (FamilyCenterTopUsersBottomSheet)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import _modDef2667 from "module_2667" /* 2667 */;
-import UserUtilsDefault from "UserUtils" /* 5197 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import TableRow from "TableRow" /* 7119 */;
-import TableRowGroup from "TableRowGroup" /* 7204 */;
-import ActionSheet from "ActionSheet" /* 7504 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8518 */;
+import _modDef2664 from "module_2664" /* 2664 */;
+import UserUtilsDefault from "UserUtils" /* 5224 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import TableRow from "TableRow" /* 7063 */;
+import TableRowGroup from "TableRowGroup" /* 7151 */;
+import ActionSheet from "ActionSheet" /* 7449 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8464 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -31,7 +31,7 @@ function UserRow(userActivity) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
@@ -41,7 +41,7 @@ export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   const obj = { children: null };
   const obj2 = { variant: "body-md/semibold", style: closure_6().header, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2667.BxbvS7);
+  obj2.children = intl.string(_modDef2664.BxbvS7);
   items = [React4(Text_Text.Text, obj2), ];
   const tmp = closure_6();
   items[1] = React4(TableRowGroup.TableRowGroup, { hasIcons: true, children: topUserActivities.map((userActivity) => closure_1_4(UserRow, { userActivity }, userActivity.user_id)) });

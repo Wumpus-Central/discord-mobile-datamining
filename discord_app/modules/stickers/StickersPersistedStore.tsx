@@ -1,13 +1,13 @@
-// === Module 6974: StickersPersistedStore ===
+// === Module 6916: StickersPersistedStore ===
 
-// Module 6974 (StickersPersistedStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6916 (StickersPersistedStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import FrecencyDefault from "Frecency" /* 5917 */;
+import FrecencyDefault from "Frecency" /* 5936 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import StickersStore from "StickersStore" /* 6975 */;
+import StickersStore from "StickersStore" /* 6917 */;
 
 function handleStickersStoreUpdate() {
   if (StickersStore.isLoaded) {
@@ -23,7 +23,7 @@ function handleUserSettingsProtoStoreChange() {
   if (null == stickers) {
     return false;
   } else {
-    closure_6.overwriteHistory(_modDef12.mapValues(stickers, (recentUses) => {
+    closure_6.overwriteHistory(applyDefault.mapValues(stickers, (recentUses) => {
       const obj = {};
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;

@@ -1,18 +1,18 @@
-// === Module 20030: GuildSettingsModalAuditLogFilter ===
+// === Module 20037: GuildSettingsModalAuditLogFilter ===
 
-// Module 20030 (GuildSettingsModalAuditLogFilter)
+// Module 20037 (GuildSettingsModalAuditLogFilter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5197 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5210 */;
-import FormRadio from "FormRadio" /* 7206 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11003 */;
-import AuditLogUtils from "AuditLogUtils" /* 20028 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 20031 */;
+import UserUtilsDefault from "UserUtils" /* 5224 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5230 */;
+import FormRadio from "FormRadio" /* 7153 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10955 */;
+import AuditLogUtils from "AuditLogUtils" /* 20035 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 20038 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20026 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20033 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1072).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = noop.memo(function AuditLogFilterUserRow(selected) {
@@ -61,7 +61,7 @@ export default function GuildSettingsModalAuditLogFilter(data) {
     }
   }), items);
   const data1 = memo.data;
-  const keyExtractor = memo.keyExtractor;
+  keyExtractor = memo.keyExtractor;
   const items1 = [filterType, navigation];
   const effect = navigation.useEffect(() => {
     if (AuditLogFilterTypes.USER === filterType) {

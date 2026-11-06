@@ -1,15 +1,15 @@
-// === Module 18412: happeningNowRankingUtils ===
+// === Module 18404: happeningNowRankingUtils ===
 
-// Module 18412 (happeningNowRankingUtils)
-import _mod12 from "module_12" /* 12 */;
+// Module 18404 (happeningNowRankingUtils)
+import apply from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
-import VoiceStateStore from "VoiceStateStore" /* 5815 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
+import VoiceStateStore from "VoiceStateStore" /* 5833 */;
 
-const _modDef12 = _mod12;
+const applyDefault = apply;
 
 require = fn;
-const HappeningNowConstants = fn(17559);
+const HappeningNowConstants = fn(17548);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: metroImportDefault } = HappeningNowConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");
@@ -79,10 +79,10 @@ export function filterHappeningNowCards(arr) {
             const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(channelId2);
             let someResult = null != voiceStatesForChannel;
             if (someResult) {
-              const mapped = _modDef12(voiceStatesForChannel).map((userId) => userId.userId);
+              const mapped = applyDefault(voiceStatesForChannel).map((userId) => userId.userId);
               const found = mapped.filter(GlobalUtils.isNotNullish);
               someResult = found.some((item) => blockedOrIgnored.isBlockedOrIgnored(item));
-              const arr2 = _modDef12(voiceStatesForChannel);
+              const arr2 = applyDefault(voiceStatesForChannel);
             }
             flag2 = someResult;
           }
@@ -194,5 +194,5 @@ export function sortHappeningNowCards(result) {
       return flag;
     }
   ];
-  return _mod12.orderBy(result, items, ["asc", "asc"]);
+  return apply.orderBy(result, items, ["asc", "asc"]);
 }

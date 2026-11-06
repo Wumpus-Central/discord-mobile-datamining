@@ -1,12 +1,12 @@
-// === Module 9772: useGameProfileCommunitiesLocaleFilter ===
+// === Module 9722: useGameProfileCommunitiesLocaleFilter ===
 
-// Module 9772 (useGameProfileCommunitiesLocaleFilter)
-import _modDef12 from "module_12" /* 12 */;
+// Module 9722 (useGameProfileCommunitiesLocaleFilter)
+import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(9773).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9723).useGameProfileCommunitiesLocaleFilterExclusions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleFilter.tsx");
 
@@ -21,7 +21,7 @@ export default function useGameProfileCommunitiesLocaleFilter(arg0, arg1) {
       items = [];
     }
     const mapped = items.map((preferredLocale) => preferredLocale.preferredLocale);
-    return _modDef12.uniq(mapped.filter(GlobalUtils.isNotNullish));
+    return applyDefault.uniq(mapped.filter(GlobalUtils.isNotNullish));
   }, items);
   const obj = { locales: memo, filteredGuilds: null, showLocaleFilter: memo.length >= 2 };
   const items1 = [arg1, tmp];

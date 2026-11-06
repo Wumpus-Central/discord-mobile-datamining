@@ -1,11 +1,11 @@
-// === Module 17417: QuestHomeRoundtripTracker ===
+// === Module 17406: QuestHomeRoundtripTracker ===
 
-// Module 17417 (QuestHomeRoundtripTracker)
+// Module 17406 (QuestHomeRoundtripTracker)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6678 */;
-import MetricEvents from "MetricEvents" /* 6683 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 7010 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6619 */;
+import MetricEvents from "MetricEvents" /* 6624 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6952 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

@@ -1,7 +1,7 @@
-// === Module 14296: GuildPowerupMocks ===
+// === Module 14273: GuildPowerupMocks ===
 
-// Module 14296 (GuildPowerupMocks)
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5356 */;
+// Module 14273 (GuildPowerupMocks)
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5376 */;
 import size from "module_2" /* 2 */;
 
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;

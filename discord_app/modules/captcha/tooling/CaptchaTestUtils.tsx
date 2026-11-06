@@ -1,7 +1,7 @@
-// === Module 17971: CaptchaTestUtils ===
+// === Module 17959: CaptchaTestUtils ===
 
-// Module 17971 (CaptchaTestUtils)
-import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 17972 */;
+// Module 17959 (CaptchaTestUtils)
+import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 17960 */;
 import size from "module_2" /* 2 */;
 
 const entries = Object.entries(CaptchaTestActionCreators.HCaptchaDifficulty);

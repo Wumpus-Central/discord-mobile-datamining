@@ -1,18 +1,18 @@
-// === Module 20303: GuildRoleSubscriptionTierDetailsModal ===
+// === Module 20310: GuildRoleSubscriptionTierDetailsModal ===
 
-// Module 20303 (GuildRoleSubscriptionTierDetailsModal)
+// Module 20310 (GuildRoleSubscriptionTierDetailsModal)
 import util from "util" /* 1113 */;
-import TableRowGroup from "TableRowGroup" /* 7204 */;
-import TextInput from "TextInput" /* 7226 */;
-import TextArea from "TextArea" /* 7392 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17475 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17488 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20261 */;
-import FormStylesDefault from "FormStyles" /* 20266 */;
-import FormImagePicker from "FormImagePicker" /* 20267 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20268 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 20276 */;
-import FormPriceTierDefault from "FormPriceTier" /* 20304 */;
+import TableRowGroup from "TableRowGroup" /* 7151 */;
+import TextInput from "TextInput" /* 7173 */;
+import TextArea from "TextArea" /* 7339 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17464 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17477 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20268 */;
+import FormStylesDefault from "FormStyles" /* 20273 */;
+import FormImagePicker from "FormImagePicker" /* 20274 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20275 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 20283 */;
+import FormPriceTierDefault from "FormPriceTier" /* 20311 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -98,7 +98,7 @@ function Content() {
   return closure_1_11(View, obj7);
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(17468);
+const GuildRoleSubscriptionsConstants = fn(17457);
 ({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_8 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);

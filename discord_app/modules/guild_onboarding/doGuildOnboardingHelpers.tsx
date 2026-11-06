@@ -1,12 +1,12 @@
-// === Module 7411: doGuildOnboardingHelpers ===
+// === Module 7358: doGuildOnboardingHelpers ===
 
-// Module 7411 (doGuildOnboardingHelpers)
-import FlagUtils from "FlagUtils" /* 1398 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7412 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+// Module 7358 (doGuildOnboardingHelpers)
+import FlagUtils from "FlagUtils" /* 1403 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7359 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
 
 require = fn;
-const GuildMemberFlags = fn(5061).GuildMemberFlags;
+const GuildMemberFlags = fn(5088).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");
 

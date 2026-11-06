@@ -1,7 +1,7 @@
-// === Module 12148: UserSettingsVoiceConstants ===
+// === Module 12117: UserSettingsVoiceConstants ===
 
-// Module 12148 (UserSettingsVoiceConstants)
-import HelpdeskUtils from "HelpdeskUtils" /* 2190 */;
+// Module 12117 (UserSettingsVoiceConstants)
+import HelpdeskUtils from "HelpdeskUtils" /* 2185 */;
 
 const combined = "" + HelpdeskUtils.getArticleURL(fn(1072).HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
 const size = fn(2);

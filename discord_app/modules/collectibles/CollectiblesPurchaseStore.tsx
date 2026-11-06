@@ -1,7 +1,7 @@
-// === Module 7880: CollectiblesPurchaseStore ===
+// === Module 7834: CollectiblesPurchaseStore ===
 
-// Module 7880 (CollectiblesPurchaseStore)
-import _mod12 from "module_12" /* 12 */;
+// Module 7834 (CollectiblesPurchaseStore)
+import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -85,7 +85,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
         }));
         closure_3 = map;
       }
-      obj = _mod12;
+      obj = apply;
     }
     c8 = true;
     c4 = false;
@@ -115,7 +115,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
           }));
           closure_3 = map;
         }
-        obj = _mod12;
+        obj = apply;
       }
       c5 = undefined;
       c7 = undefined;

@@ -1,11 +1,11 @@
-// === Module 10158: useComputeEmojiPickerFunctions ===
+// === Module 10109: useComputeEmojiPickerFunctions ===
 
-// Module 10158 (useComputeEmojiPickerFunctions)
-import _modDef12 from "module_12" /* 12 */;
-import FunctionUtils from "FunctionUtils" /* 2163 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5089 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 10130 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10159 */;
+// Module 10109 (useComputeEmojiPickerFunctions)
+import applyDefault from "apply" /* 12 */;
+import FunctionUtils from "FunctionUtils" /* 2158 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5116 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10081 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10110 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -86,7 +86,7 @@ function _computeCategories(arg0) {
       if (isNativeEmojiPickerEnabled) {
         let obj37 = { emojiSections: items, renderingData: null };
         let obj38 = { type: constants3.NATIVE_SECTION, label: null, emojiCount: null, emojisDisabled: null, emojisHidden: null };
-        let tmp64Result = _modDef12;
+        let tmp64Result = applyDefault;
         obj38.label = tmp64Result.capitalize(tmp2.name);
         let num;
         if (byCategory != null) {
@@ -121,7 +121,7 @@ function _computeCategories(arg0) {
         let tmp7 = new.target;
         let set2 = new Set();
         obj39.emojisDisabled = set2;
-        let tmp64Result2 = _modDef12;
+        let tmp64Result2 = applyDefault;
         obj39.label = tmp64Result2.capitalize(tmp2.name);
         obj39.footer = constants2.UNICODE;
         obj.renderingData = obj39;
@@ -191,9 +191,9 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(6937);
+const EmojiPickerConstants = fn(6879);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: closure_6 } = EmojiPickerConstants);
-const constants3 = fn(10129).EmojiPickerRenderingDataType;
+const constants3 = fn(10080).EmojiPickerRenderingDataType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
 

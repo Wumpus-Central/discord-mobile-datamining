@@ -1,10 +1,10 @@
-// === Module 10035: SelectedConversationStore ===
+// === Module 9986: SelectedConversationStore ===
 
-// Module 10035 (SelectedConversationStore)
+// Module 9986 (SelectedConversationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7912 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7915 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7866 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7869 */;
 
 let c2 = null;
 let closure_3 = 0;

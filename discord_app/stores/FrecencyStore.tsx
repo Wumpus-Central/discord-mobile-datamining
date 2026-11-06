@@ -1,15 +1,15 @@
-// === Module 7033: FrecencyStore ===
+// === Module 6975: FrecencyStore ===
 
-// Module 7033 (FrecencyStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6975 (FrecencyStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5917 */;
+import FrecencyDefault from "Frecency" /* 5936 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
 
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);
@@ -69,7 +69,7 @@ function initFrecency() {
   if (null == guildAndChannels) {
     return false;
   } else {
-    closure_9.overwriteHistory(_modDef12.mapValues(guildAndChannels, (recentUses) => {
+    closure_9.overwriteHistory(applyDefault.mapValues(guildAndChannels, (recentUses) => {
       const obj = {};
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;

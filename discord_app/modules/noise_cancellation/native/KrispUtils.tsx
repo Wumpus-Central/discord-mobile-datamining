@@ -1,7 +1,7 @@
-// === Module 6030: noise_cancellation/KrispUtils ===
+// === Module 6050: noise_cancellation/KrispUtils ===
 
-// Module 6030 (noise_cancellation/KrispUtils)
-import inject from "inject" /* 2137 */;
+// Module 6050 (noise_cancellation/KrispUtils)
+import inject from "inject" /* 2132 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");

@@ -1,17 +1,17 @@
-// === Module 11348: ForLaterScreen ===
+// === Module 11303: ForLaterScreen ===
 
-// Module 11348 (ForLaterScreen)
+// Module 11303 (ForLaterScreen)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5773 */;
-import springPresets from "springPresets" /* 5774 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6166 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7465 */;
-import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 11349 */;
-import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 11353 */;
+import spring_spring from "spring/spring" /* 5791 */;
+import springPresets from "springPresets" /* 5792 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6186 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7410 */;
+import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 11304 */;
+import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 11308 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10375 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10327 */;
 
 const require = globalThis.__r;
 
@@ -29,12 +29,12 @@ function ForLaterPage(type) {
   items = [SavedMessagesStore];
   const stateFromStoresObject = throttledNow(504).useStateFromStoresObject(items, () => ({ overdueReminderCount: SavedMessagesStore.getOverdueMessageReminderCount(), bookmarkCount: SavedMessagesStore.getBookmarkCount() }));
   ({ overdueReminderCount, bookmarkCount } = stateFromStoresObject);
-  if (type !== throttledNow(10376).SavedMessageSortTypes.BOOKMARK) {
+  if (type !== throttledNow(10328).SavedMessageSortTypes.BOOKMARK) {
     bookmarkCount = savedMessages.length;
   }
-  const tmp6 = fetchState === throttledNow(10376).BookmarksFetchState.LOADING;
+  const tmp6 = fetchState === throttledNow(10328).BookmarksFetchState.LOADING;
   const obj = throttledNow(504);
-  const analyticsLocations = useAnalyticsLocationsDefault(tmp(7490).FOR_LATER_POPOUT).analyticsLocations;
+  const analyticsLocations = useAnalyticsLocationsDefault(tmp(7435).FOR_LATER_POPOUT).analyticsLocations;
   const obj2 = { type: null, name: null, properties: null };
   const tmpResult = useAnalyticsLocationsDefault;
   obj2.type = throttledNow(1260).ImpressionTypes.MODAL;
@@ -53,11 +53,11 @@ function ForLaterPage(type) {
   [][0] = throttledNow;
   if (0 === savedMessages.length) {
     if (!tmp6) {
-      if (fetchState !== tmp4(10376).BookmarksFetchState.LOADED_HAS_MORE) {
+      if (fetchState !== tmp4(10328).BookmarksFetchState.LOADED_HAS_MORE) {
         const obj3 = { value: analyticsLocations, children: null };
         const obj4 = { type };
-        obj3.children = closure_8(tmp(11373), obj4);
-        let tmp18 = closure_8(tmp4(7465).AnalyticsLocationProvider, obj3);
+        obj3.children = closure_8(tmp(11328), obj4);
+        let tmp18 = closure_8(tmp4(7410).AnalyticsLocationProvider, obj3);
       }
     }
     const obj5 = { style: null };
@@ -74,9 +74,9 @@ function ForLaterPage(type) {
       tmp22Result = closure_8(closure_5, obj9);
     }
     obj8.ListFooterComponent = tmp22Result;
-    obj7.children = closure_8(tmp4(7433).FlashList, obj8);
+    obj7.children = closure_8(tmp4(7380).FlashList, obj8);
     obj6.children = closure_8(closure_6, obj7);
-    return closure_8(tmp4(7465).AnalyticsLocationProvider, obj6);
+    return closure_8(tmp4(7410).AnalyticsLocationProvider, obj6);
   }
   const date = new Date();
 }
@@ -84,7 +84,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 }, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
 let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.headerBorder = size;

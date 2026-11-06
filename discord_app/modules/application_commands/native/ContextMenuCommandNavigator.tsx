@@ -1,34 +1,29 @@
-// === Module 19262: ContextMenuCommandNavigator ===
+// === Module 19254: ContextMenuCommandNavigator ===
 
-// Module 19262 (ContextMenuCommandNavigator)
+// Module 19254 (ContextMenuCommandNavigator)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import HeaderShared from "HeaderShared" /* 9967 */;
+import HeaderShared from "HeaderShared" /* 9918 */;
+import AppFrameContainerDefault from "AppFrameContainer" /* 19155 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const NativeStackNavigator = fn(10041);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const NativeStackNavigator = fn(9992);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5143);
-let obj3 = { container: { flex: 1 }, content: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
-let closure_8 = createStyles.createStyles(obj3);
+const createStyles = fn(5170);
+let obj3 = { content: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
+let closure_7 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandNavigator.tsx");
 
 export default function ContextMenuCommandNavigator() {
-  const tmp = closure_8();
-  _require = tmp;
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7799).trackAppUIViewed(), []);
+  _require = closure_7();
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7753).trackAppUIViewed(), []);
   importDefault = require("Navigator").useAccessibilityNativeStackOptions();
-  const rect = useSafeAreaInsetsDefault();
-  let obj2 = { style: null, children: null };
-  items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj2.style = items;
+  let obj2 = { children: null };
   let obj3 = {
     screenOptions(navigation) {
       navigation = navigation.navigation;
@@ -38,7 +33,7 @@ export default function ContextMenuCommandNavigator() {
         headerTitle(children) {
           const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return closure_1_5(closure_1_0(dependencyMap[9]).GenericHeaderTitle, { title: children.children });
+          return closure_1_4(closure_1_0(dependencyMap[8]).GenericHeaderTitle, { title: children.children });
         },
         headerTitleAlign: "center",
         headerLeft: null
@@ -56,16 +51,17 @@ export default function ContextMenuCommandNavigator() {
   };
   const obj4 = { name: "root", options: null, getComponent: null };
   const obj5 = { title: null };
+  let obj = require("Navigator");
   ({ Navigator, Screen } = Screen);
   const intl = require("util").intl;
   obj5.title = intl.string(require("util").t.PHjkRE);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(19263).default;
+    return closure_0(19255).default;
   };
-  const items1 = [
-    closure_5(Screen, obj4),
-    closure_5(Screen.Screen, {
+  items = [
+    closure_4(Screen, obj4),
+    closure_4(Screen.Screen, {
       name: "app",
       options(route) {
         const section = route.route.params.section;
@@ -76,11 +72,11 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(19265).default;
+        return closure_0(19257).default;
       }
     })
   ];
-  obj3.children = items1;
-  obj2.children = closure_6(Navigator, obj3);
-  return closure_5(View, obj2);
+  obj3.children = items;
+  obj2.children = closure_5(Navigator, obj3);
+  return closure_4(AppFrameContainerDefault, obj2);
 };

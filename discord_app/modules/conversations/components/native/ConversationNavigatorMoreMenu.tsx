@@ -1,20 +1,20 @@
-// === Module 10054: ConversationNavigatorMoreMenu ===
+// === Module 10005: ConversationNavigatorMoreMenu ===
 
-// Module 10054 (ConversationNavigatorMoreMenu)
+// Module 10005 (ConversationNavigatorMoreMenu)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import LinkIcon from "LinkIcon" /* 5864 */;
-import IconButton from "IconButton" /* 8173 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9912 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 10055 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 10057 */;
+import LinkIcon from "LinkIcon" /* 5882 */;
+import IconButton from "IconButton" /* 8119 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9862 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 10006 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 10008 */;
 import noop from "module_19" /* 19 */;
-import SelectedConversationStore from "SelectedConversationStore" /* 10035 */;
+import SelectedConversationStore from "SelectedConversationStore" /* 9986 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

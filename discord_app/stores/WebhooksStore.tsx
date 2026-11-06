@@ -1,10 +1,10 @@
-// === Module 19236: WebhooksStore ===
+// === Module 19228: WebhooksStore ===
 
-// Module 19236 (WebhooksStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 19228 (WebhooksStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 19237 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 19229 */;
 
 function handleWebhookCreateUpdate(arg0) {
   ({ guildId, webhook } = arg0);
@@ -30,15 +30,15 @@ prototype["getWebhooksForGuild"] = function getWebhooksForGuild(id) {
   if (null == dependencyMap[id]) {
     dependencyMap[id] = {};
   }
-  return _modDef12.values(dependencyMap[id]);
+  return applyDefault.values(dependencyMap[id]);
 };
 prototype["getWebhooksForChannel"] = function getWebhooksForChannel(id, arg1) {
   closure_0 = arg1;
   if (null == dependencyMap[id]) {
     dependencyMap[id] = {};
   }
-  const values = _modDef12(dependencyMap[id]).values();
-  const tmpResult = _modDef12(dependencyMap[id]);
+  const values = applyDefault(dependencyMap[id]).values();
+  const tmpResult = applyDefault(dependencyMap[id]);
   return values.filter((channel_id) => channel_id.channel_id === closure_0).value();
 };
 Object.defineProperty(prototype, "error", {
@@ -60,8 +60,8 @@ const webhooksStore = new WebhooksStore(DispatcherDefault, {
         if (null == dependencyMap[guildId]) {
           dependencyMap[guildId] = {};
         }
-        const values = _modDef12(dependencyMap[guildId]).values();
-        const tmp15Result = _modDef12(dependencyMap[guildId]);
+        const values = applyDefault(dependencyMap[guildId]).values();
+        const tmp15Result = applyDefault(dependencyMap[guildId]);
         items = values.filter((channel_id) => channel_id.channel_id !== channelId).value();
         const iter = values.filter((channel_id) => channel_id.channel_id !== channelId);
       }

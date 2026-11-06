@@ -1,9 +1,9 @@
-// === Module 9984: openChannelSecondaryViewChat ===
+// === Module 9935: openChannelSecondaryViewChat ===
 
-// Module 9984 (openChannelSecondaryViewChat)
+// Module 9935 (openChannelSecondaryViewChat)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RootNavigationRef from "RootNavigationRef" /* 5325 */;
-import MessageManagerDefault from "MessageManager" /* 9985 */;
+import RootNavigationRef from "RootNavigationRef" /* 5345 */;
+import MessageManagerDefault from "MessageManager" /* 9936 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -68,11 +68,11 @@ export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
   const effect = noop.useEffect(() => {
     function handleFrameDeepLinkQueued(channelId) {
       if (channelId.channelId === handleFrameDeepLinkQueued) {
-        const rootNavigationRef = handleFrameDeepLinkQueued(5325).getRootNavigationRef();
+        const rootNavigationRef = handleFrameDeepLinkQueued(5345).getRootNavigationRef();
         handleFrameDeepLinkQueued = tmp;
-        const obj2 = handleFrameDeepLinkQueued(5325);
+        const obj2 = handleFrameDeepLinkQueued(5345);
         const tmp6 = handleFrameDeepLinkQueued;
-        const rootNavigationRef1 = handleFrameDeepLinkQueued(5325).getRootNavigationRef();
+        const rootNavigationRef1 = handleFrameDeepLinkQueued(5345).getRootNavigationRef();
         let num = -1;
         if (null != rootNavigationRef1) {
           num = -1;
@@ -98,7 +98,7 @@ export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
             rootNavigationRef.dispatch(obj);
           }
         }
-        const obj4 = handleFrameDeepLinkQueued(5325);
+        const obj4 = handleFrameDeepLinkQueued(5345);
       }
     }
     if (null != handleFrameDeepLinkQueued) {

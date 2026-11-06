@@ -1,7 +1,7 @@
-// === Module 17941: DevToolsProfilingUseStateFromStores ===
+// === Module 17929: DevToolsProfilingUseStateFromStores ===
 
-// Module 17941 (DevToolsProfilingUseStateFromStores)
-import useStateFromStoresPerformanceDebugging from "useStateFromStoresPerformanceDebugging" /* 17942 */;
+// Module 17929 (DevToolsProfilingUseStateFromStores)
+import useStateFromStoresPerformanceDebugging from "useStateFromStoresPerformanceDebugging" /* 17930 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

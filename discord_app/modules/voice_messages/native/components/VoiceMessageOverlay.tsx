@@ -1,24 +1,29 @@
-// === Module 14447: VoiceMessageOverlay ===
+// === Module 14424: VoiceMessageOverlay ===
 
-// Module 14447 (VoiceMessageOverlay)
+// Module 14424 (VoiceMessageOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5380 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5400 */;
-import useToken from "useToken" /* 5734 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6159 */;
-import LegacyTokens from "LegacyTokens" /* 6916 */;
-import useRefValueDefault from "useRefValue" /* 7103 */;
-import inlineStyles from "inlineStyles" /* 8176 */;
-import _modDef14448 from "module_14448" /* 14448 */;
+import timing_timing from "timing/timing" /* 5400 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5420 */;
+import useToken from "useToken" /* 5754 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5765 */;
+import _modDef5894 from "module_5894" /* 5894 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6179 */;
+import LegacyTokens from "LegacyTokens" /* 6858 */;
+import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7042 */;
+import useRefValueDefault from "useRefValue" /* 7047 */;
+import inlineStyles from "inlineStyles" /* 8122 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12996 */;
+import _modDef14425 from "module_14425" /* 14425 */;
+import VoiceMessageChatDefault from "VoiceMessageChat" /* 14426 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import apply from "module_12" /* 12 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import apply from "apply" /* 12 */;
 
 const module_1652_mod = _mod1652;
 
@@ -271,26 +276,27 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx13.__initData = tmp57;
   const animatedStyle3 = require("module_1652").useAnimatedStyle(VoiceMessageOverlayTsx13);
   const tmp5Result21 = require("module_1652");
-  const tmp14Result = importDefault(tmp3 ? 8786 : 11331);
-  const items16 = [closure_38, initialAnimation, safeAreaBottom, CHAT_INPUT_HEIGHT, 32, 8];
+  const tmp14Result = importDefault(tmp3 ? 8732 : 11286);
+  const tmp63 = useKeyboardAnimatedValueDefault(safeAreaBottom);
+  const items16 = [closure_38, initialAnimation, tmp63, CHAT_INPUT_HEIGHT, 32, 8];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  [tmp63, tmp64, tmp65, tmp66, tmp67, tmp68] = items16;
+  [tmp64, tmp65, tmp66, tmp67, tmp68, tmp69] = items16;
   class VoiceMessageOverlayTsx16 {
     constructor() {
       obj = { opacity: closure_0.get(), bottom: null };
-      sum = closure_1 + closure_2 + (closure_3 - closure_4);
+      sum = closure_1.get() + closure_2 + (closure_3 - closure_4);
       obj.bottom = sum + closure_4 * closure_0.get();
       return obj;
     }
   }
-  const items17 = [tmp64, tmp65, tmp66, tmp67, tmp68];
+  const items17 = [tmp65, tmp66, tmp67, tmp68, tmp69];
   VoiceMessageOverlayTsx16.__closure = items17;
-  VoiceMessageOverlayTsx16.__workletHash = 30731874865;
-  VoiceMessageOverlayTsx16.__initData = tmp63;
+  VoiceMessageOverlayTsx16.__workletHash = 5009342521000;
+  VoiceMessageOverlayTsx16.__initData = tmp64;
   const animatedStyle4 = require("module_1652").useAnimatedStyle(VoiceMessageOverlayTsx16);
   const obj2 = { style: null, children: null };
   const items18 = [tmp.lockParentContainer, animatedStyle, animatedStyle4];
@@ -299,7 +305,7 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result }), ];
-  const obj4 = { style: null, source: _modDef14448 };
+  const obj4 = { style: null, source: _modDef14425 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
@@ -309,18 +315,18 @@ function LockPill(voiceMessageAnimationState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13956).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(13957).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(13932).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(13933).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1072).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(13035).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(13000).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let module_1652 = module_1652_mod;
 let closure_16 = module_1652.createAnimatedComponent(fn(1187).Icon);
 let module_1652 = module_1652_mod;
-let closure_17 = module_1652.createAnimatedComponent(fn(5763).Text);
+let closure_17 = module_1652.createAnimatedComponent(fn(5781).Text);
 let closure_18 = apply.memoize(() => module_1652.createAnimatedComponent(inlineStyles.Ellipse));
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_19 = createStyles.createStyles(() => {
   const obj = { innerContainer: { flexDirection: "row", alignItems: "flex-end", paddingTop: 8, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL, paddingBottom: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM }, contentContainer: { position: "absolute", bottom: 0, width: "100%", alignItems: "center", overflow: "hidden" }, contentContainerFloating: { justifyContent: "flex-end", overflow: "visible" }, floatingSendButton: null, floatingSendButtonActive: null, floatingSendButtonIconActive: null, voiceChatContainer: null, lockContainer: null, lockParentContainer: null, chevon: null };
   const size = { width: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH, height: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT };
@@ -445,22 +451,23 @@ let closure_34 = { code: "(function VoiceMessageOverlayTsx12(){let[interpolate,t
 let closure_35 = { code: "(function VoiceMessageOverlayTsx13(){let[interpolate,timing,VOICE_MESSAGE_ANIMATION_STATES]=this.__closure;return{opacity:interpolate(timing.get(),VOICE_MESSAGE_ANIMATION_STATES,[1,1,0,0])};})" };
 let closure_36 = { code: "(function VoiceMessageOverlayTsx14(){let[voiceMessageAnimationState,VoiceMessageAnimationState]=this.__closure;return voiceMessageAnimationState.get()[1]===VoiceMessageAnimationState.LOCKED||voiceMessageAnimationState.get()[1]===VoiceMessageAnimationState.LOCKING;})" };
 let closure_37 = { code: "(function VoiceMessageOverlayTsx15(result,previous){let[scheduleOnRN,setLocked]=this.__closure;if(result!==previous){scheduleOnRN(setLocked,result);}})" };
-let closure_38 = { code: "(function VoiceMessageOverlayTsx16(){let[initialAnimation,safeAreaBottom,CHAT_INPUT_HEIGHT,LOCK_PILL_BOTTOM_OFFSET,INITIAL_SHIFT]=this.__closure;return{opacity:initialAnimation.get(),bottom:safeAreaBottom+CHAT_INPUT_HEIGHT+(LOCK_PILL_BOTTOM_OFFSET-INITIAL_SHIFT)+INITIAL_SHIFT*initialAnimation.get()};})" };
+let closure_38 = { code: "(function VoiceMessageOverlayTsx16(){let[initialAnimation,animatedSafeAreaBottom,CHAT_INPUT_HEIGHT,LOCK_PILL_BOTTOM_OFFSET,INITIAL_SHIFT]=this.__closure;return{opacity:initialAnimation.get(),bottom:animatedSafeAreaBottom.get()+CHAT_INPUT_HEIGHT+(LOCK_PILL_BOTTOM_OFFSET-INITIAL_SHIFT)+INITIAL_SHIFT*initialAnimation.get()};})" };
 let closure_40 = { code: "(function VoiceMessageOverlayTsx17(){let[voiceMessageAnimationState]=this.__closure;return voiceMessageAnimationState.get()[1];})" };
 let closure_41 = { code: "(function VoiceMessageOverlayTsx18(state,previous){let[scheduleOnRN,setVoiceMessageState]=this.__closure;if(state!==previous){scheduleOnRN(setVoiceMessageState,state);}})" };
-let closure_42 = { code: "(function VoiceMessageOverlayTsx19(){let[initialAnimation]=this.__closure;return{opacity:initialAnimation.get()};})" };
+let closure_42 = { code: "(function VoiceMessageOverlayTsx19(){let[initialAnimation,animatedInsetsBottom]=this.__closure;return{opacity:initialAnimation.get(),bottom:animatedInsetsBottom.get()};})" };
 let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   channelId = channelId.channelId;
   _require = channelId;
   ({ voiceMessageAnimationState, exiting } = channelId);
-  let ref;
-  const token = require("useToken").useToken(ref(575).modules.mobile.CHAT_INPUT_FLOATING_INLINE_FULL_GRADIENT_HEIGHT);
+  importDefault = undefined;
+  const token = require("useToken").useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_INLINE_FULL_GRADIENT_HEIGHT);
   const tmp5 = closure_19();
-  const bottom = ref(5745)({ includeCustomKeyboardHeight: true, includeKeyboardHeight: true }).insets.bottom;
+  const bottom = useSafeAreaInsetsKeyboardAwareDefault({ includeCustomKeyboardHeight: true, includeKeyboardHeight: true }).insets.bottom;
   let obj = require("useToken");
+  const tmp6 = useKeyboardAnimatedValueDefault(bottom);
   const keyboardOpenPaddingStyle = require("FloatingChatInputContainer").useKeyboardOpenPaddingStyle();
-  const tmp7 = useVoiceMessagesUIStore((startTimeMillis) => null != startTimeMillis.startTimeMillis);
-  closure_129_0 = tmp7;
+  const tmp8 = useVoiceMessagesUIStore((startTimeMillis) => null != startTimeMillis.startTimeMillis);
+  closure_129_0 = tmp8;
   closure_129_1 = exiting;
   let obj2 = require("FloatingChatInputContainer");
   const sharedValue = require("module_1652").useSharedValue(0);
@@ -474,7 +481,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   }, items);
   const items1 = [sharedValue, exiting];
   const effect1 = noop.useEffect(() => {
-    if (ref) {
+    if (c1) {
       const obj2 = { easing: _mod1652.Easing.quad, duration: 100 };
       const result = dependencyMap.set(timing_timing.withTiming(0, obj2));
     }
@@ -482,13 +489,13 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   let obj3 = require("module_1652");
   const sharedValue1 = require("module_1652").useSharedValue(0);
   closure_129_4 = sharedValue1;
-  const items2 = [sharedValue, sharedValue1, tmp7];
+  const items2 = [sharedValue, sharedValue1, tmp8];
   const effect2 = noop.useEffect(() => {
     if (c0) {
       const obj2 = { easing: _mod1652.Easing.quad, duration: 200 };
       const result = noop.set(timing_timing.withTiming(1, obj2));
       const _performance = performance;
-      if (performance.now() - ref.current < 500) {
+      if (performance.now() - ref2.current < 500) {
         const obj3 = { easing: _mod1652.Easing.quad, duration: 250 };
         const result1 = dependencyMap.set(timing_timing.withTiming(1, obj3));
         const tmp2Result = timing_timing;
@@ -496,24 +503,24 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
     }
   }, items2);
   const obj5 = require("module_1652");
-  [tmp15, tmp16] = noop.useState(VoiceMessageAnimationState.SENDING);
-  const tmp14 = _slicedToArray(noop.useState(VoiceMessageAnimationState.SENDING), 2);
+  [tmp16, tmp17] = noop.useState(VoiceMessageAnimationState.SENDING);
+  const tmp15 = _slicedToArray(noop.useState(VoiceMessageAnimationState.SENDING), 2);
   const items3 = [closure_40, voiceMessageAnimationState];
   _require = undefined;
-  [tmp17, tmp18] = items3;
+  [tmp18, tmp19] = items3;
   class VoiceMessageOverlayTsx17 {
     constructor() {
       return closure_0.get()[1];
     }
   }
-  const items4 = [tmp18];
+  const items4 = [tmp19];
   VoiceMessageOverlayTsx17.__closure = items4;
   VoiceMessageOverlayTsx17.__workletHash = 13417586896774;
-  VoiceMessageOverlayTsx17.__initData = tmp17;
-  const items5 = [closure_41, require("module_1705").scheduleOnRN, tmp16];
+  VoiceMessageOverlayTsx17.__initData = tmp18;
+  const items5 = [closure_41, require("module_1705").scheduleOnRN, tmp17];
   _require = undefined;
-  ref = undefined;
-  [tmp19, tmp20, tmp21] = items5;
+  importDefault = undefined;
+  [tmp20, tmp21, tmp22] = items5;
   class VoiceMessageOverlayTsx18 {
     constructor(arg0, arg1) {
       if (channelId !== arg1) {
@@ -524,12 +531,12 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
       return;
     }
   }
-  const items6 = [tmp20, tmp21];
+  const items6 = [tmp21, tmp22];
   VoiceMessageOverlayTsx18.__closure = items6;
   VoiceMessageOverlayTsx18.__workletHash = 8966188609438;
-  VoiceMessageOverlayTsx18.__initData = tmp19;
+  VoiceMessageOverlayTsx18.__initData = tmp20;
   const animatedReaction = require("module_1652").useAnimatedReaction(VoiceMessageOverlayTsx17, VoiceMessageOverlayTsx18);
-  ref = noop.useRef(null);
+  const ref = noop.useRef(null);
   const effect3 = noop.useEffect(() => {
     if (obj.getIsScreenReaderEnabled()) {
       const obj2 = { ref };
@@ -546,8 +553,8 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
         tmp = "background" !== event;
       }
       if (!tmp) {
-        const ComponentDispatch = c0(dependencyMap[31]).ComponentDispatch;
-        const obj = { isCancelling: true, cancelReason: c0(dependencyMap[32]).VoiceMessageRecordingResult.CANCELLED_ON_BACKGROUND };
+        const ComponentDispatch = c0(dependencyMap[32]).ComponentDispatch;
+        const obj = { isCancelling: true, cancelReason: c0(dependencyMap[33]).VoiceMessageRecordingResult.CANCELLED_ON_BACKGROUND };
         ComponentDispatch.dispatchKeyed(constants.VOICE_MESSAGE_SEND, closure_0, obj);
       }
     });
@@ -556,42 +563,43 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
     };
   }, items7);
   const obj6 = require("module_1652");
-  const items8 = [closure_42, sharedValue];
+  const items8 = [closure_42, sharedValue, tmp6];
   _require = undefined;
-  [tmp26, tmp27] = items8;
+  importDefault = undefined;
+  [tmp27, tmp28, tmp29] = items8;
   class VoiceMessageOverlayTsx19 {
     constructor() {
-      obj = { opacity: closure_0.get() };
+      obj = { opacity: closure_0.get(), bottom: closure_1.get() };
       return obj;
     }
   }
-  const items9 = [tmp27];
+  const items9 = [tmp28, tmp29];
   VoiceMessageOverlayTsx19.__closure = items9;
-  VoiceMessageOverlayTsx19.__workletHash = 16656285026938;
-  VoiceMessageOverlayTsx19.__initData = tmp26;
+  VoiceMessageOverlayTsx19.__workletHash = 1566219795574;
+  VoiceMessageOverlayTsx19.__initData = tmp27;
   const animatedStyle = require("module_1652").useAnimatedStyle(VoiceMessageOverlayTsx19);
   let tmpResult = require("module_1652");
   const wakeLock = require("WakeLock").useWakeLock("VoiceMessageOverlay");
   const obj7 = { style: null, children: null };
-  const items10 = [tmp5.contentContainer, { bottom }, animatedStyle, ];
+  const items10 = [tmp5.contentContainer, animatedStyle, ];
   const items11 = [tmp5.contentContainerFloating, keyboardOpenPaddingStyle];
-  items10[3] = items11;
+  items10[2] = items11;
   obj7.style = items10;
-  const items12 = [closure_13(require("ChatInputScrimGradient").ChatInputScrimGradient, { gradientHeight: token, inline: true }), closure_13(closure_26, { initialAnimation: sharedValue, recordingAnimation: sharedValue1, voiceMessageState: tmp15, exiting }), ];
+  const items12 = [closure_13(require("ChatInputScrimGradient").ChatInputScrimGradient, { gradientHeight: token, inline: true }), closure_13(closure_26, { initialAnimation: sharedValue, recordingAnimation: sharedValue1, voiceMessageState: tmp16, exiting }), ];
   const obj8 = { style: tmp5.innerContainer, children: null };
   const obj9 = { style: tmp5.voiceChatContainer, children: null };
-  const obj10 = { isRecording: tmp7, initialAnimation: sharedValue, leftAccessory: null, rightAccessory: null };
+  const obj10 = { isRecording: tmp8, initialAnimation: sharedValue, leftAccessory: null, rightAccessory: null };
   const tmpResult2 = require("WakeLock");
-  const obj11 = { icon: ref(5876), variant: null, size: "sm", maxFontSizeMultiplier: 2, accessibilityLabel: null, onPressIn: null, onPress: null };
+  const obj11 = { icon: _modDef5894, variant: null, size: "sm", maxFontSizeMultiplier: 2, accessibilityLabel: null, onPressIn: null, onPress: null };
   let str = "tertiary";
-  if (tmp15 === VoiceMessageAnimationState.CANCELLING) {
+  if (tmp16 === VoiceMessageAnimationState.CANCELLING) {
     str = "destructive";
   }
   obj11.variant = str;
   const intl = tmp(1113).intl;
   obj11.accessibilityLabel = intl.string(require("util").t.RdK9sV);
   obj11.onPressIn = function onPressIn() {
-    return _undefined(dependencyMap[38]).triggerHaptic();
+    return _undefined(dependencyMap[39]).triggerHaptic();
   };
   obj11.onPress = function onPress() {
     const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
@@ -599,16 +607,16 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   };
   obj10.leftAccessory = closure_13(require("IconButton").IconButton, obj11);
   const obj12 = { ref, active: null, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null };
-  let tmp36 = tmp15 === VoiceMessageAnimationState.SENDING;
-  const tmp3Result = ref(14449);
-  if (!tmp36) {
-    tmp36 = tmp15 === VoiceMessageAnimationState.LOCKED;
+  let tmp38 = tmp16 === VoiceMessageAnimationState.SENDING;
+  const tmp3Result = VoiceMessageChatDefault;
+  if (!tmp38) {
+    tmp38 = tmp16 === VoiceMessageAnimationState.LOCKED;
   }
-  obj12.active = tmp36;
+  obj12.active = tmp38;
   ({ floatingSendButton: obj14.style, floatingSendButtonActive: obj14.activeStyle, floatingSendButtonIconActive: obj14.activeIconStyle } = tmp5);
-  if (!tmp7) {
+  if (!tmp8) {
     if (!exiting) {
-      let SendMessageIcon = tmp(12178).MicrophoneIcon;
+      let SendMessageIcon = tmp(12147).MicrophoneIcon;
     }
     const obj13 = { children: null };
     obj12.IconComponent = SendMessageIcon;
@@ -629,8 +637,8 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
     obj13.children = items13;
     return closure_14(closure_15, obj13);
   }
-  SendMessageIcon = tmp(5866).SendMessageIcon;
-  tmp3Result2 = ref(13031);
+  SendMessageIcon = tmp(5884).SendMessageIcon;
+  tmp3Result2 = ChatInputActionButtonDefault;
 });
 const memoResult = noop.memo(function VoiceMessageEllipse(arg0) {
   ({ radius, voiceMessageAnimationState } = arg0);

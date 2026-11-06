@@ -4,7 +4,7 @@
 import _modAll2 from "module_2" /* 2 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import SnowflakeUtils from "SnowflakeUtils" /* 11 */;
-import _mod12 from "module_12" /* 12 */;
+import apply from "apply" /* 12 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -946,7 +946,7 @@ prototype5["serializeWebPerfStartupMetrics"] = function serializeWebPerfStartupM
 prototype5["serializeTTITracker"] = function serializeTTITracker(appFirstVisibleTime) {
   const self = this;
   const startTime = this.getStartTime(appFirstVisibleTime);
-  const found = _mod12(AppStartPerformanceDefault.logGroups[0].logs).filter((log) => {
+  const found = apply(AppStartPerformanceDefault.logGroups[0].logs).filter((log) => {
     log = log.log;
     return log.startsWith("Require ");
   });
@@ -957,7 +957,7 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(appFirstVisible
     }
     return num;
   });
-  const tmp2Result = _mod12(AppStartPerformanceDefault.logGroups[0].logs);
+  const tmp2Result = apply(AppStartPerformanceDefault.logGroups[0].logs);
   const result = this.serializeAppStartupMetrics();
   const obj = {};
   const merged = Object.assign(this.extraProperties);

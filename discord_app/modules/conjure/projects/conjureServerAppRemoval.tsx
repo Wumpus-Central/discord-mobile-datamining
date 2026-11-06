@@ -1,18 +1,18 @@
-// === Module 13510: conjureServerAppRemoval ===
+// === Module 13485: conjureServerAppRemoval ===
 
-// Module 13510 (conjureServerAppRemoval)
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7019 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7040 */;
-import ConjureUtils from "ConjureUtils" /* 7561 */;
-import conjureAppInServer from "conjureAppInServer" /* 11079 */;
+// Module 13485 (conjureServerAppRemoval)
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6961 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6982 */;
+import ConjureUtils from "ConjureUtils" /* 7506 */;
+import conjureAppInServer from "conjureAppInServer" /* 11032 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2167 */;
-import GuildChannelStore from "GuildChannelStore" /* 5073 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+import ApplicationStore from "ApplicationStore" /* 2162 */;
+import GuildChannelStore from "GuildChannelStore" /* 5100 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -52,8 +52,8 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           items = [];
         } else {
-          items = guild(11079).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(11079);
+          items = guild(11032).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(11032);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -62,8 +62,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(11079).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(11079);
+          canRemoveConjureBotResult = guild(11032).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(11032);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -71,8 +71,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(11079).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(11079);
+          canRemoveConjureBotResult = guild(11032).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(11032);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;
@@ -256,7 +256,7 @@ let closure_21 = async function _loadMissingApplication(arg0) {
     }
   }
 };
-let closure_7 = fn(5073).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(5100).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);
@@ -374,7 +374,7 @@ export function useConjureServerApp(guildId, applicationId) {
       }
       return [];
     }
-  }, items8, require("module_12").isEqual);
+  }, items8, require("apply").isEqual);
   closure_129_3 = stateFromStores2;
   const items9 = [stateFromStores2];
   const effect3 = noop.useEffect(() => {
@@ -387,7 +387,7 @@ export function useConjureServerApp(guildId, applicationId) {
   const obj3 = require("initialize");
   const items10 = [ApplicationStore, GuildStore, GuildChannelStore, GuildMemberStore, PermissionStore, UserStore, RelationshipStore];
   const items11 = [guildId, applicationId];
-  return require("initialize").useStateFromStores(items10, () => readConjureServerApp(closure_0, closure_1), items11, require("module_12").isEqual);
+  return require("initialize").useStateFromStores(items10, () => readConjureServerApp(closure_0, closure_1), items11, require("apply").isEqual);
 }
 export function loadConjureServerApp() {
   const self = this;

@@ -1,16 +1,16 @@
-// === Module 18283: auth/register ===
+// === Module 18275: auth/register ===
 
-// Module 18283 (auth/register)
+// Module 18275 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import _modDef2171 from "module_2171" /* 2171 */;
-import APIErrorDefault from "APIError" /* 6585 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6676 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6885 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 18285 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 18286 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 18287 */;
+import _modDef2166 from "module_2166" /* 2166 */;
+import APIErrorDefault from "APIError" /* 6605 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6617 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6827 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 18277 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 18278 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 18279 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -207,7 +207,7 @@ function registerFull(giftCodeSKUId) {
     let obj2 = { source: constants5.REGISTER, action: constants4.AGE_GATE_SUBMITTED };
     AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, obj2);
     const tmp4Result = AnalyticsUtilsDefault;
-    const diffResult = _modDef2171().diff(birthday, "years");
+    const diffResult = _modDef2166().diff(birthday, "years");
     if (diffResult >= 13) {
       if (diffResult < 13) {
         let str3 = "23+";
@@ -225,7 +225,7 @@ function registerFull(giftCodeSKUId) {
       AnalyticsUtilsDefault.track(constants.USER_AGE_SUBMITTED, obj3);
       const tmp4Result3 = AnalyticsUtilsDefault;
     }
-    const obj11 = _modDef2171();
+    const obj11 = _modDef2166();
   }
   const request = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
   const user = { fingerprint: AuthenticationStore.getFingerprint(), email, username, global_name: globalName, password, invite, consent, phone_token: phoneToken, date_of_birth: null, gift_code_sku_id: null, guild_template_code: null, promotional_email_opt_in: null };
@@ -278,7 +278,7 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(18284);
+const ParentalConsentStore = fn(18276);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, AnalyticsSections: metroImportDefault, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1097);

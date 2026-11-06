@@ -1,18 +1,18 @@
-// === Module 7361: ViewEmptyState ===
+// === Module 7308: ViewEmptyState ===
 
-// Module 7361 (ViewEmptyState)
+// Module 7308 (ViewEmptyState)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import FastImageDefault from "FastImage" /* 5854 */;
+import FastImageDefault from "FastImage" /* 5872 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6861 */;
+import TextStyles from "TextStyles" /* 6803 */;
 
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center", marginHorizontal: 36 }, emptyImage: { width: 170, height: 130 }, fixOpticalIllusion: { marginTop: -50, alignItems: "center" }, emptyLabel: null, emptyText: null };
 const obj3 = {};
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));

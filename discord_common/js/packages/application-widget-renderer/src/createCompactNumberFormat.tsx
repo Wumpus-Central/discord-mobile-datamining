@@ -1,6 +1,6 @@
-// === Module 12471: createCompactNumberFormat ===
+// === Module 12436: createCompactNumberFormat ===
 
-// Module 12471 (createCompactNumberFormat)
+// Module 12436 (createCompactNumberFormat)
 import size from "module_2" /* 2 */;
 
 function toAsciiDigits(arg0, get) {
@@ -32,16 +32,16 @@ export function createCompactNumberFormat(stateFromStores) {
   const numberFormat1 = new Intl.NumberFormat(stateFromStores, { notation: "compact", compactDisplay: "short" });
   const map1 = new Map();
   return {
-    format(arg0) {
+    format(scrollLength) {
       let tmp10;
       let tmp22;
       let tmp28;
       let tmp4;
-      if (0 !== arg0) {
+      if (0 !== scrollLength) {
         const _Number2 = Number;
-        if (Number.isFinite(arg0)) {
+        if (Number.isFinite(scrollLength)) {
           const _Math = Math;
-          const absolute = Math.abs(arg0);
+          const absolute = Math.abs(scrollLength);
           let num = 0;
           if (0 !== absolute) {
             const _Math6 = Math;
@@ -99,7 +99,7 @@ export function createCompactNumberFormat(stateFromStores) {
             }
             num7 = value;
           }
-          const result1 = arg0 / num7;
+          const result1 = scrollLength / num7;
           const _Math2 = Math;
           const absolute1 = Math.abs(result1);
           let num10 = 0;
@@ -135,14 +135,14 @@ export function createCompactNumberFormat(stateFromStores) {
           const _Math5 = Math;
           const result2 = Math.floor(result1 * tmp29) / tmp29 * num7;
           const _Number = Number;
-          let tmp32 = arg0;
+          let tmp32 = scrollLength;
           if (Number.isFinite(result2)) {
             tmp32 = result2;
           }
           return numberFormat1.format(tmp32);
         }
       }
-      return numberFormat1.format(arg0);
+      return numberFormat1.format(scrollLength);
     }
   };
 }

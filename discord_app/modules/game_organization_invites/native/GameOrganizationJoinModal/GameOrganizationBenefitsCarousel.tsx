@@ -1,13 +1,13 @@
-// === Module 13456: GameOrganizationBenefitsCarousel ===
+// === Module 13431: GameOrganizationBenefitsCarousel ===
 
-// Module 13456 (GameOrganizationBenefitsCarousel)
+// Module 13431 (GameOrganizationBenefitsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2533 from "module_2533" /* 2533 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import Stack_Stack from "Stack/Stack" /* 6165 */;
-import Card from "Card" /* 7121 */;
+import _modDef2530 from "module_2530" /* 2530 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import Stack_Stack from "Stack/Stack" /* 6185 */;
+import Card from "Card" /* 7065 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,12 +46,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-let items = [{ message: _modDef2533.WUVzdk }, ];
-let obj = { message: _modDef2533.WUVzdk };
-items[1] = { message: _modDef2533.MEQJ1m };
-const createStyles = fn(5143);
+let items = [{ message: _modDef2530.WUVzdk }, ];
+let obj = { message: _modDef2530.WUVzdk };
+items[1] = { message: _modDef2530.MEQJ1m };
+const createStyles = fn(5170);
 let obj4 = { carouselContainer: { marginHorizontal: -PX_16 }, carousel: { alignItems: "stretch" }, carouselContent: { paddingHorizontal: PX_16 }, card: null, cardSpacing: null, benefitImage: null, pagination: null };
-let obj2 = { message: _modDef2533.MEQJ1m };
+let obj2 = { message: _modDef2530.MEQJ1m };
 obj4.card = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 obj4.cardSpacing = { marginRight: PX_12 };
 let obj5 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };

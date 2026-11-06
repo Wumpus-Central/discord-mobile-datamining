@@ -1,20 +1,20 @@
-// === Module 7427: NotificationSettingsModalActionCreators ===
+// === Module 7374: NotificationSettingsModalActionCreators ===
 
-// Module 7427 (NotificationSettingsModalActionCreators)
+// Module 7374 (NotificationSettingsModalActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5150 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7422 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7424 */;
+import shared from "shared" /* 5177 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7369 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7371 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6913 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Endpoints = fn(1072).Endpoints;
-fn(5088).NotificationSettingsUpdateType;
+fn(5115).NotificationSettingsUpdateType;
 const constants = fn(1082).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
@@ -151,13 +151,13 @@ export default {
             } else {
               closure_0 = tmp5;
               closure_128_0 = undefined;
-              const setFlagResult = closure_0(1398).setFlag(UserGuildSettingsStore.accountNotificationSettings.flags, closure_0, tmp2);
+              const setFlagResult = closure_0(1403).setFlag(UserGuildSettingsStore.accountNotificationSettings.flags, closure_0, tmp2);
               closure_128_0 = setFlagResult;
               const HTTP = closure_0(1282).HTTP;
               const request = { url: constants.ACCOUNT_NOTIFICATION_SETTINGS, body: null, rejectWithError: null };
               const obj5 = { flags: setFlagResult };
               request.body = obj5;
-              const obj10 = closure_0(1398);
+              const obj10 = closure_0(1403);
               request.rejectWithError = closure_0(1282).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;

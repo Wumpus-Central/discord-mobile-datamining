@@ -1,8 +1,8 @@
-// === Module 16981: IgnoredUserRow ===
+// === Module 16969: IgnoredUserRow ===
 
-// Module 16981 (IgnoredUserRow)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7630 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8896 */;
+// Module 16969 (IgnoredUserRow)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7575 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8842 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -11,7 +11,7 @@ const require = fn;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7465)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7410)().analyticsLocations;
   const intl = userRecord(1113).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -37,7 +37,7 @@ function IgnoredUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16978).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16966).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -57,8 +57,8 @@ function IgnoredUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(5770).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(7119).TableRow, { accessible: false, icon: jsx(userRecord(1187).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
+  obj.trailing = jsx(userRecord(5788).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  return jsx(userRecord(7063).TableRow, { accessible: false, icon: jsx(userRecord(1187).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 10748: useGiftOptionsSyncDebounce ===
+// === Module 10700: useGiftOptionsSyncDebounce ===
 
-// Module 10748 (useGiftOptionsSyncDebounce)
-import _modDef12 from "module_12" /* 12 */;
-import useInitialValueDefault from "useInitialValue" /* 5751 */;
+// Module 10700 (useGiftOptionsSyncDebounce)
+import applyDefault from "apply" /* 12 */;
+import useInitialValueDefault from "useInitialValue" /* 5769 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -13,7 +13,7 @@ export default function useGiftOptionsSyncDebounce(arg0) {
   dependencyMap = noop.useRef(null);
   noop = noop.useRef(null);
   noop.useRef([]);
-  const tmp = useInitialValueDefault(() => _modDef12.debounce(() => {
+  const tmp = useInitialValueDefault(() => applyDefault.debounce(() => {
     closure_1_2.current = ref.current;
     closure_1_0((arg0) => arg0 + 1);
   }, 500));

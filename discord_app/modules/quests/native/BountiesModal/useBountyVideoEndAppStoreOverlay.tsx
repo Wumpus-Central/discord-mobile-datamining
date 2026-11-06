@@ -1,15 +1,15 @@
-// === Module 17206: useBountyVideoEndAppStoreOverlay ===
+// === Module 17194: useBountyVideoEndAppStoreOverlay ===
 
-// Module 17206 (useBountyVideoEndAppStoreOverlay)
-import QuestContent from "QuestContent" /* 6924 */;
-import AnalyticsActions from "AnalyticsActions" /* 8007 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8016 */;
-import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9847 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 17207 */;
+// Module 17194 (useBountyVideoEndAppStoreOverlay)
+import QuestContent from "QuestContent" /* 6866 */;
+import AnalyticsActions from "AnalyticsActions" /* 7961 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7970 */;
+import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9797 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 17195 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(6919).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6861).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const redux = noop.createContext(null);
 const size = fn(2);
@@ -81,10 +81,10 @@ export function useBountyVideoEndAppStoreOverlay(bounty) {
                           return trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: current.id, adCreativeType: bounty(sourceQuestContent[10]).AdCreativeType.BOUNTY, trackingCtx, overlaySurface: dependencyMap });
                         },
                     onInstallPress(overlaySurface) {
-                          trackingCtx = current(14904);
-                          const result = trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: appId.id, adCreativeType: current(6926).AdCreativeType.BOUNTY, trackingCtx, overlaySurface });
-                          const obj2 = { adContentId: appId.id, adCreativeType: current(6926).AdCreativeType.BOUNTY, trackingCtx, overlaySurface };
-                          const result1 = current(14887).setAppStoreOverlayOpen({
+                          trackingCtx = current(14881);
+                          const result = trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: appId.id, adCreativeType: current(6868).AdCreativeType.BOUNTY, trackingCtx, overlaySurface });
+                          const obj2 = { adContentId: appId.id, adCreativeType: current(6868).AdCreativeType.BOUNTY, trackingCtx, overlaySurface };
+                          const result1 = current(14863).setAppStoreOverlayOpen({
                             trackOverlayEvent(event, timeSpentMs) {
                               trackingCtx = bounty(sourceQuestContent[9]);
                               return trackingCtx.trackAdContentAppStoreOverlayEvent({ adContentId: current.id, adCreativeType: bounty(sourceQuestContent[10]).AdCreativeType.BOUNTY, trackingCtx, inlineStoreAppId: appId, overlayVariant: bounty(sourceQuestContent[9]).AppStoreOverlayVariant.CUSTOM, event, timeSpentMs, overlaySurface });
@@ -121,10 +121,10 @@ export function useBountyVideoEndAppStoreOverlay(bounty) {
                           return trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: current.id, adCreativeType: bounty(sourceQuestContent[10]).AdCreativeType.BOUNTY, trackingCtx, overlaySurface: dependencyMap });
                         },
                     onInstallPress(overlaySurface) {
-                          trackingCtx = current(14904);
-                          const result = trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: appId.id, adCreativeType: current(6926).AdCreativeType.BOUNTY, trackingCtx, overlaySurface });
-                          const obj2 = { adContentId: appId.id, adCreativeType: current(6926).AdCreativeType.BOUNTY, trackingCtx, overlaySurface };
-                          const result1 = current(14887).setAppStoreOverlayOpen({
+                          trackingCtx = current(14881);
+                          const result = trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: appId.id, adCreativeType: current(6868).AdCreativeType.BOUNTY, trackingCtx, overlaySurface });
+                          const obj2 = { adContentId: appId.id, adCreativeType: current(6868).AdCreativeType.BOUNTY, trackingCtx, overlaySurface };
+                          const result1 = current(14863).setAppStoreOverlayOpen({
                             trackOverlayEvent(event, timeSpentMs) {
                               trackingCtx = bounty(sourceQuestContent[9]);
                               return trackingCtx.trackAdContentAppStoreOverlayEvent({ adContentId: current.id, adCreativeType: bounty(sourceQuestContent[10]).AdCreativeType.BOUNTY, trackingCtx, inlineStoreAppId: appId, overlayVariant: bounty(sourceQuestContent[9]).AppStoreOverlayVariant.CUSTOM, event, timeSpentMs, overlaySurface });

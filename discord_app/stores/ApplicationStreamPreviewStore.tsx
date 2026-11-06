@@ -1,11 +1,11 @@
-// === Module 8048: ApplicationStreamPreviewStore ===
+// === Module 8002: ApplicationStreamPreviewStore ===
 
-// Module 8048 (ApplicationStreamPreviewStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 8002 (ApplicationStreamPreviewStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Constants from "Constants" /* 6853 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6855 */;
+import Constants from "Constants" /* 6795 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6797 */;
 import size from "module_2" /* 2 */;
 
 function reset() {
@@ -113,11 +113,11 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(Dispatch
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    const isEmptyResult = _modDef12.isEmpty(closure_4);
+    const isEmptyResult = applyDefault.isEmpty(closure_4);
     let reduced = !isEmptyResult;
     if (isEmptyResult) {
-      reduced = !_modDef12.isEmpty(closure_5);
-      const tmpResult = _modDef12;
+      reduced = !applyDefault.isEmpty(closure_5);
+      const tmpResult = applyDefault;
     }
     if (reduced) {
       reduced = voiceStates.reduce((acc, guildId) => {

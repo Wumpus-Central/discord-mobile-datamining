@@ -1,13 +1,13 @@
-// === Module 7819: GuildMemberSafetyPageStore ===
+// === Module 7773: GuildMemberSafetyPageStore ===
 
-// Module 7819 (GuildMemberSafetyPageStore)
-import _mod12 from "module_12" /* 12 */;
+// Module 7773 (GuildMemberSafetyPageStore)
+import apply from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import GuildMemberSafetyMembers from "GuildMemberSafetyMembers" /* 7820 */;
-import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7822 */;
-import GuildMemberSafetySearch from "GuildMemberSafetySearch" /* 7843 */;
+import GuildMemberSafetyMembers from "GuildMemberSafetyMembers" /* 7774 */;
+import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7776 */;
+import GuildMemberSafetySearch from "GuildMemberSafetySearch" /* 7797 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -398,8 +398,8 @@ prototype["updateMembersSort"] = function updateMembersSort(selectedSort) {
   const self = this;
   closure_0 = selectedSort;
   return new Promise((fn) => {
-    items = [..._mod12.cloneDeep(self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0])];
-    HermesBuiltin.arraySpread(_mod12.cloneDeep(self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0]), tmp);
+    items = [...apply.cloneDeep(self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0])];
+    HermesBuiltin.arraySpread(apply.cloneDeep(self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0]), tmp);
     const item = items.forEach((item) => {
       _search = _search._search;
       let flag;
@@ -483,7 +483,7 @@ prototype["refreshNewMembersAndSearchResults"] = function refreshNewMembersAndSe
         const NumberResult = Number(Date.now());
         self._scheduleRefresh(NumberResult);
         const _members = self._members;
-        const cloneDeepResult = _mod12.cloneDeep(_members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER));
+        const cloneDeepResult = apply.cloneDeep(_members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER));
         let flag2 = false;
         for (const item10031 of cloneDeepResult) {
           let _members2 = self._members;
@@ -548,7 +548,7 @@ prototype["updateSearchState"] = function updateSearchState(selectedSort) {
           }
         }
         const _members = self._members;
-        const cloneDeepResult = _mod12.cloneDeep(_members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER));
+        const cloneDeepResult = apply.cloneDeep(_members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER));
         let flag2 = BooleanResult !== self._search.hasDefaultQuery;
         for (const item10048 of cloneDeepResult) {
           if (item10048.isCurrentGuildMemberByTimestamp) {

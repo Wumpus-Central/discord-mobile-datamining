@@ -1,16 +1,16 @@
-// === Module 7724: EntitlementStore ===
+// === Module 7677: EntitlementStore ===
 
-// Module 7724 (EntitlementStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7677 (EntitlementStore)
+import applyDefault from "apply" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
-import EntitlementTypes from "EntitlementTypes" /* 2175 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7725 */;
-import EntitlementSourceTypes from "EntitlementSourceTypes" /* 7726 */;
-import EntitlementRecord from "EntitlementRecord" /* 2168 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2165 */;
-import SKUStore from "SKUStore" /* 7034 */;
+import EntitlementTypes from "EntitlementTypes" /* 2170 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7678 */;
+import EntitlementSourceTypes from "EntitlementSourceTypes" /* 7679 */;
+import EntitlementRecord from "EntitlementRecord" /* 2163 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2160 */;
+import SKUStore from "SKUStore" /* 6976 */;
 
 require = fn;
 function addEntitlement(entitlement) {
@@ -72,7 +72,7 @@ prototype["get"] = function get(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getGiftable"] = function getGiftable() {
-  return _modDef12.values(closure_8);
+  return applyDefault.values(closure_8);
 };
 prototype["getForApplication"] = function getForApplication(arg0) {
   if (null == dependencyMap3[arg0]) {

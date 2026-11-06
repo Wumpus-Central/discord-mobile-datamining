@@ -1,6 +1,6 @@
-// === Module 12565: ApplicationAssetsV2Store ===
+// === Module 12530: ApplicationAssetsV2Store ===
 
-// Module 12565 (ApplicationAssetsV2Store)
+// Module 12530 (ApplicationAssetsV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -9,7 +9,7 @@ function handleFeaturedOrDeveloperFetchSuccess(configs) {
   const values = Object.values(configs.configs);
   _require = false;
   const flatResult = values.flat();
-  const entries = Object.entries(require("module_12").groupBy(flatResult, (application_id) => application_id.application_id));
+  const entries = Object.entries(require("apply").groupBy(flatResult, (application_id) => application_id.application_id));
   const mapped = entries.map((item) => {
     [tmp, obj] = item;
     items = [
@@ -69,7 +69,7 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(DispatcherDefault,
   },
   APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function handleFetchSuccess(configs) {
     _require = false;
-    const entries = Object.entries(require("module_12").groupBy(configs.configs, (application_id) => application_id.application_id));
+    const entries = Object.entries(require("apply").groupBy(configs.configs, (application_id) => application_id.application_id));
     const mapped = entries.map((item) => {
       [tmp, obj] = item;
       items = [

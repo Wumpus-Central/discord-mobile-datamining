@@ -1,8 +1,8 @@
-// === Module 11995: useCurrentEmbeddedActivity ===
+// === Module 11961: useCurrentEmbeddedActivity ===
 
-// Module 11995 (useCurrentEmbeddedActivity)
+// Module 11961 (useCurrentEmbeddedActivity)
 import initialize from "initialize" /* 504 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
 
 require = fn;
 const size = fn(2);

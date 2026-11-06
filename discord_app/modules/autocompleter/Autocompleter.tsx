@@ -1,19 +1,19 @@
-// === Module 9288: Autocompleter ===
+// === Module 9234: Autocompleter ===
 
-// Module 9288 (Autocompleter)
-import _modDef12 from "module_12" /* 12 */;
+// Module 9234 (Autocompleter)
+import applyDefault from "apply" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
-import _modDef2072 from "module_2072" /* 2072 */;
-import StringUtils from "StringUtils" /* 2155 */;
-import findCodedLinks from "findCodedLinks" /* 5885 */;
-import CodedLink from "CodedLink" /* 5889 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6917 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 7038 */;
-import GuildUtilsDefault from "GuildUtils" /* 7039 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9290 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7586 */;
-import LinkRecord from "LinkRecord" /* 9289 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+import _modDef2067 from "module_2067" /* 2067 */;
+import StringUtils from "StringUtils" /* 2150 */;
+import findCodedLinks from "findCodedLinks" /* 5904 */;
+import CodedLink from "CodedLink" /* 5908 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6859 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6980 */;
+import GuildUtilsDefault from "GuildUtils" /* 6981 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9236 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7531 */;
+import LinkRecord from "LinkRecord" /* 9235 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -27,8 +27,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(5073).GUILD_VOCAL_CHANNELS_KEY;
-fn(7035).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5100).GUILD_VOCAL_CHANNELS_KEY;
+fn(6977).AutocompleterResultTypes;
 const React6 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -101,9 +101,9 @@ class Autocompleter {
       clearTimeout(obj._asyncTimeout);
       items = [];
       HermesBuiltin.arraySpread(obj._inAppNavigations, HermesBuiltin.arraySpread(obj._linkResults, HermesBuiltin.arraySpread(obj._gameProfileResults, HermesBuiltin.arraySpread(obj._guildResults, HermesBuiltin.arraySpread(obj._voiceChannelResults, HermesBuiltin.arraySpread(obj._textChannelResults, HermesBuiltin.arraySpread(obj._groupDMResults, HermesBuiltin.arraySpread(obj._userResults, 0))))))));
-      const tmp2Result = _modDef12(items);
-      const uniqByResult = _modDef12(items).uniqBy((type) => "" + type.type + "-" + type.record.id);
-      obj.results = _modDef12(items).uniqBy((type) => "" + type.type + "-" + type.record.id).sort(autocompleter_sortByMatchScoreDefault).value();
+      const tmp2Result = applyDefault(items);
+      const uniqByResult = applyDefault(items).uniqBy((type) => "" + type.type + "-" + type.record.id);
+      obj.results = applyDefault(items).uniqBy((type) => "" + type.type + "-" + type.record.id).sort(autocompleter_sortByMatchScoreDefault).value();
       obj.onResultsChange(obj.results, obj.query);
     };
     obj.onResultsChange = global;
@@ -545,7 +545,7 @@ prototype["queryLink"] = function queryLink(query) {
       items = [obj2];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef2072.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef2067.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

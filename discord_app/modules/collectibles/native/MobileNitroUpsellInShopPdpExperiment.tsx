@@ -1,6 +1,6 @@
-// === Module 15284: MobileNitroUpsellInShopPdpExperiment ===
+// === Module 15278: MobileNitroUpsellInShopPdpExperiment ===
 
-// Module 15284 (MobileNitroUpsellInShopPdpExperiment)
+// Module 15278 (MobileNitroUpsellInShopPdpExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

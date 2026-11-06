@@ -1,13 +1,13 @@
-// === Module 6707: CallStore ===
+// === Module 6649: CallStore ===
 
-// Module 6707 (CallStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6649 (CallStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
 
 require = fn;
 function callConnect() {
@@ -176,7 +176,7 @@ calls = {
     if (recipients == null) {
       recipients = ["all"];
     }
-    enqueuedRings[channelId] = _modDef12.union(items, recipients);
+    enqueuedRings[channelId] = applyDefault.union(items, recipients);
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     if (null == channelId.channelId) {

@@ -1,12 +1,12 @@
-// === Module 20389: LibdiscoreExperimentManager ===
+// === Module 20397: LibdiscoreExperimentManager ===
 
-// Module 20389 (LibdiscoreExperimentManager)
+// Module 20397 (LibdiscoreExperimentManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import js_shim_shim from "js_shim/shim" /* 1363 */;
 import ApexExperiment from "ApexExperiment" /* 1449 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 5018 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 5045 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
 
 require = fn;
 function experimentStoreUpdateHandler() {

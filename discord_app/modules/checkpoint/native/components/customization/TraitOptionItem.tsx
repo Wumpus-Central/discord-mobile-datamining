@@ -1,20 +1,20 @@
-// === Module 13923: TraitOptionItem ===
+// === Module 13899: TraitOptionItem ===
 
-// Module 13923 (TraitOptionItem)
+// Module 13899 (TraitOptionItem)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5210 */;
-import LinearGradientDefault from "LinearGradient" /* 5725 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6205 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6250 */;
-import _modDef7182 from "module_7182" /* 7182 */;
-import inlineStyles from "inlineStyles" /* 8176 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9681 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5230 */;
+import LinearGradientDefault from "LinearGradient" /* 5745 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6225 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6270 */;
+import _modDef7129 from "module_7129" /* 7129 */;
+import inlineStyles from "inlineStyles" /* 8122 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9630 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6204 */;
+import CheckpointConstants from "CheckpointConstants" /* 6224 */;
 import jsxProd from "jsxProd" /* 21 */;
-import CheckpointCustomizationUtils_mod from "CheckpointCustomizationUtils" /* 6571 */;
-import createStyles from "createStyles" /* 5143 */;
+import CheckpointCustomizationUtils_mod from "CheckpointCustomizationUtils" /* 6591 */;
+import createStyles from "createStyles" /* 5170 */;
 import size from "module_2" /* 2 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -30,7 +30,7 @@ function RarityIndicator(rarity) {
     obj2.maskElement = React6(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
     const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
     obj2.children = React6(LinearGradientDefault, obj3);
-    let tmp4Result = React6(_modDef7182, obj2);
+    let tmp4Result = React6(_modDef7129, obj2);
   } else {
     const items1 = [, , ];
     ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);

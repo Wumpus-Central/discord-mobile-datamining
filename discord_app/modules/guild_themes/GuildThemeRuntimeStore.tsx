@@ -1,14 +1,14 @@
-// === Module 5354: GuildThemeRuntimeStore ===
+// === Module 5374: GuildThemeRuntimeStore ===
 
-// Module 5354 (GuildThemeRuntimeStore)
-import _mod12 from "module_12" /* 12 */;
+// Module 5374 (GuildThemeRuntimeStore)
+import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import guildThemeSerialization from "guildThemeSerialization" /* 5013 */;
-import Powerups from "Powerups" /* 5359 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5355 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import guildThemeSerialization from "guildThemeSerialization" /* 5040 */;
+import Powerups from "Powerups" /* 5379 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5375 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
 
 require = fn;
 function snapshotSelectedGuildId(guildId) {
@@ -38,8 +38,8 @@ function snapshotSelectedGuildId(guildId) {
     }
     flag = guildId !== guildId;
     if (!flag) {
-      flag = !_mod12.isEqual(_null.guildTheme, cloneGuildThemeResult);
-      const tmp11Result = _mod12;
+      flag = !apply.isEqual(_null.guildTheme, cloneGuildThemeResult);
+      const tmp11Result = apply;
     }
     if (!flag) {
       flag = _null.hasThemeFeature !== tmp8;
@@ -72,8 +72,8 @@ function handleSavedGuildTheme(guildId) {
     }
     let flag = guildId1 !== guildId;
     if (!flag) {
-      flag = !_mod12.isEqual(_null.guildTheme, cloneGuildThemeResult);
-      const tmp2Result = _mod12;
+      flag = !apply.isEqual(_null.guildTheme, cloneGuildThemeResult);
+      const tmp2Result = apply;
     }
     if (!flag) {
       flag = _null.hasThemeFeature !== tmp12;
@@ -239,7 +239,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(DispatcherDefault, {
           }
           let flag5 = guildId !== id;
           if (!flag5) {
-            flag5 = !_mod12.isEqual(_null.guildTheme, guildTheme2);
+            flag5 = !apply.isEqual(_null.guildTheme, guildTheme2);
           }
           if (!flag5) {
             flag5 = _null.hasThemeFeature !== tmp11;

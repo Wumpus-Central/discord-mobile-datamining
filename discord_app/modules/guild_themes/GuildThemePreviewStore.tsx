@@ -1,10 +1,10 @@
-// === Module 5352: GuildThemePreviewStore ===
+// === Module 5372: GuildThemePreviewStore ===
 
-// Module 5352 (GuildThemePreviewStore)
-import _mod12 from "module_12" /* 12 */;
+// Module 5372 (GuildThemePreviewStore)
+import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import guildThemeSerialization from "guildThemeSerialization" /* 5013 */;
+import guildThemeSerialization from "guildThemeSerialization" /* 5040 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -21,9 +21,9 @@ function handleEnd() {
   }
   return flag;
 }
-const GuildThemePreviewConstants = fn(5353);
+const GuildThemePreviewConstants = fn(5373);
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
-const timeout = new fn(4987).Timeout();
+const timeout = new fn(5014).Timeout();
 let closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
 const Store = initializeDefault.Store;
 class GuildThemePreviewStore extends Store {
@@ -103,7 +103,7 @@ prototype["hasChanges"] = function hasChanges() {
   if (tmp) {
     let tmp4 = closure_5.draftEnabled !== closure_5.originalEnabled;
     if (!tmp4) {
-      tmp4 = !_mod12.isEqual(closure_5.draft, closure_5.original);
+      tmp4 = !apply.isEqual(closure_5.draft, closure_5.original);
     }
     tmp = tmp4;
   }
@@ -130,8 +130,8 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: tmp, customUserThemeSettings: "a" };
-      const isEqualResult = _mod12.isEqual(closure_5.draft, obj2);
+      const obj2 = { presetId: tmp, customUserThemeSettings: "Array" };
+      const isEqualResult = apply.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {
         flag = !closure_5.draftEnabled;
@@ -164,7 +164,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
       obj3.gradientAngle = tmp;
       obj3.baseMix = tmp2;
       obj2.customUserThemeSettings = obj3;
-      const isEqualResult = _mod12.isEqual(closure_5.draft, obj2);
+      const isEqualResult = apply.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {
         flag = !closure_5.draftEnabled;
@@ -377,8 +377,8 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
         }
         let isEqualResult = flag === closure_5.originalEnabled;
         if (isEqualResult) {
-          isEqualResult = _mod12.isEqual(themeSettings, closure_5.original);
-          const tmp7Result = _mod12;
+          isEqualResult = apply.isEqual(themeSettings, closure_5.original);
+          const tmp7Result = apply;
         }
         let flag2 = isEqualResult;
         if (flag2) {

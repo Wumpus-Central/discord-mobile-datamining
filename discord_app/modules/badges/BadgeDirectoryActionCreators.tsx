@@ -1,6 +1,6 @@
-// === Module 8914: BadgeDirectoryActionCreators ===
+// === Module 8860: BadgeDirectoryActionCreators ===
 
-// Module 8914 (BadgeDirectoryActionCreators)
+// Module 8860 (BadgeDirectoryActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -148,7 +148,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
             const _Date = Date;
             closure_132_1(closure_132_2[5]).distribution(obj16, Date.now() - closure_131_6);
             const obj = closure_132_1(closure_132_2[5]);
-            const obj17 = { type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: closure_131_2, badges: body.badges };
+            const obj17 = { type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: closure_131_2, badges: body.badges, requestedAt: closure_131_6 };
             closure_132_1(closure_132_2[3]).dispatch(obj17);
             c6 = 0;
             const obj3 = closure_132_1(closure_132_2[3]);
@@ -160,22 +160,32 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
         }
         c8 = 3;
       }
-    } catch (tmp75) {
-      closure_5 = tmp75;
+    } catch (tmp76) {
+      closure_5 = tmp76;
       if (tmp4 === c6) {
         c8 = tmp2;
-        throw tmp75;
+        throw tmp76;
       } else {
         c7 = tmp;
       }
     }
   }
 };
-let closure_11 = async function _fetchBadge(arg0) {
+function fetchBadge() {
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_12 = async function _fetchBadge(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
+  } else if (tmp7 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -197,9 +207,10 @@ let closure_11 = async function _fetchBadge(arg0) {
           return obj3;
         } else {
           closure_4 = tmp3;
-          closure_3 = tmp7;
+          closure_3 = tmp5;
           closure_131_0 = undefined;
           closure_131_1 = undefined;
+          closure_131_2 = undefined;
           let id = closure_1;
           if (closure_1 == null) {
             currentUser = currentUser.getCurrentUser();
@@ -210,9 +221,11 @@ let closure_11 = async function _fetchBadge(arg0) {
           }
           closure_131_0 = id;
           if (null != id) {
+            const _Date = Date;
+            closure_131_1 = Date.now();
             c6 = 1;
             const HTTP = HTTPUtils.HTTP;
-            const obj5 = { url: hasOwnProperty.USER_BADGE(urlUserId(tmp26), closure_0), rejectWithError: true };
+            const obj5 = { url: hasOwnProperty.USER_BADGE(urlUserId(tmp28), closure_0), rejectWithError: true };
             c7 = 2;
             c8 = 1;
             const obj6 = { value: HTTP.get(obj5), done: false };
@@ -220,17 +233,17 @@ let closure_11 = async function _fetchBadge(arg0) {
           }
         }
       } else {
-        if (1 === tmp7) {
+        if (1 === tmp8) {
           c6 = 0;
-          closure_131_2 = closure_5;
-          closure_132_1(closure_132_2[7]).captureException(closure_131_2);
+          closure_131_3 = closure_5;
+          closure_132_1(closure_132_2[7]).captureException(closure_131_3);
           const obj4 = closure_132_1(closure_132_2[7]);
         } else if (arg0 === 1) {
           c8 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          closure_131_1 = value;
-          const obj7 = { type: "BADGE_FETCH_SUCCESS", userId: closure_131_0, badge: closure_131_1.body };
+          closure_131_2 = value;
+          const obj7 = { type: "BADGE_FETCH_SUCCESS", userId: closure_131_0, badge: closure_131_2.body, requestedAt: closure_131_1 };
           closure_132_1(closure_132_2[3]).dispatch(obj7);
           c6 = 0;
           const obj = closure_132_1(closure_132_2[3]);
@@ -241,27 +254,30 @@ let closure_11 = async function _fetchBadge(arg0) {
         return obj8;
       }
       c8 = 3;
-    } catch (tmp31) {
-      closure_5 = tmp31;
+    } catch (tmp33) {
+      closure_5 = tmp33;
       if (tmp4 === c6) {
         c8 = tmp2;
-        throw tmp31;
+        throw tmp33;
       } else {
         c7 = tmp;
       }
     }
   }
 };
-let closure_12 = async function _requestBadgeSummary(arg0) {
+let closure_13 = async function _requestBadgeSummary(arg0) {
   closure_5 = tmp3;
+  closure_4 = tmp5;
   closure_132_0 = closure_0;
   closure_132_1 = closure_2;
+  const _Date2 = Date;
+  closure_132_2 = Date.now();
   const HTTP = HTTPUtils.HTTP;
   const request = { url: hasOwnProperty.USER_BADGE(urlUserId(closure_2), closure_1), query: { with_progress: false }, rejectWithError: true };
   await HTTP.get(request);
-  if (1 === tmp7) {
+  if (1 === tmp8) {
     c7 = 0;
-    closure_132_4 = closure_6;
+    closure_132_5 = closure_6;
     value = closure_133_8.get(closure_132_0);
     let backoff;
     if (value != null) {
@@ -274,28 +290,28 @@ let closure_12 = async function _requestBadgeSummary(arg0) {
       closure_133_1(closure_133_2[8]);
       new closure_133_1(closure_133_2[8])(MINUTE, closure_133_1(closure_133_2[9]).Millis.HOUR, true);
     }
-    closure_132_3 = closure_3;
-    const obj6 = { backoff: closure_132_3, gateUntil: null };
+    closure_132_4 = closure_3;
+    const obj6 = { backoff: closure_132_4, gateUntil: null };
     const _Date = Date;
     const timestamp = Date.now();
-    obj6.gateUntil = timestamp + closure_132_3.fail();
+    obj6.gateUntil = timestamp + closure_132_4.fail();
     const result = closure_133_8.set(closure_132_0, obj6);
-    closure_133_1(closure_133_2[7]).captureException(closure_132_4);
+    closure_133_1(closure_133_2[7]).captureException(closure_132_5);
     c9 = 3;
     closure_133_1(closure_133_2[7]);
   } else if (arg0 === 1) {
     c9 = 3;
     throw value;
   } else if (arg0 !== 2) {
-    closure_132_2 = value;
+    closure_132_3 = value;
     closure_133_8.delete(closure_132_0);
-    closure_133_1(closure_133_2[3]).dispatch({ type: "BADGE_SUMMARY_FETCH_SUCCESS", userId: closure_132_1, badge: closure_132_2.body });
+    closure_133_1(closure_133_2[3]).dispatch({ type: "BADGE_SUMMARY_FETCH_SUCCESS", userId: closure_132_1, badge: closure_132_3.body, requestedAt: closure_132_2 });
     c7 = 0;
     closure_133_1(closure_133_2[3]);
   }
   return value;
 };
-let closure_13 = async function _ackBadge(arg0) {
+let closure_14 = async function _ackBadge(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -352,6 +368,7 @@ let closure_13 = async function _ackBadge(arg0) {
         } else if (arg0 !== 2) {
           const obj7 = { type: "BADGE_ACK_SUCCESS", userId: closure_129_1, badgeId: closure_129_0 };
           closure_130_1(closure_130_2[3]).dispatch(obj7);
+          closure_130_11(closure_129_0, closure_129_1);
           c4 = 0;
           const obj = closure_130_1(closure_130_2[3]);
         }
@@ -361,11 +378,11 @@ let closure_13 = async function _ackBadge(arg0) {
         return obj8;
       }
       c6 = 3;
-    } catch (tmp28) {
-      closure_3 = tmp28;
+    } catch (tmp32) {
+      closure_3 = tmp32;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp28;
+        throw tmp32;
       } else {
         c5 = tmp;
       }
@@ -393,16 +410,7 @@ export function fetchBadgeDirectory() {
   }
   return applyArgumentsResult;
 }
-export function fetchBadge() {
-  const self = this;
-  const apply = closure_11.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+export { fetchBadge };
 export function fetchBadgeSummary(GIFTING, id) {
   let tmp = id;
   if (id == null) {
@@ -436,7 +444,7 @@ export function fetchBadgeSummary(GIFTING, id) {
       } else {
         const cleanupPromise = (function requestBadgeSummary() {
           const self = this;
-          const apply = closure_1_12.apply;
+          const apply = closure_1_13.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
@@ -456,7 +464,7 @@ export function fetchBadgeSummary(GIFTING, id) {
 }
 export function ackBadge() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

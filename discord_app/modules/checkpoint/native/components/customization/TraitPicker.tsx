@@ -1,18 +1,18 @@
-// === Module 13921: TraitPicker ===
+// === Module 13897: TraitPicker ===
 
-// Module 13921 (TraitPicker)
+// Module 13897 (TraitPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import _modDef3219 from "module_3219" /* 3219 */;
-import timing_timing from "timing/timing" /* 5380 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6571 */;
-import CheckpointTextDefault from "CheckpointText" /* 13878 */;
-import TraitOptionDetails from "TraitOptionDetails" /* 13924 */;
+import _modDef3248 from "module_3248" /* 3248 */;
+import timing_timing from "timing/timing" /* 5400 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6591 */;
+import CheckpointTextDefault from "CheckpointText" /* 13853 */;
+import TraitOptionDetails from "TraitOptionDetails" /* 13900 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
 
 const _modDef1652 = _mod1652;
 const TraitOptionDetailsDefault = TraitOptionDetails;
@@ -23,7 +23,7 @@ function EarnedCountHeader(customizationOption) {
   const tmp = closure_13();
   const customizationOptionName = CheckpointCustomizationUtils.getCustomizationOptionName(customizationOption.customizationOption);
   const intl = util.intl;
-  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3219.Vfq58K, {
+  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3248.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(arg0) {
@@ -32,7 +32,7 @@ function EarnedCountHeader(customizationOption) {
   });
   const obj3 = { variant: "body-sm/medium", color: "text-default", style: tmp.earnedRow, accessibilityRole: "header", accessibilityLabel: combined, children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3219.Vfq58K, {
+  obj3.children = intl2.format(_modDef3248.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
@@ -131,18 +131,18 @@ function TraitPickerLandscape(selectedAsset) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const rarityOrder = fn(6204).CHECKPOINT_RARITY_ORDER_MOBILE;
+const rarityOrder = fn(6224).CHECKPOINT_RARITY_ORDER_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5143);
-let obj2 = { container: { gap: fn(13922).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
-let obj3 = { gap: fn(13922).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(13922).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(13922).CONTENT_INSET };
+const createStyles = fn(5170);
+let obj2 = { container: { gap: fn(13898).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
+let obj3 = { gap: fn(13898).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13898).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13898).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(13922).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(13898).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 let closure_13 = createStyles.createStyles(obj2);
 let closure_15 = { code: "(function TraitPickerTsx1(){let[INTRO_DETAILS_DURATION_MS,Easing,withTiming,isVisible,INTRO_DETAILS_OFFSET_Y]=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isVisible?1:0,timing),transform:[{translateY:withTiming(isVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};})" };
@@ -162,20 +162,20 @@ export default function TraitPicker(customizationOption) {
     isLandscape = false;
   }
   ({ onSelectOption, onSelectFinalizeOption } = customizationOption);
-  const isTraitRarityVisible = customizationOption(6571).getIsTraitRarityVisible(customizationOption);
-  const obj = customizationOption(6571);
+  const isTraitRarityVisible = customizationOption(6591).getIsTraitRarityVisible(customizationOption);
+  const obj = customizationOption(6591);
   const tmp = selectedOptionId;
   items = [AccessibilityStore];
   dependencyMap = customizationOption(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = customizationOption(504);
-  _slicedToArray = customizationOption(5400).useIsScreenReaderEnabled();
-  const obj3 = customizationOption(5400);
-  const traitPickerOptions = customizationOption(13926).useTraitPickerOptions({ customizationOption, optionIds, savedOptionId, rarityOrder });
+  _slicedToArray = customizationOption(5420).useIsScreenReaderEnabled();
+  const obj3 = customizationOption(5420);
+  const traitPickerOptions = customizationOption(13902).useTraitPickerOptions({ customizationOption, optionIds, savedOptionId, rarityOrder });
   const availableTraitOptions = traitPickerOptions.availableTraitOptions;
   const earnedCount = traitPickerOptions.earnedCount;
   let tmp6 = null != selectedOptionId;
   closure_6 = tmp6;
-  const tmp7 = selectedOptionId(5751)(() => {
+  const tmp7 = selectedOptionId(5769)(() => {
     let num = 0;
     if (!closure_6) {
       num = 0;
@@ -192,12 +192,12 @@ export default function TraitPicker(customizationOption) {
     }
     return num;
   });
-  const obj4 = customizationOption(13926);
+  const obj4 = customizationOption(13902);
   const obj5 = { customizationOption, optionIds, savedOptionId, rarityOrder };
   const obj6 = availableTraitOptions;
   [tmp9, tmp10] = availableTraitOptions.useState(tmp7);
   const tmp8 = _slicedToArray(availableTraitOptions.useState(tmp7), 2);
-  const obj8 = { availableTraitOptions, selectedOptionId, onSelectOption: customizationOption(13670).selectCharacterTrait, isPaused: null };
+  const obj8 = { availableTraitOptions, selectedOptionId, onSelectOption: customizationOption(13645).selectCharacterTrait, isPaused: null };
   let tmp11 = flag;
   if (!flag) {
     let tmp12 = !tmp6;
@@ -207,7 +207,7 @@ export default function TraitPicker(customizationOption) {
     tmp11 = tmp12;
   }
   obj8.isPaused = tmp11;
-  const autoSelectTraitOption = customizationOption(13927).useAutoSelectTraitOption(obj8);
+  const autoSelectTraitOption = customizationOption(13903).useAutoSelectTraitOption(obj8);
   let diff = earnedCount;
   if (!tmp6) {
     diff = earnedCount - tmp9;
@@ -223,13 +223,13 @@ export default function TraitPicker(customizationOption) {
   }, items1);
   if (isLandscape) {
     str = "md";
-    if (selectedOptionId(1493)().height <= tmp3(5328).WINDOW_SIZE_THRESHOLD_LARGE) {
+    if (selectedOptionId(1493)().height <= tmp3(5348).WINDOW_SIZE_THRESHOLD_LARGE) {
       str = "sm";
     }
   }
   if (isFinalizeRoute) {
     const obj9 = { activeCustomizationOption: customizationOption, onSelectOption: onSelectFinalizeOption, disableSwitching: isCurrentTraitBlocked, disabled: flag };
-    let tmp16Result = closure_9(tmp3(13928).FinalizeTraitTabs, obj9);
+    let tmp16Result = closure_9(tmp3(13904).FinalizeTraitTabs, obj9);
     let tmp19 = closure_9;
   } else {
     const obj10 = { customizationOption, earnedCount: diff, totalCount: traitPickerOptions.totalCount };
@@ -239,14 +239,14 @@ export default function TraitPicker(customizationOption) {
   const obj11 = { header: tmp16Result, optionList: null, selectedAsset: null, isDetailsVisible: null, isRarityVisible: null };
   const obj12 = { customizationOption, size: str, options: availableTraitOptions, selectedOptionId, disabled: flag, hideRarity: !isTraitRarityVisible, introStartIndex: null, onIntroStep: null, onSelectOption: null };
   let num2 = 0;
-  const obj7 = customizationOption(13927);
+  const obj7 = customizationOption(13903);
   if (!tmp6) {
     num2 = tmp7;
   }
   obj12.introStartIndex = num2;
   obj12.onIntroStep = tmp10;
   obj12.onSelectOption = onSelectOption;
-  obj11.optionList = tmp19(tmp(13922), obj12, customizationOption);
+  obj11.optionList = tmp19(tmp(13898), obj12, customizationOption);
   obj11.selectedAsset = memo;
   if (!tmp6) {
     tmp6 = 0 === tmp7;

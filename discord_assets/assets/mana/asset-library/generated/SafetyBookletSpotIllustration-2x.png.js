@@ -1,6 +1,6 @@
-// === Module 11474: ? ===
+// === Module 11436: ? ===
 
-// Module 11474
+// Module 11436
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SafetyBookletSpotIllustration-2x.png.js");

@@ -1,27 +1,27 @@
-// === Module 5055: GuildMemberStore ===
+// === Module 5082: GuildMemberStore ===
 
-// Module 5055 (GuildMemberStore)
+// Module 5082 (GuildMemberStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtils from "FlagUtils" /* 1398 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1402 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2108 */;
-import mappers from "mappers" /* 2109 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 2120 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 5053 */;
-import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 5056 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 5061 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5062 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5063 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5064 */;
-import ImpersonateStore from "ImpersonateStore" /* 5048 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1393 */;
+import FlagUtils from "FlagUtils" /* 1403 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2103 */;
+import mappers from "mappers" /* 2104 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 2115 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 5080 */;
+import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 5083 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 5088 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5089 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5090 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5091 */;
+import ImpersonateStore from "ImpersonateStore" /* 5075 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildRoleStore from "GuildRoleStore" /* 5049 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildRoleStore from "GuildRoleStore" /* 5076 */;
+import GuildStore from "GuildStore" /* 5041 */;
 import size from "module_2" /* 2 */;
 
 function trackCommunicationDisabled(guildId, tmp10Result) {
@@ -89,7 +89,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "ao", hoistRoleId: "rejectWithError", iconRoleId: "Number", highestRoleId: "a" };
+    return { colorString: null, colorStrings: null, colorRoleId: "channel", hoistRoleId: "format", iconRoleId: "Icon", highestRoleId: "y" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {
@@ -705,7 +705,7 @@ prototype["getMutableAllGuildsAndMembers"] = function getMutableAllGuildsAndMemb
 };
 prototype["memberOf"] = function memberOf(userId) {
   closure_0 = userId;
-  obj = _modDef12(obj);
+  obj = applyDefault(obj);
   const found = obj.toPairs().filter((item) => {
     [, tmp] = item;
     return null != tmp[closure_0];
@@ -909,8 +909,8 @@ prototype["getMemberRoleWithPendingUpdates"] = function getMemberRoleWithPending
   }
   let differenceResult = roles;
   if (null != dependencyMap4[arg0]) {
-    obj = _modDef12;
-    differenceResult = obj.difference(_modDef12.union(roles, tmp2.added), tmp2.removed);
+    obj = applyDefault;
+    differenceResult = obj.difference(applyDefault.union(roles, tmp2.added), tmp2.removed);
   }
   return differenceResult;
 };
@@ -992,7 +992,7 @@ obj = {
         if (obj == null) {
           obj = {};
         }
-        const obj2 = _modDef12;
+        const obj2 = applyDefault;
         let added = obj.added;
         if (added == null) {
           added = [];
@@ -1001,18 +1001,18 @@ obj = {
         if (removedRoleIds == null) {
           items = [];
         }
-        const obj4 = { added: obj2.difference(_modDef12.union(added, addedRoleIds), items), removed: null };
-        const unionResult = _modDef12.union(added, addedRoleIds);
-        const tmp4Result = _modDef12;
+        const obj4 = { added: obj2.difference(applyDefault.union(added, addedRoleIds), items), removed: null };
+        const unionResult = applyDefault.union(added, addedRoleIds);
+        const tmp4Result = applyDefault;
         let removed = obj.removed;
         if (removed == null) {
           removed = [];
         }
-        const tmp4Result2 = _modDef12;
+        const tmp4Result2 = applyDefault;
         if (addedRoleIds == null) {
           addedRoleIds = [];
         }
-        obj4.removed = tmp4Result.difference(_modDef12.union(removed, removedRoleIds), addedRoleIds);
+        obj4.removed = tmp4Result.difference(applyDefault.union(removed, removedRoleIds), addedRoleIds);
         dependencyMap4[guildId] = obj4;
         const obj5 = { userId: id, guildId, nick: null, avatar: null, avatarDecoration: null, guildRoles: null, roles: null, premiumSince: null, isPending: null, joinedAt: null, flags: null, fullProfileLoadedTimestamp: null, collectibles: null, displayNameStyles: null, gamingLeaderboardData: null };
         ({ nick: obj7.nick, avatar: obj7.avatar, avatarDecoration: obj7.avatarDecoration } = tmp3);
@@ -1028,7 +1028,7 @@ obj = {
         obj5.flags = flags;
         ({ fullProfileLoadedTimestamp: obj7.fullProfileLoadedTimestamp, collectibles: obj7.collectibles, displayNameStyles: obj7.displayNameStyles, gamingLeaderboardData: obj7.gamingLeaderboardData } = tmp3);
         tmp2[id] = createMember(obj5);
-        const unionResult1 = _modDef12.union(removed, removedRoleIds);
+        const unionResult1 = applyDefault.union(removed, removedRoleIds);
       }
     }
   },

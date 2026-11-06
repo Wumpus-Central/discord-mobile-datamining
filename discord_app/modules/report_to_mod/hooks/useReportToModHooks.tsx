@@ -1,14 +1,14 @@
-// === Module 10382: useReportToModHooks ===
+// === Module 10334: useReportToModHooks ===
 
-// Module 10382 (useReportToModHooks)
+// Module 10334 (useReportToModHooks)
 import _mod19 from "module_19" /* 19 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7582 */;
-import ReportToModUtils from "ReportToModUtils" /* 7599 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7603 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7781 */;
-import UserActionCreators from "UserActionCreators" /* 8898 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import MessageStore from "MessageStore" /* 6199 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7527 */;
+import ReportToModUtils from "ReportToModUtils" /* 7544 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7548 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7735 */;
+import UserActionCreators from "UserActionCreators" /* 8844 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import MessageStore from "MessageStore" /* 6219 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

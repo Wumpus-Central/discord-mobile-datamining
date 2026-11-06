@@ -1,13 +1,13 @@
-// === Module 7380: FastList ===
+// === Module 7327: FastList ===
 
-// Module 7380 (FastList)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7327 (FastList)
+import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import BottomSheetModal from "BottomSheetModal" /* 5402 */;
-import NativeViewDefault from "NativeView" /* 7104 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7382 */;
+import BottomSheetModal from "BottomSheetModal" /* 5422 */;
+import NativeViewDefault from "NativeView" /* 7048 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7329 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -164,7 +164,7 @@ prototype["_fill"] = function _fill(arg0, arg1, arg2) {
   closure_0 = arg1;
   closure_1 = 0;
   if (!arg2) {
-    const item = _modDef12.forEach(arg0, (arg0) => {
+    const item = applyDefault.forEach(arg0, (arg0) => {
       if (null == closure_0[closure_1]) {
         return false;
       } else {

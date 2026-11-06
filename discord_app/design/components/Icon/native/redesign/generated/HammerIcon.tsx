@@ -1,9 +1,9 @@
-// === Module 13224: HammerIcon ===
+// === Module 13189: HammerIcon ===
 
-// Module 13224 (HammerIcon)
+// Module 13189 (HammerIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5853 */;
-import _mod13225 from "module_13225" /* 13225 */;
+import BaseIconImage from "BaseIconImage" /* 5871 */;
+import _mod13190 from "module_13190" /* 13190 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HammerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13225, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13190, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

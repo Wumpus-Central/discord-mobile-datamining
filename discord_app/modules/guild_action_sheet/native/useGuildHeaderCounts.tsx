@@ -1,11 +1,11 @@
-// === Module 16060: useGuildHeaderCounts ===
+// === Module 16055: useGuildHeaderCounts ===
 
-// Module 16060 (useGuildHeaderCounts)
-import _mod12 from "module_12" /* 12 */;
+// Module 16055 (useGuildHeaderCounts)
+import apply from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5368 */;
-import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 16061 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5388 */;
+import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 16056 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ export function useGuildHeaderCounts(id) {
   closure_130_1 = id;
   closure_130_2 = stateFromStores;
   const items1 = ["GUILD_HEADER_MEMBER_COUNT", id];
-  const memo = noop.useMemo(() => _mod12.throttle((count) => {
+  const memo = noop.useMemo(() => apply.throttle((count) => {
     DispatcherDefault.dispatch({ type, count, guildId });
   }, 3000), items1);
   closure_130_3 = memo;
@@ -57,7 +57,7 @@ export function useGuildHeaderCounts(id) {
   closure_132_1 = id;
   closure_132_2 = stateFromStores2;
   const items6 = ["GUILD_HEADER_ONLINE_COUNT", id];
-  const memo1 = noop.useMemo(() => _mod12.throttle((count) => {
+  const memo1 = noop.useMemo(() => apply.throttle((count) => {
     DispatcherDefault.dispatch({ type, count, guildId });
   }, 3000), items6);
   closure_132_3 = memo1;

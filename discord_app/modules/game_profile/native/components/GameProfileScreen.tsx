@@ -1,22 +1,22 @@
-// === Module 9474: GameProfileScreen ===
+// === Module 9420: GameProfileScreen ===
 
-// Module 9474 (GameProfileScreen)
+// Module 9420 (GameProfileScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5384 */;
-import components_Button_Button from "components/Button/Button" /* 5770 */;
-import LinkingDefault from "Linking" /* 5846 */;
-import useGameProfileObscuredDefault from "useGameProfileObscured" /* 8828 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9473 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9476 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9493 */;
-import useInAppBrowserReturnDefault from "useInAppBrowserReturn" /* 9494 */;
-import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 9500 */;
-import useGameProfileNavigationDefault from "useGameProfileNavigation" /* 9517 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 9519 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5404 */;
+import components_Button_Button from "components/Button/Button" /* 5788 */;
+import LinkingDefault from "Linking" /* 5864 */;
+import useGameProfileObscuredDefault from "useGameProfileObscured" /* 8774 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9419 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9422 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9439 */;
+import useInAppBrowserReturnDefault from "useInAppBrowserReturn" /* 9440 */;
+import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 9446 */;
+import useGameProfileNavigationDefault from "useGameProfileNavigation" /* 9463 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 9465 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 9475 */;
+import GameProfileStore from "GameProfileStore" /* 9421 */;
 
 const require = globalThis.__r;
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { loadingContainer: { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, scrollView: null, stickyHeader: null };
 let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.scrollView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -328,9 +328,9 @@ export default function GameProfileScreen(gameId) {
   }, items19);
   const items20 = [gameId, source, sourceUserId, viewId];
   const effect4 = obj2.useEffect(() => () => {
-    const guildIdAndVerifiedFromInvite = gameId(9493).getGuildIdAndVerifiedFromInvite(ref2.current);
+    const guildIdAndVerifiedFromInvite = gameId(9439).getGuildIdAndVerifiedFromInvite(ref2.current);
     ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
-    const obj = gameId(9493);
+    const obj = gameId(9439);
     const obj3 = { viewId, gameId, gameName: null, playedFriendIds: null, playedFriendsData: null, similarGames: null, guildId: null, isVerified: null };
     let str = ref.current;
     if (str == null) {
@@ -346,8 +346,8 @@ export default function GameProfileScreen(gameId) {
     obj3.similarGames = similarGames;
     obj3.guildId = guildId;
     obj3.isVerified = isVerified;
-    const result = gameId(9493).trackGameProfileClose(obj3);
-    const obj2 = gameId(9493);
+    const result = gameId(9439).trackGameProfileClose(obj3);
+    const obj2 = gameId(9439);
   }, items20);
   const items21 = [sharedValue1];
   const items22 = [sharedValue3];
@@ -373,31 +373,31 @@ export default function GameProfileScreen(gameId) {
       let tmp72 = name;
       const obj5 = { ref, style: tmp.scrollView, contentContainerStyle: memo1, lockableScrollableContentOffsetY: sharedValue, children: null };
       const obj6 = { obscured: tmp12, children: null };
-      let tmp72Result = selectedTab === tmp2(9518).GameProfileNavTab.OVERVIEW;
+      let tmp72Result = selectedTab === tmp2(9464).GameProfileNavTab.OVERVIEW;
       if (tmp72Result) {
-        const obj7 = { game: data, invite: first1, viewId, source, trackAction: callback1, onGuildInviteResolved: tmp13[1], closeModal: tmp5(5384).hideAllActionSheets, scrollY: sharedValue, websiteButtons: memo, onStoreLinksMeasured: callback5, onHeaderHeightMeasured: callback4 };
-        tmp72Result = tmp72(tmp5(9522), obj7);
-        const tmp5Result5 = tmp5(9522);
+        const obj7 = { game: data, invite: first1, viewId, source, trackAction: callback1, onGuildInviteResolved: tmp13[1], closeModal: tmp5(5404).hideAllActionSheets, scrollY: sharedValue, websiteButtons: memo, onStoreLinksMeasured: callback5, onHeaderHeightMeasured: callback4 };
+        tmp72Result = tmp72(tmp5(9468), obj7);
+        const tmp5Result5 = tmp5(9468);
       }
       const items24 = [tmp72Result, ];
-      let tmp72Result4 = selectedTab === tmp2(9518).GameProfileNavTab.COMMUNITIES;
+      let tmp72Result4 = selectedTab === tmp2(9464).GameProfileNavTab.COMMUNITIES;
       if (tmp72Result4) {
-        const obj8 = { game: data, viewId, scrollY: sharedValue, trackAction: callback1, closeModal: tmp5(5384).hideAllActionSheets };
-        tmp72Result4 = tmp72(tmp5(9768), obj8);
-        const tmp5Result6 = tmp5(9768);
+        const obj8 = { game: data, viewId, scrollY: sharedValue, trackAction: callback1, closeModal: tmp5(5404).hideAllActionSheets };
+        tmp72Result4 = tmp72(tmp5(9718), obj8);
+        const tmp5Result6 = tmp5(9718);
       }
       items24[1] = tmp72Result4;
       obj6.children = items24;
-      obj5.children = tmp65(tmp5(9520), obj6);
-      let tmp72Result5 = tmp72(tmp2(5402).BottomSheetScrollView, obj5);
-      const tmp5Result4 = tmp5(9520);
+      obj5.children = tmp65(tmp5(9466), obj6);
+      let tmp72Result5 = tmp72(tmp2(5422).BottomSheetScrollView, obj5);
+      const tmp5Result4 = tmp5(9466);
     }
     const items25 = [tmp72Result5, , , ];
     const obj9 = { style: null, pointerEvents: "box-none", children: null };
     const items26 = [tmp.stickyHeader, animatedStyle];
     obj9.style = items26;
     const obj10 = { game: data, headerRight: memo2 };
-    obj9.children = tmp72(tmp5(9778), obj10);
+    obj9.children = tmp72(tmp5(9728), obj10);
     items25[1] = tmp72(tmp5(1652).View, obj9);
     let tmp72Result6 = !isLoading;
     if (!isLoading) {
@@ -405,11 +405,11 @@ export default function GameProfileScreen(gameId) {
     }
     if (tmp72Result6) {
       const obj11 = { game: data, navigation, onLayout: callback2 };
-      tmp72Result6 = tmp72(tmp5(9779), obj11);
+      tmp72Result6 = tmp72(tmp5(9729), obj11);
     }
     items25[2] = tmp72Result6;
     const obj12 = { variant: "overlay", onPress: bottomSheetClose };
-    items25[3] = tmp72(tmp2(5733).ActionSheetHeaderBar, obj12);
+    items25[3] = tmp72(tmp2(5753).ActionSheetHeaderBar, obj12);
     obj4.children = items25;
     return tmp65(tmp66, obj4);
   }

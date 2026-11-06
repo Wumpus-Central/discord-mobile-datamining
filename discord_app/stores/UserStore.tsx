@@ -1,21 +1,21 @@
 // === Module 1385: UserStore ===
 
 // Module 1385 (UserStore)
-import _mod12 from "module_12" /* 12 */;
+import apply from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import UserStoreUtils from "UserStoreUtils" /* 1396 */;
-import FlagUtilsAll from "FlagUtils" /* 1398 */;
-import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1401 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1402 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1393 */;
+import UserStoreUtils from "UserStoreUtils" /* 1401 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1406 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1407 */;
 import PremiumStateUtils from "PremiumStateUtils" /* 1408 */;
 import FamilyCenterModels from "FamilyCenterModels" /* 1409 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2108 */;
-import mappers from "mappers" /* 2109 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 2120 */;
-import Server from "Server" /* 2121 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2103 */;
+import mappers from "mappers" /* 2104 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 2115 */;
+import Server from "Server" /* 2116 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1386 */;
-import UserRecord from "UserRecord" /* 1399 */;
+import UserRecord from "UserRecord" /* 1404 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
 
@@ -748,7 +748,7 @@ function handlePresenceUpdates(updates) {
         const user = item.user;
         let tmp2 = acc;
         if (user.hasOwnProperty(item)) {
-          result = result.set(_mod12.camelCase(item), item.user[item]);
+          result = result.set(apply.camelCase(item), item.user[item]);
           let tmp7 = acc;
           if (!acc) {
             tmp7 = result !== result;

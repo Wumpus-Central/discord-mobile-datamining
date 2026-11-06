@@ -1,20 +1,20 @@
-// === Module 14604: ForumChannelEmptyState ===
+// === Module 14581: ForumChannelEmptyState ===
 
-// Module 14604 (ForumChannelEmptyState)
+// Module 14581 (ForumChannelEmptyState)
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import shared from "shared" /* 5150 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import _modDef14605 from "module_14605" /* 14605 */;
-import _modDef14606 from "module_14606" /* 14606 */;
+import shared from "shared" /* 5177 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import _modDef14582 from "module_14582" /* 14582 */;
+import _modDef14583 from "module_14583" /* 14583 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
@@ -33,9 +33,9 @@ export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef14605;
+    let tmp4Result = _modDef14582;
   } else {
-    tmp4Result = _modDef14606;
+    tmp4Result = _modDef14583;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

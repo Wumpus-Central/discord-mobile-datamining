@@ -1,15 +1,15 @@
-// === Module 14278: GuildProgressUtils ===
+// === Module 14255: GuildProgressUtils ===
 
-// Module 14278 (GuildProgressUtils)
+// Module 14255 (GuildProgressUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14281 */;
-import GuildChannelStore from "GuildChannelStore" /* 5073 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import GuildProgressStore from "GuildProgressStore" /* 14279 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14258 */;
+import GuildChannelStore from "GuildChannelStore" /* 5100 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import GuildProgressStore from "GuildProgressStore" /* 14256 */;
 
 const require = globalThis.__r;
 
@@ -91,7 +91,7 @@ function useIOSCompletionStates(guild) {
   }
   const tmpResult4 = require("initialize");
 }
-const Steps = fn(14273).Steps;
+const Steps = fn(14250).Steps;
 const Constants = fn(1072);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -101,7 +101,7 @@ export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export function openActionSheet(guild) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(14280, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
+  obj.openLazy(asyncRequireImpl(14257, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
 }
 export function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);

@@ -1,14 +1,14 @@
-// === Module 12886: useConjureAutomodSettingsLink ===
+// === Module 12851: useConjureAutomodSettingsLink ===
 
-// Module 12886 (useConjureAutomodSettingsLink)
-import _modDef3995 from "module_3995" /* 3995 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6983 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9226 */;
+// Module 12851 (useConjureAutomodSettingsLink)
+import _modDef4024 from "module_4024" /* 4024 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6925 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9172 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11051 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11003 */;
 
 const require = globalThis.__r;
 
@@ -66,7 +66,7 @@ export default function useConjureAutomodSettingsLink(arg0) {
 export function ConjureAutomodSettingsLink(guildId) {
   guildId = guildId.guildId;
   const intl = guildId(1113).intl;
-  const tmp3 = _modDef3995;
+  const tmp3 = _modDef4024;
   const obj = { children: null };
   items = [
     " ",

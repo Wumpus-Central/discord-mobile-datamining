@@ -1,10 +1,10 @@
-// === Module 18915: useComponentRenderSpan ===
+// === Module 18904: useComponentRenderSpan ===
 
-// Module 18915 (useComponentRenderSpan)
+// Module 18904 (useComponentRenderSpan)
 import LoggerDefault from "Logger" /* 3 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13562 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 13565 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18916 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13537 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 13540 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 18905 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -46,15 +46,15 @@ export function useNavigationTTIRegionMeasurement(exclude, name) {
   str.useRef(str);
   str.useRef(false);
   items = [name, exclude];
-  const callback = str.useCallback((traceId, endMonotonicMs, arg2, arg3, measurementSource) => {
-    let isFiniteResult = arg2 > 0 && arg3 > 0;
+  const callback = str.useCallback((traceId, endMonotonicMs, scrollLength, scrollLength, measurementSource) => {
+    let isFiniteResult = scrollLength > 0 && scrollLength > 0;
     if (isFiniteResult) {
       const _Number = Number;
-      isFiniteResult = Number.isFinite(arg2);
+      isFiniteResult = Number.isFinite(scrollLength);
     }
     if (isFiniteResult) {
       const _Number2 = Number;
-      isFiniteResult = Number.isFinite(arg3);
+      isFiniteResult = Number.isFinite(scrollLength);
     }
     if (isFiniteResult) {
       const current = ref3.current;

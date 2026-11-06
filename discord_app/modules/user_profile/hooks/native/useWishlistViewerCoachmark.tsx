@@ -1,7 +1,7 @@
-// === Module 15218: useWishlistViewerCoachmark ===
+// === Module 15212: useWishlistViewerCoachmark ===
 
-// Module 15218 (useWishlistViewerCoachmark)
-import dismissible_content from "dismissible_content" /* 4976 */;
+// Module 15212 (useWishlistViewerCoachmark)
+import dismissible_content from "dismissible_content" /* 5003 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,7 +1,7 @@
 // === Module 1231: UserSettingsProtoStore ===
 
 // Module 1231 (UserSettingsProtoStore)
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -76,7 +76,7 @@ const prototype = UserSettingsProtoStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   closure_0 = arg0;
   if (null != arg0) {
-    const item = _modDef12.forEach(closure_7, (ProtoClass, arg1) => {
+    const item = applyDefault.forEach(closure_7, (ProtoClass, arg1) => {
       const tmp = userSettings[Number(undefined, arg1)];
       if (null != tmp) {
         let str;
@@ -116,7 +116,7 @@ prototype["getState"] = function getState() {
 
 };
 prototype["computeState"] = function computeState() {
-  return _modDef12.mapValues(closure_7, (ProtoClass) => {
+  return applyDefault.mapValues(closure_7, (ProtoClass) => {
     const obj = { proto: user_settings_UserSettingsUtils.protoToB64(ProtoClass.ProtoClass, ProtoClass.proto) };
     if (tmp3) {
       obj.protoToSave = user_settings_UserSettingsUtils.protoToB64(ProtoClass.ProtoClass, ProtoClass.editInfo.protoToSave);
@@ -295,7 +295,7 @@ const userSettingsProtoStore = new UserSettingsProtoStore(DispatcherDefault, {
   CACHE_LOADED: function handleCacheLoaded(userSettings) {
     userSettings = userSettings.userSettings;
     if (null != userSettings) {
-      const item = _modDef12.forEach(closure_7, (ProtoClass, arg1) => {
+      const item = applyDefault.forEach(closure_7, (ProtoClass, arg1) => {
         const tmp = userSettings[Number(undefined, arg1)];
         if (null != tmp) {
           let str;

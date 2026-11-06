@@ -1,21 +1,21 @@
-// === Module 8347: ThreadActionCreators ===
+// === Module 8292: ThreadActionCreators ===
 
-// Module 8347 (ThreadActionCreators)
+// Module 8292 (ThreadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5897 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6096 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8488 */;
-import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8489 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5916 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6116 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8434 */;
+import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8435 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8348 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
-import ThreadSummaryStore from "ThreadSummaryStore" /* 8487 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8293 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
+import ThreadSummaryStore from "ThreadSummaryStore" /* 8433 */;
 
 const require = globalThis.__r;
 
@@ -44,11 +44,11 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
   const obj = DispatcherDefault;
   obj.dispatch({ type: "THREAD_MEMBER_LOCAL_UPDATE", id: id.id, guildId: id.getGuildId(), userId: AuthenticationStore.getId(), isJoining });
 }
-let closure_4 = fn(4996).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8348).PAGE_SIZE;
+let closure_4 = fn(5023).createChannelRecordFromServer;
+const PAGE_SIZE = fn(8293).PAGE_SIZE;
 const Constants = fn(1072);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-const ChannelFlags = fn(4999).ChannelFlags;
+const ChannelFlags = fn(5026).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 

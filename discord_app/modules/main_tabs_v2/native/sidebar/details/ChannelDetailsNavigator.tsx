@@ -1,14 +1,14 @@
-// === Module 19192: ChannelDetailsNavigator ===
+// === Module 19184: ChannelDetailsNavigator ===
 
-// Module 19192 (ChannelDetailsNavigator)
+// Module 19184 (ChannelDetailsNavigator)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HeaderShared from "HeaderShared" /* 9967 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 14243 */;
-import _modDef14611 from "module_14611" /* 14611 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 19193 */;
+import HeaderShared from "HeaderShared" /* 9918 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 14220 */;
+import _modDef14588 from "module_14588" /* 14588 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 19185 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 require = fn;
 function ConnectedCreateThreadHeaderButton(channelId) {
@@ -25,26 +25,26 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
   [][0] = channel;
-  const canStartThread = channel(7585).useCanStartThread(channel);
+  const canStartThread = channel(7530).useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
     const obj2 = { accessibilityLabel: null, onPress: null, source: null };
     const intl = tmp(1113).intl;
     obj2.accessibilityLabel = intl.string(tmp(1113).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef14611;
-    tmp5 = closure_9(tmp(9967).HeaderIconButton, obj2);
+    obj2.source = _modDef14588;
+    tmp5 = closure_9(tmp(9918).HeaderIconButton, obj2);
   }
   return tmp5;
 }
 const View = fn(17).View;
-const constants = fn(10323).ChannelDetailsNavigatorScreens;
+const constants = fn(10275).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SearchNavigatorScreens = fn(19014).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(19003).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = Object.freeze({});
-const NativeStackNavigator = fn(10041);
+const NativeStackNavigator = fn(9992);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
@@ -108,22 +108,19 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
     }
     return tmp2;
   });
-  const rect = channelId(tmp5[20])();
-  const obj4 = { style: null, children: null };
-  const items4 = [channelSettingsScreensStyles.container, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj4.style = items4;
+  const obj4 = { style: channelSettingsScreensStyles.container, children: null };
   const obj5 = { id: "channel-details-navigator", screenOptions: null, initialRouteName: null, children: null };
   const tmp4Result = navigation(source[18]);
   let merged = Object.assign(accessibilityNativeStackOptions);
   obj5.screenOptions = { headerTitle: navigation(source[11]).renderGenericTitle, headerTitleAlign: "center" };
   obj5.initialRouteName = DETAILS;
-  const items5 = [
+  const items4 = [
     closure_9(Screen.Screen, {
       initialParams: { channelId, search, expandTopic },
       name: constants.DETAILS,
       options: { headerShown: false },
       getComponent() {
-        return navigation(source[21]).default;
+        return navigation(source[20]).default;
       }
     }),
     closure_9(Screen.Screen, {
@@ -134,19 +131,19 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
           header(arg0) {
             const obj2 = {};
             const merged = Object.assign(arg0);
-            const obj = route(9967);
+            const obj = route(9918);
             obj2.shouldHandleSafeArea = route(1377).isAndroid();
             return obj.renderHeader(obj2);
           },
           headerTitle() {
-            return closure_2_9(channelId(source[23]), { channelId: route.params.channelId });
+            return closure_2_9(channelId(source[22]), { channelId: route.params.channelId });
           },
           headerLeft: route(source[11]).getRenderBackImage(route.navigation)
         };
         return obj;
       },
       getComponent() {
-        return navigation(source[24]).default;
+        return navigation(source[23]).default;
       }
     }),
   ,
@@ -161,7 +158,7 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
     name: constants.DETAILS,
     options: { headerShown: false },
     getComponent() {
-      return navigation(source[21]).default;
+      return navigation(source[20]).default;
     }
   };
   const obj8 = {
@@ -172,32 +169,32 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
         header(arg0) {
           const obj2 = {};
           const merged = Object.assign(arg0);
-          const obj = route(9967);
+          const obj = route(9918);
           obj2.shouldHandleSafeArea = route(1377).isAndroid();
           return obj.renderHeader(obj2);
         },
         headerTitle() {
-          return closure_2_9(channelId(source[23]), { channelId: route.params.channelId });
+          return closure_2_9(channelId(source[22]), { channelId: route.params.channelId });
         },
         headerLeft: route(source[11]).getRenderBackImage(route.navigation)
       };
       return obj;
     },
     getComponent() {
-      return navigation(source[24]).default;
+      return navigation(source[23]).default;
     }
   };
-  items5[2] = closure_9(Screen.Screen, {
-    name: navigation(source[25]).ConversationNavigatorScreens.FOCUS,
+  items4[2] = closure_9(Screen.Screen, {
+    name: navigation(source[24]).ConversationNavigatorScreens.FOCUS,
     options(arg0) {
       ({ route, navigation } = arg0);
-      return navigation(source[26]).conversationNavigatorFocusHeaderOptions(route, navigation);
+      return navigation(source[25]).conversationNavigatorFocusHeaderOptions(route, navigation);
     },
     getComponent() {
-      return navigation(source[27]).default;
+      return navigation(source[26]).default;
     }
   });
-  items5[3] = closure_9(Screen.Screen, {
+  items4[3] = closure_9(Screen.Screen, {
     name: constants.PINNED_MESSAGES,
     initialParams: { channelId },
     options(navigation) {
@@ -216,10 +213,10 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
       return obj;
     },
     getComponent() {
-      return navigation(source[28]).default;
+      return navigation(source[27]).default;
     }
   });
-  items5[4] = closure_9(Screen.Screen, {
+  items4[4] = closure_9(Screen.Screen, {
     initialParams: { channelId, applicationId },
     name: constants.MUTE,
     options(navigation) {
@@ -238,7 +235,7 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
       return obj;
     },
     getComponent() {
-      return navigation(source[29]).default;
+      return navigation(source[28]).default;
     }
   });
   const obj12 = {};
@@ -263,11 +260,11 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
     return obj;
   };
   obj12.getComponent = function getComponent() {
-    return navigation(source[30]).default;
+    return navigation(source[29]).default;
   };
-  items5[5] = closure_9(Screen.Screen, obj12);
+  items4[5] = closure_9(Screen.Screen, obj12);
   const entries = Object.entries(memo1);
-  items5[6] = entries.map((item) => {
+  items4[6] = entries.map((item) => {
     [tmp, ] = item;
     return closure_1_9(Screen.Screen, {
       name: tmp,
@@ -291,7 +288,8 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
       }
     }, tmp);
   });
-  obj5.children = items5;
+  obj5.children = items4;
   obj4.children = closure_10(Screen.Navigator, obj5);
-  return closure_9(channelSettingsScreensStyles, obj4);
+  const children = closure_9(channelSettingsScreensStyles, obj4);
+  return closure_9(channelId(source[30]), { children });
 });

@@ -1,7 +1,7 @@
-// === Module 12730: components/BottomSheetTextInput ===
+// === Module 12695: components/BottomSheetTextInput ===
 
-// Module 12730 (components/BottomSheetTextInput)
-import BottomSheetTextInput from "BottomSheetTextInput" /* 9215 */;
+// Module 12695 (components/BottomSheetTextInput)
+import BottomSheetTextInput from "BottomSheetTextInput" /* 9161 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/action_sheet/native/components/BottomSheetTextInput.tsx");

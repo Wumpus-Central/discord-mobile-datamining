@@ -1,13 +1,13 @@
-// === Module 8658: InGameMessageNuxSystemMessage ===
+// === Module 8604: InGameMessageNuxSystemMessage ===
 
-// Module 8658 (InGameMessageNuxSystemMessage)
+// Module 8604 (InGameMessageNuxSystemMessage)
 import util from "util" /* 1113 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8557 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8564 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8566 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8568 */;
-import ApplicationStore from "ApplicationStore" /* 2167 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8503 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8510 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8512 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8514 */;
+import ApplicationStore from "ApplicationStore" /* 2162 */;
 
 require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;

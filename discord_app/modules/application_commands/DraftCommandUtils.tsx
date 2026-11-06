@@ -1,9 +1,9 @@
-// === Module 13987: DraftCommandUtils ===
+// === Module 13963: DraftCommandUtils ===
 
-// Module 13987 (DraftCommandUtils)
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6174 */;
-import DraftCommand from "DraftCommand" /* 7847 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10500 */;
+// Module 13963 (DraftCommandUtils)
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 6194 */;
+import DraftCommand from "DraftCommand" /* 7801 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10452 */;
 import size from "module_2" /* 2 */;
 
 const COMMAND_SENTINEL = ChannelAutocompleteConstants.COMMAND_SENTINEL;

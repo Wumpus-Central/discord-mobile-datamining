@@ -1,19 +1,19 @@
-// === Module 7719: LaptopSpotIllustration ===
+// === Module 7672: LaptopSpotIllustration ===
 
-// Module 7719 (LaptopSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7213 */;
-import _modDef7720 from "module_7720" /* 7720 */;
-import _modDef7721 from "module_7721" /* 7721 */;
-import _modDef7722 from "module_7722" /* 7722 */;
+// Module 7672 (LaptopSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7160 */;
+import _modDef7673 from "module_7673" /* 7673 */;
+import _modDef7674 from "module_7674" /* 7674 */;
+import _modDef7675 from "module_7675" /* 7675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7720 }, 3: null };
-let obj2 = { uri: _modDef7720 };
-obj[2] = { uri: _modDef7721 };
-const obj3 = { uri: _modDef7721 };
-obj[3] = { uri: _modDef7722 };
+let obj = { 1: null, 2: { uri: _modDef7673 }, 3: null };
+let obj2 = { uri: _modDef7673 };
+obj[2] = { uri: _modDef7674 };
+const obj3 = { uri: _modDef7674 };
+obj[3] = { uri: _modDef7675 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/LaptopSpotIllustration.native.tsx");
 

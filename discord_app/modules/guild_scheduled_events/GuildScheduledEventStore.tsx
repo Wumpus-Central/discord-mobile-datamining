@@ -1,11 +1,11 @@
-// === Module 6993: GuildScheduledEventStore ===
+// === Module 6935: GuildScheduledEventStore ===
 
-// Module 6993 (GuildScheduledEventStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6935 (GuildScheduledEventStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
 
 function scheduledEventSort(status) {
   ({ id, scheduled_start_time } = status);
@@ -168,7 +168,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
-const GuildScheduledEventsConstants = fn(4998);
+const GuildScheduledEventsConstants = fn(5025);
 ({ GuildScheduledEventStatus: closure_4, GuildScheduledEventStatusDone: hasOwnProperty, GuildScheduledEventUserResponses: closure_6 } = GuildScheduledEventsConstants);
 const StaticGuildEventIndexes = {
   EVENT: "event",
@@ -193,7 +193,7 @@ const StaticGuildEventIndexes = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   }
 };
-const secondaryIndexMap = new fn(5070).SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(5097).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
   items = [guild_id];
   if (null != entity_id) {
@@ -439,7 +439,7 @@ const guildScheduledEventStore = new GuildScheduledEventStore(DispatcherDefault,
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guildScheduledEvents.guildId), true);
     const mapped = values.map((id) => id.id);
     const mapped1 = guildScheduledEvents.map((id) => id.id);
-    obj = _modDef12;
+    obj = applyDefault;
     const item = obj.difference(mapped, mapped1).forEach((item) => {
       set.delete(item);
       delete tmp[tmp2];

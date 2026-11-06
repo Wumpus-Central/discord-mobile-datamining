@@ -1,36 +1,36 @@
-// === Module 19944: TelecomManager ===
+// === Module 19951: TelecomManager ===
 
-// Module 19944 (TelecomManager)
+// Module 19951 (TelecomManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6053 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6844 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7629 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8084 */;
-import SoundUtils from "SoundUtils" /* 11219 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 12121 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 12126 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 16652 */;
-import NativeTelecomModuleDefault from "NativeTelecomModule" /* 19945 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6073 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6786 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7574 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8030 */;
+import SoundUtils from "SoundUtils" /* 11174 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 12090 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 12095 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 16649 */;
+import NativeTelecomModuleDefault from "NativeTelecomModule" /* 19952 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundpackStore from "SoundpackStore" /* 11220 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6852 */;
+import SoundpackStore from "SoundpackStore" /* 11175 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6794 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6707 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import MediaEngineStore from "MediaEngineStore" /* 2135 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 11200 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5901 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
-import StreamerModeStore from "StreamerModeStore" /* 5198 */;
+import CallStore from "CallStore" /* 6649 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import MediaEngineStore from "MediaEngineStore" /* 2130 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 11155 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
+import StreamerModeStore from "StreamerModeStore" /* 5225 */;
 import UserStore from "UserStore" /* 1385 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ DeviceEventEmitter: closure_4, NativeEventEmitter } = get_ActivityIndicator);
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(5905).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5924).MediaEngineContextTypes;
 let c18 = "telecom-end-call-requested";
 let c19 = "telecom-set-foreground-requested";
 let c20 = "telecom-mic-mute-requested";
@@ -360,9 +360,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
       const obj3 = { guildId };
       tmp19 = obj3;
     }
-    const obj4 = self(19945);
-    const reportIncomingCallResult = self(19945).reportIncomingCall(channelId, channelName, tmp19);
-    self(19945).reportIncomingCall(channelId, channelName, tmp19).then((result) => {
+    const obj4 = self(19952);
+    const reportIncomingCallResult = self(19952).reportIncomingCall(channelId, channelName, tmp19);
+    self(19952).reportIncomingCall(channelId, channelName, tmp19).then((result) => {
       if (!result) {
         obj.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -371,7 +371,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
       obj.warn("Failed to report incoming call:", error);
       self.clearCall(closure_0);
     });
-    const nextPromise = self(19945).reportIncomingCall(channelId, channelName, tmp19).then((result) => {
+    const nextPromise = self(19952).reportIncomingCall(channelId, channelName, tmp19).then((result) => {
       if (!result) {
         obj.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -385,7 +385,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(19945);
+  obj = self(19952);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj.cancelIncomingCall(channelId).then(() => {
     self.clearCall(closure_0);
@@ -805,7 +805,7 @@ prototype["startCall"] = function startCall(arg0) {
 prototype["endCall"] = function endCall(channelId) {
   const self = this;
   obj.info("Ending call:", channelId.channelId);
-  obj = self(19945);
+  obj = self(19952);
   const endCallResult = obj.endCall(channelId.channelId);
   return obj.endCall(channelId.channelId).then((result) => {
     self.clearCall(channelId.channelId);
@@ -958,7 +958,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(19945);
+            obj = self(19952);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

@@ -1,6 +1,6 @@
-// === Module 19693: useFormattedEndTime ===
+// === Module 19699: useFormattedEndTime ===
 
-// Module 19693 (useFormattedEndTime)
+// Module 19699 (useFormattedEndTime)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserStore from "UserStore" /* 1385 */;

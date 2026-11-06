@@ -11,11 +11,11 @@ import DesignIds from "DesignIds" /* 1356 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1376 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import DeviceUtils from "DeviceUtils" /* 5100 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6679 */;
-import MetricEvents from "MetricEvents" /* 6683 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 16223 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 16224 */;
+import DeviceUtils from "DeviceUtils" /* 5127 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6620 */;
+import MetricEvents from "MetricEvents" /* 6624 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 16220 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 16221 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -553,8 +553,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6678).increment(obj6, true);
-  const tmp26Result = tmp26(6678);
+  tmp26(6619).increment(obj6, true);
+  const tmp26Result = tmp26(6619);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1072);
@@ -634,7 +634,7 @@ export function initSentry() {
           if (tmp15Result14.isAndroid()) {
             str2 = "android";
           }
-          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35420400000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@354.4.0-2+354204", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35420500000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@354.5.0-2+354205", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -665,7 +665,7 @@ export function initSentry() {
           };
           tmp15Result13.init(obj3);
           const tmp15Result16 = _mod674;
-          _mod674.setTag("buildNumber", "35420400000000");
+          _mod674.setTag("buildNumber", "35420500000000");
           const tmp15Result17 = _mod674;
           _mod674.setTag("appVersion", constants.Version);
           const tmp15Result18 = _mod674;

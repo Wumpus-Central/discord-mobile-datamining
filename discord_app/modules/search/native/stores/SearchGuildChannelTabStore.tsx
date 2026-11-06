@@ -1,14 +1,14 @@
-// === Module 14144: SearchGuildChannelTabStore ===
+// === Module 14121: SearchGuildChannelTabStore ===
 
-// Module 14144 (SearchGuildChannelTabStore)
+// Module 14121 (SearchGuildChannelTabStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _mod12 from "module_12" /* 12 */;
+import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6917 */;
-import autocompleter_AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 7035 */;
-import GuildChannelStore from "GuildChannelStore" /* 5073 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6859 */;
+import autocompleter_AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 6977 */;
+import GuildChannelStore from "GuildChannelStore" /* 5100 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
 import size from "module_2" /* 2 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -52,7 +52,7 @@ prototype["search"] = function search(query, guildId) {
   obj7.boosters = boosterMap1;
   this.voiceChannels = AutocompleteUtilsDefault.queryChannels(obj7).map((channel) => ({ channel: channel.record }));
   const queryChannelsResult1 = AutocompleteUtilsDefault.queryChannels(obj7);
-  const mapped = _mod12.chain(queryChannelsResult).map((channel) => {
+  const mapped = apply.chain(queryChannelsResult).map((channel) => {
     const obj = { channel: channel.record, lastMessageId: null };
     let lastMessageId = ReadStateStore.lastMessageId(channel.record.id);
     if (lastMessageId == null) {
@@ -61,7 +61,7 @@ prototype["search"] = function search(query, guildId) {
     obj.lastMessageId = lastMessageId;
     return obj;
   });
-  const chainResult = _mod12.chain(queryChannelsResult);
+  const chainResult = apply.chain(queryChannelsResult);
   this.textChannels = mapped.sort((lastMessageId, lastMessageId2) => SnowflakeUtilsDefault.compare(lastMessageId2.lastMessageId, lastMessageId.lastMessageId)).value();
   if (query.length > 0) {
     self.count = self.textChannels.length + self.voiceChannels.length;

@@ -1,6 +1,6 @@
-// === Module 10859: redirectToSlayerStorefrontWeb ===
+// === Module 10811: redirectToSlayerStorefrontWeb ===
 
-// Module 10859 (redirectToSlayerStorefrontWeb)
+// Module 10811 (redirectToSlayerStorefrontWeb)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

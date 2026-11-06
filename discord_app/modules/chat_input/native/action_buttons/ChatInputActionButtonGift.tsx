@@ -1,23 +1,23 @@
-// === Module 14037: ChatInputActionButtonGift ===
+// === Module 14013: ChatInputActionButtonGift ===
 
-// Module 14037 (ChatInputActionButtonGift)
+// Module 14013 (ChatInputActionButtonGift)
 import nativeDefault from "native" /* 575 */;
-import dismissible_content from "dismissible_content" /* 4976 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4977 */;
+import dismissible_content from "dismissible_content" /* 5003 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 5004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
-import PromotionsStore from "PromotionsStore" /* 9782 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import PromotionsStore from "PromotionsStore" /* 9732 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(13035).ChatInputActionType;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ChatInputActionType = fn(13000).ChatInputActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { gradientContainerRefresh: null, transparentBackground: null };
   const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
@@ -73,9 +73,12 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
   if (stateFromStores1 != null) {
     boxAnimationUrl = stateFromStores1.boxAnimationUrl;
   }
-  let trinketAnimationUrl;
   if (stateFromStores1 != null) {
-    trinketAnimationUrl = stateFromStores1.trinketAnimationUrl;
+    const trinketAnimationUrl = stateFromStores1.trinketAnimationUrl;
+  }
+  let prop;
+  if (stateFromStores1 != null) {
+    prop = stateFromStores1.trinketRiveAnimationUrl;
   }
   let gradient;
   if (stateFromStores1 != null) {
@@ -85,33 +88,37 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
   const isNullOrEmptyResult = require("StringUtils").isNullOrEmpty(boxAnimationUrl);
   let tmp12 = !isNullOrEmptyResult;
   const tmp2Result = require("StringUtils");
-  const isNullOrEmptyResult1 = require("StringUtils").isNullOrEmpty(trinketAnimationUrl);
-  let tmp31Result = !isNullOrEmptyResult1;
-  if (!isNullOrEmptyResult1) {
-    tmp31Result = !tmp12;
+  let isNullOrEmptyResult1 = require("StringUtils").isNullOrEmpty(prop);
+  if (isNullOrEmptyResult1) {
+    isNullOrEmptyResult1 = require("StringUtils").isNullOrEmpty(trinketAnimationUrl);
+    const tmp2Result5 = require("StringUtils");
   }
+  if (!isNullOrEmptyResult1) {
+    isNullOrEmptyResult1 = tmp12;
+  }
+  let tmp31Result = !isNullOrEmptyResult1;
   const GiftingPromoMobileButtonAnimationDismissHoldoutExperiment = require("GiftingPromoMobileButtonAnimationDismissHoldoutExperiment").GiftingPromoMobileButtonAnimationDismissHoldoutExperiment;
   inHoldout = GiftingPromoMobileButtonAnimationDismissHoldoutExperiment.useConfig({ location: "ChatInputActionButtonGift" }).inHoldout;
   const tmp15 = stateFromStores1;
-  const tmp2Result3 = require("StringUtils");
+  const tmp2Result4 = require("StringUtils");
   [tmp17, c6] = stateFromStores1(stateFromStores2.useState(false), 2);
   const tmp16 = stateFromStores1(stateFromStores2.useState(false), 2);
   if (!isNullOrEmptyResult) {
-    let prop = null;
+    let prop1 = null;
     if (!tmp17) {
-      prop = require("dismissible_content").DismissibleContent.GIFTING_PROMOTION_ICON;
+      prop1 = require("dismissible_content").DismissibleContent.GIFTING_PROMOTION_ICON;
     }
   } else {
-    prop = null;
+    prop1 = null;
   }
-  const tmp15Result = tmp15(require("useSelectedDismissibleContent").useSelectedSnowflakeBoundDismissibleContent(prop, stateFromStores2, undefined, true), 2);
+  const tmp15Result = tmp15(require("useSelectedDismissibleContent").useSelectedSnowflakeBoundDismissibleContent(prop1, stateFromStores2, undefined, true), 2);
   closure_7 = tmp20;
   const tmp21 = tmp15Result[0] === require("dismissible_content").DismissibleContent.GIFTING_PROMOTION_ICON;
   if (!isNullOrEmptyResult) {
     tmp12 = tmp21;
   }
   closure_8 = tmp12;
-  if (tmp31Result) {
+  if (!isNullOrEmptyResult1) {
     tmp31Result = tmp21;
   }
   closure_9 = tmp31Result;
@@ -204,7 +211,7 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
   }
   const items8 = [tmp25Result, ];
   if (tmp31Result) {
-    const obj10 = { trinketsAnimationUrl: trinketAnimationUrl };
+    const obj10 = { trinketsAnimationUrl: trinketAnimationUrl, trinketsRiveAnimationUrl: prop };
     tmp31Result = tmp31(require("GiftIconTrinketsAnimation").GiftIconTrinketsAnimation, obj10);
   }
   items8[1] = tmp31Result;

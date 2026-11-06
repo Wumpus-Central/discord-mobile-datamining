@@ -1,8 +1,8 @@
-// === Module 11290: serializeAppStartLogs ===
+// === Module 11245: serializeAppStartLogs ===
 
-// Module 11290 (serializeAppStartLogs)
-import _modDef12 from "module_12" /* 12 */;
-import ThreadUtils from "ThreadUtils" /* 8492 */;
+// Module 11245 (serializeAppStartLogs)
+import applyDefault from "apply" /* 12 */;
+import ThreadUtils from "ThreadUtils" /* 8438 */;
 import size from "module_2" /* 2 */;
 
 function getDisplayName(tag) {
@@ -39,7 +39,7 @@ export default function serializeAppStartLogs(arg0) {
     ({ index, timestamp, logs, nativeLogs, serverTrace } = item);
     let tmp = timestamp;
     if (0 === index) {
-      const found = _modDef12.find(logs, (log) => {
+      const found = applyDefault.find(logs, (log) => {
         log = log.log;
         return log.indexOf("Logger loaded") >= 0;
       });
@@ -217,11 +217,11 @@ export default function serializeAppStartLogs(arg0) {
       obj.log = "" + str3 + timestamp.prefix + timestamp.log + "\n";
       return obj;
     });
-    num2 = _modDef12.max(mapped.map((totalTime) => totalTime.totalTime.length));
+    num2 = applyDefault.max(mapped.map((totalTime) => totalTime.totalTime.length));
     if (num2 == null) {
       num2 = 0;
     }
-    num3 = _modDef12.max(mapped.map((deltaTime) => deltaTime.deltaTime.length));
+    num3 = applyDefault.max(mapped.map((deltaTime) => deltaTime.deltaTime.length));
     if (num3 == null) {
       num3 = 0;
     }

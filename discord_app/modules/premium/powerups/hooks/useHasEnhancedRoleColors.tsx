@@ -1,7 +1,7 @@
-// === Module 6178: useHasEnhancedRoleColors ===
+// === Module 6198: useHasEnhancedRoleColors ===
 
-// Module 6178 (useHasEnhancedRoleColors)
-import GuildStore from "GuildStore" /* 5014 */;
+// Module 6198 (useHasEnhancedRoleColors)
+import GuildStore from "GuildStore" /* 5041 */;
 
 const require = globalThis.__r;
 

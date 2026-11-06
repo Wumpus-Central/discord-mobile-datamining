@@ -1,9 +1,9 @@
-// === Module 18841: ICYMIInfoModal ===
+// === Module 18829: ICYMIInfoModal ===
 
-// Module 18841 (ICYMIInfoModal)
+// Module 18829 (ICYMIInfoModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import NavigatorHeader from "NavigatorHeader" /* 7142 */;
-import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 18842 */;
+import NavigatorHeader from "NavigatorHeader" /* 7089 */;
+import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 18830 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,12 +17,12 @@ export default function ICYMIInfoModal(extendedOnboarding) {
   closure_129_0 = extendedOnboarding;
   closure_129_1 = skipIntro;
   items = [extendedOnboarding, skipIntro];
-  const navigatorScreens = extendedOnboarding(7309).useNavigatorScreens(() => {
+  const navigatorScreens = extendedOnboarding(7256).useNavigatorScreens(() => {
     let obj = {};
     const obj2 = {
       headerLeft: NavigatorHeader.getHeaderCloseButton(),
       render() {
-        return jsx(skipIntro(18843), { extendedOnboarding });
+        return jsx(skipIntro(18831), { extendedOnboarding });
       },
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_OVERVIEW,
       impressionProperties: { extended_onboarding: extendedOnboarding }
@@ -30,7 +30,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
     obj[ICYMIInfoModalTypes.ICYMIInfoScreens.DEFAULT] = obj2;
     const obj5 = NavigatorHeader;
     if (skipIntro) {
-      let headerCloseButton = obj5.getHeaderCloseButton(() => skipIntro(6882).popWithKey(extendedOnboarding(18842).ICYMI_INFO_MODAL_KEY));
+      let headerCloseButton = obj5.getHeaderCloseButton(() => skipIntro(6824).popWithKey(extendedOnboarding(18830).ICYMI_INFO_MODAL_KEY));
     } else {
       headerCloseButton = obj5.getHeaderBackButton();
     }
@@ -44,16 +44,16 @@ export default function ICYMIInfoModal(extendedOnboarding) {
           const intl = extendedOnboarding(1113).intl;
           obj.text = intl.string(extendedOnboarding(1113).t["5Wxrcd"]);
           obj.onPress = function onPress() {
-            const ICYMIAnalytics = extendedOnboarding(16490).ICYMIAnalytics;
+            const ICYMIAnalytics = extendedOnboarding(16487).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
-            closure_1_1(6882).pop();
+            closure_1_1(6824).pop();
           };
-          tmp = jsx(extendedOnboarding(7700).HeaderActionButton, { text: null, onPress: null });
+          tmp = jsx(extendedOnboarding(7653).HeaderActionButton, { text: null, onPress: null });
         }
         return tmp;
       },
       render() {
-        return closure_1_4(skipIntro(18851), {});
+        return closure_1_4(skipIntro(18839), {});
       },
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
@@ -67,16 +67,16 @@ export default function ICYMIInfoModal(extendedOnboarding) {
           const intl = extendedOnboarding(1113).intl;
           obj.text = intl.string(extendedOnboarding(1113).t["5Wxrcd"]);
           obj.onPress = function onPress() {
-            const ICYMIAnalytics = extendedOnboarding(16490).ICYMIAnalytics;
+            const ICYMIAnalytics = extendedOnboarding(16487).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
-            closure_1_1(6882).pop();
+            closure_1_1(6824).pop();
           };
-          tmp = jsx(extendedOnboarding(7700).HeaderActionButton, { text: null, onPress: null });
+          tmp = jsx(extendedOnboarding(7653).HeaderActionButton, { text: null, onPress: null });
         }
         return tmp;
       },
       render() {
-        return closure_1_4(skipIntro(18851), {});
+        return closure_1_4(skipIntro(18839), {});
       },
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
@@ -86,14 +86,14 @@ export default function ICYMIInfoModal(extendedOnboarding) {
       const intl = extendedOnboarding(1113).intl;
       obj.text = intl.string(extendedOnboarding(1113).t["5Wxrcd"]);
       obj.onPress = function onPress() {
-        const ICYMIAnalytics = extendedOnboarding(16490).ICYMIAnalytics;
+        const ICYMIAnalytics = extendedOnboarding(16487).ICYMIAnalytics;
         const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "guilds" });
-        closure_1_1(6882).pop();
+        closure_1_1(6824).pop();
       };
-      return closure_1_4(extendedOnboarding(7700).HeaderActionButton, obj);
+      return closure_1_4(extendedOnboarding(7653).HeaderActionButton, obj);
     };
     obj7.render = function render() {
-      return closure_1_4(skipIntro(18857), {});
+      return closure_1_4(skipIntro(18845), {});
     };
     obj7.impressionName = discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_SELECT_GUILDS;
     obj[ICYMIInfoModalTypes.ICYMIInfoScreens.JOIN_GUILDS] = obj7;
@@ -102,12 +102,12 @@ export default function ICYMIInfoModal(extendedOnboarding) {
   let items1 = [extendedOnboarding, skipIntro];
   if (extendedOnboarding) {
     let obj2 = { screens: navigatorScreens, steps: tmp4, initialRouteName: null };
-    let ICYMIInfoScreens = tmp(18842).ICYMIInfoScreens;
+    let ICYMIInfoScreens = tmp(18830).ICYMIInfoScreens;
     obj2.initialRouteName = skipIntro ? ICYMIInfoScreens.TOPICS_CLOUD : ICYMIInfoScreens.DEFAULT;
-    jsx(tmp(13458).StepModal, { screens: navigatorScreens, steps: tmp4, initialRouteName: null });
+    jsx(tmp(13433).StepModal, { screens: navigatorScreens, steps: tmp4, initialRouteName: null });
   } else {
-    let obj3 = { screens: navigatorScreens, initialRouteName: tmp(18842).ICYMIInfoScreens.DEFAULT };
-    return jsx(tmp(11679).Modal, { screens: navigatorScreens, initialRouteName: tmp(18842).ICYMIInfoScreens.DEFAULT });
+    let obj3 = { screens: navigatorScreens, initialRouteName: tmp(18830).ICYMIInfoScreens.DEFAULT };
+    return jsx(tmp(11645).Modal, { screens: navigatorScreens, initialRouteName: tmp(18830).ICYMIInfoScreens.DEFAULT });
   }
-  let obj = extendedOnboarding(7309);
+  let obj = extendedOnboarding(7256);
 };

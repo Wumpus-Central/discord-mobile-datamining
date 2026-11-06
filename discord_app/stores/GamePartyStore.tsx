@@ -1,12 +1,12 @@
-// === Module 15377: GamePartyStore ===
+// === Module 15372: GamePartyStore ===
 
-// Module 15377 (GamePartyStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 15372 (GamePartyStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6708 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6650 */;
 
 function updateParty(id, id2, activities, status) {
   const found = activities.find((party) => {
@@ -50,7 +50,7 @@ function updateParty(id, id2, activities, status) {
                 map.delete(tmp9);
               }
             }
-            obj3 = _modDef12;
+            obj3 = applyDefault;
           }
         }
       }
@@ -97,7 +97,7 @@ function updateParty(id, id2, activities, status) {
           flag3 = true;
         }
       }
-      obj9 = _modDef12;
+      obj9 = applyDefault;
     }
   }
   return flag3;
@@ -127,7 +127,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   if (null == dependencyMap[relationship.id]) {
     return false;
   } else {
-    const values = _modDef12.values(tmp);
+    const values = applyDefault.values(tmp);
     for (const item10025 of values) {
       value = map.get(item10025);
       let obj3 = value;
@@ -272,7 +272,7 @@ const gamePartyStore = new GamePartyStore(DispatcherDefault, {
     if (null == dependencyMap[relationship.id]) {
       return false;
     } else {
-      const values = _modDef12.values(tmp);
+      const values = applyDefault.values(tmp);
       for (const item10017 of values) {
         value = map.get(item10017);
         let obj2 = value;

@@ -1,20 +1,20 @@
-// === Module 17481: ResubscribedAlert ===
+// === Module 17470: ResubscribedAlert ===
 
-// Module 17481 (ResubscribedAlert)
+// Module 17470 (ResubscribedAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import common_AlertDefault from "common/Alert" /* 6168 */;
-import _modDef17482 from "module_17482" /* 17482 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import common_AlertDefault from "common/Alert" /* 6188 */;
+import _modDef17471 from "module_17471" /* 17471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, body: { alignItems: "center", textAlign: "center" }, centerText: { textAlign: "center" }, headerImage: { width: 87, height: 87 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,7 +30,7 @@ export default function ResubscribedAlert(onClose) {
   const obj2 = { style: tmp.body, children: null };
   const obj3 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj3.source = _modDef17482;
+  obj3.source = _modDef17471;
   obj3.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj3), React4(native.Spacer, { size: 27 }), , , ];
   const obj4 = { variant: "body-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };

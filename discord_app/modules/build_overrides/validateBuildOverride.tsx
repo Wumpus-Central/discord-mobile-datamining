@@ -1,7 +1,7 @@
-// === Module 15364: validateBuildOverride ===
+// === Module 15358: validateBuildOverride ===
 
-// Module 15364 (validateBuildOverride)
-import _modDef12 from "module_12" /* 12 */;
+// Module 15358 (validateBuildOverride)
+import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -107,7 +107,7 @@ export default function validateBuildOverride(targetBuildOverride, items3, Versi
         }
         obj8 = { valid: true };
       }
-      obj12 = _modDef12;
+      obj12 = applyDefault;
     }
   }
   const obj9 = { valid: false, reason: null };

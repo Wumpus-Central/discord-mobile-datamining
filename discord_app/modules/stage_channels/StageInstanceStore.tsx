@@ -1,9 +1,9 @@
-// === Module 4997: StageInstanceStore ===
+// === Module 5024: StageInstanceStore ===
 
-// Module 4997 (StageInstanceStore)
+// Module 5024 (StageInstanceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4998 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 5025 */;
 import size from "module_2" /* 2 */;
 
 function handleStageInstanceCreateOrUpdate(instance) {

@@ -1,21 +1,21 @@
-// === Module 16833: UserProfilePremiumTryItOutUpsell ===
+// === Module 16818: UserProfilePremiumTryItOutUpsell ===
 
-// Module 16833 (UserProfilePremiumTryItOutUpsell)
+// Module 16818 (UserProfilePremiumTryItOutUpsell)
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5773 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 16799 */;
+import spring_spring from "spring/spring" /* 5791 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 16795 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7515).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7460).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let closure_5 = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_6 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 }, card: { marginHorizontal: PROFILE_SIDE_PADDING - UserProfileUpsellCardV2.GRADIENT_BORDER_WIDTH } };
   return obj;

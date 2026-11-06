@@ -1,6 +1,6 @@
-// === Module 14042: ChatInputCover ===
+// === Module 14019: ChatInputCover ===
 
-// Module 14042 (ChatInputCover)
+// Module 14019 (ChatInputCover)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

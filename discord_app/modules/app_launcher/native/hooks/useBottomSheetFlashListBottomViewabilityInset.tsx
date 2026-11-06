@@ -1,9 +1,9 @@
-// === Module 12652: useBottomSheetFlashListBottomViewabilityInset ===
+// === Module 12617: useBottomSheetFlashListBottomViewabilityInset ===
 
-// Module 12652 (useBottomSheetFlashListBottomViewabilityInset)
-import _modDef12 from "module_12" /* 12 */;
+// Module 12617 (useBottomSheetFlashListBottomViewabilityInset)
+import applyDefault from "apply" /* 12 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11443 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11405 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ export function useBottomSheetFlashListBottomViewabilityInset() {
   const diff = useWindowDimensionsDefault().height - useKeyboardActionSheetHeightDefault().maximum;
   const bottomVisibilityInsetRef = noop.useRef(9999);
   importDefault = bottomVisibilityInsetRef;
-  const memo = noop.useMemo(() => _modDef12.debounce(function _handleBottomViewabilityInset(current) {
+  const memo = noop.useMemo(() => applyDefault.debounce(function _handleBottomViewabilityInset(current) {
     _undefined.current = current;
     current = ref.current;
     if (current != null) {

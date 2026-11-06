@@ -1,11 +1,11 @@
-// === Module 10790: useFetchCollectiblesCategoriesAndPurchases ===
+// === Module 10742: useFetchCollectiblesCategoriesAndPurchases ===
 
-// Module 10790 (useFetchCollectiblesCategoriesAndPurchases)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7864 */;
-import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10791 */;
+// Module 10742 (useFetchCollectiblesCategoriesAndPurchases)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7818 */;
+import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10743 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5364 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7880 */;
+import ExperimentStore from "ExperimentStore" /* 5384 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7834 */;
 
 require = fn;
 function useFetchPurchases() {

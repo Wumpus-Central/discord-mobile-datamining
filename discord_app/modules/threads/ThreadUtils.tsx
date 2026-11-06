@@ -1,18 +1,18 @@
-// === Module 8492: ThreadUtils ===
+// === Module 8438: ThreadUtils ===
 
-// Module 8492 (ThreadUtils)
+// Module 8438 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef2171 from "module_2171" /* 2171 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5897 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7422 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7823 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8481 */;
+import _modDef2166 from "module_2166" /* 2166 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5916 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7369 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7777 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8427 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6913 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
 
 const require = globalThis.__r;
 
@@ -127,8 +127,8 @@ export function useLastMessageTimestamp(thread) {
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef2171(createTimestamp).valueOf();
-    const obj3 = _modDef2171(createTimestamp);
+    valueOfResult = _modDef2166(createTimestamp).valueOf();
+    const obj3 = _modDef2166(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

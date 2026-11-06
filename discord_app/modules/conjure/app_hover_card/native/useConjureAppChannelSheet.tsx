@@ -1,15 +1,15 @@
-// === Module 14640: useConjureAppChannelSheet ===
+// === Module 14617: useConjureAppChannelSheet ===
 
-// Module 14640 (useConjureAppChannelSheet)
+// Module 14617 (useConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import _modDef3995 from "module_3995" /* 3995 */;
-import UserUtils from "UserUtils" /* 5197 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11536 */;
+import _modDef4024 from "module_4024" /* 4024 */;
+import UserUtils from "UserUtils" /* 5224 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11498 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
 
 require = fn;
 function ConjureAppSheetIcon(application) {
@@ -33,7 +33,7 @@ function ConjureAppSheetIcon(application) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { icon: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;
@@ -97,7 +97,7 @@ export default function useConjureAppChannelSheet(guild_id, arg1) {
       if (null != creator) {
         const intl = util.intl;
         const obj3 = { name: UserUtils.getName(tmp5) };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef3995["6/x9LD"], obj3);
+        formatToPlainStringResult = intl.formatToPlainString(_modDef4024["6/x9LD"], obj3);
       }
       obj.subtitle = formatToPlainStringResult;
       tmp2 = obj;

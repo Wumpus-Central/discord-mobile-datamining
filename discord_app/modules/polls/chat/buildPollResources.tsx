@@ -1,8 +1,8 @@
-// === Module 12775: buildPollResources ===
+// === Module 12740: buildPollResources ===
 
-// Module 12775 (buildPollResources)
-import buildPlatformPollResources from "buildPlatformPollResources" /* 12771 */;
-import apply from "module_12" /* 12 */;
+// Module 12740 (buildPollResources)
+import buildPlatformPollResources from "buildPlatformPollResources" /* 12736 */;
+import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/polls/chat/buildPollResources.tsx");

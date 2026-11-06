@@ -1,8 +1,8 @@
-// === Module 14211: DragAndDropUtils ===
+// === Module 14188: DragAndDropUtils ===
 
-// Module 14211 (DragAndDropUtils)
+// Module 14188 (DragAndDropUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 
 function calculatePositionDeltas(arg0) {
   ({ oldOrdering, newOrdering, idGetter, existingPositionGetter, ascending } = arg0);
@@ -63,7 +63,7 @@ function getPositionUpdates(arg0) {
   }
   let values = objectArray;
   if (!Array.isArray(objectArray)) {
-    values = _modDef12.values(objectArray);
+    values = applyDefault.values(objectArray);
   }
   const obj2 = { oldOrdering: values, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: null };
   items = [...values];

@@ -1,25 +1,25 @@
-// === Module 19504: useControllerPIPState ===
+// === Module 19496: useControllerPIPState ===
 
-// Module 19504 (useControllerPIPState)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5064 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9112 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19458 */;
-import useSelfHasVideoDefault from "useSelfHasVideo" /* 19506 */;
-import calculatePIPStateDefault from "calculatePIPState" /* 19507 */;
+// Module 19496 (useControllerPIPState)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5091 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9058 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19450 */;
+import useSelfHasVideoDefault from "useSelfHasVideo" /* 19498 */;
+import calculatePIPStateDefault from "calculatePIPState" /* 19499 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
-import FramesStore from "FramesStore" /* 6984 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15888 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
+import FramesStore from "FramesStore" /* 6926 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15882 */;
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19508);
+const useExternalPipSelectedTileDefault = tmp6(19500);
 require = fn;
-const VoicePanelModes = fn(11419).VoicePanelModes;
-const ActivityPanelModes = fn(5793).ActivityPanelModes;
-const asLaunched = fn(6985).asLaunched;
+const VoicePanelModes = fn(11381).VoicePanelModes;
+const ActivityPanelModes = fn(5811).ActivityPanelModes;
+const asLaunched = fn(6927).asLaunched;
 let closure_12 = { code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})" };
 let closure_13 = { code: "(function useControllerPIPStateTsx2(current){let[clampPIPScale,pipState,scale]=this.__closure;const newScale=clampPIPScale({scale:current.scale,width:pipState.width,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,windowDimensions:current.windowDimensions,safeArea:current.safeArea,pipAvoidanceSpecs:current.pipAvoidanceSpecs});if(current.scale!==newScale){scale.set(newScale);}})" };
 const size = fn(2);
@@ -37,7 +37,7 @@ export function useControllerPIPState(channelId) {
   ({ windowDimensions, pipAvoidanceSpecs, safeArea } = channelId);
   let obj = require("module_1652");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
-  const ref = noop.useRef({ id: "displayName", mode: "isArray", width: false, height: null, containerHeight: 0, showSecondaryPIP: false, scale: sharedValue });
+  const ref = noop.useRef({ id: "disabled", mode: "isArray", width: false, height: null, containerHeight: 0, showSecondaryPIP: null, scale: sharedValue });
   const obj2 = require("VoicePanelPIPScaleCache");
   items = [PIPSpeakerStore];
   closure_129_0 = channelId;

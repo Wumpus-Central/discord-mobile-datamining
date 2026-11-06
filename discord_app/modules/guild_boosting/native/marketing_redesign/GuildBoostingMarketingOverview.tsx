@@ -1,11 +1,11 @@
-// === Module 7707: GuildBoostingMarketingOverview ===
+// === Module 7660: GuildBoostingMarketingOverview ===
 
-// Module 7707 (GuildBoostingMarketingOverview)
+// Module 7660 (GuildBoostingMarketingOverview)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7728 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7682 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildStore from "GuildStore" /* 5041 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
@@ -35,7 +35,7 @@ export default function GuildBoostingMarketingOverview(guildId) {
   const analyticsLocations = guildBoostSlots(tmp3[11])().analyticsLocations;
   const tmp9 = navigation(analyticsLocations.useState(false), 2);
   closure_5 = tmp9[1];
-  const tmp2Result3 = guildId(stateFromStores[10]);
+  const tmp2Result4 = guildId(stateFromStores[10]);
   [GuildStore, UserStore] = navigation(analyticsLocations.useState(0), 2);
   analyticsLocations.useRef(false);
   const tmp11 = guildBoostSlots(stateFromStores[12])(() => Date.now());
@@ -49,6 +49,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   } else {
     UNSPECIFIED = tmp2(tmp3[14]).PremiumSubscriptionGroupRole.UNSPECIFIED;
   }
+  const tmp2Result5 = guildId(stateFromStores[9]);
+  const triggeredLayoutTransition = guildId(stateFromStores[15]).useTriggeredLayoutTransition();
+  const layout = triggeredLayoutTransition.layout;
   const items2 = [navigation, guildBoostSlots, ];
   let name;
   if (stateFromStores != null) {
@@ -75,15 +78,15 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items2);
   const items3 = [guildId, analyticsLocations, tmp11];
   const effect = obj4.useEffect(() => () => {
-    const obj = guildBoostSlots(stateFromStores[15]);
+    const obj = guildBoostSlots(stateFromStores[16]);
     obj.track(constants.MODAL_DISMISSED, { type: constants2.PREMIUM_GUILD_USER_MODAL, location_stack, guild_id, duration_open_ms: Date.now() - closure_1_9 });
   }, items3);
   const effect1 = obj4.useEffect(() => {
-    const premiumSubscriptionPlans = guildId(stateFromStores[16]).fetchPremiumSubscriptionPlans();
-    const obj = guildId(stateFromStores[16]);
-    const paymentSources = guildId(stateFromStores[17]).fetchPaymentSources();
+    const premiumSubscriptionPlans = guildId(stateFromStores[17]).fetchPremiumSubscriptionPlans();
+    const obj = guildId(stateFromStores[17]);
+    const paymentSources = guildId(stateFromStores[18]).fetchPaymentSources();
   }, []);
-  let tmp18 = null;
+  let tmp19 = null;
   if (null != stateFromStores) {
     let obj2 = { children: null };
     const obj3 = {
@@ -116,20 +119,21 @@ export default function GuildBoostingMarketingOverview(guildId) {
       fractionalPremiumInfo: tmp12,
       premiumGroupRole: UNSPECIFIED
     };
-    const items4 = [closure_10(tmp8(tmp3[19]), obj5), , , , , ];
+    const items4 = [closure_10(tmp8(tmp3[20]), obj5), , , ];
     const obj6 = { guild: stateFromStores };
-    items4[1] = closure_10(tmp8(tmp3[20]), obj6);
-    const obj7 = { guild: stateFromStores };
-    items4[2] = closure_10(tmp8(tmp3[21]), obj7);
-    items4[3] = closure_10(tmp8(tmp3[22]), {});
-    items4[4] = closure_10(tmp8(tmp3[23]), {});
-    items4[5] = closure_10(tmp8(tmp3[24]), {});
+    items4[1] = closure_10(tmp8(tmp3[21]), obj6);
+    const obj7 = { guild: stateFromStores, layout, onExpandedChange: triggeredLayoutTransition.trigger };
+    items4[2] = closure_10(tmp8(tmp3[22]), obj7);
+    const obj8 = { layout, children: null };
+    const items5 = [closure_10(tmp8(tmp3[24]), {}), closure_10(tmp8(tmp3[25]), {}), closure_10(tmp8(tmp3[26]), {})];
+    obj8.children = items5;
+    items4[3] = closure_11(tmp8(tmp3[23]).View, obj8);
     obj3.children = items4;
-    const items5 = [closure_11(closure_5, obj3), ];
-    const obj8 = { guild: stateFromStores, previousGuildSubscriptionSlot: first, isVisible: tmp9[0], fractionalPremiumState: tmp12.fractionalState, premiumGroupRole: UNSPECIFIED };
-    items5[1] = closure_10(tmp8(tmp3[18]), obj8);
-    obj2.children = items5;
-    tmp18 = closure_11(closure_12, obj2);
+    const items6 = [closure_11(closure_5, obj3), ];
+    const obj9 = { guild: stateFromStores, previousGuildSubscriptionSlot: first, isVisible: tmp9[0], fractionalPremiumState: tmp12.fractionalState, premiumGroupRole: UNSPECIFIED };
+    items6[1] = closure_10(tmp8(tmp3[19]), obj9);
+    obj2.children = items6;
+    tmp19 = closure_11(closure_12, obj2);
   }
-  return tmp18;
+  return tmp19;
 };

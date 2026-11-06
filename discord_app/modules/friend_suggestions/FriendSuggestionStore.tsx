@@ -1,12 +1,12 @@
-// === Module 7949: FriendSuggestionStore ===
+// === Module 7903: FriendSuggestionStore ===
 
-// Module 7949 (FriendSuggestionStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7903 (FriendSuggestionStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7950 */;
-import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7951 */;
-import UserRecord from "UserRecord" /* 1399 */;
+import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7904 */;
+import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7905 */;
+import UserRecord from "UserRecord" /* 1404 */;
 import UserStore from "UserStore" /* 1385 */;
 
 let dependencyMap = {};
@@ -60,7 +60,7 @@ const friendSuggestionStore = new FriendSuggestionStore(DispatcherDefault, {
         const substr = contact_names.slice(0, 2);
       }
       const obj = { key: suggestion.suggested_user.id, name: null, user: null, mutualFriendsCount: null, contactNames: null };
-      const firstResult = _modDef12.first(suggestion.reasons);
+      const firstResult = applyDefault.first(suggestion.reasons);
       let name;
       if (firstResult != null) {
         name = firstResult.name;
@@ -87,14 +87,14 @@ const friendSuggestionStore = new FriendSuggestionStore(DispatcherDefault, {
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function handleLoadFriendSuggestionsSuccess(suggestions) {
     c6 = false;
-    const mapped = _modDef12.chain(suggestions.suggestions).map((contact_names) => {
+    const mapped = applyDefault.chain(suggestions.suggestions).map((contact_names) => {
       if (null != contact_names.contact_names) {
         if (contact_names.contact_names.length >= 2) {
           contact_names = contact_names.contact_names;
           const substr = contact_names.slice(0, 2);
         }
         const obj = { key: contact_names.suggested_user.id, name: null, user: null, mutualFriendsCount: null, contactNames: null };
-        const firstResult = _modDef12.first(contact_names.reasons);
+        const firstResult = applyDefault.first(contact_names.reasons);
         let name;
         if (firstResult != null) {
           name = firstResult.name;
@@ -107,10 +107,10 @@ const friendSuggestionStore = new FriendSuggestionStore(DispatcherDefault, {
         return obj;
       }
     });
-    const chainResult = _modDef12.chain(suggestions.suggestions);
+    const chainResult = applyDefault.chain(suggestions.suggestions);
     closure_4 = mapped.keyBy((key) => key.key).value();
     const iter = mapped.keyBy((key) => key.key);
-    _modDef12.keys(closure_4).length;
+    applyDefault.keys(closure_4).length;
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function handleLoadFriendSuggestionsFailure() {
     c6 = false;
@@ -122,14 +122,14 @@ const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSugg
 
 export default friendSuggestionStore;
 export function transformFriendSuggestions(arg0) {
-  const mapped = _modDef12.chain(arg0).map((contact_names) => {
+  const mapped = applyDefault.chain(arg0).map((contact_names) => {
     if (null != contact_names.contact_names) {
       if (contact_names.contact_names.length >= 2) {
         contact_names = contact_names.contact_names;
         const substr = contact_names.slice(0, 2);
       }
       const obj = { key: contact_names.suggested_user.id, name: null, user: null, mutualFriendsCount: null, contactNames: null };
-      const firstResult = _modDef12.first(contact_names.reasons);
+      const firstResult = applyDefault.first(contact_names.reasons);
       let name;
       if (firstResult != null) {
         name = firstResult.name;
@@ -142,6 +142,6 @@ export function transformFriendSuggestions(arg0) {
       return obj;
     }
   });
-  const chainResult = _modDef12.chain(arg0);
+  const chainResult = applyDefault.chain(arg0);
   return mapped.keyBy((key) => key.key).value();
 }

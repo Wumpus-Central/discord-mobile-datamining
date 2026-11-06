@@ -1,13 +1,13 @@
-// === Module 16047: useGameOrganizationInviteSuggestions ===
+// === Module 16042: useGameOrganizationInviteSuggestions ===
 
-// Module 16047 (useGameOrganizationInviteSuggestions)
-import InstantInviteUtils from "InstantInviteUtils" /* 9272 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9302 */;
+// Module 16042 (useGameOrganizationInviteSuggestions)
+import InstantInviteUtils from "InstantInviteUtils" /* 9218 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9248 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9285 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9231 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -80,7 +80,7 @@ export default function useGameOrganizationInviteSuggestions() {
               obj5.omitUserIds = set;
               c4 = 3;
               c5 = 1;
-              const obj6 = { value: closure_2_0(9302).loadInviteSuggestions(obj5), done: false };
+              const obj6 = { value: closure_2_0(9248).loadInviteSuggestions(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp8) {
@@ -117,8 +117,8 @@ export default function useGameOrganizationInviteSuggestions() {
             c3 = 0;
             tmp4(false);
             if ("" !== tmp31.current) {
-              const result = closure_2_0(9302).searchInviteSuggestions(tmp31.current);
-              const obj = closure_2_0(9302);
+              const result = closure_2_0(9248).searchInviteSuggestions(tmp31.current);
+              const obj = closure_2_0(9248);
             }
             c5 = 3;
             return { value: "HermesInternal", done: null };

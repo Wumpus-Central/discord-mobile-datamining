@@ -1,18 +1,18 @@
-// === Module 18624: GuildUpsellList ===
+// === Module 18614: GuildUpsellList ===
 
-// Module 18624 (GuildUpsellList)
+// Module 18614 (GuildUpsellList)
 import nativeDefault from "native" /* 575 */;
-import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 18625 */;
+import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 18615 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17900 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17888 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const viewabilityConfig = { itemVisiblePercentThreshold: 50, minimumViewTime: 500 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { hidden: { opacity: 0 }, gridItem: { flex: 1 }, leftColumn: { paddingRight: nativeDefault.space.PX_8 }, rightColumn: null };
 let obj3 = { paddingRight: nativeDefault.space.PX_8 };
 obj2.rightColumn = { paddingLeft: nativeDefault.space.PX_8 };

@@ -3,8 +3,7 @@
 // Module 2027 (i18n/i18n)
 import getSystemLocale from "getSystemLocale" /* 1348 */;
 import _modDef2028 from "module_2028" /* 2028 */;
-import _mod2069 from "module_2069" /* 2069 */;
-import parse from "parse" /* 2070 */;
+import parse from "parse" /* 2065 */;
 
 require = fn;
 global.IntlMessageFormat = _modDef2028;
@@ -37,9 +36,6 @@ const module_2062 = fn(2062);
 const module_2063 = fn(2063);
 const module_2064 = fn(2064);
 delete tmp2[tmp];
-if (typeof Intl === "undefined") {
-  fn(2065);
-}
 const React2 = "en-US";
 class Provider {
   constructor(arg0) {
@@ -136,10 +132,10 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj3);
     } else {
       try {
-        return self(2070).getMessage(tmp4, locale);
+        return self(2065).getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(2070).getMessage(tmp7, tmp);
+          return self(2065).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -154,35 +150,29 @@ _instance_members_initializer_I18N_ = function() {
 };
 class I18N extends EventEmitter {
   constructor(arg0) {
+    ({ initialLocale, getLanguages } = global);
     closure_0 = undefined;
-    ({ getMessages, getLanguages } = global);
-    tmp6 = new I18N(tmp5, tmp4, tmp3, tmp2, new.target, new.target, tmp);
-    closure_0 = tmp6;
-    tmp7 = _instance_members_initializer_I18N_();
+    tmp5 = new I18N(tmp4, tmp3, new.target, new.target, tmp2, tmp, getLanguages);
+    closure_0 = tmp5;
+    tmp6 = _instance_members_initializer_I18N_();
     promise = new Promise((resolveLanguageLoaded) => {
       closure_0.resolveLanguageLoaded = resolveLanguageLoaded;
     });
-    tmp6.initialLanguageLoad = promise;
-    if (Intl.__addLocaleData) {
-      _Intl = Intl;
-      tmp9 = closure_0;
-      tmp10 = closure_1;
-      __addLocaleDataResult = Intl.__addLocaleData(closure_0(closure_1[31]));
-    }
-    tmp6._languages = getLanguages();
+    tmp5.initialLanguageLoad = promise;
+    tmp5._languages = getLanguages();
     if (null != window.Proxy) {
-      tmp15 = ProxyProvider;
-      tmp16 = new.target;
-      tmp14 = new ProxyProvider(tmp6._getParsedMessages);
+      tmp11 = ProxyProvider;
+      tmp12 = new.target;
+      tmp10 = new ProxyProvider(tmp5._getParsedMessages);
     } else {
-      tmp12 = LazyPropertyProvider;
-      tmp13 = new.target;
-      tmp14 = new LazyPropertyProvider(tmp6._getParsedMessages);
+      tmp8 = LazyPropertyProvider;
+      tmp9 = new.target;
+      tmp10 = new LazyPropertyProvider(tmp5._getParsedMessages);
     }
-    tmp6._provider = tmp14;
-    _provider = tmp6._provider;
-    tmp6.Messages = _provider.getMessages();
-    tmp6._getMessages = getMessages;
+    tmp5._provider = tmp10;
+    _provider = tmp5._provider;
+    tmp5.Messages = _provider.getMessages();
+    tmp5._getMessages = global.getMessages;
     return;
   }
 }

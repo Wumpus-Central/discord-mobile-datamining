@@ -1,12 +1,12 @@
-// === Module 19245: IconLabelBlock ===
+// === Module 19237: IconLabelBlock ===
 
-// Module 19245 (IconLabelBlock)
+// Module 19237 (IconLabelBlock)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import shared from "shared" /* 5150 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import IconUploaderDefault from "IconUploader" /* 10333 */;
+import shared from "shared" /* 5177 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import IconUploaderDefault from "IconUploader" /* 10285 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ let closure_3 = ["error"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 }, error: { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: nativeDefault.unsafe_rawColors.RED_400 }, label: null, iconUploaderWrapper: null, text: null };
 let obj3 = { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 obj2.label = { fontSize: 12, marginTop: 20, color: nativeDefault.colors.TEXT_SUBTLE };
@@ -93,7 +93,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return metroImportDefault(View, obj);
 };
-IconLabelBlock.contextType = fn(5209).ThemeContext;
+IconLabelBlock.contextType = fn(5229).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

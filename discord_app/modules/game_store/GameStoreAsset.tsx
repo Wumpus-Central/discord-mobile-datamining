@@ -1,6 +1,6 @@
-// === Module 16602: GameStoreAsset ===
+// === Module 16599: GameStoreAsset ===
 
-// Module 16602 (GameStoreAsset)
+// Module 16599 (GameStoreAsset)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_store/GameStoreAsset.tsx");

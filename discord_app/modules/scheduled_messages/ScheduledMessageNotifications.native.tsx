@@ -1,14 +1,14 @@
-// === Module 14823: ScheduledMessageNotifications ===
+// === Module 14800: ScheduledMessageNotifications ===
 
-// Module 14823 (ScheduledMessageNotifications)
+// Module 14800 (ScheduledMessageNotifications)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5849 */;
-import ClockIcon from "ClockIcon" /* 5877 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6096 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9963 */;
-import openScheduledMessagesLimitUpsellDefault from "openScheduledMessagesLimitUpsell" /* 14824 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5867 */;
+import ClockIcon from "ClockIcon" /* 5895 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6116 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9914 */;
+import openScheduledMessagesLimitUpsellDefault from "openScheduledMessagesLimitUpsell" /* 14801 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -39,7 +39,7 @@ export function handleScheduleMessageError(body) {
     code = body.code;
   }
   if (code === AbortCodes.TOO_MANY_SCHEDULED_MESSAGES) {
-    const scheduledMessagesLimit = ScheduledMessageUtils.getScheduledMessagesLimit("ScheduledMessagesCreateRoadblock");
+    const scheduledMessagesLimit = ScheduledMessageUtils.getScheduledMessagesLimit();
     if (scheduledMessagesLimit.isUpgradable) {
       items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_ROADBLOCK];
       openScheduledMessagesLimitUpsellDefault(items);

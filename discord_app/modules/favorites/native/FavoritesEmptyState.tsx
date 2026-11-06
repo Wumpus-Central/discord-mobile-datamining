@@ -1,22 +1,22 @@
-// === Module 19126: FavoritesEmptyState ===
+// === Module 19115: FavoritesEmptyState ===
 
-// Module 19126 (FavoritesEmptyState)
+// Module 19115 (FavoritesEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3577 from "module_3577" /* 3577 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import components_Button_Button from "components/Button/Button" /* 5770 */;
-import Stack_Stack from "Stack/Stack" /* 6165 */;
-import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 11022 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 11681 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14627 */;
+import _modDef3606 from "module_3606" /* 3606 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import components_Button_Button from "components/Button/Button" /* 5788 */;
+import Stack_Stack from "Stack/Stack" /* 6185 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10974 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 11647 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14604 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_48 }, text: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,17 +32,17 @@ export default function FavoritesEmptyState() {
   const obj2 = { spacing: nativeDefault.space.PX_8, align: "center", children: null };
   const obj3 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef3577["wh+Rz1"]);
+  obj3.children = intl.string(_modDef3606["wh+Rz1"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj3), ];
   const obj4 = { variant: "body-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3577["+SuGKb"]);
+  obj4.children = intl2.string(_modDef3606["+SuGKb"]);
   items1[1] = hasOwnProperty(Text_Text.Text, obj4);
   obj2.children = items1;
   items[1] = timestampProducer(Stack_Stack.Stack, obj2);
   const obj5 = { variant: "primary", text: null, icon: null, onPress: null };
   const intl3 = util.intl;
-  obj5.text = intl3.string(_modDef3577["6kk0gM"]);
+  obj5.text = intl3.string(_modDef3606["6kk0gM"]);
   obj5.icon = hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {});
   obj5.onPress = callback;
   items[2] = hasOwnProperty(components_Button_Button.Button, obj5);

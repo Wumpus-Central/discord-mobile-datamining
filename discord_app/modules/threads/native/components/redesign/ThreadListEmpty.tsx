@@ -1,19 +1,19 @@
-// === Module 19099: ThreadListEmpty ===
+// === Module 19088: ThreadListEmpty ===
 
-// Module 19099 (ThreadListEmpty)
+// Module 19088 (ThreadListEmpty)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import components_Button_Button from "components/Button/Button" /* 5770 */;
-import _modDef14030 from "module_14030" /* 14030 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import components_Button_Button from "components/Button/Button" /* 5788 */;
+import _modDef14006 from "module_14006" /* 14006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { container: { flex: 1, justifyContent: "center", alignItems: "center" }, iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, padding: 12 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 16 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 16, marginBottom: 16 } };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, padding: 12 };
@@ -24,7 +24,7 @@ export default noop.memo(function ThreadListEmpty(onCreateThreadPress) {
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef14030, size: native.Icon.Sizes.MEDIUM }) };
+  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef14006, size: native.Icon.Sizes.MEDIUM }) };
   items = [React4(View, obj2), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

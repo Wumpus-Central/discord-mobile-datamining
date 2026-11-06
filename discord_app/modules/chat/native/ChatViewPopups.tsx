@@ -1,9 +1,9 @@
-// === Module 14450: ChatViewPopups ===
+// === Module 14427: ChatViewPopups ===
 
-// Module 14450 (ChatViewPopups)
-import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 14451 */;
-import WelcomeScreenUtils from "WelcomeScreenUtils" /* 14455 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 14462 */;
+// Module 14427 (ChatViewPopups)
+import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 14428 */;
+import WelcomeScreenUtils from "WelcomeScreenUtils" /* 14432 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 14439 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

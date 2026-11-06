@@ -1,7 +1,7 @@
-// === Module 6915: GuildsTree ===
+// === Module 6857: GuildsTree ===
 
-// Module 6915 (GuildsTree)
-import _mod12 from "module_12" /* 12 */;
+// Module 6857 (GuildsTree)
+import apply from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
 
@@ -154,7 +154,7 @@ prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   return self;
 };
 prototype["cloneNode"] = function cloneNode(arg0) {
-  return _mod12.clone(arg0);
+  return apply.clone(arg0);
 };
 prototype["convertToFolder"] = function convertToFolder(node) {
   const self = this;
@@ -231,7 +231,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
                     items1 = [];
                   } else {
                     let children = type.children;
-                    let mapped = children.map(/* F124534 */ function() { ... });
+                    let mapped = children.map(/* F124759 */ function() { ... });
                     items1 = mapped.flat();
                   }
                   return items1;

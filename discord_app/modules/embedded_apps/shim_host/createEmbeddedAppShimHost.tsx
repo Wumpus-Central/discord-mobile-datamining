@@ -1,8 +1,8 @@
-// === Module 19759: createEmbeddedAppShimHost ===
+// === Module 19765: createEmbeddedAppShimHost ===
 
-// Module 19759 (createEmbeddedAppShimHost)
-import _mod12 from "module_12" /* 12 */;
-import protocol from "protocol" /* 19755 */;
+// Module 19765 (createEmbeddedAppShimHost)
+import apply from "apply" /* 12 */;
+import protocol from "protocol" /* 19761 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ export function createEmbeddedAppShimHost(arg0) {
         const result = map.set(type.type, type);
         closure_3.dispatch(type);
       }
-      obj = _mod12;
+      obj = apply;
     },
     close() {
       closure_3.close();

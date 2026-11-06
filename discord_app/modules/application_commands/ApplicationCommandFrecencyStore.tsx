@@ -1,10 +1,10 @@
-// === Module 9920: ApplicationCommandFrecencyStore ===
+// === Module 9870: ApplicationCommandFrecencyStore ===
 
-// Module 9920 (ApplicationCommandFrecencyStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 9870 (ApplicationCommandFrecencyStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5917 */;
+import FrecencyDefault from "Frecency" /* 5936 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 function handleUserSettingsProtoStoreChange() {
@@ -16,7 +16,7 @@ function handleUserSettingsProtoStoreChange() {
   if (applicationCommands == null) {
     applicationCommands = {};
   }
-  closure_7.overwriteHistory(_modDef12.mapValues(applicationCommands, (recentUses) => {
+  closure_7.overwriteHistory(applyDefault.mapValues(applicationCommands, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
@@ -25,7 +25,7 @@ function handleUserSettingsProtoStoreChange() {
     return obj;
   }), global.pendingUsages);
 }
-const ApplicationCommandConstants = fn(6173);
+const ApplicationCommandConstants = fn(6193);
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let global = { pendingUsages: [] };

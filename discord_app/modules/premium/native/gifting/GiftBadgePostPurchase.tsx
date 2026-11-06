@@ -1,24 +1,20 @@
-// === Module 14673: GiftBadgePostPurchase ===
+// === Module 14650: GiftBadgePostPurchase ===
 
-// Module 14673 (GiftBadgePostPurchase)
+// Module 14650 (GiftBadgePostPurchase)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _modDef2763 from "module_2763" /* 2763 */;
-import dismissible_content from "dismissible_content" /* 4976 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5173 */;
-import HapticUtils from "HapticUtils" /* 5386 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5387 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
-import BadgeId from "BadgeId" /* 8901 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10801 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10803 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 14675 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 14676 */;
+import _modDef2760 from "module_2760" /* 2760 */;
+import dismissible_content from "dismissible_content" /* 5003 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5200 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
+import BadgeId from "BadgeId" /* 8847 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8860 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 14652 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8909 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8855 */;
 
 require = fn;
 function PostPurchaseFooter(onSendGift) {
@@ -31,23 +27,23 @@ function PostPurchaseFooter(onSendGift) {
   const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = noop.useCallback(() => {
     ModalActionCreatorsDefault.pop();
-    const rootNavigationRef = onSendGift(5325).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(5345).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(13597).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj2.icon = closure_10(onSendGift(13572).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   const intl = onSendGift(1113).intl;
-  obj2.text = intl.string(_modDef2763.g86YiI);
+  obj2.text = intl.string(_modDef2760.g86YiI);
   obj2.onPress = callback;
-  const items1 = [closure_10(onSendGift(5770).Button, obj2), ];
+  const items1 = [closure_10(onSendGift(5788).Button, obj2), ];
   const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1113).intl;
-  obj4.text = intl2.string(_modDef2763["sa/cfM"]);
+  obj4.text = intl2.string(_modDef2760["sa/cfM"]);
   obj4.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5770).Button, obj4);
+  items1[1] = closure_10(onSendGift(5788).Button, obj4);
   obj.children = items1;
   return closure_11(View, obj);
 }
@@ -66,68 +62,97 @@ function InProgressScreen(arg0) {
   obj.children = items2;
   return closure_1_11(View, obj);
 }
-function LevelUpScreen(arg0) {
-  ({ newTier, nextTier, giftsToNextTier } = arg0);
-  ({ simulatedProgress, currentTier, onSendGift } = arg0);
-  const tmp3 = closure_12(useSafeAreaInsetsDefault().bottom);
-  const giftingBadgeTierIconUrl = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(newTier);
+function LevelUpScreen(newTier) {
+  newTier = newTier.newTier;
+  ({ nextTier, giftsToNextTier } = newTier);
+  let isBadgeUnreadStateEnabled;
+  let stateFromStores;
+  ({ simulatedProgress, currentTier, onSendGift } = newTier);
+  const tmp3 = closure_12(isBadgeUnreadStateEnabled(stateFromStores[8])().bottom);
+  const giftingBadgeTierIconUrl = newTier(stateFromStores[17]).getGiftingBadgeTierIconUrl(newTier);
+  let obj = newTier(stateFromStores[17]);
+  isBadgeUnreadStateEnabled = newTier(stateFromStores[18]).useIsBadgeUnreadStateEnabled({ location: "GiftBadgePostPurchase" });
+  const obj2 = newTier(stateFromStores[18]);
+  items = [BadgeDirectoryStore];
+  const items1 = [isBadgeUnreadStateEnabled, newTier.key];
+  stateFromStores = newTier(stateFromStores[19]).useStateFromStores(items, () => {
+    const badgeById = BadgeDirectoryStore.getBadgeById(BadgeId.BadgeId.GIFTING);
+    let tmp2 = isBadgeUnreadStateEnabled;
+    if (isBadgeUnreadStateEnabled) {
+      let has_updates;
+      if (badgeById != null) {
+        has_updates = badgeById.has_updates;
+      }
+      tmp2 = true === has_updates;
+    }
+    if (tmp2) {
+      tmp2 = badgeById.current_tier === newTier.key;
+    }
+    return tmp2;
+  }, items1);
   const effect = noop.useEffect(() => {
-    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_HEAVY);
+    const result = newTier(stateFromStores[21]).triggerHapticFeedback(isBadgeUnreadStateEnabled(stateFromStores[22]).IMPACT_HEAVY);
   }, []);
-  const obj2 = { style: tmp3.screenContainer, children: null };
-  const obj3 = { style: tmp3.content, children: null };
-  const obj4 = { style: tmp3.levelUpIconWrapper, children: null };
-  let tmp9Result = null != giftingBadgeTierIconUrl;
-  if (tmp9Result) {
-    const obj5 = { icon: giftingBadgeTierIconUrl, size: 140 };
-    tmp9Result = closure_1_10(GiftingBadgeIconDefault, obj5);
+  const items2 = [stateFromStores];
+  const effect1 = noop.useEffect(() => {
+    if (stateFromStores) {
+      BadgeDirectoryActionCreators.ackBadge(BadgeId.BadgeId.GIFTING);
+    }
+  }, items2);
+  const obj4 = { style: tmp3.screenContainer, children: null };
+  const obj5 = { style: tmp3.content, children: null };
+  const obj6 = { style: tmp3.levelUpIconWrapper, children: null };
+  let tmp12Result = null != giftingBadgeTierIconUrl;
+  if (tmp12Result) {
+    const obj7 = { icon: giftingBadgeTierIconUrl, size: 140 };
+    tmp12Result = closure_10(tmp(tmp2[24]), obj7);
   }
-  obj4.children = tmp9Result;
-  items = [closure_1_10(View, obj4), ];
-  const obj6 = { style: tmp3.levelUpBody, children: null };
-  const items1 = [closure_1_10(GiftingBadgeLevelUpProgressDefault, { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
-  const obj8 = { style: tmp3.messageSection, children: null };
-  const obj9 = { variant: "heading-xxl/semibold", style: tmp3.centerText, children: null };
-  const intl = util.intl;
+  obj6.children = tmp12Result;
+  const items3 = [closure_10(View, obj6), ];
+  const obj8 = { style: tmp3.levelUpBody, children: null };
+  const items4 = [closure_10(isBadgeUnreadStateEnabled(stateFromStores[25]), { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
+  const obj10 = { style: tmp3.messageSection, children: null };
+  const obj11 = { variant: "heading-xxl/semibold", style: tmp3.centerText, children: null };
+  const intl = tmp4(tmp2[13]).intl;
   let str = newTier.name;
   if (str == null) {
     str = "";
   }
-  obj9.children = intl.format(_modDef2763.k8MmO8, { tierName: str });
-  const items2 = [closure_1_10(Text_Text.Text, obj9), ];
-  let tmp9Result2 = null != nextTier && null != giftsToNextTier;
-  if (tmp9Result2) {
-    tmp9Result2 = giftsToNextTier > 0;
+  obj11.children = intl.format(isBadgeUnreadStateEnabled(stateFromStores[14]).k8MmO8, { tierName: str });
+  const items5 = [closure_10(newTier(stateFromStores[16]).Text, obj11), ];
+  let tmp12Result2 = null != nextTier && null != giftsToNextTier;
+  if (tmp12Result2) {
+    tmp12Result2 = giftsToNextTier > 0;
   }
-  if (tmp9Result2) {
-    const obj10 = { variant: "body-md/normal", color: "text-subtle", style: tmp3.centerText, children: null };
-    const intl2 = util.intl;
-    const obj11 = { count: giftsToNextTier, nextTierName: null };
+  if (tmp12Result2) {
+    const obj12 = { variant: "body-md/normal", color: "text-subtle", style: tmp3.centerText, children: null };
+    const intl2 = tmp4(tmp2[13]).intl;
+    const obj13 = { count: giftsToNextTier, nextTierName: null };
     let str2 = nextTier.name;
     if (str2 == null) {
       str2 = "";
     }
-    obj11.nextTierName = str2;
-    obj10.children = intl2.format(_modDef2763["6QVlxw"], obj11);
-    tmp9Result2 = closure_1_10(Text_Text.Text, obj10);
+    obj13.nextTierName = str2;
+    obj12.children = intl2.format(tmp(tmp2[14])["6QVlxw"], obj13);
+    tmp12Result2 = closure_10(tmp4(tmp2[16]).Text, obj12);
   }
-  items2[1] = tmp9Result2;
-  obj8.children = items2;
-  items1[1] = closure_1_11(View, obj8);
-  obj6.children = items1;
-  items[1] = closure_1_11(View, obj6);
-  obj3.children = items;
-  const items3 = [closure_1_11(View, obj3), closure_1_10(PostPurchaseFooter, { onSendGift })];
-  obj2.children = items3;
-  return closure_1_11(View, obj2);
+  items5[1] = tmp12Result2;
+  obj10.children = items5;
+  items4[1] = closure_11(View, obj10);
+  obj8.children = items4;
+  items3[1] = closure_11(View, obj8);
+  obj5.children = items3;
+  const items6 = [closure_11(View, obj5), closure_10(PostPurchaseFooter, { onSendGift })];
+  obj4.children = items6;
+  return closure_11(View, obj4);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(14674);
+const GiftingBadgeConstants = fn(14651);
 ({ getRemainingGiftsToNextTier: closure_6, getTierForProgress: metroImportDefault, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { screenContainer: { flex: 1 }, content: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 }, progressWrapper: null, messageSection: null, centerText: null, levelUpIconWrapper: null, levelUpBody: null, levelUpProgress: null, footer: null };
   const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };
@@ -195,11 +220,11 @@ export default function GiftBadgePostPurchase(arg0) {
       }
       const obj3 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
       const obj4 = { nextTier: str2 };
-      obj3.title = intl2.formatToPlainString(_modDef2763.KjdBPz, obj4);
+      obj3.title = intl2.formatToPlainString(_modDef2760.KjdBPz, obj4);
       const intl3 = util.intl;
-      obj3.description = intl3.string(_modDef2763.oqDrEM);
+      obj3.description = intl3.string(_modDef2760.oqDrEM);
       const intl4 = util.intl;
-      obj3.progressBarTitle = intl4.string(_modDef2763["Ka5s+Q"]);
+      obj3.progressBarTitle = intl4.string(_modDef2760["Ka5s+Q"]);
       obj3.progress = sum;
       obj3.currentTier = tmp26;
       obj3.nextTier = tmp8;
@@ -208,9 +233,9 @@ export default function GiftBadgePostPurchase(arg0) {
     } else {
       obj5 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
       const intl5 = util.intl;
-      obj5.title = intl5.string(_modDef2763["/rBQud"]);
+      obj5.title = intl5.string(_modDef2760["/rBQud"]);
       const intl6 = util.intl;
-      obj5.description = intl6.string(_modDef2763.DDQMlx);
+      obj5.description = intl6.string(_modDef2760.DDQMlx);
       let name;
       if (tmp24 != null) {
         name = tmp24.name;
@@ -223,7 +248,7 @@ export default function GiftBadgePostPurchase(arg0) {
           name1 = tmp24.name;
         }
         const obj6 = { tierName: name1 };
-        str = intl.formatToPlainString(_modDef2763.bwyQt8, obj6);
+        str = intl.formatToPlainString(_modDef2760.bwyQt8, obj6);
       }
       obj5.progressBarTitle = str;
       obj5.progress = sum;

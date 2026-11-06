@@ -1,6 +1,6 @@
-// === Module 13962: CustomTypingIndicatorExperiment ===
+// === Module 13938: CustomTypingIndicatorExperiment ===
 
-// Module 13962 (CustomTypingIndicatorExperiment)
+// Module 13938 (CustomTypingIndicatorExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
@@ -8,8 +8,8 @@ const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name:
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx");
 
 export const CustomTypingIndicatorExperiment = apexExperiment;
-export function useCustomTypingIndicatorConfig(TypingIndicatorInner) {
-  return apexExperiment.useConfig({ location: TypingIndicatorInner });
+export function useCustomTypingIndicatorConfig(MainViewTooltipActionSheets) {
+  return apexExperiment.useConfig({ location: MainViewTooltipActionSheets });
 }
 export function getCustomTypingIndicatorConfig(location) {
   return apexExperiment.getConfig({ location });

@@ -1,6 +1,6 @@
-// === Module 11419: VoicePanelConstants ===
+// === Module 11381: VoicePanelConstants ===
 
-// Module 11419 (VoicePanelConstants)
+// Module 11381 (VoicePanelConstants)
 import PlatformUtils_mod from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ obj4.overshootClamping = true;
 const obj5 = {};
 const merged2 = Object.assign(obj2);
 obj5.mass = 0.3;
-const obj6 = { NO_VIDEO_PARTICIPANTS: "no_video_participants", CALLER_DISCONNECTED: "caller_disconnected" };
+const obj6 = { NO_VIDEO_PARTICIPANTS: "no_video_participants", CALLER_DISCONNECTED: "caller_disconnected", NO_STAGE_SPEAKERS: "no_stage_speakers" };
 const obj7 = { [obj6.NO_VIDEO_PARTICIPANTS]: { width: 2, height: 1 } };
 let PlatformUtils = PlatformUtils_mod;
 PlatformUtils.isAndroid();

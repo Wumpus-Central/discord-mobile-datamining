@@ -1,15 +1,15 @@
-// === Module 18444: MessagesFlashList ===
+// === Module 18436: MessagesFlashList ===
 
-// Module 18444 (MessagesFlashList)
-import MessagesItemChannel from "MessagesItemChannel" /* 18373 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18383 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18384 */;
-import useMessagesData from "useMessagesData" /* 18387 */;
-import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18402 */;
-import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18439 */;
-import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 18440 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 18441 */;
-import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18442 */;
+// Module 18436 (MessagesFlashList)
+import MessagesItemChannel from "MessagesItemChannel" /* 18365 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18375 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18376 */;
+import useMessagesData from "useMessagesData" /* 18379 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18394 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18431 */;
+import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 18432 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 18433 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18434 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -77,7 +77,7 @@ export default noop.memo(function MessagesFlashList(listItemHeight) {
   const items2 = [friendSuggestions];
   const getItemType = listRefHappeningNow.useCallback((kind) => kind.kind, []);
   const items3 = [renderHeader, listRefHappeningNow];
-  const keyExtractor = listRefHappeningNow.useCallback((kind) => {
+  keyExtractor = listRefHappeningNow.useCallback((kind) => {
     kind = kind.kind;
     if ("favorite" === kind) {
       const _HermesInternal4 = HermesInternal;

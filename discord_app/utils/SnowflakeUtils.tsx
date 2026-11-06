@@ -1,7 +1,7 @@
 // === Module 11: SnowflakeUtils ===
 
 // Module 11 (SnowflakeUtils)
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import utils_SnowflakeUtils from "utils/SnowflakeUtils" /* 13 */;
 import size from "module_2" /* 2 */;
 
@@ -42,7 +42,7 @@ export default {
   },
   forEach(arg0, arg1) {
     closure_0 = arg1;
-    const item = _modDef12.forEach(arg0, (arg0, arg1) => closure_0(arg0, arg1));
+    const item = applyDefault.forEach(arg0, (arg0, arg1) => closure_0(arg0, arg1));
   },
   forEachKey(recurrenceCounts, fn) {
     for (const key10004 in arg0) {

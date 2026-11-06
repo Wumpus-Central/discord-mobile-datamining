@@ -1,6 +1,6 @@
-// === Module 19696: logThirdPartyImportsDone ===
+// === Module 19702: logThirdPartyImportsDone ===
 
-// Module 19696 (logThirdPartyImportsDone)
+// Module 19702 (logThirdPartyImportsDone)
 import LoggerDefault from "Logger" /* 3 */;
 
 new LoggerDefault("app").log("Finished loading third party imports");

@@ -1,6 +1,6 @@
-// === Module 14911: VQRemainingTimeTruncationExperiment ===
+// === Module 14888: VQRemainingTimeTruncationExperiment ===
 
-// Module 14911 (VQRemainingTimeTruncationExperiment)
+// Module 14888 (VQRemainingTimeTruncationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

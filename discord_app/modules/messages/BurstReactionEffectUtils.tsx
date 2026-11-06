@@ -1,8 +1,8 @@
-// === Module 5139: BurstReactionEffectUtils ===
+// === Module 5166: BurstReactionEffectUtils ===
 
-// Module 5139 (BurstReactionEffectUtils)
-import ColorUtils from "ColorUtils" /* 5140 */;
-import apply from "module_12" /* 12 */;
+// Module 5166 (BurstReactionEffectUtils)
+import ColorUtils from "ColorUtils" /* 5167 */;
+import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/BurstReactionEffectUtils.tsx");

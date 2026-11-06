@@ -1,9 +1,9 @@
-// === Module 12602: ActivitiesBanner ===
+// === Module 12567: ActivitiesBanner ===
 
-// Module 12602 (ActivitiesBanner)
+// Module 12567 (ActivitiesBanner)
 import util from "util" /* 1113 */;
-import useActivityApplications from "useActivityApplications" /* 12591 */;
-import BannerBaseDefault from "BannerBase" /* 12614 */;
+import useActivityApplications from "useActivityApplications" /* 12556 */;
+import BannerBaseDefault from "BannerBase" /* 12579 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

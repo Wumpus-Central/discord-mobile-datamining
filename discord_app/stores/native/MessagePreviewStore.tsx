@@ -1,10 +1,10 @@
-// === Module 9081: MessagePreviewStore ===
+// === Module 9027: MessagePreviewStore ===
 
-// Module 9081 (MessagePreviewStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 9027 (MessagePreviewStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6201 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6221 */;
 
 require = fn;
 let c3 = null;
@@ -27,7 +27,7 @@ Object.defineProperty(prototype, "jumpTargetId", {
 });
 prototype["getMessage"] = function getMessage(arg0) {
   closure_0 = arg0;
-  return _modDef12.find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
+  return applyDefault.find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
 };
 MessagePreviewStore.displayName = "MessagePreviewStore";
 const messagePreviewStore = new MessagePreviewStore(DispatcherDefault, {

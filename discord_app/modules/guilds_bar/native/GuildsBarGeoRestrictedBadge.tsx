@@ -1,18 +1,18 @@
-// === Module 18704: GuildsBarGeoRestrictedBadge ===
+// === Module 18694: GuildsBarGeoRestrictedBadge ===
 
-// Module 18704 (GuildsBarGeoRestrictedBadge)
+// Module 18694 (GuildsBarGeoRestrictedBadge)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import _modDef17139 from "module_17139" /* 17139 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import _modDef17127 from "module_17127" /* 17127 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { badgeImageContainer: null, badgeImage: null };
 let size = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(6916).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+const size1 = { height: 16, width: 16, opacity: fn(6858).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
 obj.badgeImage = size1;
 let closure_4 = createStyles.createStyles(obj);
 size = fn(2);
@@ -23,7 +23,7 @@ export default noop.memo(function GuildsBarGeoRestrictedBadge(style) {
   const obj = { style: null, pointerEvents: "none", children: null };
   items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  const obj2 = { source: _modDef17139, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef17139, style: tmp.badgeImage });
+  const obj2 = { source: _modDef17127, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef17127, style: tmp.badgeImage });
   return <View style={null} pointerEvents="none">{null}</View>;
 });

@@ -1,12 +1,12 @@
-// === Module 10229: components/EmojiPickerListComponent ===
+// === Module 10181: components/EmojiPickerListComponent ===
 
-// Module 10229 (components/EmojiPickerListComponent)
+// Module 10181 (components/EmojiPickerListComponent)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(10129);
+const EmojiPickerListConstants = fn(10080);
 ({ ROW_HEIGHT: closure_4, LABEL_HEIGHT: hasOwnProperty, LABEL_TOP_PADDING: closure_6, LABEL_BOTTOM_PADDING: metroImportDefault } = EmojiPickerListConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -22,7 +22,7 @@ export default function EmojiPickerListComponent(paddingTop) {
   items = [paddingTop, paddingBottom];
   const contentContainerStyle = paddingBottom.useMemo(() => ({ paddingTop, paddingBottom }), items);
   const getItemType = paddingBottom.useCallback((type) => type.type, []);
-  const keyExtractor = paddingBottom.useCallback((type, arg1) => "" + type.type + "-" + arg1, []);
+  keyExtractor = paddingBottom.useCallback((type, arg1) => "" + type.type + "-" + arg1, []);
   const overrideItemLayout = paddingBottom.useCallback((arg0, type) => {
     type = type.type;
     if (require("useEmojiPickerData").EmojiPickerItemType.PLACEHOLDER === type) {
@@ -81,5 +81,5 @@ export default function EmojiPickerListComponent(paddingTop) {
     }
   }));
   const preventNativeModalDismiss = require("PortalKeyboardModalContext").useIsPortalKeyboardInModal();
-  return jsx(require("module_7433").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref: ref2, renderItem, stickyHeaderIndices });
+  return jsx(require("module_7380").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref: ref2, renderItem, stickyHeaderIndices });
 };

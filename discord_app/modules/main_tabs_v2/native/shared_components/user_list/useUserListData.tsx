@@ -1,21 +1,21 @@
-// === Module 10913: useUserListData ===
+// === Module 10865: useUserListData ===
 
-// Module 10913 (useUserListData)
-import _modDef12 from "module_12" /* 12 */;
+// Module 10865 (useUserListData)
+import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import GuildUtilsDefault from "GuildUtils" /* 7039 */;
-import UserSearchItemsDefault from "UserSearchItems" /* 7944 */;
-import UserSearchUtils from "UserSearchUtils" /* 7948 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9290 */;
+import GuildUtilsDefault from "GuildUtils" /* 6981 */;
+import UserSearchItemsDefault from "UserSearchItems" /* 7898 */;
+import UserSearchUtils from "UserSearchUtils" /* 7902 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9236 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7949 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7945 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7946 */;
-import UserRecord from "UserRecord" /* 1399 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7903 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7899 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7900 */;
+import UserRecord from "UserRecord" /* 1404 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -156,8 +156,8 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
     found = items7.filter((user) => user.user.id !== id);
   }
   if (withFriends) {
-    const mapped = _modDef12(tmp).map((items, title) => ({ title, items }));
-    const arr12 = _modDef12(tmp);
+    const mapped = applyDefault(tmp).map((items, title) => ({ title, items }));
+    const arr12 = applyDefault(tmp);
     let items11 = mapped.sortBy((title) => title.title).value();
     const iter = mapped.sortBy((title) => title.title);
   } else {
@@ -169,10 +169,10 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   const intl = util.intl;
   obj2.title = intl.string(util.t.HbJ7eD);
   if (withAffinitySuggestions) {
-    const obj4 = _modDef12(items);
-    const sortByResult = _modDef12(items).sortBy((affinity) => -affinity.affinity);
-    let valueResult2 = _modDef12(items).sortBy((affinity) => -affinity.affinity).slice(0, num).value();
-    const iter2 = _modDef12(items).sortBy((affinity) => -affinity.affinity).slice(0, num);
+    const obj4 = applyDefault(items);
+    const sortByResult = applyDefault(items).sortBy((affinity) => -affinity.affinity);
+    let valueResult2 = applyDefault(items).sortBy((affinity) => -affinity.affinity).slice(0, num).value();
+    const iter2 = applyDefault(items).sortBy((affinity) => -affinity.affinity).slice(0, num);
   } else {
     valueResult2 = [];
   }

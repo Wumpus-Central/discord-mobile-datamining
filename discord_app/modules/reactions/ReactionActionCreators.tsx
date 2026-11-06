@@ -1,18 +1,18 @@
-// === Module 8551: ReactionActionCreators ===
+// === Module 8497: ReactionActionCreators ===
 
-// Module 8551 (ReactionActionCreators)
+// Module 8497 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
-import EmojiUtils from "EmojiUtils" /* 5093 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5754 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6096 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8347 */;
+import EmojiUtils from "EmojiUtils" /* 5120 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5772 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6116 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8292 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import MessageStore from "MessageStore" /* 6199 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import MessageStore from "MessageStore" /* 6219 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -786,7 +786,7 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(5150).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = channelId(5177).AccessibilityAnnouncer;
                   intl = channelId(1113).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };

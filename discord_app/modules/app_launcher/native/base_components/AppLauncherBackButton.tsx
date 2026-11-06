@@ -1,9 +1,9 @@
-// === Module 12686: AppLauncherBackButton ===
+// === Module 12651: AppLauncherBackButton ===
 
-// Module 12686 (AppLauncherBackButton)
+// Module 12651 (AppLauncherBackButton)
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1500 */;
-import IconButton from "IconButton" /* 8173 */;
+import IconButton from "IconButton" /* 8119 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,10 +14,10 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/base_comp
 export default function AppLauncherBackButton(onPress) {
   const navigation = Link.useNavigation();
   const canGoBackResult = navigation.canGoBack();
-  const obj2 = { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 7147 : 7199), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  const obj2 = { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 7094 : 7146), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
   const intl = util.intl;
   const t = util.t;
   obj2.accessibilityLabel = intl.string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq);
-  return jsx(IconButton.IconButton, { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 7147 : 7199), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 });
+  return jsx(IconButton.IconButton, { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 7094 : 7146), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 });
 };
 export const BACK_BUTTON_SIZE = 32;

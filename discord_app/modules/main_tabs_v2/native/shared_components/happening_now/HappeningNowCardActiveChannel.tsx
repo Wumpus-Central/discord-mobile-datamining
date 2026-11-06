@@ -1,26 +1,26 @@
-// === Module 18433: HappeningNowCardActiveChannel ===
+// === Module 18425: HappeningNowCardActiveChannel ===
 
-// Module 18433 (HappeningNowCardActiveChannel)
+// Module 18425 (HappeningNowCardActiveChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import router_utils from "router_utils" /* 1099 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import noop from "module_19" /* 19 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 15854 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import TypingStore from "TypingStore" /* 13960 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 15848 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import TypingStore from "TypingStore" /* 13936 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(15854).MAX_STORED_MESSAGES;
-let closure_10 = fn(17559).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(15848).MAX_STORED_MESSAGES;
+let closure_10 = fn(17548).HappeningNowCardTrackingType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_15 = createStyles.createStyles({ content: { flexShrink: 1, marginLeft: 4, gap: 2 }, avatarsWrapper: { marginBottom: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx");
@@ -54,16 +54,16 @@ export default noop.memo(function HappeningNowCardActiveChannel(index) {
   });
   const items3 = [stateFromStoresArray];
   const memo = stateFromStoresArray.useMemo(() => {
-    const obj = _modDef12;
-    return obj.uniq(_modDef12.map(stateFromStoresArray, "userId")).filter(GlobalUtils.isNotNullish);
+    const obj = applyDefault;
+    return obj.uniq(applyDefault.map(stateFromStoresArray, "userId")).filter(GlobalUtils.isNotNullish);
   }, items3);
   const obj3 = index(channelId[10]);
   const ensureHydratedGuildUsers = index(channelId[14]).useEnsureHydratedGuildUsers(guildId, memo);
   const obj4 = index(channelId[14]);
   const items4 = [UserStore];
   const stateFromStoresArray1 = index(channelId[10]).useStateFromStoresArray(items4, () => {
-    const obj = _modDef12;
-    const mapped = obj.uniq(_modDef12.map(stateFromStoresArray, "userId")).map((item) => user.getUser(item));
+    const obj = applyDefault;
+    const mapped = obj.uniq(applyDefault.map(stateFromStoresArray, "userId")).map((item) => user.getUser(item));
     return mapped.filter(GlobalUtils.isNotNullish);
   });
   const items5 = [channelId, index, guildId];

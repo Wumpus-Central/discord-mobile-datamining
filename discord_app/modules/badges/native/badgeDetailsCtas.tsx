@@ -1,20 +1,20 @@
-// === Module 11675: badgeDetailsCtas ===
+// === Module 11637: badgeDetailsCtas ===
 
-// Module 11675 (badgeDetailsCtas)
+// Module 11637 (badgeDetailsCtas)
 import Constants from "Constants" /* 1072 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1074 */;
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1500 */;
-import RootNavigationRef from "RootNavigationRef" /* 5325 */;
-import openURLDefault from "openURL" /* 5842 */;
-import QuestContent from "QuestContent" /* 6924 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
-import openUserSettings from "openUserSettings" /* 7705 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7864 */;
-import BadgeId from "BadgeId" /* 8901 */;
-import QuestsEligibility from "QuestsEligibility" /* 9829 */;
-import QuestUtils from "QuestUtils" /* 9834 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10742 */;
+import RootNavigationRef from "RootNavigationRef" /* 5345 */;
+import openURLDefault from "openURL" /* 5860 */;
+import QuestContent from "QuestContent" /* 6866 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
+import openUserSettings from "openUserSettings" /* 7658 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7818 */;
+import BadgeId from "BadgeId" /* 8847 */;
+import QuestsEligibility from "QuestsEligibility" /* 9780 */;
+import QuestUtils from "QuestUtils" /* 9785 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10694 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;

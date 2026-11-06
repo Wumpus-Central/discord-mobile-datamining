@@ -1,7 +1,7 @@
-// === Module 7914: ConversationsUtils ===
+// === Module 7868: ConversationsUtils ===
 
-// Module 7914 (ConversationsUtils)
-import _mod12 from "module_12" /* 12 */;
+// Module 7868 (ConversationsUtils)
+import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
@@ -32,7 +32,7 @@ export function mapConversation(rawConversation) {
           }
           tmp6 = null;
           if (typeof brief_summary === "string") {
-            const obj = { title: _mod12.upperFirst(filter.title), brief_summary: filter.brief_summary, key_points: null };
+            const obj = { title: apply.upperFirst(filter.title), brief_summary: filter.brief_summary, key_points: null };
             const _Array = Array;
             if (Array.isArray(filter.key_points)) {
               const key_points = filter.key_points;

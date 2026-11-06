@@ -1,12 +1,12 @@
-// === Module 9687: WishlistButton ===
+// === Module 9636: WishlistButton ===
 
-// Module 9687 (WishlistButton)
+// Module 9636 (WishlistButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import native from "native" /* 5209 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5849 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 9616 */;
+import native from "native" /* 5229 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5867 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 9565 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -148,8 +148,8 @@ class WishlistButtonBase {
           WishlistButtonTsx1.__closure = items1;
           WishlistButtonTsx1.__workletHash = 12515096529687;
           WishlistButtonTsx1.__initData = tmp3;
-          const result = sharedValue.set(c0(5380).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
-          obj = c0(5380);
+          const result = sharedValue.set(c0(5400).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
+          obj = c0(5400);
         });
         return () => cancelAnimationFrame(closure_0);
       }
@@ -452,9 +452,9 @@ const jsxProd = fn(21);
 let obj = { duration: 400, easing: null };
 const Easing = fn(1652).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-let obj2 = { sm: fn(5776).SMALL_BUTTON_HEIGHT, md: fn(5776).MEDIUM_BUTTON_HEIGHT };
+let obj2 = { sm: fn(5794).SMALL_BUTTON_HEIGHT, md: fn(5794).MEDIUM_BUTTON_HEIGHT };
 const value2 = { sm: "sm", md: "md" };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_17 = createStyles.createStyles((arg0) => {
   obj = { button: null, light: null, lightPressed: null, dark: null, darkPressed: null, midnight: null, disabled: null, iconContainer: null, animationFill: null };
   const size = { width: obj2[arg0], height: obj2[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };

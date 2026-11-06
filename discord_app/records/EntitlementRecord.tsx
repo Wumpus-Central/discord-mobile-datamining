@@ -1,11 +1,11 @@
-// === Module 2168: EntitlementRecord ===
+// === Module 2163: EntitlementRecord ===
 
-// Module 2168 (EntitlementRecord)
-import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 16135 */;
-import Record from "Record" /* 1400 */;
-import SKURecord from "SKURecord" /* 2169 */;
-import UserRecord from "UserRecord" /* 1399 */;
+// Module 2163 (EntitlementRecord)
+import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
+import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 16131 */;
+import Record from "Record" /* 1405 */;
+import SKURecord from "SKURecord" /* 2164 */;
+import UserRecord from "UserRecord" /* 1404 */;
 
 require = fn;
 let EntitlementRecord;
@@ -112,7 +112,7 @@ Object.defineProperty(prototype, "isGiftable", {
   },
   set: undefined
 });
-prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get) {
+prototype["isValid"] = function isValid(stateFromStores, get) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -127,7 +127,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
             return false;
           }
         }
-        if (!obj.canInstallPremiumApplications(isPremiumWithFractionalPremiumOnly)) {
+        if (!obj.canInstallPremiumApplications(stateFromStores)) {
           return false;
         }
         obj = PremiumUtilsDefault;

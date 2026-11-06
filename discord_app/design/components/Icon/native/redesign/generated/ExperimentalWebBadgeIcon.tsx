@@ -1,10 +1,10 @@
-// === Module 9460: ExperimentalWebBadgeIcon ===
+// === Module 9406: ExperimentalWebBadgeIcon ===
 
-// Module 9460 (ExperimentalWebBadgeIcon)
+// Module 9406 (ExperimentalWebBadgeIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5853 */;
-import _mod9461 from "module_9461" /* 9461 */;
-import _mod9462 from "module_9462" /* 9462 */;
+import BaseIconImage from "BaseIconImage" /* 5871 */;
+import _mod9407 from "module_9407" /* 9407 */;
+import _mod9408 from "module_9408" /* 9408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,8 +26,8 @@ export function ExperimentalWebBadgeIcon(secondaryColor) {
   const merged = Object.assign(secondaryColor, Object.assign({ style: 0, color: 0, secondaryColor: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  items = [React4(BaseIconImage.BaseIconImage, { source: _mod9461, color, style }), ];
-  const obj3 = { source: _mod9462, color: str, style: null };
+  items = [React4(BaseIconImage.BaseIconImage, { source: _mod9407, color, style }), ];
+  const obj3 = { source: _mod9408, color: str, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

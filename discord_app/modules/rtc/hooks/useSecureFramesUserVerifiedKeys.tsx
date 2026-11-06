@@ -1,8 +1,8 @@
-// === Module 18170: useSecureFramesUserVerifiedKeys ===
+// === Module 18162: useSecureFramesUserVerifiedKeys ===
 
-// Module 18170 (useSecureFramesUserVerifiedKeys)
-import _modDef12 from "module_12" /* 12 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9401 */;
+// Module 18162 (useSecureFramesUserVerifiedKeys)
+import applyDefault from "apply" /* 12 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9347 */;
 
 const require = globalThis.__r;
 
@@ -14,12 +14,12 @@ export function useSecureFramesUserVerifiedKeys(userId) {
   _require = userId;
   items = [VerifiedKeyStore];
   return require("initialize").useStateFromStoresArray(items, () => {
-    const entries = _modDef12(VerifiedKeyStore.getUserVerifiedKeys(closure_0)).entries();
+    const entries = applyDefault(VerifiedKeyStore.getUserVerifiedKeys(closure_0)).entries();
     const mapped = entries.map((item) => {
       [tmp, tmp2] = item;
       return { verifiedKey, timestamp };
     });
-    const tmpResult = _modDef12(VerifiedKeyStore.getUserVerifiedKeys(closure_0));
+    const tmpResult = applyDefault(VerifiedKeyStore.getUserVerifiedKeys(closure_0));
     return mapped.sortBy((timestamp) => -1 * timestamp.timestamp).value();
   });
 }

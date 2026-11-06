@@ -1,6 +1,6 @@
-// === Module 17948: MFAConstants ===
+// === Module 17936: MFAConstants ===
 
-// Module 17948 (MFAConstants)
+// Module 17936 (MFAConstants)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

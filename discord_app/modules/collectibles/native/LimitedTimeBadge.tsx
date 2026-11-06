@@ -1,20 +1,20 @@
-// === Module 9684: LimitedTimeBadge ===
+// === Module 9633: LimitedTimeBadge ===
 
-// Module 9684 (LimitedTimeBadge)
+// Module 9633 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5150 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import useCountdownDefault from "useCountdown" /* 7769 */;
+import shared from "shared" /* 5177 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import useCountdownDefault from "useCountdown" /* 7723 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2191 */;
+import LocaleStore from "LocaleStore" /* 2186 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 }, backgroundDarkMode: null, backgroundLightMode: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
 obj2.backgroundDarkMode = { backgroundColor: nativeDefault.colors.WHITE };

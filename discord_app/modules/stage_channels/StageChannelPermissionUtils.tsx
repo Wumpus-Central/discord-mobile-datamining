@@ -1,20 +1,20 @@
-// === Module 6848: StageChannelPermissionUtils ===
+// === Module 6790: StageChannelPermissionUtils ===
 
-// Module 6848 (StageChannelPermissionUtils)
+// Module 6790 (StageChannelPermissionUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 5000 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
-import LurkingStore from "LurkingStore" /* 5076 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 5027 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5107 */;
+import LurkingStore from "LurkingStore" /* 5103 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import StageInstanceStore from "StageInstanceStore" /* 4997 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import StageInstanceStore from "StageInstanceStore" /* 5024 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(5010).isGuildOwner;
+const isGuildOwner = fn(5037).isGuildOwner;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
@@ -141,6 +141,12 @@ export function useCanUpdateStageChannelModerators(id) {
     }
     return canResult1;
   }, items1);
+}
+export function useCanToggleRequestToSpeak(channel) {
+  _require = channel;
+  items = [PermissionStore];
+  const items1 = [channel];
+  return require("initialize").useStateFromStores(items, () => PermissionStore.can(constants2.MANAGE_CHANNELS, closure_0) || PermissionStore.can(constants2.MANAGE_ROLES, closure_0), items1);
 }
 export function useCanModerateRequestToSpeak(id) {
   _require = id;

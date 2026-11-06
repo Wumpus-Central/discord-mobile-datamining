@@ -1,18 +1,18 @@
-// === Module 8889: EditCollectiblesCTAButton ===
+// === Module 8835: EditCollectiblesCTAButton ===
 
-// Module 8889 (EditCollectiblesCTAButton)
+// Module 8835 (EditCollectiblesCTAButton)
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import HapticUtils from "HapticUtils" /* 5386 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7864 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8890 */;
-import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 8892 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8893 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import HapticUtils from "HapticUtils" /* 5406 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7818 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8836 */;
+import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 8838 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8839 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ require = fn;
 let closure_5 = fn(1074).CollectiblesMobileShopScreen;
 let closure_6 = fn(1623).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_8 = createStyles.createStyles({ buttonRowContainer: { flexGrow: 0, flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 12, height: 48 }, buttonContainer: { position: "absolute", bottom: 0, left: 0, right: 0, marginLeft: 24, marginRight: 24, flexDirection: "column", justifyContent: "flex-end" } });
 let closure_9 = { code: "(function EditCollectiblesCTAButtonTsx1(){let[shouldShowButton,APPLY_BUTTON_BOUNCE_DISTANCE,APPLY_BUTTON_SCALE_TRANSITION,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING]=this.__closure;const targetTranslateY=shouldShowButton.get()?0:APPLY_BUTTON_BOUNCE_DISTANCE;const targetScale=shouldShowButton.get()?1:APPLY_BUTTON_SCALE_TRANSITION;return{transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}]};})" };
 let closure_10 = { code: "(function EditCollectiblesCTAButtonTsx2(){let[shouldShowButton]=this.__closure;return{pointerEvents:shouldShowButton.get()?'box-none':'none'};})" };
@@ -152,13 +152,13 @@ export default noop.memo(function EditCollectiblesCTAButton(user) {
   const tmp2Result = PremiumUtilsDefault;
   let result = require("CollectiblesUtils").isPremiumCollectiblesProduct(product);
   if (!result) {
-    result = tmp4(7877).isPremiumCollectiblesPurchase(purchase);
-    const tmp4Result8 = tmp4(7877);
+    result = tmp4(7831).isPremiumCollectiblesPurchase(purchase);
+    const tmp4Result8 = tmp4(7831);
   }
   let result1 = !canUseCollectiblesResult;
   if (!canUseCollectiblesResult) {
-    result1 = tmp4(7877).isPremiumCollectiblesPurchase(purchase);
-    const tmp4Result9 = tmp4(7877);
+    result1 = tmp4(7831).isPremiumCollectiblesPurchase(purchase);
+    const tmp4Result9 = tmp4(7831);
   }
   let tmp30 = null == selectedSkuId;
   if (!tmp30) {

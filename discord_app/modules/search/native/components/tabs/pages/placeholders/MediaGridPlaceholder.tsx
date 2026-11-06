@@ -1,25 +1,25 @@
-// === Module 19018: MediaGridPlaceholder ===
+// === Module 19007: MediaGridPlaceholder ===
 
-// Module 19018 (MediaGridPlaceholder)
-import _mod12 from "module_12" /* 12 */;
+// Module 19007 (MediaGridPlaceholder)
+import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14117 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 19017 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 19019 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14094 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 19006 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 19008 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9982);
+const SearchConstants = fn(9933);
 ({ MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: closure_6, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { zIndex: 1, position: "absolute", width: "100%" }, recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING }, row: { flexDirection: "row" }, section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: SEARCH_LIST_SECTION_TOP_PADDING, paddingBottom: 8 }, sectionItem: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, sectionText: { opacity: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -39,9 +39,9 @@ export function RecentsMediaGridPlaceholder(visible) {
   let tmp = closure_9();
   dependencyMap = tmp;
   items = [numRows];
-  memo = memo.useMemo(() => _mod12.range(0, numRows * numColumns), items);
+  memo = memo.useMemo(() => apply.range(0, numRows * numColumns), items);
   const items1 = [memo];
-  const memo1 = memo.useMemo(() => _mod12.chunk(memo, numColumns), items1);
+  const memo1 = memo.useMemo(() => apply.chunk(memo, numColumns), items1);
   const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(visible.visible);
   const obj2 = { style: null, pointerEvents: "none", children: null };
   const items2 = [, , ];

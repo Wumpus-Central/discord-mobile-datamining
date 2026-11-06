@@ -1,16 +1,16 @@
-// === Module 6087: VideoQuality ===
+// === Module 6107: VideoQuality ===
 
-// Module 6087 (VideoQuality)
+// Module 6107 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import TimeUtils from "TimeUtils" /* 5909 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5926 */;
-import Histogram from "Histogram" /* 6032 */;
-import NetworkQualityDefault from "NetworkQuality" /* 6038 */;
-import VideoQualityStats from "VideoQualityStats" /* 6088 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 6064 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5929 */;
+import TimeUtils from "TimeUtils" /* 5928 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5945 */;
+import Histogram from "Histogram" /* 6052 */;
+import NetworkQualityDefault from "NetworkQuality" /* 6058 */;
+import VideoQualityStats from "VideoQualityStats" /* 6108 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 6084 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5948 */;
 
 require = fn;
 function round(arg0) {
@@ -230,10 +230,10 @@ prototype["pause"] = function pause() {
   if (!this.paused.value) {
     self.pausedCount = self.pausedCount + 1;
   }
-  const item = _modDef12.forEach(self.outboundStats, (arg0) => {
+  const item = applyDefault.forEach(self.outboundStats, (arg0) => {
     arg0.statsWindow = [];
   });
-  const item1 = _modDef12.forEach(self.inboundStats, (arg0) => {
+  const item1 = applyDefault.forEach(self.inboundStats, (arg0) => {
     arg0.statsWindow = [];
   });
   self.updateSendState({ paused: true });
@@ -889,7 +889,7 @@ prototype["updateSendState"] = function updateSendState(paused) {
   }
   self.videoStopped.value = self.paused.value || self.zeroReceivers.value;
   if ((self.paused.value || self.zeroReceivers.value) !== self.videoStopped.value) {
-    const item = _modDef12.forEach(self.outboundStats, (arg0) => {
+    const item = applyDefault.forEach(self.outboundStats, (arg0) => {
       items = [];
       arg0.statsWindow = items;
       return items;
@@ -1413,12 +1413,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     const set1 = new Set();
     const obj2 = { receivers: 1 };
     self.updateSendState(obj2);
-    let tmp23 = self.connection.context === tmp(5926).MediaEngineContextTypes.DEFAULT;
+    let tmp23 = self.connection.context === tmp(5945).MediaEngineContextTypes.DEFAULT;
     if (tmp23) {
       tmp23 = null != transport.camera;
     }
     self.cameraDuration.value = tmp23;
-    let tmp25 = self.connection.context === tmp(5926).MediaEngineContextTypes.DEFAULT;
+    let tmp25 = self.connection.context === tmp(5945).MediaEngineContextTypes.DEFAULT;
     if (tmp25) {
       tmp25 = null != transport.camera;
     }
@@ -1426,7 +1426,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       tmp25 = self.callUserIdsCount > 1;
     }
     self.cameraOpportunityDuration.value = tmp25;
-    let tmp27 = self.connection.context === tmp(5926).MediaEngineContextTypes.DEFAULT;
+    let tmp27 = self.connection.context === tmp(5945).MediaEngineContextTypes.DEFAULT;
     if (tmp27) {
       tmp27 = null != transport.camera;
     }
@@ -1437,7 +1437,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     if (tmp29) {
       self.cameraToggles = self.cameraToggles + 1;
     }
-    let liveBackgroundEnabled = self.connection.context === tmp(5926).MediaEngineContextTypes.DEFAULT;
+    let liveBackgroundEnabled = self.connection.context === tmp(5945).MediaEngineContextTypes.DEFAULT;
     if (liveBackgroundEnabled) {
       liveBackgroundEnabled = null != transport.camera;
     }
@@ -1445,7 +1445,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       liveBackgroundEnabled = VideoBackgroundStore.liveBackgroundEnabled;
     }
     self.videoBackgroundEnabledDuration.value = liveBackgroundEnabled;
-    closure_7 = _modDef12.max(streamParameters.map((quality) => quality.quality));
+    closure_7 = applyDefault.max(streamParameters.map((quality) => quality.quality));
     const outbound = transport.rtp.outbound;
     const first = outbound.filter((type) => {
       let tmp = "video" === type.type;
@@ -1711,7 +1711,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       }
     });
     if (!self.paused.value) {
-      const item1 = _modDef12.forEach(transport.rtp.inbound, (arr, arg1) => {
+      const item1 = applyDefault.forEach(transport.rtp.inbound, (arr, arg1) => {
         const found = arr.find((type) => "video" === type.type);
         if (null != found) {
           let obj = self.inboundStats[arg1];
@@ -1761,7 +1761,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
           tmp27 = null == obj.timeToFirstFrame && found.framesDecoded > 0;
         }
       });
-      const tmp32Result = _modDef12;
+      const tmp32Result = applyDefault;
     }
     if (tmp38) {
       if (tmpResult.areSetsEqual(set, set1)) {
@@ -1769,7 +1769,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       } else {
         self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;
       }
-      tmpResult = tmp(5009);
+      tmpResult = tmp(5036);
     }
   } else {
     const receiverReports2 = receiverReports.receiverReports;

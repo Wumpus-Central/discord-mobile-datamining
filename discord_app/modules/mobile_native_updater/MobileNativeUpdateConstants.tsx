@@ -1,8 +1,8 @@
-// === Module 5883: MobileNativeUpdateConstants ===
+// === Module 5902: MobileNativeUpdateConstants ===
 
-// Module 5883 (MobileNativeUpdateConstants)
+// Module 5902 (MobileNativeUpdateConstants)
 import URLUtilsDefault from "URLUtils" /* 1378 */;
-import hooks from "module_2171" /* 2171 */;
+import hooks from "module_2166" /* 2166 */;
 
 let tmp3 = null;
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {

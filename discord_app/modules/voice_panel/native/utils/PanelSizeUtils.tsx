@@ -1,7 +1,7 @@
-// === Module 19498: PanelSizeUtils ===
+// === Module 19490: PanelSizeUtils ===
 
-// Module 19498 (PanelSizeUtils)
-import VoicePanelConstants from "VoicePanelConstants" /* 11419 */;
+// Module 19490 (PanelSizeUtils)
+import VoicePanelConstants from "VoicePanelConstants" /* 11381 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function getMaxPanelWidth_PanelSizeUtilsTsx1({windowWidth:windowWidth,connected:connected,safeAreaLeft:safeAreaLeft,safeAreaRight:safeAreaRight}){let[VOICE_PANEL_DRAWER_MAX_WIDTH]=this.__closure;return Math.min(windowWidth,connected?windowWidth:Math.min(VOICE_PANEL_DRAWER_MAX_WIDTH,windowWidth-safeAreaLeft-safeAreaRight));})" }, VoicePanelConstants.VOICE_PANEL_DRAWER_MAX_WIDTH];

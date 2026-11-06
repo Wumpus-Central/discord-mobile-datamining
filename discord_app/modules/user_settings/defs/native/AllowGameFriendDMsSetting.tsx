@@ -1,11 +1,11 @@
-// === Module 18209: AllowGameFriendDMsSetting ===
+// === Module 18201: AllowGameFriendDMsSetting ===
 
-// Module 18209 (AllowGameFriendDMsSetting)
+// Module 18201 (AllowGameFriendDMsSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4968 */;
-import SettingsConstants from "SettingsConstants" /* 8578 */;
-import useIsAllowGameFriendDMsSettingVisible from "useIsAllowGameFriendDMsSettingVisible" /* 18210 */;
-import SettingBuilders from "SettingBuilders" /* 11737 */;
+import UserSettings from "UserSettings" /* 4995 */;
+import SettingsConstants from "SettingsConstants" /* 8524 */;
+import useIsAllowGameFriendDMsSettingVisible from "useIsAllowGameFriendDMsSettingVisible" /* 18202 */;
+import SettingBuilders from "SettingBuilders" /* 11703 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

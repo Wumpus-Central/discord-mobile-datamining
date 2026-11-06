@@ -1,19 +1,19 @@
-// === Module 6895: StageChannelRoleStore ===
+// === Module 6837: StageChannelRoleStore ===
 
-// Module 6895 (StageChannelRoleStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 6837 (StageChannelRoleStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 5000 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6186 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6896 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildRoleStore from "GuildRoleStore" /* 5049 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 5027 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5107 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6206 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6838 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildRoleStore from "GuildRoleStore" /* 5076 */;
+import GuildStore from "GuildStore" /* 5041 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5815 */;
+import VoiceStateStore from "VoiceStateStore" /* 5833 */;
 
 require = fn;
 function buildStageChannelUserRoles(user, id2) {
@@ -191,7 +191,7 @@ const stageChannelRoleStore = new StageChannelRoleStore(DispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    const isEmptyResult = _modDef12.isEmpty(closure_11);
+    const isEmptyResult = applyDefault.isEmpty(closure_11);
     let reduced = !isEmptyResult;
     if (!isEmptyResult) {
       reduced = voiceStates.reduce((acc, item) => {

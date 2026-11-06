@@ -1,20 +1,20 @@
-// === Module 19873: NewUserUtils ===
+// === Module 19879: NewUserUtils ===
 
-// Module 19873 (NewUserUtils)
+// Module 19879 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import Link from "Link" /* 1500 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8108 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14479 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14585 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18332 */;
-import InterestPickerExperiment from "InterestPickerExperiment" /* 18711 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 19872 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8054 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14456 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14562 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18324 */;
+import InterestPickerExperiment from "InterestPickerExperiment" /* 18701 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 19878 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 18284 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6710 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 18276 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6652 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -227,12 +227,12 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(14205);
+const NotificationPermissionConstants = fn(14182);
 ({ EventActionLocation: metroImportDefault, EventActionType: closure_8 } = NotificationPermissionConstants);
 const Constants = fn(1072);
 ({ PlatformTypes: closure_9, Routes: closure_10 } = Constants);
-const ContactPermissions = fn(14474).ContactPermissions;
-let closure_12 = fn(8085).NotificationAuthorizationStatus;
+const ContactPermissions = fn(14451).ContactPermissions;
+let closure_12 = fn(8031).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_16 = asyncGeneratorStep(async () => {
@@ -445,17 +445,6 @@ let items = [
   obj2,
   obj3,
   {
-    key: "interest-picker",
-    shouldShowStep() {
-      const shouldShowGuardianConnect = ParentalConsentStore.getShouldShowGuardianConnect();
-      let result = !shouldShowGuardianConnect;
-      if (!shouldShowGuardianConnect) {
-        result = InterestPickerExperiment.isInterestPickerExperimentEnabled("nuf_interest_picker_step");
-      }
-      return result;
-    }
-  },
-  {
     key: "discoverability",
     shouldShowStep() {
       return !MobileOnboardingFrictionExperimentDefault.getMobileOnboardingFrictionConfig(NewUserUtils).skipContactSync;
@@ -484,8 +473,19 @@ let items = [
     }
   },
   {
+    key: "interest-picker",
+    shouldShowStep() {
+      const shouldShowGuardianConnect = ParentalConsentStore.getShouldShowGuardianConnect();
+      let result = !shouldShowGuardianConnect;
+      if (!shouldShowGuardianConnect) {
+        result = InterestPickerExperiment.isInterestPickerExperimentEnabled("nuf_interest_picker_step");
+      }
+      return result;
+    }
+  },
+  {
     key: "accept-invite",
-    shouldShowStep: fn(9270).hasDeferredInvite,
+    shouldShowStep: fn(9216).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

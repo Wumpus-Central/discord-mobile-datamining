@@ -1,8 +1,8 @@
-// === Module 7571: GuildRoleSubscriptionsActionCreators ===
+// === Module 7516: GuildRoleSubscriptionsActionCreators ===
 
-// Module 7571 (GuildRoleSubscriptionsActionCreators)
+// Module 7516 (GuildRoleSubscriptionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRoleSubscriptionsHttpApiAll from "GuildRoleSubscriptionsHttpApi" /* 7572 */;
+import GuildRoleSubscriptionsHttpApiAll from "GuildRoleSubscriptionsHttpApi" /* 7517 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

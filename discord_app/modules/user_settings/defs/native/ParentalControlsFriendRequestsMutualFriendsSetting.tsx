@@ -1,26 +1,26 @@
-// === Module 18219: ParentalControlsFriendRequestsMutualFriendsSetting ===
+// === Module 18211: ParentalControlsFriendRequestsMutualFriendsSetting ===
 
-// Module 18219 (ParentalControlsFriendRequestsMutualFriendsSetting)
+// Module 18211 (ParentalControlsFriendRequestsMutualFriendsSetting)
 import util from "util" /* 1113 */;
-import FlagUtilsAll from "FlagUtils" /* 1398 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7305 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16992 */;
-import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16996 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7252 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16980 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16984 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7860 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7814 */;
 
 require = fn;
 const FriendSourceFlags = fn(1072).FriendSourceFlags;
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
   },
-  parent: fn(8578).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8524).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
-    const selectedTeenId = controlledSetting(8517).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(16992).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8463).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(16980).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualFriends;

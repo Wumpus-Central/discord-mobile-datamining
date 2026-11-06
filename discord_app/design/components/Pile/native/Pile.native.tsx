@@ -1,10 +1,10 @@
-// === Module 13656: Pile ===
+// === Module 13631: Pile ===
 
-// Module 13656 (Pile)
-import _mod12 from "module_12" /* 12 */;
+// Module 13631 (Pile)
+import apply from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ClipView from "ClipView" /* 9662 */;
-import PileOverflow from "PileOverflow" /* 13657 */;
+import ClipView from "ClipView" /* 9611 */;
+import PileOverflow from "PileOverflow" /* 13632 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -12,7 +12,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_6 = createStyles.createStyles({ pile: { flexDirection: "row" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");
@@ -83,7 +83,7 @@ export function Pile(aria_label) {
           GlobalUtils.assertNever(shape);
           const tmp3Result3 = GlobalUtils;
         }
-        tmp3Result = _mod12;
+        tmp3Result = apply;
       }
       let num6 = 0;
       let num7 = 0;
@@ -103,7 +103,7 @@ export function Pile(aria_label) {
         }
         num6 = num8;
         num7 = sum1;
-        tmp3Result4 = _mod12;
+        tmp3Result4 = apply;
       }
       const obj2 = { height: tmp6, marginLeft: num7, marginTop: num6 };
       items = [obj2, ];

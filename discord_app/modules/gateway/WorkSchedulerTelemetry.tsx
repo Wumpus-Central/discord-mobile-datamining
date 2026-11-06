@@ -1,7 +1,7 @@
-// === Module 15779: WorkSchedulerTelemetry ===
+// === Module 15773: WorkSchedulerTelemetry ===
 
-// Module 15779 (WorkSchedulerTelemetry)
-import _mod12 from "module_12" /* 12 */;
+// Module 15773 (WorkSchedulerTelemetry)
+import apply from "apply" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -30,10 +30,10 @@ class WorkSchedulerTelemetry {
 }
 const prototype = WorkSchedulerTelemetry.prototype;
 prototype["reset"] = function reset() {
-  this._timeTracking = _mod12.cloneDeep(closure_3);
-  this._timingStats = _mod12.cloneDeep(closure_4);
-  this._measurements = _mod12.cloneDeep(closure_5);
-  this._eventCounts = _mod12.cloneDeep(closure_6);
+  this._timeTracking = apply.cloneDeep(closure_3);
+  this._timingStats = apply.cloneDeep(closure_4);
+  this._measurements = apply.cloneDeep(closure_5);
+  this._eventCounts = apply.cloneDeep(closure_6);
 };
 prototype["clearTime"] = function clearTime(arg0) {
   this._timeTracking[arg0] = null;

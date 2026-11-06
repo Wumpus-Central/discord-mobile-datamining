@@ -1,7 +1,7 @@
-// === Module 5818: getPlatform ===
+// === Module 5836: getPlatform ===
 
-// Module 5818 (getPlatform)
-import EmbeddedActivitySupportedPlatforms from "EmbeddedActivitySupportedPlatforms" /* 2149 */;
+// Module 5836 (getPlatform)
+import EmbeddedActivitySupportedPlatforms from "EmbeddedActivitySupportedPlatforms" /* 2144 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");

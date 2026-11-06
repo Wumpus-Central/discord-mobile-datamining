@@ -1,7 +1,7 @@
-// === Module 6693: getAnalyticsDataForSKU ===
+// === Module 6635: getAnalyticsDataForSKU ===
 
-// Module 6693 (getAnalyticsDataForSKU)
-import ApplicationStore from "ApplicationStore" /* 2167 */;
+// Module 6635 (getAnalyticsDataForSKU)
+import ApplicationStore from "ApplicationStore" /* 2162 */;
 
 const SKUFeatureTypes = fn(1072).SKUFeatureTypes;
 const size = fn(2);

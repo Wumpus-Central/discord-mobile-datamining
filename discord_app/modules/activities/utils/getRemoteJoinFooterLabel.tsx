@@ -1,8 +1,8 @@
-// === Module 15378: getRemoteJoinFooterLabel ===
+// === Module 15373: getRemoteJoinFooterLabel ===
 
-// Module 15378 (getRemoteJoinFooterLabel)
+// Module 15373 (getRemoteJoinFooterLabel)
 import util from "util" /* 1113 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9894 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9844 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");

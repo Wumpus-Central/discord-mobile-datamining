@@ -1,7 +1,7 @@
 // === Module 1233: user_settings/UserSettingsUtils ===
 
 // Module 1233 (user_settings/UserSettingsUtils)
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import user_settings_shared from "user_settings_shared" /* 1225 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
@@ -181,7 +181,7 @@ export function serializeUsageHistory(usageHistory, FREQUENCY_ITEM_LIMIT) {
   let length;
   const entries = Object.entries(usageHistory);
   if (entries.length > FREQUENCY_ITEM_LIMIT) {
-    const reversed = _modDef12.sortBy(entries, (arg0) => {
+    const reversed = applyDefault.sortBy(entries, (arg0) => {
       [, tmp] = arg0;
       return tmp.recentUses[tmp.recentUses.length - 1];
     }).reverse();
@@ -191,7 +191,7 @@ export function serializeUsageHistory(usageHistory, FREQUENCY_ITEM_LIMIT) {
         length = reversed.length;
       } while (length > FREQUENCY_ITEM_LIMIT);
     }
-    const sortByResult = _modDef12.sortBy(entries, (arg0) => {
+    const sortByResult = applyDefault.sortBy(entries, (arg0) => {
       [, tmp] = arg0;
       return tmp.recentUses[tmp.recentUses.length - 1];
     });

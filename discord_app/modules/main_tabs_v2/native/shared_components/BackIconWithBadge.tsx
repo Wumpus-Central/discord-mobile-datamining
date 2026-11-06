@@ -1,14 +1,14 @@
-// === Module 18777: BackIconWithBadge ===
+// === Module 16832: BackIconWithBadge ===
 
-// Module 18777 (BackIconWithBadge)
+// Module 16832 (BackIconWithBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7146 */;
-import XSmallIcon from "XSmallIcon" /* 7198 */;
-import ClipView from "ClipView" /* 9662 */;
-import XLargeIcon from "XLargeIcon" /* 10952 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7093 */;
+import XSmallIcon from "XSmallIcon" /* 7145 */;
+import ClipView from "ClipView" /* 9611 */;
+import XLargeIcon from "XLargeIcon" /* 10904 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7024 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6966 */;
 
 require = fn;
 function IconWithBadge(includeNotificationsCount) {
@@ -16,71 +16,83 @@ function IconWithBadge(includeNotificationsCount) {
   if (flag === undefined) {
     flag = false;
   }
-  _require = undefined;
+  let flag2 = includeNotificationsCount.hideBadge;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
   let memo;
   const tmp = closure_8();
   items = [GuildReadStateStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
+  const items1 = [flag2];
+  const stateFromStores = flag2(memo[6]).useStateFromStores(items, () => {
+    num = 0;
+    if (!flag2) {
+      num = GuildReadStateStore.getTotalMentionCount();
+    }
+    return num;
+  }, items1);
   let num = 0;
-  if (null != stateFromStores) {
-    num = stateFromStores;
+  if (!flag2) {
+    let num2 = 0;
+    if (null != stateFromStores) {
+      num2 = stateFromStores;
+    }
+    let num3 = 0;
+    if (flag) {
+      num3 = tmp6;
+    }
+    num = num2 + num3;
   }
-  let num2 = 0;
-  if (flag) {
-    num2 = memo(18768)().value;
-  }
-  const sum = num + num2;
-  _require = sum;
-  const items1 = [sum];
+  const items2 = [num];
   memo = noop.useMemo(() => {
-    if (c0 < 10) {
+    if (num < 10) {
       let BADGE_SIZE = native.BADGE_SIZE;
     } else {
       BADGE_SIZE = native.BADGE_SIZE + 8;
     }
     return BADGE_SIZE;
-  }, items1);
-  const items2 = [sum, memo];
+  }, items2);
+  const items3 = [num, memo];
   const memo1 = noop.useMemo(() => {
-    if (0 !== c0) {
+    if (0 !== num) {
       const BADGE_PADDING = native.BADGE_PADDING;
       const size = { shape: ClipView.CutoutShape.RoundedRect, x: 12 - BADGE_PADDING, y: 16 - BADGE_PADDING, width: memo + 2 * BADGE_PADDING, height: native.BADGE_SIZE + 2 * BADGE_PADDING, cornerRadius: (native.BADGE_SIZE + 2 * BADGE_PADDING) / 2 };
       return size;
     }
-  }, items2);
-  const obj = require("initialize");
-  const tmp5 = memo;
+  }, items3);
+  const obj = flag2(memo[6]);
+  const tmp5 = num;
   let size;
   if (tmp2Result.isAndroid()) {
     size = { height: 40, width: 40, paddingTop: 8, marginRight: -8 };
   }
   const obj2 = { style: size, children: null };
   const obj3 = { style: tmp.backIcon, children: null };
-  tmp2Result = require("utils/PlatformUtils");
+  tmp2Result = flag2(memo[10]);
   if (null != memo1) {
-    const items3 = [memo1];
-    let items4 = items3;
+    const items4 = [memo1];
+    let items5 = items4;
   } else {
-    items4 = [];
+    items5 = [];
   }
-  const obj4 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(tmp5(9662), obj4), ];
-  let tmp9Result = null;
-  if (sum > 0) {
+  const obj4 = { cutouts: items5, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
+  const items6 = [closure_6(tmp5(memo[9]), obj4), ];
+  let tmp10Result = null;
+  if (num > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };
-    const obj7 = { value: sum, maxValue: 99 };
-    obj6.children = closure_6(tmp2(1187).Badge, obj7);
-    tmp9Result = closure_6(View, obj6);
+    const obj7 = { value: num, maxValue: 99 };
+    obj6.children = closure_6(tmp2(tmp3[8]).Badge, obj7);
+    tmp10Result = closure_6(View, obj6);
   }
-  items5[1] = tmp9Result;
-  obj3.children = items5;
+  items6[1] = tmp10Result;
+  obj3.children = items6;
   obj2.children = closure_7(View, obj3);
   return closure_6(View, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT } };
 let closure_8 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -93,8 +105,12 @@ export function SettingsLeftIconWithBadge(navigation) {
   if (flag === undefined) {
     flag = false;
   }
+  let flag2 = navigation.hideBadge;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
   items = [navigation];
-  const obj = { includeNotificationsCount: flag, Icon: null };
+  const obj = { includeNotificationsCount: flag, hideBadge: flag2, Icon: null };
   if (noop.useMemo(() => navigation.getState().index > 0, items)) {
     obj.Icon = ArrowLargeLeftIcon.ArrowLargeLeftIcon;
     let tmp5 = obj;

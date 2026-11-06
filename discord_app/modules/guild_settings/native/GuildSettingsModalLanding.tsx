@@ -1,27 +1,27 @@
-// === Module 19968: GuildSettingsModalLanding ===
+// === Module 19975: GuildSettingsModalLanding ===
 
-// Module 19968 (GuildSettingsModalLanding)
+// Module 19975 (GuildSettingsModalLanding)
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
-import ToastUtils from "ToastUtils" /* 5848 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5897 */;
-import ClipboardListIcon from "ClipboardListIcon" /* 7051 */;
-import TableRow2 from "TableRow" /* 7119 */;
-import TableRowGroup from "TableRowGroup" /* 7204 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9211 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9226 */;
-import RobotIcon from "RobotIcon" /* 12310 */;
-import HammerIcon from "HammerIcon" /* 13224 */;
-import _modDef15362 from "module_15362" /* 15362 */;
-import ModerationIcon from "ModerationIcon" /* 19972 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5107 */;
+import ToastUtils from "ToastUtils" /* 5866 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5916 */;
+import ClipboardListIcon from "ClipboardListIcon" /* 6993 */;
+import TableRow2 from "TableRow" /* 7063 */;
+import TableRowGroup from "TableRowGroup" /* 7151 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9157 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9172 */;
+import RobotIcon from "RobotIcon" /* 12277 */;
+import HammerIcon from "HammerIcon" /* 13189 */;
+import _modDef15356 from "module_15356" /* 15356 */;
+import ModerationIcon from "ModerationIcon" /* 19979 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 5073 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
+import GuildChannelStore from "GuildChannelStore" /* 5100 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 18487 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9227 */;
+import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 18477 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9173 */;
 
 require = fn;
 function SettingsSection(guild) {
@@ -31,11 +31,11 @@ function SettingsSection(guild) {
   const obj = { label: null, arrow: true, icon: null, onPress: null };
   const intl = guild(1113).intl;
   obj.label = intl.string(guild(1113).t["/dp6yY"]);
-  obj.icon = closure_15(guild(7119).TableRow.Icon, { IconComponent: guild(5872).CircleInformationIcon });
+  obj.icon = closure_15(guild(7063).TableRow.Icon, { IconComponent: guild(5890).CircleInformationIcon });
   obj.onPress = function onPress() {
     return importDefault(constants2.OVERVIEW);
   };
-  items = [closure_15(guild(7119).TableRow, obj, "overview")];
+  items = [closure_15(guild(7063).TableRow, obj, "overview")];
   const currentUser = UserStore.getCurrentUser();
   if (!canManageChannels) {
     let canManageACategoryResult = null != currentUser;
@@ -48,13 +48,13 @@ function SettingsSection(guild) {
     const obj4 = { label: null, arrow: true, icon: null, onPress: null };
     const intl2 = tmp2(1113).intl;
     obj4.label = intl2.string(tmp2(1113).t.OGiMXJ);
-    const obj5 = { IconComponent: tmp2(19969).ChannelListIcon };
-    obj4.icon = closure_15(tmp2(7119).TableRow.Icon, obj5);
+    const obj5 = { IconComponent: tmp2(19976).ChannelListIcon };
+    obj4.icon = closure_15(tmp2(7063).TableRow.Icon, obj5);
     obj4.onPress = function onPress() {
       guild = GuildSettingsModalChannelsStore.initGuild(guild.id);
       importDefault(constants2.CHANNELS);
     };
-    items.push(closure_15(tmp2(7119).TableRow, obj4, "channels"));
+    items.push(closure_15(tmp2(7063).TableRow, obj4, "channels"));
   }
   let tmp9 = canManageGuild;
   if (!canManageGuild) {
@@ -67,50 +67,50 @@ function SettingsSection(guild) {
     const obj6 = { label: null, arrow: true, icon: null, onPress: null };
     const intl3 = tmp2(1113).intl;
     obj6.label = intl3.string(tmp2(1113).t.CIsNZw);
-    const obj7 = { IconComponent: tmp2(19210).PuzzlePieceIcon };
-    obj6.icon = closure_15(tmp2(7119).TableRow.Icon, obj7);
+    const obj7 = { IconComponent: tmp2(19202).PuzzlePieceIcon };
+    obj6.icon = closure_15(tmp2(7063).TableRow.Icon, obj7);
     obj6.onPress = function onPress() {
       return importDefault(constants2.INTEGRATIONS);
     };
-    items.push(closure_15(tmp2(7119).TableRow, obj6, "integrations"));
+    items.push(closure_15(tmp2(7063).TableRow, obj6, "integrations"));
   }
-  const obj2 = { IconComponent: guild(5872).CircleInformationIcon };
+  const obj2 = { IconComponent: guild(5890).CircleInformationIcon };
   if (tmp2Result.canUseMobileServerTagSettings(guild.id)) {
     const obj8 = { label: null, arrow: true, icon: null, onPress: null };
     const intl4 = tmp2(1113).intl;
     obj8.label = intl4.string(tmp2(1113).t["2QmKZ2"]);
-    const obj9 = { IconComponent: tmp2(9722).TagIcon };
-    obj8.icon = closure_15(tmp2(7119).TableRow.Icon, obj9);
+    const obj9 = { IconComponent: tmp2(9671).TagIcon };
+    obj8.icon = closure_15(tmp2(7063).TableRow.Icon, obj9);
     obj8.onPress = function onPress() {
       return importDefault(constants2.TAG);
     };
-    items.push(closure_15(tmp2(7119).TableRow, obj8, "server-tag"));
+    items.push(closure_15(tmp2(7063).TableRow, obj8, "server-tag"));
   }
   if (isGuildAdmin) {
-    isGuildAdmin = tmp2(19971).canSeeVanityUrlSettings(guild);
-    const tmp2Result2 = tmp2(19971);
+    isGuildAdmin = tmp2(19978).canSeeVanityUrlSettings(guild);
+    const tmp2Result2 = tmp2(19978);
   }
   if (isGuildAdmin) {
     const obj10 = { label: null, arrow: true, icon: null, onPress: null };
     const intl5 = tmp2(1113).intl;
     obj10.label = intl5.string(tmp2(1113).t["5XZKy/"]);
-    const obj11 = { IconComponent: tmp2(5864).LinkIcon };
-    obj10.icon = closure_15(tmp2(7119).TableRow.Icon, obj11);
+    const obj11 = { IconComponent: tmp2(5882).LinkIcon };
+    obj10.icon = closure_15(tmp2(7063).TableRow.Icon, obj11);
     obj10.onPress = function onPress() {
       return importDefault(constants2.VANITY_URL);
     };
-    items.push(closure_15(tmp2(7119).TableRow, obj10, "vanity"));
+    items.push(closure_15(tmp2(7063).TableRow, obj10, "vanity"));
   }
   if (canManageGuild) {
     const obj12 = { label: null, arrow: true, icon: null, onPress: null };
     const intl6 = tmp2(1113).intl;
     obj12.label = intl6.string(tmp2(1113).t.KUw7Ss);
-    const obj13 = { source: _modDef15362 };
-    obj12.icon = closure_15(tmp2(7119).TableRow.Icon, obj13);
+    const obj13 = { source: _modDef15356 };
+    obj12.icon = closure_15(tmp2(7063).TableRow.Icon, obj13);
     obj12.onPress = function onPress() {
       return importDefault(constants2.GUILD_TEMPLATES);
     };
-    items.push(closure_15(tmp2(7119).TableRow, obj12, "guild-template"));
+    items.push(closure_15(tmp2(7063).TableRow, obj12, "guild-template"));
   }
   let tmpResult = null;
   if (0 !== items.length) {
@@ -118,7 +118,7 @@ function SettingsSection(guild) {
     const intl7 = tmp2(1113).intl;
     obj14.title = intl7.string(tmp2(1113).t["3D5yo/"]);
     obj14.children = items;
-    tmpResult = closure_15(tmp2(7204).TableRowGroup, obj14);
+    tmpResult = closure_15(tmp2(7151).TableRowGroup, obj14);
   }
   return tmpResult;
 }
@@ -129,32 +129,32 @@ function ExpressionSection(pushScreen) {
     const obj = { label: null, arrow: true, icon: null, onPress: null };
     const intl = pushScreen(1113).intl;
     obj.label = intl.string(pushScreen(1113).t.sMOuuS);
-    const obj2 = { IconComponent: pushScreen(9605).ReactionIcon };
-    obj.icon = closure_15(pushScreen(7119).TableRow.Icon, obj2);
+    const obj2 = { IconComponent: pushScreen(9551).ReactionIcon };
+    obj.icon = closure_15(pushScreen(7063).TableRow.Icon, obj2);
     obj.onPress = function onPress() {
       return pushScreen(constants2.EMOJI);
     };
-    items.push(closure_15(pushScreen(7119).TableRow, obj, "emoji"));
+    items.push(closure_15(pushScreen(7063).TableRow, obj, "emoji"));
     const obj3 = { label: null, arrow: true, icon: null, onPress: null };
     const intl2 = pushScreen(1113).intl;
     obj3.label = intl2.string(pushScreen(1113).t.R5nQkS);
-    const obj4 = { IconComponent: pushScreen(11233).StickerIcon };
-    obj3.icon = closure_15(pushScreen(7119).TableRow.Icon, obj4);
+    const obj4 = { IconComponent: pushScreen(11188).StickerIcon };
+    obj3.icon = closure_15(pushScreen(7063).TableRow.Icon, obj4);
     obj3.onPress = function onPress() {
       return pushScreen(constants2.STICKERS);
     };
-    items.push(closure_15(pushScreen(7119).TableRow, obj3, "stickers"));
+    items.push(closure_15(pushScreen(7063).TableRow, obj3, "stickers"));
   }
   if (pushScreen.canConfigureOfficialMessages) {
     const obj5 = { label: null, arrow: true, icon: null, onPress: null };
     const intl3 = pushScreen(1113).intl;
     obj5.label = intl3.string(pushScreen(1113).t.xHEzFh);
-    const obj6 = { IconComponent: pushScreen(14771).StampIcon };
-    obj5.icon = closure_15(pushScreen(7119).TableRow.Icon, obj6);
+    const obj6 = { IconComponent: pushScreen(14748).StampIcon };
+    obj5.icon = closure_15(pushScreen(7063).TableRow.Icon, obj6);
     obj5.onPress = function onPress() {
       return pushScreen(constants2.OFFICIAL_MESSAGES);
     };
-    items.push(closure_15(pushScreen(7119).TableRow, obj5, "official-messages"));
+    items.push(closure_15(pushScreen(7063).TableRow, obj5, "official-messages"));
   }
   let tmp10 = null;
   if (0 !== items.length) {
@@ -162,7 +162,7 @@ function ExpressionSection(pushScreen) {
     const intl4 = pushScreen(1113).intl;
     obj7.title = intl4.string(pushScreen(1113).t.m6lkGy);
     obj7.children = items;
-    tmp10 = closure_15(pushScreen(7204).TableRowGroup, obj7);
+    tmp10 = closure_15(pushScreen(7151).TableRowGroup, obj7);
   }
   return tmp10;
 }
@@ -172,38 +172,38 @@ function PeopleSection(pushScreen) {
   const obj = { label: null, arrow: true, icon: null, onPress: null };
   const intl = pushScreen(1113).intl;
   obj.label = intl.string(pushScreen(1113).t["9Oq93m"]);
-  obj.icon = closure_15(pushScreen(7119).TableRow.Icon, { IconComponent: pushScreen(8807).GroupIcon });
+  obj.icon = closure_15(pushScreen(7063).TableRow.Icon, { IconComponent: pushScreen(8753).GroupIcon });
   obj.onPress = function onPress() {
     return pushScreen(constants2.MEMBERS);
   };
-  items = [closure_15(pushScreen(7119).TableRow, obj, "members")];
+  items = [closure_15(pushScreen(7063).TableRow, obj, "members")];
   if (canManageRoles) {
     const obj3 = { label: null, arrow: true, icon: null, onPress: null };
     const intl2 = tmp2(1113).intl;
     obj3.label = intl2.string(tmp2(1113).t["LPJmL/"]);
-    const obj4 = { IconComponent: tmp2(9211).ShieldUserIcon };
-    obj3.icon = closure_15(tmp2(7119).TableRow.Icon, obj4);
+    const obj4 = { IconComponent: tmp2(9157).ShieldUserIcon };
+    obj3.icon = closure_15(tmp2(7063).TableRow.Icon, obj4);
     obj3.onPress = function onPress() {
       return pushScreen(constants2.ROLES);
     };
-    items.push(closure_15(tmp2(7119).TableRow, obj3, "roles"));
+    items.push(closure_15(tmp2(7063).TableRow, obj3, "roles"));
   }
   if (canManageGuild) {
     const obj5 = { label: null, arrow: true, icon: null, onPress: null };
     const intl3 = tmp2(1113).intl;
     obj5.label = intl3.string(tmp2(1113).t.ngRFjZ);
-    const obj6 = { IconComponent: tmp2(5864).LinkIcon };
-    obj5.icon = closure_15(tmp2(7119).TableRow.Icon, obj6);
+    const obj6 = { IconComponent: tmp2(5882).LinkIcon };
+    obj5.icon = closure_15(tmp2(7063).TableRow.Icon, obj6);
     obj5.onPress = function onPress() {
       return pushScreen(constants2.INSTANT_INVITES);
     };
-    items.push(closure_15(tmp2(7119).TableRow, obj5, "invites"));
+    items.push(closure_15(tmp2(7063).TableRow, obj5, "invites"));
   }
   const obj7 = { title: null, hasIcons: true, children: null };
   const intl4 = tmp2(1113).intl;
   obj7.title = intl4.string(pushScreen(1113).t.bMAKMK);
   obj7.children = items;
-  return closure_15(pushScreen(7204).TableRowGroup, obj7);
+  return closure_15(pushScreen(7151).TableRowGroup, obj7);
 }
 function ModerationSection(arg0) {
   ({ canManageGuild, canViewAuditLog, canManageBans, pushScreen: require } = arg0);
@@ -288,12 +288,12 @@ function CommunitySection(pushScreen) {
       const obj2 = { label: null, arrow: true, icon: null, onPress: null };
       const intl2 = pushScreen(1113).intl;
       obj2.label = intl2.string(pushScreen(1113).t["0wWfUG"]);
-      const obj3 = { IconComponent: pushScreen(10447).AnalyticsIcon };
-      obj2.icon = closure_15(pushScreen(7119).TableRow.Icon, obj3);
+      const obj3 = { IconComponent: pushScreen(10399).AnalyticsIcon };
+      obj2.icon = closure_15(pushScreen(7063).TableRow.Icon, obj3);
       obj2.onPress = function onPress() {
         return pushScreen(constants2.ANALYTICS);
       };
-      items.push(closure_15(pushScreen(7119).TableRow, obj2, "analytics"));
+      items.push(closure_15(pushScreen(7063).TableRow, obj2, "analytics"));
     }
     let tmp9 = null;
     if (0 !== items.length) {
@@ -301,21 +301,21 @@ function CommunitySection(pushScreen) {
       const intl3 = pushScreen(1113).intl;
       obj4.title = intl3.string(pushScreen(1113).t["1g9A/f"]);
       obj4.children = items;
-      tmp9 = closure_15(pushScreen(7204).TableRowGroup, obj4);
+      tmp9 = closure_15(pushScreen(7151).TableRowGroup, obj4);
     }
     return tmp9;
   } else {
     let TreehouseIcon = dependencyMap;
-    const TableRow = pushScreen(7119).TableRow;
+    const TableRow = pushScreen(7063).TableRow;
     const obj = { label: null, arrow: true, icon: null, onPress: null };
     const intl = pushScreen(1113).intl;
     let Icon = intl.string;
     let t = pushScreen(1113).t;
     if (hasItem) {
       obj.label = Icon(t.nRtNqn);
-      Icon = tmp3(7119).TableRow.Icon;
+      Icon = tmp3(7063).TableRow.Icon;
       const obj5 = { IconComponent: null };
-      TreehouseIcon = tmp3(17871).TreehouseIcon;
+      TreehouseIcon = tmp3(17859).TreehouseIcon;
       obj5.IconComponent = TreehouseIcon;
       obj.icon = closure_15(Icon, obj5);
       obj.onPress = function onPress() {
@@ -324,8 +324,8 @@ function CommunitySection(pushScreen) {
       let tmp2Result = closure_15(TableRow, obj, "community-overview");
     } else {
       obj.label = Icon(t.ElKTeb);
-      const obj6 = { IconComponent: tmp3(17871).TreehouseIcon };
-      obj.icon = closure_15(tmp3(7119).TableRow.Icon, obj6);
+      const obj6 = { IconComponent: tmp3(17859).TreehouseIcon };
+      obj.icon = closure_15(tmp3(7063).TableRow.Icon, obj6);
       obj.onPress = function onPress() {
         return pushScreen(constants2.COMMUNITY_INTRO, {});
       };
@@ -337,9 +337,9 @@ function CommunitySection(pushScreen) {
 function GuildSettingsModalLandingInner(guild) {
   guild = guild.guild;
   const updateErrors = guild.updateErrors;
-  const token = guild(5734).useToken(updateErrors(575).modules.mobile.TABLE_ROW_PADDING);
+  const token = guild(5754).useToken(updateErrors(575).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_18();
-  let obj = guild(5734);
+  let obj = guild(5754);
   const navigation = guild(1499).useNavigation();
   let obj2 = guild(1499);
   items = [GuildChannelStore];
@@ -383,13 +383,13 @@ function GuildSettingsModalLandingInner(guild) {
   }, items2);
   ({ canManageGuild, isGuildAdmin, canManageRoles, canManageBans, canManageGuildExpressions, canManageChannels, canViewAuditLog, canManageWebhooks, canViewGuildAnalytics } = stateFromStoresObject);
   const obj4 = guild(504);
-  const obj6 = guild(19974);
-  const tmp11 = guild(19974).useChannelsAllowedToUnlink(guild.id).length > 0;
-  const canManageGuildRoleSubscriptions = guild(7576).useCanManageGuildRoleSubscriptions(guild);
+  const obj6 = guild(19981);
+  const tmp11 = guild(19981).useChannelsAllowedToUnlink(guild.id).length > 0;
+  const canManageGuildRoleSubscriptions = guild(7521).useCanManageGuildRoleSubscriptions(guild);
   let result = canManageGuild;
   if (canManageGuild) {
-    result = tmp(7583).isGuildOfficialMessagesEnabled(guild, "GuildSettingsModalLanding");
-    const tmpResult = tmp(7583);
+    result = tmp(7528).isGuildOfficialMessagesEnabled(guild, "GuildSettingsModalLanding");
+    const tmpResult = tmp(7528);
   }
   const items3 = [updateErrors.message];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -402,7 +402,7 @@ function GuildSettingsModalLandingInner(guild) {
   obj8.contentContainerStyle = items4;
   const obj9 = { style: { paddingHorizontal: token }, spacing: updateErrors(575).space.PX_24, children: null };
   const items5 = [
-    closure_15(updateErrors(19245), {
+    closure_15(updateErrors(19237), {
       iconProps: {
         onUpload: function handleGuildIconUpload(icon) {
           GuildSettingsActionCreatorsDefault.updateIcon(guild.id, icon);
@@ -433,13 +433,13 @@ function GuildSettingsModalLandingInner(guild) {
   let tmp17Result = canManageGuildRoleSubscriptions;
   if (canManageGuildRoleSubscriptions) {
     const obj11 = { guild, pushScreen: callback };
-    tmp17Result = closure_15(tmp3(19975), obj11);
+    tmp17Result = closure_15(tmp3(19982), obj11);
   }
   const obj12 = { children: null };
   items5[6] = tmp17Result;
   obj9.children = items5;
-  obj8.children = closure_16(guild(6165).Stack, obj9);
-  const items6 = [closure_15(guild(8322).Form, obj8), closure_15(guild(5744).NavScrim, {})];
+  obj8.children = closure_16(guild(6185).Stack, obj9);
+  const items6 = [closure_15(guild(8267).Form, obj8), closure_15(guild(5764).NavScrim, {})];
   obj12.children = items6;
   return closure_16(closure_17, obj12);
 }
@@ -447,7 +447,7 @@ const Constants = fn(1072);
 ({ GuildFeatures: closure_11, GuildSettingsSections: closure_12, ChannelTypes: map1, AnalyticEvents: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_18 = createStyles.createStyles({ container: { flex: 1 }, containerContent: { paddingTop: 16 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalLanding.tsx");

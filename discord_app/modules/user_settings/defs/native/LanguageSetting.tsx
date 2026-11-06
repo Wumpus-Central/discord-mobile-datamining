@@ -1,18 +1,18 @@
-// === Module 17687: LanguageSetting ===
+// === Module 17676: LanguageSetting ===
 
-// Module 17687 (LanguageSetting)
+// Module 17676 (LanguageSetting)
 import util from "util" /* 1113 */;
-import LocaleStore from "LocaleStore" /* 2191 */;
+import LocaleStore from "LocaleStore" /* 2186 */;
 
 require = fn;
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(9776).LanguageIcon,
+  IconComponent: fn(9726).LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
     items = [LocaleStore];
     _require = require("initialize").useStateFromStores(items, () => locale.locale);

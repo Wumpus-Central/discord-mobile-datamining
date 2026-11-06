@@ -1,17 +1,17 @@
-// === Module 10346: FeedbackForm ===
+// === Module 10298: FeedbackForm ===
 
-// Module 10346 (FeedbackForm)
-import _modDef12 from "module_12" /* 12 */;
+// Module 10298 (FeedbackForm)
+import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import FeedbackUtils from "FeedbackUtils" /* 10347 */;
+import FeedbackUtils from "FeedbackUtils" /* 10299 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let FeedbackRating = fn(10344).FeedbackRating;
+let FeedbackRating = fn(10296).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { ratingsLabel: { textAlign: "center" }, reasonsHeader: { marginBottom: 8 }, reasonsList: { overflow: "hidden", marginBottom: 12, padding: 0 }, reason: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }, doNotShowAgainContainer: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.doNotShowAgainContainer = { paddingHorizontal: 0, paddingVertical: 8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -39,7 +39,7 @@ export function FeedbackForm(otherKey) {
     if (!obj.isEqual(closure_5, reasons)) {
       _undefined(FeedbackUtils.shuffleProblems(reasons, otherKey));
     }
-    obj = _modDef12;
+    obj = applyDefault;
   }, items);
   const tmp8 = trackOpen(noop.useState({}), 2);
   const first = tmp8[0];

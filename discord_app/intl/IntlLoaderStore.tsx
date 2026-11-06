@@ -1,11 +1,11 @@
-// === Module 2192: IntlLoaderStore ===
+// === Module 2187: IntlLoaderStore ===
 
-// Module 2192 (IntlLoaderStore)
+// Module 2187 (IntlLoaderStore)
 import util from "util" /* 1113 */;
-import _modDef2193 from "module_2193" /* 2193 */;
-import bg from "bg" /* 4418 */;
-import formatjs from "formatjs" /* 4893 */;
-import moment from "moment" /* 4924 */;
+import _modDef2188 from "module_2188" /* 2188 */;
+import bg from "bg" /* 4445 */;
+import formatjs from "formatjs" /* 4920 */;
+import moment from "moment" /* 4951 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import module_2025 from "module_2025" /* 2025 */;
 
@@ -73,7 +73,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2203).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2198).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -203,7 +203,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2193);
+            state.setLocaleData(_modDef2188);
             c3 = 3;
           }
         }
@@ -349,14 +349,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "id",
-    localeData: _modDef2193,
+    error: "add",
+    localeData: _modDef2188,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "id" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "add" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -397,7 +397,7 @@ export function setAppLocale() {
 export function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2193;
+    tmp = _modDef2188;
   }
   return tmp;
 }

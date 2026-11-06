@@ -1,26 +1,26 @@
-// === Module 7850: ChannelListStore ===
+// === Module 7804: ChannelListStore ===
 
-// Module 7850 (ChannelListStore)
+// Module 7804 (ChannelListStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5064 */;
-import ChannelListStateDefault from "ChannelListState" /* 7852 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
-import GatedChannelStore from "GatedChannelStore" /* 5047 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6993 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6979 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5091 */;
+import ChannelListStateDefault from "ChannelListState" /* 7806 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
+import GatedChannelStore from "GatedChannelStore" /* 5074 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6935 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6921 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7425 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7851 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6913 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7372 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7805 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
 
 require = fn;
 function handleReset() {
@@ -56,14 +56,14 @@ function handleChannelSelect() {
   let flag = tmp3;
   if (flag) {
     items = [channelId, voiceChannelId, channelId, voiceChannelId];
-    const obj = _modDef12(items);
-    const item = _modDef12(items).uniq().forEach((item) => {
+    const obj = applyDefault(items);
+    const item = applyDefault(items).uniq().forEach((item) => {
       if (null != item) {
         const result = closure_1_20.nonPositionalChannelIdUpdate(item);
       }
     });
     flag = true;
-    const uniqResult = _modDef12(items).uniq();
+    const uniqResult = applyDefault(items).uniq();
   }
   return flag;
 }
@@ -139,7 +139,7 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   BACKGROUND_SYNC: handleReset,
   BULK_ACK: function handleBulkAck(channels) {
     _require = false;
-    const mapped = _modDef12(channels.channels).map((channelId) => {
+    const mapped = applyDefault(channels.channels).map((channelId) => {
       channel = channel.getChannel(channelId.channelId);
       let guild_id;
       if (channel != null) {
@@ -148,7 +148,7 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
       return guild_id;
     });
     const found = mapped.filter(require("GlobalUtils").isNotNullish);
-    const arr = _modDef12(channels.channels);
+    const arr = applyDefault(channels.channels);
     const item = found.uniq().forEach((item) => {
       if (closure_20.clearGuildId(item)) {
         c0 = true;
@@ -182,8 +182,8 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   },
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
     c0 = false;
-    const mapped = _modDef12(channels.channels).map((guild_id) => guild_id.guild_id);
-    const arr = _modDef12(channels.channels);
+    const mapped = applyDefault(channels.channels).map((guild_id) => guild_id.guild_id);
+    const arr = applyDefault(channels.channels);
     const item = mapped.uniq().forEach((item) => {
       if (closure_20.clearGuildId(item)) {
         c0 = true;

@@ -1,15 +1,15 @@
-// === Module 12676: useAppsInThisServer ===
+// === Module 12641: useAppsInThisServer ===
 
-// Module 12676 (useAppsInThisServer)
-import _modDef12 from "module_12" /* 12 */;
+// Module 12641 (useAppsInThisServer)
+import applyDefault from "apply" /* 12 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(9918).useGuildIndexState;
-const limit = fn(6173).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(9868).useGuildIndexState;
+const limit = fn(6193).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 
@@ -89,7 +89,7 @@ export default function useAppsInThisServer(context) {
   const obj7 = { appsInThisServer: null, isLoading: tmp2Result.fetchState.fetching || discovery.loading };
   const items4 = [stateFromStores, sortApplicationsViaFrecency];
   obj7.appsInThisServer = obj6.useMemo(() => {
-    const found = _modDef12.compact(sortApplicationsViaFrecency.map((application) => application.application)).filter((id) => {
+    const found = applyDefault.compact(sortApplicationsViaFrecency.map((application) => application.application)).filter((id) => {
       let tmp = false === closure_1_1;
       if (tmp) {
         tmp = stateFromStores(memo[10])(id.id);

@@ -1,16 +1,16 @@
-// === Module 7911: ReferencedMessageStore ===
+// === Module 7865: ReferencedMessageStore ===
 
-// Module 7911 (ReferencedMessageStore)
+// Module 7865 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1453 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6201 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7916 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6221 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7870 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7912 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7915 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import MessageStore from "MessageStore" /* 6199 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7866 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7869 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import MessageStore from "MessageStore" /* 6219 */;
 
 require = fn;
 function processMessage(message) {
@@ -41,7 +41,7 @@ function processMessage(message) {
           }
         } else {
           const obj3 = { state: merged.DELETED };
-          const result1 = merged.set(message.channel_id, message_id, obj3);
+          const result1 = merged.set(message_reference.channel_id, message_id, obj3);
           flag2 = true;
         }
       } else {

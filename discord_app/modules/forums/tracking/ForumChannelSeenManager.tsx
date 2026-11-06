@@ -1,8 +1,8 @@
-// === Module 10027: ForumChannelSeenManager ===
+// === Module 9978: ForumChannelSeenManager ===
 
-// Module 10027 (ForumChannelSeenManager)
-import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 10026 */;
-import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 10028 */;
+// Module 9978 (ForumChannelSeenManager)
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9977 */;
+import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 9979 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

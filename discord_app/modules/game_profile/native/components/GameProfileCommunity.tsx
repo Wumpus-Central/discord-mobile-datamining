@@ -1,12 +1,12 @@
-// === Module 9595: GameProfileCommunity ===
+// === Module 9541: GameProfileCommunity ===
 
-// Module 9595 (GameProfileCommunity)
-import transitionToGuild from "transitionToGuild" /* 7664 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9493 */;
-import GameProfileSection from "GameProfileSection" /* 9590 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9591 */;
-import GameProfileGuildCard from "GameProfileGuildCard" /* 9596 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9597 */;
+// Module 9541 (GameProfileCommunity)
+import transitionToGuild from "transitionToGuild" /* 7617 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9439 */;
+import GameProfileSection from "GameProfileSection" /* 9536 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9537 */;
+import GameProfileGuildCard from "GameProfileGuildCard" /* 9542 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9543 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

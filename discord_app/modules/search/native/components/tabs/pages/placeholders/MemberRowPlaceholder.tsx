@@ -1,11 +1,11 @@
-// === Module 19054: MemberRowPlaceholder ===
+// === Module 19043: MemberRowPlaceholder ===
 
-// Module 19054 (MemberRowPlaceholder)
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 19048 */;
+// Module 19043 (MemberRowPlaceholder)
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 19037 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_3 = createStyles.createStyles({ container: { paddingHorizontal: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/MemberRowPlaceholder.tsx");

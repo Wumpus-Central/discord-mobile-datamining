@@ -1,14 +1,14 @@
-// === Module 5364: ExperimentStore ===
+// === Module 5384: ExperimentStore ===
 
-// Module 5364 (ExperimentStore)
+// Module 5384 (ExperimentStore)
 import LoggerDefault from "Logger" /* 3 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import Storage5 from "Storage" /* 510 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import BuildOverrideUtils from "BuildOverrideUtils" /* 1374 */;
-import GuildFilters from "GuildFilters" /* 5366 */;
+import GuildFilters from "GuildFilters" /* 5386 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
@@ -571,7 +571,7 @@ function loadLocalOverrides() {
   items[2] = value4;
   obj4 = {};
   obj = {};
-  obj4 = _modDef12;
+  obj4 = applyDefault;
   let flag = !obj4.isEmpty(items[0]);
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
@@ -721,7 +721,7 @@ function handleGuildChange(arg0) {
     continue;
   }
 }
-const ExperimentConstants = fn(5365);
+const ExperimentConstants = fn(5385);
 ({ ExperimentBuckets: hasOwnProperty, ExperimentTypes: closure_6, ExposureTypes: metroImportDefault } = ExperimentConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, EMPTY_STRING_SNOWFLAKE_ID: closure_9, UserFlags: closure_10 } = Constants);

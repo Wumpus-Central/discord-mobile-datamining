@@ -1,14 +1,14 @@
-// === Module 13978: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 13954: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 13978 (CustomTypingIndicatorAnimatedEmoji)
-import user from "user" /* 1393 */;
+// Module 13954 (CustomTypingIndicatorAnimatedEmoji)
+import user from "user" /* 1398 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5380 */;
-import EmojiDefault from "Emoji" /* 7439 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13979 */;
+import timing_timing from "timing/timing" /* 5400 */;
+import EmojiDefault from "Emoji" /* 7386 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13955 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 2122 */;
+import AppStateStore from "AppStateStore" /* 2117 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
@@ -17,10 +17,15 @@ require = fn;
 const AppStates = fn(1072).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(5143);
-let closure_9 = createStyles.createStyles((fontSize) => ({ textEmoji: { fontSize }, imageEmoji: { width: fontSize, height: fontSize } }));
+const createStyles = fn(5170);
+let closure_9 = createStyles.createStyles((width) => {
+  const obj = { emojiContainer: { width, height: width, alignItems: "center", justifyContent: "center" }, textEmoji: null, imageEmoji: { width, height: width } };
+  const size = { width: 18 * width / 14, height: 18 * width / 14, textAlign: "center", fontSize: 12 * width / 14, lineHeight: 18 * width / 14 };
+  obj.textEmoji = size;
+  return obj;
+});
 let closure_10 = { code: "(function CustomTypingIndicatorAnimatedEmojiTsx1(){let[angle,scale,ringRadius,translateY]=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};})" };
-const size = fn(2);
+let size = fn(2);
 let result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx");
 
 export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
@@ -41,6 +46,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
   let sharedValue1;
   let sharedValue2;
   let stateFromStores;
+  const tmp = sharedValue2(num);
   enabled = enabled.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled;
   let name = emoji.id;
   if (name == null) {
@@ -52,7 +58,6 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
   const callback = obj.useCallback(() => {
     closure_6(name);
   }, items);
-  const tmp = sharedValue2(num);
   const tmp7 = useCanPlayAnimatedEmojiDefault();
   sharedValue = require("module_1652").useSharedValue(1);
   const tmp2Result = require("module_1652");
@@ -151,6 +156,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
   CustomTypingIndicatorAnimatedEmojiTsx1.__initData = tmp13;
   const animatedStyle = require("module_1652").useAnimatedStyle(CustomTypingIndicatorAnimatedEmojiTsx1);
   let obj2 = { style: animatedStyle, children: null };
+  let obj3 = { style: tmp.emojiContainer, name: null, src: null, fastImageStyle: null, textEmojiStyle: null, onError: null };
   let str = "\u{1F615}";
   const tmp2Result8 = require("module_1652");
   if (tmp4[0] !== name) {
@@ -160,7 +166,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
     }
     str = str2;
   }
-  let obj3 = { name: str, src: null, fastImageStyle: null, textEmojiStyle: null, onError: null };
+  obj3.name = str;
   let emojiURL;
   if (tmp4[0] !== name) {
     if (null != emoji.id) {

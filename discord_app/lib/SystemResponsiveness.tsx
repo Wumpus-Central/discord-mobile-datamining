@@ -1,8 +1,8 @@
-// === Module 6044: SystemResponsiveness ===
+// === Module 6064: SystemResponsiveness ===
 
-// Module 6044 (SystemResponsiveness)
-import _modDef12 from "module_12" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5926 */;
+// Module 6064 (SystemResponsiveness)
+import applyDefault from "apply" /* 12 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5945 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/SystemResponsiveness.tsx");
@@ -12,7 +12,7 @@ class SystemResponsiveness {
     closure_0 = obj;
     obj.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
-        const item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
+        const item = applyDefault.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             let prop = type.pttQueueLatencyMicrosSamples;
             if (prop == null) {

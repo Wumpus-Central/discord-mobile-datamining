@@ -1,9 +1,9 @@
-// === Module 14597: TabsGradient ===
+// === Module 14574: TabsGradient ===
 
-// Module 14597 (TabsGradient)
+// Module 14574 (TabsGradient)
 import _mod1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5725 */;
-import spring_spring from "spring/spring" /* 5773 */;
+import LinearGradientDefault from "LinearGradient" /* 5745 */;
+import spring_spring from "spring/spring" /* 5791 */;
 import noop from "module_19" /* 19 */;
 
 const module_1652 = _mod1652;
@@ -37,7 +37,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
 let closure_8 = { mass: 1, damping: 30, stiffness: 250 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_9 = createStyles.createStyles({ gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 }, left: { left: 0 }, right: { right: 0 } });
 let closure_10 = { code: "(function TabsGradientNativeTsx1(){let[withSpring,visible,SPRING_CONFIG]=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};})" };
 let closure_12 = { code: "(function TabsGradientNativeTsx2(){let[itemDimensions,state]=this.__closure;const items=itemDimensions.get();const itemWidths=items.reduce(function(s,layout){var _layout$width;return s+((_layout$width=layout===null||layout===void 0?void 0:layout.width)!==null&&_layout$width!==void 0?_layout$width:0);},0);const itemsSpacing=items.length*state.itemSpacing;return itemWidths+itemsSpacing;})" };

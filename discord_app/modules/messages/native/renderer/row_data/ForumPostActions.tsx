@@ -1,11 +1,11 @@
-// === Module 8544: ForumPostActions ===
+// === Module 8490: ForumPostActions ===
 
-// Module 8544 (ForumPostActions)
+// Module 8490 (ForumPostActions)
 import Constants from "Constants" /* 1072 */;
-import ReactionUtils from "ReactionUtils" /* 5087 */;
-import _modDef7138 from "module_7138" /* 7138 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8542 */;
-import _modDef8545 from "module_8545" /* 8545 */;
+import ReactionUtils from "ReactionUtils" /* 5114 */;
+import _modDef7085 from "module_7085" /* 7085 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8488 */;
+import _modDef8491 from "module_8491" /* 8491 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -26,7 +26,7 @@ export function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: "MouseInteraction", displayName: "a" };
+        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: 2419702024201420700000000, displayName: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000455974455667326 };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
         const obj6 = emojiId(str2[10]);
@@ -72,17 +72,17 @@ export function createForumPostActions(arg0) {
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
   const getAssetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed;
   if (isFollowing) {
-    let assetUriForEmbed = getAssetUriForEmbed(_modDef7138);
+    let assetUriForEmbed = getAssetUriForEmbed(_modDef7085);
     let tmp6 = importDefault;
     let tmp8 = require;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(_modDef8545);
+    assetUriForEmbed = getAssetUriForEmbed(_modDef8491);
     tmp6 = importDefault;
     tmp8 = require;
   }
   if (null != assetUriForEmbed) {
     let stringResult;
-    const assetUriForEmbed1 = tmp8(8542).getAssetUriForEmbed(tmp6(5865));
+    const assetUriForEmbed1 = tmp8(8488).getAssetUriForEmbed(tmp6(5883));
     if (!hasReactions) {
       let emoji;
       if (defaultReaction != null) {
@@ -100,17 +100,17 @@ export function createForumPostActions(arg0) {
       obj.title = intl2.string(tmp8(1113).t["5uAO7d"]);
       const intl3 = tmp8(1113).intl;
       const obj2 = { helpArticleUrl: null };
-      const obj3 = { url: tmp6(2190).getCreatorSupportArticleURL(HelpdeskArticles.MEDIA_CHANNEL) };
+      const obj3 = { url: tmp6(2185).getCreatorSupportArticleURL(HelpdeskArticles.MEDIA_CHANNEL) };
       obj2.helpArticleUrl = obj3;
       obj.subtitle = intl3.formatToParts(tmp8(1113).t.YtCu5p, obj2);
       const intl4 = tmp8(1113).intl;
       obj.cta = intl4.string(tmp8(1113).t.C5UQC9);
-      const tmp6Result = tmp6(2190);
-      obj.icon = tmp8(8542).getAssetUriForEmbed(tmp6(8546));
-      const tmp8Result3 = tmp8(8542);
-      obj.closeIcon = tmp8(8542).getAssetUriForEmbed(tmp6(7396));
+      const tmp6Result = tmp6(2185);
+      obj.icon = tmp8(8488).getAssetUriForEmbed(tmp6(8492));
+      const tmp8Result3 = tmp8(8488);
+      obj.closeIcon = tmp8(8488).getAssetUriForEmbed(tmp6(7343));
       tmp14 = obj;
-      const tmp8Result4 = tmp8(8542);
+      const tmp8Result4 = tmp8(8488);
     }
     const obj4 = { numDisplayedReactions: 3, isFollowing, followIcon: assetUriForEmbed, followLabel: null, shareIcon: null, shareLabel: null, defaultReaction: null, addReactLabel: null, sharePrompt: null };
     const intl5 = tmp8(1113).intl;
@@ -131,7 +131,7 @@ export function createForumPostActions(arg0) {
     return obj4;
   } else {
     const _HermesInternal = HermesInternal;
-    tmp6(1242).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 7138 : 8545));
+    tmp6(1242).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 7085 : 8491));
     const tmp6Result2 = tmp6(1242);
   }
 }

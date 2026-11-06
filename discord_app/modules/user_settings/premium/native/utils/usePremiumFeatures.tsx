@@ -1,18 +1,18 @@
-// === Module 10102: usePremiumFeatures ===
+// === Module 10053: usePremiumFeatures ===
 
-// Module 10102 (usePremiumFeatures)
+// Module 10053 (usePremiumFeatures)
 import util from "util" /* 1113 */;
-import user from "user" /* 1393 */;
-import PremiumUtils from "PremiumUtils" /* 2176 */;
-import _modDef3415 from "module_3415" /* 3415 */;
-import FriendsIcon from "FriendsIcon" /* 5852 */;
-import ReactionIcon from "ReactionIcon" /* 9605 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9681 */;
-import ScreenStreamIcon from "ScreenStreamIcon" /* 9881 */;
-import UploadIcon from "UploadIcon" /* 10103 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 10105 */;
-import BoostGemIcon from "BoostGemIcon" /* 10107 */;
-import UserSquareIcon from "UserSquareIcon" /* 10109 */;
+import user from "user" /* 1398 */;
+import PremiumUtils from "PremiumUtils" /* 2171 */;
+import _modDef3444 from "module_3444" /* 3444 */;
+import FriendsIcon from "FriendsIcon" /* 5870 */;
+import ReactionIcon from "ReactionIcon" /* 9551 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9630 */;
+import ScreenStreamIcon from "ScreenStreamIcon" /* 9831 */;
+import UploadIcon from "UploadIcon" /* 10054 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 10056 */;
+import BoostGemIcon from "BoostGemIcon" /* 10058 */;
+import UserSquareIcon from "UserSquareIcon" /* 10060 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 require = fn;
 const PremiumConstants = fn(1387);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const TOTAL_PREMIUM_GROUP_USERS = fn(2189).TOTAL_PREMIUM_GROUP_USERS;
+const TOTAL_PREMIUM_GROUP_USERS = fn(2184).TOTAL_PREMIUM_GROUP_USERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/usePremiumFeatures.tsx");
 
@@ -38,7 +38,7 @@ export default function usePremiumFeatures(arg0) {
   return noop.useMemo(() => {
     let obj = { IconComponent: FriendsIcon.FriendsIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
     const intl = util.intl;
-    obj.label = intl.formatToPlainString(_modDef3415.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
+    obj.label = intl.formatToPlainString(_modDef3444.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
     items = [hasOwnProperty.TIER_2];
     obj.premiumTypes = new Set(items);
     const items1 = [user.PremiumSubscriptionGroupRole.PRIMARY];
@@ -46,7 +46,7 @@ export default function usePremiumFeatures(arg0) {
     const items2 = [obj, , , , , , , , , ];
     const obj3 = { IconComponent: FriendsIcon.FriendsIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
     const intl2 = util.intl;
-    obj3.label = intl2.string(_modDef3415["G6K/+s"]);
+    obj3.label = intl2.string(_modDef3444["G6K/+s"]);
     const items3 = [hasOwnProperty.TIER_2];
     const obj2 = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
     const set = new Set(items);
@@ -105,7 +105,7 @@ export default function usePremiumFeatures(arg0) {
     items2[6] = obj10;
     const obj11 = { IconComponent: BoostGemIcon.BoostGemIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
     const intl8 = util.intl;
-    obj11.label = intl8.formatToPlainString(_modDef3415.HVCRVf, { numBoosts });
+    obj11.label = intl8.formatToPlainString(_modDef3444.HVCRVf, { numBoosts });
     const items15 = [hasOwnProperty.TIER_2];
     const obj12 = { numBoosts };
     const set6 = new Set(items13);

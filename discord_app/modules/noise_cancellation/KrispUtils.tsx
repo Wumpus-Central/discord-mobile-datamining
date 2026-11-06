@@ -1,7 +1,7 @@
-// === Module 6029: KrispUtils ===
+// === Module 6049: KrispUtils ===
 
-// Module 6029 (KrispUtils)
-import noise_cancellation_KrispUtils from "noise_cancellation/KrispUtils" /* 6030 */;
+// Module 6049 (KrispUtils)
+import noise_cancellation_KrispUtils from "noise_cancellation/KrispUtils" /* 6050 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/noise_cancellation/KrispUtils.tsx");

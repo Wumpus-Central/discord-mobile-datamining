@@ -1,17 +1,17 @@
-// === Module 16691: ErrorBoundary ===
+// === Module 16688: ErrorBoundary ===
 
-// Module 16691 (ErrorBoundary)
+// Module 16688 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import components_Button_Button from "components/Button/Button" /* 5770 */;
-import AppCrash from "AppCrash" /* 9305 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import components_Button_Button from "components/Button/Button" /* 5788 */;
+import AppCrash from "AppCrash" /* 9251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11520 */;
 
 require = fn;
 function MaybeClearBuildOverride() {
@@ -59,7 +59,7 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(5770).Button, obj2);
+    return closure_9(tmp2(5788).Button, obj2);
   }
   obj = require("initialize");
 }
@@ -67,7 +67,7 @@ get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_11 = createStyles.createLegacyClassComponentStyles({ buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 }, debugLogsContainer: { position: "absolute", right: 32, top: 64, display: "flex", flexDirection: "row", alignItems: "center", gap: 12 }, error: { marginTop: 24, textAlign: "center" }, text: { textAlign: "center" } });
 const PureComponent = noop.PureComponent;
 class ErrorBoundary extends PureComponent {
@@ -158,7 +158,7 @@ prototype["render"] = function render() {
   }
   return children;
 };
-ErrorBoundary.contextType = fn(5209).ThemeContext;
+ErrorBoundary.contextType = fn(5229).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/ErrorBoundary.tsx");
 

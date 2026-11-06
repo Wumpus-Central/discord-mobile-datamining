@@ -1,6 +1,6 @@
-// === Module 6481: ? ===
+// === Module 6501: ? ===
 
-// Module 6481
+// Module 6501
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/face/awkward.png.js");

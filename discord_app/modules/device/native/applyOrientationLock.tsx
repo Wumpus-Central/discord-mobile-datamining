@@ -1,8 +1,8 @@
-// === Module 14930: applyOrientationLock ===
+// === Module 14907: applyOrientationLock ===
 
-// Module 14930 (applyOrientationLock)
-import DeviceOrientation from "DeviceOrientation" /* 9049 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 11194 */;
+// Module 14907 (applyOrientationLock)
+import DeviceOrientation from "DeviceOrientation" /* 8995 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 11149 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/device/native/applyOrientationLock.tsx");

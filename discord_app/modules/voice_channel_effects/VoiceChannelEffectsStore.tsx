@@ -1,13 +1,13 @@
-// === Module 11985: VoiceChannelEffectsStore ===
+// === Module 11951: VoiceChannelEffectsStore ===
 
-// Module 11985 (VoiceChannelEffectsStore)
+// Module 11951 (VoiceChannelEffectsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import shared from "shared" /* 5150 */;
-import CallConstants from "CallConstants" /* 5817 */;
-import VoiceChannelEffectsUtils from "VoiceChannelEffectsUtils" /* 7672 */;
-import apply from "module_12" /* 12 */;
+import shared from "shared" /* 5177 */;
+import CallConstants from "CallConstants" /* 5835 */;
+import VoiceChannelEffectsUtils from "VoiceChannelEffectsUtils" /* 7625 */;
+import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
 let closure_4 = CallConstants.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT;

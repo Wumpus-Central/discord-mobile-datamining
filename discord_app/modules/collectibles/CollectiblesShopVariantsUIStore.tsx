@@ -1,8 +1,8 @@
-// === Module 9677: CollectiblesShopVariantsUIStore ===
+// === Module 9626: CollectiblesShopVariantsUIStore ===
 
-// Module 9677 (CollectiblesShopVariantsUIStore)
-import _mod5058 from "module_5058" /* 5058 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7876 */;
+// Module 9626 (CollectiblesShopVariantsUIStore)
+import _mod5085 from "module_5085" /* 5085 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7830 */;
 import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
   return obj;
-}, _mod5058.shallow);
+}, _mod5085.shallow);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
 export function useSelectedVariantIndex(product) {

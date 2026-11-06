@@ -1,8 +1,8 @@
-// === Module 16036: GuildBadgeMaple ===
+// === Module 16031: GuildBadgeMaple ===
 
-// Module 16036 (GuildBadgeMaple)
-import inlineStyles from "inlineStyles" /* 8176 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 16001 */;
+// Module 16031 (GuildBadgeMaple)
+import inlineStyles from "inlineStyles" /* 8122 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15996 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

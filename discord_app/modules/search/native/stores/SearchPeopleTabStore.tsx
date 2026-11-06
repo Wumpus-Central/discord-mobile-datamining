@@ -1,14 +1,14 @@
-// === Module 14146: SearchPeopleTabStore ===
+// === Module 14123: SearchPeopleTabStore ===
 
-// Module 14146 (SearchPeopleTabStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 14123 (SearchPeopleTabStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import useUserListData from "useUserListData" /* 10913 */;
-import NewMessageUserList from "NewMessageUserList" /* 14147 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import FrecencyStore from "FrecencyStore" /* 7033 */;
+import useUserListData from "useUserListData" /* 10865 */;
+import NewMessageUserList from "NewMessageUserList" /* 14124 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import FrecencyStore from "FrecencyStore" /* 6975 */;
 
 require = fn;
 let closure_5 = [];
@@ -49,8 +49,8 @@ prototype["search"] = function search(str) {
     if (0 === trimmed1.length) {
       items = [];
     } else {
-      const values = _modDef12.chain(ChannelStore.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(14147).filterGroupDMs);
+      const values = applyDefault.chain(ChannelStore.getMutablePrivateChannels()).values();
+      const found = values.filter(trimmed1(14124).filterGroupDMs);
       const mapped = found.map((id) => {
         items = [id, NewMessageUserList.matchGroupDM(id, trimmed1), FrecencyStore.getScoreWithoutFetchingLatest(id.id)];
         return items;
@@ -66,7 +66,7 @@ prototype["search"] = function search(str) {
         }
         return diff;
       });
-      const chainResult = _modDef12.chain(ChannelStore.getMutablePrivateChannels());
+      const chainResult = applyDefault.chain(ChannelStore.getMutablePrivateChannels());
       items = sorted.map((item) => {
         [tmp] = item;
         return tmp;

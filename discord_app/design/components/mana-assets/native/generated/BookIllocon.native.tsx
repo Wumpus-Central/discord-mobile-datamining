@@ -1,20 +1,20 @@
-// === Module 14524: BookIllocon ===
+// === Module 14501: BookIllocon ===
 
-// Module 14524 (BookIllocon)
-import FastImageDefault from "FastImage" /* 5854 */;
-import assetHelpers from "assetHelpers" /* 7213 */;
-import _modDef14525 from "module_14525" /* 14525 */;
-import _modDef14526 from "module_14526" /* 14526 */;
-import _modDef14527 from "module_14527" /* 14527 */;
+// Module 14501 (BookIllocon)
+import FastImageDefault from "FastImage" /* 5872 */;
+import assetHelpers from "assetHelpers" /* 7160 */;
+import _modDef14502 from "module_14502" /* 14502 */;
+import _modDef14503 from "module_14503" /* 14503 */;
+import _modDef14504 from "module_14504" /* 14504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14525 }, 3: null };
-const obj2 = { uri: _modDef14525 };
-obj[2] = { uri: _modDef14526 };
-const obj3 = { uri: _modDef14526 };
-obj[3] = { uri: _modDef14527 };
+let obj = { 1: null, 2: { uri: _modDef14502 }, 3: null };
+const obj2 = { uri: _modDef14502 };
+obj[2] = { uri: _modDef14503 };
+const obj3 = { uri: _modDef14503 };
+obj[3] = { uri: _modDef14504 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BookIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function BookIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7213).getAssetSource(obj);
+  obj.source = num(7160).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

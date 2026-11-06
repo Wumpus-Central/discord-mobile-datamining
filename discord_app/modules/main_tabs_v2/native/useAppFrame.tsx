@@ -1,15 +1,16 @@
-// === Module 18336: useAppFrame ===
+// === Module 18328: useAppFrame ===
 
-// Module 18336 (useAppFrame)
+// Module 18328 (useAppFrame)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import useChatLayoutDefault from "useChatLayout" /* 5327 */;
-import createStyles from "createStyles" /* 5143 */;
+import DeviceUtils from "DeviceUtils" /* 5127 */;
+import useChatLayoutDefault from "useChatLayout" /* 5347 */;
+import createStyles from "createStyles" /* 5170 */;
 import size from "module_2" /* 2 */;
 
 const StyleSheet = _mod17.StyleSheet;
-let closure_3 = createStyles.createStyles((marginTop) => {
+let closure_4 = createStyles.createStyles((marginTop) => {
   const obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingTop: null };
   let num = 0;
   if (marginTop <= 0) {
@@ -40,15 +41,24 @@ export default function useAppFrame() {
     flag = true;
   }
   const rect = useSafeAreaInsetsDefault();
-  closure_3(rect.top);
-  const obj2 = { insets: rect, styles: null };
+  let isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
+  ({ container, content, body, border, topBorder } = closure_4(rect.top));
   if (flag) {
-    if (useChatLayoutDefault().isChatLockedOpen) {
-      if (rect.right > 0) {
-        const obj3 = { container: tmp2, content: tmp3, body: tmp4, border: tmp5, topBorder: tmp6 };
-      }
-      obj2.styles = {};
-      return obj2;
+    if (!isChatLockedOpen) {
+      isChatLockedOpen = DeviceUtils.isDuo();
     }
+    flag = isChatLockedOpen;
   }
+  if (flag) {
+    flag = rect.right > 0;
+  }
+  const obj3 = { insets: rect, hasFrame: flag, styles: null };
+  if (flag) {
+    const obj4 = { container, content, body, border, topBorder };
+    let obj5 = obj4;
+  } else {
+    obj5 = {};
+  }
+  obj3.styles = obj5;
+  return obj3;
 };

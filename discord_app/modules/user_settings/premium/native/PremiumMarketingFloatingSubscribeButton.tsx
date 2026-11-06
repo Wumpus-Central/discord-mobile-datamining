@@ -1,16 +1,16 @@
-// === Module 15625: PremiumMarketingFloatingSubscribeButton ===
+// === Module 15619: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 15625 (PremiumMarketingFloatingSubscribeButton)
+// Module 15619 (PremiumMarketingFloatingSubscribeButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5725 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10474 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 15623 */;
+import LinearGradientDefault from "LinearGradient" /* 5745 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10426 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 15617 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 }, gradient: { position: "absolute", left: 0, right: 0, bottom: 0, top: -64 }, buttonContainer: { marginLeft: "auto", marginRight: "auto", width: "100%", paddingHorizontal: 12, paddingTop: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { code: "(function PremiumMarketingFloatingSubscribeButtonTsx1(){let[withTiming,isVisible,useReducedMotion,FADE_DURATION_MS,ENTER_TRANSLATE_PX]=this.__closure;return{opacity:withTiming(isVisible.get()?1:0,{duration:useReducedMotion?0:FADE_DURATION_MS}),transform:[{translateY:withTiming(isVisible.get()?0:ENTER_TRANSLATE_PX,{duration:useReducedMotion?0:FADE_DURATION_MS})}]};})" };

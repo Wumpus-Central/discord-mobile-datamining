@@ -1,18 +1,18 @@
-// === Module 7586: ThreadMemberListStore ===
+// === Module 7531: ThreadMemberListStore ===
 
-// Module 7586 (ThreadMemberListStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7531 (ThreadMemberListStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
-import UserUtilsDefault from "UserUtils" /* 5197 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5107 */;
+import UserUtilsDefault from "UserUtils" /* 5224 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7587 */;
-import PresenceStore from "PresenceStore" /* 5898 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6708 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7532 */;
+import PresenceStore from "PresenceStore" /* 5917 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6650 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -513,7 +513,7 @@ const threadMemberListStore = new ThreadMemberListStore(DispatcherDefault, {
   GUILD_MEMBER_UPDATE: handleUserUpdate,
   GUILD_MEMBER_REMOVE: handleUserUpdate,
   PRESENCES_REPLACE: function handlePresenceReplace(presences) {
-    const mapped = _modDef12(presences.presences).map((user) => {
+    const mapped = applyDefault(presences.presences).map((user) => {
       user = user.user;
       let id;
       if (user != null) {
@@ -522,7 +522,7 @@ const threadMemberListStore = new ThreadMemberListStore(DispatcherDefault, {
       return id;
     });
     const found = mapped.filter(GlobalUtils.isNotNullish);
-    const arr = _modDef12(presences.presences);
+    const arr = applyDefault(presences.presences);
     let flag = false;
     let flag2 = false;
     const iter = found.uniq();

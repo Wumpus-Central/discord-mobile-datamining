@@ -1,6 +1,6 @@
-// === Module 14869: ConsoleAuthorizationRedirectURIs ===
+// === Module 14845: ConsoleAuthorizationRedirectURIs ===
 
-// Module 14869 (ConsoleAuthorizationRedirectURIs)
+// Module 14845 (ConsoleAuthorizationRedirectURIs)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set(["https://discord.com/connections/playstation-stg/link", "https://discord.com/connections/playstation/link"]) };

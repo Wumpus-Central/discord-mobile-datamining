@@ -1,16 +1,16 @@
-// === Module 14427: ProvisionalAccountExplainer ===
+// === Module 14404: ProvisionalAccountExplainer ===
 
-// Module 14427 (ProvisionalAccountExplainer)
+// Module 14404 (ProvisionalAccountExplainer)
 import nativeDefault from "native" /* 575 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7514 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14428 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7459 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14405 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { chatContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, gap: nativeDefault.space.PX_8 }, header: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, gap: nativeDefault.space.PX_8 };
@@ -27,7 +27,7 @@ export function ChatProvisionalAccountExplainerCard(iconSize) {
   c1 = "body-sm/semibold";
   items = [iconSize, "body-sm/semibold"];
   const callback = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  const provisionalAccountExplanationText = iconSize(14429).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
+  const provisionalAccountExplanationText = iconSize(14406).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   const obj2 = { style: null, children: null };
   const items1 = [tmp.chatContainer, style];
   obj2.style = items1;
@@ -35,11 +35,11 @@ export function ChatProvisionalAccountExplainerCard(iconSize) {
   const obj4 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = iconSize(1113).intl;
   obj4.children = intl.string(iconSize(1113).t.Iyka0U);
-  const items2 = [closure_5(iconSize(5763).Text, obj4), closure_5(iconSize(7230).CircleErrorIcon, { size: "xs", color: "text-default" })];
+  const items2 = [closure_5(iconSize(5781).Text, obj4), closure_5(iconSize(7177).CircleErrorIcon, { size: "xs", color: "text-default" })];
   obj3.children = items2;
-  const items3 = [closure_6(View, obj3), closure_5(iconSize(5763).Text, { variant: "body-sm/normal", color: "text-default", children: provisionalAccountExplanationText })];
+  const items3 = [closure_6(View, obj3), closure_5(iconSize(5781).Text, { variant: "body-sm/normal", color: "text-default", children: provisionalAccountExplanationText })];
   obj2.children = items3;
-  return closure_6(iconSize(7121).Card, obj2);
+  return closure_6(iconSize(7065).Card, obj2);
 }
 export function UserProfileProvisionalAccountExplainerCard(iconSize) {
   iconSize = iconSize.iconSize;
@@ -47,12 +47,12 @@ export function UserProfileProvisionalAccountExplainerCard(iconSize) {
   items = [iconSize, "body-md/semibold"];
   ({ style, userId } = iconSize);
   const callback = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  const provisionalAccountExplanationText = iconSize(14429).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
+  const provisionalAccountExplanationText = iconSize(14406).useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   const obj2 = { style, title: null, titleIcon: null, children: null };
-  const obj = iconSize(14429);
+  const obj = iconSize(14406);
   const intl = iconSize(1113).intl;
   obj2.title = intl.string(iconSize(1113).t.Iyka0U);
-  obj2.titleIcon = closure_5(iconSize(7230).CircleErrorIcon, { size: "xs", color: "text-default" });
-  obj2.children = closure_5(iconSize(5763).Text, { variant: "body-md/normal", color: "text-default", children: provisionalAccountExplanationText });
+  obj2.titleIcon = closure_5(iconSize(7177).CircleErrorIcon, { size: "xs", color: "text-default" });
+  obj2.children = closure_5(iconSize(5781).Text, { variant: "body-md/normal", color: "text-default", children: provisionalAccountExplanationText });
   return closure_5(UserProfileCardDefault, obj2);
 }

@@ -1,15 +1,15 @@
-// === Module 18442: MessagesItemAddFriendsWidget ===
+// === Module 18434: MessagesItemAddFriendsWidget ===
 
-// Module 18442 (MessagesItemAddFriendsWidget)
+// Module 18434 (MessagesItemAddFriendsWidget)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import RootNavigationRef from "RootNavigationRef" /* 5325 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import Pressables from "Pressables" /* 7124 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9097 */;
-import IconActionButtonDefault from "IconActionButton" /* 14780 */;
-import _modDef15933 from "module_15933" /* 15933 */;
-import _modDef18443 from "module_18443" /* 18443 */;
+import RootNavigationRef from "RootNavigationRef" /* 5345 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import Pressables from "Pressables" /* 7068 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9043 */;
+import IconActionButtonDefault from "IconActionButton" /* 14757 */;
+import _modDef15928 from "module_15928" /* 15928 */;
+import _modDef18435 from "module_18435" /* 18435 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -222,8 +222,8 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1072).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const sum = fn(14780).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(5143);
+const sum = fn(14757).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5170);
 let obj = { container: { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, title: null, actions: null, actionIcon: null };
 let obj3 = { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
 obj.title = { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.md, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
@@ -260,12 +260,12 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj2.children = metroImportDefault(Text_Text.Text, obj3);
   items = [metroImportDefault(Pressables.PressableHighlight, obj2), ];
   const obj4 = { style: tmp.actions, children: null };
-  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef15933, onPress: handleShare, accessibilityLabel: null };
+  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef15928, onPress: handleShare, accessibilityLabel: null };
   const intl3 = util.intl;
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [metroImportDefault(IconActionButtonDefault, obj5), ];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef18443;
+  obj6.source = _modDef18435;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

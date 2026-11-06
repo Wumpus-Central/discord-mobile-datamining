@@ -1,7 +1,7 @@
-// === Module 4995: FavoriteStore ===
+// === Module 5022: FavoriteStore ===
 
-// Module 4995 (FavoriteStore)
-import _mod12 from "module_12" /* 12 */;
+// Module 5022 (FavoriteStore)
+import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
@@ -65,7 +65,7 @@ function initializeFromUserSettings() {
     }
   }
   if (value2 == null) {
-    value2 = !_mod12.isEmpty(obj);
+    value2 = !apply.isEmpty(obj);
   }
   flag2 = undefined;
   if (favorites != null) {
@@ -112,7 +112,7 @@ function initializeFromUserSettings() {
     flag4 = closure_18 !== tmp18;
   }
   if (!flag4) {
-    flag4 = !_mod12.isEqual(obj, obj);
+    flag4 = !apply.isEqual(obj, obj);
   }
   if (flag4) {
     closure_18 = tmp18;
@@ -120,8 +120,8 @@ function initializeFromUserSettings() {
   }
   return flag4;
 }
-const createChannelRecord = fn(4996).createChannelRecord;
-const FavoritesConstants = fn(5005);
+const createChannelRecord = fn(5023).createChannelRecord;
+const FavoritesConstants = fn(5032);
 ({ FAVORITES_PRUNE_SCOPE_ALL: closure_4, FAVORITES_PRUNE_SCOPE_AUTO_ADDED } = FavoritesConstants);
 const FAVORITES_PRUNE_WHEN_ARCHIVED = FavoritesConstants.FAVORITES_PRUNE_WHEN_ARCHIVED;
 let closure_7 = FavoritesConstants.FAVORITES_UNCATEGORIZED_PARENT_ID;
@@ -242,7 +242,7 @@ prototype["getFavoritesCountAgainstLimit"] = function getFavoritesCountAgainstLi
   return num;
 };
 prototype["hasStoredFavorites"] = function hasStoredFavorites() {
-  return !_mod12.isEmpty(this.getFavoriteChannels());
+  return !apply.isEmpty(this.getFavoriteChannels());
 };
 FavoriteStore.displayName = "FavoriteStore";
 const favoriteStore = new FavoriteStore(DispatcherDefault, {});

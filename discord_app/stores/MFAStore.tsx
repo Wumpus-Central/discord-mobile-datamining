@@ -1,7 +1,7 @@
-// === Module 15893: MFAStore ===
+// === Module 15887: MFAStore ===
 
-// Module 15893 (MFAStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 15887 (MFAStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import TokenManagerAll from "TokenManager" /* 1098 */;
@@ -58,7 +58,7 @@ const mFAStore = new MFAStore(DispatcherDefault, {
   },
   MFA_VIEW_BACKUP_CODES: function handleGetBackupCodes(arg0) {
     ({ codes, key } = arg0);
-    closure_4 = _modDef12.sortBy(codes, "code");
+    closure_4 = applyDefault.sortBy(codes, "code");
   },
   MFA_SEND_VERIFICATION_KEY: function handleSendVerificationEmail(nonces) {
     nonces = nonces.nonces;

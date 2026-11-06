@@ -1,8 +1,8 @@
-// === Module 6899: GuildMemberRequester ===
+// === Module 6841: GuildMemberRequester ===
 
-// Module 6899 (GuildMemberRequester)
-import _modDef12 from "module_12" /* 12 */;
-import Timers from "Timers" /* 4987 */;
+// Module 6841 (GuildMemberRequester)
+import applyDefault from "apply" /* 12 */;
+import Timers from "Timers" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 class GuildMemberRequestState {
@@ -135,7 +135,7 @@ prototype2["isSettled"] = function isSettled(arg0, arg1) {
 };
 prototype2["flushRequests"] = function flushRequests() {
   const self = this;
-  const item = _modDef12.forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
+  const item = applyDefault.forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
 };
 prototype2["requestUnacknowledged"] = function requestUnacknowledged() {
   if (arr.reduce(this._guildStates, (arg0, requestUnacknowledged) => false !== requestUnacknowledged.requestUnacknowledged() || arg0, false)) {
@@ -174,7 +174,7 @@ prototype2["getDebugState"] = function getDebugState(arg0) {
   const pendingRequestGuildIds = [];
   const unacknowledgedRequestGuildIds = [];
   const sentRequestGuildIds = [];
-  const item = _modDef12.forEach(this._guildStates, (_pendingRequests) => {
+  const item = applyDefault.forEach(this._guildStates, (_pendingRequests) => {
     _pendingRequests = _pendingRequests._pendingRequests;
     if (_pendingRequests.has(closure_0)) {
       pendingRequestGuildIds.push(_pendingRequests._guildId);

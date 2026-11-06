@@ -1,6 +1,6 @@
-// === Module 13203: ConjureHomeTypes ===
+// === Module 13168: ConjureHomeTypes ===
 
-// Module 13203 (ConjureHomeTypes)
+// Module 13168 (ConjureHomeTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/home/ConjureHomeTypes.tsx");

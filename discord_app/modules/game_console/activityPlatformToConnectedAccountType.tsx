@@ -1,8 +1,8 @@
-// === Module 19548: activityPlatformToConnectedAccountType ===
+// === Module 19541: activityPlatformToConnectedAccountType ===
 
-// Module 19548 (activityPlatformToConnectedAccountType)
+// Module 19541 (activityPlatformToConnectedAccountType)
 import Constants from "Constants" /* 1072 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9894 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9844 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;

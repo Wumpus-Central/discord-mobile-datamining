@@ -1,7 +1,7 @@
-// === Module 13211: useConjureServerProjects ===
+// === Module 13176: useConjureServerProjects ===
 
-// Module 13211 (useConjureServerProjects)
-import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
+// Module 13176 (useConjureServerProjects)
+import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
 
 const require = globalThis.__r;
 
@@ -26,6 +26,6 @@ export default function useConjureServerProjects(arg0) {
   obj.fetchState = require("initialize").useStateFromStores(items2, () => ConjureProjectStore.getGuildProjectsFetchState(closure_0), items3);
   return obj;
 };
-export function conjureProjectPointsAtGuild(guild_id, guildId) {
-  return guild_id.guild_id === guildId || guild_id.preview_guild_id === guildId;
+export function conjureProjectPointsAtGuild(guild_id, arg1) {
+  return guild_id.guild_id === arg1 || guild_id.preview_guild_id === arg1;
 }

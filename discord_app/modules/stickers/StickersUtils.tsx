@@ -1,13 +1,13 @@
-// === Module 6698: StickersUtils ===
+// === Module 6640: StickersUtils ===
 
-// Module 6698 (StickersUtils)
+// Module 6640 (StickersUtils)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 2023 */;
-import StickersTypes from "StickersTypes" /* 6699 */;
+import StickersTypes from "StickersTypes" /* 6641 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildStore from "GuildStore" /* 5041 */;
 
 require = fn;
 function getStickerExtensionFromFormatType(format_type) {
@@ -27,14 +27,14 @@ function getStickerExtensionFromFormatType(format_type) {
     throw error;
   }
 }
-const StickersConstants = fn(4971);
+const StickersConstants = fn(4998);
 ({ DEFAULT_STICKER_DIMENSIONS: closure_4, STICKER_APPLICATION_ID: hasOwnProperty, StickerAnimationSettings: closure_6 } = StickersConstants);
 const Endpoints = fn(1072).Endpoints;
 const API_ENDPOINT = GLOBAL_ENV.API_ENDPOINT;
 const MEDIA_PROXY_ENDPOINT = GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 ({ PROJECT_ENV: closure_10, ASSET_ENDPOINT } = GLOBAL_ENV);
 const CDN_HOST = GLOBAL_ENV.CDN_HOST;
-const values = Object.values(fn(6699).StickerExtensions);
+const values = Object.values(fn(6641).StickerExtensions);
 const decodeURIComponentResult = decodeURIComponent(Endpoints.STICKER_ASSET("[\\d]+", "(" + values.join("|") + ")"));
 const regExp = new RegExp("(" + location.protocol + ASSET_ENDPOINT + "|" + location.protocol + MEDIA_PROXY_ENDPOINT + ")(" + decodeURIComponentResult + ")", "ig");
 const regExp1 = new RegExp("" + location.protocol + API_ENDPOINT + "(" + decodeURIComponentResult + ")", "ig");

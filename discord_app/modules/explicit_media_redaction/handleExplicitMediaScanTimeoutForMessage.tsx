@@ -1,9 +1,9 @@
-// === Module 7916: handleExplicitMediaScanTimeoutForMessage ===
+// === Module 7870: handleExplicitMediaScanTimeoutForMessage ===
 
-// Module 7916 (handleExplicitMediaScanTimeoutForMessage)
-import _mod12 from "module_12" /* 12 */;
-import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants" /* 7608 */;
-import findComponentMediaDefault from "findComponentMedia" /* 7615 */;
+// Module 7870 (handleExplicitMediaScanTimeoutForMessage)
+import apply from "apply" /* 12 */;
+import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants" /* 7553 */;
+import findComponentMediaDefault from "findComponentMedia" /* 7560 */;
 import size from "module_2" /* 2 */;
 
 function failOverComponentMedia(components) {
@@ -53,7 +53,7 @@ export function handleExplicitMediaScanTimeoutForMessage(message) {
       return obj3;
     }
   });
-  const components = _mod12.cloneDeep(message.components);
+  const components = apply.cloneDeep(message.components);
   failOverComponentMedia(components);
   const messageSnapshots = message.messageSnapshots;
   let messageSnapshots1 = messageSnapshots;
@@ -86,7 +86,7 @@ export function handleExplicitMediaScanTimeoutForMessage(message) {
             return obj3;
           }
         });
-        let cloneDeepResult = _mod12.cloneDeep(message.components);
+        let cloneDeepResult = apply.cloneDeep(message.components);
         failOverComponentMedia(cloneDeepResult);
         return message.merge({ message: message.merge({ attachments: mapped, embeds: mapped1, components: cloneDeepResult }) });
       });

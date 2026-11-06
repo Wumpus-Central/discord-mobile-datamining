@@ -1,22 +1,22 @@
-// === Module 7588: ChannelMemberStore ===
+// === Module 7533: ChannelMemberStore ===
 
-// Module 7588 (ChannelMemberStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7533 (ChannelMemberStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
-import ExperimentStore from "ExperimentStore" /* 5364 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6852 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5107 */;
+import ExperimentStore from "ExperimentStore" /* 5384 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6794 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5368 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildRoleStore from "GuildRoleStore" /* 5049 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PresenceStore from "PresenceStore" /* 5898 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6708 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5388 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildRoleStore from "GuildRoleStore" /* 5076 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PresenceStore from "PresenceStore" /* 5917 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6650 */;
 import UserStore from "UserStore" /* 1385 */;
 
 let require = fn;
@@ -28,7 +28,7 @@ function getMemberListId(arg0) {
     if (obj.canEveryone(constants2.VIEW_CHANNEL, channel)) {
     } else {
       const obj2 = MurmurHashV3Default;
-      const reduced = _modDef12(channel.permissionOverwrites).reduce((arr, id) => {
+      const reduced = applyDefault(channel.permissionOverwrites).reduce((arr, id) => {
         id = id.id;
         ({ allow, deny } = id);
         if (obj.has(allow, constants.VIEW_CHANNEL)) {
@@ -44,7 +44,7 @@ function getMemberListId(arg0) {
         return arr;
       }, []);
       const sorted = reduced.sort();
-      let arr = _modDef12(channel.permissionOverwrites);
+      let arr = applyDefault(channel.permissionOverwrites);
       const str1 = obj2.v3(sorted.join(",")).toString();
       const str2 = obj2.v3(sorted.join(","));
     }
@@ -195,7 +195,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "alignItems" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -290,7 +290,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "alignItems" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -518,11 +518,11 @@ prototype2["forEach"] = function forEach(arg0, arg1) {
   const self = this;
   closure_0 = arg1;
   if (null == arg0) {
-    let item = _modDef12.forEach(self._guildLists, (arg0) => {
-      const item = _modDef12.forEach(arg0, closure_0);
+    let item = applyDefault.forEach(self._guildLists, (arg0) => {
+      const item = applyDefault.forEach(arg0, closure_0);
     });
   } else if (null != self._guildLists[arg0]) {
-    const item1 = _modDef12.forEach(tmp, arg1);
+    const item1 = applyDefault.forEach(tmp, arg1);
   }
 };
 prototype2["delete"] = function delete(arg0) {

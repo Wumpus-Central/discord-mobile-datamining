@@ -1,22 +1,22 @@
-// === Module 12571: WidgetUtils ===
+// === Module 12536: WidgetUtils ===
 
-// Module 12571 (WidgetUtils)
+// Module 12536 (WidgetUtils)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4976 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5173 */;
-import utils from "utils" /* 5796 */;
-import useGame2 from "useGame" /* 7622 */;
-import WidgetType from "WidgetType" /* 7918 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7919 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 7921 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7923 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7925 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12574 */;
-import WidgetGameTag from "WidgetGameTag" /* 12575 */;
+import dismissible_content from "dismissible_content" /* 5003 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5200 */;
+import utils from "utils" /* 5814 */;
+import useGame2 from "useGame" /* 7567 */;
+import WidgetType from "WidgetType" /* 7872 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7873 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 7875 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7877 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7879 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12539 */;
+import WidgetGameTag from "WidgetGameTag" /* 12540 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
-import UserProfileStore from "UserProfileStore" /* 7917 */;
-import WidgetStore from "WidgetStore" /* 12572 */;
+import UserProfileStore from "UserProfileStore" /* 7871 */;
+import WidgetStore from "WidgetStore" /* 12537 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -85,9 +85,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7920).WIDGET_TITLES_BY_TYPE;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
-let closure_9 = fn(12573).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(7874).WIDGET_TITLES_BY_TYPE;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
+let closure_9 = fn(12538).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -744,10 +744,10 @@ export function updatePendingGameTags(arr, gameId, tags) {
     }
   }
 }
-export function removeTagFromGame(widgetType, arg1, arg2) {
-  closure_0 = arg1;
-  let obj = arg2;
-  const tmp2 = findGameWidget(widgetType);
+export function removeTagFromGame(editableTagsWidgetType, gameId, tag) {
+  closure_0 = gameId;
+  let obj = tag;
+  const tmp2 = findGameWidget(editableTagsWidgetType);
   if (null != tmp2) {
     const games = tmp2.games;
     const found = games.find((gameId) => gameId.gameId === closure_0);
@@ -759,7 +759,7 @@ export function removeTagFromGame(widgetType, arg1, arg2) {
           if (found1.length <= 0) {
             found1 = [];
           }
-          closure_0 = arg1;
+          closure_0 = gameId;
           const _Object = Object;
           if (found1.length <= Object.values(WidgetGameTag.WidgetGameTag).length) {
             const tmpResult = findGameWidget(tmp2.type);
@@ -792,17 +792,17 @@ export function removeTagFromGame(widgetType, arg1, arg2) {
     }
   }
 }
-export function updatePendingGameComment(widgetType, arg1, comment) {
-  closure_0 = arg1;
+export function updatePendingGameComment(widgetType, gameId, trimmed) {
+  closure_0 = gameId;
   let tmp = findGameWidget(widgetType);
   if (null != tmp) {
     const games = tmp.games;
     const found = games.find((gameId) => gameId.gameId === closure_0);
     if (null != found) {
-      if (comment !== found.comment) {
+      if (trimmed !== found.comment) {
         const obj = {};
         const merged = Object.assign(found);
-        obj.comment = comment;
+        obj.comment = trimmed;
         const games1 = tmp.games;
         const mapped = games1.map((gameId) => {
           let tmp = gameId;
@@ -934,8 +934,8 @@ export function reorderGamesInWidget(widgetType, arg1, arg2) {
     }
   }
 }
-export function removePendingGameFromWidget(widgetType, arg1) {
-  closure_0 = arg1;
+export function removePendingGameFromWidget(widgetType, gameId) {
+  closure_0 = gameId;
   let merged = findGameWidget(widgetType);
   if (null != merged) {
     const found = null != merged.games ? merged.games : [].filter((gameId) => gameId.gameId !== closure_0);

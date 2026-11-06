@@ -1,6 +1,6 @@
-// === Module 16226: updateBackgroundColor ===
+// === Module 16223: updateBackgroundColor ===
 
-// Module 16226 (updateBackgroundColor)
+// Module 16223 (updateBackgroundColor)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/themes/updateBackgroundColor.native.tsx");

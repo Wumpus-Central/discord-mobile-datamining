@@ -1,10 +1,10 @@
-// === Module 12304: conjurePublishAction ===
+// === Module 12271: conjurePublishAction ===
 
-// Module 12304 (conjurePublishAction)
+// Module 12271 (conjurePublishAction)
 import util from "util" /* 1113 */;
-import _modDef3995 from "module_3995" /* 3995 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 11058 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 12288 */;
+import _modDef4024 from "module_4024" /* 4024 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 11010 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 12255 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");
@@ -48,7 +48,7 @@ export function resolveConjurePublishAction(input) {
           str4 = "";
         }
         const obj5 = { server: str4 };
-        formatResult = intl.format(_modDef3995.N4NkyR, obj5);
+        formatResult = intl.format(_modDef4024.N4NkyR, obj5);
       }
     }
     const obj7 = { installScope: input.installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
@@ -90,7 +90,7 @@ export function resolveConjurePublishAction(input) {
               str8 = "";
             }
             const obj9 = { server: str8 };
-            formatResult1 = intl2.format(_modDef3995.eHYXFg, obj9);
+            formatResult1 = intl2.format(_modDef4024.eHYXFg, obj9);
           }
         }
       }
@@ -115,7 +115,7 @@ export function resolveConjurePublishAction(input) {
         const obj10 = {};
         const merged2 = Object.assign(obj8);
         const intl4 = util.intl;
-        obj10.label = intl4.string(_modDef3995["tUeY/h"]);
+        obj10.label = intl4.string(_modDef4024["tUeY/h"]);
         obj10.action = "review_permissions";
         let obj11 = obj10;
       }
@@ -124,7 +124,7 @@ export function resolveConjurePublishAction(input) {
     obj11 = {};
     const merged3 = Object.assign(obj8);
     const intl3 = util.intl;
-    obj11.label = intl3.string(_modDef3995["120EFN"]);
+    obj11.label = intl3.string(_modDef4024["120EFN"]);
     obj11.action = "publish";
   } else if ("activity" === status2.surface) {
     if (usesAppChannels) {

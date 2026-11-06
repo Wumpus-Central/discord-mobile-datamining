@@ -1,6 +1,6 @@
-// === Module 10997: InstantInviteIcons ===
+// === Module 10949: InstantInviteIcons ===
 
-// Module 10997 (InstantInviteIcons)
+// Module 10949 (InstantInviteIcons)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 const Platform = _mod17.Platform;
 const obj = {};
-Object.defineProperty(obj, "more", { get: () => require("module_10998"), set: undefined });
-Object.defineProperty(obj, "share", { get: () => require("module_10999"), set: undefined });
-Object.defineProperty(obj, "revoke", { get: () => require("module_11000"), set: undefined });
-Object.defineProperty(obj, "copy", { get: () => require("module_9317"), set: undefined });
+Object.defineProperty(obj, "more", { get: () => require("module_10950"), set: undefined });
+Object.defineProperty(obj, "share", { get: () => require("module_10951"), set: undefined });
+Object.defineProperty(obj, "revoke", { get: () => require("module_10952"), set: undefined });
+Object.defineProperty(obj, "copy", { get: () => require("module_9263"), set: undefined });
 const frozen = Object.freeze(obj);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteIcons.tsx");
 

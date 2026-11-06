@@ -1,7 +1,7 @@
-// === Module 7465: useAnalyticsLocations ===
+// === Module 7410: useAnalyticsLocations ===
 
-// Module 7465 (useAnalyticsLocations)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7410 (useAnalyticsLocations)
+import applyDefault from "apply" /* 12 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ export default function useAnalyticsLocations() {
   const memo = context.useMemo(() => {
     let tmp3 = context;
     if (0 !== first.length) {
-      const flattenResult = _modDef12.flatten(tmp2);
+      const flattenResult = applyDefault.flatten(tmp2);
       items = [];
       HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(context, 0));
       tmp3 = items;
@@ -34,7 +34,7 @@ export default function useAnalyticsLocations() {
     const substr = first.slice(0, first.length - 1);
     let tmp2 = context;
     if (0 !== substr.length) {
-      const flattenResult = _modDef12.flatten(substr);
+      const flattenResult = applyDefault.flatten(substr);
       items = [];
       HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(context, 0));
       tmp2 = items;

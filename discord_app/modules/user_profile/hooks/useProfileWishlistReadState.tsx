@@ -1,17 +1,16 @@
-// === Module 15229: useProfileWishlistReadState ===
+// === Module 15223: useProfileWishlistReadState ===
 
-// Module 15229 (useProfileWishlistReadState)
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7928 */;
-import ProfileReadStateSection from "ProfileReadStateSection" /* 7929 */;
-import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15230 */;
+// Module 15223 (useProfileWishlistReadState)
+import ProfileReadStateSection from "ProfileReadStateSection" /* 7883 */;
+import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15224 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WishlistStore from "WishlistStore" /* 9624 */;
-import UserProfileStore from "UserProfileStore" /* 7917 */;
+import WishlistStore from "WishlistStore" /* 9573 */;
+import UserProfileStore from "UserProfileStore" /* 7871 */;
 
 require = fn;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileWishlistReadState.tsx");
+let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileWishlistReadState.tsx");
 
 export default function useProfileWishlistReadState(ownerId) {
   ownerId = ownerId.ownerId;
@@ -35,7 +34,7 @@ export default function useProfileWishlistReadState(ownerId) {
     }
     return profileReadStateSectionAckedAt;
   }, items1);
-  let obj2 = ownerId(wishlistId[5]);
+  const obj2 = ownerId(wishlistId[5]);
   const obj3 = stateFromStores1;
   [tmp7, tmp8] = flag(stateFromStores1.useState(undefined), 2);
   let tmp9 = flag;
@@ -66,27 +65,11 @@ export default function useProfileWishlistReadState(ownerId) {
   const items2 = [closure_4, UserProfileStore];
   const items3 = [ownerId, wishlistId];
   stateFromStores1 = tmp(tmp2[5]).useStateFromStores(items2, () => {
-    if (null != ownerId) {
-      if (null != wishlistId) {
-        if (null != WishlistStore.getWishlist(wishlistId)) {
-          if (!WishlistStore.isFetching(wishlistId)) {
-            if (null == WishlistStore.getError(wishlistId)) {
-              const wishlistSettings = UserProfileStore.getWishlistSettings(ownerId, wishlistId);
-              let updated_at;
-              if (wishlistSettings != null) {
-                updated_at = wishlistSettings.updated_at;
-              }
-              let shouldAckWishlistResult = null == updated_at || WishlistStore.getUpdatedAt(wishlistId) === updated_at;
-              if (shouldAckWishlistResult) {
-                shouldAckWishlistResult = ProfileReadStateUtils.shouldAckWishlist(wishlistSettings, UserProfileStore.getProfileReadState(ownerId));
-              }
-              return shouldAckWishlistResult;
-            }
-          }
-        }
-      }
+    let result = null != ownerId;
+    if (result) {
+      result = ProfileReadStateActionCreators.canAckProfileWishlist(tmp, wishlistId);
     }
-    return false;
+    return result;
   }, items3);
   closure_4 = tmp17;
   const items4 = [flag, undefined !== tmp7, stateFromStores1, ownerId];

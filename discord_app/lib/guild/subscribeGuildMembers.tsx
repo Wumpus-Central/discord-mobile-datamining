@@ -1,9 +1,9 @@
-// === Module 7624: subscribeGuildMembers ===
+// === Module 7569: subscribeGuildMembers ===
 
-// Module 7624 (subscribeGuildMembers)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7569 (subscribeGuildMembers)
+import applyDefault from "apply" /* 12 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6898 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6840 */;
 
 const require = fn;
 let c5 = false;
@@ -16,7 +16,7 @@ export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
   closure_1 = AddMembersActionSheet;
   items = [memo, AddMembersActionSheet];
   const effect = noop.useEffect(() => {
-    let item = _modDef12.forEach(closure_0, (userIds, guildId) => {
+    let item = applyDefault.forEach(closure_0, (userIds, guildId) => {
       let tmp = !c5;
       if (!c5) {
         tmp = userIds.length > 50;
@@ -29,8 +29,8 @@ export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7593).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7593);
+      closure_0(7538).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7538);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) => closure_1_0(closure_1_2[4]).unsubscribeMembers(guildId, userIds));
@@ -58,7 +58,7 @@ export function useEnsureHydratedGuildUsers(guild_id, items1) {
   closure_129_1 = "useEnsureHydratedGuildUsers";
   const items2 = [memo, "useEnsureHydratedGuildUsers"];
   const effect1 = noop.useEffect(() => {
-    let item = _modDef12.forEach(closure_0, (userIds, guildId) => {
+    let item = applyDefault.forEach(closure_0, (userIds, guildId) => {
       let tmp = !c5;
       if (!c5) {
         tmp = userIds.length > 50;
@@ -71,8 +71,8 @@ export function useEnsureHydratedGuildUsers(guild_id, items1) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7593).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7593);
+      closure_0(7538).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7538);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) => closure_1_0(closure_1_2[4]).unsubscribeMembers(guildId, userIds));

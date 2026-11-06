@@ -1,18 +1,18 @@
-// === Module 15217: useProfileSectionTabs ===
+// === Module 15211: useProfileSectionTabs ===
 
-// Module 15217 (useProfileSectionTabs)
+// Module 15211 (useProfileSectionTabs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileSections = fn(8900).UserProfileSections;
+const UserProfileSections = fn(8846).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 
-export function useProfileTabIndices(arg0, isRecentActivityMobileEnabled, arg2) {
+export function useProfileTabIndices(isMobileWidgetEditingEnabled, isRecentActivityMobileEnabled, arg2) {
   let num = -1;
   let num2 = 1;
   let num3 = -1;
-  if (arg0) {
+  if (isMobileWidgetEditingEnabled) {
     num2 = 2;
     num3 = 1;
   }

@@ -1,10 +1,10 @@
-// === Module 8874: avatar_decorations/AvatarDecorationUtils ===
+// === Module 8820: avatar_decorations/AvatarDecorationUtils ===
 
-// Module 8874 (avatar_decorations/AvatarDecorationUtils)
+// Module 8820 (avatar_decorations/AvatarDecorationUtils)
 import native from "native" /* 1187 */;
 import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1412 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = AvatarDecorationConstants.DECORATION_TO_AVATAR_RATIO;
@@ -48,5 +48,5 @@ export function getDecorationCutoutForAvatarCutout(cutout, arg1) {
 export function openAvatarDecorationActionSheet(arg0) {
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8875, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8821, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 }

@@ -1,11 +1,11 @@
-// === Module 7205: TableRadioRow ===
+// === Module 7152: TableRadioRow ===
 
-// Module 7205 (TableRadioRow)
-import useA11yRolesNative from "useA11yRolesNative" /* 5210 */;
-import native from "native" /* 5313 */;
-import TableRow from "TableRow" /* 7119 */;
-import TableRadioGroup from "TableRadioGroup" /* 7202 */;
-import FormRadio from "FormRadio" /* 7206 */;
+// Module 7152 (TableRadioRow)
+import useA11yRolesNative from "useA11yRolesNative" /* 5230 */;
+import TableRow from "TableRow" /* 7063 */;
+import TableRowBadge from "TableRowBadge" /* 7077 */;
+import TableRadioGroup from "TableRadioGroup" /* 7149 */;
+import FormRadio from "FormRadio" /* 7153 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,21 +16,17 @@ const result = size.fileFinishedImporting("design/components/TableRow/native/Tab
 export function TableRadioRow(value) {
   value = value.value;
   require = value;
-  ({ label, subLabel, disabled } = value);
+  ({ label, subLabel, badge, disabled } = value);
   if (disabled === undefined) {
     disabled = false;
   }
   ({ legacyCompat_selected, legacyCompat_onPress: dependencyMap } = value);
-  const merged = Object.assign(value, Object.assign({ value: 0, label: 0, subLabel: 0, disabled: 0, accessibilityHint: 0, legacyCompat_selected: 0, legacyCompat_onPress: 0 }));
+  const merged = Object.assign(value, Object.assign({ value: 0, label: 0, subLabel: 0, badge: 0, disabled: 0, accessibilityHint: 0, legacyCompat_selected: 0, legacyCompat_onPress: 0 }));
   const context = noop.useContext(TableRadioGroup.TableRadioGroupContext);
   const onSelect = context.onSelect;
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  const nodeText = native.getNodeText(label);
-  const tmp2Result = native;
-  const nodeText1 = native.getNodeText(subLabel);
-  const tmp2Result3 = native;
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj = {};
@@ -38,15 +34,13 @@ export function TableRadioRow(value) {
   obj.arrow = false;
   obj.label = label;
   obj.subLabel = subLabel;
+  obj.badge = badge;
   obj.disabled = disabled;
   obj.accessibilityState = accessibilityState;
   obj.accessible = true;
   obj.accessibilityRole = accessibilityRole;
-  let str = nodeText1;
-  if (nodeText1 == null) {
-    str = "";
-  }
-  obj.accessibilityLabel = "" + nodeText + ", " + str;
+  const tmp2Result = useA11yRolesNative;
+  obj.accessibilityLabel = TableRowBadge.getTableRowAccessibilityLabel(label, subLabel, badge);
   obj.accessibilityHint = value.accessibilityHint;
   obj.onPress = function handleOnPress(arg0) {
     if (dependencyMap != null) {

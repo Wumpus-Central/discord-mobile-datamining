@@ -1,34 +1,44 @@
-// === Module 13967: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 13943: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 13967 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 13943 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 575 */;
-import openUserSettings from "openUserSettings" /* 7705 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5000 */;
+import dismissible_content from "dismissible_content" /* 5003 */;
+import openUserSettings from "openUserSettings" /* 7658 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+let closure_7 = fn(5419).ACTION_SHEET_BORDER_RADIUS;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
-let closure_9 = createStyles.createStyles(() => {
-  const obj = { content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, examples: null, newBadge: null, title: null, body: null, actions: null, row: null, outerRow: null, innerRow: null, outerStack: null, innerStack: null };
-  const obj2 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+let obj = { launch: null, new_presets: null };
+let items = [fn(1398).TypingSuggestion.UNSPECIFIED, fn(1398).TypingSuggestion.YAPPING, fn(1398).TypingSuggestion.OVERSHARING];
+obj.launch = items;
+let items1 = [fn(1398).TypingSuggestion.CHIRPING, fn(1398).TypingSuggestion.KEYSMASHING, fn(1398).TypingSuggestion.PURRING];
+obj.new_presets = items1;
+const createStyles = fn(5170);
+let closure_12 = createStyles.createStyles(() => {
+  obj = { gradient: { borderTopLeftRadius: borderTopRightRadius, borderTopRightRadius, overflow: "hidden" }, content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, examples: null, newBadge: null, title: null, body: null, actions: null, row: null, outerRow: null, innerRow: null, outerStack: null, innerStack: null };
+  const obj2 = { borderTopLeftRadius: borderTopRightRadius, borderTopRightRadius, overflow: "hidden" };
+  const obj3 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };
   obj.examples = { width: "100%", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_16 };
-  const obj3 = { width: "100%", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_16 };
+  const obj4 = { width: "100%", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_16 };
   obj.newBadge = { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round, paddingVertical: 0 };
-  const obj4 = { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round, paddingVertical: 0 };
+  const obj5 = { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round, paddingVertical: 0 };
   obj.title = { textAlign: "center", marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
-  const obj5 = { textAlign: "center", marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
+  const obj6 = { textAlign: "center", marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
   obj.body = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
-  const obj6 = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
+  const obj7 = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
   obj.actions = { gap: nativeDefault.space.PX_12, width: "100%" };
-  const obj7 = { gap: nativeDefault.space.PX_12, width: "100%" };
+  const obj8 = { gap: nativeDefault.space.PX_12, width: "100%" };
   obj.row = { alignSelf: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderColor: nativeDefault.colors.BORDER_NORMAL, borderWidth: 1, borderRadius: nativeDefault.radii.md };
-  const obj8 = { alignSelf: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderColor: nativeDefault.colors.BORDER_NORMAL, borderWidth: 1, borderRadius: nativeDefault.radii.md };
+  const obj9 = { alignSelf: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderColor: nativeDefault.colors.BORDER_NORMAL, borderWidth: 1, borderRadius: nativeDefault.radii.md };
   obj.outerRow = { padding: nativeDefault.space.PX_8, opacity: 0.75 };
-  const obj9 = { padding: nativeDefault.space.PX_8, opacity: 0.75 };
+  const obj10 = { padding: nativeDefault.space.PX_8, opacity: 0.75 };
   obj.innerRow = { padding: nativeDefault.space.PX_10 };
   obj.outerStack = { width: "auto", maxWidth: "80%", overflow: "hidden" };
   obj.innerStack = { width: "auto", maxWidth: "100%", overflow: "hidden" };
@@ -39,40 +49,86 @@ const result = size.fileFinishedImporting("modules/custom_typing_indicator/nativ
 
 export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  let analyticsLocations1 = markAsDismissed.analyticsLocations;
-  let analyticsLocations;
-  const ref = noop.useRef(null);
-  const tmp2 = closure_9();
-  if (analyticsLocations1 == null) {
-    analyticsLocations1 = [];
+  ({ analyticsLocations, variant } = markAsDismissed);
+  if (variant === undefined) {
+    variant = "launch";
   }
-  analyticsLocations = ref(analyticsLocations[7])(analyticsLocations1, tmp3(tmp4[8]).CUSTOM_TYPING_INDICATOR_ANNOUNCEMENT_SHEET).analyticsLocations;
-  items = [markAsDismissed, analyticsLocations];
-  const items1 = [markAsDismissed];
-  const callback = noop.useCallback(() => {
-    const obj2 = { screen: UserSettingsSections.TYPING_INDICATOR, params: { analyticsLocations } };
-    openUserSettings.openUserSettings(obj2, () => {
-      markAsDismissed(constants.TAKE_ACTION);
-    });
+  let flag = markAsDismissed.dismissNewPresetsSheet;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let analyticsLocations2;
+  let callback;
+  const ref = callback.useRef(null);
+  const tmp2 = closure_12();
+  if (analyticsLocations == null) {
+    analyticsLocations = [];
+  }
+  analyticsLocations2 = flag(ref[13])(analyticsLocations, tmp3(tmp4[14]).CUSTOM_TYPING_INDICATOR_ANNOUNCEMENT_SHEET).analyticsLocations;
+  items = [markAsDismissed, flag];
+  callback = obj.useCallback((arg0) => {
+    markAsDismissed(arg0);
+    if (flag) {
+      UserSettingsProtoActionCreators.addDismissedContent(dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_ACTION_SHEET);
+    }
   }, items);
-  const items2 = [markAsDismissed];
-  const callback1 = noop.useCallback(() => {
-    markAsDismissed(ContentDismissActionType.USER_DISMISS);
+  const tmp5 = flag(ref[13]);
+  [tmp8, tmp9, tmp10] = analyticsLocations2(callback[variant], 3);
+  if ("launch" === variant) {
+    let obj2 = { badge: null, title: null, body: null };
+    const intl = markAsDismissed(tmp4[8]).intl;
+    obj2.badge = intl.string(markAsDismissed(tmp4[8]).t.y2b7CA);
+    const intl2 = markAsDismissed(tmp4[8]).intl;
+    obj2.title = intl2.string(tmp3(tmp4[9]).uGxDiu);
+    const intl3 = markAsDismissed(tmp4[8]).intl;
+    obj2.body = intl3.string(tmp3(tmp4[9]).yezU3E);
+    let tmp12 = obj2;
+  } else if ("new_presets" === variant) {
+    const obj3 = { badge: null, title: null, body: null };
+    const intl6 = markAsDismissed(tmp4[8]).intl;
+    obj3.badge = intl6.string(markAsDismissed(tmp4[8]).t.oW0eUd);
+    const intl7 = markAsDismissed(tmp4[8]).intl;
+    obj3.title = intl7.string(tmp3(tmp4[9]).LGMA0i);
+    const intl8 = markAsDismissed(tmp4[8]).intl;
+    const obj4 = { preset: null };
+    const intl9 = markAsDismissed(tmp4[8]).intl;
+    obj4.preset = intl9.string(markAsDismissed(tmp4[10]).getCustomTypingIndicatorSuggestionMessage(markAsDismissed(tmp4[7]).TypingSuggestion.KEYSMASHING));
+    obj3.body = intl8.formatToPlainString(tmp3(tmp4[9]).ByhEOe, obj4);
+    tmp12 = obj3;
+    const obj23 = markAsDismissed(tmp4[10]);
+  }
+  const items1 = [callback, analyticsLocations2];
+  const items2 = [callback];
+  const callback1 = obj.useCallback(() => {
+    const obj2 = { screen: UserSettingsSections.TYPING_INDICATOR, params: { analyticsLocations: analyticsLocations2 } };
+    openUserSettings.openUserSettings(obj2, () => {
+      callback(constants.TAKE_ACTION);
+    });
   }, items1);
-  const callback2 = noop.useCallback(() => {
-    markAsDismissed(ContentDismissActionType.USER_DISMISS);
+  const items3 = [callback];
+  const callback2 = obj.useCallback(() => {
+    callback(ContentDismissActionType.USER_DISMISS);
   }, items2);
-  let obj2 = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: null };
-  const obj3 = { bottom: true, children: null };
-  const obj4 = { style: tmp2.content, children: null };
-  const items3 = [
-    closure_7(markAsDismissed(analyticsLocations[12]).ActionSheetHeaderBar, {
+  const callback3 = obj.useCallback(() => {
+    callback(ContentDismissActionType.USER_DISMISS);
+  }, items3);
+  const obj5 = { ref, onDismiss: callback3, startExpanded: true, handleDisabled: true, children: null };
+  let tmp16Result = "new_presets" === variant;
+  if (tmp16Result) {
+    const obj6 = { color: "nitro-pink", offsetBottom: 0.3, backgroundColor: tmp3(tmp4[12]).colors.MOBILE_ACTIONSHEET_BACKGROUND, style: tmp2.gradient };
+    tmp16Result = closure_9(tmp17(tmp4[20]).ExpressiveGradient, obj6);
+  }
+  const obj7 = { bottom: true, children: null };
+  const items4 = [tmp16Result, ];
+  const obj8 = { style: tmp2.content, children: null };
+  const items5 = [
+    closure_9(markAsDismissed(ref[21]).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
           current.closeActionSheet();
         }
-        markAsDismissed(ContentDismissActionType.USER_DISMISS);
+        callback(ContentDismissActionType.USER_DISMISS);
       }
     }),
   ,
@@ -81,83 +137,69 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   ,
 
   ];
-  const obj6 = { style: tmp2.examples, children: null };
-  const obj7 = { style: null, children: null };
-  const items4 = [, ];
-  ({ row: arr6[0], outerRow: arr6[1] } = tmp2);
-  obj7.style = items4;
-  const obj8 = { name: "Cap", suggestion: null, emojiSize: 24, spacing: 8, textVariant: "body-md/medium", textColor: "text-subtle", lineClamp: 1, emojiSource: null, style: null };
-  const obj5 = {
+  const obj10 = { style: tmp2.examples, children: null };
+  const obj11 = { style: null, children: null };
+  const items6 = [, ];
+  ({ row: arr7[0], outerRow: arr7[1] } = tmp2);
+  obj11.style = items6;
+  const obj12 = { name: "Cap", suggestion: tmp8, emojiSize: 24, spacing: 8, textVariant: "body-md/medium", textColor: "text-subtle", lineClamp: 1, emojiSource: null, style: null };
+  const obj9 = {
     onPress() {
       const current = ref.current;
       if (current != null) {
         current.closeActionSheet();
       }
-      markAsDismissed(ContentDismissActionType.USER_DISMISS);
+      callback(ContentDismissActionType.USER_DISMISS);
     }
   };
-  const tmp5 = ref(analyticsLocations[7]);
-  obj8.suggestion = markAsDismissed(analyticsLocations[14]).TypingSuggestion.UNSPECIFIED;
-  const items5 = [ref(analyticsLocations[15]), ref(analyticsLocations[16]), ref(analyticsLocations[15])];
-  obj8.emojiSource = items5;
-  obj8.style = tmp2.outerStack;
-  obj7.children = closure_7(ref(analyticsLocations[13]), obj8);
-  const items6 = [closure_7(View, obj7), , ];
-  const obj9 = { style: null, children: null };
-  const items7 = [, ];
-  ({ row: arr9[0], innerRow: arr9[1] } = tmp2);
-  obj9.style = items7;
-  const obj10 = { name: "Rose", suggestion: null, emojiSize: 28, spacing: 10, textVariant: "body-lg/medium", textColor: "text-default", lineClamp: 1, style: null, emojiSource: null };
-  const tmp3Result = ref(analyticsLocations[13]);
-  obj10.suggestion = markAsDismissed(analyticsLocations[14]).TypingSuggestion.YAPPING;
-  obj10.style = tmp2.innerStack;
-  const items8 = [ref(analyticsLocations[17]), ref(analyticsLocations[18]), ref(analyticsLocations[17])];
-  obj10.emojiSource = items8;
-  obj9.children = closure_7(ref(analyticsLocations[13]), obj10);
-  items6[1] = closure_7(View, obj9);
-  const obj11 = { style: null, children: null };
-  const items9 = [, ];
-  ({ row: arr11[0], outerRow: arr11[1] } = tmp2);
-  obj11.style = items9;
-  const obj12 = { name: "Loky", suggestion: null, emojiSize: 24, spacing: 8, textVariant: "body-md/medium", textColor: "text-subtle", lineClamp: 1, style: null, emojiSource: null };
-  const tmp3Result3 = ref(analyticsLocations[13]);
-  obj12.suggestion = markAsDismissed(analyticsLocations[14]).TypingSuggestion.OVERSHARING;
+  const tmp7 = analyticsLocations2(callback[variant], 3);
+  const items7 = [flag(ref[23]), flag(ref[24]), flag(ref[23])];
+  obj12.emojiSource = items7;
   obj12.style = tmp2.outerStack;
-  const items10 = [ref(analyticsLocations[19]), ref(analyticsLocations[20]), ref(analyticsLocations[21])];
-  obj12.emojiSource = items10;
-  obj11.children = closure_7(ref(analyticsLocations[13]), obj12);
-  items6[2] = closure_7(View, obj11);
-  obj6.children = items6;
-  items3[1] = closure_8(View, obj6);
-  const obj13 = { text: null, color: null, style: null };
-  const intl = markAsDismissed(tmp4[23]).intl;
-  obj13.text = intl.string(markAsDismissed(analyticsLocations[23]).t.y2b7CA);
-  obj13.color = markAsDismissed(analyticsLocations[22]).BadgeColors.EXPRESSIVE;
-  obj13.style = tmp2.newBadge;
-  items3[2] = closure_7(markAsDismissed(analyticsLocations[22]).TextBadge, obj13);
-  const obj14 = { variant: "heading-lg/medium", style: tmp2.title, color: "text-default", children: null };
-  const intl2 = markAsDismissed(tmp4[23]).intl;
-  obj14.children = intl2.string(ref(analyticsLocations[25]).uGxDiu);
-  items3[3] = closure_7(markAsDismissed(analyticsLocations[24]).Text, obj14);
-  const obj15 = { variant: "body-md/normal", style: tmp2.body, color: "text-muted", children: null };
-  const intl3 = markAsDismissed(tmp4[23]).intl;
-  obj15.children = intl3.string(ref(analyticsLocations[25]).yezU3E);
-  items3[4] = closure_7(markAsDismissed(analyticsLocations[24]).Text, obj15);
-  const obj16 = { style: tmp2.actions, children: null };
-  const obj17 = { text: null, variant: "primary", size: "lg", onPress: null };
-  const intl4 = markAsDismissed(tmp4[23]).intl;
-  obj17.text = intl4.string(ref(analyticsLocations[25]).TswY68);
-  obj17.onPress = callback;
-  const items11 = [closure_7(markAsDismissed(analyticsLocations[26]).Button, obj17), ];
-  const obj18 = { text: null, variant: "secondary", size: "lg", onPress: null };
-  const intl5 = markAsDismissed(tmp4[23]).intl;
-  obj18.text = intl5.string(markAsDismissed(analyticsLocations[23]).t.TulDPl);
-  obj18.onPress = callback1;
-  items11[1] = closure_7(markAsDismissed(analyticsLocations[26]).Button, obj18);
-  obj16.children = items11;
-  items3[5] = closure_8(View, obj16);
-  obj4.children = items3;
-  obj3.children = closure_8(View, obj4);
-  obj2.children = closure_7(markAsDismissed(analyticsLocations[11]).SafeAreaPaddingView, obj3);
-  return closure_7(markAsDismissed(analyticsLocations[10]).BottomSheet, obj2);
+  obj11.children = closure_9(flag(ref[22]), obj12);
+  const items8 = [closure_9(View, obj11), , ];
+  const obj13 = { style: null, children: null };
+  const items9 = [, ];
+  ({ row: arr10[0], innerRow: arr10[1] } = tmp2);
+  obj13.style = items9;
+  const obj14 = { name: "Rose", suggestion: tmp9, emojiSize: 28, spacing: 10, textVariant: "body-lg/medium", textColor: "text-default", lineClamp: 1, style: tmp2.innerStack, emojiSource: null };
+  const tmp3Result = flag(ref[22]);
+  const items10 = [flag(ref[25]), flag(ref[26]), flag(ref[25])];
+  obj14.emojiSource = items10;
+  obj13.children = closure_9(flag(ref[22]), obj14);
+  items8[1] = closure_9(View, obj13);
+  const obj15 = { style: null, children: null };
+  const items11 = [, ];
+  ({ row: arr12[0], outerRow: arr12[1] } = tmp2);
+  obj15.style = items11;
+  const obj16 = { name: "Loky", suggestion: tmp10, emojiSize: 24, spacing: 8, textVariant: "body-md/medium", textColor: "text-subtle", lineClamp: 1, style: tmp2.outerStack, emojiSource: null };
+  const tmp3Result3 = flag(ref[22]);
+  const items12 = [flag(ref[27]), flag(ref[28]), flag(ref[29])];
+  obj16.emojiSource = items12;
+  obj15.children = closure_9(flag(ref[22]), obj16);
+  items8[2] = closure_9(View, obj15);
+  obj10.children = items8;
+  items5[1] = closure_10(View, obj10);
+  const tmp3Result4 = flag(ref[22]);
+  items5[2] = closure_9(markAsDismissed(ref[30]).TextBadge, { text: tmp12.badge, color: markAsDismissed(ref[30]).BadgeColors.EXPRESSIVE, style: tmp2.newBadge });
+  items5[3] = closure_9(markAsDismissed(ref[31]).Text, { variant: "heading-lg/medium", style: tmp2.title, color: "text-default", children: tmp12.title });
+  items5[4] = closure_9(markAsDismissed(ref[31]).Text, { variant: "body-md/normal", style: tmp2.body, color: "text-muted", children: tmp12.body });
+  const obj20 = { style: tmp2.actions, children: null };
+  const obj21 = { text: null, variant: "primary", size: "lg", onPress: null };
+  const intl4 = tmp17(tmp4[8]).intl;
+  obj21.text = intl4.string(flag(ref[9]).TswY68);
+  obj21.onPress = callback1;
+  const items13 = [closure_9(markAsDismissed(ref[32]).Button, obj21), ];
+  const obj22 = { text: null, variant: "secondary", size: "lg", onPress: null };
+  const intl5 = tmp17(tmp4[8]).intl;
+  obj22.text = intl5.string(markAsDismissed(ref[8]).t.TulDPl);
+  obj22.onPress = callback2;
+  items13[1] = closure_9(markAsDismissed(ref[32]).Button, obj22);
+  obj20.children = items13;
+  items5[5] = closure_10(View, obj20);
+  obj8.children = items5;
+  items4[1] = closure_10(View, obj8);
+  obj7.children = items4;
+  obj5.children = closure_10(markAsDismissed(ref[19]).SafeAreaPaddingView, obj7);
+  return closure_9(markAsDismissed(ref[18]).BottomSheet, obj5);
 };

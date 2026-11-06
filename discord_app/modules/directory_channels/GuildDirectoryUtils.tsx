@@ -1,9 +1,9 @@
-// === Module 14083: GuildDirectoryUtils ===
+// === Module 14060: GuildDirectoryUtils ===
 
-// Module 14083 (GuildDirectoryUtils)
-import _modDef12 from "module_12" /* 12 */;
+// Module 14060 (GuildDirectoryUtils)
+import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 14084 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 14061 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryTypes = GuildDirectoryConstants.DirectoryEntryTypes;
@@ -64,18 +64,18 @@ export function guildDirectoryEntryFromServer(entry) {
 export const MAX_CATEGORY_SERVERS = 5;
 export function orderByTotalMemberCount(found) {
   items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return _modDef12.orderBy(found, items, ["desc"]);
+  return applyDefault.orderBy(found, items, ["desc"]);
 }
 export function orderByDateAdded(reactions) {
   items = [(createdAt) => createdAt.createdAt];
-  return _modDef12.orderBy(reactions, items, ["desc"]);
+  return applyDefault.orderBy(reactions, items, ["desc"]);
 }
 export function rankByDateAdded(arr) {
   const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);
   items = [(createdAt) => createdAt.createdAt];
-  return _modDef12.orderBy(found, items, ["desc"]).slice(0, 5);
+  return applyDefault.orderBy(found, items, ["desc"]).slice(0, 5);
 }
 export function rankGuildEntries(arr) {
   items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return _modDef12.orderBy(arr, items, ["desc"]);
+  return applyDefault.orderBy(arr, items, ["desc"]);
 }

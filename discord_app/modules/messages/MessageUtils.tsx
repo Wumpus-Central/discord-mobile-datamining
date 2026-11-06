@@ -1,8 +1,8 @@
-// === Module 11203: MessageUtils ===
+// === Module 11158: MessageUtils ===
 
-// Module 11203 (MessageUtils)
-import AgeGateUtils from "AgeGateUtils" /* 6872 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+// Module 11158 (MessageUtils)
+import AgeGateUtils from "AgeGateUtils" /* 6814 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;

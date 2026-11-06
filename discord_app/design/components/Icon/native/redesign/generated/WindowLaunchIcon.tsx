@@ -1,9 +1,9 @@
-// === Module 14813: WindowLaunchIcon ===
+// === Module 14790: WindowLaunchIcon ===
 
-// Module 14813 (WindowLaunchIcon)
+// Module 14790 (WindowLaunchIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5853 */;
-import _mod14814 from "module_14814" /* 14814 */;
+import BaseIconImage from "BaseIconImage" /* 5871 */;
+import _mod14791 from "module_14791" /* 14791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function WindowLaunchIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14814, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14791, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

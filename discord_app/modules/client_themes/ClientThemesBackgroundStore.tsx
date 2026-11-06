@@ -1,20 +1,19 @@
-// === Module 5167: ClientThemesBackgroundStore ===
+// === Module 5194: ClientThemesBackgroundStore ===
 
-// Module 5167 (ClientThemesBackgroundStore)
+// Module 5194 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import dismissible_content from "dismissible_content" /* 4976 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5173 */;
-import UserUtils from "UserUtils" /* 5197 */;
-import ProductCatalog from "ProductCatalog" /* 5200 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5208 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
+import dismissible_content from "dismissible_content" /* 5003 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5200 */;
+import UserUtils from "UserUtils" /* 5224 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5228 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -69,21 +68,14 @@ function handleUserStoreChange() {
       user = undefined;
       let flag = true;
     }
-    const currentUser = UserStore.getCurrentUser();
     const obj = require("HexagonCampaignUtils");
-    if (obj3.hasPerkOnlyFromHexagonCampaign(currentUser, HexagonCampaignPerk.CLIENT_THEME)) {
-      const CLIENT_THEMES = ProductCatalog.CLIENT_THEMES;
-      let featureValue = CLIENT_THEMES.getFeatureValue(currentUser);
-    } else {
-      featureValue = PremiumUtilsDefault.canUseClientThemes(currentUser);
-    }
-    if (!featureValue === closure_15) {
+    const tmp13 = !PremiumUtilsDefault.canUseClientThemes(UserStore.getCurrentUser());
+    if (tmp13 === closure_15) {
       return flag;
     } else {
-      closure_15 = tmp17;
+      closure_15 = tmp13;
       c17 = false;
     }
-    obj3 = require("HexagonCampaignUtils");
   }
   flag = false;
   if (null == user) {
@@ -181,9 +173,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4996).isGuildTextChannelType;
+const isGuildTextChannelType = fn(5023).isGuildTextChannelType;
 const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5168).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5195).HexagonCampaignPerk;
 const SystemThemeState = fn(1195).SystemThemeState;
 let closure_15 = true;
 let c16 = false;

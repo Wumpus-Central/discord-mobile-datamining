@@ -1,12 +1,12 @@
-// === Module 15854: ActiveChannelsStore ===
+// === Module 15848: ActiveChannelsStore ===
 
-// Module 15854 (ActiveChannelsStore)
+// Module 15848 (ActiveChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
 
 function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {
@@ -14,7 +14,7 @@ function truncateOldMessageData(channelId) {
     const _Date2 = Date;
     importDefault = SnowflakeUtilsDefault.fromTimestamp(Date.now() - c5);
     const tmp6 = importDefault;
-    const findIndexResult = _modDef12.findIndex(arr, (id) => SnowflakeUtilsDefault.compare(id.id, closure_0) > 0);
+    const findIndexResult = applyDefault.findIndex(arr, (id) => SnowflakeUtilsDefault.compare(id.id, closure_0) > 0);
     if (-1 === findIndexResult) {
       dependencyMap2[channelId] = [];
     } else {
@@ -33,7 +33,7 @@ function handleChannelDelete(channel) {
   delete tmp4[tmp3];
   delete tmp2[tmp];
 }
-const isGuildHomeChannel = fn(4999).isGuildHomeChannel;
+const isGuildHomeChannel = fn(5026).isGuildHomeChannel;
 let c5 = 900000;
 let dependencyMap = {};
 const dependencyMap2 = {};
@@ -86,8 +86,8 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
             }
           });
           const _Array = Array;
-          const found = _modDef12.chain(Array.from(arr)).filter((item) => item in dependencyMap);
-          const chainResult = _modDef12.chain(Array.from(arr));
+          const found = applyDefault.chain(Array.from(arr)).filter((item) => item in dependencyMap);
+          const chainResult = applyDefault.chain(Array.from(arr));
           const _Set = Set;
           const set = new Set(found.sortBy((arg0) => {
             let num;

@@ -1,13 +1,13 @@
-// === Module 9011: useMediaViewerSyncer ===
+// === Module 8957: useMediaViewerSyncer ===
 
-// Module 9011 (useMediaViewerSyncer)
+// Module 8957 (useMediaViewerSyncer)
 import _mod1652 from "module_1652" /* 1652 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8985 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8931 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(9012);
+const Constants = fn(8958);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: closure_6, THUMBNAIL_MAX_WIDTH: metroImportDefault, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
 const PlatformUtils = fn(1377);
 let closure_10 = PlatformUtils.isAndroid();
@@ -285,8 +285,8 @@ export function useMediaViewerSyncer(sources) {
         useMediaViewerSyncerTsx6.__initData = tmp41;
         let derivedValue = arr(selectedIndex[5]).useDerivedValue(useMediaViewerSyncerTsx6);
         const items13 = [animatedRef];
-        const callback2 = React.useCallback((arg0) => {
-          const result = sources(onEndReached[9]).lerpVarWidthThumbnailScrollBounds(items, arg0);
+        const callback2 = React.useCallback((result1) => {
+          const result = sources(onEndReached[9]).lerpVarWidthThumbnailScrollBounds(items, result1);
           const obj = sources(onEndReached[9]);
           sources(onEndReached[5]).scrollTo(c0, result, 0, false);
         }, items13);

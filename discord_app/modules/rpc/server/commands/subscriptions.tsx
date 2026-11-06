@@ -1,8 +1,8 @@
-// === Module 16603: subscriptions ===
+// === Module 16600: subscriptions ===
 
-// Module 16603 (subscriptions)
-import _modDef12 from "module_12" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 9486 */;
+// Module 16600 (subscriptions)
+import applyDefault from "apply" /* 12 */;
+import RPCErrorDefault from "RPCError" /* 9432 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -181,7 +181,7 @@ export default {
               let tmp6 = nextResult;
               let isEqualResult = nextResult.evt === evt;
               if (isEqualResult) {
-                let obj = _modDef12;
+                let obj = applyDefault;
                 isEqualResult = obj.isEqual(tmp6.args, args);
               }
               if (isEqualResult) {

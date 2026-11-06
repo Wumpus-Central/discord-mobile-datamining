@@ -1,9 +1,9 @@
-// === Module 8935: useNameplate ===
+// === Module 8881: useNameplate ===
 
-// Module 8935 (useNameplate)
-import utils from "utils" /* 2113 */;
+// Module 8881 (useNameplate)
+import utils from "utils" /* 2108 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
 
 require = fn;
 const size = fn(2);

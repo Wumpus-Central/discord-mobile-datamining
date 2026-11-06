@@ -1,8 +1,8 @@
-// === Module 7379: fastest_list/FastestList ===
+// === Module 7326: fastest_list/FastestList ===
 
-// Module 7379 (fastest_list/FastestList)
-import FastestListItemTypeDefault from "FastestListItemType" /* 7372 */;
-import FastList from "FastList" /* 7380 */;
+// Module 7326 (fastest_list/FastestList)
+import FastestListItemTypeDefault from "FastestListItemType" /* 7319 */;
+import FastList from "FastList" /* 7327 */;
 import noop_mod from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default function FastestList(inActionSheet) {
     horizontal = false;
   }
   inActionSheet = inActionSheet.inActionSheet;
-  const keyExtractor = inActionSheet.keyExtractor;
+  keyExtractor = inActionSheet.keyExtractor;
   ({ listFooterAlwaysMounted, insetStart, insetEnd, itemSize, keyboardDismissMode, keyboardShouldPersistTaps, listFooterSize } = inActionSheet);
   if (listFooterAlwaysMounted === undefined) {
     listFooterAlwaysMounted = false;

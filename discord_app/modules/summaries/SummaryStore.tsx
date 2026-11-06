@@ -1,22 +1,22 @@
-// === Module 10308: SummaryStore ===
+// === Module 10260: SummaryStore ===
 
-// Module 10308 (SummaryStore)
+// Module 10260 (SummaryStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import sortByMatchScore from "sortByMatchScore" /* 9287 */;
-import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 10310 */;
-import Summary from "Summary" /* 10311 */;
+import sortByMatchScore from "sortByMatchScore" /* 9233 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 10262 */;
+import Summary from "Summary" /* 10263 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5364 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 9286 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6913 */;
+import ExperimentStore from "ExperimentStore" /* 5384 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9232 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function handleQuickSwitcherUpdate() {
   });
   closure_24 = found.map((record) => record.record.id);
 }
-const SUMMARY_POLL_INTERVAL = fn(10309).SUMMARY_POLL_INTERVAL;
+const SUMMARY_POLL_INTERVAL = fn(10261).SUMMARY_POLL_INTERVAL;
 let obj = { FETCHING: "fetching", OK: "ok", ERROR: "error" };
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -555,14 +555,14 @@ obj2 = {
   RECEIVE_CHANNEL_SUMMARIES_BULK(requestArgs) {
     ({ receivedAt: require, error: importDefault } = requestArgs);
     const channelIds = requestArgs.requestArgs.channelIds;
-    dependencyMap = _modDef12.toPairs(requestArgs.summaries).reduce((acc, item) => {
+    dependencyMap = applyDefault.toPairs(requestArgs.summaries).reduce((acc, item) => {
       const tmp = closure_7(item, 2);
       const first = tmp[0];
       obj = error(12);
-      const chainResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(10311).createSummaryFromServer(item, first)));
-      const sortByResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(10311).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId));
-      const reversed = error(12).chain(tmp[1].map((item) => lastReceivedAt(10311).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75).reverse();
-      const takeRightResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(10311).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75);
+      const chainResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(10263).createSummaryFromServer(item, first)));
+      const sortByResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(10263).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId));
+      const reversed = error(12).chain(tmp[1].map((item) => lastReceivedAt(10263).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75).reverse();
+      const takeRightResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(10263).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75);
       acc[first] = reversed.filter((item) => Object.keys(item).length > 0).value();
       return acc;
     }, {});
@@ -592,19 +592,19 @@ obj2 = {
   CONVERSATION_SUMMARY_UPDATE(channel_id) {
     channel_id = channel_id.channel_id;
     const timestamp = Date.now();
-    const chainResult = _modDef12.chain(channel_id.summaries);
-    const found = _modDef12.chain(channel_id.summaries).sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id)).filter((item) => Object.keys(item).length > 0);
+    const chainResult = applyDefault.chain(channel_id.summaries);
+    const found = applyDefault.chain(channel_id.summaries).sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id)).filter((item) => Object.keys(item).length > 0);
     const mapped = found.map((item) => Summary.createSummaryFromServer(item, channel_id));
-    const sortByResult = _modDef12.chain(channel_id.summaries).sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id));
+    const sortByResult = applyDefault.chain(channel_id.summaries).sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id));
     items = dependencyMap2[channel_id];
     const iter = mapped.reverse();
     if (items == null) {
       items = [];
     }
     const valueResult = mapped.reverse().value();
-    const tmp2Result = _modDef12;
-    const combined = _modDef12.chain(valueResult).concat(items);
-    const chainResult1 = _modDef12.chain(valueResult);
+    const tmp2Result = applyDefault;
+    const combined = applyDefault.chain(valueResult).concat(items);
+    const chainResult1 = applyDefault.chain(valueResult);
     const sortByResult1 = combined.sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId));
     const takeRightResult = combined.sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId)).takeRight(75);
     const uniqByResult = combined.sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId)).takeRight(75).uniqBy("id");

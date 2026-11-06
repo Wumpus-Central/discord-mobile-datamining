@@ -1,13 +1,13 @@
-// === Module 20466: executeHeadlessTask ===
+// === Module 20474: executeHeadlessTask ===
 
-// Module 20466 (executeHeadlessTask)
+// Module 20474 (executeHeadlessTask)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import fast_connect from "fast_connect" /* 15 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10396 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15803 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10348 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15797 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -367,7 +367,7 @@ let closure_10 = async function _executeHeadlessTask() {
   })();
 };
 const AppState = fn(17).AppState;
-const NativeAppStartup = fn(19670);
+const NativeAppStartup = fn(19676);
 ({ initHeadlessTask: metroImportDefault, applicationReady: closure_8 } = NativeAppStartup);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

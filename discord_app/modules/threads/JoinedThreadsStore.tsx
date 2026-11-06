@@ -1,11 +1,11 @@
-// === Module 5077: JoinedThreadsStore ===
+// === Module 5104: JoinedThreadsStore ===
 
-// Module 5077 (JoinedThreadsStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 5104 (JoinedThreadsStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4996 */;
-import MuteTimersDefault from "MuteTimers" /* 5078 */;
+import ChannelRecord from "ChannelRecord" /* 5023 */;
+import MuteTimersDefault from "MuteTimers" /* 5105 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 
@@ -180,19 +180,19 @@ obj = {
     });
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(joinedThreads) {
-    const mapped = _modDef12(joinedThreads.joinedThreads).map((joinTimestamp) => {
+    const mapped = applyDefault(joinedThreads.joinedThreads).map((joinTimestamp) => {
       obj = {};
       const merged = Object.assign(joinTimestamp);
       obj.joinTimestamp = new Date(joinTimestamp.joinTimestamp);
       return obj;
     });
-    const arr = _modDef12(joinedThreads.joinedThreads);
+    const arr = applyDefault(joinedThreads.joinedThreads);
     mapped.keyBy("threadId").value();
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
     const id = guild.id;
-    obj = _modDef12(obj);
+    obj = applyDefault(obj);
     const rejectResult = obj.reject((guildId) => guildId.guildId === id);
     obj = obj.reject((guildId) => guildId.guildId === id).keyBy("threadId").value();
     const threads = guild.threads;
@@ -203,7 +203,7 @@ obj = {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    obj = _modDef12(obj);
+    obj = applyDefault(obj);
     const rejectResult = obj.reject((guildId) => guildId.guildId === id);
     obj = obj.reject((guildId) => guildId.guildId === id).keyBy("threadId").value();
   },
@@ -270,7 +270,7 @@ obj = {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "ti" }, joinTimestamp: null };
+        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "r" }, joinTimestamp: null };
         const _Date = Date;
         const date = new Date();
         guildId = date;

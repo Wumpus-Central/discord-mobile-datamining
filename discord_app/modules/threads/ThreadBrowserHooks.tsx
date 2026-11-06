@@ -1,23 +1,23 @@
-// === Module 14599: ThreadBrowserHooks ===
+// === Module 14576: ThreadBrowserHooks ===
 
-// Module 14599 (ThreadBrowserHooks)
-import _modDef12 from "module_12" /* 12 */;
+// Module 14576 (ThreadBrowserHooks)
+import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8347 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 10025 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8292 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6999 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8348 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6941 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8293 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(14600).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(14577).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");
@@ -33,20 +33,20 @@ export function useActiveThreadIds(arg0) {
   const items1 = [, ];
   ({ guild_id: arr2[0], id: arr2[1] } = arg0);
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
-    const values = _modDef12(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id)).values();
+    const values = applyDefault(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id)).values();
     const mapped = values.map((id) => channel.getChannel(id.id));
     const found = mapped.filter(GlobalUtils.isNotNullish);
     const found1 = found.filter((item) => closure_1_7.can(constants.VIEW_CHANNEL, item));
-    const tmpResult = _modDef12(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id));
+    const tmpResult = applyDefault(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id));
     return found1.map((id) => id.id).value();
   }, items1);
   const items2 = [stateFromStoresArray];
   return noop.useMemo(() => {
-    const sorted = _modDef12(closure_1_1).sort((arg0, arg1) => {
+    const sorted = applyDefault(closure_1_1).sort((arg0, arg1) => {
       const obj = closure_1_1(closure_1_2[14]);
       return obj.compare(closure_1_8.lastMessageId(arg0), closure_1_8.lastMessageId(arg1));
     });
-    let obj = _modDef12(closure_1_1);
+    let obj = applyDefault(closure_1_1);
     return sorted.reverse().value();
   }, items2);
 }
@@ -56,27 +56,27 @@ export function useActiveThreads(channel) {
   const items1 = [, ];
   ({ guild_id: arr2[0], id: arr2[1] } = channel);
   const stateFromStoresArray = memo(504).useStateFromStoresArray(items, () => {
-    const values = _modDef12(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id)).values();
+    const values = applyDefault(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id)).values();
     const mapped = values.map((id) => channel.getChannel(id.id));
     const found = mapped.filter(GlobalUtils.isNotNullish);
     const found1 = found.filter((item) => closure_1_7.can(constants.VIEW_CHANNEL, item));
-    const tmpResult = _modDef12(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id));
+    const tmpResult = applyDefault(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id));
     return found1.map((id) => id.id).value();
   }, items1);
   closure_129_1 = stateFromStoresArray;
   const items2 = [stateFromStoresArray];
   memo = noop.useMemo(() => {
-    const sorted = _modDef12(closure_1_1).sort((arg0, arg1) => {
+    const sorted = applyDefault(closure_1_1).sort((arg0, arg1) => {
       const obj = closure_1_1(closure_1_2[14]);
       return obj.compare(closure_1_8.lastMessageId(arg0), closure_1_8.lastMessageId(arg1));
     });
-    let obj = _modDef12(closure_1_1);
+    let obj = applyDefault(closure_1_1);
     return sorted.reverse().value();
   }, items2);
   let obj = memo(504);
   const items3 = [JoinedThreadsStore];
   const items4 = [memo];
-  const tmp3 = _slicedToArray(memo(504).useStateFromStores(items3, () => _modDef12.partition(memo, (id) => closure_1_11.hasJoined(id)), items4, memo(504).statesWillNeverBeEqual), 2);
+  const tmp3 = _slicedToArray(memo(504).useStateFromStores(items3, () => applyDefault.partition(memo, (id) => closure_1_11.hasJoined(id)), items4, memo(504).statesWillNeverBeEqual), 2);
   return { joinedThreadIds: tmp3[0], unjoinedThreadIds: tmp3[1] };
 }
 export function useActiveGuildThreads(arg0) {
@@ -84,9 +84,9 @@ export function useActiveGuildThreads(arg0) {
   items = [PermissionStore, ActiveThreadsStore, ChannelStore];
   const items1 = [arg0];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
-    const values = _modDef12(ActiveThreadsStore.getThreadsForGuild(closure_0)).values();
+    const values = applyDefault(ActiveThreadsStore.getThreadsForGuild(closure_0)).values();
     const mapped = values.map((item) => stateFromStoresArray(closure_1_2[12]).values(item));
-    const tmpResult = _modDef12(ActiveThreadsStore.getThreadsForGuild(closure_0));
+    const tmpResult = applyDefault(ActiveThreadsStore.getThreadsForGuild(closure_0));
     const mapped1 = mapped.flatten().map((id) => channel.getChannel(id.id));
     const found = mapped1.filter(GlobalUtils.isNotNullish);
     const found1 = found.filter((item) => closure_1_7.can(constants.VIEW_CHANNEL, item));
@@ -95,11 +95,11 @@ export function useActiveGuildThreads(arg0) {
   }, items1);
   const items2 = [stateFromStoresArray];
   return noop.useMemo(() => {
-    const sorted = _modDef12(stateFromStoresArray).sort((arg0, arg1) => {
+    const sorted = applyDefault(stateFromStoresArray).sort((arg0, arg1) => {
       const obj = stateFromStoresArray(closure_1_2[14]);
       return obj.compare(closure_1_8.lastMessageId(arg0), closure_1_8.lastMessageId(arg1));
     });
-    let obj = _modDef12(stateFromStoresArray);
+    let obj = applyDefault(stateFromStoresArray);
     return sorted.reverse().value();
   }, items2);
 }
@@ -154,8 +154,8 @@ export function useArchivedThreads(channel, LATEST_ACTIVITY, loadMore, MATCH_SOM
   let obj = require("initialize");
   const items4 = [ArchivedThreadsStore, nextOffset, isInitialLoad];
   obj2.threadIds = require("initialize").useStateFromStoresArray(items4, () => {
-    const tmpResult = _modDef12(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3));
-    return _modDef12(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3)).filter((item) => {
+    const tmpResult = applyDefault(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3));
+    return applyDefault(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3)).filter((item) => {
       if (closure_1_4) {
         if (!showResolvedFlags) {
           return false;

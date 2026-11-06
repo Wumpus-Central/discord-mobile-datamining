@@ -1,11 +1,11 @@
-// === Module 11526: PinotChannelLabel ===
+// === Module 11488: PinotChannelLabel ===
 
-// Module 11526 (PinotChannelLabel)
+// Module 11488 (PinotChannelLabel)
 import util from "util" /* 1113 */;
-import _modDef3287 from "module_3287" /* 3287 */;
-import PinotChannelLabelAnchor from "PinotChannelLabelAnchor" /* 11527 */;
-import useAttachPinotMemberCoachmark from "useAttachPinotMemberCoachmark" /* 11528 */;
-import ChannelHeaderShared from "ChannelHeaderShared" /* 11533 */;
+import _modDef3316 from "module_3316" /* 3316 */;
+import PinotChannelLabelAnchor from "PinotChannelLabelAnchor" /* 11489 */;
+import useAttachPinotMemberCoachmark from "useAttachPinotMemberCoachmark" /* 11490 */;
+import ChannelHeaderShared from "ChannelHeaderShared" /* 11495 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/pinot/native/PinotChannelLabe
 
 export function getPinotChannelLabelText() {
   const intl = util.intl;
-  return intl.string(_modDef3287.uneDIi);
+  return intl.string(_modDef3316.uneDIi);
 }
 export function PinotChannelLabel(channel) {
   channel = channel.channel;
@@ -36,7 +36,7 @@ export function PinotChannelLabel(channel) {
   };
   const obj4 = { children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3287.uneDIi);
+  obj4.children = intl.string(_modDef3316.uneDIi);
   obj3.children = jsx(ChannelHeaderShared.SubtitleText, { children: null });
   return <View ref={noop.useCallback((current) => {
     ref1.current = current;

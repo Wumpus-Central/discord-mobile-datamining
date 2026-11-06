@@ -1,12 +1,12 @@
-// === Module 9070: ICYMIActionCreators ===
+// === Module 9016: ICYMIActionCreators ===
 
-// Module 9070 (ICYMIActionCreators)
+// Module 9016 (ICYMIActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import UserSettings from "UserSettings" /* 4968 */;
-import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 9072 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 9074 */;
+import UserSettings from "UserSettings" /* 4995 */;
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 9018 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 9020 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 9071 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 9017 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
@@ -1085,9 +1085,6 @@ export default {
   },
   giveFeedback() {
     return Dispatcher.dispatch({ type: "ICYMI_FEEDBACK_GIVEN" });
-  },
-  clearReadStates() {
-    return Dispatcher.dispatch({ type: "CLEAR_ICYMI_READ_STATES" });
   },
   addedRecommendedGuild() {
     return Dispatcher.dispatch({ type: "ICYMI_JOINED_RECOMMENDED_GUILD" });

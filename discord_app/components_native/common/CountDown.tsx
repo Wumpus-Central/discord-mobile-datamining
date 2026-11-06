@@ -1,9 +1,9 @@
-// === Module 10335: CountDown ===
+// === Module 10287: CountDown ===
 
-// Module 10335 (CountDown)
+// Module 10287 (CountDown)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5763 */;
+import Text_Text from "Text/Text" /* 5781 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

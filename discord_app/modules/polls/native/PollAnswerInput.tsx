@@ -1,16 +1,16 @@
-// === Module 12789: PollAnswerInput ===
+// === Module 12754: PollAnswerInput ===
 
-// Module 12789 (PollAnswerInput)
+// Module 12754 (PollAnswerInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import PollsUtils from "PollsUtils" /* 8549 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9934 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10126 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import PollsUtils from "PollsUtils" /* 8495 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9884 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10077 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 require = fn;
 function ImageInput(openImageInputActionSheet) {
@@ -88,13 +88,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const DraftType = fn(7846).DraftType;
-const PollsConstants = fn(8552);
+const DraftType = fn(7800).DraftType;
+const PollsConstants = fn(8498);
 ({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { defaultContainer: { flexDirection: "row", alignItems: "center" }, inputContainer: { flex: 1 }, cannotRemove: { marginRight: 36 }, defaultImageContainer: { width: 60, height: 48, justifyContent: "center", alignItems: "center" }, pollAnswerTextInput: { flex: 1, paddingStart: 0 }, defaultRemoveButtonContainer: { paddingLeft: nativeDefault.space.PX_12, height: 48, justifyContent: "center", color: nativeDefault.colors.TEXT_MUTED }, uploadContainer: { alignItems: "flex-start" } };
 let closure_16 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -152,7 +152,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12791, dependencyMap.paths), closure_2_11, { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker });
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12756, dependencyMap.paths), closure_2_11, { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker });
       },
       iconSrc: index(channelId[21]),
       containerStyle: tmp.defaultImageContainer,
@@ -161,7 +161,7 @@ export default function PollAnswerInput(answer) {
     }),
 
   ];
-  const obj5 = { ref: inputRef, textAlignVertical: "center", showTopContainer: false, showBorder: false, placeholder: null, onChange: null, onSubmitEditing: null, onFocus: null, onBlur: null, blurOnSubmit: false, style: null, selectionColor: "id", textContentType: "tag", accessibilityLabel: "a", accessibilityHint: "id", maxLength: "next", returnKeyType: "isArray", required: "Icon", autoCorrect: "Array", "aria-invalid": "id" };
+  const obj5 = { ref: inputRef, textAlignVertical: "center", showTopContainer: false, showBorder: false, placeholder: null, onChange: null, onSubmitEditing: null, onFocus: null, onBlur: null, blurOnSubmit: false, style: null, selectionColor: "channel", textContentType: null, accessibilityLabel: null, accessibilityHint: null, maxLength: null, returnKeyType: null, required: null, autoCorrect: null, "aria-invalid": null };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);
   obj5.onChange = function onChange(text) {

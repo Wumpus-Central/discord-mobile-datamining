@@ -1,15 +1,15 @@
-// === Module 10393: UploaderBase ===
+// === Module 10345: UploaderBase ===
 
-// Module 10393 (UploaderBase)
+// Module 10345 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
-import _modDef12 from "module_12" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8363 */;
-import UploadTargets from "UploadTargets" /* 8386 */;
+import applyDefault from "apply" /* 12 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8309 */;
+import UploadTargets from "UploadTargets" /* 8332 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const AbortCodes = fn(1072).AbortCodes;
-const FileUploadErrorTypes = fn(5148).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(5175).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -78,7 +78,7 @@ class UploaderBase extends EventEmitter {
     };
     obj = closure_1(closure_2[5]);
     tmp3.id = obj.uniqueId("Uploader");
-    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "id" };
+    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "channel" };
     return tmp3;
   }
 }
@@ -296,7 +296,7 @@ prototype["setUploadingTextForUI"] = function setUploadingTextForUI(arg0) {
   if (flag) {
     let _fileSizeResult = self._fileSize();
   } else {
-    _fileSizeResult = _modDef12.sumBy(self.files, (reactNativeFilePrepped) => reactNativeFilePrepped.reactNativeFilePrepped ? reactNativeFilePrepped.currentSize : reactNativeFilePrepped.preCompressionSize);
+    _fileSizeResult = applyDefault.sumBy(self.files, (reactNativeFilePrepped) => reactNativeFilePrepped.reactNativeFilePrepped ? reactNativeFilePrepped.currentSize : reactNativeFilePrepped.preCompressionSize);
   }
   logger.log("setUploadingTextForUI - total content: " + _fileSizeResult + " bytes and " + self.files.length + " attachments for " + self.id);
   const obj3 = {};
@@ -342,9 +342,9 @@ prototype["_recomputeProgressByFile"] = function _recomputeProgressByFile() {
 };
 prototype["_addAttachmentsToPayload"] = function _addAttachmentsToPayload(arg0, arg1, arg2) {
   const merged = Object.assign(arg0);
-  _modDef12;
+  applyDefault;
   items = [...arg2];
-  return _modDef12.set({}, arg1, items);
+  return applyDefault.set({}, arg1, items);
 };
 prototype["clearProcessingMessageInterval"] = function clearProcessingMessageInterval() {
   const self = this;

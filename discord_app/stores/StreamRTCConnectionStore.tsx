@@ -1,20 +1,20 @@
-// === Module 8030: StreamRTCConnectionStore ===
+// === Module 7984: StreamRTCConnectionStore ===
 
-// Module 8030 (StreamRTCConnectionStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 7984 (StreamRTCConnectionStore)
+import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5926 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6855 */;
-import canSpectateDefault from "canSpectate" /* 6893 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8027 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 8031 */;
-import RunningGameStore from "RunningGameStore" /* 2142 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5945 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6797 */;
+import canSpectateDefault from "canSpectate" /* 6835 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7981 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 7985 */;
+import RunningGameStore from "RunningGameStore" /* 2137 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2135 */;
-import PresenceStore from "PresenceStore" /* 5898 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5901 */;
+import MediaEngineStore from "MediaEngineStore" /* 2130 */;
+import PresenceStore from "PresenceStore" /* 5917 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 const StreamRTCConnectionDefault = StreamRTCConnection;
@@ -22,7 +22,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1072);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6853).StreamTypes;
+const StreamTypes = fn(6795).StreamTypes;
 let dependencyMap = {};
 dependencyMap = {};
 let closure_13 = {};
@@ -186,7 +186,7 @@ if (MediaEngineStore.isSupported()) {
   let obj = {
     CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
         sessionId = sessionId.sessionId;
-        const item = _modDef12.forEach(closure_18, (isOwner, arg1) => {
+        const item = applyDefault.forEach(closure_18, (isOwner, arg1) => {
           let str = "receiver-disconnect";
           if (isOwner.isOwner) {
             str = "sender-disconnect";
@@ -198,7 +198,7 @@ if (MediaEngineStore.isSupported()) {
       },
     CONNECTION_CLOSED: function handleConnectionClosed() {
         c3 = null;
-        const item = _modDef12.forEach(closure_18, (isOwner, arg1) => {
+        const item = applyDefault.forEach(closure_18, (isOwner, arg1) => {
           let str = "receiver-disconnect";
           if (isOwner.isOwner) {
             str = "sender-disconnect";
@@ -213,7 +213,7 @@ if (MediaEngineStore.isSupported()) {
     RTC_CONNECTION_LOSS_RATE: handleRtcAction,
     RTC_CONNECTION_UPDATE_ID: function handleRtcConnectionUpdateId(arg0) {
         const connection = arg0;
-        return _modDef12.some(closure_18, (arg0) => arg0 === connection.connection);
+        return applyDefault.some(closure_18, (arg0) => arg0 === connection.connection);
       },
     RTC_CONNECTION_SECURE_FRAMES_UPDATE: handleRtcAction,
     RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: function handleRtcConnectionRemoteVideoSinkWants(guildId) {
@@ -256,7 +256,7 @@ if (MediaEngineStore.isSupported()) {
         const encodeStreamKeyResult = obj.encodeStreamKey({ streamType, guildId, channelId, ownerId: AuthenticationStore.getId() });
         closure_11[encodeStreamKeyResult] = { appContext, analyticsLocations };
         const obj2 = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
-        const item = _modDef12.forEach(dependencyMap3, (analyticsContext) => {
+        const item = applyDefault.forEach(dependencyMap3, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;
           analyticsContext.setActionContext(appContext);
           const result = analyticsContext.setNativePickerStyleUsed(importDefault);
@@ -293,8 +293,8 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
         appContext = appContext.appContext;
         const streamKey = appContext.streamKey;
-        closure_11[streamKey] = { appContext, analyticsLocations: "a" };
-        const item = _modDef12.forEach(closure_18, (analyticsContext) => {
+        closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
+        const item = applyDefault.forEach(closure_18, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;
           analyticsContext.setActionContext(appContext);
           if (analyticsContext.isOwner) {
@@ -436,7 +436,7 @@ if (MediaEngineStore.isSupported()) {
       },
     VIDEO_SIZE_UPDATE: function handleVideoSizeUpdate(arg0) {
         ({ streamId: require, dimensions: importDefault, zoom: dependencyMap } = arg0);
-        const item = _modDef12.forEach(closure_18, (setVideoSize) => {
+        const item = applyDefault.forEach(closure_18, (setVideoSize) => {
           if (setVideoSize != null) {
             setVideoSize.setVideoSize(require, importDefault, dependencyMap);
           }

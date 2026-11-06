@@ -1,9 +1,9 @@
-// === Module 7711: useSelectedDismissibleContent ===
+// === Module 7664: useSelectedDismissibleContent ===
 
-// Module 7711 (useSelectedDismissibleContent)
-import useGetDismissibleContent from "useGetDismissibleContent" /* 7712 */;
-import DismissibleContentScope from "DismissibleContentScope" /* 7714 */;
-import useSelectedDismissibleContentShared from "useSelectedDismissibleContentShared" /* 7717 */;
+// Module 7664 (useSelectedDismissibleContent)
+import useGetDismissibleContent from "useGetDismissibleContent" /* 7665 */;
+import DismissibleContentScope from "DismissibleContentScope" /* 7667 */;
+import useSelectedDismissibleContentShared from "useSelectedDismissibleContentShared" /* 7670 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -100,13 +100,13 @@ export function useSelectedTimeRecurringDismissibleContent(prop, timeRecurringCo
   items = [tmp2, tmp3];
   return items;
 }
-export function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName) {
+export function useSelectedSnowflakeBoundDismissibleContent(contentType, newSnowflakeId, groupName) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
   }
-  [tmp2, tmp3] = useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName);
-  const tmp = _slicedToArray(useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName), 2);
+  [tmp2, tmp3] = useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(contentType, newSnowflakeId, groupName);
+  const tmp = _slicedToArray(useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(contentType, newSnowflakeId, groupName), 2);
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, flag);
   items = [tmp2, tmp3];
   return items;

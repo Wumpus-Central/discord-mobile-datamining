@@ -1,11 +1,11 @@
-// === Module 9526: SKUUtils ===
+// === Module 9472: SKUUtils ===
 
-// Module 9526 (SKUUtils)
+// Module 9472 (SKUUtils)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import _modDef2171 from "module_2171" /* 2171 */;
-import matchPathCompat from "matchPathCompat" /* 5179 */;
-import StoreUtils from "StoreUtils" /* 6593 */;
+import _modDef2166 from "module_2166" /* 2166 */;
+import matchPathCompat from "matchPathCompat" /* 5206 */;
+import StoreUtils from "StoreUtils" /* 6613 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -277,7 +277,7 @@ export function getReadablePreorderReleaseDate(arg0) {
     let num = 0;
     if (0 < items.length) {
       [tmp3, tmp4] = items[num];
-      const obj = _modDef2171(preorderApproximateReleaseDate, tmp3, true);
+      const obj = _modDef2166(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

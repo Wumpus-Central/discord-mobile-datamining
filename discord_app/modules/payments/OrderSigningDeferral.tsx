@@ -1,7 +1,7 @@
-// === Module 9718: OrderSigningDeferral ===
+// === Module 9667: OrderSigningDeferral ===
 
-// Module 9718 (OrderSigningDeferral)
-import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9719 */;
+// Module 9667 (OrderSigningDeferral)
+import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9668 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -40,12 +40,12 @@ let closure_4 = async function _performSigningDeferralAction(arg0) {
           c1 = 3;
           const obj4 = { value, done: true };
           return obj4;
-        } else if (null == closure_0) {
+        } else if (null == _require) {
           const _Error2 = Error;
           const error = new Error("Order signing was deferred without a deferral context");
           throw error;
         } else {
-          ({ payment_redirect_context, stripe_3ds_context } = closure_0);
+          ({ payment_redirect_context, stripe_3ds_context } = _require);
           if (null == payment_redirect_context) {
             if (null == stripe_3ds_context) {
               const _Error = Error;
@@ -54,7 +54,7 @@ let closure_4 = async function _performSigningDeferralAction(arg0) {
             } else {
               c2 = 1;
               c1 = 1;
-              const obj5 = { value: Stripe3DSChallenge.authenticateStripePaymentIntent(stripe_3ds_context), done: false };
+              const obj5 = { value: Stripe3DSChallenge.authenticateStripePaymentIntent(stripe_3ds_context, _require.payment_gateway_merchant_account_id), done: false };
               return obj5;
             }
           } else {

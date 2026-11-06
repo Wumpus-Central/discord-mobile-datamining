@@ -1,11 +1,11 @@
-// === Module 7399: MemberVerificationAlertIncomplete ===
+// === Module 7346: MemberVerificationAlertIncomplete ===
 
-// Module 7399 (MemberVerificationAlertIncomplete)
+// Module 7346 (MemberVerificationAlertIncomplete)
 import util from "util" /* 1113 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 7046 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7082 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6988 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7024 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5175 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5202 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -54,20 +54,20 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   const obj3 = {};
   const obj = guildId(563);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(7400).ListViewIcon;
+  obj3.icon = guildId(7347).ListViewIcon;
   obj3.header = formatToPlainStringResult;
   const obj4 = { children: null };
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl3 = tmp2(1113).intl;
   obj5.text = intl3.string(guildId(1113).t.h3aGmv);
   obj5.onPress = callback;
-  const items4 = [closure_5(guildId(5770).Button, obj5), ];
+  const items4 = [closure_5(guildId(5788).Button, obj5), ];
   const obj6 = { text: null, variant: "destructive", onPress: null };
   const intl4 = tmp2(1113).intl;
   obj6.text = intl4.string(guildId(1113).t.OQFlFD);
   obj6.onPress = callback1;
-  items4[1] = closure_5(guildId(5770).Button, obj6);
+  items4[1] = closure_5(guildId(5788).Button, obj6);
   obj4.children = items4;
   obj3.buttons = closure_7(closure_6, obj4);
-  return closure_5(onClose(7050), obj3);
+  return closure_5(onClose(6992), obj3);
 };

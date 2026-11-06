@@ -1,12 +1,12 @@
-// === Module 1399: UserRecord ===
+// === Module 1404: UserRecord ===
 
-// Module 1399 (UserRecord)
+// Module 1404 (UserRecord)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import FlagUtils from "FlagUtils" /* 1398 */;
+import FlagUtils from "FlagUtils" /* 1403 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2108 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2112 */;
-import Record from "Record" /* 1400 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2103 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
+import Record from "Record" /* 1405 */;
 
 const AvatarUtilsDefault = AvatarUtils;
 

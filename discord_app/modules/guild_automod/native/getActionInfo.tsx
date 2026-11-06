@@ -1,12 +1,12 @@
-// === Module 19998: getActionInfo ===
+// === Module 20005: getActionInfo ===
 
-// Module 19998 (getActionInfo)
-import CircleXIcon2 from "CircleXIcon" /* 7236 */;
-import TextIcon from "TextIcon" /* 8798 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 13515 */;
-import Constants from "Constants" /* 13524 */;
-import ChatXIcon from "ChatXIcon" /* 14269 */;
-import BaseActionInfo from "BaseActionInfo" /* 19999 */;
+// Module 20005 (getActionInfo)
+import CircleXIcon2 from "CircleXIcon" /* 7183 */;
+import TextIcon from "TextIcon" /* 8744 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 13490 */;
+import Constants from "Constants" /* 13499 */;
+import ChatXIcon from "ChatXIcon" /* 14246 */;
+import BaseActionInfo from "BaseActionInfo" /* 20006 */;
 import size from "module_2" /* 2 */;
 
 const AutomodActionType = Constants.AutomodActionType;

@@ -1,8 +1,8 @@
-// === Module 19563: calculateContentCenterOffset ===
+// === Module 19556: calculateContentCenterOffset ===
 
-// Module 19563 (calculateContentCenterOffset)
-import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11422 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12636 */;
+// Module 19556 (calculateContentCenterOffset)
+import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11384 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12601 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function calculateContentCenterOffset_calculateContentCenterOffsetTsx1({contentHeight:contentHeight,windowHeight:windowHeight,safeArea:safeArea}){let[EDGE_GUTTER,roundToNearestPixel]=this.__closure;const safeAreaTop=Math.max(safeArea.top,EDGE_GUTTER);const safeAreaBottom=Math.max(safeArea.bottom,EDGE_GUTTER);if(windowHeight<=contentHeight){return safeAreaTop;}return Math.max(safeAreaTop,safeAreaTop+roundToNearestPixel((windowHeight-safeAreaTop-safeAreaBottom-contentHeight)/2));})" }, VoicePanelCardConstants.EDGE_GUTTER, roundToNearestPixelDefault];

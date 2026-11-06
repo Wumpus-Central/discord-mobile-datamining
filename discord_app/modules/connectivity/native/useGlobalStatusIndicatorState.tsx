@@ -1,14 +1,14 @@
-// === Module 12064: useGlobalStatusIndicatorState ===
+// === Module 12029: useGlobalStatusIndicatorState ===
 
-// Module 12064 (useGlobalStatusIndicatorState)
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 12063 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 12066 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5901 */;
+// Module 12029 (useGlobalStatusIndicatorState)
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11343 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 12031 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
 
-const useMyCurrentStageChannelDefault = tmp4(12068);
+const useMyCurrentStageChannelDefault = tmp4(12032);
 const require = fn;
-const RTC_PANEL_HEIGHT = fn(12065).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(12030).RTC_PANEL_HEIGHT;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connectivity/native/useGlobalStatusIndicatorState.tsx");
@@ -19,9 +19,9 @@ export function useGlobalStatusIndicatorState() {
   }
   let stateFromStores;
   importDefault = undefined;
-  let hasPipParticipant = stateFromStores(11915).useHasPipParticipant({ isActivityViewFocused: false });
+  let hasPipParticipant = stateFromStores(11881).useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
-  const obj = stateFromStores(11915);
+  const obj = stateFromStores(11881);
   items = [RTCConnectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => channelId.getChannelId());
   const tmp7 = useIsInvitedToSpeakDefault();
@@ -41,19 +41,19 @@ export function useGlobalStatusIndicatorState() {
     return isGuildStageVoiceResult;
   }, items2);
   const obj3 = stateFromStores(504);
-  let num = stateFromStores(12061).useGetStageRTCPanelHeight(stateFromStores);
-  stateFromStores(5324);
+  let num = stateFromStores(12027).useGetStageRTCPanelHeight(stateFromStores);
+  stateFromStores(5344);
   let tmp12 = null != tmp5;
   if (tmp12) {
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
-    tmp12 = tmp(8084).getVoiceChannelKey(channelId) !== tmp11;
-    const tmpResult = tmp(8084);
+    tmp12 = tmp(8030).getVoiceChannelKey(channelId) !== tmp11;
+    const tmpResult = tmp(8030);
   }
-  const obj4 = stateFromStores(12061);
-  let isVoicePanelShowing = stateFromStores(12067).useIsVoicePanelShowing();
+  const obj4 = stateFromStores(12027);
+  let isVoicePanelShowing = stateFromStores(11344).useIsVoicePanelShowing();
   const tmp14 = null != useMyCurrentStageChannelDefault();
   if (!isVoicePanelShowing) {
     let tmp15 = !tmp12;

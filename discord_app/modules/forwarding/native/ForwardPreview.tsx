@@ -1,24 +1,24 @@
-// === Module 13639: ForwardPreview ===
+// === Module 13614: ForwardPreview ===
 
-// Module 13639 (ForwardPreview)
-import _mod12 from "module_12" /* 12 */;
+// Module 13614 (ForwardPreview)
+import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
-import useThemeDefault from "useTheme" /* 5379 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import FastImageDefault from "FastImage" /* 5854 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6225 */;
-import ImageIcon from "ImageIcon" /* 8805 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8856 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 9535 */;
-import ClipView from "ClipView" /* 9662 */;
-import ChatItemDefault from "ChatItem" /* 10072 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10719 */;
-import ImagesIcon2 from "ImagesIcon" /* 13029 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13640 */;
-import MosaicMediaType from "MosaicMediaType" /* 13641 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13643 */;
+import useThemeDefault from "useTheme" /* 5399 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import FastImageDefault from "FastImage" /* 5872 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6245 */;
+import ImageIcon from "ImageIcon" /* 8751 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8802 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 9481 */;
+import ClipView from "ClipView" /* 9611 */;
+import ChatItemDefault from "ChatItem" /* 10023 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10671 */;
+import ImagesIcon2 from "ImagesIcon" /* 12994 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13615 */;
+import MosaicMediaType from "MosaicMediaType" /* 13616 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13618 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -33,7 +33,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(575).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(5143).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(5170).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -51,7 +51,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(5143);
+  let obj = attachmentCount(5170);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -61,7 +61,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 56;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
 let size = { width: 4, height: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
 obj2.quote = size;
@@ -89,7 +89,7 @@ export function ForwardPreview(message) {
   ({ attachments, embeds, hasContent, contentMessage } = forwardPreviewContent);
   const checkpointDataFromMessage = checkpoint_CheckpointMessageComponentUtils.getCheckpointDataFromMessage(contentMessage);
   if (attachments.length > 0) {
-    const countByResult = _mod12.countBy(attachments, (proxy_url) => MosaicMediaType.getMosaicMediaTypeForAttachment(proxy_url, true));
+    const countByResult = apply.countBy(attachments, (proxy_url) => MosaicMediaType.getMosaicMediaTypeForAttachment(proxy_url, true));
     let num = countByResult.IMAGE;
     if (num == null) {
       num = 0;
@@ -190,7 +190,7 @@ export function ForwardPreview(message) {
       formatToPlainStringResult = intl.formatToPlainString(util.t["89ihS8"], obj14);
       AttachmentIcon = AttachmentIcon2.AttachmentIcon;
     }
-    const tmp2Result = _mod12;
+    const tmp2Result = apply;
   } else {
     tmp6 = null;
     tmp7 = null;

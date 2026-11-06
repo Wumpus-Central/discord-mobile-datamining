@@ -1,7 +1,7 @@
-// === Module 7776: DiscountRecord ===
+// === Module 7730: DiscountRecord ===
 
-// Module 7776 (DiscountRecord)
-import Record from "Record" /* 1400 */;
+// Module 7730 (DiscountRecord)
+import Record from "Record" /* 1405 */;
 
 const PremiumConstants = fn(1387);
 ({ SubscriptionIntervalTypes, DiscountUserUsageLimitIntervalTypes } = PremiumConstants);

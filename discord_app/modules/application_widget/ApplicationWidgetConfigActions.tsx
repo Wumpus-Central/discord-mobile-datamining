@@ -1,10 +1,10 @@
-// === Module 11137: ApplicationWidgetConfigActions ===
+// === Module 11090: ApplicationWidgetConfigActions ===
 
-// Module 11137 (ApplicationWidgetConfigActions)
+// Module 11090 (ApplicationWidgetConfigActions)
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11138 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11091 */;
 import Backoff from "Backoff" /* 559 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
@@ -271,13 +271,13 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
     }
   })();
 };
-const FetchState = fn(11138).FetchState;
+const FetchState = fn(11091).FetchState;
 const Endpoints = fn(1072).Endpoints;
-const promiseDeduper = new fn(5268).PromiseDeduper();
+const promiseDeduper = new fn(5288).PromiseDeduper();
 const importDefaultResult2 = new Backoff(DurationsDefault.Millis.SECOND, DurationsDefault.Millis.MINUTE, true);
 const subscription = Dispatcher.subscribe("LOGOUT", () => importDefaultResult2.succeed());
-const promiseDeduper3 = new fn(5268).PromiseDeduper();
-const promiseDeduper4 = new fn(5268).PromiseDeduper();
+const promiseDeduper3 = new fn(5288).PromiseDeduper();
+const promiseDeduper4 = new fn(5288).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigActions.tsx");
 

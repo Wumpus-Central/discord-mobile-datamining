@@ -1,21 +1,17 @@
-// === Module 19298: SettingsNavigator ===
+// === Module 19290: SettingsNavigator ===
 
-// Module 19298 (SettingsNavigator)
+// Module 19290 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5763 */;
-import Pressables from "Pressables" /* 7124 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7305 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16862 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 18777 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 19299 */;
+import Text_Text from "Text/Text" /* 5781 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7252 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16850 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 19291 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2191 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16860 */;
-
-const require = globalThis.__r;
+import LocaleStore from "LocaleStore" /* 2186 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16848 */;
 
 require = fn;
 function SettingHeaderBadge(badge) {
@@ -48,28 +44,25 @@ const Constants = fn(1072);
 ({ AnalyticsPages: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const NativeStackNavigator = fn(10041);
+const NativeStackNavigator = fn(9992);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5143);
-let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };
+const createStyles = fn(5170);
+let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.headerContainer = { width: "100%", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };
 let obj5 = { width: "100%", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };
 obj.headerContainerRow = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, width: "100%" };
 obj.headerTitleWithBadge = { flexShrink: 1 };
-const obj6 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, width: "100%" };
-obj.backIcon = { borderRadius: nativeDefault.radii.round, marginTop: nativeDefault.space.PX_8 };
 let closure_12 = createStyles.createStyles(obj);
-const obj7 = { borderRadius: nativeDefault.radii.round, marginTop: nativeDefault.space.PX_8 };
+const obj6 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, width: "100%" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/core/native/SettingsNavigator.tsx");
 
 export default noop.memo(function SettingsNavigator() {
   const tmp = closure_12();
-  _require = tmp;
-  const route = require("Link").useRoute();
+  const route = screen(onClose[12]).useRoute();
   const params = route.params;
-  let screen;
+  screen = undefined;
   if (params != null) {
     screen = params.screen;
   }
@@ -77,69 +70,49 @@ export default noop.memo(function SettingsNavigator() {
     screen = constants2.OVERVIEW;
   }
   const params2 = route.params;
-  params1 = undefined;
+  let params1;
   if (params2 != null) {
     params1 = params2.params;
   }
   const params3 = route.params;
-  let onClose;
+  onClose = undefined;
   if (params3 != null) {
     onClose = params3.onClose;
   }
-  let obj = require("Link");
-  let navigation = require("Link").useNavigation();
-  const tmp2Result = require("Link");
-  const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(tmp2(tmp3[14]).OpenUserSettingsTriggerPoint);
+  let obj = screen(onClose[12]);
+  noop = screen(onClose[12]).useNavigation();
+  const tmp2Result = screen(onClose[12]);
+  const commonTriggerPoint = screen(onClose[13]).useCommonTriggerPoint(tmp2(tmp3[14]).OpenUserSettingsTriggerPoint);
   items = [screen];
-  const effect = onClose.useEffect(() => {
+  const effect = noop.useEffect(() => {
     obj2 = { destinationPane: screen, source: { page: constants.USER_SETTINGS } };
     const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj2);
   }, items);
   const items1 = [onClose];
-  const effect1 = onClose.useEffect(() => () => {
+  const effect1 = noop.useEffect(() => () => {
     if (onClose != null) {
       tmp();
     }
   }, items1);
-  const tmp2Result8 = require("useCommonTriggerPoint");
-  const items2 = [obj2];
-  const stateFromStores = require("useStateFromStores").useStateFromStores(items2, () => obj2.locale);
-  const tmp2Result9 = require("useStateFromStores");
-  const memo = onClose.useMemo(() => closure_0(params1[19]).getSettingScreens(), []);
-  const layoutEffect = onClose.useLayoutEffect(() => closure_0(params1[20]).trackAppUIViewed(), []);
-  const effect2 = onClose.useEffect(() => screen(params1[21]).validate(), []);
-  const tmp13 = screen(params1[17]);
-  const accessibilityNativeStackOptions = require("Navigator").useAccessibilityNativeStackOptions();
-  const tmp2Result10 = require("Navigator");
-  const accessibilityNativeStackFocusTracking = require("useAccessibilityNativeStackFocusTracking").useAccessibilityNativeStackFocusTracking();
-  obj2 = { backgroundColor: null, borderTopWidth: 1, borderTopColor: null };
+  const tmp2Result8 = screen(onClose[13]);
+  const items2 = [closure_5];
+  const stateFromStores = screen(onClose[16]).useStateFromStores(items2, () => closure_5.locale);
+  const tmp2Result9 = screen(onClose[16]);
+  const memo = noop.useMemo(() => screen(onClose[19]).getSettingScreens(), []);
+  const layoutEffect = noop.useLayoutEffect(() => screen(onClose[20]).trackAppUIViewed(), []);
+  const effect2 = noop.useEffect(() => params1(onClose[21]).validate(), []);
+  const tmp13 = params1(onClose[17]);
+  const accessibilityNativeStackOptions = screen(onClose[22]).useAccessibilityNativeStackOptions();
+  const tmp2Result10 = screen(onClose[22]);
+  const accessibilityNativeStackFocusTracking = screen(onClose[23]).useAccessibilityNativeStackFocusTracking();
+  let obj2 = { backgroundColor: null, borderTopWidth: 1, borderTopColor: null };
   ({ beforeRemove, transitionStart } = accessibilityNativeStackFocusTracking);
-  const tmp2Result11 = require("useAccessibilityNativeStackFocusTracking");
-  obj2.backgroundColor = require("useToken").useToken(screen(params1[8]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
-  const tmp2Result12 = require("useToken");
-  obj2.borderTopColor = require("useToken").useToken(screen(params1[8]).colors.BORDER_SUBTLE);
-  const items3 = [tmp.backIcon];
-  closure_6 = onClose.useCallback((navigation) => () => {
-    const obj = { collapsable: false, children: null };
-    obj2 = {
-      onPress() {
-        return navigation.goBack();
-      },
-      accessible: true,
-      accessibilityRole: "button",
-      accessibilityLabel: null,
-      hitSlop: null,
-      children: null
-    };
-    const intl = util.intl;
-    obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
-    obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-    const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: React6(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-    obj2.children = React6(View, obj3);
-    obj.children = React6(Pressables.PressableOpacity, obj2);
-    return React6(View, obj);
-  }, items3);
-  const memo1 = onClose.useMemo(() => ({
+  const tmp2Result11 = screen(onClose[23]);
+  obj2.backgroundColor = screen(onClose[24]).useToken(params1(onClose[8]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  const tmp2Result12 = screen(onClose[24]);
+  obj2.borderTopColor = screen(onClose[24]).useToken(params1(onClose[8]).colors.BORDER_SUBTLE);
+  closure_5 = noop.useCallback((navigation) => () => closure_2_9(params1(onClose[25]), { navigation }), []);
+  const memo1 = noop.useMemo(() => ({
     transitionEnd(data) {
       let isActive = data.data.closing;
       state = state.getState();
@@ -154,21 +127,21 @@ export default noop.memo(function SettingsNavigator() {
       }
     }
   }), []);
-  const listeners = onClose.useMemo(() => ({
+  const listeners = noop.useMemo(() => ({
     transitionEnd(data) {
       let closing = data.data.closing;
       if (closing) {
-        closing = null != closure_1_6.getField("selected");
+        closing = null != listeners.getField("selected");
       }
       if (closing) {
-        closure_1_6.setState({ selected: null });
+        listeners.setState({ selected: null });
       }
     }
   }), []);
-  const tmp2Result13 = require("useToken");
-  const autoSettingsSearchSessionAnalytics = require("useAutoSettingsSearchSessionAnalytics").useAutoSettingsSearchSessionAnalytics();
-  let obj3 = { value: tmp13(screen(params1[18]).USER_SETTINGS).analyticsLocations, children: null };
-  const items4 = [closure_9(screen(params1[29]), {}), ];
+  const tmp2Result13 = screen(onClose[24]);
+  const autoSettingsSearchSessionAnalytics = screen(onClose[26]).useAutoSettingsSearchSessionAnalytics();
+  let obj3 = { value: tmp13(params1(onClose[18]).USER_SETTINGS).analyticsLocations, children: null };
+  const items3 = [closure_9(params1(onClose[27]), {}), ];
   let obj4 = {
     style: tmp.statusBarSpacer,
     accessible: false,
@@ -191,20 +164,20 @@ export default noop.memo(function SettingsNavigator() {
   };
   obj5.screenListeners = { beforeRemove, transitionStart };
   obj5.initialRouteName = screen;
-  const items5 = [
+  const items4 = [
     closure_9(Screen.Screen, {
       name: constants2.OVERVIEW,
       options(navigation) {
         const obj = { title: null, headerLeft: null, headerBackVisible: false, headerShadowVisible: false, contentStyle: null };
         const intl = util.intl;
         obj.title = intl.string(util.t["3D5yo/"]);
-        obj.headerLeft = closure_6(navigation.navigation);
+        obj.headerLeft = closure_5(navigation.navigation);
         obj.contentStyle = obj2;
         return obj;
       },
       listeners: memo1,
       getComponent() {
-        return closure_0(params1[30]).default;
+        return screen(onClose[29]).default;
       }
     }),
     memo.map((item) => {
@@ -214,8 +187,8 @@ export default noop.memo(function SettingsNavigator() {
         options(navigation) {
           const obj = { title: null, headerLeft: null, headerBackVisible: false, contentStyle: null, headerShadowVisible: null };
           obj2 = SettingRendererUtils;
-          obj.title = obj2.getSettingTitle(closure_1_0);
-          obj.headerLeft = closure_6(navigation.navigation);
+          obj.title = obj2.getSettingTitle(screen);
+          obj.headerLeft = closure_5(navigation.navigation);
           obj.contentStyle = obj2;
           const navigationOptions = component.navigationOptions;
           let flag;
@@ -241,7 +214,7 @@ export default noop.memo(function SettingsNavigator() {
         },
         getComponent() {
           component = component.getComponent();
-          _modDef38(null != component, "[Settings Navigator] Invalid component for setting: " + closure_1_0);
+          _modDef38(null != component, "[Settings Navigator] Invalid component for setting: " + screen);
           return component;
         },
         initialParams: null,
@@ -256,9 +229,9 @@ export default noop.memo(function SettingsNavigator() {
       return closure_1_9(Screen.Screen, obj, tmp);
     })
   ];
-  obj5.children = items5;
+  obj5.children = items4;
   obj4.children = closure_10(Screen.Navigator, obj5);
-  items4[1] = closure_9(navigation, obj4);
-  obj3.children = items4;
-  return closure_10(require("useAnalyticsLocations").AnalyticsLocationProvider, obj3);
+  items3[1] = closure_9(obj2, obj4);
+  obj3.children = items3;
+  return closure_10(screen(onClose[17]).AnalyticsLocationProvider, obj3);
 });

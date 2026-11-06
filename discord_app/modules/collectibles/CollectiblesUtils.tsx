@@ -1,22 +1,22 @@
-// === Module 7877: CollectiblesUtils ===
+// === Module 7831: CollectiblesUtils ===
 
-// Module 7877 (CollectiblesUtils)
-import _mod12 from "module_12" /* 12 */;
+// Module 7831 (CollectiblesUtils)
+import apply from "apply" /* 12 */;
 import Constants2 from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import PerksStateUtils from "PerksStateUtils" /* 1391 */;
-import user from "user" /* 1393 */;
-import NameplateRecord from "NameplateRecord" /* 2114 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
-import EntitlementTypes from "EntitlementTypes" /* 2175 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import PriceUtils from "PriceUtils" /* 7555 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7870 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7871 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7872 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7876 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7878 */;
+import user from "user" /* 1398 */;
+import NameplateRecord from "NameplateRecord" /* 2109 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
+import EntitlementTypes from "EntitlementTypes" /* 2170 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
+import PriceUtils from "PriceUtils" /* 7500 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7824 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7825 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7826 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7830 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7832 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1074 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -27,51 +27,51 @@ function getItemRecordsFromPurchases(arr, PROFILE_EFFECT) {
   if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
     items = [];
     HermesBuiltin.arraySpread(arr.values(), 0);
-    const tmpResult = _mod12;
-    const found = _mod12.flatMap(items, "items").filter(isAvatarDecorationRecord);
-    const flatMapResult = _mod12.flatMap(items, "items");
-    return _mod12.uniqBy(found, "skuId");
+    const tmpResult = apply;
+    const found = apply.flatMap(items, "items").filter(isAvatarDecorationRecord);
+    const flatMapResult = apply.flatMap(items, "items");
+    return apply.uniqBy(found, "skuId");
   } else if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
     const items1 = [];
     HermesBuiltin.arraySpread(arr.values(), 0);
-    const tmpResult9 = _mod12;
-    const found1 = _mod12.flatMap(items1, "items").filter(isNameplateRecord);
-    const flatMapResult1 = _mod12.flatMap(items1, "items");
-    return _mod12.uniqBy(found1, "skuId");
+    const tmpResult9 = apply;
+    const found1 = apply.flatMap(items1, "items").filter(isNameplateRecord);
+    const flatMapResult1 = apply.flatMap(items1, "items");
+    return apply.uniqBy(found1, "skuId");
   } else if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
     const items2 = [];
     HermesBuiltin.arraySpread(arr.values(), 0);
-    const tmpResult11 = _mod12;
-    const found2 = _mod12.flatMap(items2, "items").filter(isProfileEffectRecord);
-    const flatMapResult2 = _mod12.flatMap(items2, "items");
-    return _mod12.uniqBy(found2, "skuId");
+    const tmpResult11 = apply;
+    const found2 = apply.flatMap(items2, "items").filter(isProfileEffectRecord);
+    const flatMapResult2 = apply.flatMap(items2, "items");
+    return apply.uniqBy(found2, "skuId");
   } else if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME) {
     const items3 = [];
     HermesBuiltin.arraySpread(arr.values(), 0);
-    const tmpResult13 = _mod12;
-    const found3 = _mod12.flatMap(items3, "items").filter(isProfileFrameRecord);
-    const flatMapResult3 = _mod12.flatMap(items3, "items");
-    return _mod12.uniqBy(found3, "skuId");
+    const tmpResult13 = apply;
+    const found3 = apply.flatMap(items3, "items").filter(isProfileFrameRecord);
+    const flatMapResult3 = apply.flatMap(items3, "items");
+    return apply.uniqBy(found3, "skuId");
   } else {
     return [];
   }
 }
 function getItemRecordsFromCategories(arr, PROFILE_EFFECT) {
   items = [...arr.values()];
-  const flatMapResult = _mod12.flatMap(items, "products");
-  const uniqByResult = _mod12.uniqBy(flatMapResult.reduce((arr, type) => {
+  const flatMapResult = apply.flatMap(items, "products");
+  const uniqByResult = apply.uniqBy(flatMapResult.reduce((arr, type) => {
     closure_0 = type;
     if (null != type) {
       if (type.type === require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP) {
         if (null != type.variants) {
           const variants = type.variants;
-          let combined = require("module_12").concat(arr, variants.map((item) => {
+          let combined = require("apply").concat(arr, variants.map((item) => {
             const obj = {};
             const merged = Object.assign(item);
             ({ storeListingId: obj.variantGroupStoreListingId, eligibleOffers: obj.eligibleOffers } = closure_0);
             return obj;
           }));
-          const tmpResult = require("module_12");
+          const tmpResult = require("apply");
         }
         return combined;
       }
@@ -80,25 +80,25 @@ function getItemRecordsFromCategories(arr, PROFILE_EFFECT) {
     combined = arr;
   }, []), "storeListingId");
   if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
-    let tmpResult = _mod12;
-    const found = _mod12.flatMap(uniqByResult, "items").filter(isAvatarDecorationRecord);
-    const flatMapResult1 = _mod12.flatMap(uniqByResult, "items");
-    return _mod12.uniqBy(found, "skuId");
+    let tmpResult = apply;
+    const found = apply.flatMap(uniqByResult, "items").filter(isAvatarDecorationRecord);
+    const flatMapResult1 = apply.flatMap(uniqByResult, "items");
+    return apply.uniqBy(found, "skuId");
   } else if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
-    const tmpResult9 = _mod12;
-    const found1 = _mod12.flatMap(uniqByResult, "items").filter(isNameplateRecord);
-    const flatMapResult2 = _mod12.flatMap(uniqByResult, "items");
-    return _mod12.uniqBy(found1, "skuId");
+    const tmpResult9 = apply;
+    const found1 = apply.flatMap(uniqByResult, "items").filter(isNameplateRecord);
+    const flatMapResult2 = apply.flatMap(uniqByResult, "items");
+    return apply.uniqBy(found1, "skuId");
   } else if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
-    const tmpResult11 = _mod12;
-    const found2 = _mod12.flatMap(uniqByResult, "items").filter(isProfileEffectRecord);
-    const flatMapResult3 = _mod12.flatMap(uniqByResult, "items");
-    return _mod12.uniqBy(found2, "skuId");
+    const tmpResult11 = apply;
+    const found2 = apply.flatMap(uniqByResult, "items").filter(isProfileEffectRecord);
+    const flatMapResult3 = apply.flatMap(uniqByResult, "items");
+    return apply.uniqBy(found2, "skuId");
   } else if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME) {
-    const tmpResult13 = _mod12;
-    const found3 = _mod12.flatMap(uniqByResult, "items").filter(isProfileFrameRecord);
-    const flatMapResult4 = _mod12.flatMap(uniqByResult, "items");
-    return _mod12.uniqBy(found3, "skuId");
+    const tmpResult13 = apply;
+    const found3 = apply.flatMap(uniqByResult, "items").filter(isProfileFrameRecord);
+    const flatMapResult4 = apply.flatMap(uniqByResult, "items");
+    return apply.uniqBy(found3, "skuId");
   } else {
     return [];
   }
@@ -496,13 +496,13 @@ export function extendVariantsProducts(items) {
       if (type.type === require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP) {
         if (null != type.variants) {
           const variants = type.variants;
-          let combined = require("module_12").concat(arr, variants.map((item) => {
+          let combined = require("apply").concat(arr, variants.map((item) => {
             const obj = {};
             const merged = Object.assign(item);
             ({ storeListingId: obj.variantGroupStoreListingId, eligibleOffers: obj.eligibleOffers } = closure_0);
             return obj;
           }));
-          const tmpResult = require("module_12");
+          const tmpResult = require("apply");
         }
         return combined;
       }
@@ -513,7 +513,7 @@ export function extendVariantsProducts(items) {
 }
 export function getProductsFromCategories(arr, arg1) {
   items = [...arr.values()];
-  const flatMapResult = _mod12.flatMap(items, "products");
+  const flatMapResult = apply.flatMap(items, "products");
   let reduced = flatMapResult;
   if (arg1) {
     reduced = flatMapResult.reduce((arr, type) => {
@@ -522,13 +522,13 @@ export function getProductsFromCategories(arr, arg1) {
         if (type.type === require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP) {
           if (null != type.variants) {
             const variants = type.variants;
-            let combined = require("module_12").concat(arr, variants.map((item) => {
+            let combined = require("apply").concat(arr, variants.map((item) => {
               const obj = {};
               const merged = Object.assign(item);
               ({ storeListingId: obj.variantGroupStoreListingId, eligibleOffers: obj.eligibleOffers } = closure_0);
               return obj;
             }));
-            const tmpResult = require("module_12");
+            const tmpResult = require("apply");
           }
           return combined;
         }
@@ -537,7 +537,7 @@ export function getProductsFromCategories(arr, arg1) {
       combined = arr;
     }, []);
   }
-  return _mod12.uniqBy(reduced, "storeListingId");
+  return apply.uniqBy(reduced, "storeListingId");
 }
 export { getItemRecordsFromPurchases };
 export { getItemRecordsFromCategories };
@@ -573,7 +573,7 @@ export function getAvatarDecorationsFromCategories(categories) {
 }
 export function getAvatarDecorations(stateFromStores, arr) {
   items = [...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION), ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION)];
-  return _mod12.uniqBy(items, "skuId");
+  return apply.uniqBy(items, "skuId");
 }
 export function getNameplatesFromPurchases(arr) {
   return getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.NAMEPLATE);
@@ -583,7 +583,7 @@ export function getNameplatesFromCategories(arr) {
 }
 export function getNameplates(stateFromStores, arr) {
   items = [...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.NAMEPLATE), ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.NAMEPLATE)];
-  return _mod12.uniqBy(items, "skuId");
+  return apply.uniqBy(items, "skuId");
 }
 export function getProfileEffectsFromPurchases(arr) {
   return getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
@@ -593,7 +593,7 @@ export function getProfileEffectsFromCategories(arr) {
 }
 export function getProfileEffects(stateFromStores, arr) {
   items = [...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT), ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT)];
-  return _mod12.uniqBy(items, "skuId");
+  return apply.uniqBy(items, "skuId");
 }
 export function groupProfileEffects(arr, arr) {
   const tmp = getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
@@ -615,7 +615,7 @@ export function getProfileFramesFromCategories(arr) {
 }
 export function getProfileFrames(stateFromStores, arr) {
   items = [...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME), ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME)];
-  return _mod12.uniqBy(items, "skuId");
+  return apply.uniqBy(items, "skuId");
 }
 export function isCollectiblesGiftCode(giftCode) {
   return giftCode.applicationId === closure_1_11;

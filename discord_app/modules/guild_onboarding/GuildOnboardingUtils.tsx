@@ -1,18 +1,18 @@
-// === Module 7413: GuildOnboardingUtils ===
+// === Module 7360: GuildOnboardingUtils ===
 
-// Module 7413 (GuildOnboardingUtils)
+// Module 7360 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import FlagUtilsAll from "FlagUtils" /* 1398 */;
-import StringUtils from "StringUtils" /* 2155 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 7409 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7414 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6710 */;
-import GuildChannelStore from "GuildChannelStore" /* 5073 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import StringUtils from "StringUtils" /* 2150 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5107 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7356 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7361 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6652 */;
+import GuildChannelStore from "GuildChannelStore" /* 5100 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
 
 const require = globalThis.__r;
 
@@ -79,11 +79,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(5073).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7408).OnboardingConnectionType;
+let closure_7 = fn(5100).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(7355).OnboardingConnectionType;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(5061).GuildMemberFlags;
+const GuildMemberFlags = fn(5088).GuildMemberFlags;
 let date = new Date(1682488800000);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingUtils.tsx");

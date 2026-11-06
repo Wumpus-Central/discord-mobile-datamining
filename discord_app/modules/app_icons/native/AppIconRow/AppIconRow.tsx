@@ -1,14 +1,14 @@
-// === Module 17802: AppIconRow ===
+// === Module 17791: AppIconRow ===
 
-// Module 17802 (AppIconRow)
-import _modDef12 from "module_12" /* 12 */;
+// Module 17791 (AppIconRow)
+import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5210 */;
-import TableRow from "TableRow" /* 7119 */;
-import FormRadio from "FormRadio" /* 7206 */;
-import AppIconTypes from "AppIconTypes" /* 10168 */;
-import AppIconDefault from "AppIcon" /* 17283 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5230 */;
+import TableRow from "TableRow" /* 7063 */;
+import FormRadio from "FormRadio" /* 7153 */;
+import AppIconTypes from "AppIconTypes" /* 10119 */;
+import AppIconDefault from "AppIcon" /* 17271 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ const items = [
     return intl.string(util.t.RnMLvl);
   }
 ];
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -49,7 +49,7 @@ export default function AppIconRow(arg0) {
   ({ hasNitro, currentAppIcon, showEasterEgg } = arg0);
   const id = icon.id;
   if (id === AppIconTypes.PremiumAppIconIds.PIRATE) {
-    const obj = _modDef12;
+    const obj = applyDefault;
     let name = items[obj.random(obj, 0, items.length - 1)]();
   } else {
     name = icon.name;

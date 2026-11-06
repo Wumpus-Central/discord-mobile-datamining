@@ -1,22 +1,22 @@
-// === Module 18230: ActivityPrivacyDefaultSharingSetting ===
+// === Module 18222: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 18230 (ActivityPrivacyDefaultSharingSetting)
+// Module 18222 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import UserSettings from "UserSettings" /* 4968 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 17026 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
+import UserSettings from "UserSettings" /* 4995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 17014 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8578).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8524).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions() {
     return noop.useMemo(() => {
       const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
@@ -55,7 +55,7 @@ const radio = SettingBuilders.createRadio({
       const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18231, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18223, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
     }
   }
 });

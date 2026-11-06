@@ -1,6 +1,6 @@
-// === Module 17211: BountyRewardClaimErrorUtils ===
+// === Module 17199: BountyRewardClaimErrorUtils ===
 
-// Module 17211 (BountyRewardClaimErrorUtils)
+// Module 17199 (BountyRewardClaimErrorUtils)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

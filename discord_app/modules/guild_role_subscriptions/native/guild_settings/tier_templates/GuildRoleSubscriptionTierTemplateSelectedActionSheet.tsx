@@ -1,15 +1,15 @@
-// === Module 20309: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
+// === Module 20316: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
 
-// Module 20309 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
+// Module 20316 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_24, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,21 +29,21 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
   const obj4 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1113).intl;
   obj4.children = intl.string(markAsDismissed(1113).t.Y0PTc0);
-  items = [closure_5(markAsDismissed(5763).Text, obj4), ];
+  items = [closure_5(markAsDismissed(5781).Text, obj4), ];
   const obj5 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = markAsDismissed(1113).intl;
   obj5.children = intl2.string(markAsDismissed(1113).t["YSI/1/"]);
-  items[1] = closure_5(markAsDismissed(5763).Text, obj5);
+  items[1] = closure_5(markAsDismissed(5781).Text, obj5);
   obj3.children = items;
-  const items1 = [closure_6(markAsDismissed(6165).Stack, obj3), ];
+  const items1 = [closure_6(markAsDismissed(6185).Stack, obj3), ];
   const obj6 = { text: null, onPress: null, grow: true };
   const intl3 = markAsDismissed(1113).intl;
   obj6.text = intl3.string(markAsDismissed(1113).t.MhldXX);
   obj6.onPress = function onPress() {
     return markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  items1[1] = closure_5(markAsDismissed(5770).Button, obj6);
+  items1[1] = closure_5(markAsDismissed(5788).Button, obj6);
   obj2.children = items1;
   obj.children = closure_6(View, obj2);
-  return closure_5(markAsDismissed(5398).BottomSheet, obj);
+  return closure_5(markAsDismissed(5418).BottomSheet, obj);
 };

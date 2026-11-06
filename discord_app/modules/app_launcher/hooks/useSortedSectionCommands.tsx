@@ -1,12 +1,12 @@
-// === Module 12689: useSortedSectionCommands ===
+// === Module 12654: useSortedSectionCommands ===
 
-// Module 12689 (useSortedSectionCommands)
+// Module 12654 (useSortedSectionCommands)
 import DurationsDefault from "Durations" /* 1089 */;
-import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12623 */;
+import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 12588 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const CommandListSortOrder = fn(12690).CommandListSortOrder;
+const CommandListSortOrder = fn(12655).CommandListSortOrder;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 

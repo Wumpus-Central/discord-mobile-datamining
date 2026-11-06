@@ -1,8 +1,8 @@
-// === Module 19697: ManagerRegistry ===
+// === Module 19703: ManagerRegistry ===
 
-// Module 19697 (ManagerRegistry)
+// Module 19703 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20431 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20439 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -137,6 +137,7 @@ const obj = {
   SharedSpacesWarningManager: null,
   StageBoostUpsellManager: null,
   StageChannelRequestToSpeakMessageManager: null,
+  StageSpeakInviteNotificationManager: null,
   StageMusicManager: null,
   StaffMemberPreloaderManager: null,
   SubscriptionManager: null,
@@ -735,6 +736,12 @@ obj.StageChannelRequestToSpeakMessageManager = {
   actions: ["VOICE_STATE_UPDATES"],
   inlineRequire() {
     return require("StageChannelRequestToSpeakMessageManager").default;
+  }
+};
+obj.StageSpeakInviteNotificationManager = {
+  actions: ["VOICE_STATE_UPDATES"],
+  inlineRequire() {
+    return require("StageSpeakInviteNotificationManager").default;
   }
 };
 obj.StageMusicManager = {

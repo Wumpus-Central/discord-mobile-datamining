@@ -1,17 +1,17 @@
-// === Module 14957: useGuildTagCreationUpsell ===
+// === Module 14934: useGuildTagCreationUpsell ===
 
-// Module 14957 (useGuildTagCreationUpsell)
-import _modDef12 from "module_12" /* 12 */;
+// Module 14934 (useGuildTagCreationUpsell)
+import applyDefault from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2112 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6673 */;
-import ServerTagUpsellOnProfileExperimentDefault from "ServerTagUpsellOnProfileExperiment" /* 14958 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6614 */;
+import ServerTagUpsellOnProfileExperimentDefault from "ServerTagUpsellOnProfileExperiment" /* 14935 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
 import UserStore from "UserStore" /* 1385 */;
-import BillingInfoStore from "BillingInfoStore" /* 2177 */;
-import SubscriptionStore from "SubscriptionStore" /* 2181 */;
+import BillingInfoStore from "BillingInfoStore" /* 2172 */;
+import SubscriptionStore from "SubscriptionStore" /* 2176 */;
 
 require = fn;
 const size = fn(2);
@@ -25,7 +25,7 @@ export function useGuildTagCreationUpsell(GuildProfileCreateTagUpsell, arg1) {
   items = [GuildStore, PermissionStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
-    return _modDef12.sortBy(guildsArray.filter((item) => {
+    return applyDefault.sortBy(guildsArray.filter((item) => {
       const guildSupportsTagsResult = closure_1_0(dependencyMap[9]).guildSupportsTags(item);
       let tmp4 = !guildSupportsTagsResult;
       if (!guildSupportsTagsResult) {

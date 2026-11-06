@@ -1,13 +1,13 @@
-// === Module 17069: useFamilyCenterActivities ===
+// === Module 17057: useFamilyCenterActivities ===
 
-// Module 17069 (useFamilyCenterActivities)
+// Module 17057 (useFamilyCenterActivities)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7860 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7814 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const TeenActionDisplayType = fn(7861).TeenActionDisplayType;
+const TeenActionDisplayType = fn(7815).TeenActionDisplayType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActivities.tsx");
 
@@ -36,7 +36,7 @@ export function useFormattedTotalForDisplayType(displayType) {
     num = 0;
   }
   if (displayType === TeenActionDisplayType.TOTAL_VOICE_MINUTES) {
-    return tmp(8518).formatTotalTime(num);
+    return tmp(8464).formatTotalTime(num);
   } else if (displayType === TeenActionDisplayType.PURCHASES) {
     const totalSpendAmount = FamilyCenterStore.getTotalSpendAmount();
     const totalSpendCurrency = FamilyCenterStore.getTotalSpendCurrency();
@@ -44,8 +44,8 @@ export function useFormattedTotalForDisplayType(displayType) {
     if (null != totalSpendAmount) {
       result = num;
       if (null != totalSpendCurrency) {
-        result = tmp(7555).shortenAndFormatPrice(totalSpendAmount, totalSpendCurrency);
-        const tmpResult3 = tmp(7555);
+        result = tmp(7500).shortenAndFormatPrice(totalSpendAmount, totalSpendCurrency);
+        const tmpResult3 = tmp(7500);
       }
     }
     return result;
@@ -53,8 +53,8 @@ export function useFormattedTotalForDisplayType(displayType) {
     const totalGiftValue = FamilyCenterStore.getTotalGiftValue();
     let result1 = num;
     if (null != totalGiftValue) {
-      result1 = tmp(7555).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);
-      const tmpResult4 = tmp(7555);
+      result1 = tmp(7500).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);
+      const tmpResult4 = tmp(7500);
     }
     return result1;
   } else {

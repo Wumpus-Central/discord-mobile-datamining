@@ -1,66 +1,66 @@
-// === Module 11557: Messages ===
+// === Module 11519: Messages ===
 
-// Module 11557 (Messages)
-import _modDef12 from "module_12" /* 12 */;
+// Module 11519 (Messages)
+import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7019 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 10081 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11751 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6961 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10032 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11717 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8868 */;
-import ApplicationStore from "ApplicationStore" /* 2167 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
-import CacheStore from "CacheStore" /* 7800 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6981 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10302 */;
-import EmojiStore from "EmojiStore" /* 6934 */;
-import ExperimentStore from "ExperimentStore" /* 5364 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7606 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11559 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7020 */;
-import BasicGuildStore from "BasicGuildStore" /* 8559 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8529 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6993 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7782 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8843 */;
-import InteractionStore from "InteractionStore" /* 8535 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11563 */;
-import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8536 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7415 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11564 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7777 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11566 */;
-import PendingReplyStore from "PendingReplyStore" /* 7967 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7911 */;
-import SummaryStore from "SummaryStore" /* 10308 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7619 */;
-import LocaleStore from "LocaleStore" /* 2191 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8814 */;
+import ApplicationStore from "ApplicationStore" /* 2162 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11520 */;
+import CacheStore from "CacheStore" /* 7754 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6923 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10254 */;
+import EmojiStore from "EmojiStore" /* 6876 */;
+import ExperimentStore from "ExperimentStore" /* 5384 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7551 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11521 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6962 */;
+import BasicGuildStore from "BasicGuildStore" /* 8505 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8475 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6935 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7736 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8789 */;
+import InteractionStore from "InteractionStore" /* 8481 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11525 */;
+import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8482 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7362 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11526 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7731 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11528 */;
+import PendingReplyStore from "PendingReplyStore" /* 7921 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7865 */;
+import SummaryStore from "SummaryStore" /* 10260 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7564 */;
+import LocaleStore from "LocaleStore" /* 2186 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
-import EditMessageStore from "EditMessageStore" /* 7968 */;
-import GiftCodeStore from "GiftCodeStore" /* 11567 */;
-import GuildMemberStore from "GuildMemberStore" /* 5055 */;
-import GuildStore from "GuildStore" /* 5014 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6846 */;
-import InviteStore from "InviteStore" /* 5886 */;
-import MessageStore from "MessageStore" /* 6199 */;
-import PermissionStore from "PermissionStore" /* 5075 */;
-import PresenceStore from "PresenceStore" /* 5898 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5901 */;
-import ReadStateStore from "ReadStateStore" /* 6980 */;
-import SessionsStore from "SessionsStore" /* 5903 */;
-import UploadStore from "UploadStore" /* 8538 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
+import EditMessageStore from "EditMessageStore" /* 7922 */;
+import GiftCodeStore from "GiftCodeStore" /* 11529 */;
+import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildStore from "GuildStore" /* 5041 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6788 */;
+import InviteStore from "InviteStore" /* 5905 */;
+import MessageStore from "MessageStore" /* 6219 */;
+import PermissionStore from "PermissionStore" /* 5102 */;
+import PresenceStore from "PresenceStore" /* 5917 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
+import ReadStateStore from "ReadStateStore" /* 6922 */;
+import SessionsStore from "SessionsStore" /* 5922 */;
+import UploadStore from "UploadStore" /* 8484 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5815 */;
-import SKUStore from "SKUStore" /* 7034 */;
-import ActivityLauncherStore from "ActivityLauncherStore" /* 11721 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5904 */;
+import VoiceStateStore from "VoiceStateStore" /* 5833 */;
+import SKUStore from "SKUStore" /* 6976 */;
+import ActivityLauncherStore from "ActivityLauncherStore" /* 11687 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5923 */;
 
 require = fn;
 class MessagesConnected {
@@ -153,7 +153,7 @@ class MessagesConnected {
     tmp21 = closure_49;
     linkedLobby = channel.linkedLobby;
     application_id = undefined;
-    stateFromStoresObject = tmp2Result3.useStateFromStoresObject(items6, () => _modDef12.mapValues(stateFromStores, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items7);
+    stateFromStoresObject = tmp2Result3.useStateFromStoresObject(items6, () => applyDefault.mapValues(stateFromStores, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items7);
     if (linkedLobby != null) {
       application_id = linkedLobby.application_id;
     }
@@ -182,8 +182,8 @@ class MessagesConnected {
     effect = obj6.useEffect(() => {
       if (!obj.areArraysShallowEqual(id, guildId.current)) {
         const obj2 = ApplicationActionCreatorsDefault;
-        const found = _modDef12(id).filter(GlobalUtils.isNotNullish);
-        const arr = _modDef12(id);
+        const found = applyDefault(id).filter(GlobalUtils.isNotNullish);
+        const arr = applyDefault(id);
         const applications = obj2.fetchApplications(found.uniq().value(), false);
         guildId.current = id;
         const iter = found.uniq();
@@ -875,11 +875,11 @@ class MessagesConnected {
     return tmp125(tmp26Result, obj1);
   }
 }
-const PollsInteractionStore = fn(11565);
+const PollsInteractionStore = fn(11527);
 ({ useChannelPollInteractions: closure_28, useMessagePollInteractions: closure_29 } = PollsInteractionStore);
 const Constants = fn(1072);
 ({ ActivityActionTypes: closure_59, ChannelTypesSets: closure_60, ME: closure_61, MessageTypes: closure_62, Permissions: closure_63 } = Constants);
-let closure_64 = fn(11560).GameOrganizationInviteStates;
+let closure_64 = fn(11522).GameOrganizationInviteStates;
 const PremiumConstants = fn(1387);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_65, PremiumTypes: closure_66 } = PremiumConstants);
 const jsxProd = fn(21);

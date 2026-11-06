@@ -1,11 +1,11 @@
-// === Module 8352: ThreadMembersStore ===
+// === Module 8297: ThreadMembersStore ===
 
-// Module 8352 (ThreadMembersStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 8297 (ThreadMembersStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4996 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelRecord from "ChannelRecord" /* 5023 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 import size from "module_2" /* 2 */;
 
 function updateFromGuild(threads) {
@@ -227,11 +227,11 @@ const threadMembersStore = new ThreadMembersStore(DispatcherDefault, {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    closure_4 = _modDef12.omitBy(closure_4, (guildId) => guildId.guildId === id);
+    closure_4 = applyDefault.omitBy(closure_4, (guildId) => guildId.guildId === id);
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     const id = channel.channel.id;
-    closure_4 = _modDef12.omitBy(closure_4, (parentId) => parentId.parentId === id);
+    closure_4 = applyDefault.omitBy(closure_4, (parentId) => parentId.parentId === id);
   },
   THREAD_CREATE: handleThreadCreateOrUpdate,
   THREAD_UPDATE: handleThreadCreateOrUpdate,

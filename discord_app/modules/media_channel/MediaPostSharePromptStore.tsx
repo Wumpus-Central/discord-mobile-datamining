@@ -1,13 +1,13 @@
-// === Module 8536: MediaPostSharePromptStore ===
+// === Module 8482: MediaPostSharePromptStore ===
 
-// Module 8536 (MediaPostSharePromptStore)
+// Module 8482 (MediaPostSharePromptStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 8537 */;
-import GatedChannelStore from "GatedChannelStore" /* 5047 */;
+import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 8483 */;
+import GatedChannelStore from "GatedChannelStore" /* 5074 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 
 require = fn;
 let set = new Set();

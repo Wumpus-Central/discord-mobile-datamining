@@ -1,6 +1,6 @@
-// === Module 17317: OrbsArcadeWindowUtils ===
+// === Module 17305: OrbsArcadeWindowUtils ===
 
-// Module 17317 (OrbsArcadeWindowUtils)
+// Module 17305 (OrbsArcadeWindowUtils)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

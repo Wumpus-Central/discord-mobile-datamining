@@ -1,8 +1,8 @@
-// === Module 10931: useDiscoverableApplicationStream ===
+// === Module 10883: useDiscoverableApplicationStream ===
 
-// Module 10931 (useDiscoverableApplicationStream)
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6852 */;
-import RelationshipStore from "RelationshipStore" /* 5085 */;
+// Module 10883 (useDiscoverableApplicationStream)
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6794 */;
+import RelationshipStore from "RelationshipStore" /* 5112 */;
 
 const require = globalThis.__r;
 

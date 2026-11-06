@@ -1,14 +1,14 @@
-// === Module 11339: ActionSheetIconHeader ===
+// === Module 11294: ActionSheetIconHeader ===
 
-// Module 11339 (ActionSheetIconHeader)
-import Text_Text from "Text/Text" /* 5763 */;
+// Module 11294 (ActionSheetIconHeader)
+import Text_Text from "Text/Text" /* 5781 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_5 = createStyles.createStyles({ container: { paddingVertical: 0, flexDirection: "row", alignItems: "center", gap: 12 }, titles: { justifyContent: "center", flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetIconHeader.native.tsx");

@@ -1,16 +1,16 @@
-// === Module 7435: GuildOnboardingPromptOptionButton ===
+// === Module 7382: GuildOnboardingPromptOptionButton ===
 
-// Module 7435 (GuildOnboardingPromptOptionButton)
+// Module 7382 (GuildOnboardingPromptOptionButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5152 */;
-import timing_timing from "timing/timing" /* 5380 */;
-import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7436 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5179 */;
+import timing_timing from "timing/timing" /* 5400 */;
+import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
-import EmojiStore from "EmojiStore" /* 6934 */;
+import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import EmojiStore from "EmojiStore" /* 6876 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 let obj = { duration: 200, easing: null };
 let Easing = fn(1652).Easing;
 obj.easing = Easing.out(fn(1652).Easing.ease);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj3 = { container: { borderRadius: nativeDefault.radii.md, borderWidth: 2, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 8 }, optionButton: { paddingVertical: 12, paddingHorizontal: 16, display: "flex", flexDirection: "row", alignItems: "center" }, optionTextEmoji: { fontSize: 24, lineHeight: 24, marginRight: 12, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24, marginRight: 12 }, optionText: { flexShrink: 1 }, checkIcon: null, newBadgeWrapper: null, newBadge: null, roleCount: null };
 let size = { position: "absolute", top: -6, right: -6, width: 20, height: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" };
 obj3.checkIcon = size;
@@ -478,9 +478,9 @@ export default function PromptOptionButton(option) {
       str = "";
     }
     obj8.name = str;
-    obj7.children = ref(tmp14(7439), obj8);
+    obj7.children = ref(tmp14(7386), obj8);
     tmp71Result = tmp71(c5, obj7);
-    const tmp14Result = tmp14(7439);
+    const tmp14Result = tmp14(7386);
   }
   const items19 = [tmp71Result, ];
   const obj10 = { style: tmp.optionText, children: null };
@@ -488,7 +488,7 @@ export default function PromptOptionButton(option) {
   let tmp77Result = null != option.description && option.description.length > 0;
   if (tmp77Result) {
     const obj12 = { variant: "body-xs/medium", color: "text-default", children: option.description };
-    tmp77Result = tmp77(tmp2(5763).Text, obj12);
+    tmp77Result = tmp77(tmp2(5781).Text, obj12);
   }
   items20[1] = tmp77Result;
   obj10.children = items20;
@@ -504,7 +504,7 @@ export default function PromptOptionButton(option) {
     let intl = tmp2(1113).intl;
     const obj15 = { memberCount: num };
     obj14.children = intl.format(tmp2(1113).t.EgKsZA, obj15);
-    obj13.children = tmp77(tmp2(5763).Text, obj14);
+    obj13.children = tmp77(tmp2(5781).Text, obj14);
     tmp77Result2 = tmp77(tmp14(1652).View, obj13);
   }
   items21[1] = tmp77Result2;

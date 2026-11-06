@@ -1,7 +1,7 @@
-// === Module 8088: useStateChannelIsLive ===
+// === Module 8034: useStateChannelIsLive ===
 
-// Module 8088 (useStateChannelIsLive)
-import StageInstanceStore from "StageInstanceStore" /* 4997 */;
+// Module 8034 (useStateChannelIsLive)
+import StageInstanceStore from "StageInstanceStore" /* 5024 */;
 
 const require = globalThis.__r;
 

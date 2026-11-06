@@ -1,20 +1,20 @@
-// === Module 19516: VoicePanelDock ===
+// === Module 19508: VoicePanelDock ===
 
-// Module 19516 (VoicePanelDock)
+// Module 19508 (VoicePanelDock)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5380 */;
-import HapticUtils from "HapticUtils" /* 5386 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5430 */;
-import ExternalPipDefault from "ExternalPip" /* 6011 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11418 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11423 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11445 */;
-import useVoicePanelDockStatusDefault from "useVoicePanelDockStatus" /* 19517 */;
-import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19519 */;
-import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19523 */;
+import timing_timing from "timing/timing" /* 5400 */;
+import HapticUtils from "HapticUtils" /* 5406 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
+import ExternalPipDefault from "ExternalPip" /* 6030 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11380 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11385 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11407 */;
+import useVoicePanelDockStatusDefault from "useVoicePanelDockStatus" /* 19509 */;
+import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19511 */;
+import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19515 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -22,14 +22,14 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11419).VoicePanelModes;
-const VoicePanelDockConstants = fn(11437);
+const VoicePanelModes = fn(11381).VoicePanelModes;
+const VoicePanelDockConstants = fn(11399);
 ({ DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: metroImportDefault, DOCK_PULL_SNAP_DISTANCE: closure_8, DOCK_PULL_SNAP_GIVE: closure_9, DOCK_TAP_MAX_MOVEMENT: closure_10, getDockInset: closure_11, DOCK_DRAG_HANDLE_TOP, DOCK_DRAG_HANDLE_WIDTH, DOCK_GAP, DOCK_PADDING_TOP, DOCK_ROW_HEIGHT } = VoicePanelDockConstants);
-const GestureConstants = fn(11438);
+const GestureConstants = fn(11400);
 ({ FLING_MIN_DISTANCE: closure_12, FLING_MIN_VELOCITY: map1, PULL_GESTURE_ACTIVATION_DISTANCE: closure_14, PULL_GESTURE_RESISTANCE: closure_15, PULL_GESTURE_SNAP_TIMING: closure_16, PULL_GESTURE_UNSNAP_TIMING: closure_17 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { dock: { position: "absolute", top: 0, left: 0, right: 0, paddingTop: DOCK_PADDING_TOP, zIndex: 10 }, pressTarget: { position: "absolute", top: 0, left: 0, right: 0 }, dragHandle: null, row: null, identity: null };
 let size = { position: "absolute", top: DOCK_DRAG_HANDLE_TOP, alignSelf: "center", width: DOCK_DRAG_HANDLE_WIDTH, height: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj.dragHandle = size;

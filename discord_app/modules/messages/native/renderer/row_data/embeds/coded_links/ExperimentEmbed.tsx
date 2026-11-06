@@ -1,17 +1,17 @@
-// === Module 13465: ExperimentEmbed ===
+// === Module 13440: ExperimentEmbed ===
 
-// Module 13465 (ExperimentEmbed)
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8540 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8542 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8731 */;
-import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8733 */;
-import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11746 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11747 */;
-import useApexExperiments from "useApexExperiments" /* 11748 */;
-import _modDef13466 from "module_13466" /* 13466 */;
-import _modDef13467 from "module_13467" /* 13467 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 13468 */;
-import _modDef13469 from "module_13469" /* 13469 */;
+// Module 13440 (ExperimentEmbed)
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8486 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8488 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8677 */;
+import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8679 */;
+import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11712 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11713 */;
+import useApexExperiments from "useApexExperiments" /* 11714 */;
+import _modDef13441 from "module_13441" /* 13441 */;
+import _modDef13442 from "module_13442" /* 13442 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 13443 */;
+import _modDef13444 from "module_13444" /* 13444 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -69,8 +69,8 @@ function ExperimentOverrideActionSheet(override) {
   return jsx(id(memo[19]).BottomSheet, { header: jsx(id(memo[20]).BottomSheetTitleHeader, { title: experiment.title, subtitle: id }), children: jsx(id(memo[21]).ExperimentDetails, { experiment, override: override.override, id, options: memo1, onCopyLink: callback }) });
 }
 const Image = fn(17).Image;
-const ExperimentEmbedType = fn(5365).ExperimentEmbedType;
-const InviteTypes = fn(8024).InviteTypes;
+const ExperimentEmbedType = fn(5385).ExperimentEmbedType;
+const InviteTypes = fn(7978).InviteTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/ExperimentEmbed.tsx");
@@ -169,7 +169,7 @@ export function createExperimentEmbed(url, theme) {
         obj5.titleColor = colors.titleColor;
         obj5.subtitle = label;
         obj5.subtitleColor = colors.subtitleColor;
-        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13469);
+        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13444);
         obj5.thumbnailBackgroundColor = colors.backgroundColor;
         obj5.acceptLabelColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedColor : colors.acceptLabelGreenColor;
         obj5.acceptLabelBackgroundColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedBackgroundColor : colors.acceptLabelGreenBackgroundColor;
@@ -198,7 +198,7 @@ export function createExperimentEmbed(url, theme) {
         }
         obj6.subtitle = combined1;
         obj6.subtitleColor = colors.subtitleColor;
-        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13469);
+        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13444);
         ({ backgroundColor: obj13.thumbnailBackgroundColor, acceptLabelGreenColor: obj13.acceptLabelColor, acceptLabelGreenBackgroundColor: obj13.acceptLabelBackgroundColor } = colors);
         obj6.acceptLabelText = "View Experiment Details";
         obj6.embedCanBeTapped = true;
@@ -222,9 +222,9 @@ export function createExperimentEmbed(url, theme) {
   obj7.bodyText = "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj7.bodyTextColor = colors.bodyTextColor;
   if (tmp4Result10.isThemeDark(theme)) {
-    let tmpResult = _modDef13466;
+    let tmpResult = _modDef13441;
   } else {
-    tmpResult = _modDef13467;
+    tmpResult = _modDef13442;
   }
   obj7.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj7.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

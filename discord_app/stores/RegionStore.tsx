@@ -1,10 +1,10 @@
-// === Module 19195: RegionStore ===
+// === Module 19187: RegionStore ===
 
-// Module 19195 (RegionStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 19187 (RegionStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildStore from "GuildStore" /* 5014 */;
+import GuildStore from "GuildStore" /* 5041 */;
 
 let c3 = null;
 let closure_4 = {};
@@ -25,7 +25,7 @@ prototype["getOptimalRegion"] = function getOptimalRegion() {
   if (null != regions) {
     let found = regions.find((optimal) => optimal.optimal);
     if (found == null) {
-      found = _modDef12.sample(regions);
+      found = applyDefault.sample(regions);
     }
     tmp2 = found;
   }
@@ -51,7 +51,7 @@ prototype["getRandomRegion"] = function getRandomRegion() {
   const regions = this.getRegions(tmp);
   let sampleResult = null;
   if (null != regions) {
-    sampleResult = _modDef12.sample(regions);
+    sampleResult = applyDefault.sample(regions);
   }
   return sampleResult;
 };
@@ -78,7 +78,7 @@ prototype["getRegions"] = function getRegions(guildId) {
 RegionStore.displayName = "RegionStore";
 const regionStore = new RegionStore(DispatcherDefault, {
   LOAD_REGIONS: function handleLoadRegions(regions) {
-    const sortByResult = _modDef12.sortBy(regions.regions, (name) => name.name);
+    const sortByResult = applyDefault.sortBy(regions.regions, (name) => name.name);
     if (null != regions.guildId) {
       closure_4[regions.guildId] = sortByResult;
     } else {

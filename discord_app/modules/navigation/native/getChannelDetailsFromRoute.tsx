@@ -1,7 +1,7 @@
-// === Module 7014: getChannelDetailsFromRoute ===
+// === Module 6956: getChannelDetailsFromRoute ===
 
-// Module 7014 (getChannelDetailsFromRoute)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5324 */;
+// Module 6956 (getChannelDetailsFromRoute)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5344 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/navigation/native/getChannelDetailsFromRoute.tsx");

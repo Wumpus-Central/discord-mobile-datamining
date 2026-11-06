@@ -1,11 +1,11 @@
-// === Module 9860: FractionalPremiumUtils ===
+// === Module 9810: FractionalPremiumUtils ===
 
-// Module 9860 (FractionalPremiumUtils)
+// Module 9810 (FractionalPremiumUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import PremiumUtils from "PremiumUtils" /* 2176 */;
-import DateUtils from "DateUtils" /* 4965 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7996 */;
+import PremiumUtils from "PremiumUtils" /* 2171 */;
+import DateUtils from "DateUtils" /* 4992 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7950 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");

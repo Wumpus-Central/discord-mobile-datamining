@@ -1,6 +1,6 @@
-// === Module 12475: ApplicationWidgetFieldValueType ===
+// === Module 12440: ApplicationWidgetFieldValueType ===
 
-// Module 12475 (ApplicationWidgetFieldValueType)
+// Module 12440 (ApplicationWidgetFieldValueType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetFieldValueType.tsx");

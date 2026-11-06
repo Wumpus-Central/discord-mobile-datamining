@@ -1,10 +1,10 @@
-// === Module 2167: ApplicationStore ===
+// === Module 2162: ApplicationStore ===
 
-// Module 2167 (ApplicationStore)
+// Module 2162 (ApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationRecord from "ApplicationRecord" /* 2145 */;
+import ApplicationRecord from "ApplicationRecord" /* 2140 */;
 
 function addApplication(fromServer) {
   value = map.get(fromServer.id);

@@ -1,6 +1,6 @@
-// === Module 19945: NativeTelecomModule ===
+// === Module 19952: NativeTelecomModule ===
 
-// Module 19945 (NativeTelecomModule)
+// Module 19952 (NativeTelecomModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

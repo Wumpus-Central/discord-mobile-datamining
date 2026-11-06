@@ -1,8 +1,8 @@
-// === Module 13227: conjureTemplateIntakeRequests ===
+// === Module 13192: conjureTemplateIntakeRequests ===
 
-// Module 13227 (conjureTemplateIntakeRequests)
+// Module 13192 (conjureTemplateIntakeRequests)
 import util from "util" /* 1113 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 11142 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 11095 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

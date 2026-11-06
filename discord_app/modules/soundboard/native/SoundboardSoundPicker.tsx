@@ -1,31 +1,35 @@
-// === Module 19479: SoundboardSoundPicker ===
+// === Module 19471: SoundboardSoundPicker ===
 
-// Module 19479 (SoundboardSoundPicker)
+// Module 19471 (SoundboardSoundPicker)
 import nativeDefault from "native" /* 575 */;
-import searchSounds from "searchSounds" /* 7666 */;
+import searchSounds from "searchSounds" /* 7619 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5901 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(19480);
+const ExpressionPickerStore = fn(19472);
 ({ setSearchQuery: closure_6, useExpressionPickerStore: metroImportDefault } = ExpressionPickerStore);
-const SoundboardPickerType = fn(6198).SoundboardPickerType;
+const SoundboardPickerType = fn(6218).SoundboardPickerType;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5143);
-let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(19481).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
+const createStyles = fn(5170);
+let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(19473).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
 let closure_14 = createStyles.createStyles(obj);
-let obj3 = { paddingHorizontal: fn(19481).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
+let obj3 = { paddingHorizontal: fn(19473).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPicker.tsx");
 
 export default noop.memo(function SoundboardSoundPicker(channel) {
   channel = channel.channel;
   const initialScrollLocation = channel.initialScrollLocation;
+  let flag = channel.startExpanded;
+  if (flag === undefined) {
+    flag = true;
+  }
   let stateFromStores;
   availableSounds = undefined;
   c5 = undefined;
@@ -90,7 +94,7 @@ export default noop.memo(function SoundboardSoundPicker(channel) {
     isIOSResult = closure_12(tmp11(tmp7[22]), obj12);
   }
   const items4 = [isIOSResult, ];
-  const obj13 = { animatedIndex: sharedValue1, scrollable: true, startExpanded: true, onExpand: callback1, footer: null, children: null };
+  const obj13 = { animatedIndex: sharedValue1, scrollable: true, startExpanded: flag, onExpand: callback1, footer: null, children: null };
   const obj11 = channel(ref[21]);
   let tmp27;
   if (tmp6Result.isAndroid()) {

@@ -1,7 +1,7 @@
 // === Module 1193: SelectivelySyncedUserSettingsStore ===
 
 // Module 1193 (SelectivelySyncedUserSettingsStore)
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -65,11 +65,11 @@ const items = [
     Storage3.remove("UserSettingsSync");
     const obj2 = {};
     if (false === obj[UserSettingsSections.TEXT]) {
-      const obj3 = { shouldSync: false, settings: _modDef12.pick(value2, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay", "defaultReactionEmoji"]) };
+      const obj3 = { shouldSync: false, settings: applyDefault.pick(value2, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay", "defaultReactionEmoji"]) };
       obj2.text = obj3;
     }
     if (false === obj[UserSettingsSections.APPEARANCE]) {
-      const obj4 = { shouldSync: false, settings: _modDef12.pick(value2, ["theme", "clientThemeSettings", "developerMode"]) };
+      const obj4 = { shouldSync: false, settings: applyDefault.pick(value2, ["theme", "clientThemeSettings", "developerMode"]) };
       obj2.appearance = obj4;
     }
     return obj2;

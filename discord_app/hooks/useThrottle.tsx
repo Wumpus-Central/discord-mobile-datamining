@@ -1,7 +1,7 @@
-// === Module 12260: useThrottle ===
+// === Module 12067: useThrottle ===
 
-// Module 12260 (useThrottle)
-import _mod12 from "module_12" /* 12 */;
+// Module 12067 (useThrottle)
+import apply from "apply" /* 12 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,10 +18,10 @@ function useThrottledFunction(callback4, arg1) {
     items = [];
   }
   noop = sharedValue;
-  const ref = noop.useRef(require("module_12").throttle(callback4, arg1, sharedValue));
+  const ref = noop.useRef(require("apply").throttle(callback4, arg1, sharedValue));
   const items1 = [callback4, arg1, sharedValue, ...items];
   const effect = noop.useEffect(() => {
-    ref.current = _mod12.throttle(closure_0, current2, ref1);
+    ref.current = apply.throttle(closure_0, current2, ref1);
     return () => {
       const current = ref.current;
       if (current != null) {
@@ -50,11 +50,11 @@ export (memo, throttleDurationForChannel) => {
       items = [];
     }
     ref1 = arg3;
-    const ref = ref1.useRef(require("module_12").throttle(tmp, throttleDurationForChannel, arg3));
+    const ref = ref1.useRef(require("apply").throttle(tmp, throttleDurationForChannel, arg3));
     const items1 = [tmp, throttleDurationForChannel, arg3];
     HermesBuiltin.arraySpread(items, 3);
     const effect = ref1.useEffect(() => {
-      ref.current = _mod12.throttle(closure_0, current2, ref1);
+      ref.current = apply.throttle(closure_0, current2, ref1);
       return () => {
         const current = ref.current;
         if (current != null) {

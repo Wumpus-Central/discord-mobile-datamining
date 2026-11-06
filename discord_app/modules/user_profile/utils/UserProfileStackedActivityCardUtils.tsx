@@ -1,14 +1,14 @@
-// === Module 15122: UserProfileStackedActivityCardUtils ===
+// === Module 15099: UserProfileStackedActivityCardUtils ===
 
-// Module 15122 (UserProfileStackedActivityCardUtils)
-import _mod12 from "module_12" /* 12 */;
-import ActivityTypes from "ActivityTypes" /* 5899 */;
+// Module 15099 (UserProfileStackedActivityCardUtils)
+import apply from "apply" /* 12 */;
+import ActivityTypes from "ActivityTypes" /* 5918 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 
 export function getUserProfileLiveActivities(stateFromStores1) {
-  return _mod12.uniqWith(stateFromStores1.filter((type) => {
+  return apply.uniqWith(stateFromStores1.filter((type) => {
     type = type.type;
     return type !== ActivityTypes.ActivityTypes.CUSTOM_STATUS && type !== ActivityTypes.ActivityTypes.HANG_STATUS;
   }), (application_id, application_id2) => {

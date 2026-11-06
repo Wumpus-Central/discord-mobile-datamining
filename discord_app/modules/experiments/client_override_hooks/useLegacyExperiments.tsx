@@ -1,9 +1,9 @@
-// === Module 11747: useLegacyExperiments ===
+// === Module 11713: useLegacyExperiments ===
 
-// Module 11747 (useLegacyExperiments)
-import ExperimentManager from "ExperimentManager" /* 5369 */;
+// Module 11713 (useLegacyExperiments)
+import ExperimentManager from "ExperimentManager" /* 5389 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5364 */;
+import ExperimentStore from "ExperimentStore" /* 5384 */;
 
 require = fn;
 function parseRegisteredExperiments(stateFromStoresObject) {
@@ -21,17 +21,17 @@ function parseRegisteredExperiments(stateFromStoresObject) {
       if (typeof type.description === "object") {
         let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1(8732).getExperimentBucketName(item);
-        const obj3 = closure_1(8732);
+        experimentBucketName = closure_1(8678).getExperimentBucketName(item);
+        const obj3 = closure_1(8678);
       }
       obj.label = experimentBucketName;
-      obj.shortLabel = closure_1(8732).getExperimentBucketName(item);
+      obj.shortLabel = closure_1(8678).getExperimentBucketName(item);
       if (item === constants.CONTROL) {
-        let TREATMENT = obj(8734).Variation_Type.CONTROL;
+        let TREATMENT = obj(8680).Variation_Type.CONTROL;
       } else if (item === tmp4.NOT_ELIGIBLE) {
-        TREATMENT = obj(8734).Variation_Type.UNSPECIFIED;
+        TREATMENT = obj(8680).Variation_Type.UNSPECIFIED;
       } else {
-        TREATMENT = obj(8734).Variation_Type.TREATMENT;
+        TREATMENT = obj(8680).Variation_Type.TREATMENT;
       }
       obj.type = TREATMENT;
       return obj;
@@ -63,7 +63,7 @@ function getLegacyOverridesInfo(stateFromStoresObject1) {
   return obj;
 }
 const useMemo = fn(19).useMemo;
-const ExperimentConstants = fn(5365);
+const ExperimentConstants = fn(5385);
 ({ ExperimentBuckets: closure_6, ExperimentTypes: metroImportDefault } = ExperimentConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useLegacyExperiments.tsx");

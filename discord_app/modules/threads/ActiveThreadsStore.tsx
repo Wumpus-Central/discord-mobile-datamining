@@ -1,12 +1,12 @@
-// === Module 6999: ActiveThreadsStore ===
+// === Module 6941: ActiveThreadsStore ===
 
-// Module 6999 (ActiveThreadsStore)
+// Module 6941 (ActiveThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef12 from "module_12" /* 12 */;
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4996 */;
-import ChannelStore from "ChannelStore" /* 4992 */;
+import ChannelRecord from "ChannelRecord" /* 5023 */;
+import ChannelStore from "ChannelStore" /* 5019 */;
 import size from "module_2" /* 2 */;
 
 function handleThreadCreateOrUpdate(channel) {
@@ -60,7 +60,7 @@ function deleteThread(channel) {
           if (obj3.isEmpty(dependencyMap[guild_id][parent_id])) {
             delete tmp2[tmp3];
           }
-          obj3 = _modDef12;
+          obj3 = applyDefault;
         }
         tmp9 = tmp11;
       }
@@ -104,7 +104,7 @@ prototype["getThreadsForParent"] = function getThreadsForParent(guild_id, id) {
   return tmp;
 };
 prototype["hasThreadsForChannel"] = function hasThreadsForChannel(guild_id, id) {
-  return !_modDef12.isEmpty(this.getThreadsForParent(guild_id, id));
+  return !applyDefault.isEmpty(this.getThreadsForParent(guild_id, id));
 };
 prototype["forEachGuild"] = function forEachGuild(arg0) {
   importDefault = arg0;
@@ -147,8 +147,8 @@ const activeThreadsStore = new ActiveThreadsStore(DispatcherDefault, {
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(channels) {
     dependencyMap = {};
-    const found = _modDef12(channels.channels).filter((type) => set.has(type.type));
-    const arr = _modDef12(channels.channels);
+    const found = applyDefault(channels.channels).filter((type) => set.has(type.type));
+    const arr = applyDefault(channels.channels);
     let item = found.groupBy("guild_id").forEach((arr, index) => {
       closure_0 = index;
       closure_5[index] = {};

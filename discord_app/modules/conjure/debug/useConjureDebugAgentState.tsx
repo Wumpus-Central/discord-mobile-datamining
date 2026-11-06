@@ -1,10 +1,10 @@
-// === Module 13261: useConjureDebugAgentState ===
+// === Module 13235: useConjureDebugAgentState ===
 
-// Module 13261 (useConjureDebugAgentState)
-import conjureDebugConnection from "conjureDebugConnection" /* 11081 */;
+// Module 13235 (useConjureDebugAgentState)
+import conjureDebugConnection from "conjureDebugConnection" /* 11034 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 11035 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 11041 */;
+import ConjureChatStore from "ConjureChatStore" /* 10987 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10993 */;
 
 const require = globalThis.__r;
 

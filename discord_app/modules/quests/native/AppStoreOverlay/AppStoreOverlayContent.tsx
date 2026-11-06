@@ -1,8 +1,8 @@
-// === Module 14888: AppStoreOverlayContent ===
+// === Module 14864: AppStoreOverlayContent ===
 
-// Module 14888 (AppStoreOverlayContent)
-import openURL from "openURL" /* 5842 */;
-import LinkingDefault from "Linking" /* 5846 */;
+// Module 14864 (AppStoreOverlayContent)
+import openURL from "openURL" /* 5860 */;
+import LinkingDefault from "Linking" /* 5864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -28,7 +28,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj4 = { value, done: true };
+          let obj4 = { value, done: true };
           return obj4;
         } else {
           dependencyMap = tmp6;
@@ -85,12 +85,23 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
               items.push(obj2);
             }
             if (null != rating.chart_rank) {
-              const obj7 = { type: "chart", label: null, rank: null, category: null };
+              let appStoreOverlayCategoryLabel = null;
+              if (null != rating.category_id) {
+                appStoreOverlayCategoryLabel = null;
+                if ("" !== rating.category_id) {
+                  appStoreOverlayCategoryLabel = closure_1_0(14865).getAppStoreOverlayCategoryLabel(os.os, rating.category_id);
+                  const obj3 = closure_1_0(14865);
+                }
+              }
+              const obj4 = { type: "chart", label: null, rank: null, category: null };
               const intl4 = closure_1_0(1113).intl;
-              obj7.label = intl4.string(closure_1_0(1113).t["x/ERbV"]);
-              ({ chart_rank: obj3.rank, category } = rating);
-              obj7.category = category;
-              items.push(obj7);
+              obj4.label = intl4.string(closure_1_0(1113).t["x/ERbV"]);
+              obj4.rank = rating.chart_rank;
+              if (appStoreOverlayCategoryLabel == null) {
+                appStoreOverlayCategoryLabel = rating.category;
+              }
+              obj4.category = appStoreOverlayCategoryLabel;
+              items.push(obj4);
             }
             const screenshots = rating.screenshots;
             const found = screenshots.filter((item) => "" !== item);
@@ -99,13 +110,13 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
                 let storeAppId = rating.app_id;
               }
               const obj8 = { title: null, subtitle: null, description: null, iconUrl: null, headerUrl: null, stats: null, media: null, storeUrl: null, appId: null, platform: null };
-              ({ name: obj4.title, category: obj4.subtitle, description: obj4.description, icon: obj4.iconUrl, header_image } = rating);
+              ({ name: obj5.title, subtitle: obj5.subtitle, description: obj5.description, icon: obj5.iconUrl, header_image } = rating);
               obj8.headerUrl = header_image;
-              let tmp12;
+              let tmp15;
               if (items.length > 0) {
-                tmp12 = items;
+                tmp15 = items;
               }
-              obj8.stats = tmp12;
+              obj8.stats = tmp15;
               let mapped;
               if (found.length > 0) {
                 mapped = found.map((url) => ({ type: "screenshot", url }));

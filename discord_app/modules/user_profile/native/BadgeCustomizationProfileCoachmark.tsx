@@ -1,15 +1,15 @@
-// === Module 19182: BadgeCustomizationProfileCoachmark ===
+// === Module 19172: BadgeCustomizationProfileCoachmark ===
 
-// Module 19182 (BadgeCustomizationProfileCoachmark)
+// Module 19172 (BadgeCustomizationProfileCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 5216 */;
+import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 5236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const PX_64 = nativeDefault.space.PX_64;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
@@ -24,7 +24,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
   let str2;
   items = [str2];
   const stateFromStores = targetRef(504).useStateFromStores(items, () => visible(_undefined[9]).canUsePremiumProfileCustomization(str2.getCurrentUser()));
-  reducedMotion = reducedMotion.useContext(targetRef(5157).AccessibilityPreferencesContext).reducedMotion;
+  reducedMotion = reducedMotion.useContext(targetRef(5184).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = undefined;
   const height = visible(1493)().height;
   let rect = visible(1627)();
@@ -52,7 +52,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
       str = "top";
     }
     str2 = str;
-    tmpResult = tmp(9780);
+    tmpResult = tmp(9730);
   }
   const items2 = [stateFromStores, visible, str2, markAsDismissed, onTryItOut, reducedMotion.enabled];
   const memo = obj2.useMemo(() => {
@@ -80,6 +80,6 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
     return obj;
   }, items2);
   const tmp4 = stateFromStores(reducedMotion.useState(null), 2);
-  const coachmark = targetRef(10141).useCoachmark(targetRef, memo);
+  const coachmark = targetRef(10092).useCoachmark(targetRef, memo);
   return null;
 };

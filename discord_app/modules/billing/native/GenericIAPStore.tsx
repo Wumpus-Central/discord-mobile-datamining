@@ -1,10 +1,10 @@
-// === Module 15938: GenericIAPStore ===
+// === Module 15933: GenericIAPStore ===
 
-// Module 15938 (GenericIAPStore)
-import _modDef12 from "module_12" /* 12 */;
+// Module 15933 (GenericIAPStore)
+import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ProductIds from "ProductIds" /* 7738 */;
+import ProductIds from "ProductIds" /* 7692 */;
 
 require = fn;
 let c3 = null;
@@ -20,7 +20,7 @@ prototype["canMakePurchase"] = function canMakePurchase() {
 prototype["genericProductsLoaded"] = function genericProductsLoaded() {
   let tmp = null != c3;
   if (tmp) {
-    tmp = _modDef12.filter(c3, (identifier) => {
+    tmp = applyDefault.filter(c3, (identifier) => {
       const GenericProductIds = ProductIds.GenericProductIds;
       return GenericProductIds.includes(identifier.identifier);
     }).length === ProductIds.GenericProductIds.length;
