@@ -1,57 +1,46 @@
 // === Module 4606: ? ===
 
 // Module 4606
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import module_4454_mod from "module_4454" /* 4454 */;
+import module_4607_mod from "module_4607" /* 4607 */;
+import module_4610_mod from "module_4610" /* 4610 */;
+import requiredArgs_mod from "requiredArgs" /* 4451 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj = { default: module_4454 };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = module_4454;
 }
-requiredArgs = tmp3;
+module_4454 = tmp3;
+let module_4607 = module_4607_mod;
+if (!module_4607) {
+  const obj2 = { default: module_4607 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4607;
+}
+module_4607 = tmp5;
+let module_4610 = module_4610_mod;
+if (!module_4610) {
+  const obj3 = { default: module_4610 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4610;
+}
+module_4610 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function isDate(arg0) {
-  requiredArgs.default(1, arguments);
-  let tmp2 = arg0 instanceof Date;
-  if (!tmp2) {
-    const tmp4 = "object" === _typeof(arg0);
-    if (!tmp4) {
-      tmp2 = tmp4;
-    } else {
-      const _Object = Object;
-      let str2 = Object.prototype.toString;
-      const call = str2.call;
-      str2 = "[object Date]";
-      const tmp5 = typeof call === "unknown" ? str2() : call(arg0);
-    }
-  }
-  return tmp2;
+export default function addISOWeekYears(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4610.default(arg0, module_4607.default(arg0) + module_4454.default(arg1));
 };
 export default exports.default;

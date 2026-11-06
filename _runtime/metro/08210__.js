@@ -1,16 +1,15 @@
 // === Module 8210: ? ===
 
 // Module 8210
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8200 from "module_8200" /* 8200 */;
-import _modDef8211 from "module_8211" /* 8211 */;
+import _modDef8146 from "module_8146" /* 8146 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Ellipse = fn;
+const Polygon = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,58 +29,60 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Ellipse {
+class Polygon {
   constructor() {
     self = this;
-    tmp = closure_3(this, Ellipse);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Ellipse);
-    tmp3 = closure_4;
-    if (metroImportDefault()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, Polygon);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(Polygon);
+    tmp3 = closure_3;
+    if (closure_6()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polygon(8211)(points) + "z";
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(Ellipse, _modDef8200);
+_inherits(Polygon, _modDef8146);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
     const props = this.props;
-    const obj = {};
-    ({ cx, cy, rx, ry } = props);
-    const merged = Object.assign(Ellipse(8191).extract(this, props));
-    obj.cx = cx;
-    obj.cy = cy;
-    obj.rx = rx;
-    obj.ry = ry;
-    const obj2 = Ellipse(8191);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8211, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polygon(8211)(points) + "z";
+    }
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polygon(8206), { ref: this.refMethod, d: null });
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Ellipse, items);
-importDefaultResultResult.displayName = "Ellipse";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
+let items = [entry];
+const importDefaultResultResult = _createClass(Polygon, items);
+importDefaultResultResult.displayName = "Polygon";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

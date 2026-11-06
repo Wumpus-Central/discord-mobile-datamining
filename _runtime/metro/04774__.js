@@ -1,8 +1,10 @@
 // === Module 4774: ? ===
 
 // Module 4774
-import _typeof_mod from "module_4423" /* 4423 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import _mod4455 from "module_4455" /* 4455 */;
+import _typeof_mod from "module_4450" /* 4450 */;
+import requiredArgs_mod from "requiredArgs" /* 4451 */;
+import module_4454_mod from "module_4454" /* 4454 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -20,17 +22,80 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj3 = { default: module_4454 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4454;
+}
+module_4454 = tmp7;
 
-export default function isSameMonth(arg0, arg1) {
+export default function setUTCDay(arg0, arg1, weekStartsOn) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = _typeof.default(arg1);
-  const fullYear = defaultResult1.getFullYear();
-  let tmp3 = fullYear === defaultResult2.getFullYear();
-  if (tmp3) {
-    const month = defaultResult1.getMonth();
-    tmp3 = month === defaultResult2.getMonth();
+  const defaultOptions = _mod4455.getDefaultOptions();
+  weekStartsOn = undefined;
+  if (null != weekStartsOn) {
+    weekStartsOn = weekStartsOn.weekStartsOn;
   }
-  return tmp3;
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != weekStartsOn) {
+      const locale = weekStartsOn.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              weekStartsOn1 = options.weekStartsOn;
+            }
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn1;
+  }
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    const locale2 = defaultOptions.locale;
+    let weekStartsOn2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            weekStartsOn2 = options2.weekStartsOn;
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn2;
+  }
+  let num = 0;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
+    }
+  }
+  const defaultResult1 = module_4454.default(num);
+  if (defaultResult1 >= 0) {
+    if (defaultResult1 <= 6) {
+      const defaultResult2 = _typeof.default(arg0);
+      const defaultResult3 = module_4454.default(arg1);
+      let num4 = 0;
+      const uTCDay = defaultResult2.getUTCDay();
+      if ((defaultResult3 % 7 + 7) % 7 < defaultResult1) {
+        num4 = 7;
+      }
+      const diff = num4 + defaultResult3 - uTCDay;
+      defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff);
+      return defaultResult2;
+    }
+  }
+  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  throw rangeError;
 };
 export default exports.default;

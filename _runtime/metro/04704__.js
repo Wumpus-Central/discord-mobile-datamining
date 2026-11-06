@@ -1,50 +1,77 @@
 // === Module 4704: ? ===
 
 // Module 4704
-import startOfWeek_mod from "startOfWeek" /* 4582 */;
-import startOfWeekYear_mod from "startOfWeekYear" /* 4705 */;
-import _typeof_mod from "module_4423" /* 4423 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import _mod4455 from "module_4455" /* 4455 */;
+import code_mod from "module_4696" /* 4696 */;
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
+let code = code_mod;
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfWeek;
+  tmp3 = code;
 }
-startOfWeek = tmp3;
-let startOfWeekYear = startOfWeekYear_mod;
-if (!startOfWeekYear) {
-  const obj2 = { default: startOfWeekYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfWeekYear;
-}
-startOfWeekYear = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
-} else {
-  tmp7 = _typeof;
-}
-_typeof = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-let c4 = 604800000;
+code = tmp3;
+let closure_3 = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
 
-export default function getWeek(arg0, arg1) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = startOfWeek.default(defaultResult1, arg1).getTime();
-  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
-  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
+export default function formatDuration(arg0, locale) {
+  closure_0 = arg0;
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat = "1 argument required, but only ".concat;
+    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
+    throw typeError;
+  } else {
+    locale = undefined;
+    const defaultOptions = _mod4455.getDefaultOptions();
+    if (null != locale) {
+      locale = locale.locale;
+    }
+    if (null === locale) {
+      locale = defaultOptions.locale;
+    }
+    if (null === locale) {
+      locale = code.default;
+    }
+    let format;
+    if (null != locale) {
+      format = locale.format;
+    }
+    if (null === format) {
+      format = closure_3;
+    }
+    let zero;
+    if (null != locale) {
+      zero = locale.zero;
+    }
+    closure_2 = null !== zero && undefined !== zero && zero;
+    let delimiter;
+    if (null != locale) {
+      delimiter = locale.delimiter;
+    }
+    let str2 = " ";
+    if (null !== delimiter) {
+      str2 = " ";
+      if (undefined !== delimiter) {
+        str2 = delimiter;
+      }
+    }
+    if (locale.formatDistance) {
+      const reduced = format.reduce((arr, item) => {
+        let combined = arr;
+        if (typeof closure_0[item] === "number") {
+          if (closure_2) {
+            combined = arr.concat(locale.formatDistance(tmp, tmp3));
+          } else {
+            combined = arr;
+          }
+        }
+        return combined;
+      }, []);
+      return reduced.join(str2);
+    } else {
+      return "";
+    }
+  }
 };
 export default exports.default;

@@ -1,37 +1,44 @@
 // === Module 4592: ? ===
 
 // Module 4592
-import module_4427_mod from "module_4427" /* 4427 */;
-import module_4572_mod from "module_4572" /* 4572 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import module_4593 from "module_4593" /* 4593 */;
+import module_4594 from "module_4594" /* 4594 */;
+import module_4595 from "module_4595" /* 4595 */;
+import date_mod from "module_4894" /* 4894 */;
+import date_mod from "module_4895" /* 4895 */;
 
-let module_4427 = module_4427_mod;
-if (!module_4427) {
-  const obj = { default: module_4427 };
+if (!module_4593) {
+  const obj = { default: module_4593 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4427;
+  tmp3 = module_4593;
 }
-module_4427 = tmp3;
-let module_4572 = module_4572_mod;
-if (!module_4572) {
-  const obj2 = { default: module_4572 };
+if (!module_4594) {
+  const obj2 = { default: module_4594 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4572;
+  tmp5 = module_4594;
 }
-module_4572 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+if (!module_4595) {
+  const obj3 = { default: module_4595 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_4595;
 }
-requiredArgs = tmp7;
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function addYears(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4572.default(interval, 12 * module_4427.default(arg1));
-};
+export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

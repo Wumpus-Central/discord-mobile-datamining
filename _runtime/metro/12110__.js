@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 25, height: 24, scales: [1, 2, 3], hash: "b252f7dc065300671ba9347414eb0bad", name: "ic_raised_hand", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls", width: 24, height: 24, scales: [2, 3], hash: "c9f854c83b9079fe0ab040df65e3caf2", name: "nav_header_disconnect", type: "png" });

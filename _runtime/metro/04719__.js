@@ -1,30 +1,19 @@
 // === Module 4719: ? ===
 
 // Module 4719
-import _typeof_mod from "module_4423" /* 4423 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import _mod4455 from "module_4455" /* 4455 */;
+import assign_mod from "assign" /* 4700 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = assign;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function isEqual(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === _typeof.default(arg1).getTime();
+export default function getDefaultOptions() {
+  return assign.default({}, _mod4455.getDefaultOptions());
 };
 export default exports.default;

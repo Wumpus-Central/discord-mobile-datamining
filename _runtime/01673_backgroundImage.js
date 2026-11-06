@@ -153,10 +153,10 @@ pnpm_backgroundImageTs10.__initData = tmp15;
 const items13 = [{ code: "(function pnpm_backgroundImageTs11(position){let[isPercentage]=this.__closure;return Number.isFinite(position)||isPercentage(position);})" }, fn(1674).isPercentage];
 let closure_132_0;
 [tmp19, tmp20] = items13;
-function pnpm_backgroundImageTs11(arg0) {
-  let isFiniteResult = Number.isFinite(arg0);
+function pnpm_backgroundImageTs11(scrollLength) {
+  let isFiniteResult = Number.isFinite(scrollLength);
   if (!isFiniteResult) {
-    isFiniteResult = _slicedToArray(arg0);
+    isFiniteResult = _slicedToArray(scrollLength);
   }
   return isFiniteResult;
 }

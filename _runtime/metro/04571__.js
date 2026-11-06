@@ -1,48 +1,81 @@
 // === Module 4571: ? ===
 
 // Module 4571
-import module_4427_mod from "module_4427" /* 4427 */;
-import _typeof_mod from "module_4423" /* 4423 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import module_4452_mod from "module_4452" /* 4452 */;
 
-let module_4427 = module_4427_mod;
-if (!module_4427) {
-  const obj = { default: module_4427 };
+let module_4452 = module_4452_mod;
+if (!module_4452) {
+  const obj = { default: module_4452 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4427;
+  tmp3 = module_4452;
 }
-module_4427 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
+module_4452 = tmp3;
+const dependencyMap = ["\u0432\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440\u0433", "\u043F\u044F\u0442\u043D\u0438\u0446\u0443", "\u0441\u0443\u0431\u0431\u043E\u0442\u0443"];
+let closure_2 = {
+  lastWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4452.default(getUTCDay, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'во ${tmp2}`;
+        let text1 = `'во ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 === uTCDay) {
+        let text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u0435 " + tmp2} в' p`;
+      } else {
+        if (1 !== uTCDay) {
+          if (2 !== uTCDay) {
+            if (4 !== uTCDay) {
+              text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u0443\u044E " + tmp2} в' p`;
+            }
+          }
+        }
+        text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u044B\u0439 " + tmp2} в' p`;
+      }
+      return text2;
+    }
+  },
+  yesterday: "'\u0432\u0447\u0435\u0440\u0430 \u0432' p",
+  today: "'\u0441\u0435\u0433\u043E\u0434\u043D\u044F \u0432' p",
+  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u0432' p",
+  nextWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4452.default(getUTCDay, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'во ${tmp2}`;
+        let text1 = `'во ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 === uTCDay) {
+        let text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0435 " + tmp2} в' p`;
+      } else {
+        if (1 !== uTCDay) {
+          if (2 !== uTCDay) {
+            if (4 !== uTCDay) {
+              text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E " + tmp2} в' p`;
+            }
+          }
+        }
+        text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 " + tmp2} в' p`;
+      }
+      return text2;
+    }
+  },
+  other: "P"
+};
 
-export default function addDays(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = module_4427.default(arg1);
-  if (isNaN(defaultResult2)) {
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else if (defaultResult2) {
-    defaultResult1.setDate(defaultResult1.getDate() + defaultResult2);
-    return defaultResult1;
-  } else {
-    return defaultResult1;
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_2[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
   }
+  return tmpResult;
 };
 export default exports.default;

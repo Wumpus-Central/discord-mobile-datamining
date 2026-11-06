@@ -1,9 +1,15 @@
 // === Module 16384: ? ===
 
 // Module 16384
-import _mod16450 from "module_16450" /* 16450 */;
-import module_16385 from "module_16385" /* 16385 */;
+import _mod16383 from "module_16383" /* 16383 */;
 
-const obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod16450;
-module_16385(obj, { assign: _mod16450 });
+
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod16383, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod16383[tmp2] = tmp;
+  }
+};

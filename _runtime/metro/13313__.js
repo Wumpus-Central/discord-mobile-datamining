@@ -1,36 +1,25 @@
 // === Module 13313: ? ===
 
 // Module 13313
-import _mod13308 from "module_13308" /* 13308 */;
+import _mod13269 from "module_13269" /* 13269 */;
+import _mod13299 from "module_13299" /* 13299 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function hasTracingEnabled(tracesSampler) {
-  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
-    if (!globalThis.__SENTRY_TRACING__) {
-      return false;
-    }
+export function createClientReportEnvelope(discarded_events, dsn, arg2) {
+  let result = arg2;
+  items = [{ type: "client_report" }, ];
+  if (!arg2) {
+    result = _mod13269.dateTimestampInSeconds();
   }
-  let tmp = tracesSampler;
-  const client = _mod13308.getClient();
-  if (!tracesSampler) {
-    let options = client;
-    if (client) {
-      options = client.getOptions();
-    }
-    tmp = options;
+  items[1] = { timestamp: result, discarded_events };
+  if (dsn) {
+    const obj3 = { dsn };
+    let obj4 = obj3;
+  } else {
+    obj4 = {};
   }
-  let tmp3 = tmp;
-  if (tmp3) {
-    let enableTracing = tmp.enableTracing;
-    if (!enableTracing) {
-      enableTracing = "tracesSampleRate" in tmp;
-    }
-    if (!enableTracing) {
-      enableTracing = "tracesSampler" in tmp;
-    }
-    tmp3 = enableTracing;
-  }
-  return tmp3;
+  const items1 = [items];
+  return _mod13299.createEnvelope(obj4, items1);
 }

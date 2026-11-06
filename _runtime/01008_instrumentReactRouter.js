@@ -8,8 +8,8 @@ import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-function instrumentReactRouter(f121933, arg1, arg2, location, reactrouter_v4) {
-  _require = f121933;
+function instrumentReactRouter(f122162, arg1, arg2, location, reactrouter_v4) {
+  _require = f122162;
   dependencyMap = reactrouter_v4;
   items = _slicedToArray;
   if (_slicedToArray === undefined) {
@@ -55,7 +55,7 @@ function instrumentReactRouter(f121933, arg1, arg2, location, reactrouter_v4) {
       obj3[require("module_681").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + reactrouter_v4;
       obj3[require("module_681").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj2.attributes = obj3;
-      let result = require("feedbackAsyncIntegration").startBrowserTracingPageLoadSpan(f121933, obj2);
+      let result = require("feedbackAsyncIntegration").startBrowserTracingPageLoadSpan(f122162, obj2);
       let obj = require("feedbackAsyncIntegration");
     }
   }
@@ -169,7 +169,7 @@ function matchRoutes(pathname, search, arg2) {
                           if (items === undefined) {
                             items = [];
                           }
-                          routes.some(/* F81016 */ function() { ... });
+                          routes.some(/* F81095 */ function() { ... });
                         }
                       }
                       return match;
@@ -203,9 +203,9 @@ export function reactRouterV4BrowserTracingIntegration(instrumentNavigation) {
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   const obj3 = {};
   const merged1 = Object.assign(result);
-  obj3.afterAllSetup = function afterAllSetup(f121933) {
-    result.afterAllSetup(f121933);
-    instrumentReactRouter(f121933, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f122162) {
+    result.afterAllSetup(f122162);
+    instrumentReactRouter(f122162, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
   };
   return obj3;
 }
@@ -222,9 +222,9 @@ export function reactRouterV5BrowserTracingIntegration(instrumentNavigation) {
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   const obj3 = {};
   const merged1 = Object.assign(result);
-  obj3.afterAllSetup = function afterAllSetup(f121933) {
-    result.afterAllSetup(f121933);
-    instrumentReactRouter(f121933, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f122162) {
+    result.afterAllSetup(f122162);
+    instrumentReactRouter(f122162, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
   };
   return obj3;
 }

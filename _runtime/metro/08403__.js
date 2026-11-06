@@ -1,84 +1,40 @@
 // === Module 8403: ? ===
 
 // Module 8403
-import _mod8396 from "module_8396" /* 8396 */;
-import _mod8397 from "module_8397" /* 8397 */;
+import _modDef8404 from "module_8404" /* 8404 */;
 
-require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
 
-export function isBLEND(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "blend");
-}
-export function isELF(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "elf");
-}
-export function isEXE(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "exe");
-}
-export function isMACHO(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "macho");
-}
-export function isINDD(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "indd");
-}
-export function isORC(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "orc");
-}
-export function isPARQUET(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "parquet");
-}
-export function isPDF(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pdf");
-}
-export function isPS(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ps");
-}
-export function isRTF(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "rtf");
-}
-export function isSQLITE(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "sqlite");
-}
-export function isSTL(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "stl");
-}
-export function isTTF(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ttf");
-}
-export function isDOC(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "doc");
-}
-export function isPCAP(fileChunk) {
-  fileChunk = _mod8396.getFileChunk(fileChunk);
-  const FileTypes = _mod8397.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pcap");
-}
+export default {
+  decode(arg0, buffer) {
+    value = _modDef8404.get();
+    if (undefined !== value) {
+      if (undefined !== arg0) {
+        try {
+          const decoder = new value(arg0);
+          const _DataView = DataView;
+          if (buffer instanceof DataView) {
+            buffer = buffer.buffer;
+          } else {
+            const _Uint8Array = Uint8Array;
+            buffer = Uint8Array.from(buffer);
+          }
+          decoder.decode(buffer);
+        } catch (err) {
+        }
+      }
+    }
+    const mapped = buffer.map((item) => String.fromCharCode(item));
+    return (function decodeAsciiValue(arg0) {
+      try {
+        const _decodeURIComponent = decodeURIComponent;
+        const _escape = escape;
+        return decodeURIComponent(escape(arg0));
+      } catch (err) {
+        return tmp;
+      }
+    })(mapped.join(""));
+  },
+  TAG_HEADER_SIZE: 5
+};

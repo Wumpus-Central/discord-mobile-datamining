@@ -1,11 +1,9 @@
 // === Module 5431: ? ===
 
 // Module 5431
-import _mod5432 from "module_5432" /* 5432 */;
+import _mod19 from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const context = _mod19.createContext(null);
 
-export function initialize() {
-  _mod5432.startListening();
-}
+export const BottomSheetInternalContext = context;
+export const BottomSheetInternalProvider = context.Provider;

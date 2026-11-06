@@ -1,84 +1,39 @@
 // === Module 13080: ? ===
 
 // Module 13080
-import _mod13081 from "module_13081" /* 13081 */;
+import _mod13027 from "module_13027" /* 13027 */;
 
-class Tokenizer {
-  constructor(arg0) {
-    return;
-  }
-}
-Tokenizer.prototype = {
-  charCodeAt(sum) {
-    let num = 0;
-    if (sum < this.str.length) {
-      num = this.str.charCodeAt(sum);
-    }
-    return num;
-  },
-  charCode() {
-    return this.charCodeAt(this.pos);
-  },
-  nextCharCode() {
-    return this.charCodeAt(this.pos + 1);
-  },
-  nextNonWsCode(pos) {
-    return this.charCodeAt(this.findWsEnd(pos));
-  },
-  findWsEnd(pos) {
+const Comment = _mod13027.TYPE.Comment;
+let obj = {
+  name: "Comment",
+  structure: { value: String },
+  parse() {
     const self = this;
-    let sum = pos;
-    let tmp2 = pos;
-    if (pos < this.str.length) {
-      while (true) {
-        let str = self.str;
-        let charCodeAtResult = str.charCodeAt(sum);
-        if (13 !== charCodeAtResult) {
-          if (10 !== charCodeAtResult) {
-            if (12 !== charCodeAtResult) {
-              if (32 !== charCodeAtResult) {
-                tmp2 = sum;
-                if (9 !== charCodeAtResult) {
-                  break;
-                }
-              }
-              break;
-            }
-          }
-        }
-        sum = sum + 1;
-        tmp2 = sum;
-        if (sum >= self.str.length) {
-          break;
-        }
-      }
+    const tokenStart = this.scanner.tokenStart;
+    const tokenEnd = this.scanner.tokenEnd;
+    this.eat(Comment);
+    const sum = tokenEnd - tokenStart + 2;
+    let tmp3 = sum >= 2;
+    if (2 <= sum) {
+      const source = self.scanner.source;
+      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
     }
-    return tmp2;
-  },
-  substringToPos(wsEnd) {
-    this.pos = wsEnd;
-    return this.str.substring(this.pos, wsEnd);
-  },
-  eat(arg0) {
-    const self = this;
-    if (this.charCode() !== arg0) {
-      const _String = String;
-      self.error(`Expect \`${String.fromCharCode(arg0)}\``);
+    if (tmp3) {
+      const source2 = self.scanner.source;
+      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
     }
-    self.pos = self.pos + 1;
-  },
-  peek() {
-    const self = this;
-    let str = "";
-    if (this.pos < this.str.length) {
-      self.pos = +self.pos + 1;
-      str = self.str.charAt(tmp);
+    let diff = tokenEnd;
+    if (tmp3) {
+      diff = tokenEnd - 2;
     }
-    return str;
+    const obj = { type: "Comment", loc: self.getLocation(tokenStart, self.scanner.tokenStart), value: self.scanner.source.substring(tokenStart + 2, diff) };
+    return obj;
   },
-  error(arg0) {
-    throw new _mod13081(arg0, this.str, this.pos);
+  generate(value) {
+    this.chunk("/*");
+    this.chunk(value.value);
+    this.chunk("*/");
   }
 };
 
-export default Tokenizer;
+export default obj;

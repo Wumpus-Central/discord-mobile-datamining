@@ -1,7 +1,9 @@
 // === Module 8155: ? ===
 
 // Module 8155
-import registerAsset from "module_1119" /* 1119 */;
+import module_65 from "module_65" /* 65 */;
 
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGDefs", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true } };
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "48354bca4647923912a0392de88da6fa", name: "IdCardIcon", type: "png" });
+export default module_65.get("RNSVGDefs", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

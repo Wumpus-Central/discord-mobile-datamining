@@ -1,17 +1,7 @@
 // === Module 6667: ? ===
 
 // Module 6667
-import _mod6599 from "module_6599" /* 6599 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod6599(arg0);
-    }
-    str = str2;
-  }
-  return str;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "dd9ba5b8ac4831db353c60f9d72ff648", name: "img_account_sync_bluesky_light_and_dark", type: "png" });

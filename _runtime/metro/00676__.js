@@ -305,7 +305,7 @@ function symbolicate(arg0) {
                         } else {
                           _self = self;
                           c1 = 3;
-                          let obj = { value: Promise.all(_self.map(/* F143269 */ function() { ... })), done: true };
+                          let obj = { value: Promise.all(_self.map(/* F142804 */ function() { ... })), done: true };
                           return obj;
                         }
                       } catch (tmp7) {

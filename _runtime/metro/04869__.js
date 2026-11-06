@@ -1,44 +1,56 @@
 // === Module 4869: ? ===
 
 // Module 4869
-import module_4870 from "module_4870" /* 4870 */;
-import module_4871 from "module_4871" /* 4871 */;
-import module_4872 from "module_4872" /* 4872 */;
-import date_mod from "module_4873" /* 4873 */;
-import date_mod from "module_4874" /* 4874 */;
+import module_4454_mod from "module_4454" /* 4454 */;
+import _typeof_mod from "module_4450" /* 4450 */;
+import module_4598_mod from "module_4598" /* 4598 */;
+import module_4721_mod from "module_4721" /* 4721 */;
+import requiredArgs_mod from "requiredArgs" /* 4451 */;
 
-if (!module_4870) {
-  const obj = { default: module_4870 };
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj = { default: module_4454 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4870;
+  tmp3 = module_4454;
 }
-if (!module_4871) {
-  const obj2 = { default: module_4871 };
+module_4454 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4871;
+  tmp5 = _typeof;
 }
-if (!module_4872) {
-  const obj3 = { default: module_4872 };
+_typeof = tmp5;
+let module_4598 = module_4598_mod;
+if (!module_4598) {
+  const obj3 = { default: module_4598 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4872;
+  tmp7 = module_4598;
 }
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
+module_4598 = tmp7;
+let module_4721 = module_4721_mod;
+if (!module_4721) {
+  const obj4 = { default: module_4721 };
   let tmp9 = obj4;
 } else {
-  tmp9 = date;
+  tmp9 = module_4721;
 }
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
+module_4721 = tmp9;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj5 = { default: requiredArgs };
   let tmp11 = obj5;
 } else {
-  tmp11 = date;
+  tmp11 = requiredArgs;
 }
+requiredArgs = tmp11;
 
-export default { code: "vi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function setISODay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  return module_4598.default(defaultResult1, module_4454.default(arg1) - module_4721.default(defaultResult1));
+};
 export default exports.default;

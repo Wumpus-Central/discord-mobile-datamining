@@ -1,21 +1,7 @@
 // === Module 16412: ? ===
 
 // Module 16412
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
-  }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+import _mod16390 from "module_16390" /* 16390 */;
+
+
+export default _mod16390({}.isPrototypeOf);

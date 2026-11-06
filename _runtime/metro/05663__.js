@@ -1,36 +1,12 @@
 // === Module 5663: ? ===
 
 // Module 5663
-import RecyclerViewManager from "RecyclerViewManager" /* 5664 */;
-import _slicedToArray from "module_5643" /* 5643 */;
+import _mod5664 from "module_5664" /* 5664 */;
+import _mod5665 from "module_5665" /* 5665 */;
+import _mod5666 from "module_5666" /* 5666 */;
+import _mod5668 from "module_5668" /* 5668 */;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
 
-export (data) => {
-  let recyclerViewManager = velocityTracker(closure_5(() => {
-    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
-    return recyclerViewManager;
-  }), 1)[0];
-  velocityTracker = velocityTracker(closure_5(() => {
-    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
-    return velocityTracker;
-  }), 1)[0];
-  items = [data];
-  closure_4(() => {
-    recyclerViewManager.updateProps(closure_0);
-  }, items);
-  const items1 = [data.data];
-  closure_4(() => {
-    recyclerViewManager.processDataUpdate();
-  }, items1);
-  closure_3(() => {
-    recyclerViewManager.restoreIfNeeded();
-    return () => {
-      recyclerViewManager.dispose();
-      velocityTracker.cleanUp();
-    };
-  }, []);
-  return { recyclerViewManager, velocityTracker };
-}
+export default function _slicedToArray(arg0, arg1) {
+  return _mod5664(arg0) || _mod5665(arg0, arg1) || _mod5666(arg0, arg1) || _mod5668();
+};

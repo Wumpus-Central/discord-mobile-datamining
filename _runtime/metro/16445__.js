@@ -1,13 +1,14 @@
 // === Module 16445: ? ===
 
 // Module 16445
-import _mod16393 from "module_16393" /* 16393 */;
-import _mod16402 from "module_16402" /* 16402 */;
-import all from "module_16412" /* 16412 */;
+import _mod16383 from "module_16383" /* 16383 */;
+import all from "module_16409" /* 16409 */;
 
-let closure_0 = _mod16393(Function.toString);
-if (!all(_mod16402.inspectSource)) {
-  _mod16402.inspectSource = (arg0) => closure_0(arg0);
+let _moduleResult = all(_mod16383.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod16383.WeakMap));
+  const obj = /native code/;
 }
 
-export default _mod16402.inspectSource;
+export default _moduleResult;

@@ -1,8 +1,8 @@
 // === Module 4721: ? ===
 
 // Module 4721
-import _typeof_mod from "module_4423" /* 4423 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import _typeof_mod from "module_4450" /* 4450 */;
+import requiredArgs_mod from "requiredArgs" /* 4451 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,8 +21,12 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFirstDayOfMonth(arg0) {
+export default function getISODay(arg0) {
   requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDate();
+  let num = _typeof.default(arg0).getDay();
+  if (0 === num) {
+    num = 7;
+  }
+  return num;
 };
 export default exports.default;

@@ -1,8 +1,10 @@
 // === Module 4690: ? ===
 
 // Module 4690
-import _typeof_mod from "module_4423" /* 4423 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import _typeof_mod from "module_4450" /* 4450 */;
+import startOfUTCWeek_mod from "startOfUTCWeek" /* 4453 */;
+import startOfUTCWeekYear_mod from "startOfUTCWeekYear" /* 4691 */;
+import requiredArgs_mod from "requiredArgs" /* 4451 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -12,28 +14,37 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let startOfUTCWeek = startOfUTCWeek_mod;
+if (!startOfUTCWeek) {
+  const obj2 = { default: startOfUTCWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfUTCWeek;
 }
-requiredArgs = tmp5;
+startOfUTCWeek = tmp5;
+let startOfUTCWeekYear = startOfUTCWeekYear_mod;
+if (!startOfUTCWeekYear) {
+  const obj3 = { default: startOfUTCWeekYear };
+  let tmp7 = obj3;
+} else {
+  tmp7 = startOfUTCWeekYear;
+}
+startOfUTCWeekYear = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function isLeapYear(arg0) {
+export default function getUTCWeek(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  const fullYear = _typeof.default(arg0).getFullYear();
-  const result = fullYear % 400;
-  let tmp4 = result === 0;
-  if (result !== 0) {
-    const result1 = fullYear % 4;
-    let tmp6 = result1 === 0;
-    if (result1 === 0) {
-      tmp6 = fullYear % 100 !== 0;
-    }
-    tmp4 = tmp6;
-  }
-  return tmp4;
+  const defaultResult1 = _typeof.default(arg0);
+  const time = startOfUTCWeek.default(defaultResult1, arg1).getTime();
+  const defaultResult2 = startOfUTCWeek.default(defaultResult1, arg1);
+  return Math.round((time - startOfUTCWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
 };
 export default exports.default;

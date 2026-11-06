@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hexagon_campaign/images", width: 32, height: 24, scales: [2, 3, 4], hash: "c20f5cd14c5f693d97dedff22cf6001d", name: "hexagon_campaign_font_logo", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ce6df62bb592b89e09867505a632d8fe", name: "EyeDropperIcon", type: "png" });

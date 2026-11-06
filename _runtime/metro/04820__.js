@@ -1,63 +1,37 @@
 // === Module 4820: ? ===
 
 // Module 4820
-import _typeof_mod from "module_4423" /* 4423 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import module_4631_mod from "module_4631" /* 4631 */;
+import subDays_mod from "subDays" /* 4821 */;
+import requiredArgs_mod from "requiredArgs" /* 4451 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4631 = module_4631_mod;
+if (!module_4631) {
+  const obj = { default: module_4631 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4631;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4631 = tmp3;
+let subDays = subDays_mod;
+if (!subDays) {
+  const obj2 = { default: subDays };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = subDays;
 }
-requiredArgs = tmp5;
+subDays = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function parseJSON(str) {
+export default function isYesterday(arg0) {
   requiredArgs.default(1, arguments);
-  if (typeof str === "string") {
-    const match = str.match(/(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2}):(\d{2})(?:\.(\d{0,7}))?(?:Z|(.)(\d{2}):?(\d{2})?)?/);
-    const _Date = Date;
-    if (match) {
-      const _Date2 = Date;
-      let num2 = +match[9];
-      if (!num2) {
-        num2 = 0;
-      }
-      let num3 = 1;
-      if ("-" == match[8]) {
-        num3 = -1;
-      }
-      let num4 = +match[10];
-      if (!num4) {
-        num4 = 0;
-      }
-      let num5 = 1;
-      if ("-" == match[8]) {
-        num5 = -1;
-      }
-      const diff = +match[2] - 1;
-      const text = `${tmp13}00`;
-      const diff1 = +match[4] - num2 * num3;
-      const diff2 = +match[5] - num4 * num5;
-      let _Date1 = new _Date(Date.UTC(tmp7, diff, tmp9, diff1, diff2, tmp12, +`${tmp13}00`.substring(0, 3)));
-      const tmp10 = +match[4];
-      const tmp11 = +match[5];
-      const tmp8 = +match[2];
-    } else {
-      _Date1 = new _Date(NaN);
-    }
-    return _Date1;
-  } else {
-    return _typeof.default(str);
-  }
+  return module_4631.default(arg0, subDays.default(Date.now(), 1));
 };
 export default exports.default;

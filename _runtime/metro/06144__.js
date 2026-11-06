@@ -1,8 +1,15 @@
 // === Module 6144: ? ===
 
 // Module 6144
-import _mod17 from "module_17" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-const Platform = _mod17.Platform;
+({ useEffect: closure_0, useRef: closure_1 } = noop);
 
-export const isIOS26OrHigher = false;
+export function usePrevious(current) {
+  const tmp = duration(undefined);
+  closure_1 = tmp;
+  React(() => {
+    closure_1.current = current;
+  });
+  return tmp.current;
+}

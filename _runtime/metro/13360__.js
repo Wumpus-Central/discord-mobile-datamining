@@ -1,77 +1,262 @@
 // === Module 13360: ? ===
 
 // Module 13360
-import _mod13282 from "module_13282" /* 13282 */;
+import errorCallback from "errorCallback" /* 13251 */;
+import _mod13262 from "module_13262" /* 13262 */;
+import _mod13279 from "module_13279" /* 13279 */;
+import _mod13287 from "module_13287" /* 13287 */;
+import _mod13326 from "module_13326" /* 13326 */;
+import _toArray from "_toArray" /* 717 */;
+import "module_13254";
+import consoleSandbox from "module_13255" /* 13255 */;
+import dateTimestampInSeconds from "module_13269" /* 13269 */;
+import __SENTRY_DEBUG__ from "module_13283" /* 13283 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
-    if (_mod13282.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod13282.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp16 = _mod13282.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        if (!set.has(item10026)) {
-          let addResult = set.add(item10026);
-          let obj2 = arg0(item10026);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
+function _addTracingHeadersToFetchRequest(headers, headers2, span) {
+  const traceData = _mod13326.getTraceData({ span });
+  ({ sentry-trace: tmp4, baggage } = traceData);
+  if (tmp4) {
+    headers = headers2.headers;
+    if (!headers) {
+      const _Request = Request;
+      let isInstanceOfResult = typeof Request !== "undefined";
+      if (typeof Request !== "undefined") {
+        const _Request2 = Request;
+        isInstanceOfResult = _mod13262.isInstanceOf(headers, Request);
+        const tmpResult = _mod13262;
+      }
+      let headers1;
+      if (isInstanceOfResult) {
+        headers1 = headers.headers;
+      }
+      headers = headers1;
+    }
+    if (headers) {
+      const _Headers = Headers;
+      let isInstanceOfResult1 = typeof Headers !== "undefined";
+      if (typeof Headers !== "undefined") {
+        const _Headers3 = Headers;
+        isInstanceOfResult1 = _mod13262.isInstanceOf(headers, Headers);
+        const tmpResult2 = _mod13262;
+      }
+      if (isInstanceOfResult1) {
+        const _Headers2 = Headers;
+        headers2 = new Headers(headers);
+        const result = headers2.set("sentry-trace", tmp4);
+        if (baggage) {
+          const str6 = headers2.get("baggage");
+          if (str6) {
+            let parts = str6.split(",");
+            let found = parts.filter((item) => {
+              const first = item.split("=")[0];
+              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+            });
+            let joined = found.join(",");
+            let combined = baggage;
+            if (joined) {
+              const _HermesInternal = HermesInternal;
+              combined = "" + joined + "," + baggage;
             }
-            continue;
+            const result1 = headers2.set("baggage", combined);
+          } else {
+            const result2 = headers2.set("baggage", baggage);
           }
         }
-        continue;
-      }
-    }
-  })(fn);
-  return map.get(arg1);
-}
-const map = new Map();
-const set = new Set();
-
-export function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          if (item10010.filename) {
-            if (!item10010.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
-              if (tmp9) {
-                item10010.module_metadata = tmp10;
+        return headers2;
+      } else {
+        const _Array = Array;
+        if (Array.isArray(headers)) {
+          const found1 = headers.filter((item) => {
+            let isArray = Array.isArray(item);
+            if (isArray) {
+              isArray = "sentry-trace" === item[0];
+            }
+            return !isArray;
+          });
+          items = [];
+          const items1 = ["sentry-trace", tmp4];
+          items[HermesBuiltin.arraySpread(found1.map((item) => {
+            if (Array.isArray(item)) {
+              if ("baggage" === item[0]) {
+                if (typeof item[1] === "string") {
+                  const arr = _toArray(item);
+                  items = [arr[0], ];
+                  const substr = arr.slice(2);
+                  const parts = arr[1].split(",");
+                  const found = parts.filter((item) => {
+                    const first = item.split("=")[0];
+                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+                  });
+                  items[1] = found.join(",");
+                  HermesBuiltin.arraySpread(substr, 2);
+                  return items;
+                }
               }
             }
+            return item;
+          }), 0)] = items1;
+          if (baggage) {
+            const items2 = ["baggage", baggage];
+            items.push(items2);
           }
-          continue;
+          return items;
+        } else {
+          let baggage1;
+          if ("baggage" in headers) {
+            baggage1 = headers.baggage;
+          }
+          const _Array2 = Array;
+          if (Array.isArray(baggage1)) {
+            const mapped = baggage1.map((item) => {
+              let joined = item;
+              if (typeof item === "string") {
+                const parts = item.split(",");
+                const found = parts.filter((item) => {
+                  const first = item.split("=")[0];
+                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+                });
+                joined = found.join(",");
+              }
+              return joined;
+            });
+            let found2 = mapped.filter((item) => "" === item);
+          } else {
+            const items3 = [];
+            found2 = items3;
+            if (baggage1) {
+              const parts1 = baggage1.split(",");
+              const found3 = parts1.filter((item) => {
+                const first = item.split("=")[0];
+                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+              });
+              items3.push(found3.join(","));
+              found2 = items3;
+            }
+          }
+          if (baggage) {
+            found2.push(baggage);
+          }
+          const obj3 = {};
+          const merged = Object.assign(headers);
+          obj3["sentry-trace"] = tmp4;
+          let joined1;
+          if (found2.length > 0) {
+            joined1 = found2.join(",");
+          }
+          obj3.baggage = joined1;
+          return obj3;
         }
       }
-    });
-  } catch (err) {
+    } else {
+      const obj4 = {};
+      const merged1 = Object.assign(traceData);
+      return obj4;
+    }
   }
+  const obj2 = { span };
 }
-export { getMetadataForUrl };
-export function stripMetadataFromStackFrames(exception) {
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
-        while (iter !== undefined) {
-          delete tmp2[tmp];
-          continue;
+errorCallback;
+_mod13279;
+
+export function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
+  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
+}
+export function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
+  let str = arg4;
+  if (arg4 === undefined) {
+    str = "auto.http.browser";
+  }
+  let endResult = fetchData;
+  if (fetchData.fetchData) {
+    let setHttpStatus = require;
+    let headers = dependencyMap;
+    let hasTracingEnabledResult = _mod13287.hasTracingEnabled();
+    if (hasTracingEnabledResult) {
+      hasTracingEnabledResult = fn(endResult.fetchData.url);
+    }
+    if (endResult.endTimestamp) {
+      if (hasTracingEnabledResult) {
+        const __span = endResult.fetchData.__span;
+        if (__span) {
+          if (arg3[__span]) {
+            if (endResult.response) {
+              setHttpStatus = setHttpStatus(13272).setHttpStatus;
+              setHttpStatus(obj10, endResult.response.status);
+              headers = endResult.response;
+              if (headers) {
+                headers = endResult.response.headers;
+              }
+              if (headers) {
+                const headers2 = endResult.response.headers;
+                headers = headers2.get("content-length");
+              }
+              if (headers) {
+                const _parseInt = parseInt;
+                setHttpStatus = parseInt(headers);
+                if (setHttpStatus > 0) {
+                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
+                }
+              }
+              const setHttpStatusResult = setHttpStatus(13272);
+            } else if (endResult.error) {
+              const obj2 = { code: setHttpStatus(13272).SPAN_STATUS_ERROR, message: "internal_error" };
+              obj10.setStatus(obj2);
+            }
+            endResult = obj10.end();
+            delete tmp2[tmp];
+          }
         }
       }
-    });
-  } catch (err) {
+    }
+    ({ method, url } = endResult.fetchData);
+    const tmp7 = (function getFullURL(url) {
+      try {
+        const _URL = URL;
+        const uRL = new URL(url);
+        return uRL.href;
+      } catch (err) {
+      }
+    })(url);
+    if (tmp7) {
+      const host = setHttpStatus(13337).parseUrl(tmp7).host;
+      const setHttpStatusResult2 = setHttpStatus(13337);
+    }
+    const activeSpan = setHttpStatus(13260).getActiveSpan();
+    if (hasTracingEnabledResult) {
+      if (activeSpan) {
+        const obj3 = { name: null, attributes: null };
+        const _HermesInternal = HermesInternal;
+        obj3.name = "" + method + " " + url;
+        const obj4 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
+        obj4[setHttpStatus(13270).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
+        obj4[setHttpStatus(13270).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
+        obj3.attributes = obj4;
+        let startInactiveSpanResult = setHttpStatus(13289).startInactiveSpan(obj3);
+        const setHttpStatusResult4 = setHttpStatus(13289);
+      }
+      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
+      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
+      if (fn2(endResult.fetchData.url)) {
+        let obj5 = endResult.args[1];
+        if (!obj5) {
+          obj5 = {};
+        }
+        let tmp14;
+        if (setHttpStatusResult5.hasTracingEnabled()) {
+          if (activeSpan) {
+            tmp14 = startInactiveSpanResult;
+          }
+        }
+        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj5, tmp14);
+        if (tmp13Result) {
+          endResult.args[1] = obj5;
+          obj5.headers = tmp13Result;
+        }
+        setHttpStatusResult5 = setHttpStatus(13287);
+      }
+      return startInactiveSpanResult;
+    }
+    startInactiveSpanResult = new setHttpStatus(13288).SentryNonRecordingSpan();
+    const setHttpStatusResult3 = setHttpStatus(13260);
   }
 }

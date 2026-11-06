@@ -1,20 +1,7 @@
 // === Module 6668: ? ===
 
 // Module 6668
-import _mod6651 from "module_6651" /* 6651 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor, arg1) {
-  let tmp = _mod6651(arg1);
-  if (tmp) {
-    tmp = "[[Enumerable]]" in arg1;
-  }
-  if (tmp) {
-    tmp = "[[Configurable]]" in arg1;
-  }
-  if (tmp) {
-    tmp = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-    const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-  }
-  return tmp;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "f42a65d76bbabdff3fd54cfb0d130cfb", name: "img_account_sync_bluesky_white", type: "png" });

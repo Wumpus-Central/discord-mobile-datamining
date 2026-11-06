@@ -1,14 +1,24 @@
 // === Module 5727: ? ===
 
 // Module 5727
-import _modDef5728 from "module_5728" /* 5728 */;
 
-const require = globalThis.__r;
-
-for (const key10016 in require("module_5728")) {
-  arg5[key10016] = require("module_5728")[key10016];
-  continue;
+export function useDataMultiplier(arg0, arg1) {
+  const array = new Array(arg1);
+  let flag = false;
+  if (typeof arg0[0] === "object") {
+    flag = true;
+  }
+  for (let num = 0; num < arg1; num = num + 1) {
+    let tmp3 = arg0[num % tmp];
+    if (flag) {
+      let obj = {};
+      let merged = Object.assign(tmp3);
+      let tmp5 = obj;
+    } else {
+      tmp5 = tmp3;
+    }
+    array[num] = tmp5;
+  }
+  items = [array];
+  return items;
 }
-
-export default _modDef5728;
-export const LinearGradient = _modDef5728;

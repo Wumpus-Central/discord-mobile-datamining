@@ -1,73 +1,49 @@
 // === Module 16440: ? ===
 
 // Module 16440
-import _mod16389 from "module_16389" /* 16389 */;
-import text from "text" /* 16398 */;
-import _mod16421 from "module_16421" /* 16421 */;
-import _mod16438 from "module_16438" /* 16438 */;
+import _mod16384 from "module_16384" /* 16384 */;
+import _mod16409 from "module_16409" /* 16409 */;
+import _mod16437 from "module_16437" /* 16437 */;
 import _mod16441 from "module_16441" /* 16441 */;
 
-const enumerable = "enumerable";
-const configurable = "configurable";
-const writable = "writable";
-if (_mod16389) {
-  if (_mod16441) {
-    defineProperty = function defineProperty(fn, arg1, value) {
-      _mod16438(fn);
-      const tmp2 = text(arg1);
-      _mod16438(value);
-      let tmp4 = value;
-      if (typeof fn === "function") {
-        tmp4 = value;
-        if ("prototype" === tmp2) {
-          tmp4 = value;
-          if ("value" in value) {
-            tmp4 = value;
-            if (writable in value) {
-              tmp4 = value;
-              if (!value[writable]) {
-                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
-                let tmp8 = tmp7;
-                if (tmp7) {
-                  tmp8 = tmp7[writable];
-                }
-                tmp4 = value;
-                if (tmp8) {
-                  fn[tmp2] = value.value;
-                  const obj = { configurable: configurable in value ? value[configurable] : tmp7[configurable], enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable], writable: false };
-                }
-              }
-            }
-          }
-        }
-      }
-      return defineProperty(fn, tmp2, tmp4);
-    };
-  }
-  let defineProperty2 = defineProperty;
-} else {
-  defineProperty2 = function defineProperty(arg0, arg1, value) {
-    _mod16438(arg0);
-    const tmp2 = text(arg1);
-    _mod16438(value);
-    if (!_mod16421) {
-      if (!("get" in value)) {
-        if (!("set" in value)) {
-          if ("value" in value) {
-            arg0[tmp2] = value.value;
-          }
-          return arg0;
-        }
-      }
-      const tmp8 = new TypeError("Accessors not supported");
-      throw tmp8;
-    } else {
-      try {
-        return defineProperty(arg0, tmp2, value);
-      } catch (err) {
-      }
-    }
-  };
-}
 
-export const f = defineProperty2;
+export default (arg0, arg1, value, arg3) => {
+  let obj = arg3;
+  if (!arg3) {
+    obj = {};
+  }
+  let flag = obj.enumerable;
+  let name = arg1;
+  if (undefined !== obj.name) {
+    name = obj.name;
+  }
+  if (_mod16409(value)) {
+    _mod16441(value, name, obj);
+  }
+  if (obj.global) {
+    if (flag) {
+      arg0[arg1] = value;
+    } else {
+      _mod16384(arg1, value);
+    }
+  } else {
+    try {
+      if (obj.unsafe) {
+        if (arg0[arg1]) {
+          flag = true;
+        }
+      } else {
+        delete tmp[tmp2];
+      }
+      if (flag) {
+        arg0[arg1] = value;
+      } else {
+        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
+        _mod16437.f(arg0, arg1, obj2);
+        const tmp3Result = _mod16437;
+      }
+    } catch (err) {
+    }
+  }
+  return arg0;
+};

@@ -1,30 +1,7 @@
 // === Module 6658: ? ===
 
 // Module 6658
+import registerAsset from "module_1119" /* 1119 */;
 
-export default function fromPropertyDescriptor(__Value__) {
-  if (undefined === __Value__) {
-    return __Value__;
-  } else {
-    const obj = {};
-    if ("[[Value]]" in __Value__) {
-      obj.value = __Value__["[[Value]]"];
-    }
-    if ("[[Writable]]" in __Value__) {
-      obj.writable = __Value__["[[Writable]]"];
-    }
-    if ("[[Get]]" in __Value__) {
-      obj.get = __Value__["[[Get]]"];
-    }
-    if ("[[Set]]" in __Value__) {
-      obj.set = __Value__["[[Set]]"];
-    }
-    if ("[[Enumerable]]" in __Value__) {
-      obj.enumerable = __Value__["[[Enumerable]]"];
-    }
-    if ("[[Configurable]]" in __Value__) {
-      obj.configurable = __Value__["[[Configurable]]"];
-    }
-    return obj;
-  }
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "2735b94e62f2bc71613cf7e1aec9c3fe", name: "img_account_sync_twitch_white", type: "svg" });

@@ -1,26 +1,44 @@
 // === Module 4902: ? ===
 
 // Module 4902
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "fi" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, narrow: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, short: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" }, narrow: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" }, short: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import module_4903 from "module_4903" /* 4903 */;
+import module_4904 from "module_4904" /* 4904 */;
+import module_4905 from "module_4905" /* 4905 */;
+import date_mod from "module_4906" /* 4906 */;
+import date_mod from "module_4907" /* 4907 */;
+
+if (!module_4903) {
+  const obj = { default: module_4903 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4903;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+if (!module_4904) {
+  const obj2 = { default: module_4904 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4904;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, narrow: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, short: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" }, narrow: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" }, short: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "fi" };
-prop.push(obj);
+if (!module_4905) {
+  const obj3 = { default: module_4905 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4905;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "zh-CN", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default exports.default;

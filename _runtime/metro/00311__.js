@@ -101,7 +101,7 @@ class FlatList {
       if (num == null) {
         num = 1;
       }
-      let keyExtractor = closure_0.props.keyExtractor;
+      keyExtractor = closure_0.props.keyExtractor;
       if (keyExtractor == null) {
         keyExtractor = get_VirtualizedListDefault.keyExtractor;
       }
@@ -342,7 +342,7 @@ let items = [
       if (num == null) {
         num = 1;
       }
-      let keyExtractor = this.props.keyExtractor;
+      keyExtractor = this.props.keyExtractor;
       if (keyExtractor == null) {
         keyExtractor = require("get VirtualizedList").keyExtractor;
       }

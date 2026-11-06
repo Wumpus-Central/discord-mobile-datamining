@@ -28,8 +28,8 @@ function isInlineStyleTransform(arr) {
                     let tmp2 = "transform" === item;
                     if (tmp2) {
                       let _Array = Array;
-                      tmp2 = Array.isArray(obj) && obj.some(/* F83106 */ function() { ... });
-                      let tmp4 = Array.isArray(obj) && obj.some(/* F83106 */ function() { ... });
+                      tmp2 = Array.isArray(obj) && obj.some(/* F83186 */ function() { ... });
+                      let tmp4 = Array.isArray(obj) && obj.some(/* F83186 */ function() { ... });
                     }
                     isSharedValueResult = tmp2;
                   }
@@ -49,8 +49,8 @@ function isInlineStyleTransform(arr) {
                     let tmp2 = "transform" === item;
                     if (tmp2) {
                       let _Array = Array;
-                      tmp2 = Array.isArray(obj) && obj.some(/* F83106 */ function() { ... });
-                      let tmp4 = Array.isArray(obj) && obj.some(/* F83106 */ function() { ... });
+                      tmp2 = Array.isArray(obj) && obj.some(/* F83186 */ function() { ... });
+                      let tmp4 = Array.isArray(obj) && obj.some(/* F83186 */ function() { ... });
                     }
                     isSharedValueResult = tmp2;
                   }
@@ -281,7 +281,7 @@ export function hasInlineStyles(viewDescriptors) {
                       if (someResult) {
                         let _Object = Object;
                         let keys = Object.keys(item);
-                        someResult = keys.some(/* F83107 */ function() { ... });
+                        someResult = keys.some(/* F83187 */ function() { ... });
                       }
                       return someResult;
                     });
@@ -290,7 +290,7 @@ export function hasInlineStyles(viewDescriptors) {
                       if (someResult) {
                         let _Object = Object;
                         let keys = Object.keys(item);
-                        someResult = keys.some(/* F83107 */ function() { ... });
+                        someResult = keys.some(/* F83187 */ function() { ... });
                       }
                       return someResult;
                     });
@@ -318,7 +318,7 @@ export function hasInlineStyles(viewDescriptors) {
                       if (someResult) {
                         let _Object = Object;
                         let keys = Object.keys(item);
-                        someResult = keys.some(/* F83107 */ function() { ... });
+                        someResult = keys.some(/* F83187 */ function() { ... });
                       }
                       return someResult;
                     });
@@ -327,7 +327,7 @@ export function hasInlineStyles(viewDescriptors) {
                       if (someResult) {
                         let _Object = Object;
                         let keys = Object.keys(item);
-                        someResult = keys.some(/* F83107 */ function() { ... });
+                        someResult = keys.some(/* F83187 */ function() { ... });
                       }
                       return someResult;
                     });

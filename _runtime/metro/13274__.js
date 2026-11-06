@@ -1,7 +1,23 @@
 // === Module 13274: ? ===
 
 // Module 13274
-import registerAsset from "module_1119" /* 1119 */;
+import _mod13273 from "module_13273" /* 13273 */;
+import _mod13275 from "module_13275" /* 13275 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3b7bd4c82e3e8c361f5983d530550253", name: "ArrowSmallDownIcon", type: "png" });
+export function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod13273.getSentryCarrier(mainCarrier);
+  if (sentryCarrier.acs) {
+    let acs = sentryCarrier.acs;
+  } else {
+    acs = _mod13275.getStackAsyncContextStrategy();
+    const tmpResult = _mod13275;
+  }
+  return acs;
+}
+export function setAsyncContextStrategy(acs) {
+  const mainCarrier = _mod13273.getMainCarrier();
+  _mod13273.getSentryCarrier(mainCarrier).acs = acs;
+}

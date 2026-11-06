@@ -1,20 +1,40 @@
 // === Module 16427: ? ===
 
 // Module 16427
-import _mod16393 from "module_16393" /* 16393 */;
-import _mod16414 from "module_16414" /* 16414 */;
-import f2 from "f" /* 16428 */;
-import _mod16438 from "module_16438" /* 16438 */;
-import _mod16439 from "module_16439" /* 16439 */;
+import _mod16388 from "module_16388" /* 16388 */;
+import _mod16390 from "module_16390" /* 16390 */;
+import _mod16406 from "module_16406" /* 16406 */;
+import _mod16428 from "module_16428" /* 16428 */;
+import _mod16429 from "module_16429" /* 16429 */;
 
-let closure_2 = _mod16393([].concat);
+let closure_2 = _mod16390([].push);
 
-export default _mod16414("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f2.f(_mod16438(arg0));
-  const f = _mod16439.f;
-  let tmp2 = fResult;
-  if (f) {
-    tmp2 = closure_2(fResult, f(arg0));
+export default (arg0, arg1) => {
+  const tmp = _mod16388(arg0);
+  items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod16406;
+    let tmp14Result = tmp14(_mod16428, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod16406(tmp, key10010);
+    }
+    if (!tmp2) {
+      continue;
+    } else {
+      let tmp4 = closure_2(items, key10010);
+      continue;
+    }
+    continue;
   }
-  return tmp2;
-});
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod16406(tmp, tmp7)) {
+      let tmp5Result = _mod16429;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
+      }
+    }
+  }
+  return items;
+};

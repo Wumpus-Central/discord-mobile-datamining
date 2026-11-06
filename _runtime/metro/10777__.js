@@ -1,7 +1,33 @@
 // === Module 10777: ? ===
 
 // Module 10777
-import registerAsset from "module_1119" /* 1119 */;
+import Layouts5 from "Layouts" /* 10778 */;
+import noop from "module_19" /* 19 */;
 
+require = arg1;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 278.5, height: 48, scales: [2, 3], hash: "6fb4e1fb24dfc4b551fb510bb467f897", name: "img_nitro_tier_0_activated_dark", type: "png" });
+export function useLayoutConfig(size) {
+  size = size.size;
+  const vertical = size.vertical;
+  items = [, , , ];
+  ({ mode: arr[0], modeConfig: arr[1] } = size);
+  items[2] = size;
+  items[3] = vertical;
+  return vertical.useMemo(() => {
+    const obj = { size, vertical };
+    const mode = size.mode;
+    if ("parallax" === mode) {
+      const Layouts4 = Layouts5.Layouts;
+      return Layouts4.parallax(obj, size.modeConfig);
+    } else if ("horizontal-stack" === mode) {
+      const Layouts3 = Layouts5.Layouts;
+      return Layouts3.horizontalStack(size.modeConfig);
+    } else if ("vertical-stack" === mode) {
+      const Layouts2 = Layouts5.Layouts;
+      return Layouts2.verticalStack(size.modeConfig);
+    } else {
+      const Layouts = Layouts5.Layouts;
+      return Layouts.normal(obj);
+    }
+  }, items);
+}

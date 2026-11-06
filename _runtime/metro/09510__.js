@@ -1,7 +1,7 @@
 // === Module 9510: ? ===
 
 // Module 9510
-import registerAsset from "module_1119" /* 1119 */;
+const parts = "\u0200aglq\t\u0015\u0018\u001B\u026D\u000F\0\0\u0012p;\u4026os;\u4027t;\u403Et;\u403Cuot;\u4022".split("");
+const uint16Array = new Uint16Array(parts.map((item) => item.charCodeAt(0)));
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "119c03ecfe749b5d0f4e60c612bb714f", name: "RiotGamesNeutralIcon", type: "png" });
+export default uint16Array;

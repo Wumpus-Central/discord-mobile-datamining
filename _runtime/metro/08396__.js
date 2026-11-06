@@ -1,117 +1,315 @@
 // === Module 8396: ? ===
 
 // Module 8396
-function fetchFromObject(FileTypes, arr) {
-  const index = arr.indexOf(".");
-  if (index > -1) {
-    let tmp2 = fetchFromObject(FileTypes[arr.slice(arr, 0, index)], arr.slice(index + 1));
-  } else {
-    tmp2 = FileTypes[arr];
-  }
-  return tmp2;
-}
-
-export function getFileChunk(fileChunk) {
-  let num = chunkSize;
-  if (chunkSize === undefined) {
-    num = 32;
-  }
-  let uint8Array = fileChunk;
-  if (fileChunk instanceof ArrayBuffer) {
-    const _Uint8Array = Uint8Array;
-    uint8Array = new Uint8Array(fileChunk);
-  }
-  if (!Array.isArray(fileChunk)) {
-    const _ArrayBuffer = ArrayBuffer;
-    if (!(fileChunk instanceof ArrayBuffer)) {
-      const _Uint8Array2 = Uint8Array;
-      if (!(fileChunk instanceof Uint8Array)) {
-        const _TypeError = TypeError;
-        const _HermesInternal = HermesInternal;
-        const typeError = new TypeError("Expected the `file` argument to be of type `Array<number>`, `Uint8Array`, or `ArrayBuffer`, got `" + typeof fileChunk + "`");
-        throw typeError;
-      }
-    }
-  }
-  const arr = Array.from(uint8Array.slice(0, num));
-  if (arr.every((item) => {
-    let tmp = typeof item === "number";
-    if (typeof item === "number") {
-      const _isNaN = isNaN;
-      tmp = !isNaN(item);
-    }
-    return tmp;
-  })) {
-    return arr;
-  } else {
-    const _TypeError2 = TypeError;
-    const typeError1 = new TypeError("File content contains illegal values");
-    throw typeError1;
-  }
-}
-export { fetchFromObject };
-export function findMatroskaDocTypeElements(fileChunk) {
-  const mapped = fileChunk.map((item) => String.fromCharCode(item));
-  const joined = mapped.join("");
-  let str = "webm";
-  if (!joined.includes("webm")) {
-    let str3;
-    if (joined.includes("matroska")) {
-      str3 = "mkv";
-    }
-    str = str3;
-  }
-  return str;
-}
-export function isftypStringIncluded(fileChunk) {
-  items = [102, 116, 121, 112];
-  let num = 0;
-  if (0 < fileChunk.length - items.length) {
-    while (true) {
-      let num2 = 0;
-      let flag = true;
-      if (0 < items.length) {
-        flag = false;
-        while (fileChunk[num + num2] === items[num2]) {
-          let sum = num2 + 1;
-          num2 = sum;
-          flag = true;
-          if (sum >= items.length) {
-            break;
+const obj = {
+  0: {
+    name: "GPSVersionID",
+    description(arg0) {
+      let str = "Unknown";
+      if (2 === arg0[0]) {
+        str = "Unknown";
+        if (2 === arg0[1]) {
+          str = "Unknown";
+          if (0 === arg0[2]) {
+            str = "Unknown";
+            if (0 === arg0[3]) {
+              str = "Version 2.2";
+            }
           }
         }
       }
-      if (flag) {
-        break;
-      } else {
-        num = num + 1;
+      return str;
+    }
+  },
+  1: {
+    name: "GPSLatitudeRef",
+    description(join) {
+      const joined = join.join("");
+      let str = "North latitude";
+      if ("N" !== joined) {
+        let str2 = "Unknown";
+        if ("S" === joined) {
+          str2 = "South latitude";
+        }
+        str = str2;
+      }
+      return str;
+    }
+  },
+  2: { name: "GPSLatitude", description: fn(8395).getCalculatedGpsValue },
+  3: {
+    name: "GPSLongitudeRef",
+    description(join) {
+      const joined = join.join("");
+      let str = "East longitude";
+      if ("E" !== joined) {
+        let str2 = "Unknown";
+        if ("W" === joined) {
+          str2 = "West longitude";
+        }
+        str = str2;
+      }
+      return str;
+    }
+  },
+  4: null,
+  5: null,
+  6: null,
+  7: null,
+  8: "GPSSatellites",
+  9: null,
+  10: null,
+  11: "GPSDOP",
+  12: null,
+  13: "GPSSpeed",
+  14: null,
+  15: "GPSTrack",
+  16: null,
+  17: "GPSImgDirection",
+  18: "GPSMapDatum",
+  19: null,
+  20: null,
+  21: null,
+  22: null,
+  23: null,
+  24: "GPSDestBearing",
+  25: null,
+  26: "GPSDestDistance",
+  27: null,
+  28: null,
+  29: "GPSDateStamp",
+  30: null,
+  31: "GPSHPositioningError"
+};
+const obj2 = {
+  name: "GPSVersionID",
+  description(arg0) {
+    let str = "Unknown";
+    if (2 === arg0[0]) {
+      str = "Unknown";
+      if (2 === arg0[1]) {
+        str = "Unknown";
+        if (0 === arg0[2]) {
+          str = "Unknown";
+          if (0 === arg0[3]) {
+            str = "Version 2.2";
+          }
+        }
       }
     }
-    return true;
+    return str;
   }
-  return false;
-}
-export function isFlvStringIncluded(fileChunk) {
-  const substr = fileChunk.slice(0, 3);
-  const decoder = new TextDecoder();
-  const uint8Array = new Uint8Array(substr);
-  return decoder.decode(uint8Array).includes("FLV");
-}
-export function isFileContaineJfiforExifHeader(arg0) {
-  let tmp2 = 224 === tmp;
-  if (!tmp2) {
-    tmp2 = 225 === tmp;
+};
+const obj3 = { name: "GPSLatitude", description: fn(8395).getCalculatedGpsValue };
+obj[4] = { name: "GPSLongitude", description: fn(8395).getCalculatedGpsValue };
+obj[5] = {
+  name: "GPSAltitudeRef",
+  description(arg0) {
+    let str = "Sea level";
+    if (0 !== arg0) {
+      let str2 = "Unknown";
+      if (1 === arg0) {
+        str2 = "Sea level reference (negative value)";
+      }
+      str = str2;
+    }
+    return str;
   }
-  return tmp2;
-}
-export function isAvifStringIncluded(fileChunk) {
-  const substr = fileChunk.slice(4, 12);
-  const mapped = substr.map((item) => String.fromCharCode(item));
-  return "ftypavif" === mapped.join("");
-}
-export function isHeicSignatureIncluded(fileChunk) {
-  const mapped = fileChunk.map((item) => String.fromCharCode(item));
-  closure_0 = mapped.join("");
-  items = ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"];
-  return items.some((item) => closure_0.includes(item));
-}
+};
+obj[6] = {
+  name: "GPSAltitude",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " m";
+  }
+};
+obj[7] = {
+  name: "GPSTimeStamp",
+  description(arr) {
+    const mapped = arr.map((item) => {
+      [tmp, tmp2] = item;
+      const result = tmp / tmp2;
+      let combined = result;
+      if (obj.test("" + result)) {
+        const _HermesInternal = HermesInternal;
+        combined = "0" + result;
+      }
+      return combined;
+    });
+    return mapped.join(":");
+  }
+};
+obj[9] = {
+  name: "GPSStatus",
+  description(join) {
+    const joined = join.join("");
+    let str = "Measurement in progress";
+    if ("A" !== joined) {
+      let str2 = "Unknown";
+      if ("V" === joined) {
+        str2 = "Measurement Interoperability";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[10] = {
+  name: "GPSMeasureMode",
+  description(join) {
+    const joined = join.join("");
+    let str = "2-dimensional measurement";
+    if ("2" !== joined) {
+      let str2 = "Unknown";
+      if ("3" === joined) {
+        str2 = "3-dimensional measurement";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[12] = {
+  name: "GPSSpeedRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "Kilometers per hour";
+    if ("K" !== joined) {
+      let str2 = "Miles per hour";
+      if ("M" !== joined) {
+        let str4 = "Unknown";
+        if ("N" === joined) {
+          str4 = "Knots";
+        }
+        str2 = str4;
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[14] = {
+  name: "GPSTrackRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "True direction";
+    if ("T" !== joined) {
+      let str2 = "Unknown";
+      if ("M" === joined) {
+        str2 = "Magnetic direction";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[16] = {
+  name: "GPSImgDirectionRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "True direction";
+    if ("T" !== joined) {
+      let str2 = "Unknown";
+      if ("M" === joined) {
+        str2 = "Magnetic direction";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[19] = {
+  name: "GPSDestLatitudeRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "North latitude";
+    if ("N" !== joined) {
+      let str2 = "Unknown";
+      if ("S" === joined) {
+        str2 = "South latitude";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[20] = {
+  name: "GPSDestLatitude",
+  description(arg0) {
+    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
+  }
+};
+obj[21] = {
+  name: "GPSDestLongitudeRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "East longitude";
+    if ("E" !== joined) {
+      let str2 = "Unknown";
+      if ("W" === joined) {
+        str2 = "West longitude";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[22] = {
+  name: "GPSDestLongitude",
+  description(arg0) {
+    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
+  }
+};
+obj[23] = {
+  name: "GPSDestBearingRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "True direction";
+    if ("T" !== joined) {
+      let str2 = "Unknown";
+      if ("M" === joined) {
+        str2 = "Magnetic direction";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[25] = {
+  name: "GPSDestDistanceRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "Kilometers";
+    if ("K" !== joined) {
+      let str2 = "Miles";
+      if ("M" !== joined) {
+        let str4 = "Unknown";
+        if ("N" === joined) {
+          str4 = "Knots";
+        }
+        str2 = str4;
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+const obj4 = { name: "GPSLongitude", description: fn(8395).getCalculatedGpsValue };
+obj[27] = { name: "GPSProcessingMethod", description: fn(8395).getEncodedString };
+const obj5 = { name: "GPSProcessingMethod", description: fn(8395).getEncodedString };
+obj[28] = { name: "GPSAreaInformation", description: fn(8395).getEncodedString };
+obj[30] = {
+  name: "GPSDifferential",
+  description(arg0) {
+    let str = "Measurement without differential correction";
+    if (0 !== arg0) {
+      let str2 = "Unknown";
+      if (1 === arg0) {
+        str2 = "Differential correction applied";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+
+export default obj;

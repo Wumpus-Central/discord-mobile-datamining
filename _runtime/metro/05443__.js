@@ -1,12 +1,12 @@
 // === Module 5443: ? ===
 
 // Module 5443
-import animatedComponentDefault from "animatedComponent" /* 5444 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+function print() {
 
-({ Animated, StyleSheet } = get_ActivityIndicator);
-const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
+}
+const frozen = Object.freeze(print);
 
-export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
-export const AnimatedNativeDetector = animatedComponent;
-export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });
+export { print };
+export (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
+}

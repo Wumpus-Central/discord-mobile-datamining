@@ -1,7 +1,17 @@
 // === Module 7275: ? ===
 
 // Module 7275
-import registerAsset from "module_1119" /* 1119 */;
+import _mod7276 from "module_7276" /* 7276 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e37bbde49f12a4469b46214e14dfde4a", name: "KeyIcon", type: "png" });
+export function getDistanceForDirection(layout, gestureDirection, arg2) {
+  const invertedMultiplier = _mod7276.getInvertedMultiplier(gestureDirection, arg2);
+  if ("vertical" !== gestureDirection) {
+    if ("vertical-inverted" !== gestureDirection) {
+      return layout.width * invertedMultiplier;
+    }
+  }
+  return layout.height * invertedMultiplier;
+}

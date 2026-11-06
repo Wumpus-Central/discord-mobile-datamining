@@ -1,15 +1,21 @@
 // === Module 5647: ? ===
 
 // Module 5647
+import _mod19 from "module_19" /* 19 */;
+import _mod5427 from "module_5427" /* 5427 */;
 
-export default function _arrayLikeToArray(arg0, arg1) {
-  let length = arg1;
-  if (tmp) {
-    length = arg0.length;
-  }
-  const ArrayResult = Array(length);
-  for (let num = 0; num < length; num = num + 1) {
-    ArrayResult[num] = arg0[num];
-  }
-  return ArrayResult;
-};
+_mod19.useCallback;
+
+export function useBottomSheetContentSizeSetter() {
+  const bottomSheetInternal = _mod5427.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj2 = { setContentSize: null };
+  items = [enableDynamicSizing, animatedContentHeight];
+  obj2.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
+    }
+  }, items);
+  return obj2;
+}

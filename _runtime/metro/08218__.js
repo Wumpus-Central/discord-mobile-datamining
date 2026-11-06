@@ -1,14 +1,15 @@
 // === Module 8218: ? ===
 
 // Module 8218
-import _modDef8215 from "module_8215" /* 8215 */;
+import _modDef8146 from "module_8146" /* 8146 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeComponentTransfer = arg1;
+const Symbol = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +29,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeComponentTransfer {
+const jsx = fn(21).jsx;
+class Symbol {
   constructor() {
     self = this;
-    tmp = c2(this, FeComponentTransfer);
+    tmp = c2(this, Symbol);
     tmp2 = closure_4;
-    obj = closure_4(FeComponentTransfer);
+    obj = closure_4(Symbol);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +50,29 @@ class FeComponentTransfer {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeComponentTransfer, _modDef8215);
+_inherits(Symbol, _modDef8146);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeComponentTransfer(8192).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign({ name: props.id });
+    const merged1 = Object.assign(Symbol(8135)(props));
+    obj2.children = props.children;
+    return jsx(Symbol(8219), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeComponentTransfer, items);
-importDefaultResultResult.displayName = "FeComponentTransfer";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Symbol, items);
+importDefaultResultResult.displayName = "Symbol";
 
 export default importDefaultResultResult;

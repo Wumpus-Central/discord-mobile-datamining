@@ -1,11 +1,19 @@
 // === Module 5544: ? ===
 
 // Module 5544
-import _mod5545 from "module_5545" /* 5545 */;
-import _mod5547 from "module_5547" /* 5547 */;
-import _mod5548 from "module_5548" /* 5548 */;
+import ComposedGestureName from "ComposedGestureName" /* 5512 */;
+import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5521 */;
+import _mod5538 from "module_5538" /* 5538 */;
 
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export const useCompetingGestures = _mod5545.useCompetingGestures;
-export const useExclusiveGestures = _mod5547.useExclusiveGestures;
-export const useSimultaneousGestures = _mod5548.useSimultaneousGestures;
+export function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5538.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
+}

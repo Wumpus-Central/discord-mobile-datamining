@@ -1,14 +1,18 @@
 // === Module 4605: ? ===
 
 // Module 4605
-import _typeof_mod from "module_4606" /* 4606 */;
-import _typeof_mod from "module_4423" /* 4423 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import module_4454_mod from "module_4454" /* 4454 */;
+import _typeof_mod from "module_4450" /* 4450 */;
+import requiredArgs_mod from "requiredArgs" /* 4451 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj = { default: module_4454 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4454;
 }
+module_4454 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -26,13 +30,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function isValid(num) {
-  requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
+export default function addMilliseconds(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const time = _typeof.default(arg0).getTime();
+  const defaultResult1 = _typeof.default(arg0);
+  return new Date(time + module_4454.default(arg1));
 };
 export default exports.default;

@@ -41,16 +41,16 @@ export function assertUInt32(NumberResult) {
     throw error1;
   }
 }
-export function assertFloat32(NumberResult) {
-  if (typeof NumberResult !== "number") {
+export function assertFloat32(scrollLength) {
+  if (typeof scrollLength !== "number") {
     const _Error2 = Error;
-    const error = new Error("invalid float 32: " + typeof NumberResult);
+    const error = new Error("invalid float 32: " + typeof scrollLength);
     throw error;
   } else {
     const _Number = Number;
-    if (Number.isFinite(NumberResult)) {
+    if (Number.isFinite(scrollLength)) {
       const _Error = Error;
-      const error1 = new Error("invalid float 32: " + NumberResult);
+      const error1 = new Error("invalid float 32: " + scrollLength);
       throw error1;
     }
   }

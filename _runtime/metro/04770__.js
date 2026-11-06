@@ -1,28 +1,49 @@
 // === Module 4770: ? ===
 
 // Module 4770
-import module_4771_mod from "module_4771" /* 4771 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import module_4454_mod from "module_4454" /* 4454 */;
+import _typeof_mod from "module_4450" /* 4450 */;
+import module_4686_mod from "module_4686" /* 4686 */;
+import requiredArgs_mod from "requiredArgs" /* 4451 */;
 
-let module_4771 = module_4771_mod;
-if (!module_4771) {
-  const obj = { default: module_4771 };
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj = { default: module_4454 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4771;
+  tmp3 = module_4454;
 }
-module_4771 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4454 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = _typeof;
 }
-requiredArgs = tmp5;
+_typeof = tmp5;
+let module_4686 = module_4686_mod;
+if (!module_4686) {
+  const obj3 = { default: module_4686 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4686;
+}
+module_4686 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function isSameISOWeek(arg0, arg1) {
+export default function setUTCISOWeek(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4771.default(arg0, arg1, { weekStartsOn: 1 });
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4686.default(defaultResult1) - module_4454.default(arg1);
+  defaultResult1.setUTCDate(defaultResult1.getUTCDate() - 7 * diff);
+  return defaultResult1;
 };
 export default exports.default;

@@ -12,7 +12,7 @@ export function debug(message, attributes) {
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "debug", message, attributes, severityNumber: "ao" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "debug", message, attributes, severityNumber: "add" }, obj.scope);
 }
 export function error(message, attributes) {
   let obj = arg2;
@@ -26,26 +26,26 @@ export function fatal(message, attributes) {
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "fatal", message, attributes, severityNumber: "e" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "fatal", message, attributes, severityNumber: "Button" }, obj.scope);
 }
 export function info(message, attributes) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "info", message, attributes, severityNumber: "ao" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "info", message, attributes, severityNumber: "add" }, obj.scope);
 }
 export function trace(message, attributes) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "trace", message, attributes, severityNumber: "ao" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "trace", message, attributes, severityNumber: "add" }, obj.scope);
 }
 export function warn(message, attributes) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "warn", message, attributes, severityNumber: "unicodeVersion" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "warn", message, attributes, severityNumber: "children" }, obj.scope);
 }

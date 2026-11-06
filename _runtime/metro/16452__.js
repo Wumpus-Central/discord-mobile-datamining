@@ -1,7 +1,6 @@
 // === Module 16452: ? ===
 
 // Module 16452
-import _mod16386 from "module_16386" /* 16386 */;
+import _mod17 from "module_17" /* 17 */;
 
-
-export default _mod16386;
+const parsed = parseInt(_mod17.Platform.Version, 10);

@@ -1,9 +1,44 @@
 // === Module 4520: ? ===
 
 // Module 4520
-let closure_0 = { lastWeek: "'forrige' eeee 'kl.' p", yesterday: "'i g\u00E5r kl.' p", today: "'i dag kl.' p", tomorrow: "'i morgen kl.' p", nextWeek: "EEEE 'kl.' p", other: "P" };
+import module_4521 from "module_4521" /* 4521 */;
+import module_4522 from "module_4522" /* 4522 */;
+import module_4523 from "module_4523" /* 4523 */;
+import date_mod from "module_4524" /* 4524 */;
+import date_mod from "module_4525" /* 4525 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
+if (!module_4521) {
+  const obj = { default: module_4521 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4521;
+}
+if (!module_4522) {
+  const obj2 = { default: module_4522 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4522;
+}
+if (!module_4523) {
+  const obj3 = { default: module_4523 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4523;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "ja", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
 export default exports.default;

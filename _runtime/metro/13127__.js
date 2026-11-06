@@ -1,18 +1,7 @@
 // === Module 13127: ? ===
 
 // Module 13127
-import _mod13062 from "module_13062" /* 13062 */;
+import _mod13128 from "module_13128" /* 13128 */;
 
-const Number = _mod13062.TYPE.Number;
-const obj = {
-  name: "Number",
-  structure: { value: String },
-  parse() {
-    return { type: "Number", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd), value: this.consume(Number) };
-  },
-  generate(value) {
-    this.chunk(value.value);
-  }
-};
 
-export default obj;
+export default _mod13128;

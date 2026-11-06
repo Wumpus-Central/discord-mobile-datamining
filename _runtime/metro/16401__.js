@@ -1,19 +1,16 @@
 // === Module 16401: ? ===
 
 // Module 16401
-import _mod16402 from "module_16402" /* 16402 */;
+import prop_mod from "module_16402" /* 16402 */;
 
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
 
-export default (arg0, arg1) => {
-  let tmp3 = _mod16402[arg0];
-  if (!tmp3) {
-    let obj = arg1;
-    if (!arg1) {
-      obj = {};
-    }
-    _mod16402[arg0] = obj;
-    tmp3 = obj;
-    const tmpResult = _mod16402;
-  }
-  return tmp3;
-};
+export default prop;

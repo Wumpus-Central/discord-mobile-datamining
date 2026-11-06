@@ -1,44 +1,53 @@
 // === Module 4517: ? ===
 
 // Module 4517
-import module_4518 from "module_4518" /* 4518 */;
-import module_4519 from "module_4519" /* 4519 */;
-import module_4520 from "module_4520" /* 4520 */;
-import date_mod from "module_4521" /* 4521 */;
-import date_mod from "module_4522" /* 4522 */;
+import module_4452_mod from "module_4452" /* 4452 */;
 
-if (!module_4518) {
-  const obj = { default: module_4518 };
+let module_4452 = module_4452_mod;
+if (!module_4452) {
+  const obj = { default: module_4452 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4518;
+  tmp3 = module_4452;
 }
-if (!module_4519) {
-  const obj2 = { default: module_4519 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4519;
-}
-if (!module_4520) {
-  const obj3 = { default: module_4520 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4520;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+module_4452 = tmp3;
+const dependencyMap = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
+let closure_2 = {
+  lastWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (module_4452.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
+    } else {
+      str = "'domenica scorsa alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} scorso alle' p`;
+      }
+    }
+    return str;
+  },
+  yesterday: "'ieri alle' p",
+  today: "'oggi alle' p",
+  tomorrow: "'domani alle' p",
+  nextWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (module_4452.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
+    } else {
+      str = "'domenica prossima alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
+      }
+    }
+    return str;
+  },
+  other: "P"
+};
 
-export default { code: "nb", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_2[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
+};
 export default exports.default;

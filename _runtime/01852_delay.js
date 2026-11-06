@@ -8,8 +8,8 @@ let c0;
 let c1;
 let c2;
 [tmp2, tmp3, tmp4, tmp5] = items;
-function pnpm_delayTs2(result3, tmp5Result15, arg2) {
-  items = [c1, tmp5Result15, result3, c2, arg2];
+function pnpm_delayTs2(c16, tmp5Result15, Never) {
+  items = [c1, tmp5Result15, c16, c2, Never];
   [tmp, tmp2, tmp3, tmp4, tmp5] = items;
   function pnpm_delayTs1() {
     let tmpResult = closure_0;

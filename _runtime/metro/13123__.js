@@ -1,64 +1,16 @@
 // === Module 13123: ? ===
 
 // Module 13123
-import _mod13062 from "module_13062" /* 13062 */;
+import _mod13124 from "module_13124" /* 13124 */;
+import _mod13125 from "module_13125" /* 13125 */;
+import _mod13126 from "module_13126" /* 13126 */;
+import _mod13127 from "module_13127" /* 13127 */;
+import _mod13129 from "module_13129" /* 13129 */;
+import _mod13130 from "module_13130" /* 13130 */;
+import _mod13132 from "module_13132" /* 13132 */;
+import _mod13133 from "module_13133" /* 13133 */;
+import _mod13135 from "module_13135" /* 13135 */;
+import _mod13136 from "module_13136" /* 13136 */;
 
-const Ident = _mod13062.TYPE.Ident;
-const Number = _mod13062.TYPE.Number;
-const Dimension = _mod13062.TYPE.Dimension;
-const LeftParenthesis = _mod13062.TYPE.LeftParenthesis;
-const RightParenthesis = _mod13062.TYPE.RightParenthesis;
-const Colon = _mod13062.TYPE.Colon;
-const Delim = _mod13062.TYPE.Delim;
-let obj = {
-  name: "MediaFeature",
-  structure: { name: String, value: ["Identifier", "Number", "Dimension", "Ratio", null] },
-  parse() {
-    const self = this;
-    this.eat(LeftParenthesis);
-    const scanner = this.scanner;
-    scanner.skipSC();
-    const scanner2 = this.scanner;
-    scanner2.skipSC();
-    if (this.scanner.tokenType === RightParenthesis) {
-      self.eat(tmp6);
-      const obj = { type: "MediaFeature", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: consumeResult, value: null };
-      return obj;
-    } else {
-      self.eat(Colon);
-      const scanner4 = self.scanner;
-      scanner4.skipSC();
-      const tokenType = self.scanner.tokenType;
-      if (Number === tokenType) {
-        if (self.lookupNonWSType(1) === Delim) {
-          let RatioResult = self.Ratio();
-        } else {
-          RatioResult = self.Number();
-        }
-      } else {
-        if (Dimension === tokenType) {
-          let DimensionResult = self.Dimension();
-          const scanner3 = self.scanner;
-          scanner3.skipSC();
-        } else if (Ident !== tokenType) {
-          self.error("Number, dimension, ratio or identifier is expected");
-          DimensionResult = null;
-        }
-        DimensionResult = self.Identifier();
-      }
-    }
-    consumeResult = this.consume(Ident);
-  },
-  generate(name) {
-    const self = this;
-    this.chunk("(");
-    this.chunk(name.name);
-    if (null !== name.value) {
-      self.chunk(":");
-      self.node(name.value);
-    }
-    self.chunk(")");
-  }
-};
 
-export default obj;
+export default { dir: _mod13124, has: _mod13125, lang: _mod13126, matches: _mod13127, not: _mod13129, "nth-child": _mod13130, "nth-last-child": _mod13132, "nth-last-of-type": _mod13133, "nth-of-type": _mod13135, slotted: _mod13136 };

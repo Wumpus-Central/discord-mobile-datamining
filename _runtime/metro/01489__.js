@@ -2,8 +2,8 @@
 
 // Module 1489
 
-export default (arg0, arg1, arg2, arg3) => {
-  c0 = arg0;
+export default (scrollLength, arg1, arg2, scrollLength) => {
+  c0 = scrollLength;
   let str = arg1;
   let str2 = arg2;
   if (!arg1) {
@@ -12,10 +12,10 @@ export default (arg0, arg1, arg2, arg3) => {
   if (!str2) {
     str2 = "=";
   }
-  if (null === arg0) {
+  if (null === scrollLength) {
     c0 = undefined;
   }
-  if (typeof arg0 === "object") {
+  if (typeof scrollLength === "object") {
     const _Object = Object;
     const keys = Object.keys(tmp);
     let mapped = keys.map((item) => {
@@ -94,13 +94,13 @@ export default (arg0, arg1, arg2, arg3) => {
   } else {
     let str9 = "";
     str10 = "";
-    if (arg3) {
+    if (scrollLength) {
       let isFiniteResult = globalThis;
       const _encodeURIComponent = encodeURIComponent;
-      if ("string" !== typeof arg3) {
+      if ("string" !== typeof scrollLength) {
         if ("boolean" === tmp2) {
           let str6 = "false";
-          if (arg3) {
+          if (scrollLength) {
             str6 = "true";
           }
         } else if ("number" === tmp2) {

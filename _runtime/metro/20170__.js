@@ -1,15 +1,7 @@
 // === Module 20170: ? ===
 
 // Module 20170
-import _mod20171 from "module_20171" /* 20171 */;
-import capitalize from "capitalize" /* 20178 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default _mod20171((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/community_settings", width: 88, height: 80, scales: [2, 3], hash: "d16693419c73a203fe410baf14480d7e", name: "finishing_touches", type: "png" });

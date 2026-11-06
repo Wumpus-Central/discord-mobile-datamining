@@ -1,135 +1,76 @@
 // === Module 5502: ? ===
 
 // Module 5502
-import tagMessage from "tagMessage" /* 5434 */;
-import validateHitSlop from "validateHitSlop" /* 5462 */;
-import reanimatedWrapper from "reanimatedWrapper" /* 5474 */;
-import reanimatedUtils from "reanimatedUtils" /* 5490 */;
-import allowedNativeProps2 from "allowedNativeProps" /* 5491 */;
-import eventUtils from "eventUtils" /* 5503 */;
-import _slicedToArray from "module_32" /* 32 */;
+import handlerIDToTag from "handlerIDToTag" /* 5453 */;
+import convertToHandlerTag from "convertToHandlerTag" /* 5474 */;
+import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 5479 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 5481 */;
 
-require = fn;
-function resolveInternalConfigProps(disableReanimated) {
-  if (tmp3) {
-    disableReanimated.disableReanimated = true;
-  }
-  let useAnimated = disableReanimated.useAnimated;
-  if (!useAnimated) {
-    useAnimated = eventUtils.isNativeAnimatedEvent(disableReanimated.onUpdate);
-    const tmpResult = eventUtils;
-  }
-  disableReanimated.dispatchesAnimatedEvents = useAnimated;
-  if (disableReanimated.dispatchesAnimatedEvents) {
-    disableReanimated.disableReanimated = true;
-  }
-  disableReanimated = disableReanimated.disableReanimated;
-  let result = !disableReanimated;
-  if (!disableReanimated) {
-    result = undefined !== reanimatedWrapper.Reanimated;
-  }
-  if (result) {
-    result = reanimatedUtils.hasWorkletEventHandlers(disableReanimated);
-    const tmpResult3 = reanimatedUtils;
-  }
-  if (result) {
-    result = !disableReanimated.dispatchesAnimatedEvents;
-  }
-  disableReanimated.shouldUseReanimatedDetector = result;
-  tmp3 = tagMessage.isTestEnv() && undefined === disableReanimated.disableReanimated;
-  disableReanimated.needsPointerData = eventUtils.shouldHandleTouchEvents(disableReanimated);
-  const tmpResult4 = eventUtils;
-}
-const useMemo = fn(19).useMemo;
-const map = new Map();
-function DEFAULT_PROPS_TRANSFORMER(arg0) {
-  return arg0;
-}
-function isGestureEnabled(gestures) {
-  if (obj.isComposedGesture(gestures)) {
-    gestures = gestures.gestures;
-    let someResult = gestures.some(isGestureEnabled);
-  } else {
-    someResult = false !== reanimatedUtils.maybeUnpackValue(gestures.config.enabled);
-    const tmpResult = reanimatedUtils;
-  }
-  return someResult;
-}
+const require = globalThis.__r;
 
-export { isGestureEnabled };
-export { resolveInternalConfigProps };
-export function prepareConfigForNativeSide(c0, shouldUseReanimatedDetector) {
-  const result = allowedNativeProps2.applyProductionTestIDFilter();
-  shouldUseReanimatedDetector = shouldUseReanimatedDetector.shouldUseReanimatedDetector;
-  if (shouldUseReanimatedDetector) {
-    shouldUseReanimatedDetector = !reanimatedUtils.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
-    const tmp2Result = reanimatedUtils;
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
+  _require = attachedGestures;
+  prepare.prepare();
+  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
+    let tmp2 = attachedGestures.attachedGestures[num];
+    let obj = require("convertToHandlerTag");
+    let result = obj.checkGestureCallbacksForWorklets(tmp2);
+    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
+      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
+    }
   }
-  const obj2 = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
-  const PropsWhiteLists = allowedNativeProps2.PropsWhiteLists;
-  let EMPTY_WHITE_LIST = PropsWhiteLists.get(c0);
-  if (EMPTY_WHITE_LIST == null) {
-    EMPTY_WHITE_LIST = allowedNativeProps2.EMPTY_WHITE_LIST;
-  }
-  const entries = Object.entries(shouldUseReanimatedDetector);
-  while (tmp11 !== undefined) {
-    [first, tmp17] = tmp12;
-    let tmp16 = first;
-    let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
-    if (!allowedNativeProps.has(first)) {
-      if (!EMPTY_WHITE_LIST.has(tmp16)) {
-        let PropsToFilter = allowedNativeProps2.PropsToFilter;
-        if (PropsToFilter.has(tmp16)) {
-          continue;
-        } else {
-          let _console = console;
-          let tmp19Result = tagMessage;
-          let _HermesInternal = HermesInternal;
-          let str = "";
-          let str2 = " is not a valid property for ";
-          let str3 = " and will be ignored.";
-          let warnResult = console.warn(tmp19Result.tagMessage("" + tmp16 + " is not a valid property for " + c0 + " and will be ignored."));
-          continue;
+  attachedGestures = attachedGestures.attachedGestures;
+  attachedGestures.hasExternalRelations = true;
+  require("ghQueueMicrotask").ghQueueMicrotask(() => {
+    if (attachedGestures.isMounted) {
+      let arr = attachedGestures;
+      if (attachedGestures === tmp.attachedGestures) {
+        let tmp23 = gesturesToAttach;
+        let tmp21 = arr.length !== gesturesToAttach.length;
+        let num = 0;
+        let tmp22 = tmp21;
+        if (0 < gesturesToAttach.length) {
+          do {
+            let tmp3 = attachedGestures[num];
+            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
+            let flag = tmp21;
+            if (tmp4) {
+              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
+              tmp4 = tmp6;
+            }
+            if (tmp4) {
+              flag = true;
+            }
+            tmp3.config = gesturesToAttach[num].config;
+            tmp3.handlers = gesturesToAttach[num].handlers;
+            let obj = RNGestureHandlerModuleDefault;
+            let obj2 = transformIntoHandlerTags;
+            let result = obj.setGestureHandlerConfig(tmp3.handlerTag, obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS));
+            let obj3 = RNGestureHandlerModuleDefault;
+            let obj4 = convertToHandlerTag;
+            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
+            let obj5 = handlerIDToTag;
+            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
+            num = num + 1;
+            tmp21 = flag;
+            tmp22 = flag;
+            tmp23 = gesturesToAttach;
+            arr = attachedGestures;
+          } while (num < gesturesToAttach.length);
         }
-        continue;
+        attachedGestures.hasExternalRelations = convertToHandlerTag.hasExternalRelations(tmp23);
+        if (attachedGestures.animatedHandlers) {
+          if (tmp22) {
+            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
+            attachedGestures.animatedHandlers.value = found.map((handlers) => handlers.handlers);
+          }
+        }
+        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
       }
     }
-    let tmp19Result3 = reanimatedUtils;
-    let maybeUnpackValueResult = tmp19Result3.maybeUnpackValue(tmp17);
-    if ("hitSlop" === tmp16) {
-      let tmp19Result4 = validateHitSlop;
-      let normalizeHitSlopResult = tmp19Result4.normalizeHitSlop(maybeUnpackValueResult);
-    } else {
-      normalizeHitSlopResult = maybeUnpackValueResult;
-    }
-    obj2[tmp16] = normalizeHitSlopResult;
-  }
-  return obj2;
-}
-export function useClonedAndRemappedConfig(gestureHandlerProps) {
-  closure_0 = gestureHandlerProps;
-  let tmp = map;
-  if (map === undefined) {
-    tmp = map;
-  }
-  closure_1 = tmp;
-  let tmp2 = transformHoverProps;
-  if (transformHoverProps === undefined) {
-    tmp2 = DEFAULT_PROPS_TRANSFORMER;
-  }
-  closure_2 = tmp2;
-  items = [gestureHandlerProps, tmp, tmp2];
-  return useMemo(() => {
-    const obj = {};
-    const merged = Object.assign(closure_0);
-    const item = closure_1.forEach((item, index) => {
-      if (index in obj) {
-        obj[item] = obj[index];
-        delete tmp[tmp2];
-      }
-    });
-    const tmp3 = closure_2(obj);
-    resolveInternalConfigProps(tmp3);
-    return tmp3;
-  }, items);
+  });
 }

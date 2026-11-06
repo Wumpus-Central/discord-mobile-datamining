@@ -1,24 +1,34 @@
 // === Module 16402: ? ===
 
 // Module 16402
-import _mod16386 from "module_16386" /* 16386 */;
+import _mod16383 from "module_16383" /* 16383 */;
 import _mod16387 from "module_16387" /* 16387 */;
 import _mod16403 from "module_16403" /* 16403 */;
 
-let prop = _mod16386["__core-js_shared__"];
-if (!prop) {
-  prop = _mod16387("__core-js_shared__", {});
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod16387(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod16383.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+    }
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = _mod16403;
+      }
+      if (tmp2Result) {
+        tmp2Result = _mod16403 < 41;
+      }
+      tmp5 = tmp2Result;
+    }
+    return tmp5;
+  });
 }
-let versions = prop.versions;
-if (!versions) {
-  const items = [];
-  prop.versions = items;
-  versions = items;
-}
-let str2 = "global";
-if (_mod16403) {
-  str2 = "pure";
-}
-versions.push({ version: "3.41.0", mode: str2, copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE", source: "https://github.com/zloirock/core-js" });
 
 export default prop;

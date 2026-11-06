@@ -1,46 +1,113 @@
 // === Module 4708: ? ===
 
 // Module 4708
-import differenceInCalendarWeeks_mod from "differenceInCalendarWeeks" /* 4612 */;
-import lastDayOfMonth_mod from "lastDayOfMonth" /* 4709 */;
-import startOfMonth_mod from "startOfMonth" /* 4639 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import _typeof_mod from "module_4450" /* 4450 */;
+import module_4632_mod from "module_4632" /* 4632 */;
+import module_4693_mod from "module_4693" /* 4693 */;
+import module_4454_mod from "module_4454" /* 4454 */;
 
-let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
-if (!differenceInCalendarWeeks) {
-  const obj = { default: differenceInCalendarWeeks };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = differenceInCalendarWeeks;
+  tmp3 = _typeof;
 }
-differenceInCalendarWeeks = tmp3;
-let lastDayOfMonth = lastDayOfMonth_mod;
-if (!lastDayOfMonth) {
-  const obj2 = { default: lastDayOfMonth };
+_typeof = tmp3;
+let module_4632 = module_4632_mod;
+if (!module_4632) {
+  const obj2 = { default: module_4632 };
   let tmp5 = obj2;
 } else {
-  tmp5 = lastDayOfMonth;
+  tmp5 = module_4632;
 }
-lastDayOfMonth = tmp5;
-let startOfMonth = startOfMonth_mod;
-if (!startOfMonth) {
-  const obj3 = { default: startOfMonth };
+module_4632 = tmp5;
+let module_4693 = module_4693_mod;
+if (!module_4693) {
+  const obj3 = { default: module_4693 };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfMonth;
+  tmp7 = module_4693;
 }
-startOfMonth = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
+module_4693 = tmp7;
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj4 = { default: module_4454 };
   let tmp9 = obj4;
 } else {
-  tmp9 = requiredArgs;
+  tmp9 = module_4454;
 }
-requiredArgs = tmp9;
+module_4454 = tmp9;
 
-export default function getWeeksInMonth(arg0, arg1) {
-  requiredArgs.default(1, arguments);
-  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
+export default function formatRFC3339(arg0, fractionDigits) {
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat2 = "1 arguments required, but only ".concat;
+    const typeError = new TypeError("1 arguments required, but only ".concat(arguments.length, " present"));
+    throw typeError;
+  } else {
+    const defaultResult = _typeof.default(arg0);
+    if (module_4632.default(defaultResult)) {
+      fractionDigits = undefined;
+      if (null != fractionDigits) {
+        fractionDigits = fractionDigits.fractionDigits;
+      }
+      let num2 = 0;
+      if (null !== fractionDigits) {
+        num2 = 0;
+        if (undefined !== fractionDigits) {
+          num2 = fractionDigits;
+        }
+      }
+      const NumberResult = Number(num2);
+      if (NumberResult >= 0) {
+        if (NumberResult <= 3) {
+          const defaultResult1 = module_4693.default(defaultResult.getDate(), 2);
+          const fullYear = defaultResult.getFullYear();
+          const defaultResult2 = module_4693.default(defaultResult.getMonth() + 1, 2);
+          const defaultResult3 = module_4693.default(defaultResult.getHours(), 2);
+          let str4 = "";
+          const defaultResult4 = module_4693.default(defaultResult.getMinutes(), 2);
+          if (NumberResult > 0) {
+            const _Math = Math;
+            const _Math2 = Math;
+            const milliseconds = defaultResult.getMilliseconds();
+            str4 = `.${obj.default(tmp20(tmp19 * Math.pow(10, tmp8 - 3)), tmp8)}`;
+          }
+          const timezoneOffset = defaultResult.getTimezoneOffset();
+          let str6 = "Z";
+          if (0 !== timezoneOffset) {
+            const _Math3 = Math;
+            const absolute = Math.abs(timezoneOffset);
+            let str7 = "-";
+            const defaultResult6 = module_4693.default(module_4454.default(absolute / 60), 2);
+            if (timezoneOffset < 0) {
+              str7 = "+";
+            }
+            const combined = "".concat(str7);
+            const combined1 = combined.concat(defaultResult6, ":");
+            str6 = combined1.concat(module_4693.default(absolute % 60, 2));
+            const defaultResult7 = module_4693.default(absolute % 60, 2);
+          }
+          const concat = "".concat;
+          const combined2 = "".concat(fullYear, "-");
+          const combined3 = combined2.concat(defaultResult2, "-");
+          const combined4 = combined3.concat(defaultResult1, "T");
+          const combined5 = combined4.concat(defaultResult3, ":");
+          const combined6 = combined5.concat(defaultResult4, ":");
+          const combined7 = combined6.concat(module_4693.default(defaultResult.getSeconds(), 2));
+          const combined8 = combined7.concat(str4);
+          return combined8.concat(str6);
+        }
+      }
+      const _RangeError2 = RangeError;
+      const rangeError = new RangeError("fractionDigits must be between 0 and 3 inclusively");
+      throw rangeError;
+    } else {
+      const _RangeError = RangeError;
+      const rangeError1 = new RangeError("Invalid time value");
+      throw rangeError1;
+    }
+  }
 };
 export default exports.default;

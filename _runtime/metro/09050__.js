@@ -1,146 +1,29 @@
 // === Module 9050: ? ===
 
 // Module 9050
-import _mod17 from "module_17" /* 17 */;
+import _mod518 from "module_518" /* 518 */;
+import _mod521 from "module_521" /* 521 */;
+import _mod543 from "module_543" /* 543 */;
+import eq from "eq" /* 615 */;
 
-const Orientation = _mod17.NativeModules.Orientation;
-const Platform = _mod17.Platform;
-const DeviceEventEmitter = _mod17.DeviceEventEmitter;
-const dependencyMap = {};
-let c3 = 0;
-const __listener_id = "__listener_id";
 
-export default {
-  getOrientation(arg0) {
-    closure_0 = arg0;
-    const orientation = Orientation.getOrientation((arg0, arg1) => {
-      closure_0(arg0, arg1);
-    });
-  },
-  getSpecificOrientation(arg0) {
-    closure_0 = arg0;
-    const specificOrientation = Orientation.getSpecificOrientation((arg0, arg1) => {
-      closure_0(arg0, arg1);
-    });
-  },
-  ignoreAutoRotate(flag) {
-    Orientation.ignoreAutoRotate(flag);
-  },
-  lockToPortrait() {
-    Orientation.lockToPortrait();
-  },
-  lockToLandscape() {
-    Orientation.lockToLandscape();
-  },
-  lockToLandscapeRight() {
-    Orientation.lockToLandscapeRight();
-  },
-  lockToLandscapeLeft() {
-    Orientation.lockToLandscapeLeft();
-  },
-  unlockAllOrientations() {
-    const result = Orientation.unlockAllOrientations();
-  },
-  addOrientationListener(handleOrientationChange) {
-    if (handleOrientationChange.hasOwnProperty(__listener_id)) {
-      let str = handleOrientationChange[__listener_id];
+export default function isIterateeCall(arg0, num, arg2) {
+  if (_mod521(arg2)) {
+    if (typeof num === "number") {
+      let tmp5 = _mod518(arg2) && _mod543(num, arg2.length);
+      const tmp4 = _mod518(arg2) && _mod543(num, arg2.length);
     } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(handleOrientationChange)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(handleOrientationChange, __listener_id, obj);
+      tmp5 = typeof num === "string";
+      if (typeof num === "string") {
+        tmp5 = num in arg2;
       }
     }
-    closure_2[str] = DeviceEventEmitter.addListener("orientationDidChange", (orientation) => {
-      handleOrientationChange(orientation.orientation);
-    });
-  },
-  addOrientationDegreesChangeListener(arg0) {
-    closure_0 = arg0;
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
+    let tmp6 = tmp5;
+    if (tmp6) {
+      tmp6 = eq(arg2[num], arg0);
     }
-    closure_2[str] = DeviceEventEmitter.addListener("orientationDegreesDidChange", (orientationDegrees) => {
-      closure_0(orientationDegrees.orientationDegrees);
-    });
-  },
-  removeOrientationListener(arg0) {
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    if (dependencyMap[str]) {
-      dependencyMap[str].remove();
-      dependencyMap[str] = null;
-    }
-  },
-  addSpecificOrientationListener(arg0) {
-    closure_0 = arg0;
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    closure_2[str] = DeviceEventEmitter.addListener("specificOrientationDidChange", (specificOrientation) => {
-      closure_0(specificOrientation.specificOrientation);
-    });
-  },
-  removeSpecificOrientationListener(arg0) {
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    if (dependencyMap[str]) {
-      dependencyMap[str].remove();
-      dependencyMap[str] = null;
-    }
-  },
-  getInitialOrientation() {
-    return Orientation.initialOrientation;
+    return tmp6;
+  } else {
+    return false;
   }
 };

@@ -319,19 +319,19 @@ function nativeFramesIntegration() {
                       closure_0 = arg0;
                       closure_1 = arg1;
                       c2 = false;
-                      const timeout = setTimeout(/* F121959 */ function() { ... }, 2000);
+                      const timeout = setTimeout(/* F122188 */ function() { ... }, 2000);
                       const NATIVE = closure_0(866).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
-                      nativeFrames.then(/* F121960 */ function() { ... }).then(undefined, /* F121961 */ function() { ... });
+                      nativeFrames.then(/* F122189 */ function() { ... }).then(undefined, /* F122190 */ function() { ... });
                     });
                     new Promise((arg0, arg1) => {
                       closure_0 = arg0;
                       closure_1 = arg1;
                       c2 = false;
-                      const timeout = setTimeout(/* F121959 */ function() { ... }, 2000);
+                      const timeout = setTimeout(/* F122188 */ function() { ... }, 2000);
                       const NATIVE = closure_0(866).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
-                      nativeFrames.then(/* F121960 */ function() { ... }).then(undefined, /* F121961 */ function() { ... });
+                      nativeFrames.then(/* F122189 */ function() { ... }).then(undefined, /* F122190 */ function() { ... });
                     }).then((nativeFrames) => {
                       closure_0({ timestamp, nativeFrames });
                     }).then(undefined, (arg0) => {
@@ -811,19 +811,19 @@ export (enableNative2) => {
                         closure_0 = arg0;
                         closure_1 = arg1;
                         c2 = false;
-                        const timeout = setTimeout(/* F121959 */ function() { ... }, 2000);
+                        const timeout = setTimeout(/* F122188 */ function() { ... }, 2000);
                         const NATIVE = closure_0(866).NATIVE;
                         const nativeFrames = NATIVE.fetchNativeFrames();
-                        nativeFrames.then(/* F121960 */ function() { ... }).then(undefined, /* F121961 */ function() { ... });
+                        nativeFrames.then(/* F122189 */ function() { ... }).then(undefined, /* F122190 */ function() { ... });
                       });
                       new Promise((arg0, arg1) => {
                         closure_0 = arg0;
                         closure_1 = arg1;
                         c2 = false;
-                        const timeout = setTimeout(/* F121959 */ function() { ... }, 2000);
+                        const timeout = setTimeout(/* F122188 */ function() { ... }, 2000);
                         const NATIVE = closure_0(866).NATIVE;
                         const nativeFrames = NATIVE.fetchNativeFrames();
-                        nativeFrames.then(/* F121960 */ function() { ... }).then(undefined, /* F121961 */ function() { ... });
+                        nativeFrames.then(/* F122189 */ function() { ... }).then(undefined, /* F122190 */ function() { ... });
                       }).then((nativeFrames) => {
                         closure_0({ timestamp, nativeFrames });
                       }).then(undefined, (arg0) => {

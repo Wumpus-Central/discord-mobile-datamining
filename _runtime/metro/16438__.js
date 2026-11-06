@@ -1,14 +1,10 @@
 // === Module 16438: ? ===
 
 // Module 16438
-import _mod16411 from "module_16411" /* 16411 */;
+import _mod16386 from "module_16386" /* 16386 */;
+import _mod16387 from "module_16387" /* 16387 */;
 
 
-export default (arg0) => {
-  if (_mod16411(arg0)) {
-    return arg0;
-  } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
-  }
-};
+export default _mod16386 && _mod16387(() => 42 !== Object.defineProperty(() => {
+
+}, "prototype", { value: 42, writable: false }).prototype);

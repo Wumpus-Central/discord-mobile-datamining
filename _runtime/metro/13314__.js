@@ -1,105 +1,286 @@
 // === Module 13314: ? ===
 
 // Module 13314
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod13310 from "module_13310" /* 13310 */;
+import _slicedToArray from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
+import __SENTRY_DEBUG__ from "module_13254" /* 13254 */;
+import dateTimestampInSeconds from "module_13269" /* 13269 */;
 
-const SentryNonRecordingSpan = require;
-class SentryNonRecordingSpan {
-  constructor() {
-    obj = global;
-    if (global === undefined) {
-      obj = {};
+const ServerRuntimeClient = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    self = this;
-    tmp = c2(this, SentryNonRecordingSpan);
-    traceId = obj.traceId;
-    if (!traceId) {
-      tmp2 = closure_0;
-      tmp3 = closure_1;
-      obj2 = closure_0(closure_1[2]);
-      traceId = obj2.generateTraceId();
-    }
-    self._traceId = traceId;
-    spanId = obj.spanId;
-    if (!spanId) {
-      tmp4 = closure_0;
-      tmp5 = closure_1;
-      obj3 = closure_0(closure_1[2]);
-      spanId = obj3.generateSpanId();
-    }
-    self._spanId = spanId;
-    return;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+_possibleConstructorReturn;
+class ServerRuntimeClient {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_3(this, ServerRuntimeClient);
+    obj = closure_0(closure_1[9]);
+    result = obj.registerSpanErrorInstrumentation();
+    items = [];
+    items[0] = global;
+    tmp3 = hasOwnProperty;
+    obj2 = hasOwnProperty(ServerRuntimeClient);
+    tmp4 = closure_4;
+    if (metroImportDefault()) {
+      tmp6 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj2, items, tmp3(self).constructor);
+    } else {
+      constructResult = obj2.apply(self, items);
+    }
+    return tmp4(self, constructResult);
+  }
+}
+_inherits(ServerRuntimeClient, _mod13310.BaseClient);
 const entry = {
-  key: "spanContext",
-  value: function spanContext() {
-    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(13286).TRACE_FLAG_NONE };
+  key: "eventFromException",
+  value: function eventFromException(arg0, arg1) {
+    const result = ServerRuntimeClient(13315).eventFromUnknownInput(this, this._options.stackParser, arg0, arg1);
+    result.level = "error";
+    const obj = ServerRuntimeClient(13315);
+    return ServerRuntimeClient(13279).resolvedSyncPromise(result);
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "end",
-    value: function end(arg0) {
-
+    key: "eventFromMessage",
+    value: function eventFromMessage(arg0) {
+      let str = arg1;
+      if (arg1 === undefined) {
+        str = "info";
+      }
+      const obj = ServerRuntimeClient(13279);
+      return obj.resolvedSyncPromise(ServerRuntimeClient(13315).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace));
     }
   },
   {
-    key: "setAttribute",
-    value: function setAttribute(arg0, arg1) {
-      return this;
+    key: "captureException",
+    value: function captureException(arg0, arg1, arg2) {
+      const self = this;
+      if (this._options.autoSessionTracking) {
+        if (self._sessionFlusher) {
+          const isolationScope = ServerRuntimeClient(13282).getIsolationScope();
+          const requestSession = isolationScope.getRequestSession();
+          let tmp4 = requestSession;
+          if (requestSession) {
+            tmp4 = "ok" === requestSession.status;
+          }
+          if (tmp4) {
+            requestSession.status = "errored";
+          }
+          const obj = ServerRuntimeClient(13282);
+        }
+      }
+      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "captureException", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0, arg1, arg2];
+      return fn(items);
     }
   },
   {
-    key: "setAttributes",
-    value: function setAttributes(arg0) {
-      return this;
+    key: "captureEvent",
+    value: function captureEvent(type, arg1, arg2) {
+      const self = this;
+      if (this._options.autoSessionTracking) {
+        if (self._sessionFlusher) {
+          if ("exception" === tmp) {
+            if (type.exception) {
+              if (type.exception.values) {
+                if (type.exception.values.length > 0) {
+                  const isolationScope = ServerRuntimeClient(13282).getIsolationScope();
+                  const requestSession = isolationScope.getRequestSession();
+                  let tmp5 = requestSession;
+                  if (requestSession) {
+                    tmp5 = "ok" === requestSession.status;
+                  }
+                  if (tmp5) {
+                    requestSession.status = "errored";
+                  }
+                  const obj = ServerRuntimeClient(13282);
+                }
+              }
+            }
+          }
+          tmp = type.type || "exception";
+        }
+      }
+      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "captureEvent", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [type, arg1, arg2];
+      return fn(items);
     }
   },
   {
-    key: "setStatus",
-    value: function setStatus(arg0) {
-      return this;
+    key: "close",
+    value: function close(arg0) {
+      const self = this;
+      if (this._sessionFlusher) {
+        const _sessionFlusher = self._sessionFlusher;
+        _sessionFlusher.close();
+      }
+      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "close", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0];
+      return fn(items);
     }
   },
   {
-    key: "updateName",
-    value: function updateName(arg0) {
-      return this;
+    key: "initSessionFlusher",
+    value: function initSessionFlusher() {
+      const self = this;
+      const release = this._options.release;
+      if (release) {
+        const obj = { release, environment: tmp };
+        const sessionFlusher = new ServerRuntimeClient(13308).SessionFlusher(self, obj);
+        self._sessionFlusher = sessionFlusher;
+      } else if (ServerRuntimeClient(13283).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(13255).logger;
+        logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
+      }
     }
   },
   {
-    key: "isRecording",
-    value: function isRecording() {
-      return false;
+    key: "captureCheckIn",
+    value: function captureCheckIn(checkInId, arg1, arg2) {
+      if ("checkInId" in checkInId) {
+        if (checkInId.checkInId) {
+          checkInId = checkInId.checkInId;
+        }
+        const self = this;
+        if (this._isEnabled()) {
+          const options = self.getOptions();
+          const tunnel = options.tunnel;
+          const obj4 = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
+          ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);
+          ({ release: obj2.release, environment: obj2.environment } = options);
+          if ("duration" in checkInId) {
+            obj4.duration = checkInId.duration;
+          }
+          if (arg1) {
+            ({ schedule: obj3.schedule, checkinMargin: obj3.checkin_margin, maxRuntime: obj3.max_runtime, timezone: obj3.timezone, failureIssueThreshold: obj3.failure_issue_threshold, recoveryThreshold: obj3.recovery_threshold } = arg1);
+            obj4.monitor_config = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
+            const obj8 = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
+          }
+          [tmp9, tmp10] = self._getTraceInfoFromScope(arg2);
+          if (tmp10) {
+            const obj9 = { trace: tmp10 };
+            obj4.contexts = obj9;
+          }
+          const obj5 = ServerRuntimeClient(13316);
+          const sdkMetadata = self.getSdkMetadata();
+          const checkInEnvelope = obj5.createCheckInEnvelope(obj4, tmp9, sdkMetadata, tunnel, self.getDsn());
+          if (ServerRuntimeClient(13283).DEBUG_BUILD) {
+            const logger2 = ServerRuntimeClient(13255).logger;
+            logger2.info("Sending checkin:", checkInId.monitorSlug, checkInId.status);
+          }
+          self.sendEnvelope(checkInEnvelope);
+          return checkInId;
+        } else {
+          if (ServerRuntimeClient(13283).DEBUG_BUILD) {
+            const logger = ServerRuntimeClient(13255).logger;
+            logger.warn("SDK not enabled, will not capture checkin.");
+          }
+          return checkInId;
+        }
+      }
+      checkInId = ServerRuntimeClient(13266).uuid4();
+      const obj = ServerRuntimeClient(13266);
     }
   },
   {
-    key: "addEvent",
-    value: function addEvent(arg0, arg1, arg2) {
-      return this;
+    key: "_captureRequestSession",
+    value: function _captureRequestSession() {
+      if (this._sessionFlusher) {
+        const _sessionFlusher = this._sessionFlusher;
+        const result = _sessionFlusher.incrementSessionStatusCount();
+      } else if (ServerRuntimeClient(13283).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(13255).logger;
+        logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
+      }
     }
   },
   {
-    key: "addLink",
-    value: function addLink(arg0) {
-      return this;
+    key: "_prepareEvent",
+    value: function _prepareEvent(platform, arg1, arg2, arg3) {
+      const self = this;
+      if (this._options.platform) {
+        platform.platform = platform.platform || self._options.platform;
+      }
+      if (self._options.runtime) {
+        const obj = {};
+        const merged = Object.assign(platform.contexts);
+        obj.runtime = platform.contexts || {}.runtime || self._options.runtime;
+        platform.contexts = obj;
+        const tmp3 = platform.contexts || {};
+      }
+      if (self._options.serverName) {
+        platform.server_name = platform.server_name || self._options.serverName;
+      }
+      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "_prepareEvent", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [platform, arg1, arg2, arg3];
+      return fn(items);
     }
   },
   {
-    key: "addLinks",
-    value: function addLinks(arg0) {
-      return this;
-    }
-  },
-  {
-    key: "recordException",
-    value: function recordException(arg0, arg1) {
-
+    key: "_getTraceInfoFromScope",
+    value: function _getTraceInfoFromScope(arg0) {
+      if (arg0) {
+        const _getSpanForScopeResult = ServerRuntimeClient(13277)._getSpanForScope(arg0);
+        if (_getSpanForScopeResult) {
+          let spanToTraceContextResult = ServerRuntimeClient(13260).spanToTraceContext(_getSpanForScopeResult);
+          const tmpResult = ServerRuntimeClient(13260);
+        } else {
+          spanToTraceContextResult = ServerRuntimeClient(13282).getTraceContextFromScope(arg0);
+          const tmpResult3 = ServerRuntimeClient(13282);
+        }
+        const tmpResult4 = ServerRuntimeClient(13291);
+        if (_getSpanForScopeResult) {
+          let dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromSpan(_getSpanForScopeResult);
+        } else {
+          const self = this;
+          dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromScope(this, arg0);
+        }
+        items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
+        return items;
+      } else {
+        const items1 = [undefined, undefined];
+        return items1;
+      }
     }
   }
 ];
 
-export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);
+export const ServerRuntimeClient = _createClass(ServerRuntimeClient, items);

@@ -1,73 +1,56 @@
 // === Module 16163: ? ===
 
 // Module 16163
-const re0 = /^[0-9]+$/;
+import _mod16153 from "module_16153" /* 16153 */;
 
-export default {
-  compareIdentifiers(major, major2) {
-    const isMatch = re0.test(major);
-    const isMatch1 = re0.test(major2);
-    let tmp3 = isMatch;
-    if (isMatch) {
-      tmp3 = isMatch1;
+
+export default (arg0, arg1) => {
+  const obj = _mod16153(arg0, null, true);
+  const tmp = _mod16153(arg1, null, true);
+  const compareResult = obj.compare(tmp);
+  if (0 === compareResult) {
+    return null;
+  } else {
+    let tmp3 = tmp;
+    if (compareResult > 0) {
+      tmp3 = obj;
     }
-    let tmp4 = major2;
-    let tmp5 = major;
-    if (tmp3) {
-      tmp5 = +major;
-      tmp4 = +major2;
+    let tmp4 = obj;
+    if (compareResult > 0) {
+      tmp4 = tmp;
     }
-    let num = 0;
-    if (tmp5 !== tmp4) {
-      if (!isMatch) {
-        if (!isMatch1) {
-          let num4 = 1;
-          if (tmp5 < tmp4) {
-            num4 = -1;
+    if (tmp4.prerelease.length) {
+      if (!length) {
+        if (tmp4.patch) {
+          let str2 = "patch";
+          if (!tmp3.patch) {
+            let str3 = "major";
+            if (tmp3.minor) {
+              str3 = "minor";
+            }
+            str2 = str3;
           }
-          let num3 = num4;
+          let str = str2;
         } else {
-          num3 = 1;
+          str = "major";
         }
-        let num2 = num3;
-      } else {
-        num2 = -1;
+        return str;
       }
-      num = num2;
     }
-    return num;
-  },
-  rcompareIdentifiers(arg0, arg1) {
-    const isMatch = re0.test(arg1);
-    const isMatch1 = re0.test(arg0);
-    let tmp3 = isMatch;
-    if (isMatch) {
-      tmp3 = isMatch1;
+    let str4 = "";
+    if (tmp3.prerelease.length) {
+      str4 = "pre";
     }
-    let tmp4 = arg0;
-    let tmp5 = arg1;
-    if (tmp3) {
-      tmp5 = +arg1;
-      tmp4 = +arg0;
-    }
-    let num = 0;
-    if (tmp5 !== tmp4) {
-      if (!isMatch) {
-        if (!isMatch1) {
-          let num4 = 1;
-          if (tmp5 < tmp4) {
-            num4 = -1;
-          }
-          let num3 = num4;
-        } else {
-          num3 = 1;
-        }
-        let num2 = num3;
-      } else {
-        num2 = -1;
+    if (obj.major !== tmp.major) {
+      let str5 = `${str4}major`;
+    } else if (obj.minor !== tmp.minor) {
+      str5 = `${str4}minor`;
+    } else {
+      str5 = "prerelease";
+      if (obj.patch !== tmp.patch) {
+        str5 = `${str4}patch`;
       }
-      num = num2;
     }
-    return num;
+    return str5;
   }
 };

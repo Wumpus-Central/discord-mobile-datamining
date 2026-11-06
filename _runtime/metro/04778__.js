@@ -1,8 +1,9 @@
 // === Module 4778: ? ===
 
 // Module 4778
-import _typeof_mod from "module_4423" /* 4423 */;
-import requiredArgs_mod from "requiredArgs" /* 4424 */;
+import _typeof_mod from "module_4450" /* 4450 */;
+import requiredArgs_mod from "requiredArgs" /* 4451 */;
+import module_4454_mod from "module_4454" /* 4454 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -20,11 +21,30 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj3 = { default: module_4454 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4454;
+}
+module_4454 = tmp7;
 
-export default function isSameYear(arg0, arg1) {
+export default function setUTCISODay(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  return fullYear === _typeof.default(arg1).getFullYear();
+  const defaultResult1 = module_4454.default(arg1);
+  let diff = defaultResult1;
+  if (defaultResult1 % 7 === 0) {
+    diff = defaultResult1 - 7;
+  }
+  const defaultResult2 = _typeof.default(arg0);
+  let num = 0;
+  const uTCDay = defaultResult2.getUTCDay();
+  if ((diff % 7 + 7) % 7 < 1) {
+    num = 7;
+  }
+  const diff1 = num + diff - uTCDay;
+  defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff1);
+  return defaultResult2;
 };
 export default exports.default;

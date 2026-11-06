@@ -1,17 +1,21 @@
 // === Module 16421: ? ===
 
 // Module 16421
-import _mod16390 from "module_16390" /* 16390 */;
-import element from "element" /* 16422 */;
-import getOwnPropertyDescriptor from "module_16389" /* 16389 */;
-
-let tmp2 = !getOwnPropertyDescriptor;
+let propertyIsEnumerable = {}.propertyIsEnumerable;
 if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod16390(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
-    }
-  }).a);
+  if (getOwnPropertyDescriptor) {
+    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
+      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
+      return tmp && tmp.enumerable;
+    };
+  }
+  arg5.f = propertyIsEnumerable;
+} else {
+  const call = propertyIsEnumerable.call;
+  if (typeof call === "unknown") {
+    let propertyIsEnumerableResult = propertyIsEnumerable(1);
+  } else {
+    propertyIsEnumerableResult = call(obj, 1);
+  }
+  obj = { 1: 2 };
 }
-
-export default tmp2;

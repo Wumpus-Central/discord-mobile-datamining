@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 480, height: 413, scales: [2, 3], hash: "b25b2e24db6c14f15201cb7533aed65e", name: "register-background-dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "24def842b7fc85d108b018aef0f23eb6", name: "ArrowLargeLeftIcon", type: "png" });

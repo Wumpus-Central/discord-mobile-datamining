@@ -1,30 +1,39 @@
 // === Module 5255: ? ===
 
 // Module 5255
-import c from "c" /* 5240 */;
-import _mod5253 from "module_5253" /* 5253 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod17 from "module_17" /* 17 */;
+import _modAll65 from "module_65" /* 65 */;
 
-require = arg1;
-function getStringProperty(stringProperty, arg1) {
-  return stringProperty.stringProperty(arg1);
-}
+const Platform = _mod17.Platform;
 
-export function useRiveString(LVL, instance) {
-  const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod5253.useRiveProperty(instance, LVL, getStringProperty);
-  if (cResult[0] === tmp5) {
-    if (cResult[1] === tmp4) {
-      if (cResult[2] === tmp3) {
-        let tmp6 = cResult[3];
-      }
-      return tmp6;
-    }
+export function getHostComponent(RiveView, arg1) {
+  closure_0 = arg1;
+  if (null == _modAll65) {
+    const _Error = Error;
+    const error = new Error("NativeComponentRegistry is not available on android!");
+    throw error;
+  } else {
+    return _modAll65.get(RiveView, () => {
+      const tmp = closure_0();
+      const validAttributes = tmp.validAttributes;
+      (function wrapValidAttributes(validAttributes) {
+        const keys = Object.keys(validAttributes);
+        for (const item10009 of keys) {
+          let obj = {
+            diff(arg0, arg1) {
+                return arg0 !== arg1;
+              },
+            process(arg0) {
+                return arg0;
+              }
+          };
+          arg0[item10009] = obj;
+          continue;
+        }
+        return validAttributes;
+      })(validAttributes);
+      tmp.validAttributes = validAttributes;
+      return tmp;
+    });
   }
-  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
-  cResult[0] = tmp5;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = obj3;
-  tmp6 = obj3;
 }
