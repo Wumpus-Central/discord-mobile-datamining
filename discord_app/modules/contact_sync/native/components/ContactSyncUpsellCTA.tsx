@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
-import _modDef15936 from "../../../../../_runtime/metro/15936__.js";
+import _modDef15931 from "../../../../../_runtime/metro/15931__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const dismissUpsellCTA = fn(14475).dismissUpsellCTA;
+const dismissUpsellCTA = fn(14452).dismissUpsellCTA;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   container: {
     padding: 12,
@@ -54,10 +54,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       items = [obj3];
       obj2.options = items;
-      const result = location(7501).showSimpleActionSheet(obj2);
+      const result = location(7446).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef15936,
+    iconSource: _modDef15931,
     title: null,
     subtitle: null,
   };
@@ -67,7 +67,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
   obj.title = intl.string(location(1113).t.T6Rfd9);
   const intl2 = location(1113).intl;
   obj.subtitle = intl2.string(location(1113).t.c6KIpg);
-  return jsx(location(8322).FormCTA, {
+  return jsx(location(8267).FormCTA, {
     onPress: function handleOpen() {
       const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = location;
@@ -92,10 +92,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       items = [obj3];
       obj2.options = items;
-      const result = location(7501).showSimpleActionSheet(obj2);
+      const result = location(7446).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef15936,
+    iconSource: _modDef15931,
     title: null,
     subtitle: null,
   });

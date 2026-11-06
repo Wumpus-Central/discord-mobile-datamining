@@ -1,5 +1,5 @@
 // discord_app/lib/search/EnglishAnalyzer.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import snowballStemmer from "snowballStemmer.tsx";
 import Search from "../../../discord_common/js/shared/shared-constants/Search.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -95,8 +95,8 @@ function createHighlightMatcher(str) {
     tmp3 = str.length <= Search.SEARCH_PARTIAL_NAME_MATCH_MAX_QUERY_LENGTH;
   }
   const obj = { words: null, supportPartialMatches: null };
-  const mapped = _modDef12(str.split(/\W+/)).map(stripPossessive);
-  const tmp4Result = _modDef12(str.split(/\W+/));
+  const mapped = applyDefault(str.split(/\W+/)).map(stripPossessive);
+  const tmp4Result = applyDefault(str.split(/\W+/));
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
@@ -181,8 +181,8 @@ const set = new Set([
 const result = size.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
 
 export function analyze(str) {
-  const mapped = _modDef12(str.split(/\W+/)).map(stripPossessive);
-  const tmpResult = _modDef12(str.split(/\W+/));
+  const mapped = applyDefault(str.split(/\W+/)).map(stripPossessive);
+  const tmpResult = applyDefault(str.split(/\W+/));
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);

@@ -130,25 +130,25 @@ function FloatingNav(navigation) {
   GameProfileFloatingNavTsx1.__initData = tmp11;
   if (isGameProfileCommunitiesMobileEnabled) {
     let obj3 = {
-      tab: tmp4(9518).GameProfileNavTab.OVERVIEW,
-      IconComponent: tmp4(9883).GameControllerIcon,
+      tab: tmp4(9464).GameProfileNavTab.OVERVIEW,
+      IconComponent: tmp4(9833).GameControllerIcon,
       label: null,
     };
     const intl = tmp4(1113).intl;
     obj3.label = intl.string(tmp4(1113).t.qHmbyh);
     const items3 = [obj3];
-    let obj4 = { tab: tmp4(9518).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(8807).GroupIcon, label: null };
+    let obj4 = { tab: tmp4(9464).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(8753).GroupIcon, label: null };
     const intl2 = tmp4(1113).intl;
     obj4.label = intl2.string(tmp4(1113).t["3xFZEo"]);
     items3[1] = obj4;
     const obj5 = { style: tmp3.wrap, pointerEvents: "box-none", onLayout: navigation.onLayout, children: null };
     const obj6 = { colors: memo, style: tmp3.scrim, pointerEvents: "none" };
-    const items4 = [closure_7(tmp(5725), obj6)];
+    const items4 = [closure_7(tmp(5745), obj6)];
     const obj7 = { style: tmp3.pill, accessibilityRole: "tablist", children: null };
     const obj8 = {
       style: tmp3.pillBlur,
       pointerEvents: "none",
-      children: closure_7(tmp4(9144).BackgroundBlurFill, {}),
+      children: closure_7(tmp4(9090).BackgroundBlurFill, {}),
     };
     const items5 = [closure_7(closure_5, obj8)];
     const obj9 = { style: tmp3.pillRow, children: null };
@@ -178,7 +178,7 @@ function FloatingNav(navigation) {
         );
       }),
     };
-    items7[1] = closure_7(tmp4(14940).YouScreenNavIconMeasurer, obj11);
+    items7[1] = closure_7(tmp4(14917).YouScreenNavIconMeasurer, obj11);
     obj9.children = items7;
     items5[1] = closure_8(closure_5, obj9);
     obj7.children = items5;
@@ -200,7 +200,7 @@ const PX_48 = nativeDefault.space.PX_48;
 const PX_6 = nativeDefault.space.PX_6;
 const Easing = fn(1652).Easing;
 let closure_13 = Easing.inOut(fn(1652).Easing.cubic);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_14 = createStyles.createStyles((bottom) => {
   const obj = {
     wrap: null,

@@ -67,7 +67,7 @@ function FramePanelHeaderContentInner(arg0) {
   return React5(ActivityPanelHeader.BaseActivityPanelContent, obj3);
 }
 const View = fn(17).View;
-const asLaunched = fn(6985).asLaunched;
+const asLaunched = fn(6927).asLaunched;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_10 = noop.memo(function FramePanelHeaderContent(arg0) {

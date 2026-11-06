@@ -1,5 +1,5 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
@@ -79,8 +79,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(7403).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(7408).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(7350).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(7355).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -152,7 +152,7 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       const self = this;
       const options = found.options;
       const mapped = options.map((id) => id.id);
-      intersectionResult = _modDef12.intersection(mapped, this.getOnboardingResponses(c0));
+      intersectionResult = applyDefault.intersection(mapped, this.getOnboardingResponses(c0));
     }
     return intersectionResult;
   }
@@ -453,13 +453,13 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
           tmp4 = removedOptionIds.length > 0;
         }
         if (tmp4) {
-          _modDef12.pullAll(dependencyMap[guildId].responses, removedOptionIds);
+          applyDefault.pullAll(dependencyMap[guildId].responses, removedOptionIds);
         }
         if (selected) {
           const responses = dependencyMap[guildId].responses;
           responses.push(optionId);
         } else {
-          _modDef12.pull(dependencyMap[guildId].responses, optionId);
+          applyDefault.pull(dependencyMap[guildId].responses, optionId);
         }
         if (null == dependencyMap2[guildId]) {
           dependencyMap2[guildId] = {};

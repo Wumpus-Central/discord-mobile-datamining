@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/stores/SearchPeopleTabStore.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import util from "../../../../intl/index.native.tsx";
@@ -47,8 +47,8 @@ prototype["search"] = function search(str) {
     if (0 === trimmed1.length) {
       items = [];
     } else {
-      const values = _modDef12.chain(ChannelStore.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(14147).filterGroupDMs);
+      const values = applyDefault.chain(ChannelStore.getMutablePrivateChannels()).values();
+      const found = values.filter(trimmed1(14124).filterGroupDMs);
       const mapped = found.map((id) => {
         items = [id, NewMessageUserList.matchGroupDM(id, trimmed1), FrecencyStore.getScoreWithoutFetchingLatest(id.id)];
         return items;
@@ -64,7 +64,7 @@ prototype["search"] = function search(str) {
         }
         return diff;
       });
-      const chainResult = _modDef12.chain(ChannelStore.getMutablePrivateChannels());
+      const chainResult = applyDefault.chain(ChannelStore.getMutablePrivateChannels());
       items = sorted
         .map((item) => {
           [tmp] = item;

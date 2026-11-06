@@ -13,6 +13,7 @@ import ReactionNotificationDefault from "ReactionNotification.tsx";
 import ReminderNotificationDefault from "ReminderNotification.tsx";
 import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification.tsx";
 import MessageRequestNotificationDefault from "MessageRequestNotification.tsx";
+import StageSpeakInviteNotificationDefault from "../../stage_channels/native/components/StageSpeakInviteNotification.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import NativeMenuStore from "../../native_menu/native/NativeMenuStore.tsx";
@@ -49,19 +50,22 @@ function NotificationWrapper(notification) {
     if (constants.RESTRICTED_HOURS_WARNING !== type) {
       if (constants.RESTRICTED_SCHEDULE_UPDATED !== type) {
         if (constants.MESSAGE_REQUEST === type) {
-          obj = { notification };
+          const obj9 = { notification };
           return jsx(MessageRequestNotificationDefault, { notification });
+        } else if (constants.STAGE_SPEAK_INVITE === type) {
+          obj = { notification };
+          return jsx(StageSpeakInviteNotificationDefault, { notification });
         } else {
           return null;
         }
       }
     }
-    const obj9 = { notification };
+    const obj10 = { notification };
     return jsx(RestrictedHoursWarningNotificationDefault, { notification });
   }
 }
 let StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(11212);
+const InAppNotificationConstants = fn(11167);
 ({
   DEFAULT_ANIMATION_TIMING: metroImportDefault,
   extrapolateConfig: closure_8,
@@ -76,7 +80,7 @@ const jsx = fn(21).jsx;
 let obj = { duration: 200, easing: null };
 const Easing = fn(1652).Easing;
 obj.easing = Easing.in(fn(1652).Easing.ease);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_16 = createStyles.createStyles({
   safeAreaContainer: {
     position: "absolute",
@@ -130,8 +134,8 @@ export default function InAppNotificationContainer(notification) {
   const tmp = closure_16();
   let isIOSResult = require("utils/PlatformUtils").isIOS();
   if (isIOSResult) {
-    isIOSResult = tmp2(11387).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
-    const tmp2Result = tmp2(11387);
+    isIOSResult = tmp2(11349).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
+    const tmp2Result = tmp2(11349);
   }
   items = [notification];
   const memo = noop.useMemo(() => InAppNotificationUtils.extractMetadataFromNotification(c0), items);
@@ -223,7 +227,7 @@ export default function InAppNotificationContainer(notification) {
       AnalyticsUtilsDefault.track(constants2.IN_APP_NOTIFICATION_SHOWN, obj2);
     }
   }, items3);
-  const Gesture = tmp2(5430).Gesture;
+  const Gesture = tmp2(5450).Gesture;
   const tmp2Result11 = require("initialize");
   const items4 = [
     closure_19,

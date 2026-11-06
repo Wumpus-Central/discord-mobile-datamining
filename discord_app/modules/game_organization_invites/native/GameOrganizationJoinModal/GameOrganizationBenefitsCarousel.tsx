@@ -1,7 +1,7 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationBenefitsCarousel.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2533 from "../../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2530 from "../../GameOrganizationInvitesUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -47,10 +47,10 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-let items = [{ message: _modDef2533.WUVzdk }];
-let obj = { message: _modDef2533.WUVzdk };
-items[1] = { message: _modDef2533.MEQJ1m };
-const createStyles = fn(5143);
+let items = [{ message: _modDef2530.WUVzdk }];
+let obj = { message: _modDef2530.WUVzdk };
+items[1] = { message: _modDef2530.MEQJ1m };
+const createStyles = fn(5170);
 let obj4 = {
   carouselContainer: { marginHorizontal: -PX_16 },
   carousel: { alignItems: "stretch" },
@@ -60,7 +60,7 @@ let obj4 = {
   benefitImage: null,
   pagination: null,
 };
-let obj2 = { message: _modDef2533.MEQJ1m };
+let obj2 = { message: _modDef2530.MEQJ1m };
 obj4.card = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 obj4.cardSpacing = { marginRight: PX_12 };
 let obj5 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };

@@ -31,9 +31,9 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const obj2 = { children: null };
   const obj = rewards(504);
   const items2 = [
-    closure_9(rewards(13656).Pile, {
+    closure_9(rewards(13631).Pile, {
       "aria-label": memo,
-      shape: rewards(9662).CutoutShape.Circle,
+      shape: rewards(9611).CutoutShape.Circle,
       size: v50,
       gap: 2,
       depthX: 0.28,
@@ -45,8 +45,8 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const intl = rewards(1113).intl;
   obj5.children = intl.string(rewards(1113).t.DCCcdz);
   const items3 = [
-    closure_9(rewards(5763).Text, obj5),
-    closure_9(rewards(5763).Text, {
+    closure_9(rewards(5781).Text, obj5),
+    closure_9(rewards(5781).Text, {
       variant: "heading-xs/semibold",
       color: "text-subtle",
       lineClamp: 2,
@@ -136,7 +136,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let c12 = 50;
 let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, "rgba(16, 142, 77, 0.5)"];
-let createStyles = fn(5143);
+let createStyles = fn(5170);
 let obj2 = {
   rewardShelf: {
     flexDirection: "row",
@@ -160,8 +160,8 @@ let obj2 = {
 };
 let size = {
   marginLeft: "auto",
-  width: fn(5776).SMALL_BUTTON_HEIGHT,
-  height: fn(5776).SMALL_BUTTON_HEIGHT,
+  width: fn(5794).SMALL_BUTTON_HEIGHT,
+  height: fn(5794).SMALL_BUTTON_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
 };
@@ -178,7 +178,7 @@ let items2 = [{ scaleX: -1 }];
 obj5.transform = items2;
 obj2.chestLogoMirrored = obj5;
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5143);
+createStyles = fn(5170);
 let closure_17 = createStyles.createStyles((width) => ({
   nitroCoin: { width, height: width, alignItems: "center", justifyContent: "center" },
 }));

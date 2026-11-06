@@ -135,6 +135,7 @@ const obj = {
   SharedSpacesWarningManager: null,
   StageBoostUpsellManager: null,
   StageChannelRequestToSpeakMessageManager: null,
+  StageSpeakInviteNotificationManager: null,
   StageMusicManager: null,
   StaffMemberPreloaderManager: null,
   SubscriptionManager: null,
@@ -862,6 +863,12 @@ obj.StageChannelRequestToSpeakMessageManager = {
   actions: ["VOICE_STATE_UPDATES"],
   inlineRequire() {
     return require("StageChannelRequestToSpeakMessageManager").default;
+  },
+};
+obj.StageSpeakInviteNotificationManager = {
+  actions: ["VOICE_STATE_UPDATES"],
+  inlineRequire() {
+    return require("StageSpeakInviteNotificationManager").default;
   },
 };
 obj.StageMusicManager = {

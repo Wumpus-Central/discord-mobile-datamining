@@ -1,5 +1,5 @@
 // discord_app/modules/build_overrides/validateBuildOverride.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import util from "../../intl/index.native.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -105,7 +105,7 @@ export default function validateBuildOverride(targetBuildOverride, items3, Versi
         }
         obj8 = { valid: true };
       }
-      obj12 = _modDef12;
+      obj12 = applyDefault;
     }
   }
   const obj9 = { valid: false, reason: null };

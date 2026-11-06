@@ -1,6 +1,6 @@
 // discord_app/stores/views/SortedVoiceStateStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
@@ -94,7 +94,7 @@ function makeSortedVoiceState(voiceState, guildId, id, connectedOn) {
   return obj3;
 }
 function handleUpdateUsers() {
-  return _modDef12.reduce(closure_13, (arg0, updateUsers) => updateUsers.updateUsers() || arg0, false);
+  return applyDefault.reduce(closure_13, (arg0, updateUsers) => updateUsers.updateUsers() || arg0, false);
 }
 function handleFavoritesChange() {
   c14 = null;

@@ -1,5 +1,5 @@
 // discord_app/modules/payments/native/hooks/useGiftOptionsSyncDebounce.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ export default function useGiftOptionsSyncDebounce(arg0) {
   noop = noop.useRef(null);
   noop.useRef([]);
   const tmp = useInitialValueDefault(() =>
-    _modDef12.debounce(() => {
+    applyDefault.debounce(() => {
       closure_1_2.current = ref.current;
       closure_1_0((arg0) => arg0 + 1);
     }, 500),

@@ -286,7 +286,7 @@ function useOnActivityItemSelected(arg0) {
       : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2147).STAFF_RELEASE_PHASES;
+const STAFF_RELEASE_PHASES = fn(2142).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1072).ApplicationFlags;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 const size = fn(2);

@@ -1,7 +1,7 @@
 // discord_app/lib/guild/GuildMemberSubscriptions.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 
@@ -110,9 +110,9 @@ prototype["checkForLeaks"] = function checkForLeaks(arg0, arg1) {
 prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
   const self = this;
   if (!obj.isEmpty(this._unsubscriptions)) {
-    let item = _modDef12.forEach(self._unsubscriptions, (arg0, arg1) => {
+    let item = applyDefault.forEach(self._unsubscriptions, (arg0, arg1) => {
       dependencyMap = tmp3;
-      const item = _modDef12.forEach(arg0, (arg0, arg1) => {
+      const item = applyDefault.forEach(arg0, (arg0, arg1) => {
         let num = dependencyMap[arg1];
         if (num == null) {
           num = 0;
@@ -127,12 +127,12 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
         delete tmp[tmp2];
       }
       self._onChange(arg1, self.get(arg1));
-      obj2 = _modDef12;
+      obj2 = applyDefault;
     });
     self._unsubscriptions = {};
-    const tmpResult = _modDef12;
+    const tmpResult = applyDefault;
   }
-  obj = _modDef12;
+  obj = applyDefault;
 };
 
 export default GuildMemberSubscriptions;

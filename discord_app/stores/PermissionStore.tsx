@@ -1,5 +1,5 @@
 // discord_app/stores/PermissionStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
@@ -69,7 +69,7 @@ function getUncachedChannelPermissions(id, arg1) {
             }
             return NONE2;
           }
-          obj2 = _modDef12;
+          obj2 = applyDefault;
         }
       }
       const obj6 = { user: currentUser, context: channel, checkElevated: flag };
@@ -140,7 +140,7 @@ function handleGuildRole(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = _modDef12.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = applyDefault.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -172,7 +172,7 @@ function handleImpersonateUpdate(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = _modDef12.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = applyDefault.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -259,12 +259,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     excludeGuildPermissions,
   };
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(5010);
+const GuildRecord = fn(5037);
 ({ isGuildOwner: closure_10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1072).Permissions;
-let closure_18 = fn(5079).MemberSafetyPagePermissions;
+let closure_18 = fn(5106).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

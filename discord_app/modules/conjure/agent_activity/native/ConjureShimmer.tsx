@@ -2,8 +2,8 @@
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05725_LinearGradient.js";
-import _modDef7182 from "../../../../../_runtime/metro/07182__.js";
+import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
+import _modDef7129 from "../../../../../_runtime/metro/07129__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 const locations = [0, 0.4, 0.5, 0.6, 1];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_13 = createStyles.createStyles({
   root: { position: "relative" },
   band: { position: "absolute", top: 0, bottom: 0 },
@@ -140,7 +140,7 @@ export default function ConjureShimmer(epoch) {
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
     obj8.children = closure_8(LinearGradientDefault, obj10);
     obj6.children = closure_8(_modDef1652.View, obj8);
-    obj5.children = closure_8(_modDef7182, obj6);
+    obj5.children = closure_8(_modDef7129, obj6);
     tmp18 = closure_8(closure_6, obj5);
   }
   items5[1] = tmp18;

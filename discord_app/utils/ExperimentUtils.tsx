@@ -1,5 +1,5 @@
 // discord_app/utils/ExperimentUtils.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import ExperimentManager from "../modules/experiments/ExperimentManager.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import ExperimentStore from "../modules/experiments/ExperimentStore.tsx";
@@ -19,7 +19,7 @@ function getFirstEligibleUserExperiment(arg0) {
   }
   return null;
 }
-const ExperimentConstants = fn(5365);
+const ExperimentConstants = fn(5385);
 ({ ExperimentTypes: hasOwnProperty, ExperimentBuckets: closure_6 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/ExperimentUtils.tsx");
@@ -58,7 +58,7 @@ export default {
             return false;
           } else if (type.type === constants.USER) {
             if (type2.type === tmp.USER) {
-              return _modDef12.isEqual(type.context, type2.context);
+              return applyDefault.isEqual(type.context, type2.context);
             }
           }
         }

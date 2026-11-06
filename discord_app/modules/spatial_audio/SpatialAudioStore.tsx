@@ -6,7 +6,7 @@ import SpatialAudioForVoiceExperimentDefault from "../voice_panel/SpatialAudioFo
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 
 require = fn;
 function applyActiveOptions(arg0) {
@@ -73,8 +73,8 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(6055).DEFAULT_SPATIAL_AUDIO_OPTIONS;
-const Constants = fn(5905);
+const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(6075).DEFAULT_SPATIAL_AUDIO_OPTIONS;
+const Constants = fn(5924);
 ({ Features: metroImportDefault, MediaEngineContextTypes: closure_8, SpatialAudioStatus } = Constants);
 let obj = {};
 let isSpatial = {};
@@ -95,10 +95,10 @@ prototype["initialize"] = function initialize(enabled) {
   items = [ApexExperimentStore];
   self.syncWith(items, handleExperimentChange);
   const mediaEngine = MediaEngineStore.getMediaEngine();
-  mediaEngine.on(self(5926).MediaEngineEvent.Connection, (setSpatialAudioEnabled) =>
+  mediaEngine.on(self(5945).MediaEngineEvent.Connection, (setSpatialAudioEnabled) =>
     setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial.isSpatial),
   );
-  mediaEngine.on(self(5926).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
+  mediaEngine.on(self(5945).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
     let flag = arg0 !== global;
     if (flag) {
       global = arg0;

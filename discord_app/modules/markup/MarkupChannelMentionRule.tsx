@@ -1,7 +1,7 @@
 // discord_app/modules/markup/MarkupChannelMentionRule.tsx
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
-import _modDef2072 from "../../../_runtime/metro/02072__.js";
+import _modDef2067 from "../../../_runtime/metro/02067__.js";
 import StringUtils from "../../utils/StringUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import LinkUtils from "../links/LinkUtils.tsx";
@@ -160,7 +160,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
           obj4.content = items3;
           let obj11 = obj4;
         } else if (null != url) {
-          const obj9 = { type: "link", content: null, target: null, title: "id" };
+          const obj9 = { type: "link", content: null, target: null, title: "channel" };
           const obj10 = { type: "text", content: url };
           const items4 = [obj10];
           obj9.content = items4;
@@ -373,7 +373,7 @@ let obj2 = {
   },
 };
 obj.channelOrMessageUrl = {
-  order: _modDef2072.defaultRules.url.order - 0.5,
+  order: _modDef2067.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -398,7 +398,7 @@ obj.channelOrMessageUrl = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "id" };
+      const obj = { type: "link", content: null, target: null, title: "channel" };
       const obj2 = { type: "text", content: tmp };
       items = [obj2];
       obj.content = items;
@@ -433,7 +433,7 @@ obj.channelOrMessageUrl = {
   },
 };
 let obj3 = {
-  order: _modDef2072.defaultRules.url.order - 0.5,
+  order: _modDef2067.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -458,7 +458,7 @@ let obj3 = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "id" };
+      const obj = { type: "link", content: null, target: null, title: "channel" };
       const obj2 = { type: "text", content: tmp };
       items = [obj2];
       obj.content = items;
@@ -493,7 +493,7 @@ let obj3 = {
   },
 };
 obj.mediaPostLink = {
-  order: _modDef2072.defaultRules.url.order - 0.5,
+  order: _modDef2067.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;
@@ -532,7 +532,7 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "id" };
+    const obj = { type: "link", content: null, target: tmp, title: "channel" };
     items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;

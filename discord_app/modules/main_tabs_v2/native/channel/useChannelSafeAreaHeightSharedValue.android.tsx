@@ -4,10 +4,10 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useChannelDockHeightDefault from "useChannelDockHeight.tsx";
+import MainTabsNavigatorPanelContextDefault from "../panels/MainTabsNavigatorPanelContext.tsx";
 import useSafeAreaInsetsSharedValueDefault from "../../../safe_area/useSafeAreaInsetsSharedValue.native.tsx";
 import useSafeAreaBottomKeyboardInfoControllerDefault from "useSafeAreaBottomKeyboardInfoController.tsx";
 import useKeyboardActionSheetHeightDefault from "../../../action_sheet/native/useKeyboardActionSheetHeight.tsx";
-import useIsChannelFullyOpenDefault from "useIsChannelFullyOpen.tsx";
 import VoicePanelSheetMorph from "../../../voice_panel/native/dock/VoicePanelSheetMorph.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -39,8 +39,11 @@ export default function useChannelSafeAreaHeightSharedValue() {
   _require = tmp7;
   const obj5 = require("useToken");
   const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(tmp7);
-  const tmp9 = useIsChannelFullyOpenDefault();
-  items = [tmp7, sharedValue1, tmp9];
+  const obj6 = require("../../../../../_runtime/metro/01652__.js");
+  const isChannelFullyOpen = require("useIsChannelFullyOpen").getIsChannelFullyOpen(
+    noop.useContext(MainTabsNavigatorPanelContextDefault),
+  );
+  items = [tmp7, sharedValue1, isChannelFullyOpen];
   const effect = noop.useEffect(() => {
     if (c2) {
       let withSpringResult = spring_spring.withSpring(c0, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG);
@@ -49,7 +52,7 @@ export default function useChannelSafeAreaHeightSharedValue() {
     }
     const result = _undefined2.set(withSpringResult);
   }, items);
-  const obj6 = require("../../../../../_runtime/metro/01652__.js");
+  const obj7 = require("useIsChannelFullyOpen");
   const items1 = [
     c4,
     sharedValue1,

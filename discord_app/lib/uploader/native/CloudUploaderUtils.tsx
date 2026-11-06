@@ -1,5 +1,5 @@
 // discord_app/lib/uploader/native/CloudUploaderUtils.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import UploadUtils from "../../../utils/UploadUtils.tsx";
 import LocaleStore from "../../../modules/user_settings/LocaleStore.tsx";
@@ -11,7 +11,7 @@ function getUploadPayload(self) {
   const obj = {
     filename: self.filename,
     file_size: self.currentSize,
-    id: _modDef12.uniqueId(),
+    id: applyDefault.uniqueId(),
     original_content_type: "a",
   };
   return obj;
@@ -31,8 +31,8 @@ export function prepareMessagePayload(Authorization, arr, arg2, arg3) {
       const obj = {};
       let merged = Object.assign(arg2);
       const items1 = [];
-      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(_modDef12.get(obj, arg3, []), 0));
-      let result = _modDef12.set(obj, arg3, items1);
+      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(applyDefault.get(obj, arg3, []), 0));
+      let result = applyDefault.set(obj, arg3, items1);
     }
     const obj2 = {
       Authorization,

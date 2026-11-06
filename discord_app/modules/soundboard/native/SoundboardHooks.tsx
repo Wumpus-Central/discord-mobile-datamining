@@ -6,7 +6,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;
-const SoundboardStyleConstants = fn(19481);
+const SoundboardStyleConstants = fn(19473);
 ({ SOUNDS_PER_ROW: closure_6, SOUND_ROW_PADDING: metroImportDefault } = SoundboardStyleConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
@@ -35,8 +35,8 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -49,15 +49,16 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj5 = { value, done: true };
+              return obj5;
             } else if (c0) {
-              const FrecencyUserSettingsActionCreators = shouldFetch(4973).FrecencyUserSettingsActionCreators;
-              const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
+              const FrecencyUserSettingsActionCreators = shouldFetch(5000).FrecencyUserSettingsActionCreators;
+              shouldFetch(5288).ignoreErrors(FrecencyUserSettingsActionCreators.loadIfNecessary());
+              const obj2 = shouldFetch(5288);
               c1 = 1;
               c0 = 1;
-              const obj5 = { value: shouldFetch(7659).maybeFetchSoundboardSounds(), done: false };
-              return obj5;
+              const obj6 = { value: shouldFetch(7612).maybeFetchSoundboardSounds(), done: false };
+              return obj6;
             }
           } else if (arg0 === 1) {
             c0 = 3;
@@ -69,9 +70,9 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
           }
           c0 = 3;
           return { value: "HermesInternal", done: null };
-        } catch (tmp9) {
+        } catch (tmp8) {
           c0 = tmp;
-          throw tmp9;
+          throw tmp8;
         }
       }
     };

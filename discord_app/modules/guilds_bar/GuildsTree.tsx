@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/GuildsTree.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -152,7 +152,7 @@ prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   return self;
 };
 prototype["cloneNode"] = function cloneNode(arg0) {
-  return _mod12.clone(arg0);
+  return apply.clone(arg0);
 };
 prototype["convertToFolder"] = function convertToFolder(node) {
   const self = this;
@@ -229,7 +229,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
                     items1 = [];
                   } else {
                     let children = type.children;
-                    let mapped = children.map(/* F124534 */ function() { ... });
+                    let mapped = children.map(/* F124759 */ function() { ... });
                     items1 = mapped.flat();
                   }
                   return items1;

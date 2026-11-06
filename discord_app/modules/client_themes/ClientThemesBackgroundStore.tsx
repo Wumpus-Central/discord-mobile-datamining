@@ -6,7 +6,6 @@ import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import UserUtils from "../../utils/UserUtils.tsx";
-import ProductCatalog from "../premium/ProductCatalog.tsx";
 import ThemeActionCreators from "../user_settings/ThemeActionCreators.tsx";
 import SelectivelySyncedUserSettingsStore from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
@@ -71,21 +70,14 @@ function handleUserStoreChange() {
       user = undefined;
       let flag = true;
     }
-    const currentUser = UserStore.getCurrentUser();
     const obj = require("HexagonCampaignUtils");
-    if (obj3.hasPerkOnlyFromHexagonCampaign(currentUser, HexagonCampaignPerk.CLIENT_THEME)) {
-      const CLIENT_THEMES = ProductCatalog.CLIENT_THEMES;
-      let featureValue = CLIENT_THEMES.getFeatureValue(currentUser);
-    } else {
-      featureValue = PremiumUtilsDefault.canUseClientThemes(currentUser);
-    }
-    if (!featureValue === closure_15) {
+    const tmp13 = !PremiumUtilsDefault.canUseClientThemes(UserStore.getCurrentUser());
+    if (tmp13 === closure_15) {
       return flag;
     } else {
-      closure_15 = tmp17;
+      closure_15 = tmp13;
       c17 = false;
     }
-    obj3 = require("HexagonCampaignUtils");
   }
   flag = false;
   if (null == user) {
@@ -187,9 +179,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4996).isGuildTextChannelType;
+const isGuildTextChannelType = fn(5023).isGuildTextChannelType;
 const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5168).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5195).HexagonCampaignPerk;
 const SystemThemeState = fn(1195).SystemThemeState;
 let closure_15 = true;
 let c16 = false;

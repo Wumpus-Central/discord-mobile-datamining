@@ -1,6 +1,6 @@
 // discord_app/modules/forums/ForumHooks.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ThreadSortOrder from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
@@ -29,7 +29,7 @@ import ForumSearchStore from "ForumSearchStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ForumTimestampFormats = fn(7596).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7541).ForumTimestampFormats;
 const Constants = fn(1072);
 ({
   AnalyticsObjectTypes: closure_20,
@@ -37,7 +37,7 @@ const Constants = fn(1072);
   EMPTY_STRING_SNOWFLAKE_ID: closure_22,
   Permissions: closure_23,
 } = Constants);
-const ChannelFlags = fn(4999).ChannelFlags;
+const ChannelFlags = fn(5026).ChannelFlags;
 let closure_25 = fn(1112).MAX_THREAD_UNREAD_MESSAGE_COUNT;
 let closure_26 = { isNew: false, hasUnreads: false };
 const size = fn(2);
@@ -86,7 +86,7 @@ export function useExistingPin(thread) {
   _require = thread;
   items = [ActiveThreadsStore, ChannelStore];
   return require("initialize").useStateFromStores(items, () => {
-    const keys = _modDef12(ActiveThreadsStore.getThreadsForParent(thread.guild_id, thread.parent_id)).keys();
+    const keys = applyDefault(ActiveThreadsStore.getThreadsForParent(thread.guild_id, thread.parent_id)).keys();
     const found = keys.filter((item) => {
       channel = channel.getChannel(item);
       let hasFlagResult;
@@ -157,7 +157,7 @@ export function useMostUsedReaction(reactions) {
     }
     if (0 !== reactions.length) {
       items = [(count) => count.count + count.burst_count, (burst_count) => burst_count.burst_count];
-      return _modDef12.orderBy(reactions, items, ["desc", "desc"])[0];
+      return applyDefault.orderBy(reactions, items, ["desc", "desc"])[0];
     }
   }, items);
 }
@@ -240,7 +240,7 @@ export function useSomeForumPostReactions(message) {
       let orderByResult = reactions;
       if (flag) {
         items = [(count) => count.count + count.burst_count, (burst_count) => burst_count.burst_count];
-        orderByResult = _modDef12.orderBy(reactions, items, ["desc", "desc"]);
+        orderByResult = applyDefault.orderBy(reactions, items, ["desc", "desc"]);
       }
       return orderByResult;
     }, items1);
@@ -310,7 +310,7 @@ export function useMaxPossibleForumPostReactions(message) {
         reactions = [];
       }
       items = [(count) => count.count + count.burst_count, (burst_count) => burst_count.burst_count];
-      return _modDef12.orderBy(reactions, items, ["desc", "desc"]);
+      return applyDefault.orderBy(reactions, items, ["desc", "desc"]);
     }, items1);
     let items2 = [];
     if (null != null) {
@@ -434,7 +434,7 @@ export function useForumPostMessageAuthor(message, thread) {
   items = [UserStore];
   const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
   const obj = id(504);
-  const nullableMessageAuthor = id(6576).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(6596).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = noop.useEffect(() => {
     let tmp2 = null != id;

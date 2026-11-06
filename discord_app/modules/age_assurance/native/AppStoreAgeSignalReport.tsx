@@ -188,8 +188,8 @@ function startAgeSignalReport(isColdLaunch, connection) {
   if (tmp) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp2(5829).shouldCollectAppStoreSignal();
-      const tmp2Result = tmp2(5829);
+      result = tmp2(5847).shouldCollectAppStoreSignal();
+      const tmp2Result = tmp2(5847);
     }
     tmp = result;
     const obj = require("AppStoreAgeSignalSupport");

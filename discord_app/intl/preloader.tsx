@@ -1,5 +1,5 @@
 // discord_app/intl/preloader.tsx
-import asyncRequireImpl from "../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/02118_asyncRequireImpl.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -107,6 +107,7 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
           asyncRequireImpl(dependencyMap[78], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[79], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[80], dependencyMap.paths),
+          asyncRequireImpl(dependencyMap[46], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[81], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[82], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[83], dependencyMap.paths),
@@ -118,6 +119,7 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
           asyncRequireImpl(dependencyMap[89], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[90], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[91], dependencyMap.paths),
+          asyncRequireImpl(dependencyMap[92], dependencyMap.paths),
         ];
         c0 = 3;
         const obj = { value: Promise.all(items), done: true };

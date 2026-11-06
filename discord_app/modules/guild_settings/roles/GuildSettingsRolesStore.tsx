@@ -16,7 +16,7 @@ import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildSettingsStore from "../GuildSettingsStore.tsx";
 import Constants from "../../../Constants.tsx";
 import EnhancedRoleColorConstants from "../../premium/powerups/constants/EnhancedRoleColorConstants.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function handleSetSection(arg0) {

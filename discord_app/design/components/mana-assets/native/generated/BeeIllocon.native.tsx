@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/BeeIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef12934 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-1x.png.js";
-import _modDef12935 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-2x.png.js";
-import _modDef12936 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-3x.png.js";
+import _modDef12899 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-1x.png.js";
+import _modDef12900 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-2x.png.js";
+import _modDef12901 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BeeIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12934 }, 3: null };
-const obj2 = { uri: _modDef12934 };
-obj[2] = { uri: _modDef12935 };
-const obj3 = { uri: _modDef12935 };
-obj[3] = { uri: _modDef12936 };
+let obj = { 1: null, 2: { uri: _modDef12899 }, 3: null };
+const obj2 = { uri: _modDef12899 };
+obj[2] = { uri: _modDef12900 };
+const obj3 = { uri: _modDef12900 };
+obj[3] = { uri: _modDef12901 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
 
@@ -28,7 +28,7 @@ export function BeeIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7213).getAssetSource(obj);
+  obj.source = num(7160).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

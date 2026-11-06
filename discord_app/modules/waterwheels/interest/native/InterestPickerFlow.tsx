@@ -18,7 +18,7 @@ export default function InterestPickerFlow(arm) {
   const interestPickerPicks = arm(getPicks[4]).useInterestPickerPicks();
   getPicks = interestPickerPicks.getPicks;
   const setPicks = interestPickerPicks.setPicks;
-  const tmp4 = setPicks(first.useState("picker"), 2);
+  let tmp4 = setPicks(first.useState("picker"), 2);
   first = tmp4[0];
   closure_5 = tmp4[1];
   const first1 = setPicks(first.useState(arm(getPicks[5]).createInterestGuildsResource), 1)[0];
@@ -50,10 +50,11 @@ export default function InterestPickerFlow(arm) {
       onComplete() {
         const tmp = getPicks();
         if (!ref.current) {
-          tmp2.current = true;
+          tmp3.current = true;
           setPicks(tmp);
           first1.dispose();
-          onComplete(tmp, false);
+          onComplete(tmp, 0 === tmp2);
+          const tmp4 = 0 === tmp2;
         }
       },
     };
@@ -110,12 +111,13 @@ export default function InterestPickerFlow(arm) {
       obj2.pick_ids = pick_ids;
       obj2.duration_ms = Math.max(0, Date.now() - ref2.current);
       AnalyticsUtilsDefault.track(AnalyticEvents.WATERWHEELS_INTEREST_PICKER_SKIP, obj2);
-      if (!ref.current) {
-        tmp3.current = true;
-        setPicks(pick_ids);
-        first1.dispose();
-        onComplete(pick_ids, true);
+      setPicks(pick_ids);
+      if (0 === pick_ids.length) {
+        const popular = first1.loadPopular();
+      } else {
+        first1.setPicks(pick_ids);
       }
+      closure_5("guilds");
     };
     tmp13 = first1(onComplete(tmp2[9]), obj3);
     const tmp16 = onComplete(tmp2[9]);

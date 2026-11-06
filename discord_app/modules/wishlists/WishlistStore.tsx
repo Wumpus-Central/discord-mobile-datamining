@@ -52,8 +52,8 @@ prototype["hasError"] = function hasError(arg0) {
 prototype["getError"] = function getError(arg0) {
   return this.get(arg0).error;
 };
-prototype["getUpdatedAt"] = function getUpdatedAt(wishlistId) {
-  return this.get(wishlistId).updatedAt;
+prototype["getUpdatedAt"] = function getUpdatedAt(firstWishlistId) {
+  return this.get(firstWishlistId).updatedAt;
 };
 prototype["getLastFetchedAt"] = function getLastFetchedAt(arg0) {
   return this.get(arg0).lastFetchedAt;

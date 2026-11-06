@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import CheckpointPressable from "../CheckpointPressable.tsx";
@@ -88,11 +88,11 @@ function TraitTab(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6204);
+const CheckpointConstants = fn(6224);
 ({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   scroll: { flexGrow: 0 },
   scrollContent: { paddingHorizontal: nativeDefault.space.PX_16 },
@@ -250,7 +250,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
       } else {
         const obj = { selectedOption: activeCustomizationOption, onSelectOption };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(13929, dependencyMap.paths),
+          asyncRequireImpl(13905, dependencyMap.paths),
           "CheckpointFinalizeTraitPicker",
           obj,
         );

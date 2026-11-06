@@ -6,7 +6,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: { flex: 1, alignItems: "center", justifyContent: "center" },
   header: { marginBottom: 16 },
@@ -36,16 +36,16 @@ export default function HubEmailConnectionWaitlist(school) {
         const intl = onClose(1113).intl;
         obj.text = intl.string(onClose(1113).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_5(onClose(7700).HeaderActionButton, obj);
+        return closure_2_5(onClose(7653).HeaderActionButton, obj);
       },
     });
   }, items);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
   let obj = onClose(1499);
-  obj3.source = navigation(14574);
+  obj3.source = navigation(14551);
   obj3.style = tmp.header;
-  const items1 = [closure_5(navigation(5854), obj3), , ,];
+  const items1 = [closure_5(navigation(5872), obj3), , ,];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1113).intl;
   obj4.children = intl.string(onClose(1113).t.OaloU5);
@@ -53,13 +53,13 @@ export default function HubEmailConnectionWaitlist(school) {
   const obj5 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1113).intl;
   obj5.children = intl2.format(onClose(1113).t.Rs7MXJ, { school: school.school });
-  items1[2] = closure_5(onClose(5763).Text, obj5);
+  items1[2] = closure_5(onClose(5781).Text, obj5);
   const obj6 = { style: tmp.redesignButton, children: null };
   const obj7 = { size: "lg", text: null, onPress: null };
   const intl3 = onClose(1113).intl;
   obj7.text = intl3.string(onClose(1113).t.i4jeWR);
   obj7.onPress = onClose;
-  obj6.children = closure_5(onClose(5770).Button, obj7);
+  obj6.children = closure_5(onClose(5788).Button, obj7);
   items1[3] = closure_5(View, obj6);
   obj2.children = items1;
   return closure_6(View, obj2);

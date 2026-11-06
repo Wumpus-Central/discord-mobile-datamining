@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/hooks/useAppsInThisServer.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(9918).useGuildIndexState;
-const limit = fn(6173).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(9868).useGuildIndexState;
+const limit = fn(6193).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 
@@ -94,7 +94,7 @@ export default function useAppsInThisServer(context) {
   const obj7 = { appsInThisServer: null, isLoading: tmp2Result.fetchState.fetching || discovery.loading };
   const items4 = [stateFromStores, sortApplicationsViaFrecency];
   obj7.appsInThisServer = obj6.useMemo(() => {
-    const found = _modDef12
+    const found = applyDefault
       .compact(sortApplicationsViaFrecency.map((application) => application.application))
       .filter((id) => {
         let tmp = false === closure_1_1;

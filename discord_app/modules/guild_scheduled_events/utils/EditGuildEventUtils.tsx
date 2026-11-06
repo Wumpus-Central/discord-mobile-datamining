@@ -4,7 +4,7 @@ import EntityUtils from "EntityUtils.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4998);
+const GuildScheduledEventsConstants = fn(5025);
 ({
   GuildScheduledEventEntityTypes: c3,
   GuildScheduledEventStatus: closure_4,

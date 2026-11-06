@@ -12,13 +12,13 @@ function useShowLinkDecorationsSettingValue() {
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
   const result = AccessibilityActionCreators.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OLZFB8);
   },
-  parent: fn(8578).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8524).MobileUserSettings.ACCESSIBILITY,
   useValue: useShowLinkDecorationsSettingValue,
   onValueChange: onShowLinkDecorationsValueChange,
 });

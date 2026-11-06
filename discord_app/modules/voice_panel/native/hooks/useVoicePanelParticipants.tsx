@@ -2,6 +2,7 @@
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
+import StageChannelRoleStore from "../../../stage_channels/StageChannelRoleStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
@@ -20,10 +21,10 @@ function getMemoizedParticipant(item10013, get) {
   }
   return value;
 }
-const VoicePanelConstants = fn(11419);
-({ VoicePanelCardItemType: closure_11, VoicePanelCTACard: closure_12 } = VoicePanelConstants);
+const VoicePanelConstants = fn(11381);
+({ VoicePanelCardItemType: closure_12, VoicePanelCTACard: map1 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
-let closure_14 = [];
+let closure_15 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelParticipants.tsx");
 
@@ -39,83 +40,100 @@ export default function useVoicePanelCards(arg0, arg1) {
   if (flag == null) {
     flag = false;
   }
-  const tmp2 = require("useIsConnectedToVoiceChannel")(arg0);
-  noop = tmp2;
+  const isStageUnifiedCall = require("StageChannelUnifiedCallExperiment").useIsStageUnifiedCall(
+    channel,
+    "useVoicePanelCards",
+  );
+  const tmp3 = require("useIsConnectedToVoiceChannel")(arg0);
+  closure_5 = tmp3;
   const first = flag(
-    noop.useState(() => new Map()),
+    isStageUnifiedCall.useState(() => new Map()),
     1,
   )[0];
   items = [first];
-  const effect = noop.useEffect(() => () => first.clear(), items);
+  const effect = isStageUnifiedCall.useEffect(() => () => first.clear(), items);
+  let obj2 = require("StageChannelUnifiedCallExperiment");
   let items1 = [RTCConnectionStore];
   stateFromStores = require("initialize").useStateFromStores(
     items1,
     () => state.getState() === constants2.RTC_CONNECTED,
   );
-  let obj2 = require("initialize");
+  let obj3 = require("initialize");
   desyncedChannelParticipants = require("RTCConnectionDesyncHooks").useDesyncedChannelParticipants(arg0);
   let obj = { items: null, isConnected: null };
-  let obj3 = require("RTCConnectionDesyncHooks");
-  const items2 = [first, SortedVoiceStateStore];
-  const items3 = [tmp2, desyncedChannelParticipants, arg0, arg1, first, flag, id, stateFromStores];
+  let obj4 = require("RTCConnectionDesyncHooks");
+  const items2 = [closure_5, SortedVoiceStateStore, first];
+  const items3 = [tmp3, desyncedChannelParticipants, arg0, arg1, first, flag, isStageUnifiedCall, id, stateFromStores];
   obj.items = require("initialize").useStateFromStoresArray(
     items2,
     () => {
       let tmp;
-      if (closure_4) {
+      if (closure_5) {
         let voiceParticipantsHidden = ChannelRTCStore.getVoiceParticipantsHidden(closure_0);
-        items = [];
-        const filteredParticipants = ChannelRTCStore.getFilteredParticipants(closure_0);
-        for (const item10024 of filteredParticipants) {
-          let arr = items.push(item10024);
-          continue;
+        if (isStageUnifiedCall) {
+          let stageSpeakerParticipants = ChannelRTCStore.getStageSpeakerParticipants(closure_0);
+        } else {
+          stageSpeakerParticipants = ChannelRTCStore.getFilteredParticipants(closure_0);
         }
+        items = [];
+        HermesBuiltin.arraySpread(stageSpeakerParticipants, 0);
         if (!voiceParticipantsHidden) {
           if (null != desyncedChannelParticipants) {
-            for (const item10034 of tmp12) {
-              let arr2 = items.push(item10034);
+            for (const item10038 of tmp16) {
+              let tmp21 = isStageUnifiedCall;
+              if (isStageUnifiedCall) {
+                tmp21 = !StageChannelRoleStore.isSpeaker(item10038.user.id, closure_0);
+              }
+              if (!tmp21) {
+                let arr = items.push(item10038);
+              }
               continue;
             }
           }
         }
         let items1 = [];
-        const tmp18 = items[Symbol.iterator]();
-        while (tmp18 !== undefined) {
-          let obj = { type: constants.PARTICIPANT, id: tmp20.id };
-          let tmp25 = getMemoizedParticipant(obj, first);
+        for (const item10058 of items) {
+          let obj2 = { type: constants.PARTICIPANT, id: item10058.id };
+          let tmp33 = getMemoizedParticipant(obj2, first);
           if (flag) {
-            if (tmp25.id === id) {
-              tmp = tmp25;
+            if (tmp33.id === id) {
+              tmp = tmp33;
               continue;
             }
           }
-          let arr3 = items1.push(tmp25);
+          let arr2 = items1.push(tmp33);
         }
         if (null != tmp) {
           items1.push(tmp);
         }
-        let tmp34 = flag;
+        let tmp42 = flag;
         if (flag) {
-          tmp34 = stateFromStores;
+          tmp42 = stateFromStores;
         }
-        if (tmp34) {
-          tmp34 = 1 === items1.length;
+        if (tmp42) {
+          tmp42 = 1 === items1.length;
         }
-        if (tmp34) {
-          const obj2 = { type: constants.CTA, id: constants2.CALLER_DISCONNECTED };
-          items1.push(getMemoizedParticipant(obj2, first));
+        if (tmp42) {
+          const obj3 = { type: constants.CTA, id: constants2.CALLER_DISCONNECTED };
+          items1.push(getMemoizedParticipant(obj3, first));
+        }
+        if (isStageUnifiedCall) {
+          if (0 === items.length) {
+            const obj4 = { type: constants.CTA, id: constants2.NO_STAGE_SPEAKERS };
+            items1.push(getMemoizedParticipant(obj4, first));
+          }
+          if (items1.length <= 0) {
+            items1 = closure_15;
+          }
+          return items1;
         }
         if (voiceParticipantsHidden) {
           voiceParticipantsHidden = 0 === items.length;
         }
         if (voiceParticipantsHidden) {
-          const obj3 = { type: constants.CTA, id: constants2.NO_VIDEO_PARTICIPANTS };
-          items1.push(getMemoizedParticipant(obj3, first));
+          const obj5 = { type: constants.CTA, id: constants2.NO_VIDEO_PARTICIPANTS };
+          items1.push(getMemoizedParticipant(obj5, first));
         }
-        if (items1.length <= 0) {
-          items1 = closure_14;
-        }
-        return items1;
       } else {
         const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(closure_0, closure_1);
         let mapped = voiceStatesForChannelAlt.map((id) => {
@@ -129,14 +147,14 @@ export default function useVoicePanelCards(arg0, arg1) {
           return value;
         });
         if (mapped.length <= 0) {
-          mapped = closure_14;
+          mapped = closure_15;
         }
         return mapped;
       }
     },
     items3,
   );
-  obj.isConnected = tmp2;
+  obj.isConnected = tmp3;
   return obj;
 }
 export function useChunkedParticipants(channelId, arg1) {
@@ -158,7 +176,7 @@ export function useChunkedParticipants(channelId, arg1) {
     items1,
     () => {
       if (managerSubscription < 0) {
-        return closure_14;
+        return closure_15;
       } else {
         items = [];
         if (VoiceStateStore.isInChannel(closure_0, id)) {
@@ -191,7 +209,7 @@ export function useChunkedParticipants(channelId, arg1) {
             items.push(getMemoizedParticipant(obj, first));
           }
           if (items.length <= 0) {
-            items = closure_14;
+            items = closure_15;
           }
           return items;
         } else {

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../../actions/ModalActionCreators.tsx";
 import SafetyWarningUtils from "../../../shared/SafetyWarningUtils.tsx";
@@ -94,17 +94,17 @@ class StrangerDangerWarningBanner {
         };
         obj2.onIgnore = function onIgnore() {
           closure_1_4();
-          const obj = channelId(11465);
+          const obj = channelId(11427);
           obj.trackCtaEvent({
             channelId,
             warningId,
             senderId,
             warningType: constants.STRANGER_DANGER,
-            cta: channelId(11465).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM,
+            cta: channelId(11427).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM,
           });
         };
         obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-        obj.openLazy(asyncRequireImpl(11484, dependencyMap.paths), closure_9, obj2);
+        obj.openLazy(asyncRequireImpl(11446, dependencyMap.paths), closure_9, obj2);
       };
     }, items5);
     closure_6 = callback2;
@@ -142,7 +142,7 @@ class StrangerDangerWarningBanner {
       const obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t.DJMZX6);
-      const tmp = asyncRequireImpl(11470, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11432, dependencyMap.paths);
       obj2.safetyTips = metroImportDefault().map((children, index) =>
         closure_1_10(channelId(senderId[20]).Text, { variant: "body-sm/medium", children }, index),
       );
@@ -182,13 +182,13 @@ class StrangerDangerWarningBanner {
     return tmp8(tmp9, obj1);
   }
 }
-const SafetyWarningTypes = fn(10988).SafetyWarningTypes;
-const Constants = fn(11452);
+const SafetyWarningTypes = fn(10940).SafetyWarningTypes;
+const Constants = fn(11414);
 ({ STRANGER_DANGER_MORE_TIPS_MODAL_KEY: closure_6, getStrangerDangerSafetyTips: metroImportDefault } = Constants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_9 = fn(11483).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_9 = fn(11445).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" },
 };

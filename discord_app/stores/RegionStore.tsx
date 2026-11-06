@@ -1,5 +1,5 @@
 // discord_app/stores/RegionStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import GuildStore from "GuildStore.tsx";
@@ -22,7 +22,7 @@ prototype["getOptimalRegion"] = function getOptimalRegion() {
   if (null != regions) {
     let found = regions.find((optimal) => optimal.optimal);
     if (found == null) {
-      found = _modDef12.sample(regions);
+      found = applyDefault.sample(regions);
     }
     tmp2 = found;
   }
@@ -48,7 +48,7 @@ prototype["getRandomRegion"] = function getRandomRegion() {
   const regions = this.getRegions(tmp);
   let sampleResult = null;
   if (null != regions) {
-    sampleResult = _modDef12.sample(regions);
+    sampleResult = applyDefault.sample(regions);
   }
   return sampleResult;
 };
@@ -75,7 +75,7 @@ prototype["getRegions"] = function getRegions(guildId) {
 RegionStore.displayName = "RegionStore";
 const regionStore = new RegionStore(DispatcherDefault, {
   LOAD_REGIONS: function handleLoadRegions(regions) {
-    const sortByResult = _modDef12.sortBy(regions.regions, (name) => name.name);
+    const sortByResult = applyDefault.sortBy(regions.regions, (name) => name.name);
     if (null != regions.guildId) {
       closure_4[regions.guildId] = sortByResult;
     } else {

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UnsyncedUserSettingsStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
@@ -356,7 +356,7 @@ const items = [
     value = Storage.get("UserSettingsStore");
     const Storage2 = Storage3.Storage;
     Storage2.remove("UserSettingsStore");
-    return _modDef12.pick(
+    return applyDefault.pick(
       value,
       "dataSavingMode",
       "videoUploadQuality",

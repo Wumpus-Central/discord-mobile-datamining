@@ -1,16 +1,15 @@
 // discord_app/modules/game_organization_invites/canGoToGameOrganizationGuild.tsx
-import GuildStore from "../../stores/GuildStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/canGoToGameOrganizationGuild.tsx");
 
-export default function canGoToGameOrganizationGuild(accepted, arg1) {
+export default function canGoToGameOrganizationGuild(accepted, id, arg2) {
   accepted = accepted.accepted;
   if (accepted) {
-    accepted = accepted.inviterId !== arg1;
+    accepted = accepted.inviterId !== id;
   }
   if (accepted) {
-    accepted = null != GuildStore.getGuild(accepted.guildId);
+    accepted = arg2;
   }
   return accepted;
 }

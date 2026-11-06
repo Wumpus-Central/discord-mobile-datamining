@@ -1,5 +1,5 @@
 // discord_app/modules/message_request/hooks/useMessageRequestPreview.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import MessageStore from "../../../stores/MessageStore.tsx";
@@ -54,7 +54,7 @@ let closure_11 = async function _loadMessageRequestData() {
             c1 = 2;
             c4 = 1;
           }
-          obj3 = _modDef12;
+          obj3 = applyDefault;
         }
       } else if (1 === tmp7) {
         c3 = 0;

@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/Messages.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import discord_common_shallowEqual from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ApplicationActionCreatorsDefault from "../../applications/ApplicationActionCreators.tsx";
@@ -153,7 +153,7 @@ class MessagesConnected {
     application_id = undefined;
     stateFromStoresObject = tmp2Result3.useStateFromStoresObject(
       items6,
-      () => _modDef12.mapValues(stateFromStores, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)),
+      () => applyDefault.mapValues(stateFromStores, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)),
       items7,
     );
     if (linkedLobby != null) {
@@ -184,8 +184,8 @@ class MessagesConnected {
     effect = obj6.useEffect(() => {
       if (!obj.areArraysShallowEqual(id, guildId.current)) {
         const obj2 = ApplicationActionCreatorsDefault;
-        const found = _modDef12(id).filter(GlobalUtils.isNotNullish);
-        const arr = _modDef12(id);
+        const found = applyDefault(id).filter(GlobalUtils.isNotNullish);
+        const arr = applyDefault(id);
         const applications = obj2.fetchApplications(found.uniq().value(), false);
         guildId.current = id;
         const iter = found.uniq();
@@ -1134,7 +1134,7 @@ class MessagesConnected {
     return tmp125(tmp26Result, obj1);
   }
 }
-const PollsInteractionStore = fn(11565);
+const PollsInteractionStore = fn(11527);
 ({ useChannelPollInteractions: closure_28, useMessagePollInteractions: closure_29 } = PollsInteractionStore);
 const Constants = fn(1072);
 ({
@@ -1144,7 +1144,7 @@ const Constants = fn(1072);
   MessageTypes: closure_62,
   Permissions: closure_63,
 } = Constants);
-let closure_64 = fn(11560).GameOrganizationInviteStates;
+let closure_64 = fn(11522).GameOrganizationInviteStates;
 const PremiumConstants = fn(1387);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_65, PremiumTypes: closure_66 } = PremiumConstants);
 const jsxProd = fn(21);

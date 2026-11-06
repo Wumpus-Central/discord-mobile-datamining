@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod5058 from "../../../../_runtime/metro/05058__.js";
+import _mod5085 from "../../../../_runtime/metro/05085__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import identity from "../../../../_runtime/metro/01254__.js";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -16,17 +16,17 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "sa",
+    overSpecs: "description",
     dropSpecs: "isArray",
     dragRegion: require("../../../../_runtime/metro/01652__.js").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "ptb",
-    scrollPosition: "ptb",
-    windowSize: "PTB",
-    setStateShallow: false,
-    dropStart: false,
-    dropComplete: false,
+    listInsets: "headers",
+    scrollPosition: true,
+    windowSize: true,
+    setStateShallow: true,
+    dropStart: true,
+    dropComplete: true,
   };
   let obj2 = require("../../../../_runtime/metro/01652__.js");
   obj.gestureState = require("../../../../_runtime/metro/01652__.js").makeMutable(obj);
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "ao" }));
+      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "r", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -93,7 +93,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "ti" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -122,7 +122,13 @@ export function useItemDragState(guildId, flag) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "sa", overState: "isArray", itemSize: null, dragDropInProgress };
+        const obj2 = {
+          isDragTarget: false,
+          dragState: "description",
+          overState: "isArray",
+          itemSize: null,
+          dragDropInProgress,
+        };
         return obj2;
       }
     }
@@ -211,7 +217,7 @@ export function useItemDragState(guildId, flag) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod5058.shallow);
+  }, _mod5085.shallow);
 }
 export function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

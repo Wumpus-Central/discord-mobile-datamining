@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileYourFriendsCard.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1187).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
@@ -43,21 +43,21 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9303).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9249).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
-    const found = _modDef12.chain(stateFromStoresArray).filter((item) => stateFromStoresArray1.includes(item));
-    const chainResult = _modDef12.chain(stateFromStoresArray);
+    const found = applyDefault.chain(stateFromStoresArray).filter((item) => stateFromStoresArray1.includes(item));
+    const chainResult = applyDefault.chain(stateFromStoresArray);
     const mapped = found.take(5).map(UserStore.getUser);
     const takeResult = found.take(5);
     const valueResult = mapped.filter(GlobalUtils.isNotNullish).value();
     if (valueResult.length >= 5) {
       dependencyMap(valueResult);
     } else {
-      const tmpResult = _modDef12;
-      const mapped1 = _modDef12.chain(gameRelationshipsByType).map((id) => id.id);
-      const chainResult1 = _modDef12.chain(gameRelationshipsByType);
+      const tmpResult = applyDefault;
+      const mapped1 = applyDefault.chain(gameRelationshipsByType).map((id) => id.id);
+      const chainResult1 = applyDefault.chain(gameRelationshipsByType);
       const uniqResult = mapped1.uniq();
       const mapped2 = mapped1
         .uniq()
@@ -87,7 +87,13 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = {
+              user,
+              guildId: "r",
+              size: closure_0(1187).AvatarSizes.XSMALL,
+              cutout:
+                "(function ZoomLayoutGestureNativeTsx19(){let[stopAnimation,touchStoppedAnimation,panInterrupted,scale,animated,withSpring,minimumZoomScale,SPRING_CONFIG,translateX,translateY]=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);scale.set(animated?withSpring(minimumZoomScale,SPRING_CONFIG):minimumZoomScale);translateX.set(animated?withSpring(0,SPRING_CONFIG):0);translateY.set(animated?withSpring(0,SPRING_CONFIG):0);})",
+            };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -97,7 +103,8 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: null,
+              cutout:
+                "(function ZoomLayoutGestureNativeTsx19(){let[stopAnimation,touchStoppedAnimation,panInterrupted,scale,animated,withSpring,minimumZoomScale,SPRING_CONFIG,translateX,translateY]=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);scale.set(animated?withSpring(minimumZoomScale,SPRING_CONFIG):minimumZoomScale);translateX.set(animated?withSpring(0,SPRING_CONFIG):0);translateY.set(animated?withSpring(0,SPRING_CONFIG):0);})",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>
@@ -117,7 +124,13 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = {
+              user,
+              guildId: "r",
+              size: closure_0(1187).AvatarSizes.XSMALL,
+              cutout:
+                "(function ZoomLayoutGestureNativeTsx19(){let[stopAnimation,touchStoppedAnimation,panInterrupted,scale,animated,withSpring,minimumZoomScale,SPRING_CONFIG,translateX,translateY]=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);scale.set(animated?withSpring(minimumZoomScale,SPRING_CONFIG):minimumZoomScale);translateX.set(animated?withSpring(0,SPRING_CONFIG):0);translateY.set(animated?withSpring(0,SPRING_CONFIG):0);})",
+            };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -127,7 +140,8 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: null,
+              cutout:
+                "(function ZoomLayoutGestureNativeTsx19(){let[stopAnimation,touchStoppedAnimation,panInterrupted,scale,animated,withSpring,minimumZoomScale,SPRING_CONFIG,translateX,translateY]=this.__closure;stopAnimation();touchStoppedAnimation.set(false);panInterrupted.set(true);scale.set(animated?withSpring(minimumZoomScale,SPRING_CONFIG):minimumZoomScale);translateX.set(animated?withSpring(0,SPRING_CONFIG):0);translateY.set(animated?withSpring(0,SPRING_CONFIG):0);})",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>

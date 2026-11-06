@@ -13,11 +13,11 @@ import PIPSpeakerStore from "PIPSpeakerStore.tsx";
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19508);
+const useExternalPipSelectedTileDefault = tmp6(19500);
 require = fn;
-const VoicePanelModes = fn(11419).VoicePanelModes;
-const ActivityPanelModes = fn(5793).ActivityPanelModes;
-const asLaunched = fn(6985).asLaunched;
+const VoicePanelModes = fn(11381).VoicePanelModes;
+const ActivityPanelModes = fn(5811).ActivityPanelModes;
+const asLaunched = fn(6927).asLaunched;
 let closure_12 = {
   code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})",
 };
@@ -40,12 +40,12 @@ export function useControllerPIPState(channelId) {
   let obj = require("../../../../../_runtime/metro/01652__.js");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
   const ref = noop.useRef({
-    id: "displayName",
+    id: "disabled",
     mode: "isArray",
     width: false,
     height: null,
     containerHeight: 0,
-    showSecondaryPIP: false,
+    showSecondaryPIP: null,
     scale: sharedValue,
   });
   const obj2 = require("VoicePanelPIPScaleCache");

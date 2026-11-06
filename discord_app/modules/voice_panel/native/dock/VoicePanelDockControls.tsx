@@ -1,16 +1,21 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockControls.tsx
 import native from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
-import _modDef10021 from "../../../../../_runtime/metro/10021__.js";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import _modDef9972 from "../../../../../_runtime/metro/09972__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
+import _modDef14311 from "../../../../../_runtime/metro/14311__.js";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
+import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import VoicePanelStore from "../../VoicePanelStore.tsx";
 
 const nativeDefault = native;
+const useSoundboardConfigDefault = useSoundboardConfig;
 
 require = fn;
 function DockMuteButton(channelId) {
@@ -81,16 +86,35 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1113).intl;
   obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef10021;
+  obj.icon = _modDef9972;
   obj.onPress = callback;
-  return closure_7(channelId(8173).IconButton, obj);
+  return closure_7(channelId(8119).IconButton, obj);
+}
+function DockSoundboardButton(arg0) {
+  ({ onPress, disabled, disabledAccessibilityHint } = arg0);
+  const obj = {
+    accessibilityLabel: null,
+    variant: "secondary",
+    size: "sm",
+    icon: null,
+    onPress: null,
+    disabled: null,
+    accessibilityHint: null,
+  };
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.ABjMWI);
+  obj.icon = _modDef14311;
+  obj.onPress = onPress;
+  obj.disabled = disabled;
+  obj.accessibilityHint = disabledAccessibilityHint;
+  return metroImportDefault(IconButton.IconButton, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(11437).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(11399).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_9 = createStyles.createStyles(obj);
@@ -102,15 +126,40 @@ export default noop.memo(function VoicePanelDockControls() {
   const tmp = closure_9();
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp2Result = useDockBoxShadowDefault(native.Shadow.SHADOW_MEDIUM);
+  const tmp4Result = useSoundboardConfigDefault(
+    channelId,
+    useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_DOCK,
+  );
   const obj = { style: tmp.actions, children: null };
   const obj2 = { style: null, children: metroImportDefault(DockMuteButton, { channelId }) };
   items = [tmp.buttonShadow, { boxShadow: tmp2Result }];
   obj2.style = items;
-  const items1 = [metroImportDefault(View, obj2)];
-  const obj3 = { style: null, children: metroImportDefault(DockHangUpButton, { channelId }) };
-  const items2 = [tmp.buttonShadow, { boxShadow: tmp2Result }];
-  obj3.style = items2;
-  items1[1] = metroImportDefault(View, obj3);
+  const items1 = [metroImportDefault(View, obj2), ,];
+  let tmp8Result = null;
+  if (tmp4Result.visible) {
+    const obj3 = { style: null, children: null };
+    const items2 = [tmp.buttonShadow];
+    const obj4 = { boxShadow: tmp2Result };
+    items2[1] = obj4;
+    obj3.style = items2;
+    ({
+      handlePress: obj5.onPress,
+      disabled: obj5.disabled,
+      disabledAccessibilityHint: obj5.disabledAccessibilityHint,
+    } = tmp4Result);
+    obj3.children = metroImportDefault(DockSoundboardButton, {
+      onPress: null,
+      disabled: null,
+      disabledAccessibilityHint: null,
+    });
+    tmp8Result = metroImportDefault(View, obj3);
+    const obj6 = { onPress: null, disabled: null, disabledAccessibilityHint: null };
+  }
+  items1[1] = tmp8Result;
+  const obj11 = { style: null, children: metroImportDefault(DockHangUpButton, { channelId }) };
+  const items3 = [tmp.buttonShadow, { boxShadow: tmp2Result }];
+  obj11.style = items3;
+  items1[2] = metroImportDefault(View, obj11);
   obj.children = items1;
   return React5(View, obj);
 });

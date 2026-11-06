@@ -45,7 +45,7 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1072);
 ({ KeyboardThemes: closure_4, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   input: {
     fontSize: 16,

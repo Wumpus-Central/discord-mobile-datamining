@@ -30,13 +30,14 @@ import outbound_promotion_popover from "outbound_promotion_popover.tsx";
 import outbound_promotion_claim_modal_card from "outbound_promotion_claim_modal_card.tsx";
 import shop_coachmark from "shop_coachmark.tsx";
 import nitro_perk_card from "nitro_perk_card.tsx";
+import collection_page_marketing_block from "collection_page_marketing_block.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
 const MessageType = fn(1197).MessageType;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 };
     items[1] = {
       no: 2,
@@ -290,32 +291,41 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
         return require("outbound_promotion_claim_modal_card").OutboundPromotionClaimModalCard;
       },
     };
-    obj = { no: 32, name: "shop_coachmark", kind: "message", oneof: "properties", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[30]).ShopCoachmark;
-      }
-    }
-    obj.T = T;
-    items[29] = obj;
-    items[30] = {
-      no: 33,
-      name: "nitro_perk_card",
+    items[29] = {
+      no: 32,
+      name: "shop_coachmark",
       kind: "message",
       oneof: "properties",
       T() {
-        return require("nitro_perk_card").NitroPerkCard;
+        return require("shop_coachmark").ShopCoachmark;
       },
     };
-    items[31] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
-    items[32] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
+    obj = { no: 33, name: "nitro_perk_card", kind: "message", oneof: "properties", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[31]).NitroPerkCard;
+      }
+    }
+    obj.T = T;
+    items[30] = obj;
+    items[31] = {
+      no: 34,
+      name: "collection_page_marketing_block",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("collection_page_marketing_block").CollectionPageMarketingBlock;
+      },
+    };
+    items[32] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
+    items[33] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", items, T);
     return tmp1;
   }
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { properties: { oneofKind: "ti" }, contentIdentifier: "", isDefaultBase: false };
+  const obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -762,13 +772,27 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
       writeUnknownFields,
     );
   }
+  if ("collectionPageMarketingBlock" === properties.properties.oneofKind) {
+    const CollectionPageMarketingBlock = collection_page_marketing_block.CollectionPageMarketingBlock;
+    const tagResult31 = tag.tag(34, _mod1197.WireType.LengthDelimited);
+    const joined30 = CollectionPageMarketingBlock.internalBinaryWrite(
+      properties.properties.collectionPageMarketingBlock,
+      tag.tag(34, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult30 = CollectionPageMarketingBlock.internalBinaryWrite(
+      properties.properties.collectionPageMarketingBlock,
+      tag.tag(34, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   if ("" !== properties.contentIdentifier) {
     tag.tag(3, _mod1197.WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult31 = tag.tag(3, _mod1197.WireType.LengthDelimited);
+    const tagResult32 = tag.tag(3, _mod1197.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
     tag.tag(18, _mod1197.WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult32 = tag.tag(18, _mod1197.WireType.Varint);
+    const tagResult33 = tag.tag(18, _mod1197.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

@@ -6,6 +6,7 @@ import useChatLayoutDefault from "../modules/chat/native/useChatLayout.tsx";
 import HomeDrawerExperiment from "../modules/home_drawer/native/HomeDrawerExperiment.tsx";
 import useRefValueDefault from "../hooks/useRefValue.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
+import useAppFrameDefault from "../modules/main_tabs_v2/native/useAppFrame.tsx";
 import isJankScreenReportingEnabled from "../modules/jank_stats/native/isJankScreenReportingEnabled.tsx";
 import getJankScreenName from "../modules/jank_stats/native/getJankScreenName.tsx";
 import JankSlidingSurfaceReporterDefault from "../modules/jank_stats/native/JankSlidingSurfaceReporter.native.tsx";
@@ -27,31 +28,32 @@ require = fn;
 function LeftPanelContent(panelStyles) {
   panelStyles = panelStyles.panelStyles;
   let top;
-  const tmp = closure_13();
-  const tmp4 = _slicedToArray(useGuildsRouteGuildId.useGuildsRouteGuildAndChannelId(), 2);
-  const current = tmp4[0];
+  const hasFrame = useAppFrameDefault().hasFrame;
+  const tmp3 = closure_14(hasFrame);
+  const tmp5 = _slicedToArray(useGuildsRouteGuildId.useGuildsRouteGuildAndChannelId(), 2);
+  const current = tmp5[0];
   const ref = noop.useRef(current);
   let isChatBesideChannelList = ref;
   items = [current];
   const effect = noop.useEffect(() => {
     isChatBesideChannelList.current = current;
   }, items);
-  let tmp8 = null != current;
-  if (tmp8) {
-    tmp8 = current !== ME;
+  let tmp9 = null != current;
+  if (tmp9) {
+    tmp9 = current !== React6;
   }
   let tmp11 = useRefValueDefault(ref);
-  if (tmp8) {
+  if (tmp9) {
     tmp11 = current;
   }
   isChatBesideChannelList = useChatLayoutDefault().isChatBesideChannelList;
   top = useSafeAreaInsetsDefault().top;
-  const items1 = [tmp, top];
+  const items1 = [tmp3, top];
   const memo = noop.useMemo(() => {
     items = [first.sideContainer, { marginTop: top }];
     return items;
   }, items1);
-  const items2 = [tmp, isChatBesideChannelList];
+  const items2 = [tmp3, isChatBesideChannelList];
   const memo1 = noop.useMemo(() => {
     items = [first.side];
     let sideTablet = isChatBesideChannelList;
@@ -61,39 +63,46 @@ function LeftPanelContent(panelStyles) {
     items[1] = sideTablet;
     return items;
   }, items2);
-  const sum = DM_WIDTH + useChannelListWidthDefault();
+  const sum = left + useChannelListWidthDefault();
   let num = 0;
-  if (tmp8) {
+  if (tmp9) {
     num = 1;
   }
   const obj3 = { activeIndex: num, children: null };
   const items3 = [
     closure_1_11(messages_MessagesDefault, { style: memo1 }),
-    closure_1_11(RedesignChannelListDefault, { style: memo1, selectedGuildId: tmp11, selectedChannelId: tmp4[1] }),
+    closure_1_11(RedesignChannelListDefault, { style: memo1, selectedGuildId: tmp11, selectedChannelId: tmp5[1] }),
   ];
   obj3.children = items3;
-  const tmp15Result = application_id(NativeFreezeScreens.NativeFreezeScreens, obj3);
-  const items4 = [absoluteFill.absoluteFill];
-  let tmp19;
+  const items4 = [application_id(NativeFreezeScreens.NativeFreezeScreens, obj3)];
+  let tmp16Result = null;
+  if (hasFrame) {
+    const obj4 = { pointerEvents: "none", style: tmp3.framedBorder };
+    tmp16Result = closure_1_11(hasOwnProperty, obj4);
+  }
+  items4[1] = tmp16Result;
+  const tmp15Result = application_id(state, { children: items4 });
+  const items5 = [timestampProducer.absoluteFill];
+  let tmp22;
   if (isChatBesideChannelList) {
-    tmp19 = sum;
+    tmp22 = sum;
   }
-  const obj4 = { style: items4, children: null };
-  items4[1] = { width: tmp19 };
-  const items5 = [closure_1_11(HomePanelContent.HomePanelContent, {})];
+  const obj5 = { style: items5, children: null };
+  items5[1] = { width: tmp22 };
+  const items6 = [closure_1_11(HomePanelContent.HomePanelContent, {})];
   if (null == panelStyles) {
-    const obj5 = { style: memo, pointerEvents: "box-none", nativeID: "messages-parent-view", children: tmp15Result };
-    let tmp16Result = closure_1_11(hasOwnProperty, obj5);
+    const obj6 = { style: memo, pointerEvents: "box-none", nativeID: "messages-parent-view", children: tmp15Result };
+    let tmp16Result2 = closure_1_11(hasOwnProperty, obj6);
   } else {
-    const obj6 = { style: null, pointerEvents: "box-none", nativeID: "messages-parent-view", children: null };
-    const items6 = [memo, panelStyles];
-    obj6.style = items6;
-    obj6.children = tmp15Result;
-    tmp16Result = closure_1_11(_modDef1652.View, obj6);
+    const obj7 = { style: null, pointerEvents: "box-none", nativeID: "messages-parent-view", children: null };
+    const items7 = [memo, panelStyles];
+    obj7.style = items7;
+    obj7.children = tmp15Result;
+    tmp16Result2 = closure_1_11(_modDef1652.View, obj7);
   }
-  items5[1] = tmp16Result;
-  obj4.children = items5;
-  return application_id(hasOwnProperty, obj4);
+  items6[1] = tmp16Result2;
+  obj5.children = items6;
+  return application_id(hasOwnProperty, obj5);
 }
 function resolveHomeDrawerName() {
   return HOME_DRAWER_SCREEN;
@@ -134,31 +143,56 @@ function LeftPanelHomeDrawerContainer() {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
-const DM_WIDTH = Constants.DM_WIDTH;
-const ME = Constants.ME;
-const HOME_DRAWER_SCREEN = fn(18348).HOME_DRAWER_SCREEN;
+({ DM_WIDTH: closure_8, ME: closure_9 } = Constants);
+const HOME_DRAWER_SCREEN = fn(18340).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5143);
-let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
-const rect = {
-  position: "absolute",
-  top: 0,
-  left: DM_WIDTH,
-  bottom: 0,
-  right: 0,
-  flexDirection: "row",
-  borderLeftWidth: 1,
-  borderTopWidth: 1,
-  borderColor: nativeDefault.colors.APP_FRAME_BORDER,
-  borderTopLeftRadius: nativeDefault.radii.xl,
-};
-obj.sideContainer = rect;
-obj.side = { borderTopLeftRadius: nativeDefault.radii.xl - 1, borderTopRightRadius: nativeDefault.radii.none };
-let obj3 = { borderTopLeftRadius: nativeDefault.radii.xl - 1, borderTopRightRadius: nativeDefault.radii.none };
-obj.sideTablet = { borderTopRightRadius: nativeDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
-let closure_13 = createStyles.createStyles(obj);
-let closure_17 = noop.memo(function LeftMenuTabsInner() {
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const createStyles = fn(5170);
+let closure_14 = createStyles.createStyles(() => {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
+  }
+  const obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null, framedBorder: null };
+  const rect = {
+    position: "absolute",
+    top: 0,
+    left,
+    bottom: 0,
+    right: 0,
+    flexDirection: "row",
+    borderLeftWidth: null,
+    borderTopWidth: null,
+    borderColor: null,
+    borderTopLeftRadius: null,
+  };
+  let num = 1;
+  if (flag) {
+    num = 0;
+  }
+  rect.borderLeftWidth = num;
+  let num2 = 1;
+  if (flag) {
+    num2 = 0;
+  }
+  rect.borderTopWidth = num2;
+  rect.borderColor = nativeDefault.colors.APP_FRAME_BORDER;
+  rect.borderTopLeftRadius = nativeDefault.radii.xl;
+  obj.sideContainer = rect;
+  const xl = nativeDefault.radii.xl;
+  obj.side = { borderTopLeftRadius: flag ? xl : xl - 1, borderTopRightRadius: nativeDefault.radii.none };
+  const obj2 = { borderTopLeftRadius: flag ? xl : xl - 1, borderTopRightRadius: nativeDefault.radii.none };
+  obj.sideTablet = { borderTopRightRadius: nativeDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
+  const obj4 = {};
+  const merged = Object.assign(timestampProducer.absoluteFillObject);
+  obj4.borderLeftWidth = 1;
+  obj4.borderTopWidth = 1;
+  obj4.borderColor = nativeDefault.colors.APP_FRAME_BORDER;
+  obj4.borderTopLeftRadius = nativeDefault.radii.xl;
+  obj.framedBorder = obj4;
+  return obj;
+});
+let closure_18 = noop.memo(function LeftMenuTabsInner() {
   const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
   if (MobileHomeDrawerExperiment.useConfig({ location: "gesture" }).enableHome) {
     let tmp2Result = closure_1_11(LeftPanelHomeDrawerContainer, {});
@@ -168,11 +202,10 @@ let closure_17 = noop.memo(function LeftMenuTabsInner() {
   }
   return tmp2Result;
 });
-let obj4 = { borderTopRightRadius: nativeDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MainChannels.tsx");
 
 export default noop.memo(function MainChannelsRedesignInner() {
-  const obj = { profile: StartupProfiler.Profiles.LeftPanel, children: closure_1_11(closure_17, {}) };
+  const obj = { profile: StartupProfiler.Profiles.LeftPanel, children: closure_1_11(closure_18, {}) };
   return closure_1_11(StartupProfilerDefault, obj);
 });

@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useUserListData.tsx
-import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import DispatcherDefault from "../../../../../Dispatcher.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import GuildUtilsDefault from "../../../../../utils/GuildUtils.tsx";
@@ -182,8 +182,8 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
     found = items7.filter((user) => user.user.id !== id);
   }
   if (withFriends) {
-    const mapped = _modDef12(tmp).map((items, title) => ({ title, items }));
-    const arr12 = _modDef12(tmp);
+    const mapped = applyDefault(tmp).map((items, title) => ({ title, items }));
+    const arr12 = applyDefault(tmp);
     let items11 = mapped.sortBy((title) => title.title).value();
     const iter = mapped.sortBy((title) => title.title);
   } else {
@@ -195,13 +195,13 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   const intl = util.intl;
   obj2.title = intl.string(util.t.HbJ7eD);
   if (withAffinitySuggestions) {
-    const obj4 = _modDef12(items);
-    const sortByResult = _modDef12(items).sortBy((affinity) => -affinity.affinity);
-    let valueResult2 = _modDef12(items)
+    const obj4 = applyDefault(items);
+    const sortByResult = applyDefault(items).sortBy((affinity) => -affinity.affinity);
+    let valueResult2 = applyDefault(items)
       .sortBy((affinity) => -affinity.affinity)
       .slice(0, num)
       .value();
-    const iter2 = _modDef12(items)
+    const iter2 = applyDefault(items)
       .sortBy((affinity) => -affinity.affinity)
       .slice(0, num);
   } else {

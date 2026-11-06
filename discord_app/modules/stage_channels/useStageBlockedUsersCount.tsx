@@ -8,10 +8,10 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageBlockedUsersCount.tsx");
 
-export function useStageBlockedUsersCount(id1) {
-  _require = id1;
+export function useStageBlockedUsersCount(id) {
+  _require = id;
   items = [StageChannelParticipantStore];
-  const items1 = [id1];
+  const items1 = [id];
   return require("initialize").useStateFromStores(
     items,
     () => {
@@ -27,10 +27,10 @@ export function useStageBlockedUsersCount(id1) {
     items1,
   );
 }
-export function useStageIgnoredUsersCount(id2) {
-  _require = id2;
+export function useStageIgnoredUsersCount(id1) {
+  _require = id1;
   items = [StageChannelParticipantStore];
-  const items1 = [id2];
+  const items1 = [id1];
   return require("initialize").useStateFromStores(
     items,
     () => {

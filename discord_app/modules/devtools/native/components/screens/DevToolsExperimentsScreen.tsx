@@ -1,5 +1,5 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx
-import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import FingerprintUtils from "../../../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
@@ -36,7 +36,7 @@ function UserExperimentDebugView(id) {
   const tmp = closure_13();
   const experimentAssignment = useExperimentAssignments.useExperimentAssignment(experiment, tmp7);
   const experimentServerAssignment = useExperimentAssignments.useExperimentServerAssignment(experiment, tmp7);
-  const mapped = _modDef12
+  const mapped = applyDefault
     .sortBy(ExperimentStore.getRecentExposures(constants2.USER, id.id), (arg0) => {
       [, tmp] = arg0;
       return -tmp;
@@ -66,7 +66,7 @@ function UserExperimentDebugView(id) {
     str4 =
       'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.';
   }
-  const sortByResult = _modDef12.sortBy(ExperimentStore.getRecentExposures(constants2.USER, id.id), (arg0) => {
+  const sortByResult = applyDefault.sortBy(ExperimentStore.getRecentExposures(constants2.USER, id.id), (arg0) => {
     [, tmp] = arg0;
     return -tmp;
   });
@@ -132,7 +132,7 @@ function GuildExperimentDebugView(arg0) {
   ({ id, override } = arg0);
   const loadedGuildExperiment = ExperimentStore.getLoadedGuildExperiment(id);
   const tmp = closure_13();
-  const mapped = _modDef12
+  const mapped = applyDefault
     .sortBy(ExperimentStore.getRecentExposures(constants2.GUILD, id), (arg0) => {
       [, tmp] = arg0;
       return -tmp;
@@ -141,13 +141,13 @@ function GuildExperimentDebugView(arg0) {
       [tmp, tmp2] = item;
       return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
     });
-  const sortByResult = _modDef12.sortBy(ExperimentStore.getRecentExposures(constants2.GUILD, id), (arg0) => {
+  const sortByResult = applyDefault.sortBy(ExperimentStore.getRecentExposures(constants2.GUILD, id), (arg0) => {
     [, tmp] = arg0;
     return -tmp;
   });
   const obj3 = {};
   items = [];
-  const iter = _modDef12.sortBy(GuildStore.getGuildsArray(), (name) => name.name.toLowerCase())[Symbol.iterator]();
+  const iter = applyDefault.sortBy(GuildStore.getGuildsArray(), (name) => name.name.toLowerCase())[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp5 = nextResult;
@@ -168,8 +168,8 @@ function GuildExperimentDebugView(arg0) {
     let arr = items.push("" + tmp5.name + ": " + tmp10);
     continue;
   }
-  const sortByResult1 = _modDef12.sortBy(GuildStore.getGuildsArray(), (name) => name.name.toLowerCase());
-  const keys = _modDef12(obj3).keys();
+  const sortByResult1 = applyDefault.sortBy(GuildStore.getGuildsArray(), (name) => name.name.toLowerCase());
+  const keys = applyDefault(obj3).keys();
   const mapped1 = keys.map(Number);
   const sorted = mapped1.sort();
   const mapped2 = sorted.map((item) => "" + obj3[item] + " guilds are in bucket " + item);
@@ -181,13 +181,13 @@ function GuildExperimentDebugView(arg0) {
     str =
       "Warning: Server did not send any experiment config. You may need to check the 'Send to Client' box in the admin UI.";
   }
-  const obj4 = _modDef12(obj3);
+  const obj4 = applyDefault(obj3);
   obj6.subLabel = str;
   const items1 = [
-    closure_11(obj3(7204).TableRowGroup, {
+    closure_11(obj3(7151).TableRowGroup, {
       title: "Overview",
       hasIcons: false,
-      children: closure_11(obj3(7119).TableRow, obj6),
+      children: closure_11(obj3(7063).TableRow, obj6),
     }),
     closure_11(obj3(1187).Spacer, { size: 16 }),
     ,
@@ -198,9 +198,9 @@ function GuildExperimentDebugView(arg0) {
     ,
   ];
   const obj8 = { title: "Guild Assignments", hasIcons: false, children: null };
-  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(7119).TableRow, obj6) };
-  obj8.children = closure_11(obj3(7119).TableRow, { label: items.join("\n") });
-  items1[2] = closure_11(obj3(7204).TableRowGroup, obj8);
+  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(7063).TableRow, obj6) };
+  obj8.children = closure_11(obj3(7063).TableRow, { label: items.join("\n") });
+  items1[2] = closure_11(obj3(7151).TableRowGroup, obj8);
   items1[3] = closure_11(obj3(1187).Spacer, { size: 16 });
   let str2 = "None";
   let str3 = "None";
@@ -209,10 +209,10 @@ function GuildExperimentDebugView(arg0) {
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
   const obj9 = { label: items.join("\n") };
-  items1[4] = closure_11(obj3(7204).TableRowGroup, {
+  items1[4] = closure_11(obj3(7151).TableRowGroup, {
     title: "Server Descriptor",
     hasIcons: false,
-    children: closure_11(obj3(7119).TableRow, { label: str3 }),
+    children: closure_11(obj3(7063).TableRow, { label: str3 }),
   });
   items1[5] = closure_11(obj3(1187).Spacer, { size: 16 });
   if (null != override) {
@@ -222,22 +222,22 @@ function GuildExperimentDebugView(arg0) {
   const obj10 = {
     title: "Server Descriptor",
     hasIcons: false,
-    children: closure_11(obj3(7119).TableRow, { label: str3 }),
+    children: closure_11(obj3(7063).TableRow, { label: str3 }),
   };
-  items1[6] = closure_11(obj3(7204).TableRowGroup, {
+  items1[6] = closure_11(obj3(7151).TableRowGroup, {
     title: "Override Descriptor",
     hasIcons: false,
-    children: closure_11(obj3(7119).TableRow, { label: str2 }),
+    children: closure_11(obj3(7063).TableRow, { label: str2 }),
   });
   items1[7] = closure_11(obj3(1187).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    let mapped3 = closure_11(tmp20(7119).TableRow, { label: "none" });
+    let mapped3 = closure_11(tmp20(7063).TableRow, { label: "none" });
   } else {
     mapped3 = mapped.map((label) =>
       closure_1_11(obj3(dependencyMap[23]).TableRow, { label, labelLineClamp: 1 }, label),
     );
   }
-  items1[8] = closure_11(obj3(7204).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
+  items1[8] = closure_11(obj3(7151).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
   obj5.children = items1;
   return closure_12(View, obj5);
 }
@@ -256,7 +256,7 @@ class ExperimentDetails {
     obj9 = { paddingHorizontal: null };
     callback = closure_4.useCallback(() => {
       ClipboardUtils.copy(uRLForExperiment, () => {
-        uRLForExperiment(5849).open("experiment-link-copied", { text: "Copied experiment link", variant: "success" });
+        uRLForExperiment(5867).open("experiment-link-copied", { text: "Copied experiment link", variant: "success" });
         if (onCopyLink != null) {
           onCopyLink();
         }
@@ -276,7 +276,7 @@ class ExperimentDetails {
         if (isDestructive) {
           variant = "danger";
         }
-        return closure_1_11(onCopyLink(7119).TableRow, { variant, label, onPress }, index);
+        return closure_1_11(onCopyLink(7063).TableRow, { variant, label, onPress }, index);
       }),
     };
     items1 = [, ,];
@@ -322,11 +322,11 @@ function ExperimentActionSheet(arg0) {
   return closure_1_11(Sheet_BottomSheet.BottomSheet, obj);
 }
 const View = fn(17).View;
-const ExperimentConstants = fn(5365);
+const ExperimentConstants = fn(5385);
 ({ ExperimentBuckets: closure_9, ExperimentTypes: closure_10 } = ExperimentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   listContainer: null,

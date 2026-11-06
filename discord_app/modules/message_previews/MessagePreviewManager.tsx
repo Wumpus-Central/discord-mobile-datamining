@@ -1,6 +1,6 @@
 // discord_app/modules/message_previews/MessagePreviewManager.tsx
 import LoggerDefault from "../debug/Logger.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import RemoteFetchData from "RemoteFetchData.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -11,7 +11,7 @@ import MessagePreviewStore from "MessagePreviewStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const isThread = fn(4996).isThread;
+const isThread = fn(5023).isThread;
 const Endpoints = fn(1072).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {

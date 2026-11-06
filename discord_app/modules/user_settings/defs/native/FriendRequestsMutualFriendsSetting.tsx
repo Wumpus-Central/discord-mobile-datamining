@@ -8,15 +8,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const FriendSourceFlags = fn(1072).FriendSourceFlags;
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
   },
-  parent: fn(8578).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8524).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
-    const FriendSourceFlagsSetting = setting(4968).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(4995).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     items = [setting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).mutualFriends;

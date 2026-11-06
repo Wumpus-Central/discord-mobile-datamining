@@ -1,5 +1,5 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationUtils.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import DurationsDefault from "../../../utils/Durations.tsx";
 import v1 from "../../../../_runtime/01266_v1.js";
 import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
@@ -7,7 +7,7 @@ import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx"
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(11212).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(11167).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -23,7 +23,7 @@ export function isReactionMilestoneNotification(reactions, type) {
   if (null != type) {
     if (type !== constants2.GUILD_ANNOUNCEMENT) {
       return REACTION_MILESTONE_COUNTS.has(
-        _mod12.sumBy(reactions, (count_details) => {
+        apply.sumBy(reactions, (count_details) => {
           count_details = count_details.count_details;
           let num;
           if (count_details != null) {
@@ -68,7 +68,9 @@ export function getNotificationDuration(ALERT) {
               } else {
                 if (constants3.MESSAGE_REMINDER !== ALERT) {
                   if (constants3.RESTRICTED_HOURS_WARNING !== ALERT) {
-                    if (constants3.RESTRICTED_SCHEDULE_UPDATED === ALERT) {
+                    if (constants3.STAGE_SPEAK_INVITE === ALERT) {
+                      return 15 * DurationsDefault.Millis.SECOND;
+                    } else if (constants3.RESTRICTED_SCHEDULE_UPDATED === ALERT) {
                       return 7 * DurationsDefault.Millis.SECOND;
                     }
                   }
@@ -134,68 +136,71 @@ export function extractMetadataFromNotification(c0) {
   const type = _require.type;
   if (constants3.MESSAGE !== type) {
     if (constants3.REACTION !== type) {
-      if (constants3.ALERT === type) {
-        guild = _require.guild;
-        let id;
-        if (guild != null) {
-          id = guild.id;
-        }
-        if (id == null) {
-          const channel3 = _require.channel;
-          let guild_id;
-          if (channel3 != null) {
-            guild_id = channel3.guild_id;
+      if (constants3.ALERT !== type) {
+        if (constants3.STAGE_SPEAK_INVITE !== type) {
+          if (constants3.FORUM_THREAD_CREATED === type) {
+            const thread = _require.thread;
+            let guild_id;
+            if (thread != null) {
+              guild_id = thread.guild_id;
+            }
+            const thread2 = _require.thread;
+            let id;
+            if (thread2 != null) {
+              id = thread2.id;
+            }
+            let channelId = id;
+            let tmp4 = guild_id;
+          } else if (constants3.MESSAGE_FAILED_TO_SEND === type) {
+            channelId = _require.channelId;
+          } else if (constants3.MESSAGE_REMINDER === type) {
+            const channel9 = _require.channel;
+            let guild_id1;
+            if (channel9 != null) {
+              guild_id1 = channel9.guild_id;
+            }
+            const channel = _require.channel;
+            let id1;
+            if (channel != null) {
+              id1 = channel.id;
+            }
+            const channel2 = _require.channel;
+            let type1;
+            if (channel2 != null) {
+              type1 = channel2.type;
+            }
+            let tmp2 = type1;
+            channelId = id1;
+            tmp4 = guild_id1;
           }
-          id = guild_id;
         }
-        const channel4 = _require.channel;
-        let id1;
-        if (channel4 != null) {
-          id1 = channel4.id;
-        }
-        const channel5 = _require.channel;
-        let type1;
-        if (channel5 != null) {
-          type1 = channel5.type;
-        }
-        let tmp2 = type1;
-        let channelId = id1;
-        let tmp4 = id;
-      } else if (constants3.FORUM_THREAD_CREATED === type) {
-        const thread = _require.thread;
-        let guild_id1;
-        if (thread != null) {
-          guild_id1 = thread.guild_id;
-        }
-        const thread2 = _require.thread;
-        let id2;
-        if (thread2 != null) {
-          id2 = thread2.id;
-        }
-        channelId = id2;
-        tmp4 = guild_id1;
-      } else if (constants3.MESSAGE_FAILED_TO_SEND === type) {
-        channelId = _require.channelId;
-      } else if (constants3.MESSAGE_REMINDER === type) {
-        const channel9 = _require.channel;
-        let guild_id2;
-        if (channel9 != null) {
-          guild_id2 = channel9.guild_id;
-        }
-        const channel = _require.channel;
-        let id3;
-        if (channel != null) {
-          id3 = channel.id;
-        }
-        const channel2 = _require.channel;
-        let type2;
-        if (channel2 != null) {
-          type2 = channel2.type;
-        }
-        tmp2 = type2;
-        channelId = id3;
-        tmp4 = guild_id2;
       }
+      guild = _require.guild;
+      let id2;
+      if (guild != null) {
+        id2 = guild.id;
+      }
+      if (id2 == null) {
+        const channel3 = _require.channel;
+        let guild_id2;
+        if (channel3 != null) {
+          guild_id2 = channel3.guild_id;
+        }
+        id2 = guild_id2;
+      }
+      const channel4 = _require.channel;
+      let id3;
+      if (channel4 != null) {
+        id3 = channel4.id;
+      }
+      const channel5 = _require.channel;
+      let type2;
+      if (channel5 != null) {
+        type2 = channel5.type;
+      }
+      tmp2 = type2;
+      channelId = id3;
+      tmp4 = id2;
     }
     const obj = { guildId: tmp4, channelId, messageId: tmp3, channelType: tmp2 };
     return obj;

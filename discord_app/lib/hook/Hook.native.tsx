@@ -12,3 +12,6 @@ export function cancelAttachToProcess() {
 export function findSteamProcess() {
   return Promise.resolve(null);
 }
+export function connectToHook() {
+  return Promise.resolve(null);
+}

@@ -1,10 +1,10 @@
 // discord_app/utils/FileUtils.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import util from "../intl/index.native.tsx";
 import PremiumUtils from "PremiumUtils.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import UploadUtils from "UploadUtils.tsx";
-import noConflictDefault from "../../_runtime/08362_noConflict.js";
+import noConflictDefault from "../../_runtime/08308_noConflict.js";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
@@ -79,7 +79,7 @@ export function classifyFile(file) {
   if (str2 == null) {
     str2 = "";
   }
-  const found = _modDef12.find(items, (reType) => {
+  const found = applyDefault.find(items, (reType) => {
     if (null != reType.reType) {
       if (null != type) {
         reType = reType.reType;
@@ -111,7 +111,7 @@ export function classifyFileName(str, arg1) {
   if (str == null) {
     str = "";
   }
-  const found = _modDef12.find(items, (reType) => {
+  const found = applyDefault.find(items, (reType) => {
     if (null != reType.reType) {
       if (null != type) {
         reType = reType.reType;

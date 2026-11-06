@@ -1,6 +1,6 @@
 // discord_app/modules/polls/chat/buildPollResources.tsx
 import buildPlatformPollResources from "buildPlatformPollResources.native.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/polls/chat/buildPollResources.tsx");

@@ -23,7 +23,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9621).HeartIcon, {
+    children: closure_5(toastText(9570).HeartIcon, {
       color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
       size: "md",
     }),
@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   card: {
     borderWidth: 1,

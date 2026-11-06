@@ -13,6 +13,6 @@ const result = size.fileFinishedImporting(
 );
 
 export const CustomTypingIndicatorNewPresetsExperiment = apexExperiment;
-export function useCustomTypingIndicatorNewPresetsConfig(CustomTypingIndicatorEditScreen) {
-  return apexExperiment.useConfig({ location: CustomTypingIndicatorEditScreen });
+export function useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting) {
+  return apexExperiment.useConfig({ location: TypingIndicatorSetting });
 }

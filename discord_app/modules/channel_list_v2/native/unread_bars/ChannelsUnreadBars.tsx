@@ -200,11 +200,11 @@ function findNearestUnreadItem(c0, c1, headerHeight, youBarTotalHeight) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(11244).getScaledChannelRowHeight;
-const UnreadSetting = fn(6914).UnreadSetting;
+const getScaledChannelRowHeight = fn(11199).getScaledChannelRowHeight;
+const UnreadSetting = fn(6856).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_16 = createStyles.createStyles({ wrapper: StyleSheet.absoluteFillObject });
 const constants = { MENTION: "mention", UNREAD: "unread" };
 let closure_18 = { beforeItem: null, afterItem: null };

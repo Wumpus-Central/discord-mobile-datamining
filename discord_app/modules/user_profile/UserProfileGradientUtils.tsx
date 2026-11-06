@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/UserProfileGradientUtils.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply2 from "../../../_runtime/00012_apply.js";
 import _modDef671 from "../../../_runtime/metro/00671__.js";
 import utils_ColorUtils from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import utils_ColorDefault from "../../utils/Color.tsx";
@@ -90,9 +90,9 @@ export const calculateModalV2BackgroundColor = apply.memoize(
     const mixResult = obj2.mix(_modDef671(hex2intResult), _modDef671(arg1), 0.5, "lab");
     const result = Math.round(100 * mixResult.get("hsl.l")) / 100;
     if (tmp !== ThemeTypes.LIGHT) {
-      let clampResult = _mod12.clamp(result, 0, 0.1);
+      let clampResult = apply2.clamp(result, 0, 0.1);
     } else {
-      clampResult = _mod12.clamp(result, 0.8, 1);
+      clampResult = apply2.clamp(result, 0.8, 1);
     }
     const tmp10 = _modDef671(hex2intResult);
     const result1 = _modDef671(mixResult).set("hsl.l", clampResult);

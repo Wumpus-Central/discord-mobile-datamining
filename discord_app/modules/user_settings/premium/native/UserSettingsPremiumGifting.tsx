@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -31,7 +31,7 @@ const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_11, SubscriptionPlans: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL },
   giftingSettingsContainer: { flex: 1 },
@@ -96,7 +96,7 @@ export default function UserSettingsPremiumGifting(ref) {
   const items1 = [stateFromStoresArray];
   memo = enabled.useMemo(
     () =>
-      _modDef12.groupBy(stateFromStoresArray, (skuId) =>
+      applyDefault.groupBy(stateFromStoresArray, (skuId) =>
         closure_1_0(memo[16]).makeComboId(skuId.skuId, skuId.subscriptionPlanId, skuId.giftStyle),
       ),
     items1,

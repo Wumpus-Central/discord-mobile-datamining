@@ -1,6 +1,6 @@
 // discord_app/modules/app_database/background_sync/native/BackgroundSync.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import Storage4 from "../../../../../discord_common/js/packages/storage/Storage.tsx";
 import DurationsDefault from "../../../../utils/Durations.tsx";
 import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -685,7 +685,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
           closure_145_4 = messagesResult;
           if (null != messagesResult) {
             let _Array = Array;
-            let tmp128 = _modDef12;
+            let tmp128 = applyDefault;
             readStatesByChannel = readStatesByChannel.getReadStatesByChannel();
             let tmp128Result = tmp128(Array.from(readStatesByChannel.values()));
             let found = tmp128Result.filter((channelId) => {
@@ -1006,7 +1006,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
               deleted_message_ids = [];
             }
             closure_135_5 = deleted_message_ids;
-            let obj3 = _modDef12;
+            let obj3 = applyDefault;
             let tmp26 = _slicedToArray(obj3.partition(modified_messages, modules_Messages.isLikelyNotDelta), 2);
             let arr4 = tmp26[1];
             closure_135_6 = arr4;
@@ -1093,14 +1093,14 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ isPrivate: hasOwnProperty, isThread: closure_6 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(6975);
-const ChannelStore = fn(4992);
-const EmojiStore = fn(6934);
-const GuildStore = fn(5014);
+const StickersStore = fn(6917);
+const ChannelStore = fn(5019);
+const EmojiStore = fn(6876);
+const GuildStore = fn(5041);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;
 const lastSyncTime = "lastSyncTime";

@@ -1,6 +1,6 @@
 // discord_app/modules/forums/ForumPostDataLoader.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ForumPostMessagesStore from "ForumPostMessagesStore.tsx";
@@ -193,7 +193,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
     }
   }
 };
-const computeThreadIdsSnapshot = fn(7618).computeThreadIdsSnapshot;
+const computeThreadIdsSnapshot = fn(7563).computeThreadIdsSnapshot;
 const Endpoints = fn(1072).Endpoints;
 class DefaultDict {
   constructor(arg0) {
@@ -216,7 +216,7 @@ prototype["delete"] = function delete(arg0) {
   delete tmp2[tmp];
 };
 prototype["hasNext"] = function hasNext() {
-  return !_modDef12.isEmpty(this._set);
+  return !applyDefault.isEmpty(this._set);
 };
 prototype["next"] = function next() {
   return SnowflakeUtilsDefault.keys(this._set)[0];

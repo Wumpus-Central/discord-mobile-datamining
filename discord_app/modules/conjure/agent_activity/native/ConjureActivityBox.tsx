@@ -7,7 +7,7 @@ import ConjureSubagentMark from "ConjureSubagentMark.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ConjureNativeStepImagesDefault = tmp5(12943);
+const ConjureNativeStepImagesDefault = tmp5(12908);
 require = fn;
 function TurnStatusLine(epoch) {
   ({ projectId: require, tree, turnActive } = epoch);
@@ -224,7 +224,7 @@ function TimelineRow(inGutter) {
     trailing: null,
   };
   let tmp7 = ConjureNativeStatusLineDefault;
-  obj.line = node(12815).describeNode(node);
+  obj.line = node(12780).describeNode(node);
   obj.live = flag2;
   let tmp9 = !flag2;
   if (!flag2) {
@@ -245,10 +245,10 @@ function TimelineRow(inGutter) {
     let obj3 = {
       variant: "body-xs/normal",
       color: "text-subtle",
-      children: node(12306).describeDuration(node.durationMs),
+      children: node(12273).describeDuration(node.durationMs),
     };
-    tmp4Result = closure_6(node(5763).Text, obj3);
-    const tmp8Result = node(12306);
+    tmp4Result = closure_6(node(5781).Text, obj3);
+    const tmp8Result = node(12273);
   }
   obj.trailing = tmp4Result;
   const children = [closure_6(tmp7, obj), ,];
@@ -302,17 +302,17 @@ function TimelineRow(inGutter) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
-  activityBox: { marginLeft: -fn(12859).RAIL_INDENT },
+  activityBox: { marginLeft: -fn(12824).RAIL_INDENT },
   activityDetail: null,
   stepDetail: null,
   stepLine: null,
   stepCommand: null,
 };
-let obj3 = { marginLeft: -fn(12859).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(12859).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(12859).RAIL_INDENT };
+let obj3 = { marginLeft: -fn(12824).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(12824).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(12824).RAIL_INDENT };
 obj2.stepDetail = {
   marginTop: nativeDefault.space.PX_4,
   paddingLeft: nativeDefault.space.PX_12,

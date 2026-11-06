@@ -1,13 +1,13 @@
 // discord_app/modules/checkpoint/testing/CheckpointTesting.messages.js
 import AssetJsonUtils from "../../asset_json/native/AssetJsonUtils.tsx";
-import _mod3222 from "../../../../_runtime/metro/03222__.js";
+import _mod3251 from "../../../../_runtime/metro/03251__.js";
 import module_1152_mod from "../../../../_runtime/metro/01152__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let module_1152 = module_1152_mod;
 const loader = module_1152.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3222);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3251);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

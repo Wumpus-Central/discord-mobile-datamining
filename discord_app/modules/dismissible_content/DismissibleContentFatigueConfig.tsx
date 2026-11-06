@@ -65,7 +65,6 @@ const items = [
   dismissible_content.DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
   dismissible_content.DismissibleContent.GAME_SERVER_HOSTING_PORTKEY_TOS,
   dismissible_content.DismissibleContent.GAME_SERVER_HOSTING_NEW_BADGE,
-  dismissible_content.DismissibleContent.GAME_SERVER_GAME_DETECTION_UPSELL_NEW_BADGE,
   dismissible_content.DismissibleContent.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_NEW_BADGE,
   dismissible_content.DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_EDIT_PROFILE_NEW_BADGE,
   dismissible_content.DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
@@ -101,6 +100,7 @@ const items = [
   dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
   dismissible_content.DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE,
   dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
+  dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE,
   dismissible_content.DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE,
   dismissible_content.DismissibleContent.SOUNDBOARD_DESKTOP_NUX,
   dismissible_content.DismissibleContent.TINY_BRONCO,
@@ -109,6 +109,7 @@ const items = [
   dismissible_content.DismissibleContent.GIFT_INVENTORY_SETTINGS_NEW_BADGE,
   dismissible_content.DismissibleContent.PINOT_MEMBER_SETTING_NEW_BADGE,
   dismissible_content.DismissibleContent.PINOT_MEMBER_COACHMARK,
+  dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE,
 ];
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");

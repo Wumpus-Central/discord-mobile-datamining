@@ -1,5 +1,5 @@
 // discord_app/modules/connections/ConnectionsUtils.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import util from "../../intl/index.native.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
@@ -10,7 +10,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(7488);
+const Constants = fn(7433);
 ({ MetadataFields: hasOwnProperty, OperatorTypes: closure_6 } = Constants);
 const PlatformTypes = fn(1072).PlatformTypes;
 const size = fn(2);
@@ -402,7 +402,7 @@ export function getVisibleConnectionsRole(guildMember) {
         }
         return hasItem;
       });
-      const intersectionResult = _modDef12.intersection(found, getConnectionsRolesDefault(channel));
+      const intersectionResult = applyDefault.intersection(found, getConnectionsRolesDefault(channel));
       if (intersectionResult.length > 0) {
         let first = intersectionResult[0];
         if (first == null) {

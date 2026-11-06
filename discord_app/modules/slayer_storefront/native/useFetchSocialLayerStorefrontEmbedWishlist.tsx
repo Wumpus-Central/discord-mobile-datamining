@@ -14,12 +14,12 @@ require = fn;
 let closure_8 = {
   user: "a",
   profile: "flexDirection",
-  wishlistId: "count",
-  wishlist: "CHANNEL_RTC_UPDATE_CHAT_OPEN",
-  updatedAt: null,
-  storedUpdatedAt: null,
-  fetching: -45,
-  error: null,
+  wishlistId: "container",
+  wishlist: "chorro",
+  updatedAt: "chorro de agua",
+  storedUpdatedAt: "c\u00F3mic",
+  fetching: "c\u00F3mics",
+  error: "emoci\u00F3n",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting(

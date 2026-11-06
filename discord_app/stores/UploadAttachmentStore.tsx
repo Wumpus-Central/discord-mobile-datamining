@@ -177,7 +177,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
         }
       }
     }
-    const item = require("../../_runtime/metro/00012__.js").forEach(files, (file) => {
+    const item = require("apply").forEach(files, (file) => {
       const cloudUpload = new CloudUpload.CloudUpload(file, channelId, items.length, importDefault);
       items.push(cloudUpload);
     });
@@ -188,7 +188,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     }
     const result = value4.set(draftType, items);
     const result1 = obj.set(channelId, value4);
-    const arr2 = require("../../_runtime/metro/00012__.js");
+    const arr2 = require("apply");
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
     ({

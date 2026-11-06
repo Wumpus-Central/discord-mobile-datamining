@@ -9,8 +9,8 @@ import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(5073).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5148).MessageSendLocation;
+let closure_7 = fn(5100).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5175).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePatchNotesComposer.tsx");
 

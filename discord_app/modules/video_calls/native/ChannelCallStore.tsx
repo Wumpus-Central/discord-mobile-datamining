@@ -8,15 +8,15 @@ import useSelectedParticipantDefault from "../useSelectedParticipant.tsx";
 import isOrientationLockSupportedDefault from "../../device/native/isOrientationLockSupported.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(11190);
+const ChannelCallConstants = fn(11145);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5817).ParticipantTypes;
-const timeout = new fn(4987).Timeout();
+const ParticipantTypes = fn(5835).ParticipantTypes;
+const timeout = new fn(5014).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -28,23 +28,23 @@ let obj2 = {};
 let size = {
   x: "Array",
   y: "Path",
-  width: "apply",
-  height: "sr",
-  screenOrientation: fn(9049).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: null,
-  isInitialized: null,
-  isVisible: null,
+  width: "channel",
+  height: "location",
+  screenOrientation: fn(8995).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002177745760348538,
+  isInitialized: 15177101738217418000000000000000000000000000000000000000000000000000000000000000000,
+  isVisible: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017361922762208535,
 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "Path",
-  width: "apply",
-  height: "sr",
-  screenOrientation: fn(9049).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: null,
-  isInitialized: null,
-  isVisible: null,
+  width: "channel",
+  height: "location",
+  screenOrientation: fn(8995).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002177745760348538,
+  isInitialized: 15177101738217418000000000000000000000000000000000000000000000000000000000000000000,
+  isVisible: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017361922762208535,
 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;

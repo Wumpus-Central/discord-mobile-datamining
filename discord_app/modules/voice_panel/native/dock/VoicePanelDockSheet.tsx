@@ -10,19 +10,19 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(11419);
+const VoicePanelConstants = fn(11381);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelDockConstants = fn(11437);
+const VoicePanelDockConstants = fn(11399);
 ({ DOCK_SETTLE_PROGRESS, DOCK_PRESS_EXTENSION } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let items = [
   {
-    code: "(function getDockSheetTransform_VoicePanelDockSheetTsx1({connected:connected,progress:progress,wrapperDimensions:wrapperDimensions,dockHeight:dockHeight,dockJoinMorphOrigin:dockJoinMorphOrigin,dockEntryProgress:dockEntryProgress,sheetExitProgress:sheetExitProgress,dockPressProgress:dockPressProgress}){let[getDockRect,shrinkDockAroundCenter,scaleDockAroundCenter,DOCK_PRESS_EXTENSION]=this.__closure;const{drawerWidth:drawerWidth,drawerHeight:drawerHeight,drawerX:drawerX,drawerY:drawerY}=wrapperDimensions;if(!connected&&progress<=0||drawerWidth<=0||drawerHeight<=0){return null;}const fullRect={x:drawerX,y:drawerY,width:drawerWidth,height:drawerHeight};const restRect=getDockRect(fullRect,dockHeight);const origin=dockJoinMorphOrigin!=null?{...dockJoinMorphOrigin,height:drawerHeight*(dockJoinMorphOrigin.width/drawerWidth)}:fullRect;const geometry=shrinkDockAroundCenter(progress,origin,restRect);const{translateX:translateX,translateY:translateY,scale:scale}=scaleDockAroundCenter(geometry,drawerWidth,drawerHeight);const onScreenHeight=dockHeight+(drawerHeight-dockHeight)*(1-progress);const offscreen=(1-dockEntryProgress+sheetExitProgress)*onScreenHeight;const pressExtension=dockPressProgress*DOCK_PRESS_EXTENSION;return{translateX:translateX,translateY:translateY+offscreen-pressExtension,scale:scale};})",
+    code: "(function getDockSheetTransform_VoicePanelDockSheetTsx1({connected:connected,progress:progress,wrapperDimensions:wrapperDimensions,dockHeight:dockHeight,dockBottom:dockBottom,dockJoinMorphOrigin:dockJoinMorphOrigin,dockEntryProgress:dockEntryProgress,sheetExitProgress:sheetExitProgress,dockPressProgress:dockPressProgress}){let[getDockRect,shrinkDockAroundCenter,scaleDockAroundCenter,DOCK_PRESS_EXTENSION]=this.__closure;const{drawerWidth:drawerWidth,drawerHeight:drawerHeight,drawerX:drawerX,drawerY:drawerY}=wrapperDimensions;if(!connected&&progress<=0||drawerWidth<=0||drawerHeight<=0){return null;}const fullRect={x:drawerX,y:drawerY,width:drawerWidth,height:drawerHeight};const restRect={...getDockRect(fullRect,dockHeight),y:drawerY+Math.max(Math.max(dockBottom-drawerY,drawerHeight)-dockHeight,0)};const origin=dockJoinMorphOrigin!=null?{...dockJoinMorphOrigin,height:drawerHeight*(dockJoinMorphOrigin.width/drawerWidth)}:fullRect;const geometry=shrinkDockAroundCenter(progress,origin,restRect);const{translateX:translateX,translateY:translateY,scale:scale}=scaleDockAroundCenter(geometry,drawerWidth,drawerHeight);const onScreenHeight=dockHeight+(drawerHeight-dockHeight)*(1-progress);const offscreen=(1-dockEntryProgress+sheetExitProgress)*onScreenHeight;const pressExtension=dockPressProgress*DOCK_PRESS_EXTENSION;return{translateX:translateX,translateY:translateY+offscreen-pressExtension,scale:scale};})",
   },
-  fn(11445).getDockRect,
-  fn(11445).shrinkDockAroundCenter,
-  fn(11445).scaleDockAroundCenter,
+  fn(11407).getDockRect,
+  fn(11407).shrinkDockAroundCenter,
+  fn(11407).scaleDockAroundCenter,
   DOCK_PRESS_EXTENSION,
 ];
 let closure_129_0;
@@ -32,32 +32,33 @@ let closure_129_3;
 [tmp5, tmp6, tmp7, tmp8, tmp9] = items;
 function getDockSheetTransform(connected) {
   ({ progress, wrapperDimensions, dockHeight, dockJoinMorphOrigin } = connected);
-  ({ drawerWidth, drawerHeight } = wrapperDimensions);
+  ({ drawerWidth, drawerHeight, drawerY } = wrapperDimensions);
   if (connected.connected) {
     if (drawerWidth > 0) {
       if (drawerHeight > 0) {
-        const size = { x: tmp4, y: tmp5, width: drawerWidth, height: drawerHeight };
+        const size = { x: tmp5, y: drawerY, width: drawerWidth, height: drawerHeight };
+        const obj2 = {};
+        const merged = Object.assign(require(size, dockHeight));
+        const _Math = Math;
+        const _Math2 = Math;
+        obj2.y = drawerY + Math.max(Math.max(tmp - drawerY, drawerHeight) - dockHeight, 0);
         let tmp9 = size;
         if (null != dockJoinMorphOrigin) {
           const obj = {};
-          const merged = Object.assign(dockJoinMorphOrigin);
+          const merged1 = Object.assign(dockJoinMorphOrigin);
           obj.height = drawerHeight * (dockJoinMorphOrigin.width / drawerWidth);
           tmp9 = obj;
         }
-        const tmp12 = dependencyMap(
-          importDefault(progress, tmp9, require(size, dockHeight)),
-          drawerWidth,
-          drawerHeight,
-        );
-        const obj2 = {
+        const tmp12 = dependencyMap(importDefault(progress, tmp9, obj2), drawerWidth, drawerHeight);
+        const obj3 = {
           translateX: tmp12.translateX,
           translateY:
             tmp12.translateY +
-            (1 - tmp + tmp2) * (dockHeight + (drawerHeight - dockHeight) * (1 - progress)) -
-            tmp3 * noop,
+            (1 - tmp2 + tmp3) * (dockHeight + (drawerHeight - dockHeight) * (1 - progress)) -
+            tmp4 * noop,
           scale: tmp12.scale,
         };
-        return obj2;
+        return obj3;
       }
     }
   }
@@ -65,7 +66,7 @@ function getDockSheetTransform(connected) {
 }
 let items1 = [tmp6, tmp7, tmp8, tmp9];
 getDockSheetTransform.__closure = items1;
-getDockSheetTransform.__workletHash = 685261852504;
+getDockSheetTransform.__workletHash = 3423331622410;
 getDockSheetTransform.__initData = tmp5;
 let items2 = [
   {

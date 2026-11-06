@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
-import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import SelectedDismissibleContentDefault from "../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -10,10 +10,10 @@ const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(19597, dependencyMap.paths);
+  return asyncRequireImpl(19593, dependencyMap.paths);
 }
-const VoicePanelModes = fn(11419).VoicePanelModes;
-const isActivityParticipant = fn(5817).isActivityParticipant;
+const VoicePanelModes = fn(11381).VoicePanelModes;
+const isActivityParticipant = fn(5835).isActivityParticipant;
 const jsx = fn(21).jsx;
 let closure_10 = {
   code: "(function VoicePanelDismissableContentTsx1(){let[mode,VoicePanelModes,focused]=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;})",
@@ -85,7 +85,7 @@ export default noop.memo(function VoicePanelDismissibleContent() {
     VoicePanelDismissableContentTsx2,
   );
   if (tmp4[0]) {
-    const items5 = [tmp6(4976).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
+    const items5 = [tmp6(5003).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
     let items6 = items5;
   } else {
     items6 = [];

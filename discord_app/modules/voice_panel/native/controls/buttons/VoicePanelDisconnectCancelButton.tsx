@@ -4,33 +4,36 @@ import ChannelRTCActionCreatorsDefault from "../../../../../actions/ChannelRTCAc
 import SelectedChannelActionCreatorsDefault from "../../../../../actions/SelectedChannelActionCreators.tsx";
 import ChannelRTCParticipants from "../../../../calls/ChannelRTCParticipants.tsx";
 import StreamActionCreators from "../../../../../actions/StreamActionCreators.tsx";
+import StageChannelActionCreatorExtras from "../../../../stage_channels/StageChannelActionCreatorExtras.native.tsx";
 import leaveEmbeddedActivity from "../../../../activities/leaveEmbeddedActivity.tsx";
 import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
+import shouldShowEndStageModalDefault from "../../../../stage_channels/shouldShowEndStageModal.tsx";
 import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../../activities/EmbeddedActivitiesStore.tsx";
 import ApplicationStreamingStore from "../../../../../stores/ApplicationStreamingStore.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import VoicePanelStore from "../../../VoicePanelStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11419).VoicePanelModes;
+const VoicePanelModes = fn(11381).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT },
   icon: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 obj2.icon = { tintColor: nativeDefault.colors.WHITE };
-let closure_11 = createStyles.createStyles(obj2);
-let closure_12 = {
+let closure_12 = createStyles.createStyles(obj2);
+let closure_13 = {
   code: "(function VoicePanelDisconnectCancelButtonTsx1(){let[mode,VoicePanelModes,focused]=this.__closure;var _focused$get$id,_focused$get;if(mode.get()!==VoicePanelModes.PANEL){return null;}return(_focused$get$id=(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==null&&_focused$get$id!==void 0?_focused$get$id:null;})",
 };
-let closure_13 = {
+let closure_14 = {
   code: "(function VoicePanelDisconnectCancelButtonTsx2(focusId,lastFocusId){let[scheduleOnRN,handleFocusChange]=this.__closure;if(focusId!==lastFocusId){scheduleOnRN(handleFocusChange,focusId);}})",
 };
 const size = fn(2);
@@ -42,7 +45,7 @@ export default function DisconnectCancelButton(props) {
   let first;
   noop = undefined;
   let PhoneHangUpIcon;
-  let tmp = closure_11();
+  let tmp = closure_12();
   const context = noop.useContext(VoicePanelStateContextDefault);
   const channelId = context.channelId;
   const focused = context.focused;
@@ -74,7 +77,7 @@ export default function DisconnectCancelButton(props) {
       closure_4(null);
     }
   }, []);
-  items = [closure_12, context.mode, VoicePanelModes, focused];
+  items = [closure_13, context.mode, VoicePanelModes, focused];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -101,7 +104,7 @@ export default function DisconnectCancelButton(props) {
   VoicePanelDisconnectCancelButtonTsx1.__closure = items1;
   VoicePanelDisconnectCancelButtonTsx1.__workletHash = 15477130751677;
   VoicePanelDisconnectCancelButtonTsx1.__initData = tmp9;
-  const items2 = [closure_13, require("../../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback];
+  const items2 = [closure_14, require("../../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   [tmp13, tmp14, tmp15] = items2;
@@ -136,6 +139,12 @@ export default function DisconnectCancelButton(props) {
           StreamActionCreators.stopStream(id);
         }
       } else {
+        const channel = ChannelStore.getChannel(c1);
+        if (null != channel) {
+          if (shouldShowEndStageModalDefault(channel)) {
+            StageChannelActionCreatorExtras.openEndStageModal(channel);
+          }
+        }
         SelectedChannelActionCreatorsDefault.disconnect();
         state = VoicePanelStore.getState();
         state.closeChannel(c1);
@@ -152,11 +161,11 @@ export default function DisconnectCancelButton(props) {
     }
   }, items4);
   if (first === constants.ACTIVITY) {
-    PhoneHangUpIcon = tmp8(12090).DoorExitIcon;
+    PhoneHangUpIcon = tmp8(12055).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(19632).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(19605).ScreenXIcon;
   } else {
-    PhoneHangUpIcon = tmp8(10020).PhoneHangUpIcon;
+    PhoneHangUpIcon = tmp8(9971).PhoneHangUpIcon;
   }
   const element = {
     onPress: callback1,

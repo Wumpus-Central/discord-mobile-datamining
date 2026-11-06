@@ -1,5 +1,5 @@
 // discord_app/modules/favorites/FavoriteStore.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
@@ -63,7 +63,7 @@ function initializeFromUserSettings() {
     }
   }
   if (value2 == null) {
-    value2 = !_mod12.isEmpty(obj);
+    value2 = !apply.isEmpty(obj);
   }
   flag2 = undefined;
   if (favorites != null) {
@@ -110,7 +110,7 @@ function initializeFromUserSettings() {
     flag4 = closure_18 !== tmp18;
   }
   if (!flag4) {
-    flag4 = !_mod12.isEqual(obj, obj);
+    flag4 = !apply.isEqual(obj, obj);
   }
   if (flag4) {
     closure_18 = tmp18;
@@ -118,8 +118,8 @@ function initializeFromUserSettings() {
   }
   return flag4;
 }
-const createChannelRecord = fn(4996).createChannelRecord;
-const FavoritesConstants = fn(5005);
+const createChannelRecord = fn(5023).createChannelRecord;
+const FavoritesConstants = fn(5032);
 ({ FAVORITES_PRUNE_SCOPE_ALL: closure_4, FAVORITES_PRUNE_SCOPE_AUTO_ADDED } = FavoritesConstants);
 const FAVORITES_PRUNE_WHEN_ARCHIVED = FavoritesConstants.FAVORITES_PRUNE_WHEN_ARCHIVED;
 let closure_7 = FavoritesConstants.FAVORITES_UNCATEGORIZED_PARENT_ID;
@@ -239,7 +239,7 @@ prototype["getFavoritesCountAgainstLimit"] = function getFavoritesCountAgainstLi
   return num;
 };
 prototype["hasStoredFavorites"] = function hasStoredFavorites() {
-  return !_mod12.isEmpty(this.getFavoriteChannels());
+  return !apply.isEmpty(this.getFavoriteChannels());
 };
 FavoriteStore.displayName = "FavoriteStore";
 const favoriteStore = new FavoriteStore(DispatcherDefault, {});

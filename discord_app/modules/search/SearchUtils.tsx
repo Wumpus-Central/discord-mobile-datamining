@@ -1,9 +1,9 @@
 // discord_app/modules/search/SearchUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2171 from "../../../_runtime/metro/02171__.js";
+import _modDef2166 from "../../../_runtime/metro/02166__.js";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import QueryTokenizerDefault from "../../lib/QueryTokenizer.tsx";
@@ -20,7 +20,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(9982).SearchTabs;
+const SearchTabs = fn(9933).SearchTabs;
 const Constants = fn(1072);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({
@@ -96,7 +96,7 @@ export function getSearchTabFetchId(searchContext, MESSAGES, searchResultsQuery)
   return "" + channelId + "-" + MESSAGES + "-" + searchResultsQuery;
 }
 export function getChannelActiveAgoTimestamp(arg0) {
-  const diffResult = _modDef2171().diff(_modDef2171(arg0), "s");
+  const diffResult = _modDef2166().diff(_modDef2166(arg0), "s");
   if (diffResult > c19) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -134,7 +134,7 @@ export function getChannelActiveAgoTimestamp(arg0) {
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef2171();
+  const obj = _modDef2166();
 }
 export function getIndexingErrorText(searchContext) {
   const type = searchContext.type;
@@ -502,7 +502,7 @@ export function quoteChannelName(channelName) {
 export function getFlattenedAutocompleteResults(arg0, arg1) {
   closure_0 = arg1;
   importDefault = [];
-  const item = _modDef12(arg0).forEach((results) => {
+  const item = applyDefault(arg0).forEach((results) => {
     closure_0 = results;
     if (null != results) {
       if (0 !== results.results.length) {
@@ -590,18 +590,18 @@ export function filterHasAnswer(type, type2) {
 export function refreshSearchTokens() {
   const result = SearchTokens.rebuildSearchTokenConfigs();
   navigation.reset();
-  _modDef12(SearchTokensDefault).forOwn((arg0, type) => {
+  applyDefault(SearchTokensDefault).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return navigation.addRule({ type });
   });
   navigation2.reset();
-  const tmp3Result = _modDef12(SearchTokensDefault);
+  const tmp3Result = applyDefault(SearchTokensDefault);
   const crossDMSearchTokensConfig = SearchTokens.buildCrossDMSearchTokensConfig();
-  _modDef12(crossDMSearchTokensConfig).forOwn((arg0, type) => {
+  applyDefault(crossDMSearchTokensConfig).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return navigation2.addRule({ type });
   });
-  const obj4 = _modDef12(crossDMSearchTokensConfig);
+  const obj4 = applyDefault(crossDMSearchTokensConfig);
   DispatcherDefault.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
 }
 export function getChannelDisplayName(isDM) {

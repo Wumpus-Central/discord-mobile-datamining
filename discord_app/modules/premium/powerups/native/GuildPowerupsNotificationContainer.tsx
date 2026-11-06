@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2699 from "../GuildPowerups.messages.js";
+import _modDef2696 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useGuildPowerupTier3OverrideConfigDefault from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
 import useGuildPowerupExpiringNotificationsConfigDefault from "../hooks/useGuildPowerupExpiringNotificationsConfig.tsx";
@@ -40,7 +40,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { color: "text-strong", variant: "heading-lg/semibold", children: null };
     const intl = util.intl;
-    obj2.children = intl.string(_modDef2699["3FRirU"]);
+    obj2.children = intl.string(_modDef2696["3FRirU"]);
     items = [React4(Text_Text.Text, obj2), ,];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {

@@ -1,6 +1,6 @@
 // discord_app/modules/app_database/modules/NonGuildVersions.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import DurationsDefault from "../../../utils/Durations.tsx";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -37,15 +37,15 @@ class NonGuildVersions {
                 const _isNaN = isNaN;
                 const _Number = Number;
                 if (!isNaN(Number(guildId))) {
-                  const result = closure_1_1(5021).nonGuildVersionsTransaction(database);
+                  const result = closure_1_1(5048).nonGuildVersionsTransaction(database);
                   const obj2 = { id: "initial_guild_id", versionString: guildId };
                   result.put(obj2);
-                  const obj = closure_1_1(5021);
+                  const obj = closure_1_1(5048);
                 }
               }
-              const result1 = closure_1_1(5021).nonGuildVersionsTransaction(database);
+              const result1 = closure_1_1(5048).nonGuildVersionsTransaction(database);
               result1.delete("initial_guild_id");
-              const obj4 = closure_1_1(5021);
+              const obj4 = closure_1_1(5048);
             });
           }
         }, 10 * closure_1(tmp2[6]).Millis.SECOND),
@@ -157,10 +157,10 @@ obj.actions = {
     return obj3.handleConnectionOpen(arg0, arg1);
   },
 };
-const isCacheEnabled = fn(7936);
+const isCacheEnabled = fn(7890);
 if (isCacheEnabled.isCacheEnabled()) {
   SelectedGuildStore.addChangeListener(
-    _modDef12.throttle(() => {
+    applyDefault.throttle(() => {
       const databaseResult = DatabaseDaosDefault.database();
       if (databaseResult != null) {
         databaseResult.transaction((database) => {
@@ -169,20 +169,20 @@ if (isCacheEnabled.isCacheEnabled()) {
             const _isNaN = isNaN;
             const _Number = Number;
             if (!isNaN(Number(guildId))) {
-              const result = closure_1_1(5021).nonGuildVersionsTransaction(database);
+              const result = closure_1_1(5048).nonGuildVersionsTransaction(database);
               const obj2 = { id: "initial_guild_id", versionString: guildId };
               result.put(obj2);
-              const obj = closure_1_1(5021);
+              const obj = closure_1_1(5048);
             }
           }
-          const result1 = closure_1_1(5021).nonGuildVersionsTransaction(database);
+          const result1 = closure_1_1(5048).nonGuildVersionsTransaction(database);
           result1.delete("initial_guild_id");
-          const obj4 = closure_1_1(5021);
+          const obj4 = closure_1_1(5048);
         });
       }
     }, 10 * DurationsDefault.Millis.SECOND),
   );
-  const importDefaultResult1 = _modDef12;
+  const importDefaultResult1 = applyDefault;
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/NonGuildVersions.tsx");

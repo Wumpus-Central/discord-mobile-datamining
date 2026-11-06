@@ -5,7 +5,7 @@ import getFlattedChannelListDefault from "../channel/getFlattedChannelList.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import GuildChannelStore_mod from "../../stores/GuildChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 
 const require = fn;
 function sortCategoryList(channel, channel2) {
@@ -122,13 +122,13 @@ function buildSortedChannels() {
   const arr3 = getFlattedChannelListDefault(_null._categories, _null);
 }
 let closure_3 = ["lock_permissions", "id"];
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({
   castChannelRecord: hasOwnProperty,
   isGuildSelectableChannelType: closure_6,
   isGuildVocalChannelType: metroImportDefault,
 } = ChannelRecord);
-let GuildChannelStore = fn(5073);
+let GuildChannelStore = fn(5100);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_8, GUILD_VOCAL_CHANNELS_KEY: closure_9 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
-import _modDef3219 from "../../../Checkpoint2026.messages.js";
+import _modDef3248 from "../../../Checkpoint2026.messages.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
@@ -27,7 +27,7 @@ function EarnedCountHeader(customizationOption) {
     "" +
     customizationOptionName +
     ", " +
-    intl.formatToPlainString(_modDef3219.Vfq58K, {
+    intl.formatToPlainString(_modDef3248.Vfq58K, {
       earnedCount,
       totalCount,
       countHook(arg0) {
@@ -43,7 +43,7 @@ function EarnedCountHeader(customizationOption) {
     children: null,
   };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3219.Vfq58K, {
+  obj3.children = intl2.format(_modDef3248.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
@@ -148,24 +148,24 @@ function TraitPickerLandscape(selectedAsset) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const rarityOrder = fn(6204).CHECKPOINT_RARITY_ORDER_MOBILE;
+const rarityOrder = fn(6224).CHECKPOINT_RARITY_ORDER_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
-  container: { gap: fn(13922).TRAIT_OPTION_SPACING },
+  container: { gap: fn(13898).TRAIT_OPTION_SPACING },
   earnedRow: null,
   landscapeGap: null,
   details: null,
   landscapeScrollContent: null,
 };
-let obj3 = { gap: fn(13922).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(13922).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(13922).CONTENT_INSET };
+let obj3 = { gap: fn(13898).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13898).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13898).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(13922).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(13898).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 let closure_13 = createStyles.createStyles(obj2);
 let closure_15 = {
@@ -187,15 +187,15 @@ export default function TraitPicker(customizationOption) {
     isLandscape = false;
   }
   ({ onSelectOption, onSelectFinalizeOption } = customizationOption);
-  const isTraitRarityVisible = customizationOption(6571).getIsTraitRarityVisible(customizationOption);
-  const obj = customizationOption(6571);
+  const isTraitRarityVisible = customizationOption(6591).getIsTraitRarityVisible(customizationOption);
+  const obj = customizationOption(6591);
   const tmp = selectedOptionId;
   items = [AccessibilityStore];
   dependencyMap = customizationOption(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = customizationOption(504);
-  _slicedToArray = customizationOption(5400).useIsScreenReaderEnabled();
-  const obj3 = customizationOption(5400);
-  const traitPickerOptions = customizationOption(13926).useTraitPickerOptions({
+  _slicedToArray = customizationOption(5420).useIsScreenReaderEnabled();
+  const obj3 = customizationOption(5420);
+  const traitPickerOptions = customizationOption(13902).useTraitPickerOptions({
     customizationOption,
     optionIds,
     savedOptionId,
@@ -205,7 +205,7 @@ export default function TraitPicker(customizationOption) {
   const earnedCount = traitPickerOptions.earnedCount;
   let tmp6 = null != selectedOptionId;
   closure_6 = tmp6;
-  const tmp7 = selectedOptionId(5751)(() => {
+  const tmp7 = selectedOptionId(5769)(() => {
     let num = 0;
     if (!closure_6) {
       num = 0;
@@ -222,7 +222,7 @@ export default function TraitPicker(customizationOption) {
     }
     return num;
   });
-  const obj4 = customizationOption(13926);
+  const obj4 = customizationOption(13902);
   const obj5 = { customizationOption, optionIds, savedOptionId, rarityOrder };
   const obj6 = availableTraitOptions;
   [tmp9, tmp10] = availableTraitOptions.useState(tmp7);
@@ -230,7 +230,7 @@ export default function TraitPicker(customizationOption) {
   const obj8 = {
     availableTraitOptions,
     selectedOptionId,
-    onSelectOption: customizationOption(13670).selectCharacterTrait,
+    onSelectOption: customizationOption(13645).selectCharacterTrait,
     isPaused: null,
   };
   let tmp11 = flag;
@@ -242,7 +242,7 @@ export default function TraitPicker(customizationOption) {
     tmp11 = tmp12;
   }
   obj8.isPaused = tmp11;
-  const autoSelectTraitOption = customizationOption(13927).useAutoSelectTraitOption(obj8);
+  const autoSelectTraitOption = customizationOption(13903).useAutoSelectTraitOption(obj8);
   let diff = earnedCount;
   if (!tmp6) {
     diff = earnedCount - tmp9;
@@ -258,7 +258,7 @@ export default function TraitPicker(customizationOption) {
   }, items1);
   if (isLandscape) {
     str = "md";
-    if (selectedOptionId(1493)().height <= tmp3(5328).WINDOW_SIZE_THRESHOLD_LARGE) {
+    if (selectedOptionId(1493)().height <= tmp3(5348).WINDOW_SIZE_THRESHOLD_LARGE) {
       str = "sm";
     }
   }
@@ -269,7 +269,7 @@ export default function TraitPicker(customizationOption) {
       disableSwitching: isCurrentTraitBlocked,
       disabled: flag,
     };
-    let tmp16Result = closure_9(tmp3(13928).FinalizeTraitTabs, obj9);
+    let tmp16Result = closure_9(tmp3(13904).FinalizeTraitTabs, obj9);
     let tmp19 = closure_9;
   } else {
     const obj10 = { customizationOption, earnedCount: diff, totalCount: traitPickerOptions.totalCount };
@@ -295,14 +295,14 @@ export default function TraitPicker(customizationOption) {
     onSelectOption: null,
   };
   let num2 = 0;
-  const obj7 = customizationOption(13927);
+  const obj7 = customizationOption(13903);
   if (!tmp6) {
     num2 = tmp7;
   }
   obj12.introStartIndex = num2;
   obj12.onIntroStep = tmp10;
   obj12.onSelectOption = onSelectOption;
-  obj11.optionList = tmp19(tmp(13922), obj12, customizationOption);
+  obj11.optionList = tmp19(tmp(13898), obj12, customizationOption);
   obj11.selectedAsset = memo;
   if (!tmp6) {
     tmp6 = 0 === tmp7;

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UserSettingsProtoManager.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType.tsx";
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators.tsx";
@@ -14,7 +14,7 @@ function handleConnectionOpen() {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     let result = PreloadedUserSettingsActionCreators.markDirtyFromMigration(tmp2.proto, tmp2.editInfo.cleanupFuncs);
   }
-  const item = _modDef12.forEach(
+  const item = applyDefault.forEach(
     UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType,
     (scheduleSaveFromOfflineEdit, arg1) => {
       const tmp = fullState[Number(undefined, arg1)];
@@ -40,7 +40,7 @@ function handleAppStateUpdate(state) {
     tmp = "background" !== state;
   }
   if (!tmp) {
-    const item = _modDef12.forEach(
+    const item = applyDefault.forEach(
       UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType,
       (persistChanges, arg1) => {
         fullState = fullState.getFullState();

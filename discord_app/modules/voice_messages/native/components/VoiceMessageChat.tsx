@@ -198,14 +198,14 @@ function Duration(animationValue) {
   }
   obj4.color = str;
   obj4.children = memo;
-  items7[1] = closure_13(tmp8(5763).Text, obj4);
+  items7[1] = closure_13(tmp8(5781).Text, obj4);
   obj3.children = items7;
   return closure_14(tmp10(1652).View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13956).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(13957);
+const useVoiceMessagesUIStore = fn(13932).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(13933);
 ({
   VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8,
   VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9,
@@ -216,7 +216,7 @@ const VoiceMessageConstants = fn(13957);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = module_1652.createAnimatedComponent(ActivityIndicator);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   container: {
     height: "100%",
@@ -339,7 +339,7 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
     if (!timeout) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const obj = c0(5380);
+        const obj = c0(5400);
         const result = _undefined2.set(obj.withTiming(1, { easing: c0(1652).Easing.quad, duration: 200 }));
       }, 1000);
       return () => {

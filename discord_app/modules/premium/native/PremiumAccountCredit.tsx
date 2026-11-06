@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/PremiumAccountCredit.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import _modDef3415 from "../premium_group/PremiumGroup.messages.js";
+import _modDef3444 from "../premium_group/PremiumGroup.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GameIcon from "../../game_detection/native/GameIcon.tsx";
 import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
@@ -29,7 +29,7 @@ function AccountCreditTier(arg0) {
   }
   if (hasPremiumGroup) {
     const intl3 = util.intl;
-    let stringResult = intl3.string(_modDef3415["5asczk"]);
+    let stringResult = intl3.string(_modDef3444["5asczk"]);
   } else {
     if (null != currentSubscription) {
       if (currentSubscription.planId === planId) {
@@ -109,7 +109,7 @@ const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   title: { marginBottom: 12 },
   creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -123,8 +123,8 @@ let obj2 = {
   creditDescription: null,
 };
 let size = {
-  width: fn(7473).GameIconImageSize[fn(undefined, 7473).GameIconSizes.SMALL],
-  height: fn(7473).GameIconImageSize[fn(undefined, 7473).GameIconSizes.SMALL],
+  width: fn(7418).GameIconImageSize[fn(undefined, 7418).GameIconSizes.SMALL],
+  height: fn(7418).GameIconImageSize[fn(undefined, 7418).GameIconSizes.SMALL],
   alignItems: "center",
   justifyContent: "center",
 };
@@ -153,8 +153,8 @@ export default function PremiumAccountCredit(currentSubscription) {
   if (null != entitlements) {
     if (obj8.hasAccountCredit(entitlements)) {
       const _Array = Array;
-      const tmp11Result = _modDef12;
-      const found = _modDef12(Array.from(entitlements)).filter((subscriptionPlanId) => {
+      const tmp11Result = applyDefault;
+      const found = applyDefault(Array.from(entitlements)).filter((subscriptionPlanId) => {
         let tmp = null != subscriptionPlanId.subscriptionPlanId;
         if (tmp) {
           tmp = null != subscriptionPlanId.parentId;
@@ -164,7 +164,7 @@ export default function PremiumAccountCredit(currentSubscription) {
         }
         return tmp;
       });
-      const tmp11ResultResult = _modDef12(Array.from(entitlements));
+      const tmp11ResultResult = applyDefault(Array.from(entitlements));
       const valueResult = found.groupBy((subscriptionPlanId) => subscriptionPlanId.subscriptionPlanId).value();
       c3 = valueResult;
       const obj2 = { style, children: null };
@@ -177,7 +177,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       };
       const intl = tmp2(1113).intl;
       obj3.children = intl.string(tmp2(1113).t.YugZY0);
-      const items1 = [closure_6(tmp2(5763).Text, obj3), , ,];
+      const items1 = [closure_6(tmp2(5781).Text, obj3), , ,];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj4.style = items2;
@@ -202,7 +202,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj5 = { style: tmp.creditDescription, variant: "body-sm/medium", children: null };
       const intl2 = tmp2(1113).intl;
       obj5.children = intl2.string(tmp2(1113).t.Z5b2Gf);
-      items1[2] = closure_6(tmp2(5763).Text, obj5);
+      items1[2] = closure_6(tmp2(5781).Text, obj5);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -210,7 +210,7 @@ export default function PremiumAccountCredit(currentSubscription) {
           const obj6 = { style: tmp.creditDescription, variant: "body-sm/medium", children: null };
           const intl3 = tmp2(1113).intl;
           obj6.children = intl3.string(tmp2(1113).t.azRP0E);
-          tmp9Result = closure_6(tmp2(5763).Text, obj6);
+          tmp9Result = closure_6(tmp2(5781).Text, obj6);
         }
       }
       items1[3] = tmp9Result;

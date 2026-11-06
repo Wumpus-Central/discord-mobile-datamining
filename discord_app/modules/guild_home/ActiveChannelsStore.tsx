@@ -1,6 +1,6 @@
 // discord_app/modules/guild_home/ActiveChannelsStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -12,7 +12,7 @@ function truncateOldMessageData(channelId) {
     const _Date2 = Date;
     importDefault = SnowflakeUtilsDefault.fromTimestamp(Date.now() - c5);
     const tmp6 = importDefault;
-    const findIndexResult = _modDef12.findIndex(arr, (id) => SnowflakeUtilsDefault.compare(id.id, closure_0) > 0);
+    const findIndexResult = applyDefault.findIndex(arr, (id) => SnowflakeUtilsDefault.compare(id.id, closure_0) > 0);
     if (-1 === findIndexResult) {
       dependencyMap2[channelId] = [];
     } else {
@@ -31,7 +31,7 @@ function handleChannelDelete(channel) {
   delete tmp4[tmp3];
   delete tmp2[tmp];
 }
-const isGuildHomeChannel = fn(4999).isGuildHomeChannel;
+const isGuildHomeChannel = fn(5026).isGuildHomeChannel;
 let c5 = 900000;
 let dependencyMap = {};
 const dependencyMap2 = {};
@@ -83,8 +83,8 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
             }
           });
           const _Array = Array;
-          const found = _modDef12.chain(Array.from(arr)).filter((item) => item in dependencyMap);
-          const chainResult = _modDef12.chain(Array.from(arr));
+          const found = applyDefault.chain(Array.from(arr)).filter((item) => item in dependencyMap);
+          const chainResult = applyDefault.chain(Array.from(arr));
           const _Set = Set;
           const set = new Set(
             found

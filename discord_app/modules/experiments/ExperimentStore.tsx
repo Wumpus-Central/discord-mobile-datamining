@@ -1,6 +1,6 @@
 // discord_app/modules/experiments/ExperimentStore.tsx
 import LoggerDefault from "../debug/Logger.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import Storage5 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import Dispatcher from "../../Dispatcher.tsx";
 import MurmurHashV3Default from "../../../_runtime/01251_MurmurHashV3.js";
@@ -722,7 +722,7 @@ function loadLocalOverrides() {
   items[2] = value4;
   obj4 = {};
   obj = {};
-  obj4 = _modDef12;
+  obj4 = applyDefault;
   let flag = !obj4.isEmpty(items[0]);
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
@@ -897,7 +897,7 @@ function handleGuildChange(arg0) {
     continue;
   }
 }
-const ExperimentConstants = fn(5365);
+const ExperimentConstants = fn(5385);
 ({
   ExperimentBuckets: hasOwnProperty,
   ExperimentTypes: closure_6,

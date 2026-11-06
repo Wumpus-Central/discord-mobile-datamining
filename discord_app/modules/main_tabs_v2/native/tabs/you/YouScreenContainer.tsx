@@ -1,18 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_PlatformUtils from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import useChatLayoutDefault from "../../../../chat/native/useChatLayout.tsx";
 import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
+import AppFrameContainerDefault from "../../AppFrameContainer.tsx";
+import YouScreenDefault from "YouScreen.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const useWindowDimensionsDefault = tmp(1493);
-const useChatLayoutDefault = tmp(5327);
-const YouScreenDefault = tmp(19167);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(11711).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11677).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center" },
   androidContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none },
@@ -27,8 +28,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/
 
 export default noop.memo(function YouScreenContainer(route) {
   route = route.route;
-  let items1 = closure_6();
-  let tmp5Result = dependencyMap;
+  let tmp = closure_6();
   const trackTabPerformance = TabsPerformanceTracker.useTrackTabPerformance(RootNavigatorScreen.YOU);
   if (route != null) {
     const params = route.params;
@@ -36,39 +36,45 @@ export default noop.memo(function YouScreenContainer(route) {
       const initialTab = params.initialTab;
     }
   }
-  if (useChatLayoutDefault().isChatBesideChannelList) {
-    items = [items1.container];
-    let tmp7;
-    if (tmp3Result.isAndroid()) {
-      const obj2 = {};
-      const merged = Object.assign(items1.androidContainer);
-      obj2.paddingTop = useSafeAreaInsetsDefault().top;
-      tmp7 = obj2;
+  if (tmp4Result.isDuo()) {
+    const obj2 = { children: null };
+    const obj3 = { initialTab };
+    obj2.children = jsx(YouScreenDefault, { initialTab });
+    let tmp6Result = jsx(AppFrameContainerDefault, { children: null });
+    const tmp2Result = AppFrameContainerDefault;
+  } else if (useChatLayoutDefault().isChatBesideChannelList) {
+    items = [tmp.container];
+    let tmp9;
+    if (tmp4Result3.isAndroid()) {
+      const obj4 = {};
+      const merged = Object.assign(tmp.androidContainer);
+      obj4.paddingTop = useSafeAreaInsetsDefault().top;
+      tmp9 = obj4;
     }
-    const obj3 = { style: null, children: null };
-    items[1] = tmp7;
-    obj3.style = items;
-    tmp3Result = utils_PlatformUtils;
-    if (tmp3Result2.isAndroid()) {
-      const obj4 = { style: null, children: null };
-      items1 = [,];
-      items1[0] = items1.wrapper;
-      const obj5 = { maxWidth: 0.6 * useWindowDimensionsDefault().width };
-      items1[1] = obj5;
-      obj4.style = items1;
-      const obj6 = { initialTab };
-      tmp5Result = <tmp initialTab={initialTab} />;
-      obj4.children = tmp5Result;
-      let tmp5Result3 = <View style={null}>{null}</View>;
+    const obj5 = { style: null, children: null };
+    items[1] = tmp9;
+    obj5.style = items;
+    tmp4Result3 = utils_PlatformUtils;
+    if (tmp4Result4.isAndroid()) {
+      const obj6 = { style: null, children: null };
+      const items1 = [tmp.wrapper];
+      const obj7 = { maxWidth: 0.6 * useWindowDimensionsDefault().width };
+      items1[1] = obj7;
+      obj6.style = items1;
+      const obj8 = { initialTab };
+      tmp = jsx(YouScreenDefault, { initialTab });
+      obj6.children = tmp;
+      let tmp6Result3 = <View style={null}>{null}</View>;
     } else {
-      const obj7 = { initialTab };
-      tmp5Result3 = jsx(YouScreenDefault, { initialTab });
+      const obj9 = { initialTab };
+      tmp6Result3 = jsx(YouScreenDefault, { initialTab });
     }
-    obj3.children = tmp5Result3;
+    obj5.children = tmp6Result3;
     <View style={null}>{null}</View>;
-    tmp3Result2 = utils_PlatformUtils;
+    tmp4Result4 = utils_PlatformUtils;
   } else {
-    const obj8 = { initialTab };
-    return jsx(YouScreenDefault, { initialTab });
+    const obj10 = { initialTab };
+    tmp6Result = jsx(YouScreenDefault, { initialTab });
   }
+  return tmp6Result;
 });

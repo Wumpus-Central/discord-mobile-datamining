@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   headerContainer: {
     height: 56,
@@ -157,7 +157,7 @@ export default function GameProfileNavigationHeader(game) {
   if (null != name) {
     const obj4 = { style: tmp.headerContainer, children: null };
     const obj5 = { android_fallbackColor: token };
-    const items6 = [closure_6(tmp2(9144).BackgroundBlurFill, obj5)];
+    const items6 = [closure_6(tmp2(9090).BackgroundBlurFill, obj5)];
     const obj6 = { style: tmp.headerRow, children: null };
     let tmp21Result = null != memo;
     if (tmp21Result) {
@@ -165,7 +165,7 @@ export default function GameProfileNavigationHeader(game) {
       const obj8 = { uri: memo };
       obj7.source = obj8;
       obj7.style = tmp.icon;
-      tmp21Result = closure_6(tmp4(5854), obj7);
+      tmp21Result = closure_6(tmp4(5872), obj7);
     }
     const items7 = [tmp21Result, ,];
     const obj9 = { style: tmp.titleContainer, children: null };
@@ -175,7 +175,7 @@ export default function GameProfileNavigationHeader(game) {
       lineClamp: 1,
       children: name,
     };
-    const items8 = [closure_6(tmp2(5763).Heading, obj10)];
+    const items8 = [closure_6(tmp2(5781).Heading, obj10)];
     let l30Rank;
     if (game != null) {
       l30Rank = game.l30Rank;
@@ -184,12 +184,12 @@ export default function GameProfileNavigationHeader(game) {
     if (tmp19Result) {
       const obj11 = { style: tmp.rankPillContainer, children: null };
       const obj12 = { rank: game.l30Rank, compact: true };
-      const items9 = [closure_6(tmp4(9530), obj12)];
+      const items9 = [closure_6(tmp4(9476), obj12)];
       const obj13 = { style: null, children: null };
       const items10 = [StyleSheet.absoluteFill, animatedStyle1];
       obj13.style = items10;
       const obj14 = { rank: game.l30Rank };
-      obj13.children = closure_6(tmp4(9530), obj14);
+      obj13.children = closure_6(tmp4(9476), obj14);
       items9[1] = closure_6(tmp4(1652).View, obj13);
       obj11.children = items9;
       tmp19Result = closure_7(closure_4, obj11);

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_action_sheet/native/useGuildHeaderCounts.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberCountStore from "../../../stores/GuildMemberCountStore.tsx";
@@ -28,7 +28,7 @@ export function useGuildHeaderCounts(id) {
   const items1 = ["GUILD_HEADER_MEMBER_COUNT", id];
   const memo = noop.useMemo(
     () =>
-      _mod12.throttle((count) => {
+      apply.throttle((count) => {
         DispatcherDefault.dispatch({ type, count, guildId });
       }, 3000),
     items1,
@@ -63,7 +63,7 @@ export function useGuildHeaderCounts(id) {
   const items6 = ["GUILD_HEADER_ONLINE_COUNT", id];
   const memo1 = noop.useMemo(
     () =>
-      _mod12.throttle((count) => {
+      apply.throttle((count) => {
         DispatcherDefault.dispatch({ type, count, guildId });
       }, 3000),
     items6,

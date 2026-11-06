@@ -693,7 +693,7 @@ export function SegmentedControlPages(arg0) {
     let tmp83Result2 = tmp83Result;
     if (null != nativeGesture) {
       const obj8 = { gesture: nativeGesture, children: tmp83Result };
-      tmp83Result2 = tmp83(tmp(5430).GestureDetector, obj8);
+      tmp83Result2 = tmp83(tmp(5450).GestureDetector, obj8);
     }
     return tmp83Result2;
   }

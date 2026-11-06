@@ -14,15 +14,15 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let closure_5 = { mass: 0.4, damping: 18, stiffness: 300 };
 let closure_6 = { duration: 150 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { target: null, fill: null };
 let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(19427).CLOSE_TARGET_SIZE,
-  height: fn(19427).CLOSE_TARGET_SIZE,
-  borderRadius: fn(19427).CLOSE_TARGET_SIZE / 2,
+  width: fn(19419).CLOSE_TARGET_SIZE,
+  height: fn(19419).CLOSE_TARGET_SIZE,
+  borderRadius: fn(19419).CLOSE_TARGET_SIZE / 2,
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
@@ -37,7 +37,7 @@ const rect = {
   left: 0,
   right: 0,
   bottom: 0,
-  borderRadius: fn(19427).CLOSE_TARGET_SIZE / 2,
+  borderRadius: fn(19419).CLOSE_TARGET_SIZE / 2,
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.STATUS_DANGER,

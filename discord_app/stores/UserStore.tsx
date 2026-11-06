@@ -1,10 +1,10 @@
 // discord_app/stores/UserStore.tsx
-import _mod12 from "../../_runtime/metro/00012__.js";
+import apply from "../../_runtime/00012_apply.js";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
+import DisplayNameStylesUtils from "../modules/display_name_styles/DisplayNameStylesUtils.tsx";
 import UserStoreUtils from "../modules/user/UserStoreUtils.tsx";
 import FlagUtilsAll from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import PrimaryGuildUtils from "../modules/guild_tag/PrimaryGuildUtils.tsx";
-import DisplayNameStylesUtils from "../modules/display_name_styles/DisplayNameStylesUtils.tsx";
 import CustomTypingIndicatorTypes from "../modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx";
 import PremiumStateUtils from "../modules/premium/premium_state/PremiumStateUtils.tsx";
 import FamilyCenterModels from "../modules/parent_tools/FamilyCenterModels.tsx";
@@ -753,7 +753,7 @@ function handlePresenceUpdates(updates) {
         const user = item.user;
         let tmp2 = acc;
         if (user.hasOwnProperty(item)) {
-          result = result.set(_mod12.camelCase(item), item.user[item]);
+          result = result.set(apply.camelCase(item), item.user[item]);
           let tmp7 = acc;
           if (!acc) {
             tmp7 = result !== result;

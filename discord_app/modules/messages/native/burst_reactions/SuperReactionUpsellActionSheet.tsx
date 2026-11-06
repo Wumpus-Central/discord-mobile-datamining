@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _mod5112 from "../../../../../_runtime/metro/05112__.js";
+import _mod5139 from "../../../../../_runtime/metro/05139__.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
@@ -17,9 +17,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const AnalyticsPages = fn(1072).AnalyticsPages;
 const jsx = fn(21).jsx;
-const dismissibleContent = fn(4976).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
-let items = [fn(10085), fn(10086), fn(10087), fn(10088), fn(10086), fn(10089), fn(10090), fn(10091)];
-const createStyles = fn(5143);
+const dismissibleContent = fn(5003).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
+let items = [fn(10036), fn(10037), fn(10038), fn(10039), fn(10037), fn(10040), fn(10041), fn(10042)];
+const createStyles = fn(5170);
 let obj2 = { fill: null, nitroIcon: null, description: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

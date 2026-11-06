@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/CheckpointModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Server from "../../../../flow/Server.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import InteractionComponentTypes from "../../../interaction_components/InteractionComponentTypes.tsx";
@@ -142,7 +142,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
                 c7 = 3;
                 c8 = 1;
                 const obj8 = {
-                  value: closure_0(13670).sendCheckpointCard(closure_132_0, c3, closure_133_0),
+                  value: closure_0(13645).sendCheckpointCard(closure_132_0, c3, closure_133_0),
                   done: false,
                 };
                 return obj8;
@@ -151,7 +151,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
               c6 = 0;
               closure_132_2(false);
               const intl = closure_0(1113).intl;
-              closure_0(5848).presentError(intl.string(closure_0(1113).t.fEptJP));
+              closure_0(5866).presentError(intl.string(closure_0(1113).t.fEptJP));
               c8 = 3;
               const obj9 = { value: undefined, done: true };
               return obj9;
@@ -164,10 +164,10 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
               const obj10 = { value, done: true };
               return obj10;
             } else {
-              const result = closure_0(13666).trackCheckpoint2026CardShared(closure_133_0);
+              const result = closure_0(13641).trackCheckpoint2026CardShared(closure_133_0);
               c6 = 0;
-              const obj = closure_0(13666);
-              closure_0(13611).closeForwardModal();
+              const obj = closure_0(13641);
+              closure_0(13586).closeForwardModal();
               c8 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -566,7 +566,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
       return applyArgumentsResult;
     },
     onShare: function handleShare() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13673, dependencyMap.paths), "CheckpointShare", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13648, dependencyMap.paths), "CheckpointShare", {
         character: stateFromStores,
         stats,
         onForward: handleForward,
@@ -600,7 +600,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const CheckpointConstants = fn(6204);
+const CheckpointConstants = fn(6224);
 ({
   CHECKPOINT_CONTROL_SIZE,
   CHECKPOINT_LOGO_SIZE,
@@ -612,7 +612,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let sum = CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
 const sum1 = sum + nativeDefault.space.PX_24;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   loader: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BLACK },
   container: null,
@@ -646,7 +646,7 @@ let obj4 = { height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 obj2.headerActions = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
 obj2.customizationSection = { position: "absolute", left: 0, right: 0, bottom: sum1 };
 const rect1 = {
-  top: (CHECKPOINT_NAV_HEIGHT + fn(13686).CHECKPOINT_HEADER_BUTTON_SIZE) / 2,
+  top: (CHECKPOINT_NAV_HEIGHT + fn(13661).CHECKPOINT_HEADER_BUTTON_SIZE) / 2,
   bottom: CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16,
   left: "59%",
   marginLeft: 0,

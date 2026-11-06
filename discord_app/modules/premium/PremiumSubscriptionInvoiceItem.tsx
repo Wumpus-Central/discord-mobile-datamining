@@ -1,5 +1,5 @@
 // discord_app/modules/premium/PremiumSubscriptionInvoiceItem.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
@@ -12,7 +12,7 @@ export function coalesceInvoiceItems(arr) {
       if (item10009.subscriptionPlanId === arg0.subscriptionPlanId) {
         if (item10009.subscriptionPlanPrice === arg0.subscriptionPlanPrice) {
           if (item10009.amount === arg0.amount) {
-            let obj2 = _modDef12;
+            let obj2 = applyDefault;
             if (obj2.isEqual(item10009.discounts, arg0.discounts)) {
               let addResult = set.add(item10009.subscriptionPlanId);
               item10009.quantity = item10009.quantity + arg0.quantity;

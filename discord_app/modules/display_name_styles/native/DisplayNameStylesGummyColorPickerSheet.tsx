@@ -19,13 +19,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6, StyleSheet } = get_ActivityIndicator);
-let closure_7 = fn(1403).DISPLAY_NAME_STYLES_GUMMY_PRESETS;
+let closure_7 = fn(1394).DISPLAY_NAME_STYLES_GUMMY_PRESETS;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const DisplayNameStylesUtils = fn(1402);
+const DisplayNameStylesUtils = fn(1393);
 let closure_11 = DisplayNameStylesUtils.hueToGummyColor(0);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj3 = {
   sheetBackground: { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg },
   body: null,
@@ -42,7 +42,7 @@ obj3.body = {
   gap: nativeDefault.space.PX_16,
   alignItems: "center",
 };
-obj3.sheetContentColumn = { width: "100%", maxWidth: fn(17608).SHEET_CONTENT_MAX_WIDTH };
+obj3.sheetContentColumn = { width: "100%", maxWidth: fn(17597).SHEET_CONTENT_MAX_WIDTH };
 let obj5 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingTop: nativeDefault.space.PX_4,
@@ -92,7 +92,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(arg0) {
   colors = tmp6[0];
   closure_5 = tmp6[1];
   const tmp5 = displayNameStylesEffectConfig;
-  const tmp8Result = onSelectColors(17609)(DisplayNameEffect.DisplayNameEffect.GUMMY);
+  const tmp8Result = onSelectColors(17598)(DisplayNameEffect.DisplayNameEffect.GUMMY);
   const findIndexResult = tmp8Result.findIndex((colors) =>
     discord_common_shallowEqual.areArraysShallowEqual(colors.colors, first),
   );
@@ -141,25 +141,25 @@ export default function DisplayNameStylesGummyColorPickerSheet(arg0) {
   }, items1);
   let obj3 = { backgroundStyles: tmp.sheetBackground, header: null, children: null };
   const obj4 = { title: displayNameStylesEffectConfig.name, trailing: null };
-  const tmp8 = onSelectColors(17609);
+  const tmp8 = onSelectColors(17598);
   const obj5 = { variant: "primary", size: "sm", text: null, onPress: null };
   const intl = util.intl;
   obj5.text = intl.string(util.t.XqMe3N);
   obj5.onPress = callback2;
   obj4.trailing = closure_9(components_Button_Button.Button, obj5);
-  obj3.header = closure_9(onSelectColors(17604), obj4);
+  obj3.header = closure_9(onSelectColors(17593), obj4);
   const obj6 = { style: tmp.body, children: null };
   const obj7 = { style: null, children: null };
   const items2 = [,];
   ({ sheetContentColumn: arr5[0], optionContainer: arr5[1] } = tmp);
   obj7.style = items2;
   let tmp21;
-  const tmp7Result = onSelectColors(17604);
+  const tmp7Result = onSelectColors(17593);
   if (colors.length > 0 && findIndexResult < 0) {
     tmp21 = colors;
   }
   const items3 = [
-    closure_9(onSelectColors(17613), {
+    closure_9(onSelectColors(17602), {
       activeColors: tmp21,
       isSelected: colors.length > 0 && findIndexResult < 0,
       onPress: callback,

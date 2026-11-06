@@ -1,5 +1,5 @@
 // discord_app/modules/voice_calls/native/components/Timer.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import native from "../../../../design/void/native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -123,20 +123,20 @@ prototype["render"] = function render() {
   if (!props.hideHours) {
     const _String = String;
     const _HermesInternal = HermesInternal;
-    let str = "" + _modDef12.padStart(String(hours), 2, "0") + ":";
+    let str = "" + applyDefault.padStart(String(hours), 2, "0") + ":";
   } else {
     str = "";
   }
   if (!hideMinutes) {
     const _String2 = String;
     const _HermesInternal2 = HermesInternal;
-    let str5 = "" + _modDef12.padStart(String(minutes), 2, "0") + ":";
+    let str5 = "" + applyDefault.padStart(String(minutes), 2, "0") + ":";
   } else {
     str5 = "";
   }
   if (str.length > 0) {
     const _String3 = String;
-    let padStartResult = _modDef12.padStart(String(seconds), 2, "0");
+    let padStartResult = applyDefault.padStart(String(seconds), 2, "0");
   } else {
     padStartResult = seconds;
   }

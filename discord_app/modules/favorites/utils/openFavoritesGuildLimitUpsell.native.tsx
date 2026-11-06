@@ -1,5 +1,5 @@
 // discord_app/modules/favorites/utils/openFavoritesGuildLimitUpsell.native.tsx
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -7,7 +7,7 @@ const FavoritesGuildUpsellSheet = "FavoritesGuildUpsellSheet";
 const result = size.fileFinishedImporting("modules/favorites/utils/openFavoritesGuildLimitUpsell.native.tsx");
 
 export default function openFavoritesGuildLimitUpsell(limit) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11019, dependencyMap.paths), FavoritesGuildUpsellSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10971, dependencyMap.paths), FavoritesGuildUpsellSheet, {
     limit,
   });
 }

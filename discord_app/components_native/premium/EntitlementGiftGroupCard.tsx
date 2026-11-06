@@ -11,18 +11,18 @@ import SlayerStorefrontItemCardDefault from "../../modules/slayer_storefront/nat
 import GiftCodeActionCreatorsDefault from "../../actions/GiftCodeActionCreators.tsx";
 import SubscriptionUtils from "../../utils/SubscriptionUtils.tsx";
 import ChevronSmallDownIcon from "../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import _modDef14667 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef14644 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef15329 from "../../../_runtime/metro/15329__.js";
+import _modDef15330 from "../../../_runtime/metro/15330__.js";
+import _modDef15331 from "../../../_runtime/metro/15331__.js";
+import _modDef15332 from "../../../_runtime/metro/15332__.js";
+import _modDef15333 from "../../../_runtime/metro/15333__.js";
+import _modDef15334 from "../../../_runtime/metro/15334__.js";
 import _modDef15335 from "../../../_runtime/metro/15335__.js";
 import _modDef15336 from "../../../_runtime/metro/15336__.js";
 import _modDef15337 from "../../../_runtime/metro/15337__.js";
-import _modDef15338 from "../../../_runtime/metro/15338__.js";
-import _modDef15339 from "../../../_runtime/metro/15339__.js";
 import _modDef15340 from "../../../_runtime/metro/15340__.js";
 import _modDef15341 from "../../../_runtime/metro/15341__.js";
-import _modDef15342 from "../../../_runtime/metro/15342__.js";
-import _modDef15343 from "../../../_runtime/metro/15343__.js";
-import _modDef15346 from "../../../_runtime/metro/15346__.js";
-import _modDef15347 from "../../../_runtime/metro/15347__.js";
 import GiftCodeRowDefault from "GiftCodeRow.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../modules/applications/ApplicationStore.tsx";
@@ -43,7 +43,7 @@ const PremiumConstants = fn(1387);
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   giftGroupCard: { overflow: "hidden", marginTop: 8 },
   giftGroupCardRefresh: {
@@ -257,35 +257,35 @@ prototype["renderHeader"] = function renderHeader(source, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return _modDef15335;
+    return _modDef15329;
   } else if (constants2.CAKE === giftStyle) {
-    return _modDef15337;
+    return _modDef15331;
   } else if (constants2.CHEST === giftStyle) {
-    return _modDef15338;
+    return _modDef15332;
   } else if (constants2.COFFEE === giftStyle) {
-    return _modDef15336;
+    return _modDef15330;
   } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
-    return _modDef15339;
+    return _modDef15333;
   } else if (constants2.SEASONAL_CAKE === giftStyle) {
-    return _modDef15340;
+    return _modDef15334;
   } else if (constants2.SEASONAL_CHEST === giftStyle) {
-    return _modDef15341;
+    return _modDef15335;
   } else if (constants2.SEASONAL_COFFEE === giftStyle) {
-    return _modDef15342;
+    return _modDef15336;
   } else if (constants2.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef14667 };
+    const obj = { uri: _modDef14644 };
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return _modDef15343;
+    return _modDef15337;
   } else if (TIER_0.TIER_1 === id) {
-    return _modDef15346;
+    return _modDef15340;
   } else {
     if (TIER_0.TIER_2 !== id) {
       if (TIER_0.LEGACY !== id) {
         return null;
       }
     }
-    return _modDef15347;
+    return _modDef15341;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {
@@ -360,7 +360,7 @@ prototype["render"] = function render() {
     closure_14(closure_4, obj4);
   }
 };
-EntitlementGiftGroupCard.contextType = fn(5209).ThemeContext;
+EntitlementGiftGroupCard.contextType = fn(5229).ThemeContext;
 let items = [AuthenticationStore, SKUStore, ApplicationStore, GiftCodeStore, SubscriptionPlanStore];
 let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const size = fn(2);

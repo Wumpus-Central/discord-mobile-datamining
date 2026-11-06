@@ -5,7 +5,7 @@ import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05450_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import native2 from "../../../../design/components/experimental/native.tsx";
@@ -39,7 +39,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11419);
+const VoicePanelConstants = fn(11381);
 ({
   UI_SHOW_HIDE_PHYSICS: metroImportDefault,
   MODE_CHANGE_PHYSICS: closure_8,
@@ -47,16 +47,16 @@ const VoicePanelConstants = fn(11419);
   PANEL_CONTROLS_HEIGHT_PHYSICS: closure_10,
   VoicePanelModes: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11422);
+const VoicePanelCardConstants = fn(11384);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(11417);
+const VoicePanelControlsConstants = fn(11379);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } =
   VoicePanelControlsConstants);
 const Constants = fn(1072);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -738,7 +738,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   closure_129_2 = sharedValue1;
   closure_129_3 = callback;
   ({ hiddenProps, hiddenStyles } = useControlsHiddenPresentationDefault(mode, sharedValue1));
-  const context1 = obj2.useContext(tmp4(11418));
+  const context1 = obj2.useContext(tmp4(11380));
   const controlsSpecs2 = context1.controlsSpecs;
   closure_129_4 = controlsSpecs2;
   const windowDimensions = context1.windowDimensions;
@@ -1341,7 +1341,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   const tmpResult25 = require("../../../../../_runtime/metro/01652__.js");
   const isScreenReaderEnabled1 = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const tmpResult26 = require("useIsScreenReaderEnabled");
-  const context2 = obj2.useContext(tmp4(11418));
+  const context2 = obj2.useContext(tmp4(11380));
   ({
     controlsSpecs: controlsSpecs3,
     windowDimensions: windowDimensions2,

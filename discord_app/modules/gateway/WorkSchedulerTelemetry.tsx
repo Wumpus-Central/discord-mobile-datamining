@@ -1,5 +1,5 @@
 // discord_app/modules/gateway/WorkSchedulerTelemetry.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -67,10 +67,10 @@ class WorkSchedulerTelemetry {
 }
 const prototype = WorkSchedulerTelemetry.prototype;
 prototype["reset"] = function reset() {
-  this._timeTracking = _mod12.cloneDeep(closure_3);
-  this._timingStats = _mod12.cloneDeep(closure_4);
-  this._measurements = _mod12.cloneDeep(closure_5);
-  this._eventCounts = _mod12.cloneDeep(closure_6);
+  this._timeTracking = apply.cloneDeep(closure_3);
+  this._timingStats = apply.cloneDeep(closure_4);
+  this._measurements = apply.cloneDeep(closure_5);
+  this._eventCounts = apply.cloneDeep(closure_6);
 };
 prototype["clearTime"] = function clearTime(arg0) {
   this._timeTracking[arg0] = null;

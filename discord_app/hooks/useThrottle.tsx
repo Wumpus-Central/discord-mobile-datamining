@@ -1,5 +1,5 @@
 // discord_app/hooks/useThrottle.tsx
-import _mod12 from "../../_runtime/metro/00012__.js";
+import apply from "../../_runtime/00012_apply.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -16,10 +16,10 @@ function useThrottledFunction(callback4, arg1) {
     items = [];
   }
   noop = sharedValue;
-  const ref = noop.useRef(require("../../_runtime/metro/00012__.js").throttle(callback4, arg1, sharedValue));
+  const ref = noop.useRef(require("apply").throttle(callback4, arg1, sharedValue));
   const items1 = [callback4, arg1, sharedValue, ...items];
   const effect = noop.useEffect(() => {
-    ref.current = _mod12.throttle(closure_0, current2, ref1);
+    ref.current = apply.throttle(closure_0, current2, ref1);
     return () => {
       const current = ref.current;
       if (current != null) {
@@ -48,11 +48,11 @@ export (memo, throttleDurationForChannel) => {
       items = [];
     }
     ref1 = arg3;
-    const ref = ref1.useRef(require("../../_runtime/metro/00012__.js").throttle(tmp, throttleDurationForChannel, arg3));
+    const ref = ref1.useRef(require("apply").throttle(tmp, throttleDurationForChannel, arg3));
     const items1 = [tmp, throttleDurationForChannel, arg3];
     HermesBuiltin.arraySpread(items, 3);
     const effect = ref1.useEffect(() => {
-      ref.current = _mod12.throttle(closure_0, current2, ref1);
+      ref.current = apply.throttle(closure_0, current2, ref1);
       return () => {
         const current = ref.current;
         if (current != null) {

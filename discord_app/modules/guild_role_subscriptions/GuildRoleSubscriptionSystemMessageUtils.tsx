@@ -62,7 +62,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     return obj;
   }
 }
-const GuildRoleSubscriptionSystemMessageConstants = fn(8596);
+const GuildRoleSubscriptionSystemMessageConstants = fn(8542);
 ({
   getJoinButtonLabels: hasOwnProperty,
   getRenewButtonLabels: closure_6,

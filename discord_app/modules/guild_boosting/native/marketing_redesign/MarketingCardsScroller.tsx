@@ -6,13 +6,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const previous = "previous";
 const next = "next";
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   wrapper: { position: "relative" },
   navigationButton: null,
@@ -31,7 +30,7 @@ let size = {
   width: 44,
   zIndex: 1,
 };
-const ColorUtils = fn(5140);
+const ColorUtils = fn(5167);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
 size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];
@@ -39,7 +38,7 @@ size.transform = items;
 obj2.navigationButton = size;
 obj2.navigationButtonPrevious = { left: 16 };
 obj2.navigationButtonNext = { right: 16 };
-let closure_12 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx",
@@ -56,6 +55,7 @@ export function MarketingCardsScroller(ref) {
   c8 = undefined;
   c9 = undefined;
   let stateFromStores;
+  let ref2;
   closure_12 = undefined;
   closure_13 = undefined;
   closure_14 = undefined;
@@ -84,7 +84,8 @@ export function MarketingCardsScroller(ref) {
   }
   itemCount = merged.itemCount;
   onScrollingChange = merged.onScrollingChange;
-  const tmp2 = closure_12();
+  ({ layout, style } = merged);
+  const tmp2 = ref2();
   noop.useRef(null);
   const sum = cardWidth + cardMarginRight;
   noop = sum;
@@ -99,9 +100,9 @@ export function MarketingCardsScroller(ref) {
   const tmp7 = ref(noop.useState(0), 2);
   [tmp10, c9] = ref(noop.useState(0), 2);
   const tmp9 = ref(noop.useState(0), 2);
-  items = [closure_7];
-  stateFromStores = num(onScrollingChange[8]).useStateFromStores(items, () => closure_7.useReducedMotion);
-  noop.useRef(stateFromStores);
+  items = [first];
+  stateFromStores = num(onScrollingChange[8]).useStateFromStores(items, () => first.useReducedMotion);
+  ref2 = noop.useRef(stateFromStores);
   let obj2 = num(onScrollingChange[8]);
   let tmp15 = tmp10 > 0;
   const isScreenReaderEnabled = num(onScrollingChange[9]).useIsScreenReaderEnabled();
@@ -112,16 +113,16 @@ export function MarketingCardsScroller(ref) {
     tmp15 = rounded > Math.round(tmp10);
   }
   closure_12 = tmp15;
-  let tmp26Result = tmp15;
+  let tmp27Result = tmp15;
   if (tmp15) {
-    tmp26Result = first > 0;
+    tmp27Result = first > 0;
   }
-  closure_13 = tmp26Result;
-  let tmp26Result2 = tmp15;
+  closure_13 = tmp27Result;
+  let tmp27Result2 = tmp15;
   if (tmp15) {
-    tmp26Result2 = first < itemCount - 1;
+    tmp27Result2 = first < itemCount - 1;
   }
-  closure_14 = tmp26Result2;
+  closure_14 = tmp27Result2;
   const items1 = [itemCount, sum];
   const items2 = [stateFromStores];
   const memo = obj.useMemo(() => {
@@ -153,27 +154,29 @@ export function MarketingCardsScroller(ref) {
   }, items3);
   const items4 = [scrollToIndex];
   const imperativeHandle = obj.useImperativeHandle(ref.ref, () => ({ scrollToIndex }), items4);
-  const items5 = [tmp26Result2, tmp26Result];
+  const items5 = [tmp27Result2, tmp27Result];
   const obj4 = { style: null, children: null };
-  const items6 = [merged.style, tmp2.wrapper];
+  const items6 = [style, tmp2.wrapper];
   obj4.style = items6;
+  const memo1 = obj.useMemo(() => {
+    items = [];
+    if (closure_13) {
+      const obj = { name: previous, label: null };
+      const intl = util.intl;
+      obj.label = intl.string(util.t.vgfxaA);
+      items.push(obj);
+    }
+    if (closure_14) {
+      const obj2 = { name: next, label: null };
+      const intl2 = util.intl;
+      obj2.label = intl2.string(util.t.XiOHRX);
+      items.push(obj2);
+    }
+    return items;
+  }, items5);
   const obj5 = {
-    accessibilityActions: noop.useMemo(() => {
-      items = [];
-      if (closure_13) {
-        const obj = { name: previous, label: null };
-        const intl = util.intl;
-        obj.label = intl.string(util.t.vgfxaA);
-        items.push(obj);
-      }
-      if (closure_14) {
-        const obj2 = { name: next, label: null };
-        const intl2 = util.intl;
-        obj2.label = intl2.string(util.t.XiOHRX);
-        items.push(obj2);
-      }
-      return items;
-    }, items5),
+    layout,
+    accessibilityActions: memo1,
     centerContent: true,
     contentContainerStyle,
     decelerationRate: 0.1,
@@ -233,10 +236,10 @@ export function MarketingCardsScroller(ref) {
     }
     obj.importantForAccessibility = str;
     obj.children = children;
-    return React5(timestampProducer, obj);
+    return metroImportDefault(View, obj);
   });
-  const items7 = [c8(ref, obj5), ,];
-  if (tmp26Result) {
+  const items7 = [closure_7(itemCount(onScrollingChange[12]).ScrollView, obj5), ,];
+  if (tmp27Result) {
     function handleNavigatePrevious() {
       if (closure_13) {
         callback(first - 1);
@@ -249,12 +252,12 @@ export function MarketingCardsScroller(ref) {
     const items8 = [,];
     ({ navigationButton: arr10[0], navigationButtonPrevious: arr10[1] } = tmp2);
     obj6.style = items8;
-    const obj7 = { color: itemCount(tmp12[7]).colors.WHITE, size: "sm" };
-    obj6.children = tmp26(tmp11(tmp12[13]).ChevronLargeLeftIcon, obj7);
-    tmp26Result = tmp26(tmp11(tmp12[12]).PressableOpacity, obj6);
+    const obj7 = { color: tmp28(tmp12[7]).colors.WHITE, size: "sm" };
+    obj6.children = tmp27(tmp11(tmp12[14]).ChevronLargeLeftIcon, obj7);
+    tmp27Result = tmp27(tmp11(tmp12[13]).PressableOpacity, obj6);
   }
-  items7[1] = tmp26Result;
-  if (tmp26Result2) {
+  items7[1] = tmp27Result;
+  if (tmp27Result2) {
     function handleNavigateNext() {
       if (closure_14) {
         callback(first + 1);
@@ -267,11 +270,11 @@ export function MarketingCardsScroller(ref) {
     const items9 = [,];
     ({ navigationButton: arr11[0], navigationButtonNext: arr11[1] } = tmp2);
     obj8.style = items9;
-    const obj9 = { color: itemCount(tmp12[7]).colors.WHITE, size: "sm" };
-    obj8.children = tmp26(tmp11(tmp12[14]).ChevronLargeRightIcon, obj9);
-    tmp26Result2 = tmp26(tmp11(tmp12[12]).PressableOpacity, obj8);
+    const obj9 = { color: tmp28(tmp12[7]).colors.WHITE, size: "sm" };
+    obj8.children = tmp27(tmp11(tmp12[15]).ChevronLargeRightIcon, obj9);
+    tmp27Result2 = tmp27(tmp11(tmp12[13]).PressableOpacity, obj8);
   }
-  items7[2] = tmp26Result2;
+  items7[2] = tmp27Result2;
   obj4.children = items7;
-  return c9(first, obj4);
+  return c8(ref, obj4);
 }

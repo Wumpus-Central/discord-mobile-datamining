@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import DismissibleContentUtils from "../../dismissible_content/DismissibleContentUtils.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -17,7 +17,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7861);
+const FamilyCenterConstants = fn(7815);
 ({
   FamilyCenterSubPages: closure_6,
   UserLinkStatus: metroImportDefault,
@@ -25,12 +25,12 @@ const FamilyCenterConstants = fn(7861);
 } = FamilyCenterConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, UserSettingsSections: closure_10 } = Constants);
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const modal = "modal";
-let closure_15 = fn(4976).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
-const createStyles = fn(5143);
+let closure_15 = fn(5003).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
+const createStyles = fn(5170);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, illustration: null, title: null, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.illustration = { alignItems: "center", paddingTop: nativeDefault.space.PX_12 };
@@ -107,7 +107,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       );
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19906, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19912, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);

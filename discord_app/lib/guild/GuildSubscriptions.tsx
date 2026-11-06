@@ -1,5 +1,5 @@
 // discord_app/lib/guild/GuildSubscriptions.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import Constants from "../../Constants.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import FavoritesUtils from "../../modules/favorites/FavoritesUtils.tsx";
@@ -157,7 +157,7 @@ prototype["clearWithoutFlushing"] = function clearWithoutFlushing(id, c0) {
 };
 prototype["flush"] = function flush() {
   const self = this;
-  const item = _modDef12.forEach(this._pending, (arg0, arg1) => {
+  const item = applyDefault.forEach(this._pending, (arg0, arg1) => {
     const _subscribed = self._subscribed;
     _subscribed.add(arg1);
   });

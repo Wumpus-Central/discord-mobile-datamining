@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/MediaGridPlaceholder.tsx
-import _mod12 from "../../../../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
 import _modDef1652 from "../../../../../../../../_runtime/metro/01652__.js";
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9982);
+const SearchConstants = fn(9933);
 ({
   MEDIA_NUM_COLUMNS: hasOwnProperty,
   MEDIA_ITEM_GAP_WIDTH: closure_6,
@@ -22,7 +22,7 @@ const SearchConstants = fn(9982);
 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: { zIndex: 1, position: "absolute", width: "100%" },
   recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING },
@@ -64,9 +64,9 @@ export function RecentsMediaGridPlaceholder(visible) {
   let tmp = closure_9();
   dependencyMap = tmp;
   items = [numRows];
-  memo = memo.useMemo(() => _mod12.range(0, numRows * numColumns), items);
+  memo = memo.useMemo(() => apply.range(0, numRows * numColumns), items);
   const items1 = [memo];
-  const memo1 = memo.useMemo(() => _mod12.chunk(memo, numColumns), items1);
+  const memo1 = memo.useMemo(() => apply.chunk(memo, numColumns), items1);
   const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(visible.visible);
   const obj2 = { style: null, pointerEvents: "none", children: null };
   const items2 = [, ,];

@@ -1,7 +1,7 @@
 // discord_app/modules/autocompleter/Autocompleter.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import _modDef2072 from "../../../_runtime/metro/02072__.js";
+import _modDef2067 from "../../../_runtime/metro/02067__.js";
 import StringUtils from "../../utils/StringUtils.tsx";
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
 import CodedLink from "../coded_links/CodedLink.tsx";
@@ -25,8 +25,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(5073).GUILD_VOCAL_CHANNELS_KEY;
-fn(7035).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5100).GUILD_VOCAL_CHANNELS_KEY;
+fn(6977).AutocompleterResultTypes;
 const React6 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -117,9 +117,9 @@ class Autocompleter {
           ),
         ),
       );
-      const tmp2Result = _modDef12(items);
-      const uniqByResult = _modDef12(items).uniqBy((type) => "" + type.type + "-" + type.record.id);
-      obj.results = _modDef12(items)
+      const tmp2Result = applyDefault(items);
+      const uniqByResult = applyDefault(items).uniqBy((type) => "" + type.type + "-" + type.record.id);
+      obj.results = applyDefault(items)
         .uniqBy((type) => "" + type.type + "-" + type.record.id)
         .sort(autocompleter_sortByMatchScoreDefault)
         .value();
@@ -606,7 +606,7 @@ prototype["queryLink"] = function queryLink(query) {
       items = [obj2];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef2072.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef2067.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

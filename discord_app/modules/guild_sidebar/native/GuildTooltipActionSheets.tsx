@@ -1,6 +1,6 @@
 // discord_app/modules/guild_sidebar/native/GuildTooltipActionSheets.tsx
 import _mod1705 from "../../../../_runtime/metro/01705__.js";
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import DismissibleActionSheet from "../../dismissible_content/native/DismissibleActionSheet.tsx";
@@ -11,16 +11,16 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(18588, dependencyMap.paths);
+  return asyncRequireImpl(18578, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(18590, dependencyMap.paths);
+  return asyncRequireImpl(18580, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(18593, dependencyMap.paths);
+  return asyncRequireImpl(18583, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(18595, dependencyMap.paths);
+  return asyncRequireImpl(18585, dependencyMap.paths);
 }
 class GuildTooltipActionSheets {
   constructor(arg0) {
@@ -111,7 +111,7 @@ class GuildTooltipActionSheets {
     return jsx(tmp4(tmp2[14]), obj1);
   }
 }
-const hasOwnProperty = fn(4989).DismissibleContentGroupName;
+const hasOwnProperty = fn(5016).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const GuildTooltipActionSheet = "GuildTooltipActionSheet";
 let closure_13 = {

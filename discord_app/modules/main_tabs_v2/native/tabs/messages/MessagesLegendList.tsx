@@ -124,7 +124,7 @@ export default noop.memo(function MessagesLegendList(listItemHeight) {
     return estimatedItemSize;
   }, items2);
   const items4 = [renderHeader, listRefHappeningNow];
-  const keyExtractor = listLeft.useCallback((kind) => {
+  keyExtractor = listLeft.useCallback((kind) => {
     kind = kind.kind;
     if ("favorite" === kind) {
       const _HermesInternal4 = HermesInternal;

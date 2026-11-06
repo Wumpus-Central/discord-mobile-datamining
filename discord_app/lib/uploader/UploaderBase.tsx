@@ -1,13 +1,13 @@
 // discord_app/lib/uploader/UploaderBase.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import uploader_UploadUtils from "UploadUtils.tsx";
 import UploadTargets from "UploadTargets.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
 const AbortCodes = fn(1072).AbortCodes;
-const FileUploadErrorTypes = fn(5148).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(5175).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -89,7 +89,7 @@ class UploaderBase extends EventEmitter {
       hasImage: false,
       hasVideo: false,
       attachmentsCount: 0,
-      items: "id",
+      items: "channel",
     };
     return tmp3;
   }
@@ -310,7 +310,7 @@ prototype["setUploadingTextForUI"] = function setUploadingTextForUI(arg0) {
   if (flag) {
     let _fileSizeResult = self._fileSize();
   } else {
-    _fileSizeResult = _modDef12.sumBy(self.files, (reactNativeFilePrepped) =>
+    _fileSizeResult = applyDefault.sumBy(self.files, (reactNativeFilePrepped) =>
       reactNativeFilePrepped.reactNativeFilePrepped
         ? reactNativeFilePrepped.currentSize
         : reactNativeFilePrepped.preCompressionSize,
@@ -367,9 +367,9 @@ prototype["_recomputeProgressByFile"] = function _recomputeProgressByFile() {
 };
 prototype["_addAttachmentsToPayload"] = function _addAttachmentsToPayload(arg0, arg1, arg2) {
   const merged = Object.assign(arg0);
-  _modDef12;
+  applyDefault;
   items = [...arg2];
-  return _modDef12.set({}, arg1, items);
+  return applyDefault.set({}, arg1, items);
 };
 prototype["clearProcessingMessageInterval"] = function clearProcessingMessageInterval() {
   const self = this;

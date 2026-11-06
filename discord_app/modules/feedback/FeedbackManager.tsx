@@ -1,5 +1,5 @@
 // discord_app/modules/feedback/FeedbackManager.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import FeedbackConfig from "FeedbackConfig.tsx";
@@ -92,7 +92,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     });
   }
   items = [lastImpressionTime, tmp7];
-  let num = _mod12.max(items);
+  let num = apply.max(items);
   if (num == null) {
     num = 0;
   }
@@ -115,7 +115,7 @@ function groupRecencyEligibilityCheck(cooldown) {
   }
   return true;
 }
-const Constants = fn(10344);
+const Constants = fn(10296);
 ({ FeedbackTypePrecedence: closure_4, MAX_REPRESENTABLE_DATE: hasOwnProperty } = Constants);
 class FeedbackManager extends tmp3 {
   constructor() {

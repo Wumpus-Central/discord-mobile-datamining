@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/MessagesHooks.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import discord_common_shallowEqual from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ApplicationActionCreatorsDefault from "../../applications/ApplicationActionCreators.tsx";
@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(10082).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(10033).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 
@@ -39,7 +39,7 @@ export function useMessageAuthorActivities(arg0) {
   const items2 = [memo];
   return require("initialize").useStateFromStoresObject(
     items1,
-    () => _modDef12.mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)),
+    () => applyDefault.mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)),
     items2,
   );
 }
@@ -61,8 +61,8 @@ export function useFetchMessageApplications(arg0) {
   const effect = noop.useEffect(() => {
     if (!obj.areArraysShallowEqual(memo, ref.current)) {
       const obj2 = ApplicationActionCreatorsDefault;
-      const found = _modDef12(memo).filter(GlobalUtils.isNotNullish);
-      const arr = _modDef12(memo);
+      const found = applyDefault(memo).filter(GlobalUtils.isNotNullish);
+      const arr = applyDefault(memo);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
       ref.current = memo;
       const iter = found.uniq();

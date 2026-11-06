@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx
-import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02118_asyncRequireImpl.js";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserAffinitiesV2Store from "../../../../user_affinities/UserAffinitiesV2Store.tsx";
@@ -36,11 +36,11 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(17559).HappeningNowCardTrackingType;
+let closure_8 = fn(17548).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -66,7 +66,7 @@ export default noop.memo(function VoiceChannelCard(guildId) {
     items,
     () => {
       const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(guildId.channelId);
-      const mapped = _modDef12(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
+      const mapped = applyDefault(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
       const found = mapped.filter(GlobalUtils.isNotNullish);
       items = [
         function userAffinitySort(id) {
@@ -92,7 +92,7 @@ export default noop.memo(function VoiceChannelCard(guildId) {
           return num;
         },
       ];
-      const arr = _modDef12(voiceStatesForChannel);
+      const arr = applyDefault(voiceStatesForChannel);
       return found.orderBy(items, ["desc"]).value();
     },
     items1,
@@ -139,7 +139,7 @@ export function useVoiceChannelUsers(channelId) {
     items,
     () => {
       const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(guildId.channelId);
-      const mapped = _modDef12(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
+      const mapped = applyDefault(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
       const found = mapped.filter(GlobalUtils.isNotNullish);
       items = [
         function userAffinitySort(id) {
@@ -165,7 +165,7 @@ export function useVoiceChannelUsers(channelId) {
           return num;
         },
       ];
-      const arr = _modDef12(voiceStatesForChannel);
+      const arr = applyDefault(voiceStatesForChannel);
       return found.orderBy(items, ["desc"]).value();
     },
     items1,

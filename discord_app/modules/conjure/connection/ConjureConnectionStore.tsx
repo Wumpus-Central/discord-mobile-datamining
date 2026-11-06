@@ -70,7 +70,7 @@ function appendFailedUserMessage(projectId, nonce, message) {
     userId: null,
     timestamp: null,
     attachments: null,
-    held: "sa",
+    held: "description",
   };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
@@ -193,10 +193,11 @@ function handleEvent(projectId, pendingEvents, type) {
           if (attachments != null) {
             mapped = attachments.map((id) => id.id);
           }
-          obj = { templateId: null, remix: null, clarificationAnswers: null, linkEmbeds: null };
+          obj = { templateId: null, remix: null, copy: null, clarificationAnswers: null, linkEmbeds: null };
           ({
             templateId: obj.templateId,
             remix: obj.remix,
+            copy: obj.copy,
             clarificationAnswers: obj.clarificationAnswers,
             linkEmbeds: obj.linkEmbeds,
           } = tmp6);
@@ -621,43 +622,43 @@ function closeAllConnections() {
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
   conjureMediaTickets.clearMediaTickets();
 }
-const getOlderHistoryCursor = fn(11035).getOlderHistoryCursor;
-const ConjureBrowserSessionsStore = fn(11044);
-const ConjureSmartContextStore = fn(11045);
-const ConjureDebugLogStore = fn(11046);
-const ConjureLiveReloadStore = fn(11048);
-const ConjureModelSettingsStore = fn(11049);
-const ConjureOverlayBackgroundStore = fn(11050);
-const ConjurePublishStatusStore = fn(11051);
-const ConjureRemixStore = fn(11052);
-const ConjureSettingsStore = fn(11053);
-const ConjureSpendLimitStore = fn(11054);
-const ConjureVoiceChannelPinStore = fn(11055);
+const getOlderHistoryCursor = fn(10987).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(10996);
+const ConjureSmartContextStore = fn(10997);
+const ConjureDebugLogStore = fn(10998);
+const ConjureLiveReloadStore = fn(11000);
+const ConjureModelSettingsStore = fn(11001);
+const ConjureOverlayBackgroundStore = fn(11002);
+const ConjurePublishStatusStore = fn(11003);
+const ConjureRemixStore = fn(11004);
+const ConjureSettingsStore = fn(11005);
+const ConjureSpendLimitStore = fn(11006);
+const ConjureVoiceChannelPinStore = fn(11007);
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(11080).browserSessionsFrameHandlers);
-let merged1 = Object.assign(fn(11056).chatFrameHandlers);
-const merged2 = Object.assign(fn(11081).debugFrameHandlers);
-const merged3 = Object.assign(fn(11083).hostAccessFrameHandlers);
-const merged4 = Object.assign(fn(11085).liveReloadFrameHandlers);
-const merged5 = Object.assign(fn(11086).modelSettingsFrameHandlers);
-const merged6 = Object.assign(fn(11087).previewFrameHandlers);
-const merged7 = Object.assign(fn(11144).publishFrameHandlers);
-const merged8 = Object.assign(fn(11150).publishScheduleFrameHandlers);
-const merged9 = Object.assign(fn(11152).remixFrameHandlers);
-const merged10 = Object.assign(fn(11153).settingsFrameHandlers);
-const merged11 = Object.assign(fn(11155).smartContextFrameHandlers);
+let merged = Object.assign(fn(11033).browserSessionsFrameHandlers);
+let merged1 = Object.assign(fn(11008).chatFrameHandlers);
+const merged2 = Object.assign(fn(11034).debugFrameHandlers);
+const merged3 = Object.assign(fn(11036).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(11038).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(11039).modelSettingsFrameHandlers);
+const merged6 = Object.assign(fn(11040).previewFrameHandlers);
+const merged7 = Object.assign(fn(11097).publishFrameHandlers);
+const merged8 = Object.assign(fn(11103).publishScheduleFrameHandlers);
+const merged9 = Object.assign(fn(11105).remixFrameHandlers);
+const merged10 = Object.assign(fn(11106).settingsFrameHandlers);
+const merged11 = Object.assign(fn(11108).smartContextFrameHandlers);
 let obj2 = {};
-const merged12 = Object.assign(fn(11156).appBuildRequestStepHandlers);
-const merged13 = Object.assign(fn(11056).chatStepHandlers);
-const merged14 = Object.assign(fn(11081).debugStepHandlers);
-const merged15 = Object.assign(fn(11087).previewStepHandlers);
-const merged16 = Object.assign(fn(11157).projectStepHandlers);
-const merged17 = Object.assign(fn(11144).publishStepHandlers);
-const merged18 = Object.assign(fn(11158).usageStepHandlers);
+const merged12 = Object.assign(fn(11109).appBuildRequestStepHandlers);
+const merged13 = Object.assign(fn(11008).chatStepHandlers);
+const merged14 = Object.assign(fn(11034).debugStepHandlers);
+const merged15 = Object.assign(fn(11040).previewStepHandlers);
+const merged16 = Object.assign(fn(11110).projectStepHandlers);
+const merged17 = Object.assign(fn(11097).publishStepHandlers);
+const merged18 = Object.assign(fn(11111).usageStepHandlers);
 const set1 = new Set([
   "hello",
   "history",
@@ -807,7 +808,7 @@ export function sendUserMessage(projectId, trimmed, arg2) {
   if (arg3 === undefined) {
     obj = {};
   }
-  ({ clarificationAnswers, nonce, templateId, remix } = obj);
+  ({ copy, clarificationAnswers, nonce, templateId, remix } = obj);
   trimmed = trimmed.trim();
   let tmp8;
   if (null != arg2) {
@@ -817,11 +818,13 @@ export function sendUserMessage(projectId, trimmed, arg2) {
   }
   if ("" === trimmed) {
     if (null == tmp8) {
-      return false;
+      if (true !== copy) {
+        return false;
+      }
     }
   }
   const result = conjureLinkEmbeds.readyConjureLinkEmbeds(trimmed);
-  const obj3 = { content: trimmed, nonce: null, attachments: null, templateId: null, remix: null };
+  const obj3 = { content: trimmed, nonce: null, attachments: null, templateId: null, remix: null, copy: null };
   let nonce1 = nonce;
   if (nonce == null) {
     nonce1 = createNonce.createNonce();
@@ -831,6 +834,7 @@ export function sendUserMessage(projectId, trimmed, arg2) {
   obj3.attachments = tmp8;
   obj3.templateId = templateId;
   obj3.remix = remix;
+  obj3.copy = copy;
   if (null != clarificationAnswers) {
     const obj4 = { clarificationAnswers };
     let obj5 = obj4;
@@ -864,10 +868,11 @@ export function sendUserMessage(projectId, trimmed, arg2) {
       if (attachments != null) {
         mapped = attachments.map((id) => id.id);
       }
-      const obj8 = { templateId: null, remix: null, clarificationAnswers: null, linkEmbeds: null };
+      const obj8 = { templateId: null, remix: null, copy: null, clarificationAnswers: null, linkEmbeds: null };
       ({
         templateId: obj9.templateId,
         remix: obj9.remix,
+        copy: obj9.copy,
         clarificationAnswers: obj9.clarificationAnswers,
         linkEmbeds: obj9.linkEmbeds,
       } = obj3);

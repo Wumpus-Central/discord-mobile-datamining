@@ -1,7 +1,7 @@
 // discord_app/modules/markup_v2/native/parseNativeMarkup.tsx
-import Syntax from "../../../../_runtime/08738_Syntax.js";
+import Syntax from "../../../../_runtime/08684_Syntax.js";
 import transformNativeMarkupNode from "transformNativeMarkupNode.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 
 require = fn;
 let closure_2 = apply.once(() => Syntax.parse);

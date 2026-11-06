@@ -373,17 +373,17 @@ class GuildEventCardDescription {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
-let GuildScheduledEventStore = fn(6993);
+let GuildScheduledEventStore = fn(6935);
 ({ isGuildEventEnded: closure_14, isGuildScheduledEventActive: closure_15 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const constants = fn(4998).GuildScheduledEventEntityTypes;
+const constants = fn(5025).GuildScheduledEventEntityTypes;
 let Constants = fn(1072);
 ({ Permissions: closure_18, JoinGuildSources: closure_19 } = Constants);
 Constants = fn(1083);
 ({ Fonts, NOOP: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   imageHeaderContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   imageHeaderBanner: { width: "100%", aspectRatio: 2.5 },
@@ -484,7 +484,7 @@ export function GuildEventShareAction(event) {
   event = event.event;
   const tmp3 = useCanInviteForGuildEventDefault(event);
   importDefault = tmp3;
-  dependencyMap = event(9135).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
+  dependencyMap = event(9081).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
   const obj3 = { accessibilityLabel: null, onPress: null, icon: null, variant: "secondary" };
   const intl = event(1113).intl;
   obj3.accessibilityLabel = "" + intl.string(event(1113).t.RDE0Sc) + ", " + event.name;
@@ -498,8 +498,8 @@ export function GuildEventShareAction(event) {
       ToastUtils.presentLinkCopied();
     }
   };
-  obj3.icon = importDefault(tmp3 ? 9316 : 5865);
-  return closure_21(event(8173).IconButton, obj3);
+  obj3.icon = importDefault(tmp3 ? 9262 : 5883);
+  return closure_21(event(8119).IconButton, obj3);
 }
 export function GuildEventModeratorAction(event) {
   event = event.event;
@@ -580,9 +580,9 @@ export function GuildEventIndicateInterestAction(event) {
     str = "tertiary";
   }
   if (first) {
-    let BellIcon = tmp(7137).CheckmarkLargeIcon;
+    let BellIcon = tmp(7084).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(9360).BellIcon;
+    BellIcon = tmp(9306).BellIcon;
   }
   const obj2 = {
     accessibilityRole: "togglebutton",
@@ -1007,17 +1007,17 @@ export function GuildEventSimpleLocation(event) {
     },
     items3,
   );
-  let tmp7 = stateFromStores(5788)(stateFromStores);
+  let tmp7 = stateFromStores(5806)(stateFromStores);
   const obj2 = channel_id(504);
   const tmp6 = stateFromStores;
-  const locationFromEvent = channel_id(9123).getLocationFromEvent(event);
+  const locationFromEvent = channel_id(9069).getLocationFromEvent(event);
   if (null == stateFromStores) {
     if (null == locationFromEvent) {
       return null;
     }
   }
-  const obj3 = channel_id(9123);
-  const eventLocationIconComponent = channel_id(9236).getEventLocationIconComponent(
+  const obj3 = channel_id(9069);
+  const eventLocationIconComponent = channel_id(9182).getEventLocationIconComponent(
     event,
     stateFromStores,
     stateFromStores1,
@@ -1038,7 +1038,7 @@ export function GuildEventSimpleLocation(event) {
   };
   if (null != stateFromStores) {
     const obj7 = { channel: stateFromStores };
-    let combined = tmp6(9237)(obj7);
+    let combined = tmp6(9183)(obj7);
   } else if (null != locationFromEvent) {
     const intl = tmp2(1113).intl;
     const _HermesInternal = HermesInternal;
@@ -1049,13 +1049,13 @@ export function GuildEventSimpleLocation(event) {
     let result = null;
     if (null != locationFromEvent) {
       const obj8 = { guildId: event.guild_id };
-      result = tmp2(9238).guildEventLocationParser(locationFromEvent, true, obj8);
-      const tmp2Result2 = tmp2(9238);
+      result = tmp2(9184).guildEventLocationParser(locationFromEvent, true, obj8);
+      const tmp2Result2 = tmp2(9184);
     }
     tmp7 = result;
   }
   obj6.children = tmp7;
-  items4[1] = closure_21(channel_id(5763).Text, obj6);
+  items4[1] = closure_21(channel_id(5781).Text, obj6);
   obj4.children = items4;
   return closure_22(closure_6, obj4);
 }
@@ -1071,11 +1071,11 @@ export function GuildEventCardSimpleGuildInfo(arg0) {
     const obj2 = { style: null, children: null };
     const items2 = [tmp.guildInfoContainer, style];
     obj2.style = items2;
-    const obj3 = { guild: stateFromStores, size: tmp2(7101).GuildIconSizes.XSMALL_20, style: tmp.guildIcon };
+    const obj3 = { guild: stateFromStores, size: tmp2(7045).GuildIconSizes.XSMALL_20, style: tmp.guildIcon };
     const items3 = [closure_21(GuildIconDefault, obj3)];
     const obj4 = { style: tmp.guildInfo, children: null };
     const obj5 = { variant: "body-sm/semibold", style: textStyle, children: stateFromStores.name };
-    obj4.children = closure_21(tmp2(5763).Text, obj5);
+    obj4.children = closure_21(tmp2(5781).Text, obj5);
     items3[1] = closure_21(closure_6, obj4);
     obj2.children = items3;
     tmp5 = closure_22(closure_6, obj2);

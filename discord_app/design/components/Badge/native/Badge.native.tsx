@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05725_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import BadgeShared from "../../../../../discord_common/js/packages/design/components/Badge/shared/BadgeShared.tsx";
@@ -157,6 +157,23 @@ let closure_7 = createStyles.createStyles((variant) => {
 });
 const result = size.fileFinishedImporting("design/components/Badge/native/Badge.native.tsx");
 
+export function getBadgeText(type) {
+  if ("new" === type) {
+    const intl4 = util.intl;
+    return intl4.string(util.t.y2b7CA);
+  } else if ("beta" === type) {
+    const intl3 = util.intl;
+    return intl3.string(util.t.oW0eUd);
+  } else if ("early_access" === type) {
+    const intl2 = util.intl;
+    return intl2.string(util.t.EYxi0o);
+  } else if ("free_trial" === type) {
+    const intl = util.intl;
+    return intl.string(util.t.IBYG5U);
+  } else {
+    return type.text;
+  }
+}
 export function Badge(icon) {
   ({ type, variant } = icon);
   if (variant === undefined) {

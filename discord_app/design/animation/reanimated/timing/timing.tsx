@@ -39,7 +39,7 @@ function withTiming(c0, timingStandard, arg2) {
   } else {
     tmp3 = c1;
   }
-  return _undefined2(c0, tmp3, ChatInputActionButtonTransitionItemTsx1);
+  return _undefined2(c0, tmp3, BadgeUnlockAnimationTsx5);
 }
 const items1 = [tmp3, tmp4, tmp5, tmp6];
 withTiming.__closure = items1;

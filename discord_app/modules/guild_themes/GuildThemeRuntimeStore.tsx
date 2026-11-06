@@ -1,5 +1,5 @@
 // discord_app/modules/guild_themes/GuildThemeRuntimeStore.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import guildThemeSerialization from "guildThemeSerialization.tsx";
@@ -36,8 +36,8 @@ function snapshotSelectedGuildId(guildId) {
     }
     flag = guildId !== guildId;
     if (!flag) {
-      flag = !_mod12.isEqual(_null.guildTheme, cloneGuildThemeResult);
-      const tmp11Result = _mod12;
+      flag = !apply.isEqual(_null.guildTheme, cloneGuildThemeResult);
+      const tmp11Result = apply;
     }
     if (!flag) {
       flag = _null.hasThemeFeature !== tmp8;
@@ -70,8 +70,8 @@ function handleSavedGuildTheme(guildId) {
     }
     let flag = guildId1 !== guildId;
     if (!flag) {
-      flag = !_mod12.isEqual(_null.guildTheme, cloneGuildThemeResult);
-      const tmp2Result = _mod12;
+      flag = !apply.isEqual(_null.guildTheme, cloneGuildThemeResult);
+      const tmp2Result = apply;
     }
     if (!flag) {
       flag = _null.hasThemeFeature !== tmp12;
@@ -236,7 +236,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(DispatcherDefault, {
           }
           let flag5 = guildId !== id;
           if (!flag5) {
-            flag5 = !_mod12.isEqual(_null.guildTheme, guildTheme2);
+            flag5 = !apply.isEqual(_null.guildTheme, guildTheme2);
           }
           if (!flag5) {
             flag5 = _null.hasThemeFeature !== tmp11;

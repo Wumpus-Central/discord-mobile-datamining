@@ -16,8 +16,8 @@ const apexExperiment = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx");
 
 export const CustomTypingIndicatorExperiment = apexExperiment;
-export function useCustomTypingIndicatorConfig(TypingIndicatorInner) {
-  return apexExperiment.useConfig({ location: TypingIndicatorInner });
+export function useCustomTypingIndicatorConfig(MainViewTooltipActionSheets) {
+  return apexExperiment.useConfig({ location: MainViewTooltipActionSheets });
 }
 export function getCustomTypingIndicatorConfig(location) {
   return apexExperiment.getConfig({ location });

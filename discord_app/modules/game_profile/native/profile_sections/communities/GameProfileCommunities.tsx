@@ -1,5 +1,5 @@
 // discord_app/modules/game_profile/native/profile_sections/communities/GameProfileCommunities.tsx
-import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildRecordUtils from "../../../../../utils/GuildRecordUtils.tsx";
 import ActionSheetActionCreators from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -20,15 +20,15 @@ const GameProfileCommunitiesLocaleFilterActionSheetDefault = GameProfileCommunit
 require = fn;
 const View = fn(17).View;
 const JoinGuildSources = fn(1072).JoinGuildSources;
-const isStaticChannelRoute = fn(4999).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5026).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
     padding: nativeDefault.space.PX_16,
-    maxWidth: fn(9523).MOBILE_GAME_PROFILE_MAX_WIDTH,
+    maxWidth: fn(9469).MOBILE_GAME_PROFILE_MAX_WIDTH,
     alignSelf: "center",
     width: "100%",
     gap: nativeDefault.space.PX_8,
@@ -40,7 +40,7 @@ let obj = {
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
   padding: nativeDefault.space.PX_16,
-  maxWidth: fn(9523).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9469).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
   gap: nativeDefault.space.PX_8,
@@ -286,27 +286,27 @@ export default function GameProfileCommunities(game) {
   };
   const intl = game(1113).intl;
   obj3.children = intl.string(game(1113).t.r6bvTh);
-  const items1 = [closure_11(game(5763).Heading, obj3)];
+  const items1 = [closure_11(game(5781).Heading, obj3)];
   if (showLocaleFilter) {
     const obj4 = {
       size: "sm",
       variant: "secondary",
-      icon: closure_11(tmp12(9776).LanguageIcon, { size: "sm" }),
+      icon: closure_11(tmp12(9726).LanguageIcon, { size: "sm" }),
       accessibilityLabel: null,
       onPress: null,
     };
     const intl2 = tmp12(1113).intl;
     obj4.accessibilityLabel = intl2.string(tmp12(1113).t.OlOHDH);
     obj4.onPress = callback;
-    showLocaleFilter = closure_11(tmp12(8173).IconButton, obj4);
+    showLocaleFilter = closure_11(tmp12(8119).IconButton, obj4);
   }
   items1[1] = showLocaleFilter;
   obj2.children = items1;
   const items2 = [closure_12(View, obj2)];
   const obj5 = { style: tmp.list, children: null };
   if (isLoading) {
-    const tmp2Result = _modDef12;
-    let mapped = _modDef12
+    const tmp2Result = applyDefault;
+    let mapped = applyDefault
       .range(8)
       .map((item) =>
         closure_1_11(
@@ -315,7 +315,7 @@ export default function GameProfileCommunities(game) {
           item,
         ),
       );
-    const rangeResult = _modDef12.range(8);
+    const rangeResult = applyDefault.range(8);
   } else {
     mapped = filteredGuilds.map((guild) =>
       closure_2_11(closure_14, { gameId: game.id, guild, viewId, scrollY, trackAction, closeModal }, guild.id),

@@ -2,9 +2,9 @@
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
 import NativeImageManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
-import asyncRequireImpl from "../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02118_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import _mod7405 from "../../../_runtime/metro/07405__.js";
+import _mod7352 from "../../../_runtime/metro/07352__.js";
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -13,7 +13,7 @@ import GuildOnboardingStore from "GuildOnboardingStore.tsx";
 
 require = fn;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod7405));
+  return JSON.parse(JSON.stringify(_mod7352));
 }
 let closure_14 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
@@ -222,7 +222,7 @@ function openAndWaitForOnboarding(guildId) {
       isFirstOpen: true,
     };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7429, dependencyMap.paths),
+      asyncRequireImpl(7376, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -238,7 +238,7 @@ function openAndWaitForOnboarding(guildId) {
       }
     });
     const pushLazyResult = ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7429, dependencyMap.paths),
+      asyncRequireImpl(7376, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -251,7 +251,7 @@ function openAndWaitForOnboarding(guildId) {
   });
 }
 const Image = fn(17).Image;
-let closure_8 = fn(7404).GUILD_ONBOARDING_MODAL_KEY;
+let closure_8 = fn(7351).GUILD_ONBOARDING_MODAL_KEY;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_9, Routes: closure_10 } = Constants);
 let closure_12 = {};

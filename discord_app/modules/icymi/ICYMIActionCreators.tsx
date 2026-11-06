@@ -1084,9 +1084,6 @@ export default {
   giveFeedback() {
     return Dispatcher.dispatch({ type: "ICYMI_FEEDBACK_GIVEN" });
   },
-  clearReadStates() {
-    return Dispatcher.dispatch({ type: "CLEAR_ICYMI_READ_STATES" });
-  },
   addedRecommendedGuild() {
     return Dispatcher.dispatch({ type: "ICYMI_JOINED_RECOMMENDED_GUILD" });
   },

@@ -42,7 +42,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(13512)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(13487)(conjureServerApp), done: false };
                 return obj4;
               }
             }
@@ -57,7 +57,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
             closure_129_1();
           } else {
             const intl = tmp3(1113).intl;
-            closure_128_0 = intl.string(tmp2(3995).PJ2Fkn);
+            closure_128_0 = intl.string(tmp2(4024).PJ2Fkn);
             closure_129_5(closure_128_0);
             const _Error = Error;
             const error = new Error(closure_128_0);

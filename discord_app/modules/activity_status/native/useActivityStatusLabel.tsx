@@ -11,7 +11,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 const util = v0wJXSh(1113);
-const VoiceActivityStatus = v0wJXSh(10948);
+const VoiceActivityStatus = v0wJXSh(10900);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/useActivityStatusLabel.tsx");

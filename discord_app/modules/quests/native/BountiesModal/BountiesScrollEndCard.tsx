@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05725_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
 import AnimatedEnterExitItemDefault from "../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import BountiesModalTransitionsRefactorExperiment from "../../experiments/BountiesModalTransitionsRefactorExperiment.tsx";
 import useVisibilityTransition from "useVisibilityTransition.tsx";
@@ -91,10 +91,10 @@ function BountiesScrollEndCardContent(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6919).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6861).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     container: null,
@@ -129,8 +129,8 @@ let items = [
   {
     code: "(function BountiesScrollEndCardTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})",
   },
-  fn(5380).withTiming,
-  fn(5383).timingStandard,
+  fn(5400).withTiming,
+  fn(5403).timingStandard,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -149,8 +149,8 @@ let items2 = [
   {
     code: "(function BountiesScrollEndCardTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})",
   },
-  fn(5380).withTiming,
-  fn(5383).timingStandard,
+  fn(5400).withTiming,
+  fn(5403).timingStandard,
 ];
 let closure_130_0;
 let closure_130_1;

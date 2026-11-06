@@ -1,11 +1,11 @@
 // discord_app/modules/remote_auth/components/native/RemoteAuthModal.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
+import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
@@ -13,19 +13,25 @@ import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import AuthBackgroundArtDefault from "../../../auth/native/components/atoms/AuthBackgroundArt.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef15942 from "../../../../../_runtime/metro/15942__.js";
+import useEaseInEaseOutLayoutAnimationsDefault from "../../../animations/native/useEaseInEaseOutLayoutAnimations.tsx";
+import _modDef15937 from "../../../../../_runtime/metro/15937__.js";
 import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
 import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const _modDef1652 = tmp8(1652);
 require = fn;
 function RemoteAuthBody(remoteAuthFingerprint) {
   remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
-  [tmp3, importDefault] = noop.useState(constants.LOADING);
-  const tmp2 = _slicedToArray(noop.useState(constants.LOADING), 2);
-  [tmp5, dependencyMap] = noop.useState(null);
+  const tmp = closure_10();
+  [tmp4, tmp5] = noop.useState(constants.LOADING);
+  importDefault = tmp5;
+  const tmp3 = _slicedToArray(noop.useState(constants.LOADING), 2);
+  [tmp7, dependencyMap] = noop.useState(null);
+  const tmp6 = _slicedToArray(noop.useState(null), 2);
   items = [remoteAuthFingerprint];
+  ({ entering, exiting } = useEaseInEaseOutLayoutAnimationsDefault());
   const effect = noop.useEffect(() => {
     const HTTP = HTTPUtils.HTTP;
     const request = {
@@ -38,38 +44,36 @@ function RemoteAuthBody(remoteAuthFingerprint) {
     const postResult = HTTP.post(request);
     HTTP.post(request)
       .then((body) => {
-        dependencyMap(body.body.handshake_token);
+        closure_1_2(body.body.handshake_token);
         closure_1_1(constants.LOADED);
-        const result = remoteAuthFingerprint(5747).DeprecatedLayoutAnimation();
       })
       .catch(() => {
         closure_1_1(constants.NOT_FOUND);
-        const result = remoteAuthFingerprint(5747).DeprecatedLayoutAnimation();
       });
   }, items);
-  if (constants.LOADING === tmp3) {
-    return closure_7(RemoteAuthLoading, {});
-  } else if (constants.LOADED === tmp3) {
-    if (null == tmp5) {
-      let tmp13 = closure_7(RemoteAuthNotFound, {});
+  if (constants.LOADING === tmp4) {
+    let tmp14 = closure_7(RemoteAuthLoading, {});
+    let tmp12 = closure_7;
+  } else if (constants.LOADED === tmp4) {
+    if (null == tmp7) {
+      let tmp19 = closure_7(RemoteAuthNotFound, {});
+      let tmp17 = closure_7;
     } else {
-      let obj = {
-        handshakeToken: tmp5,
-        setAuthStep: function transitionStep(arg0) {
-          importDefault(arg0);
-          const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
-        },
-      };
-      tmp13 = closure_7(RemoteAuthLogin, obj);
+      tmp17 = closure_7;
+      let obj = { handshakeToken: tmp7, setAuthStep: tmp5 };
+      tmp19 = closure_7(RemoteAuthLogin, obj);
     }
-    return tmp13;
-  } else if (constants.SUCCEEDED === tmp3) {
-    return closure_7(RemoteAuthLoginSucceeded, {});
+    tmp12 = tmp17;
+    tmp14 = tmp19;
+  } else if (constants.SUCCEEDED === tmp4) {
+    tmp14 = closure_7(RemoteAuthLoginSucceeded, {});
+    tmp12 = closure_7;
   } else {
     const NOT_FOUND = constants.NOT_FOUND;
-    return closure_7(RemoteAuthNotFound, {});
+    tmp12 = closure_7;
+    tmp14 = closure_7(RemoteAuthNotFound, {});
   }
-  const tmp4 = _slicedToArray(noop.useState(null), 2);
+  return tmp12(_modDef1652.View, { style: tmp.step, entering, exiting, children: tmp14 }, tmp4);
 }
 function RemoteAuthLogin(arg0) {
   ({ handshakeToken: require, setAuthStep: importDefault } = arg0);
@@ -91,7 +95,7 @@ function RemoteAuthLogin(arg0) {
     tmp9 = !tmp5;
   }
   const obj2 = { children: null };
-  const throttleResult = _modDef12.throttle(
+  const throttleResult = applyDefault.throttle(
     () => {
       _undefined(true);
       const HTTP = HTTPUtils.HTTP;
@@ -217,7 +221,7 @@ const View = fn(17).View;
 const Endpoints = fn(1072).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   background: { width: "100%", height: "100%" },
   container: { flex: 1, alignItems: "stretch", alignContent: "center" },
@@ -233,6 +237,7 @@ let obj2 = {
   },
   caption: { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 },
   mainCard: null,
+  step: null,
   buttonGroup: null,
   loadingContainer: null,
 };
@@ -260,6 +265,7 @@ obj2.mainCard = {
   shadowRadius: 2,
   shadowOffset: { height: 2, width: 0 },
 };
+obj2.step = { alignSelf: "stretch", alignItems: "center" };
 obj2.buttonGroup = { paddingVertical: 0 };
 obj2.loadingContainer = { height: 300, justifyContent: "center" };
 let closure_10 = createStyles.createStyles(obj2);
@@ -274,7 +280,7 @@ const constants = {
   [3]: "SUCCEEDED",
 };
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/remote_auth/components/native/RemoteAuthModal.tsx");
+const result = size.fileFinishedImporting("modules/remote_auth/components/native/RemoteAuthModal.tsx");
 
 export default function RemoteAuth(arg0) {
   const tmp = closure_10();
@@ -283,13 +289,15 @@ export default function RemoteAuth(arg0) {
   const obj2 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items1;
-  obj2.source = _modDef15942;
+  obj2.source = _modDef15937;
   items[1] = metroImportDefault(FastImageDefault, obj2);
   const obj3 = { style: tmp.container, children: null };
-  const obj4 = { style: tmp.mainCard, children: null };
+  const obj4 = { skipEntering: true, children: null };
+  const obj5 = { style: tmp.mainCard, layout: useEaseInEaseOutLayoutAnimationsDefault().layout, children: null };
   const merged = Object.assign(arg0);
-  obj4.children = metroImportDefault(RemoteAuthBody, {});
-  obj3.children = metroImportDefault(View, obj4);
+  obj5.children = metroImportDefault(RemoteAuthBody, {});
+  obj4.children = metroImportDefault(_modDef1652.View, obj5);
+  obj3.children = metroImportDefault(_mod1652.LayoutAnimationConfig, obj4);
   items[2] = metroImportDefault(View, obj3);
   obj.children = items;
   return React5(View, obj);

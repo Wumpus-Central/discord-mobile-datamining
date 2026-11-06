@@ -9,8 +9,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/useCanInviteGuildIds.tsx");
 
 export default function useCanInviteGuildIds(location) {
-  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(11826).useLinkedGameOrgInvitesEnabled(location);
-  const obj = linkedGameOrgInvitesEnabled(11826);
+  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(11792).useLinkedGameOrgInvitesEnabled(location);
+  const obj = linkedGameOrgInvitesEnabled(11792);
   items = [GuildStore, GuildMemberStore, GuildRoleStore, PermissionStore];
   const items1 = [linkedGameOrgInvitesEnabled];
   return linkedGameOrgInvitesEnabled(504).useStateFromStoresArray(

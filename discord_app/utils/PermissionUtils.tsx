@@ -15,7 +15,7 @@ import GuildRoleStore from "../stores/GuildRoleStore.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 import BigFlagUtils_mod from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import apply from "../../_runtime/metro/00012__.js";
+import apply from "../../_runtime/00012_apply.js";
 
 require = fn;
 function applyOverwrites(id, member, deserializeResult, overwrites) {
@@ -368,11 +368,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ THREAD_CHANNEL_TYPES: metroImportDefault, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(5010);
+const GuildRecord = fn(5037);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: closure_10 } = GuildRecord);
-const hasPermission = fn(5050).hasPermission;
+const hasPermission = fn(5077).hasPermission;
 const Constants = fn(1072);
 const Permissions = Constants.Permissions;
 ({
@@ -563,7 +563,7 @@ export function areChannelsLocked(c18, c19, appChannelBotUserId) {
           if (null == obj2[guild_id]) {
             let obj = {
               id: guild_id,
-              type: obj2(2121).PermissionOverwriteType.ROLE,
+              type: obj2(2116).PermissionOverwriteType.ROLE,
               allow: deserializeResult,
               deny: deserializeResult,
             };

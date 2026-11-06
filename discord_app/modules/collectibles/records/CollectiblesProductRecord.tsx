@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7869);
+const CollectiblesItemRecord = fn(7823);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } =
   CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -258,21 +258,20 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 skuId: null,
                 name: null,
                 summary: null,
-                styles: "t",
+                styles: "to",
                 type: "Array",
-                premiumType: "ao",
-                items:
-                  -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001615083636959319,
-                categorySkuId: 0.0000000000000000000000000000000000000000000001972286534921061,
-                categoryWillUnpublishAt: 994652482892173300000000000000000000000000000000000000000000000000000000000000000000000,
-                isCategoryReward: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000042336525053709615,
-                prices: false,
-                previewAssets: null,
-                googleSkuIds: null,
-                eligibleOffers: null,
-                variants: null,
-                bundledProducts: null,
-                isFirstParty: null,
+                premiumType: "channel",
+                items: 16870978,
+                categorySkuId: 48666368,
+                categoryWillUnpublishAt: 41242880,
+                isCategoryReward: 45809227,
+                prices: 34320128,
+                previewAssets: 45932032,
+                googleSkuIds: 45931520,
+                eligibleOffers: 25996032,
+                variants: 26110720,
+                bundledProducts: 39253248,
+                isFirstParty: 22582272,
               };
               let str;
               if (first != null) {

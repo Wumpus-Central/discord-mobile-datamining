@@ -3,7 +3,7 @@ import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
 import conjureFileMentions from "../conjureFileMentions.tsx";
 import ConjureFileMentionDefault from "ConjureFileMention.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import apply from "../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../_runtime/00012_apply.js";
 
 require = fn;
 const jsx = fn(21).jsx;

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/chat/conjureChatConnection.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4024 from "../intl/ConjureUntranslated.messages.js";
 import conjureAgentReaction from "conjureAgentReaction.tsx";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
@@ -137,7 +137,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3995["913RMa"]);
+      const stringResult = intl.string(_modDef4024["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -230,7 +230,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3995["0+RUWx"]);
+      const stringResult = intl.string(_modDef4024["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;

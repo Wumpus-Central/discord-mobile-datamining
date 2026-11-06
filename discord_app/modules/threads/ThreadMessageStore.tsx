@@ -1,6 +1,6 @@
 // discord_app/modules/threads/ThreadMessageStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
@@ -393,7 +393,7 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    closure_12 = _modDef12.omitBy(closure_12, (guildId) => {
+    closure_12 = applyDefault.omitBy(closure_12, (guildId) => {
       if (guildId.guildId === id) {
         const parentId = guildId.parentId;
         delete tmp2[tmp];
@@ -457,7 +457,7 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     const id = channel.channel.id;
-    closure_12 = _modDef12.omitBy(closure_12, (parentId) => parentId.parentId === id);
+    closure_12 = applyDefault.omitBy(closure_12, (parentId) => parentId.parentId === id);
     delete tmp[tmp2];
   },
   MESSAGE_CREATE: function handleMessageCreate(message) {

@@ -1,15 +1,15 @@
 // discord_app/modules/game_server/hooks/useGameServerPerk.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3123 from "../GameServer.messages.js";
-import _modDef14383 from "../../../../discord_assets/assets/premium/game_servers/game_server_tile.png.js";
+import _modDef3120 from "../GameServer.messages.js";
+import _modDef14360 from "../../../../discord_assets/assets/premium/game_servers/game_server_tile.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameServerStore from "../GameServerStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(5357).GAME_SERVER_POWERUP_SKU_ID;
-const GuildPowerupType = fn(5356).GuildPowerupType;
+let closure_5 = fn(5377).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(5376).GuildPowerupType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 
@@ -41,15 +41,15 @@ export default function useGameServerPerk(guildId) {
           staticImageUrl: null,
         };
         const intl = util.intl;
-        obj.title = intl.string(_modDef3123["B3OfL/"]);
+        obj.title = intl.string(_modDef3120["B3OfL/"]);
         const intl2 = util.intl;
         const obj2 = { gameName, gameName2 };
-        obj.description = intl2.format(_modDef3123["+UqyGU"], obj2);
+        obj.description = intl2.format(_modDef3120["+UqyGU"], obj2);
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef14383;
-        obj.staticImageUrl = _modDef14383;
+        obj.animatedImageUrl = _modDef14360;
+        obj.staticImageUrl = _modDef14360;
         tmp = obj;
       }
     }

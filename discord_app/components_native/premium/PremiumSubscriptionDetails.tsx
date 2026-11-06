@@ -7,16 +7,22 @@ import FastImageDefault from "../common/FastImage.tsx";
 import useAnalyticsLocationsDefault from "../../modules/app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
 import PremiumBundledPlansUtils from "../../modules/premium/native/PremiumBundledPlansUtils.tsx";
-import _modDef8681 from "../../../_runtime/metro/08681__.js";
-import _modDef10117 from "../../../_runtime/metro/10117__.js";
+import _modDef8627 from "../../../_runtime/metro/08627__.js";
+import _modDef10068 from "../../../_runtime/metro/10068__.js";
 import PremiumAnalyticsUtils from "../../modules/premium/native/PremiumAnalyticsUtils.tsx";
-import _modDef10765 from "../../../_runtime/metro/10765__.js";
-import _modDef10766 from "../../../_runtime/metro/10766__.js";
-import _modDef10767 from "../../../_runtime/metro/10767__.js";
-import _modDef10768 from "../../../_runtime/metro/10768__.js";
-import _modDef10769 from "../../../_runtime/metro/10769__.js";
-import _modDef10771 from "../../../_runtime/metro/10771__.js";
-import _modDef10774 from "../../../_runtime/metro/10774__.js";
+import _modDef10717 from "../../../_runtime/metro/10717__.js";
+import _modDef10718 from "../../../_runtime/metro/10718__.js";
+import _modDef10719 from "../../../_runtime/metro/10719__.js";
+import _modDef10720 from "../../../_runtime/metro/10720__.js";
+import _modDef10721 from "../../../_runtime/metro/10721__.js";
+import _modDef10723 from "../../../_runtime/metro/10723__.js";
+import _modDef10726 from "../../../_runtime/metro/10726__.js";
+import _modDef15476 from "../../../_runtime/metro/15476__.js";
+import _modDef15477 from "../../../_runtime/metro/15477__.js";
+import _modDef15478 from "../../../_runtime/metro/15478__.js";
+import _modDef15479 from "../../../_runtime/metro/15479__.js";
+import _modDef15480 from "../../../_runtime/metro/15480__.js";
+import _modDef15481 from "../../../_runtime/metro/15481__.js";
 import _modDef15482 from "../../../_runtime/metro/15482__.js";
 import _modDef15483 from "../../../_runtime/metro/15483__.js";
 import _modDef15484 from "../../../_runtime/metro/15484__.js";
@@ -34,12 +40,6 @@ import _modDef15495 from "../../../_runtime/metro/15495__.js";
 import _modDef15496 from "../../../_runtime/metro/15496__.js";
 import _modDef15497 from "../../../_runtime/metro/15497__.js";
 import _modDef15498 from "../../../_runtime/metro/15498__.js";
-import _modDef15499 from "../../../_runtime/metro/15499__.js";
-import _modDef15500 from "../../../_runtime/metro/15500__.js";
-import _modDef15501 from "../../../_runtime/metro/15501__.js";
-import _modDef15502 from "../../../_runtime/metro/15502__.js";
-import _modDef15503 from "../../../_runtime/metro/15503__.js";
-import _modDef15504 from "../../../_runtime/metro/15504__.js";
 import PremiumPlanWhatYouLoseActionSheet from "../../modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumSubscriptionInvoice from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 import SubscriptionRenewalMutationsNoticeDefault from "../../modules/premium/native/SubscriptionRenewalMutationsNotice.tsx";
@@ -52,7 +52,7 @@ import IAPStore from "../../stores/native/IAPStore.android.tsx";
 
 const require = globalThis.__r;
 
-const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(15505);
+const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(15499);
 require = fn;
 function handleCancelSubscription() {
   const self = this;
@@ -676,7 +676,7 @@ let size = { height: 35, width: 49 };
 const size1 = { height: 36, width: 51 };
 const size2 = { width: 51, height: 36 };
 let obj = { fontSize: 14, marginTop: 10, color: nativeDefault.unsafe_rawColors.WHITE };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj3 = {
   title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
   header: { padding: 16 },
@@ -721,62 +721,62 @@ const collapsedCategories = createStyles.createStyles(obj3);
 let obj8 = { ACTIVE: "active", RESUB: "resub", ERROR: "error" };
 let obj9 = {};
 let obj10 = {};
-obj10[obj8.ACTIVE] = _modDef10768;
-obj10[obj8.ERROR] = _modDef15482;
-obj10[obj8.RESUB] = _modDef15483;
-obj9[fn(2176).Branding.BUNDLE] = obj10;
+obj10[obj8.ACTIVE] = _modDef10720;
+obj10[obj8.ERROR] = _modDef15476;
+obj10[obj8.RESUB] = _modDef15477;
+obj9[fn(2171).Branding.BUNDLE] = obj10;
 let obj11 = {};
-obj11[obj8.ACTIVE] = _modDef10765;
-obj11[obj8.ERROR] = _modDef15482;
-obj11[obj8.RESUB] = _modDef15483;
-obj9[fn(2176).Branding.TIER_0] = obj11;
+obj11[obj8.ACTIVE] = _modDef10717;
+obj11[obj8.ERROR] = _modDef15476;
+obj11[obj8.RESUB] = _modDef15477;
+obj9[fn(2171).Branding.TIER_0] = obj11;
 let obj12 = {};
-obj12[obj8.ACTIVE] = _modDef10766;
-obj12[obj8.ERROR] = _modDef15482;
-obj12[obj8.RESUB] = _modDef15483;
-obj9[fn(2176).Branding.TIER_1] = obj12;
+obj12[obj8.ACTIVE] = _modDef10718;
+obj12[obj8.ERROR] = _modDef15476;
+obj12[obj8.RESUB] = _modDef15477;
+obj9[fn(2171).Branding.TIER_1] = obj12;
 let obj13 = {};
-obj13[obj8.ACTIVE] = _modDef10767;
-obj13[obj8.ERROR] = _modDef15482;
-obj13[obj8.RESUB] = _modDef15483;
-obj9[fn(2176).Branding.TIER_2] = obj13;
+obj13[obj8.ACTIVE] = _modDef10719;
+obj13[obj8.ERROR] = _modDef15476;
+obj13[obj8.RESUB] = _modDef15477;
+obj9[fn(2171).Branding.TIER_2] = obj13;
 let obj14 = {};
-obj14[obj8.ACTIVE] = _modDef10769;
-obj14[obj8.ERROR] = _modDef15484;
-obj14[obj8.RESUB] = _modDef15485;
-obj9[fn(2176).Branding.PREMIUM_GUILD] = obj14;
+obj14[obj8.ACTIVE] = _modDef10721;
+obj14[obj8.ERROR] = _modDef15478;
+obj14[obj8.RESUB] = _modDef15479;
+obj9[fn(2171).Branding.PREMIUM_GUILD] = obj14;
 let obj15 = {};
 let obj16 = {};
-obj16[obj8.ACTIVE] = _modDef15486;
-obj16[obj8.ERROR] = _modDef15486;
-obj16[obj8.RESUB] = _modDef15486;
-obj15[fn(2176).Branding.BUNDLE] = obj16;
+obj16[obj8.ACTIVE] = _modDef15480;
+obj16[obj8.ERROR] = _modDef15480;
+obj16[obj8.RESUB] = _modDef15480;
+obj15[fn(2171).Branding.BUNDLE] = obj16;
 let obj17 = {};
-obj17[obj8.ACTIVE] = _modDef10117;
-obj17[obj8.ERROR] = _modDef15487;
-obj17[obj8.RESUB] = _modDef15488;
-obj15[fn(2176).Branding.TIER_0] = obj17;
+obj17[obj8.ACTIVE] = _modDef10068;
+obj17[obj8.ERROR] = _modDef15481;
+obj17[obj8.RESUB] = _modDef15482;
+obj15[fn(2171).Branding.TIER_0] = obj17;
 let obj18 = {};
-obj18[obj8.ACTIVE] = _modDef15489;
-obj18[obj8.ERROR] = _modDef15490;
-obj18[obj8.RESUB] = _modDef15491;
-obj15[fn(2176).Branding.TIER_1] = obj18;
+obj18[obj8.ACTIVE] = _modDef15483;
+obj18[obj8.ERROR] = _modDef15484;
+obj18[obj8.RESUB] = _modDef15485;
+obj15[fn(2171).Branding.TIER_1] = obj18;
 let obj19 = {};
-obj19[obj8.ACTIVE] = _modDef10771;
-obj19[obj8.ERROR] = _modDef15492;
-obj19[obj8.RESUB] = _modDef15493;
-obj15[fn(2176).Branding.TIER_2] = obj19;
+obj19[obj8.ACTIVE] = _modDef10723;
+obj19[obj8.ERROR] = _modDef15486;
+obj19[obj8.RESUB] = _modDef15487;
+obj15[fn(2171).Branding.TIER_2] = obj19;
 let obj20 = {};
-obj20[obj8.ACTIVE] = _modDef15494;
-obj20[obj8.ERROR] = _modDef15495;
-obj20[obj8.RESUB] = _modDef15496;
-obj15[fn(2176).Branding.PREMIUM_GUILD] = obj20;
+obj20[obj8.ACTIVE] = _modDef15488;
+obj20[obj8.ERROR] = _modDef15489;
+obj20[obj8.RESUB] = _modDef15490;
+obj15[fn(2171).Branding.PREMIUM_GUILD] = obj20;
 let closure_22 = {
-  [fn(2176).Branding.BUNDLE]: { [obj8.ACTIVE]: size, [obj8.ERROR]: size, [obj8.RESUB]: size },
-  [fn(2176).Branding.TIER_0]: { [obj8.ACTIVE]: { height: 35, width: 29 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
-  [fn(2176).Branding.TIER_1]: { [obj8.ACTIVE]: { height: 35, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
-  [fn(2176).Branding.TIER_2]: { [obj8.ACTIVE]: { height: 37, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
-  [fn(2176).Branding.PREMIUM_GUILD]: {
+  [fn(2171).Branding.BUNDLE]: { [obj8.ACTIVE]: size, [obj8.ERROR]: size, [obj8.RESUB]: size },
+  [fn(2171).Branding.TIER_0]: { [obj8.ACTIVE]: { height: 35, width: 29 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
+  [fn(2171).Branding.TIER_1]: { [obj8.ACTIVE]: { height: 35, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
+  [fn(2171).Branding.TIER_2]: { [obj8.ACTIVE]: { height: 37, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
+  [fn(2171).Branding.PREMIUM_GUILD]: {
     [obj8.ACTIVE]: { width: 51, height: 36 },
     [obj8.ERROR]: size2,
     [obj8.RESUB]: size2,
@@ -784,36 +784,36 @@ let closure_22 = {
 };
 let obj21 = {};
 let obj22 = {};
-obj22[obj8.ACTIVE] = _modDef15497;
-obj22[obj8.ERROR] = _modDef15497;
-obj22[obj8.RESUB] = _modDef15498;
-obj21[fn(2176).Branding.BUNDLE] = obj22;
+obj22[obj8.ACTIVE] = _modDef15491;
+obj22[obj8.ERROR] = _modDef15491;
+obj22[obj8.RESUB] = _modDef15492;
+obj21[fn(2171).Branding.BUNDLE] = obj22;
 let obj23 = {};
-obj23[obj8.ACTIVE] = _modDef10774;
-obj23[obj8.ERROR] = _modDef10774;
-obj23[obj8.RESUB] = _modDef15499;
-obj21[fn(2176).Branding.TIER_0] = obj23;
+obj23[obj8.ACTIVE] = _modDef10726;
+obj23[obj8.ERROR] = _modDef10726;
+obj23[obj8.RESUB] = _modDef15493;
+obj21[fn(2171).Branding.TIER_0] = obj23;
 let obj24 = {};
-obj24[obj8.ACTIVE] = _modDef15500;
-obj24[obj8.ERROR] = _modDef15500;
-obj24[obj8.RESUB] = _modDef15501;
-obj21[fn(2176).Branding.TIER_1] = obj24;
+obj24[obj8.ACTIVE] = _modDef15494;
+obj24[obj8.ERROR] = _modDef15494;
+obj24[obj8.RESUB] = _modDef15495;
+obj21[fn(2171).Branding.TIER_1] = obj24;
 let obj25 = {};
-obj25[obj8.ACTIVE] = _modDef8681;
-obj25[obj8.ERROR] = _modDef8681;
-obj25[obj8.RESUB] = _modDef15502;
-obj21[fn(2176).Branding.TIER_2] = obj25;
+obj25[obj8.ACTIVE] = _modDef8627;
+obj25[obj8.ERROR] = _modDef8627;
+obj25[obj8.RESUB] = _modDef15496;
+obj21[fn(2171).Branding.TIER_2] = obj25;
 let obj26 = {};
-obj26[obj8.ACTIVE] = _modDef15503;
-obj26[obj8.ERROR] = _modDef15503;
-obj26[obj8.RESUB] = _modDef15504;
-obj21[fn(2176).Branding.PREMIUM_GUILD] = obj26;
+obj26[obj8.ACTIVE] = _modDef15497;
+obj26[obj8.ERROR] = _modDef15497;
+obj26[obj8.RESUB] = _modDef15498;
+obj21[fn(2171).Branding.PREMIUM_GUILD] = obj26;
 const dependencyMap3 = {
-  [fn(2176).Branding.BUNDLE]: { height: 33, width: 205 },
-  [fn(2176).Branding.TIER_0]: { height: 32, width: 59 },
-  [fn(2176).Branding.TIER_1]: { height: 16, width: 156 },
-  [fn(2176).Branding.TIER_2]: { height: 32, width: 78 },
-  [fn(2176).Branding.PREMIUM_GUILD]: { height: 17, width: 184 },
+  [fn(2171).Branding.BUNDLE]: { height: 33, width: 205 },
+  [fn(2171).Branding.TIER_0]: { height: 32, width: 59 },
+  [fn(2171).Branding.TIER_1]: { height: 16, width: 156 },
+  [fn(2171).Branding.TIER_2]: { height: 32, width: 78 },
+  [fn(2171).Branding.PREMIUM_GUILD]: { height: 17, width: 184 },
 };
 let closure_25 = { [obj8.ACTIVE]: obj, [obj8.ERROR]: obj, [obj8.RESUB]: obj2 };
 size = fn(2);
@@ -886,7 +886,7 @@ export function onCancelClick(subscription, analyticsLocations) {
   } else {
     const obj3 = {
       subscription,
-      mode: tmp(15506).WhatYouLoseMode.CANCEL,
+      mode: tmp(15500).WhatYouLoseMode.CANCEL,
       onContinue(arg0) {
         return handleCancelSubscription(closure_0, closure_1, arg0);
       },

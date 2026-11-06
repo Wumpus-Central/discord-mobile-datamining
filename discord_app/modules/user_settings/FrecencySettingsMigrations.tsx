@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/FrecencySettingsMigrations.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage4 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import Constants from "../../Constants.tsx";
@@ -128,10 +128,10 @@ let items = [
         if (state.favorites.length > 0) {
           const FavoriteStickers = frecency_user_settings.FavoriteStickers;
           favoriteStickers.favoriteStickers = FavoriteStickers.create();
-          const tmpResult = _modDef12;
-          favoriteStickers.favoriteStickers.stickerIds = _modDef12.uniq(state.favorites).slice(0, React3);
+          const tmpResult = applyDefault;
+          favoriteStickers.favoriteStickers.stickerIds = applyDefault.uniq(state.favorites).slice(0, React3);
           flag = true;
-          const uniqResult = _modDef12.uniq(state.favorites);
+          const uniqResult = applyDefault.uniq(state.favorites);
         }
         if (tmpResult2.size(state.usageHistory) > 0) {
           const StickerFrecency = frecency_user_settings.StickerFrecency;
@@ -173,10 +173,10 @@ let items = [
         if (tmp3) {
           const FavoriteEmojis = frecency_user_settings.FavoriteEmojis;
           favoriteEmojis.favoriteEmojis = FavoriteEmojis.create();
-          const tmpResult = _modDef12;
-          favoriteEmojis.favoriteEmojis.emojis = _modDef12.uniq(state.favorites).slice(0, React3);
+          const tmpResult = applyDefault;
+          favoriteEmojis.favoriteEmojis.emojis = applyDefault.uniq(state.favorites).slice(0, React3);
           flag = true;
-          const uniqResult = _modDef12.uniq(state.favorites);
+          const uniqResult = applyDefault.uniq(state.favorites);
         }
         if (tmpResult2.size(state.usageHistory) > 0) {
           const EmojiFrecency = frecency_user_settings.EmojiFrecency;
@@ -214,8 +214,8 @@ let items = [
       if (0 === arr.length) {
         return false;
       } else {
-        const values = _modDef12(favoriteGifs.favoriteGifs.gifs).values();
-        const obj = _modDef12(favoriteGifs.favoriteGifs.gifs);
+        const values = applyDefault(favoriteGifs.favoriteGifs.gifs).values();
+        const obj = applyDefault(favoriteGifs.favoriteGifs.gifs);
         const item = values.sortBy("order").forEach((item, index) => {
           const sum = arr.length + 1 + index;
           item.order = sum;
@@ -444,7 +444,7 @@ let items = [
     run(favoriteSoundboardSounds) {
       let tmp = null != favoriteSoundboardSounds.favoriteSoundboardSounds;
       if (tmp) {
-        let flag = 0 !== _modDef12.size(favoriteSoundboardSounds.favoriteSoundboardSounds.orderedSoundIds);
+        let flag = 0 !== applyDefault.size(favoriteSoundboardSounds.favoriteSoundboardSounds.orderedSoundIds);
         if (flag) {
           favoriteSoundboardSounds.favoriteSoundboardSounds.orderedSoundIds = [];
           flag = true;

@@ -1,5 +1,5 @@
 // discord_app/stores/CertifiedDeviceStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
@@ -18,7 +18,7 @@ prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
   value = Storage.get(CertifiedDeviceStore);
   if (null != value) {
-    let item = _modDef12.forEach(value, (arr, arg1) => {
+    let item = applyDefault.forEach(value, (arr, arg1) => {
       const item = arr.forEach((type) => {
         if (tmp) {
           type.hardwareMute = false;
@@ -55,7 +55,7 @@ prototype["getCertifiedDeviceName"] = function getCertifiedDeviceName(inputDevic
 };
 prototype["getCertifiedDeviceByType"] = function getCertifiedDeviceByType(arg0) {
   closure_0 = arg0;
-  return _modDef12.find(closure_6, (type) => type.type === closure_0);
+  return applyDefault.find(closure_6, (type) => type.type === closure_0);
 };
 prototype["isHardwareMute"] = function isHardwareMute(arg0) {
   let flag = false;

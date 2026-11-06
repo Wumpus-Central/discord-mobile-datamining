@@ -1,6 +1,6 @@
 // discord_app/intl/IntlLoaderStore.tsx
 import util from "index.native.tsx";
-import _modDef2193 from "../../_runtime/metro/02193__.js";
+import _modDef2188 from "../../_runtime/metro/02188__.js";
 import bg from "locale-data/date-fns.tsx";
 import formatjs from "locale-data/formatjs.tsx";
 import moment from "locale-data/moment.tsx";
@@ -71,7 +71,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2203).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2198).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -201,7 +201,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2193);
+            state.setLocaleData(_modDef2188);
             c3 = 3;
           }
         }
@@ -347,14 +347,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "id",
-    localeData: _modDef2193,
+    error: "add",
+    localeData: _modDef2188,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "id" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "add" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -395,7 +395,7 @@ export function setAppLocale() {
 export function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2193;
+    tmp = _modDef2188;
   }
   return tmp;
 }

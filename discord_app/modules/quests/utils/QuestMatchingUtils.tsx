@@ -79,13 +79,13 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(6919);
+const QuestConstants = fn(6861);
 ({
   DISCORD_APPLICATION_ID: closure_6,
   PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: metroImportDefault,
   PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_8,
 } = QuestConstants);
-let closure_9 = fn(2147).XBOX_ACTIVITY_APPLICATION_ID;
+let closure_9 = fn(2142).XBOX_ACTIVITY_APPLICATION_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 

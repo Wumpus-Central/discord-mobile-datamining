@@ -23,8 +23,8 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1072).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25 };
-let obj = { duration: 250, easing: fn(16076).STANDARD_EASING };
-const createStyles = fn(5143);
+let obj = { duration: 250, easing: fn(16071).STANDARD_EASING };
+const createStyles = fn(5170);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -162,7 +162,7 @@ export function Menu(toggleButtonRef) {
   const items4 = [menuClose, callback1];
   const memo = obj.useMemo(() => ({ menuClose, menuDismiss: callback1 }), items4);
   const obj3 = require("../../../../../_runtime/metro/01652__.js");
-  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(16077).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(16072).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
   if ("left" === position) {
     let str2 = "column";
   } else {

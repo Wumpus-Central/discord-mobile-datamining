@@ -42,7 +42,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
 let size = {
   width: 8,

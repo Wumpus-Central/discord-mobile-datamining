@@ -18,10 +18,10 @@ export default function RoleIcon(arg0) {
   const obj = {
     fontFamily: "System",
     fontSize: size * num,
-    lineHeight: "id",
-    textAlign: -102143,
+    lineHeight: "channel",
+    textAlign: -26148451,
     width: size,
-    marginBottom: 16778543,
+    marginBottom: 1359021349,
   };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };

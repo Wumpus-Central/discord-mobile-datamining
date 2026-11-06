@@ -82,7 +82,7 @@ function updateQuestData(questId, result2) {
         }
         const values = Object.values(progress);
         for (const item10011 of values) {
-          let obj2 = require("../../../_runtime/metro/00012__.js");
+          let obj2 = require("apply");
           if (!obj2.isNil(item10011)) {
             let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
             if (DESKTOP.has(item10011.eventName)) {
@@ -158,7 +158,7 @@ function _runExpirationCheck() {
   }
   const obj = require("QuestExpirationUtils");
 }
-const QuestsExperimentLocations = fn(6919).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6861).QuestsExperimentLocations;
 new Map();
 let c33 = null;
 let c34 = null;
@@ -369,11 +369,11 @@ const questStore = new QuestStore(DispatcherDefault, {
       let tmp9 = nextResult;
       let result = map.set(nextResult.id, nextResult);
       let tmp13 = mapped;
-      let obj5 = mapped(7997);
+      let obj5 = mapped(7951);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(6922).QuestContent.QUEST_BAR)) {
-        let tmp13Result = tmp13(7998);
+      if (targetedContent.includes(mapped(6864).QuestContent.QUEST_BAR)) {
+        let tmp13Result = tmp13(7952);
         let obj4 = { location: QuestsExperimentLocations.QUESTS_STORE };
         let questLogger = tmp13Result.getQuestLogger(obj4);
         let _HermesInternal2 = HermesInternal;
@@ -395,7 +395,7 @@ const questStore = new QuestStore(DispatcherDefault, {
     for (const item10131 of values) {
       if (!map.has(item10131.id)) {
         let result3 = map.set(item10131.id, item10131);
-        let obj10 = mapped(7997);
+        let obj10 = mapped(7951);
         let result4 = map1.set(item10131.id, obj10.isQuestExpired(item10131));
       }
       continue;
@@ -565,7 +565,7 @@ const questStore = new QuestStore(DispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
-            let obj2 = require("../../../_runtime/metro/00012__.js");
+            let obj2 = require("apply");
             if (!obj2.isNil(item10011)) {
               let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
               if (DESKTOP.has(item10011.eventName)) {
@@ -655,7 +655,7 @@ const questStore = new QuestStore(DispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
-            let obj2 = require("../../../_runtime/metro/00012__.js");
+            let obj2 = require("apply");
             if (!obj2.isNil(item10011)) {
               let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
               if (DESKTOP.has(item10011.eventName)) {
@@ -744,7 +744,7 @@ const questStore = new QuestStore(DispatcherDefault, {
             }
             const values = Object.values(progress);
             for (const item10011 of values) {
-              let obj2 = require("../../../_runtime/metro/00012__.js");
+              let obj2 = require("apply");
               if (!obj2.isNil(item10011)) {
                 let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
                 if (DESKTOP.has(item10011.eventName)) {
@@ -860,7 +860,7 @@ const questStore = new QuestStore(DispatcherDefault, {
               }
               const values = Object.values(progress);
               for (const item10011 of values) {
-                let obj2 = require("../../../_runtime/metro/00012__.js");
+                let obj2 = require("apply");
                 if (!obj2.isNil(item10011)) {
                   let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
                   if (DESKTOP.has(item10011.eventName)) {
@@ -946,7 +946,7 @@ const questStore = new QuestStore(DispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
-            let obj2 = require("../../../_runtime/metro/00012__.js");
+            let obj2 = require("apply");
             if (!obj2.isNil(item10011)) {
               let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
               if (DESKTOP.has(item10011.eventName)) {
@@ -1047,7 +1047,7 @@ const questStore = new QuestStore(DispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
-            let obj2 = require("../../../_runtime/metro/00012__.js");
+            let obj2 = require("apply");
             if (!obj2.isNil(item10011)) {
               let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
               if (DESKTOP.has(item10011.eventName)) {
@@ -1145,7 +1145,7 @@ const questStore = new QuestStore(DispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
-            let obj2 = require("../../../_runtime/metro/00012__.js");
+            let obj2 = require("apply");
             if (!obj2.isNil(item10011)) {
               let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
               if (DESKTOP.has(item10011.eventName)) {

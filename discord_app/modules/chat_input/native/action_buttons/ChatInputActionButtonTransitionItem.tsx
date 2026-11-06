@@ -116,7 +116,7 @@ function BounceTransitionItem(state) {
   return jsx(_modDef1652.View, { style: null });
 }
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(13035).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(13000).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({
   transitionItem: { position: "absolute" },

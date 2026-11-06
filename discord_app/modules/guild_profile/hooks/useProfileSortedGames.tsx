@@ -1,12 +1,12 @@
 // discord_app/modules/guild_profile/hooks/useProfileSortedGames.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildProfileConstants = fn(9450);
+const GuildProfileConstants = fn(9396);
 ({ HOISTED_SEARCH_GAME_IDS: closure_4, HOISTED_SEARCH_GAME_IDS_BY_PRIORITY: hasOwnProperty } = GuildProfileConstants);
 let closure_6 = [];
 const size = fn(2);
@@ -46,11 +46,11 @@ export function useProfileSortedGames(surface) {
   );
   const items2 = [memo1];
   let memo2 = baseSort.useMemo(() => {
-    const mapped = _modDef12(args).map((item) => memo1.get(item));
+    const mapped = applyDefault(args).map((item) => memo1.get(item));
     const found = mapped.filter(GlobalUtils.isNotNullish);
     const found1 = found.filter((item) => selectedGameIds(memo1[6]).isGameAllowedInGameWidgets(item));
     const mapped1 = found1.map((id) => ({ id: id.id, value: id.id, label: id.name }));
-    const arr = _modDef12(args);
+    const arr = applyDefault(args);
     const sortByResult = mapped1.sortBy((value) => {
       let num = memo4.get(value.value);
       if (num == null) {

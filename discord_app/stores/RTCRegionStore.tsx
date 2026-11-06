@@ -1,5 +1,5 @@
 // discord_app/stores/RTCRegionStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
@@ -49,7 +49,7 @@ prototype["shouldPerformLatencyTest"] = function shouldPerformLatencyTest(mapped
     if (lastGeoRankedOrder == null) {
       lastGeoRankedOrder = [];
     }
-    tmp = !_modDef12.isEqual(mapped, lastGeoRankedOrder);
+    tmp = !applyDefault.isEqual(mapped, lastGeoRankedOrder);
   }
   if (!tmp) {
     const _Date = Date;

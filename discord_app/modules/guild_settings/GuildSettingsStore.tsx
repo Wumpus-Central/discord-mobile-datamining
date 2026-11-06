@@ -1,11 +1,11 @@
 // discord_app/modules/guild_settings/GuildSettingsStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef2171 from "../../../_runtime/metro/02171__.js";
+import _modDef2166 from "../../../_runtime/metro/02166__.js";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import PlainRecord from "../../lib/PlainRecord.tsx";
@@ -112,7 +112,7 @@ function _createInvite(code) {
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   const created_at = code.created_at;
-  obj.createdAt = _modDef2171(created_at);
+  obj.createdAt = _modDef2166(created_at);
   ({ flags: obj.flags, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }
@@ -276,16 +276,16 @@ prototype["guildSpaceSettingsHasChanges"] = function guildSpaceSettingsHasChange
   return enabled !== enabled1;
 };
 prototype["hasChanges"] = function hasChanges() {
-  obj = _modDef12;
+  obj = applyDefault;
   const isEqualResult = obj.isEqual(closure_7, guild);
   let widgetHasChangesResult = !isEqualResult;
   if (isEqualResult) {
-    widgetHasChangesResult = !_modDef12.isEqual(obj, obj2);
-    const tmpResult = _modDef12;
+    widgetHasChangesResult = !applyDefault.isEqual(obj, obj2);
+    const tmpResult = applyDefault;
   }
   if (!widgetHasChangesResult) {
-    widgetHasChangesResult = !_modDef12.isEqual(obj, profile);
-    const tmpResult2 = _modDef12;
+    widgetHasChangesResult = !applyDefault.isEqual(obj, profile);
+    const tmpResult2 = applyDefault;
   }
   const self = this;
   if (!widgetHasChangesResult) {

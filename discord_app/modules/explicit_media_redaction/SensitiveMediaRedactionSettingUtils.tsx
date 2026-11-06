@@ -1,5 +1,5 @@
 // discord_app/modules/explicit_media_redaction/SensitiveMediaRedactionSettingUtils.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -12,5 +12,5 @@ export function getShouldObscureForSetting(tmp10Result) {
   );
 }
 export function areSettingsEqual(arg0, arg1) {
-  return _mod12.isEqual(arg0, arg1);
+  return apply.isEqual(arg0, arg1);
 }

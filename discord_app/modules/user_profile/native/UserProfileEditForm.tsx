@@ -5,11 +5,11 @@ import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
+import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef16704 from "../../../../_runtime/metro/16704__.js";
+import _modDef16701 from "../../../../_runtime/metro/16701__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
-import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
@@ -83,7 +83,7 @@ function MainUserProfileEditForm(arg0) {
 }
 function UserProfileEditFormContent(currentUser) {
   _require = str;
-  ({ autoFocusElement, isTryItOut } = currentUser);
+  ({ header, autoFocusElement, isTryItOut } = currentUser);
   if (isTryItOut === undefined) {
     isTryItOut = false;
   }
@@ -314,7 +314,7 @@ function UserProfileEditFormContent(currentUser) {
   const tmp41 = tmp(obj[46])(sharedValue, sum1);
   closure_8 = tmp41;
   const tmp38 = tmp(obj[45])(width);
-  const items6 = [closure_21, tmp41.isScrolledAboveTryItOutSection, sharedValue1];
+  const items6 = [closure_22, tmp41.isScrolledAboveTryItOutSection, sharedValue1];
   _require = undefined;
   importDefault = undefined;
   [tmp42, tmp43, tmp44] = items6;
@@ -610,6 +610,9 @@ function UserProfileEditFormContent(currentUser) {
       onContentSizeChange: null,
       onLayout: null,
       scrollEventThrottle: null,
+      stickyHeaderIndices: null,
+      stickyHeaderHiddenOnScroll: null,
+      keyboardShouldPersistTaps: null,
       children: null,
     };
     let tmp81;
@@ -632,8 +635,19 @@ function UserProfileEditFormContent(currentUser) {
       num3 = 16;
     }
     obj39.scrollEventThrottle = num3;
+    let tmp84;
+    if (null != header) {
+      tmp84 = closure_18;
+    }
+    obj39.stickyHeaderIndices = tmp84;
+    obj39.stickyHeaderHiddenOnScroll = null != header;
+    let str8;
+    if (null != header) {
+      str8 = "handled";
+    }
+    obj39.keyboardShouldPersistTaps = str8;
     const obj40 = { style: tmp3.bounceOffset };
-    const items13 = [closure_15(tmp58, obj40), ,];
+    const items13 = [closure_15(tmp58, obj40), header, ,];
     const obj41 = {
       user: str,
       displayProfile: tmp17Result,
@@ -645,7 +659,7 @@ function UserProfileEditFormContent(currentUser) {
       isTryItOut,
       disabled: isSubmitting,
     };
-    items13[1] = closure_15(EditUserProfileBanner, obj41);
+    items13[2] = closure_15(EditUserProfileBanner, obj41);
     const obj42 = { style: null, children: null };
     const items14 = [, , ,];
     ({ avatarBackground: arr15[0], avatarPosition: arr15[1] } = tmp2);
@@ -706,6 +720,7 @@ function UserProfileEditFormContent(currentUser) {
       const obj48 = { value: tmp56Result, children: null };
       const obj49 = {
         userId: str.id,
+        initialTab: currentUser.initialTab,
         containerBackground,
         hasCustomProfileTheme: tmp35,
         scrollPosition: sharedValue,
@@ -720,7 +735,7 @@ function UserProfileEditFormContent(currentUser) {
     obj44.children = items17;
     items15[1] = closure_16(tmp58, obj44);
     obj50.children = items15;
-    items13[2] = closure_16(tmp58, obj50);
+    items13[3] = closure_16(tmp58, obj50);
     obj39.children = items13;
     items12[1] = closure_16(tmp80, obj39);
     if (!tmp29) {
@@ -748,23 +763,24 @@ function UserProfileEditFormContent(currentUser) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7515).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7460).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1072);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: closure_10 } = Constants);
-const HexagonCampaignConstants = fn(5168);
+const HexagonCampaignConstants = fn(5195);
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-const constants3 = fn(16703).UserProfileEditAutoFocusElement;
+const constants3 = fn(16700).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
+let closure_18 = [1];
 let obj = {
-  assetOrigin: fn(7300).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef16704,
-  staticImageUri: _modDef16704,
+  assetOrigin: fn(7247).AssetOriginTypes.NEW_ASSET,
+  imageUri: _modDef16701,
+  staticImageUri: _modDef16701,
   description: "",
-  originalAsset: "applicationId",
+  originalAsset: "disabled",
 };
-let closure_21 = {
+let closure_22 = {
   code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})",
 };
 const size = fn(2);

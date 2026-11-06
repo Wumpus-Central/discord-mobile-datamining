@@ -8,7 +8,7 @@ import BaseConnectionEvent from "../../../../discord_common/js/packages/media-en
 import downsampleWaveformDefault from "../downsampleWaveform.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 
 require = fn;
 let closure_22 = async function _startAudioRecording(arg0) {
@@ -267,7 +267,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(13956);
+const VoiceMessagesUIStore = fn(13932);
 ({
   addVoiceMessageWave: hasOwnProperty,
   resetVoiceMessageState: closure_6,
@@ -278,7 +278,7 @@ const VoiceMessagesUIStore = fn(13956);
   useVoiceMessagesUIStore: closure_11,
   VoiceMessageRecordingStatus: closure_12,
 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(13957);
+const VoiceMessageConstants = fn(13933);
 ({
   WAVEFORM_WAVE_MAX_VALUE: map1,
   VOICE_RECORDING_MIN_DB: closure_14,

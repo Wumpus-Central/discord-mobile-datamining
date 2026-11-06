@@ -10,7 +10,7 @@ import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsS
 const require = globalThis.__r;
 
 require = fn;
-const isHexagonCampaignAppIcon = fn(10167).isHexagonCampaignAppIcon;
+const isHexagonCampaignAppIcon = fn(10118).isHexagonCampaignAppIcon;
 const ClientThemesConstants = fn(1240);
 ({ BACKGROUND_GRADIENT_PRESETS_MAP: metroImportDefault, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } =
   ClientThemesConstants);
@@ -20,7 +20,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignPreviousPerkValues.tsx");
 
 export { DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME };
-export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(10168).FreemiumAppIconIds.DEFAULT;
+export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(10119).FreemiumAppIconIds.DEFAULT;
 export function getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME) {
   _require = DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
   if (null != DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME.backgroundGradientPresetId) {

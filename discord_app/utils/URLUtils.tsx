@@ -1,5 +1,5 @@
 // discord_app/utils/URLUtils.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import Constants from "../Constants.tsx";
 import URLUtilsDefault from "URLUtils.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
@@ -331,13 +331,13 @@ export default {
   formatPathWithQuery(pathname, arg1) {
     const obj2 = { pathname, query: null };
     const obj = UrlAll;
-    obj2.query = _modDef12.pickBy(arg1);
+    obj2.query = applyDefault.pickBy(arg1);
     return obj.format(obj2);
   },
   formatSearch(arg0) {
     const obj2 = { query: null };
     const obj = UrlAll;
-    obj2.query = _modDef12.pickBy(arg0);
+    obj2.query = applyDefault.pickBy(arg0);
     return obj.format(obj2);
   },
   safeParseWithQuery(target) {

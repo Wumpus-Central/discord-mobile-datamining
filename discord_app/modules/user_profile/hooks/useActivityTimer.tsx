@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/user_profile/hooks/useActivityT
 export default function useActivityTimer(start) {
   start = start.start;
   let first;
-  const interval = new first(4987).Interval();
+  const interval = new first(5014).Interval();
   first = _slicedToArray(closure_5(interval), 1)[0];
   const tmp3 = _slicedToArray(
     closure_5(() => Date.now()),
@@ -30,12 +30,12 @@ export default function useActivityTimer(start) {
   const bound = Math.max(Math.min(diff1 / DurationsDefault.Millis.SECOND, result), 0);
   return { elapsed: bound, duration: result, percentage: Math.max(Math.min(bound / result, 1), 0) };
 }
-export function formatTime(duration) {
-  const rounded = Math.floor(duration);
+export function formatTime(result1) {
+  const rounded = Math.floor(result1);
   const result = rounded % DurationsDefault.Seconds.MINUTE;
-  const rounded1 = Math.floor(duration / DurationsDefault.Seconds.MINUTE);
-  const result1 = rounded1 % DurationsDefault.Seconds.MINUTE;
-  const rounded2 = Math.floor(duration / DurationsDefault.Seconds.HOUR);
+  const rounded1 = Math.floor(result1 / DurationsDefault.Seconds.MINUTE);
+  result1 = rounded1 % DurationsDefault.Seconds.MINUTE;
+  const rounded2 = Math.floor(result1 / DurationsDefault.Seconds.HOUR);
   if (0 === rounded2) {
     const _String4 = String;
     const _String5 = String;
@@ -58,11 +58,11 @@ export function formatTime(duration) {
   }
   return combined;
 }
-export function formatTimeForA11yLabel(arg0) {
-  const rounded = Math.floor(arg0);
+export function formatTimeForA11yLabel(result1) {
+  const rounded = Math.floor(result1);
   const seconds = rounded % DurationsDefault.Seconds.MINUTE;
-  const rounded1 = Math.floor(arg0 / DurationsDefault.Seconds.MINUTE);
+  const rounded1 = Math.floor(result1 / DurationsDefault.Seconds.MINUTE);
   const minutes = rounded1 % DurationsDefault.Seconds.MINUTE;
-  const hours = Math.floor(arg0 / DurationsDefault.Seconds.HOUR);
+  const hours = Math.floor(result1 / DurationsDefault.Seconds.HOUR);
   return utils.formatTimestampToA11yLabel({ hours, minutes, seconds });
 }

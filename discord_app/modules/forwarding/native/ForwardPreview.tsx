@@ -1,5 +1,5 @@
 // discord_app/modules/forwarding/native/ForwardPreview.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import utils_ImageUtilsDefault from "../../../utils/native/ImageUtils.tsx";
@@ -31,7 +31,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(575).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(5143).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(5170).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -80,7 +80,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(5143);
+  let obj = attachmentCount(5170);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -90,7 +90,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 56;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   quote: null,
@@ -144,7 +144,7 @@ export function ForwardPreview(message) {
   const checkpointDataFromMessage =
     checkpoint_CheckpointMessageComponentUtils.getCheckpointDataFromMessage(contentMessage);
   if (attachments.length > 0) {
-    const countByResult = _mod12.countBy(attachments, (proxy_url) =>
+    const countByResult = apply.countBy(attachments, (proxy_url) =>
       MosaicMediaType.getMosaicMediaTypeForAttachment(proxy_url, true),
     );
     let num = countByResult.IMAGE;
@@ -247,7 +247,7 @@ export function ForwardPreview(message) {
       formatToPlainStringResult = intl.formatToPlainString(util.t["89ihS8"], obj14);
       AttachmentIcon = AttachmentIcon2.AttachmentIcon;
     }
-    const tmp2Result = _mod12;
+    const tmp2Result = apply;
   } else {
     tmp6 = null;
     tmp7 = null;

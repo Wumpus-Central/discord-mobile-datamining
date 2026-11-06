@@ -45,6 +45,9 @@ prototype["enable"] = function enable() {
   return Promise.resolve();
 };
 prototype["setAudioMixerOptions"] = function setAudioMixerOptions() {};
+prototype["getSpatialAudioVersion"] = function getSpatialAudioVersion() {
+  return 0;
+};
 prototype["getSpatialAudioHrtfFiles"] = function getSpatialAudioHrtfFiles() {
   return { directory: null, files: [] };
 };
@@ -212,6 +215,7 @@ prototype["presentNativeScreenSharePicker"] = function presentNativeScreenShareP
 prototype["releaseNativeDesktopVideoSourcePickerStream"] = function releaseNativeDesktopVideoSourcePickerStream() {};
 prototype["setMaybePreprocessMute"] = function setMaybePreprocessMute() {};
 prototype["setAudioInputBypassSystemProcessing"] = function setAudioInputBypassSystemProcessing() {};
+prototype["setAudioOutputBufferDurationMs"] = function setAudioOutputBufferDurationMs() {};
 prototype["fetchAsyncResources"] = function fetchAsyncResources() {
   return Promise.resolve();
 };

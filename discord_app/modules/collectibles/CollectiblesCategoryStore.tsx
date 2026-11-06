@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/CollectiblesCategoryStore.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
@@ -250,7 +250,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
           const date = new Date();
         }
       }
-      obj = _mod12;
+      obj = apply;
     }
     closure_18 = Date.now();
     c16 = false;

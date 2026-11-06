@@ -1,7 +1,7 @@
 // discord_app/modules/channel/native/ChannelLongPressActionSheet.tsx
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import StageChannelPermissions from "../../stage_channels/StageChannelPermissions.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -152,31 +152,31 @@ function ChannelLongPressActionSheetConnected(channel) {
   let frameId;
   let items14;
   const tmp2 = guildId;
-  const analyticsLocations = onClose(guildId[92])(onClose(guildId[93]).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
+  const analyticsLocations = onClose(guildId[93])(onClose(guildId[94]).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
   guildId = channel.getGuildId();
   const tmp5 = channel;
-  let tmp3 = onClose(guildId[92]);
-  const isFavoritesGuildSelected = channel(guildId[94]).useIsFavoritesGuildSelected();
-  let obj = channel(guildId[94]);
+  let tmp3 = onClose(guildId[93]);
+  const isFavoritesGuildSelected = channel(guildId[95]).useIsFavoritesGuildSelected();
+  let obj = channel(guildId[95]);
   items = [GuildStore];
-  const stateFromStores = channel(guildId[95]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  let obj2 = channel(guildId[95]);
+  const stateFromStores = channel(guildId[96]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  let obj2 = channel(guildId[96]);
   const items1 = [PermissionStore];
-  const stateFromStoresObject = channel(guildId[95]).useStateFromStoresObject(items1, () => ({
+  const stateFromStoresObject = channel(guildId[96]).useStateFromStoresObject(items1, () => ({
     canManageChannel: PermissionStore.can(constants7.MANAGE_CHANNELS, channel),
     canCreateInstantInvite: PermissionStore.can(constants7.CREATE_INSTANT_INVITE, channel),
     canConnect: PermissionStore.can(constants7.CONNECT, channel),
     canModerateStage: PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel),
   }));
   ({ canCreateInstantInvite, canManageChannel, canConnect, canModerateStage } = stateFromStoresObject);
-  let obj3 = channel(guildId[95]);
+  let obj3 = channel(guildId[96]);
   if (guildId == null) {
     guildId = closure_29;
   }
-  const optInEnabledForGuild = channel(guildId[97]).useOptInEnabledForGuild(guildId);
-  let obj4 = channel(guildId[97]);
+  const optInEnabledForGuild = channel(guildId[98]).useOptInEnabledForGuild(guildId);
+  let obj4 = channel(guildId[98]);
   const items2 = [UserGuildSettingsStore];
-  const stateFromStoresObject1 = tmp5(tmp2[95]).useStateFromStoresObject(items2, () => {
+  const stateFromStoresObject1 = tmp5(tmp2[96]).useStateFromStoresObject(items2, () => {
     const obj = {
       isOptedIn: UserGuildSettingsStore.isChannelOptedIn(guildId, channel.id),
       isParentOptedIn: null,
@@ -191,66 +191,66 @@ function ChannelLongPressActionSheetConnected(channel) {
     return obj;
   });
   ({ isOptedIn, isPinned, isParentOptedIn } = stateFromStoresObject1);
-  const tmp5Result = tmp5(tmp2[95]);
+  const tmp5Result = tmp5(tmp2[96]);
   const items3 = [UserGuildSettingsStore];
-  const stateFromStores1 = tmp5(tmp2[95]).useStateFromStores(items3, () =>
+  const stateFromStores1 = tmp5(tmp2[96]).useStateFromStores(items3, () =>
     UserGuildSettingsStore.isChannelMuted(guildId, channel.id),
   );
-  const tmp5Result16 = tmp5(tmp2[95]);
+  const tmp5Result16 = tmp5(tmp2[96]);
   const items4 = [ReadStateStore];
-  const stateFromStores2 = tmp5(tmp2[95]).useStateFromStores(items4, () =>
+  const stateFromStores2 = tmp5(tmp2[96]).useStateFromStores(items4, () =>
     ReadStateStore.hasUnreadOrMentions(channel.id),
   );
-  const tmp5Result17 = tmp5(tmp2[95]);
-  const canMarkChannelUnread = tmp5(tmp2[60]).useCanMarkChannelUnread(channel);
-  const tmp5Result18 = tmp5(tmp2[60]);
+  const tmp5Result17 = tmp5(tmp2[96]);
+  const canMarkChannelUnread = tmp5(tmp2[61]).useCanMarkChannelUnread(channel);
+  const tmp5Result18 = tmp5(tmp2[61]);
   const items5 = [ActiveThreadsStore];
-  const stateFromStores3 = tmp5(tmp2[95]).useStateFromStores(items5, () => {
+  const stateFromStores3 = tmp5(tmp2[96]).useStateFromStores(items5, () => {
     let hasThreadsForChannelResult = null != guildId;
     if (hasThreadsForChannelResult) {
       hasThreadsForChannelResult = ActiveThreadsStore.hasThreadsForChannel(tmp, channel.id);
     }
     return hasThreadsForChannelResult;
   });
-  const tmp5Result19 = tmp5(tmp2[95]);
+  const tmp5Result19 = tmp5(tmp2[96]);
   const items6 = [CategoryCollapseStore];
-  const stateFromStores4 = tmp5(tmp2[95]).useStateFromStores(items6, () =>
+  const stateFromStores4 = tmp5(tmp2[96]).useStateFromStores(items6, () =>
     CategoryCollapseStore.isCollapsed(channel.parent_id),
   );
-  const tmp5Result20 = tmp5(tmp2[95]);
+  const tmp5Result20 = tmp5(tmp2[96]);
   const items7 = [CollapsedVoiceChannelStore];
-  const stateFromStores5 = tmp5(tmp2[95]).useStateFromStores(items7, () =>
+  const stateFromStores5 = tmp5(tmp2[96]).useStateFromStores(items7, () =>
     CollapsedVoiceChannelStore.isCollapsed(channel.id),
   );
-  const tmp5Result21 = tmp5(tmp2[95]);
+  const tmp5Result21 = tmp5(tmp2[96]);
   const items8 = [StageInstanceStore];
-  const stateFromStores6 = tmp5(tmp2[95]).useStateFromStores(items8, () => StageInstanceStore.isLive(channel.id));
-  const tmp5Result22 = tmp5(tmp2[95]);
+  const stateFromStores6 = tmp5(tmp2[96]).useStateFromStores(items8, () => StageInstanceStore.isLive(channel.id));
+  const tmp5Result22 = tmp5(tmp2[96]);
   let tmpResult = onClose(tmp2[28]);
   const tmpResultResult = onClose(tmp2[28])(channel, !channel.isThread());
-  const DeveloperMode = tmp5(tmp2[99]).DeveloperMode;
+  const DeveloperMode = tmp5(tmp2[100]).DeveloperMode;
   setting = DeveloperMode.useSetting();
   if (null != stateFromStores) {
-    const obj5 = { guild: stateFromStores, size: tmp5(tmp2[100]).GuildIconSizes.LARGE };
-    let tmp24 = jsx(tmp(tmp2[100]), { guild: stateFromStores, size: tmp5(tmp2[100]).GuildIconSizes.LARGE });
+    const obj5 = { guild: stateFromStores, size: tmp5(tmp2[101]).GuildIconSizes.LARGE };
+    let tmp24 = jsx(tmp(tmp2[101]), { guild: stateFromStores, size: tmp5(tmp2[101]).GuildIconSizes.LARGE });
     let tmp23 = jsx;
-    const tmpResult3 = tmp(tmp2[100]);
+    const tmpResult3 = tmp(tmp2[101]);
   } else {
     tmp23 = jsx;
-    const obj6 = { size: tmp5(tmp2[101]).AvatarSizes.LARGE, channel };
-    tmp24 = jsx(tmp5(tmp2[101]).Avatar, { size: tmp5(tmp2[101]).AvatarSizes.LARGE, channel });
+    const obj6 = { size: tmp5(tmp2[102]).AvatarSizes.LARGE, channel };
+    tmp24 = jsx(tmp5(tmp2[102]).Avatar, { size: tmp5(tmp2[102]).AvatarSizes.LARGE, channel });
   }
-  const tmp21 = onClose(tmp2[98])(channel);
+  const tmp21 = onClose(tmp2[99])(channel);
   const items9 = [UserStore];
-  const stateFromStores7 = tmp5(tmp2[95]).useStateFromStores(items9, () => currentUser.getCurrentUser());
-  const tmp5Result23 = tmp5(tmp2[95]);
+  const stateFromStores7 = tmp5(tmp2[96]).useStateFromStores(items9, () => currentUser.getCurrentUser());
+  const tmp5Result23 = tmp5(tmp2[96]);
   const tmp27 = null != stateFromStores7 && channel.isOwner(stateFromStores7.id);
   const items10 = [UserGuildSettingsStore];
-  const stateFromStores8 = tmp5(tmp2[95]).useStateFromStores(items10, () =>
+  const stateFromStores8 = tmp5(tmp2[96]).useStateFromStores(items10, () =>
     UserGuildSettingsStore.isMessagesFavorite(channel.id),
   );
-  const tmp5Result24 = tmp5(tmp2[95]);
-  const inappropriateConversationsTiers = tmp5(tmp2[102]).useInappropriateConversationsTiers(channel);
+  const tmp5Result24 = tmp5(tmp2[96]);
+  const inappropriateConversationsTiers = tmp5(tmp2[103]).useInappropriateConversationsTiers(channel);
   let isTier1;
   if (inappropriateConversationsTiers != null) {
     isTier1 = inappropriateConversationsTiers.isTier1;
@@ -275,14 +275,14 @@ function ChannelLongPressActionSheetConnected(channel) {
     }
     tmp34 = !isTier21;
   }
-  const tmp5Result25 = tmp5(tmp2[102]);
+  const tmp5Result25 = tmp5(tmp2[103]);
   const items11 = [items14];
-  const stateFromStores9 = tmp5(tmp2[95]).useStateFromStores(items11, () =>
+  const stateFromStores9 = tmp5(tmp2[96]).useStateFromStores(items11, () =>
     ChannelSpoilerAgreeStore.didAgree(channel.id),
   );
-  const tmp5Result26 = tmp5(tmp2[95]);
-  const tmp38 = onClose(tmp2[104])(channel);
-  const tmp39 = onClose(tmp2[105])(channel);
+  const tmp5Result26 = tmp5(tmp2[96]);
+  const tmp38 = onClose(tmp2[105])(channel);
+  const tmp39 = onClose(tmp2[106])(channel);
   let isFavorites;
   if (tmp39 != null) {
     isFavorites = tmp39.isFavorites;
@@ -295,20 +295,20 @@ function ChannelLongPressActionSheetConnected(channel) {
       tmp41 = tmp39;
     }
   }
-  const tmp37 = onClose(tmp2[103])(channel);
-  isConjureChannelCandidate = tmp5(tmp2[106]).useIsConjureChannelCandidate(channel, "ChannelLongPressActionSheet");
+  const tmp37 = onClose(tmp2[104])(channel);
+  isConjureChannelCandidate = tmp5(tmp2[107]).useIsConjureChannelCandidate(channel, "ChannelLongPressActionSheet");
   let tmp44 = null;
-  const tmp5Result27 = tmp5(tmp2[106]);
+  const tmp5Result27 = tmp5(tmp2[107]);
   if (isConjureChannelCandidate) {
     tmp44 = channel;
   }
-  const tmpResult2Result = onClose(tmp2[107])(tmp44);
-  const tmp46 = onClose(tmp2[108])(channel);
+  const tmpResult2Result = onClose(tmp2[108])(tmp44);
+  const tmp46 = onClose(tmp2[109])(channel);
   frameId = tmp46.frameId;
-  const tmpResult4 = onClose(tmp2[107]);
-  const items12 = [tmp5(tmp2[109]).ApexExperimentStore];
+  const tmpResult4 = onClose(tmp2[108]);
+  const items12 = [tmp5(tmp2[110]).ApexExperimentStore];
   const items13 = [isConjureChannelCandidate, frameId];
-  const stateFromStores10 = tmp5(tmp2[95]).useStateFromStores(
+  const stateFromStores10 = tmp5(tmp2[96]).useStateFromStores(
     items12,
     () => {
       let tmp = isConjureChannelCandidate;
@@ -322,13 +322,13 @@ function ChannelLongPressActionSheetConnected(channel) {
     },
     items13,
   );
-  const tmp48 = onClose(tmp2[111])(channel, isConjureChannelCandidate);
-  const tmp5Result28 = tmp5(tmp2[95]);
+  const tmp48 = onClose(tmp2[112])(channel, isConjureChannelCandidate);
+  const tmp5Result28 = tmp5(tmp2[96]);
   let tmp49 = null != tmpResult2Result;
   if (!tmp49) {
     tmp49 = null != tmp48.remixProject;
   }
-  const isConjureMobileEnabled = tmp5(tmp2[112]).useIsConjureMobileEnabled(tmp49, "ChannelLongPressActionSheet");
+  const isConjureMobileEnabled = tmp5(tmp2[113]).useIsConjureMobileEnabled(tmp49, "ChannelLongPressActionSheet");
   if (stateFromStores7 != null) {
     const isStaffResult = stateFromStores7.isStaff();
   }
@@ -454,7 +454,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj14.label = intl5.string(tmp5(tmp2[23]).t.OQ9MKu);
       obj14.IconComponent = tmp5(tmp2[32]).LinkIcon;
       obj14.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10991, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10943, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj14);
     }
@@ -536,7 +536,7 @@ function ChannelLongPressActionSheetConnected(channel) {
     const obj23 = { label: null, IconComponent: null, onPress: null };
     const intl8 = tmp5(tmp2[23]).intl;
     obj23.label = intl8.string(tmp(tmp2[42]).jMMrDM);
-    obj23.IconComponent = tmp5(tmp2[30]).PencilIcon;
+    obj23.IconComponent = tmp5(tmp2[47]).MagicWandIcon;
     obj23.onPress = function onPress() {
       openConjureHomeScreenDefault(StageInstanceStore);
     };
@@ -554,7 +554,7 @@ function ChannelLongPressActionSheetConnected(channel) {
     const obj25 = { label: null, IconComponent: null, onPress: null };
     const intl9 = tmp5(tmp2[23]).intl;
     obj25.label = intl9.string(tmp5(tmp2[23]).t.VINpSK);
-    obj25.IconComponent = tmp5(tmp2[47]).GroupPlusIcon;
+    obj25.IconComponent = tmp5(tmp2[48]).GroupPlusIcon;
     obj25.onPress = function onPress() {
       const result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, {
         source: constants6.CONTEXT_MENU,
@@ -580,7 +580,7 @@ function ChannelLongPressActionSheetConnected(channel) {
         const t2 = tmp5(tmp2[23]).t;
         if (isParentOptedIn) {
           obj26.label = string2(t2.jNphKT);
-          obj26.IconComponent = tmp5(tmp2[52]).XSmallIcon;
+          obj26.IconComponent = tmp5(tmp2[53]).XSmallIcon;
           obj26.onPress = function onPress() {
             if (null != channel.parent_id) {
               const obj = OptInChannelsActionCreators;
@@ -597,7 +597,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           }
           obj26.label = string2Result;
           if (isOptedIn) {
-            let PlusLargeIcon = tmp5(tmp2[52]).XSmallIcon;
+            let PlusLargeIcon = tmp5(tmp2[53]).XSmallIcon;
           } else {
             PlusLargeIcon = tmp5(tmp2[38]).PlusLargeIcon;
           }
@@ -622,7 +622,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       }
       const obj27 = {
         label: stringResult,
-        IconComponent: tmp5(tmp2[49]).PinIcon,
+        IconComponent: tmp5(tmp2[50]).PinIcon,
         onPress() {
           OptInChannelsActionCreators.setIsFavorite(currentGuildId, channel.id, !setting, {
             section: constants3.CHANNEL_ACTION_SHEET,
@@ -689,7 +689,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       const obj30 = { label: null, IconComponent: null, onPress: null };
       const intl14 = tmp5(tmp2[23]).intl;
       obj30.label = intl14.string(tmp5(tmp2[23]).t.EuzCET);
-      obj30.IconComponent = tmp5(tmp2[54]).WarningIcon;
+      obj30.IconComponent = tmp5(tmp2[55]).WarningIcon;
       obj30.onPress = function onPress() {
         const result = InappropriateConversationsActionCreators.markAsInappropriateConversation(
           channel.id,
@@ -703,7 +703,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       const obj31 = { label: null, IconComponent: null, onPress: null };
       const intl15 = tmp5(tmp2[23]).intl;
       obj31.label = intl15.string(tmp5(tmp2[23]).t["tBw/1i"]);
-      obj31.IconComponent = tmp5(tmp2[54]).WarningIcon;
+      obj31.IconComponent = tmp5(tmp2[55]).WarningIcon;
       obj31.onPress = function onPress() {
         const result = InappropriateConversationsActionCreators.markAsInappropriateConversation(
           channel.id,
@@ -724,7 +724,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             const obj33 = { label: null, IconComponent: null, onPress: null };
             const intl16 = tmp5(tmp2[23]).intl;
             obj33.label = intl16.string(tmp5(tmp2[23]).t.L6623r);
-            obj33.IconComponent = tmp5(tmp2[56]).InboxIcon;
+            obj33.IconComponent = tmp5(tmp2[57]).InboxIcon;
             obj33.onPress = function onPress() {
               MessageRequestActionCreators.markAsMessageRequest(channel.id);
             };
@@ -734,7 +734,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           const obj34 = { label: null, IconComponent: null, onPress: null };
           const intl17 = tmp5(tmp2[23]).intl;
           obj34.label = intl17.string(tmp5(tmp2[23]).t["85YWlY"]);
-          obj34.IconComponent = tmp5(tmp2[56]).InboxIcon;
+          obj34.IconComponent = tmp5(tmp2[57]).InboxIcon;
           obj34.onPress = function onPress() {
             const result = MessageRequestActionCreators.clearMessageRequestState(channel.id);
           };
@@ -750,7 +750,7 @@ function ChannelLongPressActionSheetConnected(channel) {
     }
     const obj35 = { sectionKey: "notifications", buttons: [] };
     if (tmp96) {
-      const MarkChannelUnreadExperiment = tmp5(tmp2[58]).MarkChannelUnreadExperiment;
+      const MarkChannelUnreadExperiment = tmp5(tmp2[59]).MarkChannelUnreadExperiment;
       if (MarkChannelUnreadExperiment.getConfig({ location: "channel_action_sheet" }).enabled) {
         if (!stateFromStores2) {
           if (canMarkChannelUnread) {
@@ -758,7 +758,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             const obj36 = { label: null, IconComponent: null, onPress: null };
             const intl18 = tmp5(tmp2[23]).intl;
             obj36.label = intl18.string(tmp5(tmp2[23]).t.RpE9k7);
-            obj36.IconComponent = tmp5(tmp2[59]).ChatMarkUnreadIcon;
+            obj36.IconComponent = tmp5(tmp2[60]).ChatMarkUnreadIcon;
             obj36.onPress = function onPress() {
               markChannelUnreadDefault(channel.id);
             };
@@ -770,7 +770,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       const obj37 = { label: null, IconComponent: null, onPress: null };
       const intl19 = tmp5(tmp2[23]).intl;
       obj37.label = intl19.string(tmp5(tmp2[23]).t.e6RscS);
-      obj37.IconComponent = tmp5(tmp2[61]).EyeIcon;
+      obj37.IconComponent = tmp5(tmp2[62]).EyeIcon;
       obj37.onPress = function onPress() {
         ReadStateActionCreators.ackChannel(channel, {
           section: constants3.CHANNEL_ACTION_SHEET,
@@ -786,7 +786,7 @@ function ChannelLongPressActionSheetConnected(channel) {
         const obj38 = { label: null, IconComponent: null, disableColor: true, onPress: null };
         const intl27 = tmp5(tmp2[23]).intl;
         obj38.label = intl27.string(tmp5(tmp2[23]).t.h850Ss);
-        obj38.IconComponent = tmp5(tmp2[67]).ChannelNotificationIcon;
+        obj38.IconComponent = tmp5(tmp2[68]).ChannelNotificationIcon;
         obj38.onPress = function onPress() {
           ChannelSettingsActionCreatorsDefault.setSection(constants4.NOTIFICATIONS);
           ChannelSettingsActionCreatorsDefault.open(channel.id);
@@ -804,7 +804,7 @@ function ChannelLongPressActionSheetConnected(channel) {
         const obj40 = { label: null, IconComponent: null, onPress: null };
         const intl28 = tmp5(tmp2[23]).intl;
         obj40.label = intl28.string(tmp5(tmp2[23]).t.B2panI);
-        obj40.IconComponent = tmp5(tmp2[69]).ThreadIcon;
+        obj40.IconComponent = tmp5(tmp2[70]).ThreadIcon;
         obj40.onPress = function onPress() {
           showThreadBrowserModalDefault(channel);
         };
@@ -825,7 +825,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           const t6 = tmp5(tmp2[23]).t;
           if (isGuildStageVoiceResult) {
             obj42.label = string6(t6["7vb2cc"]);
-            obj42.IconComponent = tmp5(tmp2[72]).StageIcon;
+            obj42.IconComponent = tmp5(tmp2[73]).StageIcon;
             obj42.onPress = function onPress() {
               handleVoiceOrStageChannelConnectPress(channel);
             };
@@ -834,16 +834,16 @@ function ChannelLongPressActionSheetConnected(channel) {
             const obj43 = { label: null, IconComponent: null, onPress: null };
             const intl31 = tmp5(tmp2[23]).intl;
             obj43.label = intl31.string(tmp5(tmp2[23]).t.ZXxLQg);
-            obj43.IconComponent = tmp5(tmp2[73]).ChatIcon;
+            obj43.IconComponent = tmp5(tmp2[74]).ChatIcon;
             obj43.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11187, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11142, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons20.push(obj43);
           } else {
             obj42.label = string6(t6.ZXxLQg);
-            obj42.IconComponent = tmp5(tmp2[73]).ChatIcon;
+            obj42.IconComponent = tmp5(tmp2[74]).ChatIcon;
             obj42.onPress = function onPress() {
               handleVoiceOrStageChannelConnectPress(channel);
               ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
@@ -858,7 +858,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           const obj44 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
           const intl32 = tmp5(tmp2[23]).intl;
           obj44.label = intl32.string(tmp5(tmp2[23]).t.saZaRb);
-          obj44.IconComponent = tmp5(tmp2[52]).XSmallIcon;
+          obj44.IconComponent = tmp5(tmp2[53]).XSmallIcon;
           obj44.onPress = function onPress() {
             return (async () => {
               if (paths === 2) {
@@ -887,7 +887,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                     } else {
                       c1 = 1;
                       paths = 1;
-                      const obj4 = { value: tmp4(paths[21])(paths[77], paths.paths), done: false };
+                      const obj4 = { value: tmp4(paths[21])(paths[78], paths.paths), done: false };
                       return obj4;
                     }
                   } else if (arg0 === 1) {
@@ -917,7 +917,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           const obj45 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
           const intl33 = tmp5(tmp2[23]).intl;
           obj45.label = intl33.string(tmp5(tmp2[23]).t["+78Pfm"]);
-          obj45.IconComponent = tmp5(tmp2[78]).FlagIcon;
+          obj45.IconComponent = tmp5(tmp2[79]).FlagIcon;
           obj45.onPress = function onPress() {
             const result = ReportModals.showReportModalForStageChannel(channel);
           };
@@ -932,7 +932,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             const obj47 = { label: null, IconComponent: null, onPress: null };
             const intl40 = tmp5(tmp2[23]).intl;
             obj47.label = intl40.string(tmp5(tmp2[23]).t.ZXxLQg);
-            obj47.IconComponent = tmp5(tmp2[73]).ChatIcon;
+            obj47.IconComponent = tmp5(tmp2[74]).ChatIcon;
             obj47.onPress = function onPress() {
               openAppChannelToChatDefault(channel);
               hideLaunchPadDefault();
@@ -941,14 +941,14 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj46.buttons = items18;
             if (tmp125) {
               const buttons23 = obj46.buttons;
-              buttons23.push(tmp(tmp2[81])(frameId, userMuted));
+              buttons23.push(tmp(tmp2[82])(frameId, userMuted));
             }
             if (null != frameId) {
               const buttons24 = obj46.buttons;
               const obj48 = { label: null, IconComponent: null, onPress: null };
               const intl34 = tmp5(tmp2[23]).intl;
               obj48.label = intl34.string(tmp5(tmp2[23]).t.VkMnR2);
-              obj48.IconComponent = tmp5(tmp2[82]).DoorExitIcon;
+              obj48.IconComponent = tmp5(tmp2[83]).DoorExitIcon;
               obj48.onPress = function onPress() {
                 closeFrameDefault(ActiveThreadsStore);
               };
@@ -965,7 +965,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             const obj50 = { label: null, IconComponent: null, onPress: null };
             const intl35 = tmp5(tmp2[23]).intl;
             obj50.label = intl35.string(tmp5(tmp2[23]).t.ix2UVZ);
-            obj50.IconComponent = tmp5(tmp2[84]).EyeSlashIcon;
+            obj50.IconComponent = tmp5(tmp2[85]).EyeSlashIcon;
             obj50.onPress = function onPress() {
               GuildActionCreatorsDefault.clearSpoilerAgree(channel.id);
             };
@@ -986,7 +986,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           }
           const obj52 = {
             label: string7Result,
-            IconComponent: tmp5(tmp2[86]).SettingsIcon,
+            IconComponent: tmp5(tmp2[87]).SettingsIcon,
             onPress() {
               ChannelSettingsActionCreatorsDefault.setSection(constants4.OVERVIEW);
               ChannelSettingsActionCreatorsDefault.open(channel.id);
@@ -1008,7 +1008,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             if (channel.isCategory()) {
               let CopyIcon = tmp5(tmp2[38]).PlusLargeIcon;
             } else {
-              CopyIcon = tmp5(tmp2[87]).CopyIcon;
+              CopyIcon = tmp5(tmp2[88]).CopyIcon;
             }
             obj53.IconComponent = CopyIcon;
             obj53.onPress = function onPress() {
@@ -1036,7 +1036,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           const obj54 = { label: null, IconComponent: null, onPress: null };
           const intl38 = tmp5(tmp2[23]).intl;
           obj54.label = intl38.string(tmp5(tmp2[23]).t.gFHI3k);
-          obj54.IconComponent = tmp5(tmp2[89]).IdIcon;
+          obj54.IconComponent = tmp5(tmp2[90]).IdIcon;
           obj54.onPress = function onPress() {
             ClipboardUtils.copy(channel.id);
             ToastUtils.presentIdCopied();
@@ -1067,7 +1067,7 @@ function ChannelLongPressActionSheetConnected(channel) {
         const obj56 = { value: analyticsLocations, children: null };
         const obj57 = { showGradient: true, startExpanded: null, header: null, children: null };
         tmp121 = channel.isGuildStageVoice() && stateFromStores6 && canConnect;
-        obj57.startExpanded = tmp5(tmp2[114]).isMetaQuest();
+        obj57.startExpanded = tmp5(tmp2[115]).isMetaQuest();
         const header = tmp48.header;
         let icon;
         if (header != null) {
@@ -1095,7 +1095,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           subtitle = formatToPlainStringResult;
         }
         obj58.subtitle = subtitle;
-        obj57.header = tmp23(tmp5(tmp2[115]).ActionSheetIconHeader, obj58);
+        obj57.header = tmp23(tmp5(tmp2[116]).ActionSheetIconHeader, obj58);
         obj57.children = items14.map((buttons) => {
           const obj = { hasIcons: true, children: null };
           buttons = buttons.buttons;
@@ -1107,11 +1107,11 @@ function ChannelLongPressActionSheetConnected(channel) {
               str = "danger";
             }
             return closure_1_33(
-              channel(7506).ActionSheetRow,
+              channel(7451).ActionSheetRow,
               {
                 variant: str,
                 label,
-                icon: closure_1_33(channel(7506).ActionSheetRow.Icon, {
+                icon: closure_1_33(channel(7451).ActionSheetRow.Icon, {
                   IconComponent,
                   style: iconStyle,
                   disableColor,
@@ -1129,8 +1129,8 @@ function ChannelLongPressActionSheetConnected(channel) {
           });
           return jsx(ActionSheetRow.ActionSheetRow.Group, { hasIcons: true, children: null }, buttons.sectionKey);
         });
-        obj56.children = tmp23(tmp5(tmp2[113]).ActionSheet, obj57);
-        return tmp23(tmp5(tmp2[92]).AnalyticsLocationProvider, obj56);
+        obj56.children = tmp23(tmp5(tmp2[114]).ActionSheet, obj57);
+        return tmp23(tmp5(tmp2[93]).AnalyticsLocationProvider, obj56);
       } else {
         const buttons29 = obj41.buttons;
         const intl29 = tmp5(tmp2[23]).intl;
@@ -1162,7 +1162,7 @@ function ChannelLongPressActionSheetConnected(channel) {
         const buttons30 = obj35.buttons;
         const obj60 = {
           label: stringResult1,
-          IconComponent: tmp5(tmp2[64]).BellIcon,
+          IconComponent: tmp5(tmp2[65]).BellIcon,
           onPress() {
             const obj2 = {
               guildId: channel.getGuildId(),
@@ -1208,7 +1208,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       const buttons31 = obj35.buttons;
       const obj61 = {
         label: stringResult2,
-        IconComponent: tmp5(tmp2[63]).BellSlashIcon,
+        IconComponent: tmp5(tmp2[64]).BellSlashIcon,
         onPress() {
           const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
           if (tmp) {
@@ -1238,19 +1238,19 @@ function ChannelLongPressActionSheetConnected(channel) {
     }
     const obj62 = {
       label: string3Result,
-      IconComponent: tmp5(tmp2[49]).PinIcon,
+      IconComponent: tmp5(tmp2[50]).PinIcon,
       onPress() {
         OptInChannelsActionCreators.setMessagesFavorite(channel.id, !isConjureChannelCandidate);
       },
     };
     t3 = buttons32.push(obj62);
   }
-  const tmp5Result29 = tmp5(tmp2[112]);
+  const tmp5Result29 = tmp5(tmp2[113]);
   tmp70 = null != remixProject && null != guildId1;
   tmp72 = null != tmp52 && null != guildId1;
 }
-const SafetyWarningTypes = fn(10988).SafetyWarningTypes;
-const ChannelRecord = fn(4996);
+const SafetyWarningTypes = fn(10940).SafetyWarningTypes;
+const ChannelRecord = fn(5023);
 ({
   isGuildTextChannelType: closure_9,
   isGuildVocalChannelType: closure_10,
@@ -1269,7 +1269,7 @@ const Constants = fn(1072);
   Permissions: closure_30,
   ZERO_STRING_GUILD_ID: closure_31,
 } = Constants);
-let closure_32 = fn(10323).ChannelDetailsNavigatorScreens;
+let closure_32 = fn(10275).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPressActionSheet.tsx");

@@ -50,8 +50,8 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           items = [];
         } else {
-          items = guild(11079).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(11079);
+          items = guild(11032).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(11032);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -60,8 +60,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(11079).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(11079);
+          canRemoveConjureBotResult = guild(11032).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(11032);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -69,8 +69,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(11079).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(11079);
+          canRemoveConjureBotResult = guild(11032).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(11032);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;
@@ -253,7 +253,7 @@ let closure_21 = async function _loadMissingApplication(arg0) {
     }
   }
 };
-let closure_7 = fn(5073).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(5100).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);
@@ -381,7 +381,7 @@ export function useConjureServerApp(guildId, applicationId) {
       }
     },
     items8,
-    require("../../../../_runtime/metro/00012__.js").isEqual,
+    require("apply").isEqual,
   );
   closure_129_3 = stateFromStores2;
   const items9 = [stateFromStores2];
@@ -407,7 +407,7 @@ export function useConjureServerApp(guildId, applicationId) {
     items10,
     () => readConjureServerApp(closure_0, closure_1),
     items11,
-    require("../../../../_runtime/metro/00012__.js").isEqual,
+    require("apply").isEqual,
   );
 }
 export function loadConjureServerApp() {

@@ -1,11 +1,11 @@
 // discord_app/stores/GuildMemberStore.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import DisplayNameStylesUtils from "../modules/display_name_styles/DisplayNameStylesUtils.tsx";
+import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import mappers from "../modules/collectibles/utils/mappers.tsx";
 import isActivityParticipantValidGuildMemberDefault from "../modules/activities/isActivityParticipantValidGuildMember.tsx";
@@ -90,10 +90,10 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
     return {
       colorString: null,
       colorStrings: null,
-      colorRoleId: "ao",
-      hoistRoleId: "rejectWithError",
-      iconRoleId: "Number",
-      highestRoleId: "a",
+      colorRoleId: "channel",
+      hoistRoleId: "format",
+      iconRoleId: "Icon",
+      highestRoleId: "y",
     };
   } else {
     const iter = roles[Symbol.iterator]();
@@ -875,7 +875,7 @@ prototype["getMutableAllGuildsAndMembers"] = function getMutableAllGuildsAndMemb
 };
 prototype["memberOf"] = function memberOf(userId) {
   closure_0 = userId;
-  obj = _modDef12(obj);
+  obj = applyDefault(obj);
   const found = obj.toPairs().filter((item) => {
     [, tmp] = item;
     return null != tmp[closure_0];
@@ -1081,8 +1081,8 @@ prototype["getMemberRoleWithPendingUpdates"] = function getMemberRoleWithPending
   }
   let differenceResult = roles;
   if (null != dependencyMap4[arg0]) {
-    obj = _modDef12;
-    differenceResult = obj.difference(_modDef12.union(roles, tmp2.added), tmp2.removed);
+    obj = applyDefault;
+    differenceResult = obj.difference(applyDefault.union(roles, tmp2.added), tmp2.removed);
   }
   return differenceResult;
 };
@@ -1164,7 +1164,7 @@ obj = {
         if (obj == null) {
           obj = {};
         }
-        const obj2 = _modDef12;
+        const obj2 = applyDefault;
         let added = obj.added;
         if (added == null) {
           added = [];
@@ -1173,18 +1173,18 @@ obj = {
         if (removedRoleIds == null) {
           items = [];
         }
-        const obj4 = { added: obj2.difference(_modDef12.union(added, addedRoleIds), items), removed: null };
-        const unionResult = _modDef12.union(added, addedRoleIds);
-        const tmp4Result = _modDef12;
+        const obj4 = { added: obj2.difference(applyDefault.union(added, addedRoleIds), items), removed: null };
+        const unionResult = applyDefault.union(added, addedRoleIds);
+        const tmp4Result = applyDefault;
         let removed = obj.removed;
         if (removed == null) {
           removed = [];
         }
-        const tmp4Result2 = _modDef12;
+        const tmp4Result2 = applyDefault;
         if (addedRoleIds == null) {
           addedRoleIds = [];
         }
-        obj4.removed = tmp4Result.difference(_modDef12.union(removed, removedRoleIds), addedRoleIds);
+        obj4.removed = tmp4Result.difference(applyDefault.union(removed, removedRoleIds), addedRoleIds);
         dependencyMap4[guildId] = obj4;
         const obj5 = {
           userId: id,
@@ -1221,7 +1221,7 @@ obj = {
           gamingLeaderboardData: obj7.gamingLeaderboardData,
         } = tmp3);
         tmp2[id] = createMember(obj5);
-        const unionResult1 = _modDef12.union(removed, removedRoleIds);
+        const unionResult1 = applyDefault.union(removed, removedRoleIds);
       }
     }
   },

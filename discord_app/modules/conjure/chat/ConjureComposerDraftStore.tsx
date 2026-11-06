@@ -3,7 +3,7 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 
 require = fn;
 function readStoredDrafts() {

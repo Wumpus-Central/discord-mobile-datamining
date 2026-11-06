@@ -1,5 +1,5 @@
 // discord_app/modules/applications/useGetOrFetchApplications.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators.tsx";
@@ -29,8 +29,8 @@ export default function useGetOrFetchApplications(items) {
     }
     if (tmp) {
       const obj2 = ApplicationActionCreatorsDefault;
-      const found = _modDef12(items1).filter(GlobalUtils.isNotNullish);
-      const arr = _modDef12(items1);
+      const found = applyDefault(items1).filter(GlobalUtils.isNotNullish);
+      const arr = applyDefault(items1);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
       applications.catch(NOOP);
       ref.current = items1;
@@ -71,8 +71,8 @@ export function useGetOrFetchApplication(applicationId) {
     }
     if (tmp) {
       const obj2 = ApplicationActionCreatorsDefault;
-      const found = _modDef12(items1).filter(GlobalUtils.isNotNullish);
-      const arr = _modDef12(items1);
+      const found = applyDefault(items1).filter(GlobalUtils.isNotNullish);
+      const arr = applyDefault(items1);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
       applications.catch(NOOP);
       ref.current = items1;

@@ -1,5 +1,5 @@
 // discord_app/modules/wishlists/hooks/useWishlistHooks.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import maybeFetchUserProfileDefault from "../../user_profile/maybeFetchUserProfile.tsx";
 import WishlistActionCreatorsDefault from "../WishlistActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -56,7 +56,7 @@ function useFetchWishlist(wishlistId) {
     if (null == first) {
       items = [];
     } else {
-      items = _mod12.uniq(getWishlistSkuIds(tmp));
+      items = apply.uniq(getWishlistSkuIds(tmp));
     }
     return items;
   }, items1);
@@ -111,7 +111,7 @@ function useFetchWishlist(wishlistId) {
   return obj4;
 }
 let useEffect = fn(19).useEffect;
-const getWishlistSkuIds = fn(9625).getWishlistSkuIds;
+const getWishlistSkuIds = fn(9574).getWishlistSkuIds;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistHooks.tsx");
 

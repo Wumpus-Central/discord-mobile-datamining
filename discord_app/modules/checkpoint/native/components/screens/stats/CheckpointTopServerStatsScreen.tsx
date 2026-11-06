@@ -3,7 +3,7 @@ import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3219 from "../../../../Checkpoint2026.messages.js";
+import _modDef3248 from "../../../../Checkpoint2026.messages.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import CheckpointStatsUtils from "../../../../CheckpointStatsUtils.tsx";
 import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
@@ -106,12 +106,12 @@ export default function CheckpointTopServerStatsScreen() {
   }
   const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3219["M+a+t1"]);
+  const stringResult = intl.string(_modDef3248["M+a+t1"]);
   let formatToPlainStringResult;
   if (null != checkpointTopPercent) {
     const intl2 = util.intl;
     const obj2 = { numDays: rounded, percent: checkpointTopPercent };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3219.BRQODX, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3248.BRQODX, obj2);
   }
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.spotlightContainer, children: null };
@@ -187,11 +187,11 @@ export default function CheckpointTopServerStatsScreen() {
         return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
       },
     };
-    let formatResult = intl4.format(_modDef3219.sIDTV1, obj17);
+    let formatResult = intl4.format(_modDef3248.sIDTV1, obj17);
   } else {
     const intl3 = util.intl;
     const obj18 = { numDays: rounded };
-    formatResult = intl3.format(_modDef3219.nLCUQ4, obj18);
+    formatResult = intl3.format(_modDef3248.nLCUQ4, obj18);
   }
   const obj19 = { children: null };
   obj16.children = formatResult;

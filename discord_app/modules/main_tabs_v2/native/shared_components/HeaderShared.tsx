@@ -190,10 +190,10 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9968).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9919).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   headerRightContainer: { marginRight: 16 },
   headerWrapper: {
@@ -302,19 +302,17 @@ const memoResult = noop.memo(
     } else {
       tmp6 = headerTitle;
     }
-    const obj2 = style(num[15]);
-    const obj3 = gradientTop;
-    const layoutEffect = obj3.useLayoutEffect(() => style(num[16]).DeprecatedLayoutAnimation({ duration: 0 }));
-    const obj4 = { style: memo, children: null };
+    const obj3 = { style: memo, children: null };
     let title;
+    const obj2 = style(num[15]);
     if (back != null) {
       title = back.title;
     }
-    const obj5 = { label: title, canGoBack: null, tintColor: null };
+    const obj4 = { label: title, canGoBack: null, tintColor: null };
     const tmp7 = tmp2(num[7])("custom-drawn");
-    obj5.canGoBack = navigation.isFocused() && navigation.canGoBack();
-    obj5.tintColor = text;
-    const items1 = [fn(obj5), , ,];
+    obj4.canGoBack = navigation.isFocused() && navigation.canGoBack();
+    obj4.tintColor = text;
+    const items1 = [fn(obj4), , ,];
     if (typeof headerTitle !== "string") {
       let name = options.title;
       if (name == null) {
@@ -325,14 +323,14 @@ const memoResult = noop.memo(
     items1[1] = tmp6({ children: headerTitle, tintColor: text });
     let headerRightResult;
     if (headerRight != null) {
-      const obj6 = { canGoBack: navigation.isFocused() && navigation.canGoBack(), tintColor: text };
-      headerRightResult = headerRight(obj6);
-      const tmp14 = navigation.isFocused() && navigation.canGoBack();
+      const obj5 = { canGoBack: navigation.isFocused() && navigation.canGoBack(), tintColor: text };
+      headerRightResult = headerRight(obj5);
+      const tmp13 = navigation.isFocused() && navigation.canGoBack();
     }
     items1[2] = headerRightResult;
     items1[3] = tmp7;
-    obj4.children = items1;
-    return closure_7(closure_4, obj4);
+    obj3.children = items1;
+    return closure_7(closure_4, obj3);
   },
   (back, back2) => {
     let tmpResultResult = discord_common_shallowEqualDefault(back, back2, ["back"]);

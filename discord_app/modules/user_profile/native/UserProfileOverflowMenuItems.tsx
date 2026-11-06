@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
@@ -49,7 +49,7 @@ export function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11485, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11447, dependencyMap.paths);
         obj.openLazy(
           tmp,
           metroImportDefault,
@@ -99,7 +99,7 @@ export function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(11484, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11446, dependencyMap.paths);
       obj.openLazy(
         tmp,
         timestampProducer,
@@ -134,7 +134,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(15055, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(15032, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {
@@ -179,8 +179,8 @@ export function getDeveloperCopyMenuItem(arg0, isTidaRegion) {
         dependencyMap({ action: "COPY_USERNAME", analyticsLocations });
         const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = ClipboardUtils;
-        obj2.copy(analyticsLocations(5197).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
-        const obj3 = analyticsLocations(5197);
+        obj2.copy(analyticsLocations(5224).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
+        const obj3 = analyticsLocations(5224);
         const result = ToastUtils.presentUsernameCopied();
       };
       items.push(obj);

@@ -12,10 +12,10 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_6, PremiumUpsellTypes: metroImportDefault } = PremiumConstants);
-const ResolutionTypes = fn(5905).ResolutionTypes;
+const ResolutionTypes = fn(5924).ResolutionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 },
   liveTag: {

@@ -1,9 +1,9 @@
 // discord_app/modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05725_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05745_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
@@ -54,11 +54,11 @@ function LiveTag() {
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
-const GUILD_VOCAL_CHANNELS_KEY = fn(5073).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5100).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(5143);
+let createStyles = fn(5170);
 let obj2 = {
   voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" },
   streamPreviewShadow: null,
@@ -85,7 +85,7 @@ const rect = {
 };
 obj2.streamPreviewBorder = rect;
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5143);
+createStyles = fn(5170);
 let obj4 = { tag: null, tagText: null };
 const rect1 = {
   paddingHorizontal: 4,
@@ -206,7 +206,7 @@ export function useVoiceUsers(guild) {
   const items6 = [stateFromStores, guild.afkChannelId, stateFromStoresArray];
   const memo = stateFromStoresArray.useMemo(
     () =>
-      _modDef12.flatMap(stateFromStoresArray, (arg0) => {
+      applyDefault.flatMap(stateFromStoresArray, (arg0) => {
         if (arg0 === guild.afkChannelId) {
           return [];
         } else {

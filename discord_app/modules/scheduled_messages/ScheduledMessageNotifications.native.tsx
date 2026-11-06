@@ -37,7 +37,7 @@ export function handleScheduleMessageError(body) {
     code = body.code;
   }
   if (code === AbortCodes.TOO_MANY_SCHEDULED_MESSAGES) {
-    const scheduledMessagesLimit = ScheduledMessageUtils.getScheduledMessagesLimit("ScheduledMessagesCreateRoadblock");
+    const scheduledMessagesLimit = ScheduledMessageUtils.getScheduledMessagesLimit();
     if (scheduledMessagesLimit.isUpgradable) {
       items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_ROADBLOCK];
       openScheduledMessagesLimitUpsellDefault(items);

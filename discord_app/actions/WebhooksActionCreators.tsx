@@ -1,5 +1,5 @@
 // discord_app/actions/WebhooksActionCreators.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import DispatcherDefault from "../Dispatcher.tsx";
 import AlertActionCreatorsDefault from "AlertActionCreators.tsx";
 import Constants from "../Constants.tsx";
@@ -44,7 +44,7 @@ export default {
     _require = guildId;
     let tmp = arg2;
     if (null == arg2) {
-      let obj = _modDef12;
+      let obj = applyDefault;
       tmp = length[obj.random(obj, 0, length.length - 1)];
     }
     const HTTP = require("HTTPUtils").HTTP;

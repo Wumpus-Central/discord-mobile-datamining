@@ -6,12 +6,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const AppIconConstants = fn(10167);
+const AppIconConstants = fn(10118);
 ({ getIconById: hasOwnProperty, isHexagonCampaignAppIcon: closure_6 } = AppIconConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const HexagonCampaignPerk = fn(5168).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5195).HexagonCampaignPerk;
 let closure_9 = new LoggerDefault("AppIconPremiumManager");
-const DEFAULT = fn(10168).FreemiumAppIconIds.DEFAULT;
+const DEFAULT = fn(10119).FreemiumAppIconIds.DEFAULT;
 let closure_11 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost", CAMPAIGN_EXPIRED: "campaign_expired" };
 class AppIconPremiumManager extends tmp4 {
   constructor() {
@@ -72,7 +72,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
             currentUser = tmp5.getCurrentUser();
             v1 = 1;
             v3 = 1;
-            const obj4 = { value: _undefined(_undefined2[9]).fetchCurrentAppIcon(), done: false };
+            const obj4 = { value: _undefined(_undefined3[9]).fetchCurrentAppIcon(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -102,7 +102,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
                 const obj7 = { value: undefined, done: true };
                 return obj7;
               }
-              obj = _undefined(_undefined2[10]);
+              obj = _undefined(_undefined3[10]);
             }
             closure_131_2 = v1(closure_131_1);
             if (closure_131_1 !== closure_131_2.id) {
@@ -112,18 +112,18 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
               if (currentUser != null) {
                 premiumType1 = currentUser.premiumType;
               }
-              c1 = premiumType1;
+              let _undefined2 = premiumType1;
               if (premiumType1 == null) {
-                c1 = undefined;
+                _undefined2 = undefined;
               }
-              closure_132_0.resetIcon(closure_131_1, c1, constants2.ORPHANED);
+              closure_132_0.resetIcon(closure_131_1, _undefined2, constants2.ORPHANED);
               v3 = 3;
               const obj8 = { value: undefined, done: true };
               return obj8;
             } else {
-              const canUseAllAppIconsResult = _undefined(_undefined2[11]).canUseAllAppIcons(currentUser);
-              let isPremium = !canUseAllAppIconsResult;
-              if (!canUseAllAppIconsResult) {
+              const result = _undefined2(_undefined3[11]).canUsePremiumAppIcons(currentUser);
+              let isPremium = !result;
+              if (!result) {
                 isPremium = closure_131_2.isPremium;
               }
               if (isPremium) {
@@ -133,13 +133,13 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
                 if (currentUser != null) {
                   premiumType2 = currentUser.premiumType;
                 }
-                _undefined2 = premiumType2;
+                _undefined3 = premiumType2;
                 if (premiumType2 == null) {
-                  _undefined2 = undefined;
+                  _undefined3 = undefined;
                 }
-                closure_132_0.resetIcon(closure_131_1, _undefined2, constants2.PREMIUM_LOST);
+                closure_132_0.resetIcon(closure_131_1, _undefined3, constants2.PREMIUM_LOST);
               }
-              const obj9 = _undefined(_undefined2[11]);
+              const obj9 = _undefined2(_undefined3[11]);
             }
           }
           v3 = 3;

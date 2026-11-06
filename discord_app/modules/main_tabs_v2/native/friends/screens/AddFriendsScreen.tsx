@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/AddFriendsScreen.tsx
-import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
@@ -71,7 +71,7 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const Sections = fn(14496).Sections;
+const Sections = fn(14473).Sections;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_12,
@@ -79,7 +79,7 @@ const Constants = fn(1072);
   InstantInviteSources: closure_14,
   RelationshipTypes: closure_15,
 } = Constants);
-const ContactPermissions = fn(14474).ContactPermissions;
+const ContactPermissions = fn(14451).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = {
@@ -92,7 +92,7 @@ let closure_19 = {
   CONTACT_SUGGESTIONS: 3,
   [3]: "CONTACT_SUGGESTIONS",
 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: { flex: 1 },
   inviteAppsContainerNonSticky: {
@@ -236,12 +236,12 @@ export default function AddFriendsScreen(navigation) {
         items1.push(user);
       }
     });
-    return _modDef12
+    return applyDefault
       .unionBy(items1, items, (id) => id.id)
       .sort((arg0, arg1) => {
-        const name = source_page(5197).getName(arg0);
-        const obj = source_page(5197);
-        return name.localeCompare(source_page(5197).getName(arg1));
+        const name = source_page(5224).getName(arg0);
+        const obj = source_page(5224);
+        return name.localeCompare(source_page(5224).getName(arg1));
       });
   });
   let obj5 = navigation(analyticsLocations[27]);
@@ -280,9 +280,9 @@ export default function AddFriendsScreen(navigation) {
       return source_page(analyticsLocations[28])
         .unionBy(items1, items, (user) => user.user.id)
         .sort((user, user2) => {
-          const name = items1(5197).getName(user.user);
-          const obj = items1(5197);
-          return name.localeCompare(items1(5197).getName(user2.user));
+          const name = items1(5224).getName(user.user);
+          const obj = items1(5224);
+          return name.localeCompare(items1(5224).getName(user2.user));
         });
     },
     items4,

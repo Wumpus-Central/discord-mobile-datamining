@@ -3,8 +3,8 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
-import _modDef3219 from "../../Checkpoint2026.messages.js";
+import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
+import _modDef3248 from "../../Checkpoint2026.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import CheckpointExperiments from "../../CheckpointExperiments.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -18,7 +18,7 @@ function handlePress() {
 }
 function handleLongPress() {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19188, dependencyMap.paths),
+    asyncRequireImpl(19180, dependencyMap.paths),
     "CheckpointTestingActionSheet",
   );
 }
@@ -37,9 +37,9 @@ function CheckpointProfileEntrypointRow() {
     end: true,
   };
   const intl = util.intl;
-  obj3.label = intl.string(_modDef3219["8hclXY"]);
+  obj3.label = intl.string(_modDef3248["8hclXY"]);
   const intl2 = util.intl;
-  obj3.subLabel = intl2.string(_modDef3219.BFc4lY);
+  obj3.subLabel = intl2.string(_modDef3248.BFc4lY);
   if (stateFromStores) {
     let tmp5Result = <ActivityIndicator />;
   } else {

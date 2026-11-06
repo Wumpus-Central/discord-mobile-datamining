@@ -82,8 +82,8 @@ export function getStageHasStream(id) {
     )
   );
 }
-export function useIsStageVideoEnabled(arg0) {
-  _require = arg0;
+export function useIsStageVideoEnabled(guild_id) {
+  _require = guild_id;
   items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   let tmp2 = null != stateFromStores;

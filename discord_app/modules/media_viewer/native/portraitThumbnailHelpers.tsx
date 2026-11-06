@@ -7,12 +7,12 @@ const items = [
   },
 ];
 [tmp2] = items;
-function lerpVarWidthThumbnailScrollBounds(items, arg1) {
+function lerpVarWidthThumbnailScrollBounds(items, result1) {
   if (0 === items.length) {
     return 0;
   } else {
-    let length = arg1;
-    if (arg1 < 0) {
+    let length = result1;
+    if (result1 < 0) {
       return 0;
     } else {
       if (length >= items.length) {

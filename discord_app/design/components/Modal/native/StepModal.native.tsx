@@ -1,6 +1,6 @@
 // discord_app/design/components/Modal/native/StepModal.native.tsx
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
-import NavigatorConstants from "../../Navigator/native/NavigatorConstants.native.tsx";
+import NavigatorHeader from "../../Navigator/native/NavigatorHeader.native.tsx";
 import Modal from "Modal.native.tsx";
 import ModalStepIndicator from "ModalStepIndicator.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -10,20 +10,19 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
-let obj2 = { container: { height: "100%" }, stepContainer: null };
-const rect = {
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  top: 0,
-  left: 0,
-  right: 0,
-  height: fn(5724).NAV_BAR_HEIGHT,
-  zIndex: 1,
-};
-obj2.stepContainer = rect;
-let closure_8 = createStyles.createStyles(obj2);
+const createStyles = fn(5170);
+let closure_8 = createStyles.createStyles({
+  container: { height: "100%" },
+  stepContainer: {
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 1,
+  },
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
 
@@ -33,10 +32,11 @@ export function StepModal(steps) {
   const merged = Object.assign(steps, Object.assign({ steps: 0, onWillFocus: 0 }));
   const tmp2 = closure_8();
   const tmp3 = useSafeAreaInsetsDefault();
-  const tmp4 = _slicedToArray(noop.useState(0), 2);
-  closure_2 = tmp4[1];
+  const navigatorHeaderSize = NavigatorHeader.useNavigatorHeaderSize();
+  const tmp5 = _slicedToArray(noop.useState(0), 2);
+  closure_2 = tmp5[1];
   items = [onWillFocus, steps];
-  const obj = { style: tmp2.container, children: null };
+  const obj2 = { style: tmp2.container, children: null };
   const callback = noop.useCallback((arg0) => {
     let num;
     if (steps != null) {
@@ -50,16 +50,16 @@ export function StepModal(steps) {
       onWillFocus(arg0);
     }
   }, items);
-  const obj2 = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj2.onWillFocus = callback;
-  obj2.headerStyle = { height: NavigatorConstants.NAV_BAR_HEIGHT + tmp3.top };
-  obj2.hideTitle = true;
-  const items1 = [timestampProducer(Modal.Modal, obj2)];
+  obj3.onWillFocus = callback;
+  obj3.headerStyle = { height: navigatorHeaderSize.height + tmp3.top };
+  obj3.hideTitle = true;
+  const items1 = [timestampProducer(Modal.Modal, obj3)];
   const obj4 = { style: null, pointerEvents: "box-none", children: null };
-  const items2 = [tmp2.stepContainer, { marginTop: tmp3.top }];
+  const items2 = [tmp2.stepContainer, { marginTop: tmp3.top, height: navigatorHeaderSize.height }];
   obj4.style = items2;
-  const obj5 = { currentStep: tmp4[0], totalSteps: null };
+  const obj5 = { currentStep: tmp5[0], totalSteps: null };
   let num;
   if (steps != null) {
     num = steps.length;
@@ -70,6 +70,6 @@ export function StepModal(steps) {
   obj5.totalSteps = num;
   obj4.children = timestampProducer(ModalStepIndicator.ModalStepIndicator, obj5);
   items1[1] = timestampProducer(View, obj4);
-  obj.children = items1;
-  return metroImportDefault(View, obj);
+  obj2.children = items1;
+  return metroImportDefault(View, obj2);
 }

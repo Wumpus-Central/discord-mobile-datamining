@@ -1,5 +1,5 @@
 // discord_app/modules/premium/gifting/PremiumGiftingIntentStore.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
@@ -108,7 +108,7 @@ function generateFriendAnniversaries(c15) {
   if (
     obj2.getFriendAnniversaryGateConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" }).enabled
   ) {
-    const EnableFriendAnniversaryNotifications = highestAffinity(4968).EnableFriendAnniversaryNotifications;
+    const EnableFriendAnniversaryNotifications = highestAffinity(4995).EnableFriendAnniversaryNotifications;
     if (EnableFriendAnniversaryNotifications.getSetting()) {
       closure_15 = c15;
       const friendIDs = RelationshipStore.getFriendIDs();
@@ -129,7 +129,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = closure_11.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8692).categorizeFriendAnniversariesByAffinity(
+          const result = highestAffinity(8638).categorizeFriendAnniversariesByAffinity(
             closure_11,
             (userId) => {
               const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
@@ -142,14 +142,14 @@ function generateFriendAnniversaries(c15) {
             true,
           );
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8692);
+          const highestAffinityResult = highestAffinity(8638);
         }
         sampleSizeResult = _null;
       }
-      sampleSizeResult = _modDef12.sampleSize(found, c15);
+      sampleSizeResult = applyDefault.sampleSize(found, c15);
     }
   }
-  obj2 = set2(8693);
+  obj2 = set2(8639);
 }
 const Consents = fn(1072).Consents;
 let closure_10 = {

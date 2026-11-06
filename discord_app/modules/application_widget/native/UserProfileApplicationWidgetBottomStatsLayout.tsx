@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   statsGrid: {
     flexDirection: "row",
@@ -57,7 +57,7 @@ export default function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
         const obj2 = { field: iter.value, variant: "body-sm/medium", color: "text-default", skeletonWidthChars: 8 };
         items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2)];
         if ("value" === iter.label.status) {
-          Text = Text(5763).Text;
+          Text = Text(5781).Text;
           const obj3 = { variant: "body-xs/normal", color: "text-muted", children: null };
           iter = iter.label.text;
           obj3.children = iter;
@@ -65,7 +65,7 @@ export default function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
         } else {
           tmp5Result = null;
           if ("skeleton" === iter.label.status) {
-            tmp5Result = React3(Text(12557).TextSkeleton, { variant: "body-xs/normal", widthChars: 6 });
+            tmp5Result = React3(Text(12522).TextSkeleton, { variant: "body-xs/normal", widthChars: 6 });
           }
         }
         items[1] = tmp5Result;

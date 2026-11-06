@@ -1,7 +1,7 @@
 // discord_app/design/components/TableRow/native/TableRadioRow.native.tsx
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import native from "../../../utils/native.tsx";
 import TableRow from "TableRow.native.tsx";
+import TableRowBadge from "TableRowBadge.native.tsx";
 import TableRadioGroup from "TableRadioGroup.native.tsx";
 import FormRadio from "../../Forms/native/FormRadio.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("design/components/TableRow/native/Tab
 export function TableRadioRow(value) {
   value = value.value;
   require = value;
-  ({ label, subLabel, disabled } = value);
+  ({ label, subLabel, badge, disabled } = value);
   if (disabled === undefined) {
     disabled = false;
   }
@@ -25,6 +25,7 @@ export function TableRadioRow(value) {
       value: 0,
       label: 0,
       subLabel: 0,
+      badge: 0,
       disabled: 0,
       accessibilityHint: 0,
       legacyCompat_selected: 0,
@@ -36,10 +37,6 @@ export function TableRadioRow(value) {
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  const nodeText = native.getNodeText(label);
-  const tmp2Result = native;
-  const nodeText1 = native.getNodeText(subLabel);
-  const tmp2Result3 = native;
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj = {};
@@ -47,15 +44,13 @@ export function TableRadioRow(value) {
   obj.arrow = false;
   obj.label = label;
   obj.subLabel = subLabel;
+  obj.badge = badge;
   obj.disabled = disabled;
   obj.accessibilityState = accessibilityState;
   obj.accessible = true;
   obj.accessibilityRole = accessibilityRole;
-  let str = nodeText1;
-  if (nodeText1 == null) {
-    str = "";
-  }
-  obj.accessibilityLabel = "" + nodeText + ", " + str;
+  const tmp2Result = useA11yRolesNative;
+  obj.accessibilityLabel = TableRowBadge.getTableRowAccessibilityLabel(label, subLabel, badge);
   obj.accessibilityHint = value.accessibilityHint;
   obj.onPress = function handleOnPress(arg0) {
     if (dependencyMap != null) {

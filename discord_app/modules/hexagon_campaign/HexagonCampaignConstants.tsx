@@ -1,9 +1,9 @@
 // discord_app/modules/hexagon_campaign/HexagonCampaignConstants.tsx
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import PremiumConstants from "../premium/PremiumConstants.tsx";
-import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
+import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import HexagonCampaignDates from "../../../discord_common/js/shared/shared-constants/HexagonCampaignDates.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

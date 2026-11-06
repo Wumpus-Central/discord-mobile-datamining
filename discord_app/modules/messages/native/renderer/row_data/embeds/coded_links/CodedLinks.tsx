@@ -133,20 +133,24 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
                       if (CodedLink.CodedLinkType.GAME_PROFILE !== type) {
                         if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
                           if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                            if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
-                              let gameOrganizationInviteEmbed = null;
-                              if (tmpResult35.getLinkedGameOrgInvitesEnabled("mobile_coded_link_embed")) {
-                                let id;
-                                if (currentUser != null) {
-                                  id = currentUser.id;
+                            if (CodedLink.CodedLinkType.USER_WISHLIST !== type) {
+                              if (CodedLink.CodedLinkType.CONJURE_PROJECT !== type) {
+                                if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
+                                  let gameOrganizationInviteEmbed = null;
+                                  if (tmpResult35.getLinkedGameOrgInvitesEnabled("mobile_coded_link_embed")) {
+                                    let id;
+                                    if (currentUser != null) {
+                                      id = currentUser.id;
+                                    }
+                                    gameOrganizationInviteEmbed =
+                                      GameOrganizationInviteEmbed.createGameOrganizationInviteEmbed(code, theme, id);
+                                    const tmpResult36 = GameOrganizationInviteEmbed;
+                                  }
+                                  return gameOrganizationInviteEmbed;
+                                } else {
+                                  return GlobalUtils.assertNever(type);
                                 }
-                                gameOrganizationInviteEmbed =
-                                  GameOrganizationInviteEmbed.createGameOrganizationInviteEmbed(code, theme, id);
-                                const tmpResult36 = GameOrganizationInviteEmbed;
                               }
-                              return gameOrganizationInviteEmbed;
-                            } else {
-                              return GlobalUtils.assertNever(type);
                             }
                           }
                         }

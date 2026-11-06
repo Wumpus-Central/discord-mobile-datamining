@@ -6,16 +6,16 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import ChannelActionSheetUtils from "../../../channel/native/ChannelActionSheetUtils.tsx";
-import _modDef14617 from "../../../../../_runtime/metro/14617__.js";
-import _modDef18443 from "../../../../../_runtime/metro/18443__.js";
+import _modDef14594 from "../../../../../_runtime/metro/14594__.js";
+import _modDef18435 from "../../../../../_runtime/metro/18435__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const StaticChannelRoute = fn(4999).StaticChannelRoute;
+const StaticChannelRoute = fn(5026).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { headerIcon: null };
 let size = { marginRight: 16, tintColor: nativeDefault.colors.CHANNEL_ICON, width: 20, height: 20 };
 obj2.headerIcon = size;
@@ -31,14 +31,14 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   const obj2 = { leading: null, title: null };
   const obj3 = { style: closure_7().headerIcon, children: null };
   const tmp = closure_7();
-  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef14617 });
+  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef14594 });
   obj2.leading = closure_5(View, obj3);
   const intl = util.intl;
   obj2.title = intl.string(util.t["KzCF/6"]);
   items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2)];
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj4 = { disableColor: true, source: _modDef14617 };
-  obj5.leading = closure_5(native.Icon, { source: _modDef18443 });
+  const obj4 = { disableColor: true, source: _modDef14594 };
+  obj5.leading = closure_5(native.Icon, { source: _modDef18435 });
   const obj7 = { text: null };
   const intl2 = util.intl;
   obj7.text = intl2.string(util.t.WqhZss);

@@ -1,5 +1,5 @@
 // discord_app/modules/parent_tools/native/showSpendingLimitReachedAlert.tsx
-import _modDef2667 from "../FamilyCenter.messages.js";
+import _modDef2664 from "../FamilyCenter.messages.js";
 import BillingError from "../../../errors/BillingError.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import V6OrEarlierAPIError from "../../../errors/index.tsx";
@@ -21,8 +21,8 @@ export function isSpendingLimitError(billingError) {
   return tmp3;
 }
 export function showSpendingLimitReachedAlert() {
-  activeLinkUserIds = activeLinkUserIds(8515).getActiveLinkUserIds();
-  const obj = activeLinkUserIds(8515);
+  activeLinkUserIds = activeLinkUserIds(8461).getActiveLinkUserIds();
+  const obj = activeLinkUserIds(8461);
   const obj3 = { title: null, body: null, isDismissable: true };
   let intl = activeLinkUserIds(1113).intl;
   obj3.title = intl.string(activeLinkUserIds(1113).t.QJKKrT);
@@ -35,8 +35,8 @@ export function showSpendingLimitReachedAlert() {
     obj4.onConfirm = function onConfirm() {
       return openLinkedUsersChannelDefault(activeLinkUserIds, LayerActionCreators.popLayer, () => {
         const intl = activeLinkUserIds(1113).intl;
-        return activeLinkUserIds(5848).presentFailedToast(
-          intl.formatToPlainString(_modDef2667.D1BwNC, { count: length.length }),
+        return activeLinkUserIds(5866).presentFailedToast(
+          intl.formatToPlainString(_modDef2664.D1BwNC, { count: length.length }),
         );
       });
     };

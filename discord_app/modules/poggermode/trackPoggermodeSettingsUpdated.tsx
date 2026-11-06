@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import PoggermodeConstants from "PoggermodeConstants.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getScreenshakeLocationName(arg0) {

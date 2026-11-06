@@ -70,7 +70,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7662).getGuildIdsToFetchSoundsFor();
+  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7615).getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
   } else {
@@ -88,7 +88,7 @@ function _maybeFetchGuildSoundboardSounds() {
     DispatcherDefault.dispatch(obj4);
     return promise;
   }
-  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7662);
+  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7615);
 }
 let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
   let disableAnalytics = arg0;
@@ -450,7 +450,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(6198).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6218).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1072);
 ({ Endpoints: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const UserSettingsConstants = fn(1082);

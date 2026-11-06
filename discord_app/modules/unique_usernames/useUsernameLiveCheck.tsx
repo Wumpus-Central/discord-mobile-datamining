@@ -1,5 +1,5 @@
 // discord_app/modules/unique_usernames/useUsernameLiveCheck.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import UniqueUsernamesUtils from "UniqueUsernamesUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import UniqueUsernamesStore from "UniqueUsernamesStore.tsx";
@@ -38,7 +38,7 @@ export function useUsernameLiveCheck(username) {
   const items3 = [flag2, flag3];
   const memo = flag3.useMemo(
     () =>
-      _mod12.debounce((arg0) => {
+      apply.debounce((arg0) => {
         let str = "modal";
         if (closure_1_2) {
           str = "registration";

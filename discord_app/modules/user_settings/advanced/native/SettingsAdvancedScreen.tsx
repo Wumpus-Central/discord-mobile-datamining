@@ -5,7 +5,7 @@ import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayou
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(8578).MobileUserSettings;
+const MobileUserSettings = fn(8524).MobileUserSettings;
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -21,7 +21,7 @@ export default noop.memo(function SettingsAdvancedScreen() {
     obj3.settings = items;
     const intl2 = util.intl;
     obj3.subLabel = intl2.format(util.t["CY6q/Q"], { apiDocsUrl: constants2.API_DOCS });
-    const items1 = [obj3, , , ,];
+    const items1 = [obj3, , ,];
     const obj5 = { settings: null, subLabel: null };
     const items2 = [constants.LAUNCHPAD];
     obj5.settings = items2;
@@ -34,16 +34,10 @@ export default noop.memo(function SettingsAdvancedScreen() {
     items1[2] = obj6;
     const obj7 = { label: null, settings: null };
     const intl4 = util.intl;
-    obj7.label = intl4.string(util.t["jnXV/V"]);
-    const items4 = [constants.ICYMI_TAB];
+    obj7.label = intl4.string(util.t.GwQs0C);
+    const items4 = [constants.NATIVE_MARKDOWN];
     obj7.settings = items4;
     items1[3] = obj7;
-    const obj8 = { label: null, settings: null };
-    const intl5 = util.intl;
-    obj8.label = intl5.string(util.t.GwQs0C);
-    const items5 = [constants.NATIVE_MARKDOWN];
-    obj8.settings = items5;
-    items1[4] = obj8;
     obj2.sections = items1;
     return SettingBuilders.createList(obj2);
   }, []);

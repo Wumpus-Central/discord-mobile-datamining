@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/scope_setup/native/ConjureScopeServerCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4024 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ConjureNativeCardSurfaceDefault from "../../shared/native/ConjureNativeCardSurface.tsx";
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = [];
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   surface: { marginTop: nativeDefault.space.PX_8, padding: 0, overflow: "hidden" },
   header: null,
@@ -74,11 +74,11 @@ export default function ConjureScopeServerCard(card) {
   const obj2 = { style: tmp.header, children: null };
   const obj3 = { variant: "body-md/semibold", color: "text-default", accessibilityRole: "header", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef3995.ickKBI);
+  obj3.children = intl.string(_modDef4024.ickKBI);
   items = [timestampProducer(Text_Text.Text, obj3)];
   const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3995.OyM4SV);
+  obj4.children = intl2.string(_modDef4024.OyM4SV);
   items[1] = timestampProducer(Text_Text.Text, obj4);
   obj2.children = items;
   const items1 = [metroImportDefault(View, obj2), ,];
@@ -104,7 +104,7 @@ export default function ConjureScopeServerCard(card) {
   const obj8 = { style: tmp.footer, children: null };
   const obj9 = { variant: "primary", size: "sm", text: null, disabled: null, onPress: null };
   const intl3 = util.intl;
-  obj9.text = intl3.string(_modDef3995.PTIP7V);
+  obj9.text = intl3.string(_modDef4024.PTIP7V);
   obj9.disabled = null == id || null == onPickServer;
   obj9.onPress = function onPress() {
     if (null != id) {

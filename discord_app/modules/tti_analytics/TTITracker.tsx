@@ -2,7 +2,7 @@
 import _modAll2 from "../../../_runtime/metro/00002__.js";
 import AppStartPerformanceDefault from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import SnowflakeUtils from "../../utils/SnowflakeUtils.tsx";
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -1265,7 +1265,7 @@ prototype5["serializeWebPerfStartupMetrics"] = function serializeWebPerfStartupM
 prototype5["serializeTTITracker"] = function serializeTTITracker(appFirstVisibleTime) {
   const self = this;
   const startTime = this.getStartTime(appFirstVisibleTime);
-  const found = _mod12(AppStartPerformanceDefault.logGroups[0].logs).filter((log) => {
+  const found = apply(AppStartPerformanceDefault.logGroups[0].logs).filter((log) => {
     log = log.log;
     return log.startsWith("Require ");
   });
@@ -1276,7 +1276,7 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(appFirstVisible
     }
     return num;
   });
-  const tmp2Result = _mod12(AppStartPerformanceDefault.logGroups[0].logs);
+  const tmp2Result = apply(AppStartPerformanceDefault.logGroups[0].logs);
   const result = this.serializeAppStartupMetrics();
   const obj = {};
   const merged = Object.assign(this.extraProperties);

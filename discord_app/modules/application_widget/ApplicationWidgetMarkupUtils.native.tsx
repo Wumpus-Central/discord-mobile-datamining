@@ -3,7 +3,7 @@ import MarkupReactRulesDefault from "../markup/MarkupReactRules.native.tsx";
 import MarkupRulesDefault from "../markup/MarkupRules.tsx";
 import MarkupLiteralImageRuleDefault from "../markup/MarkupLiteralImageRule.tsx";
 import combineMarkupRules from "../markup/combineMarkupRules.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import MarkupParser_mod from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
 
 const items = ["text", "link", "emoji"];

@@ -38,12 +38,12 @@ let closure_4 = async function _performSigningDeferralAction(arg0) {
           c1 = 3;
           const obj4 = { value, done: true };
           return obj4;
-        } else if (null == closure_0) {
+        } else if (null == _require) {
           const _Error2 = Error;
           const error = new Error("Order signing was deferred without a deferral context");
           throw error;
         } else {
-          ({ payment_redirect_context, stripe_3ds_context } = closure_0);
+          ({ payment_redirect_context, stripe_3ds_context } = _require);
           if (null == payment_redirect_context) {
             if (null == stripe_3ds_context) {
               const _Error = Error;
@@ -53,7 +53,10 @@ let closure_4 = async function _performSigningDeferralAction(arg0) {
               c2 = 1;
               c1 = 1;
               const obj5 = {
-                value: Stripe3DSChallenge.authenticateStripePaymentIntent(stripe_3ds_context),
+                value: Stripe3DSChallenge.authenticateStripePaymentIntent(
+                  stripe_3ds_context,
+                  _require.payment_gateway_merchant_account_id,
+                ),
                 done: false,
               };
               return obj5;

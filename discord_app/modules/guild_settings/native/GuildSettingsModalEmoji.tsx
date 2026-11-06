@@ -11,7 +11,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import GuildSettingsEmojiStore from "../GuildSettingsEmojiStore.tsx";
-import apply_mod from "../../../../_runtime/metro/00012__.js";
+import apply_mod from "../../../../_runtime/00012_apply.js";
 
 const require = globalThis.__r;
 
@@ -209,8 +209,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let apply = apply_mod;
-let closure_11 = apply.throttle(fn(10243).fetchEmoji, 1000);
-const createStyles = fn(5143);
+let closure_11 = apply.throttle(fn(10195).fetchEmoji, 1000);
+const createStyles = fn(5170);
 let obj = {
   loadingContainer: { flex: 1, paddingTop: 40 },
   emptyState: { paddingTop: 30 },

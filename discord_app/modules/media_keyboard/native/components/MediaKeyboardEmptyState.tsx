@@ -6,8 +6,8 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
-import _modDef10740 from "../../../../../_runtime/metro/10740__.js";
-import _modDef10741 from "../../../../../_runtime/metro/10741__.js";
+import _modDef10692 from "../../../../../_runtime/metro/10692__.js";
+import _modDef10693 from "../../../../../_runtime/metro/10693__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -31,10 +31,10 @@ class MediaKeyboardEmptyState {
   }
 }
 const View = fn(17).View;
-const NativePermissionStatus = fn(8085).NativePermissionStatus;
+const NativePermissionStatus = fn(8031).NativePermissionStatus;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: {
     marginHorizontal: nativeDefault.space.PX_8,
@@ -75,7 +75,7 @@ export function getMediaEmptyStateComponentOrNull(photosEmpty) {
           const intl3 = util.intl;
           obj2.actionLabel = intl3.string(util.t.JuXTi6);
           obj2.actionPress = tmp2;
-          obj2.imageSource = _modDef10740;
+          obj2.imageSource = _modDef10692;
           const intl4 = util.intl;
           obj2.label = intl4.string(util.t["5g7NcN"]);
           return hasOwnProperty(MediaKeyboardEmptyState, obj2);
@@ -90,7 +90,7 @@ export function getMediaEmptyStateComponentOrNull(photosEmpty) {
           const intl = util.intl;
           obj.actionLabel = intl.string(util.t.tpoWUd);
           obj.actionPress = tmp;
-          obj.imageSource = _modDef10741;
+          obj.imageSource = _modDef10693;
           const intl2 = util.intl;
           obj.label = intl2.string(util.t.YOvRBZ);
           return hasOwnProperty(MediaKeyboardEmptyState, obj);
@@ -108,7 +108,7 @@ export function getMediaEmptyStateComponentOrNull(photosEmpty) {
   const intl5 = util.intl;
   obj3.actionLabel = intl5.string(util.t["457oeG"]);
   obj3.actionPress = photosEmpty.onPressPrivacySettings;
-  obj3.imageSource = _modDef10740;
+  obj3.imageSource = _modDef10692;
   const intl6 = util.intl;
   obj3.label = intl6.string(util.t["8p9jGu"]);
   return hasOwnProperty(MediaKeyboardEmptyState, obj3);

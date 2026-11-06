@@ -883,18 +883,18 @@ export function extractMediaFromMessageComponents(getContentMessage, contentMess
       let type = nextResult.type;
       if (Server.ComponentType.MEDIA_GALLERY === type) {
         items = tmp4.items;
-        for (const item10029 of items) {
-          let tmp16 = toMediaSourceFromUnfurledMedia(
+        for (const item10035 of items) {
+          let tmp18 = toMediaSourceFromUnfurledMedia(
             arg0,
             arg2,
-            item10029.media,
-            item10029.description,
-            item10029.spoiler,
+            item10035.media,
+            item10035.description,
+            item10035.spoiler,
           );
-          if (null != tmp16) {
+          if (null != tmp18) {
             let obj = { sources: null, unfurledMediaItem: null };
-            obj.sources = tmp17;
-            obj.unfurledMediaItem = item10029.media;
+            obj.sources = tmp19;
+            obj.unfurledMediaItem = item10035.media;
             let arr = items1.push(obj);
           }
           continue;
@@ -1026,7 +1026,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
     return null;
   } else {
     const type = value.type;
-    if (tmp(2121).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(2116).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -1049,7 +1049,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
       });
       const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1380).isNotNullish) };
       return obj2;
-    } else if (tmp(2121).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(2116).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {

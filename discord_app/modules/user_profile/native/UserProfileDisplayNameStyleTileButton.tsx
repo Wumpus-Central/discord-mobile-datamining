@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   button: {
     flexDirection: "row",
@@ -44,7 +44,7 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   let obj = user(504);
   const items1 = [AccessibilityStore];
   const stateFromStores = user(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  const GifAutoPlay = user(4968).GifAutoPlay;
+  const GifAutoPlay = user(4995).GifAutoPlay;
   const setting = GifAutoPlay.useSetting();
   const obj3 = {
     accessibilityRole: "button",
@@ -59,7 +59,7 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   obj3.accessibilityLabel = intl.string(user(1113).t.lsjENp);
   const obj4 = { text: null };
   const obj2 = user(504);
-  obj4.text = user(16807).getDisplayNameStyleAccessibleValue(displayNameStyles);
+  obj4.text = user(16803).getDisplayNameStyleAccessibleValue(displayNameStyles);
   obj3.accessibilityValue = obj4;
   const intl2 = user(1113).intl;
   obj3.accessibilityHint = intl2.string(user(1113).t["4lAcxv"]);
@@ -83,14 +83,14 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   };
   if (!stateFromStores) {
     if (setting) {
-      let STATIC = tmp2(10957).EffectDisplayType.ANIMATED;
+      let STATIC = tmp2(10909).EffectDisplayType.ANIMATED;
     }
     obj7.effectDisplayType = STATIC;
     obj6.children = closure_6(tmp10, obj7);
-    const items2 = [closure_6(View, obj6), closure_6(tmp2(7128).TableRowArrow, {})];
+    const items2 = [closure_6(View, obj6), closure_6(tmp2(7072).TableRowArrow, {})];
     obj3.children = items2;
-    return closure_7(user(7124).PressableHighlight, obj3);
+    return closure_7(user(7068).PressableHighlight, obj3);
   }
-  STATIC = tmp2(10957).EffectDisplayType.STATIC;
-  const obj5 = user(16807);
+  STATIC = tmp2(10909).EffectDisplayType.STATIC;
+  const obj5 = user(16803);
 }

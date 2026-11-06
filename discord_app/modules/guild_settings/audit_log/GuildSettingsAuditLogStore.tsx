@@ -9,9 +9,9 @@ import BigFlagUtils from "../../../../discord_common/js/shared/utils/BigFlagUtil
 
 const require = globalThis.__r;
 
-const AuditLogChange = fn(20027).AuditLogChange;
-let closure_4 = fn(4996).isGuildSelectableChannelType;
-const hasAnyPermission = fn(5050).hasAnyPermission;
+const AuditLogChange = fn(20034).AuditLogChange;
+let closure_4 = fn(5023).isGuildSelectableChannelType;
+const hasAnyPermission = fn(5077).hasAnyPermission;
 const Constants = fn(1072);
 const AuditLogActions = Constants.AuditLogActions;
 ({
@@ -639,7 +639,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
       if (null != c16) {
         unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(c16);
       }
-      const found = require("../../../../_runtime/metro/00012__.js")(members).filter((roles) => {
+      const found = require("apply")(members).filter((roles) => {
         const userId = roles;
         roles = roles.roles;
         return roles.some((item) => {
@@ -660,7 +660,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           }
         });
       });
-      const arr = require("../../../../_runtime/metro/00012__.js")(members);
+      const arr = require("apply")(members);
       closure_19 = found.map((userId) => userId.userId).value();
       const iter = found.map((userId) => userId.userId);
     }
@@ -677,7 +677,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
       if (null != guildId) {
         unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guildId);
       }
-      const found = require("../../../../_runtime/metro/00012__.js")(members).filter((roles) => {
+      const found = require("apply")(members).filter((roles) => {
         const userId = roles;
         roles = roles.roles;
         return roles.some((item) => {
@@ -698,7 +698,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           }
         });
       });
-      const arr = require("../../../../_runtime/metro/00012__.js")(members);
+      const arr = require("apply")(members);
       closure_19 = found.map((userId) => userId.userId).value();
       const iter = found.map((userId) => userId.userId);
     }

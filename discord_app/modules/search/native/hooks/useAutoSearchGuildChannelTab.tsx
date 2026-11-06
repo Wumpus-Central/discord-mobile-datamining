@@ -1,12 +1,12 @@
 // discord_app/modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx
-import _mod12 from "../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../_runtime/00012_apply.js";
 import SearchPlatformUtilsDefault from "../SearchPlatformUtils.tsx";
 import SearchUtils from "../../SearchUtils.tsx";
 import SearchPlatformActionCreatorsDefault from "../SearchPlatformActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(14133).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_4 = fn(14110).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
 
@@ -29,7 +29,7 @@ export function useAutoSearchGuildChannelTab(searchContext, arg1) {
   const items2 = [searchContext, arg1, callback];
   const effect1 = noop.useEffect(() => {
     if (!closure_1) {
-      const debounceResult = _mod12.debounce(callback, closure_4);
+      const debounceResult = apply.debounce(callback, closure_4);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult, true);
     }
   }, items2);

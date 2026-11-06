@@ -1,18 +1,20 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
-import _modDef2533 from "../../../../../../game_organization_invites/GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2530 from "../../../../../../game_organization_invites/GameOrganizationInvitesUntranslated.messages.js";
 import ColorUtils from "../../../../../../../utils/ColorUtils.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import canGoToGameOrganizationGuildDefault from "../../../../../../game_organization_invites/canGoToGameOrganizationGuild.tsx";
 import getGameOrganizationDisplayNounDefault from "../../../../../../game_organization_invites/getGameOrganizationDisplayNoun.tsx";
+import getGameOrganizationInviteCtaStateDefault from "../../../../../../game_organization_invites/getGameOrganizationInviteCtaState.tsx";
 import GameOrganizationInviteStore from "../../../../../../game_organization_invites/GameOrganizationInviteStore.tsx";
+import GuildStore from "../../../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(10303).CodedLinkExtendedType;
-const constants = fn(11560).GameOrganizationInviteStates;
-const InviteTypes = fn(8024).InviteTypes;
+const CodedLinkExtendedType = fn(10255).CodedLinkExtendedType;
+const constants = fn(11522).GameOrganizationInviteStates;
+const InviteTypes = fn(7978).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx",
@@ -24,32 +26,32 @@ export function createGameOrganizationInviteEmbed(code, theme, id) {
   if (null == invite) {
     return null;
   } else {
-    const obj3 = {};
+    const obj2 = {};
     const merged = Object.assign(baseColors);
-    obj3.extendedType = CodedLinkExtendedType.GAME_ORGANIZATION_INVITE;
-    obj3.type = InviteTypes.GUILD;
-    ({ titleColor: obj17.titleColor, bodyTextColor: obj17.bodyTextColor } = colors);
+    obj2.extendedType = CodedLinkExtendedType.GAME_ORGANIZATION_INVITE;
+    obj2.type = InviteTypes.GUILD;
+    ({ titleColor: obj13.titleColor, bodyTextColor: obj13.bodyTextColor } = colors);
     if (invite.state === constants.RESOLVING) {
       const obj4 = {};
-      const merged1 = Object.assign(obj3);
-      const intl9 = util.intl;
-      obj4.headerText = intl9.string(util.t["N/g9Z4"]).toUpperCase();
-      ({ resolvingGradientStart: obj16.resolvingGradientStart, resolvingGradientEnd: obj16.resolvingGradientEnd } =
+      const merged1 = Object.assign(obj2);
+      const intl6 = util.intl;
+      obj4.headerText = intl6.string(util.t["N/g9Z4"]).toUpperCase();
+      ({ resolvingGradientStart: obj12.resolvingGradientStart, resolvingGradientEnd: obj12.resolvingGradientEnd } =
         colors);
       obj4.embedCanBeTapped = false;
       obj4.canBeAccepted = false;
       return obj4;
-    } else if (invite.state === tmp34.ERROR) {
+    } else if (invite.state === tmp30.ERROR) {
       const obj5 = {};
-      const merged2 = Object.assign(obj3);
-      const intl6 = util.intl;
+      const merged2 = Object.assign(obj2);
+      const intl3 = util.intl;
       const obj6 = { noun: getGameOrganizationDisplayNounDefault({ displayNoun: null }) };
-      obj5.headerText = intl6.formatToPlainString(_modDef2533["jKi+kc"], obj6);
-      const intl7 = util.intl;
-      obj5.titleText = intl7.string(_modDef2533["2/aTr2"]);
-      const intl8 = util.intl;
+      obj5.headerText = intl3.formatToPlainString(_modDef2530["jKi+kc"], obj6);
+      const intl4 = util.intl;
+      obj5.titleText = intl4.string(_modDef2530["2/aTr2"]);
+      const intl5 = util.intl;
       const obj7 = { noun: getGameOrganizationDisplayNounDefault({ displayNoun: null, lowercase: true }) };
-      obj5.subtitle = intl8.formatToPlainString(_modDef2533["L/fHgw"], obj7);
+      obj5.subtitle = intl5.formatToPlainString(_modDef2530["L/fHgw"], obj7);
       const internal3 = nativeDefault.internal;
       obj5.titleColor = RowGeneratorStyleSheet.processColorOrThrow(
         internal3.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL),
@@ -61,79 +63,63 @@ export function createGameOrganizationInviteEmbed(code, theme, id) {
     } else {
       ({ organization, application, displayNoun, accepted, inviterId } = invite);
       const obj8 = { displayNoun };
-      const tmp35 = getGameOrganizationDisplayNounDefault(obj8);
+      const tmp31 = getGameOrganizationDisplayNounDefault(obj8);
       ({ memberCount, maxMembers } = organization);
-      let tmp5 = null != memberCount && null != maxMembers;
-      const obj9 = {};
-      const merged3 = Object.assign(obj3);
-      const intl = util.intl;
-      const obj10 = { noun: tmp35 };
-      obj9.headerText = intl.formatToPlainString(_modDef2533["jKi+kc"], obj10);
-      ({ name: obj2.titleText, iconUrl } = organization);
-      obj9.thumbnailUrl = iconUrl;
-      obj9.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-      ({ name: obj2.gameName, iconUrl: iconUrl2 } = application);
-      obj9.gameIconUrl = iconUrl2;
-      let formatToPlainStringResult;
-      if (tmp5) {
-        const intl2 = util.intl;
-        const obj11 = { count: memberCount, max: maxMembers };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef2533.VuENGl, obj11);
+      const obj9 = {
+        accepted,
+        isInviter: id === inviterId,
+        canGoToGuild: null,
+        noun: null,
+        isGameOrganizationFull: null,
+      };
+      const tmpResult = getGameOrganizationInviteCtaStateDefault;
+      obj9.canGoToGuild = canGoToGameOrganizationGuildDefault(invite, id, null != GuildStore.getGuild(invite.guildId));
+      obj9.noun = tmp31;
+      let tmp10 = tmp5;
+      if (null != memberCount && null != maxMembers) {
+        tmp10 = memberCount >= maxMembers;
       }
-      obj9.memberCountText = formatToPlainStringResult;
+      obj9.isGameOrganizationFull = tmp10;
+      const tmpResult2 = canGoToGameOrganizationGuildDefault;
+      const obj10 = {};
+      const merged3 = Object.assign(obj2);
+      const intl = util.intl;
+      const obj14 = { noun: tmp31 };
+      obj10.headerText = intl.formatToPlainString(_modDef2530["jKi+kc"], obj14);
+      ({ name: obj3.titleText, iconUrl } = organization);
+      obj10.thumbnailUrl = iconUrl;
+      obj10.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
+      ({ name: obj3.gameName, iconUrl: iconUrl2 } = application);
+      obj10.gameIconUrl = iconUrl2;
+      let formatToPlainStringResult;
+      if (null != memberCount && null != maxMembers) {
+        const intl2 = util.intl;
+        const obj24 = { count: memberCount, max: maxMembers };
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef2530.VuENGl, obj24);
+      }
+      obj10.memberCountText = formatToPlainStringResult;
       const description = organization.description;
-      obj9.bodyText = description;
+      obj10.bodyText = description;
+      const tmpResultResult = tmpResult(obj9);
       const internal = nativeDefault.internal;
       items = [
         ColorUtils.hexToRgba(
           internal.resolveSemanticColor(theme, nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_START),
         ),
       ];
-      const tmp9Result = ColorUtils;
+      const tmp15Result = ColorUtils;
       const internal2 = nativeDefault.internal;
       items[1] = ColorUtils.hexToRgba(
         internal2.resolveSemanticColor(theme, nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_END),
       );
-      obj9.gradientColors = items;
-      const tmp12 = canGoToGameOrganizationGuildDefault(invite, id);
-      if (tmp5) {
-        tmp5 = memberCount >= maxMembers;
-      }
-      if (accepted) {
-        const intl5 = util.intl;
-        const string = intl5.string;
-        if (tmp12) {
-          let stringResult = string(_modDef2533.H1wMHV);
-        } else {
-          stringResult = string(util.t.cEnaWx);
-        }
-        const obj12 = { acceptLabelText: stringResult, canBeAccepted: tmp12, embedCanBeTapped: tmp12 };
-      } else {
-        if (tmp5) {
-          const obj13 = { acceptLabelText: null, canBeAccepted: false, embedCanBeTapped: false };
-          const intl4 = util.intl;
-          const obj14 = { noun: tmp35 };
-          obj13.acceptLabelText = intl4.formatToPlainString(_modDef2533.rMimTG, obj14);
-          let obj32 = obj13;
-        } else {
-          const intl3 = util.intl;
-          if (id === inviterId) {
-            let stringResult1 = intl3.string(_modDef2533.OkMPbI);
-          } else {
-            const obj18 = { noun: tmp35 };
-            stringResult1 = intl3.formatToPlainString(_modDef2533["Cz/ZUM"], obj18);
-          }
-          obj32 = {
-            acceptLabelText: stringResult1,
-            canBeAccepted: id !== inviterId,
-            embedCanBeTapped: id !== inviterId,
-          };
-        }
-        const merged4 = Object.assign(obj32);
-        obj9.isCtaLoading = GameOrganizationInviteStore.isJoinFlowPending(code);
-        return obj9;
-      }
-      const tmp9Result2 = ColorUtils;
+      obj10.gradientColors = items;
+      ({
+        label: obj3.acceptLabelText,
+        actionable: obj3.canBeAccepted,
+        actionable: obj3.embedCanBeTapped,
+      } = tmpResultResult);
+      obj10.isCtaLoading = GameOrganizationInviteStore.isJoinFlowPending(code);
+      return obj10;
     }
   }
   const tmp3 = getEmbedThemeColorsDefault(theme);

@@ -1,5 +1,5 @@
 // discord_app/modules/embedded_apps/shim_host/createEmbeddedAppShimHost.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import protocol from "../../../../discord_common/js/packages/embedded-app-shims/src/shared/protocol.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -23,7 +23,7 @@ export function createEmbeddedAppShimHost(arg0) {
         const result = map.set(type.type, type);
         closure_3.dispatch(type);
       }
-      obj = _mod12;
+      obj = apply;
     },
     close() {
       closure_3.close();

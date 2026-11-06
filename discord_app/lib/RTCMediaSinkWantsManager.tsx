@@ -1,6 +1,6 @@
 // discord_app/lib/RTCMediaSinkWantsManager.tsx
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import discord_common_shallowEqualDefault from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
@@ -23,12 +23,12 @@ function getDefaultWants(wantsLevel) {
   return obj3;
 }
 const VideoToggleState = fn(1072).VideoToggleState;
-const SimulcastOverrideQuality = fn(5905).SimulcastOverrideQuality;
+const SimulcastOverrideQuality = fn(5924).SimulcastOverrideQuality;
 let c7 = 100;
 const DEFAULT_WANTS_DISABLED = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(6008);
+const BrowserUtils = fn(6027);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 let obj3 = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {
@@ -327,7 +327,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
       }
       let isEqualResult = null == closure_0.connection;
       if (!isEqualResult) {
-        isEqualResult = _modDef12.isEqual(closure_0.latestWants, tmp5);
+        isEqualResult = applyDefault.isEqual(closure_0.latestWants, tmp5);
       }
       if (!isEqualResult) {
         closure_0.latestWants = tmp5;
@@ -404,7 +404,7 @@ prototype["invertWants"] = function invertWants(arg0, wantsLevel) {
   while (iter !== undefined) {
     let tmp3 = nextResult;
     if (closure_11) {
-      let obj = _modDef12;
+      let obj = applyDefault;
       let minByResult = obj.minBy(tmp3, (quality) => quality.quality);
       for (const item10038 of nextResult) {
         let ssrc1;

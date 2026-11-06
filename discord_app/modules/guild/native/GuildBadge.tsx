@@ -1,10 +1,10 @@
 // discord_app/modules/guild/native/GuildBadge.tsx
 import native from "../../../design/void/native.tsx";
 import GuildRecordUtils from "../../../utils/GuildRecordUtils.tsx";
-import _modDef7106 from "../../../../_runtime/metro/07106__.js";
-import _modDef7107 from "../../../../_runtime/metro/07107__.js";
-import _modDef7108 from "../../../../_runtime/metro/07108__.js";
-import _modDef7109 from "../../../../_runtime/metro/07109__.js";
+import _modDef7050 from "../../../../_runtime/metro/07050__.js";
+import _modDef7051 from "../../../../_runtime/metro/07051__.js";
+import _modDef7052 from "../../../../_runtime/metro/07052__.js";
+import _modDef7053 from "../../../../_runtime/metro/07053__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -107,10 +107,10 @@ let obj = {
   [4]: "NONE",
 };
 let obj2 = {
-  [VERIFIED]: _modDef7106,
-  [PARTNERED]: _modDef7107,
-  [VERIFIED_BLACK]: _modDef7108,
-  [PARTNERED_BLACK]: _modDef7109,
+  [VERIFIED]: _modDef7050,
+  [PARTNERED]: _modDef7051,
+  [VERIFIED_BLACK]: _modDef7052,
+  [PARTNERED_BLACK]: _modDef7053,
   [obj.NONE]: null,
 };
 ({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);

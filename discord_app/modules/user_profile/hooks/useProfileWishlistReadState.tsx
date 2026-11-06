@@ -1,5 +1,4 @@
 // discord_app/modules/user_profile/hooks/useProfileWishlistReadState.tsx
-import ProfileReadStateUtils from "../ProfileReadStateUtils.tsx";
 import ProfileReadStateSection from "../../../../discord_common/js/shared/shared-constants/ProfileReadStateSection.tsx";
 import ProfileReadStateActionCreators from "../ProfileReadStateActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -9,7 +8,7 @@ import UserProfileStore from "../UserProfileStore.tsx";
 
 require = fn;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileWishlistReadState.tsx");
+let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileWishlistReadState.tsx");
 
 export default function useProfileWishlistReadState(ownerId) {
   ownerId = ownerId.ownerId;
@@ -40,7 +39,7 @@ export default function useProfileWishlistReadState(ownerId) {
     },
     items1,
   );
-  let obj2 = ownerId(wishlistId[5]);
+  const obj2 = ownerId(wishlistId[5]);
   const obj3 = stateFromStores1;
   [tmp7, tmp8] = flag(stateFromStores1.useState(undefined), 2);
   let tmp9 = flag;
@@ -73,31 +72,11 @@ export default function useProfileWishlistReadState(ownerId) {
   stateFromStores1 = tmp(tmp2[5]).useStateFromStores(
     items2,
     () => {
-      if (null != ownerId) {
-        if (null != wishlistId) {
-          if (null != WishlistStore.getWishlist(wishlistId)) {
-            if (!WishlistStore.isFetching(wishlistId)) {
-              if (null == WishlistStore.getError(wishlistId)) {
-                const wishlistSettings = UserProfileStore.getWishlistSettings(ownerId, wishlistId);
-                let updated_at;
-                if (wishlistSettings != null) {
-                  updated_at = wishlistSettings.updated_at;
-                }
-                let shouldAckWishlistResult =
-                  null == updated_at || WishlistStore.getUpdatedAt(wishlistId) === updated_at;
-                if (shouldAckWishlistResult) {
-                  shouldAckWishlistResult = ProfileReadStateUtils.shouldAckWishlist(
-                    wishlistSettings,
-                    UserProfileStore.getProfileReadState(ownerId),
-                  );
-                }
-                return shouldAckWishlistResult;
-              }
-            }
-          }
-        }
+      let result = null != ownerId;
+      if (result) {
+        result = ProfileReadStateActionCreators.canAckProfileWishlist(tmp, wishlistId);
       }
-      return false;
+      return result;
     },
     items3,
   );

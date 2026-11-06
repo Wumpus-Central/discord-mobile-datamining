@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
-import _modDef2667 from "../FamilyCenter.messages.js";
+import _modDef2664 from "../FamilyCenter.messages.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -15,25 +15,25 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(11202).getScheduleRuleDateRange(rule);
-  let obj = rule(11202);
-  const obj2 = rule(11202);
+  const scheduleRuleDateRange = rule(11157).getScheduleRuleDateRange(rule);
+  let obj = rule(11157);
+  const obj2 = rule(11157);
   const obj3 = {
     label: scheduleRuleDateRange,
-    subLabel: rule(11202).formatDays(rule.days),
+    subLabel: rule(11157).formatDays(rule.days),
     trailing: null,
     arrow: null,
     onPress: null,
   };
   const intl = rule(1113).intl;
   const string = intl.string;
-  const tmp4 = _modDef2667;
+  const tmp4 = _modDef2664;
   if (rule.enabled) {
     let stringResult = string(tmp4["8vDHRq"]);
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj3.trailing = closure_5(rule(5763).Text, {
+  obj3.trailing = closure_5(rule(5781).Text, {
     variant: "body-sm/medium",
     color: "text-subtle",
     children: stringResult,
@@ -49,7 +49,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(7119).TableRow, obj3);
+  return closure_5(rule(7063).TableRow, obj3);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;

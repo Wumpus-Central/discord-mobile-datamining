@@ -124,7 +124,7 @@ function LiveProfileFrame(frame) {
   c9 = undefined;
   c10 = undefined;
   const tmp = c10();
-  const settled = frame(8941).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
+  const settled = frame(8887).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
   items = [frame.layers, frameOrder, profileThemeType, filterLayer];
   const memo = profileThemeType.useMemo(() => {
     const layers = frame.layers;
@@ -137,7 +137,7 @@ function LiveProfileFrame(frame) {
       return result;
     });
   }, items);
-  let obj = frame(8941);
+  let obj = frame(8887);
   let num = 0;
   if (settled) {
     num = 1;
@@ -159,7 +159,7 @@ function LiveProfileFrame(frame) {
           overflowTop: c8,
           overflowBottom: c9,
           overflowHorizontal: c10,
-        } = containerWidth(8943)(frame, containerWidth));
+        } = containerWidth(8889)(frame, containerWidth));
         const obj4 = { style: null, children: null };
         const items2 = [tmp.container];
         const obj5 = { opacity: sharedValue };
@@ -185,15 +185,15 @@ function LiveProfileFrame(frame) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(8922).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8940);
+let closure_5 = fn(8868).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8886);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: closure_6, PROFILE_FRAME_Z_INDEX: metroImportDefault } =
   ProfileFrameConstants);
 let jsx = fn(21).jsx;
 let source = { duration: 150, easing: null };
 const Easing = fn(1652).Easing;
 source.easing = Easing.in(fn(1652).Easing.ease);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj3 = { container: null, layer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

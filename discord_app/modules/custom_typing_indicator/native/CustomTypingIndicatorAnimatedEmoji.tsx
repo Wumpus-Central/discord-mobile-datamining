@@ -15,15 +15,27 @@ require = fn;
 const AppStates = fn(1072).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(5143);
-let closure_9 = createStyles.createStyles((fontSize) => ({
-  textEmoji: { fontSize },
-  imageEmoji: { width: fontSize, height: fontSize },
-}));
+const createStyles = fn(5170);
+let closure_9 = createStyles.createStyles((width) => {
+  const obj = {
+    emojiContainer: { width, height: width, alignItems: "center", justifyContent: "center" },
+    textEmoji: null,
+    imageEmoji: { width, height: width },
+  };
+  const size = {
+    width: (18 * width) / 14,
+    height: (18 * width) / 14,
+    textAlign: "center",
+    fontSize: (12 * width) / 14,
+    lineHeight: (18 * width) / 14,
+  };
+  obj.textEmoji = size;
+  return obj;
+});
 let closure_10 = {
   code: "(function CustomTypingIndicatorAnimatedEmojiTsx1(){let[angle,scale,ringRadius,translateY]=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};})",
 };
-const size = fn(2);
+let size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx",
 );
@@ -46,6 +58,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
   let sharedValue1;
   let sharedValue2;
   let stateFromStores;
+  const tmp = sharedValue2(num);
   enabled = enabled.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion
     .enabled;
   let name = emoji.id;
@@ -58,7 +71,6 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
   const callback = obj.useCallback(() => {
     closure_6(name);
   }, items);
-  const tmp = sharedValue2(num);
   const tmp7 = useCanPlayAnimatedEmojiDefault();
   sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(1);
   const tmp2Result = require("../../../../_runtime/metro/01652__.js");
@@ -177,6 +189,14 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
     CustomTypingIndicatorAnimatedEmojiTsx1,
   );
   let obj2 = { style: animatedStyle, children: null };
+  let obj3 = {
+    style: tmp.emojiContainer,
+    name: null,
+    src: null,
+    fastImageStyle: null,
+    textEmojiStyle: null,
+    onError: null,
+  };
   let str = "\u{1F615}";
   const tmp2Result8 = require("../../../../_runtime/metro/01652__.js");
   if (tmp4[0] !== name) {
@@ -186,7 +206,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
     }
     str = str2;
   }
-  let obj3 = { name: str, src: null, fastImageStyle: null, textEmojiStyle: null, onError: null };
+  obj3.name = str;
   let emojiURL;
   if (tmp4[0] !== name) {
     if (null != emoji.id) {

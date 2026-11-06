@@ -1,10 +1,10 @@
 // discord_app/modules/game_profile/hooks/useGameProfileCommunitiesLocaleFilter.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(9773).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9723).useGameProfileCommunitiesLocaleFilterExclusions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleFilter.tsx");
 
@@ -19,7 +19,7 @@ export default function useGameProfileCommunitiesLocaleFilter(arg0, arg1) {
       items = [];
     }
     const mapped = items.map((preferredLocale) => preferredLocale.preferredLocale);
-    return _modDef12.uniq(mapped.filter(GlobalUtils.isNotNullish));
+    return applyDefault.uniq(mapped.filter(GlobalUtils.isNotNullish));
   }, items);
   const obj = { locales: memo, filteredGuilds: null, showLocaleFilter: memo.length >= 2 };
   const items1 = [arg1, tmp];

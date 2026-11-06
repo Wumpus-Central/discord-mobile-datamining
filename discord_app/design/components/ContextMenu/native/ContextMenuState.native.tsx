@@ -18,8 +18,8 @@ let items = [
   0,
   4,
   fn(1705).scheduleOnRN,
-  fn(5386).triggerHapticFeedback,
-  fn(5386).HapticFeedbackTypes,
+  fn(5406).triggerHapticFeedback,
+  fn(5406).HapticFeedbackTypes,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -88,6 +88,17 @@ export function hideContextMenu() {
 }
 export function useActiveContextMenu() {
   return obj3((menu) => menu.menu);
+}
+export function useIsContextMenuActive(contextMenuState) {
+  closure_0 = contextMenuState;
+  return obj3((menu) => {
+    menu = menu.menu;
+    state = undefined;
+    if (menu != null) {
+      state = menu.state;
+    }
+    return state === closure_0;
+  });
 }
 export { updateContextMenuState };
 export function useContextMenuState() {

@@ -1,5 +1,5 @@
 // discord_app/modules/applications/ApplicationAssetsStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 
@@ -9,7 +9,7 @@ function handleFetchEmbeddedActivityShelfSuccess(assets) {
   const merged = Object.assign(obj);
   for (const key10012 in assets) {
     obj[key10012] = obj.FETCH_SUCCESS;
-    let obj4 = _modDef12;
+    let obj4 = applyDefault;
     let keyByResult = obj4.keyBy(assets[key10012], "name");
     if (keyByResult == null) {
       keyByResult = {};
@@ -66,7 +66,7 @@ const applicationAssetsStore = new ApplicationAssetsStore(DispatcherDefault, {
   APPLICATION_ASSETS_UPDATE: function handleUpdateApplicationAssets(assets) {
     assets = assets.assets;
     if (null != assets) {
-      let keyByResult = _modDef12.keyBy(assets, "name");
+      let keyByResult = applyDefault.keyBy(assets, "name");
       if (keyByResult == null) {
         keyByResult = {};
       }

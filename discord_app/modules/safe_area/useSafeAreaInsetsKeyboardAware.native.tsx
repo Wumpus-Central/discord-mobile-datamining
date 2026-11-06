@@ -3,8 +3,6 @@ import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../keyboard/native/KeyboardTypes.tsx";
 import useSystemKeyboardHeight from "../keyboard/native/useSystemKeyboardHeight.native.tsx";
 import useKeyboardType from "../keyboard/native/useKeyboardType.tsx";
-import useKeyboardDuration from "../keyboard/native/useKeyboardDuration.tsx";
-import DeprecatedLayoutAnimation from "../animations/native/DeprecatedLayoutAnimation.tsx";
 import useCustomKeyboardHeight from "../keyboard/native/useCustomKeyboardHeight.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -12,7 +10,7 @@ import subscribeToKeyboardUIStore from "../keyboard/native/subscribeToKeyboardUI
 
 require = fn;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx");
+const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx");
 
 export default function useSafeAreaInsetsKeyboardAware() {
   let obj = arg0;
@@ -35,12 +33,11 @@ export default function useSafeAreaInsetsKeyboardAware() {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  let callback;
-  c6 = undefined;
-  const tmp2 = flag2(flag3[5])();
-  const appEntryKey = flag(flag3[6]).useAppEntryKey();
+  let tmp = flag2(flag3[3])();
+  noop = tmp;
+  const appEntryKey = flag(flag3[4]).useAppEntryKey();
   items = [appEntryKey, flag3, flag, flag2];
-  callback = callback.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (obj.isIOS()) {
       if (!flag) {
         return 0;
@@ -69,56 +66,50 @@ export default function useSafeAreaInsetsKeyboardAware() {
     }
     return systemKeyboardHeight;
   }, items);
-  const ref = callback.useRef(callback());
-  const obj2 = flag(flag3[6]);
-  let tmp = flag3;
-  const tmp3 = flag;
-  [tmp8, c6] = appEntryKey(callback.useState(ref.current), 2);
-  const items1 = [callback, flag, flag2];
-  const effect = callback.useEffect(
-    () =>
-      subscribeToKeyboardUIStore(function maybeUpdateKeyboardHeight() {
-        const tmp = callback();
-        if (ref.current !== tmp) {
-          ref.current = tmp;
-          closure_1_6(tmp);
-        }
-      }),
-    items1,
-  );
-  let isAndroidResult = !flag;
-  if (flag) {
-    isAndroidResult = !flag4;
-  }
-  if (!isAndroidResult) {
-    isAndroidResult = tmp3(tmp[7]).isAndroid();
-    const tmp3Result = tmp3(tmp[7]);
-  }
-  closure_129_0 = isAndroidResult;
-  closure_129_1 = obj3.useRef(false);
-  const items2 = [tmp8, isAndroidResult];
-  const effect1 = obj3.useEffect(() => {
-    const keyboardDuration = useKeyboardDuration.getKeyboardDuration();
-    if (flag2.current) {
-      if (0 !== keyboardDuration) {
-        if (!flag) {
-          const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimationKeyboard(keyboardDuration);
-          const tmpResult = DeprecatedLayoutAnimation;
-        }
+  const items1 = [callback, flag4];
+  const callback1 = noop.useCallback(() => {
+    const tmp = callback();
+    let tmp2 = null;
+    if (tmp > 0) {
+      let num = 0;
+      if (flag4) {
+        num = tmp;
       }
+      tmp2 = num;
     }
-    flag2.current = true;
+    return tmp2;
+  }, items1);
+  const ref = noop.useRef(callback1());
+  const tmp6 = flag4(noop.useState(ref.current), 2);
+  const first = tmp6[0];
+  closure_10 = tmp6[1];
+  const items2 = [callback1];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    let tmp = callback1();
+    if (ref.current !== tmp) {
+      ref.current = tmp;
+      closure_10(tmp);
+    }
+    return subscribeToKeyboardUIStore(function maybeUpdateKeyboardInset() {
+      const tmp = callback1();
+      if (ref.current !== tmp) {
+        ref.current = tmp;
+        closure_1_10(tmp);
+      }
+    });
   }, items2);
-  let num = 0;
-  if (flag4) {
-    num = tmp8;
-  }
-  let insets = tmp2;
-  if (tmp8 > 0) {
-    const obj4 = {};
-    const merged = Object.assign(tmp2);
-    obj4.bottom = num;
-    insets = obj4;
-  }
-  return { insets };
+  const obj3 = { insets: null };
+  const items3 = [tmp, first];
+  obj3.insets = noop.useMemo(() => {
+    if (null != first) {
+      const obj = {};
+      const merged = Object.assign(closure_4);
+      obj.bottom = tmp;
+      let tmp2 = obj;
+    } else {
+      tmp2 = closure_4;
+    }
+    return tmp2;
+  }, items3);
+  return obj3;
 }

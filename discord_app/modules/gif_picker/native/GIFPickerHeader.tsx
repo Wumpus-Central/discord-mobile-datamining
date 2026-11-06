@@ -100,7 +100,7 @@ function FavoritesSearch(onQueryChange) {
   const obj5 = {
     variant: "icon-only",
     size: "md",
-    icon: require("../../../../_runtime/metro/07360__.js"),
+    icon: require("../../../../_runtime/metro/07307__.js"),
     accessibilityLabel: null,
     onPress: null,
   };
@@ -151,7 +151,7 @@ const View = fn(17).View;
 fn(1072).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   container: { paddingVertical: nativeDefault.space.PX_8 },
   headerContainer: null,
@@ -162,14 +162,14 @@ let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(10431).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(10383).GIF_PICKER_GUTTER_SPACING,
 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10431).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10383).GIF_PICKER_GUTTER_SPACING };
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(7247).InputHeights.MD,
+  height: fn(7194).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -186,7 +186,7 @@ let obj5 = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(7247).InputHeights.MD,
+  height: fn(7194).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,

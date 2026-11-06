@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/native/ConjureProjectList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4024 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -12,7 +12,6 @@ import ConjureProjectIconDefault from "ConjureProjectIcon.tsx";
 import ConjureSettingsSheet from "../../settings/native/ConjureSettingsSheet.tsx";
 import ConjureHeaderIconButtonDefault from "../../shared/native/ConjureHeaderIconButton.tsx";
 import ConjureCreateSheet from "../../create/native/ConjureCreateSheet.tsx";
-import openConjureProjectsSheet from "openConjureProjectsSheet.tsx";
 import ConjureNumberBadgeDefault from "../../shared/native/ConjureNumberBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingsProtoStore from "../../../user_settings/UserSettingsProtoStore.tsx";
@@ -28,8 +27,8 @@ function ProjectRow(project) {
   project = project.project;
   const onMore = project.onMore;
   const tmp = closure_11(0);
-  const conjureProjectBadge = project(11062).useConjureProjectBadge(project.id);
-  const obj = project(11062);
+  const conjureProjectBadge = project(11014).useConjureProjectBadge(project.id);
+  const obj = project(11014);
   items = [ConjureProjectStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(
@@ -43,9 +42,9 @@ function ProjectRow(project) {
     const obj3 = { time: null };
     const _Date = Date;
     const date = new Date(project.updated_at);
-    obj3.time = tmp2(6998).getRelativeTimestamp(date.getTime());
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3995.AXydi3, obj3);
-    const tmp2Result = tmp2(6998);
+    obj3.time = tmp2(6940).getRelativeTimestamp(date.getTime());
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4024.AXydi3, obj3);
+    const tmp2Result = tmp2(6940);
   }
   const obj4 = {
     label: project.name,
@@ -59,13 +58,13 @@ function ProjectRow(project) {
   };
   if (stateFromStores) {
     const intl2 = tmp2(1113).intl;
-    formatToPlainStringResult = intl2.string(_modDef3995.Yh5pAc);
+    formatToPlainStringResult = intl2.string(_modDef4024.Yh5pAc);
   }
   obj4.subLabel = formatToPlainStringResult;
   let stringResult;
   if (null != conjureProjectBadge && conjureProjectBadge > 0 && !stateFromStores) {
     const intl3 = tmp2(1113).intl;
-    stringResult = intl3.string(_modDef3995.hfIuc7);
+    stringResult = intl3.string(_modDef4024.hfIuc7);
   }
   obj4.accessibilityHint = stringResult;
   obj4.disabled = stateFromStores;
@@ -80,7 +79,7 @@ function ProjectRow(project) {
       tmp15Result3 = closure_9(ConjureNumberBadgeDefault, obj6);
     }
     const items2 = [tmp15Result3];
-    const obj7 = { IconComponent: tmp2(9912).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
+    const obj7 = { IconComponent: tmp2(9862).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
     const intl4 = tmp2(1113).intl;
     obj7.accessibilityLabel = intl4.string(tmp2(1113).t["UKOtz+"]);
     items2[1] = closure_9(ConjureHeaderIconButtonDefault, obj7);
@@ -91,7 +90,7 @@ function ProjectRow(project) {
   obj4.trailing = tmp13Result;
   obj4.onPress = project.onPress;
   obj4.onLongPress = onMore;
-  const children = [closure_9(project(7119).TableRow, obj4)];
+  const children = [closure_9(project(7063).TableRow, obj4)];
   let tmp15Result4 = null;
   if (null != conjureProjectBadge) {
     tmp15Result4 = null;
@@ -112,7 +111,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_11 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom },
@@ -338,9 +337,7 @@ export default function ConjureProjectList(guildId) {
       const intl4 = tmp4(tmp2[22]).intl;
       const obj10 = { count: arr.length };
       obj9.label = intl4.formatToPlainString(tmp(tmp2[24]).vnoMFE, obj10);
-      obj9.onPress = function onPress() {
-        return openConjureProjectsSheet.openConjureProjectsSheetForGuild(guildId);
-      };
+      obj9.onPress = tmp4(tmp2[30]).showConjureProjectsSheet;
       obj8.children = closure_9(tmp4(tmp2[29]).TableRow, obj9);
       tmp21Result = closure_9(tmp4(tmp2[28]).TableRowGroup, obj8);
     }

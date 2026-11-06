@@ -1,7 +1,7 @@
 // discord_app/modules/links/native/handleSupportedURL.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
@@ -36,8 +36,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(7070).addPostConnectionCallback;
-let closure_9 = fn(7751).handleMobileWebCheckoutStatus;
+fn(7012).addPostConnectionCallback;
+let closure_9 = fn(7705).handleMobileWebCheckoutStatus;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_12,
@@ -47,14 +47,14 @@ const Constants = fn(1072);
   PlatformTypes: closure_16,
   ME: closure_17,
 } = Constants);
-const StaticChannelRoute = fn(4999).StaticChannelRoute;
-const StreamTypes = fn(6853).StreamTypes;
-const NativePermissionTypes = fn(8085).NativePermissionTypes;
-let closure_21 = fn(11098).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_22 = fn(7861).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_23 = fn(5884).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15930).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8578).MobileUserSettings;
+const StaticChannelRoute = fn(5026).StaticChannelRoute;
+const StreamTypes = fn(6795).StreamTypes;
+const NativePermissionTypes = fn(8031).NativePermissionTypes;
+let closure_21 = fn(11051).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(7815).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_23 = fn(5903).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(15925).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8524).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -215,7 +215,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
+      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "png" };
       const obj27 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj22.navigationSettings = obj27;
       rootNavigationRef1(inviteCode[30])(obj22);
@@ -253,19 +253,19 @@ export default function handleSupportedURL(payload) {
                 closure_128_0 = undefined;
                 closure_128_1 = undefined;
                 closure_128_2 = undefined;
-                tmp2(6882).popAll();
-                const tmp42 = tmp3(10853);
+                tmp2(6824).popAll();
+                const tmp42 = tmp3(10805);
                 const openSocialLayerStorefrontUnsupportedOnMobileAlert =
                   tmp42.openSocialLayerStorefrontUnsupportedOnMobileAlert;
                 closure_128_0 = openSocialLayerStorefrontUnsupportedOnMobileAlert;
                 closure_128_1 = tmp42.openSocialLayerStorefrontProductDetailsModal;
                 if (null != payload.skuId) {
-                  closure_128_2 = tmp3(7034).default;
+                  closure_128_2 = tmp3(6976).default;
                   ({ guildId, skuId } = payload);
                   c2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp3(10854).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15937).default()),
+                    value: tmp3(10806).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15932).default()),
                     done: false,
                   };
                   return obj4;
@@ -273,7 +273,7 @@ export default function handleSupportedURL(payload) {
                   const result = openSocialLayerStorefrontUnsupportedOnMobileAlert();
                   dependencyMap = 3;
                 }
-                const obj7 = tmp2(6882);
+                const obj7 = tmp2(6824);
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -285,7 +285,7 @@ export default function handleSupportedURL(payload) {
             } else if (null != closure_128_2.get(closure_129_0.skuId)) {
               if (!closure_128_2.didFetchingSkuFail(closure_129_0.skuId)) {
                 const obj = { skuId: closure_129_0.skuId, analyticsLocations: null };
-                items = [tmp2(7490).URI_SCHEME];
+                items = [tmp2(7435).URI_SCHEME];
                 obj.analyticsLocations = items;
                 closure_128_1(obj);
               }
@@ -385,7 +385,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15943, dependencyMap.paths),
+                    asyncRequireImpl(15938, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -756,15 +756,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(6882).popAll();
-                        const obj5 = closure_1(6882);
+                        closure_1(6824).popAll();
+                        const obj5 = closure_1(6824);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7705).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7705);
+                        dependencyMap(7658).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7658);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(7486).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(7431).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -782,8 +782,8 @@ export default function handleSupportedURL(payload) {
                     }
                     closure_133_1 = closure_1(1378).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(5846).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(5846);
+                      closure_1(5864).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(5864);
                     }
                     const obj12 = closure_1(1378);
                   }

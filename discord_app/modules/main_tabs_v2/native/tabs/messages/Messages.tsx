@@ -1,10 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/Messages.tsx
 import TTITrackerDefault from "../../../../tti_analytics/TTITracker.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
-import NavigationRouteUtils from "../../../helpers/NavigationRouteUtils.native.tsx";
-import RootNavigationRef from "../../../RootNavigationRef.native.tsx";
-import DeprecatedLayoutAnimation from "../../../../animations/native/DeprecatedLayoutAnimation.tsx";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import TTIAnalyticsUtils from "../../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
@@ -15,15 +11,14 @@ import useMessagesScrollToTopDefault from "useMessagesScrollToTop.tsx";
 import useMessagesReconnectToCallsEffectDefault from "useMessagesReconnectToCallsEffect.tsx";
 import ChannelListPanelBackdropDefault from "../../../../channel_list_v2/native/components/ChannelListPanelBackdrop.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
-import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GatewayConnectionStore from "../../../../gateway/GatewayConnectionStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let closure_8 = {
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+let closure_7 = {
   code: "(function MessagesTsx1(event){let[scrollPosition,handleGuildsNavigationScroll]=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);})",
 };
 const size = fn(2);
@@ -43,9 +38,7 @@ export default noop.memo(function Messages(style) {
   ({ headerSize, listItemHeight, listItemSizes, listItemSuggestedFriendHeight, listLeft, listTop } =
     useMessagesSpecsDefault());
   const tmp10 = useMessagesDataDefault();
-  const dataKey = tmp10.dataKey;
-  _require = dataKey;
-  importDefault = tmp10.sections;
+  _require = tmp10.sections;
   const ref = noop.useRef(null);
   const ref1 = noop.useRef(null);
   const tmp9 = useMessagesSpecsDefault();
@@ -60,38 +53,11 @@ export default noop.memo(function Messages(style) {
   useMessagesReconnectToCallsEffectDefault();
   obj6 = require("PlatformUtils");
   const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(
-    tmp4(18392).DmGdmListRenderTriggerPoint,
+    tmp4(18384).DmGdmListRenderTriggerPoint,
   );
-  items = [dataKey];
-  const effect = noop.useEffect(() => {
-    if (null != c0) {
-      if (!obj7.isAndroid()) {
-        if (!AccessibilityStore.useReducedMotion) {
-          const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
-          let tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
-          if (tmp2) {
-            const tmp5Result4 = NavigationRouteUtils;
-            const rootNavigationRef1 = RootNavigationRef.getRootNavigationRef();
-            let currentRoute;
-            if (rootNavigationRef1 != null) {
-              currentRoute = rootNavigationRef1.getCurrentRoute();
-            }
-            tmp2 = null != tmp5Result4.coerceGuildsRoute(currentRoute);
-            const tmp5Result5 = RootNavigationRef;
-          }
-          if (tmp2) {
-            const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
-            const tmp5Result6 = DeprecatedLayoutAnimation;
-          }
-          const tmp5Result = RootNavigationRef;
-        }
-      }
-      obj7 = PlatformUtils;
-    }
-  }, items);
   const layoutEffect = noop.useLayoutEffect(() => {
     TTIAnalyticsUtils.trackAppUIViewed();
-    const reduced = _undefined2.reduce((acc, item) => acc + item, 0);
+    const reduced = _undefined.reduce((acc, item) => acc + item, 0);
     TTITrackerDefault.recordRender(reduced, GatewayConnectionStore.isConnected());
   });
   const tmp4Result = require("useCommonTriggerPoint");
@@ -99,10 +65,10 @@ export default noop.memo(function Messages(style) {
   const externalScrollEventHandler = require("QuestDockExternalCoordinationContext").useExternalScrollEventHandler({
     id: "messages",
   });
-  const items1 = [closure_8, sharedValue, externalScrollEventHandler];
+  items = [closure_7, sharedValue, externalScrollEventHandler];
   _require = undefined;
   importDefault = undefined;
-  [tmp21, tmp22, tmp23] = items1;
+  [tmp20, tmp21, tmp22] = items;
   class MessagesTsx1 {
     constructor(arg0) {
       result = closure_0.set(style.contentOffset.y);
@@ -110,11 +76,11 @@ export default noop.memo(function Messages(style) {
       return;
     }
   }
-  const items2 = [tmp22, tmp23];
-  MessagesTsx1.__closure = items2;
+  const items1 = [tmp21, tmp22];
+  MessagesTsx1.__closure = items1;
   MessagesTsx1.__workletHash = 2610387438817;
-  MessagesTsx1.__initData = tmp21;
-  let obj7 = {
+  MessagesTsx1.__initData = tmp20;
+  const obj7 = {
     accessibilityLabel: null,
     data: null,
     handleScrollAnimated: null,
@@ -152,28 +118,28 @@ export default noop.memo(function Messages(style) {
     MessagesTsx1,
   );
   const obj10 = { backgroundColor: nativeDefault.colors.PANEL_BG, children: null };
-  const items3 = [closure_6(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), ,];
+  const items2 = [closure_5(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), ,];
   if (tmp10.showFullscreenEmptyState) {
-    let tmp25Result = closure_6(tmp(18395), {});
+    let tmp24Result = closure_5(tmp(18387), {});
   } else {
     if ("legend" === list) {
-      let tmp28 = 18400;
+      let tmp27 = 18392;
     } else {
-      tmp28 = "flash" === list ? 18444 : 18445;
+      tmp27 = "flash" === list ? 18436 : 18437;
     }
     const obj11 = { ref };
     const merged = Object.assign(obj7);
-    tmp25Result = closure_6(tmp(tmp28), obj11);
-    const tmpResult2 = tmp(tmp28);
+    tmp24Result = closure_5(tmp(tmp27), obj11);
+    const tmpResult2 = tmp(tmp27);
   }
-  items3[1] = tmp25Result;
-  let tmp25Result2 = null;
+  items2[1] = tmp24Result;
+  let tmp24Result2 = null;
   if (!doesLandOnHomeDrawer) {
-    tmp25Result2 = closure_6(tmp4(13567).TTIFirstContentfulPaint, { label: "messages_tabs" });
+    tmp24Result2 = closure_5(tmp4(13542).TTIFirstContentfulPaint, { label: "messages_tabs" });
   }
-  items3[2] = tmp25Result2;
-  obj10.children = items3;
-  obj9.children = closure_7(require("CutoutBackgroundContext").CutoutBackgroundProvider, obj10);
-  obj8.children = closure_6(ChannelListPanelBackdropDefault, obj9);
-  return closure_6(require("useAnalyticsLocations").AnalyticsLocationProvider, obj8);
+  items2[2] = tmp24Result2;
+  obj10.children = items2;
+  obj9.children = closure_6(require("CutoutBackgroundContext").CutoutBackgroundProvider, obj10);
+  obj8.children = closure_5(ChannelListPanelBackdropDefault, obj9);
+  return closure_5(require("useAnalyticsLocations").AnalyticsLocationProvider, obj8);
 });

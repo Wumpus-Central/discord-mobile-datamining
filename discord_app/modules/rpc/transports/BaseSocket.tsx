@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/transports/BaseSocket.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import RPCErrorDefault from "../RPCError.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

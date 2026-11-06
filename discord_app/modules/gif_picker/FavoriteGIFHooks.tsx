@@ -1,5 +1,5 @@
 // discord_app/modules/gif_picker/FavoriteGIFHooks.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import FrecencyUserSettingsHooks from "../user_settings/FrecencyUserSettingsHooks.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -36,7 +36,7 @@ export function useSortedFavoriteGIFs(transformFavoriteGifUrl) {
   }
   items = [gifs, transformFavoriteGifUrl];
   return noop.useMemo(() => {
-    const mapped = _modDef12(gifs).map((src, url) => {
+    const mapped = applyDefault(gifs).map((src, url) => {
       const obj = {};
       const merged = Object.assign(src);
       obj.url = url;
@@ -50,7 +50,7 @@ export function useSortedFavoriteGIFs(transformFavoriteGifUrl) {
       obj.src = src;
       return obj;
     });
-    const arr = _modDef12(gifs);
+    const arr = applyDefault(gifs);
     const sortByResult = mapped.sortBy("order");
     return mapped.sortBy("order").reverse().value();
   }, items);

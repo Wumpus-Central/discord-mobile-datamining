@@ -1,45 +1,43 @@
 // discord_app/modules/checkpoint/CheckpointConstants.tsx
-import _modDef3219 from "Checkpoint2026.messages.js";
+import _modDef3248 from "Checkpoint2026.messages.js";
 
-const items = [{ list: "gamesByPlayers", label: _modDef3219.b4s18j }, , , ,];
-const obj = { list: "gamesByPlayers", label: _modDef3219.b4s18j };
-items[1] = { list: "newGamesByPlayers", label: _modDef3219.DcxpNj };
-const obj2 = { list: "newGamesByPlayers", label: _modDef3219.DcxpNj };
-items[2] = { list: "indieGamesByPlayers", label: _modDef3219.OAUTki };
-const obj3 = { list: "indieGamesByPlayers", label: _modDef3219.OAUTki };
-items[3] = { list: "gamesByCoplayUsers", label: _modDef3219.ioC4Qg };
-const obj4 = { list: "gamesByCoplayUsers", label: _modDef3219.ioC4Qg };
-items[4] = { list: "gamesByStreamWatchMinutes", label: _modDef3219.M1L00s };
-const obj6 = {
-  [fn(6205).CheckpointTraitRarity.DEFAULT]: "#FFE047",
-  [fn(6205).CheckpointTraitRarity.COMMON]: "#35ED7E",
-  [fn(6205).CheckpointTraitRarity.RARE]: "#EF3054",
-  [fn(6205).CheckpointTraitRarity.EPIC]: "#7D53DE",
-  [fn(6205).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
+const items = [{ list: "gamesByPlayers", label: _modDef3248.b4s18j }, , ,];
+const obj = { list: "gamesByPlayers", label: _modDef3248.b4s18j };
+items[1] = { list: "newGamesByPlayers", label: _modDef3248.DcxpNj };
+const obj2 = { list: "newGamesByPlayers", label: _modDef3248.DcxpNj };
+items[2] = { list: "indieGamesByPlayers", label: _modDef3248.OAUTki };
+const obj3 = { list: "indieGamesByPlayers", label: _modDef3248.OAUTki };
+items[3] = { list: "gamesByStreamWatchMinutes", label: _modDef3248.M1L00s };
+const obj5 = {
+  [fn(6225).CheckpointTraitRarity.DEFAULT]: "#FFE047",
+  [fn(6225).CheckpointTraitRarity.COMMON]: "#35ED7E",
+  [fn(6225).CheckpointTraitRarity.RARE]: "#EF3054",
+  [fn(6225).CheckpointTraitRarity.EPIC]: "#7D53DE",
+  [fn(6225).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
 };
-obj6[fn(6205).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
-const obj7 = {};
-obj7[fn(6205).CheckpointTraitRarity.DEFAULT] = _modDef3219.bP4GV1;
-obj7[fn(6205).CheckpointTraitRarity.COMMON] = _modDef3219.QwkKWr;
-obj7[fn(6205).CheckpointTraitRarity.RARE] = _modDef3219.KLmNgL;
-obj7[fn(6205).CheckpointTraitRarity.EPIC] = _modDef3219.hAmdLZ;
-obj7[fn(6205).CheckpointTraitRarity.ULTRA] = _modDef3219.Tv4xyf;
-obj7[fn(6205).CheckpointTraitRarity.NITRO] = _modDef3219["0ModIv"];
+obj5[fn(6225).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
+const obj6 = {};
+obj6[fn(6225).CheckpointTraitRarity.DEFAULT] = _modDef3248.bP4GV1;
+obj6[fn(6225).CheckpointTraitRarity.COMMON] = _modDef3248.QwkKWr;
+obj6[fn(6225).CheckpointTraitRarity.RARE] = _modDef3248.KLmNgL;
+obj6[fn(6225).CheckpointTraitRarity.EPIC] = _modDef3248.hAmdLZ;
+obj6[fn(6225).CheckpointTraitRarity.ULTRA] = _modDef3248.Tv4xyf;
+obj6[fn(6225).CheckpointTraitRarity.NITRO] = _modDef3248["0ModIv"];
 const items1 = [
-  fn(6205).CheckpointTraitRarity.ULTRA,
-  fn(6205).CheckpointTraitRarity.EPIC,
-  fn(6205).CheckpointTraitRarity.RARE,
-  fn(6205).CheckpointTraitRarity.COMMON,
-  fn(6205).CheckpointTraitRarity.DEFAULT,
-  fn(6205).CheckpointTraitRarity.NITRO,
+  fn(6225).CheckpointTraitRarity.ULTRA,
+  fn(6225).CheckpointTraitRarity.EPIC,
+  fn(6225).CheckpointTraitRarity.RARE,
+  fn(6225).CheckpointTraitRarity.COMMON,
+  fn(6225).CheckpointTraitRarity.DEFAULT,
+  fn(6225).CheckpointTraitRarity.NITRO,
 ];
 const items2 = [
-  fn(6205).CheckpointTraitRarity.DEFAULT,
-  fn(6205).CheckpointTraitRarity.COMMON,
-  fn(6205).CheckpointTraitRarity.RARE,
-  fn(6205).CheckpointTraitRarity.EPIC,
-  fn(6205).CheckpointTraitRarity.ULTRA,
-  fn(6205).CheckpointTraitRarity.NITRO,
+  fn(6225).CheckpointTraitRarity.DEFAULT,
+  fn(6225).CheckpointTraitRarity.COMMON,
+  fn(6225).CheckpointTraitRarity.RARE,
+  fn(6225).CheckpointTraitRarity.EPIC,
+  fn(6225).CheckpointTraitRarity.ULTRA,
+  fn(6225).CheckpointTraitRarity.NITRO,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");
@@ -72,7 +70,7 @@ export const NATIVE_CHARACTER_LAYER_SIZE = 224;
 export const CHECKPOINT_2026_POWER_BAR_UNITS = 6;
 export const CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS = 1;
 export const CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS = 5;
-export const CHECKPOINT_RARITY_TO_COLOR = obj6;
-export const CHECKPOINT_RARITY_TO_LABEL_MESSAGE = obj7;
+export const CHECKPOINT_RARITY_TO_COLOR = obj5;
+export const CHECKPOINT_RARITY_TO_LABEL_MESSAGE = obj6;
 export const CHECKPOINT_RARITY_ORDER_MOBILE = items1;
 export const CHECKPOINT_RARITY_ORDER_WEB = items2;

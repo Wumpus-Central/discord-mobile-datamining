@@ -1,25 +1,155 @@
 // discord_app/modules/voice_calls/native/AudioManagerStore.android.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
-import _mod17 from "../../../../_runtime/metro/00017__.js";
+import LoggerDefault from "../../debug/Logger.tsx";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import Constants from "../../../Constants.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
-import Constants2 from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
-import NativeAudioManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import NativeAudioManagerModule2 from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const NativeAudioManagerModule_mod = NativeAudioManagerModuleDefault;
+const NativeAudioManagerModuleDefault = NativeAudioManagerModule2;
 
-const RTCConnectionStates = Constants.RTCConnectionStates;
-const MediaEngineContextTypes = Constants2.MediaEngineContextTypes;
-const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeAudioManagerModuleDefault);
+require = fn;
+function setCommunicationModeOn() {
+  const self = this;
+  const apply = closure_13.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_13 = async function _setCommunicationModeOn(arg0) {
+  closure_2 = tmp3;
+  closure_129_0 = closure_0;
+  await NativeAudioManagerModuleDefault.setCommunicationModeOn(closure_0);
+  if (1 === tmp7) {
+    c4 = 0;
+    closure_129_1 = closure_3;
+    let str = "off";
+    if (closure_129_0) {
+      str = "on";
+    }
+    closure_130_7.error("Failed to turn communication mode " + str, closure_129_1);
+    c6 = 3;
+  } else if (arg0 === 1) {
+    c6 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    c4 = 0;
+  }
+  return value;
+};
+function setActiveAudioDevice() {
+  const self = this;
+  const apply = closure_15.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_15 = async function _setActiveAudioDevice() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = deviceString;
+            if (obj9.isString(deviceString)) {
+              const obj4 = { extra: null };
+              const obj5 = { deviceString };
+              obj4.extra = obj5;
+              SentryUtilsDefault.captureMessage(
+                "AudioManagerStore received a string for an android audio device",
+                obj4,
+              );
+              const tmp33Result = SentryUtilsDefault;
+            } else {
+              c4 = 1;
+              c5 = 2;
+              c6 = 1;
+              const obj6 = { value: NativeAudioManagerModuleDefault.setActiveAudioDevice(deviceString), done: false };
+              return obj6;
+            }
+            obj9 = applyDefault;
+          }
+        } else {
+          if (1 === tmp7) {
+            c4 = 0;
+            closure_129_1 = closure_3;
+            const _HermesInternal2 = HermesInternal;
+            closure_130_7.error(
+              "Failed to set audio device " + closure_129_0.deviceId + " (" + closure_129_0.simpleDeviceType + ")",
+              closure_129_1,
+            );
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            if (!value) {
+              const _HermesInternal = HermesInternal;
+              closure_130_7.warn(
+                "Audio device " + closure_129_0.deviceId + " (" + closure_129_0.simpleDeviceType + ") was not applied",
+              );
+            }
+            c4 = 0;
+          }
+          c4 = 0;
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c6 = 3;
+      } catch (tmp24) {
+        closure_3 = tmp24;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp24;
+        } else {
+          c5 = tmp;
+        }
+      }
+    }
+  })();
+};
+const RTCConnectionStates = fn(1072).RTCConnectionStates;
+const MediaEngineContextTypes = fn(5924).MediaEngineContextTypes;
+const nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAudioManagerModuleDefault);
+let closure_7 = new LoggerDefault("AudioManagerStore");
 let global = [];
-let NativeAudioManagerModule = NativeAudioManagerModule_mod;
+let NativeAudioManagerModule = fn(9321);
 global = NativeAudioManagerModule.getInvalidAndroidDevice();
-let NativeAudioManagerModule = NativeAudioManagerModule_mod;
+NativeAudioManagerModule = fn(9321);
 let device = NativeAudioManagerModule.getInvalidAndroidDevice();
-let c9 = false;
+let c11 = false;
 const Store = initializeDefault.Store;
 class AudioManagerStore extends Store {}
 const prototype = AudioManagerStore.prototype;
@@ -62,50 +192,31 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
     } else {
       state = context.state;
       if (RTCConnectionStates.CONNECTING === state) {
-        c9 = true;
-        const result = NativeAudioManagerModuleDefault.setCommunicationModeOn(true);
-        let tmp8 = global !== device;
-        if (tmp8) {
-          tmp8 = device.simpleDeviceType !== NativeAudioManagerModule.AudioDeviceType.INVALID;
+        c11 = true;
+        setCommunicationModeOn(true);
+        let tmp6 = global !== device;
+        if (tmp6) {
+          tmp6 = device.simpleDeviceType !== NativeAudioManagerModule2.AudioDeviceType.INVALID;
         }
-        if (tmp8) {
-          if (tmp4Result.isString(device)) {
-            const obj3 = { extra: null };
-            const obj4 = { deviceString: device };
-            obj3.extra = obj4;
-            SentryUtilsDefault.captureMessage("AudioManagerStore received a string for an android audio device", obj3);
-            const tmp4Result3 = SentryUtilsDefault;
-          } else {
-            NativeAudioManagerModuleDefault.setActiveAudioDevice(device);
-            const tmp4Result4 = NativeAudioManagerModuleDefault;
-          }
-          tmp4Result = _modDef12;
+        if (tmp6) {
+          setActiveAudioDevice(device);
         }
-      } else if (tmp13.DISCONNECTED === state) {
+      } else if (tmp12.DISCONNECTED === state) {
         if (!context.willReconnect) {
-          c9 = false;
-          const result1 = NativeAudioManagerModuleDefault.setCommunicationModeOn(false);
+          c11 = false;
+          setCommunicationModeOn(false);
         }
       }
     }
   },
   NATIVE_AUDIO_SET_OUTPUT_DEVICE: function handleSetActiveAudioDevice(device) {
     device = device.device;
-    if (c9) {
-      if (obj.isString(device)) {
-        const obj2 = { extra: null };
-        const obj3 = { deviceString: device };
-        obj2.extra = obj3;
-        SentryUtilsDefault.captureMessage("AudioManagerStore received a string for an android audio device", obj2);
-        const tmpResult = SentryUtilsDefault;
-      } else {
-        NativeAudioManagerModuleDefault.setActiveAudioDevice(device);
-        const tmpResult2 = NativeAudioManagerModuleDefault;
-      }
-      obj = _modDef12;
+    if (c11) {
+      setActiveAudioDevice(device);
     }
   },
 });
-let result = size.fileFinishedImporting("modules/voice_calls/native/AudioManagerStore.android.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/native/AudioManagerStore.android.tsx");
 
 export default audioManagerStore;

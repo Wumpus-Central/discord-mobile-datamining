@@ -3,6 +3,7 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import QuestTypes from "../QuestTypes.tsx";
+import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import DiscordAppStateDefault from "../../app_state/DiscordAppState.native.tsx";
 import AdDecisionUtils from "../../ads/utils/AdDecisionUtils.tsx";
 import AdDeliveryStore from "../../ads/AdDeliveryStore.tsx";
@@ -10,9 +11,10 @@ import FramesStore from "../../frames/FramesStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 require = fn;
-function pauseOrResumeTimer(c3) {
-  const startedAt = _null.startedAt;
-  const tmp3 = asLaunched(FramesStore.getFrame(_null.frameId));
+function pauseOrResumeTimer(startedAt) {
+  startedAt = startedAt.startedAt;
+  obj = FramesStore;
+  const tmp3 = asLaunched(FramesStore.getFrame(startedAt.frameId));
   state = DiscordAppStateDefault.getState();
   let tmp8 = state === ConstantsIOS.AppStates.ACTIVE;
   if (tmp8) {
@@ -25,15 +27,15 @@ function pauseOrResumeTimer(c3) {
   if (tmp8) {
     if (!tmp) {
       const obj3 = {};
-      const merged = Object.assign(_null);
+      const merged = Object.assign(startedAt);
       const _Date = Date;
       obj3.startedAt = Date.now();
-      _null = obj3;
+      obj = obj3;
       let flag = true;
     }
     return flag;
   }
-  const tmp2Result = asLaunched(FramesStore.getFrame(_null.frameId));
+  const tmp2Result = asLaunched(obj.getFrame(startedAt.frameId));
   const state1 = DiscordAppStateDefault.getState();
   let tmp17 = state1 === ConstantsIOS.AppStates.ACTIVE;
   if (tmp17) {
@@ -51,26 +53,27 @@ function pauseOrResumeTimer(c3) {
     const _Date2 = Date;
     const obj4 = {};
     const diff = Date.now() - startedAt;
-    const merged1 = Object.assign(_null);
+    const merged1 = Object.assign(startedAt);
     const _Math = Math;
-    obj4.remainingMs = Math.max(0, _null.remainingMs - diff);
+    obj4.remainingMs = Math.max(0, startedAt.remainingMs - diff);
     obj4.startedAt = null;
-    _null = obj4;
+    obj = obj4;
     flag2 = true;
   }
   flag = flag2;
   const tmp4Result = DiscordAppStateDefault;
 }
 function handleVisibilityChange() {
-  let tmp = null != c3;
+  let tmp = null != obj;
   if (tmp) {
-    tmp = pauseOrResumeTimer(c3);
+    tmp = pauseOrResumeTimer(obj);
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5793).ActivityPanelModes;
-const asLaunched = fn(6985).asLaunched;
-let c3 = null;
+const ActivityPanelModes = fn(5811).ActivityPanelModes;
+const asLaunched = fn(6927).asLaunched;
+let obj = null;
+let set = new Set();
 const Store = initializeDefault.Store;
 class PlayableStore extends Store {}
 const prototype = PlayableStore.prototype;
@@ -79,49 +82,52 @@ prototype["initialize"] = function initialize() {
 };
 prototype["getPlayingPlayableId"] = function getPlayingPlayableId() {
   let playableId;
-  if (_null != null) {
-    playableId = _null.playableId;
+  if (obj != null) {
+    playableId = obj.playableId;
   }
   if (playableId == null) {
     playableId = null;
   }
   return playableId;
 };
+prototype["isPlayableCompleted"] = function isPlayableCompleted(id) {
+  return set.has(id);
+};
 prototype["isRunning"] = function isRunning(arg0) {
   let playableId;
-  if (_null != null) {
-    playableId = _null.playableId;
+  if (obj != null) {
+    playableId = obj.playableId;
   }
   let tmp2 = playableId === arg0;
   if (tmp2) {
-    tmp2 = null != _null.startedAt;
+    tmp2 = null != obj.startedAt;
   }
   return tmp2;
 };
 prototype["getRemainingMs"] = function getRemainingMs(playingPlayableId) {
   let tmp = null;
-  if (null != _null) {
+  if (null != obj) {
     tmp = null;
-    if (_null.playableId === playingPlayableId) {
-      if (null == _null.startedAt) {
-        let remainingMs = _null.remainingMs;
+    if (obj.playableId === playingPlayableId) {
+      if (null == obj.startedAt) {
+        let remainingMs = obj.remainingMs;
       } else {
         const _Math = Math;
         const _Date = Date;
-        remainingMs = Math.max(0, _null.remainingMs - (Date.now() - _null.startedAt));
+        remainingMs = Math.max(0, obj.remainingMs - (Date.now() - obj.startedAt));
       }
     }
   }
   return tmp;
 };
 PlayableStore.displayName = "PlayableStore";
-const playableStore = new PlayableStore(DispatcherDefault, {
+obj = {
   LOGOUT: function handleLogout() {
-    c3 = null;
+    set = new Set();
   },
   FRAME_IFRAME_MOUNT: function handleFrameIframeMount(frameId) {
     frameId = frameId.frameId;
-    if (null != c3) {
+    if (null != obj) {
       return false;
     } else {
       const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
@@ -138,13 +144,12 @@ const playableStore = new PlayableStore(DispatcherDefault, {
           applicationId = frame.applicationId;
         }
         if (deliveredPlayable.applicationId === applicationId) {
-          const obj = {
+          obj = {
             playableId: deliveredPlayable.id,
             frameId,
             remainingMs: 1000 * deliveredPlayable.rewardTimerSeconds,
             startedAt: null,
           };
-          c3 = obj;
           pauseOrResumeTimer(obj);
         }
       }
@@ -152,16 +157,42 @@ const playableStore = new PlayableStore(DispatcherDefault, {
     }
   },
   FRAME_STOP: function handleFrameStop(arg0) {
-    if (null != _null) {
-      if (_null.frameId === tmp) {
-        _null = null;
+    return false;
+  },
+  PLAYABLE_REWARD_TIMER_COMPLETE: function handlePlayableRewardTimerComplete(arg0) {
+    if (null != obj) {
+      if (obj.playableId === tmp) {
+        obj = {};
+        const merged = Object.assign(obj);
+        obj.remainingMs = 0;
+        obj.startedAt = null;
+      }
+    }
+    return false;
+  },
+  PLAYABLE_REWARD_CLAIM_SUCCESS: function handleClaimPlayableRewardSuccess(playableId) {
+    set = new Set(set);
+    set.add(playableId.playableId);
+  },
+  QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function handleFetchQuestToDeliverSuccess(creative) {
+    creative = creative.creative;
+    let type;
+    if (creative != null) {
+      type = creative.type;
+    }
+    if (type === AdCreativeType.AdCreativeType.PLAYABLE) {
+      if (set.has(creative.playable.id)) {
+        const _Set = Set;
+        set = new Set(set);
+        set.delete(creative.playable.id);
       }
     }
     return false;
   },
   APP_STATE_UPDATE: handleVisibilityChange,
   FRAME_SET_PANEL_MODE: handleVisibilityChange,
-});
+};
+const playableStore = new PlayableStore(DispatcherDefault, obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/PlayableStore.tsx");
 

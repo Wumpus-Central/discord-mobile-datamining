@@ -1,5 +1,5 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardList.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
@@ -20,11 +20,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 let closure_6 = fn(1623).InAppCameraUsedCameraPreviewTypes;
-let closure_7 = fn(5399).ACTION_SHEET_START_HEIGHT_RATIO;
-const NativePermissionStatus = fn(8085).NativePermissionStatus;
+let closure_7 = fn(5419).ACTION_SHEET_START_HEIGHT_RATIO;
+const NativePermissionStatus = fn(8031).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PhotoLibraryHelper);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   listContainer: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -243,8 +243,8 @@ export default noop.memo(function MediaKeyboardList(channel) {
   );
   const tmp9Result5 = require("../../../../../_runtime/metro/01652__.js");
   if (flag) {
-    flag = tmp9(8367).isImageCaptureIntentSupported();
-    const tmp9Result6 = tmp9(8367);
+    flag = tmp9(8313).isImageCaptureIntentSupported();
+    const tmp9Result6 = tmp9(8313);
   }
   let num;
   if (assets != null) {
@@ -273,7 +273,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
       const arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
       HermesBuiltin.arraySpread(Array(3 * itemsPerRow - items1.length).fill(null), arraySpreadResult);
       const ArrayResult = Array(3 * itemsPerRow - items1.length);
-      return _modDef12.chunk(items2, itemsPerRow);
+      return applyDefault.chunk(items2, itemsPerRow);
     } else {
       let edges;
       if (assets != null) {
@@ -284,7 +284,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
       }
       const items3 = [];
       HermesBuiltin.arraySpread(edges, HermesBuiltin.arraySpread(items1, 0));
-      return _modDef12.chunk(items3, itemsPerRow);
+      return applyDefault.chunk(items3, itemsPerRow);
     }
   }, items10);
   const items11 = [onPressCamera];
@@ -453,16 +453,16 @@ export default noop.memo(function MediaKeyboardList(channel) {
     obj8.onScroll = callback;
     const intl = tmp9(1113).intl;
     obj8.accessibilityLabel = intl.string(tmp9(1113).t.XONG6A);
-    obj8.footerSize = tmp9(10736).FOOTER_HEIGHT;
+    obj8.footerSize = tmp9(10688).FOOTER_HEIGHT;
     obj8.renderFooter = callback4;
     obj8.chunkBase = minimum;
     let prop;
     if (!tmp28) {
-      prop = tmp9(7380).MINIMUM_BATCHES_TO_RENDER;
+      prop = tmp9(7327).MINIMUM_BATCHES_TO_RENDER;
     }
     obj8.batchesToRender = prop;
-    mediaEmptyStateComponentOrNull = extensions(tmp6(7380), obj8);
-    let tmp6Result = tmp6(7380);
+    mediaEmptyStateComponentOrNull = extensions(tmp6(7327), obj8);
+    let tmp6Result = tmp6(7327);
   }
   return mediaEmptyStateComponentOrNull;
 });

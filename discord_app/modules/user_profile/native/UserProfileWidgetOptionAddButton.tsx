@@ -73,9 +73,9 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const dependencyMap = { default: 4, compact: 3 };
-const createStyles = fn(5143);
-let obj2 = {
+const NUMBER_OF_COLUMNS_BY_VARIANT = { default: 4, compact: 3 };
+const createStyles = fn(5170);
+let obj3 = {
   button: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
     borderWidth: 1,
@@ -92,7 +92,7 @@ let obj2 = {
   textBar: null,
   overlay: null,
 };
-let obj3 = {
+let obj4 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,
@@ -100,32 +100,32 @@ let obj3 = {
   overflow: "hidden",
   alignSelf: "stretch",
 };
-obj2.cover = {
+obj3.cover = {
   aspectRatio: 0.75,
   borderRadius: nativeDefault.radii.sm,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   overflow: "hidden",
 };
-let obj5 = {};
+let obj6 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj5.opacity = 0.2;
-obj2.coverImage = obj5;
-obj2.detailsCard = { flexDirection: "row", alignItems: "center" };
-obj2.textColumn = { flex: 1, flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 };
-let obj4 = {
+obj6.opacity = 0.2;
+obj3.coverImage = obj6;
+obj3.detailsCard = { flexDirection: "row", alignItems: "center" };
+obj3.textColumn = { flex: 1, flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 };
+let obj5 = {
   aspectRatio: 0.75,
   borderRadius: nativeDefault.radii.sm,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   overflow: "hidden",
 };
-obj2.textBar = { height: 12, borderRadius: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-let obj7 = {};
+obj3.textBar = { height: 12, borderRadius: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let obj8 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj7.alignItems = "center";
-obj7.justifyContent = "center";
-obj7.gap = nativeDefault.space.PX_8;
-obj2.overlay = obj7;
-let closure_8 = createStyles.createStyles(obj2);
+obj8.alignItems = "center";
+obj8.justifyContent = "center";
+obj8.gap = nativeDefault.space.PX_8;
+obj3.overlay = obj8;
+let closure_8 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetOptionAddButton.tsx");
 
@@ -187,3 +187,5 @@ export default function UserProfileWidgetOptionAddButton(onPress) {
   obj.children = items;
   return timestampProducer(React3, obj);
 }
+export { NUMBER_OF_COLUMNS_BY_VARIANT };
+export const GRID_GAP_TO_COVER_RATIO = 0.1;

@@ -6,10 +6,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(11034).sendUserMessage;
+const sendUserMessage = fn(10986).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
   copyRow: null,
@@ -198,8 +198,8 @@ export default function ConjureSecretsSheet(projectId) {
   let obj = { ref, startExpanded: true, keyboardShouldPersistTaps: "always", header: null, children: null };
   let obj2 = { title: null, trailing: null };
   let intl = projectId(1113).intl;
-  obj2.title = intl.string(request(3995).TuMGZp);
-  obj2.trailing = c8(projectId(7505).ActionSheetCloseButton, {
+  obj2.title = intl.string(request(4024).TuMGZp);
+  obj2.trailing = c8(projectId(7450).ActionSheetCloseButton, {
     onPress() {
       const current = ref.current;
       let closeActionSheetResult;
@@ -209,27 +209,27 @@ export default function ConjureSecretsSheet(projectId) {
       return closeActionSheetResult;
     },
   });
-  obj.header = c8(projectId(7460).BottomSheetTitleHeader, obj2);
+  obj.header = c8(projectId(7405).BottomSheetTitleHeader, obj2);
   let obj4 = { style: tmp.container, children: null };
   let tmp13Result = null;
   if (null != request.note) {
     tmp13Result = null;
     if ("" !== request.note) {
       let obj5 = { text: request.note, variant: "body-sm/normal", color: "text-default" };
-      tmp13Result = tmp13(tmp16(12346), obj5);
+      tmp13Result = tmp13(tmp16(12311), obj5);
     }
   }
   let items1 = [tmp13Result, , , , , ,];
   let obj6 = { variant: "body-xs/normal", color: "text-muted", children: null };
   let intl2 = tmp14(1113).intl;
-  obj6.children = intl2.string(request(3995).jgDBJZ);
-  items1[1] = c8(projectId(5763).Text, obj6);
+  obj6.children = intl2.string(request(4024).jgDBJZ);
+  items1[1] = c8(projectId(5781).Text, obj6);
   let tmp13Result3 = null;
   if (request.fields.length > 1) {
     let obj7 = { variant: "body-xs/normal", color: "text-muted", children: null };
     const intl3 = tmp14(1113).intl;
-    obj7.children = intl3.string(tmp16(3995)["La+pe4"]);
-    tmp13Result3 = tmp13(tmp14(5763).Text, obj7);
+    obj7.children = intl3.string(tmp16(4024)["La+pe4"]);
+    tmp13Result3 = tmp13(tmp14(5781).Text, obj7);
   }
   items1[2] = tmp13Result3;
   let copy_values = request.copy_values;
@@ -327,19 +327,19 @@ export default function ConjureSecretsSheet(projectId) {
   if (tmp8) {
     let obj8 = { variant: "body-xs/normal", color: "text-feedback-critical", children: null };
     const intl4 = tmp14(1113).intl;
-    obj8.children = intl4.string(tmp16(3995).IrMuew);
-    tmp13Result4 = tmp13(tmp14(5763).Text, obj8);
+    obj8.children = intl4.string(tmp16(4024).IrMuew);
+    tmp13Result4 = tmp13(tmp14(5781).Text, obj8);
   }
   items1[5] = tmp13Result4;
   let obj9 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
   const intl5 = tmp14(1113).intl;
-  obj9.text = intl5.string(request(3995).DUdtms);
+  obj9.text = intl5.string(request(4024).DUdtms);
   obj9.loading = first1;
   obj9.disabled = found.length <= 0;
   obj9.onPress = callback;
-  items1[6] = c8(projectId(5770).Button, obj9);
+  items1[6] = c8(projectId(5788).Button, obj9);
   obj4.children = items1;
   obj.children = c9(first1, obj4);
-  return c8(projectId(7504).ActionSheet, obj);
+  return c8(projectId(7449).ActionSheet, obj);
 }
 export const CONJURE_SECRETS_SHEET_KEY = "ConjureSecretsSheet";

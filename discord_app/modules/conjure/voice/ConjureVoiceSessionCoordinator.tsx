@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/voice/ConjureVoiceSessionCoordinator.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
 import SpatialAudioForVoiceExperimentDefault from "../../voice_panel/SpatialAudioForVoiceExperiment.tsx";
@@ -15,7 +15,7 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 let obj2 = fn;
 const RPCErrors = fn(1072).RPCErrors;
-const Constants = fn(5905);
+const Constants = fn(5924);
 ({ Features: closure_10, MediaEngineContextTypes: closure_11 } = Constants);
 let closure_12 = { x: 0, y: 0, z: -1 };
 let closure_13 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
@@ -167,15 +167,15 @@ prototype["start"] = function start(id) {
               );
               throw tmp15;
             }
-            tmp41Result2 = tmp41(16553);
+            tmp41Result2 = tmp41(16550);
           }
-          tmp41Result = tmp41(16553);
+          tmp41Result = tmp41(16550);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj13 = handleFrameLifecycleChange(16553);
+        obj13 = handleFrameLifecycleChange(16550);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -265,16 +265,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(16555);
+    obj2 = obj2(16552);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(16555).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(16552).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(16555);
+      const tmp11Result = tmp11(16552);
     }
     tmp11 = obj2;
   } else {
@@ -347,7 +347,7 @@ prototype["syncSpatialAudioOverrides"] = function syncSpatialAudioOverrides() {
     if (spatialHolder != null) {
       acoustics = spatialHolder.acoustics;
     }
-    let mergeResult = _modDef12.merge({}, closure_13, acoustics);
+    let mergeResult = applyDefault.merge({}, closure_13, acoustics);
   } else {
     mergeResult = {};
   }
@@ -356,7 +356,7 @@ prototype["syncSpatialAudioOverrides"] = function syncSpatialAudioOverrides() {
     const result = AudioActionCreatorsDefault.setSpatialAudioOverrides(mergeResult);
     const tmp6Result = AudioActionCreatorsDefault;
   }
-  obj3 = _modDef12;
+  obj3 = applyDefault;
 };
 prototype["pickFocusedSpatialSession"] = function pickFocusedSpatialSession() {
   let tmp = null;
@@ -401,7 +401,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(16556).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(16553).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

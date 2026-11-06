@@ -99,7 +99,7 @@ function handleUpdate() {
   }
   return flag;
 }
-const setAppLocale = fn(2192).setAppLocale;
+const setAppLocale = fn(2187).setAppLocale;
 let locale = fn(1113).intl.currentLocale;
 let global = fn(1113).systemLocale;
 (function getSystemLocale() {

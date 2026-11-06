@@ -3,8 +3,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05450_LegacyBaseButton.js";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import StageChannelUnifiedCallExperiment from "../../../stage_channels/StageChannelUnifiedCallExperiment.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
@@ -24,10 +26,10 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11417).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11379).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
@@ -44,78 +46,100 @@ let closure_10 = noop.memo(function ListItems(arg0) {
   const treatment = MobileGoLiveEntrypointExperimentDefault.useConfig({ location: "VoicePanelVoiceControls" }).treatment;
   let nonContextualStreamOutputPresent = MobileAudioOutputExperimentDefault.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
   const tmp6 = useSelectedActiveStreamDefault(channel);
-  if (!tmp2) {
-    items = [tmp2, , , , , , ];
-    const obj4 = { channel, connected: tmp2 };
-    items[1] = hasOwnProperty(VoicePanelVoiceControlsButtons.GameConsoles, obj4);
+  const isStageUnifiedCall = StageChannelUnifiedCallExperiment.useIsStageUnifiedCall(channel, "VoicePanelVoiceControls");
+  let tmp9 = tmp2;
+  if (tmp2) {
+    tmp9 = isStageUnifiedCall;
+  }
+  if (tmp9) {
+    const obj5 = { channel, openTab };
+    tmp9 = hasOwnProperty(VoicePanelVoiceControlsButtons.StageButtons, obj5);
+  }
+  items = [tmp9, , , , , , , ];
+  let tmp11 = tmp2;
+  if (tmp2) {
+    tmp11 = !isStageUnifiedCall;
+  }
+  if (!tmp11) {
+    items[1] = tmp11;
+    let tmp15 = !isStageUnifiedCall;
+    if (!isStageUnifiedCall) {
+      const obj6 = { channel, connected: tmp2 };
+      tmp15 = hasOwnProperty(VoicePanelVoiceControlsButtons.GameConsoles, obj6);
+    }
+    items[2] = tmp15;
     if (nonContextualStreamOutputPresent) {
       nonContextualStreamOutputPresent = hasOwnProperty(VoicePanelVoiceControlsButtons.StreamVolumeItem, {});
     }
-    items[2] = nonContextualStreamOutputPresent;
-    const obj5 = { title: null, hasIcons: true, children: null };
+    items[3] = nonContextualStreamOutputPresent;
+    const obj7 = { title: null, hasIcons: true, children: null };
     const intl = util.intl;
-    obj5.title = intl.string(util.t.dsXapM);
+    obj7.title = intl.string(util.t.dsXapM);
     const items1 = [hasOwnProperty(VoicePanelVoiceControlsButtons.DeafenSwitch, {}), , , , ];
-    const obj6 = { channel, connected: tmp2 };
-    items1[1] = hasOwnProperty(VoicePanelVoiceControlsButtons.AudioRouteButton, obj6);
-    const obj7 = { channelId };
-    items1[2] = hasOwnProperty(VoicePanelVoiceControlsButtons.HideNonVideoParticipants, obj7);
+    const obj8 = { channel, connected: tmp2 };
+    items1[1] = hasOwnProperty(VoicePanelVoiceControlsButtons.AudioRouteButton, obj8);
+    let tmp18Result = !isStageUnifiedCall;
+    if (!isStageUnifiedCall) {
+      const obj9 = { channelId };
+      tmp18Result = hasOwnProperty(VoicePanelVoiceControlsButtons.HideNonVideoParticipants, obj9);
+    }
+    items1[2] = tmp18Result;
     items1[3] = hasOwnProperty(VoicePanelVoiceControlsButtons.HideSelfVideo, {});
-    let tmp12Result = tmp2;
+    let tmp18Result3 = tmp2;
     if (tmp2) {
-      const obj8 = { channel, connected: tmp2 };
-      tmp12Result = hasOwnProperty(VoicePanelVoiceControlsButtons.InviteButton, obj8);
+      const obj10 = { channel, connected: tmp2 };
+      tmp18Result3 = hasOwnProperty(VoicePanelVoiceControlsButtons.InviteButton, obj10);
     }
-    items1[4] = tmp12Result;
-    obj5.children = items1;
-    items[3] = timestampProducer(TableRowGroup.TableRowGroup, obj5);
-    items[4] = hasOwnProperty(UserSettingsVoiceProcessing.VoiceProcessingOptions, {});
-    const obj9 = { guildId: channel.guild_id };
-    const items2 = [hasOwnProperty(VoicePanelVoiceControlsButtons.VoiceSettingsButton, obj9), ];
-    let tmp12Result2 = null != tmp6;
-    if (tmp12Result2) {
-      const obj10 = { stream: tmp6 };
-      tmp12Result2 = hasOwnProperty(VoicePanelVoiceControlsButtons.ReportStreamIssueButton, obj10);
+    items1[4] = tmp18Result3;
+    obj7.children = items1;
+    items[4] = timestampProducer(TableRowGroup.TableRowGroup, obj7);
+    items[5] = hasOwnProperty(UserSettingsVoiceProcessing.VoiceProcessingOptions, {});
+    const obj11 = { guildId: channel.guild_id };
+    const items2 = [hasOwnProperty(VoicePanelVoiceControlsButtons.VoiceSettingsButton, obj11), ];
+    let tmp18Result4 = null != tmp6;
+    if (tmp18Result4) {
+      const obj12 = { stream: tmp6 };
+      tmp18Result4 = hasOwnProperty(VoicePanelVoiceControlsButtons.ReportStreamIssueButton, obj12);
     }
-    const obj11 = { hasIcons: true, children: null };
-    items2[1] = tmp12Result2;
-    obj11.children = items2;
-    items[5] = timestampProducer(TableRowGroup.TableRowGroup, obj11);
-    let tmp7Result = null;
+    const obj13 = { hasIcons: true, children: null };
+    items2[1] = tmp18Result4;
+    obj13.children = items2;
+    items[6] = timestampProducer(TableRowGroup.TableRowGroup, obj13);
+    let tmp8Result = null;
     if (tmp2) {
-      tmp7Result = null;
+      tmp8Result = null;
       if (setting) {
-        tmp7Result = null;
+        tmp8Result = null;
         if (embeddedActivityLaunchability === getEmbeddedActivityLaunchability.EmbeddedActivityLaunchability.CAN_LAUNCH) {
-          const obj12 = { title: null, hasIcons: true, children: null };
+          const obj14 = { title: null, hasIcons: true, children: null };
           const intl2 = util.intl;
-          obj12.title = intl2.string(util.t.J6rqB7);
+          obj14.title = intl2.string(util.t.J6rqB7);
           const items3 = [hasOwnProperty(VoicePanelVoiceControlsButtons.LeaveActivitiesButton, {}), hasOwnProperty(VoicePanelVoiceControlsButtons.ShareActivityLogsButton, {}), hasOwnProperty(VoicePanelVoiceControlsButtons.ToggleShowActivitiesDebugOverlay, {})];
-          obj12.children = items3;
-          tmp7Result = timestampProducer(TableRowGroup.TableRowGroup, obj12);
+          obj14.children = items3;
+          tmp8Result = timestampProducer(TableRowGroup.TableRowGroup, obj14);
         }
       }
     }
-    const obj13 = { spacing: 24, children: null };
-    items[6] = tmp7Result;
-    obj13.children = items;
-    return timestampProducer(tmp8, obj13);
+    const obj15 = { spacing: 24, children: null };
+    items[7] = tmp8Result;
+    obj15.children = items;
+    return timestampProducer(Stack_Stack.Stack, obj15);
   } else {
-    const obj14 = { openTab };
-    const items4 = [hasOwnProperty(VoicePanelVoiceControlsButtons.ActivitiesButton, obj14), ];
+    const obj16 = { openTab };
+    const items4 = [hasOwnProperty(VoicePanelVoiceControlsButtons.ActivitiesButton, obj16), ];
     if (MobileGoLiveEntrypointExperiment.MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
-      const obj15 = { openTab };
-      let tmp9Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ChatButton, obj15);
-      const obj16 = { hasIcons: true, children: null };
-      items4[1] = tmp9Result;
-      obj16.children = items4;
-      timestampProducer(TableRowGroup.TableRowGroup, obj16);
+      const obj17 = { openTab };
+      let tmp12Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ChatButton, obj17);
+      const obj18 = { hasIcons: true, children: null };
+      items4[1] = tmp12Result;
+      obj18.children = items4;
+      timestampProducer(TableRowGroup.TableRowGroup, obj18);
     } else if (MobileGoLiveEntrypointExperiment.MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
-      const obj17 = { channel };
-      tmp9Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ScreenshareButton, obj17);
+      const obj19 = { channel };
+      tmp12Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ScreenshareButton, obj19);
     }
-    const obj18 = { channel };
-    tmp9Result = hasOwnProperty(VoicePanelVoiceControlsButtons.SoundboardButton, obj18);
+    const obj20 = { channel };
+    tmp12Result = hasOwnProperty(VoicePanelVoiceControlsButtons.SoundboardButton, obj20);
   }
 });
 const scrollIndicatorInsets = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
@@ -178,7 +202,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   let tmp16Result = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     const obj6 = { style: tmp.blurRegion };
-    tmp16Result = closure_5(tmp2(tmp3[25]), obj6);
+    tmp16Result = closure_5(tmp2(tmp3[26]), obj6);
   }
   const items6 = [tmp16Result, , ];
   let tmp16Result3 = null != stateFromStores;
@@ -194,7 +218,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   let tmp16Result4 = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     const obj8 = { shown: sharedValue, style: tmp.blurRegion };
-    tmp16Result4 = closure_5(tmp2(tmp3[27]), obj8);
+    tmp16Result4 = closure_5(tmp2(tmp3[28]), obj8);
   }
   children[1] = tmp16Result4;
   return closure_6(closure_7, { children });

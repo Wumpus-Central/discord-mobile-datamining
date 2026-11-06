@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UserSettingsProtoStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
@@ -81,7 +81,7 @@ const prototype = UserSettingsProtoStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   closure_0 = arg0;
   if (null != arg0) {
-    const item = _modDef12.forEach(closure_7, (ProtoClass, arg1) => {
+    const item = applyDefault.forEach(closure_7, (ProtoClass, arg1) => {
       const tmp = userSettings[Number(undefined, arg1)];
       if (null != tmp) {
         let str;
@@ -119,7 +119,7 @@ prototype["initialize"] = function initialize(arg0) {
 };
 prototype["getState"] = function getState() {};
 prototype["computeState"] = function computeState() {
-  return _modDef12.mapValues(closure_7, (ProtoClass) => {
+  return applyDefault.mapValues(closure_7, (ProtoClass) => {
     const obj = { proto: user_settings_UserSettingsUtils.protoToB64(ProtoClass.ProtoClass, ProtoClass.proto) };
     if (tmp3) {
       obj.protoToSave = user_settings_UserSettingsUtils.protoToB64(
@@ -304,7 +304,7 @@ const userSettingsProtoStore = new UserSettingsProtoStore(DispatcherDefault, {
   CACHE_LOADED: function handleCacheLoaded(userSettings) {
     userSettings = userSettings.userSettings;
     if (null != userSettings) {
-      const item = _modDef12.forEach(closure_7, (ProtoClass, arg1) => {
+      const item = applyDefault.forEach(closure_7, (ProtoClass, arg1) => {
         const tmp = userSettings[Number(undefined, arg1)];
         if (null != tmp) {
           let str;

@@ -20,121 +20,126 @@ function NoCover(arg0) {
   }
   const bound = Math.min(PX_32, Math.max(0, width - tmp4(575).space.PX_16));
   const tmp6 = closure_13();
-  iconURL = game.getIconURL(1024);
-  [tmp9, c1] = noop.useState(null);
-  const tmp8 = _slicedToArray(noop.useState(null), 2);
-  let tmp13 = null != iconURL;
-  [tmp11, tmp12] = noop.useState(0);
-  if (tmp13) {
-    tmp13 = iconURL !== tmp9;
+  let tmp7 = width;
+  if (compact) {
+    tmp7 = bound;
   }
-  const tmp14 = tmp4(18717)(game.id, iconURL);
-  let tmp15 = !compact;
+  iconURL = game.getIconURL(tmp7);
+  const iconURL1 = game.getIconURL(16);
+  [tmp11, c1] = noop.useState(null);
+  const tmp10 = _slicedToArray(noop.useState(null), 2);
+  let tmp15 = null != iconURL;
+  [tmp13, tmp14] = noop.useState(0);
+  if (tmp15) {
+    tmp15 = iconURL !== tmp11;
+  }
+  const tmp16 = tmp4(18707)(game.id, iconURL1);
+  let tmp17 = !compact;
   if (!compact) {
-    tmp15 = tmp13;
+    tmp17 = tmp15;
   }
-  const tmp16 = closure_14(
+  const tmp18 = closure_14(
     width,
     bound,
-    Math.max(width / TILE_ASPECT_RATIO - width + closure_12, tmp11 + PX_6 + PX_8),
-    tmp14,
+    Math.max(width / TILE_ASPECT_RATIO - width + closure_12, tmp13 + PX_6 + PX_8),
+    tmp16,
   );
   items = [tmp6.fallback, ,];
-  let titleOnly = tmp19;
-  if (!tmp13) {
+  let titleOnly = tmp21;
+  if (!tmp15) {
     titleOnly = tmp6.titleOnly;
   }
   items[1] = titleOnly;
-  let background = tmp20;
-  if (!tmp15) {
-    background = tmp16.background;
+  let background = tmp22;
+  if (!tmp17) {
+    background = tmp18.background;
   }
   const obj = { style: items, children: null };
   items[2] = background;
-  let tmp21 = tmp13;
-  if (tmp13) {
-    tmp21 = null != tmp14;
+  let tmp23 = tmp15;
+  if (tmp15) {
+    tmp23 = null != tmp16;
   }
-  if (tmp21) {
-    tmp21 = tmp20;
+  if (tmp23) {
+    tmp23 = tmp22;
   }
-  if (tmp21) {
+  if (tmp23) {
     const obj2 = { accessible: false, source: null, style: null, blurRadius: 32, resizeMode: "cover", fadeDuration: 0 };
     const obj3 = { uri: iconURL };
     obj2.source = obj3;
     obj2.style = tmp6.texture;
-    tmp21 = React5(tmp4(5854), obj2);
+    tmp23 = React5(tmp4(5872), obj2);
   }
-  const items1 = [tmp21, , ,];
-  let tmp23 = tmp15;
-  if (tmp15) {
+  const items1 = [tmp23, , ,];
+  let tmp25 = tmp17;
+  if (tmp17) {
     const obj4 = { style: null, children: null };
-    const items2 = [tmp6.art, tmp16.art];
+    const items2 = [tmp6.art, tmp18.art];
     obj4.style = items2;
     const obj5 = { source: null, style: null, resizeMode: "contain", onError: null };
     const obj6 = { uri: iconURL };
     obj5.source = obj6;
-    obj5.style = tmp16.image;
+    obj5.style = tmp18.image;
     obj5.onError = function onError() {
       return _undefined(iconURL);
     };
-    obj4.children = React5(tmp4(5854), obj5);
-    tmp23 = React5(timestampProducer, obj4);
+    obj4.children = React5(tmp4(5872), obj5);
+    tmp25 = React5(timestampProducer, obj4);
   }
-  items1[1] = tmp23;
-  if (tmp13) {
-    tmp13 = tmp20;
+  items1[1] = tmp25;
+  if (tmp15) {
+    tmp15 = tmp22;
   }
-  if (tmp13) {
+  if (tmp15) {
     const obj7 = { source: null, style: null, resizeMode: "contain", onError: null };
     const obj8 = { uri: iconURL };
     obj7.source = obj8;
-    const items3 = [tmp6.icon, tmp16.icon];
+    const items3 = [tmp6.icon, tmp18.icon];
     obj7.style = items3;
     obj7.onError = function onError() {
       return _undefined(iconURL);
     };
-    tmp13 = React5(tmp4(5854), obj7);
+    tmp15 = React5(tmp4(5872), obj7);
   }
-  items1[2] = tmp13;
-  let tmp27Result = !compact;
+  items1[2] = tmp15;
+  let tmp29Result = !compact;
   if (compact) {
-    tmp27Result = tmp19;
+    tmp29Result = tmp21;
   }
-  if (tmp27Result) {
-    let tmp28;
-    if (tmp15) {
+  if (tmp29Result) {
+    let tmp30;
+    if (tmp17) {
       const items4 = [tmp6.banner, ,];
-      ({ banner: arr5[1], background: arr5[2] } = tmp16);
-      tmp28 = items4;
+      ({ banner: arr5[1], background: arr5[2] } = tmp18);
+      tmp30 = items4;
     }
-    const obj9 = { style: tmp28, children: null };
+    const obj9 = { style: tmp30, children: null };
     const obj10 = { name: game.name, width: null, alignLastBaseline: null, onHeightChange: null };
     const _Math = Math;
     obj10.width = Math.max(0, width - tmp4(575).space.PX_16);
-    obj10.alignLastBaseline = tmp15;
-    let tmp30;
-    if (tmp15) {
-      tmp30 = tmp12;
+    obj10.alignLastBaseline = tmp17;
+    let tmp32;
+    if (tmp17) {
+      tmp32 = tmp14;
     }
-    obj10.onHeightChange = tmp30;
-    obj9.children = React5(tmp4(18718), obj10);
-    tmp27Result = React5(timestampProducer, obj9);
-    const tmp4Result = tmp4(18718);
+    obj10.onHeightChange = tmp32;
+    obj9.children = React5(tmp4(18708), obj10);
+    tmp29Result = React5(timestampProducer, obj9);
+    const tmp4Result = tmp4(18708);
   }
-  items1[3] = tmp27Result;
+  items1[3] = tmp29Result;
   obj.children = items1;
   return React6(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const TILE_ASPECT_RATIO = fn(18715).TILE_ASPECT_RATIO;
+const TILE_ASPECT_RATIO = fn(18705).TILE_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 const PX_8 = nativeDefault.space.PX_8;
 let closure_12 = nativeDefault.space.PX_4 / 2;
-let createStyles = fn(5143);
+let createStyles = fn(5170);
 let obj2 = {
   cover: null,
   image: null,
@@ -173,7 +178,7 @@ let obj4 = {
 obj2.icon = { borderRadius: nativeDefault.radii.xs };
 let obj6 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.opacity = fn(18717).COVER_TEXTURE_OPACITY;
+obj6.opacity = fn(18707).COVER_TEXTURE_OPACITY;
 obj2.texture = obj6;
 const rect = {
   position: "absolute",
@@ -200,7 +205,7 @@ const rect1 = {
 };
 obj2.banner = rect1;
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5143);
+createStyles = fn(5170);
 let closure_14 = createStyles.createStyles((height, width, height2, backgroundColor) => {
   if (null == backgroundColor) {
     let obj = {};

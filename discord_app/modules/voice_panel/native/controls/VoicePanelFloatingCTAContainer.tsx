@@ -15,12 +15,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-function FloatingCTA(trailing) {
-  trailing = trailing.trailing;
-  const merged = Object.assign(trailing, Object.assign({ trailing: 0 }));
+function FloatingCTA(arg0) {
+  ({ trailing, onPress } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ trailing: 0, onPress: 0 }));
+  let tmp3 = null == trailing;
+  if (tmp3) {
+    tmp3 = null != onPress;
+  }
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  obj.children = jsx(RowButton.RowButton, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
+  obj.children = jsx(RowButton.RowButton, { experimental_withBlurBackground: true, arrow: tmp3, trailing, onPress });
   return jsx(Stack_Stack.Stack, { children: null });
 }
 class VoicePanelFloatingCTAContainer {
@@ -56,10 +60,12 @@ class VoicePanelFloatingCTAContainer {
     );
     closure_3 = memo;
     obj3 = closure_0(closure_2[17]);
-    floatingCTAProps = obj3.useFloatingCTAProps(stateFromStores);
-    tmp10 = closure_1(closure_2[18])(mode, wrapperSpecs, { state, cleanUp });
-    ({ hiddenProps, hiddenStyles } = tmp10);
-    obj4 = closure_0(closure_2[19]);
+    stageCTAProps = obj3.useStageCTAProps(stateFromStores);
+    obj4 = closure_0(closure_2[17]);
+    floatingCTAProps = obj4.useFloatingCTAProps(stateFromStores);
+    tmp11 = closure_1(closure_2[18])(mode, wrapperSpecs, { state, cleanUp });
+    ({ hiddenProps, hiddenStyles } = tmp11);
+    obj5 = closure_0(closure_2[19]);
     items2 = [, , , , , , , , , , , , ,];
     items2[0] = closure_12;
     items2[1] = closure_0(closure_2[20]).getControlsDefaultWidth;
@@ -88,7 +94,7 @@ class VoicePanelFloatingCTAContainer {
     closure_10 = undefined;
     closure_11 = undefined;
     closure_12 = undefined;
-    [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24] = items2;
+    [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, tmp25] = items2;
     class VoicePanelFloatingCTAContainerTsx1 {
       constructor() {
         tmp = closure_0(closure_1.get().width, closure_2.get().left, closure_2.get().right);
@@ -127,58 +133,65 @@ class VoicePanelFloatingCTAContainer {
       }
     }
     items3 = [, , , , , , , , , , , ,];
-    items3[0] = tmp12;
-    items3[1] = tmp13;
-    items3[2] = tmp14;
-    items3[3] = tmp15;
-    items3[4] = tmp16;
-    items3[5] = tmp17;
-    items3[6] = tmp18;
-    items3[7] = tmp19;
-    items3[8] = tmp20;
-    items3[9] = tmp21;
-    items3[10] = tmp22;
-    items3[11] = tmp23;
-    items3[12] = tmp24;
+    items3[0] = tmp13;
+    items3[1] = tmp14;
+    items3[2] = tmp15;
+    items3[3] = tmp16;
+    items3[4] = tmp17;
+    items3[5] = tmp18;
+    items3[6] = tmp19;
+    items3[7] = tmp20;
+    items3[8] = tmp21;
+    items3[9] = tmp22;
+    items3[10] = tmp23;
+    items3[11] = tmp24;
+    items3[12] = tmp25;
     VoicePanelFloatingCTAContainerTsx1.__closure = items3;
     VoicePanelFloatingCTAContainerTsx1.__workletHash = 6234134411441;
-    VoicePanelFloatingCTAContainerTsx1.__initData = tmp11;
-    tmp26 = closure_9;
-    animatedStyle = obj4.useAnimatedStyle(VoicePanelFloatingCTAContainerTsx1);
+    VoicePanelFloatingCTAContainerTsx1.__initData = tmp12;
+    tmp27 = closure_9;
+    animatedStyle = obj5.useAnimatedStyle(VoicePanelFloatingCTAContainerTsx1);
     obj1 = { style: null, animatedProps: hiddenProps, children: null };
     items4 = [, ,];
     items4[0] = tmp.container;
     items4[1] = animatedStyle;
     items4[2] = hiddenStyles;
     obj1.style = items4;
-    if (null != memo) {
-      obj8 = { contentTypes: null, children: null };
-      obj8.contentTypes = tmp5;
-      obj8.children = function children() {
+    if (null != stageCTAProps) {
+      tmp33 = closure_11;
+      obj10 = {};
+      tmp34 = obj10;
+      tmp35 = stageCTAProps;
+      merged = Object.assign(stageCTAProps);
+      tmp27Result = tmp27(closure_11, obj10);
+    } else if (null != memo) {
+      obj11 = { contentTypes: null, children: null };
+      obj11.contentTypes = tmp5;
+      obj11.children = function children() {
         const merged = Object.assign(c3);
         return <FloatingCTA />;
       };
-      tmp26Result = tmp26(tmp2(tmp3[23]), obj8);
+      tmp27Result = tmp27(tmp2(tmp3[23]), obj11);
     } else {
-      tmp26Result = null;
+      tmp27Result = null;
       if (null != floatingCTAProps) {
-        tmp28 = closure_11;
-        obj9 = {};
-        tmp29 = obj9;
-        tmp30 = floatingCTAProps;
-        merged = Object.assign(floatingCTAProps);
-        tmp26Result = tmp26(closure_11, obj9);
+        tmp29 = closure_11;
+        obj12 = {};
+        tmp30 = obj12;
+        tmp31 = floatingCTAProps;
+        merged1 = Object.assign(floatingCTAProps);
+        tmp27Result = tmp27(closure_11, obj12);
       }
     }
-    obj1.children = tmp26Result;
-    return tmp26(tmp2(tmp3[19]).View, obj1);
+    obj1.children = tmp27Result;
+    return tmp27(tmp2(tmp3[19]).View, obj1);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(11419).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11422).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(11381).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11384).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1083).ThemeTypes;
 let jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: null };
 const rect = {
   zIndex: 1,

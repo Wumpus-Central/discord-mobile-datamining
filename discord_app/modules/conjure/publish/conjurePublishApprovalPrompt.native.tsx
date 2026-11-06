@@ -15,7 +15,7 @@ export function promptPublishApproval(approval_url) {
   }
   if (obj.validPublishApproval(approval_url, str)) {
     ConjurePublishBlockedSheetDefault(
-      tmp(11148).ConjurePublishBlockedReason.PUBLISH_APPROVAL_REQUIRED,
+      tmp(11101).ConjurePublishBlockedReason.PUBLISH_APPROVAL_REQUIRED,
       undefined,
       () => {
         LinkingDefault.openURL(closure_0);

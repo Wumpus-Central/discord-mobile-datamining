@@ -1,5 +1,5 @@
 // discord_app/lib/guild/GuildMemberRequester.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -133,7 +133,7 @@ prototype2["isSettled"] = function isSettled(arg0, arg1) {
 };
 prototype2["flushRequests"] = function flushRequests() {
   const self = this;
-  const item = _modDef12.forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
+  const item = applyDefault.forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
 };
 prototype2["requestUnacknowledged"] = function requestUnacknowledged() {
   if (
@@ -178,7 +178,7 @@ prototype2["getDebugState"] = function getDebugState(arg0) {
   const pendingRequestGuildIds = [];
   const unacknowledgedRequestGuildIds = [];
   const sentRequestGuildIds = [];
-  const item = _modDef12.forEach(this._guildStates, (_pendingRequests) => {
+  const item = applyDefault.forEach(this._guildStates, (_pendingRequests) => {
     _pendingRequests = _pendingRequests._pendingRequests;
     if (_pendingRequests.has(closure_0)) {
       pendingRequestGuildIds.push(_pendingRequests._guildId);

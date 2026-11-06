@@ -1,6 +1,6 @@
 // discord_app/stores/PresenceStore.tsx
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import _modDef1342 from "../../_runtime/metro/01342__.js";
@@ -170,7 +170,7 @@ function flattenPresence(id) {
         }
         closure_14[id] = tmp8;
       }
-      obj = _modDef12;
+      obj = applyDefault;
     }
     ({ status: closure_11[id], activities } = reduced);
     closure_12[id] = activities;
@@ -214,7 +214,7 @@ function flattenPresence(id) {
 function flattenPresenceInConnectionOpen(arg0) {
   if (null != presencesForGuilds[arg0]) {
     const _Object = Object;
-    const maxByResult = _modDef12.maxBy(
+    const maxByResult = applyDefault.maxBy(
       Object.values(tmp),
       (processedAtTimestamp) => processedAtTimestamp.processedAtTimestamp,
     );

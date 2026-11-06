@@ -98,9 +98,9 @@ function RTCDebugGeneral() {
   }
   const obj5 = { title: "general", children: null };
   const obj6 = { obj: null };
-  const tmp4 = channelId(5788)(stateFromStores1);
+  const tmp4 = channelId(5806)(stateFromStores1);
   obj4.name = name;
-  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5788)(stateFromStores1) } };
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5806)(stateFromStores1) } };
   obj5.children = closure_14(ObjectKV, obj6);
   return closure_14(Section, obj5);
 }
@@ -147,15 +147,15 @@ function RTCDebugContext(context) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(5905).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5924).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {}
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(5140);
+const ColorUtils = fn(5167);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };

@@ -21,13 +21,15 @@ export default function useOpenProfileSettings() {
   }
   guild = obj.guild;
   const scrollPosition = obj.scrollPosition;
+  const initialTab = obj.initialTab;
   items = [
     guild,
     scrollPosition,
+    initialTab,
     obj.analyticsLocations,
     guild(scrollPosition[6]).useIsEligibleForUserProfileWYSIWYGEditing("useOpenProfileSettings"),
   ];
-  return useCallback(() => {
+  return initialTab(() => {
     if (null != guild) {
       const guildIdentitySettings = GuildIdentityActionCreators.initGuildIdentitySettings(guild.id);
     }
@@ -37,8 +39,9 @@ export default function useOpenProfileSettings() {
       USER_PROFILE = constants.USER_PROFILE;
     }
     ProfileCustomizationNavigationStore.setState({ subsection: USER_PROFILE, scrollPosition });
-    openUserSettings.openUserSettings({ screen: UserSettingsSections.PROFILE_CUSTOMIZATION });
+    const obj3 = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION, params: { initialTab } };
+    openUserSettings.openUserSettings(obj3);
     const obj2 = { subsection: USER_PROFILE, scrollPosition };
-    const obj3 = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION };
+    const obj4 = { initialTab };
   }, items);
 }

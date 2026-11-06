@@ -1,6 +1,6 @@
 // discord_app/utils/DragAndDropUtils.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 
 function calculatePositionDeltas(arg0) {
   ({ oldOrdering, newOrdering, idGetter, existingPositionGetter, ascending } = arg0);
@@ -61,7 +61,7 @@ function getPositionUpdates(arg0) {
   }
   let values = objectArray;
   if (!Array.isArray(objectArray)) {
-    values = _modDef12.values(objectArray);
+    values = applyDefault.values(objectArray);
   }
   const obj2 = {
     oldOrdering: values,

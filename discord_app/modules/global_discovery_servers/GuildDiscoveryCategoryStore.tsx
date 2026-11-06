@@ -1,5 +1,5 @@
 // discord_app/modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
@@ -110,7 +110,7 @@ export function areDiscoveryCategoriesEqual(arr, arr2) {
     ({ categoryId: arr[0], name: arr[1] } = item);
     return items;
   });
-  return _modDef12.isEqual(
+  return applyDefault.isEqual(
     mapped,
     arr2.map((item) => {
       items = [,];

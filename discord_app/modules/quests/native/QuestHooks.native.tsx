@@ -11,6 +11,7 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import BountyStore from "../BountyStore.tsx";
 import QuestStore from "../QuestStore.tsx";
+import PlayableStore from "PlayableStore.tsx";
 
 const require = globalThis.__r;
 
@@ -18,7 +19,7 @@ require = fn;
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   _require = mobileQuestDock;
   const questDockQuest = require("AdCreativeUtils").getQuestDockQuest(mobileQuestDock);
-  const tmp4 = questDockAdCreativeId(7261)();
+  const tmp4 = questDockAdCreativeId(7208)();
   const obj = require("AdCreativeUtils");
   items = [QuestStore];
   let userStatus1;
@@ -26,7 +27,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
     items,
     () =>
       null !=
-      questPreviewOverride.getQuestPreviewOverride(mobileQuestDock(dependencyMap[11]).QuestContent.QUEST_BAR_MOBILE),
+      questPreviewOverride.getQuestPreviewOverride(mobileQuestDock(dependencyMap[12]).QuestContent.QUEST_BAR_MOBILE),
     [],
   );
   if (questDockQuest != null) {
@@ -34,8 +35,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(7987).isDismissed(questDockQuest.userStatus, tmp(6922).QuestContent.QUEST_BAR_MOBILE);
-    const tmpResult = tmp(7987);
+    isDismissedResult = tmp(7941).isDismissed(questDockQuest.userStatus, tmp(6864).QuestContent.QUEST_BAR_MOBILE);
+    const tmpResult = tmp(7941);
   }
   let claimedAt;
   if (questDockQuest != null) {
@@ -46,11 +47,11 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   const obj2 = require("initialize");
   const isQuestExpired = require("hooks/QuestHooks").useIsQuestExpired(questDockQuest);
-  const tmpResult6 = require("hooks/QuestHooks");
+  const tmpResult7 = require("hooks/QuestHooks");
   let isEligibleForQuests = require("QuestsEligibility").getIsEligibleForQuests();
-  const tmpResult7 = require("QuestsEligibility");
+  const tmpResult8 = require("QuestsEligibility");
   questDockAdCreativeId = require("AdCreativeUtils").getQuestDockAdCreativeId(mobileQuestDock);
-  const tmpResult8 = require("AdCreativeUtils");
+  const tmpResult9 = require("AdCreativeUtils");
   const items1 = [QuestStore];
   const items2 = [questDockAdCreativeId];
   const stateFromStores1 = require("initialize").useStateFromStores(
@@ -64,10 +65,9 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
     },
     items2,
   );
-  const tmpResult9 = require("initialize");
+  const tmpResult10 = require("initialize");
   const items3 = [BountyStore];
   const items4 = [mobileQuestDock];
-  const type = mobileQuestDock.type;
   const stateFromStores2 = require("initialize").useStateFromStores(
     items3,
     () => {
@@ -79,9 +79,24 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
     },
     items4,
   );
+  const tmpResult11 = require("initialize");
+  const items5 = [PlayableStore];
+  const items6 = [mobileQuestDock];
+  const type = mobileQuestDock.type;
+  const stateFromStores3 = require("initialize").useStateFromStores(
+    items5,
+    () => {
+      let isPlayableCompletedResult = mobileQuestDock.type === AdCreativeType.AdCreativeType.PLAYABLE;
+      if (isPlayableCompletedResult) {
+        isPlayableCompletedResult = PlayableStore.isPlayableCompleted(mobileQuestDock.playable.id);
+      }
+      return isPlayableCompletedResult;
+    },
+    items6,
+  );
   if (require("AdCreativeType").AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(6926).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(6868).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -92,31 +107,34 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(6926).AdCreativeType.PLAYABLE === type) {
-    let tmp18 = isEligibleForQuests;
+  } else if (tmp(6868).AdCreativeType.PLAYABLE === type) {
+    let tmp19 = isEligibleForQuests;
     if (isEligibleForQuests) {
-      tmp18 = !stateFromStores1;
+      tmp19 = !stateFromStores1;
     }
-    if (tmp18) {
-      tmp18 = !tmp4;
+    if (tmp19) {
+      tmp19 = !stateFromStores3;
     }
-    return tmp18;
-  } else if (tmp(6926).AdCreativeType.QUEST === type) {
+    if (tmp19) {
+      tmp19 = !tmp4;
+    }
+    return tmp19;
+  } else if (tmp(6868).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
-        let tmp16 = null != questDockQuest && !tmp4;
+        let tmp17 = null != questDockQuest && !tmp4;
       }
-      return tmp16;
+      return tmp17;
     }
-    tmp16 = null != questDockQuest && isEligibleForQuests && !isQuestExpired && !tmp10 && !isDismissedResult && !tmp4;
-    const tmp17 =
+    tmp17 = null != questDockQuest && isEligibleForQuests && !isQuestExpired && !tmp10 && !isDismissedResult && !tmp4;
+    const tmp18 =
       null != questDockQuest && isEligibleForQuests && !isQuestExpired && !tmp10 && !isDismissedResult && !tmp4;
   }
-  const tmpResult10 = require("initialize");
+  const tmpResult12 = require("initialize");
 }
-const QuestConstants = fn(6919);
-({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_9, QuestVariants: closure_10 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(6684).CAPTCHA_MODAL_KEY;
+const QuestConstants = fn(6861);
+({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_10, QuestVariants: closure_11 } = QuestConstants);
+const CAPTCHA_MODAL_KEY = fn(6625).CAPTCHA_MODAL_KEY;
 const ThemeTypes = fn(1083).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestHooks.native.tsx");
@@ -165,7 +183,7 @@ export function useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuest
     key = key.getKey();
     let tmp2 = key === CAPTCHA_MODAL_KEY;
     if (!tmp2) {
-      tmp2 = key === closure_1_9;
+      tmp2 = key === closure_1_10;
     }
     return tmp2;
   });
@@ -224,7 +242,7 @@ export function useHasWatchVideoOnMobileTasks(config) {
 export function useMobileActivityQuest(quest) {
   _require = quest;
   const activityApplicationId = require("QuestTaskUtils").getActivityApplicationId(quest);
-  analyticsLocations = activityApplicationId(analyticsLocations[23])().analyticsLocations;
+  analyticsLocations = activityApplicationId(analyticsLocations[24])().analyticsLocations;
   let obj = require("QuestTaskUtils");
   const tmp = analyticsLocations;
   const tmp3 = activityApplicationId;
@@ -248,8 +266,8 @@ export function useMobileActivityQuest(quest) {
         supported_platforms = embeddedActivityConfig.supported_platforms;
       }
     }
-    canLaunchActivityResult = tmp3(tmp[26])(supported_platforms);
-    const tmp3Result = tmp3(tmp[26]);
+    canLaunchActivityResult = tmp3(tmp[27])(supported_platforms);
+    const tmp3Result = tmp3(tmp[27]);
   }
   if (canLaunchActivityResult) {
     if (!result) {
@@ -319,7 +337,7 @@ export function useMobileActivityQuest(quest) {
                   const obj5 = { applicationId: stateFromStores.id, analyticsLocations };
                   v1 = 1;
                   c0 = 1;
-                  const obj6 = { value: v1(analyticsLocations[28]).launch(obj5), done: false };
+                  const obj6 = { value: v1(analyticsLocations[29]).launch(obj5), done: false };
                   return obj6;
                 }
               }

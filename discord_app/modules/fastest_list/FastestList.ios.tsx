@@ -18,7 +18,7 @@ export default function FastestList(inActionSheet) {
     horizontal = false;
   }
   inActionSheet = inActionSheet.inActionSheet;
-  const keyExtractor = inActionSheet.keyExtractor;
+  keyExtractor = inActionSheet.keyExtractor;
   ({
     listFooterAlwaysMounted,
     insetStart,

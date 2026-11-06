@@ -1,14 +1,14 @@
 // discord_app/modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
-import _mod7433 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7380 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod7433;
+  const tmp3 = _mod7380;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/MemberVerificationFormStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import MemberVerificationTypes from "MemberVerificationTypes.tsx";
@@ -20,7 +20,7 @@ prototype["getRulesPrompt"] = function getRulesPrompt(guildId) {
   if (dependencyMap[guildId] != null) {
     formFields = tmp2.formFields;
   }
-  return _modDef12.find(formFields, MemberVerificationTypes.isTermsFormField);
+  return applyDefault.find(formFields, MemberVerificationTypes.isTermsFormField);
 };
 MemberVerificationFormStore.displayName = "MemberVerificationFormStore";
 const memberVerificationFormStore = new MemberVerificationFormStore(DispatcherDefault, {

@@ -66,7 +66,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6985);
+const FramesConstants = fn(6927);
 ({ FrameIntent: closure_6, makeFrameId: metroImportDefault } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrames.tsx");

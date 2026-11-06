@@ -83,9 +83,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7920).WIDGET_TITLES_BY_TYPE;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
-let closure_9 = fn(12573).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(7874).WIDGET_TITLES_BY_TYPE;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
+let closure_9 = fn(12538).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -753,10 +753,10 @@ export function updatePendingGameTags(arr, gameId, tags) {
     }
   }
 }
-export function removeTagFromGame(widgetType, arg1, arg2) {
-  closure_0 = arg1;
-  let obj = arg2;
-  const tmp2 = findGameWidget(widgetType);
+export function removeTagFromGame(editableTagsWidgetType, gameId, tag) {
+  closure_0 = gameId;
+  let obj = tag;
+  const tmp2 = findGameWidget(editableTagsWidgetType);
   if (null != tmp2) {
     const games = tmp2.games;
     const found = games.find((gameId) => gameId.gameId === closure_0);
@@ -768,7 +768,7 @@ export function removeTagFromGame(widgetType, arg1, arg2) {
           if (found1.length <= 0) {
             found1 = [];
           }
-          closure_0 = arg1;
+          closure_0 = gameId;
           const _Object = Object;
           if (found1.length <= Object.values(WidgetGameTag.WidgetGameTag).length) {
             const tmpResult = findGameWidget(tmp2.type);
@@ -801,17 +801,17 @@ export function removeTagFromGame(widgetType, arg1, arg2) {
     }
   }
 }
-export function updatePendingGameComment(widgetType, arg1, comment) {
-  closure_0 = arg1;
+export function updatePendingGameComment(widgetType, gameId, trimmed) {
+  closure_0 = gameId;
   let tmp = findGameWidget(widgetType);
   if (null != tmp) {
     const games = tmp.games;
     const found = games.find((gameId) => gameId.gameId === closure_0);
     if (null != found) {
-      if (comment !== found.comment) {
+      if (trimmed !== found.comment) {
         const obj = {};
         const merged = Object.assign(found);
-        obj.comment = comment;
+        obj.comment = trimmed;
         const games1 = tmp.games;
         const mapped = games1.map((gameId) => {
           let tmp = gameId;
@@ -943,8 +943,8 @@ export function reorderGamesInWidget(widgetType, arg1, arg2) {
     }
   }
 }
-export function removePendingGameFromWidget(widgetType, arg1) {
-  closure_0 = arg1;
+export function removePendingGameFromWidget(widgetType, gameId) {
+  closure_0 = gameId;
   let merged = findGameWidget(widgetType);
   if (null != merged) {
     const found = null != merged.games ? merged.games : [].filter((gameId) => gameId.gameId !== closure_0);

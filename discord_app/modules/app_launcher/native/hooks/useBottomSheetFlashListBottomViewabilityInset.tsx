@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/hooks/useBottomSheetFlashListBottomViewabilityInset.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useKeyboardActionSheetHeightDefault from "../../../action_sheet/native/useKeyboardActionSheetHeight.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -30,7 +30,7 @@ export function useBottomSheetFlashListBottomViewabilityInset() {
   importDefault = bottomVisibilityInsetRef;
   const memo = noop.useMemo(
     () =>
-      _modDef12.debounce(function _handleBottomViewabilityInset(current) {
+      applyDefault.debounce(function _handleBottomViewabilityInset(current) {
         _undefined.current = current;
         current = ref.current;
         if (current != null) {

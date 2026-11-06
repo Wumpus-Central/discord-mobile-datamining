@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileActivityEmptyStates.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -101,7 +101,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   },
 ];
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 },
   text: null,
@@ -120,15 +120,15 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(6179).getName(guildId, channelId, user);
+  name = name(6199).getName(guildId, channelId, user);
   const intl = user(1113).intl;
-  let obj = name(6179);
+  let obj = name(6199);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1113).t.sjSitP, { name }),
     bodyText: _slicedToArray(
       noop.useState(() => {
-        let sampleResult = _mod12.sample(items);
+        let sampleResult = apply.sample(items);
         if (sampleResult == null) {
           sampleResult = items[0];
         }
@@ -148,7 +148,7 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   const intl2 = user(1113).intl;
   obj4.text = intl2.string(user(1113).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5770).Button, obj4);
+  obj3.children = closure_7(user(5788).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

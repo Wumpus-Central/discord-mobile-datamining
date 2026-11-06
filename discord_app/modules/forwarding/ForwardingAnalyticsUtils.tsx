@@ -1,5 +1,5 @@
 // discord_app/modules/forwarding/ForwardingAnalyticsUtils.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -63,7 +63,7 @@ export function trackForwardCopyLink(channel_id, id) {
 export function useTrackForwardAddRecipientOnce() {
   return noop.useMemo(
     () =>
-      _mod12.once((channel_id, message_id, has_query) => {
+      apply.once((channel_id, message_id, has_query) => {
         closure_1_1(closure_1_2[3]).track(constants.FORWARD_ADD_RECIPIENT, { channel_id, message_id, has_query });
       }),
     [],
@@ -72,7 +72,7 @@ export function useTrackForwardAddRecipientOnce() {
 export function useTrackForwardEditSearchOnce() {
   return noop.useMemo(
     () =>
-      _mod12.once((channel_id, message_id) => {
+      apply.once((channel_id, message_id) => {
         closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_SEARCH, { channel_id, message_id });
       }),
     [],
@@ -81,7 +81,7 @@ export function useTrackForwardEditSearchOnce() {
 export function useTrackForwardEditContextMessageOnce() {
   return noop.useMemo(
     () =>
-      _mod12.once((channel_id, message_id) => {
+      apply.once((channel_id, message_id) => {
         closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_CONTEXT_MESSAGE, { channel_id, message_id });
       }),
     [],

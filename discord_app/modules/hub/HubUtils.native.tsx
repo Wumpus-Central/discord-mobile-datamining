@@ -1,7 +1,7 @@
 // discord_app/modules/hub/HubUtils.native.tsx
 import HubEmailConnectionModalActionCreatorsDefault from "native/components/HubEmailConnectionModalActionCreators.tsx";
 import InviteStore from "../../stores/InviteStore.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 
 let closure_3 = apply.throttle(
   (code) => {

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ChannelTypes from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -40,10 +40,10 @@ import ICYMIStore from "../ICYMIStore.tsx";
 const require = globalThis.__r;
 
 const util = LeftBackIconWithBadge(1113);
-const Pressables = LeftBackIconWithBadge(7124);
-const XSmallIcon = LeftBackIconWithBadge(7198);
-const notifications_Notifications = LeftBackIconWithBadge(18775);
-const BackIconWithBadge = LeftBackIconWithBadge(18777);
+const Pressables = LeftBackIconWithBadge(7068);
+const XSmallIcon = LeftBackIconWithBadge(7145);
+const BackIconWithBadge = LeftBackIconWithBadge(16832);
+const notifications_Notifications = LeftBackIconWithBadge(18764);
 require = fn;
 function SettingsButton() {
   return gesture(IconButton.IconButton, {
@@ -185,7 +185,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18850, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18838, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -231,7 +231,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-          isFocused(11345).showForLaterModal(isFocused(10376).SavedMessageSortTypes.BOOKMARK);
+          isFocused(11300).showForLaterModal(isFocused(10328).SavedMessageSortTypes.BOOKMARK);
         },
       };
       ref1.current = obj;
@@ -421,11 +421,11 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: closure_6 } = get_ActivityIndicator);
-let closure_12 = fn(18826).NUM_GUILDS_EXTENDED_ONBOARDING;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+let closure_12 = fn(18814).NUM_GUILDS_EXTENDED_ONBOARDING;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_17 = createStyles.createStyles((paddingTop) => {
   const obj = {
     containerOuterTablet: {
@@ -438,7 +438,7 @@ let closure_17 = createStyles.createStyles((paddingTop) => {
   };
   return obj;
 });
-const createICYMIStyles = fn(18827);
+const createICYMIStyles = fn(18815);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: { flex: 1, flexShrink: 1, flexGrow: 1 },

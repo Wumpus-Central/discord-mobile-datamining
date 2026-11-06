@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardsGrid.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import CollectiblesShopCardV2Default from "CollectiblesShopCardV2.tsx";
 import CollectiblesAnalyticsContext from "../CollectiblesAnalyticsContext.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -27,8 +27,8 @@ function ShopCardGridItem(index) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9612).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(5170);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9558).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
@@ -42,12 +42,12 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(18144).useCardLayout();
+  const cardLayout = products(18136).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   items = [products, columns];
   ({ rowWidth, ref, onLayout } = cardLayout);
-  const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
+  const memo = noop.useMemo(() => applyDefault.chunk(products, columns), items);
   const obj2 = {
     accessibilityLabel: accessibilityLabel.accessibilityLabel,
     accessibilityRole: "list",
@@ -59,9 +59,9 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     contentContainerStyle: null,
     children: null,
   };
-  let obj = products(18144);
+  let obj = products(18136);
   obj2.contentContainerStyle = {
-    gap: products(9612).COLLECTIBLES_SHOP_CARD_GAP,
+    gap: products(9558).COLLECTIBLES_SHOP_CARD_GAP,
     paddingTop,
     paddingBottom,
     width: rowWidth,

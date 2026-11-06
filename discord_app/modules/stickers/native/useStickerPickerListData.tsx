@@ -1,12 +1,12 @@
 // discord_app/modules/stickers/native/useStickerPickerListData.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import StickersTypes from "../StickersTypes.tsx";
 import age_gate_AgeGateUtils from "../../age_gate/native/AgeGateUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let useStickerPickerStore = fn(10453).useStickerPickerStore;
-const StickerPickerConstants = fn(10420);
+let useStickerPickerStore = fn(10405).useStickerPickerStore;
+const StickerPickerConstants = fn(10372);
 ({
   MIN_MARGIN: hasOwnProperty,
   ROW_HEIGHT: closure_6,
@@ -15,7 +15,7 @@ const StickerPickerConstants = fn(10420);
 } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
 let closure_9 = LABEL_HEIGHT + 2 * fn(1228).PADDING_VERTICAL;
-let closure_10 = fn(10208).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10208).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+let closure_10 = fn(10160).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10160).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 
@@ -46,7 +46,7 @@ export default function useStickerPickerListData(containerWidth) {
         num2.push(1);
       } else {
         const found = nitroLocked.filter((format_type) => items1.includes(format_type.format_type));
-        const chunkResult = _modDef12.chunk(found, mapped2);
+        const chunkResult = applyDefault.chunk(found, mapped2);
         const obj3 = { type: obj.STICKERS, stickersByRow: chunkResult };
         items3.push(obj3);
         num2.push(chunkResult.length);

@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/age_notice/getAgeNoticeWarningDescriptions.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3255 from "intl/AgeNotice.messages.js";
+import _modDef3284 from "intl/AgeNotice.messages.js";
 import AgeNoticeExperiment from "AgeNoticeExperiment.tsx";
 import AgeNoticeConstants from "AgeNoticeConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -34,13 +34,13 @@ export function getAgeNoticeWarningDescriptions(tmp3Result, guildName) {
       obj2.unverified = stringResult;
     } else {
       const obj3 = { guildName };
-      obj2.adult = intl.formatToPlainString(_modDef3255.iK0n30, obj3);
+      obj2.adult = intl.formatToPlainString(_modDef3284.iK0n30, obj3);
       const intl2 = util.intl;
       const obj4 = { guildName };
-      obj2.teen = intl2.formatToPlainString(_modDef3255.ezJA0R, obj4);
+      obj2.teen = intl2.formatToPlainString(_modDef3284.ezJA0R, obj4);
       const intl3 = util.intl;
       const obj5 = { guildName };
-      obj2.unverified = intl3.formatToPlainString(_modDef3255.h4HbnI, obj5);
+      obj2.unverified = intl3.formatToPlainString(_modDef3284.h4HbnI, obj5);
     }
   }
   obj = AgeNoticeExperiment;

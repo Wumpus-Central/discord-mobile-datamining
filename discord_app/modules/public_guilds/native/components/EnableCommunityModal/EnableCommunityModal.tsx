@@ -28,10 +28,10 @@ const result = size.fileFinishedImporting(
 export default function EnableCommunityModal() {
   const memo = noop.useMemo(() => {
     function headerRight() {
-      const obj = { source: closure_1_1(8504), onPress, accessibilityLabel: null };
+      const obj = { source: closure_1_1(8450), onPress, accessibilityLabel: null };
       const intl = closure_1_0(1113).intl;
       obj.accessibilityLabel = intl.string(closure_1_0(1113).t.cpT0Cq);
-      return closure_1_4(closure_1_0(7700).HeaderActionButton, obj);
+      return closure_1_4(closure_1_0(7653).HeaderActionButton, obj);
     }
     return {
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_1]: {
@@ -41,7 +41,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(20153), {});
+          return closure_1_4(closure_1_1(20160), {});
         },
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: {
@@ -50,7 +50,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(20165), {});
+          return closure_1_4(closure_1_1(20172), {});
         },
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: {
@@ -59,7 +59,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(20166), {});
+          return closure_1_4(closure_1_1(20173), {});
         },
       },
     };

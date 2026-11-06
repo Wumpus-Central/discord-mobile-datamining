@@ -26,8 +26,8 @@ const result = size.fileFinishedImporting("modules/slayer_storefront/storefrontC
 
 export const MAX_STOREFRONT_EMBED_SKUS = 6;
 export { normalizeStorefrontSkuIds };
-export function makeStorefrontCodedLink(items, applicationId) {
-  return "" + items.join(",") + "-" + applicationId;
+export function makeStorefrontCodedLink(items, applicationId1) {
+  return "" + items.join(",") + "-" + applicationId1;
 }
 export function parseStorefrontCodedLink(code) {
   const parts = code.split("-");

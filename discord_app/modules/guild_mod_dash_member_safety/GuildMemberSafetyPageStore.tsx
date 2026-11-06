@@ -1,5 +1,5 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyPageStore.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import GuildMemberSafetyMembers from "GuildMemberSafetyMembers.tsx";
 import guild_mod_dash_member_safety_DateUtils from "DateUtils.tsx";
@@ -420,12 +420,12 @@ prototype["updateMembersSort"] = function updateMembersSort(selectedSort) {
   closure_0 = selectedSort;
   return new Promise((fn) => {
     items = [
-      ..._mod12.cloneDeep(
+      ...apply.cloneDeep(
         self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0],
       ),
     ];
     HermesBuiltin.arraySpread(
-      _mod12.cloneDeep(self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0]),
+      apply.cloneDeep(self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0]),
       tmp,
     );
     const item = items.forEach((item) => {
@@ -515,7 +515,7 @@ prototype["refreshNewMembersAndSearchResults"] = function refreshNewMembersAndSe
         const NumberResult = Number(Date.now());
         self._scheduleRefresh(NumberResult);
         const _members = self._members;
-        const cloneDeepResult = _mod12.cloneDeep(
+        const cloneDeepResult = apply.cloneDeep(
           _members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER),
         );
         let flag2 = false;
@@ -586,7 +586,7 @@ prototype["updateSearchState"] = function updateSearchState(selectedSort) {
           }
         }
         const _members = self._members;
-        const cloneDeepResult = _mod12.cloneDeep(
+        const cloneDeepResult = apply.cloneDeep(
           _members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER),
         );
         let flag2 = BooleanResult !== self._search.hasDefaultQuery;

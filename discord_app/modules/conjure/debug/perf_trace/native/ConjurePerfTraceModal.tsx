@@ -18,11 +18,11 @@ function WaterfallRow(node) {
   ({ onSelect: dependencyMap, onToggle: noop, onExpandSubtree: closure_4 } = node);
   const tmp = closure_11();
   const detail = tmp;
-  const perfCategoryColors = node(13244).usePerfCategoryColors();
+  const perfCategoryColors = node(13218).usePerfCategoryColors();
   if (collapsed) {
-    let ChevronSmallDownIcon = tmp2(7516).ChevronSmallRightIcon;
+    let ChevronSmallDownIcon = tmp2(7461).ChevronSmallRightIcon;
   } else {
-    ChevronSmallDownIcon = tmp2(11611).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp2(11573).ChevronSmallDownIcon;
   }
   if (node.failed) {
     let running = tmp.failed;
@@ -62,7 +62,7 @@ function WaterfallRow(node) {
   obj2.accessibilityState = obj3;
   const obj4 = { style: null, children: null };
   const items1 = [tmp.rowTop];
-  let obj = node(13244);
+  let obj = node(13218);
   items1[1] = { paddingLeft: node.depth * selected(575).space.PX_12 };
   obj4.style = items1;
   if (node.children.length > 0) {
@@ -93,15 +93,15 @@ function WaterfallRow(node) {
   let tmp13Result = null;
   if (node.descendants > 0) {
     const obj9 = { variant: "body-xs/normal", color: "text-muted", children: node.descendants };
-    tmp13Result = tmp13(tmp2(5763).Text, obj9);
+    tmp13Result = tmp13(tmp2(5781).Text, obj9);
   }
   items2[1] = tmp13Result;
   const obj10 = { style: null };
   const items3 = [tmp.swatch, perfCategoryColors[node.category]];
   obj10.style = items3;
   items2[2] = tmp13(closure_6, obj10);
-  items2[3] = tmp13(node(5763).Text, { variant: "body-xs/semibold", color: "text-strong", children: node.service });
-  items2[4] = tmp13(node(5763).Text, {
+  items2[3] = tmp13(node(5781).Text, { variant: "body-xs/semibold", color: "text-strong", children: node.service });
+  items2[4] = tmp13(node(5781).Text, {
     variant: "body-xs/normal",
     color: "text-default",
     style: tmp.operation,
@@ -114,14 +114,14 @@ function WaterfallRow(node) {
     const obj14 = { variant: "footnote/semibold", color: "text-default", children: null };
     const _HermesInternal = HermesInternal;
     obj14.children = "\u00D7" + node.count;
-    obj13.children = tmp13(tmp2(5763).Text, obj14);
+    obj13.children = tmp13(tmp2(5781).Text, obj14);
     tmp13Result4 = tmp13(closure_6, obj13);
   }
   items2[5] = tmp13Result4;
   let tmp13Result5 = null;
   if (node.failed) {
     const obj15 = { size: "xs", color: selected(575).colors.STATUS_DANGER };
-    tmp13Result5 = tmp13(tmp2(8171).WarningIcon, obj15);
+    tmp13Result5 = tmp13(tmp2(8117).WarningIcon, obj15);
   }
   items2[6] = tmp13Result5;
   const obj16 = { variant: "body-xs/normal", color: "text-muted", children: null };
@@ -134,8 +134,8 @@ function WaterfallRow(node) {
     children: node.operation,
   };
   const obj5 = { paddingLeft: node.depth * selected(575).space.PX_12 };
-  obj16.children = node(13245).perfNodeDuration(node);
-  items2[7] = tmp13(node(5763).Text, obj16);
+  obj16.children = node(13219).perfNodeDuration(node);
+  items2[7] = tmp13(node(5781).Text, obj16);
   obj4.children = items2;
   const items4 = [closure_9(closure_6, obj4), ,];
   const obj17 = { style: tmp.track, children: null };
@@ -155,8 +155,8 @@ function WaterfallRow(node) {
     const obj21 = { paddingLeft: node.depth * selected(575).space.PX_12 };
     items6[1] = obj21;
     obj20.style = items6;
-    const tmp2Result2 = tmp2(13245);
-    obj20.children = tmp2(13245)
+    const tmp2Result2 = tmp2(13219);
+    obj20.children = tmp2(13219)
       .perfNodeSections(node)
       .map((item) => {
         ({ title, rows } = item);
@@ -179,8 +179,8 @@ function WaterfallRow(node) {
             }
             const obj = { style: detailLine, children: null };
             items = [
-              closure_2_8(node(5763).Text, { variant: "body-xs/semibold", color: "text-muted", children: label }),
-              closure_2_8(node(5763).Text, {
+              closure_2_8(node(5781).Text, { variant: "body-xs/semibold", color: "text-muted", children: label }),
+              closure_2_8(node(5781).Text, {
                 variant: "body-xs/normal",
                 color: "text-default",
                 style: tmp4.operation,
@@ -199,7 +199,7 @@ function WaterfallRow(node) {
         return React6(timestampProducer, obj, title);
       });
     tmp13Result6 = tmp13(closure_6, obj20);
-    const perfNodeSectionsResult = tmp2(13245).perfNodeSections(node);
+    const perfNodeSectionsResult = tmp2(13219).perfNodeSections(node);
   }
   items4[2] = tmp13Result6;
   obj2.children = items4;
@@ -297,16 +297,16 @@ function Waterfall(trace) {
     const obj9 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
     obj9.children = "Started by " + trace.started_by.trace_name;
-    tmp8Result = closure_8(tmp4(5763).Text, obj9);
+    tmp8Result = closure_8(tmp4(5781).Text, obj9);
   }
   items1[2] = tmp8Result;
   let tmp8Result2 = null;
   if (0 !== trace.dropped) {
     const obj10 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
     const _HermesInternal2 = HermesInternal;
-    obj10.children = "" + tmp4(13245).formatSpanCount(trace.dropped) + " not recorded";
-    tmp8Result2 = closure_8(tmp4(5763).Text, obj10);
-    const tmp4Result = tmp4(13245);
+    obj10.children = "" + tmp4(13219).formatSpanCount(trace.dropped) + " not recorded";
+    tmp8Result2 = closure_8(tmp4(5781).Text, obj10);
+    const tmp4Result = tmp4(13219);
   }
   items1[3] = tmp8Result2;
   obj4.children = items1;
@@ -378,7 +378,7 @@ function PerfTraceScreen(projectId) {
     items1,
   );
   if (null == stateFromStores) {
-    let tmp6 = closure_8(projectId(5763).Text, {
+    let tmp6 = closure_8(projectId(5781).Text, {
       variant: "body-sm/normal",
       color: "text-muted",
       children: "This trace is no longer available.",
@@ -394,7 +394,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const perf_trace = "perf_trace";
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   content: { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12 },
   section: null,

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet.tsx";
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_9 = createStyles.createStyles({
   badgeNameContainer: { flexDirection: "row" },
   tenureRequirements: { marginStart: 4 },

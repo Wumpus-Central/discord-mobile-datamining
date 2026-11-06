@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/NotificationsManager.native.tsx
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/02123_asyncRequireImpl.js";
-import _modDef2171 from "../../../_runtime/metro/02171__.js";
+import asyncRequireImpl from "../../../_runtime/02118_asyncRequireImpl.js";
+import _modDef2166 from "../../../_runtime/metro/02166__.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import NativePermissionManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativePermissionManagerModule.tsx";
 import PushNotificationActionCreators from "../../actions/native/PushNotificationActionCreators.tsx";
@@ -20,8 +20,8 @@ function haveNotSeenPromptSince(arg0, arg1) {
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      tmp4 = _modDef2171().diff(tmp, "days") >= 1;
-      const obj = _modDef2171();
+      tmp4 = _modDef2166().diff(tmp, "days") >= 1;
+      const obj = _modDef2166();
     }
     tmp2 = tmp4;
   }
@@ -87,7 +87,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(19898, dependencyMap.paths), gesture, obj3);
+    obj2.openLazy(asyncRequireImpl(19904, dependencyMap.paths), gesture, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -170,11 +170,11 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
     }
   }
 };
-const PermissionPromptType = fn(14204).PermissionPromptType;
+const PermissionPromptType = fn(14181).PermissionPromptType;
 const Constants = fn(1072);
 ({ RelationshipTypes: closure_10, GuildFeatures: closure_11, AnalyticEvents: closure_12 } = Constants);
-let closure_13 = fn(8085).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(14205);
+let closure_13 = fn(8031).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(14182);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_14, EventActionLocation: closure_15 } =
   NotificationPermissionConstants);
 const items = [,];
@@ -690,7 +690,7 @@ class NotificationsManager extends tmp4 {
               closure_128_0 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(8108).getNotificationAuthorizationStatus(), done: false };
+              const obj5 = { value: tmp5(8054).getNotificationAuthorizationStatus(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -702,7 +702,7 @@ class NotificationsManager extends tmp4 {
             return obj6;
           } else {
             closure_128_0 = value;
-            const result = tmp2(14207).updateNotificationAuthorizationStatus(closure_128_0);
+            const result = tmp2(14184).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }

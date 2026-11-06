@@ -25,15 +25,15 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ ChannelRecordBase: metroImportDefault, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(13615).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10911).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(13590).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10863).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);

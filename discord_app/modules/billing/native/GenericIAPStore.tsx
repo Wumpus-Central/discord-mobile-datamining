@@ -1,5 +1,5 @@
 // discord_app/modules/billing/native/GenericIAPStore.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ProductIds from "../../premium/native/ProductIds.android.tsx";
@@ -18,7 +18,7 @@ prototype["genericProductsLoaded"] = function genericProductsLoaded() {
   let tmp = null != c3;
   if (tmp) {
     tmp =
-      _modDef12.filter(c3, (identifier) => {
+      applyDefault.filter(c3, (identifier) => {
         const GenericProductIds = ProductIds.GenericProductIds;
         return GenericProductIds.includes(identifier.identifier);
       }).length === ProductIds.GenericProductIds.length;

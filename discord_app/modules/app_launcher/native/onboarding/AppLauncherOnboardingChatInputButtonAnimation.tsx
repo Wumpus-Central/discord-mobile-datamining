@@ -8,8 +8,8 @@ import LottieAnimationViewDefault from "../../../../components_native/common/Lot
 import ButtonConstants from "../../../../design/components/Button/native/ButtonConstants.native.tsx";
 import ClientThemesOverrides from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import useAppLauncherOnboardingContentDefault from "hooks/useAppLauncherOnboardingContent.tsx";
-import _mod12615 from "../../../../../_runtime/metro/12615__.js";
-import _mod14034 from "../../../../../_runtime/metro/14034__.js";
+import _mod12580 from "../../../../../_runtime/metro/12580__.js";
+import _mod14010 from "../../../../../_runtime/metro/14010__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_9 = createStyles.createStyles(() => {
   const sum = ButtonConstants.SMALL_BUTTON_HEIGHT + ButtonConstants.SMALL_BUTTON_PADDING + 2;
   const obj = { fakeButton: null, glowMask: null, glowLottie: null, trinketsLottie: null, glowAnimation: null };
@@ -71,8 +71,8 @@ let items = [
   {
     code: "(function EnteringAnimation_AppLauncherOnboardingChatInputButtonAnimationTsx1(){let[withTiming,timingStandard]=this.__closure;const initialValues={opacity:0};const animations={opacity:withTiming(1,timingStandard)};return{initialValues:initialValues,animations:animations};})",
   },
-  fn(5380).withTiming,
-  fn(5383).timingStandard,
+  fn(5400).withTiming,
+  fn(5403).timingStandard,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -93,8 +93,8 @@ let items2 = [
   {
     code: "(function ExitingAnimation_AppLauncherOnboardingChatInputButtonAnimationTsx2(){let[withTiming,timingStandard]=this.__closure;const initialValues={opacity:1};const animations={opacity:withTiming(0,timingStandard)};return{initialValues:initialValues,animations:animations};})",
   },
-  fn(5380).withTiming,
-  fn(5383).timingStandard,
+  fn(5400).withTiming,
+  fn(5403).timingStandard,
 ];
 let closure_130_0;
 let closure_130_1;
@@ -134,7 +134,7 @@ export function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj4.style = items1;
   const obj5 = { collapsable: false, style: tmp.glowLottie, source: null, autoPlay: null };
-  obj5.source = _mod14034;
+  obj5.source = _mod14010;
   obj5.autoPlay = !stateFromStores;
   const items2 = [timestampProducer(LottieAnimationViewDefault, obj5), ,];
   const obj6 = { collapsable: false, style: null };
@@ -146,7 +146,7 @@ export function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const items4 = [metroImportDefault(_modDef1652.View, obj4)];
   const obj8 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj7 = { collapsable: false, style: tmp.fakeButton };
-  obj8.source = _mod12615;
+  obj8.source = _mod12580;
   obj8.autoPlay = !stateFromStores;
   items4[1] = timestampProducer(LottieAnimationViewDefault, obj8);
   obj3.children = items4;

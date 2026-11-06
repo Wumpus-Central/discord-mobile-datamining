@@ -1,5 +1,5 @@
 // discord_app/utils/SnowflakeUtils.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import utils_SnowflakeUtils from "../../discord_common/js/shared/utils/SnowflakeUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
@@ -40,7 +40,7 @@ export default {
   },
   forEach(arg0, arg1) {
     closure_0 = arg1;
-    const item = _modDef12.forEach(arg0, (arg0, arg1) => closure_0(arg0, arg1));
+    const item = applyDefault.forEach(arg0, (arg0, arg1) => closure_0(arg0, arg1));
   },
   forEachKey(recurrenceCounts, fn) {
     for (const key10004 in arg0) {

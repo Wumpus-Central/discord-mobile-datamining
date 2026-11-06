@@ -15,7 +15,7 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(14910).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(14887).getVideoQuestWatchCtaText;
 export function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
@@ -99,10 +99,10 @@ export function formatVideoProgressRatio(maxVideoProgressSeconds, current) {
   }
   return num;
 }
-export function isValidDuration(arg0) {
-  let isFiniteResult = Number.isFinite(arg0);
+export function isValidDuration(scrollLength) {
+  let isFiniteResult = Number.isFinite(scrollLength);
   if (isFiniteResult) {
-    isFiniteResult = arg0 > 0;
+    isFiniteResult = scrollLength > 0;
   }
   return isFiniteResult;
 }

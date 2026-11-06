@@ -31,7 +31,7 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "flexDirection";
 };
-const GlobalDiscoveryServersConstants = fn(9228);
+const GlobalDiscoveryServersConstants = fn(9174);
 ({
   GlobalDiscoveryServerTab: closure_6,
   FEATURED_GUILDS_CACHE_DURATION: metroImportDefault,
@@ -216,9 +216,11 @@ export function fromDiscoverableGuildSearchResult(id) {
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "id",
-    discoverySplash: false,
-    emojis: false,
+    preferredLocale: "isArray",
+    discoverySplash:
+      "(function computeOffsetIfDataChanged_Pnpm_computeOffsetIfDataChangedTs2(params){let[omitZero]=this.__closure;const{direction:direction,handlerOffset:_handlerOffset,size:size,previousLength:previousLength,currentLength:currentLength}=params;let handlerOffset=_handlerOffset;let positionIndex;let round;const isPositive=direction<0;if(isPositive){positionIndex=Math.abs(handlerOffset)/size;round=Number.parseInt(String(omitZero(previousLength,positionIndex/previousLength)));}else{positionIndex=(Math.abs(handlerOffset)-size)/size;round=Number.parseInt(String(omitZero(previousLength,positionIndex/previousLength)))+1;}const prevOffset=omitZero(previousLength,positionIndex%previousLength);const prevIndex=isPositive?prevOffset:previousLength-prevOffset-1;const changedLength=round*(currentLength-previousLength);const changedOffset=changedLength*size;if(prevIndex>currentLength-1&&currentLength<previousLength){if(isPositive)handlerOffset=(currentLength-1)*size*direction;else handlerOffset=(currentLength-1)*size*-1;}else{handlerOffset+=changedOffset*direction;}return handlerOffset;})",
+    emojis:
+      "(function computeOffsetIfSizeChanged_Pnpm_computeOffsetIfSizeChangedTs1(params){const{handlerOffset:handlerOffset,prevSize:prevSize,size:size}=params;return handlerOffset/prevSize*size;})",
   };
   ({
     approximate_presence_count: obj.presenceCount,

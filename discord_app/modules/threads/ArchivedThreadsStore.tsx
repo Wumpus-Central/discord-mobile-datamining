@@ -1,6 +1,6 @@
 // discord_app/modules/threads/ArchivedThreadsStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ThreadSortOrder from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
@@ -42,7 +42,7 @@ function resortListState(value) {
   let id = ChannelStore.getChannel(value.threads[value.threads.length - 1]);
   if (null == id) {
     c4 = null;
-    const found = _modDef12(ChannelStore.getAllThreadsForParent(value.channelId)).filter((isArchivedThread) =>
+    const found = applyDefault(ChannelStore.getAllThreadsForParent(value.channelId)).filter((isArchivedThread) =>
       isArchivedThread.isArchivedThread(),
     );
     const found1 = found.filter((appliedTags) => {
@@ -103,17 +103,17 @@ function resortListState(value) {
       return SnowflakeUtilsDefault.compare(id, id2);
     });
     const mapped = sorted.map((id) => id.id);
-    const tmp7Result = _modDef12(ChannelStore.getAllThreadsForParent(value.channelId));
+    const tmp7Result = applyDefault(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
     let iter = mapped.reverse();
-  } else if (sortOrder === sortOrder(5001).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(5028).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = ReadStateStore.lastMessageId(id);
   } else {
     id2 = id.id;
   }
 }
-const ALL_CHANNEL_TYPES = fn(4996).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(5023).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;

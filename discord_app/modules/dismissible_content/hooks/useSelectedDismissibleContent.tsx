@@ -144,14 +144,18 @@ export function useSelectedTimeRecurringDismissibleContent(prop, timeRecurringCo
   items = [tmp2, tmp3];
   return items;
 }
-export function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName) {
+export function useSelectedSnowflakeBoundDismissibleContent(contentType, newSnowflakeId, groupName) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
   }
-  [tmp2, tmp3] = useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName);
+  [tmp2, tmp3] = useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(
+    contentType,
+    newSnowflakeId,
+    groupName,
+  );
   const tmp = _slicedToArray(
-    useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName),
+    useGetDismissibleContent.useGetSnowflakeBoundDismissibleContent(contentType, newSnowflakeId, groupName),
     2,
   );
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(

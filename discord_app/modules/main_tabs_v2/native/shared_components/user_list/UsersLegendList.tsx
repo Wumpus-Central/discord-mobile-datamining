@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersLegendList.tsx
-import BottomSheetModal from "../../../../../../_runtime/05402_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/05422_BottomSheetModal.js";
 import FastestListItemTypeDefault from "../../../../fastest_list/FastestListItemType.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ function renderBottomSheetScrollComponent(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_7 = createStyles.createStyles({ row: { overflow: "hidden" } });
 let closure_9 = {
   code: "(function UsersLegendListTsx1(event){let[scrollPosValue,onScroll,scheduleOnRN]=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){scheduleOnRN(onScroll,{nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}})",
@@ -35,7 +35,7 @@ export default noop.memo(function UsersLegendList(insetStart) {
     num2 = 0;
   }
   const itemSize = insetStart.itemSize;
-  const keyExtractor = insetStart.keyExtractor;
+  keyExtractor = insetStart.keyExtractor;
   ({ listHeaderSize, onContentLengthChange } = insetStart);
   const renderItem = insetStart.renderItem;
   const renderListHeader = insetStart.renderListHeader;
@@ -318,5 +318,5 @@ export default noop.memo(function UsersLegendList(insetStart) {
   obj4.sharedValues = memo;
   obj4.stickyHeaderIndices = memo1.stickyHeaderIndices;
   obj4.style = style;
-  return renderListHeader(tmp3(14646).AnimatedLegendList, obj4);
+  return renderListHeader(tmp3(14623).AnimatedLegendList, obj4);
 });

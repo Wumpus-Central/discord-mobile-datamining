@@ -1,7 +1,7 @@
 // discord_app/design/components/Illustration/native/redesign/generated/FeedbackModalHappyDesaturated.tsx
 import shared from "../../../../../shared.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
-import _mod8952 from "../../index.tsx";
+import _mod8898 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -14,55 +14,55 @@ const result = size.fileFinishedImporting(
 );
 
 export function getFeedbackModalHappyDesaturatedSource(theme) {
-  return _mod8952.getIllustrationSource(theme, {
+  return _mod8898.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/10361__.js");
+      return require("../../../../../../../_runtime/metro/10313__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/10362__.js");
+      return require("../../../../../../../_runtime/metro/10314__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/10363__.js");
+      return require("../../../../../../../_runtime/metro/10315__.js");
     },
   });
 }
 export function useFeedbackModalHappyDesaturatedSource() {
   const obj = shared;
-  return _mod8952.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8898.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/10361__.js");
+      return require("../../../../../../../_runtime/metro/10313__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/10362__.js");
+      return require("../../../../../../../_runtime/metro/10314__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/10363__.js");
+      return require("../../../../../../../_runtime/metro/10315__.js");
     },
   });
 }
 export function FeedbackModalHappyDesaturated(arg0) {
   const obj = shared;
-  const illustrationSource = _mod8952.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8898.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/10361__.js");
+      return require("../../../../../../../_runtime/metro/10313__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/10362__.js");
+      return require("../../../../../../../_runtime/metro/10314__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/10363__.js");
+      return require("../../../../../../../_runtime/metro/10315__.js");
     },
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("../../../../../../../_runtime/metro/10361__.js");
+      return require("../../../../../../../_runtime/metro/10313__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/10362__.js");
+      return require("../../../../../../../_runtime/metro/10314__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/10363__.js");
+      return require("../../../../../../../_runtime/metro/10315__.js");
     },
   };
   const merged = Object.assign(arg0);

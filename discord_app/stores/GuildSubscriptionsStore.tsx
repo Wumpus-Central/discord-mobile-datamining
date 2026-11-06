@@ -82,7 +82,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     closure_20.subscribeToGuild(tmp11);
-    obj5 = obj4(5017);
+    obj5 = obj4(5044);
   }
   obj4 = {};
   set = new Set(LurkingStore.lurkingGuildIds());
@@ -184,7 +184,7 @@ function handleSpotifyUpdate() {
   }
   return false;
 }
-const EVERYONE_CHANNEL_ID = fn(7588).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(7533).EVERYONE_CHANNEL_ID;
 const Constants = fn(1072);
 ({ ChannelSections, ChannelTypes: closure_19 } = Constants);
 let closure_20 = new GuildSubscriptionsDefault((subscriptions) => {
@@ -327,7 +327,7 @@ let subscriptions = {
         tmp3(tmp4[17]).dispatch(obj3);
         const tmp3Result = tmp3(tmp4[17]);
       }
-      obj2 = require("../../_runtime/metro/00012__.js");
+      obj2 = require("apply");
       tmp3 = importDefault;
       tmp4 = subscriptions;
     } else {

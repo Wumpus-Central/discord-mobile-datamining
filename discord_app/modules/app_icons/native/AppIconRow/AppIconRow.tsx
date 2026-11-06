@@ -1,5 +1,5 @@
 // discord_app/modules/app_icons/native/AppIconRow/AppIconRow.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
@@ -36,7 +36,7 @@ const items = [
     return intl.string(util.t.RnMLvl);
   },
 ];
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -47,7 +47,7 @@ export default function AppIconRow(arg0) {
   ({ hasNitro, currentAppIcon, showEasterEgg } = arg0);
   const id = icon.id;
   if (id === AppIconTypes.PremiumAppIconIds.PIRATE) {
-    const obj = _modDef12;
+    const obj = applyDefault;
     let name = items[obj.random(obj, 0, items.length - 1)]();
   } else {
     name = icon.name;

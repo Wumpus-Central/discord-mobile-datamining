@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2171 from "../../../../../../_runtime/metro/02171__.js";
+import _modDef2166 from "../../../../../../_runtime/metro/02166__.js";
 import DateUtils from "../../../../../utils/DateUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
@@ -17,11 +17,11 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10911).UserRowModes;
-const ReadStateTypes = fn(6914).ReadStateTypes;
+const UserRowModes = fn(10863).UserRowModes;
+const ReadStateTypes = fn(6856).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   guildIcon: { flexShrink: 0, flexGrow: 0 },
   subLabel: { display: "flex", flexDirection: "row", alignItems: "center" },
@@ -180,7 +180,7 @@ export default noop.memo(function ChannelRow(channel) {
         const obj6 = {
           variant: "body-xs/medium",
           color: "text-subtle",
-          children: DateUtils.calendarFormatCompact(_modDef2171(tmp14)),
+          children: DateUtils.calendarFormatCompact(_modDef2166(tmp14)),
         };
         items1[1] = application_id(Text_Text.Text, obj6);
         obj4.children = items1;

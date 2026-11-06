@@ -11,6 +11,7 @@ export const MAX_STAGE_TOPIC_LENGTH = 120;
 export const MAX_AUDIENCE_ROW_LIMIT = 4;
 export const STAGE_APPLICATION_ID = "834488117758001152";
 export const REQUEST_TO_SPEAK_SHEET_KEY = "request-to-speak-list";
+export const STAGE_AUDIENCE_SHEET_KEY = "stage-audience";
 export const START_STAGE_CHANNEL_EVENT_SHEET_KEY = "start-stage-channel-event";
 export const START_STAGE_CHANNEL_EVENT_MODAL_KEY = "start-stage-channel-event-modal";
 export const PUBLIC_STAGE_INFO_ACTION_SHEET_KEY = "public-stage-info-action-sheet";

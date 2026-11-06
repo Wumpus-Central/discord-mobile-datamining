@@ -1,5 +1,5 @@
 // discord_app/lib/guild/subscribeGuildMembers.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildMemberRequesterStore from "../../stores/GuildMemberRequesterStore.tsx";
 
@@ -14,7 +14,7 @@ export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
   closure_1 = AddMembersActionSheet;
   items = [memo, AddMembersActionSheet];
   const effect = noop.useEffect(() => {
-    let item = _modDef12.forEach(closure_0, (userIds, guildId) => {
+    let item = applyDefault.forEach(closure_0, (userIds, guildId) => {
       let tmp = !c5;
       if (!c5) {
         tmp = userIds.length > 50;
@@ -27,8 +27,8 @@ export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7593).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7593);
+      closure_0(7538).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7538);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) =>
@@ -58,7 +58,7 @@ export function useEnsureHydratedGuildUsers(guild_id, items1) {
   closure_129_1 = "useEnsureHydratedGuildUsers";
   const items2 = [memo, "useEnsureHydratedGuildUsers"];
   const effect1 = noop.useEffect(() => {
-    let item = _modDef12.forEach(closure_0, (userIds, guildId) => {
+    let item = applyDefault.forEach(closure_0, (userIds, guildId) => {
       let tmp = !c5;
       if (!c5) {
         tmp = userIds.length > 50;
@@ -71,8 +71,8 @@ export function useEnsureHydratedGuildUsers(guild_id, items1) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7593).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7593);
+      closure_0(7538).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7538);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) =>

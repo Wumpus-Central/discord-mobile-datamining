@@ -1,8 +1,8 @@
 // discord_app/modules/slayer_storefront/SlayerStorefrontUtils.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import StoreUtils from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/06931_keysSorter.js";
+import keysSorter from "../../../_runtime/06873_keysSorter.js";
 import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes.tsx";
 import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -181,8 +181,8 @@ function getSKUShareURL(guildId, applicationId) {
     window.GLOBAL_ENV.WEBAPP_ENDPOINT +
     gesture.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7547).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7549);
+let closure_4 = fn(7492).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7494);
 ({
   BLOONS_TD6_SPLIT_TENDER_PROMOTION_ID: closure_9,
   getChannelsGameShopPrefix: closure_10,
@@ -193,7 +193,7 @@ const Constants = fn(1072);
 ({ GuildFeatures: map1, Routes: closure_14, SKUProductLines: closure_15 } = Constants);
 const CollectibleShopTab = fn(1074).CollectibleShopTab;
 let str = "jpg";
-if (fn(6593).SUPPORTS_WEBP) {
+if (fn(6613).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getRequiredSubscriptionPlanIds(arr) {
@@ -439,7 +439,7 @@ export function transformSlayerApplicationStorefrontServer(id) {
     obj.sections = mapped;
     return obj;
   });
-  obj.assets = _modDef12.keyBy(id.assets, "id");
+  obj.assets = applyDefault.keyBy(id.assets, "id");
   let fromServer;
   if (null != id.application) {
     fromServer = ApplicationRecord.createFromServer(id.application);
@@ -454,7 +454,7 @@ export function transformSlayerApplicationStorefrontServer(id) {
   if (promotions == null) {
     promotions = {};
   }
-  obj.promotions = _modDef12.mapValues(promotions, transformSlayerStorefrontPromotionServer);
+  obj.promotions = applyDefault.mapValues(promotions, transformSlayerStorefrontPromotionServer);
   return obj;
 }
 export function getPrimaryCarouselItemInfo(tenantMetadata, id) {
@@ -482,7 +482,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, id) {
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "Path", primaryIconLabel: "count" };
+          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "channel" };
         } else {
           const obj3 = StoreUtils;
           obj4 = {
@@ -495,7 +495,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, id) {
       }
     }
   }
-  return { primaryIconAsset: "Path", primaryIconLabel: "count" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "channel" };
 }
 export function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

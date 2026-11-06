@@ -1,15 +1,15 @@
 // discord_app/modules/feedback/native/FeedbackForm.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FeedbackUtils from "../FeedbackUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let FeedbackRating = fn(10344).FeedbackRating;
+let FeedbackRating = fn(10296).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   ratingsLabel: { textAlign: "center" },
   reasonsHeader: { marginBottom: 8 },
@@ -47,7 +47,7 @@ export function FeedbackForm(otherKey) {
     if (!obj.isEqual(closure_5, reasons)) {
       _undefined(FeedbackUtils.shuffleProblems(reasons, otherKey));
     }
-    obj = _modDef12;
+    obj = applyDefault;
   }, items);
   const tmp8 = trackOpen(noop.useState({}), 2);
   const first = tmp8[0];

@@ -1,5 +1,5 @@
 // discord_app/stores/billing/UserOfferStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
@@ -59,7 +59,7 @@ function rehydrateDiscountOffer(discount) {
 function handleSubscriptionStoreUpdate() {
   let flag = null != SubscriptionStore.getPremiumTypeSubscription();
   if (flag) {
-    closure_19.userDiscountOffers = _modDef12.pick(closure_19.userDiscountOffers, closure_1_11);
+    closure_19.userDiscountOffers = applyDefault.pick(closure_19.userDiscountOffers, closure_1_11);
     closure_19.userTrialOffers = {};
     flag = true;
   }
@@ -83,7 +83,7 @@ let cooldownExpirationTimestamps = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F468}\u{1F3FE}\u200D\u2695\uFE0F",
+  userDiscounts: "\u{1F469}\u{1F3FE}\u200D\u{1F373}",
   isFetching: true,
   lastFetchSuccessful: null,
   shouldTriggerOffer: 8,

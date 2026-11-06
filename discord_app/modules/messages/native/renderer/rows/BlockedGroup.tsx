@@ -5,7 +5,7 @@ import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import shared from "../../../../../design/shared.tsx";
 import RowGeneratorConstants from "../RowGeneratorConstants.tsx";
 import RowGeneratorStyleSheet from "../RowGeneratorStyleSheet.tsx";
-import apply from "../../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../../_runtime/00012_apply.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const SeparatorAction = RowGeneratorConstants.SeparatorAction;

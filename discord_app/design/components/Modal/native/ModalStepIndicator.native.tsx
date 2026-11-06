@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import _modDef2204 from "../../../intl/Mana.messages.js";
+import _modDef2199 from "../../../intl/Mana.messages.js";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -95,7 +95,7 @@ function StepPill(isActive) {
 const View = fn(17).View;
 let jsx = fn(21).jsx;
 let closure_6 = { overshootClamping: true };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", gap: 4 },
   stepPill: { height: 4, borderRadius: 2 },
@@ -135,7 +135,7 @@ export function ModalStepIndicator(arg0) {
       const obj4 = {
         accessible: true,
         accessibilityRole: "progressbar",
-        accessibilityLabel: intl.string(_modDef2204.KUwsC0),
+        accessibilityLabel: intl.string(_modDef2199.KUwsC0),
         accessibilityValue: null,
         importantForAccessibility: "yes",
         style: null,
@@ -149,7 +149,7 @@ export function ModalStepIndicator(arg0) {
         <View
           accessible
           accessibilityRole="progressbar"
-          accessibilityLabel={intl.string(_modDef2204.KUwsC0)}
+          accessibilityLabel={intl.string(_modDef2199.KUwsC0)}
           accessibilityValue={null}
           importantForAccessibility="yes"
           style={null}

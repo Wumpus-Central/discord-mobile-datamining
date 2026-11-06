@@ -12,6 +12,7 @@ require = fn;
 const SoundboardButtonLocation = {
   VOICE_CONTROLS: "call control drawer",
   VOICE_PANEL_CONTROLS: "voice panel controls",
+  VOICE_PANEL_DOCK: "voice panel dock",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useSoundboardConfig.tsx");
@@ -24,20 +25,34 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
   items = [MediaEngineStore];
   const stateFromStores = obj.useStateFromStores(items, () => deaf.isDeaf());
   if (tmp2) {
-    if (obj.VOICE_CONTROLS === analyticsSource) {
-      let flag = true;
-    } else {
-      flag = false;
+    if (obj.VOICE_CONTROLS !== analyticsSource) {
+      if (tmp5.VOICE_PANEL_CONTROLS !== analyticsSource) {
+        let flag = false;
+      }
+      tmp2 = flag;
     }
-    tmp2 = flag;
+    flag = true;
+    tmp5 = obj;
   }
   const items1 = [channelId, analyticsSource];
   const items2 = [channelId];
   const callback = noop.useCallback(() => {
     const channel = ChannelStore.getChannel(closure_0);
     if (null != channel) {
-      const obj2 = { channel, analyticsSource };
-      const result = soundboard_SoundboardActionCreators.showSoundboardSoundPickerActionSheet(obj2);
+      const obj = soundboard_SoundboardActionCreators;
+      const obj2 = { channel, analyticsSource, startExpanded: null };
+      let flag = true;
+      if (obj.VOICE_CONTROLS !== analyticsSource) {
+        flag = true;
+        if (tmp5.VOICE_PANEL_CONTROLS !== analyticsSource) {
+          flag = true;
+          if (tmp5.VOICE_PANEL_DOCK === analyticsSource) {
+            flag = false;
+          }
+        }
+      }
+      obj2.startExpanded = flag;
+      const result = obj.showSoundboardSoundPickerActionSheet(obj2);
     }
   }, items1);
   let obj2 = { visible: tmp2, handlePress: callback, disabled: null, disabledAccessibilityHint: null };

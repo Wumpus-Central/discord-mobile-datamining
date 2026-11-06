@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/openQuestAccessSuspendedBottomSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/quests/native/openQuestAccess
 
 export default function openQuestAccessSuspendedBottomSheet() {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(17370, dependencyMap.paths),
+    asyncRequireImpl(17359, dependencyMap.paths),
     QuestAccessSuspendedBottomSheet,
     {},
   );

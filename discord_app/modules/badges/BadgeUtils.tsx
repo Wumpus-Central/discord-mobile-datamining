@@ -175,14 +175,29 @@ export function getLegacyIconUrlByBadgeId(badges) {
   }
   return map;
 }
-export function findTier(viewerBadge, next_tier) {
+export function findTier(badge, next_tier) {
   closure_0 = next_tier;
   let found;
   if (null != next_tier) {
-    const tiers = viewerBadge.tiers;
+    const tiers = badge.tiers;
     found = tiers.find((key) => key.key === closure_0);
   }
   return found;
+}
+export function getBadgeUnlockLabel(badge, c1) {
+  const intl = util.intl;
+  closure_0 = c1;
+  let found;
+  if (null != c1) {
+    const tiers = badge.tiers;
+    found = tiers.find((key) => key.key === closure_0);
+  }
+  if (null != found) {
+    let K3TdAp = util.t.K3TdAp;
+  } else {
+    K3TdAp = util.t["4oIsxf"];
+  }
+  return intl.string(K3TdAp);
 }
 export function getTierRowSubtitle(isUnlocked) {
   if (!isUnlocked.isUnlocked) {

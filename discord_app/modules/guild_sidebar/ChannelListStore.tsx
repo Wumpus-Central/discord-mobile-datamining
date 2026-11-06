@@ -1,6 +1,6 @@
 // discord_app/modules/guild_sidebar/ChannelListStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import embeddedActivityLocationUtils from "../activities/utils/embeddedActivityLocationUtils.tsx";
@@ -54,8 +54,8 @@ function handleChannelSelect() {
   let flag = tmp3;
   if (flag) {
     items = [channelId, voiceChannelId, channelId, voiceChannelId];
-    const obj = _modDef12(items);
-    const item = _modDef12(items)
+    const obj = applyDefault(items);
+    const item = applyDefault(items)
       .uniq()
       .forEach((item) => {
         if (null != item) {
@@ -63,7 +63,7 @@ function handleChannelSelect() {
         }
       });
     flag = true;
-    const uniqResult = _modDef12(items).uniq();
+    const uniqResult = applyDefault(items).uniq();
   }
   return flag;
 }
@@ -153,7 +153,7 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   BACKGROUND_SYNC: handleReset,
   BULK_ACK: function handleBulkAck(channels) {
     _require = false;
-    const mapped = _modDef12(channels.channels).map((channelId) => {
+    const mapped = applyDefault(channels.channels).map((channelId) => {
       channel = channel.getChannel(channelId.channelId);
       let guild_id;
       if (channel != null) {
@@ -162,7 +162,7 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
       return guild_id;
     });
     const found = mapped.filter(require("GlobalUtils").isNotNullish);
-    const arr = _modDef12(channels.channels);
+    const arr = applyDefault(channels.channels);
     const item = found.uniq().forEach((item) => {
       if (closure_20.clearGuildId(item)) {
         c0 = true;
@@ -196,8 +196,8 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   },
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
     c0 = false;
-    const mapped = _modDef12(channels.channels).map((guild_id) => guild_id.guild_id);
-    const arr = _modDef12(channels.channels);
+    const mapped = applyDefault(channels.channels).map((guild_id) => guild_id.guild_id);
+    const arr = applyDefault(channels.channels);
     const item = mapped.uniq().forEach((item) => {
       if (closure_20.clearGuildId(item)) {
         c0 = true;

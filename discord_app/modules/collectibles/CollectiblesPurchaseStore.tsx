@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/CollectiblesPurchaseStore.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 
@@ -84,7 +84,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
         );
         closure_3 = map;
       }
-      obj = _mod12;
+      obj = apply;
     }
     c8 = true;
     c4 = false;
@@ -116,7 +116,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefaul
           );
           closure_3 = map;
         }
-        obj = _mod12;
+        obj = apply;
       }
       c5 = undefined;
       c7 = undefined;

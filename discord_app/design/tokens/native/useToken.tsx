@@ -1,15 +1,15 @@
 // discord_app/design/tokens/native/useToken.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 
-const SemanticColorContext = obj(5312);
+const SemanticColorContext = obj(5332);
 require = fn;
 const map = new Map();
 const keys = Object.keys(nativeDefault.colors);
 let closure_4 = Object.fromEntries(
   keys.map((item) => {
-    items = [_modDef12.kebabCase(item), item];
+    items = [applyDefault.kebabCase(item), item];
     return items;
   }),
 );

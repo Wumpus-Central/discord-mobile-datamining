@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import useBaseAppContainerDimensionsDefault from "../../../screen/native/useBaseAppContainerDimensions.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import Suspender from "../../../../../_runtime/06127_Suspender.js";
+import Suspender from "../../../../../_runtime/06147_Suspender.js";
 import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext.tsx";
 import ChatViewWidthContextDefault from "../../../chat/native/ChatViewWidthContext.tsx";
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation.tsx";
@@ -14,6 +14,7 @@ import MainTabsBackgroundChat from "MainTabsBackgroundChat.tsx";
 import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture.tsx";
 import HideCoveredChannelsExperimentDefault from "../HideCoveredChannelsExperiment.tsx";
 import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles.tsx";
+import ChannelScreenFrameContainerDefault from "ChannelScreenFrameContainer.tsx";
 import StandaloneChannelScreenDefault from "../channel/StandaloneChannelScreen.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -231,14 +232,14 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const setVisibleChannelScreen = fn(18908).setVisibleChannelScreen;
-const ONYX_BORDER_WIDTH = fn(9968).ONYX_BORDER_WIDTH;
+const setVisibleChannelScreen = fn(18896).setVisibleChannelScreen;
+const ONYX_BORDER_WIDTH = fn(9919).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: closure_10, AnalyticsSections: closure_11 } = Constants);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_15 = createStyles.createStyles({
   onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH },
 });
@@ -260,30 +261,25 @@ let closure_22 = {
 let closure_23 = {
   code: "(function MainTabsChannelScreenStackTsx6(){let[enabled,highestFullyRenderedScreenIndex,index]=this.__closure;return enabled&&highestFullyRenderedScreenIndex.get()>index;})",
 };
-let closure_25 = noop.memo(function FirstChannelScreen(isActive) {
-  ({
-    guildId: require,
-    channelId: importDefault,
-    showCreateThread: dependencyMap,
-    frame: _slicedToArray,
-    index,
-  } = isActive);
-  ({ isDragging, translateX, containerWidth } = isActive);
-  isActive = isActive.isActive;
-  ({ maxWidth, transitionState } = isActive);
-  const cleanup = isActive.cleanup;
-  const highestFullyRenderedScreenIndex = isActive.highestFullyRenderedScreenIndex;
-  ({ freeze, isNavigationTTIStackVisible, focusChatPressableComponent, parentFreezeValue } = isActive);
-  const tmp2 = useThemeDefault();
+let closure_25 = noop.memo(function FirstChannelScreen(index) {
+  ({ guildId: require, channelId: importDefault, showCreateThread: dependencyMap, frame } = index);
+  index = index.index;
+  ({ isDragging, translateX, containerWidth } = index);
+  const isActive = index.isActive;
+  ({ maxWidth, transitionState } = index);
+  const cleanup = index.cleanup;
+  const highestFullyRenderedScreenIndex = index.highestFullyRenderedScreenIndex;
+  ({ freeze, isNavigationTTIStackVisible, focusChatPressableComponent, parentFreezeValue } = index);
+  const tmp3 = useThemeDefault();
   const width = useBaseAppContainerDimensionsDefault().width;
-  const tmp3 = closure_15();
-  const tmp4 = useIsCompletelyCovered(index, highestFullyRenderedScreenIndex, translateX);
+  const tmp4 = closure_15();
+  let tmp5 = useIsCompletelyCovered(index, highestFullyRenderedScreenIndex, translateX);
   items = [cleanup, transitionState];
   const mainTabsChannelScreenStyles = useMainTabsChannelScreenStyles.useMainTabsChannelScreenStyles(
     isDragging,
     translateX,
     maxWidth,
-    tmp4,
+    tmp5,
     parentFreezeValue,
   );
   const effect = index.useEffect(() => {
@@ -292,16 +288,16 @@ let closure_25 = noop.memo(function FirstChannelScreen(isActive) {
     }
   }, items);
   const items1 = [mainTabsChannelScreenStyles, ,];
-  let tmp9 = null;
+  let tmp10 = null;
   if (null != containerWidth) {
     const obj2 = { width: containerWidth };
-    tmp9 = obj2;
+    tmp10 = obj2;
   }
-  items1[1] = tmp9;
+  items1[1] = tmp10;
   let onyxContainerStyles;
-  if (tmp2 === ThemeTypes.ONYX) {
+  if (tmp3 === ThemeTypes.ONYX) {
     if (!useChatLayoutDefault().isChatBesideChannelList) {
-      onyxContainerStyles = tmp3.onyxContainerStyles;
+      onyxContainerStyles = tmp4.onyxContainerStyles;
     }
   }
   const obj3 = { style: items1, children: null };
@@ -309,7 +305,8 @@ let closure_25 = noop.memo(function FirstChannelScreen(isActive) {
   const obj4 = { freeze, children: null };
   const obj5 = {
     collapsable: false,
-    style: isActive.absoluteFill,
+    translateX,
+    roundCorners: null == frame,
     pointerEvents: null,
     accessibilityElementsHidden: null,
     importantForAccessibility: null,
@@ -350,7 +347,7 @@ let closure_25 = noop.memo(function FirstChannelScreen(isActive) {
       return state(ChatViewWidthContextDefault.Provider, obj);
     },
   });
-  obj4.children = closure_13(transitionState, obj5);
+  obj4.children = closure_13(ChannelScreenFrameContainerDefault, obj5);
   const items2 = [closure_13(Suspender.Freeze, obj4), focusChatPressableComponent];
   obj3.children = items2;
   return closure_14(_modDef1652.View, obj3);
@@ -499,8 +496,12 @@ let closure_28 = noop.memo(function ChannelScreen(cleanup) {
       },
     }),
   };
-  obj8.children = closure_13(require("Suspender").Freeze, obj9);
-  obj7.children = closure_13(_modDef1652.View, obj8);
+  const items7 = [
+    closure_13(require("Suspender").Freeze, obj9),
+    closure_13(require("ChannelScreenFrameContainer").ChannelScreenFrameTopBorder, {}),
+  ];
+  obj8.children = items7;
+  obj7.children = closure_14(_modDef1652.View, obj8);
   obj6.children = closure_13(require("MainTabsNavigatorPanelContext").MainTabsChannelScreenStackContext.Provider, obj7);
   return closure_13(require("LegacyBaseButton").GestureDetector, obj6);
 });
@@ -601,7 +602,7 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
       }
     }
   }, items6);
-  const tmp19 = tmp(screenStackVisible[29])();
+  const tmp19 = tmp(screenStackVisible[30])();
   closure_12 = tmp19;
   first = screens[0];
   if (shouldFreeze) {
@@ -610,7 +611,7 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
   if (shouldFreeze) {
     let tmp22 = null == first;
     if (!tmp22) {
-      tmp22 = first.type !== tmp7(tmp2[28]).ChannelScreenType.DEFAULT;
+      tmp22 = first.type !== tmp7(tmp2[29]).ChannelScreenType.DEFAULT;
     }
     shouldFreeze = tmp22;
   }

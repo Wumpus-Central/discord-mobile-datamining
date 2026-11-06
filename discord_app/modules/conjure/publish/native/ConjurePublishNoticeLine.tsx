@@ -13,7 +13,7 @@ const require = globalThis.__r;
 const useConjurePatchNotesLinkDefault = useConjurePatchNotesLink;
 const ConjurePublishNotesSheetDefault = ConjurePublishNotesSheet;
 
-const _modDef3995 = items(3995);
+const _modDef4024 = items(4024);
 require = fn;
 function PatchNotesLink(projectId) {
   projectId = projectId.projectId;
@@ -44,7 +44,7 @@ function PatchNotesLink(projectId) {
           );
         },
       };
-      let formatResult = intl2.format(_modDef3995["35VEu5"], obj2);
+      let formatResult = intl2.format(_modDef4024["35VEu5"], obj2);
     } else {
       const intl = projectId(1113).intl;
       let obj3 = {
@@ -61,7 +61,7 @@ function PatchNotesLink(projectId) {
           }
         },
       };
-      formatResult = intl.format(_modDef3995["6/zJpD"], obj3);
+      formatResult = intl.format(_modDef4024["6/zJpD"], obj3);
     }
     obj = { children: null };
     items = [" ", formatResult];
@@ -107,7 +107,7 @@ export default function ConjurePublishNoticeLine(arg0) {
   const children = [intl.format(require("conjurePublishCard").publishNoticeMessage(notice, name, tmp4.automod), obj2)];
   if (null != tmp4.guildId) {
     const obj3 = { guildId: tmp4.guildId, update: notice.update };
-    let tmp9 = closure_3(tmp6(12886).ConjureAutomodSettingsLink, obj3);
+    let tmp9 = closure_3(tmp6(12851).ConjureAutomodSettingsLink, obj3);
   } else {
     tmp9 = null;
     if (!tmp4.automod) {

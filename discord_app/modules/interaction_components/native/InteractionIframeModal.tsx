@@ -14,7 +14,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1362).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 },
   header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" },

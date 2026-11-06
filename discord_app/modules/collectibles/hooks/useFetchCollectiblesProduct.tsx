@@ -50,7 +50,7 @@ export function useFetchCollectiblesProduct(skuId, includeBundles) {
     if (product != null) {
       type = product.type;
     }
-    tmp10 = type === tmp(2116).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(2111).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === product.items.length;

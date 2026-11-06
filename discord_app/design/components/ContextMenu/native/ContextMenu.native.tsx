@@ -6,7 +6,7 @@ import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import shared from "../../../shared.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05450_LegacyBaseButton.js";
 import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
@@ -156,21 +156,21 @@ export function ContextMenu(triggerOnLongPress) {
   }
   c8 = returnRef;
   const tmpResult8 = require("useFontScale");
-  const activeContextMenu = require("ContextMenuState").useActiveContextMenu();
+  const isContextMenuActive = require("ContextMenuState").useIsContextMenuActive(contextMenuState);
   const tmpResult9 = require("ContextMenuState");
-  let result = (tmp(10063).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(10063).CONTEXT_MENU_ITEM_PADDING) * fontScale;
-  const result1 = 2 * tmp(10063).CONTEXT_MENU_ITEM_PADDING;
+  let result = (tmp(10014).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(10014).CONTEXT_MENU_ITEM_PADDING) * fontScale;
+  const result1 = 2 * tmp(10014).CONTEXT_MENU_ITEM_PADDING;
   const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(
-    Math.max(result + result1, tmp(10063).CONTEXT_MENU_ITEM_BASE_HEIGHT),
+    Math.max(result + result1, tmp(10014).CONTEXT_MENU_ITEM_BASE_HEIGHT),
   );
   obj3.useRef(items3);
   let items4 = [items3];
   const layoutEffect = obj3.useLayoutEffect(() => {
     c17.current = _undefined5;
   }, items4);
-  let items5 = [activeContextMenu, contextMenuState];
+  let items5 = [isContextMenuActive, contextMenuState];
   const layoutEffect1 = obj3.useLayoutEffect(() => {
-    if (null == c16) {
+    if (!c16) {
       const result = ContextMenuState.resetContextMenuState(c14);
     }
   }, items5);
@@ -794,7 +794,7 @@ export function ContextMenu(triggerOnLongPress) {
     let tmp47Result = tmp47(c4, obj5);
   } else {
     const obj6 = { gesture: memo1, children: children(obj4) };
-    tmp47Result = tmp47(tmp(5430).GestureDetector, obj6);
+    tmp47Result = tmp47(tmp(5450).GestureDetector, obj6);
   }
   return tmp47Result;
 }

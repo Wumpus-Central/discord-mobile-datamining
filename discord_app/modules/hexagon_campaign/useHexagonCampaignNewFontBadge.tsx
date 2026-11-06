@@ -9,7 +9,7 @@ import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(5168);
+const HexagonCampaignConstants = fn(5195);
 ({
   HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: hasOwnProperty,
   HexagonCampaignPerk: closure_6,

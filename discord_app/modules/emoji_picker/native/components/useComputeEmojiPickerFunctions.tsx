@@ -1,5 +1,5 @@
 // discord_app/modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import FunctionUtils from "../../../../utils/FunctionUtils.tsx";
 import UnicodeEmojisDefault from "../../../emojis/UnicodeEmojis.tsx";
 import EmojiPickerUtils from "../../EmojiPickerUtils.tsx";
@@ -117,7 +117,7 @@ function _computeCategories(arg0) {
           emojisDisabled: null,
           emojisHidden: null,
         };
-        let tmp64Result = _modDef12;
+        let tmp64Result = applyDefault;
         obj38.label = tmp64Result.capitalize(tmp2.name);
         let num;
         if (byCategory != null) {
@@ -152,7 +152,7 @@ function _computeCategories(arg0) {
         let tmp7 = new.target;
         let set2 = new Set();
         obj39.emojisDisabled = set2;
-        let tmp64Result2 = _modDef12;
+        let tmp64Result2 = applyDefault;
         obj39.label = tmp64Result2.capitalize(tmp2.name);
         obj39.footer = constants2.UNICODE;
         obj.renderingData = obj39;
@@ -222,9 +222,9 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(6937);
+const EmojiPickerConstants = fn(6879);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: closure_6 } = EmojiPickerConstants);
-const constants3 = fn(10129).EmojiPickerRenderingDataType;
+const constants3 = fn(10080).EmojiPickerRenderingDataType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
 

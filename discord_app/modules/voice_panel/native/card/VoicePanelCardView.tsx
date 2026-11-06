@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCardView.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import util from "../../../../intl/index.native.tsx";
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import Suspender from "../../../../../_runtime/06127_Suspender.js";
+import Suspender from "../../../../../_runtime/06147_Suspender.js";
 import VoicePanelCardDefault from "VoicePanelCard.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -375,17 +375,17 @@ function CardContentFreezer(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11419);
+const VoicePanelConstants = fn(11381);
 ({
   LAYOUT_PHYSICS: closure_9,
   VoicePanelModes: closure_10,
   UI_SHOW_HIDE_PHYSICS,
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11417).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19422).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11422).EDGE_GUTTER;
-const isUserParticipant = fn(5817).isUserParticipant;
+const VoicePanelControlsModes = fn(11379).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19414).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11384).EDGE_GUTTER;
+const isUserParticipant = fn(5835).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);
@@ -488,7 +488,7 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   const items6 = [stateFromStoresArray, channelId];
   const effect = noop.useEffect(() => {
     if (!obj.isEqual(ref.current, stateFromStoresArray)) {
-      const differenceWithResult = _modDef12.differenceWith(
+      const differenceWithResult = applyDefault.differenceWith(
         ref.current,
         stateFromStoresArray,
         (id, id2) => id.id === id2.id,
@@ -503,10 +503,10 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
         const obj2 = { username: user.username };
         AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t["9NqwWZ"], obj2));
       }
-      const tmpResult = _modDef12;
+      const tmpResult = applyDefault;
     }
     ref.current = stateFromStoresArray;
-    obj = _modDef12;
+    obj = applyDefault;
   }, items6);
   const items7 = [chunkedParticipants];
   return noop.useMemo(() => {

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_identity/native/EditGuildIdentityAvatar.tsx
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ const Constants = fn(1072);
 const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");

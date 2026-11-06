@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/stores/SearchHistoryStore.tsx
-import _mod12 from "../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import SearchConstants from "../../SearchConstants.tsx";
@@ -56,7 +56,7 @@ prototype["add"] = function add(type) {
 prototype["remove"] = function remove(arg0) {
   closure_0 = arg0;
   items = this.items;
-  this.items = items.filter((item) => !_mod12.isEqual(item, closure_0));
+  this.items = items.filter((item) => !apply.isEqual(item, closure_0));
 };
 const dependencyMap = {};
 ({ NATIVE_SEARCH_HISTORY_STORAGE_KEY, NATIVE_SEARCH_HISTORY_STORE_DISPLAY_NAME } = SearchConstants);
@@ -80,7 +80,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
     searchHistories = searchHistories.searchHistories;
   }
   if (null != searchHistories) {
-    closure_4 = _mod12.mapValues(searchHistories, (arg0) => {
+    closure_4 = apply.mapValues(searchHistories, (arg0) => {
       if (typeof SearchHistory === "function") {
         const deserializer = Object.assign({ items: null });
         deserializer[0] = [];

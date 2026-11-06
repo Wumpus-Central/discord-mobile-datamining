@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   footerText: { textAlign: "center" },
   textArea: { marginTop: -16, marginBottom: 36 },

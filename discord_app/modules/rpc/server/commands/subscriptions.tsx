@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/server/commands/subscriptions.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import RPCErrorDefault from "../../RPCError.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -190,7 +190,7 @@ export default {
               let tmp6 = nextResult;
               let isEqualResult = nextResult.evt === evt;
               if (isEqualResult) {
-                let obj = _modDef12;
+                let obj = applyDefault;
                 isEqualResult = obj.isEqual(tmp6.args, args);
               }
               if (isEqualResult) {

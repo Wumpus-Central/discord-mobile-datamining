@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   containerOuter: { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   containerOuterTablet: null,
@@ -20,7 +20,7 @@ obj2.containerOuterTablet = {
   flex: 1,
 };
 obj2.container = { flex: 1 };
-const obj4 = {
+let obj4 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   paddingHorizontal: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
@@ -48,32 +48,40 @@ export default function Settings() {
   const tmp7 = closure_6();
   let containerOuter = tmp7;
   items = [tmp7, tmp5, tmp6, top, left, right];
-  let obj2 = {
-    style: noop.useMemo(() => {
-      if (closure_3) {
-        if (obj.isIpadOS()) {
-          containerOuter = containerOuter.containerOuter;
-        }
-        return containerOuter;
+  let obj2 = { style: tmp6 ? tmp7.containerTablet : tmp7.container, children: null };
+  const memo = noop.useMemo(() => {
+    if (closure_3) {
+      if (obj.isIpadOS()) {
+        containerOuter = containerOuter.containerOuter;
       }
-      if (closure_4) {
-        items = [tmp3.containerOuterTablet];
-        const obj2 = { paddingTop: top, paddingLeft: left, paddingRight: right };
-        items[1] = obj2;
-        containerOuter = items;
-      } else {
-        containerOuter = [tmp3.containerOuter];
-        const obj3 = { paddingLeft: left, paddingRight: right };
-        containerOuter[1] = obj3;
-      }
-    }, items),
-    children: null,
-  };
+      return containerOuter;
+    }
+    if (closure_4) {
+      items = [tmp3.containerOuterTablet];
+      const obj2 = { paddingTop: top, paddingLeft: left, paddingRight: right };
+      items[1] = obj2;
+      containerOuter = items;
+    } else {
+      containerOuter = [tmp3.containerOuter];
+      const obj3 = { paddingLeft: left, paddingRight: right };
+      containerOuter[1] = obj3;
+    }
+  }, items);
+  obj2.children = containerOuter(left(right[9]), {});
+  const tmp9Result = containerOuter(closure_4, obj2);
   const obj = top(right[5]);
-  tmp = top;
-  obj2.children = containerOuter(closure_4, {
-    style: tmp6 ? tmp7.containerTablet : tmp7.container,
-    children: containerOuter(left(right[9]), {}),
-  });
-  return containerOuter(closure_4, obj2);
+  let obj3 = { style: null, children: null };
+  if (tmpResult2.isDuo()) {
+    const obj4 = { children: null };
+    obj3.style = tmp7.containerOuter;
+    obj3.children = tmp9Result;
+    obj4.children = tmp9(tmp10, obj3);
+    let tmp9Result2 = tmp9(tmp4(tmp2[10]), obj4);
+    const tmp4Result = tmp4(tmp2[10]);
+  } else {
+    obj3.style = memo;
+    obj3.children = tmp9Result;
+    tmp9Result2 = tmp9(tmp10, obj3);
+  }
+  return tmp9Result2;
 }

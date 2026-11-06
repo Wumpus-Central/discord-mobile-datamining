@@ -1,6 +1,6 @@
 // discord_app/modules/threads/ActiveJoinedThreadsStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
@@ -277,7 +277,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj3.isEmpty(dependencyMap[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj3 = _modDef12;
+      obj3 = applyDefault;
     }
     let tmp19 = null != guild_id && null != parent_id && null != id;
     if (tmp19) {
@@ -301,7 +301,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj6.isEmpty(dependencyMap5[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj6 = _modDef12;
+      obj6 = applyDefault;
     }
     let tmp30 = null != guild_id && null != parent_id && null != id;
     if (tmp30) {
@@ -325,7 +325,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj9.isEmpty(dependencyMap2[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj9 = _modDef12;
+      obj9 = applyDefault;
     }
     let tmp41 = null != guild_id && null != parent_id && null != id;
     if (tmp41) {
@@ -349,7 +349,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj12.isEmpty(dependencyMap3[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj12 = _modDef12;
+      obj12 = applyDefault;
     }
     let tmp52 = null != guild_id && null != parent_id && null != id;
     if (tmp52) {
@@ -373,7 +373,7 @@ function updateThread(guild_id, parent_id, id) {
       if (obj15.isEmpty(dependencyMap4[guild_id][parent_id])) {
         delete tmp2[tmp];
       }
-      obj15 = _modDef12;
+      obj15 = applyDefault;
     }
     if (id in dependencyMap7) {
       const _clearTimeout = clearTimeout;
@@ -745,7 +745,7 @@ function updateIn(dependencyMap2, _Date, _Date2, arg3) {
       if (obj3.isEmpty(dependencyMap2[guild_id][parent_id])) {
         delete tmp[tmp2];
       }
-      obj3 = _modDef12;
+      obj3 = applyDefault;
     } else {
       dependencyMap2[guild_id][parent_id][id] = _Date2;
     }
@@ -922,7 +922,7 @@ prototype["getActiveThreadCount"] = function getActiveThreadCount(arg0, arg1) {
   if (obj2 == null) {
     obj2 = {};
   }
-  const sizeResult = _modDef12.size(obj2);
+  const sizeResult = applyDefault.size(obj2);
   let obj3;
   if (dependencyMap3[arg0] != null) {
     obj3 = tmp5[arg1];
@@ -930,7 +930,7 @@ prototype["getActiveThreadCount"] = function getActiveThreadCount(arg0, arg1) {
   if (obj3 == null) {
     obj3 = {};
   }
-  return sizeResult + _modDef12.size(obj3);
+  return sizeResult + applyDefault.size(obj3);
 };
 ActiveJoinedThreadsStore.displayName = "ActiveJoinedThreadsStore";
 const activeJoinedThreadsStore = new ActiveJoinedThreadsStore(DispatcherDefault, {

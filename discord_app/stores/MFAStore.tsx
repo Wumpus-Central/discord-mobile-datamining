@@ -1,5 +1,5 @@
 // discord_app/stores/MFAStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import TokenManagerAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
@@ -55,7 +55,7 @@ const mFAStore = new MFAStore(DispatcherDefault, {
   },
   MFA_VIEW_BACKUP_CODES: function handleGetBackupCodes(arg0) {
     ({ codes, key } = arg0);
-    closure_4 = _modDef12.sortBy(codes, "code");
+    closure_4 = applyDefault.sortBy(codes, "code");
   },
   MFA_SEND_VERIFICATION_KEY: function handleSendVerificationEmail(nonces) {
     nonces = nonces.nonces;

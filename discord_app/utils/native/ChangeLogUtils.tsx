@@ -76,9 +76,9 @@ function ChangeLogParagraph(state) {
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = output(5763).Text;
+    Paragraph = output(5781).Text;
   }
-  const result = output(8716).splitParagraphAtImages(node.content);
+  const result = output(8662).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -116,7 +116,7 @@ function ChangeLogParagraph(state) {
     }
     return tmp7;
   }
-  let obj = output(8716);
+  let obj = output(8662);
   tmp7 = <Paragraph key={state.key} variant="body-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "body-sm/normal", style: tmp.text, children: output(node.content, state) };
 }
@@ -148,11 +148,11 @@ function ChangeLogBlockQuote(state) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, container: null, text: null };
 let obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6916).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6916).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6858).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6858).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});
@@ -161,10 +161,11 @@ let result = size.fileFinishedImporting("utils/native/ChangeLogUtils.tsx");
 
 export const baseRules = rules;
 export const customRules = {
-  link(dependencyMap) {
+  link(inlineStoreParams) {
+    const styling = inlineStoreParams;
     return {
       react(node, output, state) {
-        return <ChangeLogLink key={state.key} accessibilityRole="link" node={node} output={output} state={state} styling={dependencyMap} />;
+        return <ChangeLogLink key={state.key} accessibilityRole="link" node={node} output={output} state={state} styling={styling} />;
       }
     };
   },

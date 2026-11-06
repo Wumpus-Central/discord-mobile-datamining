@@ -1,7 +1,7 @@
 // discord_app/utils/AutocompleteUtils.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import SnowflakeUtilsDefault from "SnowflakeUtils.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import util from "../intl/index.native.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
 import StringUtils from "StringUtils.tsx";
@@ -11,7 +11,7 @@ import UserUtilsDefault from "UserUtils.tsx";
 import useChannelName from "../modules/channel/useChannelName.tsx";
 import RegexUtilsDefault from "RegexUtils.tsx";
 import StickersTypes from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/07037_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/06979_fuzzysearch.js";
 import autocompleter_sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import GuildUtilsDefault from "GuildUtils.tsx";
 import OnboardingHomeUtils from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -48,13 +48,13 @@ function NOOP() {
   return true;
 }
 function calculateScore() {
-  let num = arg0;
-  if (arg0 === undefined) {
+  let num = gameProfileMatchTier;
+  if (gameProfileMatchTier === undefined) {
     num = 0;
   }
-  let num2 = arg1;
+  let num2 = boosters;
   const result = 1000 * num;
-  if (arg1 == null) {
+  if (boosters == null) {
     num2 = 1;
   }
   return result * num2;
@@ -436,9 +436,9 @@ function getCategoryName(parent_id, arg1) {
     return tmp2;
   }
 }
-const InAppNavigationRecord = fn(6918);
+const InAppNavigationRecord = fn(6860);
 ({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: closure_6 } = InAppNavigationRecord);
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({
   ChannelRecordBase: map1,
   isGuildChannelType: closure_14,
@@ -448,26 +448,26 @@ const ChannelRecord = fn(4996);
   PrivateChannelRecord: closure_18,
   UnknownChannelRecord: closure_19,
 } = ChannelRecord);
-const isEveryoneRole = fn(5050).isEveryoneRole;
-let GuildChannelStore = fn(5073);
+const isEveryoneRole = fn(5077).isEveryoneRole;
+let GuildChannelStore = fn(5100);
 const GUILD_SELECTABLE_CHANNELS_KEY = GuildChannelStore.GUILD_SELECTABLE_CHANNELS_KEY;
 const GUILD_VOCAL_CHANNELS_KEY = GuildChannelStore.GUILD_VOCAL_CHANNELS_KEY;
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(7035).AutocompleterResultTypes;
-const StaticChannelId = fn(4999).StaticChannelId;
+fn(6977).AutocompleterResultTypes;
+const StaticChannelId = fn(5026).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(7036).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(7036).default.MENTION_HERE;
-const MENTION_GAME = fn(7036).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(7036).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(7036).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(6978).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(6978).default.MENTION_HERE;
+const MENTION_GAME = fn(6978).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(6978).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(6978).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({
@@ -568,7 +568,7 @@ let merged = Object.assign({
 let tmp6 = new LoggerDefault("AutocompleteUtils");
 merged[3] = new Map();
 let items = [GUILD_SELECTABLE_CHANNELS_KEY, GUILD_VOCAL_CHANNELS_KEY, ChannelTypes.GUILD_CATEGORY];
-const FunctionUtils = fn(2163);
+const FunctionUtils = fn(2158);
 let closure_66 = FunctionUtils.cachedFunction(() => {
   const channelsByRecipientId = new Map();
   const recipientsById = new Map();
@@ -686,8 +686,8 @@ export default {
               if (null != id) {
                 if (null != channel2) {
                   const messages = MessageStore.getMessages(id);
-                  const reversed = _modDef12(messages.toArray()).reverse();
-                  const tmp16Result = _modDef12(messages.toArray());
+                  const reversed = applyDefault(messages.toArray()).reverse();
+                  const tmp16Result = applyDefault(messages.toArray());
                   const mapped1 = reversed
                     .uniqBy((author) => author.author.id)
                     .map((author) => user.getUser(author.author.id));
@@ -789,8 +789,8 @@ export default {
           if (null != channelId) {
             if (null != channel) {
               const messages = MessageStore.getMessages(channelId);
-              const reversed = _modDef12(messages.toArray()).reverse();
-              const tmp14Result = _modDef12(messages.toArray());
+              const reversed = applyDefault(messages.toArray()).reverse();
+              const tmp14Result = applyDefault(messages.toArray());
               const mapped = reversed
                 .uniqBy((author) => author.author.id)
                 .map((author) => user.getUser(author.author.id));
@@ -887,8 +887,8 @@ export default {
       const members = GuildUtilsDefault.requestMembers(null, query, limit);
     }
     const obj2 = { query, limit, request: flag, filter, boosters, users: null };
-    const tmp6Result = _modDef12(UserStore.getUsers());
-    obj2.users = _modDef12(UserStore.getUsers()).values().value();
+    const tmp6Result = applyDefault(UserStore.getUsers());
+    obj2.users = applyDefault(UserStore.getUsers()).values().value();
     return this.queryUsers(obj2);
   },
   queryChannels(guildId) {
@@ -908,10 +908,10 @@ export default {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + closure_1_1(5792).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + closure_1_1(5810).escape(toLocaleLowerCaseResult), "i");
         obj.exactQuery = regExp;
-        const obj2 = closure_1_1(5792);
-        const regExp1 = new RegExp(closure_1_1(5792).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = closure_1_1(5810);
+        const regExp1 = new RegExp(closure_1_1(5810).escape(toLocaleLowerCaseResult), "i");
         obj.containQuery = regExp1;
         return obj;
       });
@@ -919,17 +919,17 @@ export default {
         let toLocaleLowerCaseResult = query.toLocaleLowerCase();
         let obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: true };
         const _RegExp = RegExp;
-        let obj2 = closure_1(5792);
+        let obj2 = closure_1(5810);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + closure_1(5792).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + closure_1(5810).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj.exactQuery = regExp;
         const _RegExp2 = RegExp;
-        const str = closure_1(5792).escape(toLocaleLowerCaseResult);
-        const obj3 = closure_1(5792);
-        let regExp1 = new RegExp(closure_1(5792).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = closure_1(5810).escape(toLocaleLowerCaseResult);
+        const obj3 = closure_1(5810);
+        let regExp1 = new RegExp(closure_1(5810).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj.containQuery = regExp1;
         mapped.unshift(obj);
-        const str6 = closure_1(5792).escape(toLocaleLowerCaseResult);
+        const str6 = closure_1(5810).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -945,13 +945,13 @@ export default {
       return tmp;
     })(type);
     if (null == guildId) {
-      const values = _modDef12(ChannelStore.loadAllGuildAndPrivateChannelsFromDisk()).values();
+      const values = applyDefault(ChannelStore.loadAllGuildAndPrivateChannelsFromDisk()).values();
       if (items) {
         let allActiveJoinedThreads = ActiveJoinedThreadsStore.computeAllActiveJoinedThreads();
       } else {
         allActiveJoinedThreads = [];
       }
-      const tmp6Result = _modDef12(ChannelStore.loadAllGuildAndPrivateChannelsFromDisk());
+      const tmp6Result = applyDefault(ChannelStore.loadAllGuildAndPrivateChannelsFromDisk());
       const valueResult = values.concat(allActiveJoinedThreads).value();
       items = [];
       const maxScore = FrecencyStore.getMaxScore();
@@ -959,7 +959,7 @@ export default {
       includeAllThreads = 6;
       const iter = values.concat(allActiveJoinedThreads);
     }
-    let mapped = _modDef12(GuildChannelStore.getChannels(guildId)[type]).map((channel) => channel.channel);
+    let mapped = applyDefault(GuildChannelStore.getChannels(guildId)[type]).map((channel) => channel.channel);
     if (!items) {
       tmp12([]).value();
       const iter2 = tmp12([]);
@@ -969,7 +969,7 @@ export default {
     } else {
       allThreadsForGuild = ActiveJoinedThreadsStore.computeAllActiveJoinedThreads(guildId);
     }
-    const tmp10Result = _modDef12(GuildChannelStore.getChannels(guildId)[type]);
+    const tmp10Result = applyDefault(GuildChannelStore.getChannels(guildId)[type]);
   },
   queryGuilds(fuzzy) {
     ({ query, limit } = fuzzy);
@@ -1106,10 +1106,10 @@ export default {
     const regExp1 = new RegExp(RegexUtilsDefault.escape(stripDiacriticsResult), "i");
     obj.containQuery = regExp1;
     obj.queryLower = stripDiacriticsResult;
-    const tmp4Result = _modDef12(ChannelStore.getMutablePrivateChannels());
-    const iter = _modDef12(ChannelStore.getMutablePrivateChannels()).values();
+    const tmp4Result = applyDefault(ChannelStore.getMutablePrivateChannels());
+    const iter = applyDefault(ChannelStore.getMutablePrivateChannels()).values();
     items = [];
-    const iter2 = _modDef12(ChannelStore.getMutablePrivateChannels()).values().value()[Symbol.iterator]();
+    const iter2 = applyDefault(ChannelStore.getMutablePrivateChannels()).values().value()[Symbol.iterator]();
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
       let tmp6 = nextResult;
@@ -1340,10 +1340,10 @@ export default {
     const regExp1 = new RegExp(RegexUtilsDefault.escape(toLocaleLowerCaseResult), "i");
     obj.containQuery = regExp1;
     obj.queryLower = toLocaleLowerCaseResult;
-    const tmp4Result = _modDef12(SKUStore.getSKUs());
-    const iter = _modDef12(SKUStore.getSKUs()).values();
+    const tmp4Result = applyDefault(SKUStore.getSKUs());
+    const iter = applyDefault(SKUStore.getSKUs()).values();
     items = [];
-    const iter2 = _modDef12(SKUStore.getSKUs()).values().value()[Symbol.iterator]();
+    const iter2 = applyDefault(SKUStore.getSKUs()).values().value()[Symbol.iterator]();
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
       let tmp7 = nextResult;
@@ -1382,8 +1382,8 @@ export default {
     if (null != channelId1) {
       if (null != channel) {
         const messages = MessageStore.getMessages(channelId1);
-        const reversed = _modDef12(messages.toArray()).reverse();
-        const tmp6Result = _modDef12(messages.toArray());
+        const reversed = applyDefault(messages.toArray()).reverse();
+        const tmp6Result = applyDefault(messages.toArray());
         const mapped = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
         const found = mapped.filter((isNonUserBot) => {
           if (null == isNonUserBot) {
@@ -1763,7 +1763,7 @@ export default {
     const obj = require("RegexUtils");
     regExp1 = new RegExp(require("RegexUtils").escape(toLocaleLowerCaseResult), "i");
     let obj2 = require("RegexUtils");
-    const mapped = require("../../_runtime/metro/00012__.js")(fuzzy.choices).map((displayName, originalIndex) => {
+    const mapped = require("apply")(fuzzy.choices).map((displayName, originalIndex) => {
       displayName = displayName.displayName;
       const tmp = getMatchValue(
         displayName.toLocaleLowerCase(),
@@ -1975,22 +1975,22 @@ export default {
     new Set();
     items1 = [];
     closure_5 = items1;
-    const FrecencyUserSettingsActionCreators = flag(4973).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = flag(5000).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     function _loop() {
       if ("" === closure_6) {
         return 1;
       } else {
         const toLocaleLowerCaseResult = closure_6.toLocaleLowerCase();
-        const stripDiacriticsResult = toLocaleLowerCaseResult(2155).stripDiacritics(toLocaleLowerCaseResult);
+        const stripDiacriticsResult = toLocaleLowerCaseResult(2150).stripDiacritics(toLocaleLowerCaseResult);
         const _RegExp = RegExp;
-        let obj2 = toLocaleLowerCaseResult(2155);
+        let obj2 = toLocaleLowerCaseResult(2150);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(5792).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(5810).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(5792);
+        const obj3 = nextResult(5810);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(5792).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(5810).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = StickersStore.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((item, index) => {
@@ -2013,12 +2013,12 @@ export default {
                     } else if (regex.test(value)) {
                       num4 = 7 * tmp9;
                     } else {
-                      let tmp18 = tmp7 !== flag(6699).StickerMetadataTypes.GUILD_NAME;
+                      let tmp18 = tmp7 !== flag(6641).StickerMetadataTypes.GUILD_NAME;
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6699).StickerMetadataTypes.PACK_NAME;
+                        tmp18 = tmp7 !== flag(6641).StickerMetadataTypes.PACK_NAME;
                       }
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6699).StickerMetadataTypes.STICKER_NAME;
+                        tmp18 = tmp7 !== flag(6641).StickerMetadataTypes.STICKER_NAME;
                       }
                       if (!tmp18) {
                         tmp18 = !regex2.test(value);
@@ -2056,11 +2056,11 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7658);
+              obj2 = flag(7611);
             }
           });
         });
-        const obj4 = nextResult(5792);
+        const obj4 = nextResult(5810);
       }
     }
     let iter2 = items[Symbol.iterator]();
@@ -2069,8 +2069,8 @@ export default {
       let _loopResult = _loop();
       continue;
     }
-    let obj = _modDef12(items1);
-    let valueResult = _modDef12(items1)
+    let obj = applyDefault(items1);
+    let valueResult = applyDefault(items1)
       .sortBy((score) => -1 * score.score)
       .value();
     closure_5 = valueResult;

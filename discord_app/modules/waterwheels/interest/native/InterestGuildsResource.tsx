@@ -18,7 +18,7 @@ function availableInterestGuilds(guilds) {
   });
   return found.slice(0, 15);
 }
-const MAX_SELECTIONS = fn(18715).MAX_SELECTIONS;
+const MAX_SELECTIONS = fn(18705).MAX_SELECTIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildsResource.tsx");
 class InterestGuildsResource {
@@ -43,49 +43,58 @@ class InterestGuildsResource {
         return listeners.delete(closure_0);
       };
     };
-    obj.setPicks = function setPicks(items) {
-      let flag = arg1;
-      if (arg1 === undefined) {
+    obj.setPicks = function setPicks(gameIds) {
+      if (flag === undefined) {
         flag = false;
       }
-      if (!obj.disposed) {
-        const _Array = Array;
-        const _Set = Set;
-        const set = new Set(items);
-        const substr = Array.from(set).slice(0, MAX_SELECTIONS);
-        const sorted = substr.sort();
-        const joined = sorted.join(",");
-        if (tmp10) {
-          const _Array2 = Array;
-          const _Set2 = Set;
-          const set1 = new Set(items);
-          obj.gameIds = Array.from(set1).slice(0, MAX_SELECTIONS);
-          obj.requestId = obj.requestId + 1;
-          if ("" !== joined) {
-            const obj2 = { key: joined, status: "loading", guilds: [], failed: false };
-            obj.publish(obj2);
-            items = [];
-            ({ load, requestId } = obj);
-            HermesBuiltin.arraySpread(obj.gameIds, 0);
-            load(requestId, joined, items);
-          } else {
-            const obj3 = { key: joined, status: "idle", guilds: [], failed: false };
-            obj.publish(obj3);
-          }
-          const arr2 = Array.from(set1);
-        }
-        const arr = Array.from(set);
-        tmp10 = joined !== obj.snapshot.key || flag;
-      }
+      obj.updatePicks(gameIds, flag, false);
+    };
+    obj.loadPopular = function loadPopular() {
+      return obj.updatePicks([], false, true);
     };
     obj.retry = function retry() {
-      return obj.setPicks(obj.gameIds, true);
+      return obj.updatePicks(obj.gameIds, true, "popular" === obj.snapshot.key);
     };
     obj.fetchGuilds = global;
     return obj;
   }
 }
 const prototype = InterestGuildsResource.prototype;
+prototype["updatePicks"] = function updatePicks(gameIds, flag, arg2) {
+  const self = this;
+  if (!this.disposed) {
+    let str = "popular";
+    if (!arg2) {
+      const _Array = Array;
+      const _Set = Set;
+      const set = new Set(gameIds);
+      const substr = Array.from(set).slice(0, MAX_SELECTIONS);
+      const sorted = substr.sort();
+      str = sorted.join(",");
+      const arr = Array.from(set);
+    }
+    if (tmp10) {
+      const _Array2 = Array;
+      const _Set2 = Set;
+      const set1 = new Set(gameIds);
+      self.gameIds = Array.from(set1).slice(0, MAX_SELECTIONS);
+      self.requestId = self.requestId + 1;
+      if ("" !== str) {
+        const obj = { key: str, status: "loading", guilds: [], failed: false };
+        self.publish(obj);
+        items = [];
+        ({ load, requestId } = self);
+        HermesBuiltin.arraySpread(self.gameIds, 0);
+        load(requestId, str, items);
+      } else {
+        const obj2 = { key: str, status: "idle", guilds: [], failed: false };
+        self.publish(obj2);
+      }
+      const arr2 = Array.from(set1);
+    }
+    tmp10 = str !== self.snapshot.key || flag;
+  }
+};
 prototype["dispose"] = function dispose() {
   this.disposed = true;
   const listeners = this.listeners;

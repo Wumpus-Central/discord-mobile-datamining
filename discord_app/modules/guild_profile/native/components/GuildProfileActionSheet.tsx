@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05402_BottomSheetModal.js";
-import LinearGradientDefault from "../../../../../_runtime/05725_LinearGradient.js";
+import BottomSheetModal from "../../../../../_runtime/05422_BottomSheetModal.js";
+import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
 import ActionSheetHeaderBar from "../../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
 import GuildProfileSheetBodyDefault from "GuildProfileSheetBody.tsx";
 import GuildProfileCreateTagUpsellDefault from "GuildProfileCreateTagUpsell.tsx";
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   footerContainer: { paddingHorizontal: 16, paddingVertical: 40 },
   footerStack: { gap: 8 },
@@ -34,12 +34,12 @@ export default function GuildProfileActionSheet(guildId) {
   let colors;
   noop = colors();
   const tmp = useThemeDefault();
-  const backgroundColor = guildId(5734).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp);
-  let obj = guildId(5734);
-  const bottomSheetRef = guildId(8887).useBottomSheetRef();
+  const backgroundColor = guildId(5754).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp);
+  let obj = guildId(5754);
+  const bottomSheetRef = guildId(8833).useBottomSheetRef();
   ({ bottomSheetRef: c5, bottomSheetClose } = bottomSheetRef);
-  const obj2 = guildId(8887);
-  const token = guildId(5734).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  const obj2 = guildId(8833);
+  const token = guildId(5754).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   items = [token];
   colors = noop.useMemo(() => {
     const obj = _modDef671(token);

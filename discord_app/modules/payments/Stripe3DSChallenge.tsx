@@ -3,18 +3,28 @@ import StripeUtils from "../../utils/StripeUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_3 = async function _getLoadedStripe() {
-  closure_0 = tmp2;
-  await StripeUtils.getStripe();
-  closure_128_0 = value;
-  if (null == closure_128_0) {
+function getLoadedStripe() {
+  const self = this;
+  const apply = closure_4.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_4 = async function _getLoadedStripe() {
+  closure_1 = tmp2;
+  await StripeUtils.getStripe(closure_0);
+  closure_129_0 = value;
+  if (null == closure_129_0) {
     const _Error = Error;
     const error = new Error("Stripe is not loaded");
     throw error;
   }
-  return closure_128_0;
+  return closure_129_0;
 };
-let closure_4 = async function _retrievePaymentIntent() {
+let closure_5 = async function _retrievePaymentIntent() {
   closure_2 = tmp2;
   await closure_0.retrievePaymentIntent(closure_1);
   closure_130_0 = value;
@@ -33,7 +43,7 @@ let closure_4 = async function _retrievePaymentIntent() {
   }
   return paymentIntent;
 };
-let closure_5 = async function _confirmCardPayment(arg0) {
+let closure_6 = async function _confirmCardPayment(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -90,35 +100,26 @@ let closure_5 = async function _confirmCardPayment(arg0) {
     }
   }
 };
-let closure_6 = async function _authenticateStripePaymentIntent() {
-  if (null == closure_129_0) {
+let closure_7 = async function _authenticateStripePaymentIntent() {
+  if (null == closure_130_0) {
     const _Error2 = Error;
     const error = new Error("Stripe 3DS context has no client secret");
     throw error;
   }
-  await (function getLoadedStripe() {
-    const self = this;
-    const apply = closure_1_3.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  })();
-  closure_129_2 = value;
+  await closure_131_3(closure_130_2);
+  closure_130_3 = value;
   await (function retrievePaymentIntent() {
     const self = this;
-    const apply = closure_1_4.apply;
+    const apply = closure_1_5.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  })(closure_129_2, closure_129_0);
-  closure_129_3 = value;
-  const status = closure_129_3.status;
+  })(closure_130_3, closure_130_0);
+  closure_130_4 = value;
+  const status = closure_130_4.status;
   if ("succeeded" !== status) {
     if ("processing" !== status) {
       if ("requires_payment_method" !== status) {
@@ -126,16 +127,16 @@ let closure_6 = async function _authenticateStripePaymentIntent() {
           if ("requires_action" !== status) {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error1 = new Error("Unexpected payment intent status: " + closure_129_3.status);
+            const error1 = new Error("Unexpected payment intent status: " + closure_130_4.status);
             throw error1;
           }
         }
       }
-      c3 = 3;
+      c5 = 3;
       return {
         value: (function confirmCardPayment() {
           const self = this;
-          const apply = closure_1_5.apply;
+          const apply = closure_1_6.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
@@ -143,8 +144,8 @@ let closure_6 = async function _authenticateStripePaymentIntent() {
           }
           return applyArgumentsResult;
         })(
-          closure_129_2,
-          closure_129_0,
+          closure_130_3,
+          closure_130_0,
           (function getConfirmCardPaymentData(status, payment_method) {
             if ("requires_payment_method" === status.status) {
               if (null != payment_method) {
@@ -152,23 +153,25 @@ let closure_6 = async function _authenticateStripePaymentIntent() {
                 return obj;
               }
             }
-          })(closure_129_3, closure_129_1),
+          })(closure_130_4, closure_130_1),
         ),
         done: true,
       };
     }
   }
   await "HermesInternal";
-  closure_1 = tmp2;
-  ({ client_secret: closure_129_0, payment_method_id: closure_129_1 } = closure_0);
+  closure_2 = tmp2;
+  ({ client_secret: closure_130_0, payment_method_id: closure_130_1 } = closure_0);
+  closure_130_2 = closure_1;
   return "flexDirection";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/Stripe3DSChallenge.tsx");
 
+export { getLoadedStripe };
 export function authenticateStripePaymentIntent() {
   const self = this;
-  const apply = closure_6.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

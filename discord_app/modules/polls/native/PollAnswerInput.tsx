@@ -1,7 +1,7 @@
 // discord_app/modules/polls/native/PollAnswerInput.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
@@ -94,13 +94,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const DraftType = fn(7846).DraftType;
-const PollsConstants = fn(8552);
+const DraftType = fn(7800).DraftType;
+const PollsConstants = fn(8498);
 ({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   defaultContainer: { flexDirection: "row", alignItems: "center" },
   inputContainer: { flex: 1 },
@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12791, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12756, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -207,15 +207,15 @@ export default function PollAnswerInput(answer) {
     onBlur: null,
     blurOnSubmit: false,
     style: null,
-    selectionColor: "id",
-    textContentType: "tag",
-    accessibilityLabel: "a",
-    accessibilityHint: "id",
-    maxLength: "next",
-    returnKeyType: "isArray",
-    required: "Icon",
-    autoCorrect: "Array",
-    "aria-invalid": "id",
+    selectionColor: "channel",
+    textContentType: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    maxLength: null,
+    returnKeyType: null,
+    required: null,
+    autoCorrect: null,
+    "aria-invalid": null,
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

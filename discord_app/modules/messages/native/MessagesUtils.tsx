@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/MessagesUtils.tsx
 import TTITrackerDefault from "../../tti_analytics/TTITracker.tsx";
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
@@ -113,7 +113,7 @@ function getVisibleMessages(arg0) {
 }
 function getMessage(toArray, arg1) {
   closure_0 = arg1;
-  return _modDef12.find(toArray.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
+  return applyDefault.find(toArray.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
 }
 let closure_24 = async function _handleTapNavBar(arg0) {
   if (c3 === 2) {
@@ -217,8 +217,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(10082).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8524);
+let closure_5 = fn(10033).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8470);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1072);
 ({

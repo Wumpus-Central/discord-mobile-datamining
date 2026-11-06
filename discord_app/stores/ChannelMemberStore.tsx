@@ -1,5 +1,5 @@
 // discord_app/stores/ChannelMemberStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
@@ -26,7 +26,7 @@ function getMemberListId(arg0) {
     if (obj.canEveryone(constants2.VIEW_CHANNEL, channel)) {
     } else {
       const obj2 = MurmurHashV3Default;
-      const reduced = _modDef12(channel.permissionOverwrites).reduce((arr, id) => {
+      const reduced = applyDefault(channel.permissionOverwrites).reduce((arr, id) => {
         id = id.id;
         ({ allow, deny } = id);
         if (obj.has(allow, constants.VIEW_CHANNEL)) {
@@ -42,7 +42,7 @@ function getMemberListId(arg0) {
         return arr;
       }, []);
       const sorted = reduced.sort();
-      let arr = _modDef12(channel.permissionOverwrites);
+      let arr = applyDefault(channel.permissionOverwrites);
       const str1 = obj2.v3(sorted.join(",")).toString();
       const str2 = obj2.v3(sorted.join(","));
     }
@@ -193,7 +193,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "alignItems" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -288,7 +288,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "alignItems" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -516,11 +516,11 @@ prototype2["forEach"] = function forEach(arg0, arg1) {
   const self = this;
   closure_0 = arg1;
   if (null == arg0) {
-    let item = _modDef12.forEach(self._guildLists, (arg0) => {
-      const item = _modDef12.forEach(arg0, closure_0);
+    let item = applyDefault.forEach(self._guildLists, (arg0) => {
+      const item = applyDefault.forEach(arg0, closure_0);
     });
   } else if (null != self._guildLists[arg0]) {
-    const item1 = _modDef12.forEach(tmp, arg1);
+    const item1 = applyDefault.forEach(tmp, arg1);
   }
 };
 prototype2["delete"] = function delete(arg0) {

@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/AvatarMoatmonsturrExample.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef20230 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-1x.png.js";
-import _modDef20231 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-2x.png.js";
-import _modDef20232 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-3x.png.js";
+import _modDef20237 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-1x.png.js";
+import _modDef20238 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-2x.png.js";
+import _modDef20239 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarMoatmonsturrExample-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20230 }, 3: null };
-let obj2 = { uri: _modDef20230 };
-obj[2] = { uri: _modDef20231 };
-const obj3 = { uri: _modDef20231 };
-obj[3] = { uri: _modDef20232 };
+let obj = { 1: null, 2: { uri: _modDef20237 }, 3: null };
+let obj2 = { uri: _modDef20237 };
+obj[2] = { uri: _modDef20238 };
+const obj3 = { uri: _modDef20238 };
+obj[3] = { uri: _modDef20239 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/AvatarMoatmonsturrExample.native.tsx",

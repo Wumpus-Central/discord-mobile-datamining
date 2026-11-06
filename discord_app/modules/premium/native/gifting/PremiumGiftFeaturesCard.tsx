@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import StringUtils from "../../../../utils/StringUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05725_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
@@ -126,7 +126,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_15 = createStyles.createStyles(() => {
   obj = {
     card: null,

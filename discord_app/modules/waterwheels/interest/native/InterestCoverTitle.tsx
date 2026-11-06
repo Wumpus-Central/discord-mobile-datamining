@@ -51,7 +51,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 0.75;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_8 = createStyles.createStyles((width, scale, height, paddingBottom) => {
   const obj = {
     container: { width, alignItems: "center", justifyContent: "center" },

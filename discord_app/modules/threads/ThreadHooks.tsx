@@ -1,6 +1,6 @@
 // discord_app/modules/threads/ThreadHooks.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import isSystemMessageDefault from "../messages/isSystemMessage.tsx";
 import GuildChannelSubscriptions from "../../lib/guild/GuildChannelSubscriptions.tsx";
@@ -144,7 +144,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(4996).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(5023).THREADED_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ Permissions: closure_12, MessageFlags: map1, ChannelTypes: closure_14 } = Constants);
 let obj = {
@@ -316,19 +316,19 @@ export function useHasActiveThreads(channel) {
       user.guild_id,
       user.id,
     );
-    const someResult = _modDef12(activeJoinedRelevantThreadsForParent).some((channel) =>
+    const someResult = applyDefault(activeJoinedRelevantThreadsForParent).some((channel) =>
       closure_1_9.can(constants.VIEW_CHANNEL, channel.channel),
     );
-    const obj = _modDef12(activeJoinedRelevantThreadsForParent);
-    const someResult1 = _modDef12(activeJoinedThreadsForParent).some((channel) => {
+    const obj = applyDefault(activeJoinedRelevantThreadsForParent);
+    const someResult1 = applyDefault(activeJoinedThreadsForParent).some((channel) => {
       let canResult = !(channel.channel.id in activeJoinedRelevantThreadsForParent);
       if (canResult) {
         canResult = PermissionStore.can(constants.VIEW_CHANNEL, channel.channel);
       }
       return canResult;
     });
-    const obj2 = _modDef12(activeJoinedThreadsForParent);
-    let someResult2 = _modDef12(activeUnjoinedThreadsForParent).some((item) =>
+    const obj2 = applyDefault(activeJoinedThreadsForParent);
+    let someResult2 = applyDefault(activeUnjoinedThreadsForParent).some((item) =>
       closure_1_9.can(constants.VIEW_CHANNEL, item),
     );
     let tmp7 = someResult;
@@ -626,8 +626,8 @@ export function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("shouldAgeVerifyForAgeGate").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(6872).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(6872);
+    shouldAgeVerifyForAgeGate = tmp3(6814).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(6814);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

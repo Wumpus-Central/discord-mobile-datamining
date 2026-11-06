@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/StageChannelRoleStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import StageChannelPermissions from "StageChannelPermissions.tsx";
@@ -195,7 +195,7 @@ const stageChannelRoleStore = new StageChannelRoleStore(DispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    const isEmptyResult = _modDef12.isEmpty(closure_11);
+    const isEmptyResult = applyDefault.isEmpty(closure_11);
     let reduced = !isEmptyResult;
     if (!isEmptyResult) {
       reduced = voiceStates.reduce((acc, item) => {

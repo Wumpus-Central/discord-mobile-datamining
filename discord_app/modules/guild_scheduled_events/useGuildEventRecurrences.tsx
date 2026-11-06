@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/useGuildEventRecurrences.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import GuildScheduledEventManagerDefault from "GuildScheduledEventManager.tsx";
 import ScheduleUtils from "utils/ScheduleUtils.tsx";
 import usePrevValueDefault from "../../../discord_common/js/shared/hooks/usePrevValue.tsx";
@@ -25,12 +25,12 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      const tmpResult = tmp(9120);
+      const tmpResult = tmp(9066);
       let _Date = Date;
-      let rRule = tmp(9120).getRRule(byWeekday);
+      let rRule = tmp(9066).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-      const tmpResult2 = tmp(9120);
+      const tmpResult2 = tmp(9066);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];
@@ -46,7 +46,7 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
               const date = new Date(tmp13.scheduled_start_time);
               closure_6(ScheduleUtils.generateNextRecurrences(first.length, rRule, date));
             }
-            obj3 = _modDef12;
+            obj3 = applyDefault;
           }
         }
       }

@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/useStageChannelGridParticipants.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import StageChannelParticipants from "StageChannelParticipants.tsx";
 import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -92,7 +92,7 @@ export function useStageChannelParticipantsList(arg0, arg1, arg2) {
       items4 = [];
     }
     function pushSection(items2, arg1, arg2) {
-      const chunkResult = _mod12.chunk(items2, 1);
+      const chunkResult = apply.chunk(items2, 1);
       items1.push(chunkResult);
       items.push(chunkResult.length);
     }
@@ -113,10 +113,10 @@ export function useStageChannelParticipantsList(arg0, arg1, arg2) {
           return tmp;
         });
       }
-      const chunkResult = _mod12.chunk(found, items1[item]);
+      const chunkResult = apply.chunk(found, items1[item]);
       items1.push(chunkResult);
       items.push(chunkResult.length);
-      const tmpResult = _mod12;
+      const tmpResult = apply;
     });
     pushSection(items2, 1, false);
     const items6 = [items, items1];
@@ -133,9 +133,9 @@ export function useThrottleDurationForChannel(id) {
   items = [stageParticipantsCount];
   const effect = noop.useEffect(() => {
     if (stageParticipantsCount > 100) {
-      closure_1(true);
+      dependencyMap(true);
     } else if (tmp < 75) {
-      closure_1(false);
+      dependencyMap(false);
     }
   }, items);
   let num = 0;
@@ -216,7 +216,7 @@ export function useStageChannelParticipantsListThrottled(id, memo, throttleDurat
       items4 = [];
     }
     function pushSection(items2, arg1, arg2) {
-      const chunkResult = _mod12.chunk(items2, 1);
+      const chunkResult = apply.chunk(items2, 1);
       items1.push(chunkResult);
       items.push(chunkResult.length);
     }
@@ -237,10 +237,10 @@ export function useStageChannelParticipantsListThrottled(id, memo, throttleDurat
           return tmp;
         });
       }
-      const chunkResult = _mod12.chunk(found, items1[item]);
+      const chunkResult = apply.chunk(found, items1[item]);
       items1.push(chunkResult);
       items.push(chunkResult.length);
-      const tmpResult = _mod12;
+      const tmpResult = apply;
     });
     pushSection(items2, 1, false);
     const items6 = [items, items1];
@@ -264,4 +264,50 @@ export function useStageChannelParticipantsListThrottled(id, memo, throttleDurat
   const items8 = [tmp6[flag ? tmp11.MEDIA : tmp11.SELECTED], tmp6[tmp11.SPEAKER], tmp9[tmp11.AUDIENCE]];
   items7[1] = items8;
   return items7;
+}
+export function useThrottledStageAudience(id) {
+  let stageParticipantsCount = id;
+  items = [StageChannelParticipantStore];
+  const items1 = [id];
+  const stateFromStores = stageParticipantsCount(504).useStateFromStores(
+    items,
+    () => {
+      items = [stageParticipantsCount, StageChannelParticipantStore.getParticipantsVersion(stageParticipantsCount)];
+      return items;
+    },
+    items1,
+    stageParticipantsCount(6846).isVersionEqual,
+  );
+  const items2 = [stateFromStores];
+  const memo = noop.useMemo(() => {
+    items = [
+      ...StageChannelParticipantStore.getMutableParticipants(
+        closure_1[0],
+        StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE,
+      ),
+    ];
+    return items;
+  }, items2);
+  const obj = stageParticipantsCount(504);
+  stageParticipantsCount = undefined;
+  const obj2 = stageParticipantsCount(12067);
+  stageParticipantsCount = stageParticipantsCount(6845).useStageParticipantsCount(
+    id,
+    stageParticipantsCount(6839).StageChannelParticipantNamedIndex.AUDIENCE,
+  );
+  const tmp4 = _slicedToArray(noop.useState(false), 2);
+  dependencyMap = tmp4[1];
+  const items3 = [stageParticipantsCount];
+  const effect = noop.useEffect(() => {
+    if (stageParticipantsCount > 100) {
+      dependencyMap(true);
+    } else if (tmp < 75) {
+      dependencyMap(false);
+    }
+  }, items3);
+  let num = 0;
+  if (tmp4[0]) {
+    num = 5000;
+  }
+  return obj2.useThrottledState(memo, num);
 }

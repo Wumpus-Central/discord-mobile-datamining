@@ -1,6 +1,6 @@
 // discord_app/modules/messages/BurstReactionEffectUtils.tsx
 import ColorUtils from "../../utils/ColorUtils.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/BurstReactionEffectUtils.tsx");

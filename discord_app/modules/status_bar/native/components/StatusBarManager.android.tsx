@@ -1,5 +1,5 @@
 // discord_app/modules/status_bar/native/components/StatusBarManager.android.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import NativeSafeAreaInsetsModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -52,7 +52,7 @@ prototype["updatePropsStack"] = function updatePropsStack() {
   clearImmediate(this.updateImmediate);
   this.updateImmediate = setImmediate(() => {
     items = [{ hidden: false, barStyle: "default" }, ...self.propsStack];
-    const applyResult = _modDef12.merge.apply(items);
+    const applyResult = applyDefault.merge.apply(items);
     StatusBar.setBarStyle(applyResult.barStyle);
     NativeSafeAreaInsetsModuleDefault.setStatusBarVisible(!applyResult.hidden);
   });

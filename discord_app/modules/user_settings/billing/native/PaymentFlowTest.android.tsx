@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/billing/native/PaymentFlowTest.android.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import NativePaymentContext from "../../../payments/native/NativePaymentContext.tsx";
@@ -74,7 +74,7 @@ function TestView() {
         const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
         ActionSheetActionCreatorsDefault.hideActionSheet();
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17984, dependencyMap.paths),
+          asyncRequireImpl(17972, dependencyMap.paths),
           "SimpleRequestOTPActionSheet",
           obj,
         );
@@ -89,7 +89,7 @@ function TestView() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: null,

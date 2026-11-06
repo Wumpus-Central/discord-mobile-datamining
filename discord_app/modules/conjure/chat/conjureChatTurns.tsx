@@ -310,3 +310,41 @@ export function stoppable(role) {
   }
   return tmp;
 }
+export function isCopyMarker(role) {
+  let tmp = "user" === role.role;
+  if (tmp) {
+    tmp = "" === role.content;
+  }
+  if (tmp) {
+    const attachments = role.attachments;
+    let num;
+    if (attachments != null) {
+      num = attachments.length;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    tmp = 0 === num;
+  }
+  return tmp;
+}
+export function hasShownMessages(arr) {
+  return arr.some((role) => {
+    let tmp = "user" === role.role;
+    if (tmp) {
+      tmp = "" === role.content;
+    }
+    if (tmp) {
+      const attachments = role.attachments;
+      let num;
+      if (attachments != null) {
+        num = attachments.length;
+      }
+      if (num == null) {
+        num = 0;
+      }
+      tmp = 0 === num;
+    }
+    return !tmp;
+  });
+}

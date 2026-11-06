@@ -1,5 +1,5 @@
 // discord_app/modules/roblox_subgame_detection/RobloxSubgameUtils.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import RobloxSubgameTypes from "RobloxSubgameTypes.tsx";
 import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils.native.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -62,7 +62,7 @@ export function hasRunningGameChanged(distributor, arg1, id) {
         if (!tmp12) {
           let tmp13 = null != tmp6 && null != arg1;
           if (tmp13) {
-            tmp13 = !_modDef12.isEqual(tmp6, arg1);
+            tmp13 = !applyDefault.isEqual(tmp6, arg1);
           }
           tmp12 = tmp13;
         }
@@ -81,7 +81,7 @@ export function hasSubgameInfoChanged(arg0, arg1) {
     if (!tmp2) {
       let tmp3 = null != arg0 && null != arg1;
       if (tmp3) {
-        tmp3 = !_modDef12.isEqual(arg0, arg1);
+        tmp3 = !applyDefault.isEqual(arg0, arg1);
       }
       tmp2 = tmp3;
     }

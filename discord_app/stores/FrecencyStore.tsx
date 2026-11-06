@@ -1,5 +1,5 @@
 // discord_app/stores/FrecencyStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import FrecencyDefault from "../lib/Frecency.tsx";
@@ -68,7 +68,7 @@ function initFrecency() {
     return false;
   } else {
     closure_9.overwriteHistory(
-      _modDef12.mapValues(guildAndChannels, (recentUses) => {
+      applyDefault.mapValues(guildAndChannels, (recentUses) => {
         const obj = {};
         const merged = Object.assign(recentUses);
         recentUses = recentUses.recentUses;

@@ -5,7 +5,7 @@ import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05450_LegacyBaseButton.js";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
@@ -20,8 +20,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11419).VoicePanelModes;
-const VoicePanelDockConstants = fn(11437);
+const VoicePanelModes = fn(11381).VoicePanelModes;
+const VoicePanelDockConstants = fn(11399);
 ({
   DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: metroImportDefault,
   DOCK_PULL_SNAP_DISTANCE: closure_8,
@@ -34,7 +34,7 @@ const VoicePanelDockConstants = fn(11437);
   DOCK_PADDING_TOP,
   DOCK_ROW_HEIGHT,
 } = VoicePanelDockConstants);
-const GestureConstants = fn(11438);
+const GestureConstants = fn(11400);
 ({
   FLING_MIN_DISTANCE: closure_12,
   FLING_MIN_VELOCITY: map1,
@@ -45,7 +45,7 @@ const GestureConstants = fn(11438);
 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   dock: { position: "absolute", top: 0, left: 0, right: 0, paddingTop: DOCK_PADDING_TOP, zIndex: 10 },
   pressTarget: { position: "absolute", top: 0, left: 0, right: 0 },

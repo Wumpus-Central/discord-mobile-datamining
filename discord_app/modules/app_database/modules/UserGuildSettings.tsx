@@ -1,10 +1,10 @@
 // discord_app/modules/app_database/modules/UserGuildSettings.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const UserGuildSettingsStore = fn(6913);
+const UserGuildSettingsStore = fn(6855);
 ({ convertChannelOverridesToMap: c3, getGuildDefaults: closure_4 } = UserGuildSettingsStore);
 let closure_5 = new LoggerDefault("ReadStates");
 class UserGuildSettings {
@@ -55,7 +55,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(userGuildSetti
 };
 prototype["handleUserGuildSettingsUpdate"] = function handleUserGuildSettingsUpdate(userGuildSettings, arg1) {
   userGuildSettings = userGuildSettings.userGuildSettings;
-  const maxResult = _modDef12.max(
+  const maxResult = applyDefault.max(
     userGuildSettings.map((version) => {
       let num = version.version;
       if (num == null) {

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionsControls.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -82,7 +82,7 @@ function AndOrRadios(setPendingRoleConfigurations) {
   } else {
     const _Object = Object;
     const values = Object.values(
-      _modDef12.groupBy(
+      applyDefault.groupBy(
         roleConnectionConfigurations,
         (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId,
       ),
@@ -245,20 +245,20 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(20124, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(20131, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const Constants = fn(7488);
+const Constants = fn(7433);
 ({
   GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8,
   GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_9,
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   formContent: { paddingTop: 16, paddingBottom: 0 },
   warningContainer: {
@@ -389,7 +389,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
           const result = obj.updateRoleConnectionConfigurations(
             role.id,
             Object.values(
-              _modDef12.groupBy(
+              applyDefault.groupBy(
                 arg0,
                 (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId,
               ),
@@ -421,7 +421,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
           const result = obj.updateRoleConnectionConfigurations(
             role.id,
             Object.values(
-              _modDef12.groupBy(
+              applyDefault.groupBy(
                 arg0,
                 (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId,
               ),
@@ -439,7 +439,14 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
       items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "type", value: null };
+      const obj = {
+        connectionType,
+        connectionMetadataField: "Array",
+        applicationId,
+        operator: "type",
+        value:
+          -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007211244647029995,
+      };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {
@@ -454,7 +461,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
         const result = obj2.updateRoleConnectionConfigurations(
           role.id,
           Object.values(
-            _modDef12.groupBy(
+            applyDefault.groupBy(
               items,
               (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId,
             ),

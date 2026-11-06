@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileOverflowMenu.tsx
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
@@ -24,10 +24,10 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(7515).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7460).UserProfileThemeTypes;
 const Constants = fn(1072);
 ({ AVATAR_MAX_SIZE: closure_11, ChannelTypesSets: closure_12, RelationshipTypes: map1 } = Constants);
-const ParticipantTypes = fn(5817).ParticipantTypes;
+const ParticipantTypes = fn(5835).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const size = fn(2);
@@ -323,7 +323,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
           trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15053, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15030, dependencyMap.paths), {
             userId: id,
             showUserProfile: callback1,
           });

@@ -125,7 +125,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
     }
   })();
 };
-let items = [fn(2130).TelemetryChannel.ZOOMED];
+let items = [fn(2125).TelemetryChannel.ZOOMED];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
 

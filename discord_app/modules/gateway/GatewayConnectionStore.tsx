@@ -1,6 +1,6 @@
 // discord_app/modules/gateway/GatewayConnectionStore.tsx
 import LoggerDefault from "../debug/Logger.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
@@ -183,7 +183,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1072);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
-fn(15768).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(15762).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -437,8 +437,8 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     let socket = require("GatewaySocketSingleton").socket;
     if (socket.isSessionEstablished()) {
       if ("userIds" in userIds) {
-        const obj2 = _modDef12(userIds.userIds);
-        const item = _modDef12(userIds.userIds)
+        const obj2 = applyDefault(userIds.userIds);
+        const item = applyDefault(userIds.userIds)
           .chunk(100)
           .forEach((userIds) => {
             const socket = GatewaySocketSingleton.socket;
@@ -447,7 +447,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
               presences: userIds.presences,
             });
           });
-        const chunkResult = _modDef12(userIds.userIds).chunk(100);
+        const chunkResult = applyDefault(userIds.userIds).chunk(100);
       } else {
         const socket2 = require("GatewaySocketSingleton").socket;
         const obj = { query: null, limit: null, presences: null };
@@ -526,13 +526,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(6855).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6797).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(15768).socket;
+          const socket = closure_0(15762).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(15768).socket;
+            const socket2 = closure_0(15762).socket;
             socket2.streamDelete(item);
           }
         });

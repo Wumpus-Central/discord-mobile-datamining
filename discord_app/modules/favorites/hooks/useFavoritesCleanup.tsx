@@ -43,12 +43,12 @@ export default function useFavoritesCleanup(arg0) {
                 FavoriteStore(true);
                 timestampProducer(false);
                 c3 = 2;
-                const result = tmp4(11015).setFavoritesAutoAddJoinedThreads(autoAdd);
-                const obj2 = tmp4(11015);
+                const result = tmp4(10967).setFavoritesAutoAddJoinedThreads(autoAdd);
+                const obj2 = tmp4(10967);
                 dependencyMap = 3;
                 c4 = 1;
                 const obj6 = {
-                  value: tmp4(11015).setFavoritesPruneInactiveThreads(first1, first2, first3),
+                  value: tmp4(10967).setFavoritesPruneInactiveThreads(first1, first2, first3),
                   done: false,
                 };
                 return obj6;

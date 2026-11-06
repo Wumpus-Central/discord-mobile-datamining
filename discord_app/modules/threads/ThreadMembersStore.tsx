@@ -1,5 +1,5 @@
 // discord_app/modules/threads/ThreadMembersStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
@@ -224,11 +224,11 @@ const threadMembersStore = new ThreadMembersStore(DispatcherDefault, {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    closure_4 = _modDef12.omitBy(closure_4, (guildId) => guildId.guildId === id);
+    closure_4 = applyDefault.omitBy(closure_4, (guildId) => guildId.guildId === id);
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     const id = channel.channel.id;
-    closure_4 = _modDef12.omitBy(closure_4, (parentId) => parentId.parentId === id);
+    closure_4 = applyDefault.omitBy(closure_4, (parentId) => parentId.parentId === id);
   },
   THREAD_CREATE: handleThreadCreateOrUpdate,
   THREAD_UPDATE: handleThreadCreateOrUpdate,

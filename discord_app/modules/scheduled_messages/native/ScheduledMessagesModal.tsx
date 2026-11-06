@@ -62,8 +62,7 @@ function ScheduledMessagesPage(handleScroll) {
     return closure_2_10(ScheduledMessageCardDefault, obj);
   }, items4);
   const obj4 = require("initialize");
-  const scheduledMessagesLimit =
-    require("ScheduledMessageUtils").useScheduledMessagesLimit("ScheduledMessagesMobileModal");
+  const scheduledMessagesLimit = require("ScheduledMessageUtils").useScheduledMessagesLimit();
   const limit = scheduledMessagesLimit.limit;
   let tmp11 = limit > 0;
   if (tmp11) {
@@ -146,11 +145,11 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
 const View = fn(17).View;
 const AnalyticsPages = fn(1072).AnalyticsPages;
 const PremiumTypes = fn(1387).PremiumTypes;
-const premiumMax = fn(9951).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(9901).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   modal: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -234,9 +233,9 @@ export default function ScheduledMessagesModal() {
   }
   obj5.headerStatusBarHeight = num + sharedValue(575).space.PX_8;
   tmp4Result = require("PlatformUtils");
-  obj5.headerLeft = require("NavigatorHeader").getHeaderCloseButton(sharedValue(6882).pop);
+  obj5.headerLeft = require("NavigatorHeader").getHeaderCloseButton(sharedValue(6824).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items3 = [closure_10(require("../../../../_runtime/metro/07149__.js").Header, obj5), ,];
+  const items3 = [closure_10(require("../../../../_runtime/metro/07096__.js").Header, obj5), ,];
   const obj6 = { style: null };
   const items4 = [tmp.headerBorder, animatedStyle];
   obj6.style = items4;

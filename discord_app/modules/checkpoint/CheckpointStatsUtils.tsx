@@ -306,7 +306,6 @@ export function globalStatsFromServer(global_stats) {
     newGamesByPlayers: null,
     indieGamesByPlayers: null,
     gamesByStreamWatchMinutes: null,
-    gamesByCoplayUsers: null,
     numUsersPlayedEveryDay: games.num_users_played_every_day,
   };
   const games_by_players = games.games_by_players;
@@ -362,23 +361,6 @@ export function globalStatsFromServer(global_stats) {
   });
   const prop1 = games.games_by_stream_watch_minutes;
   obj4.gamesByStreamWatchMinutes = prop1.map((game) => {
-    game = game.game;
-    const obj = {
-      id: SnowflakeUtilsDefault.cast(game.id),
-      name: null,
-      iconHash: icon_hash,
-      bannerHash: null,
-      coverImageHash: null,
-    };
-    ({ name: obj.name, icon_hash } = game);
-    const banner_hash = game.banner_hash;
-    obj.bannerHash = banner_hash;
-    const cover_image_hash = game.cover_image_hash;
-    obj.coverImageHash = cover_image_hash;
-    return obj;
-  });
-  const prop2 = games.games_by_coplay_users;
-  obj4.gamesByCoplayUsers = prop2.map((game) => {
     game = game.game;
     const obj = {
       id: SnowflakeUtilsDefault.cast(game.id),

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_onboarding/useFlattenedChannels.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
@@ -13,18 +13,16 @@ function getFlattenedChannels(c0, set, found) {
     flag = false;
   }
   ChannelStore = undefined;
-  const tmp = require("../../../_runtime/metro/00012__.js");
-  const values = require("../../../_runtime/metro/00012__.js")(
-    ChannelStore.getMutableGuildChannelsForGuild(c0),
-  ).values();
-  const tmpResult = require("../../../_runtime/metro/00012__.js")(ChannelStore.getMutableGuildChannelsForGuild(c0));
+  const tmp = require("apply");
+  const values = require("apply")(ChannelStore.getMutableGuildChannelsForGuild(c0)).values();
+  const tmpResult = require("apply")(ChannelStore.getMutableGuildChannelsForGuild(c0));
   ChannelStore = values.groupBy("parent_id").value();
   const iter = values.groupBy("parent_id");
-  const mapped = require("../../../_runtime/metro/00012__.js")(found).map((isCategory) =>
+  const mapped = require("apply")(found).map((isCategory) =>
     isCategory.isCategory() ? isCategory.id : isCategory.parent_id,
   );
   found = mapped.filter(require("GlobalUtils").isNotNullish);
-  const arr = require("../../../_runtime/metro/00012__.js")(found);
+  const arr = require("apply")(found);
   const mapped1 = found.uniq().map((item) => channel.getChannel(item));
   const found1 = mapped1.filter(require("GlobalUtils").isNotNullish);
   const uniqResult = found.uniq();
@@ -42,7 +40,7 @@ function getFlattenedChannels(c0, set, found) {
     return !isCategoryResult;
   });
   const iter2 = found1.sortBy("position");
-  const sortByResult = require("../../../_runtime/metro/00012__.js").sortBy(found2, (position) => {
+  const sortByResult = require("apply").sortBy(found2, (position) => {
     position = position.position;
     if (position.isGuildVocal()) {
       let sum = position + 10000;
@@ -65,7 +63,7 @@ function getFlattenedChannels(c0, set, found) {
       found = [];
     }
     items = [
-      ..._modDef12.sortBy(found, (position) => {
+      ...applyDefault.sortBy(found, (position) => {
         position = position.position;
         if (position.isGuildVocal()) {
           let sum = position + 10000;

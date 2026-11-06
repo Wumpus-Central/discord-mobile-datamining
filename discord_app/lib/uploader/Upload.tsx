@@ -1,5 +1,5 @@
 // discord_app/lib/uploader/Upload.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import _mod568 from "../../../_runtime/metro/00568__.js";
 import v1 from "../../../_runtime/01266_v1.js";
 import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";

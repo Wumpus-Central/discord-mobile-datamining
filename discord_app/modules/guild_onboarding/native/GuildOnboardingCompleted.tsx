@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   screen: { flex: 1, position: "relative" },
   container: {
@@ -286,12 +286,12 @@ export default function GuildOnboardingCompleted(guildId) {
         const obj10 = { uri: guildSplashURL };
         obj9.source = obj10;
         obj9.style = tmp.backgroundImage;
-        tmp27 = isScreenReaderEnabled(tmp7(5854), obj9);
+        tmp27 = isScreenReaderEnabled(tmp7(5872), obj9);
       }
       const items12 = [tmp27];
       const items13 = [tmp.container];
       let prop = null;
-      const SafeAreaPaddingView = tmp2(7431).SafeAreaPaddingView;
+      const SafeAreaPaddingView = tmp2(7378).SafeAreaPaddingView;
       if (null == guildSplashURL) {
         prop = tmp.containerWithoutSplash;
       }
@@ -313,7 +313,7 @@ export default function GuildOnboardingCompleted(guildId) {
       obj12.color = str2;
       const intl = tmp2(1113).intl;
       obj12.children = intl.string(tmp2(1113).t.PFWIYe);
-      const items14 = [isScreenReaderEnabled(tmp2(5763).Text, obj12), , ,];
+      const items14 = [isScreenReaderEnabled(tmp2(5781).Text, obj12), , ,];
       const obj13 = {
         style: tmp.subtitle,
         accessibilityRole: "header",
@@ -327,7 +327,7 @@ export default function GuildOnboardingCompleted(guildId) {
       obj13.color = str;
       const intl2 = tmp2(1113).intl;
       obj13.children = intl2.string(tmp2(1113).t.og4NNr);
-      items14[1] = isScreenReaderEnabled(tmp2(5763).Text, obj13);
+      items14[1] = isScreenReaderEnabled(tmp2(5781).Text, obj13);
       const obj14 = { style: tmp.card, children: null };
       const obj15 = { size: tmp2(1187).AvatarSizes.XXLARGE, user: stateFromStores, guildId, animate: false };
       const items15 = [isScreenReaderEnabled(tmp2(1187).Avatar, obj15), , , ,];
@@ -337,14 +337,14 @@ export default function GuildOnboardingCompleted(guildId) {
         color: "mobile-text-heading-primary",
         children: stateFromStores.username,
       };
-      items15[1] = isScreenReaderEnabled(tmp2(5763).Text, obj16);
+      items15[1] = isScreenReaderEnabled(tmp2(5781).Text, obj16);
       let tmp28Result = null;
       if (numSharedRoleMembers > 0) {
         const obj17 = { style: tmp.rolesHeader, variant: "body-sm/normal", color: "text-muted", children: null };
         const intl3 = tmp2(1113).intl;
         const obj18 = { numSharedRoleMembers };
         obj17.children = intl3.format(tmp2(1113).t.l1Jc1n, obj18);
-        tmp28Result = tmp28(tmp2(5763).Text, obj17);
+        tmp28Result = tmp28(tmp2(5781).Text, obj17);
       }
       items15[2] = tmp28Result;
       const obj19 = { style: tmp.roles, children: null };
@@ -370,7 +370,7 @@ export default function GuildOnboardingCompleted(guildId) {
         const obj21 = { variant: "body-xs/semibold", color: "mobile-text-heading-primary", children: null };
         const _HermesInternal = HermesInternal;
         obj21.children = "+" + diff;
-        obj20.children = tmp28(tmp2(5763).Text, obj21);
+        obj20.children = tmp28(tmp2(5781).Text, obj21);
         tmp28Result3 = tmp28(tmp39, obj20);
       }
       items16[1] = tmp28Result3;
@@ -379,26 +379,26 @@ export default function GuildOnboardingCompleted(guildId) {
       const obj22 = { style: null, children: null };
       const items18 = [tmp.animation, tmp25];
       obj22.style = items18;
-      const obj23 = { guild: stateFromStores1, size: tmp2(7101).GuildIconSizes.LARGE };
-      const items19 = [isScreenReaderEnabled(tmp7(7101), obj23), ,];
+      const obj23 = { guild: stateFromStores1, size: tmp2(7045).GuildIconSizes.LARGE };
+      const items19 = [isScreenReaderEnabled(tmp7(7045), obj23), ,];
       const obj24 = { style: tmp.animationText, children: null };
       const obj25 = { variant: "body-sm/medium", color: "mobile-text-heading-primary", children: null };
       const intl4 = tmp2(1113).intl;
       const obj26 = { guildName: stateFromStores1.name };
       obj25.children = intl4.format(tmp2(1113).t.FXREhf, obj26);
-      const items20 = [isScreenReaderEnabled(tmp2(5763).Text, obj25)];
+      const items20 = [isScreenReaderEnabled(tmp2(5781).Text, obj25)];
       const obj27 = { variant: "body-xs/normal", color: "text-muted", children: null };
-      const tmp7Result3 = tmp7(7101);
+      const tmp7Result3 = tmp7(7045);
       const _HermesInternal2 = HermesInternal;
-      obj27.children = "" + tmp7(2171)().format("LL");
-      items20[1] = isScreenReaderEnabled(tmp2(5763).Text, obj27);
+      obj27.children = "" + tmp7(2166)().format("LL");
+      items20[1] = isScreenReaderEnabled(tmp2(5781).Text, obj27);
       obj24.children = items20;
       items19[1] = ref(c4, obj24);
       const obj28 = { source: null, style: null };
-      const obj32 = tmp7(2171)();
-      obj28.source = tmp7(7517);
+      const obj32 = tmp7(2166)();
+      obj28.source = tmp7(7462);
       obj28.style = tmp.wave;
-      items19[2] = isScreenReaderEnabled(tmp7(5854), obj28);
+      items19[2] = isScreenReaderEnabled(tmp7(5872), obj28);
       obj22.children = items19;
       items15[4] = ref(tmp7(1652).View, obj22);
       obj14.children = items15;
@@ -410,7 +410,7 @@ export default function GuildOnboardingCompleted(guildId) {
         const intl5 = tmp2(1113).intl;
         obj30.text = intl5.string(tmp2(1113).t.LhlgY9);
         obj30.onPress = onClose;
-        obj29.children = tmp28(tmp2(5770).Button, obj30);
+        obj29.children = tmp28(tmp2(5788).Button, obj30);
         tmp28Result4 = tmp28(tmp39, obj29);
       }
       const obj31 = { children: null };

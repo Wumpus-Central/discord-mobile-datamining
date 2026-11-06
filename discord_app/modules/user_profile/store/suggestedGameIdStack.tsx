@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/store/suggestedGameIdStack.tsx
 import WidgetType from "../../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 import GuildProfileConstants from "../../guild_profile/GuildProfileConstants.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import 00560__ from "../../../../_runtime/metro/00560__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 

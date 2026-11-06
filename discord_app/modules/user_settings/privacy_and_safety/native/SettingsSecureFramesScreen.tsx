@@ -116,7 +116,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 },
   header: null,

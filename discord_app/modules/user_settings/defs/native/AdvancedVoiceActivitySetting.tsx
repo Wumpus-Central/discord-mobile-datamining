@@ -5,13 +5,13 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.BbESsg);
   },
-  parent: fn(8578).MobileUserSettings.VOICE,
+  parent: fn(8524).MobileUserSettings.VOICE,
   useValue: function useAdvancedVoiceActivitySettingValue() {
     items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);

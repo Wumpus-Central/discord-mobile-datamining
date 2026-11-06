@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/profile_effects/utils.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -25,7 +25,7 @@ export function usePotentiallyRandomizedProfileEffect(arg0) {
   let tmp6 = arg0;
   [tmp4, tmp5] = noop.useState(arg0);
   if (null != arg0) {
-    const cloneDeepResult = _mod12.cloneDeep(arg0);
+    const cloneDeepResult = apply.cloneDeep(arg0);
     const effects = cloneDeepResult.effects;
     let _Math = Math;
     const _Math2 = Math;
@@ -72,7 +72,7 @@ export function usePotentiallyRandomizedProfileEffect(arg0) {
     closure_0 = undefined;
     let tmp13 = arg0;
     if (null != arg0) {
-      const cloneDeepResult1 = _mod12.cloneDeep(arg0);
+      const cloneDeepResult1 = apply.cloneDeep(arg0);
       const effects2 = cloneDeepResult1.effects;
       const _Math3 = Math;
       const _Math4 = Math;
@@ -110,7 +110,7 @@ export function usePotentiallyRandomizedProfileEffect(arg0) {
         return randomizedSources;
       });
       tmp13 = cloneDeepResult1;
-      const tmp10Result = _mod12;
+      const tmp10Result = apply;
     }
     tmp9(tmp13);
   }

@@ -16,6 +16,6 @@ export default function SearchIndexingScreen(searchContext) {
   const effect = noop.useEffect(() => {
     TrackingDefault.trackSearchIndexing({ searchContext });
   }, items);
-  const text = searchContext(14124).getIndexingErrorText(searchContext);
+  const text = searchContext(14101).getIndexingErrorText(searchContext);
   return jsx(pages_ErrorScreenDefault, { text });
 }

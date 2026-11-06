@@ -17,10 +17,10 @@ function constructOrbChallengeItemFromUserAchievement(achievementIdentifier) {
 }
 const items = [
   null,
-  fn(15886).UserAchievementStatus.NONE,
-  fn(15886).UserAchievementStatus.IN_PROGRESS,
-  fn(15886).UserAchievementStatus.ELIGIBLE,
-  fn(15886).UserAchievementStatus.COMPLETED,
+  fn(15880).UserAchievementStatus.NONE,
+  fn(15880).UserAchievementStatus.IN_PROGRESS,
+  fn(15880).UserAchievementStatus.ELIGIBLE,
+  fn(15880).UserAchievementStatus.COMPLETED,
 ];
 const set = new Set(items);
 const ClientUnreadNotificationType = {
@@ -86,8 +86,9 @@ class OrbChallengesStore extends Store {
       nitroGatedOrbMultiplier: null,
       achievementUnreadState: null,
       lastFetchedPremiumType: "flexDirection",
-      userOpenedWalletViaProfileDCF: 32,
+      userOpenedWalletViaProfileDCF: "home_drawer",
     };
+    tmp21.challengesForOrbWalletCache = null;
     return tmp21;
   }
 }
@@ -131,7 +132,7 @@ prototype["handleReset"] = function handleReset() {
     nitroGatedOrbMultiplier: null,
     achievementUnreadState: null,
     lastFetchedPremiumType: "flexDirection",
-    userOpenedWalletViaProfileDCF: 32,
+    userOpenedWalletViaProfileDCF: "home_drawer",
   };
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
@@ -325,8 +326,16 @@ Object.defineProperty(prototype, "challenges", {
 });
 Object.defineProperty(prototype, "challengesForOrbWallet", {
   get: function challengesForOrbWallet() {
+    const self = this;
     const challenges = this.state.challenges;
-    return challenges.filter((achievementStatus) => set.has(achievementStatus.achievementStatus));
+    if (!tmp) {
+      const challengesForOrbWalletCache = {
+        source: challenges,
+        result: challenges.filter((achievementStatus) => set.has(achievementStatus.achievementStatus)),
+      };
+      self.challengesForOrbWalletCache = challengesForOrbWalletCache;
+    }
+    return self.challengesForOrbWalletCache.result;
   },
   set: undefined,
 });

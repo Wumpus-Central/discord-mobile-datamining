@@ -1,5 +1,5 @@
 // discord_app/modules/threads/ThreadBrowserHooks.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ThreadActionCreatorsDefault from "ThreadActionCreators.tsx";
 import ForumActionCreatorsDefault from "../forums/ForumActionCreators.tsx";
@@ -15,7 +15,7 @@ import JoinedThreadsStore from "JoinedThreadsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(14600).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(14577).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");
@@ -33,22 +33,22 @@ export function useActiveThreadIds(arg0) {
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
     () => {
-      const values = _modDef12(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id)).values();
+      const values = applyDefault(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id)).values();
       const mapped = values.map((id) => channel.getChannel(id.id));
       const found = mapped.filter(GlobalUtils.isNotNullish);
       const found1 = found.filter((item) => closure_1_7.can(constants.VIEW_CHANNEL, item));
-      const tmpResult = _modDef12(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id));
+      const tmpResult = applyDefault(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id));
       return found1.map((id) => id.id).value();
     },
     items1,
   );
   const items2 = [stateFromStoresArray];
   return noop.useMemo(() => {
-    const sorted = _modDef12(closure_1_1).sort((arg0, arg1) => {
+    const sorted = applyDefault(closure_1_1).sort((arg0, arg1) => {
       const obj = closure_1_1(closure_1_2[14]);
       return obj.compare(closure_1_8.lastMessageId(arg0), closure_1_8.lastMessageId(arg1));
     });
-    let obj = _modDef12(closure_1_1);
+    let obj = applyDefault(closure_1_1);
     return sorted.reverse().value();
   }, items2);
 }
@@ -60,11 +60,11 @@ export function useActiveThreads(channel) {
   const stateFromStoresArray = memo(504).useStateFromStoresArray(
     items,
     () => {
-      const values = _modDef12(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id)).values();
+      const values = applyDefault(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id)).values();
       const mapped = values.map((id) => channel.getChannel(id.id));
       const found = mapped.filter(GlobalUtils.isNotNullish);
       const found1 = found.filter((item) => closure_1_7.can(constants.VIEW_CHANNEL, item));
-      const tmpResult = _modDef12(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id));
+      const tmpResult = applyDefault(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id));
       return found1.map((id) => id.id).value();
     },
     items1,
@@ -72,11 +72,11 @@ export function useActiveThreads(channel) {
   closure_129_1 = stateFromStoresArray;
   const items2 = [stateFromStoresArray];
   memo = noop.useMemo(() => {
-    const sorted = _modDef12(closure_1_1).sort((arg0, arg1) => {
+    const sorted = applyDefault(closure_1_1).sort((arg0, arg1) => {
       const obj = closure_1_1(closure_1_2[14]);
       return obj.compare(closure_1_8.lastMessageId(arg0), closure_1_8.lastMessageId(arg1));
     });
-    let obj = _modDef12(closure_1_1);
+    let obj = applyDefault(closure_1_1);
     return sorted.reverse().value();
   }, items2);
   let obj = memo(504);
@@ -85,7 +85,7 @@ export function useActiveThreads(channel) {
   const tmp3 = _slicedToArray(
     memo(504).useStateFromStores(
       items3,
-      () => _modDef12.partition(memo, (id) => closure_1_11.hasJoined(id)),
+      () => applyDefault.partition(memo, (id) => closure_1_11.hasJoined(id)),
       items4,
       memo(504).statesWillNeverBeEqual,
     ),
@@ -100,9 +100,9 @@ export function useActiveGuildThreads(arg0) {
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
     () => {
-      const values = _modDef12(ActiveThreadsStore.getThreadsForGuild(closure_0)).values();
+      const values = applyDefault(ActiveThreadsStore.getThreadsForGuild(closure_0)).values();
       const mapped = values.map((item) => stateFromStoresArray(closure_1_2[12]).values(item));
-      const tmpResult = _modDef12(ActiveThreadsStore.getThreadsForGuild(closure_0));
+      const tmpResult = applyDefault(ActiveThreadsStore.getThreadsForGuild(closure_0));
       const mapped1 = mapped.flatten().map((id) => channel.getChannel(id.id));
       const found = mapped1.filter(GlobalUtils.isNotNullish);
       const found1 = found.filter((item) => closure_1_7.can(constants.VIEW_CHANNEL, item));
@@ -113,11 +113,11 @@ export function useActiveGuildThreads(arg0) {
   );
   const items2 = [stateFromStoresArray];
   return noop.useMemo(() => {
-    const sorted = _modDef12(stateFromStoresArray).sort((arg0, arg1) => {
+    const sorted = applyDefault(stateFromStoresArray).sort((arg0, arg1) => {
       const obj = stateFromStoresArray(closure_1_2[14]);
       return obj.compare(closure_1_8.lastMessageId(arg0), closure_1_8.lastMessageId(arg1));
     });
-    let obj = _modDef12(stateFromStoresArray);
+    let obj = applyDefault(stateFromStoresArray);
     return sorted.reverse().value();
   }, items2);
 }
@@ -177,8 +177,8 @@ export function useArchivedThreads(channel, LATEST_ACTIVITY, loadMore, MATCH_SOM
   let obj = require("initialize");
   const items4 = [ArchivedThreadsStore, nextOffset, isInitialLoad];
   obj2.threadIds = require("initialize").useStateFromStoresArray(items4, () => {
-    const tmpResult = _modDef12(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3));
-    return _modDef12(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3))
+    const tmpResult = applyDefault(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3));
+    return applyDefault(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3))
       .filter((item) => {
         if (closure_1_4) {
           if (!showResolvedFlags) {

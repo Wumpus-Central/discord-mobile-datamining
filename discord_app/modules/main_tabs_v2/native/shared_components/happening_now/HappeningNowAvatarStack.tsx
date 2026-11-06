@@ -14,11 +14,11 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(15110).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(15087).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_11 = createStyles.createStyles((arg0, marginLeft) => {
   const obj = {
     avatarStack: { flexDirection: "row" },
@@ -314,7 +314,7 @@ export function HappeningNowAvatarStack(userLimit) {
       variant: "body-xs/semibold",
       children: tmp6(2024).humanizeValue(userCount, stateFromStores),
     };
-    items8[1] = sharedValue(tmp6(5763).Text, obj5);
+    items8[1] = sharedValue(tmp6(5781).Text, obj5);
     obj3.children = items8;
     let tmp33 = obj3;
     const tmp6Result7 = tmp6(2024);
@@ -332,7 +332,7 @@ export function HappeningNowAvatarStack(userLimit) {
       const obj9 = { color: "text-default", variant: "footnote/semibold", allowFontScaling: false, children: null };
       const items12 = ["+", tmp6(2024).humanizeValue(diff, stateFromStores)];
       obj9.children = items12;
-      obj8.children = tmp28(tmp6(5763).Text, obj9);
+      obj8.children = tmp28(tmp6(5781).Text, obj9);
       tmp31Result = tmp31(tmp29, obj8);
       const tmp6Result8 = tmp6(2024);
     }
@@ -347,7 +347,7 @@ export function HappeningNowAvatarStack(userLimit) {
       const items14 = [tmp3.ellipsisWrapper, animatedStyle];
       obj10.style = items14;
       const obj11 = { style: tmp3.ellipsisBorder };
-      obj10.children = tmp31(tmp6(18428).TypingIndicator, obj11);
+      obj10.children = tmp31(tmp6(18420).TypingIndicator, obj11);
       tmp31Result2 = tmp31(tmp30(1652).View, obj10);
     }
     items13[1] = tmp31Result2;

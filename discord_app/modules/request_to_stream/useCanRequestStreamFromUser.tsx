@@ -1,5 +1,5 @@
 // discord_app/modules/request_to_stream/useCanRequestStreamFromUser.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
@@ -32,7 +32,7 @@ export default function useCanRequestStreamFromUser(user, arg1) {
           if (roles == null) {
             roles = [];
           }
-          const keyByResult = _modDef12.keyBy(GuildRoleStore.getManyRoles(channel.guild_id, roles), "id");
+          const keyByResult = applyDefault.keyBy(GuildRoleStore.getManyRoles(channel.guild_id, roles), "id");
           const obj3 = { permission: Permissions.STREAM, user, context: channel, roles: keyByResult };
           if (canResult) {
             canResult = obj2.can(obj3);

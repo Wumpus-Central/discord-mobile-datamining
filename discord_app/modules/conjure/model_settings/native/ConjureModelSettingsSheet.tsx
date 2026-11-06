@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/model_settings/native/ConjureModelSettingsSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4024 from "../../intl/ConjureUntranslated.messages.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import conjureModelSettingsConnection from "../conjureModelSettingsConnection.tsx";
@@ -69,19 +69,19 @@ function ModelSettingsPicker(projectId) {
   ];
   const intl = projectId(1113).intl;
   const string = intl.string;
-  const tmp8 = _modDef3995;
+  const tmp8 = _modDef4024;
   if (tmp) {
     let stringResult = string(tmp8.GxpdUR);
   } else {
     stringResult = string(tmp8["/rJzr6"]);
   }
-  items3[1] = closure_8(projectId(5763).Text, {
+  items3[1] = closure_8(projectId(5781).Text, {
     variant: "body-xs/normal",
     color: "text-muted",
     children: stringResult,
   });
   obj2.children = items3;
-  return closure_9(projectId(6165).Stack, obj2);
+  return closure_9(projectId(6185).Stack, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -93,7 +93,7 @@ export default function ConjureModelSettingsSheet(projectId) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3995["3E7Yc0"]);
+  obj2.title = intl.string(_modDef4024["3E7Yc0"]);
   obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React5(View, { children: React5(ConjureModelSettingsContent, { projectId: projectId.projectId }) });
   return React5(ActionSheet.ActionSheet, obj);

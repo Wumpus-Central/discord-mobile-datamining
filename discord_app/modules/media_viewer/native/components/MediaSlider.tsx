@@ -1,5 +1,5 @@
 // discord_app/modules/media_viewer/native/components/MediaSlider.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: {
     flex: 1,
@@ -66,7 +66,7 @@ export default function MediaSlider(controls) {
   closure_9 = tmp8[1];
   const tmp5 = onPlayPress(noop.useState("transparent"), 2);
   const tmp12 = paused(setPaused[7])(() =>
-    _modDef12.throttle((arg0) => {
+    applyDefault.throttle((arg0) => {
       closure_1_5(arg0);
     }, num),
   );
@@ -91,7 +91,7 @@ export default function MediaSlider(controls) {
       setPaused(arg0);
     }, items2),
     paused(setPaused[7])(() =>
-      _modDef12.throttle((arg0) => {
+      applyDefault.throttle((arg0) => {
         closure_1_6(arg0);
         let str = "transparent";
         if (1 === arg0) {
@@ -119,7 +119,7 @@ export default function MediaSlider(controls) {
     }
   }, items4);
   const tmp13 = paused(setPaused[7])(() =>
-    _modDef12.throttle((arg0) => {
+    applyDefault.throttle((arg0) => {
       closure_1_6(arg0);
       let str = "transparent";
       if (1 === arg0) {

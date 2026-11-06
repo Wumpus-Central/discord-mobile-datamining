@@ -1,5 +1,5 @@
 // discord_app/modules/chat_input/native/ChatInputParser.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -22,7 +22,7 @@ prototype["removeRule"] = function removeRule(arg0) {
 prototype["parse"] = function parse(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return _modDef12.valuesIn(this.rules).reduce((arr, matchFunction) => arr.concat(matchFunction.matchFunction(matchFunction, closure_1).map((item) => {
+  return applyDefault.valuesIn(this.rules).reduce((arr, matchFunction) => arr.concat(matchFunction.matchFunction(matchFunction, closure_1).map((item) => {
     if (typeof matchFunction.deleteNodeOnBackspace === "function") {
       let deleteNodeOnBackspace = matchFunction.deleteNodeOnBackspace(item);
     } else {

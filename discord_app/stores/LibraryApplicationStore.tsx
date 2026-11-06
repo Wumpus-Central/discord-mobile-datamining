@@ -195,10 +195,10 @@ Object.defineProperty(prototype, "entitledBranchIds", {
     const merged = Object.assign(closure_10);
     const merged1 = Object.assign(closure_9);
     const obj = {};
-    const tmp = require("../../_runtime/metro/00012__.js");
-    const values = require("../../_runtime/metro/00012__.js")({}).values();
+    const tmp = require("apply");
+    const values = require("apply")({}).values();
     const found = values.filter((item) => LibraryApplicationUtils.isUserEntitledToLibraryApplication(item));
-    const tmpResult = require("../../_runtime/metro/00012__.js")({});
+    const tmpResult = require("apply")({});
     return found.map((branchId) => branchId.branchId).value();
   },
   set: undefined,

@@ -42,17 +42,17 @@ function SettingsEmoji(emoji) {
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(8578).MobileUserSettings.CHAT,
+  parent: fn(8524).MobileUserSettings.CHAT,
   useTrailing: function useDoubleTapEmojiSettingTrailing() {
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.useSetting();

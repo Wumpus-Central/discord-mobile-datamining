@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
 
@@ -23,7 +23,7 @@ export function useRefreshChatInputCoachmark(disabled) {
   if (disabled.disabled) {
     items = [];
   } else {
-    items = [tmp(4976).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
+    items = [tmp(5003).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
   const tmp3 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items), 2);
   _require = tmp4;

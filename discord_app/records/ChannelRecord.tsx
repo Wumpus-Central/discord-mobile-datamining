@@ -1,6 +1,6 @@
 // discord_app/records/ChannelRecord.tsx
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import privDefault from "../../_runtime/01453_priv.js";
@@ -60,7 +60,7 @@ const Constants = fn(1072);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
 const BasicPermissions = Constants.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = Constants);
-const ChannelFlags = fn(4999).ChannelFlags;
+const ChannelFlags = fn(5026).ChannelFlags;
 let items = [, , , , , , , , , ,];
 ({
   GUILD_TEXT: arr[0],
@@ -863,28 +863,28 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     originChannelId: null,
     ownerId: null,
     parent_id: null,
-    parentChannelThreadType: "filter",
+    parentChannelThreadType: "fileBytes",
     permissionOverwrites_: true,
     position_: true,
     rateLimitPerUser_: true,
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: 181.396,
-    safetyWarnings: -71.917,
-    blockedUserWarningDismissed: false,
-    template: false,
-    themeColor: false,
-    threadMetadata: false,
-    topic_: false,
-    totalMessageSent: false,
-    type: false,
-    userLimit_: false,
-    version: false,
-    videoQualityMode: false,
-    linkedLobby: false,
-    hdStreamingUntil: false,
-    hdStreamingBuyerId: false,
+    rtcRegion: "audio",
+    safetyWarnings: null,
+    blockedUserWarningDismissed: null,
+    template: null,
+    themeColor: null,
+    threadMetadata: null,
+    topic_: null,
+    totalMessageSent: null,
+    type: null,
+    userLimit_: null,
+    version: null,
+    videoQualityMode: null,
+    linkedLobby: null,
+    hdStreamingUntil: null,
+    hdStreamingBuyerId: null,
     voiceHangout: null,
   };
   if (null == application_id.available_tags) {
@@ -962,7 +962,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     if (null == nicks) {
       let obj6 = {};
     } else {
-      obj6 = _modDef12.reduce(
+      obj6 = applyDefault.reduce(
         nicks,
         (arg0, id) => {
           arg0[id.id] = id.nick;
@@ -1042,7 +1042,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       hd_streaming_buyer_id: obj.hdStreamingBuyerId,
       voice_hangout: obj.voiceHangout,
     } = application_id);
-    return obj7(5004).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(5031).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -1199,7 +1199,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(5004).dangerouslyCast(obj, tmp7);
+  return obj6(5031).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1331,7 +1331,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(5004).dangerouslyCast(obj, tmp7);
+  return obj6(5031).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1506,7 +1506,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj8(5004).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(5031).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {
@@ -1622,7 +1622,7 @@ PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
   if (null == nicks) {
     let obj2 = {};
   } else {
-    obj2 = _modDef12.reduce(
+    obj2 = applyDefault.reduce(
       nicks,
       (arg0, id) => {
         arg0[id.id] = id.nick;
@@ -1671,7 +1671,7 @@ prototype2["addRecipient"] = function addRecipient(arg0, arg1, arg2) {
     }
     items = [];
     items[HermesBuiltin.arraySpread(recipients, 0)] = arg0;
-    const result = self.set("recipients", _modDef12.uniq(items).sort(SnowflakeUtilsDefault.compare));
+    const result = self.set("recipients", applyDefault.uniq(items).sort(SnowflakeUtilsDefault.compare));
     let result1 = result;
     if (null != arg1) {
       const obj2 = {};
@@ -1685,7 +1685,7 @@ prototype2["addRecipient"] = function addRecipient(arg0, arg1, arg2) {
   }
 };
 prototype2["removeRecipient"] = function removeRecipient(id2) {
-  return this.set("recipients", _modDef12.without(this.recipients, id2));
+  return this.set("recipients", applyDefault.without(this.recipients, id2));
 };
 class DMChannelRecord extends PrivateChannelRecord {}
 class GroupDMChannelRecord extends PrivateChannelRecord {}

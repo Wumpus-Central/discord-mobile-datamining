@@ -1,5 +1,5 @@
 // discord_app/modules/inbox/RecentMentionsStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import TimeUtils from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
@@ -148,7 +148,7 @@ function deleteMessage(arg0) {
     return false;
   } else {
     delete tmp[tmp2];
-    const obj = { deletedMessages: _modDef12.filter(substr, (id) => id.id === id) };
+    const obj = { deletedMessages: applyDefault.filter(substr, (id) => id.id === id) };
     ({ addedMessages, deletedMessages } = obj);
     if (null != addedMessages) {
       const item = addedMessages.forEach((getChannelId) => {
@@ -168,15 +168,15 @@ function deleteMessage(arg0) {
         }
       });
     }
-    substr = _modDef12.filter(substr, (id) => id.id !== id);
-    const tmp7Result = _modDef12;
+    substr = applyDefault.filter(substr, (id) => id.id !== id);
+    const tmp7Result = applyDefault;
   }
 }
 function handleMessageDelete(id) {
   id = id.id;
   if (null != dependencyMap[id]) {
     delete tmp[tmp2];
-    const obj = { deletedMessages: _modDef12.filter(substr, (id) => id.id === id) };
+    const obj = { deletedMessages: applyDefault.filter(substr, (id) => id.id === id) };
     ({ addedMessages, deletedMessages } = obj);
     if (null != addedMessages) {
       const item = addedMessages.forEach((getChannelId) => {
@@ -196,16 +196,16 @@ function handleMessageDelete(id) {
         }
       });
     }
-    substr = _modDef12.filter(substr, (id) => id.id !== id);
-    const tmp4Result = _modDef12;
+    substr = applyDefault.filter(substr, (id) => id.id !== id);
+    const tmp4Result = applyDefault;
   }
   return false;
 }
 function handleSetRecentMentionsFilters(arg0) {
   const obj = {};
   const merged = Object.assign(closure_23);
-  const obj2 = _modDef12;
-  closure_23 = obj2.defaults(_modDef12.pick(arg0, ["guildFilter", "roleFilter", "everyoneFilter"]), closure_23);
+  const obj2 = applyDefault;
+  closure_23 = obj2.defaults(applyDefault.pick(arg0, ["guildFilter", "roleFilter", "everyoneFilter"]), closure_23);
   const Storage = items(510).Storage;
   const result = Storage.set(recentMentionFilterSettings, closure_23);
   let tmp4 = obj.guildFilter !== closure_23.guildFilter;
@@ -251,7 +251,7 @@ function handleSetRecentMentionsFilters(arg0) {
 }
 function handleRelationshipUpdate() {
   const obj = {
-    deletedMessages: _modDef12.filter(substr, (message) => RelationshipStore.isBlockedOrIgnoredForMessage(message)),
+    deletedMessages: applyDefault.filter(substr, (message) => RelationshipStore.isBlockedOrIgnoredForMessage(message)),
   };
   ({ addedMessages, deletedMessages } = obj);
   if (null != addedMessages) {
@@ -440,7 +440,7 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
   },
   LOAD_RECENT_MENTIONS_SUCCESS: function handleLoadMentionsSuccess(arg0) {
     ({ hasMoreAfter, messages, isAfter } = arg0);
-    const mapped = _modDef12.map(messages, findOrCreateMessageRecord);
+    const mapped = applyDefault.map(messages, findOrCreateMessageRecord);
     ({ addedMessages, deletedMessages } = { addedMessages: mapped });
     if (null != addedMessages) {
       const item = addedMessages.forEach((getChannelId) => {
@@ -466,12 +466,12 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
       substr = mapped;
       closure_20 = {};
     }
-    const item2 = _modDef12.forEach(mapped, (id) => {
+    const item2 = applyDefault.forEach(mapped, (id) => {
       dependencyMap[id.id] = true;
     });
     c21 = false;
     c22 = hasMoreAfter;
-    const tmpResult = _modDef12;
+    const tmpResult = applyDefault;
     closure_25 = TimeUtils.now();
     c24 = true;
   },
@@ -619,7 +619,7 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
     const id = message.message.id;
     if (null != id) {
       if (null != dependencyMap[id]) {
-        const findIndexResult = _modDef12.findIndex(substr, (id) => id.id === id);
+        const findIndexResult = applyDefault.findIndex(substr, (id) => id.id === id);
         substr = substr.slice();
         if (null != substr[findIndexResult]) {
           substr[findIndexResult] = MessageRecordUtils.updateMessageRecord(tmp7, message.message);
@@ -631,7 +631,7 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
   MESSAGE_DELETE: handleMessageDelete,
   RECENT_MENTION_DELETE: handleMessageDelete,
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
-    const item = _modDef12.forEach(ids.ids, deleteMessage);
+    const item = applyDefault.forEach(ids.ids, deleteMessage);
   },
   CHANNEL_DELETE: handleDeleteChannel,
   THREAD_DELETE: handleDeleteChannel,

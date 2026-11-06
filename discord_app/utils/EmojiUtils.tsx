@@ -9,9 +9,9 @@ import EmojiPackStore from "../modules/emojis/default_emojis/EmojiPackStore.tsx"
 import PermissionStore from "../stores/PermissionStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
-const PremiumTypeUtils = isPremiumResult(2112);
-const CreatorMonetizationRestrictionsUtils = isPremiumResult(5067);
-const RoleSubscriptionEmojiUtils = isPremiumResult(5097);
+const PremiumTypeUtils = isPremiumResult(2107);
+const CreatorMonetizationRestrictionsUtils = isPremiumResult(5094);
+const RoleSubscriptionEmojiUtils = isPremiumResult(5124);
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   ({ emoji, channel, guildId } = forceIncludeExternalGuilds);
@@ -178,7 +178,7 @@ let closure_21 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: closure_6 } = ChannelRecord);
 const Permissions = fn(1072).Permissions;
 const EmojiConstants = fn(1388);

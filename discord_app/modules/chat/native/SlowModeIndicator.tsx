@@ -9,7 +9,7 @@ import SlowmodeStore from "../../../stores/SlowmodeStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { marginLeft: nativeDefault.space.PX_4 };

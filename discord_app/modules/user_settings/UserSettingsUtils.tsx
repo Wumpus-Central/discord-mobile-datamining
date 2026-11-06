@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UserSettingsUtils.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import user_settings_shared from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx";
 import frecency_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
@@ -182,7 +182,7 @@ export function serializeUsageHistory(usageHistory, FREQUENCY_ITEM_LIMIT) {
   let length;
   const entries = Object.entries(usageHistory);
   if (entries.length > FREQUENCY_ITEM_LIMIT) {
-    const reversed = _modDef12
+    const reversed = applyDefault
       .sortBy(entries, (arg0) => {
         [, tmp] = arg0;
         return tmp.recentUses[tmp.recentUses.length - 1];
@@ -194,7 +194,7 @@ export function serializeUsageHistory(usageHistory, FREQUENCY_ITEM_LIMIT) {
         length = reversed.length;
       } while (length > FREQUENCY_ITEM_LIMIT);
     }
-    const sortByResult = _modDef12.sortBy(entries, (arg0) => {
+    const sortByResult = applyDefault.sortBy(entries, (arg0) => {
       [, tmp] = arg0;
       return tmp.recentUses[tmp.recentUses.length - 1];
     });

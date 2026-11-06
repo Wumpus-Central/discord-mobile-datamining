@@ -1,6 +1,6 @@
 // discord_app/modules/guild/markGuildsAsRead.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import GuildOnboardingPromptsStore from "../guild_onboarding/GuildOnboardingPromptsStore.tsx";
@@ -11,12 +11,12 @@ import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ReadStateTypes = fn(6914).ReadStateTypes;
+const ReadStateTypes = fn(6856).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
 export default function markGuildsAsRead(arr, source, onFinished) {
-  const mapped = _modDef12
+  const mapped = applyDefault
     .flatMap(arr, (guildId) => {
       const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(guildId);
       const vocalChannelIds = GuildChannelStore.getVocalChannelIds(guildId);
@@ -65,7 +65,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
     obj3.messageId = GuildOnboardingPromptsStore.ackIdForGuild(item);
     mapped.push(obj3);
   });
-  const flatMapResult = _modDef12.flatMap(arr, (guildId) => {
+  const flatMapResult = applyDefault.flatMap(arr, (guildId) => {
     const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(guildId);
     const vocalChannelIds = GuildChannelStore.getVocalChannelIds(guildId);
     items = [...vocalChannelIds];
@@ -86,7 +86,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   });
   AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
   let obj3 = { source, type: "guild" };
-  return mapped(7418).bulkAck(mapped, onFinished);
+  return mapped(7365).bulkAck(mapped, onFinished);
 }
 export function markChannelsAsRead(arr, source, onFinished) {
   const mapped = arr.map((channelId) => {

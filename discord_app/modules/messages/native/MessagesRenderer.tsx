@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/MessagesRenderer.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import discord_common_shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(10082).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(5055).getUserCommunicationDisabledVersion;
-const Changeset = fn(8524).Changeset;
+let closure_6 = fn(10033).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(5082).getUserCommunicationDisabledVersion;
+const Changeset = fn(8470).Changeset;
 const Constants = fn(1072);
 ({
   ActivityActionTypes: closure_11,
@@ -389,7 +389,7 @@ class MessagesRenderer {
     callback2 = closure_5.useCallback((arg0) => {
       closure_0 = arg0;
       const messages = merged.messages;
-      return _modDef12.find(messages.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
+      return applyDefault.find(messages.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
     }, items1);
     closure_13 = callback2;
     items2 = [, ,];

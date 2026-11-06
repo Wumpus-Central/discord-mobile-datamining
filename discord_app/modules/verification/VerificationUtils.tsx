@@ -1,5 +1,5 @@
 // discord_app/modules/verification/VerificationUtils.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import util from "../../intl/index.native.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -91,6 +91,6 @@ export default {
     }
   },
   areVerificationTypesEqual(arg0, arg1) {
-    return _modDef12.isEqual(arg0, arg1);
+    return applyDefault.isEqual(arg0, arg1);
   },
 };

@@ -9,8 +9,8 @@ import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef8665 from "../../../../../../../_runtime/metro/08665__.js";
-import _modDef8668 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
+import _modDef8611 from "../../../../../../../_runtime/metro/08611__.js";
+import _modDef8614 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
@@ -82,7 +82,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
               learnMoreLink: null,
             };
             const tmp41Result9 = HelpdeskUtilsDefault;
-            obj6.headerImageUrl = _modDef8668;
+            obj6.headerImageUrl = _modDef8614;
             const intl12 = util.intl;
             obj6.headerText = intl12.string(util.t.HtTvXA);
             obj6.headerColor = headerTextColor;
@@ -197,7 +197,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
                     const intl7 = util.intl;
                     obj13.acceptLabelText = intl7.string(util.t.bXTClc);
                     obj13.acceptLabelColor = acceptLabelColor;
-                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8665);
+                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8611);
                     tmp31 = obj13;
                     const tmp39Result7 = renderer_EmbedUtils;
                   }
@@ -252,7 +252,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
         const obj19 = {
           titleText: "",
           titleColor,
-          headerImageUrl: _modDef8668,
+          headerImageUrl: _modDef8614,
           headerText: "",
           headerColor: headerTextColor,
           backgroundColor,

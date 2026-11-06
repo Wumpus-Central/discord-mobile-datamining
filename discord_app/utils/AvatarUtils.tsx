@@ -10,7 +10,7 @@ import ForceSdrEmojisStickersExperiment from "../modules/image_upload/ForceSdrEm
 import NumberUtils from "../../discord_common/js/shared/utils/NumberUtils.tsx";
 import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import CollectiblesAssetUtils from "../modules/collectibles/utils/CollectiblesAssetUtils.tsx";
-import _modDef2111 from "../../_runtime/metro/02111__.js";
+import _modDef2106 from "../../_runtime/metro/02106__.js";
 import Constants from "../Constants.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
@@ -373,7 +373,7 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp6;
     if (fallbackAvatar) {
-      tmp6 = _modDef2111;
+      tmp6 = _modDef2106;
     }
     return tmp6;
   }

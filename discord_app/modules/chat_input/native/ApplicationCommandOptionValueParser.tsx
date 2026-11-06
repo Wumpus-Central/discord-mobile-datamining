@@ -1,5 +1,5 @@
 // discord_app/modules/chat_input/native/ApplicationCommandOptionValueParser.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import Server from "../../../flow/Server.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
@@ -19,13 +19,13 @@ require = fn;
 function getUsers(getGuildId) {
   const guildId = getGuildId.getGuildId();
   if (getGuildId.isPrivate()) {
-    let mapped = _modDef12(getGuildId.recipients).map((userId) => ({ userId }));
-    const arr3 = _modDef12(getGuildId.recipients);
+    let mapped = applyDefault(getGuildId.recipients).map((userId) => ({ userId }));
+    const arr3 = applyDefault(getGuildId.recipients);
   } else if (null != guildId) {
-    mapped = _modDef12(GuildMemberStore.getMembers(guildId)).map((userId) => ({ userId: userId.userId }));
-    const tmp7Result = _modDef12(GuildMemberStore.getMembers(guildId));
+    mapped = applyDefault(GuildMemberStore.getMembers(guildId)).map((userId) => ({ userId: userId.userId }));
+    const tmp7Result = applyDefault(GuildMemberStore.getMembers(guildId));
   } else {
-    mapped = _modDef12([]);
+    mapped = applyDefault([]);
   }
   const mapped1 = mapped.map((userId) => user.getUser(userId.userId));
   const found = mapped1.filter(GlobalUtils.isNotNullish);
@@ -41,7 +41,7 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: closure_0(5788).computeChannelName(id, UserStore, RelationshipStore) };
+      const obj = { id: id.id, text: closure_0(5806).computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
     });
   } else {
@@ -77,8 +77,8 @@ function getChannels(getGuildId, arr) {
     });
   }
 }
-let closure_6 = fn(4996).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(6174);
+let closure_6 = fn(5023).isGuildSelectableChannelType;
+const ChannelAutocompleteConstants = fn(6194);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {}
 const prototype = function ApplicationCommandOptionValueParser(channel) {
@@ -94,7 +94,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
     } else {
       sortedRoles = [];
     }
-    closure_2 = _modDef12(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
+    closure_2 = applyDefault(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
     closure_3 = arr2.map((text) => {
       obj = {};
       const merged = Object.assign(text);
@@ -154,7 +154,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
       obj = closure_1;
     }
-    if (type.type === channel(2121).ApplicationCommandOptionType.USER) {
+    if (type.type === channel(2116).ApplicationCommandOptionType.USER) {
       const matchUserResult = matchUser();
       if (null != matchUserResult) {
         return matchUserResult;
@@ -210,13 +210,13 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    if (type.type === channel(2121).ApplicationCommandOptionType.ROLE) {
+    if (type.type === channel(2116).ApplicationCommandOptionType.ROLE) {
       const matchRoleResult = matchRole();
       if (null != matchRoleResult) {
         return matchRoleResult;
       }
     }
-    if (type.type === channel(2121).ApplicationCommandOptionType.CHANNEL) {
+    if (type.type === channel(2116).ApplicationCommandOptionType.CHANNEL) {
       arr7 = closure_2_13;
       if (typeof matchPrefix === "function") {
         let firstResult = null;
@@ -243,7 +243,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
       obj8 = getChannels(obj.channel, type.channelTypes);
     }
-    if (type.type === channel(2121).ApplicationCommandOptionType.MENTIONABLE) {
+    if (type.type === channel(2116).ApplicationCommandOptionType.MENTIONABLE) {
       const matchRoleResult1 = matchRole();
       if (null != matchRoleResult1) {
         return matchRoleResult1;
@@ -290,7 +290,7 @@ export function getRoles(guild_id) {
   } else {
     sortedRoles = [];
   }
-  return _modDef12(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
+  return applyDefault(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
 }
 export { getChannels };
 export const ApplicationCommandOptionValueParser = prototype;
@@ -345,7 +345,7 @@ export function useApplicationCommandOptionValueParser(channel) {
         } else {
           sortedRoles = [];
         }
-        closure_2 = _modDef12(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
+        closure_2 = applyDefault(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
         closure_3 = arr2.map((text) => {
           obj = {};
           const merged = Object.assign(text);
@@ -405,7 +405,7 @@ export function useApplicationCommandOptionValueParser(channel) {
           }
           obj = closure_1;
         }
-        if (type.type === channel(2121).ApplicationCommandOptionType.USER) {
+        if (type.type === channel(2116).ApplicationCommandOptionType.USER) {
           const matchUserResult = matchUser();
           if (null != matchUserResult) {
             return matchUserResult;
@@ -461,13 +461,13 @@ export function useApplicationCommandOptionValueParser(channel) {
             throw new TypeError("Trying to call a non-function");
           }
         }
-        if (type.type === channel(2121).ApplicationCommandOptionType.ROLE) {
+        if (type.type === channel(2116).ApplicationCommandOptionType.ROLE) {
           const matchRoleResult = matchRole();
           if (null != matchRoleResult) {
             return matchRoleResult;
           }
         }
-        if (type.type === channel(2121).ApplicationCommandOptionType.CHANNEL) {
+        if (type.type === channel(2116).ApplicationCommandOptionType.CHANNEL) {
           arr7 = closure_2_13;
           if (typeof matchPrefix === "function") {
             let firstResult = null;
@@ -494,7 +494,7 @@ export function useApplicationCommandOptionValueParser(channel) {
           }
           obj8 = getChannels(obj.channel, type.channelTypes);
         }
-        if (type.type === channel(2121).ApplicationCommandOptionType.MENTIONABLE) {
+        if (type.type === channel(2116).ApplicationCommandOptionType.MENTIONABLE) {
           const matchRoleResult1 = matchRole();
           if (null != matchRoleResult1) {
             return matchRoleResult1;

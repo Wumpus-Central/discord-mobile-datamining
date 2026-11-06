@@ -1,6 +1,6 @@
 // discord_app/stores/GuildReadStateStore.tsx
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import FavoritesUtils from "../modules/favorites/FavoritesUtils.tsx";
 import ThreadActionUtils from "../modules/threads/ThreadActionUtils.tsx";
 import NSFWContentGate from "../modules/age_gate/NSFWContentGate.tsx";
@@ -922,8 +922,8 @@ function handleChannelUpdate(channel) {
   return recountChannels(channel.getGuildId(), items);
 }
 function handleChannelUpdates(channels) {
-  const obj = _modDef12(channels.channels);
-  return _modDef12(channels.channels)
+  const obj = applyDefault(channels.channels);
+  return applyDefault(channels.channels)
     .groupBy((getGuildId) => getGuildId.getGuildId())
     .reduce(
       (acc, arr, index) =>
@@ -935,9 +935,9 @@ function handleChannelUpdates(channels) {
     );
 }
 function handleBulkAck(channels) {
-  const mapped = _modDef12(channels.channels).map((channelId) => channelId.channelId);
+  const mapped = applyDefault(channels.channels).map((channelId) => channelId.channelId);
   const found = mapped.filter((item) => null != ChannelStore.getChannel(item));
-  const arr = _modDef12(channels.channels);
+  const arr = applyDefault(channels.channels);
   return found
     .groupBy((arg0) => {
       const channel = ChannelStore.getChannel(arg0);
@@ -1064,11 +1064,11 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(4996);
+const ChannelRecord = fn(5023);
 ({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: closure_10 } = ChannelRecord);
-const isGuildNSFW = fn(5010).isGuildNSFW;
-const ChannelFlags = fn(4999).ChannelFlags;
-const ReadStateConstants = fn(6914);
+const isGuildNSFW = fn(5037).isGuildNSFW;
+const ChannelFlags = fn(5026).ChannelFlags;
+const ReadStateConstants = fn(6856);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
 let guilds = {};

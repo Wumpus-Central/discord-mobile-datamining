@@ -1,5 +1,5 @@
 // discord_app/modules/threads/JoinedThreadsStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
@@ -197,19 +197,19 @@ obj = {
     });
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(joinedThreads) {
-    const mapped = _modDef12(joinedThreads.joinedThreads).map((joinTimestamp) => {
+    const mapped = applyDefault(joinedThreads.joinedThreads).map((joinTimestamp) => {
       obj = {};
       const merged = Object.assign(joinTimestamp);
       obj.joinTimestamp = new Date(joinTimestamp.joinTimestamp);
       return obj;
     });
-    const arr = _modDef12(joinedThreads.joinedThreads);
+    const arr = applyDefault(joinedThreads.joinedThreads);
     mapped.keyBy("threadId").value();
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
     const id = guild.id;
-    obj = _modDef12(obj);
+    obj = applyDefault(obj);
     const rejectResult = obj.reject((guildId) => guildId.guildId === id);
     obj = obj
       .reject((guildId) => guildId.guildId === id)
@@ -223,7 +223,7 @@ obj = {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    obj = _modDef12(obj);
+    obj = applyDefault(obj);
     const rejectResult = obj.reject((guildId) => guildId.guildId === id);
     obj = obj
       .reject((guildId) => guildId.guildId === id)
@@ -301,7 +301,7 @@ obj = {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "ti" }, joinTimestamp: null };
+        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "r" }, joinTimestamp: null };
         const _Date = Date;
         const date = new Date();
         guildId = date;

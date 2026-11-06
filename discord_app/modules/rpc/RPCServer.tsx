@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/RPCServer.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import transformUserDefault from "helpers/transformUser.tsx";
 import RPCErrorDefault from "RPCError.tsx";
@@ -8,7 +8,7 @@ import RpcCommandInterception from "RpcCommandInterception.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(6588).TransportTypes;
+const TransportTypes = fn(6608).TransportTypes;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -679,7 +679,7 @@ prototype["getSubscription"] = function getSubscription(socket, evt, c3) {
       isEqualResult = socket.evt === closure_1;
     }
     if (isEqualResult) {
-      isEqualResult = _modDef12.isEqual(socket.args, closure_2);
+      isEqualResult = applyDefault.isEqual(socket.args, closure_2);
     }
     return isEqualResult;
   });
@@ -715,13 +715,13 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
   closure_0 = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
-  _modDef12.remove(this.subscriptions, (socket) => {
+  applyDefault.remove(this.subscriptions, (socket) => {
     let isEqualResult = socket.socket === closure_0;
     if (isEqualResult) {
       isEqualResult = socket.evt === closure_1;
     }
     if (isEqualResult) {
-      isEqualResult = _modDef12.isEqual(socket.args, closure_2);
+      isEqualResult = applyDefault.isEqual(socket.args, closure_2);
     }
     return isEqualResult;
   });
@@ -729,7 +729,7 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
 };
 prototype["removeSubscriptions"] = function removeSubscriptions(authorization) {
   closure_0 = authorization;
-  _modDef12.remove(this.subscriptions, (socket) => socket.socket === closure_0);
+  applyDefault.remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };
 prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(
@@ -771,8 +771,8 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(
             if (args == null) {
               args = {};
             }
-            _modDef12;
-            _modDef12;
+            applyDefault;
+            applyDefault;
             const _Object = Object;
           }
         }
@@ -796,7 +796,7 @@ prototype["storeWait"] = function storeWait(socket, fn, timeout) {
   let tmp = fn();
   if (!tmp) {
     if (0 !== timeout) {
-      const uniqueId = _modDef12.uniqueId();
+      const uniqueId = applyDefault.uniqueId();
       function removeSubscription() {}
       const promise = new Promise((arg0, socket) => {
         closure_0 = arg0;

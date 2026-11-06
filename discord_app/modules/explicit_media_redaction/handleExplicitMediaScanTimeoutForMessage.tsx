@@ -1,5 +1,5 @@
 // discord_app/modules/explicit_media_redaction/handleExplicitMediaScanTimeoutForMessage.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants.tsx";
 import findComponentMediaDefault from "findComponentMedia.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -53,7 +53,7 @@ export function handleExplicitMediaScanTimeoutForMessage(message) {
       return obj3;
     }
   });
-  const components = _mod12.cloneDeep(message.components);
+  const components = apply.cloneDeep(message.components);
   failOverComponentMedia(components);
   const messageSnapshots = message.messageSnapshots;
   let messageSnapshots1 = messageSnapshots;
@@ -86,7 +86,7 @@ export function handleExplicitMediaScanTimeoutForMessage(message) {
             return obj3;
           }
         });
-        let cloneDeepResult = _mod12.cloneDeep(message.components);
+        let cloneDeepResult = apply.cloneDeep(message.components);
         failOverComponentMedia(cloneDeepResult);
         return message.merge({
           message: message.merge({ attachments: mapped, embeds: mapped1, components: cloneDeepResult }),

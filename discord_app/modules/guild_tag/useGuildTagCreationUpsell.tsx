@@ -1,5 +1,5 @@
 // discord_app/modules/guild_tag/useGuildTagCreationUpsell.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import actions_BillingActionCreators from "../billing/actions/BillingActionCreators.tsx";
@@ -23,7 +23,7 @@ export function useGuildTagCreationUpsell(GuildProfileCreateTagUpsell, arg1) {
   items = [GuildStore, PermissionStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
-    return _modDef12.sortBy(
+    return applyDefault.sortBy(
       guildsArray.filter((item) => {
         const guildSupportsTagsResult = closure_1_0(dependencyMap[9]).guildSupportsTags(item);
         let tmp4 = !guildSupportsTagsResult;

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/conjureRemoveApp.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4024 from "../intl/ConjureUntranslated.messages.js";
 import useChannelName from "../../channel/useChannelName.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import ConjurePublishTypes from "../publish/ConjurePublishTypes.tsx";
@@ -27,7 +27,7 @@ function readConjureRemoveTarget(project) {
   }
   if (null != guild) {
     if ("in_server" === obj5.readConjureAppServerPresence(project)) {
-      const result = tmp10(11079).findConjureAppChannels(guild.id, project.application_id);
+      const result = tmp10(11032).findConjureAppChannels(guild.id, project.application_id);
       const found = result.filter((item) => PermissionStore.can(constants.MANAGE_CHANNELS, item));
       const obj = {
         projectName: project.name,
@@ -66,22 +66,22 @@ function readConjureRemoveTarget(project) {
       obj.channelNames = found.map(channelName);
       const found1 = result.filter((item) => !found.includes(item));
       obj.keptChannelNames = found1.map(channelName);
-      const tmp10Result = tmp10(11079);
-      const tmp10Result5 = tmp10(11079);
-      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(11079).conjureProductionBotUserId(project));
+      const tmp10Result = tmp10(11032);
+      const tmp10Result5 = tmp10(11032);
+      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(11032).conjureProductionBotUserId(project));
       let canRemoveConjureBotResult = null == project.preview_application_id;
       if (!canRemoveConjureBotResult) {
-        const tmp10Result7 = tmp10(11079);
+        const tmp10Result7 = tmp10(11032);
         canRemoveConjureBotResult = tmp10Result7.canRemoveConjureBot(
           guild,
-          tmp10(11079).conjurePreviewBotUserId(project),
+          tmp10(11032).conjurePreviewBotUserId(project),
         );
-        const tmp10Result8 = tmp10(11079);
+        const tmp10Result8 = tmp10(11032);
       }
       obj.canRemovePreviewBot = canRemoveConjureBotResult;
       return obj;
     }
-    obj5 = found(11079);
+    obj5 = found(11032);
   }
   return null;
 }
@@ -127,7 +127,7 @@ export function useConjureRemoveTarget(projectId) {
       obj = { guildId: null, botUserIds: [] };
     },
     items1,
-    require("../../../../_runtime/metro/00012__.js").isEqual,
+    require("apply").isEqual,
   );
   const guildId = stateFromStores.guildId;
   closure_129_1 = guildId;
@@ -170,7 +170,7 @@ export function useConjureRemoveTarget(projectId) {
       return tmp4;
     },
     items4,
-    require("../../../../_runtime/metro/00012__.js").isEqual,
+    require("apply").isEqual,
   );
 }
 export function conjureRemoveAppItems(target) {
@@ -211,7 +211,7 @@ export function conjureRemoveAppKeptChannels(target) {
     const listFormat = new Intl.ListFormat(util.intl.currentLocale, { type: "conjunction" });
     const intl = util.intl;
     const obj = { channels: listFormat.format(keptChannelNames.map((item) => "#" + item)) };
-    return intl.formatToPlainString(_modDef3995.pE4Cec, obj);
+    return intl.formatToPlainString(_modDef4024.pE4Cec, obj);
   }
 }
 export function conjureTitleWithAppTag(arg0) {
@@ -220,12 +220,12 @@ export function conjureTitleWithAppTag(arg0) {
 export function conjureRemoveAppSuccess(arg0) {
   ({ appName, guildName } = arg0);
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3995.SNFGxP, { app, server });
+  return intl.formatToPlainString(_modDef4024.SNFGxP, { app, server });
 }
 export function conjureDeleteProjectBody(target) {
   ({ appName, guildName } = target);
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3995["9CvVB9"], { app, server });
+  return intl.formatToPlainString(_modDef4024["9CvVB9"], { app, server });
 }
 export function isPublishedConjureUserApp(project, publishStatus) {
   let isConjureLiveResult = "user" === project.install_scope;

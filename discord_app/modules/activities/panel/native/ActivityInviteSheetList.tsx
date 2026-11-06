@@ -55,7 +55,7 @@ function FriendsEmptyComponent() {
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

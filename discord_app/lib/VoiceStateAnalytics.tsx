@@ -1,10 +1,10 @@
 // discord_app/lib/VoiceStateAnalytics.tsx
-import _mod12 from "../../_runtime/metro/00012__.js";
+import apply from "../../_runtime/00012_apply.js";
 import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 import SortedVoiceStateStore from "../stores/views/SortedVoiceStateStore.tsx";
 
 require = fn;
-const SpeakingFlags = fn(5905).SpeakingFlags;
+const SpeakingFlags = fn(5924).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {
@@ -67,10 +67,10 @@ prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(loca
   set1.delete(this.userId);
   set.delete(this.userId);
   const obj = { num_local_voice_user_mutes: null, num_local_voice_volumes: null };
-  const obj4 = _mod12;
+  const obj4 = apply;
   obj.num_local_voice_user_mutes = obj4.intersection(Array.from(set), Array.from(this.totalParticipants)).length;
   const arr = Array.from(set);
-  const obj5 = _mod12;
+  const obj5 = apply;
   obj.num_local_voice_volumes = obj5.intersection(Array.from(set1), Array.from(this.totalParticipants)).length;
   return obj;
 };

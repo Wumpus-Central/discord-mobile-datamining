@@ -1,12 +1,9 @@
 // discord_app/modules/game_organization_invites/native/openGameOrganizationJoinModal.tsx
-import withGameOrganizationJoinFlowPendingDefault from "../withGameOrganizationJoinFlowPending.tsx";
+import checkGameOrganizationJoinEligibilityDefault from "../checkGameOrganizationJoinEligibility.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
-import GameOrganizationCharacterEligibilityStore from "../GameOrganizationCharacterEligibilityStore.tsx";
-import GameOrganizationInviteStore from "../GameOrganizationInviteStore.tsx";
 
 const require = fn;
-let closure_10 = async function _openGameOrganizationJoinModal(arg0) {
+let closure_4 = async function _openGameOrganizationJoinModal(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -22,7 +19,7 @@ let closure_10 = async function _openGameOrganizationJoinModal(arg0) {
   } else {
     try {
       c4 = 2;
-      if (0 === num3) {
+      if (0 === c3) {
         if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -31,83 +28,48 @@ let closure_10 = async function _openGameOrganizationJoinModal(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_2 = tmp2;
-          c1 = 0;
-          let tmp43 = closure_0;
+          closure_2 = tmp5;
+          closure_1 = tmp2;
           closure_129_0 = closure_0;
-          let channelId2;
-          let characters;
-          invite = invite.getInvite(closure_0);
-          state = undefined;
-          if (invite != null) {
-            state = invite.state;
-          }
-          if (state === constants2.RESOLVED) {
-            channelId2 = channelId.getChannelId();
-            c4 = num3;
-            const obj5 = {
-              value: withGameOrganizationJoinFlowPendingDefault(tmp43, () => {
-                const useGameOrganizationCharacterEligibilityFetch = closure_0(
-                  closure_2[6],
-                ).useGameOrganizationCharacterEligibilityFetch;
-                items = [closure_1_0];
-                return useGameOrganizationCharacterEligibilityFetch.fetchMany(items);
-              }),
-              done: false,
-            };
-            return obj5;
-          }
-          c4 = 3;
+          closure_129_1 = undefined;
+          c3 = 1;
+          c4 = 1;
+          const obj4 = { value: checkGameOrganizationJoinEligibilityDefault(closure_0), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
-      } else if (closure_130_4.getChannelId() !== channelId2) {
-        c4 = 3;
-        return { value: "HermesInternal", done: null };
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
-        tmp43 = closure_130_5;
-        characters = closure_130_5.getCharacters(closure_129_0);
-        if (null == characters) {
-          closure_130_1(closure_130_2[7])(closure_129_0, closure_130_7.ERROR);
+        closure_129_1 = value;
+        if ("noop" === closure_129_1) {
           c4 = 3;
-          const obj7 = { value: undefined, done: true };
-          return obj7;
-        } else if (0 === characters.length) {
-          closure_130_1(closure_130_2[7])(closure_129_0, closure_130_7.NO_CHARACTERS);
-          c4 = 3;
-          const obj = { value: undefined, done: true };
-          return obj;
+        } else if ("eligible" !== closure_129_1) {
+          closure_130_1(closure_130_2[2])(closure_129_0, closure_129_1);
         }
+        const obj6 = { code: closure_129_0 };
+        closure_130_1(closure_130_2[3]).pushLazy(
+          closure_130_0(closure_130_2[5])(closure_130_2[4], closure_130_2.paths),
+          obj6,
+        );
+        const obj = closure_130_1(closure_130_2[3]);
       }
-      const obj8 = { code: closure_129_0 };
-      closure_130_1(closure_130_2[8]).pushLazy(
-        closure_130_0(closure_130_2[10])(closure_130_2[9], closure_130_2.paths),
-        obj8,
-      );
-      const obj4 = closure_130_1(closure_130_2[8]);
-    } catch (tmp32) {
+    } catch (tmp24) {
       c4 = tmp;
-      throw tmp32;
+      throw tmp24;
     }
   }
 };
-const GameOrganizationInviteConstants = fn(11560);
-({
-  GameOrganizationCantJoinReasons: metroImportDefault,
-  GameOrganizationCharacterMode: closure_8,
-  GameOrganizationInviteStates: closure_9,
-} = GameOrganizationInviteConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/openGameOrganizationJoinModal.tsx");
 
 export default function openGameOrganizationJoinModal() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -163,7 +163,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(18827);
+const createICYMIStyles = fn(18815);
 let guild = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -801,18 +801,18 @@ export function ThreadAsComments(arg0) {
           parseInlineReplyResult = intl.string(parentMessage(1113).t["6kp9H2"]);
         }
         obj5.children = parseInlineReplyResult;
-        items4[1] = closure_18(parentMessage(5763).Text, obj5);
+        items4[1] = closure_18(parentMessage(5781).Text, obj5);
         const obj7 = { style: tmp.commentCount, children: null };
         const obj8 = { style: tmp.commentsIcon };
-        const items5 = [closure_18(parentMessage(8789).ChatIcon, obj8), ,];
+        const items5 = [closure_18(parentMessage(8735).ChatIcon, obj8), ,];
         const obj9 = { variant: "body-sm/semibold", color: "interactive-text-default", children: str };
-        items5[1] = closure_18(parentMessage(5763).Text, obj9);
+        items5[1] = closure_18(parentMessage(5781).Text, obj9);
         const obj10 = { style: tmp.chevron, size: "xxs" };
-        items5[2] = closure_18(parentMessage(7516).ChevronSmallRightIcon, obj10);
+        items5[2] = closure_18(parentMessage(7461).ChevronSmallRightIcon, obj10);
         obj7.children = items5;
         items4[2] = closure_19(View, obj7);
         obj3.children = items4;
-        return closure_19(parentMessage(7124).PressableHighlight, obj3);
+        return closure_19(parentMessage(7068).PressableHighlight, obj3);
       }
     }
     const obj11 = { style: null, onPress: null, children: null };
@@ -828,16 +828,16 @@ export function ThreadAsComments(arg0) {
     };
     const intl2 = parentMessage(1113).intl;
     obj12.children = intl2.string(parentMessage(1113).t.VMWjXW);
-    const items7 = [closure_18(parentMessage(5763).Text, obj12)];
+    const items7 = [closure_18(parentMessage(5781).Text, obj12)];
     const obj13 = { style: tmp.commentCount, children: null };
     const obj14 = { style: tmp.commentsIcon };
-    const items8 = [closure_18(parentMessage(8789).ChatIcon, obj14)];
+    const items8 = [closure_18(parentMessage(8735).ChatIcon, obj14)];
     const obj15 = { style: tmp.chevron, size: "xxs" };
-    items8[1] = closure_18(parentMessage(7516).ChevronSmallRightIcon, obj15);
+    items8[1] = closure_18(parentMessage(7461).ChevronSmallRightIcon, obj15);
     obj13.children = items8;
     items7[1] = closure_19(View, obj13);
     obj11.children = items7;
-    return closure_19(parentMessage(7124).PressableHighlight, obj11);
+    return closure_19(parentMessage(7068).PressableHighlight, obj11);
   } else {
     return null;
   }

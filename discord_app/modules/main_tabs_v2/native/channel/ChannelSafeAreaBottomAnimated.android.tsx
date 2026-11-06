@@ -10,6 +10,55 @@ const _modDef1652 = _mod1652;
 const useChannelSafeAreaHeightSharedValueDefault = useChannelSafeAreaHeightSharedValue;
 
 require = fn;
+function useChannelSafeAreaAnimatedStyles() {
+  const tmp = useChannelSafeAreaHeightSharedValueDefault();
+  items = [closure_6, tmp];
+  c0 = undefined;
+  [tmp2, tmp3] = items;
+  class ChannelSafeAreaBottomAnimatedAndroidTsx1 {
+    constructor() {
+      obj = { height: closure_0.get() };
+      return obj;
+    }
+  }
+  const items1 = [tmp3];
+  ChannelSafeAreaBottomAnimatedAndroidTsx1.__closure = items1;
+  ChannelSafeAreaBottomAnimatedAndroidTsx1.__workletHash = 14690382113580;
+  ChannelSafeAreaBottomAnimatedAndroidTsx1.__initData = tmp2;
+  return _mod1652.useAnimatedStyle(ChannelSafeAreaBottomAnimatedAndroidTsx1);
+}
+function KeyboardAwareChannelSafeAreaBottom(channelId) {
+  const tmp = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
+  const obj = { style: useChannelSafeAreaAnimatedStyles(), children: null };
+  const obj2 = { style: null };
+  items = [React3.absoluteFill, tmp];
+  obj2.style = items;
+  obj.children = <React4 style={null} />;
+  return jsx(_modDef1652.View, { style: useChannelSafeAreaAnimatedStyles(), children: null });
+}
+function DockAwareChannelSafeAreaBottom(channelId) {
+  const tmp3 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
+  const tmp4 = useChannelSafeAreaAnimatedStyles();
+  const channelSafeAreaRestingHeight = useChannelSafeAreaHeightSharedValue.useChannelSafeAreaRestingHeight();
+  if (useIsChannelFullyOpenDefault()) {
+    const obj2 = { style: tmp4, children: null };
+    const obj3 = { style: null };
+    items = [React3.absoluteFill, tmp3];
+    obj3.style = items;
+    obj2.children = <React4 style={null} />;
+    let tmp6Result = jsx(_modDef1652.View, { style: tmp4, children: null });
+  } else {
+    const obj4 = { style: null, children: null };
+    const obj5 = { height: channelSafeAreaRestingHeight };
+    obj4.style = obj5;
+    const obj6 = { style: null };
+    const items1 = [React3.absoluteFill, tmp3];
+    obj6.style = items1;
+    obj4.children = <React4 style={null} />;
+    tmp6Result = <React4 style={null}>{null}</React4>;
+  }
+  return tmp6Result;
+}
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
@@ -22,43 +71,10 @@ const result = size.fileFinishedImporting(
 );
 
 export default noop.memo(function ChannelSafeAreaBottom(channelId) {
-  const tmp4 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
-  const tmp3 = useChannelSafeAreaHeightSharedValueDefault();
-  items = [closure_6, tmp3];
-  c0 = undefined;
-  [tmp6, tmp7] = items;
-  class ChannelSafeAreaBottomAnimatedAndroidTsx1 {
-    constructor() {
-      obj = { height: closure_0.get() };
-      return obj;
-    }
-  }
-  const items1 = [tmp7];
-  ChannelSafeAreaBottomAnimatedAndroidTsx1.__closure = items1;
-  ChannelSafeAreaBottomAnimatedAndroidTsx1.__workletHash = 14690382113580;
-  ChannelSafeAreaBottomAnimatedAndroidTsx1.__initData = tmp6;
-  const animatedStyle = _mod1652.useAnimatedStyle(ChannelSafeAreaBottomAnimatedAndroidTsx1);
-  const isMobileRTCV2Enabled = MobileRTCV2Experiment.useIsMobileRTCV2Enabled("ChannelSafeAreaBottom");
-  const tmp5Result = MobileRTCV2Experiment;
-  useChannelSafeAreaHeightSharedValue;
-  if (isMobileRTCV2Enabled) {
-    if (!tmp10) {
-      const obj2 = { style: null, children: null };
-      const obj3 = { height: tmp12 };
-      obj2.style = obj3;
-      const obj4 = { style: null };
-      const items2 = [React3.absoluteFill, tmp4];
-      obj4.style = items2;
-      obj2.children = <React4 style={null} />;
-      let tmp16 = <React4 style={null}>{null}</React4>;
-    }
-    return tmp16;
-  }
-  const obj5 = { style: animatedStyle, children: null };
-  const obj6 = { style: null };
-  const items3 = [React3.absoluteFill, tmp4];
-  obj6.style = items3;
-  obj5.children = <React4 style={null} />;
-  tmp16 = jsx(_modDef1652.View, { style: animatedStyle, children: null });
-  tmp10 = useIsChannelFullyOpenDefault();
+  return jsx(
+    MobileRTCV2Experiment.useIsMobileRTCV2Enabled("ChannelSafeAreaBottom")
+      ? DockAwareChannelSafeAreaBottom
+      : KeyboardAwareChannelSafeAreaBottom,
+    { channelId: channelId.channelId },
+  );
 });

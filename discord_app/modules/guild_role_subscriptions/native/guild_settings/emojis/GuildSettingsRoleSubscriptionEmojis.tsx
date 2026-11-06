@@ -1,25 +1,25 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx
-import asyncRequireImpl from "../../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02118_asyncRequireImpl.js";
 import RoleSubscriptionEmojiUtils from "../../../RoleSubscriptionEmojiUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildSettingsRoleSubscriptionContainerDefault from "../GuildSettingsRoleSubscriptionContainer.tsx";
 import getMaxRoleSubscriptionEmojiSlotsDefault from "../../../getMaxRoleSubscriptionEmojiSlots.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
-import apply from "../../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../../_runtime/00012_apply.js";
 
 require = fn;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
-  const roleSubscriptionSettingsDisabled = guildId(20261).useRoleSubscriptionSettingsDisabled();
-  let obj = guildId(20261);
+  const roleSubscriptionSettingsDisabled = guildId(20268).useRoleSubscriptionSettingsDisabled();
+  let obj = guildId(20268);
   items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (null == stateFromStores) {
     return null;
   } else {
     const intl = tmp(1113).intl;
-    const obj3 = { maxSlots: stateFromStores(20312)(stateFromStores) };
+    const obj3 = { maxSlots: stateFromStores(20319)(stateFromStores) };
     const obj4 = {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1113).t.H9Jxp6, obj3),
@@ -35,17 +35,17 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(20313, dependencyMap.paths),
+              asyncRequireImpl(20320, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,
                 emoji: dependencyMap,
                 onSave(arg0) {
-                  stateFromStores(5384).hideActionSheet();
+                  stateFromStores(5404).hideActionSheet();
                   closure_0(arg0);
                 },
                 onCancel() {
-                  stateFromStores(5384).hideActionSheet();
+                  stateFromStores(5404).hideActionSheet();
                   const error = new Error("User cancelled");
                   closure_1(error);
                 },
@@ -57,7 +57,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
       },
       disabled: roleSubscriptionSettingsDisabled,
     };
-    return jsx(tmp(20046).ManageEmojisModal, {
+    return jsx(tmp(20053).ManageEmojisModal, {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1113).t.H9Jxp6, obj3),
       computeEmojiItems,
@@ -72,17 +72,17 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(20313, dependencyMap.paths),
+              asyncRequireImpl(20320, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,
                 emoji: dependencyMap,
                 onSave(arg0) {
-                  stateFromStores(5384).hideActionSheet();
+                  stateFromStores(5404).hideActionSheet();
                   closure_0(arg0);
                 },
                 onCancel() {
-                  stateFromStores(5384).hideActionSheet();
+                  stateFromStores(5404).hideActionSheet();
                   const error = new Error("User cancelled");
                   closure_1(error);
                 },

@@ -36,7 +36,7 @@ function RadioTagSection(section) {
   const intl = section(1113).intl;
   obj2.label = intl.string(section(1113).t.PoWNfe);
   obj2.value = none;
-  items = [closure_6(section(7205).TableRadioRow, obj2)];
+  items = [closure_6(section(7152).TableRadioRow, obj2)];
   const tags1 = section.tags;
   items[1] = tags1.map((value) => {
     const widgetGameTagMetadata = section(dependencyMap[10]).getWidgetGameTagMetadata(value);
@@ -48,7 +48,7 @@ function RadioTagSection(section) {
     return tmp3;
   });
   obj.children = items;
-  return closure_7(section(7202).TableRadioGroup, obj);
+  return closure_7(section(7149).TableRadioGroup, obj);
 }
 function CheckboxTagSection(arg0) {
   ({ section, currentTags: require, onTagsChange: importDefault } = arg0);
@@ -72,12 +72,12 @@ function CheckboxTagSection(arg0) {
   });
   return closure_6(TableRowGroup.TableRowGroup, obj);
 }
-let closure_5 = fn(8900).TrackUserProfileEditActions;
+let closure_5 = fn(8846).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const none = "none";
 let closure_9 = [];
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

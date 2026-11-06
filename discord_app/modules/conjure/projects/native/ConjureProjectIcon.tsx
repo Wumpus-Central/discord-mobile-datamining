@@ -4,9 +4,9 @@ import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
 import ConjureAppIconTileDefault from "ConjureAppIconTile.tsx";
 import useConjureProjectIcon from "../useConjureProjectIcon.tsx";
-import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const useConjureProjectIconDefault = useConjureProjectIcon;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const dependencyMap = { header: 20, list: 32, card: 40, dialog: 48 };
-let createStyles = fn(5143);
+let createStyles = fn(5170);
 let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   const obj = {
     frame: { width, height: width, borderRadius, overflow: "hidden", alignItems: "center", justifyContent: "center" },
@@ -34,7 +34,7 @@ let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   obj.glyph = { width: width2, height: width2 };
   return obj;
 });
-createStyles = fn(5143);
+createStyles = fn(5170);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { tile: { backgroundColor } };
   return obj;

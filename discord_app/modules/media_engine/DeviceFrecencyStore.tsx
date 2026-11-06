@@ -1,12 +1,12 @@
 // discord_app/modules/media_engine/DeviceFrecencyStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import FrecencyDefault from "../../lib/Frecency.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const Constants = fn(5905);
+const Constants = fn(5924);
 const DeviceTypes = Constants.DeviceTypes;
 ({ MediaEngineContextTypes: hasOwnProperty, SpeakingFlags: closure_6 } = Constants);
 let closure_7 = {
@@ -26,11 +26,11 @@ let obj = {
   numFrequentlyItems: Infinity,
 };
 let obj2 = {};
-const stopWatch = new fn(5909).StopWatch();
+const stopWatch = new fn(5928).StopWatch();
 obj2[DeviceTypes.AUDIO_INPUT] = stopWatch;
-const stopWatch1 = new fn(5909).StopWatch();
+const stopWatch1 = new fn(5928).StopWatch();
 obj2[DeviceTypes.AUDIO_OUTPUT] = stopWatch1;
-const stopWatch2 = new fn(5909).StopWatch();
+const stopWatch2 = new fn(5928).StopWatch();
 obj2[DeviceTypes.VIDEO_INPUT] = stopWatch2;
 let dependencyMap = { [DeviceTypes.AUDIO_INPUT]: {}, [DeviceTypes.AUDIO_OUTPUT]: {}, [DeviceTypes.VIDEO_INPUT]: {} };
 let obj3 = {};
@@ -157,7 +157,7 @@ prototype["getUsageStats"] = function getUsageStats() {
 };
 DeviceFrecencyStore.displayName = "DeviceFrecencyStore";
 DeviceFrecencyStore.persistKey = "DeviceFrecencyStore";
-let items = [(arg0) => _modDef12.mapKeys(arg0, (arg0, arg1) => closure_1_7[arg1])];
+let items = [(arg0) => applyDefault.mapKeys(arg0, (arg0, arg1) => closure_1_7[arg1])];
 DeviceFrecencyStore.migrations = items;
 const deviceFrecencyStore = new DeviceFrecencyStore(DispatcherDefault, {
   AUDIO_SET_INPUT_DEVICE(oldId) {

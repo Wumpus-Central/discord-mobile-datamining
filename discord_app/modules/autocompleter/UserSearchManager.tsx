@@ -1,6 +1,6 @@
 // discord_app/modules/autocompleter/UserSearchManager.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import Constants from "../../Constants.tsx";
 import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
@@ -457,7 +457,7 @@ class UserSearchManager extends tmp2 {
     applyArgumentsResult._handleConnectionOpenSupplemental = function _handleConnectionOpenSupplemental(guilds) {
       guilds = guilds.guilds;
       const timerId = setTimeout(() => {
-        _modDef12.flatMap(guilds, (arg0) => {
+        applyDefault.flatMap(guilds, (arg0) => {
           ({ members, id: closure_0 } = arg0);
           items = [];
           const item = members.forEach((user) => {
@@ -480,7 +480,7 @@ class UserSearchManager extends tmp2 {
           return items;
         });
         items = [
-          ..._modDef12.flatMap(guilds, (activity_instances) => {
+          ...applyDefault.flatMap(guilds, (activity_instances) => {
             closure_0 = activity_instances;
             items = [];
             activity_instances = activity_instances.activity_instances;

@@ -1,7 +1,7 @@
 // discord_app/stores/MessageStore.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -429,7 +429,7 @@ prototype["getAutomodRemovalNotice"] = function getAutomodRemovalNotice(id) {
 prototype["getLastEditableMessage"] = function getLastEditableMessage(id) {
   id = UserStore.getCurrentUser();
   const messages = this.getMessages(id);
-  const reversed = _modDef12(messages.toArray()).reverse();
+  const reversed = applyDefault(messages.toArray()).reverse();
   return reversed.find((item) => {
     id = undefined;
     if (id != null) {
@@ -469,13 +469,13 @@ prototype["getLastChatCommandMessage"] = function getLastChatCommandMessage(arg0
 };
 prototype["getLastMessage"] = function getLastMessage(channelId) {
   const messages = this.getMessages(channelId);
-  const reversed = _modDef12(messages.toArray()).reverse();
+  const reversed = applyDefault(messages.toArray()).reverse();
   return reversed.get(0);
 };
 prototype["getLastNonCurrentUserMessage"] = function getLastNonCurrentUserMessage(arg0) {
   let id = UserStore.getCurrentUser();
   const messages = this.getMessages(arg0);
-  const reversed = _modDef12(messages.toArray()).reverse();
+  const reversed = applyDefault(messages.toArray()).reverse();
   return reversed.find((author) => {
     id = undefined;
     if (id != null) {
@@ -1075,7 +1075,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6701).getOrCreate(ids.channelId);
+    const orCreate = mutation(6643).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1124,14 +1124,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6701).commit(tmp3);
+        tmp(6643).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6701);
+        const tmpResult2 = tmp(6643);
       }
     }
-    let obj = mutation(6701);
+    let obj = mutation(6643);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);
@@ -1146,7 +1146,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
     channels = channels.channels;
     let flag = false;
-    const uniqResult = _modDef12.uniq(channels.map((guild_id) => guild_id.guild_id));
+    const uniqResult = applyDefault.uniq(channels.map((guild_id) => guild_id.guild_id));
     while (tmp2 !== undefined) {
       if (invalidateInaccessibleMessages(tmp3)) {
         flag = true;

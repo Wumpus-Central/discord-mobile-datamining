@@ -3,9 +3,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorConstants from "NavigatorConstants.native.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
+import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
 import HeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import _mod7149 from "../../../../../_runtime/metro/07149__.js";
+import _mod7096 from "../../../../../_runtime/metro/07096__.js";
 import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -15,7 +16,7 @@ class HeaderBackImage {
   constructor() {
     tmp = closure_8();
     obj = { size: "md", style: tmp.headerButtonIcon };
-    return jsx(closure_0(closure_2[9]).ArrowLargeLeftIcon, obj);
+    return jsx(closure_0(closure_2[10]).ArrowLargeLeftIcon, obj);
   }
 }
 function CloseButton(onPress) {
@@ -34,7 +35,7 @@ function CloseButton(onPress) {
     fn();
     return true;
   });
-  const intl = tmp2(tmp3[12]).intl;
+  const intl = tmp2(tmp3[13]).intl;
   const stringResult = intl.string(require("util").t.cpT0Cq);
   const obj2 = {};
   const merged1 = Object.assign(merged);
@@ -48,12 +49,12 @@ function CloseButton(onPress) {
     return timestampProducer(XSmallIcon.XSmallIcon, obj);
   };
   obj2.accessibilityLabel = stringResult;
-  return closure_6(require("../../../../../_runtime/metro/07149__.js").HeaderBackButton, obj2);
+  return closure_6(require("../../../../../_runtime/metro/07096__.js").HeaderBackButton, obj2);
 }
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  onPress(7148).useNavigatorBackPressHandler(() => {
+  onPress(7095).useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
     }
@@ -66,7 +67,7 @@ function CustomHeaderBackButton(onPress) {
   obj2.backImage = function backImage() {
     return closure_1_6(HeaderBackImage, {});
   };
-  return closure_6(onPress(7149).HeaderBackButton, obj2);
+  return closure_6(onPress(7096).HeaderBackButton, obj2);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -88,13 +89,13 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj2.accessibilityLabel = tmp5;
-  return timestampProducer(_mod7149.HeaderBackButton, obj2);
+  return timestampProducer(_mod7096.HeaderBackButton, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" },
   headerTitle: null,
@@ -106,8 +107,8 @@ let obj2 = {
   submittingIndicator: null,
 };
 let obj4 = {};
-let merged = Object.assign(fn(5763).TextStyleSheet["heading-md/semibold"]);
-obj4.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
+let merged = Object.assign(fn(5781).TextStyleSheet["heading-md/semibold"]);
+obj4.color = nativeDefault.colors.TEXT_STRONG;
 obj2.headerTitle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
 obj2.headerBackTitleStyle = {
@@ -119,53 +120,73 @@ obj2.headerBackTitleStyle = {
 };
 obj2.navigatorHeaderTitleContainer = { flexDirection: "row", justifyContent: "center", alignItems: "center" };
 obj2.navigatorHeaderContainer = { flexDirection: "column", justifyContent: "center", alignItems: "center" };
-obj2.navigatorHeaderSubtitle = { marginTop: -2 };
-let size = { width: 24, height: 24, tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.navigatorHeaderSubtitle = { marginTop: 2 };
+let size = { width: 24, height: 24, tintColor: nativeDefault.colors.ICON_DEFAULT };
 obj2.headerButtonIcon = size;
 const size1 = { width: 22, height: 22, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.submittingIndicator = size1;
 const styles = createStyles.createStyles(obj2);
+let closure_9 = { height: 54, titleVariant: "heading-sm/semibold", subtitleVariant: "body-xs/normal" };
+let closure_10 = { height: 58, titleVariant: "heading-md/semibold", subtitleVariant: "body-sm/normal" };
+let closure_11 = { height: 62, titleVariant: "heading-lg/semibold", subtitleVariant: "body-md/normal" };
 size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/NavigatorHeader.native.tsx");
 
 export const useStyles = styles;
+export function useNavigatorHeaderSize() {
+  const fontScale = useFontScale.useFontScale();
+  if (fontScale < 1) {
+    let tmp2 = closure_9;
+  } else {
+    tmp2 = fontScale > 1 ? closure_11 : closure_10;
+  }
+  return tmp2;
+}
 export function NavigatorHeader(subtitle) {
   subtitle = subtitle.subtitle;
   ({ title, icon } = subtitle);
   const tmp = styles();
-  const obj = { style: tmp.navigatorHeaderContainer, children: null };
-  const obj2 = { style: tmp.navigatorHeaderTitleContainer, children: null };
-  items = [
-    icon,
-    timestampProducer(Text_Text.Text, {
-      accessibilityRole: "header",
-      "aria-level": "1",
-      lineClamp: 1,
-      variant: "heading-md/semibold",
-      color: "mobile-text-heading-primary",
-      children: title,
-    }),
-  ];
-  obj2.children = items;
-  const items1 = [metroImportDefault(React4, obj2), ,];
-  let tmp6Result = null != subtitle;
-  if (tmp6Result) {
-    tmp6Result = "" !== subtitle;
+  const tmp3 = HeaderDebugOverlayDefault("js-stack");
+  const fontScale = useFontScale.useFontScale();
+  if (fontScale < 1) {
+    let tmp6 = closure_9;
+  } else {
+    tmp6 = fontScale > 1 ? closure_11 : closure_10;
   }
-  if (tmp6Result) {
-    const obj3 = {
+  const obj2 = { style: tmp.navigatorHeaderContainer, children: null };
+  const obj3 = { style: tmp.navigatorHeaderTitleContainer, children: null };
+  items = [icon];
+  ({ titleVariant, subtitleVariant } = tmp6);
+  items[1] = timestampProducer(Text_Text.Text, {
+    accessibilityRole: "header",
+    "aria-level": "1",
+    lineClamp: 1,
+    allowFontScaling: false,
+    variant: titleVariant,
+    color: "text-strong",
+    children: title,
+  });
+  obj3.children = items;
+  const items1 = [metroImportDefault(React4, obj3), ,];
+  let tmp9Result = null != subtitle;
+  if (tmp9Result) {
+    tmp9Result = "" !== subtitle;
+  }
+  if (tmp9Result) {
+    const obj4 = {
       lineClamp: 1,
+      allowFontScaling: false,
       style: tmp.navigatorHeaderSubtitle,
-      variant: "body-xs/medium",
-      color: "text-muted",
+      variant: subtitleVariant,
+      color: "text-subtle",
       children: subtitle,
     };
-    tmp6Result = timestampProducer(Text_Text.Text, obj3);
+    tmp9Result = timestampProducer(Text_Text.Text, obj4);
   }
-  items1[1] = tmp6Result;
-  items1[2] = HeaderDebugOverlayDefault("js-stack");
-  obj.children = items1;
-  return metroImportDefault(React4, obj);
+  items1[1] = tmp9Result;
+  items1[2] = tmp3;
+  obj2.children = items1;
+  return metroImportDefault(React4, obj2);
 }
 export { HeaderBackImage };
 export function renderBackImage() {

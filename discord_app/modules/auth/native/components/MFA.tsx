@@ -1,12 +1,12 @@
 // discord_app/modules/auth/native/components/MFA.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import AuthenticationActionCreatorsDefault from "../../../../actions/AuthenticationActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 const require = fn;
 function statesAreEqual(arg0, arg1) {
-  return _modDef12.isEqual(arg0, arg1);
+  return applyDefault.isEqual(arg0, arg1);
 }
 const jsx = fn(21).jsx;
 let closure_7 = { flex: 1, position: "relative" };
@@ -21,7 +21,7 @@ export default function ConnectedMFA() {
   ({ inContainer, isMultiAccount } = obj);
   const navigation = isMultiAccount(1499).useNavigation();
   if (inContainer) {
-    inContainer = navigation(7260)();
+    inContainer = navigation(7207)();
   }
   const obj2 = isMultiAccount(1499);
   items = [AuthenticationStore];
@@ -68,7 +68,7 @@ export default function ConnectedMFA() {
       tmp13 = obj4;
     }
     obj3.headerRightContainerStyle = tmp13;
-    return jsx(isMultiAccount(17949).MFAModal, obj3);
+    return jsx(isMultiAccount(17937).MFAModal, obj3);
   } else {
     const tmpResult2 = isMultiAccount(1357);
     tmp4(575).space;

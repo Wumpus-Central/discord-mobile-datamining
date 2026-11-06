@@ -70,7 +70,7 @@ function handleChannelDelete(channel) {
     return false;
   }
 }
-const isStaticChannelRoute = fn(4999).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5026).isStaticChannelRoute;
 let tabs = [];
 let c8 = null;
 let closure_9 = 1;

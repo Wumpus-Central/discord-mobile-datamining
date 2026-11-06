@@ -1,8 +1,8 @@
 // discord_app/design/components/TableRow/native/TableCheckboxRow.native.tsx
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import native from "../../../utils/native.tsx";
 import TableRow from "TableRow.native.tsx";
+import TableRowBadge from "TableRowBadge.native.tsx";
 import FormCheckbox from "../../Forms/native/FormCheckbox.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,14 +13,14 @@ let result = size.fileFinishedImporting("design/components/TableRow/native/Table
 
 export function TableCheckboxRow(checked) {
   checked = checked.checked;
-  ({ label, subLabel, disabled } = checked);
+  ({ label, subLabel, badge, disabled } = checked);
   if (disabled === undefined) {
     disabled = false;
   }
   const onPress = checked.onPress;
   const merged = Object.assign(
     checked,
-    Object.assign({ checked: 0, label: 0, subLabel: 0, disabled: 0, onPress: 0, accessibilityHint: 0 }),
+    Object.assign({ checked: 0, label: 0, subLabel: 0, badge: 0, disabled: 0, onPress: 0, accessibilityHint: 0 }),
   );
   const sharedValue = _mod1652.useSharedValue(0);
   items = [sharedValue];
@@ -32,27 +32,22 @@ export function TableCheckboxRow(checked) {
     const result = sharedValue.set(0);
     onPress(!checked);
   }, items1);
-  const nodeText = native.getNodeText(label);
-  const nodeText1 = native.getNodeText(subLabel);
   const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  const obj5 = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj5.arrow = false;
-  obj5.label = label;
-  obj5.subLabel = subLabel;
-  obj5.disabled = disabled;
-  obj5.accessibilityState = accessibilityState;
-  obj5.accessible = true;
-  obj5.accessibilityRole = accessibilityRole;
-  let str = nodeText1;
-  if (nodeText1 == null) {
-    str = "";
-  }
-  obj5.accessibilityLabel = "" + nodeText + ", " + str;
-  obj5.accessibilityHint = checked.accessibilityHint;
-  obj5.onPressIn = callback;
-  obj5.onPress = callback1;
-  obj5.trailing = jsx(FormCheckbox.FormCheckbox, { checked });
+  obj3.arrow = false;
+  obj3.label = label;
+  obj3.subLabel = subLabel;
+  obj3.badge = badge;
+  obj3.disabled = disabled;
+  obj3.accessibilityState = accessibilityState;
+  obj3.accessible = true;
+  obj3.accessibilityRole = accessibilityRole;
+  obj3.accessibilityLabel = TableRowBadge.getTableRowAccessibilityLabel(label, subLabel, badge);
+  obj3.accessibilityHint = checked.accessibilityHint;
+  obj3.onPressIn = callback;
+  obj3.onPress = callback1;
+  obj3.trailing = jsx(FormCheckbox.FormCheckbox, { checked });
   return jsx(TableRow.TableRow, {});
 }

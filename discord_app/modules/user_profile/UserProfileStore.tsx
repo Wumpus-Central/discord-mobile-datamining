@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/UserProfileStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import util from "../../intl/index.native.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
@@ -90,11 +90,11 @@ function createUserWidgetFromServer(data) {
   }
   const games = data.data.games;
   const mapped1 = games.map((gameId) => ({ gameId: gameId.game_id, comment: gameId.comment, tags: gameId.tags }));
-  const uniqByResult = _modDef12.uniqBy(mapped1, "gameId");
+  const uniqByResult = applyDefault.uniqBy(mapped1, "gameId");
   const baseGameWidget = new UserProfileGameWidgetTypes.BaseGameWidget({
     id: data.id,
     type,
-    games: _modDef12.uniqBy(mapped1, "gameId"),
+    games: applyDefault.uniqBy(mapped1, "gameId"),
   });
   return baseGameWidget;
 }
@@ -250,7 +250,7 @@ function handleMutualFriendsFetchFailure(userId) {
 function handleMutualFriendsFetchSuccess(userId) {
   set.delete(userId.userId);
   ({ userId, mutualFriends } = userId);
-  const mapped = _modDef12(mutualFriends).map((id) => {
+  const mapped = applyDefault(mutualFriends).map((id) => {
     obj = { key: id.id, user: null, status: null };
     const obj2 = {};
     const merged = Object.assign(id);
@@ -260,7 +260,7 @@ function handleMutualFriendsFetchSuccess(userId) {
     obj.status = status.getStatus(id.id);
     return obj;
   });
-  const arr = _modDef12(mutualFriends);
+  const arr = applyDefault(mutualFriends);
   const result = map3.set(userId, mapped.sortBy((user) => user.user.username.toLowerCase()).value());
   const result1 = map4.set(userId.userId, userId.mutualFriends.length);
 }
@@ -615,7 +615,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "children",
+      fetchError: "channelId",
     };
     value4 = obj;
   }
@@ -995,8 +995,8 @@ prototype["getWishlistSettings"] = function getWishlistSettings(id, firstWishlis
   }
   return tmp2;
 };
-prototype["getProfileReadState"] = function getProfileReadState(ownerId) {
-  value = map1.get(ownerId);
+prototype["getProfileReadState"] = function getProfileReadState(id) {
+  value = map1.get(id);
   let profileReadState;
   if (value != null) {
     profileReadState = value.profileReadState;

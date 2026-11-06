@@ -1,6 +1,6 @@
 // discord_app/modules/markup/useFormattedTimestamp.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef2171 from "../../../_runtime/metro/02171__.js";
+import _modDef2166 from "../../../_runtime/metro/02166__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ const require = fn;
 function getTimestampUpdateInterval(parsed) {
   let tmp = timestamp;
   if (timestamp === undefined) {
-    tmp = _modDef2171();
+    tmp = _modDef2166();
   }
   const absolute = Math.abs(parsed.diff(tmp));
   const obj = items1[Symbol.iterator]();

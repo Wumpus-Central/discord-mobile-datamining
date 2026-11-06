@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/app_channel/native/openConjureAppChannelSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const ConjureAppChannelMembersSheet = "ConjureAppChannelMembersSheet";
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/openConjureAppChannelSheet.tsx");
 
 export default function openConjureAppChannelSheet(channelId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14810, dependencyMap.paths), ConjureAppChannelSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14787, dependencyMap.paths), ConjureAppChannelSheet, {
     channelId,
   });
 }
@@ -20,7 +20,7 @@ export function closeConjureAppChannelMembersSheet() {
 }
 export function openConjureAppChannelMembersSheet(id) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(14809, dependencyMap.paths),
+    asyncRequireImpl(14786, dependencyMap.paths),
     ConjureAppChannelMembersSheet,
     { channelId: id },
   );

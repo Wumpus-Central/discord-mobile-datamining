@@ -246,7 +246,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
     }
   }
 };
-let closure_9 = fn(2147).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
+let closure_9 = fn(2142).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/handleJoinEmbeddedActivity.tsx");
 

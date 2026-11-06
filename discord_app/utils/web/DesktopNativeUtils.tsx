@@ -524,6 +524,13 @@ obj2.setProcessObserverCollectExecutableFingerprint = function setProcessObserve
     const result = setProcessObserverCollectExecutableFingerprint(arg0);
   }
 };
+obj2.setProcessObserverSteamSkuDetection = function setProcessObserverSteamSkuDetection(arg0) {
+  const discordUtils = this.getDiscordUtils();
+  const setProcessObserverSteamSkuDetection = discordUtils.setProcessObserverSteamSkuDetection;
+  if (setProcessObserverSteamSkuDetection != null) {
+    const result = setProcessObserverSteamSkuDetection(arg0);
+  }
+};
 obj2.getExecutableFingerprintForProcess = function getExecutableFingerprintForProcess(arg0) {
   const self = this;
   closure_0 = arg0;
@@ -954,7 +961,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(7081).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(7023).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -991,7 +998,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj11 = closure_0(7081);
+            const obj11 = closure_0(7023);
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -1188,7 +1195,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(7081).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(7023).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -1196,7 +1203,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(7081);
+                const obj9 = unknown(7023);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;

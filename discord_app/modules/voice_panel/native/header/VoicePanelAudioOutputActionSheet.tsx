@@ -24,9 +24,9 @@ function VoicePanelAudioPhoneOutputSection() {
   }));
   availableDevices = stateFromStoresObject.availableDevices;
   closure_1 = noop.useCallback((arg0) => {
-    availableDevices(9383).setAudioOutputDevice(arg0);
-    const obj = availableDevices(9383);
-    closure_1(5384).hideActionSheet(closure_1_9);
+    availableDevices(9329).setAudioOutputDevice(arg0);
+    const obj = availableDevices(9329);
+    closure_1(5404).hideActionSheet(closure_1_9);
   }, []);
   let tmp5 = null;
   if (availableDevices.length > 0) {
@@ -46,14 +46,14 @@ function VoicePanelAudioPhoneOutputSection() {
       children: availableDevices.map((deviceId) => {
         const obj = {
           value: deviceId.deviceId,
-          icon: closure_1_11(availableDevices(7127).TableRowIcon, {
-            source: availableDevices(9373).audioDeviceToIconMap[deviceId.simpleDeviceType],
+          icon: closure_1_11(availableDevices(7071).TableRowIcon, {
+            source: availableDevices(9319).audioDeviceToIconMap[deviceId.simpleDeviceType],
           }),
           label: null,
           subLabel: null,
         };
-        const obj2 = { source: availableDevices(9373).audioDeviceToIconMap[deviceId.simpleDeviceType] };
-        obj.label = availableDevices(9373).getAudioDeviceToDisplayText(deviceId);
+        const obj2 = { source: availableDevices(9319).audioDeviceToIconMap[deviceId.simpleDeviceType] };
+        obj.label = availableDevices(9319).getAudioDeviceToDisplayText(deviceId);
         const deviceName = deviceId.deviceName;
         let length;
         if (deviceName != null) {
@@ -64,11 +64,11 @@ function VoicePanelAudioPhoneOutputSection() {
           deviceName1 = deviceId.deviceName;
         }
         obj.subLabel = deviceName1;
-        return closure_1_11(availableDevices(7205).TableRadioRow, obj, deviceId.deviceId);
+        return closure_1_11(availableDevices(7152).TableRadioRow, obj, deviceId.deviceId);
       }),
     };
-    obj2.children = closure_11(tmp2(7202).TableRadioGroup, obj3);
-    tmp5 = closure_11(tmp2(9384).VoicePanelFormSection, obj2);
+    obj2.children = closure_11(tmp2(7149).TableRadioGroup, obj3);
+    tmp5 = closure_11(tmp2(9330).VoicePanelFormSection, obj2);
   }
   return tmp5;
 }
@@ -76,8 +76,8 @@ function VoicePanelAudioConsoleSection(channel) {
   channel = channel.channel;
   let arr;
   let awaitingRemoteSessionInfo;
-  arr = arr(12182)();
-  dependencyMap = arr(12066)();
+  arr = arr(12151)();
+  dependencyMap = arr(12031)();
   let tmp = closure_13();
   items = [awaitingRemoteSessionInfo];
   const stateFromStores = channel(563).useStateFromStores(items, () =>
@@ -128,8 +128,8 @@ function VoicePanelAudioConsoleSection(channel) {
     }
   }, items3);
   let obj2 = channel(563);
-  const tmp8 = !channel(5173).useIsDismissibleContentDismissed_UNSAFE(
-    channel(4976).DismissibleContent.DONUT_MOBILE_NUX,
+  const tmp8 = !channel(5200).useIsDismissibleContentDismissed_UNSAFE(
+    channel(5003).DismissibleContent.DONUT_MOBILE_NUX,
   );
   awaitingRemoteSessionInfo = tmp8;
   const items4 = [arr, tmp8];
@@ -179,17 +179,17 @@ function VoicePanelAudioConsoleSection(channel) {
       return tmp5;
     });
     obj5.children = mapped.filter((item) => Boolean(item));
-    obj4.children = closure_11(tmp3(7202).TableRadioGroup, obj5);
-    tmp10 = closure_11(tmp3(9384).VoicePanelFormSection, obj4);
+    obj4.children = closure_11(tmp3(7149).TableRadioGroup, obj5);
+    tmp10 = closure_11(tmp3(9330).VoicePanelFormSection, obj4);
   }
   return tmp10;
 }
 const ScrollView = fn(17).ScrollView;
-let closure_9 = fn(9381).VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
+let closure_9 = fn(9327).VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_13 = createStyles.createStyles({ sectionContainer: { marginTop: 0, marginBottom: 24 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelAudioOutputActionSheet.tsx");

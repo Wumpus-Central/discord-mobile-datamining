@@ -39,7 +39,7 @@ function processMessage(message) {
           }
         } else {
           const obj3 = { state: merged.DELETED };
-          const result1 = merged.set(message.channel_id, message_id, obj3);
+          const result1 = merged.set(message_reference.channel_id, message_id, obj3);
           flag2 = true;
         }
       } else {

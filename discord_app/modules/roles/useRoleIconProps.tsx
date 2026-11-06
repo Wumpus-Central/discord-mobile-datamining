@@ -132,7 +132,7 @@ export function useRoleIconPropsForPreview(guildId, role) {
           name: null,
           roleId: null,
           size: "Array",
-          unicodeEmoji: "<string:1140851581>",
+          unicodeEmoji: "<string:49197056>",
         };
         ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
         obj3.unicodeEmoji = roleIconData.unicodeEmoji;

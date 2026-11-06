@@ -97,7 +97,7 @@ function acceptEffectiveSettings(effectiveSettings) {
   }
   return tmp;
 }
-let DeclarativeSettings = fn(15815).DeclarativeSettings;
+let DeclarativeSettings = fn(15809).DeclarativeSettings;
 let closure_9 = DeclarativeSettings.create();
 let c10;
 let c11;

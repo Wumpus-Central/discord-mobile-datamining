@@ -8,10 +8,7 @@ function handleFeaturedOrDeveloperFetchSuccess(configs) {
   _require = false;
   const flatResult = values.flat();
   const entries = Object.entries(
-    require("../../../_runtime/metro/00012__.js").groupBy(
-      flatResult,
-      (application_id) => application_id.application_id,
-    ),
+    require("apply").groupBy(flatResult, (application_id) => application_id.application_id),
   );
   const mapped = entries.map((item) => {
     [tmp, obj] = item;
@@ -78,10 +75,7 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(DispatcherDefault,
   APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function handleFetchSuccess(configs) {
     _require = false;
     const entries = Object.entries(
-      require("../../../_runtime/metro/00012__.js").groupBy(
-        configs.configs,
-        (application_id) => application_id.application_id,
-      ),
+      require("apply").groupBy(configs.configs, (application_id) => application_id.application_id),
     );
     const mapped = entries.map((item) => {
       [tmp, obj] = item;

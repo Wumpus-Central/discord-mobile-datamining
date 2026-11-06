@@ -1,5 +1,5 @@
 // discord_app/modules/guild_onboarding/useBatchUpdateSelectOption.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.tsx";
@@ -69,7 +69,7 @@ export default function useBatchUpdateSelectOption(guildId) {
         if (roleIds1 == null) {
           roleIds1 = [];
         }
-        const differenceResult = _modDef12.difference(roleIds, roleIds1);
+        const differenceResult = applyDefault.difference(roleIds, roleIds1);
         let roleIds2;
         if (found != null) {
           roleIds2 = found.roleIds;
@@ -81,9 +81,9 @@ export default function useBatchUpdateSelectOption(guildId) {
         if (roleIds3 == null) {
           roleIds3 = [];
         }
-        let differenceResult1 = _modDef12.difference(roleIds2, roleIds3);
+        let differenceResult1 = applyDefault.difference(roleIds2, roleIds3);
         let items2 = differenceResult;
-        const tmp10Result = _modDef12;
+        const tmp10Result = applyDefault;
       }
       closure_0 = roleIds;
       if (singleSelect.singleSelect) {
@@ -101,7 +101,7 @@ export default function useBatchUpdateSelectOption(guildId) {
           if (channelIds1 == null) {
             channelIds1 = [];
           }
-          const differenceResult2 = _modDef12.difference(channelIds, channelIds1);
+          const differenceResult2 = applyDefault.difference(channelIds, channelIds1);
           let channelIds2;
           if (found1 != null) {
             channelIds2 = found1.channelIds;
@@ -113,9 +113,9 @@ export default function useBatchUpdateSelectOption(guildId) {
           if (channelIds3 == null) {
             channelIds3 = [];
           }
-          let differenceResult3 = _modDef12.difference(channelIds2, channelIds3);
+          let differenceResult3 = applyDefault.difference(channelIds2, channelIds3);
           let items1 = differenceResult2;
-          const tmp21Result = _modDef12;
+          const tmp21Result = applyDefault;
         }
         if (obj12.hasNotSetUpChannelOptIn(tmp)) {
           const push = items1.push;
@@ -128,7 +128,7 @@ export default function useBatchUpdateSelectOption(guildId) {
           items1.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-            obj.flags = closure_0(1398).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+            obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
             acc[item] = obj;
             return acc;
           }, {}),
@@ -137,7 +137,7 @@ export default function useBatchUpdateSelectOption(guildId) {
           differenceResult3.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-            obj.flags = closure_0(1398).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+            obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
             acc[item] = obj;
             return acc;
           }, {}),
@@ -167,7 +167,7 @@ export default function useBatchUpdateSelectOption(guildId) {
         items1 = [];
         const found5 = mapped1.flat().filter(GlobalUtils.isNotNullish);
         const flatResult1 = mapped1.flat();
-        differenceResult3 = _modDef12.difference(found4, found5);
+        differenceResult3 = applyDefault.difference(found4, found5);
       }
     }
     if (selected) {
@@ -188,7 +188,7 @@ export default function useBatchUpdateSelectOption(guildId) {
       items2 = [];
       const found9 = mapped3.flat().filter(GlobalUtils.isNotNullish);
       const flatResult3 = mapped3.flat();
-      differenceResult1 = _modDef12.difference(found8, found9);
+      differenceResult1 = applyDefault.difference(found8, found9);
     }
   }, items4);
   return obj2;

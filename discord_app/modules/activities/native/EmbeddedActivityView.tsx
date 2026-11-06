@@ -116,7 +116,7 @@ function EmbeddedActivityWebView(applicationId) {
     1,
   )[0]);
   const merged1 = Object.assign(merged);
-  return closure_13(applicationId(12027).BaseEmbeddedAppWebView, {
+  return closure_13(applicationId(11993).BaseEmbeddedAppWebView, {
     iframeId,
     shellBridgeSecret,
     deepLinkQueryParams: applicationId.deepLinkQueryParams,
@@ -126,12 +126,12 @@ function EmbeddedActivityWebView(applicationId) {
 let closure_3 = ["ui_density"];
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
-const ActivityScreenOrientation = fn(2147).ActivityScreenOrientation;
+const ActivityScreenOrientation = fn(2142).ActivityScreenOrientation;
 fn(1362).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
-const ActivityLayoutMode = fn(11898).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11864).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const value = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const memoResult = noop.memo(function EmbeddedActivityViewInner(channel) {
   channel = channel.channel;

@@ -1,5 +1,5 @@
 // discord_app/modules/autocompleter/native/Autocomplete.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
@@ -14,7 +14,7 @@ import UnknownGameIcon from "../../../design/components/Icon/native/redesign/gen
 import Form from "../../../design/void/Form/native/index.tsx";
 import TimestampUtils from "../../markup/TimestampUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
-import _modDef8854 from "../../../../_runtime/metro/08854__.js";
+import _modDef8800 from "../../../../_runtime/metro/08800__.js";
 import StickersHooks from "../../stickers/StickersHooks.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import ChannelAutocompleteEmojiUpsellDefault from "../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx";
@@ -35,10 +35,10 @@ const Constants = fn(1072);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   row: {
-    height: fn(10409).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(10361).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -57,7 +57,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(10409).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(10361).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -134,8 +134,8 @@ export default {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(5197).getName(user);
-      const obj3 = guildId(5197);
+      nick = guildId(5224).getName(user);
+      const obj3 = guildId(5224);
     }
     obj2.label = closure_9(AutocompleteLabel, { text: nick });
     const obj = user(504);
@@ -150,8 +150,8 @@ export default {
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj5.usernameStyle = items1;
-    obj2.trailing = closure_9(guildId(9353), obj5);
-    return closure_9(user(8322).FormRow, obj2);
+    obj2.trailing = closure_9(guildId(9299), obj5);
+    return closure_9(user(8267).FormRow, obj2);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -196,7 +196,7 @@ export default {
     ({ channel, category } = onPress);
     const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8854;
+      let channelIconWithGuild = _modDef8800;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }
@@ -268,7 +268,7 @@ export default {
   },
   ChoiceLoading() {
     const tmp = closure_11();
-    const memo = noop.useMemo(() => _modDef12.random(100, 300), []);
+    const memo = noop.useMemo(() => applyDefault.random(100, 300), []);
     const obj = { DEPRECATED_style: tmp.row, leading: null };
     const obj2 = { style: tmp.commandChoiceLoadingContainer, children: null };
     const obj3 = { style: null };

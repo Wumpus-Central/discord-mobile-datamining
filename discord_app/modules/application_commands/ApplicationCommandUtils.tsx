@@ -1,5 +1,5 @@
 // discord_app/modules/application_commands/ApplicationCommandUtils.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import IntegerDefault from "../../../_runtime/00014_Integer.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import Constants2 from "../../../discord_common/js/shared/Constants.tsx";
@@ -120,13 +120,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F125270 */ function() { ... });
+                      mapped = choices.map(/* F125506 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F92332 */ function() { ... });
+                      mapped1 = options.map(/* F92442 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -432,7 +432,7 @@ let result = size.fileFinishedImporting("modules/application_commands/Applicatio
 
 export { buildCommand };
 export function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
-  return _modDef12.flatMap(uniqByResult, (id) => {
+  return applyDefault.flatMap(uniqByResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
     const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
     return buildSubCommands(obj);
@@ -459,7 +459,7 @@ export function getMatchingGroupCommands(contextCommands, regExp, arg2, arg3) {
   regex = regExp;
   closure_1 = arg2;
   items = [];
-  const item = _modDef12(contextCommands).forEach((displayName) => {
+  const item = applyDefault(contextCommands).forEach((displayName) => {
     let isMatch = regex.test(displayName.displayName);
     if (isMatch) {
       let predicateResult = null == displayName.predicate;

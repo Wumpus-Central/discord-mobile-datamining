@@ -3,14 +3,14 @@ import util from "../../../../intl/index.native.tsx";
 import LocaleStore from "../../LocaleStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(9776).LanguageIcon,
+  IconComponent: fn(9726).LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
     items = [LocaleStore];
     _require = require("initialize").useStateFromStores(items, () => locale.locale);

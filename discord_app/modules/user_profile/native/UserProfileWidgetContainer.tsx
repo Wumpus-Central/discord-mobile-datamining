@@ -8,7 +8,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { actions: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -28,8 +28,8 @@ export default function UserProfileWidgetContainer(style) {
   const obj = userId(504);
   const tmp = userId;
   if (title == null) {
-    title = tmp(12571).getWidgetTitle(widget);
-    const tmpResult = tmp(12571);
+    title = tmp(12536).getWidgetTitle(widget);
+    const tmpResult = tmp(12536);
   }
   obj2.title = title;
   obj2.titleLeadingIcon = titleLeadingIcon;

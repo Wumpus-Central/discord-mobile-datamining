@@ -239,7 +239,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8359);
+const ClipsConstants = fn(8305);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6,
   ClipSaveTypes: metroImportDefault,
@@ -254,7 +254,7 @@ const ClipsConstants = fn(8359);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ MessageAttachmentFlags: closure_14, MessageReferenceTypes: closure_15, VoiceFlags: closure_16 } = Constants);
-const StreamSettingsConstants = fn(6001);
+const StreamSettingsConstants = fn(6020);
 const ApplicationStreamFPS = StreamSettingsConstants.ApplicationStreamFPS;
 let c18 = "default";
 let c19 = "Discord Clips";
@@ -289,14 +289,14 @@ let obj = {
   clipSignals: { enableDistributedSignals: true, enableGameSignals: true },
   debugTooltipsEnabled: false,
   enableAutoclipping: "flexDirection",
-  showPovClipsInGallery: true,
+  showPovClipsInGallery: "nested-text",
 };
 obj = {
   clipsSettings: obj,
   hardwareClassification: null,
-  hardwareClassificationForDecoupled: null,
   hardwareClassificationVersion: 0,
-  clipsDefaultSettingsState: fn(16137).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  clipsDefaultSettingsState: fn(16133).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  hasAutoEnabledClipsForHardware: false,
   newClipIds: [],
   hasClips: false,
   hasTakenDecoupledClip: false,
@@ -382,9 +382,6 @@ prototype["getClipsWarningShown"] = function getClipsWarningShown(channelId) {
 };
 prototype["getHardwareClassification"] = function getHardwareClassification() {
   return obj.hardwareClassification;
-};
-prototype["getHardwareClassificationForDecoupled"] = function getHardwareClassificationForDecoupled() {
-  return obj.hardwareClassificationForDecoupled;
 };
 prototype["getHardwareClassificationVersion"] = function getHardwareClassificationVersion() {
   return obj.hardwareClassificationVersion;
@@ -512,16 +509,7 @@ let items = [
     obj.clipsSettings = obj2;
     return obj;
   },
-  (hardwareClassificationForDecoupled) => {
-    obj = {};
-    const merged = Object.assign(hardwareClassificationForDecoupled);
-    let prop = hardwareClassificationForDecoupled.hardwareClassificationForDecoupled;
-    if (prop == null) {
-      prop = null;
-    }
-    obj.hardwareClassificationForDecoupled = prop;
-    return obj;
-  },
+  (arg0) => arg0,
   (arg0) => arg0,
   (newClipIds) => {
     obj = {};
@@ -672,6 +660,22 @@ let items = [
       INITIAL_CLIPS_DEFAULT_SETTINGS_STATE = ClipsDefaultSettingsUtils.INITIAL_CLIPS_DEFAULT_SETTINGS_STATE;
     }
     obj.clipsDefaultSettingsState = INITIAL_CLIPS_DEFAULT_SETTINGS_STATE;
+    return obj;
+  },
+  (hardwareClassification) => {
+    hardwareClassification = hardwareClassification.hardwareClassification;
+    obj = {};
+    const merged = Object.assign(hardwareClassification);
+    let tmp2 = hardwareClassification === constants2.MEETS_AUTO_ENABLE;
+    if (!tmp2) {
+      let tmp3 = hardwareClassification === constants2.MEETS_MINIMUM;
+      if (tmp3) {
+        tmp3 = hardwareClassification.hasClips || hardwareClassification.hasTakenDecoupledClip;
+        const tmp4 = hardwareClassification.hasClips || hardwareClassification.hasTakenDecoupledClip;
+      }
+      tmp2 = tmp3;
+    }
+    obj.hasAutoEnabledClipsForHardware = tmp2;
     return obj;
   },
 ];
@@ -864,37 +868,46 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
   },
   CLIPS_APPLY_DEFAULT_SETTINGS: function handleApplyDefaultSettings(arg0) {
     ({ classification, decision } = arg0);
-    const hardwareClassification = obj.hardwareClassification;
+    let MEETS_AUTO_ENABLE = obj.hardwareClassification;
     obj.hardwareClassificationVersion = hardwareClassificationVersion;
     obj.hardwareClassification = classification;
-    obj.hardwareClassificationForDecoupled = classification;
-    if (null == decision) {
-      let tmp3 = obj.clipsDefaultSettingsState.clipsEnabledSource === constants4.UNSET;
-      if (tmp3) {
-        tmp3 = classification === constants2.MEETS_AUTO_ENABLE;
-      }
-      if (tmp3) {
-        tmp3 = hardwareClassification !== constants2.MEETS_AUTO_ENABLE;
-      }
-      if (tmp3) {
-        obj.clipsSettings.clipsEnabled = true;
-      }
-    } else {
-      obj = ClipsDefaultSettingsUtils;
+    let tmp = obj.clipsDefaultSettingsState.clipsEnabledSource === constants4.UNSET;
+    if (tmp) {
+      tmp = classification === constants2.MEETS_AUTO_ENABLE;
+    }
+    if (tmp) {
+      tmp = !obj.hasAutoEnabledClipsForHardware;
+    }
+    let tmp4 = tmp;
+    if (tmp) {
+      tmp4 = !obj.clipsSettings.clipsEnabled;
+    }
+    if (tmp) {
+      obj = {};
+      const merged = Object.assign(obj.clipsSettings);
+      obj.clipsEnabled = true;
+      obj.clipsSettings = obj;
+      obj.hasAutoEnabledClipsForHardware = true;
+    }
+    if (null != decision) {
       const obj2 = {
         defaultState: obj.clipsDefaultSettingsState,
         clipsEnabled: obj.clipsSettings.clipsEnabled,
         decision,
-        previousHardwareClassification: hardwareClassification,
+        previousHardwareClassification: null,
       };
-      const result = obj.applyClipsDefaultSettingsDecision(obj2);
+      if (tmp4) {
+        MEETS_AUTO_ENABLE = constants2.MEETS_AUTO_ENABLE;
+      }
+      obj2.previousHardwareClassification = MEETS_AUTO_ENABLE;
+      const result = ClipsDefaultSettingsUtils.applyClipsDefaultSettingsDecision(obj2);
       const obj3 = {};
       ({ clipsEnabled, defaultState } = result);
-      const merged = Object.assign(obj);
-      const obj4 = {};
-      const merged1 = Object.assign(obj.clipsSettings);
-      obj4.clipsEnabled = clipsEnabled;
-      obj3.clipsSettings = obj4;
+      const merged1 = Object.assign(obj);
+      const obj5 = {};
+      const merged2 = Object.assign(obj.clipsSettings);
+      obj5.clipsEnabled = clipsEnabled;
+      obj3.clipsSettings = obj5;
       obj3.clipsDefaultSettingsState = defaultState;
       obj = obj3;
     }

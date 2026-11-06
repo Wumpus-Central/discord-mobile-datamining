@@ -1,6 +1,6 @@
 // discord_app/stores/DraftStore.tsx
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
@@ -67,7 +67,7 @@ function handleChanged(type) {
           if (tmp18 != null) {
             command3 = tmp18.command;
           }
-          isEqualResult = _modDef12.isEqual(command, command3);
+          isEqualResult = applyDefault.isEqual(command, command3);
         }
         if (!isEqualResult) {
           const obj4 = { timestamp: null, draft: null, command: null };
@@ -94,7 +94,7 @@ function handleChanged(type) {
       if (obj8.isEmpty(tmp11)) {
         delete tmp[tmp3];
       }
-      obj8 = _modDef12;
+      obj8 = applyDefault;
     }
   }
 }
@@ -119,7 +119,7 @@ function deleteDraft(first1, ChannelMessage, arg2) {
       if (obj2.isEmpty(tmp11)) {
         delete tmp2[tmp];
       }
-      obj2 = _modDef12;
+      obj2 = applyDefault;
     }
   }
 }
@@ -237,15 +237,15 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
-    const obj2 = _modDef12(tmp3);
-    const mapValuesResult = _modDef12(tmp3).mapValues((arg0) => {
+    const obj2 = applyDefault(tmp3);
+    const mapValuesResult = applyDefault(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
     });
-    const pickByResult = _modDef12(tmp3)
+    const pickByResult = applyDefault(tmp3)
       .mapValues((arg0) => {
         let tmp;
         if (arg0 != null) {
@@ -254,7 +254,7 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
         return tmp;
       })
       .pickBy(GlobalUtils.isNotNullish);
-    const mapped = _modDef12(tmp3)
+    const mapped = applyDefault(tmp3)
       .mapValues((arg0) => {
         let tmp;
         if (arg0 != null) {
@@ -268,7 +268,7 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
         [tmp] = item;
         return { channelId, timestamp, draft };
       });
-    const toPairsResult = _modDef12(tmp3)
+    const toPairsResult = applyDefault(tmp3)
       .mapValues((arg0) => {
         let tmp;
         if (arg0 != null) {
@@ -506,7 +506,7 @@ const draftStore = new DraftStore(DispatcherDefault, {
                 if (tmp26Result.isEmpty(tmp17)) {
                   delete tmp4[tmp5];
                 }
-                tmp26Result = _modDef12;
+                tmp26Result = applyDefault;
               }
             }
             const FirstThreadMessage = AuthenticationStore.FirstThreadMessage;
@@ -523,7 +523,7 @@ const draftStore = new DraftStore(DispatcherDefault, {
                 if (tmp26Result2.isEmpty(tmp22)) {
                   delete tmp[tmp2];
                 }
-                tmp26Result2 = _modDef12;
+                tmp26Result2 = applyDefault;
               }
             }
           }
@@ -551,7 +551,7 @@ const draftStore = new DraftStore(DispatcherDefault, {
         if (obj2.isEmpty(tmp9)) {
           delete tmp[tmp2];
         }
-        obj2 = _modDef12;
+        obj2 = applyDefault;
       }
     }
     return flag;
@@ -647,7 +647,7 @@ const draftStore = new DraftStore(DispatcherDefault, {
         if (obj2.isEmpty(tmp9)) {
           delete tmp[tmp2];
         }
-        obj2 = _modDef12;
+        obj2 = applyDefault;
       }
     }
     return flag;

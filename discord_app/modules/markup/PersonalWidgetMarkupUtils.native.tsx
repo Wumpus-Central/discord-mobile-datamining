@@ -2,7 +2,7 @@
 import MarkupReactRulesDefault from "MarkupReactRules.native.tsx";
 import MarkupRulesDefault from "MarkupRules.tsx";
 import combineMarkupRules from "combineMarkupRules.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import MarkupParser from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
 
 const items = [

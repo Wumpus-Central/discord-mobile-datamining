@@ -71,10 +71,10 @@ export function getCheckpointCharacterDataBinding(textureScale) {
     mobileLift = 0;
   }
   textureScale = textureScale.textureScale;
-  obj = textureScale(6248);
+  obj = textureScale(6268);
   const characterFromTraits = obj.getCharacterFromTraits(textureScale.traits);
   ({ base, shoes, outfit, face, hat, wearable, aura } = characterFromTraits);
-  const tmp4 = textureScale(13866).CHECKPOINT_OUTFIT_OPTION_TO_RIVE_OUTFIT[outfit];
+  const tmp4 = textureScale(13841).CHECKPOINT_OUTFIT_OPTION_TO_RIVE_OUTFIT[outfit];
   dependencyMap = tmp4;
   obj2 = {};
   const item = obj2.forEach((item) => {
@@ -100,8 +100,8 @@ export function getCheckpointCharacterDataBinding(textureScale) {
     chapterID: closure_4[stage],
     faceID: face,
     shoesID: shoes,
-    headwearID: textureScale(13866).CHECKPOINT_HAT_OPTION_TO_HEADWEAR_RIVE_ID[hat],
-    wearableID: textureScale(13866).CHECKPOINT_WEARABLE_OPTION_TO_WEARABLE_RIVE_ID[wearable],
+    headwearID: textureScale(13841).CHECKPOINT_HAT_OPTION_TO_HEADWEAR_RIVE_ID[hat],
+    wearableID: textureScale(13841).CHECKPOINT_WEARABLE_OPTION_TO_WEARABLE_RIVE_ID[wearable],
     outfitID: null,
     auraImage: null,
     baseColorImage: null,
@@ -114,17 +114,17 @@ export function getCheckpointCharacterDataBinding(textureScale) {
     num = 0;
   }
   obj3.outfitID = num;
-  obj3.auraImage = textureScale(13699).getCheckpointCharacterTextureUrl(
-    textureScale(13866).CHECKPOINT_AURA_OPTION_TO_AURA_RIVE_TEXTURE[aura].name,
+  obj3.auraImage = textureScale(13674).getCheckpointCharacterTextureUrl(
+    textureScale(13841).CHECKPOINT_AURA_OPTION_TO_AURA_RIVE_TEXTURE[aura].name,
     textureScale,
   );
-  const tmpResult = textureScale(13699);
-  obj3.baseColorImage = textureScale(13699).getCheckpointCharacterTextureUrl(
-    textureScale(13866).CHECKPOINT_BASE_OPTION_TO_BASE_RIVE_TEXTURE[base].name,
+  const tmpResult = textureScale(13674);
+  obj3.baseColorImage = textureScale(13674).getCheckpointCharacterTextureUrl(
+    textureScale(13841).CHECKPOINT_BASE_OPTION_TO_BASE_RIVE_TEXTURE[base].name,
     textureScale,
   );
   if ("MobilePortrait" === layout) {
-    if (stage === tmp(6572).CheckpointCharacterStage.INTRODUCTION) {
+    if (stage === tmp(6592).CheckpointCharacterStage.INTRODUCTION) {
       let tmp6 = obj2;
     }
     const merged = Object.assign(tmp6);

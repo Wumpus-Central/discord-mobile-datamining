@@ -31,6 +31,6 @@ export default function useConjureServerProjects(arg0) {
   );
   return obj;
 }
-export function conjureProjectPointsAtGuild(guild_id, guildId) {
-  return guild_id.guild_id === guildId || guild_id.preview_guild_id === guildId;
+export function conjureProjectPointsAtGuild(guild_id, arg1) {
+  return guild_id.guild_id === arg1 || guild_id.preview_guild_id === arg1;
 }

@@ -1,5 +1,5 @@
 // discord_app/modules/calls/ChannelRTCParticipants.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import ContentClassificationEmbeddedActivityFilterExperiment2 from "../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx";
 import ContentClassificationReference from "../content_classification/ContentClassificationReference.tsx";
 import ActivityTypes from "../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
@@ -62,12 +62,12 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5817);
+const CallConstants = fn(5835);
 ({ isStreamParticipant: closure_15, ParticipantTypes: closure_16 } = CallConstants);
 const ChannelTypes = fn(1072).ChannelTypes;
-const FramesConstants = fn(6985);
+const FramesConstants = fn(6927);
 ({ asLaunched, getFrameLaunchChannelId } = FramesConstants);
-const Constants = fn(5905);
+const Constants = fn(5924);
 ({ MediaEngineContextTypes: closure_18, Features: closure_19 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = {
@@ -256,11 +256,11 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f90507) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f90598) {
   const self = this;
-  const userId = f90507;
+  const userId = f90598;
   let flag;
-  if (this.participants[f90507] != null) {
+  if (this.participants[f90598] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -302,10 +302,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f905
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f90513, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f90604, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f90513] != null) {
+  if (this.participants[f90604] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {
@@ -341,7 +341,7 @@ prototype["_getEmbeddedActivities"] = function _getEmbeddedActivities() {
   if (null != selfEmbeddedActivityForChannel) {
     items = [];
     items[HermesBuiltin.arraySpread(embeddedActivitiesForChannelIncludingHidden, 0)] = selfEmbeddedActivityForChannel;
-    uniqByResult = _mod12.uniqBy(items, (compositeInstanceId) => compositeInstanceId.compositeInstanceId);
+    uniqByResult = apply.uniqBy(items, (compositeInstanceId) => compositeInstanceId.compositeInstanceId);
   }
   const ContentClassificationEmbeddedActivityFilterExperiment =
     ContentClassificationEmbeddedActivityFilterExperiment2.ContentClassificationEmbeddedActivityFilterExperiment;

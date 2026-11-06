@@ -82,7 +82,7 @@ export function sanitizeDevices(AUDIO_INPUT, items) {
 export function getAudioInputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2137).getVoiceEngine();
+    const voiceEngine = closure_0(2132).getVoiceEngine();
     const inputDevices = voiceEngine.getInputDevices((arr) => {
       const AUDIO_INPUT = constants.AUDIO_INPUT;
       c1 = false;
@@ -161,7 +161,7 @@ export function getAudioInputDevices() {
 export function getAudioOutputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2137).getVoiceEngine();
+    const voiceEngine = closure_0(2132).getVoiceEngine();
     const outputDevices = voiceEngine.getOutputDevices((arr) => {
       const AUDIO_OUTPUT = constants.AUDIO_OUTPUT;
       c1 = false;
@@ -240,7 +240,7 @@ export function getAudioOutputDevices() {
 export function getVideoInputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2137).getVoiceEngine();
+    const voiceEngine = closure_0(2132).getVoiceEngine();
     const videoInputDevices = voiceEngine.getVideoInputDevices((arr) => {
       const VIDEO_INPUT = constants.VIDEO_INPUT;
       c1 = false;

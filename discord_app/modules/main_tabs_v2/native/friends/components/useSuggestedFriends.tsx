@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx
-import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import FriendSuggestionStore from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
 
 const require = fn;
-const SuggestedFriendSource = fn(14496).SuggestedFriendSource;
+const SuggestedFriendSource = fn(14473).SuggestedFriendSource;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 
@@ -39,12 +39,12 @@ export default function useSuggestedFriends(arg0) {
         obj.friendSuggestionName = name;
         return obj;
       });
-      return _modDef12
+      return applyDefault
         .unionBy(found, mapped, (user) => user.user.id)
         .sort((user, user2) => {
-          const name = added(5197).getName(user.user);
-          const obj = added(5197);
-          return name.localeCompare(added(5197).getName(user2.user));
+          const name = added(5224).getName(user.user);
+          const obj = added(5224);
+          return name.localeCompare(added(5224).getName(user2.user));
         });
     } else {
       return [];

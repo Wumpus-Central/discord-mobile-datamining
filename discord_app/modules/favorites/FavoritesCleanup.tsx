@@ -86,8 +86,8 @@ let closure_13 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4996).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(5005);
+const THREAD_CHANNEL_TYPES = fn(5023).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(5032);
 ({ FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_9, FAVORITES_PRUNE_WHEN_ARCHIVED: closure_10 } =
   FavoritesConstants);
 const Permissions = fn(1083).Permissions;

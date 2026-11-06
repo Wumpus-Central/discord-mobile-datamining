@@ -1,13 +1,13 @@
 // discord_app/modules/polls/chat/buildPlatformPollResources.native.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_AvatarUtils from "../../../utils/native/AvatarUtils.tsx";
-import _modDef7134 from "../../../../_runtime/metro/07134__.js";
-import _modDef7455 from "../../../../_runtime/metro/07455__.js";
+import _modDef7081 from "../../../../_runtime/metro/07081__.js";
+import _modDef7400 from "../../../../_runtime/metro/07400__.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 
 require = fn;
-let closure_3 = apply.mapValues(fn(12772).pollStyleSets, (arg0) => {
+let closure_3 = apply.mapValues(fn(12737).pollStyleSets, (arg0) => {
   _require = arg0;
   closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);
@@ -45,8 +45,8 @@ export function buildPlatformPollResources(theme, layoutType) {
     selectedIcon: null,
     checkmarkIcon: null,
   };
-  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7455);
-  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7134);
+  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7400);
+  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7081);
   return obj;
 }
 export function getAvatarUrl(currentUser, guildId) {

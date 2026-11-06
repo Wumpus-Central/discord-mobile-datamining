@@ -9,11 +9,11 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const obj2 = {
   wrapper: {
     position: "relative",
-    backgroundColor: fn(14278).PROGRESS_BACKGROUND_COLOR,
+    backgroundColor: fn(14255).PROGRESS_BACKGROUND_COLOR,
     borderRadius: nativeDefault.radii.xs,
     height: 8,
   },
@@ -21,7 +21,7 @@ const obj2 = {
 };
 let obj3 = {
   position: "relative",
-  backgroundColor: fn(14278).PROGRESS_BACKGROUND_COLOR,
+  backgroundColor: fn(14255).PROGRESS_BACKGROUND_COLOR,
   borderRadius: nativeDefault.radii.xs,
   height: 8,
 };

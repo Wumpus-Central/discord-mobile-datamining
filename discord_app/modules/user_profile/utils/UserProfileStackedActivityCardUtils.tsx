@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 
 export function getUserProfileLiveActivities(stateFromStores1) {
-  return _mod12.uniqWith(
+  return apply.uniqWith(
     stateFromStores1.filter((type) => {
       type = type.type;
       return type !== ActivityTypes.ActivityTypes.CUSTOM_STATUS && type !== ActivityTypes.ActivityTypes.HANG_STATUS;

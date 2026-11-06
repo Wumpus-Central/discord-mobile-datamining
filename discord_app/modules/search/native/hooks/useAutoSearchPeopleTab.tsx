@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/hooks/useAutoSearchPeopleTab.tsx
-import _mod12 from "../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../_runtime/00012_apply.js";
 import UserAffinitiesActionCreators from "../../../user_affinities/UserAffinitiesActionCreators.tsx";
 import SearchPlatformUtilsDefault from "../SearchPlatformUtils.tsx";
 import SearchPlatformActionCreatorsDefault from "../SearchPlatformActionCreators.tsx";
@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_5 = fn(14133).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(14110).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
 
@@ -24,10 +24,10 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
   const items1 = [searchContext, arg1];
   const effect1 = noop.useEffect(() => {
     if (!closure_1) {
-      const debounceResult = _mod12.debounce((searchQueryString) => {
+      const debounceResult = apply.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          closure_1(14142).searchPeopleTab(searchContext, searchQueryString);
-          const obj = closure_1(14142);
+          closure_1(14119).searchPeopleTab(searchContext, searchQueryString);
+          const obj = closure_1(14119);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -36,7 +36,7 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
   const items2 = [searchContext];
   const effect2 = noop.useEffect(
     () => () => {
-      closure_1(14142).cleanupPeopleTab(searchContext);
+      closure_1(14119).cleanupPeopleTab(searchContext);
     },
     items2,
   );

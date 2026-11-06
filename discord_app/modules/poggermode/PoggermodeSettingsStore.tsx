@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import PoggermodeConstants from "PoggermodeConstants.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 ({ ShakeLocation, ConfettiLocation } = PoggermodeConstants);

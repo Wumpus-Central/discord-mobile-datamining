@@ -1,5 +1,5 @@
 // discord_app/modules/stickers/StickersPersistedStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
@@ -22,7 +22,7 @@ function handleUserSettingsProtoStoreChange() {
     return false;
   } else {
     closure_6.overwriteHistory(
-      _modDef12.mapValues(stickers, (recentUses) => {
+      applyDefault.mapValues(stickers, (recentUses) => {
         const obj = {};
         const merged = Object.assign(recentUses);
         recentUses = recentUses.recentUses;

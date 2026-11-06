@@ -157,7 +157,7 @@ Object.defineProperty(prototype, "isGiftable", {
   },
   set: undefined,
 });
-prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get) {
+prototype["isValid"] = function isValid(stateFromStores, get) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -172,7 +172,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
             return false;
           }
         }
-        if (!obj.canInstallPremiumApplications(isPremiumWithFractionalPremiumOnly)) {
+        if (!obj.canInstallPremiumApplications(stateFromStores)) {
           return false;
         }
         obj = PremiumUtilsDefault;

@@ -12,7 +12,7 @@ const Constants = fn(1083);
 ({ Permissions: closure_6, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: {
     display: "flex",
@@ -58,11 +58,11 @@ export default function GuildEventsNoContent(guild) {
   };
   const intl = guild(1113).intl;
   obj3.children = intl.string(guild(1113).t["WgZ+3D"]);
-  const items2 = [closure_7(guild(5763).Text, obj3), ,];
+  const items2 = [closure_7(guild(5781).Text, obj3), ,];
   const obj4 = { style: tmp.subtitle, variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = guild(1113).intl;
   obj4.children = intl2.string(guild(1113).t["v/S/PG"]);
-  items2[1] = closure_7(guild(5763).Text, obj4);
+  items2[1] = closure_7(guild(5781).Text, obj4);
   if (stateFromStores) {
     const obj5 = { style: tmp.subtitle, variant: "body-sm/normal", color: "text-default", children: null };
     const intl3 = tmp2(1113).intl;
@@ -73,7 +73,7 @@ export default function GuildEventsNoContent(guild) {
       },
     };
     obj5.children = intl3.format(tmp2(1113).t["K+DH2o"], obj6);
-    stateFromStores = closure_7(tmp2(5763).Text, obj5);
+    stateFromStores = closure_7(tmp2(5781).Text, obj5);
   }
   items2[2] = stateFromStores;
   obj2.children = items2;

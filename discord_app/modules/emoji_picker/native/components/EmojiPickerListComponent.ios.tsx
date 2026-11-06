@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(10129);
+const EmojiPickerListConstants = fn(10080);
 ({
   ROW_HEIGHT: closure_4,
   LABEL_HEIGHT: hasOwnProperty,
@@ -25,7 +25,7 @@ export default function EmojiPickerListComponent(paddingTop) {
   items = [paddingTop, paddingBottom];
   const contentContainerStyle = paddingBottom.useMemo(() => ({ paddingTop, paddingBottom }), items);
   const getItemType = paddingBottom.useCallback((type) => type.type, []);
-  const keyExtractor = paddingBottom.useCallback((type, arg1) => "" + type.type + "-" + arg1, []);
+  keyExtractor = paddingBottom.useCallback((type, arg1) => "" + type.type + "-" + arg1, []);
   const overrideItemLayout = paddingBottom.useCallback((arg0, type) => {
     type = type.type;
     if (require("useEmojiPickerData").EmojiPickerItemType.PLACEHOLDER === type) {

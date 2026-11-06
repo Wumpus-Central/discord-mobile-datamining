@@ -1,5 +1,5 @@
 // discord_app/modules/threads/ThreadMemberListStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
@@ -512,7 +512,7 @@ const threadMemberListStore = new ThreadMemberListStore(DispatcherDefault, {
   GUILD_MEMBER_UPDATE: handleUserUpdate,
   GUILD_MEMBER_REMOVE: handleUserUpdate,
   PRESENCES_REPLACE: function handlePresenceReplace(presences) {
-    const mapped = _modDef12(presences.presences).map((user) => {
+    const mapped = applyDefault(presences.presences).map((user) => {
       user = user.user;
       let id;
       if (user != null) {
@@ -521,7 +521,7 @@ const threadMemberListStore = new ThreadMemberListStore(DispatcherDefault, {
       return id;
     });
     const found = mapped.filter(GlobalUtils.isNotNullish);
-    const arr = _modDef12(presences.presences);
+    const arr = applyDefault(presences.presences);
     let flag = false;
     let flag2 = false;
     const iter = found.uniq();

@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2537 from "../../waterwheels/WaterwheelsUntranslated.messages.js";
+import _modDef2534 from "../../waterwheels/WaterwheelsUntranslated.messages.js";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -23,7 +23,7 @@ function GuildsBarWaterwheelsExpandedChildren() {
   const obj = { title: null, subtitle: null };
   const obj2 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2537.zFl2A4);
+  obj2.children = intl.string(_modDef2534.zFl2A4);
   obj.title = React5(Text_Text.Text, obj2);
   return React5(HomeDrawerShared.HomeDrawerSharedItem, obj);
 }
@@ -53,7 +53,7 @@ function handleWaterwheelsPress() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_10 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarWaterwheelsButton.tsx");
@@ -73,12 +73,12 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: "md",
-    expandedChildren: null,
+    label: null,
+    expandedChildren: "guilds-bar-drag-preview",
     children: null,
   };
   const intl = util.intl;
-  obj4.label = intl.string(_modDef2537.zFl2A4);
+  obj4.label = intl.string(_modDef2534.zFl2A4);
   obj4.expandedChildren = React5(GuildsBarWaterwheelsExpandedChildren, {});
   const colors = nativeDefault.colors;
   obj4.children = React5(CompassIcon.CompassIcon, {

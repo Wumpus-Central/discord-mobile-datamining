@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -173,7 +173,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
-const GuildScheduledEventsConstants = fn(4998);
+const GuildScheduledEventsConstants = fn(5025);
 ({
   GuildScheduledEventStatus: closure_4,
   GuildScheduledEventStatusDone: hasOwnProperty,
@@ -202,7 +202,7 @@ const StaticGuildEventIndexes = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   },
 };
-const secondaryIndexMap = new fn(5070).SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(5097).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
   items = [guild_id];
   if (null != entity_id) {
@@ -449,7 +449,7 @@ const guildScheduledEventStore = new GuildScheduledEventStore(DispatcherDefault,
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guildScheduledEvents.guildId), true);
     const mapped = values.map((id) => id.id);
     const mapped1 = guildScheduledEvents.map((id) => id.id);
-    obj = _modDef12;
+    obj = applyDefault;
     const item = obj.difference(mapped, mapped1).forEach((item) => {
       set.delete(item);
       delete tmp[tmp2];

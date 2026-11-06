@@ -1,5 +1,5 @@
 // discord_app/modules/guild_progress/GuildProgressHooks.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import canViewInviteModal from "../instant_invite/canViewInviteModal.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -14,7 +14,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(5073);
+let GuildChannelStore = fn(5100);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_6, GUILD_VOCAL_CHANNELS_KEY: metroImportDefault } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
@@ -149,7 +149,7 @@ export function useChannelsMessaged(items3) {
   const obj = require("initialize");
   const items1 = [MessageStore];
   return require("initialize").useStateFromStores(items1, () =>
-    _modDef12.some(closure_0, (id) => {
+    applyDefault.some(closure_0, (id) => {
       messages = messages.getMessages(id.id);
       const toArrayResult = messages.toArray();
       return closure_1(stateFromStoresArray[13]).some(toArrayResult, (author) => {
@@ -177,7 +177,7 @@ export function useGuildMessaged(arg0) {
     if (null == closure_1) {
       items = [];
     } else {
-      items = _modDef12.values(tmp);
+      items = applyDefault.values(tmp);
     }
     return items;
   }, items1);
@@ -187,7 +187,7 @@ export function useGuildMessaged(arg0) {
   const obj2 = require("initialize");
   const items3 = [MessageStore];
   return require("initialize").useStateFromStores(items3, () =>
-    _modDef12.some(closure_0, (id) => {
+    applyDefault.some(closure_0, (id) => {
       messages = messages.getMessages(id.id);
       const toArrayResult = messages.toArray();
       return closure_1(stateFromStoresArray[13]).some(toArrayResult, (author) => {
@@ -258,7 +258,7 @@ export function useCompletedStates(guild) {
     if (null == closure_1) {
       items = [];
     } else {
-      items = _modDef12.values(tmp);
+      items = applyDefault.values(tmp);
     }
     return items;
   }, items5);
@@ -268,7 +268,7 @@ export function useCompletedStates(guild) {
   const obj6 = require("initialize");
   const items7 = [MessageStore];
   obj.guildMessaged = require("initialize").useStateFromStores(items7, () =>
-    _modDef12.some(closure_0, (id) => {
+    applyDefault.some(closure_0, (id) => {
       messages = messages.getMessages(id.id);
       const toArrayResult = messages.toArray();
       return closure_1(stateFromStoresArray[13]).some(toArrayResult, (author) => {

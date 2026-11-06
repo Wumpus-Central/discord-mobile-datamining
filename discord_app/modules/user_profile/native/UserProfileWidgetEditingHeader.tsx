@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetEditingHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -10,10 +10,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(8900).TrackUserProfileEditActions;
+let closure_5 = fn(8846).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   heading: { flex: 1 },
@@ -43,7 +43,7 @@ export default function UserProfileWidgetEditingHeader() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16822, dependencyMap.paths),
+      asyncRequireImpl(15156, dependencyMap.paths),
       "UserProfileWidgetAddActionSheet",
     );
   };

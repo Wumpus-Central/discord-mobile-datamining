@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/RowGenerator.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import BlockedGroup from "rows/BlockedGroup.tsx";
 import MessageWithContent from "MessageWithContent.tsx";
@@ -8,7 +8,7 @@ import Loading from "rows/Loading.tsx";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
 
 require = fn;
-const RowGeneratorConstants = fn(8524);
+const RowGeneratorConstants = fn(8470);
 ({ RowType: closure_4, SeparatorType: hasOwnProperty, LoadingType: closure_6 } = RowGeneratorConstants);
 let obj = {
   constrainedWidth: 0,
@@ -17,7 +17,7 @@ let obj = {
   shouldObscureSpoiler: true,
   shouldDisableInteractiveComponents: true,
 };
-let merged = Object.assign(fn(8525).DEFAULT_OPTIONS);
+let merged = Object.assign(fn(8471).DEFAULT_OPTIONS);
 class RowManager {
   constructor() {
     merged = Object.assign({ options: null });
@@ -27,7 +27,7 @@ class RowManager {
 }
 const prototype = RowManager.prototype;
 prototype["setOptions"] = function setOptions(arg0) {
-  obj = _modDef12;
+  obj = applyDefault;
   this.options = obj.merge({}, obj, this.options, arg0);
 };
 prototype["generate"] = function generate(rowType) {

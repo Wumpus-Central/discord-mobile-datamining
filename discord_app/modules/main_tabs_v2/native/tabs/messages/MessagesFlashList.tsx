@@ -105,7 +105,7 @@ export default noop.memo(function MessagesFlashList(listItemHeight) {
   const items2 = [friendSuggestions];
   const getItemType = listRefHappeningNow.useCallback((kind) => kind.kind, []);
   const items3 = [renderHeader, listRefHappeningNow];
-  const keyExtractor = listRefHappeningNow.useCallback((kind) => {
+  keyExtractor = listRefHappeningNow.useCallback((kind) => {
     kind = kind.kind;
     if ("favorite" === kind) {
       const _HermesInternal4 = HermesInternal;

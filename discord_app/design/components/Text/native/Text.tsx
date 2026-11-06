@@ -1,12 +1,12 @@
 // discord_app/design/components/Text/native/Text.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import NativeText2 from "../../../../../_runtime/00299_NativeText.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
 import PlainTextExperimentContext from "PlainTextExperimentContext.tsx";
 import PlainTextEligibility from "PlainTextEligibility.tsx";
-import _modDef5769 from "../../../../../_runtime/metro/05769__.js";
+import _modDef5787 from "../../../../../_runtime/metro/05787__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import 01652__ from "../../../../../_runtime/metro/01652__.js";
@@ -140,7 +140,7 @@ let items = [{ includeFontPadding: true }];
 let closure_11 = [];
 const keys = Object.keys(nativeDefault.colors);
 let closure_12 = Object.fromEntries(keys.map((item) => {
-  items = [_modDef12.kebabCase(item), item];
+  items = [applyDefault.kebabCase(item), item];
   return items;
 }));
 ({ PRIMARY_NORMAL: obj2[400], PRIMARY_MEDIUM: obj2[500], PRIMARY_SEMIBOLD: obj2[600], PRIMARY_BOLD: obj2[700], PRIMARY_EXTRABOLD: obj2[800] } = Fonts);
@@ -150,7 +150,7 @@ obj3[700] = Fonts.GINTO_DISCORD_NORD_BOLD;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj5[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj5[900] } = Fonts);
 const dependencyMap = { nitro: obj3, primary: { 400: null, 500: null, 600: null, 700: null, 800: null }, code: { 400: null, 700: null } };
 let closure_14 = { nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(5764).TextVariantsFlat;
+const TextVariantsFlat = fn(5782).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((fontSize) => {
   const letterSpacing = fontSize.letterSpacing;
   items = [fontSize.name, ];
@@ -186,9 +186,9 @@ const mapped = TextVariantsFlat.map((fontSize) => {
   }
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(5765);
+const useManaTextMigrationHighlight = fn(5783);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_16 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {

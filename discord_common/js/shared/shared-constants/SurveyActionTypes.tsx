@@ -18,4 +18,10 @@ export const SurveyActionTypes = {
   TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS: "topical_navigation_multiple_impressions",
   GUILD_ROOM_JOINED: "guild_room_joined",
   YOUTUBE_3PP_MODAL_DISMISSED: "youtube_3pp_modal_dismissed",
+  GUILD_CREATED: "guild_created",
+  FRIEND_REQUEST_SENT: "friend_request_sent",
+  FRIEND_REQUEST_ACCEPTED: "friend_request_accepted",
+  USER_BLOCKED: "user_blocked",
+  REPORT_SUBMITTED: "report_submitted",
+  GROUP_DM_CREATED: "group_dm_created",
 };

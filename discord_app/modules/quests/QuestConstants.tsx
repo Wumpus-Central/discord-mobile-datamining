@@ -7,7 +7,7 @@ import AdCreativeType from "../../../discord_common/js/shared/shared-constants/A
 import FirstPartyQuestTaskTypes from "../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import DismissibleQuestContentFlags from "../../../discord_common/js/shared/shared-constants/DismissibleQuestContentFlags.tsx";
 import HTTPUtils_mod from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [

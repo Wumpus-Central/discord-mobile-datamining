@@ -5,7 +5,7 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import shared from "../../design/shared.tsx";
 import CallConstants from "../calls/CallConstants.tsx";
 import VoiceChannelEffectsUtils from "VoiceChannelEffectsUtils.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let closure_4 = CallConstants.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT;

@@ -1,5 +1,5 @@
 // discord_app/modules/instant_invite/native/action_sheet/invite_to_guilds/SelectInviteRolesActionSheet.tsx
-import _mod12 from "../../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../../_runtime/00012_apply.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_8 = createStyles.createStyles({ list: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -52,7 +52,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     if (!isEqualResult) {
       onSave(sorted);
     }
-    isEqualResult = _mod12.isEqual(sorted, items.sort());
+    isEqualResult = apply.isEqual(sorted, items.sort());
   }, items1);
   const callback2 = first.useCallback((arg0, arg1) => {
     assignableRoles = tmp;

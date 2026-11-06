@@ -19,7 +19,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1072).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 },
   allUsersIconContainer: { height: 30, width: 30, alignItems: "center" },
@@ -67,7 +67,7 @@ export default function GuildSettingsModalAuditLogFilter(data) {
     items,
   );
   const data1 = memo.data;
-  const keyExtractor = memo.keyExtractor;
+  keyExtractor = memo.keyExtractor;
   const items1 = [filterType, navigation];
   const effect = navigation.useEffect(() => {
     if (AuditLogFilterTypes.USER === filterType) {

@@ -1,9 +1,11 @@
 // discord_app/modules/voice_panel/VoicePanelManager.native.tsx
+import StageChannelUnifiedCallExperiment from "../stage_channels/StageChannelUnifiedCallExperiment.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import VoicePanelStore from "VoicePanelStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
+require = fn;
 const prototype = function VoicePanelManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
@@ -17,12 +19,14 @@ const prototype = function VoicePanelManager() {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (isGuildStageVoiceResult) {
-          state.closeChannel(channelId);
-        } else {
-          const channels = state.channels;
-          if (!channels.has(channelId)) {
-            state.openChannel(channelId);
+          if (!obj.isStageUnifiedCall(channel, "VoicePanelManager")) {
+            state.closeChannel(channelId);
           }
+          obj = StageChannelUnifiedCallExperiment;
+        }
+        const channels = state.channels;
+        if (!channels.has(channelId)) {
+          state.openChannel(channelId);
         }
       }
     },
@@ -36,12 +40,14 @@ const prototype = function VoicePanelManager() {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (isGuildStageVoiceResult) {
-          state.closeChannel(channelId);
-        } else {
-          const channels = state.channels;
-          if (!channels.has(channelId)) {
-            state.openChannel(channelId);
+          if (!obj.isStageUnifiedCall(channel, "VoicePanelManager")) {
+            state.closeChannel(channelId);
           }
+          obj = StageChannelUnifiedCallExperiment;
+        }
+        const channels = state.channels;
+        if (!channels.has(channelId)) {
+          state.openChannel(channelId);
         }
       }
     },

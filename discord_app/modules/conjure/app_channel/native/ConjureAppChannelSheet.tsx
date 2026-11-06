@@ -263,7 +263,7 @@ function ConjureAppChannelSheetContent(channel) {
       tmp24Result10 = null;
       if (null != guild_id) {
         const obj13 = { onPress: callback1, icon: null, label: null, trailing: null };
-        const obj14 = { IconComponent: tmp2(tmp3[31]).PencilIcon };
+        const obj14 = { IconComponent: tmp2(tmp3[31]).MagicWandIcon };
         obj13.icon = closure_10(tmp2(tmp3[25]).TableRowIcon, obj14);
         const intl4 = tmp2(tmp3[27]).intl;
         obj13.label = intl4.string(tmp5(tmp3[30]).jMMrDM);
@@ -351,7 +351,7 @@ const Constants = fn(1072);
 ({ ChannelSettingsSections: metroImportDefault, InstantInviteSources: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   content: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 },
   centered: { textAlign: "center" },
@@ -381,10 +381,10 @@ export default noop.memo(function ConjureAppChannelSheet(channelId) {
     const obj5 = { spacing: stateFromStores(575).space.PX_24, children: null };
     const obj6 = { channel: stateFromStores };
     obj5.children = closure_10(ConjureAppChannelSheetContent, obj6);
-    obj4.children = closure_10(tmp2(6165).Stack, obj5);
-    obj3.children = closure_10(tmp2(7431).SafeAreaPaddingView, obj4);
-    obj2.children = closure_10(tmp2(5402).BottomSheetScrollView, obj3);
-    tmp6 = closure_10(tmp2(5398).BottomSheet, obj2);
+    obj4.children = closure_10(tmp2(6185).Stack, obj5);
+    obj3.children = closure_10(tmp2(7378).SafeAreaPaddingView, obj4);
+    obj2.children = closure_10(tmp2(5422).BottomSheetScrollView, obj3);
+    tmp6 = closure_10(tmp2(5418).BottomSheet, obj2);
   }
   return tmp6;
 });

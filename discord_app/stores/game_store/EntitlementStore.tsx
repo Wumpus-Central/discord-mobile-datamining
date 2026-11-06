@@ -1,5 +1,5 @@
 // discord_app/stores/game_store/EntitlementStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeAll from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import FractionalPremiumSKUs from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
@@ -69,7 +69,7 @@ prototype["get"] = function get(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getGiftable"] = function getGiftable() {
-  return _modDef12.values(closure_8);
+  return applyDefault.values(closure_8);
 };
 prototype["getForApplication"] = function getForApplication(arg0) {
   if (null == dependencyMap3[arg0]) {

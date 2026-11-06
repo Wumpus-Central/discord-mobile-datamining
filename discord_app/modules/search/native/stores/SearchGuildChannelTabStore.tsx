@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/stores/SearchGuildChannelTabStore.tsx
 import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
-import _mod12 from "../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import AutocompleteUtils from "../../../../utils/AutocompleteUtils.tsx";
@@ -50,7 +50,7 @@ prototype["search"] = function search(query, guildId) {
   obj7.boosters = boosterMap1;
   this.voiceChannels = AutocompleteUtilsDefault.queryChannels(obj7).map((channel) => ({ channel: channel.record }));
   const queryChannelsResult1 = AutocompleteUtilsDefault.queryChannels(obj7);
-  const mapped = _mod12.chain(queryChannelsResult).map((channel) => {
+  const mapped = apply.chain(queryChannelsResult).map((channel) => {
     const obj = { channel: channel.record, lastMessageId: null };
     let lastMessageId = ReadStateStore.lastMessageId(channel.record.id);
     if (lastMessageId == null) {
@@ -59,7 +59,7 @@ prototype["search"] = function search(query, guildId) {
     obj.lastMessageId = lastMessageId;
     return obj;
   });
-  const chainResult = _mod12.chain(queryChannelsResult);
+  const chainResult = apply.chain(queryChannelsResult);
   this.textChannels = mapped
     .sort((lastMessageId, lastMessageId2) =>
       SnowflakeUtilsDefault.compare(lastMessageId2.lastMessageId, lastMessageId.lastMessageId),

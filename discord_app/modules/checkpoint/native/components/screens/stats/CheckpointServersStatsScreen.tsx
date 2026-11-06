@@ -1,14 +1,14 @@
 // discord_app/modules/checkpoint/native/components/screens/stats/CheckpointServersStatsScreen.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3187 from "../../../../Checkpoint.messages.js";
-import _modDef3219 from "../../../../Checkpoint2026.messages.js";
+import _modDef3216 from "../../../../Checkpoint.messages.js";
+import _modDef3248 from "../../../../Checkpoint2026.messages.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
-import _modDef13884 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef13885 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
+import _modDef13859 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef13860 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
 import CheckpointDisplayTextDefault from "../../CheckpointDisplayText.tsx";
 import CheckpointGuildStatsDefault from "../../CheckpointGuildStats.tsx";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
@@ -65,12 +65,12 @@ function GuildCard(guild) {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(6204);
+const CheckpointConstants = fn(6224);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: {
     width: "100%",
@@ -192,27 +192,27 @@ export default function CheckpointServersStatsScreen() {
       const obj5 = { style: tmp.heading, children: null };
       const obj6 = { style: tmp.title, children: null };
       const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-      const items1 = [closure_6(tmp2(9914).ServerIcon, obj7)];
+      const items1 = [closure_6(tmp2(9864).ServerIcon, obj7)];
       const obj8 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
       const tmp16 = CheckpointScreenDefault;
       const intl3 = tmp2(1113).intl;
       const tmp20 = CheckpointTextDefault;
-      obj8.children = intl3.string(_modDef3219.Mb5E6r).toLocaleUpperCase();
+      obj8.children = intl3.string(_modDef3248.Mb5E6r).toLocaleUpperCase();
       items1[1] = closure_6(tmp20, obj8);
       obj6.children = items1;
       const items2 = [closure_7(View, obj6)];
       const obj9 = { children: null };
-      const stringResult = intl3.string(_modDef3219.Mb5E6r);
+      const stringResult = intl3.string(_modDef3248.Mb5E6r);
       const intl4 = tmp2(1113).intl;
       const tmp21 = CheckpointDisplayTextDefault;
-      obj9.children = intl4.string(_modDef3187.F0fkrh).toLocaleUpperCase();
+      obj9.children = intl4.string(_modDef3216.F0fkrh).toLocaleUpperCase();
       items2[1] = closure_6(tmp21, obj9);
       obj5.children = items2;
       const items3 = [closure_7(View, obj5)];
       const obj10 = { variant: "heading-lg/medium", children: null };
-      const stringResult1 = intl4.string(_modDef3187.F0fkrh);
+      const stringResult1 = intl4.string(_modDef3216.F0fkrh);
       const intl5 = tmp2(1113).intl;
-      obj10.children = intl5.string(_modDef3219.IN1DaS);
+      obj10.children = intl5.string(_modDef3248.IN1DaS);
       items3[1] = closure_6(CheckpointTextDefault, obj10);
       obj4.children = items3;
       const items4 = [closure_7(View, obj4)];
@@ -258,21 +258,21 @@ export default function CheckpointServersStatsScreen() {
   let obj = require("initialize");
   const obj15 = { animatedUri: null, staticUri: null, style: null };
   const tmp6 = CheckpointScreenDefault;
-  obj15.animatedUri = _modDef13884;
-  obj15.staticUri = _modDef13885;
+  obj15.animatedUri = _modDef13859;
+  obj15.staticUri = _modDef13860;
   obj15.style = tmp.globe;
   const items6 = [closure_6(CheckpointApngPlayerDefault, obj15)];
   const obj16 = { isStepHeading: true, children: null };
   const intl = tmp2(1113).intl;
   const tmp10 = CheckpointDisplayTextDefault;
-  obj16.children = intl.string(_modDef3187.F0fkrh).toLocaleUpperCase();
+  obj16.children = intl.string(_modDef3216.F0fkrh).toLocaleUpperCase();
   items6[1] = closure_6(tmp10, obj16);
   obj14.children = items6;
   const items7 = [closure_7(View, obj14)];
   const obj17 = { variant: "heading-lg/medium", children: null };
-  const stringResult2 = intl.string(_modDef3187.F0fkrh);
+  const stringResult2 = intl.string(_modDef3216.F0fkrh);
   const intl2 = tmp2(1113).intl;
-  obj17.children = intl2.string(_modDef3219.bhnqop);
+  obj17.children = intl2.string(_modDef3248.bhnqop);
   items7[1] = closure_6(CheckpointTextDefault, obj17);
   obj13.children = items7;
   const items8 = [closure_7(View, obj13)];

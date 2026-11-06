@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05450_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
@@ -138,7 +138,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   carousel: { marginHorizontal: -nativeDefault.space.PX_16 },
   carouselContent: null,
@@ -153,8 +153,13 @@ obj2.carouselContent = {
   paddingLeft: nativeDefault.space.PX_16,
   paddingRight: nativeDefault.space.PX_16,
 };
-let size = {
-  width: 130,
+let obj4 = {
+  gap: nativeDefault.space.PX_16,
+  paddingLeft: nativeDefault.space.PX_16,
+  paddingRight: nativeDefault.space.PX_16,
+};
+obj2.statCard = {
+  minWidth: 130,
   height: 92,
   borderRadius: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT,
@@ -162,22 +167,25 @@ let size = {
   paddingVertical: nativeDefault.space.PX_12,
   gap: nativeDefault.space.PX_8,
 };
-obj2.statCard = size;
-obj2.statCardExpanded = { flex: 1, minWidth: 0 };
-let obj4 = {
-  gap: nativeDefault.space.PX_16,
-  paddingLeft: nativeDefault.space.PX_16,
-  paddingRight: nativeDefault.space.PX_16,
+obj2.statCardExpanded = { flex: 1 };
+let obj5 = {
+  minWidth: 130,
+  height: 92,
+  borderRadius: nativeDefault.space.PX_16,
+  backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingVertical: nativeDefault.space.PX_12,
+  gap: nativeDefault.space.PX_8,
 };
 obj2.expandedCarouselContent = {
   flexDirection: "row",
   gap: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
 };
-let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj6 = { flexDirection: "row", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.secondaryRow = { height: nativeDefault.space.PX_16, justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj2);
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx");
 
 export default function AppStoreOverlayStatsCarousel(arg0) {

@@ -1,4 +1,5 @@
 // discord_app/modules/tti_analytics/native/TTIAnalyticsUtils.tsx
+import LoggerDefault from "../../debug/Logger.tsx";
 import AppStartPerformanceDefault from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
@@ -8,6 +9,7 @@ import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import NativeTTIManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import getMediaPerformanceClassDefault from "../../device/getMediaPerformanceClass.android.tsx";
 import AppStartInfo2 from "AppStartInfo.android.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import CacheStore from "../../cache/CacheStore.tsx";
 import ExperimentStore from "../../experiments/ExperimentStore.tsx";
@@ -100,6 +102,83 @@ function getRedesignScreenName() {
     tmpResult = NavigationRouteUtils;
   }
 }
+function consumeAppOpenBadgeState() {
+  const self = this;
+  const apply = closure_26.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_26 = async function _consumeAppOpenBadgeState() {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_0 = tmp3;
+          c3 = 1;
+          c1 = 2;
+          c4 = 1;
+          const obj5 = { value: NativeTTIManagerModuleDefault.consumeAppOpenBadgeState(), done: false };
+          return obj5;
+        }
+      } else if (1 === tmp7) {
+        c3 = 0;
+        (function logBadgeStateFailure(arg0) {
+          if (!c21) {
+            c21 = true;
+            logger.warn("Failed to read app-open badge state", arg0);
+          }
+        })(closure_2);
+        c4 = 3;
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 0;
+        c4 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        c3 = 0;
+        c4 = 3;
+        obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp14) {
+      closure_2 = tmp14;
+      if (tmp4 === c3) {
+        c4 = tmp2;
+        throw tmp14;
+      } else {
+        c1 = tmp;
+      }
+    }
+  }
+};
 function sharedProperties(screen_name, has_cached_data, arg2) {
   obj = { load_id, duration_ms_since_app_opened: Date.now() - arg2, screen_name, has_cached_data, manifest: null };
   let tmp = null;
@@ -109,7 +188,7 @@ function sharedProperties(screen_name, has_cached_data, arg2) {
   obj.manifest = tmp;
   return obj;
 }
-let closure_23 = async function _trackAppUIViewedAsync(arg0) {
+let closure_28 = async function _trackAppUIViewedAsync(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -159,15 +238,15 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
       } else {
         closure_131_4 = value;
         closure_131_5 = closure_131_3 - closure_131_4;
-        closure_132_1(closure_132_2[21]).reportFullyDrawn();
-        const obj5 = closure_132_1(closure_132_2[21]);
-        closure_132_1(closure_132_2[17]).mark("\u2757", "Track app_ui_viewed");
-        const obj6 = closure_132_1(closure_132_2[17]);
-        closure_132_1(closure_132_2[17]).addDetail("TTI", closure_131_5);
-        const obj7 = closure_132_1(closure_132_2[17]);
-        closure_132_1(closure_132_2[17]).markAt("\u{1F3C3}", "app_opened", closure_131_4);
-        const obj8 = closure_132_1(closure_132_2[17]);
-        closure_132_0(closure_132_2[22]).ttiRecorded(closure_131_5);
+        closure_132_1(closure_132_2[19]).reportFullyDrawn();
+        const obj5 = closure_132_1(closure_132_2[19]);
+        closure_132_1(closure_132_2[20]).mark("\u2757", "Track app_ui_viewed");
+        const obj6 = closure_132_1(closure_132_2[20]);
+        closure_132_1(closure_132_2[20]).addDetail("TTI", closure_131_5);
+        const obj7 = closure_132_1(closure_132_2[20]);
+        closure_132_1(closure_132_2[20]).markAt("\u{1F3C3}", "app_opened", closure_131_4);
+        const obj8 = closure_132_1(closure_132_2[20]);
+        closure_132_0(closure_132_2[24]).ttiRecorded(closure_131_5);
         let _setTimeout = setTimeout;
         let timerId = setTimeout(() => {
           let str = closure_1_0;
@@ -176,7 +255,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
           }
           !(function logLegacyAppUiViewed() {
             const self = this;
-            const apply = closure_1_24.apply;
+            const apply = closure_1_29.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
@@ -190,11 +269,11 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
             let _setTimeout = setTimeout;
             timeout = setTimeout(() => {
               closure_1_1(9).setTTICallback(() => true);
-              closure_1_27();
-              c25 = null;
+              closure_1_32();
+              c30 = null;
             }, 15 * closure_1_1(1089).Millis.SECOND);
             closure_1_1(9).setTTICallback(() => {
-              const tmp = closure_1_21();
+              const tmp = closure_1_24();
               let flag = false;
               if (null != tmp) {
                 if (!set2.has(tmp)) {
@@ -222,11 +301,11 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
               let flag2 = flag;
               if (flag2) {
                 const _clearTimeout = clearTimeout;
-                clearTimeout(c25);
+                clearTimeout(c30);
                 const _setTimeout = setTimeout;
                 const timerId = setTimeout(() => {
-                  closure_1_27();
-                  c25 = null;
+                  closure_1_32();
+                  c30 = null;
                 }, 1000);
                 flag2 = true;
               }
@@ -244,7 +323,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
     }
   }
 };
-let closure_24 = async function _logLegacyAppUiViewed(arg0) {
+let closure_29 = async function _logLegacyAppUiViewed(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -294,23 +373,23 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
         closure_133_3 = value;
         closure_133_4 = closure_133_3.JSBundleLoadedTimestamp;
         closure_133_5 = closure_133_3.JSBundleParsedTimestamp;
-        closure_134_1(closure_134_2[17]).markAt("\u{1F3C3}", "JS Bundle Loaded", closure_133_4);
-        const obj5 = closure_134_1(closure_134_2[17]);
-        closure_134_1(closure_134_2[17]).mark("\u{1F3C3}", "app_ui_viewed logged");
-        const obj6 = closure_134_1(closure_134_2[17]);
-        closure_134_1(closure_134_2[17]).addDetail("Since Bundle Parsed", +closure_133_1 - closure_133_5);
+        closure_134_1(closure_134_2[20]).markAt("\u{1F3C3}", "JS Bundle Loaded", closure_133_4);
+        const obj5 = closure_134_1(closure_134_2[20]);
+        closure_134_1(closure_134_2[20]).mark("\u{1F3C3}", "app_ui_viewed logged");
+        const obj6 = closure_134_1(closure_134_2[20]);
+        closure_134_1(closure_134_2[20]).addDetail("Since Bundle Parsed", +closure_133_1 - closure_133_5);
         const _Date = Date;
-        const obj7 = closure_134_1(closure_134_2[17]);
-        closure_134_1(closure_134_2[17]).endTime = Date.now() + 20000;
-        const tmp30 = closure_134_1(closure_134_2[17]);
+        const obj7 = closure_134_1(closure_134_2[20]);
+        closure_134_1(closure_134_2[20]).endTime = Date.now() + 20000;
+        const tmp30 = closure_134_1(closure_134_2[20]);
         const obj9 = {};
         const merged = Object.assign(closure_133_2);
-        const merged1 = Object.assign(closure_134_15());
+        const merged1 = Object.assign(closure_134_16());
         obj9.duration_ms_since_required_js_bundle_loaded = closure_133_1 - closure_133_4;
         obj9.duration_ms_since_required_js_bundle_parsed = closure_133_1 - closure_133_5;
-        obj9.theme = closure_134_6.theme;
+        obj9.theme = closure_134_7.theme;
         const merged2 = Object.assign(closure_133_0);
-        closure_134_1(closure_134_2[19]).track(closure_134_10.APP_UI_VIEWED, obj9, { logEventProperties: true });
+        closure_134_1(closure_134_2[22]).track(closure_134_11.APP_UI_VIEWED, obj9, { logEventProperties: true });
         c8 = 3;
         return { value: "HermesInternal", done: null };
       }
@@ -322,7 +401,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
 };
 function trackAppUIViewed2() {
   const self = this;
-  const apply = closure_28.apply;
+  const apply = closure_33.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -330,11 +409,11 @@ function trackAppUIViewed2() {
   }
   return applyArgumentsResult;
 }
-let closure_28 = async function _trackAppUIViewed() {
+let closure_33 = async function _trackAppUIViewed() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  } else if (tmp5 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -355,28 +434,32 @@ let closure_28 = async function _trackAppUIViewed() {
           const obj10 = { value, done: true };
           return obj10;
         } else {
-          closure_4 = tmp5;
+          closure_4 = tmp3;
           closure_3 = tmp2;
           closure_131_0 = undefined;
           closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
           let appCreatedTime;
           let appFirstVisibleTime;
           let extraProperties;
-          closure_131_5 = undefined;
-          closure_131_6 = undefined;
-          const tmp84 = getRedesignScreenName();
-          let unknown = tmp84;
-          if (tmp84 == null) {
+          closure_131_7 = undefined;
+          closure_131_8 = undefined;
+          closure_131_9 = undefined;
+          const tmp94 = getRedesignScreenName();
+          let unknown = tmp94;
+          if (tmp94 == null) {
             unknown = "unknown";
           }
           closure_131_0 = unknown;
           const AppStartInfo = AppStartInfo2.AppStartInfo;
+          items = [AppStartInfo.getAppStartInfo(), consumeAppOpenBadgeState()];
           c5 = 1;
           c6 = 1;
-          const obj12 = { value: AppStartInfo.getAppStartInfo(), done: false };
+          const obj12 = { value: Promise.all(items), done: false };
           return obj12;
         }
-      } else if (1 === tmp5) {
+      } else if (1 === tmp6) {
         if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -386,22 +469,25 @@ let closure_28 = async function _trackAppUIViewed() {
           return obj13;
         } else {
           closure_131_1 = value;
-          appCreatedTime = closure_131_1.appCreatedTime;
-          appFirstVisibleTime = closure_131_1.appFirstVisibleTime;
-          extraProperties = closure_131_1.extraProperties;
-          const allNativeTimestamps = closure_132_1(closure_132_2[21]).getAllNativeTimestamps();
+          closure_131_2 = closure_132_3(closure_131_1, 2);
+          closure_131_3 = closure_131_2[0];
+          appCreatedTime = closure_131_3.appCreatedTime;
+          appFirstVisibleTime = closure_131_3.appFirstVisibleTime;
+          extraProperties = closure_131_3.extraProperties;
+          closure_131_7 = closure_131_2[1];
+          const allNativeTimestamps = closure_132_1(closure_132_2[19]).getAllNativeTimestamps();
           c5 = 2;
           c6 = 1;
           const obj14 = {
             value: allNativeTimestamps.then((nativeLogs) => {
-              c1(paths[17]).logGroups[0].nativeLogs = nativeLogs;
-              c1(paths[23]).processNativeLogs(nativeLogs, closure_1_2);
+              c1(paths[20]).logGroups[0].nativeLogs = nativeLogs;
+              c1(paths[25]).processNativeLogs(nativeLogs, closure_1_4);
             }),
             done: false,
           };
           return obj14;
         }
-      } else if (2 === tmp5) {
+      } else if (2 === tmp6) {
         if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -410,7 +496,7 @@ let closure_28 = async function _trackAppUIViewed() {
           const obj15 = { value, done: true };
           return obj15;
         } else {
-          const cumulativeCPUUsage = closure_132_1(closure_132_2[25]).getCumulativeCPUUsage();
+          const cumulativeCPUUsage = closure_132_1(closure_132_2[27]).getCumulativeCPUUsage();
           let usage;
           if (cumulativeCPUUsage != null) {
             usage = cumulativeCPUUsage.usage;
@@ -419,81 +505,82 @@ let closure_28 = async function _trackAppUIViewed() {
           if (usage == null) {
             c1 = null;
           }
-          closure_131_5 = c1;
+          closure_131_8 = c1;
           const obj16 = {};
-          let merged = Object.assign(closure_132_15());
+          let merged = Object.assign(closure_132_16());
           let paths = extraProperties;
           if (extraProperties == null) {
             paths = {};
           }
           const merged1 = Object.assign(paths);
-          const obj19 = closure_132_1(closure_132_2[25]);
-          const merged2 = Object.assign(closure_132_1(closure_132_2[23]).serializeTTITracker(appFirstVisibleTime));
-          obj16.load_id = closure_132_16;
+          const merged2 = Object.assign(closure_131_7);
+          const obj19 = closure_132_1(closure_132_2[27]);
+          const merged3 = Object.assign(closure_132_1(closure_132_2[25]).serializeTTITracker(appFirstVisibleTime));
+          obj16.load_id = closure_132_17;
           obj16.screen_name = closure_131_0;
-          obj16.has_cached_data = closure_132_4.hasCache();
-          obj16.startup_cpu_usage_cumulative = closure_131_5;
-          obj16.theme = closure_132_6.theme;
-          const obj3 = closure_132_1(closure_132_2[23]);
+          obj16.has_cached_data = closure_132_5.hasCache();
+          obj16.startup_cpu_usage_cumulative = closure_131_8;
+          obj16.theme = closure_132_7.theme;
+          const obj3 = closure_132_1(closure_132_2[25]);
           let result = null;
           if (obj4.isIOS()) {
-            result = closure_132_0(closure_132_2[27]).isIOSAnchoredChatScrollerEnabled();
-            const obj5 = closure_132_0(closure_132_2[27]);
+            result = closure_132_0(closure_132_2[29]).isIOSAnchoredChatScrollerEnabled();
+            const obj5 = closure_132_0(closure_132_2[29]);
           }
           obj16.ios_using_anchored_scroller = result;
-          closure_131_6 = obj16;
-          obj4 = closure_132_0(closure_132_2[26]);
-          closure_132_1(closure_132_2[17]).mark("\u2757", "Track app_ui_viewed2");
-          const obj6 = closure_132_1(closure_132_2[17]);
-          closure_132_1(closure_132_2[19]).track(closure_132_10.APP_UI_VIEWED2, closure_131_6, {
+          closure_131_9 = obj16;
+          obj4 = closure_132_0(closure_132_2[28]);
+          closure_132_1(closure_132_2[20]).mark("\u2757", "Track app_ui_viewed2");
+          const obj6 = closure_132_1(closure_132_2[20]);
+          closure_132_1(closure_132_2[22]).track(closure_132_11.APP_UI_VIEWED2, closure_131_9, {
             logEventProperties: true,
           });
-          const obj7 = closure_132_1(closure_132_2[19]);
-          const result1 = closure_132_0(closure_132_2[28]).trackAndroidArtProfileSnapshot(
-            closure_132_16,
-            closure_132_15(),
+          const obj7 = closure_132_1(closure_132_2[22]);
+          const result1 = closure_132_0(closure_132_2[30]).trackAndroidArtProfileSnapshot(
+            closure_132_17,
+            closure_132_16(),
           );
-          closure_132_26 = closure_131_6;
-          if (closure_132_9.alertStartupMetrics) {
+          closure_132_31 = closure_131_9;
+          if (closure_132_10.alertStartupMetrics) {
             const obj17 = {
               importer() {
-                return unknown(paths[31])(paths[30], paths.paths).then((result) => {
+                return unknown(paths[33])(paths[32], paths.paths).then((result) => {
                   closure_0 = result.default;
                   return (arg0) => {
-                    let str = closure_2_6.app_launch_scenario;
+                    let str = closure_2_9.app_launch_scenario;
                     if (str == null) {
                       str = "-";
                     }
                     obj = { title: "App start times", body: null };
                     const combined =
                       "\nFirstContentfulPaint (TTI): " +
-                      closure_2_6.time_first_contentful_paint +
+                      closure_2_9.time_first_contentful_paint +
                       "ms\n  \u2022 App start \u2192 JS bundle start: " +
-                      closure_2_6.time_before_js_bundle_start +
+                      closure_2_9.time_before_js_bundle_start +
                       "ms\n  \u2022 MainAppl. \u2192 MainActivity start: " +
-                      closure_2_6.android_time_creation_to_create_main_activity +
+                      closure_2_9.android_time_creation_to_create_main_activity +
                       "ms\n    \u2022 Start type: " +
-                      closure_2_6.app_start_type +
+                      closure_2_9.app_start_type +
                       "\n    \u2022 Launch scenario: " +
                       str +
                       "\n(legacy) Cached msg render: " +
-                      closure_2_6.time_display_messages_with_cache_end +
+                      closure_2_9.time_display_messages_with_cache_end +
                       "ms\n              ";
                     obj.body = combined.trimStart();
                     const merged = Object.assign(arg0);
-                    return closure_3_13(closure_0, obj);
+                    return closure_3_14(closure_0, obj);
                   };
                 });
               },
               isDismissable: false,
             };
-            closure_132_1(closure_132_2[29]).openLazy(obj17);
-            const obj9 = closure_132_1(closure_132_2[29]);
+            closure_132_1(closure_132_2[31]).openLazy(obj17);
+            const obj9 = closure_132_1(closure_132_2[31]);
           }
-          const obj8 = closure_132_0(closure_132_2[28]);
+          const obj8 = closure_132_0(closure_132_2[30]);
           c5 = 3;
           c6 = 1;
-          const obj18 = { value: closure_132_1(closure_132_2[21]).logToDeviceEnabled(), done: false };
+          const obj18 = { value: closure_132_1(closure_132_2[19]).logToDeviceEnabled(), done: false };
           return obj18;
         }
       } else if (arg0 === 1) {
@@ -511,37 +598,37 @@ let closure_28 = async function _trackAppUIViewed() {
             obj.logged_at = Date.now();
             obj.user_id = id.getId();
             const timestamp = Date.now();
-            const item = closure_29(obj).forEach((item) => {
+            const item = closure_34(obj).forEach((item) => {
               obj = {};
               const merged = Object.assign(item);
               obj.type = "app_ui_viewed";
               obj.batch_id = batch_id;
               const json = JSON.stringify(obj);
-              closure_2_1(paths[21]).logToDevice(json);
+              closure_2_1(paths[19]).logToDevice(json);
             });
             const batch_id = timestamp + 1;
-            const arr = closure_29(obj);
-            const item1 = closure_29(allExperimentAssignments.getAllExperimentAssignments()).forEach((item) => {
+            const arr = closure_34(obj);
+            const item1 = closure_34(allExperimentAssignments.getAllExperimentAssignments()).forEach((item) => {
               obj = {};
               const merged = Object.assign(item);
               obj.batch_id = batch_id;
               obj.type = "experiments";
               const json = JSON.stringify(obj);
-              closure_2_1(paths[21]).logToDevice(json);
+              closure_2_1(paths[19]).logToDevice(json);
             });
             json = JSON.stringify({ type: "finished" });
-            const arr2 = closure_29(allExperimentAssignments.getAllExperimentAssignments());
-            closure_1(paths[21]).logToDevice(json);
-            const obj2 = closure_1(paths[21]);
-            closure_1(paths[21]).trackTTILogged();
-          })(closure_131_6);
+            const arr2 = closure_34(allExperimentAssignments.getAllExperimentAssignments());
+            closure_1(paths[19]).logToDevice(json);
+            const obj2 = closure_1(paths[19]);
+            closure_1(paths[19]).trackTTILogged();
+          })(closure_131_9);
         }
         c6 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } catch (tmp66) {
+    } catch (tmp72) {
       c6 = tmp;
-      throw tmp66;
+      throw tmp72;
     }
   }
 };
@@ -566,7 +653,7 @@ function batchKeys(arg0) {
   }
   return items;
 }
-let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
+let closure_35 = async function _trackAppLaunchCompletedAsync(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -594,7 +681,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
           closure_4 = tmp2;
           c5 = 0;
           closure_133_0 = undefined;
-          ThemeStore = sharedProperties;
+          ExperimentStore = sharedProperties;
           closure_3 = closure_0;
           closure_2 = closure_1;
           c7 = 1;
@@ -610,8 +697,8 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
         const obj6 = { value, done: true };
         return obj6;
       } else {
-        closure_133_0 = ThemeStore(closure_3, closure_2, value);
-        closure_132_1(closure_132_2[19]).track(closure_132_10.APP_LAUNCH_COMPLETED, closure_133_0, {
+        closure_133_0 = ExperimentStore(closure_3, closure_2, value);
+        closure_132_1(closure_132_2[22]).track(closure_132_11.APP_LAUNCH_COMPLETED, closure_133_0, {
           logEventProperties: true,
         });
         c8 = 3;
@@ -624,13 +711,15 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7958).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(4999).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(7912).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(5026).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1266);
 const load_id = v1.v4();
 const Manifest = ClientInfoUtils.getConstants().Manifest;
-let c18 = false;
+let c19 = false;
+let closure_20 = new LoggerDefault("TTIAnalytics");
+let c21 = false;
 const set = new Set([
   "private_channel",
   "guild-forum",
@@ -649,14 +738,14 @@ const set1 = new Set([
   "channel-list",
   "other",
 ]);
-let c25 = null;
-let c26 = null;
+let c30 = null;
+let c31 = null;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/tti_analytics/native/TTIAnalyticsUtils.tsx");
 
 export { getDeviceMetadata };
 export function currentLoadId() {
-  return closure_16;
+  return closure_17;
 }
 export function trackAppOpened(launcher) {
   AppStartPerformanceDefault.mark("\u{1F3C3}", "Track app_opened");
@@ -685,7 +774,7 @@ export function trackAppUIViewed() {
   if (!AppStartInfo.getAppUIViewed()) {
     (function trackAppUIViewedAsync() {
       const self = this;
-      const apply = closure_1_23.apply;
+      const apply = closure_1_28.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -696,7 +785,7 @@ export function trackAppUIViewed() {
   }
 }
 export function getLastTrackedAppUiViewed2Properties() {
-  return c26;
+  return c31;
 }
 export function trackAppLaunchCompleted() {
   let str = unknown;
@@ -706,15 +795,15 @@ export function trackAppLaunchCompleted() {
   if (hasCacheResult === undefined) {
     hasCacheResult = CacheStore.hasCache();
   }
-  if (!c18) {
+  if (!c19) {
     AppStartPerformanceDefault.mark("\u{1F3C3}", "Track app_launch");
-    c18 = true;
+    c19 = true;
     if (str == null) {
       str = "unknown";
     }
     (function trackAppLaunchCompletedAsync() {
       const self = this;
-      const apply = closure_1_30.apply;
+      const apply = closure_1_35.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {

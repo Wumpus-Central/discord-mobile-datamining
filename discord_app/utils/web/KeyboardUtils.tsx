@@ -1,10 +1,10 @@
 // discord_app/utils/web/KeyboardUtils.tsx
 import PlatformUtils2 from "../PlatformUtils.tsx";
 import GlobalUtils from "../GlobalUtils.tsx";
-import keyCodeDefault from "../../../_runtime/16209_keyCode.js";
+import keyCodeDefault from "../../../_runtime/16205_keyCode.js";
 import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import apply_mod from "../../../_runtime/metro/00012__.js";
+import apply_mod from "../../../_runtime/00012_apply.js";
 
 require = fn;
 function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
@@ -191,7 +191,7 @@ function toPrettyKey(str) {
   }
   return str;
 }
-const KeyboardConstants = fn(7828);
+const KeyboardConstants = fn(7782);
 ({ KeyboardDeviceTypes: hasOwnProperty, LinuxKeyToCode } = KeyboardConstants);
 const MacosKeyToCode = KeyboardConstants.MacosKeyToCode;
 const WindowsKeyToCode = KeyboardConstants.WindowsKeyToCode;
@@ -525,7 +525,7 @@ export function toCombo(shortcut) {
     const parts = shortcut
       .replace(/numpad plus/i, "")
       .replace(/NUMPAD \+/i, "numpad plus")
-      .replace(/mod/i, KEYBOARD_KEY(16211).modKey)
+      .replace(/mod/i, KEYBOARD_KEY(16207).modKey)
       .split("+");
     const mapped = parts.map((item) => item.trim().replace("plus", "+"));
     return mapped.reduce((arr, item) => {

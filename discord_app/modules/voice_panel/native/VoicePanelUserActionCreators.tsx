@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/VoicePanelUserActionCreators.tsx
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -11,7 +11,7 @@ export function closeVoicePanelUserActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(VoicePanelUserActionSheet);
 }
 export function openVoicePanelUserActionSheet(c1, c2, c0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19561, dependencyMap.paths), VoicePanelUserActionSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19554, dependencyMap.paths), VoicePanelUserActionSheet, {
     guildId: importDefault,
     channelId: dependencyMap,
     userId: _require,

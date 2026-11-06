@@ -6,7 +6,7 @@ import ContentInventoryStore from "../content_inventory/ContentInventoryStore.ts
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(9068).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(9014).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
@@ -152,6 +152,8 @@ export const GameProfileSources = {
   GuildSpacePopularGames: "guild_space_popular_games",
   GuildSpaceLeaderboard: "guild_space_leaderboard",
   GlobalDiscoveryGamesBecauseYouPlayed: "global_discovery_games_because_you_played",
+  GlobalDiscoveryGamesTrendingShelf: "global_discovery_games_trending_shelf",
+  GlobalDiscoveryGamesTrendingTab: "global_discovery_games_trending_tab",
 };
 export const GameProfileTypes = { FullProfile: "full_profile", MiniProfile: "mini_profile" };
 export function getGuildIdAndVerifiedFromInvite(current) {

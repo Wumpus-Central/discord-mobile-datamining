@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/content_inventory/useReplyActions.tsx
-import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
@@ -13,9 +13,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7846).DraftType;
+const DraftType = fn(7800).DraftType;
 const EmojiIntention = fn(1388).EmojiIntention;
-const MessageSendLocation = fn(5148).MessageSendLocation;
+const MessageSendLocation = fn(5175).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -275,7 +275,7 @@ export function useReplyActions(content) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(18883, dependencyMap.paths),
+          asyncRequireImpl(18871, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

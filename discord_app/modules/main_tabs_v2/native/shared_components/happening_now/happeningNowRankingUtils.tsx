@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx
-import _mod12 from "../../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../../_runtime/00012_apply.js";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 
-const _modDef12 = _mod12;
+const applyDefault = apply;
 
 require = fn;
-const HappeningNowConstants = fn(17559);
+const HappeningNowConstants = fn(17548);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty,
   HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6,
@@ -92,10 +92,10 @@ export function filterHappeningNowCards(arr) {
             const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(channelId2);
             let someResult = null != voiceStatesForChannel;
             if (someResult) {
-              const mapped = _modDef12(voiceStatesForChannel).map((userId) => userId.userId);
+              const mapped = applyDefault(voiceStatesForChannel).map((userId) => userId.userId);
               const found = mapped.filter(GlobalUtils.isNotNullish);
               someResult = found.some((item) => blockedOrIgnored.isBlockedOrIgnored(item));
-              const arr2 = _modDef12(voiceStatesForChannel);
+              const arr2 = applyDefault(voiceStatesForChannel);
             }
             flag2 = someResult;
           }
@@ -207,5 +207,5 @@ export function sortHappeningNowCards(result) {
       return flag;
     },
   ];
-  return _mod12.orderBy(result, items, ["asc", "asc"]);
+  return apply.orderBy(result, items, ["asc", "asc"]);
 }

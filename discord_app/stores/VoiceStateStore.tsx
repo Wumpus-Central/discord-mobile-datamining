@@ -1,5 +1,5 @@
 // discord_app/stores/VoiceStateStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import MetaQuestUtils from "../modules/device/MetaQuestUtils.android.tsx";
@@ -166,13 +166,13 @@ function mergeVoiceState(guildId, userId) {
 }
 function handleGuildCreateOrDelete(guild) {
   guild = guild.guild;
-  const item = _modDef12.forEach(dependencyMap[guild.id], (userId) => {
+  const item = applyDefault.forEach(dependencyMap[guild.id], (userId) => {
     updateVoiceState(guild.id, userId.userId, () => null);
   });
   delete tmp2[tmp];
 }
 const ME = fn(1072).ME;
-const VoicePlatforms = fn(5817).VoicePlatforms;
+const VoicePlatforms = fn(5835).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};
@@ -532,7 +532,7 @@ const voiceStateStore = new VoiceStateStore(DispatcherDefault, {
     if (obj == null) {
       obj = {};
     }
-    _modDef12.each(obj, (channelId, arg1) => {
+    applyDefault.each(obj, (channelId, arg1) => {
       if (channelId.channelId === channelId) {
         updateVoiceState(ME, arg1, () => null);
       }
@@ -544,7 +544,7 @@ const voiceStateStore = new VoiceStateStore(DispatcherDefault, {
     if (obj == null) {
       obj = {};
     }
-    _modDef12.each(obj, (channelId, arg1) => {
+    applyDefault.each(obj, (channelId, arg1) => {
       if (channelId.channelId === channelId) {
         updateVoiceState(ME, arg1, () => null);
       }

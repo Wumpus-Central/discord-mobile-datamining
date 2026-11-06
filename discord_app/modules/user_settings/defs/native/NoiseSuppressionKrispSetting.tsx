@@ -6,13 +6,13 @@ import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellatio
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(8578).MobileUserSettings.VOICE,
+  parent: fn(8524).MobileUserSettings.VOICE,
   useValue() {
     return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },

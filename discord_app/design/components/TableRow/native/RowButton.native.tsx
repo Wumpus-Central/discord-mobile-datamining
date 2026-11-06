@@ -117,7 +117,7 @@ function RowButtonWrapper(experimental_withBlurBackground) {
   return jsx(Card.InternalCard, obj4);
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { card: null, cardWithBlur: null };
   const obj2 = {
@@ -131,9 +131,9 @@ let closure_5 = createStyles.createStyles(() => {
   obj.cardWithBlur = { overflow: "hidden" };
   return obj;
 });
-RowButton.Icon = fn(7127).TableRowIcon;
+RowButton.Icon = fn(7071).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(7127).TableRowIconProps;
+export const RowButtonIconProps = fn(7071).TableRowIconProps;
 export { RowButton };

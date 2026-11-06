@@ -5,11 +5,11 @@ import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState.tsx";
 import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard.tsx";
 import UserProfileTabPagesDefault from "UserProfileTabPages.tsx";
 import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext.tsx";
 import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader.tsx";
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -24,10 +24,10 @@ function MainPage() {
   });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7515).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7460).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING },
   page: null,
@@ -62,7 +62,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   closure_5 = undefined;
   let arr;
   closure_7 = undefined;
-  ({ hasCustomProfileTheme, scrollPosition, scrollViewRef, isBoardTabOnScreen } = userId);
+  ({ initialTab, hasCustomProfileTheme, scrollPosition, scrollViewRef, isBoardTabOnScreen } = userId);
   const tmp = closure_9();
   dependencyMap = tmp;
   const tmp4 = UserProfileSharedStylesDefault();
@@ -74,8 +74,12 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   if (undefined !== width) {
     num = width;
   }
-  [first, closure_5] = first.useState(0);
-  arr = tmp2(15180)(userId);
+  let num2 = 0;
+  if ("board" === initialTab) {
+    num2 = 1;
+  }
+  [first, closure_5] = first.useState(num2);
+  arr = tmp2(15144)(userId);
   closure_7 = tmp8;
   let items1 = [arr];
   const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
@@ -121,6 +125,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   let obj2 = require("UserProfileTabPages");
   const segmentedControlState = require("SegmentedControlState").useSegmentedControlState({
     pageWidth: num,
+    defaultIndex: num2,
     items,
     onPageChange: callback,
   });
@@ -163,7 +168,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   }
   obj6.variant = str;
   const items7 = [
-    arr(tmp10(12379).Tabs, obj6),
+    arr(tmp10(12344).Tabs, obj6),
     arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
   obj5.children = items7;

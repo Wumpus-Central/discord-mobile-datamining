@@ -1,5 +1,5 @@
 // discord_app/lib/RTCBandwidthMonitor.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import size from "../../_runtime/metro/00002__.js";
 
 let closure_2 = [];
@@ -85,11 +85,11 @@ RTCBandwidthMonitor["create"] = function create() {
   }
 };
 RTCBandwidthMonitor.prototype["getTotalBytes"] = function getTotalBytes() {
-  return _modDef12.sum(Object.values(this.bytes));
+  return applyDefault.sum(Object.values(this.bytes));
 };
 const result = size.fileFinishedImporting("lib/RTCBandwidthMonitor.tsx");
 
 export default RTCBandwidthMonitor;
 export function getRTCTotalBytes() {
-  return _modDef12.sum(closure_2.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
+  return applyDefault.sum(closure_2.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
 }

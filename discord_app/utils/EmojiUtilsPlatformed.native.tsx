@@ -1,5 +1,5 @@
 // discord_app/utils/EmojiUtilsPlatformed.native.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import PlatformUtils from "PlatformUtils.tsx";
 import AvatarUtilsDefault from "AvatarUtils.tsx";
 import NativeImageManagerModuleDefault from "../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
@@ -134,7 +134,7 @@ obj.getURL = MemoizerUtils.makeMemoizer(getURL);
 obj.filterUnsupportedEmojis = function filterUnsupportedEmojis(arg0) {
   let found = arg0;
   if (!obj.isAndroid()) {
-    found = _modDef12.filter(arg0, (unicodeVersion) => {
+    found = applyDefault.filter(arg0, (unicodeVersion) => {
       unicodeVersion = unicodeVersion.unicodeVersion;
       const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
       const systemVersionMinor = DeviceUtils.getSystemVersionMinor();

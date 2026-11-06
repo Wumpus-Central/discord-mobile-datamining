@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/hooks/useUserProfileMutuals.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import usePrevValueDefault from "../../../../discord_common/js/shared/hooks/usePrevValue.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import UserAffinitiesV2Store from "../../user_affinities/UserAffinitiesV2Store.tsx";
@@ -46,7 +46,7 @@ export default function useUserProfileMutuals(arg0) {
     if (null != tmp3) {
       sortByResult = tmp3;
       if (tmp3.length >= 2) {
-        sortByResult = _mod12.sortBy(tmp3, (user) => {
+        sortByResult = apply.sortBy(tmp3, (user) => {
           value = stateFromStores.get(user.user.id);
           let num;
           if (value != null) {

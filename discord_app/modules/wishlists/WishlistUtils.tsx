@@ -5,9 +5,9 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import SKURecord from "../skus/SKURecord.tsx";
 
 require = fn;
-let closure_4 = fn(9627).isCollectiblesWishlistItemRecord;
-let closure_5 = fn(9628).isPremiumWishlistItemRecord;
-const isSKUWishlistItemRecord = fn(9629).isSKUWishlistItemRecord;
+let closure_4 = fn(9576).isCollectiblesWishlistItemRecord;
+let closure_5 = fn(9577).isPremiumWishlistItemRecord;
+const isSKUWishlistItemRecord = fn(9578).isSKUWishlistItemRecord;
 const SKUProductLines = fn(1072).SKUProductLines;
 const PremiumSubscriptionSKUs = fn(1387).PremiumSubscriptionSKUs;
 const size = fn(2);

@@ -19,7 +19,7 @@ export function deleteChannelStates() {
 }
 export function useIsChannelDetailsSearchActive(arg0) {
   closure_0 = arg0;
-  const f96657 = (isSearchActive) => isSearchActive.isSearchActive;
+  const f96769 = (isSearchActive) => isSearchActive.isSearchActive;
   return obj((states) => {
     states = states.states;
     value = states.get(closure_0);
@@ -28,12 +28,12 @@ export function useIsChannelDetailsSearchActive(arg0) {
       const merged = Object.assign(closure_2);
       value = obj;
     }
-    return f96658(value);
+    return f96770(value);
   });
 }
 export function useChannelDetailsSearchActiveSource(arg0) {
   closure_0 = arg0;
-  const f96658 = (searchActiveSource) => searchActiveSource.searchActiveSource;
+  const f96770 = (searchActiveSource) => searchActiveSource.searchActiveSource;
   return obj((states) => {
     states = states.states;
     value = states.get(closure_0);
@@ -42,7 +42,7 @@ export function useChannelDetailsSearchActiveSource(arg0) {
       const merged = Object.assign(closure_2);
       value = obj;
     }
-    return f96658(value);
+    return f96770(value);
   });
 }
 export function setIsChannelDetailsSearchActive(arg0, isSearchActive, searchActiveSource) {

@@ -1,5 +1,5 @@
 // discord_app/stores/ApplicationStreamPreviewStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import Constants from "../modules/go_live/Constants.tsx";
@@ -114,11 +114,11 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(Dispatch
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    const isEmptyResult = _modDef12.isEmpty(closure_4);
+    const isEmptyResult = applyDefault.isEmpty(closure_4);
     let reduced = !isEmptyResult;
     if (isEmptyResult) {
-      reduced = !_modDef12.isEmpty(closure_5);
-      const tmpResult = _modDef12;
+      reduced = !applyDefault.isEmpty(closure_5);
+      const tmpResult = applyDefault;
     }
     if (reduced) {
       reduced = voiceStates.reduce((acc, guildId) => {

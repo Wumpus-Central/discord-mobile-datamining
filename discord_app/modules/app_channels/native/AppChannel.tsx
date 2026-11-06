@@ -176,15 +176,15 @@ function AppChannel(arg0) {
   return tmp4Result;
 }
 const View = fn(17).View;
-let closure_5 = fn(18976).useConjureFrameUpdateAvailable;
+let closure_5 = fn(18965).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let createStyles = fn(5143);
+let createStyles = fn(5170);
 let obj2 = { icon: null };
 let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(5143);
+createStyles = fn(5170);
 let closure_9 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom } };
   return obj;

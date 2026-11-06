@@ -1,7 +1,7 @@
 // discord_app/modules/avatar/native/AddAvatarModalActionCreators.tsx
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import UserSettingsAccountActionCreators from "../../../actions/UserSettingsAccountActionCreators.tsx";
@@ -65,5 +65,5 @@ export function showSkipAvatarModal(arg0) {
   AlertActionCreatorsDefault.show(obj3);
 }
 export function openAddAvatarModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19857, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19863, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 }

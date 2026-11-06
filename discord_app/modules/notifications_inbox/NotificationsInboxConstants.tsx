@@ -36,7 +36,7 @@ export function getNotificationsInboxGuild(arg0) {
     stringResult = intl.string(util.t.HcoRu0);
   }
   const obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: [] };
-  return tmp2(5006).fromGuildBasic(obj);
+  return tmp2(5033).fromGuildBasic(obj);
 }
 export const MessageCategory = obj;
 export const InboxFilters = obj2;

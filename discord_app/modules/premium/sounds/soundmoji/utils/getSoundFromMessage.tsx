@@ -12,7 +12,7 @@ function getSoundFromSounds(arr, arg1) {
   }
   return found;
 }
-const DEFAULT_SOUND_GUILD_ID = fn(6198).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6218).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx");
 

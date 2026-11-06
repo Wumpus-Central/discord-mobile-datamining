@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/SelectivelySyncedUserSettingsStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage4 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
@@ -64,7 +64,7 @@ const items = [
     if (false === obj[UserSettingsSections.TEXT]) {
       const obj3 = {
         shouldSync: false,
-        settings: _modDef12.pick(value2, [
+        settings: applyDefault.pick(value2, [
           "inlineAttachmentMedia",
           "inlineEmbedMedia",
           "renderEmbeds",
@@ -80,7 +80,7 @@ const items = [
     if (false === obj[UserSettingsSections.APPEARANCE]) {
       const obj4 = {
         shouldSync: false,
-        settings: _modDef12.pick(value2, ["theme", "clientThemeSettings", "developerMode"]),
+        settings: applyDefault.pick(value2, ["theme", "clientThemeSettings", "developerMode"]),
       };
       obj2.appearance = obj4;
     }

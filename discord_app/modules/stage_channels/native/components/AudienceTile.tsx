@@ -25,7 +25,7 @@ function RaisedHandIcon(rtsState) {
   }
   const obj = {
     style: items,
-    children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(12110), color: PRIMARY_800 }),
+    children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(12081), color: PRIMARY_800 }),
   };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
@@ -33,7 +33,7 @@ function RaisedHandIcon(rtsState) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   touchableContainer: { overflow: "visible" },
   container: { alignItems: "center" },

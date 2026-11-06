@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish_schedule/useConjurePublishScheduleProposal.tsx
-import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4024 from "../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,7 +8,7 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const canPublishProject = fn(6982).canPublishProject;
+const canPublishProject = fn(6924).canPublishProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishScheduleProposal.tsx");
 
@@ -114,9 +114,9 @@ export default function useConjurePublishScheduleProposal(arg0, trigger, arg2) {
     )[0]
   ) {
     let intl = tmp(1113).intl;
-    const obj2 = { time: tmp(12370).formatPublishScheduleTime(trigger.next_run_at) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3995.orZDqY, obj2);
-    const tmpResult = tmp(12370);
+    const obj2 = { time: tmp(12335).formatPublishScheduleTime(trigger.next_run_at) };
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4024.orZDqY, obj2);
+    const tmpResult = tmp(12335);
   }
   let obj3 = { summary: null, firstPublish: null, status: null, error: null, onTurnOn: null };
   const tmp4 = _slicedToArray(noop.useState("idle"), 2);

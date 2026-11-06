@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(9012);
+const Constants = fn(8958);
 ({
   THUMBNAIL_MARGIN: hasOwnProperty,
   THUMBNAIL_HEIGHT: closure_6,
@@ -397,8 +397,8 @@ export function useMediaViewerSyncer(sources) {
         useMediaViewerSyncerTsx6.__initData = tmp41;
         let derivedValue = arr(selectedIndex[5]).useDerivedValue(useMediaViewerSyncerTsx6);
         const items13 = [animatedRef];
-        const callback2 = React.useCallback((arg0) => {
-          const result = sources(onEndReached[9]).lerpVarWidthThumbnailScrollBounds(items, arg0);
+        const callback2 = React.useCallback((result1) => {
+          const result = sources(onEndReached[9]).lerpVarWidthThumbnailScrollBounds(items, result1);
           const obj = sources(onEndReached[9]);
           sources(onEndReached[5]).scrollTo(c0, result, 0, false);
         }, items13);

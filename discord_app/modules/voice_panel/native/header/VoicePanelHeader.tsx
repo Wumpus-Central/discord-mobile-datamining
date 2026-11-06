@@ -11,7 +11,6 @@ import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs.tsx";
 import StageMusicActionCreators from "../../../stage_channels/StageMusicActionCreators.tsx";
 import useMyCurrentStageChannelRoleDefault from "../../../stage_channels/useMyCurrentStageChannelRole.tsx";
-import VoicePanelIconButtonDefault from "../shared/VoicePanelIconButton.tsx";
 import useIsConnectedToVoiceChannelDefault from "../hooks/useIsConnectedToVoiceChannel.tsx";
 import MobileGoLiveEntrypointExperimentDefault from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
 import useVoicePanelNavArrowPressedDefault from "../hooks/useVoicePanelNavArrowPressed.tsx";
@@ -36,56 +35,62 @@ require = fn;
 function MusicMuteButton(channelId) {
   channelId = channelId.channelId;
   let stateFromStores;
-  const tmp3 = useMyCurrentStageChannelRoleDefault(channelId);
+  const tmp3 = stateFromStores(12191)(channelId);
   if (tmp3 != null) {
     const speaker = tmp3.speaker;
   }
   items = [StageMusicStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => muted.isMuted());
-  const obj = stateFromStores(504);
-  let tmp6 = null;
-  if (obj2.useShowStageMusicMuteButton(channelId)) {
-    tmp6 = null;
-    if (speaker) {
-      const intl = tmp4(1113).intl;
-      const string = intl.string;
-      const t = tmp4(1113).t;
-      if (stateFromStores) {
-        let stringResult = string(t.ScHlfl);
-      } else {
-        stringResult = string(t.zqxfrf);
-      }
-      const obj3 = {
-        accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 12087 : 8704),
-        onPress() {
-          return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
-        },
-      };
-      closure_24(VoicePanelIconButtonDefault, obj3);
-      const tmpResult = VoicePanelIconButtonDefault;
+  stateFromStores = channelId(504).useStateFromStores(items, () => muted.isMuted());
+  const obj = channelId(504);
+  const showStageMusicMuteButton = channelId(12048).useShowStageMusicMuteButton(channelId);
+  const obj2 = channelId(12048);
+  const items1 = [ChannelStore];
+  const items2 = [channelId];
+  const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId), items2);
+  channelId(11345);
+  let tmp10 = null;
+  if (showStageMusicMuteButton) {
+    if (!speaker) {
+      tmp10 = null;
     }
+    const intl = tmp4(1113).intl;
+    const string = intl.string;
+    const t = tmp4(1113).t;
+    if (stateFromStores) {
+      let stringResult = string(t.ScHlfl);
+    } else {
+      stringResult = string(t.zqxfrf);
+    }
+    const obj4 = {
+      accessibilityLabel: stringResult,
+      icon: tmp(stateFromStores ? 12052 : 8650),
+      onPress() {
+        return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
+      },
+    };
+    closure_24(tmp(19449), obj4);
+    const tmpResult = tmp(19449);
   }
-  return tmp6;
+  return tmp10;
 }
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11419);
+const VoicePanelConstants = fn(11381);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(11422).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(11417).VoicePanelControlsModes;
-const DOCK_PULL_SNAP_DISTANCE = fn(11437).DOCK_PULL_SNAP_DISTANCE;
-const ParticipantTypes = fn(5817).ParticipantTypes;
+const EDGE_GUTTER = fn(11384).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11379).VoicePanelControlsModes;
+const DOCK_PULL_SNAP_DISTANCE = fn(11399).DOCK_PULL_SNAP_DISTANCE;
+const ParticipantTypes = fn(5835).ParticipantTypes;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
 let closure_26 = { duration: 300 };
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%" },
   headerSurface: null,
@@ -363,14 +368,14 @@ export default noop.memo(function VoicePanelHeader(layout) {
   const context = noop.useContext(VoicePanelStateContextDefault);
   const channelId = context.channelId;
   _require = channelId;
-  ({ focused, mode, safeArea, connected, isDockEnabled, dockMinimizeProgress } = context);
-  ({ guildId, channelType, controlsSpecs, scrollPosition, dockHeight, wrapperDimensions } = context);
+  ({ channelType, focused, mode, safeArea, connected, isDockEnabled, dockMinimizeProgress } = context);
+  ({ guildId, controlsSpecs, scrollPosition, dockHeight, wrapperDimensions } = context);
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   let obj2 = require("useIsScreenReaderEnabled");
   items = [c10];
   let items1 = [channelId];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(c0), items1);
-  let tmp110Result11 = useIsConnectedToVoiceChannelDefault(channelId);
+  let tmp111Result11 = useIsConnectedToVoiceChannelDefault(channelId);
   let obj3 = require("initialize");
   const obj4 = MobileGoLiveEntrypointExperimentDefault;
   const items2 = [c14, c12, c10, c7];
@@ -840,28 +845,41 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx15.__workletHash = 11930407461065;
   VoicePanelHeaderTsx15.__initData = tmp90;
   const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(VoicePanelHeaderTsx15);
+  const tmp93 = useMyCurrentStageChannelRoleDefault(channelId);
+  let flag;
+  if (tmp93 != null) {
+    flag = tmp93.speaker;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  if (channelType !== require("ChannelTypes").ChannelTypes.GUILD_STAGE_VOICE) {
+    flag =
+      obj4.useConfig({ location: "VoicePanelHeader" }).treatment ===
+      tmp5(19519).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
+  }
   const tmp5Result23 = require("../../../../../_runtime/metro/01652__.js");
   let canInviteMembers = require("useCanInviteMembers").useCanInviteMembers(channelId);
   const tmp5Result24 = require("useCanInviteMembers");
   const tmp5Result25 = require("useInviteMembersCallback");
-  const tmp95 = useVoicePanelNavArrowPressedDefault();
+  const tmp96 = useVoicePanelNavArrowPressedDefault();
   const inviteMembersCallback = require("useInviteMembersCallback").useInviteMembersCallback(channelId);
-  require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(tmp95);
+  require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(tmp96);
   if (null != tmp13) {
     DOWN = constants.LEFT;
-    let tmp97 = constants;
+    let tmp98 = constants;
   } else {
-    tmp97 = constants;
+    tmp98 = constants;
     DOWN = constants.DOWN;
   }
-  if (DOWN === tmp97.LEFT) {
+  if (DOWN === tmp98.LEFT) {
     let intl2 = tmp5(1113).intl;
     let stringResult = intl2.string(tmp5(1113).t["9M6OdC"]);
   } else {
     let intl = tmp5(1113).intl;
     const string = intl.string;
     const t = tmp5(1113).t;
-    if (tmp110Result11) {
+    if (tmp111Result11) {
       stringResult = string(t.RLCTQG);
     } else {
       stringResult = string(t["5lPjGj"]);
@@ -931,8 +949,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
     const keys = Object.keys(_undefined9.getVideoDevices());
     const found = keys.find((item) => item !== closure_0);
     if (null != found) {
-      _undefined2(_undefined3[48]).setVideoDevice(found);
-      const obj = _undefined2(_undefined3[48]);
+      _undefined2(_undefined3[50]).setVideoDevice(found);
+      const obj = _undefined2(_undefined3[50]);
     }
   }, []);
   const memo = obj.useMemo(() => {
@@ -948,34 +966,34 @@ export default noop.memo(function VoicePanelHeader(layout) {
   const tmp5Result27 = require("initialize");
   const isSecureFramesUIEnabled = require("useIsSecureFramesUIEnabled").useIsSecureFramesUIEnabled({ channelId });
   const tmp5Result28 = require("useIsSecureFramesUIEnabled");
-  let tmp107 = null;
+  let tmp108 = null;
   if (tmp13 === ParticipantTypes.USER) {
-    tmp107 = null;
+    tmp108 = null;
     if (null != tmp11) {
-      tmp107 = tmp11;
+      tmp108 = tmp11;
     }
   }
   const isUserSecureFramesVerified = require("useIsSecureFramesVerified").useIsUserSecureFramesVerified({
-    userId: tmp107,
+    userId: tmp108,
     channelId,
   });
   const tmp5Result29 = require("useIsSecureFramesVerified");
-  let tmp109 = null;
+  let tmp110 = null;
   if (tmp13 === ParticipantTypes.STREAM) {
-    tmp109 = null;
+    tmp110 = null;
     if (null != tmp11) {
-      tmp109 = tmp11;
+      tmp110 = tmp11;
     }
   }
-  let flag = require("useIsSecureFramesVerified").useIsStreamSecureFramesVerified({ streamKey: tmp109, channelId });
+  let flag2 = require("useIsSecureFramesVerified").useIsStreamSecureFramesVerified({ streamKey: tmp110, channelId });
   if (ParticipantTypes.STREAM !== tmp13) {
-    flag = false;
+    flag2 = false;
     if (ParticipantTypes.USER === tmp13) {
-      flag = isUserSecureFramesVerified;
+      flag2 = isUserSecureFramesVerified;
     }
   }
   let ONYX;
-  if (tmp110Result11) {
+  if (tmp111Result11) {
     ONYX = ThemeTypes.ONYX;
   }
   const obj7 = { theme: ONYX, children: null };
@@ -986,86 +1004,84 @@ export default noop.memo(function VoicePanelHeader(layout) {
   const items29 = [tmp.headerSurface, animatedStyle1];
   obj9.style = items29;
   const items30 = [closure_24(closure_33, { isHeaderHidden: derivedValue2, scrollPosition, focused }), ,];
-  if (!tmp110Result11) {
-    items30[1] = tmp110Result11;
+  if (!tmp111Result11) {
+    items30[1] = tmp111Result11;
     const obj10 = { style: tmp.headerContentWrapper, pointerEvents: "box-none", layout, children: null };
-    let tmp110Result = null;
+    let tmp111Result = null;
     if (tmp13 === ParticipantTypes.USER) {
       const obj11 = { isHeaderHidden: derivedValue2 };
-      tmp110Result = closure_24(tmp2(19530), obj11);
+      tmp111Result = closure_24(tmp2(19523), obj11);
     }
-    const items31 = [tmp110Result];
+    const items31 = [tmp111Result];
     const obj12 = { style: null, animatedProps: null, children: null };
     const items32 = [tmp.headerOuter, animatedStyle3];
     obj12.style = items32;
     obj12.animatedProps = animatedProps;
     const obj13 = { style: tmp.leftWrapper, pointerEvents: "box-none", children: null };
     const obj14 = { icon: null, accessibilityLabel: null, onPress: null, style: null };
-    const tmp2Result7 = tmp2(7104);
-    obj14.icon = tmp2(11612);
+    const tmp2Result7 = tmp2(7048);
+    obj14.icon = tmp2(11574);
     obj14.accessibilityLabel = stringResult;
-    obj14.onPress = tmp95;
+    obj14.onPress = tmp96;
     obj14.style = memo;
-    const items33 = [closure_24(tmp2(19457), obj14)];
+    const items33 = [closure_24(tmp2(19449), obj14)];
     const obj15 = { style: tmp.headerInner, children: null };
-    const tmp2Result8 = tmp2(19457);
-    const items34 = [closure_24(tmp2(19532), {})];
-    let tmp110Result7 = null;
+    const tmp2Result8 = tmp2(19449);
+    const items34 = [closure_24(tmp2(19525), {})];
+    let tmp111Result7 = null;
     if (isSecureFramesUIEnabled) {
-      tmp110Result7 = null;
-      if (flag) {
+      tmp111Result7 = null;
+      if (flag2) {
         const obj16 = { size: "xs", color: tmp2(575).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
-        tmp110Result7 = closure_24(tmp5(14964).ShieldLockIcon, obj16);
+        tmp111Result7 = closure_24(tmp5(14941).ShieldLockIcon, obj16);
       }
     }
-    items34[1] = tmp110Result7;
+    items34[1] = tmp111Result7;
     obj15.children = items34;
-    items33[1] = closure_25(tmp2(7104), obj15);
+    items33[1] = closure_25(tmp2(7048), obj15);
     obj13.children = items33;
     const items35 = [closure_25(tmp2Result7, obj13)];
     const obj17 = { style: tmp.rightWrapper, layout, children: null };
     const items36 = [closure_24(closure_36, {}), , , , , ,];
-    let tmp110Result8 = channelType === tmp5(1093).ChannelTypes.GUILD_STAGE_VOICE;
-    if (tmp110Result8) {
+    let tmp111Result8 = channelType === tmp5(1093).ChannelTypes.GUILD_STAGE_VOICE;
+    if (tmp111Result8) {
       const obj18 = { channelId };
-      tmp110Result8 = closure_24(MusicMuteButton, obj18);
+      tmp111Result8 = closure_24(MusicMuteButton, obj18);
     }
-    items36[1] = tmp110Result8;
-    const obj19 = { isConnectedToVoiceChannel: tmp110Result11, channelId };
-    items36[2] = closure_24(tmp2(19543), obj19);
-    let tmp110Result9 = null;
+    items36[1] = tmp111Result8;
+    const obj19 = { isConnectedToVoiceChannel: tmp111Result11, channelId };
+    items36[2] = closure_24(tmp2(19536), obj19);
+    let tmp111Result9 = null;
     if (null != stateFromStores) {
-      const obj20 = { channel: stateFromStores, inCall: tmp110Result11 };
-      tmp110Result9 = closure_24(tmp2(19552), obj20);
+      const obj20 = { channel: stateFromStores, inCall: tmp111Result11 };
+      tmp111Result9 = closure_24(tmp2(19545), obj20);
     }
-    items36[3] = tmp110Result9;
+    items36[3] = tmp111Result9;
     if (canInviteMembers) {
-      const obj21 = { icon: tmp2(11167), accessibilityLabel: null, onPress: null };
+      const obj21 = { icon: tmp2(11122), accessibilityLabel: null, onPress: null };
       let intl3 = tmp5(1113).intl;
       const obj22 = { channelName: stateFromStores1 };
       obj21.accessibilityLabel = intl3.formatToPlainString(tmp5(1113).t["dHHb/2"], obj22);
       obj21.onPress = inviteMembersCallback;
-      canInviteMembers = closure_24(tmp2(19457), obj21);
-      const tmp2Result10 = tmp2(19457);
+      canInviteMembers = closure_24(tmp2(19449), obj21);
+      const tmp2Result10 = tmp2(19449);
     }
     items36[4] = canInviteMembers;
-    let tmp110Result10 = null;
+    let tmp111Result10 = null;
     if (null != stateFromStores2) {
-      const obj23 = { icon: tmp2(19554), onPress: callback1, accessibilityLabel: stateFromStores2 };
-      tmp110Result10 = closure_24(tmp2(19457), obj23);
-      const tmp2Result11 = tmp2(19457);
+      const obj23 = { icon: tmp2(19547), onPress: callback1, accessibilityLabel: stateFromStores2 };
+      tmp111Result10 = closure_24(tmp2(19449), obj23);
+      const tmp2Result11 = tmp2(19449);
     }
-    items36[5] = tmp110Result10;
-    if (tmp110Result11) {
-      tmp110Result11 =
-        obj4.useConfig({ location: "VoicePanelHeader" }).treatment ===
-        tmp5(19526).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
+    items36[5] = tmp111Result10;
+    if (tmp111Result11) {
+      tmp111Result11 = flag;
     }
-    if (tmp110Result11) {
+    if (tmp111Result11) {
       const obj24 = { channelId };
-      tmp110Result11 = closure_24(tmp2(19555), obj24);
+      tmp111Result11 = closure_24(tmp2(19548), obj24);
     }
-    items36[6] = tmp110Result11;
+    items36[6] = tmp111Result11;
     obj17.children = items36;
     items35[1] = closure_25(tmp2(1652).View, obj17);
     obj12.children = items35;
@@ -1075,19 +1091,19 @@ export default noop.memo(function VoicePanelHeader(layout) {
     obj9.children = items30;
     obj8.children = closure_25(tmp2(1652).View, obj9);
     obj7.children = closure_24(tmp2(1652).View, obj8);
-    return closure_24(tmp5(5209).ThemeContextProvider, obj7);
+    return closure_24(tmp5(5229).ThemeContextProvider, obj7);
   } else if (isDockEnabled) {
     const obj25 = { style: null, pointerEvents: "none", children: null };
     const items37 = [StyleSheet.absoluteFill, animatedStyle2];
     obj25.style = items37;
-    animatedStyle2 = tmp2(18906);
+    animatedStyle2 = tmp2(18894);
     const obj26 = { baseColor: tmp2(575).colors.BLACK, minHeight: 0 };
     obj25.children = closure_24(animatedStyle2, obj26);
-    let tmp110Result12 = closure_24(tmp2(1652).View, obj25);
+    let tmp111Result12 = closure_24(tmp2(1652).View, obj25);
   } else {
     const obj27 = { baseColor: tmp2(575).colors.BLACK, minHeight: 0 };
-    tmp110Result12 = closure_24(tmp2(18906), obj27);
-    const tmp2Result12 = tmp2(18906);
+    tmp111Result12 = closure_24(tmp2(18894), obj27);
+    const tmp2Result12 = tmp2(18894);
   }
   const tmp5Result30 = require("useIsSecureFramesVerified");
 });

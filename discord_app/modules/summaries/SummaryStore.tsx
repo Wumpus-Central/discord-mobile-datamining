@@ -1,6 +1,6 @@
 // discord_app/modules/summaries/SummaryStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
@@ -29,7 +29,7 @@ function handleQuickSwitcherUpdate() {
   });
   closure_24 = found.map((record) => record.record.id);
 }
-const SUMMARY_POLL_INTERVAL = fn(10309).SUMMARY_POLL_INTERVAL;
+const SUMMARY_POLL_INTERVAL = fn(10261).SUMMARY_POLL_INTERVAL;
 let obj = { FETCHING: "fetching", OK: "ok", ERROR: "error" };
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -565,23 +565,23 @@ obj2 = {
   RECEIVE_CHANNEL_SUMMARIES_BULK(requestArgs) {
     ({ receivedAt: require, error: importDefault } = requestArgs);
     const channelIds = requestArgs.requestArgs.channelIds;
-    dependencyMap = _modDef12.toPairs(requestArgs.summaries).reduce((acc, item) => {
+    dependencyMap = applyDefault.toPairs(requestArgs.summaries).reduce((acc, item) => {
       const tmp = closure_7(item, 2);
       const first = tmp[0];
       obj = error(12);
       const chainResult = error(12).chain(
-        tmp[1].map((item) => lastReceivedAt(10311).createSummaryFromServer(item, first)),
+        tmp[1].map((item) => lastReceivedAt(10263).createSummaryFromServer(item, first)),
       );
       const sortByResult = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(10311).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(10263).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId));
       const reversed = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(10311).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(10263).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId))
         .takeRight(75)
         .reverse();
       const takeRightResult = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(10311).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(10263).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId))
         .takeRight(75);
       acc[first] = reversed.filter((item) => Object.keys(item).length > 0).value();
@@ -616,13 +616,13 @@ obj2 = {
   CONVERSATION_SUMMARY_UPDATE(channel_id) {
     channel_id = channel_id.channel_id;
     const timestamp = Date.now();
-    const chainResult = _modDef12.chain(channel_id.summaries);
-    const found = _modDef12
+    const chainResult = applyDefault.chain(channel_id.summaries);
+    const found = applyDefault
       .chain(channel_id.summaries)
       .sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id))
       .filter((item) => Object.keys(item).length > 0);
     const mapped = found.map((item) => Summary.createSummaryFromServer(item, channel_id));
-    const sortByResult = _modDef12
+    const sortByResult = applyDefault
       .chain(channel_id.summaries)
       .sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id));
     items = dependencyMap2[channel_id];
@@ -631,9 +631,9 @@ obj2 = {
       items = [];
     }
     const valueResult = mapped.reverse().value();
-    const tmp2Result = _modDef12;
-    const combined = _modDef12.chain(valueResult).concat(items);
-    const chainResult1 = _modDef12.chain(valueResult);
+    const tmp2Result = applyDefault;
+    const combined = applyDefault.chain(valueResult).concat(items);
+    const chainResult1 = applyDefault.chain(valueResult);
     const sortByResult1 = combined.sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId));
     const takeRightResult = combined
       .sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId))

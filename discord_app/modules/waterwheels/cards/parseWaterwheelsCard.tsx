@@ -1,12 +1,12 @@
 // discord_app/modules/waterwheels/cards/parseWaterwheelsCard.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import WaterwheelsCardTypes from "WaterwheelsCardTypes.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
 require = fn;
 function isRecord(arg0) {
-  return _mod12.isPlainObject(arg0);
+  return apply.isPlainObject(arg0);
 }
 function isActionValid(value) {
   if (obj.isPlainObject(value.value)) {
@@ -30,7 +30,7 @@ function isActionValid(value) {
   } else {
     return false;
   }
-  obj = _mod12;
+  obj = apply;
 }
 function mapLayout(layout) {
   const type = layout.type;
@@ -111,7 +111,7 @@ export function parseWaterwheelsCard(id) {
                 const actions = id.actions;
                 if (
                   actions.every((type) => {
-                    let isPlainObjectResult = _mod12.isPlainObject(type);
+                    let isPlainObjectResult = apply.isPlainObject(type);
                     if (isPlainObjectResult) {
                       const _Object = Object;
                       const values = Object.values(WaterwheelsCardTypes.WaterwheelsActionType);

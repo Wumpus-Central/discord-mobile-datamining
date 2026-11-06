@@ -4,7 +4,7 @@ import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
 import native from "../../../../../../discord_common/js/packages/design/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import _mod7433 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7380 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import RowButton from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
 import ThreadPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
 import ThreadListTableRowDefault from "ThreadListTableRow.tsx";
@@ -143,7 +143,7 @@ function getThreadListStateKey(arg0) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_7 = createStyles.createStyles({
   container: { flex: 1, flexGrow: 1 },
   center: { justifyContent: "center", alignItems: "center" },
@@ -340,7 +340,7 @@ export default function ThreadList(onCreateThreadPress) {
       }
       obj5.ListFooterComponentStyle = footer;
       obj5.contentContainerStyle = contentContainerStyle;
-      obj.children = jsx(_mod7433.AnimatedFlashList, {
+      obj.children = jsx(_mod7380.AnimatedFlashList, {
         data: memo,
         ListHeaderComponent: memo2,
         ListHeaderComponentStyle: closure_3.header,

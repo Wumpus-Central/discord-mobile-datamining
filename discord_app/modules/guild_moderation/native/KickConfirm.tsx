@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   iconLabelBlock: null,

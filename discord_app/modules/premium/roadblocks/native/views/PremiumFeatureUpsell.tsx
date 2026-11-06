@@ -4,10 +4,10 @@ import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
-import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05725_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05745_LinearGradient.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
+import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import RTCConnectionStore from "../../../../../stores/RTCConnectionStore.tsx";
 
@@ -172,10 +172,10 @@ const PremiumConstants = fn(1387);
   PremiumUpsellTypes: closure_9,
 } = PremiumConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Gradients = fn(7762).Gradients;
+const Gradients = fn(7716).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -232,8 +232,8 @@ let items = [
   {
     code: "(function animationEnterExit_PremiumFeatureUpsellTsx2(visible,cleanUp){let[withSpring,springStandard,_worklet_11223997992530_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationEnterExit_PremiumFeatureUpsellTsx2([_worklet_11223997992530_init_data,cleanUp]){const PremiumFeatureUpsellTsx1=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};PremiumFeatureUpsellTsx1.__closure=[cleanUp];PremiumFeatureUpsellTsx1.__workletHash=11223997992530;PremiumFeatureUpsellTsx1.__initData=_worklet_11223997992530_init_data;return PremiumFeatureUpsellTsx1;}([_worklet_11223997992530_init_data,cleanUp]))};})",
   },
-  fn(5773).withSpring,
-  fn(5774).springStandard,
+  fn(5791).withSpring,
+  fn(5792).springStandard,
   {
     code: "(function PremiumFeatureUpsellTsx1(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})",
   },

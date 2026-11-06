@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/RestrictedScheduleNotificationUtils.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import util from "../../intl/index.native.tsx";
-import _modDef2667 from "FamilyCenter.messages.js";
+import _modDef2664 from "FamilyCenter.messages.js";
 import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -21,11 +21,11 @@ function isOnlyDayLoss(label, label2) {
       } else {
         return false;
       }
-      tmp7Result = _modDef12;
+      tmp7Result = applyDefault;
     } else {
       return false;
     }
-    obj2 = _modDef12;
+    obj2 = applyDefault;
   }
 }
 let obj = {
@@ -38,12 +38,12 @@ let obj = {
 };
 let map = new Map();
 let obj2 = {
-  [Created]: _modDef2667["5V7eBH"],
-  [Enabled]: _modDef2667.iefrVg,
-  [Disabled]: _modDef2667["k+s9cM"],
-  [Updated]: _modDef2667.Nm6hZV,
-  [Multiple]: _modDef2667.Nm6hZV,
-  [Removed]: _modDef2667.jR6uOs,
+  [Created]: _modDef2664["5V7eBH"],
+  [Enabled]: _modDef2664.iefrVg,
+  [Disabled]: _modDef2664["k+s9cM"],
+  [Updated]: _modDef2664.Nm6hZV,
+  [Multiple]: _modDef2664.Nm6hZV,
+  [Removed]: _modDef2664.jR6uOs,
 };
 ({ Created, Enabled, Disabled, Updated, Multiple, Removed } = obj);
 let result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleNotificationUtils.tsx");
@@ -136,15 +136,15 @@ export function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toScheduleSnapshotResult)
         let tmp8 = value;
         let isEqualResult = value.label === tmp4.label;
         if (isEqualResult) {
-          let obj = _modDef12;
+          let obj = applyDefault;
           isEqualResult = obj.isEqual(tmp8.startTime, tmp6.startTime);
         }
         if (isEqualResult) {
-          obj2 = _modDef12;
+          obj2 = applyDefault;
           isEqualResult = obj2.isEqual(tmp8.endTime, tmp6.endTime);
         }
         if (isEqualResult) {
-          let obj3 = _modDef12;
+          let obj3 = applyDefault;
           let items2 = [];
           let arraySpreadResult = HermesBuiltin.arraySpread(tmp8.days, 0);
           let items3 = [];
@@ -223,7 +223,7 @@ export function getRestrictedScheduleNotificationSubtitle(rule) {
   }
   if (result == null) {
     const intl = util.intl;
-    result = intl.string(_modDef2667["8OlpoY"]);
+    result = intl.string(_modDef2664["8OlpoY"]);
   }
   return result;
 }

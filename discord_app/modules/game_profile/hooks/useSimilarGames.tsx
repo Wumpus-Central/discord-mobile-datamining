@@ -1,12 +1,11 @@
 // discord_app/modules/game_profile/hooks/useSimilarGames.tsx
-import useGameProfileObscured from "useGameProfileObscured.tsx";
-import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal.tsx";
 import useGameArtwork from "useGameArtwork.tsx";
+import GameProfileVisibilityUtils from "../GameProfileVisibilityUtils.tsx";
 import GameStore from "../../games/GameStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-fn(9609).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+fn(9555).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 let closure_5 = [];
 const similarGames = [];
 const size = fn(2);
@@ -17,7 +16,7 @@ export default function useSimilarGames(arg0) {
   if (tmp) {
     tmp = !set.has(arg0);
   }
-  const similarGameIds = data(9608).useSimilarGameIds(arg0, tmp);
+  const similarGameIds = data(9554).useSimilarGameIds(arg0, tmp);
   ({ data, isLoading, error } = similarGameIds);
   if (!tmp) {
     let tmp6 = closure_5;
@@ -25,9 +24,9 @@ export default function useSimilarGames(arg0) {
     tmp6 = data;
   }
   data = tmp6;
-  const obj = data(9608);
-  const games = data(7622).useGames(tmp6);
-  const tmp3Result = data(7622);
+  const obj = data(9554);
+  const games = data(7567).useGames(tmp6);
+  const tmp3Result = data(7567);
   items = [GameStore];
   const items1 = [tmp6];
   const stateFromStores = data(504).useStateFromStores(
@@ -47,15 +46,11 @@ export default function useSimilarGames(arg0) {
   }
   return obj3;
 }
-export function isShowableSimilarGame(game, nsfwAllowed) {
-  let gameIsAcceptableResult = useShouldOpenGameProfileModal.gameIsAcceptable(game);
-  if (gameIsAcceptableResult) {
-    gameIsAcceptableResult = !useGameProfileObscured.isGameProfileObscured(game, nsfwAllowed);
-    const tmpResult = useGameProfileObscured;
+export function isShowableSimilarGame(media, nsfwAllowed) {
+  let isGameDisplayableResult = GameProfileVisibilityUtils.isGameDisplayable(media, nsfwAllowed);
+  if (isGameDisplayableResult) {
+    isGameDisplayableResult = useGameArtwork.hasGameArtwork(media);
+    const tmpResult = useGameArtwork;
   }
-  if (gameIsAcceptableResult) {
-    gameIsAcceptableResult = useGameArtwork.hasGameArtwork(game);
-    const tmpResult2 = useGameArtwork;
-  }
-  return gameIsAcceptableResult;
+  return isGameDisplayableResult;
 }

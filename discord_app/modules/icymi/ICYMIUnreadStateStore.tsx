@@ -76,9 +76,6 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(DispatcherDefault, {
       continue;
     }
   },
-  CLEAR_ICYMI_READ_STATES: function handleClearReadStates() {
-    closure_3.readIdToTimestampMap = {};
-  },
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/ICYMIUnreadStateStore.tsx");

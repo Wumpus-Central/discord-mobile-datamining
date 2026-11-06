@@ -1,5 +1,5 @@
 // discord_app/stores/CallStore.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -180,7 +180,7 @@ calls = {
     if (recipients == null) {
       recipients = ["all"];
     }
-    enqueuedRings[channelId] = _modDef12.union(items, recipients);
+    enqueuedRings[channelId] = applyDefault.union(items, recipients);
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     if (null == channelId.channelId) {

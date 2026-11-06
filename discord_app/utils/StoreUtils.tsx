@@ -8,7 +8,6 @@ import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 import BillingInfoStore from "../stores/billing/BillingInfoStore.tsx";
 import PaymentSourceStore from "../stores/billing/PaymentSourceStore.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
-import allSettled_mod from "../../_runtime/06594_allSettled.js";
 
 require = fn;
 let closure_10 = async function _waitForSubscriptionsToBeFetched() {
@@ -42,7 +41,7 @@ let closure_10 = async function _waitForSubscriptionsToBeFetched() {
               if (BillingInfoStore.isSubscriptionFetching) {
                 c1 = 2;
                 c2 = 1;
-                const obj6 = { value: closure_128_0(closure_128_1[11]).sleep(50), done: false };
+                const obj6 = { value: closure_128_0(closure_128_1[10]).sleep(50), done: false };
                 return obj6;
               }
             } else {
@@ -228,7 +227,7 @@ let closure_12 = async function _httpGetWithCountryCodeQuery(arg0) {
             closure_132_0.query = obj7;
           }
         }
-        const HTTP = closure_133_0(closure_133_1[12]).HTTP;
+        const HTTP = closure_133_0(closure_133_1[11]).HTTP;
         c7 = 3;
         const obj8 = { value: HTTP.get(closure_132_0), done: true };
         return obj8;
@@ -241,22 +240,20 @@ let closure_12 = async function _httpGetWithCountryCodeQuery(arg0) {
 };
 const Constants = fn(1072);
 ({ Endpoints: metroImportDefault, OperatingSystems: closure_8 } = Constants);
-let allSettled = allSettled_mod;
-allSettled = allSettled.shim();
-const isMobile = fn(6090).isMobile;
-let tmp4 = !isMobile;
+const isMobile = fn(6110).isMobile;
+let tmp3 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(6090).isTablet;
+  tmp3 = !fn(6110).isTablet;
 }
-if (tmp4) {
-  tmp4 = -1 !== fn(6008).getChromeVersion();
-  let obj2 = fn(6008);
+if (tmp3) {
+  tmp3 = -1 !== fn(6027).getChromeVersion();
+  let obj = fn(6027);
 }
-let closure_9 = tmp4;
+let closure_9 = tmp3;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/StoreUtils.tsx");
 
-export const SUPPORTS_WEBP = tmp4;
+export const SUPPORTS_WEBP = tmp3;
 export function getAssetURL(applicationId, mimeType, size, mp4) {
   let str = mp4;
   if (null == mp4) {

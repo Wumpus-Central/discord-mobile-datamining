@@ -13,7 +13,7 @@ import GifProvider from "../modules/gif_picker/GifProvider.tsx";
 import GIFPickerUtils from "../utils/GIFPickerUtils.tsx";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
 import GIFPickerViewStore from "../stores/views/GIFPickerViewStore.tsx";
-import apply from "../../_runtime/metro/00012__.js";
+import apply from "../../_runtime/00012_apply.js";
 
 const require = globalThis.__r;
 

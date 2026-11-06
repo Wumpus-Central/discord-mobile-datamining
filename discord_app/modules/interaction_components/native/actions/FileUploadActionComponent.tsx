@@ -99,11 +99,11 @@ function File(upload) {
   return React6(TableRow.TableRow, obj);
 }
 const View = fn(17).View;
-const DraftType = fn(7846).DraftType;
+const DraftType = fn(7800).DraftType;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/actions/FileUploadActionComponent.tsx");
@@ -313,7 +313,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10715).hideMediaKeyboardActionSheet();
+        return InteractionModal(10667).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveUploadLimit,
       onSelectFiles(arg0) {
@@ -346,7 +346,7 @@ export default function FileUploadActionComponent(maxValues) {
           const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
           if (item.isIncluded) {
             const found = currentUploads.find((item) =>
-              InteractionModal(8363).doesImageMatchUpload(item.node.image, item),
+              InteractionModal(8309).doesImageMatchUpload(item.node.image, item),
             );
             if (null != found) {
               callback1(found.id);
@@ -367,9 +367,9 @@ export default function FileUploadActionComponent(maxValues) {
           obj.handleViewAllDialog(obj2);
         },
         onManageLimited() {
-          obj = InteractionModal(10714);
+          obj = InteractionModal(10666);
           const result = obj.handleLimitedPickerDialog({
-            onDismissKeyboard: InteractionModal(10715).hideMediaKeyboardActionSheet,
+            onDismissKeyboard: InteractionModal(10667).hideMediaKeyboardActionSheet,
             onRestoreKeyboard,
           });
         },

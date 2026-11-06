@@ -8,7 +8,7 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(5073).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_4 = fn(5100).GUILD_SELECTABLE_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjureLiveParts.tsx");
 

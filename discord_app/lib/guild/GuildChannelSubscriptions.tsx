@@ -1,5 +1,5 @@
 // discord_app/lib/guild/GuildChannelSubscriptions.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import privDefault from "../../../_runtime/01453_priv.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -46,7 +46,7 @@ prototype["subscribe"] = function subscribe(arg0, arg1, arg2) {
     tmp2 = null == value;
   }
   if (tmp2) {
-    const isEqualResult = _modDef12.isEqual(value, arg2);
+    const isEqualResult = applyDefault.isEqual(value, arg2);
     let flag2 = !isEqualResult;
     if (!isEqualResult) {
       const result = _getResult.set(arg1, arg2);

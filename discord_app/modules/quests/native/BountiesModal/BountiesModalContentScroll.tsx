@@ -1110,7 +1110,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp178 = null;
     if (tmp41) {
       const obj13 = { orbAmount: stateFromStores };
-      tmp178 = callback2(tmp5(17241).BountiesScrollRecapFooter, obj13);
+      tmp178 = callback2(tmp5(17229).BountiesScrollRecapFooter, obj13);
     }
     const obj14 = { value: memo3, children: null };
     const obj15 = { style: tmp.root, children: null };
@@ -1126,8 +1126,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       obj16.pointerEvents = str;
       const obj17 = {
         adContentId,
-        adCreativeType: tmp5(6926).AdCreativeType.BOUNTY,
-        questContent: tmp5(6924).QuestContent.BOUNTIES_END_INTERSTITIAL,
+        adCreativeType: tmp5(6868).AdCreativeType.BOUNTY,
+        questContent: tmp5(6866).QuestContent.BOUNTIES_END_INTERSTITIAL,
         overrideVisibility: first2,
         sourceQuestContent,
         children() {
@@ -1138,7 +1138,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
           });
         },
       };
-      obj16.children = tmp179(tmp5(14924).QuestContentImpressionTrackerNative, obj17);
+      obj16.children = tmp179(tmp5(14901).QuestContentImpressionTrackerNative, obj17);
       tmp179Result = tmp179(tmp2(1652).View, obj16);
     }
     const items70 = [tmp179Result, , , , ,];
@@ -1164,7 +1164,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
       scrollEnabled: !tmp17,
       contentContainerStyle: memo9,
     };
-    obj18.children = callback2(tmp5(7433).AnimatedFlashList, obj19);
+    obj18.children = callback2(tmp5(7380).AnimatedFlashList, obj19);
     items70[1] = callback2(tmp2(1652).View, obj18);
     let tmp179Result4 = null;
     if (null != tmp16) {
@@ -1182,7 +1182,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
         onOverlaySurfaceClick: obj32.onOverlaySurfaceClick,
         onCarouselScroll: obj32.onCarouselScroll,
       } = tmp16);
-      tmp179Result4 = tmp179(tmp2(17246), obj20);
+      tmp179Result4 = tmp179(tmp2(17234), obj20);
     }
     items70[2] = tmp179Result4;
     let tmp179Result5 = null;
@@ -1193,7 +1193,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
         const items71 = [memo13, animatedStyle4];
         obj21.style = items71;
         const obj22 = { colors: first1, style: absoluteFill.absoluteFill };
-        obj21.children = tmp179(tmp2(5725), obj22);
+        obj21.children = tmp179(tmp2(5745), obj22);
         tmp179Result5 = tmp179(tmp2(1652).View, obj21);
       }
     }
@@ -1209,7 +1209,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp179Result6 = null;
     if (tmp38) {
       const obj24 = { onPress: callback5 };
-      tmp179Result6 = tmp179(tmp2(17247), obj24);
+      tmp179Result6 = tmp179(tmp2(17235), obj24);
     }
     obj23.children = tmp179Result6;
     items70[4] = callback2(tmp2(1652).View, obj23);
@@ -1220,18 +1220,18 @@ function BountiesModalContentScrollInner(initialBountyId) {
       opacityStyle: animatedStyle3,
       children: tmp178,
     };
-    items70[5] = callback2(tmp2(17197), obj25);
+    items70[5] = callback2(tmp2(17185), obj25);
     obj15.children = items70;
     obj14.children = hasRecurringSwipeUpNux(questHomeBounties, obj15);
-    return callback2(tmp5(17206).BountyVideoEndAppStoreProvider, obj14);
+    return callback2(tmp5(17194).BountyVideoEndAppStoreProvider, obj14);
   }
   const tmp5Result22 = require("../../../../../_runtime/metro/01652__.js");
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const QuestConstants = fn(6919);
+const QuestConstants = fn(6861);
 ({ BOUNTY_ORB_AMOUNT: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(17196);
+const BountiesModalConstants = fn(17184);
 ({
   getBountyVideoEndAppStoreSheetHeight: closure_10,
   getBountyVideoEndPeekClipHeight: closure_11,
@@ -1240,7 +1240,7 @@ const BountiesModalConstants = fn(17196);
 } = BountiesModalConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, ComponentActions: closure_15 } = Constants);
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const PlatformUtils = fn(1357);
@@ -1263,7 +1263,7 @@ function isScrollEventInBounds(contentOffset) {
 }
 isScrollEventInBounds.__workletHash = 3579964422615;
 isScrollEventInBounds.__initData = tmp7;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_30 = createStyles.createStyles(() => {
   const obj = {
     root: { flex: 1 },

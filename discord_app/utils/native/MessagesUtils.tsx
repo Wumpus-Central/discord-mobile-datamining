@@ -228,46 +228,50 @@ export default {
                                         if (CodedLink.CodedLinkType.GAME_PROFILE !== type) {
                                           if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
                                             if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                                              if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
-                                                const gameOrganizationInvites = merged.gameOrganizationInvites;
-                                                const value12 = gameOrganizationInvites.get(code);
-                                                const gameOrganizationInvites2 = props.gameOrganizationInvites;
-                                                let tmp7 = gameOrganizationInvites2.get(code) !== value12;
-                                                if (!tmp7) {
-                                                  const pendingGameOrganizationJoinFlowCodes =
-                                                    props.pendingGameOrganizationJoinFlowCodes;
-                                                  const pendingGameOrganizationJoinFlowCodes2 =
-                                                    merged.pendingGameOrganizationJoinFlowCodes;
-                                                  const hasItem1 = pendingGameOrganizationJoinFlowCodes.has(code);
-                                                  let tmp9 =
-                                                    hasItem1 !== pendingGameOrganizationJoinFlowCodes2.has(code);
-                                                  if (!tmp9) {
-                                                    let state9;
-                                                    if (value12 != null) {
-                                                      state9 = value12.state;
+                                              if (CodedLink.CodedLinkType.CONJURE_PROJECT !== type) {
+                                                if (CodedLink.CodedLinkType.USER_WISHLIST !== type) {
+                                                  if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
+                                                    const gameOrganizationInvites = merged.gameOrganizationInvites;
+                                                    const value12 = gameOrganizationInvites.get(code);
+                                                    const gameOrganizationInvites2 = props.gameOrganizationInvites;
+                                                    let tmp7 = gameOrganizationInvites2.get(code) !== value12;
+                                                    if (!tmp7) {
+                                                      const pendingGameOrganizationJoinFlowCodes =
+                                                        props.pendingGameOrganizationJoinFlowCodes;
+                                                      const pendingGameOrganizationJoinFlowCodes2 =
+                                                        merged.pendingGameOrganizationJoinFlowCodes;
+                                                      const hasItem1 = pendingGameOrganizationJoinFlowCodes.has(code);
+                                                      let tmp9 =
+                                                        hasItem1 !== pendingGameOrganizationJoinFlowCodes2.has(code);
+                                                      if (!tmp9) {
+                                                        let state9;
+                                                        if (value12 != null) {
+                                                          state9 = value12.state;
+                                                        }
+                                                        let tmp13 = state9 === constants.RESOLVED;
+                                                        if (tmp13) {
+                                                          const joinedGameOrganizationGuildIds =
+                                                            props.joinedGameOrganizationGuildIds;
+                                                          const joinedGameOrganizationGuildIds2 =
+                                                            merged.joinedGameOrganizationGuildIds;
+                                                          const hasItem2 = joinedGameOrganizationGuildIds.includes(
+                                                            value12.guildId,
+                                                          );
+                                                          tmp13 =
+                                                            hasItem2 !==
+                                                            joinedGameOrganizationGuildIds2.includes(value12.guildId);
+                                                        }
+                                                        tmp9 = tmp13;
+                                                      }
+                                                      tmp7 = tmp9;
                                                     }
-                                                    let tmp13 = state9 === constants.RESOLVED;
-                                                    if (tmp13) {
-                                                      const joinedGameOrganizationGuildIds =
-                                                        props.joinedGameOrganizationGuildIds;
-                                                      const joinedGameOrganizationGuildIds2 =
-                                                        merged.joinedGameOrganizationGuildIds;
-                                                      const hasItem2 = joinedGameOrganizationGuildIds.includes(
-                                                        value12.guildId,
-                                                      );
-                                                      tmp13 =
-                                                        hasItem2 !==
-                                                        joinedGameOrganizationGuildIds2.includes(value12.guildId);
-                                                    }
-                                                    tmp9 = tmp13;
+                                                    return tmp7;
+                                                  } else {
+                                                    const _Error = Error;
+                                                    const _HermesInternal = HermesInternal;
+                                                    throw Error("Unknown coded link type: " + type);
                                                   }
-                                                  tmp7 = tmp9;
                                                 }
-                                                return tmp7;
-                                              } else {
-                                                const _Error = Error;
-                                                const _HermesInternal = HermesInternal;
-                                                throw Error("Unknown coded link type: " + type);
                                               }
                                             }
                                           }

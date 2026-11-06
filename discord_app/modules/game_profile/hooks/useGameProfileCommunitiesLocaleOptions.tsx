@@ -4,14 +4,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GameProfileCommunitiesLocaleFilterStore from "../GameProfileCommunitiesLocaleFilterStore.tsx";
 
 require = fn;
-let closure_4 = fn(9773).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9723).useGameProfileCommunitiesLocaleFilterExclusions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleOptions.tsx");
 
-export default function useGameProfileCommunitiesLocaleOptions(dependencyMap, arg1) {
-  closure_0 = dependencyMap;
+export default function useGameProfileCommunitiesLocaleOptions(stateFromStores, arg1) {
+  closure_0 = stateFromStores;
   closure_1 = arg1;
-  const tmp = memo(dependencyMap);
+  const tmp = memo(stateFromStores);
   noop = tmp;
   let tmp2 = GameProfileCommunitiesLocaleFilterStore((toggleLocale) => toggleLocale.toggleLocale);
   GameProfileCommunitiesLocaleFilterStore = tmp2;
@@ -58,7 +58,7 @@ export default function useGameProfileCommunitiesLocaleOptions(dependencyMap, ar
       return obj;
     });
   }, items1);
-  const items2 = [tmp2, dependencyMap];
+  const items2 = [tmp2, stateFromStores];
   obj.toggleLocale = noop.useCallback((arg0) => closure_3(closure_0, arg0), items2);
   return obj;
 }

@@ -13,7 +13,7 @@ const Constants = fn(1072);
 const jsx = fn(21).jsx;
 const WHITE = nativeDefault.unsafe_rawColors.WHITE;
 const PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   iconContainer: { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round },
 };

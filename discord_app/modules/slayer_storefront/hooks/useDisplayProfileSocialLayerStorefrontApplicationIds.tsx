@@ -1,5 +1,5 @@
 // discord_app/modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import UserProfileGameWidgetTypes from "../../user_profile/UserProfileGameWidgetTypes.tsx";
 import UserProfileApplicationWidgetTypes from "../../user_profile/UserProfileApplicationWidgetTypes.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -127,7 +127,7 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
           ),
         ),
       );
-      items = _mod12.uniq(items1);
+      items = apply.uniq(items1);
     }
     return items;
   }, items3);

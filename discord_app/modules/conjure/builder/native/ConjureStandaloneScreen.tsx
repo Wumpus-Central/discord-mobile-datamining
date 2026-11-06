@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/builder/native/ConjureStandaloneScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4024 from "../../intl/ConjureUntranslated.messages.js";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import ConjureActivity from "../../projects/ConjureActivity.tsx";
@@ -28,12 +28,12 @@ function ServerProjectsHeader(guild) {
   if (null == guild) {
     const obj = { title: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3995.uk6jhJ);
+    obj.title = intl.string(_modDef4024.uk6jhJ);
     let obj2 = obj;
   } else {
     obj2 = { title: guild.name, subtitle: null, icon: null };
     const intl2 = util.intl;
-    obj2.subtitle = intl2.string(_modDef3995.IF7qLs);
+    obj2.subtitle = intl2.string(_modDef4024.IF7qLs);
     const obj3 = { style: tmp.headerGuildIcon, children: null };
     const obj4 = { guild, size: GuildIcon.GuildIconSizes.XSMALL_20, selected: false };
     obj3.children = application_id(GuildIconDefault, obj4);
@@ -62,7 +62,7 @@ function GlobalChatScene(projectId) {
     },
     items1,
   );
-  return closure_12(fallbackGuildId(12278), { guildId, projectId, entryPoint, onExit });
+  return closure_12(fallbackGuildId(12245), { guildId, projectId, entryPoint, onExit });
 }
 function RoutedProjectOpener(guildId) {
   guildId = guildId.guildId;
@@ -114,7 +114,7 @@ const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = { headerGuildIcon: { flexShrink: 0, marginRight: nativeDefault.space.PX_8 } };
 let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -274,7 +274,7 @@ export default function ConjureStandaloneScreen(guildId) {
     if (closure_5) {
       const obj2 = { title: null };
       const intl = util.intl;
-      obj2.title = intl.string(_modDef3995.uk6jhJ);
+      obj2.title = intl.string(_modDef4024.uk6jhJ);
       let tmpResult = application_id(NavigatorHeader.NavigatorHeader, obj2);
     } else {
       const obj = { guild: stateFromStores };

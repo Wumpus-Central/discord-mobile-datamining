@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   scroll: { flex: 1 },
@@ -157,13 +157,13 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items9 = [closure_10(tmp2(19291), obj6), ,];
+      const items9 = [closure_10(tmp2(19283), obj6), ,];
       const obj7 = { channelId };
-      items9[1] = closure_10(tmp2(19293), obj7);
+      items9[1] = closure_10(tmp2(19285), obj7);
       let tmp19Result = null;
       if (isEmpty) {
         const obj8 = { style: tmp.emptyChat };
-        tmp19Result = closure_10(tmp2(14431), obj8);
+        tmp19Result = closure_10(tmp2(14408), obj8);
       }
       items9[2] = tmp19Result;
       obj5.children = items9;
@@ -174,7 +174,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       items11[1] = obj10;
       obj9.style = items11;
       const obj11 = { channel: stateFromStores };
-      obj9.children = closure_10(tmp2(14244), obj11);
+      obj9.children = closure_10(tmp2(14221), obj11);
       items10[1] = closure_10(isEmpty, obj9);
       obj4.children = items10;
       tmp14Result = closure_11(tmp15, obj4);

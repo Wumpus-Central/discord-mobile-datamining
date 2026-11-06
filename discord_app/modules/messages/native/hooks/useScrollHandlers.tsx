@@ -10,7 +10,7 @@ import DimensionActionCreatorsDefault from "../../../../actions/DimensionActionC
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useChatBottomManagerUIStore = fn(10082);
+const useChatBottomManagerUIStore = fn(10033);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const size = fn(2);

@@ -519,7 +519,7 @@ function fetchAgeVerificationMethodsSuspendedUser() {
   };
   return HTTP.post(request);
 }
-const VerificationVendorName = fn(6866).VerificationVendorName;
+const VerificationVendorName = fn(6808).VerificationVendorName;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationURLActionCreators.tsx");

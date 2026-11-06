@@ -1,7 +1,7 @@
 // discord_app/lib/ChannelMessages.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import Client from "../flow/Client.tsx";
 import MessageRecordUtils from "../modules/messages/MessageRecordUtils.tsx";
 import EnsureReceivedMessagesAddedInOrderExperimentDefault from "EnsureReceivedMessagesAddedInOrderExperiment.tsx";
@@ -111,13 +111,13 @@ prototype["clear"] = function clear() {
 };
 prototype["remove"] = function remove(arg0) {
   closure_0 = arg0;
-  this._messages = _modDef12.filter(this._messages, (id) => id.id !== closure_0);
+  this._messages = applyDefault.filter(this._messages, (id) => id.id !== closure_0);
   delete tmp[tmp2];
 };
 prototype["removeMany"] = function removeMany(arg0) {
   const self = this;
   closure_0 = arg0;
-  _modDef12.each(arg0, (arg0) => {
+  applyDefault.each(arg0, (arg0) => {
     delete tmp2[tmp];
   });
   const _messages = this._messages;
@@ -296,7 +296,7 @@ class ChannelMessages {
 }
 const prototype2 = ChannelMessages.prototype;
 ChannelMessages["forEach"] = function forEach(arg0) {
-  const item = _modDef12.forEach(ChannelMessages._channelMessages, arg0);
+  const item = applyDefault.forEach(ChannelMessages._channelMessages, arg0);
 };
 ChannelMessages["get"] = function get(arg0) {
   return ChannelMessages._channelMessages[arg0];
@@ -622,27 +622,27 @@ prototype2["forAll"] = function forAll(arg0, arg1) {
 };
 prototype2["findOldest"] = function findOldest(arg0) {
   const self = this;
-  let found = _modDef12.find(this._before._messages, arg0);
+  let found = applyDefault.find(this._before._messages, arg0);
   if (found == null) {
-    found = _modDef12.find(self._array, arg0);
-    const tmpResult = _modDef12;
+    found = applyDefault.find(self._array, arg0);
+    const tmpResult = applyDefault;
   }
   if (found == null) {
-    found = _modDef12.find(self._after._messages, arg0);
-    const tmpResult2 = _modDef12;
+    found = applyDefault.find(self._after._messages, arg0);
+    const tmpResult2 = applyDefault;
   }
   return found;
 };
 prototype2["findNewest"] = function findNewest(arg0) {
   const self = this;
-  let findLastResult = _modDef12.findLast(this._after._messages, arg0);
+  let findLastResult = applyDefault.findLast(this._after._messages, arg0);
   if (findLastResult == null) {
-    findLastResult = _modDef12.findLast(self._array, arg0);
-    const tmpResult = _modDef12;
+    findLastResult = applyDefault.findLast(self._array, arg0);
+    const tmpResult = applyDefault;
   }
   if (findLastResult == null) {
-    findLastResult = _modDef12.findLast(self._before._messages, arg0);
-    const tmpResult2 = _modDef12;
+    findLastResult = applyDefault.findLast(self._before._messages, arg0);
+    const tmpResult2 = applyDefault;
   }
   return findLastResult;
 };
@@ -1169,10 +1169,10 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(6201).createMessageRecord(item));
+    const mapped = items.map((item) => set(6221).createMessageRecord(item));
     const combined = found.concat(
       mapped,
-      items1.map((item) => set(6201).createMessageRecord(item)),
+      items1.map((item) => set(6221).createMessageRecord(item)),
     );
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
@@ -1575,7 +1575,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = id(5375).JumpType.ANIMATED;
+        jumpType = id(5395).JumpType.ANIMATED;
       }
       let obj2 = {
         ready: true,
@@ -1766,7 +1766,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  const result = reversed(6704).requireSortedDescending(messages);
+  const result = reversed(6646).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
@@ -1781,7 +1781,7 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   if (!stale) {
     cached = self.cached;
   }
-  const obj = reversed(6704);
+  const obj = reversed(6646);
   const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {

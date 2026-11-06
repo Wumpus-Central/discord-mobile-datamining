@@ -1,15 +1,14 @@
 // discord_app/modules/clips/ClipsManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
-import isClipsEnabled from "isClipsEnabled.tsx";
 import ClipsExperiment from "ClipsExperiment.tsx";
+import isClipsEnabled from "isClipsEnabled.tsx";
 import AutoclipsExperimentDefault from "AutoclipsExperiment.tsx";
 import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -24,24 +23,147 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(5920).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8359);
+function getCodecSurvey() {
+  const self = this;
+  const apply = closure_25.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_25 = async function _getCodecSurvey() {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          c4 = 1;
+          const _JSON = JSON;
+          mediaEngine = mediaEngine.getMediaEngine();
+          c6 = 2;
+          c7 = 1;
+          const obj4 = { value: mediaEngine.getCodecSurvey(), done: false };
+          return obj4;
+        }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_130_0 = closure_5;
+        closure_131_18.warn("Failed to get codec survey", closure_130_0);
+        c7 = 3;
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c7 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        c4 = 0;
+        c7 = 3;
+        const obj = { value: parse(value), done: true };
+        return obj;
+      }
+    } catch (tmp18) {
+      closure_5 = tmp18;
+      if (tmp4 === c4) {
+        c7 = tmp2;
+        throw tmp18;
+      } else {
+        c6 = tmp;
+      }
+    }
+  }
+};
+let closure_26 = async function _probeHardware() {
+  closure_4 = tmp2;
+  closure_3 = tmp5;
+  items = [getCodecSurvey(), getSystemAnalyticsInfo()];
+  await Promise.all(items);
+  closure_131_0 = value;
+  closure_131_1 = closure_132_4(closure_131_0, 2);
+  closure_131_2 = closure_131_1[0];
+  closure_131_3 = closure_131_1[1];
+  if (closure_131_3 != null) {
+    const gpus = closure_131_3.gpus;
+  }
+  c0 = gpus;
+  if (gpus == null) {
+    c0 = null;
+  }
+  closure_131_4 = c0;
+  importDefault = closure_131_4;
+  if (closure_131_4 == null) {
+    importDefault = [];
+  }
+  const mapped = importDefault.map((brand) => brand.brand);
+  closure_131_5 = mapped.filter((item) => {
+    let tmp = null != item;
+    if (tmp) {
+      tmp = "" !== item;
+    }
+    return tmp;
+  });
+  if (closure_131_2 != null) {
+    const prop = closure_131_2.available_video_decoders;
+  }
+  if (null == prop) {
+    return { classification: closure_132_17.UNKNOWN, gpuModels: closure_131_5, videoEncoders: [] };
+  }
+  const available_video_encoders = closure_131_2.available_video_encoders;
+  closure_2 = available_video_encoders;
+  if (available_video_encoders == null) {
+    closure_2 = [];
+  }
+  closure_131_6 = closure_2;
+  return {
+    classification: closure_132_0(closure_132_3[15]).classifyClipsHardware(closure_131_6, closure_131_4),
+    gpuModels: closure_131_5,
+    videoEncoders: closure_131_6,
+  };
+};
+const getSystemAnalyticsInfo = fn(5939).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8305);
 ({
-  WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_14,
-  WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_15,
-  CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_16,
-  CLIPS_DEFAULT_SETTINGS_VERSION: closure_17,
-  ClipsHardwareClassification: closure_18,
+  CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15,
+  CLIPS_DEFAULT_SETTINGS_VERSION: closure_16,
+  ClipsHardwareClassification: closure_17,
+  ClipsLogger: closure_18,
   CLIP_RUNTIME: closure_19,
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6853).StreamTypes;
-const Features = fn(5905).Features;
+const StreamTypes = fn(6795).StreamTypes;
+const Features = fn(5924).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
+    applyArgumentsResult.classifyHardwarePromise = null;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
         return applyArgumentsResult.handlePostConnectionOpen();
@@ -185,37 +307,23 @@ prototype["handleClipsAllowVoiceRecordingUpdate"] = function handleClipsAllowVoi
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  const self = this;
   if (obj.isClientClipsCapable(MediaEngineStore)) {
-    let result = self.applyNativeClipsSettings();
+    const self = this;
+    const result = this.applyNativeClipsSettings();
     if (tmpResult.areClipsAvailable()) {
       const clipsFromStorage = self.loadClipsFromStorage();
       self.maybeStartNtpClock();
-      const hardwareClassification = ClipsStore.getHardwareClassification();
-      if (null != hardwareClassification) {
-        if (null != ClipsStore.getHardwareClassificationForDecoupled()) {
-          if (ClipsStore.getHardwareClassificationVersion() === value2) {
-            const clipsDefaultSettingsDecision = self.getClipsDefaultSettingsDecision(hardwareClassification);
-            if (null != clipsDefaultSettingsDecision) {
-              const result1 = self.applyClipsDefaultSettings(hardwareClassification, clipsDefaultSettingsDecision);
-            }
-          }
-        }
-      }
-      const result2 = self.classifyHardwareAndTrack();
-      result2.then((result) => {
-        result = self.applyClipsDefaultSettings(result, self.getClipsDefaultSettingsDecision(result));
-      });
+      const result1 = self.updateHardwareClassification();
     }
     tmpResult = ClipsExperiment;
   }
   obj = ClipsExperiment;
 };
 prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
-  hardwareClassification,
+  classification,
   clipsDefaultSettingsDecision,
 ) {
-  closure_0 = hardwareClassification;
+  closure_0 = classification;
   closure_1 = clipsDefaultSettingsDecision;
   const self = this;
   return (async () => {
@@ -244,7 +352,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
             return obj3;
           } else {
             const decision = tmp2;
-            const classification = tmp3;
+            classification = tmp3;
             let clipsEnabled;
             let clipsEnabledSource;
             let enableAutoclipping;
@@ -271,7 +379,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(4968).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(4995).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -351,7 +459,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(4968).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(4995).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };
@@ -376,8 +484,10 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
     }
   })();
 };
-prototype["getClipsDefaultSettingsDecision"] = function getClipsDefaultSettingsDecision(hardwareClassification) {
-  if (ClipsStore.getClipsDefaultSettingsState().version >= closure_1_17) {
+prototype["getClipsDefaultSettingsDecision"] = function getClipsDefaultSettingsDecision(classification) {
+  if (classification === constants.UNKNOWN) {
+    return null;
+  } else if (ClipsStore.getClipsDefaultSettingsState().version >= value2) {
     return null;
   } else {
     const currentUser = UserStore.getCurrentUser();
@@ -390,28 +500,28 @@ prototype["getClipsDefaultSettingsDecision"] = function getClipsDefaultSettingsD
         if (nsfwAllowed == null) {
           nsfwAllowed = null;
         }
-        let tmp6 = tmp5;
+        let tmp7 = tmp6;
         if (true === nsfwAllowed) {
-          tmp6 = hardwareClassification === constants.MEETS_AUTO_ENABLE;
+          tmp7 = classification === tmp.MEETS_AUTO_ENABLE;
         }
         let allowDefaultOn = null;
         if (true === nsfwAllowed) {
           allowDefaultOn = ClipsDefaultOnGeoExperimentDefault.getConfig({
             location: "getClipsDefaultSettingsDecision",
           }).allowDefaultOn;
-          const tmpResult = ClipsDefaultOnGeoExperimentDefault;
+          const tmp2Result = ClipsDefaultOnGeoExperimentDefault;
         }
         const obj2 = {
-          clipsEnabled: tmp6,
+          clipsEnabled: tmp7,
           enableAutoclipping: null,
           allowVoiceRecording: null,
           nsfwAllowed: null,
           geoAllowed: null,
         };
-        if (tmp6) {
-          tmp6 = true === allowDefaultOn;
+        if (tmp7) {
+          tmp7 = true === allowDefaultOn;
         }
-        obj2.enableAutoclipping = tmp6;
+        obj2.enableAutoclipping = tmp7;
         obj2.allowVoiceRecording = true === allowDefaultOn;
         obj2.nsfwAllowed = nsfwAllowed;
         obj2.geoAllowed = allowDefaultOn;
@@ -443,7 +553,7 @@ prototype["handleRTCConnectionVideo"] = function handleRTCConnectionVideo(arg0) 
     tmpResult = ClipsExperiment;
   }
 };
-prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
+prototype["updateHardwareClassification"] = function updateHardwareClassification() {
   const self = this;
   return (async () => {
     if (c5 === 2) {
@@ -461,7 +571,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
     } else {
       try {
         c5 = 2;
-        if (0 === v2) {
+        if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -470,100 +580,213 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
+            closure_1 = tmp3;
             closure_0 = tmp7;
-            closure_128_0 = undefined;
-            let gpuModels;
-            let classification;
-            c3 = 1;
-            v2 = 2;
+            let hardwareClassification2;
+            let clipsDefaultSettingsDecision;
+            if (self.classifyHardwarePromise == null) {
+              tmp25.classifyHardwarePromise = self.classifyHardware();
+            }
+            c4 = 1;
             c5 = 1;
-            const obj4 = {
-              value: v2(async () => {
-                await closure_2_5();
-                closure_128_0 = value;
-                if (closure_128_0 != null) {
-                  const gpus = closure_128_0.gpus;
-                }
-                if (null != gpus) {
-                  const gpus1 = closure_128_0.gpus;
-                  const mapped = gpus1.map((brand) => brand.brand);
-                  closure_128_1 = mapped.filter((item) => {
-                    let tmp = null != item;
-                    if (tmp) {
-                      tmp = "" !== item;
-                    }
-                    return tmp;
-                  });
-                  return { gpuModels: closure_128_1, classification: tmp2.classifyHardware(closure_128_1) };
-                }
-                const processUtils = tmp3(closure_2_3[23]).processUtils;
-                await processUtils.getSystemInfo();
-                const gpus2 = value.gpus;
-                closure_128_2 = gpus2.map((model) => model.model);
-                return { gpuModels: closure_128_2, classification: tmp2.classifyHardware(closure_128_2) };
-              })(),
-              done: false,
-            };
+            const obj4 = { value: self.classifyHardwarePromise, done: false };
             return obj4;
           }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          c5 = 3;
-          const obj5 = { value: constants.UNKNOWN, done: true };
-          return obj5;
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
         } else {
-          closure_128_0 = value;
-          gpuModels = closure_128_0.gpuModels;
-          classification = closure_128_0.classification;
-          const obj8 = { classification, version, gpu_models: gpuModels, clip_runtime };
-          tmp3(c3[18]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj8);
-          c3 = 0;
+          if (1 === tmp7) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else {
+              hardwareClassification2 = hardwareClassification.getHardwareClassification();
+              if (null != hardwareClassification2) {
+                clipsDefaultSettingsDecision = closure_129_0.getClipsDefaultSettingsDecision(hardwareClassification2);
+                if (null != clipsDefaultSettingsDecision) {
+                  c3 = 1;
+                  c4 = 3;
+                  c5 = 1;
+                  const obj6 = {
+                    value: closure_129_0.applyClipsDefaultSettings(
+                      hardwareClassification2,
+                      clipsDefaultSettingsDecision,
+                    ),
+                    done: false,
+                  };
+                  return obj6;
+                }
+              }
+            }
+          } else {
+            if (2 === tmp7) {
+              c3 = 0;
+              closure_128_2 = closure_2;
+              logger.error("Failed to apply clips default settings", closure_128_2);
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              c3 = 0;
+            }
+            c3 = 0;
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
           c5 = 3;
-          const obj = { value: classification, done: true };
-          return obj;
         }
-      } catch (tmp12) {
-        closure_2 = tmp12;
+      } catch (tmp28) {
+        closure_2 = tmp28;
         if (tmp4 === c3) {
           c5 = tmp2;
-          throw tmp12;
+          throw tmp28;
         } else {
-          v2 = tmp;
+          c4 = tmp;
         }
       }
     }
   })();
 };
-prototype["classifyHardware"] = function classifyHardware(arr) {
-  if (obj.isWindows()) {
-    if (someResult) {
-      let MEETS_AUTO_ENABLE = constants.MEETS_AUTO_ENABLE;
-    } else {
-      MEETS_AUTO_ENABLE = tmp10 ? constants.MEETS_MINIMUM : constants.BELOW_MINIMUM;
+prototype["classifyHardware"] = function classifyHardware() {
+  const self = this;
+  return (async () => {
+    closure_1 = tmp3;
+    await self.classifyAndApplyHardware();
+    if (1 === tmp7) {
+      c3 = 0;
+      closure_128_0 = closure_2;
+      logger.error("Failed to classify hardware", closure_128_0);
+      c5 = 3;
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      c3 = 0;
     }
-    return MEETS_AUTO_ENABLE;
-  } else {
-    if (tmpResult.isMac()) {
-      const app = DiscordNativeDefault.app;
-      if ("arm64" === app.getAppArch()) {
-        let MEETS_MINIMUM = constants.MEETS_AUTO_ENABLE;
+    return value;
+  })();
+};
+prototype["classifyAndApplyHardware"] = function classifyAndApplyHardware() {
+  let self = this;
+  return (async () => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        MEETS_MINIMUM = constants.MEETS_MINIMUM;
+        return { value: "HermesInternal", done: null };
       }
     } else {
-      return constants.UNKNOWN;
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_1 = tmp5;
+            closure_0 = tmp2;
+            closure_128_0 = undefined;
+            let classification;
+            let gpuModels;
+            let videoEncoders;
+            let hardwareClassification;
+            c2 = 1;
+            c3 = 1;
+            const obj5 = {
+              value: (function probeHardware() {
+                self = this;
+                const apply = closure_1_26.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(),
+              done: false,
+            };
+            return obj5;
+          }
+        } else {
+          if (1 === tmp5) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              closure_128_0 = value;
+              classification = closure_128_0.classification;
+              gpuModels = closure_128_0.gpuModels;
+              videoEncoders = closure_128_0.videoEncoders;
+              hardwareClassification = ClipsStore.getHardwareClassification();
+              let tmp9 = classification === constants.UNKNOWN;
+              if (tmp9) {
+                tmp9 = null != hardwareClassification;
+              }
+              if (tmp9) {
+                tmp9 = hardwareClassification !== constants.UNKNOWN;
+              }
+              if (!tmp9) {
+                let tmp17 = classification === hardwareClassification;
+                if (tmp17) {
+                  tmp17 = ClipsStore.getHardwareClassificationVersion() === version;
+                }
+                tmp9 = tmp17;
+              }
+              if (!tmp9) {
+                const obj7 = {
+                  classification,
+                  version,
+                  gpu_models: gpuModels,
+                  video_encoders: videoEncoders,
+                  clip_runtime,
+                };
+                closure_1(c3[20]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj7);
+                c2 = 2;
+                c3 = 1;
+                const obj8 = {
+                  value: closure_129_0.applyClipsDefaultSettings(
+                    classification,
+                    closure_129_0.getClipsDefaultSettingsDecision(classification),
+                  ),
+                  done: false,
+                };
+                return obj8;
+              }
+            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
+          c3 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp35) {
+        c3 = tmp;
+        throw tmp35;
+      }
     }
-    tmpResult = PlatformUtils;
-  }
-  obj = PlatformUtils;
+  })();
 };
 prototype["applyUserVoiceRecording"] = function applyUserVoiceRecording(id) {
   if (obj.isClientClipsCapable(MediaEngineStore)) {

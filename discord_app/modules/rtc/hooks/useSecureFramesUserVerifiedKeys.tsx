@@ -1,5 +1,5 @@
 // discord_app/modules/rtc/hooks/useSecureFramesUserVerifiedKeys.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import VerifiedKeyStore from "../VerifiedKeyStore.tsx";
 
 const require = globalThis.__r;
@@ -12,12 +12,12 @@ export function useSecureFramesUserVerifiedKeys(userId) {
   _require = userId;
   items = [VerifiedKeyStore];
   return require("initialize").useStateFromStoresArray(items, () => {
-    const entries = _modDef12(VerifiedKeyStore.getUserVerifiedKeys(closure_0)).entries();
+    const entries = applyDefault(VerifiedKeyStore.getUserVerifiedKeys(closure_0)).entries();
     const mapped = entries.map((item) => {
       [tmp, tmp2] = item;
       return { verifiedKey, timestamp };
     });
-    const tmpResult = _modDef12(VerifiedKeyStore.getUserVerifiedKeys(closure_0));
+    const tmpResult = applyDefault(VerifiedKeyStore.getUserVerifiedKeys(closure_0));
     return mapped.sortBy((timestamp) => -1 * timestamp.timestamp).value();
   });
 }

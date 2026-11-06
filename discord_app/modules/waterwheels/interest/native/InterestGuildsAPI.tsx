@@ -19,7 +19,7 @@ export function createInterestGuildsResource() {
         url,
         query: { game_ids },
         retries: 0,
-        timeout: 5000,
+        timeout: 10000,
         rejectWithError: game_ids(1282).rejectWithMigratedError(),
       };
       await HTTP.get(request);

@@ -1,6 +1,6 @@
 // discord_app/modules/spotify/SpotifyStore.tsx
 import LoggerDefault from "../debug/Logger.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
@@ -30,7 +30,7 @@ function upsertAccount(accountId, accessToken) {
     const obj = Object.create(SpotifySocket.prototype);
     obj._requestedDisconnect = false;
     obj._requestedConnect = false;
-    obj.handleDeviceStateChange = _modDef12.throttle(() => {
+    obj.handleDeviceStateChange = applyDefault.throttle(() => {
       obj = SpotifyActionCreators;
       const devices = obj.getDevices(obj.accountId, obj.accessToken);
       ({ accountId, accessToken } = obj);
@@ -78,7 +78,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4987).Interval();
+    const interval = new obj(5014).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -529,7 +529,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(9057);
+const SpotifyConstants = fn(9003);
 ({
   getSpotifyResourceType: map1,
   isSpotifyParty: closure_14,
@@ -554,11 +554,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-const timeout = new fn(4987).Timeout();
-const timeout1 = new fn(4987).Timeout();
-const timeout2 = new fn(4987).Timeout();
-const timeout3 = new fn(4987).Timeout();
-const timeout4 = new fn(4987).Timeout();
+const timeout = new fn(5014).Timeout();
+const timeout1 = new fn(5014).Timeout();
+const timeout2 = new fn(5014).Timeout();
+const timeout3 = new fn(5014).Timeout();
+const timeout4 = new fn(5014).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -649,7 +649,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11881).SpotifyAPI;
+    const SpotifyAPI = self(11847).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1338,7 +1338,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6990);
+        obj9 = device(6932);
       }
       if (null != tmp10) {
         if (!tmp22) {

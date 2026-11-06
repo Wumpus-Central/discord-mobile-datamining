@@ -497,18 +497,18 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4978).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4984);
+const DCFEventTypes = fn(5005).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(5011);
 ({
   addCandidateContent: closure_8,
   removeCandidateContent: closure_9,
   isContentShown: closure_10,
   getCurrentlyShownCounts: closure_11,
 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(4976).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS];
+let items = [fn(5003).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");

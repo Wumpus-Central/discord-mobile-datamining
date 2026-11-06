@@ -6,13 +6,13 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-function isProjectOwner(item10010) {
+function isProjectOwner(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  return item10010.owner_user_id === id;
+  return project.owner_user_id === id;
 }
 const map = new Map();
 const map1 = new Map();
@@ -29,6 +29,7 @@ let closure_16 = 0;
 let c17 = false;
 let maxProjects = null;
 let c19 = false;
+let failureCode = null;
 let obj = null;
 const set4 = new Set();
 const map4 = new Map();
@@ -60,8 +61,8 @@ prototype["getRailProjects"] = function getRailProjects() {
 prototype["getUnloadedParticipatingProjectIds"] = function getUnloadedParticipatingProjectIds() {
   return Array.from(set2).filter((item) => !set.has(item));
 };
-prototype["isProjectRunning"] = function isProjectRunning(arg0) {
-  return set3.has(arg0);
+prototype["isProjectRunning"] = function isProjectRunning(id) {
+  return set3.has(id);
 };
 prototype["hasFetchedOwnedProjects"] = function hasFetchedOwnedProjects() {
   return c17;
@@ -80,6 +81,9 @@ prototype["getMaxProjects"] = function getMaxProjects() {
 };
 prototype["hasFetchedProjectLimit"] = function hasFetchedProjectLimit() {
   return c19;
+};
+prototype["getProjectLimitFailureCode"] = function getProjectLimitFailureCode() {
+  return failureCode;
 };
 prototype["getProject"] = function getProject(arg0) {
   value = map.get(arg0);
@@ -228,6 +232,7 @@ obj = {
     error = "unattempted";
     maxProjects = null;
     c19 = false;
+    failureCode = null;
   },
   CONJURE_PROJECTS_FETCH_START: function handleProjectsFetchStart(guildId) {
     guildId = guildId.guildId;
@@ -382,6 +387,7 @@ obj = {
   CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function handleProjectLimitFetchSettle(maxProjects) {
     maxProjects = maxProjects.maxProjects;
     c19 = true;
+    failureCode = maxProjects.failureCode;
   },
   CONJURE_PROJECT_CREATE_SUCCESS: function handleProjectCreateSuccess(project) {
     project = project.project;
@@ -486,19 +492,19 @@ export function canPublishProject(project) {
   }
   return tmp3;
 }
-export function canRemixProject(project) {
+export function canRemixProject(owner_user_id) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let isProjectPublicResult = project.owner_user_id === id;
+  let isProjectPublicResult = owner_user_id.owner_user_id === id;
   if (!isProjectPublicResult) {
-    isProjectPublicResult = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
-    const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
+    isProjectPublicResult = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
+    const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
   }
   if (!isProjectPublicResult) {
-    isProjectPublicResult = ConjureProjectTypes.isProjectPublic(project);
+    isProjectPublicResult = ConjureProjectTypes.isProjectPublic(owner_user_id);
   }
   return isProjectPublicResult;
 }

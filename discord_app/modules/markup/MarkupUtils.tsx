@@ -4,7 +4,7 @@ import combineMarkupRulesDefault from "combineMarkupRules.tsx";
 import MarkupRulesDefault from "MarkupRules.tsx";
 import MarkupParserAll from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
 import reactParserFor from "native/reactParserFor.tsx";
-import apply_mod from "../../../_runtime/metro/00012__.js";
+import apply_mod from "../../../_runtime/00012_apply.js";
 
 const MarkupReactRulesDefault = MarkupReactRules;
 
@@ -194,12 +194,13 @@ let obj3 = {
   defaultReactRuleOptions,
 };
 Object.defineProperty(obj3, "defaultRules", { get: () => closure_6(), set: undefined });
+Object.defineProperty(obj3, "topicRules", { get: () => closure_9(), set: undefined });
 Object.defineProperty(obj3, "guildEventRules", { get: () => closure_16(), set: undefined });
 Object.defineProperty(obj3, "guildEventLocationRules", { get: () => closure_17(), set: undefined });
 Object.defineProperty(obj3, "notifCenterV2MessagePreviewRules", { get: () => closure_19(), set: undefined });
 obj3.lockscreenWidgetMessageRules = { text: MarkupRulesDefault.RULES.text };
 obj3.astParserFor = MarkupParserAll.astParserFor;
-obj3.reactParserFor = fn(15924).default;
+obj3.reactParserFor = fn(15918).default;
 obj3.parse = function parse() {
   items = [...arguments];
   return closure_20()(...items);

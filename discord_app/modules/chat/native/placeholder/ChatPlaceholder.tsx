@@ -1,14 +1,21 @@
 // discord_app/modules/chat/native/placeholder/ChatPlaceholder.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import useKeyboardAnimatedValueDefault from "../../../keyboard/native/useKeyboardAnimatedValue.tsx";
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles.tsx";
 import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight.tsx";
 import ChatPlaceholderRowDefault from "ChatPlaceholderRow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-let closure_3 = fn(10082).useChatInputContainerHeight;
+const require = fn;
+let closure_4 = fn(10033).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = { placeholder: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -16,29 +23,43 @@ obj3.paddingBottom = nativeDefault.space.PX_24;
 obj3.flexDirection = "column-reverse";
 obj3.overflow = "hidden";
 obj.placeholder = obj3;
-let closure_5 = createStyles.createStyles(obj);
+let closure_6 = createStyles.createStyles(obj);
+let closure_7 = {
+  code: "(function ChatPlaceholderTsx1(){let[chatInputContainerHeight,animatedContainerBottomInset]=this.__closure;return{marginBottom:chatInputContainerHeight+animatedContainerBottomInset.get()};})",
+};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholder.tsx");
 
 export default noop.memo(function ChatPlaceholder(screenIndex) {
-  let height;
-  c3 = undefined;
-  let tmp2 = c3(screenIndex.screenIndex);
-  importDefault = tmp2;
-  height = require("useWindowDimensions")().height;
-  const rect = require("useSafeAreaInsets")();
-  const insets = require("useSafeAreaInsetsKeyboardAware")({
-    isKeyboardAwareOnAndroid: false,
-    includeKeyboardHeight: true,
-  }).insets;
-  let diff = insets.bottom - rect.bottom;
-  let sum = rect.top + insets.bottom;
-  noop = diff;
-  c3 = sum;
-  items = [tmp2, diff];
-  const memo = noop.useMemo(() => ({ marginBottom: closure_0 + c2 }), items);
-  importDefault = noop.useRef([]);
-  const callback = noop.useCallback((arg0) => {
+  let callback;
+  let tmp2 = closure_4(screenIndex.screenIndex);
+  const height = useWindowDimensionsDefault().height;
+  const rect = useSafeAreaInsetsDefault();
+  let sum = rect.top + rect.bottom;
+  dependencyMap = sum;
+  let diff =
+    useSafeAreaInsetsKeyboardAwareDefault({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets
+      .bottom - rect.bottom;
+  const tmp = closure_6();
+  const tmp7 = useKeyboardAnimatedValueDefault(diff);
+  items = [closure_7, tmp2, tmp7];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp8, tmp9, tmp10] = items;
+  class ChatPlaceholderTsx1 {
+    constructor() {
+      obj = { marginBottom: closure_0 + closure_1.get() };
+      return obj;
+    }
+  }
+  const items1 = [tmp9, tmp10];
+  ChatPlaceholderTsx1.__closure = items1;
+  ChatPlaceholderTsx1.__workletHash = 13868441581206;
+  ChatPlaceholderTsx1.__initData = tmp8;
+  _require = undefined;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ChatPlaceholderTsx1);
+  _require = callback.useRef([]);
+  callback = callback.useCallback((arg0) => {
     let tmp2 = ref.current[arg0];
     if (null == tmp2) {
       const _Math = Math;
@@ -49,9 +70,9 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
     }
     return tmp2;
   }, []);
-  const items1 = [height, sum, tmp2, callback];
-  const tmp = closure_5();
-  const memo1 = noop.useMemo(() => {
+  const items2 = [height, sum, tmp2, callback];
+  let obj = require("../../../../../_runtime/metro/01652__.js");
+  const memo = callback.useMemo(() => {
     let diff;
     items = [];
     let num = 0;
@@ -63,16 +84,16 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
       let sum = num + 1;
       let arr = items.push(jsx(ChatPlaceholderRowDefault, { lines: tmp2 }, num));
       num = sum;
-      diff = height - closure_0 - c3;
+      diff = c1 - closure_0 - c2;
     } while (num2 < diff);
     return items;
-  }, items1);
-  let obj = { style: null, pointerEvents: "none", children: memo1 };
-  const items2 = [
+  }, items2);
+  const obj2 = { style: null, pointerEvents: "none", children: memo };
+  const items3 = [
     tmp.placeholder,
-    memo,
-    require("useChatPlaceholderAnimatedStyles")({ visible: true, animated: true }),
+    animatedStyle,
+    useChatPlaceholderAnimatedStylesDefault({ visible: true, animated: true }),
   ];
-  obj.style = items2;
-  return callback(require("../../../../../_runtime/metro/01652__.js").View, obj);
+  obj2.style = items3;
+  return jsx(_modDef1652.View, { style: null, pointerEvents: "none", children: memo });
 });

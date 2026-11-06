@@ -12,7 +12,7 @@ import StageInstanceStore from "StageInstanceStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(5010).isGuildOwner;
+const isGuildOwner = fn(5037).isGuildOwner;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
@@ -145,6 +145,18 @@ export function useCanUpdateStageChannelModerators(id) {
       }
       return canResult1;
     },
+    items1,
+  );
+}
+export function useCanToggleRequestToSpeak(channel) {
+  _require = channel;
+  items = [PermissionStore];
+  const items1 = [channel];
+  return require("initialize").useStateFromStores(
+    items,
+    () =>
+      PermissionStore.can(constants2.MANAGE_CHANNELS, closure_0) ||
+      PermissionStore.can(constants2.MANAGE_ROLES, closure_0),
     items1,
   );
 }

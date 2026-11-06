@@ -5,7 +5,7 @@ import useSecureFramesVerifiedUsers from "../../../rtc/hooks/useSecureFramesVeri
 import SecureFramesPersistedStore from "../../../rtc/SecureFramesPersistedStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -16,7 +16,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
   },
-  parent: fn(8578).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8524).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: function useSecureFramesPersistentCodesValue() {
     items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());

@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
-import NitroFileUploadExperiments from "../../experiments/NitroFileUploadExperiments.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import NitroFileUploadExperiments from "../../experiments/NitroFileUploadExperiments.tsx";
 import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   contentContainer: {
     paddingHorizontal: 36,

@@ -7,7 +7,6 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore.tsx";
-import allSettled_mod from "../../../../_runtime/06594_allSettled.js";
 
 const require = globalThis.__r;
 
@@ -77,7 +76,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
           let item = importDefault.forEach((ref_id) => {
             channel = channel.getChannel(ref_id.ref_id);
             if (null != channel) {
-              const obj = closure_1(c3[12]);
+              const obj = closure_1(c3[11]);
               closure_1_2.push(
                 obj.createRoleSubscriptionTemplateChannel(closure_1_0, channel.name, channel.type, channel.topic),
               );
@@ -138,11 +137,9 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(17489).useEditStateStore;
+const useEditStateStore = fn(17478).useEditStateStore;
 const GuildFeatures = fn(1072).GuildFeatures;
-const ChannelFlags = fn(4999).ChannelFlags;
-let allSettled = allSettled_mod;
-allSettled = allSettled.shim();
+const ChannelFlags = fn(5026).ChannelFlags;
 let closure_12 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting(

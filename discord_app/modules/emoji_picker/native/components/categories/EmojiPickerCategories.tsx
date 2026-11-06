@@ -12,7 +12,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const EmojiCategoryTypes = fn(6937).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6879).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -23,7 +23,7 @@ const Constants = fn(1072);
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED },
@@ -392,7 +392,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       onPress: callback4,
       style: tmp.item,
     };
-    tmp37Result = tmp37(tmp34(10274), obj7);
+    tmp37Result = tmp37(tmp34(10226), obj7);
   }
   items18[1] = tmp37Result;
   let tmp37Result2 = null;
@@ -400,7 +400,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const obj8 = { style: null, iconStyle: null, onBackspace: null };
     ({ item: obj10.style, keyboardItem: obj10.iconStyle } = tmp);
     obj8.onBackspace = onBackspace;
-    tmp37Result2 = tmp37(tmp34(10276), obj8);
+    tmp37Result2 = tmp37(tmp34(10228), obj8);
   }
   items18[2] = tmp37Result2;
   obj4.children = callback(ref, { children: items18 });

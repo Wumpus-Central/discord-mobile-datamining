@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import native from "../../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05725_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -16,10 +16,10 @@ import TableRadioRow from "../../../../design/components/TableRow/native/TableRa
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import _modDef16248 from "../../../../../_runtime/metro/16248__.js";
+import _modDef16249 from "../../../../../_runtime/metro/16249__.js";
+import _modDef16250 from "../../../../../_runtime/metro/16250__.js";
 import _modDef16251 from "../../../../../_runtime/metro/16251__.js";
-import _modDef16252 from "../../../../../_runtime/metro/16252__.js";
-import _modDef16253 from "../../../../../_runtime/metro/16253__.js";
-import _modDef16254 from "../../../../../_runtime/metro/16254__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
@@ -58,10 +58,10 @@ export default function UserSettingsDesignSystemTableRow() {
   const callback = noop.useCallback((arg0) => {
     require(arg0);
   }, []);
-  const obj2 = { children: null };
   const callback1 = noop.useCallback((arg0) => {
     importDefault(arg0);
   }, []);
+  const obj2 = { children: null };
   const obj3 = {
     spacing: 24,
     style: { paddingTop: rect.top, paddingBottom: rect.bottom, paddingHorizontal: 12 },
@@ -133,7 +133,7 @@ export default function UserSettingsDesignSystemTableRow() {
   obj19.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
   items1[6] = closure_11(TableRow.TableRow, obj19);
   obj4.children = items1;
-  const items3 = [closure_12(TableRowGroup.TableRowGroup, obj4), , , , , ,];
+  const items3 = [closure_12(TableRowGroup.TableRowGroup, obj4), , , , , , ,];
   const obj21 = { title: "Table Row Section", hasIcons: true, children: null };
   const obj22 = { label: stateFromStores.globalName, subLabel: stateFromStores.username, icon: null };
   const obj20 = { IconComponent: SettingsIcon.SettingsIcon };
@@ -269,8 +269,59 @@ export default function UserSettingsDesignSystemTableRow() {
   ];
   obj49.children = items6;
   items3[3] = closure_12(TableRowGroup.TableRowGroup, obj49);
-  const obj53 = { title: "Radio Group", hasIcons: false, defaultValue: "option1", onChange: onPress, children: null };
-  const items7 = [
+  const obj53 = { title: "Badges", hasIcons: true, children: null };
+  const obj54 = { icon: null, label: "Next to an arrow", badge: "new", arrow: true, onPress: null };
+  const obj48 = { IconComponent: SettingsIcon.SettingsIcon };
+  const obj50 = { label: "First Item", subLabel: "Here is an item", onPress };
+  const obj51 = { label: "Second Item", subLabel: "Here is another item", onPress };
+  const obj52 = { label: "Third Item", subLabel: "Here is yet another item", onPress };
+  obj54.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
+  obj54.onPress = onPress;
+  const items7 = [closure_11(TableRow.TableRow, obj54), , , ,];
+  const obj56 = {
+    icon: null,
+    label: "Next to trailing text",
+    badge: "beta",
+    trailing: null,
+    arrow: true,
+    onPress: null,
+  };
+  const obj55 = { IconComponent: SettingsIcon.SettingsIcon };
+  obj56.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
+  obj56.trailing = closure_11(TableRow.TableRow.TrailingText, { text: "English (US)" });
+  obj56.onPress = onPress;
+  items7[1] = closure_11(TableRow.TableRow, obj56);
+  const obj58 = { icon: null, label: "Next to long trailing text", badge: null, trailing: null, onPress: null };
+  const obj57 = { IconComponent: SettingsIcon.SettingsIcon };
+  obj58.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
+  obj58.badge = { type: "new", variant: "primary" };
+  obj58.trailing = closure_11(TableRow.TableRow.TrailingText, { text: "thisisareallylongusernamewhichshouldtruncate" });
+  obj58.onPress = onPress;
+  items7[2] = closure_11(TableRow.TableRow, obj58);
+  const obj60 = {
+    icon: null,
+    label: "Next to a checkbox",
+    subLabel: "The badge sits before the checkbox",
+    badge: "early_access",
+    checked: null,
+    onPress: null,
+  };
+  const obj59 = { IconComponent: SettingsIcon.SettingsIcon };
+  obj60.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
+  obj60.checked = tmp6;
+  obj60.onPress = callback1;
+  items7[3] = closure_11(TableCheckboxRow.TableCheckboxRow, obj60);
+  const obj62 = { icon: null, label: "Next to a switch", badge: null, value: null, onValueChange: null };
+  const obj61 = { IconComponent: SettingsIcon.SettingsIcon };
+  obj62.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
+  obj62.badge = { type: { text: "Custom" }, variant: "expressive" };
+  obj62.value = tmp4;
+  obj62.onValueChange = callback;
+  items7[4] = closure_11(TableSwitchRow.TableSwitchRow, obj62);
+  obj53.children = items7;
+  items3[4] = closure_12(TableRowGroup.TableRowGroup, obj53);
+  const obj64 = { title: "Radio Group", hasIcons: false, defaultValue: "option1", onChange: onPress, children: null };
+  const items8 = [
     closure_11(TableRadioRow.TableRadioRow, { label: "First Item", subLabel: "Here is an item", value: "option1" }),
     closure_11(TableRadioRow.TableRadioRow, {
       label: "Second Item",
@@ -283,61 +334,64 @@ export default function UserSettingsDesignSystemTableRow() {
       value: "option3",
     }),
     closure_11(TableRadioRow.TableRadioRow, {
+      label: "Item with a Badge",
+      subLabel: "The badge sits before the radio",
+      value: "option5",
+      badge: { type: "new", variant: "primary" },
+    }),
+    closure_11(TableRadioRow.TableRadioRow, {
       label: "Disabled Item",
       subLabel: "This should not be selectable",
       value: "option4",
       disabled: true,
     }),
   ];
-  obj53.children = items7;
-  items3[4] = closure_12(TableRadioGroup.TableRadioGroup, obj53);
-  const obj54 = { title: "Online Status", hasIcons: true, defaultValue: "option1", onChange: onPress, children: null };
-  const obj55 = { icon: null, label: "Online", value: "option1" };
-  const obj48 = { IconComponent: SettingsIcon.SettingsIcon };
-  const obj50 = { label: "First Item", subLabel: "Here is an item", onPress };
-  const obj51 = { label: "Second Item", subLabel: "Here is another item", onPress };
-  const obj52 = { label: "Third Item", subLabel: "Here is yet another item", onPress };
-  obj55.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef16254 });
-  const items8 = [closure_11(TableRadioRow.TableRadioRow, obj55), , ,];
-  const obj57 = { icon: null, label: "Idle", value: "option2" };
-  const obj56 = { variant: "text-status-online", source: _modDef16254 };
-  obj57.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef16251 });
-  items8[1] = closure_11(TableRadioRow.TableRadioRow, obj57);
-  const obj59 = { icon: null, label: "Do Not Disturb", value: "option3" };
-  const obj58 = { variant: "text-status-idle", source: _modDef16251 };
-  obj59.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef16252 });
-  items8[2] = closure_11(TableRadioRow.TableRadioRow, obj59);
-  const obj61 = { icon: null, label: "Invisible", value: "option4" };
-  const obj60 = { variant: "text-status-dnd", source: _modDef16252 };
-  obj61.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef16253 });
-  items8[3] = closure_11(TableRadioRow.TableRadioRow, obj61);
-  obj54.children = items8;
-  items3[5] = closure_12(TableRadioGroup.TableRadioGroup, obj54);
-  const obj63 = { spacing: 12, children: null };
-  const items9 = [closure_11(Text_Text.Text, { variant: "heading-xs/semibold", children: "Row buttons" }), , ,];
-  const obj64 = { icon: null, label: "Boost your server", onPress: null };
-  const obj62 = { variant: "text-status-offline", source: _modDef16253 };
-  obj64.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
-  obj64.onPress = onPress;
-  items9[1] = closure_11(RowButton.RowButton, obj64);
-  items9[2] = closure_11(RowButton.RowButton, { label: "Disabled row button", onPress, disabled: true, arrow: false });
-  const obj67 = {
+  obj64.children = items8;
+  items3[5] = closure_12(TableRadioGroup.TableRadioGroup, obj64);
+  const obj65 = { title: "Online Status", hasIcons: true, defaultValue: "option1", onChange: onPress, children: null };
+  const obj66 = { icon: null, label: "Online", value: "option1" };
+  const obj63 = { IconComponent: SettingsIcon.SettingsIcon };
+  obj66.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef16251 });
+  const items9 = [closure_11(TableRadioRow.TableRadioRow, obj66), , ,];
+  const obj68 = { icon: null, label: "Idle", value: "option2" };
+  const obj67 = { variant: "text-status-online", source: _modDef16251 };
+  obj68.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef16248 });
+  items9[1] = closure_11(TableRadioRow.TableRadioRow, obj68);
+  const obj70 = { icon: null, label: "Do Not Disturb", value: "option3" };
+  const obj69 = { variant: "text-status-idle", source: _modDef16248 };
+  obj70.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef16249 });
+  items9[2] = closure_11(TableRadioRow.TableRadioRow, obj70);
+  const obj72 = { icon: null, label: "Invisible", value: "option4" };
+  const obj71 = { variant: "text-status-dnd", source: _modDef16249 };
+  obj72.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef16250 });
+  items9[3] = closure_11(TableRadioRow.TableRadioRow, obj72);
+  obj65.children = items9;
+  items3[6] = closure_12(TableRadioGroup.TableRadioGroup, obj65);
+  const obj74 = { spacing: 12, children: null };
+  const items10 = [closure_11(Text_Text.Text, { variant: "heading-xs/semibold", children: "Row buttons" }), , ,];
+  const obj75 = { icon: null, label: "Boost your server", onPress: null };
+  const obj73 = { variant: "text-status-offline", source: _modDef16250 };
+  obj75.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
+  obj75.onPress = onPress;
+  items10[1] = closure_11(RowButton.RowButton, obj75);
+  items10[2] = closure_11(RowButton.RowButton, { label: "Disabled row button", onPress, disabled: true, arrow: false });
+  const obj78 = {
     style: { padding: 8 },
     start: { x: 0, y: 0 },
     end: { x: 1, y: 0 },
     colors: ["red", "orange", "yellow", "green", "teal", "blue", "purple"],
     children: null,
   };
-  const obj65 = { IconComponent: SettingsIcon.SettingsIcon };
-  const obj66 = { label: "Disabled row button", onPress, disabled: true, arrow: false };
-  const obj68 = { icon: null, experimental_withBlurBackground: true, label: "Row Button", onPress: null };
+  const obj76 = { IconComponent: SettingsIcon.SettingsIcon };
+  const obj77 = { label: "Disabled row button", onPress, disabled: true, arrow: false };
+  const obj79 = { icon: null, experimental_withBlurBackground: true, label: "Row Button", onPress: null };
   const tmp10 = LinearGradientDefault;
-  obj68.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon, variant: "translucent" });
-  obj68.onPress = onPress;
-  obj67.children = closure_11(RowButton.RowButton, obj68);
-  items9[3] = closure_11(tmp10, obj67);
-  obj63.children = items9;
-  items3[6] = closure_12(Stack_Stack.Stack, obj63);
+  obj79.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon, variant: "translucent" });
+  obj79.onPress = onPress;
+  obj78.children = closure_11(RowButton.RowButton, obj79);
+  items10[3] = closure_11(tmp10, obj78);
+  obj74.children = items10;
+  items3[7] = closure_12(Stack_Stack.Stack, obj74);
   obj3.children = items3;
   obj2.children = closure_12(Stack_Stack.Stack, obj3);
   return closure_11(closure_6, obj2);

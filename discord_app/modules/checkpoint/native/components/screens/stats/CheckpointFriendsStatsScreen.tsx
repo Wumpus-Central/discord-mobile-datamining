@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/screens/stats/CheckpointFriendsStatsScreen.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3187 from "../../../../Checkpoint.messages.js";
+import _modDef3216 from "../../../../Checkpoint.messages.js";
 import FriendsIcon from "../../../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import AnalyticsLocationDefault from "../../../../../app_analytics/AnalyticsLocation.tsx";
 import ChatIcon from "../../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
@@ -32,12 +32,12 @@ function FriendsHeader(children) {
   const intl = util.intl;
   const obj4 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const tmp2 = CheckpointTextDefault;
-  obj5.children = intl.string(_modDef3187.ZQakPR).toLocaleUpperCase();
+  obj5.children = intl.string(_modDef3216.ZQakPR).toLocaleUpperCase();
   items[1] = state(tmp2, obj5);
   obj3.children = items;
   const items1 = [gesture(metroImportDefault, obj3)];
   const obj6 = { children: null };
-  const stringResult = intl.string(_modDef3187.ZQakPR);
+  const stringResult = intl.string(_modDef3216.ZQakPR);
   obj6.children = title.toLocaleUpperCase();
   items1[1] = state(CheckpointDisplayTextDefault, obj6);
   obj2.children = items1;
@@ -55,7 +55,7 @@ function SidekickStats(sidekick) {
   const rounded1 = Math.round(sidekick.numVoiceMinutes);
   const intl = util.intl;
   const intl2 = util.intl;
-  const stringResult = intl.string(_modDef3187.wWKySP);
+  const stringResult = intl.string(_modDef3216.wWKySP);
   const obj = { style: tmp.stats, children: null };
   obj2 = {
     accessible: true,
@@ -72,7 +72,7 @@ function SidekickStats(sidekick) {
   const obj4 = {
     accessible: true,
     accessibilityLabel:
-      "" + rounded1 + " " + intl2.formatToPlainString(_modDef3187.UZbUtl, { numMinutes: rounded1 }).toLocaleLowerCase(),
+      "" + rounded1 + " " + intl2.formatToPlainString(_modDef3216.UZbUtl, { numMinutes: rounded1 }).toLocaleLowerCase(),
     style: tmp.stat,
     children: null,
   };
@@ -229,7 +229,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1113).intl;
     obj5.accessibilityLabel = intl2.string(user(1113).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(13597).GiftIcon, obj6);
+    obj5.children = closure_13(user(13572).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5)];
     const obj7 = {
       onPress: function handleSend() {
@@ -259,7 +259,7 @@ function SidekickMessageInput(user) {
     const obj8 = { disabled: !tmp10 };
     obj7.accessibilityState = obj8;
     const obj9 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj7.children = closure_13(user(5866).SendMessageIcon, obj9);
+    obj7.children = closure_13(user(5884).SendMessageIcon, obj9);
     items1[1] = closure_13(closure_6, obj7);
     obj4.children = items1;
     items[1] = closure_14(closure_7, obj4);
@@ -270,7 +270,7 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const CheckpointConstants = fn(6204);
+const CheckpointConstants = fn(6224);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
@@ -297,7 +297,7 @@ if (PlatformUtils.isIOS()) {
   tmp5 = obj2;
 }
 obj2 = tmp5;
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj5 = {
   container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 },
   animation: null,

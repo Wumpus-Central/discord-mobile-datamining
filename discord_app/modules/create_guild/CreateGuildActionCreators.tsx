@@ -36,6 +36,7 @@ let closure_5 = async function _createGuildFromTemplate() {
           } else {
             closure_6 = tmp3;
             closure_5 = tmp7;
+            closure_133_0 = undefined;
             c8 = 1;
             const request = { url: constants.GUILDS, body: null, trackedActionData: null, rejectWithError: false };
             const obj4 = {
@@ -48,10 +49,10 @@ let closure_5 = async function _createGuildFromTemplate() {
               staff_only: null,
             };
             ({
-              channels: obj10.channels,
-              system_channel_id: obj10.system_channel_id,
-              roles: obj10.roles,
-              code: obj10.guild_template_code,
+              channels: obj11.channels,
+              system_channel_id: obj11.system_channel_id,
+              roles: obj11.roles,
+              code: obj11.guild_template_code,
             } = id);
             obj4.staff_only = staff_only;
             request.body = obj4;
@@ -66,8 +67,8 @@ let closure_5 = async function _createGuildFromTemplate() {
           }
         } else if (1 === tmp7) {
           c8 = 0;
-          closure_133_0 = closure_7;
-          const aPIError = new closure_134_0(closure_134_2[4]).APIError(closure_133_0);
+          closure_133_1 = closure_7;
+          const aPIError = new closure_134_0(closure_134_2[6]).APIError(closure_133_1);
           throw aPIError;
         } else if (arg0 === 1) {
           c10 = 3;
@@ -75,19 +76,23 @@ let closure_5 = async function _createGuildFromTemplate() {
         } else if (arg0 === 2) {
           c8 = 0;
           c10 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
+          closure_133_0 = value;
+          closure_134_1(closure_134_2[4]).fireSurveyAction(
+            closure_134_0(closure_134_2[5]).SurveyActionTypes.GUILD_CREATED,
+          );
           c8 = 0;
           c10 = 3;
-          const obj = { value: value.body, done: true };
-          return obj;
+          const obj10 = { value: closure_133_0.body, done: true };
+          return obj10;
         }
-      } catch (tmp22) {
-        closure_7 = tmp22;
+      } catch (tmp30) {
+        closure_7 = tmp30;
         if (tmp4 === c8) {
           c10 = tmp2;
-          throw tmp22;
+          throw tmp30;
         } else {
           c9 = tmp;
         }

@@ -6,14 +6,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Constants = fn(1072);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(8578).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(16853).useIs2FAEnabled,
+  parent: fn(8524).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(16841).useIs2FAEnabled,
   usePreNavigationAction: function useOnViewBackups() {
     return noop.useCallback((arg0) => {
       closure_0 = arg0;
@@ -45,7 +45,7 @@ const route = SettingBuilders.createRoute({
             const intl4 = onSuccess(1113).intl;
             obj.actionText = intl4.string(onSuccess(1113).t.geKm7t);
             obj.confirmColor = onSuccess(1187).ButtonColors.BRAND;
-            closure_2_1(16943)(obj);
+            closure_2_1(16931)(obj);
           });
         },
         onSuccess,
@@ -63,7 +63,7 @@ const route = SettingBuilders.createRoute({
       let intl3 = closure_0(1113).intl;
       obj.actionText = intl3.string(closure_0(1113).t.PDTjLN);
       obj.confirmColor = closure_0(1187).ButtonColors.BRAND;
-      closure_1(16943)(obj);
+      closure_1(16931)(obj);
       return false;
     }, []);
   },

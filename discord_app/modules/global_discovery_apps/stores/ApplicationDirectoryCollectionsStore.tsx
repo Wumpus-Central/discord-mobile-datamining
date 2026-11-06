@@ -1,5 +1,5 @@
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 
@@ -34,13 +34,13 @@ obj2 = {
     collections = collections.collections;
     const combined = "surface:" + collections.surface + " activeState:" + collections.activeState;
     const mapped = collections.map((application_directory_collection_items) => {
-      application_directory_collection_items.application_directory_collection_items = _modDef12.sortBy(
+      application_directory_collection_items.application_directory_collection_items = applyDefault.sortBy(
         application_directory_collection_items.application_directory_collection_items,
         ["position", "id"],
       );
       return application_directory_collection_items;
     });
-    obj = _modDef12;
+    obj = applyDefault;
     obj2 = {};
     const merged = Object.assign(obj2);
     obj2[combined] = obj.sortBy(mapped, ["position", "id"]);

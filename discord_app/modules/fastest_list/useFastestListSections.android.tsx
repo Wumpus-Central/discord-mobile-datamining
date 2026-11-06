@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/fastest_list/useFastestListSe
 export default function useFastestListSections(fastestListId) {
   fastestListId = fastestListId.fastestListId;
   const itemSize = fastestListId.itemSize;
-  const keyExtractor = fastestListId.keyExtractor;
+  keyExtractor = fastestListId.keyExtractor;
   let num = fastestListId.listFooterSize;
   if (num === undefined) {
     num = 0;

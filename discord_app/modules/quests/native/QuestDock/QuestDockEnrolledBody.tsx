@@ -78,10 +78,10 @@ function EnrolledBodyWatchTask(quest) {
                 tmp12 = tmp16;
               }
               if (tmp12) {
-                const obj4 = { questId: tmp2.id, sourceQuestContent: quest(6922).QuestContent.QUEST_BAR_MOBILE };
+                const obj4 = { questId: tmp2.id, sourceQuestContent: quest(6864).QuestContent.QUEST_BAR_MOBILE };
                 v1 = 1;
                 c2 = 1;
-                const obj5 = { value: setRestingQuestDockMode(17376)(obj4), done: false };
+                const obj5 = { value: setRestingQuestDockMode(17365)(obj4), done: false };
                 return obj5;
               } else {
                 c2 = 3;
@@ -215,14 +215,14 @@ function EnrolledBodyPlayStreamTask(quest) {
   return gesture(state, obj3);
 }
 const View = fn(17).View;
-const QuestConstants = fn(6919);
+const QuestConstants = fn(6861);
 ({ QuestDockMode: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const QuestDockConstants = fn(17345);
+const QuestDockConstants = fn(17334);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT: closure_10, QUEST_DOCK_EXPANDED_PADDING_BOTTOM } = QuestDockConstants);
 ({ QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj = {
   wrapper: {
     flexGrow: 0,
@@ -254,10 +254,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledBody.tsx");
 
 export default noop.memo(function QuestDockEnrolledBody() {
-  const questDockQuest = minExpandedContentHeight(17373).useQuestDockQuest();
-  const obj = minExpandedContentHeight(17373);
+  const questDockQuest = minExpandedContentHeight(17362).useQuestDockQuest();
+  const obj = minExpandedContentHeight(17362);
   minExpandedContentHeight = noop.useContext(
-    minExpandedContentHeight(17346).QuestDockGestureContext,
+    minExpandedContentHeight(17335).QuestDockGestureContext,
   ).minExpandedContentHeight;
   items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];

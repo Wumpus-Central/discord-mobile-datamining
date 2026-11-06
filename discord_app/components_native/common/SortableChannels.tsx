@@ -1,6 +1,6 @@
 // discord_app/components_native/common/SortableChannels.tsx
 import noop from "../../../_runtime/metro/00019__.js";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 
 let require = fn;
 get_ActivityIndicator = fn(17);

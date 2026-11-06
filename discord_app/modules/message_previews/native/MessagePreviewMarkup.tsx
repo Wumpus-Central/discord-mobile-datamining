@@ -1,6 +1,6 @@
 // discord_app/modules/message_previews/native/MessagePreviewMarkup.tsx
 import privDefault from "../../../../_runtime/01453_priv.js";
-import _modDef2072 from "../../../../_runtime/metro/02072__.js";
+import _modDef2067 from "../../../../_runtime/metro/02067__.js";
 import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import MarkupTypes from "../../markup/MarkupTypes.tsx";
@@ -105,8 +105,8 @@ export function renderASTToReact(layout) {
     MarkupMessagePreviewReactRulesDefault(layout.layout, color, fontScale, maxFontSizeMultiplier),
   ];
   const tmpResult = combineMarkupRulesDefault(items);
-  const obj = _modDef2072;
-  return obj.reactFor(_modDef2072.ruleOutput(tmpResult, "react"))(tree, initialParserState);
+  const obj = _modDef2067;
+  return obj.reactFor(_modDef2067.ruleOutput(tmpResult, "react"))(tree, initialParserState);
 }
 export function getMessagePreviewASTParser(layout) {
   ({ color, fontScale, maxFontSizeMultiplier } = layout);
@@ -132,8 +132,8 @@ export function renderMessagePreviewMarkup(content) {
       MarkupMessagePreviewReactRulesDefault(layout, color, fontScale, maxFontSizeMultiplier),
     ];
     const tmp8Result = combineMarkupRulesDefault(items);
-    const obj2 = _modDef2072;
-    return obj2.reactFor(_modDef2072.ruleOutput(tmp8Result, "react"))(tree, initialParserState);
+    const obj2 = _modDef2067;
+    return obj2.reactFor(_modDef2067.ruleOutput(tmp8Result, "react"))(tree, initialParserState);
   }
 }
 export function renderMeasuredMessagePreviewMarkup(content) {
@@ -167,8 +167,8 @@ export function renderMeasuredMessagePreviewMarkup(content) {
           MarkupMessagePreviewReactRulesDefault(layout, color, fontScale, maxFontSizeMultiplier),
         ];
         const tmp9Result = combineMarkupRulesDefault(items);
-        const obj3 = _modDef2072;
-        obj.prefix = obj3.reactFor(_modDef2072.ruleOutput(tmp9Result, "react"))(tree, initialParserState);
+        const obj3 = _modDef2067;
+        obj.prefix = obj3.reactFor(_modDef2067.ruleOutput(tmp9Result, "react"))(tree, initialParserState);
         const items1 = [obj];
         let items2 = items1;
       } else {

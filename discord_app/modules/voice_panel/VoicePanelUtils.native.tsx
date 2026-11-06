@@ -1,5 +1,6 @@
 // discord_app/modules/voice_panel/VoicePanelUtils.native.tsx
 import useStateFromStores from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import StageChannelUnifiedCallExperiment from "../stage_channels/StageChannelUnifiedCallExperiment.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import VoicePanelStore from "VoicePanelStore.tsx";
@@ -10,10 +11,20 @@ const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelUtils.n
 
 export function useIsVoicePanelShowing() {
   items = [ChannelStore, RTCConnectionStore];
-  return useStateFromStores.useStateFromStores(items, () => {
-    channel = channel.getChannel(channelId.getChannelId());
-    return null != channel && !channel.isGuildStageVoice();
-  });
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () =>
+    channel.getChannel(channelId.getChannelId()),
+  );
+  StageChannelUnifiedCallExperiment;
+  let tmp3 = null != stateFromStores;
+  if (tmp3) {
+    const isGuildStageVoiceResult = stateFromStores.isGuildStageVoice();
+    let tmp5 = !isGuildStageVoiceResult;
+    if (isGuildStageVoiceResult) {
+      tmp5 = tmp2;
+    }
+    tmp3 = tmp5;
+  }
+  return tmp3;
 }
 export function useIsVoicePanelFullscreen() {
   return VoicePanelStore((isVoicePanelFullscreen) => isVoicePanelFullscreen.isVoicePanelFullscreen());

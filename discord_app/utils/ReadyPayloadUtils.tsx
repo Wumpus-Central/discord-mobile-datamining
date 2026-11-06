@@ -1,5 +1,5 @@
 // discord_app/utils/ReadyPayloadUtils.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import ChannelRecord from "../records/ChannelRecord.tsx";
 import DatabaseDaosDefault from "../modules/app_database/DatabaseDaos.tsx";
@@ -531,7 +531,7 @@ export function hydrateReadyPayloadPrioritized(pinotReadyAction, identifyStartTi
     const result = DatabaseManagerDefault.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok");
     const tmp2Result = DatabaseManagerDefault;
   }
-  closure_5 = _modDef12.keyBy(users, (id) => id.id);
+  closure_5 = applyDefault.keyBy(users, (id) => id.id);
   if (private_channels != null) {
     let item = private_channels.forEach((recipient_ids) => {
       recipient_ids = recipient_ids.recipient_ids;

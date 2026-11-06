@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02123_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import utils from "../../../content_inventory/utils.tsx";
 import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8864).isEntryNew }, , , ,];
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8864).isEntryNew };
+let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8810).isEntryNew }, , , ,];
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8810).isEntryNew };
 items[1] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -67,7 +67,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   },
 };
-const createICYMIStyles = fn(18827);
+const createICYMIStyles = fn(18815);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -173,7 +173,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(18880, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(18868, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");

@@ -7,7 +7,7 @@ import URLUtilsDefault from "../URLUtils.tsx";
 import UrlDefault from "../../../_runtime/01381_Url.js";
 import _modDef1487 from "../../../_runtime/metro/01487__.js";
 import MetaQuestUtils from "../../modules/device/MetaQuestUtils.android.tsx";
-import _modDef2072 from "../../../_runtime/metro/02072__.js";
+import _modDef2067 from "../../../_runtime/metro/02067__.js";
 import LinkUtils from "../../modules/links/LinkUtils.tsx";
 import findCodedLinks from "../../modules/coded_links/findCodedLinks.tsx";
 import CodedLink from "../../modules/coded_links/CodedLink.tsx";
@@ -51,9 +51,9 @@ const Constants = fn(1072);
 } = Constants);
 const CollectiblesShopConstants = fn(1074);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const CONVERSATION_QUERY_PARAM = fn(5791).CONVERSATION_QUERY_PARAM;
-const UPDATE_CONFIG = fn(5883).UPDATE_CONFIG;
-const PaymentConstants = fn(5884);
+const CONVERSATION_QUERY_PARAM = fn(5809).CONVERSATION_QUERY_PARAM;
+const UPDATE_CONFIG = fn(5902).UPDATE_CONFIG;
+const PaymentConstants = fn(5903);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_12, MobileWebRedirectCheckoutDeepLinkQueryKeys: map1 } =
   PaymentConstants);
 const re14 = /feature\/([\w-]+)/;
@@ -80,7 +80,7 @@ export default function parseURL(ctaLink) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const sanitizeUrlResult = _modDef2072.sanitizeUrl(ctaLink);
+  const sanitizeUrlResult = _modDef2067.sanitizeUrl(ctaLink);
   if (null == sanitizeUrlResult) {
     const obj3 = { payload: null };
     const obj4 = { type: metroImportDefault.NONE };
@@ -177,10 +177,14 @@ export default function parseURL(ctaLink) {
                                         const tmp8 = _slicedToArray(findCodedLinkResult.code.split("-"), 2);
                                       } else if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
                                         if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE !== type) {
-                                          if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                                            const _Error2 = Error;
-                                            const _HermesInternal = HermesInternal;
-                                            throw Error("Unknown coded link type: " + findCodedLinkResult.type);
+                                          if (CodedLink.CodedLinkType.CONJURE_PROJECT !== type) {
+                                            if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
+                                              if (CodedLink.CodedLinkType.USER_WISHLIST !== type) {
+                                                const _Error2 = Error;
+                                                const _HermesInternal = HermesInternal;
+                                                throw Error("Unknown coded link type: " + findCodedLinkResult.type);
+                                              }
+                                            }
                                           }
                                         }
                                       }

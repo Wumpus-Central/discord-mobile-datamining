@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_7 = createStyles.createStyles({
   container: { marginBottom: 16, paddingHorizontal: 16 },
   header: { marginBottom: 8 },

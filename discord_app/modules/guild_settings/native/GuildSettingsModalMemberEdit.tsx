@@ -168,14 +168,14 @@ class GuildSettingsModalMemberEditScene {
   }
 }
 const View = fn(17).View;
-const GuildRecord = fn(5010);
+const GuildRecord = fn(5037);
 ({ isGuildOwner: closure_6, isGuildOwnerWithRequiredMfaLevel: metroImportDefault } = GuildRecord);
-const isEveryoneRole = fn(5050).isEveryoneRole;
+const isEveryoneRole = fn(5077).isEveryoneRole;
 const Constants = fn(1072);
 ({ Permissions: closure_15, GuildFeatures: closure_16, GuildSettingsSections: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   form: { flex: 1 },
   formContent: { paddingTop: 16 },
@@ -214,12 +214,10 @@ RolesList.prototype["render"] = function render() {
   if (props.isEditing) {
     const highestRole = currentUserId(onToggleRole[14]).getHighestRole(guild, currentUserId);
     const obj2 = currentUserId(onToggleRole[14]);
-    const found = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles).filter(
-      (item) => !isEveryoneRole(item),
-    );
+    const found = require("apply")(sortedGuildRoles).filter((item) => !isEveryoneRole(item));
     const found1 = found.filter((managed) => !managed.managed);
     const found2 = found1.filter((item) => PermissionUtilsAll.isRoleHigher(guild, currentUserId, closure_4, item));
-    const arr4 = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles);
+    const arr4 = require("apply")(sortedGuildRoles);
     let valueResult = found2
       .map((id) => {
         const tmp = -1 !== closure_1.indexOf(id.id);
@@ -259,10 +257,8 @@ RolesList.prototype["render"] = function render() {
     });
   } else {
     tmp3 = onToggleRole;
-    const found3 = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles).filter((id) =>
-      importDefault.includes(id.id),
-    );
-    const arr = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles);
+    const found3 = require("apply")(sortedGuildRoles).filter((id) => importDefault.includes(id.id));
+    const arr = require("apply")(sortedGuildRoles);
     const valueResult2 = found3
       .map((role) => {
         const obj = {
@@ -410,8 +406,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      fn = self(7142).getHeaderCloseButton(onClose);
-      let obj = self(7142);
+      fn = self(7089).getHeaderCloseButton(onClose);
+      let obj = self(7089);
     }
     let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
@@ -612,7 +608,7 @@ prototype["render"] = function render() {
     }
   }
 };
-GuildSettingsModalMemberEdit.contextType = fn(5209).ThemeContext;
+GuildSettingsModalMemberEdit.contextType = fn(5229).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx");
 
@@ -620,7 +616,7 @@ export default function MemberModalEdit(onClose) {
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  const tmp = onRemove(5751)(guildId);
+  const tmp = onRemove(5769)(guildId);
   closure_2 = tmp;
   items = [onClose, onRemove, tmp];
   const memo = noop.useMemo(() => {
@@ -645,7 +641,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_18(onRemove(13509), obj);
+          return closure_2_18(onRemove(13484), obj);
         },
       },
       [closure_2_17.MEMBER_BAN]: {
@@ -657,7 +653,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(13513), obj);
+          return closure_2_18(onRemove(13488), obj);
         },
       },
     };
@@ -665,6 +661,6 @@ export default function MemberModalEdit(onClose) {
   let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
   const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
   obj.initialRouteStack = items1;
-  return closure_18(onClose(7309).Navigator, obj);
+  return closure_18(onClose(7256).Navigator, obj);
 }
 export { GuildSettingsModalMemberEditScene };

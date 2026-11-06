@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx
-import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import util from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
@@ -56,8 +56,8 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
     items1,
     () => {
       if (null != stateFromStores) {
-        const mapped = _modDef12(tmp.recipients).map(UserStore.getUser);
-        const arr2 = _modDef12(tmp.recipients);
+        const mapped = applyDefault(tmp.recipients).map(UserStore.getUser);
+        const arr2 = applyDefault(tmp.recipients);
         const found = mapped.unshift(UserStore.getCurrentUser()).filter(GlobalUtils.isNotNullish);
         const arr = mapped.unshift(UserStore.getCurrentUser());
         items = found.sortBy((username) => username.username.toLowerCase()).value();

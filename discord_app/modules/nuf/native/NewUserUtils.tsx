@@ -233,12 +233,12 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(14205);
+const NotificationPermissionConstants = fn(14182);
 ({ EventActionLocation: metroImportDefault, EventActionType: closure_8 } = NotificationPermissionConstants);
 const Constants = fn(1072);
 ({ PlatformTypes: closure_9, Routes: closure_10 } = Constants);
-const ContactPermissions = fn(14474).ContactPermissions;
-let closure_12 = fn(8085).NotificationAuthorizationStatus;
+const ContactPermissions = fn(14451).ContactPermissions;
+let closure_12 = fn(8031).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_16 = asyncGeneratorStep(async () => {
@@ -459,17 +459,6 @@ let items = [
   obj2,
   obj3,
   {
-    key: "interest-picker",
-    shouldShowStep() {
-      const shouldShowGuardianConnect = ParentalConsentStore.getShouldShowGuardianConnect();
-      let result = !shouldShowGuardianConnect;
-      if (!shouldShowGuardianConnect) {
-        result = InterestPickerExperiment.isInterestPickerExperimentEnabled("nuf_interest_picker_step");
-      }
-      return result;
-    },
-  },
-  {
     key: "discoverability",
     shouldShowStep() {
       return !MobileOnboardingFrictionExperimentDefault.getMobileOnboardingFrictionConfig(NewUserUtils).skipContactSync;
@@ -499,8 +488,19 @@ let items = [
     },
   },
   {
+    key: "interest-picker",
+    shouldShowStep() {
+      const shouldShowGuardianConnect = ParentalConsentStore.getShouldShowGuardianConnect();
+      let result = !shouldShowGuardianConnect;
+      if (!shouldShowGuardianConnect) {
+        result = InterestPickerExperiment.isInterestPickerExperimentEnabled("nuf_interest_picker_step");
+      }
+      return result;
+    },
+  },
+  {
     key: "accept-invite",
-    shouldShowStep: fn(9270).hasDeferredInvite,
+    shouldShowStep: fn(9216).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

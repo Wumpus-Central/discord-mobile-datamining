@@ -1,5 +1,5 @@
 // discord_app/modules/conversations/ConversationsUtils.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
@@ -31,7 +31,7 @@ export function mapConversation(rawConversation) {
           tmp6 = null;
           if (typeof brief_summary === "string") {
             const obj = {
-              title: _mod12.upperFirst(filter.title),
+              title: apply.upperFirst(filter.title),
               brief_summary: filter.brief_summary,
               key_points: null,
             };

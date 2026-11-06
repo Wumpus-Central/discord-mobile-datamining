@@ -7,14 +7,14 @@ const require = fn;
 function useAlwaysShow() {
   return true;
 }
-const ContentDismissActionType = fn(4989).ContentDismissActionType;
+const ContentDismissActionType = fn(5016).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_7 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DismissibleBadgeUtils.tsx");
 
-export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS) {
-  closure_0 = TINY_BRONCO_SETTINGS;
+export function createDismissibleBadgePreNavigationAction(CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE) {
+  closure_0 = CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE;
   let tmp = useShouldShowAgeNotice;
   if (useShouldShowAgeNotice === undefined) {
     tmp = useAlwaysShow;

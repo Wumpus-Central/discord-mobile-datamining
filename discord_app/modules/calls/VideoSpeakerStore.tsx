@@ -7,7 +7,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import SpeakingStore from "../../stores/SpeakingStore.tsx";
 import ChannelRTCStore from "ChannelRTCStore.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 
 require = fn;
 function updateSpeaker(arg0) {
@@ -134,7 +134,7 @@ function handleChannelRTCUpdate() {
   closure_11();
   return false;
 }
-const ParticipantTypes = fn(5817).ParticipantTypes;
+const ParticipantTypes = fn(5835).ParticipantTypes;
 let closure_11 = apply.throttle(updateSpeaker, 300, { trailing: true });
 const Store = initializeDefault.Store;
 class VideoSpeakerStoreClass extends Store {}

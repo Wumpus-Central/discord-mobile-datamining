@@ -9,16 +9,16 @@ import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
-const SettingBuilders = fn(11737);
+const SettingBuilders = fn(11703);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8578).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8524).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const selectedTeenId = controlledSetting(8517).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(16992).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8463).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(16980).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;

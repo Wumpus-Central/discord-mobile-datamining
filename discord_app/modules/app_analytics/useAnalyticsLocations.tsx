@@ -1,5 +1,5 @@
 // discord_app/modules/app_analytics/useAnalyticsLocations.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ export default function useAnalyticsLocations() {
   const memo = context.useMemo(() => {
     let tmp3 = context;
     if (0 !== first.length) {
-      const flattenResult = _modDef12.flatten(tmp2);
+      const flattenResult = applyDefault.flatten(tmp2);
       items = [];
       HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(context, 0));
       tmp3 = items;
@@ -32,7 +32,7 @@ export default function useAnalyticsLocations() {
     const substr = first.slice(0, first.length - 1);
     let tmp2 = context;
     if (0 !== substr.length) {
-      const flattenResult = _modDef12.flatten(substr);
+      const flattenResult = applyDefault.flatten(substr);
       items = [];
       HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(context, 0));
       tmp2 = items;

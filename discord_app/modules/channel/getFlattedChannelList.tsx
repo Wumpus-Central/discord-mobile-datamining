@@ -1,5 +1,5 @@
 // discord_app/modules/channel/getFlattedChannelList.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
@@ -12,7 +12,7 @@ export default function getFlattenedChannelList(arg0, arg1) {
       return true;
     };
   }
-  const mapped = _modDef12(arg0).map((channel) => {
+  const mapped = applyDefault(arg0).map((channel) => {
     if ("null" === channel.channel.id) {
       items = dependencyMap[channel.channel.id];
     } else {
@@ -20,7 +20,7 @@ export default function getFlattenedChannelList(arg0, arg1) {
     }
     return items;
   });
-  const arr = _modDef12(arg0);
+  const arr = applyDefault(arg0);
   const flattenDeepResult = mapped.flattenDeep();
   return mapped.flattenDeep().filter(fn).value();
 }

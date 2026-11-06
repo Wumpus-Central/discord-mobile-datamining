@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/media/ICYMIMediaMosaic.tsx
-import _mod12 from "../../../../../_runtime/metro/00012__.js";
+import apply from "../../../../../_runtime/00012_apply.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
@@ -556,7 +556,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const collapsedCategories = createStyles.createStyles(() => {
   const obj = {
     media: { borderRadius: nativeDefault.radii.xs },
@@ -709,7 +709,7 @@ export default function ICYMIMediaMosaic(message) {
     const mapped = result.map((item) => message(itemType[29]).flattenSource(item));
     const found = mapped.filter(GlobalUtils.isNotNullish);
     const tmp2 = _slicedToArray(
-      _mod12.partition(found, (accessoryType) => "embed" === accessoryType.accessoryType),
+      apply.partition(found, (accessoryType) => "embed" === accessoryType.accessoryType),
       2,
     );
     return { allMediaSources: found, nonEmbedSources: tmp2[1], embedSources: tmp2[0] };

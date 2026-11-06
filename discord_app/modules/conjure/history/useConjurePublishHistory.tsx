@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/history/useConjurePublishHistory.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2171 from "../../../../_runtime/metro/02171__.js";
-import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
+import _modDef2166 from "../../../../_runtime/metro/02166__.js";
+import _modDef4024 from "../intl/ConjureUntranslated.messages.js";
 import conjurePublishHistoryRequests from "conjurePublishHistoryRequests.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,8 +14,8 @@ let result = size.fileFinishedImporting("modules/conjure/history/useConjurePubli
 
 export function publishHistoryTitle(publishedAt) {
   const intl = util.intl;
-  const obj = { date: _modDef2171(publishedAt).format("LLL") };
-  return intl.formatToPlainString(_modDef3995["/spQzC"], obj);
+  const obj = { date: _modDef2166(publishedAt).format("LLL") };
+  return intl.formatToPlainString(_modDef4024["/spQzC"], obj);
 }
 export function useConjurePublishHistory(projectId) {
   _require = projectId;

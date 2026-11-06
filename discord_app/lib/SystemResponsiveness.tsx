@@ -1,5 +1,5 @@
 // discord_app/lib/SystemResponsiveness.tsx
-import _modDef12 from "../../_runtime/metro/00012__.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
@@ -10,7 +10,7 @@ class SystemResponsiveness {
     closure_0 = obj;
     obj.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
-        const item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
+        const item = applyDefault.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             let prop = type.pttQueueLatencyMicrosSamples;
             if (prop == null) {

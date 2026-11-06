@@ -76,38 +76,42 @@ if (!tmp) {
 }
 if (!tmp) {
   const _window19 = window;
-  tmp = null != window.GLOBAL_ENV.ADYEN_KEY;
+  tmp = null != window.GLOBAL_ENV.STRIPE_KEYS_BY_MERCHANT_ACCOUNT_ID;
 }
 if (!tmp) {
   const _window20 = window;
-  tmp = null != window.GLOBAL_ENV.PROJECT_ENV;
+  tmp = null != window.GLOBAL_ENV.ADYEN_KEY;
 }
 if (!tmp) {
   const _window21 = window;
-  tmp = null != window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT;
+  tmp = null != window.GLOBAL_ENV.PROJECT_ENV;
 }
 if (!tmp) {
   const _window22 = window;
-  tmp = null != window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT;
+  tmp = null != window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT;
 }
 if (!tmp) {
   const _window23 = window;
-  tmp = null != window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
+  tmp = null != window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT;
 }
 if (!tmp) {
   const _window24 = window;
-  tmp = null != window.GLOBAL_ENV.PUBLIC_PATH;
+  tmp = null != window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
 }
 if (!tmp) {
   const _window25 = window;
-  tmp = null != window.GLOBAL_ENV.MUX_ENV_KEY;
+  tmp = null != window.GLOBAL_ENV.PUBLIC_PATH;
 }
 if (!tmp) {
   const _window26 = window;
-  tmp = null != window.GLOBAL_ENV.WEBAUTHN_ORIGIN;
+  tmp = null != window.GLOBAL_ENV.MUX_ENV_KEY;
 }
 if (!tmp) {
   const _window27 = window;
+  tmp = null != window.GLOBAL_ENV.WEBAUTHN_ORIGIN;
+}
+if (!tmp) {
+  const _window28 = window;
 }
 global.window.GLOBAL_ENV.API_ENDPOINT = "//discord.com/api";
 global.window.GLOBAL_ENV.API_VERSION = 9;
@@ -127,6 +131,11 @@ global.window.GLOBAL_ENV.MARKETING_ENDPOINT = "//discord.com";
 global.window.GLOBAL_ENV.NETWORKING_ENDPOINT = "//router.discordapp.net";
 global.window.GLOBAL_ENV.BRAINTREE_KEY = "production_ktzp8hfp_49pp2rp4phym7387";
 global.window.GLOBAL_ENV.STRIPE_KEY = "pk_live_CUQtlpQUF0vufWpnpUmQvcdi";
+global.window.GLOBAL_ENV.STRIPE_KEYS_BY_MERCHANT_ACCOUNT_ID = {
+  "1527736866172829700": "pk_live_CUQtlpQUF0vufWpnpUmQvcdi",
+  "1527736866177024000":
+    "pk_live_51U3O5oFvPmMb4USIG7EcwsqswwmagHDVpHGs5pI1MvRW7EQAUeajQPM0nfvPN91c5zuJq176HTle86at4xmqOlp6002j3KeM8n",
+};
 global.window.GLOBAL_ENV.ADYEN_KEY = "live_E3OQ33V6GVGTXOVQZEAFQJ6DJIDVG6SY";
 global.window.GLOBAL_ENV.PROJECT_ENV = "production";
 global.window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT = "wss://remote-auth-gateway.discord.gg";

@@ -11,12 +11,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import VideoQuestUIStore from "../../VideoQuestUIStore.tsx";
 
 require = fn;
-const QuestsExperimentLocations = fn(6919).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6861).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(17204).PlayerState;
+export const PlayerState = fn(17192).PlayerState;
 export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   const onEnd = onLoad.onEnd;

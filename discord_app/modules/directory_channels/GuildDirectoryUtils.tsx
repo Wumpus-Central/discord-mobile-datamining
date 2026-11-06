@@ -1,5 +1,5 @@
 // discord_app/modules/directory_channels/GuildDirectoryUtils.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import GuildDirectoryConstants from "GuildDirectoryConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -86,18 +86,18 @@ export function guildDirectoryEntryFromServer(entry) {
 export const MAX_CATEGORY_SERVERS = 5;
 export function orderByTotalMemberCount(found) {
   items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return _modDef12.orderBy(found, items, ["desc"]);
+  return applyDefault.orderBy(found, items, ["desc"]);
 }
 export function orderByDateAdded(reactions) {
   items = [(createdAt) => createdAt.createdAt];
-  return _modDef12.orderBy(reactions, items, ["desc"]);
+  return applyDefault.orderBy(reactions, items, ["desc"]);
 }
 export function rankByDateAdded(arr) {
   const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);
   items = [(createdAt) => createdAt.createdAt];
-  return _modDef12.orderBy(found, items, ["desc"]).slice(0, 5);
+  return applyDefault.orderBy(found, items, ["desc"]).slice(0, 5);
 }
 export function rankGuildEntries(arr) {
   items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return _modDef12.orderBy(arr, items, ["desc"]);
+  return applyDefault.orderBy(arr, items, ["desc"]);
 }

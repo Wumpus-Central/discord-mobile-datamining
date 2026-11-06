@@ -12,14 +12,14 @@ let items = [
   },
 ];
 [tmp2] = items;
-function getRecapOrbCountFromPullProgress(arg0, arg1) {
-  if (arg1 > 0) {
+function getRecapOrbCountFromPullProgress(arg0, scrollLength) {
+  if (scrollLength > 0) {
     const _Number = Number;
-    if (Number.isFinite(arg1)) {
+    if (Number.isFinite(scrollLength)) {
       const _Math = Math;
       const _Math2 = Math;
       const _Math3 = Math;
-      return Math.round(Math.min(1, Math.max(0, arg0)) * arg1);
+      return Math.round(Math.min(1, Math.max(0, arg0)) * scrollLength);
     }
   }
   return 0;

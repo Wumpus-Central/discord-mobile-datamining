@@ -3,7 +3,7 @@ import LoggerDefault from "../../debug/Logger.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 
 let obj = importDefault;
 let closure_5 = new LoggerDefault("UserSettingsProto");
@@ -31,7 +31,7 @@ class UserSettingsProto {
       if (databaseResult != null) {
         databaseResult.transaction((database) => {
           state = closure_1_3.computeState();
-          const result = closure_1_0(5021).userSettingsTransaction(database);
+          const result = closure_1_0(5048).userSettingsTransaction(database);
           for (const key10014 in state) {
             obj2 = { id: null, value: null };
             let _Number = Number;
@@ -48,10 +48,10 @@ class UserSettingsProto {
           if (num == null) {
             num = -1;
           }
-          obj = closure_1_0(5021);
-          const result1 = closure_1_0(5021).nonGuildVersionsTransaction(database);
+          obj = closure_1_0(5048);
+          const result1 = closure_1_0(5048).nonGuildVersionsTransaction(database);
           result1.put({ id: "user_settings_version", version: num });
-          const obj3 = closure_1_0(5021);
+          const obj3 = closure_1_0(5048);
         }, "handleUserSettingsProtoChange");
       }
     };
@@ -166,7 +166,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
   if (databaseResult != null) {
     databaseResult.transaction((database) => {
       state = closure_1_3.computeState();
-      const result = closure_1_0(5021).userSettingsTransaction(database);
+      const result = closure_1_0(5048).userSettingsTransaction(database);
       for (const key10014 in state) {
         obj2 = { id: null, value: null };
         let _Number = Number;
@@ -183,10 +183,10 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       if (num == null) {
         num = -1;
       }
-      obj = closure_1_0(5021);
-      const result1 = closure_1_0(5021).nonGuildVersionsTransaction(database);
+      obj = closure_1_0(5048);
+      const result1 = closure_1_0(5048).nonGuildVersionsTransaction(database);
       result1.put({ id: "user_settings_version", version: num });
-      const obj3 = closure_1_0(5021);
+      const obj3 = closure_1_0(5048);
     }, "handleUserSettingsProtoChange");
   }
 };

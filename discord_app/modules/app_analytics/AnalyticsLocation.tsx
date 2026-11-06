@@ -326,6 +326,7 @@ export default {
   ACTIVITIES_COACH_MARK_GAME_NIGHT: "activities coach mark game night",
   STAGE_CHANNEL_CALL: "stage channel call",
   REQUEST_TO_SPEAK: "request to speak",
+  AUDIENCE_SHEET: "audience sheet",
   STAGE_VIDEO_LIMIT: "stage video limit",
   ACTIVITIES_MINI_SHELF: "activities mini shelf",
   APP_OAUTH2_LINK_EMBED: "application oauth2 embed",

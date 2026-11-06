@@ -1,6 +1,6 @@
 // discord_app/modules/threads/ActiveThreadsStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
@@ -58,7 +58,7 @@ function deleteThread(channel) {
           if (obj3.isEmpty(dependencyMap[guild_id][parent_id])) {
             delete tmp2[tmp3];
           }
-          obj3 = _modDef12;
+          obj3 = applyDefault;
         }
         tmp9 = tmp11;
       }
@@ -101,7 +101,7 @@ prototype["getThreadsForParent"] = function getThreadsForParent(guild_id, id) {
   return tmp;
 };
 prototype["hasThreadsForChannel"] = function hasThreadsForChannel(guild_id, id) {
-  return !_modDef12.isEmpty(this.getThreadsForParent(guild_id, id));
+  return !applyDefault.isEmpty(this.getThreadsForParent(guild_id, id));
 };
 prototype["forEachGuild"] = function forEachGuild(arg0) {
   importDefault = arg0;
@@ -144,8 +144,8 @@ const activeThreadsStore = new ActiveThreadsStore(DispatcherDefault, {
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(channels) {
     dependencyMap = {};
-    const found = _modDef12(channels.channels).filter((type) => set.has(type.type));
-    const arr = _modDef12(channels.channels);
+    const found = applyDefault(channels.channels).filter((type) => set.has(type.type));
+    const arr = applyDefault(channels.channels);
     let item = found.groupBy("guild_id").forEach((arr, index) => {
       closure_0 = index;
       closure_5[index] = {};

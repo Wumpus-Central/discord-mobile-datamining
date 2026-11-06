@@ -10,7 +10,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6919).QuestDockMode;
+const QuestDockMode = fn(6861).QuestDockMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx");
 
@@ -129,11 +129,11 @@ export function useMobileActivityPressHandler(questId) {
             return obj5;
           } else {
             const obj7 = {
-              type: tmp4(9843).AdUserActionType.CLICK_INTERNAL,
-              adCreativeType: tmp4(6926).AdCreativeType.QUEST,
+              type: tmp4(9794).AdUserActionType.CLICK_INTERNAL,
+              adCreativeType: tmp4(6868).AdCreativeType.QUEST,
               adCreativeId: closure_128_0,
-              questContentCTA: tmp4(8016).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
-              surfaceId: tmp4(6922).QuestContent.QUEST_BOTTOM_SHEET,
+              questContentCTA: tmp4(7970).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+              surfaceId: tmp4(6864).QuestContent.QUEST_BOTTOM_SHEET,
               sourceQuestContent: closure_128_1,
               impressionId: null,
               questContentPosition: null,
@@ -148,7 +148,7 @@ export function useMobileActivityPressHandler(questId) {
               questContentPosition = closure_128_4.getQuestContentPosition();
             }
             obj7.questContentPosition = questContentPosition;
-            tmp4(9840).captureAdUserAction(obj7);
+            tmp4(9791).captureAdUserAction(obj7);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }

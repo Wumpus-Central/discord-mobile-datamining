@@ -1,5 +1,5 @@
 // discord_app/modules/message_previews/useFormattedMessagePreview.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import MessageTypes from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 import util from "../../intl/index.native.tsx";
 import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
@@ -210,9 +210,9 @@ function formatMessagePreview(type, isBlocked) {
                   const intl27 = util.intl;
                   const obj30 = {
                     username: authorNick,
-                    usernameHook: _mod12.identity,
+                    usernameHook: apply.identity,
                     otherUsername: otherUserNick,
-                    otherUsernameHook: _mod12.identity,
+                    otherUsernameHook: apply.identity,
                   };
                   obj29.text = intl27.formatToPlainString(util.t.MMN2Jq, obj30);
                   let tmp21 = obj29;
@@ -231,15 +231,15 @@ function formatMessagePreview(type, isBlocked) {
                   }
                   if (type.author.id === id) {
                     const intl26 = util.intl;
-                    const obj31 = { username: authorNick, usernameHook: _mod12.identity };
+                    const obj31 = { username: authorNick, usernameHook: apply.identity };
                     let formatToPlainStringResult = intl26.formatToPlainString(util.t["5v2xa8"], obj31);
                   } else {
                     const intl25 = util.intl;
                     const obj32 = {
                       username: authorNick,
-                      usernameHook: _mod12.identity,
+                      usernameHook: apply.identity,
                       otherUsername: otherUserNick,
-                      otherUsernameHook: _mod12.identity,
+                      otherUsernameHook: apply.identity,
                     };
                     formatToPlainStringResult = intl25.formatToPlainString(util.t.L2FyVq, obj32);
                   }
@@ -277,19 +277,19 @@ function formatMessagePreview(type, isBlocked) {
               } else if (type.type === MessageTypes.MessageTypes.CHANNEL_NAME_CHANGE) {
                 const obj35 = { type: "text", text: null };
                 const intl21 = util.intl;
-                const obj36 = { username: authorNick, usernameHook: _mod12.identity, channelName: type.content };
+                const obj36 = { username: authorNick, usernameHook: apply.identity, channelName: type.content };
                 obj35.text = intl21.formatToPlainString(util.t.oItgEw, obj36);
                 tmp21 = obj35;
               } else if (type.type === MessageTypes.MessageTypes.CHANNEL_ICON_CHANGE) {
                 const obj37 = { type: "text", text: null };
                 const intl20 = util.intl;
-                const obj38 = { username: authorNick, usernameHook: _mod12.identity };
+                const obj38 = { username: authorNick, usernameHook: apply.identity };
                 obj37.text = intl20.formatToPlainString(util.t.OEdU6X, obj38);
                 tmp21 = obj37;
               } else if (type.type === MessageTypes.MessageTypes.CHANNEL_PINNED_MESSAGE) {
                 const obj40 = { type: "text", text: null };
                 const intl19 = util.intl;
-                const obj42 = { username: authorNick, usernameHook: _mod12.identity };
+                const obj42 = { username: authorNick, usernameHook: apply.identity };
                 obj40.text = intl19.formatToPlainString(util.t.vfkjqx, obj42);
                 tmp21 = obj40;
               } else if (type.type === MessageTypes.MessageTypes.USER_JOIN) {
@@ -301,7 +301,7 @@ function formatMessagePreview(type, isBlocked) {
                   const intl18 = util.intl;
                   const obj44 = { username: authorNick, usernameHook: null };
                   const systemMessageUserJoin = SystemMessageUtilsDefault.getSystemMessageUserJoin(type.id);
-                  obj44.usernameHook = _mod12.identity;
+                  obj44.usernameHook = apply.identity;
                   obj43.text = intl18.formatToPlainString(systemMessageUserJoin, obj44);
                   tmp24 = obj43;
                 }
@@ -311,9 +311,9 @@ function formatMessagePreview(type, isBlocked) {
                 const intl17 = util.intl;
                 const obj46 = {
                   actorName: authorNick,
-                  actorHook: _mod12.identity,
+                  actorHook: apply.identity,
                   threadName: type.content,
-                  threadOnClick: _mod12.identity,
+                  threadOnClick: apply.identity,
                 };
                 obj45.text = intl17.formatToPlainString(util.t.SGaUAU, obj46);
                 tmp21 = obj45;
@@ -326,25 +326,25 @@ function formatMessagePreview(type, isBlocked) {
               } else if (type.type === MessageTypes.MessageTypes.STAGE_START) {
                 const obj49 = { type: "text", text: null };
                 const intl15 = util.intl;
-                const obj50 = { username: authorNick, usernameOnClick: _mod12.identity, topic: type.content };
+                const obj50 = { username: authorNick, usernameOnClick: apply.identity, topic: type.content };
                 obj49.text = intl15.formatToPlainString(util.t.aZtRW8, obj50);
                 tmp21 = obj49;
               } else if (type.type === MessageTypes.MessageTypes.STAGE_END) {
                 const obj51 = { type: "text", text: null };
                 const intl14 = util.intl;
-                const obj52 = { username: authorNick, usernameOnClick: _mod12.identity, topic: type.content };
+                const obj52 = { username: authorNick, usernameOnClick: apply.identity, topic: type.content };
                 obj51.text = intl14.formatToPlainString(util.t.vMJhvG, obj52);
                 tmp21 = obj51;
               } else if (type.type === MessageTypes.MessageTypes.STAGE_SPEAKER) {
                 const obj53 = { type: "text", text: null };
                 const intl13 = util.intl;
-                const obj54 = { username: authorNick, usernameOnClick: _mod12.identity };
+                const obj54 = { username: authorNick, usernameOnClick: apply.identity };
                 obj53.text = intl13.formatToPlainString(util.t.V4uCm4, obj54);
                 tmp21 = obj53;
               } else if (type.type === MessageTypes.MessageTypes.STAGE_TOPIC) {
                 const obj55 = { type: "text", text: null };
                 const intl12 = util.intl;
-                const obj56 = { username: authorNick, usernameOnClick: _mod12.identity, topic: type.content };
+                const obj56 = { username: authorNick, usernameOnClick: apply.identity, topic: type.content };
                 obj55.text = intl12.formatToPlainString(util.t.ro3RM0, obj56);
                 tmp21 = obj55;
               } else if (type.type === MessageTypes.MessageTypes.VOICE_SESSION) {

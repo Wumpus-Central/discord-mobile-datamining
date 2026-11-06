@@ -1,7 +1,7 @@
 // discord_app/modules/frames/panel/native/FramePanelStateContext.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const context = noop.createContext(fn(19438).activityPanelStateContextDefault);
+const context = noop.createContext(fn(19430).activityPanelStateContextDefault);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelStateContext.tsx");
 

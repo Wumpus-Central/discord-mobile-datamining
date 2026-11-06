@@ -12,7 +12,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/ICYMIExperiment.tsx");
 
-export const ICYMI_LAB_FEATURE = fn(9073).ICYMI_LAB_FEATURE;
+export const ICYMI_LAB_FEATURE = fn(9019).ICYMI_LAB_FEATURE;
 export function useICYMIEnabled(TabsNavigator) {
   _require = TabsNavigator;
   items = [ApexExperimentStore, AuthenticationStore, LabFeatureStore, UserStore];

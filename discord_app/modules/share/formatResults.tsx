@@ -1,5 +1,5 @@
 // discord_app/modules/share/formatResults.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply2 from "../../../_runtime/00012_apply.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import sortByMatchScore from "../autocompleter/index.tsx";
@@ -168,7 +168,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-const isAllowedType = fn(13617).isAllowedType;
+const isAllowedType = fn(13592).isAllowedType;
 const Constants = fn(1072);
 ({ Permissions: closure_9, ChannelTypes: closure_10 } = Constants);
 const re11 = /^deleted_user_[0-9a-f]{12}$/;
@@ -210,24 +210,24 @@ export default function formatResults(hasQuery) {
             user = user.getUser(type.id);
             let tmp6 = null;
             if (null != user) {
-              const obj = { type: queryMode(9287).AutocompleterResultTypes.USER, record: user, score: 0 };
+              const obj = { type: queryMode(9233).AutocompleterResultTypes.USER, record: user, score: 0 };
               tmp6 = obj;
             }
             let tmp3 = tmp6;
           } else {
-            tmp3 = originDestination(9299)(type.id);
+            tmp3 = originDestination(9245)(type.id);
           }
           return tmp3;
         });
       }
       const channelHistory = QuickSwitcherStore.getChannelHistory();
       if (channelHistory.length > 0) {
-        let mapped1 = channelHistory.map((item) => originDestination(9299)(item));
+        let mapped1 = channelHistory.map((item) => originDestination(9245)(item));
       } else {
         mapped1 = [];
       }
       if (frequentChannels.length > 0) {
-        let mapped2 = frequentChannels.map((id) => originDestination(9299)(id.id));
+        let mapped2 = frequentChannels.map((id) => originDestination(9245)(id.id));
       } else {
         mapped2 = [];
       }
@@ -259,7 +259,7 @@ export default function formatResults(hasQuery) {
           return isNotNullishResult;
         });
         if (selectedDestinations != null) {
-          const found1 = selectedDestinations.find((item) => _mod12.isEqual(item, originDestination));
+          const found1 = selectedDestinations.find((item) => apply2.isEqual(item, originDestination));
         }
         if (null != originDestination) {
           if (null == found1) {
@@ -281,11 +281,11 @@ export default function formatResults(hasQuery) {
         let user = UserStore.getUser(targetDestination.id);
         targetDestination = null;
         if (null != user) {
-          let obj = { type: queryMode(9287).AutocompleterResultTypes.USER, record: user, score: 0 };
+          let obj = { type: queryMode(9233).AutocompleterResultTypes.USER, record: user, score: 0 };
           targetDestination = obj;
         }
       } else {
-        const tmp9 = originDestination(9299)(targetDestination.id);
+        const tmp9 = originDestination(9245)(targetDestination.id);
       }
     }
     mapped = [];
@@ -339,7 +339,7 @@ export function formatResultsWithHeaders(hasNonEmptyQuery) {
     items1 = [];
   }
   const intl = queryMode(1113).intl;
-  const headerResult = queryMode(9287).createHeaderResult(intl.string(queryMode(1113).t.qm9dSj));
+  const headerResult = queryMode(9233).createHeaderResult(intl.string(queryMode(1113).t.qm9dSj));
   if (hasNonEmptyQuery.hasNonEmptyQuery) {
     const items2 = [headerResult];
     HermesBuiltin.arraySpread(mergeAndDedupeResultsWithHeaders(results.filter(isAllowedType), items1), 1);
@@ -357,7 +357,7 @@ export function formatResultsWithHeaders(hasNonEmptyQuery) {
       let items4 = items3;
     } else {
       const intl2 = queryMode(1113).intl;
-      items4 = [queryMode(9287).createHeaderResult(intl2.string(queryMode(1113).t["80lOZ1"])), ,];
+      items4 = [queryMode(9233).createHeaderResult(intl2.string(queryMode(1113).t["80lOZ1"])), ,];
       let tmp13 = null;
       if (null != selectedChannelId) {
         const tmp7 = createAutocompleterResultForChannelIdDefault(selectedChannelId);
@@ -365,7 +365,7 @@ export function formatResultsWithHeaders(hasNonEmptyQuery) {
         if (null != tmp7) {
           let tmp9 = null;
           if (isAllowedType(tmp7)) {
-            let canResult = tmp7.type === queryMode(9287).AutocompleterResultTypes.USER;
+            let canResult = tmp7.type === queryMode(9233).AutocompleterResultTypes.USER;
             if (!canResult) {
               canResult = PermissionStore.can(constants.VIEW_CHANNEL, tmp7.record);
             }
@@ -381,9 +381,9 @@ export function formatResultsWithHeaders(hasNonEmptyQuery) {
       items4[1] = tmp13;
       items4[2] = headerResult;
       HermesBuiltin.arraySpread(found1, 3);
-      const tmpResult = queryMode(9287);
+      const tmpResult = queryMode(9233);
     }
     return mergeAndDedupeResultsWithHeaders(items4, items1);
   }
-  const obj = queryMode(9287);
+  const obj = queryMode(9233);
 }

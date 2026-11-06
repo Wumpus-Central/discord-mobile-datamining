@@ -1,12 +1,12 @@
 // discord_app/modules/video_calls/native/components/PopoutMenu.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
-import Patterns from "../../../../../_runtime/05388_Patterns.js";
-import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
+import Patterns from "../../../../../_runtime/05408_Patterns.js";
+import LegacyBaseButton from "../../../../../_runtime/05450_LegacyBaseButton.js";
 import FormRowDefault from "../../../../design/void/Form/native/FormRow.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -45,7 +45,7 @@ function PopoutMenuRow(onClose) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: {
     position: "absolute",
@@ -160,7 +160,7 @@ export default function PopoutMenu(onClose) {
   let items3 = [tmp4[1]];
   closure_16 = noop.useMemo(
     () =>
-      _modDef12.debounce((arg0) => {
+      applyDefault.debounce((arg0) => {
         closure_1_5(arg0);
       }, 16),
     items3,
@@ -258,7 +258,7 @@ export default function PopoutMenu(onClose) {
     const obj3 = { gesture: tmp33, children: null };
     const obj4 = { ref: ref1, children: trigger };
     obj3.children = c6(c5, obj4);
-    const items8 = [c6(tmp21(5430).GestureDetector, obj3)];
+    const items8 = [c6(tmp21(5450).GestureDetector, obj3)];
     let tmp35Result = null;
     if (first1) {
       const obj5 = { ref: ref2, style: null, onLayout: null, children: null };
@@ -278,7 +278,7 @@ export default function PopoutMenu(onClose) {
       const items10 = [tmp37Result, ,];
       let tmp37Result2 = null;
       if (null != title) {
-        tmp37Result2 = tmp37(tmp21(8322).FormDivider, {});
+        tmp37Result2 = tmp37(tmp21(8267).FormDivider, {});
       }
       items10[1] = tmp37Result2;
       items10[2] = rows.map((item, index) => {

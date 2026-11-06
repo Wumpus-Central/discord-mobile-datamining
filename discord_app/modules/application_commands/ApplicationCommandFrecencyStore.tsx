@@ -1,5 +1,5 @@
 // discord_app/modules/application_commands/ApplicationCommandFrecencyStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import FrecencyDefault from "../../lib/Frecency.tsx";
@@ -15,7 +15,7 @@ function handleUserSettingsProtoStoreChange() {
     applicationCommands = {};
   }
   closure_7.overwriteHistory(
-    _modDef12.mapValues(applicationCommands, (recentUses) => {
+    applyDefault.mapValues(applicationCommands, (recentUses) => {
       const obj = {};
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;
@@ -26,7 +26,7 @@ function handleUserSettingsProtoStoreChange() {
     global.pendingUsages,
   );
 }
-const ApplicationCommandConstants = fn(6173);
+const ApplicationCommandConstants = fn(6193);
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let global = { pendingUsages: [] };

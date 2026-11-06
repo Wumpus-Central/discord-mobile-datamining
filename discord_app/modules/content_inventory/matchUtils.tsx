@@ -112,7 +112,7 @@ export function findMatchingEntry(entries, activity) {
   _require = activity;
   const found = entries.filter(require("utils").isEntryActive);
   if (activity.type === require("ActivityTypes").ActivityTypes.PLAYING) {
-    const found1 = found.filter(tmp(9058).isGamingLikeEntry);
+    const found1 = found.filter(tmp(9004).isGamingLikeEntry);
     let found2 = found1.find((extra) => {
       let name = closure_0;
       let game_name = extra.extra;
@@ -130,11 +130,11 @@ export function findMatchingEntry(entries, activity) {
       }
       return tmp;
     });
-  } else if (activity.type === tmp(5899).ActivityTypes.LISTENING) {
-    const found3 = found.filter(tmp(9058).isListenedSessionEntry);
+  } else if (activity.type === tmp(5918).ActivityTypes.LISTENING) {
+    const found3 = found.filter(tmp(9004).isListenedSessionEntry);
     found2 = found3.find((item) => isMatchingListeningActivity(item, closure_0));
-  } else if (activity.type === tmp(5899).ActivityTypes.WATCHING) {
-    const found4 = entries.filter(tmp(9058).isWatchedMediaEntry);
+  } else if (activity.type === tmp(5918).ActivityTypes.WATCHING) {
+    const found4 = entries.filter(tmp(9004).isWatchedMediaEntry);
     found2 = found4.find((extra) => {
       const tmp3 = isCrunchyrollActivityDefault(activity);
       let tmp4 = !tmp3;

@@ -41,7 +41,6 @@ export default function useMessagesData() {
   const tmp7 = connectedToGateway(channelFavorites[7]);
   const items2 = [setting];
   stateFromStores = connected(channelFavorites[6]).useStateFromStores(items2, () => setting.getFriendCount());
-  setAdded.useRef(-1);
   const items3 = [
     connected,
     connectedToGateway,
@@ -54,47 +53,36 @@ export default function useMessagesData() {
     setAdded,
   ];
   return setAdded.useMemo(() => {
-    if (-1 === ref.current) {
-      ref.current = 0;
-    } else {
-      let tmp2 = connected;
-      if (connected) {
-        tmp2 = connectedToGateway;
-      }
-      if (tmp2) {
-        ref.current = ref.current + 1;
-      }
-    }
     if (numFriendSuggestions <= 0) {
-      if (tmp3) {
-        let num3 = 0;
+      if (tmp) {
+        let num2 = 0;
       } else {
-        num3 = 15;
+        num2 = 15;
       }
-      let bound = num3;
+      let bound = num2;
     } else {
       const _Math = Math;
-      bound = Math.min(tmp4, 5);
+      bound = Math.min(tmp2, 5);
     }
     items = [];
     items.push(channelFavorites.length);
     items.push(length.length);
+    let num3 = 0;
+    if (numFriendSuggestions > 0) {
+      num3 = 1;
+    }
+    items.push(num3);
     let num4 = 0;
     if (numFriendSuggestions > 0) {
-      num4 = 1;
-    }
-    items.push(num4);
-    let num5 = 0;
-    if (numFriendSuggestions > 0) {
-      num5 = 0;
+      num4 = 0;
       if (connected) {
-        num5 = 0;
+        num4 = 0;
         if (connectedToGateway) {
-          num5 = friendSuggestions.length;
+          num4 = friendSuggestions.length;
         }
       }
     }
-    items.push(num5);
+    items.push(num4);
     items.push(bound);
     if (channelFavorites.length + length.length > 0) {
       let HappeningNow = null;
@@ -104,14 +92,13 @@ export default function useMessagesData() {
       let EmptyState = HappeningNow;
     } else {
       EmptyState = null;
-      if (tmp5) {
+      if (tmp3) {
         EmptyState = obj.EmptyState;
       }
     }
     obj = {
       channels: length,
       channelFavorites,
-      dataKey: null,
       showFullscreenEmptyState: null,
       setAddedFriendSuggestions: null,
       friendSuggestions: null,
@@ -119,34 +106,28 @@ export default function useMessagesData() {
       renderFooter: null,
       sections: null,
     };
-    let combined = null;
-    if (ref.current > 0) {
-      const _HermesInternal = HermesInternal;
-      combined = "" + ref.current;
-    }
-    obj.dataKey = combined;
-    let tmp26 = !tmp3;
+    let tmp22 = !tmp;
     if (channelFavorites.length + length.length <= 0) {
-      tmp26 = connected;
+      tmp22 = connected;
     }
-    if (tmp26) {
-      tmp26 = !tmp5;
+    if (tmp22) {
+      tmp22 = !tmp3;
     }
-    obj.showFullscreenEmptyState = tmp26;
+    obj.showFullscreenEmptyState = tmp22;
     obj.setAddedFriendSuggestions = setAdded;
     obj.friendSuggestions = friendSuggestions;
     obj.renderHeader = EmptyState;
-    let tmp27 = connected;
+    let tmp23 = connected;
     if (connected) {
-      tmp27 = stateFromStores < 4;
+      tmp23 = stateFromStores < 4;
     }
-    if (tmp27) {
-      tmp27 = tmp3;
+    if (tmp23) {
+      tmp23 = tmp;
     }
-    if (!tmp27) {
-      tmp27 = tmp5;
+    if (!tmp23) {
+      tmp23 = tmp3;
     }
-    obj.renderFooter = tmp27;
+    obj.renderFooter = tmp23;
     obj.sections = items;
     return obj;
   }, items3);

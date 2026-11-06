@@ -1,5 +1,5 @@
 // discord_app/stores/native/MessagePreviewStore.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import MessageRecordUtils from "../../modules/messages/MessageRecordUtils.tsx";
@@ -24,7 +24,7 @@ Object.defineProperty(prototype, "jumpTargetId", {
 });
 prototype["getMessage"] = function getMessage(arg0) {
   closure_0 = arg0;
-  return _modDef12.find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
+  return applyDefault.find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
 };
 MessagePreviewStore.displayName = "MessagePreviewStore";
 const messagePreviewStore = new MessagePreviewStore(DispatcherDefault, {

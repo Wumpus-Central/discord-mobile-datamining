@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/scope_setup/useConjureScopeCards.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4024 from "../intl/ConjureUntranslated.messages.js";
 import conjureScopeSetup from "conjureScopeSetup.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -13,7 +13,7 @@ require = fn;
 function errorStatus(status) {
   return status.status;
 }
-let isProjectOwner = fn(6982).isProjectOwner;
+let isProjectOwner = fn(6924).isProjectOwner;
 let c8 = "scope-setup:q0";
 let closure_9 = "" + "scope-setup:q0" + ":0";
 let closure_10 = "" + "scope-setup:q0" + ":1";
@@ -106,9 +106,9 @@ export function useConjureScopeSetupCard(projectId) {
       const obj2 = { id: str, questions: null };
       const intl6 = util.intl;
       if (conjureEligibleGuilds.length > 0) {
-        let ZWXDeI = _modDef3995.ZWXDeI;
+        let ZWXDeI = _modDef4024.ZWXDeI;
       } else {
-        ZWXDeI = _modDef3995["u5+Qhu"];
+        ZWXDeI = _modDef4024["u5+Qhu"];
       }
       const obj3 = {
         id: "server-setup:q0",
@@ -122,7 +122,7 @@ export function useConjureScopeSetupCard(projectId) {
       } else {
         const obj4 = { id: id2, label: null };
         const intl7 = util.intl;
-        obj4.label = intl7.string(_modDef3995.qLYOpH);
+        obj4.label = intl7.string(_modDef4024.qLYOpH);
         items = [obj4];
       }
       obj3.options = items;
@@ -135,18 +135,18 @@ export function useConjureScopeSetupCard(projectId) {
       const obj = { id: "scope-setup", questions: null };
       const obj6 = { id, question: null, recommendation_reason: "", allow_custom: false, options: null };
       const intl = util.intl;
-      obj6.question = intl.string(_modDef3995.ickKBI);
+      obj6.question = intl.string(_modDef4024.ickKBI);
       const obj7 = { id: id2, label: null, detail: null };
       const intl2 = util.intl;
-      obj7.label = intl2.string(_modDef3995.qLYOpH);
+      obj7.label = intl2.string(_modDef4024.qLYOpH);
       const intl3 = util.intl;
-      obj7.detail = intl3.string(_modDef3995.QSKvUE);
+      obj7.detail = intl3.string(_modDef4024.QSKvUE);
       const items2 = [obj7];
       const obj8 = { id: id3, label: null, detail: null };
       const intl4 = util.intl;
-      obj8.label = intl4.string(_modDef3995.QV5C7b);
+      obj8.label = intl4.string(_modDef4024.QV5C7b);
       const intl5 = util.intl;
-      obj8.detail = intl5.string(_modDef3995["ZzHR4/"]);
+      obj8.detail = intl5.string(_modDef4024["ZzHR4/"]);
       items2[1] = obj8;
       obj6.options = items2;
       const items3 = [obj6];
@@ -212,16 +212,16 @@ export function useConjureScopeSetupCard(projectId) {
         } else {
           let intl2 = tmp(1113).intl;
           if ("server" === tmp9) {
-            let jNVZ3e = conjureEligibleGuilds(3995)["XXKd+7"];
+            let jNVZ3e = conjureEligibleGuilds(4024)["XXKd+7"];
           } else {
-            jNVZ3e = conjureEligibleGuilds(3995).jNVZ3e;
+            jNVZ3e = conjureEligibleGuilds(4024).jNVZ3e;
           }
           intl2.string(jNVZ3e);
         }
       }
     }
     let obj5 = {
-      clarification: tmp(12808).ownerOnlyClarification(memo),
+      clarification: tmp(12773).ownerOnlyClarification(memo),
       readOnly: true,
       hideSubmit: true,
       failure: null,
@@ -278,8 +278,8 @@ export function useConjureScopeSwitchCard(merged) {
     items1,
   );
   let obj = projectId(504);
-  const conjureEligibleGuilds = projectId(12824).useConjureEligibleGuilds("ConjureScopeSwitchCard");
-  let obj2 = projectId(12824);
+  const conjureEligibleGuilds = projectId(12789).useConjureEligibleGuilds("ConjureScopeSwitchCard");
+  let obj2 = projectId(12789);
   let obj3 = conjureEligibleGuilds;
   [tmp6, c6] = feature(conjureEligibleGuilds.useState(false), 2);
   const tmp5 = feature(conjureEligibleGuilds.useState(false), 2);
@@ -292,7 +292,7 @@ export function useConjureScopeSwitchCard(merged) {
   const memo = obj3.useMemo(() => {
     const first = _slicedToArray(clarification.questions, 1)[0];
     const intl = util.intl;
-    const tmp7 = _modDef3995;
+    const tmp7 = _modDef4024;
     if ("guild" === scope) {
       let d7jxeT = tmp7["jh/iy+"];
       let tmp8 = importDefault;
@@ -314,7 +314,7 @@ export function useConjureScopeSwitchCard(merged) {
       const _HermesInternal = HermesInternal;
       obj4.id = "" + first.id + ":0";
       const intl2 = util.intl;
-      obj4.label = intl2.string(tmp8(3995).TVRkVh);
+      obj4.label = intl2.string(tmp8(4024).TVRkVh);
       items = [obj4];
       obj3.options = items;
       tmp12 = obj3;
@@ -356,7 +356,7 @@ export function useConjureScopeSwitchCard(merged) {
       }
       obj4.onSubmit = handleAnswered;
       let intl = tmp(1113).intl;
-      const tmp13 = clarification(3995);
+      const tmp13 = clarification(4024);
       if ("guild" === scope) {
         let TVRkVh = tmp13.Ua7yKM;
         let tmp14 = tmp12;
@@ -379,7 +379,7 @@ export function useConjureScopeSwitchCard(merged) {
       }
       obj4.onBack = keep;
       let intl2 = tmp(1113).intl;
-      const tmp14Result = tmp14(3995);
+      const tmp14Result = tmp14(4024);
       obj4.backText = intl2.string("guild" === scope ? tmp14Result["4WnIqd"] : tmp14Result["am+p7p"]);
       obj4.hideSubmit = "user" === scope;
       if (null == tmp8) {
@@ -388,9 +388,9 @@ export function useConjureScopeSwitchCard(merged) {
       } else {
         const intl3 = tmp(1113).intl;
         if ("locked" === tmp8) {
-          let jNVZ3e = tmp14(3995).irUT0N;
+          let jNVZ3e = tmp14(4024).irUT0N;
         } else {
-          jNVZ3e = tmp14(3995).jNVZ3e;
+          jNVZ3e = tmp14(4024).jNVZ3e;
         }
         intl3.string(jNVZ3e);
       }
@@ -398,6 +398,6 @@ export function useConjureScopeSwitchCard(merged) {
   }
   const obj5 = { clarification: null, readOnly: true, hideSubmit: true, failure: null };
   let tmp7 = feature(conjureEligibleGuilds.useState(null), 2);
-  obj5.clarification = projectId(12808).ownerOnlyClarification(memo);
+  obj5.clarification = projectId(12773).ownerOnlyClarification(memo);
   return obj5;
 }

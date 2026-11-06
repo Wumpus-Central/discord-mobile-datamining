@@ -181,21 +181,21 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
   items = [setDataImmediate];
   const stateFromStores = chatInputRef(504).useStateFromStores(items, () => setDataImmediate.useReducedMotion);
   obj2 = chatInputRef(504);
-  analyticsLocations = chatInputStateRef(7465)(chatInputStateRef(7490).EMOJI_SUGGESTIONS).analyticsLocations;
-  const tmp5 = chatInputStateRef(14186)(tmp[1], 16);
+  analyticsLocations = chatInputStateRef(7410)(chatInputStateRef(7435).EMOJI_SUGGESTIONS).analyticsLocations;
+  const tmp5 = chatInputStateRef(14163)(tmp[1], 16);
   setData = tmp5.setData;
   setDataImmediate = tmp5.setDataImmediate;
   const items1 = [setData];
   const imperativeHandle = setData.useImperativeHandle(ref, () => ({ setData }), items1);
   let obj3 = { channel, text, selectionStart, selectionEnd, enabled: null, maxCount: null, minUnlockedEmojis: null };
-  const tmp4 = chatInputStateRef(7465);
+  const tmp4 = chatInputStateRef(7410);
   if (focused) {
     focused = !suppressed;
   }
   obj3.enabled = focused;
   obj3.maxCount = MAX_SUGGESTIONS_LARGE;
   obj3.minUnlockedEmojis = minUnlockedEmojis;
-  const tmp7Result = chatInputStateRef(14222)(obj3);
+  const tmp7Result = chatInputStateRef(14199)(obj3);
   unlockedEmojis = tmp7Result.unlockedEmojis;
   queryEnd = tmp7Result.queryEnd;
   clear = tmp7Result.clear;
@@ -239,7 +239,7 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
       ref = queryEnd + combined.length;
     }
   }, items2);
-  const tmp7 = chatInputStateRef(14222);
+  const tmp7 = chatInputStateRef(14199);
   return {
     unlockedEmojis,
     lockedEmojis: tmp7Result.lockedEmojis,

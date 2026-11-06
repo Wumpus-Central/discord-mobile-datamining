@@ -1,5 +1,5 @@
 // discord_app/modules/html_parser/index.tsx
-import _mod9559 from "../../../_runtime/metro/09559__.js";
+import _mod9505 from "../../../_runtime/metro/09505__.js";
 import HTMLParserRunUtils from "HTMLParserRunUtils.tsx";
 import HTMLParserLinkUtils from "HTMLParserLinkUtils.tsx";
 import HTMLParserConstants from "HTMLParserConstants.tsx";
@@ -378,7 +378,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
   obj.links = [];
   obj.lists = [];
   obj.held = [];
-  const Parser = obj(9559).Parser;
+  const Parser = obj(9505).Parser;
   const fn = () => HermesBuiltin.applyArguments(new.target, new.target);
   class fn extends Parser {
     onclosetag(arg0, arg1) {
@@ -562,7 +562,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
                           const str = markup.slice(startIndex, startIndex + arg0.length + 2);
                         },
                       };
-                      const parser = new _mod9559.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
+                      const parser = new _mod9505.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
                       parser.end(markup);
                       let map1 = map;
                     } else {
@@ -666,7 +666,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
         appendText(obj, substr);
       },
     };
-    let parser = new obj(9559).Parser(obj3, { decodeEntities: true });
+    let parser = new obj(9505).Parser(obj3, { decodeEntities: true });
     parser.end(str.replace(/</g, "&lt;"));
   }
   const runs = obj.runs;
@@ -737,11 +737,11 @@ export function parseHTMLFromText(arr, arg1) {
       if (str9.includes("\r")) {
         replaced = str9.replace(/\r\n?/g, "\n");
       }
-      const tmp21Result = collapseBlankLines(replaced, 0);
-      const tmp24 = findTextStart(tmp21Result);
-      const tmp26 = findTextEnd(tmp21Result, tmp24);
-      if (tmp26 > tmp24) {
-        const obj2 = { text: tmp21Result.slice(tmp24, tmp26) };
+      const tmp23Result = collapseBlankLines(replaced, 0);
+      const tmp26 = findTextStart(tmp23Result);
+      const tmp28 = findTextEnd(tmp23Result, tmp26);
+      if (tmp28 > tmp26) {
+        const obj2 = { text: tmp23Result.slice(tmp26, tmp28) };
         const merged = Object.assign(React6);
         items = [obj2];
         items1 = items;
@@ -764,7 +764,7 @@ export function parseHTMLFromText(arr, arg1) {
       if (str4.includes("\r")) {
         replaced1 = str4.replace(/\r\n?/g, "\n");
       }
-      let items3 = parseMarkupRuns(replaced1);
+      let addTextLinksResult = HTMLParserLinkUtils.addTextLinks(parseMarkupRuns(replaced1), false);
     } else {
       let replaced2 = arr;
       if (arr.includes("\r")) {
@@ -774,14 +774,14 @@ export function parseHTMLFromText(arr, arg1) {
       const tmp5 = findTextStart(tmp2Result);
       const tmp7 = findTextEnd(tmp2Result, tmp5);
       if (tmp7 > tmp5) {
-        const obj3 = { text: tmp2Result.slice(tmp5, tmp7) };
+        const obj4 = { text: tmp2Result.slice(tmp5, tmp7) };
         const merged1 = Object.assign(React6);
-        const items2 = [obj3];
-        items3 = items2;
+        const items2 = [obj4];
+        addTextLinksResult = items2;
       } else {
-        items3 = [];
+        addTextLinksResult = [];
       }
     }
-    return items3;
+    return addTextLinksResult;
   }
 }

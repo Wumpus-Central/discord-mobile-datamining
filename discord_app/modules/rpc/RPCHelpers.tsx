@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/RPCHelpers.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import UrlDefault from "../../../_runtime/01381_Url.js";
@@ -245,8 +245,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4996).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6588);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(5023).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6608);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1072);
 ({
@@ -321,8 +321,8 @@ export const VALIDATE_SOCKET_CALLS_PER_PERIOD_HIGH = 60;
 export const VALIDATE_SOCKET_PERIOD_MS = MINUTE;
 export { VALIDATE_SOCKET_THROTTLERS };
 export function containsSameValues(arg0, arg1) {
-  const obj = _modDef12;
-  return obj.isEqual(arg0, _modDef12.pick(arg1, Object.keys(arg0)));
+  const obj = applyDefault;
+  return obj.isEqual(arg0, applyDefault.pick(arg1, Object.keys(arg0)));
 }
 export { validateOrigin };
 export { transformBigFlag };
@@ -489,7 +489,7 @@ export function transformChannel(channel, result, arg2) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(6179).getName(dependencyMap, id.id, user),
+            nick: closure_1(6199).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -498,7 +498,7 @@ export function transformChannel(channel, result, arg2) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9484)(user);
+          obj.user = closure_1(9430)(user);
           return obj;
         }
       });

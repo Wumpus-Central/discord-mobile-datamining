@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx
-import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import StageChannelParticipants from "../../../../stage_channels/StageChannelParticipants.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageChannelParticipantStore from "../../../../stage_channels/StageChannelParticipantStore.tsx";
@@ -69,15 +69,15 @@ export function useLiveStageData(stage) {
   const items7 = [stateFromStoresArray, stateFromStoresArray1];
   const memo = stateFromStoresArray2.useMemo(() => {
     items = [...stateFromStoresArray1];
-    return _modDef12.uniqBy(items, (id) => id.id);
+    return applyDefault.uniqBy(items, (id) => id.id);
   }, items6);
   memo1 = stateFromStoresArray2.useMemo(
-    () => _modDef12.differenceBy(stateFromStoresArray, stateFromStoresArray1, "id"),
+    () => applyDefault.differenceBy(stateFromStoresArray, stateFromStoresArray1, "id"),
     items7,
   );
   const items8 = [stateFromStoresArray, stateFromStoresArray2];
   const memo2 = stateFromStoresArray2.useMemo(
-    () => _modDef12.differenceBy(stateFromStoresArray2, stateFromStoresArray, "id"),
+    () => applyDefault.differenceBy(stateFromStoresArray2, stateFromStoresArray, "id"),
     items8,
   );
   const items9 = [memo1, memo2];

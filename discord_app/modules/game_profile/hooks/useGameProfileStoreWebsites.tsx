@@ -8,12 +8,12 @@ const require = globalThis.__r;
 require = fn;
 const set = new Set(["1402418703554842694", "356877880938070016"]);
 let items = [
-  fn(9496).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES,
-  fn(9496).ThirdPartyGameApplicationWebsiteCategory.STEAM,
-  fn(9496).ThirdPartyGameApplicationWebsiteCategory.ROBLOX,
-  fn(9496).ThirdPartyGameApplicationWebsiteCategory.BATTLENET,
-  fn(9496).ThirdPartyGameApplicationWebsiteCategory.RIOT,
-  fn(9496).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT,
+  fn(9442).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES,
+  fn(9442).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+  fn(9442).ThirdPartyGameApplicationWebsiteCategory.ROBLOX,
+  fn(9442).ThirdPartyGameApplicationWebsiteCategory.BATTLENET,
+  fn(9442).ThirdPartyGameApplicationWebsiteCategory.RIOT,
+  fn(9442).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileStoreWebsites.tsx");
@@ -73,7 +73,7 @@ export function useGameProfileStoreWebsites(data) {
         }
         if (!someResult) {
           someResult = found.some(
-            (category) => category.category === steamWebsiteUrl(9496).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+            (category) => category.category === steamWebsiteUrl(9442).ThirdPartyGameApplicationWebsiteCategory.STEAM,
           );
         }
         if (!someResult) {
@@ -85,9 +85,9 @@ export function useGameProfileStoreWebsites(data) {
         }
         const sorted = found.sort((category, category2) => {
           let num = -1;
-          if (category.category !== steamWebsiteUrl(9496).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+          if (category.category !== steamWebsiteUrl(9442).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
             let num2 = 0;
-            if (category2.category === steamWebsiteUrl(9496).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+            if (category2.category === steamWebsiteUrl(9442).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
               num2 = 1;
             }
             num = num2;

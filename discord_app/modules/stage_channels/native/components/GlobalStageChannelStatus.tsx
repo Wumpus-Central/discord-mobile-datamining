@@ -5,9 +5,9 @@ import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import StageChannelActionCreators from "../../StageChannelActionCreators.tsx";
 import PushNotificationDefault from "../../../../lib/pushnotification/PushNotification.tsx";
+import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
 import useCanSpeakInChannelDefault from "../../useCanSpeakInChannel.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
-import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,8 +22,8 @@ class StageChannelRaiseHandAck {
     closure_2 = undefined;
     closure_3 = undefined;
     closure_4 = async function _handleAcceptInvite() {
-      if (c5 === 2) {
-        c5 = 3;
+      if (c4 === 2) {
+        c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
@@ -36,72 +36,71 @@ class StageChannelRaiseHandAck {
         }
       } else {
         try {
-          c5 = 2;
-          if (0 === c4) {
+          c4 = 2;
+          if (0 === v2) {
             if (arg0 === 1) {
-              c5 = 3;
+              c4 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c5 = 3;
+              c4 = 3;
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              channel = tmp7;
               if (null != id) {
                 if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                  const obj5 = { entryPoint: tmp41(6867).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                  const result = tmp3(8100).showAgeVerificationGetStartedModal(obj5);
-                  const obj4 = tmp3(8100);
+                  const obj5 = { entryPoint: tmp3(6809).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                  const result = v2(8046).showAgeVerificationGetStartedModal(obj5);
+                  const obj4 = v2(8046);
                 } else {
                   dependencyMap(true);
                   dependencyMap = 1;
-                  c4 = 2;
-                  c5 = 1;
-                  const obj6 = { value: tmp41(8090).audienceAckRequestToSpeak(id, false), done: false };
+                  v2 = 2;
+                  c4 = 1;
+                  const obj6 = { value: tmp3(8036).audienceAckRequestToSpeak(id, false), done: false };
                   return obj6;
                 }
-                obj9 = channel(6896);
+                obj9 = tmp3(6838);
               }
-              c5 = 3;
+              c4 = 3;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            closure_128_0 = tmp27;
-            closure_129_3(false);
-            throw closure_128_0;
+            closure_128_3(false);
+            throw tmp29;
           } else if (arg0 === 1) {
-            c5 = 3;
+            c4 = 3;
             throw value;
           } else if (arg0 !== 2) {
             dependencyMap = 0;
-            closure_129_3(false);
+            closure_128_3(false);
             if (null == key.getKey()) {
-              tmp27(8086).openStageChannel(closure_129_0);
-              const obj8 = tmp27(8086);
+              tmp29(8032).openStageChannel(closure_128_0);
+              const obj8 = tmp29(8032);
             }
           }
           dependencyMap = 0;
-          c5 = 3;
+          closure_128_3(false);
+          c4 = 3;
           const obj = { value, done: true };
           return obj;
-        } catch (tmp27) {
+        } catch (tmp29) {
           if (tmp4 === dependencyMap) {
-            c5 = tmp2;
-            throw tmp27;
+            c4 = tmp2;
+            throw tmp29;
           } else {
-            c4 = tmp;
+            v2 = tmp;
           }
         }
       }
     };
     tmp = closure_12();
-    tmp3 = closure_3;
     tmp2 = closure_1;
-    stringResult = closure_1(closure_3[11])(channel);
+    tmp3 = closure_3;
+    stringResult = closure_1(closure_3[10])(channel);
     if (stringResult == null) {
       tmp5 = channel;
-      intl = channel(tmp3[8]).intl;
-      stringResult = intl.string(channel(tmp3[8]).t["/YzI63"]);
+      intl = channel(tmp3[11]).intl;
+      stringResult = intl.string(channel(tmp3[11]).t["/YzI63"]);
     }
     closure_1 = stringResult;
     tmp6 = channel;
@@ -152,98 +151,79 @@ class StageChannelRaiseHandAck {
       obj1 = { style: null, children: null };
       items2 = [,];
       items2[0] = tmp.invitedContainer;
-      obj18 = { height: null };
-      obj18.height = tmp16;
-      items2[1] = obj18;
+      obj15 = { height: null };
+      obj15.height = tmp16;
+      items2[1] = obj15;
       obj1.style = items2;
       tmp20 = jsx;
-      obj19 = { style: null, children: null };
-      obj19.style = tmp.row;
-      obj20 = { style: null, accessibilityRole: "header", children: null };
-      obj20.style = tmp.invitedHeaderText;
-      intl2 = tmp6(tmp3[8]).intl;
-      obj20.children = intl2.string(tmp6(tmp3[8]).t.Ul1RJQ);
-      obj19.children = jsx(tmp6(tmp3[22]).LegacyText, obj20);
+      obj16 = { style: null, children: null };
+      obj16.style = tmp.row;
+      obj17 = { style: null, accessibilityRole: "header", children: null };
+      obj17.style = tmp.invitedHeaderText;
+      intl2 = tmp6(tmp3[11]).intl;
+      obj17.children = intl2.string(tmp6(tmp3[11]).t.Ul1RJQ);
+      obj16.children = jsx(tmp6(tmp3[22]).LegacyText, obj17);
       items3 = [, ,];
-      items3[0] = jsx(View, obj19);
+      items3[0] = jsx(View, obj16);
       num = 0;
-      if (stageBlockedUsersCount <= 0) {
-        tmp21 = null;
-        if (stageIgnoredUsersCount <= 0) {
-          items3[1] = null;
-          obj21 = { style: null, children: null };
-          obj21.style = tmp.row;
-          obj22 = { style: null, children: null };
-          obj22.style = tmp.buttonWrapper;
-          obj23 = { variant: "secondary", onPress: null, pillStyle: null, size: "sm", text: null, grow: true };
-          obj23.onPress = function handleDeclineInvite() {
-            if (null != channel) {
-              const result = StageChannelActionCreators.audienceAckRequestToSpeak(tmp, true);
-            }
-          };
-          obj23.pillStyle = tmp.declineButtonPill;
-          intl6 = tmp6(tmp3[8]).intl;
-          obj23.text = intl6.string(tmp6(tmp3[8]).t["1YDv7a"]);
-          obj22.children = tmp20(tmp6(tmp3[24]).BaseTextButton, obj23);
-          items4 = [,];
-          items4[0] = tmp20(tmp19, obj22);
-          obj24 = { style: null, children: null };
-          obj24.style = tmp.buttonWrapper;
-          obj25 = {
-            variant: "primary-overlay",
-            onPress: null,
-            size: "sm",
-            text: null,
-            loading: null,
-            disabled: null,
-            grow: true,
-          };
-          obj25.onPress = function handleAcceptInvite() {
-            const self = this;
-            const apply = closure_4.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          };
-          intl7 = tmp6(tmp3[8]).intl;
-          obj25.text = intl7.string(tmp6(tmp3[8]).t.MpO0px);
-          obj25.loading = tmp10;
-          obj25.disabled = tmp10;
-          obj24.children = tmp20(tmp6(tmp3[25]).Button, obj25);
-          items4[1] = tmp20(tmp19, obj24);
-          obj21.children = items4;
-          items3[2] = tmp18(tmp19, obj21);
-          obj1.children = items3;
-          tmp18Result = tmp18(tmp19, obj1);
-        }
+      if (stageBlockedUsersCount > 0) {
+        obj18 = { style: null, children: null };
+        obj18.style = tmp.row;
+        obj19 = { variant: "body-xs/medium", color: "text-overlay-light", children: null };
+        obj19.children = tmp2(tmp3[24])(stageBlockedUsersCount, stageIgnoredUsersCount);
+        obj18.children = tmp20(tmp6(tmp3[23]).Text, obj19);
+        tmp20Result = tmp20(tmp19, obj18);
+      } else {
+        tmp20Result = null;
       }
-      obj26 = { style: null, children: null };
-      obj26.style = tmp.row;
-      if (stageBlockedUsersCount <= 0) {
-        if (stageIgnoredUsersCount > 0) {
-          intl4 = tmp6(tmp3[8]).intl;
-          obj27 = { number: null };
-          obj27.number = stageIgnoredUsersCount;
-          formatResult = intl4.format(tmp6(tmp3[8]).t["0bU4FO"], obj27);
+      items3[1] = tmp20Result;
+      obj20 = { style: null, children: null };
+      obj20.style = tmp.row;
+      obj21 = { style: null, children: null };
+      obj21.style = tmp.buttonWrapper;
+      obj22 = { variant: "secondary", onPress: null, pillStyle: null, size: "sm", text: null, grow: true };
+      obj22.onPress = function handleDeclineInvite() {
+        if (null != channel) {
+          const result = StageChannelActionCreators.audienceAckRequestToSpeak(tmp, true);
+        }
+      };
+      obj22.pillStyle = tmp.declineButtonPill;
+      intl3 = tmp6(tmp3[11]).intl;
+      obj22.text = intl3.string(tmp6(tmp3[11]).t["1YDv7a"]);
+      obj21.children = tmp20(tmp6(tmp3[25]).BaseTextButton, obj22);
+      items4 = [,];
+      items4[0] = tmp20(tmp19, obj21);
+      obj23 = { style: null, children: null };
+      obj23.style = tmp.buttonWrapper;
+      obj24 = {
+        variant: "primary-overlay",
+        onPress: null,
+        size: "sm",
+        text: null,
+        loading: null,
+        disabled: null,
+        grow: true,
+      };
+      obj24.onPress = function handleAcceptInvite() {
+        const self = this;
+        const apply = closure_4.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
-          intl3 = tmp6(tmp3[8]).intl;
-          obj28 = { number: null };
-          obj28.number = stageBlockedUsersCount;
-          formatResult = intl3.format(tmp6(tmp3[8]).t.sFzx0G, obj28);
+          applyArgumentsResult = apply(self, arguments);
         }
-        obj29 = { variant: "body-xs/medium", color: "text-overlay-light", children: null };
-        obj29.children = formatResult;
-        obj26.children = tmp20(tmp22, obj29);
-        tmp20Result = tmp20(tmp19, obj26);
-      }
-      intl5 = tmp6(tmp3[8]).intl;
-      obj30 = { number: null };
-      stageIgnoredUsersCount = stageBlockedUsersCount + stageIgnoredUsersCount;
-      obj30.number = stageIgnoredUsersCount;
-      formatResult = intl5.format(tmp6(tmp3[8]).t["cXaoI+"], obj30);
+        return applyArgumentsResult;
+      };
+      intl4 = tmp6(tmp3[11]).intl;
+      obj24.text = intl4.string(tmp6(tmp3[11]).t.MpO0px);
+      obj24.loading = tmp10;
+      obj24.disabled = tmp10;
+      obj23.children = tmp20(tmp6(tmp3[26]).Button, obj24);
+      items4[1] = tmp20(tmp19, obj23);
+      obj20.children = items4;
+      items3[2] = tmp18(tmp19, obj20);
+      obj1.children = items3;
+      tmp18Result = tmp18(tmp19, obj1);
     }
     return tmp18Result;
   }
@@ -252,7 +232,7 @@ const View = fn(17).View;
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   invitedContainer: { paddingHorizontal: nativeDefault.space.PX_8 },
   icon: null,
@@ -344,7 +324,7 @@ export default function GlobalStageChannelStatus(arg0) {
   }
   if (!invitedHeaderText) {
     if (!tmp7) {
-      tmp8(5165);
+      tmp8(5192);
       let str = "dark-content";
     }
     if (null != channel) {
@@ -369,7 +349,7 @@ export default function GlobalStageChannelStatus(arg0) {
           const obj5 = {
             style: activeSpeakerIcon,
             size: tmp8(1187).Icon.Sizes.REFRESH_SMALL_16,
-            source: tmp8(8749).getChannelIconWithGuild(channel, guild),
+            source: tmp8(8695).getChannelIconWithGuild(channel, guild),
           };
           items2[1] = closure_10(tmp8(1187).Icon, obj5);
           let tmp13Result = "" !== str2;
@@ -409,7 +389,7 @@ export default function GlobalStageChannelStatus(arg0) {
           items2[2] = closure_11(tmp8(1187).LegacyText, obj8);
           obj3.children = items2;
           tmp13Result2 = closure_11(View, obj3);
-          const tmp8Result2 = tmp8(8749);
+          const tmp8Result2 = tmp8(8695);
         }
         return tmp13Result2;
       }

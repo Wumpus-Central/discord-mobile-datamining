@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(17559).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(17548).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   placeholderContainer: { flexDirection: "row", alignItems: "center" },
   placeholderIcon: null,

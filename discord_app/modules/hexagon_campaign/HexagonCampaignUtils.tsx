@@ -1,8 +1,8 @@
 // discord_app/modules/hexagon_campaign/HexagonCampaignUtils.tsx
 import PerksStateUtils from "../premium/perks_state/PerksStateUtils.tsx";
-import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
+import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import HexagonCampaignConstants from "HexagonCampaignConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -158,25 +158,10 @@ export function isEnrolledInHexagonCampaign(currentUser, CLIENT_THEME) {
   if (currentUser != null) {
     perks = currentUser.perks;
   }
-  const perkSource = PerksStateUtils.getPerkSource(perks, dependencyMap2[CLIENT_THEME]);
+  const perkSource = PerksStateUtils.getPerkSource(perks, metroImportDefault[CLIENT_THEME]);
   let hasItem = null != perkSource;
   if (hasItem) {
     hasItem = perkSource.includes(user.PerkSource.SOURCE_HEXAGON_CAMPAIGN);
   }
   return hasItem;
-}
-export function hasPerkOnlyFromHexagonCampaign(currentUser, APP_ICON) {
-  let perks;
-  if (currentUser != null) {
-    perks = currentUser.perks;
-  }
-  const perkSource = PerksStateUtils.getPerkSource(perks, dependencyMap2[APP_ICON]);
-  let everyResult = null != perkSource;
-  if (everyResult) {
-    everyResult = perkSource.length > 0;
-  }
-  if (everyResult) {
-    everyResult = perkSource.every((item) => item === user.PerkSource.SOURCE_HEXAGON_CAMPAIGN);
-  }
-  return everyResult;
 }

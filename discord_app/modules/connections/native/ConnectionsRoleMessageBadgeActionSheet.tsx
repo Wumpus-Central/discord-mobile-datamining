@@ -1,5 +1,5 @@
 // discord_app/modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx
-import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
@@ -191,12 +191,12 @@ class PopoutChecks {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const OperatorTypes = fn(7488).OperatorTypes;
+const OperatorTypes = fn(7433).OperatorTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", padding: 16 },
   header: {

@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
+import apply from "../../../../_runtime/00012_apply.js";
 import mappers from "../utils/mappers.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -96,7 +96,7 @@ export function isEqualAvatarDecoration(avatarDecoration, asset2) {
           const tmp12Result2 = mappers;
         }
       }
-      let isEqualResult = _mod12.isEqual(tmp2, tmp6);
+      let isEqualResult = apply.isEqual(tmp2, tmp6);
     }
     return isEqualResult;
   }

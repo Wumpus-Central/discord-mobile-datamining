@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/StageChannelUtils.tsx
-import _mod12 from "../../../_runtime/metro/00012__.js";
+import apply from "../../../_runtime/00012_apply.js";
 import util from "../../intl/index.native.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
@@ -7,9 +7,9 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
 
 require = fn;
-const constants = fn(6847).RequestToSpeakPermissionStates;
+const constants = fn(6789).RequestToSpeakPermissionStates;
 const Permissions = fn(1072).Permissions;
-const RowType = fn(8092).RowType;
+const RowType = fn(8038).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 
@@ -19,7 +19,7 @@ export function fillChunk(arg0, arg1, arg2) {
     tmp = arg1;
   }
   closure_0 = tmp;
-  return _mod12.chunk(arg0, arg1).reduce((acc, item) => {
+  return apply.chunk(arg0, arg1).reduce((acc, item) => {
     if (closure_0 <= item.length) {
       items = [];
       items[HermesBuiltin.arraySpread(acc, 0)] = item;

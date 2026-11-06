@@ -23,7 +23,7 @@ prototype["isChildConnected"] = function isChildConnected(arg0) {
 };
 Object.defineProperty(prototype, "connections", {
   get: function connections() {
-    obj = require("../../_runtime/metro/00012__.js");
+    obj = require("apply");
     return obj.values(obj);
   },
   set: undefined,

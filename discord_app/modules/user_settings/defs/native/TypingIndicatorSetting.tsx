@@ -1,41 +1,85 @@
 // discord_app/modules/user_settings/defs/native/TypingIndicatorSetting.tsx
-import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3997 from "../../../custom_typing_indicator/intl/CustomTypingIndicator.messages.js";
+import _modDef4026 from "../../../custom_typing_indicator/intl/CustomTypingIndicator.messages.js";
+import UserSettingsProtoActionCreators from "../../UserSettingsProtoActionCreators.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import CustomTypingIndicatorExperiment from "../../../custom_typing_indicator/CustomTypingIndicatorExperiment.tsx";
-import ChatDotsIcon from "../../../../design/components/Icon/native/redesign/generated/ChatDotsIcon.tsx";
-import DismissibleBadgeUtils from "DismissibleBadgeUtils.tsx";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge.tsx";
+import CustomTypingIndicatorNewPresetsExperiment from "../../../custom_typing_indicator/CustomTypingIndicatorNewPresetsExperiment.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-
-const dismissibleBadgeRouteProps = DismissibleBadgeUtils.createDismissibleBadgeRouteProps(
-  dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
+require = fn;
+const jsx = fn(21).jsx;
+const TypingIndicatorSetting = "TypingIndicatorSetting";
+let DismissibleBadgeUtils = fn(16882);
+let closure_6 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
+  fn(5003).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
+  function useCanShowLaunchBadge() {
+    return !CustomTypingIndicatorNewPresetsExperiment.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting)
+      .enabled;
+  },
 );
-({ useTrailing, usePreNavigationAction } = dismissibleBadgeRouteProps);
+DismissibleBadgeUtils = fn(16882);
+let closure_7 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
+  fn(5003).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE,
+  function useCanShowNewPresetsBadge() {
+    return CustomTypingIndicatorNewPresetsExperiment.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting)
+      .enabled;
+  },
+);
+const SettingBuilders = fn(11703);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3997["pT+BVM"]);
+    return intl.string(_modDef4026["pT+BVM"]);
   },
   parent: null,
-  IconComponent: ChatDotsIcon.ChatDotsIcon,
-  useTrailing,
-  usePreNavigationAction,
+  IconComponent: fn(17611).ChatDotsIcon,
+  useTrailing() {
+    const obj = CustomTypingIndicatorNewPresetsExperiment;
+    const DismissibleContent = dismissible_content.DismissibleContent;
+    return (
+      <tmp2
+        dismissibleContent={
+          obj.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled
+            ? DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE
+            : DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE
+        }
+        newPremiumStyle
+      />
+    );
+  },
+  usePreNavigationAction() {
+    enabled = enabled(17610).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
+    const tmp = closure_6();
+    closure_1 = tmp;
+    const tmp2 = closure_7();
+    dependencyMap = tmp2;
+    items = [enabled, tmp, tmp2];
+    return noop.useCallback(() => {
+      closure_1();
+      closure_2();
+      if (enabled) {
+        UserSettingsProtoActionCreators.addDismissedContent(
+          dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
+        );
+      }
+      return true;
+    }, items);
+  },
   usePredicate() {
     return (
-      "settings" === CustomTypingIndicatorExperiment.useCustomTypingIndicatorConfig("TypingIndicatorSetting").entryPoint
+      "settings" === CustomTypingIndicatorExperiment.useCustomTypingIndicatorConfig(TypingIndicatorSetting).entryPoint
     );
   },
   screen: {
-    route: Constants.UserSettingsSections.TYPING_INDICATOR,
+    route: fn(1072).UserSettingsSections.TYPING_INDICATOR,
     getComponent() {
       return require("CustomTypingIndicatorEditScreen").default;
     },
   },
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/TypingIndicatorSetting.tsx");
 
 export default route;

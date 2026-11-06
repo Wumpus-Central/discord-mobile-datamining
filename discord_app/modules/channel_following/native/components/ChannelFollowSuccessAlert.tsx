@@ -1,5 +1,5 @@
 // discord_app/modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx
-import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
 import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
@@ -11,8 +11,8 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let items = [fn(11400), fn(11401), fn(11402)];
-let items1 = [fn(11403), fn(11404), fn(11405)];
+let items = [fn(11362), fn(11363), fn(11364)];
+let items1 = [fn(11365), fn(11366), fn(11367)];
 const items2 = [
   () => {
     const intl = util.intl;
@@ -55,7 +55,7 @@ const items2 = [
     return intl.string(util.t.jgC65t);
   },
 ];
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 let closure_8 = createStyles.createStyles({
   text: { marginTop: 16, lineHeight: 20, textAlign: "center" },
   header: { textAlign: "center" },
@@ -71,9 +71,9 @@ export default function ChannelFollowSuccessAlert(arg0) {
   _require = tmp6;
   const obj = require("shared");
   items = [tmp6];
-  const stableMemo = require("areHookInputsEqual").useStableMemo(() => _modDef12.sample(closure_0), items);
+  const stableMemo = require("areHookInputsEqual").useStableMemo(() => applyDefault.sample(closure_0), items);
   const tmp5Result = require("areHookInputsEqual");
-  const stableMemo1 = require("areHookInputsEqual").useStableMemo(() => _modDef12.sample(items2), []);
+  const stableMemo1 = require("areHookInputsEqual").useStableMemo(() => applyDefault.sample(items2), []);
   const obj2 = {};
   const tmp5Result2 = require("areHookInputsEqual");
   const merged = Object.assign(arg0);

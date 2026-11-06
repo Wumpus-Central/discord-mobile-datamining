@@ -2,15 +2,15 @@
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const UserProfileSections = fn(8900).UserProfileSections;
+const UserProfileSections = fn(8846).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 
-export function useProfileTabIndices(arg0, isRecentActivityMobileEnabled, arg2) {
+export function useProfileTabIndices(isMobileWidgetEditingEnabled, isRecentActivityMobileEnabled, arg2) {
   let num = -1;
   let num2 = 1;
   let num3 = -1;
-  if (arg0) {
+  if (isMobileWidgetEditingEnabled) {
     num2 = 2;
     num3 = 1;
   }

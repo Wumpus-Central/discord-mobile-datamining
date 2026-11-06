@@ -341,7 +341,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5143);
+const createStyles = fn(5170);
 const gesture = createStyles.createStyles({
   buttonsContainer: { flexDirection: "row", marginTop: 8 },
   actionButtonsContainer: { flexDirection: "row", position: "absolute", left: 0 },
@@ -483,8 +483,8 @@ export function useItemActionButtonPropsV2(
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(15929)({
-        payload: closure_1(5882)("https://discord.com/channels/@me/" + channelId).payload,
+      closure_1(15924)({
+        payload: closure_1(5901)("https://discord.com/channels/@me/" + channelId).payload,
         safe: true,
         navigationReplace: false,
       });
@@ -596,10 +596,10 @@ export function useItemActionButtonPropsV2(
     let obj3 = { actionButtons: [] };
     return obj3;
   } else {
-    if (other_user.type !== tmp2(6997).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
-      if (other_user.type !== tmp2(6997).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-        if (other_user.type !== tmp2(6997).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
-          if (other_user.type === tmp2(6997).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
+    if (other_user.type !== tmp2(6939).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
+      if (other_user.type !== tmp2(6939).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+        if (other_user.type !== tmp2(6939).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
+          if (other_user.type === tmp2(6939).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
             let obj4 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
             let obj5 = { id: "view_friend_requests", text: null, variant: "secondary", size: "md", onPress: null };
             const intl15 = tmp2(1113).intl;
@@ -614,7 +614,7 @@ export function useItemActionButtonPropsV2(
             obj4.accessibilityActions = items10;
             obj4.onAccessibilityAction = callback3;
             return obj4;
-          } else if (other_user.type === tmp2(6997).NotificationCenterItems.GO_LIVE_PUSH) {
+          } else if (other_user.type === tmp2(6939).NotificationCenterItems.GO_LIVE_PUSH) {
             const obj7 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
             const obj8 = { id: "join_stream", text: null, variant: "secondary", size: "md", onPress: null };
             const intl13 = tmp2(1113).intl;
@@ -630,11 +630,11 @@ export function useItemActionButtonPropsV2(
             obj7.onAccessibilityAction = callback;
             return obj7;
           } else {
-            if (other_user.type !== tmp2(6997).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-              if (other_user.type !== tmp2(6997).NotificationCenterItems.DM_FRIEND_NUDGE) {
-                if (other_user.type !== tmp2(6997).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
-                  if (other_user.type !== tmp2(6997).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
-                    if (other_user.type === tmp2(6997).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
+            if (other_user.type !== tmp2(6939).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+              if (other_user.type !== tmp2(6939).NotificationCenterItems.DM_FRIEND_NUDGE) {
+                if (other_user.type !== tmp2(6939).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
+                  if (other_user.type !== tmp2(6939).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
+                    if (other_user.type === tmp2(6939).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
                       const obj10 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                       const obj11 = { id: "add_friend", text: null, variant: "secondary", size: "md", onPress: null };
                       const intl9 = tmp2(1113).intl;
@@ -649,7 +649,7 @@ export function useItemActionButtonPropsV2(
                       obj10.accessibilityActions = items14;
                       obj10.onAccessibilityAction = callback5;
                       return obj10;
-                    } else if (other_user.type === tmp2(6997).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
+                    } else if (other_user.type === tmp2(6939).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
                       const obj13 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                       const obj14 = { id: "join_event", text: null, variant: "secondary", size: "md", onPress: null };
                       const intl7 = tmp2(1113).intl;
@@ -664,24 +664,24 @@ export function useItemActionButtonPropsV2(
                       obj13.accessibilityActions = items16;
                       obj13.onAccessibilityAction = callback;
                       return obj13;
-                    } else if (other_user.type === tmp2(6997).NotificationCenterItems.LIFECYCLE_ITEM) {
+                    } else if (other_user.type === tmp2(6939).NotificationCenterItems.LIFECYCLE_ITEM) {
                       const item_enum = other_user.item_enum;
-                      if (tmp2(6997).ItemEnum.UPDATE_PROFILE === item_enum) {
+                      if (tmp2(6939).ItemEnum.UPDATE_PROFILE === item_enum) {
                         const intl6 = tmp2(1113).intl;
                         let stringResult = intl6.string(tmp2(1113).t.zMRcWL);
                         let str2 = "update_profile";
-                      } else if (tmp2(6997).ItemEnum.FIND_FRIENDS === item_enum) {
+                      } else if (tmp2(6939).ItemEnum.FIND_FRIENDS === item_enum) {
                         const intl5 = tmp2(1113).intl;
                         stringResult = intl5.string(tmp2(1113).t["vwL/4s"]);
                         str2 = "find_friends";
-                      } else if (tmp2(6997).ItemEnum.ADD_FRIEND === item_enum) {
+                      } else if (tmp2(6939).ItemEnum.ADD_FRIEND === item_enum) {
                         const intl4 = tmp2(1113).intl;
                         stringResult = intl4.string(tmp2(1113).t["boL/YX"]);
                         str2 = "add_friend";
                       } else {
                         str2 = null;
                         stringResult = null;
-                        if (tmp2(6997).ItemEnum.FIRST_MESSAGE === item_enum) {
+                        if (tmp2(6939).ItemEnum.FIRST_MESSAGE === item_enum) {
                           const intl20 = tmp2(1113).intl;
                           stringResult = intl20.string(tmp2(1113).t["GuUH7/"]);
                           str2 = "send_message";
@@ -709,10 +709,10 @@ export function useItemActionButtonPropsV2(
                       const obj19 = { actionButtons: [] };
                       obj16 = obj19;
                     } else {
-                      if (other_user.type !== tmp2(6997).NotificationCenterItems.RECENT_MENTION) {
-                        if (other_user.type !== tmp2(6997).NotificationCenterItems.REPLY_MENTION) {
+                      if (other_user.type !== tmp2(6939).NotificationCenterItems.RECENT_MENTION) {
+                        if (other_user.type !== tmp2(6939).NotificationCenterItems.REPLY_MENTION) {
                           if (
-                            other_user.type === tmp2(6997).NotificationCenterItems.REFERRAL_PROGRAM_ENTRYPOINT_REMINDER
+                            other_user.type === tmp2(6939).NotificationCenterItems.REFERRAL_PROGRAM_ENTRYPOINT_REMINDER
                           ) {
                             const intl3 = tmp2(1113).intl;
                             const stringResult1 = intl3.string(tmp2(1113).t.TI8qgg);
@@ -742,7 +742,7 @@ export function useItemActionButtonPropsV2(
                             obj21.onAccessibilityAction = callback;
                             return obj21;
                           } else {
-                            if (other_user.type === tmp2(6997).NotificationCenterItems.TRENDING_CONTENT) {
+                            if (other_user.type === tmp2(6939).NotificationCenterItems.TRENDING_CONTENT) {
                               const obj23 = {
                                 actionButtons: null,
                                 accessibilityActions: null,
@@ -832,7 +832,7 @@ export function useItemActionButtonPropsV2(
       compactMode,
     };
     obj34.actionsNode = callback2(IncomingFriendRequestActions, obj35);
-    if (other_user.type === tmp2(6997).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+    if (other_user.type === tmp2(6939).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
       const obj36 = { name: constants2.WAVE, label: null };
       const intl17 = tmp2(1113).intl;
       obj36.label = intl17.string(tmp2(1113).t.n8nU4W);
