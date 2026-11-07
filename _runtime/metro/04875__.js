@@ -1,47 +1,33 @@
 // _runtime/metro/04875__.js
-import module_4731_mod from "04731__.js";
-import _typeof_mod from "04450__.js";
-import requiredArgs_mod from "../04451_requiredArgs.js";
-import module_4454_mod from "04454__.js";
+import module_4422_mod from "04422__.js";
 
-let module_4731 = module_4731_mod;
-if (!module_4731) {
-  const obj = { default: module_4731 };
+let module_4422 = module_4422_mod;
+if (!module_4422) {
+  const obj = { default: module_4422 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4731;
+  tmp3 = module_4422;
 }
-module_4731 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
+function checkWeek(getTime, getTime2, arg2) {
+  let str = "eeee p";
+  if (!module_4422.default(getTime, getTime2, arg2)) {
+    const time = getTime.getTime();
+    let str2 = "'\u4E0A\u4E2A'eeee p";
+    if (time > getTime2.getTime()) {
+      str2 = "'\u4E0B\u4E2A'eeee p";
+    }
+    str = str2;
+  }
+  return str;
 }
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-let module_4454 = module_4454_mod;
-if (!module_4454) {
-  const obj4 = { default: module_4454 };
-  let tmp9 = obj4;
-} else {
-  tmp9 = module_4454;
-}
-module_4454 = tmp9;
+module_4422 = tmp3;
+let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
 
-export default function setWeek(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4731.default(defaultResult1, arg2) - module_4454.default(arg1);
-  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
-  return defaultResult1;
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_1[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
 };
 export default exports.default;

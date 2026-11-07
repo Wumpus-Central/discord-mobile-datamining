@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 311,
-  height: 205.5,
+  httpServerLocation: "/assets/images/native",
+  width: 98,
+  height: 53,
   scales: [2, 3],
-  hash: "020c495593a12ad5f00af9becbc3507d",
-  name: "premium_role_unavailable",
+  hash: "5ef9dbb61427b1140982c78eede17afd",
+  name: "mfa-server",
   type: "png",
 });

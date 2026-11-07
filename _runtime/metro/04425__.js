@@ -1,12 +1,9 @@
 // _runtime/metro/04425__.js
-import registerAsset from "01119__.js";
+let global = {};
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation:
-    "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==",
-  scales: [1],
-  hash: "39ccce5540c491e3f517b245e623c065",
-  name: "ko.messages.39ccce5540c491e3f517b245e623c065.compiled.messages",
-  type: "jsona",
-});
+export function getDefaultOptions() {
+  return global;
+}
+export function setDefaultOptions(arg0) {
+  global = arg0;
+}

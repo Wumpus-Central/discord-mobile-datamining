@@ -1,13 +1,7 @@
 // _runtime/metro/07419__.js
-import registerAsset from "01119__.js";
+import _mod7421 from "07421__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 80,
-  height: 80,
-  scales: [2, 3],
-  hash: "f949eef54936cb2056a4a93d768a87c3",
-  name: "img_nitro_tier_0_icon_80px",
-  type: "png",
-});
+const require = globalThis.__r;
+
+export const useClipboard = require("07420__.js").useClipboard;
+export default _mod7421.Clipboard;

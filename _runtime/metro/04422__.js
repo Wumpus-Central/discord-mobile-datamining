@@ -1,12 +1,28 @@
 // _runtime/metro/04422__.js
-import registerAsset from "01119__.js";
+import requiredArgs_mod from "../04421_requiredArgs.js";
+import startOfUTCWeek_mod from "../04423_startOfUTCWeek.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation:
-    "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==",
-  scales: [1],
-  hash: "0d285cff0e39c84acb6bf000d9851549",
-  name: "hu.messages.0d285cff0e39c84acb6bf000d9851549.compiled.messages",
-  type: "jsona",
-});
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj = { default: requiredArgs };
+  let tmp3 = obj;
+} else {
+  tmp3 = requiredArgs;
+}
+requiredArgs = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
+if (!startOfUTCWeek) {
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfUTCWeek;
+}
+startOfUTCWeek = tmp5;
+
+export default function isSameUTCWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfUTCWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfUTCWeek.default(arg1, arg2).getTime();
+};
+export default exports.default;

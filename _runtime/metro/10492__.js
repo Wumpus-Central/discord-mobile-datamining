@@ -1,98 +1,211 @@
 // _runtime/metro/10492__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import repeatedTimeunitPattern from "../10446_repeatedTimeunitPattern.js";
+import findMostLikelyADYear from "../10447_findMostLikelyADYear.js";
 
-const SlashDateFormatParser = require;
-const regExp = new RegExp(
-  "([^\\d]|^)([0-3]{0,1}[0-9]{1})[\\/\\.\\-]([0-3]{0,1}[0-9]{1})(?:[\\/\\.\\-]([0-9]{4}|[0-9]{2}))?(\\W|$)",
-  "i",
-);
-class SlashDateFormatParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, SlashDateFormatParser);
-    num = 2;
-    if (global) {
-      num = 3;
-    }
-    self.groupNumberMonth = num;
-    num2 = 3;
-    if (global) {
-      num2 = 2;
-    }
-    self.groupNumberDay = num2;
-    return;
-  }
-}
-const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
-  },
-};
-let items = [
-  entry,
-  {
-    key: "extract",
-    value: function extract(text, index) {
-      const sum = index.index + index[1].length;
-      const diff = index.index + index[0].length - index[5].length;
-      if (sum > 0) {
-        text.text.substring(0, sum);
-      }
-      if (diff < text.text.length) {
-        text.text.substring(diff);
-      }
-      const str8 = text.text.substring(sum, diff);
-      if (!str8.match(/^\d\.\d$/)) {
-        if (!str8.match(/^\d\.\d{1,2}\.\d{1,2}\s*$/)) {
-          const self = this;
-          const parsingResult = text.createParsingResult(sum, str8);
-          const _parseInt = parseInt;
-          const parsed = parseInt(index[this.groupNumberMonth]);
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(index[this.groupNumberDay]);
-          if (parsed < 1) {
-            tmp6 = parsed1;
-            tmp7 = parsed;
-            if (parsed > 12) {
-              if (parsed1 >= 1) {
-                if (parsed1 <= 12) {
-                  if (parsed <= 31) {
-                    items = [parsed, parsed1];
-                    [tmp6, tmp7] = items;
+function parseNumberPattern(str) {
+  str = str.toLowerCase();
+  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
+    let num6 = exports.INTEGER_WORD_DICTIONARY[str];
+  } else {
+    num6 = 1;
+    if ("ein" !== str) {
+      num6 = 1;
+      if ("einer" !== str) {
+        num6 = 1;
+        if ("einem" !== str) {
+          num6 = 1;
+          if ("einen" !== str) {
+            num6 = 1;
+            if ("eine" !== str) {
+              let num5 = 2;
+              if (!str.match(/wenigen/)) {
+                let num2 = 0.5;
+                if (!str.match(/halb/)) {
+                  num2 = 0.5;
+                  if (!str.match(/halben/)) {
+                    let num3 = 3;
+                    if (!str.match(/einigen/)) {
+                      let num4 = 7;
+                      if (!str.match(/mehreren/)) {
+                        const _parseFloat = parseFloat;
+                        num4 = parseFloat(str);
+                      }
+                      num3 = num4;
+                    }
+                    num2 = num3;
                   }
                 }
+                num5 = num2;
               }
-              return null;
-            }
-          } else {
-            tmp6 = parsed1;
-            tmp7 = parsed;
-          }
-          if (tmp6 >= 1) {
-            if (tmp6 <= 31) {
-              const start3 = parsingResult.start;
-              start3.assign("day", tmp6);
-              const start4 = parsingResult.start;
-              start4.assign("month", tmp7);
-              if (index[4]) {
-                const _parseInt3 = parseInt;
-                const parsed2 = parseInt(index[4]);
-                const start2 = parsingResult.start;
-                start2.assign("year", SlashDateFormatParser(10464).findMostLikelyADYear(parsed2));
-              } else {
-                const start = parsingResult.start;
-                start.imply("year", SlashDateFormatParser(10464).findYearClosestToRef(text.refDate, tmp6, tmp7));
-              }
-              return parsingResult.addTag("parser/SlashDateFormatParser");
+              num6 = num5;
             }
           }
-          return null;
         }
       }
-    },
-  },
-];
+    }
+  }
+  return num6;
+}
+const combined =
+  "(" +
+  exports.NUMBER_PATTERN +
+  ")\\s{0,5}(" +
+  repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) +
+  ")\\s{0,5}";
+const regExp = new RegExp(combined, "i");
 
-export default _createClass(SlashDateFormatParser, items);
+export { parseNumberPattern };
+export function parseYear(match) {
+  if (obj.test(match)) {
+    const _parseInt3 = parseInt;
+    return -parseInt(match.replace(/[^0-9]+/gi, ""));
+  } else {
+    if (obj2.test(match)) {
+      const _parseInt2 = parseInt;
+      return parseInt(match.replace(/[^0-9]+/gi, ""));
+    } else {
+      const _parseInt = parseInt;
+      if (obj3.test(match)) {
+        return _parseInt(match.replace(/[^0-9]+/gi, ""));
+      } else {
+        return findMostLikelyADYear.findMostLikelyADYear(_parseInt(match));
+      }
+      obj3 = /z/i;
+    }
+    obj2 = /n/i;
+  }
+  obj = /v/i;
+}
+export function parseDuration(arg0) {
+  let str = arg0;
+  const obj = {};
+  let match = regExp.exec(arg0);
+  while (match) {
+    let str2 = match[2];
+    let tmp3 = parseNumberPattern(match[1]);
+    obj[exports.TIME_UNIT_DICTIONARY[str2.toLowerCase(str2)]] = tmp3;
+    let substr = str.substring(match[0].length);
+    match = regExp.exec(substr);
+    str = substr;
+  }
+  return obj;
+}
+export const WEEKDAY_DICTIONARY = {
+  sonntag: 0,
+  so: 0,
+  montag: 1,
+  mo: 1,
+  dienstag: 2,
+  di: 2,
+  mittwoch: 3,
+  mi: 3,
+  donnerstag: 4,
+  do: 4,
+  freitag: 5,
+  fr: 5,
+  samstag: 6,
+  sa: 6,
+};
+export const MONTH_DICTIONARY = {
+  januar: 1,
+  jänner: 1,
+  janner: 1,
+  jan: 1,
+  "jan.": 1,
+  februar: 2,
+  feber: 2,
+  feb: 2,
+  "feb.": 2,
+  märz: 3,
+  maerz: 3,
+  mär: 3,
+  "mär.": 3,
+  mrz: 3,
+  "mrz.": 3,
+  april: 4,
+  apr: 4,
+  "apr.": 4,
+  mai: 5,
+  juni: 6,
+  jun: 6,
+  "jun.": 6,
+  juli: 7,
+  jul: 7,
+  "jul.": 7,
+  august: 8,
+  aug: 8,
+  "aug.": 8,
+  september: 9,
+  sep: 9,
+  "sep.": 9,
+  sept: 9,
+  "sept.": 9,
+  oktober: 10,
+  okt: 10,
+  "okt.": 10,
+  november: 11,
+  nov: 11,
+  "nov.": 11,
+  dezember: 12,
+  dez: 12,
+  "dez.": 12,
+};
+export const INTEGER_WORD_DICTIONARY = {
+  eins: 1,
+  eine: 1,
+  einem: 1,
+  einen: 1,
+  einer: 1,
+  zwei: 2,
+  drei: 3,
+  vier: 4,
+  fünf: 5,
+  fuenf: 5,
+  sechs: 6,
+  sieben: 7,
+  acht: 8,
+  neun: 9,
+  zehn: 10,
+  elf: 11,
+  zwölf: 12,
+  zwoelf: 12,
+};
+export const TIME_UNIT_DICTIONARY = {
+  sek: "second",
+  sekunde: "second",
+  sekunden: "second",
+  min: "minute",
+  minute: "minute",
+  minuten: "minute",
+  h: "hour",
+  std: "hour",
+  stunde: "hour",
+  stunden: "hour",
+  tag: "day",
+  tage: "day",
+  tagen: "day",
+  woche: "week",
+  wochen: "week",
+  monat: "month",
+  monate: "month",
+  monaten: "month",
+  monats: "month",
+  quartal: "quarter",
+  quartals: "quarter",
+  quartale: "quarter",
+  quartalen: "quarter",
+  a: "year",
+  j: "year",
+  jr: "year",
+  jahr: "year",
+  jahre: "year",
+  jahren: "year",
+  jahres: "year",
+};
+export const NUMBER_PATTERN =
+  "(?:" +
+  repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) +
+  "|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)";
+export const YEAR_PATTERN =
+  "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)";
+export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);

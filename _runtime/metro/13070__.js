@@ -1,152 +1,155 @@
 // _runtime/metro/13070__.js
-import _mod13027 from "13027__.js";
-import _mod13071 from "13071__.js";
-
-function consumeRaw(arg0) {
-  return this.Raw(arg0, _mod13071.mode.leftCurlyBracketOrSemicolon, true);
+function noop(arg0) {
+  return arg0;
 }
-function isDeclarationBlockAtrule() {
-  const scanner = this.scanner;
-  let lookupTypeResult = scanner.lookupType(1);
-  let num = 1;
-  if (lookupTypeResult) {
-    while (lookupTypeResult !== RightCurlyBracket) {
-      if (lookupTypeResult !== LeftCurlyBracket) {
-        if (lookupTypeResult !== AtKeyword) {
-          let sum = num + 1;
-          let scanner2 = this.scanner;
-          lookupTypeResult = scanner2.lookupType(sum);
-          num = sum;
+function generate(type, fn, arg2, arg3) {
+  let str = ",";
+  switch (type.type) {
+    case "Group":
+      closure_0 = fn;
+      generate = arg2;
+      closure_2 = arg3;
+      if (" " !== type.combinator) {
+        if (!arg3) {
+          let combinator = `${" " + type.combinator} `;
         }
-      }
-      let flag = false;
-      return false;
-    }
-    return true;
-  }
-  return false;
-}
-const AtKeyword = _mod13027.TYPE.AtKeyword;
-const Semicolon = _mod13027.TYPE.Semicolon;
-const LeftCurlyBracket = _mod13027.TYPE.LeftCurlyBracket;
-const RightCurlyBracket = _mod13027.TYPE.RightCurlyBracket;
-let obj = {
-  name: "Atrule",
-  structure: { name: String, prelude: ["AtrulePrelude", "Raw", null], block: ["Block", null] },
-  parse() {
-    const self = this;
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(AtKeyword);
-    const scanner = this.scanner;
-    const str = scanner.substrToCursor(tokenStart + 1);
-    const formatted = str.toLowerCase();
-    const scanner2 = this.scanner;
-    scanner2.skipSC();
-    let tmp4 = false === this.scanner.eof;
-    if (tmp4) {
-      tmp4 = self.scanner.tokenType !== LeftCurlyBracket;
-    }
-    if (tmp4) {
-      tmp4 = self.scanner.tokenType !== Semicolon;
-    }
-    if (!tmp4) {
-      const tokenType = self.scanner.tokenType;
-      if (Semicolon === tokenType) {
-        self.scanner.next();
-        let BlockResult = null;
-        const iter = self.scanner;
-      } else {
-        BlockResult = null;
-        if (LeftCurlyBracket === tokenType) {
-          const atrule = self.atrule;
-          if (atrule.hasOwnProperty(formatted)) {
-            if (typeof self.atrule[formatted].block === "function") {
-              const block = self.atrule[formatted].block;
-              const call3 = block.call;
-              typeof call3 === "unknown" ? block() : call3(self);
-            }
-          }
-          const call2 = isDeclarationBlockAtrule.call;
-          if (typeof call2 === "unknown") {
-            const scanner4 = self.scanner;
-            let lookupTypeResult = scanner4.lookupType(1);
-            let num = 1;
-            let flag2 = false;
-            if (lookupTypeResult) {
-              flag2 = true;
-              while (lookupTypeResult !== RightCurlyBracket) {
-                flag2 = false;
-                if (lookupTypeResult === LeftCurlyBracket) {
-                  break;
-                } else {
-                  flag2 = false;
-                  if (lookupTypeResult === AtKeyword) {
-                    break;
-                  } else {
-                    let sum = num + 1;
-                    let scanner5 = self.scanner;
-                    lookupTypeResult = scanner5.lookupType(sum);
-                    num = sum;
-                    flag2 = false;
-                    if (!lookupTypeResult) {
-                      break;
-                    }
-                  }
-                }
-              }
-            }
-            let call2Result = flag2;
+        const terms = type.terms;
+        const mapped = terms.map((item) => generate(item, closure_0, closure_1, closure_2));
+        const joined = mapped.join(combinator);
+        let explicit = type.explicit;
+        if (!explicit) {
+          explicit = arg2;
+        }
+        let sum1 = joined;
+        if (explicit) {
+          if (arg3) {
+            let str27 = "[";
           } else {
-            call2Result = call2(self);
+            str27 = "[ ";
           }
-          BlockResult = self.Block(call2Result);
+          let str28 = " ]";
+          const sum = str27 + joined;
+          if (arg3) {
+            str28 = "]";
+          }
+          sum1 = sum + str28;
         }
+        let str29 = "";
+        if (type.disallowEmpty) {
+          str29 = "!";
+        }
+        str = sum1 + str29;
+        return fn(str, type);
       }
-      const obj = {
-        type: "Atrule",
-        loc: self.getLocation(tokenStart, self.scanner.tokenStart),
-        name: str,
-        prelude: null,
-        block: BlockResult,
-      };
-      return obj;
-    } else {
-      if (self.parseAtrulePrelude) {
-        ({ AtrulePrelude, parseWithFallback } = self);
-        const element = parseWithFallback(AtrulePrelude.bind(self, str), consumeRaw);
-        let RawResult = element;
-        if (tmp12) {
-          RawResult = null;
+      combinator = type.combinator;
+      break;
+    case "Multiplier":
+      if (0 !== type.min) {
+        if (0 === type.min) {
+          if (1 === type.max) {
+            let str16 = "?";
+          }
         }
-        tmp12 = "AtrulePrelude" === element.type && null === element.children.head;
+        if (1 !== type.min) {
+          if (1 === type.min) {
+            const str18 = "";
+          }
+          let str19 = "";
+          let str20 = "";
+          if (type.comma) {
+            str20 = "#";
+          }
+          if (type.min === type.max) {
+            let text = `${"{" + type.min}}`;
+          } else {
+            const text1 = `{${type.min}`;
+            if (0 !== type.max) {
+              str19 = type.max;
+            }
+            text = `${tmp14 + "," + str19}}`;
+          }
+          const sum2 = str20 + text;
+        }
+        let str25 = "+";
+        if (type.comma) {
+          str25 = "#";
+        }
       } else {
-        const call = consumeRaw.call;
-        const tokenIndex = self.scanner.tokenIndex;
-        if (typeof call === "unknown") {
-          RawResult = self.Raw(tokenIndex, _mod13071.mode.leftCurlyBracketOrSemicolon, true);
+        str16 = "*";
+      }
+      return generate(type.term, fn, arg2, arg3) + fn(str16, type);
+    case "Type":
+      let str7 = "";
+      const text2 = `<${type.name}`;
+      if (type.opts) {
+        const opts = type.opts;
+        if ("Range" === opts.type) {
+          let str11 = "-\u221E";
+          if (null !== opts.min) {
+            str11 = opts.min;
+          }
+          let str13 = "\u221E";
+          const text3 = ` [${str11}`;
+          if (null !== opts.max) {
+            str13 = opts.max;
+          }
+          str7 = fn(text3 + "," + str13 + "]", type.opts);
         } else {
-          RawResult = call(self, tokenIndex);
+          const _Error = Error;
+          const error = new Error("Unknown node type `" + opts.type + "`");
+          throw error;
         }
       }
-      const scanner3 = self.scanner;
-      scanner3.skipSC();
-    }
-  },
-  generate(name) {
-    const self = this;
-    this.chunk("@");
-    this.chunk(name.name);
-    if (null !== name.prelude) {
-      self.chunk(" ");
-      self.node(name.prelude);
-    }
-    if (name.block) {
-      self.node(name.block);
-    } else {
-      self.chunk(";");
-    }
-  },
-  walkContext: "atrule",
-};
+      str = `${tmp + str7}>`;
+      break;
+    case "Property":
+      str = `${"<'" + type.name}'>`;
+      break;
+    case "Keyword":
+      str = type.name;
+      break;
+    case "AtKeyword":
+      str = `@${type.name}`;
+      break;
+    case "Function":
+      str = `${type.name}(`;
+      break;
+    case "String":
+      str = type.value;
+      break;
+    case "Token":
+      str = type.value;
+      break;
+    case "Comma":
+      break;
+    default:
+      const _Error2 = Error;
+      const error1 = new Error("Unknown node type `" + type.type + "`");
+      throw error1;
+  }
+}
 
-export default obj;
+export default (arg0, forceBraces) => {
+  let decorate = noop;
+  let flag = false;
+  let flag2 = false;
+  let tmp = forceBraces;
+  if (typeof forceBraces !== "function") {
+    flag = false;
+    flag2 = false;
+    tmp = decorate;
+    if (forceBraces) {
+      const _Boolean = Boolean;
+      const _Boolean2 = Boolean;
+      const BooleanResult = Boolean(forceBraces.forceBraces);
+      if (typeof forceBraces.decorate === "function") {
+        decorate = forceBraces.decorate;
+      }
+      tmp = decorate;
+      flag = Boolean(forceBraces.compact);
+      flag2 = BooleanResult;
+      const BooleanResult1 = Boolean(forceBraces.compact);
+    }
+  }
+  return generate(arg0, tmp, flag2, flag);
+};

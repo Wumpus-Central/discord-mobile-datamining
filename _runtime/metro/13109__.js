@@ -1,38 +1,20 @@
 // _runtime/metro/13109__.js
-import _mod13068 from "13068__.js";
-import _mod13110 from "13110__.js";
-import _mod13117 from "13117__.js";
-import _mod13123 from "13123__.js";
+import _mod13050 from "13050__.js";
 
+const Ident = _mod13050.TYPE.Ident;
 const obj = {
-  parseContext: {
-    default: "StyleSheet",
-    stylesheet: "StyleSheet",
-    atrule: "Atrule",
-    atrulePrelude(atrule) {
-      let StringResult = null;
-      if (atrule.atrule) {
-        const _String = String;
-        StringResult = String(atrule.atrule);
-      }
-      return this.AtrulePrelude(StringResult);
-    },
-    mediaQueryList: "MediaQueryList",
-    mediaQuery: "MediaQuery",
-    rule: "Rule",
-    selectorList: "SelectorList",
-    selector: "Selector",
-    block() {
-      return this.Block(true);
-    },
-    declarationList: "DeclarationList",
-    declaration: "Declaration",
-    value: "Value",
+  name: "Identifier",
+  structure: { name: String },
+  parse() {
+    return {
+      type: "Identifier",
+      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
+      name: this.consume(Ident),
+    };
   },
-  scope: _mod13110,
-  atrule: _mod13117,
-  pseudo: _mod13123,
-  node: _mod13068,
+  generate(name) {
+    this.chunk(name.name);
+  },
 };
 
 export default obj;

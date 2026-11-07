@@ -1,19 +1,13 @@
 // _runtime/metro/10711__.js
-import _mod19 from "00019__.js";
-import _modDef10712 from "10712__.js";
+import registerAsset from "01119__.js";
 
-const useRef = _mod19.useRef;
-let closure_3 = [];
-
-export default function useStableMemo(fn, items) {
-  const tmp = useRef();
-  const tmp2 = useRef(closure_3);
-  if (tmp2.current === closure_3) {
-    tmp.current = fn();
-    tmp2.current = items;
-  } else if (!_modDef10712(items, tmp2.current)) {
-    tmp.current = fn();
-    tmp2.current = items;
-  }
-  return tmp.current;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 82,
+  height: 18,
+  scales: [2, 3],
+  hash: "45460b156c456430280e2b323f923e88",
+  name: "img_logo_boost",
+  type: "png",
+});

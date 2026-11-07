@@ -1,47 +1,28 @@
 // _runtime/metro/04770__.js
-import module_4454_mod from "04454__.js";
-import _typeof_mod from "04450__.js";
-import module_4686_mod from "04686__.js";
-import requiredArgs_mod from "../04451_requiredArgs.js";
+import startOfMinute_mod from "../04629_startOfMinute.js";
+import requiredArgs_mod from "../04421_requiredArgs.js";
 
-let module_4454 = module_4454_mod;
-if (!module_4454) {
-  const obj = { default: module_4454 };
+let startOfMinute = startOfMinute_mod;
+if (!startOfMinute) {
+  const obj = { default: startOfMinute };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4454;
+  tmp3 = startOfMinute;
 }
-module_4454 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_4686 = module_4686_mod;
-if (!module_4686) {
-  const obj3 = { default: module_4686 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4686;
-}
-module_4686 = tmp7;
+startOfMinute = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function setUTCISOWeek(arg0, arg1) {
+export default function isSameMinute(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4686.default(defaultResult1) - module_4454.default(arg1);
-  defaultResult1.setUTCDate(defaultResult1.getUTCDate() - 7 * diff);
-  return defaultResult1;
+  const defaultResult1 = startOfMinute.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfMinute.default(arg1).getTime();
 };
 export default exports.default;

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "15492a52206e63f9d08f70b19c6b74cb",
-  name: "ic_nitro_basic_wheel_gradient",
+  hash: "43b86c9ce273868bacca6aeb06ae392b",
+  name: "StarIcon",
   type: "png",
 });

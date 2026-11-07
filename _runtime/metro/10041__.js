@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/wumpus",
-  width: 84,
-  height: 66,
-  scales: [1],
-  hash: "bb53327d21615c77cfbccb9f06aeb711",
-  name: "wumpus-link",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "45844ffe000e8da4174843bafa8614af",
+  name: "SuperReactionIcon",
   type: "png",
 });

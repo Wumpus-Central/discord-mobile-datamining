@@ -1,29 +1,26 @@
 // _runtime/metro/05748__.js
-import pointsDiffer_mod from "../00078_pointsDiffer.js";
-import processColorElement_mod from "../00080_processColorElement.js";
+import renderElement from "../00114_renderElement.js";
+import weakSet from "../00106_weakSet.js";
 import 00065__ from "00065__.js";
 
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-const obj = { startPoint: { diff: pointsDiffer }, endPoint: null, colors: null, locations: true, useAngle: true, angleCenter: null, angle: true, borderRadii: true };
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-obj.endPoint = { diff: pointsDiffer };
-let processColorElement = processColorElement_mod;
-if ("default" in processColorElement) {
-  processColorElement = processColorElement.default;
-}
-obj.colors = { process: processColorElement };
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-const obj2 = { uiViewClassName: "RNLinearGradient", validAttributes: obj };
-obj.angleCenter = { diff: pointsDiffer };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "LottieAnimationView", bubblingEventTypes: { topAnimationFinish: { phasedRegistrationNames: { captured: "onAnimationFinishCapture", bubbled: "onAnimationFinish" } }, topAnimationFailure: { phasedRegistrationNames: { captured: "onAnimationFailureCapture", bubbled: "onAnimationFailure" } }, topAnimationLoaded: { phasedRegistrationNames: { captured: "onAnimationLoadedCapture", bubbled: "onAnimationLoaded" } } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAnimationFinish: true, onAnimationFailure: true, onAnimationLoaded: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { resizeMode: true, renderMode: true, sourceName: true, sourceJson: true, sourceURL: true, sourceDotLottieURI: true, imageAssetsFolder: true, progress: true, speed: true, loop: true, autoPlay: true, enableMergePathsAndroidForKitKatAndAbove: true, enableSafeModeAndroid: true, hardwareAccelerationAndroid: true, cacheComposition: true, colorFilters: true, dummy: true, textFiltersAndroid: true, textFiltersIOS: true };
 
-export default module_65.get("RNLinearGradient", () => obj2);
-export const __INTERNAL_VIEW_CONFIG = obj2;
+export default module_65.get("LottieAnimationView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };
+export const Commands = {
+  play(nodeFromPublicInstance, arg1, arg2) {
+    items = [arg1, arg2];
+    renderElement.dispatchCommand(nodeFromPublicInstance, "play", items);
+  },
+  reset(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "reset", []);
+  },
+  pause(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "pause", []);
+  },
+  resume(nodeFromPublicInstance) {
+    renderElement.dispatchCommand(nodeFromPublicInstance, "resume", []);
+  }
+};

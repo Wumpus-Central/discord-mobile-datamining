@@ -1,13 +1,10 @@
 // _runtime/metro/10693__.js
-import registerAsset from "01119__.js";
+import _slicedToArray from "00032__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_keyboard/native/images",
-  width: 200,
-  height: 80,
-  scales: [2, 3],
-  hash: "e341a934511095337dabafab8c60034b",
-  name: "empty_photos",
-  type: "png",
-});
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
+
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return duration(() => closure_0({}), []);
+}

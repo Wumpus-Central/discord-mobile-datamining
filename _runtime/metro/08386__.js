@@ -1,104 +1,81 @@
 // _runtime/metro/08386__.js
-import _modDef8387 from "08387__.js";
-
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  read(dataView, sum) {
-    const shortAt = _modDef8387.getShortAt(dataView, sum);
-    let tmp4;
-    if (8 <= shortAt) {
-      const byteAt = _modDef8387.getByteAt(dataView, sum + 7);
-      const obj2 = { value: byteAt, description: "" + byteAt };
-      tmp4 = obj2;
-      const tmpResult = _modDef8387;
-    }
-    let tmp6;
-    if (3 <= shortAt) {
-      const byteAt1 = _modDef8387.getByteAt(dataView, sum + 2);
-      const obj3 = { value: byteAt1, description: "" + byteAt1 };
-      tmp6 = obj3;
-      const tmpResult4 = _modDef8387;
-    }
-    const obj4 = {
-      "Bits Per Sample": tmp6,
-      "Image Height": null,
-      "Image Width": null,
-      "Color Components": null,
-      Subsampling: null,
-    };
-    let tmp8;
-    if (5 <= shortAt) {
-      const shortAt1 = _modDef8387.getShortAt(dataView, sum + 3);
-      const obj5 = { value: shortAt1, description: null };
-      const _HermesInternal = HermesInternal;
-      obj5.description = "" + shortAt1 + "px";
-      tmp8 = obj5;
-      const tmpResult5 = _modDef8387;
-    }
-    obj4["Image Height"] = tmp8;
-    let tmp11;
-    if (7 <= shortAt) {
-      const shortAt2 = _modDef8387.getShortAt(dataView, sum + 5);
-      const obj6 = { value: shortAt2, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj6.description = "" + shortAt2 + "px";
-      tmp11 = obj6;
-      const tmpResult6 = _modDef8387;
-    }
-    obj4["Image Width"] = tmp11;
-    obj4["Color Components"] = tmp4;
-    let tmp14 = tmp4;
-    if (tmp4) {
-      value = tmp4.value;
-      let tmp15;
-      if (8 + 3 * value <= shortAt) {
-        items = [];
-        for (let num6 = 0; num6 < value; num6 = num6 + 1) {
-          sum = sum + 8 + 3 * num6;
-          let obj11 = _modDef8387;
-          let items1 = [obj11.getByteAt(dataView, sum), ,];
-          let obj12 = _modDef8387;
-          items1[1] = obj12.getByteAt(dataView, sum + 1);
-          let obj13 = _modDef8387;
-          items1[2] = obj13.getByteAt(dataView, sum + 2);
-          let arr = items.push(items1);
-        }
-        const obj7 = { value: items, description: null };
-        let str6 = "";
-        if (items.length > 1) {
-          closure_0 = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
-          const mapped = items.map((item) => closure_0[item[0]]);
-          let str7 = "";
-          const joined = mapped.join("");
-          if (0 !== items.length) {
-            str7 = "";
-            if (undefined !== items[0][1]) {
-              const obj8 = {
-                17: "4:4:4 (1 1)",
-                18: "4:4:0 (1 2)",
-                20: "4:4:1 (1 4)",
-                33: "4:2:2 (2 1)",
-                34: "4:2:0 (2 2)",
-                36: "4:2:1 (2 4)",
-                65: "4:1:1 (4 1)",
-                66: "4:1:0 (4 2)",
-              };
-              str7 = "";
-              if (undefined !== obj8[items[0][1]]) {
-                str7 = obj8[items[0][1]];
-              }
-            }
-          }
-          str6 = joined + str7;
-        }
-        obj7.description = str6;
-        tmp15 = obj7;
-      }
-      tmp14 = tmp15;
-    }
-    obj4.Subsampling = tmp14;
-    return obj4;
-  },
+let closure_0 = {
+  xmp: "http://ns.adobe.com/xap/1.0/",
+  tiff: "http://ns.adobe.com/tiff/1.0/",
+  exif: "http://ns.adobe.com/exif/1.0/",
+  dc: "http://purl.org/dc/elements/1.1/",
+  xmpMM: "http://ns.adobe.com/xap/1.0/mm/",
+  stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#",
+  stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#",
+  photoshop: "http://ns.adobe.com/photoshop/1.0/",
 };
+
+export function isMissingNamespaceError(message) {
+  items = [
+    "prefix is non-null and namespace is null",
+    "prefix not bound to a namespace",
+    "prefix inte bundet till en namnrymd",
+    /Namespace prefix .+ is not defined/,
+  ];
+  let num = 0;
+  if (0 < items.length) {
+    const _RegExp = RegExp;
+    const regExp = new RegExp(items[num]);
+    while (!regExp.test(message.message)) {
+      num = num + 1;
+    }
+    return true;
+  }
+  return false;
+}
+export function addMissingNamespaces(str) {
+  const match = str.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
+  if (match) {
+    items = [];
+    const obj = /xmlns:([\w-]+)=["'][^"']+["']/g;
+    let match1 = obj.exec(str);
+    if (null !== match1) {
+      do {
+        if (-1 === items.indexOf(match1[1])) {
+          let arr = items.push(match1[1]);
+        }
+        match1 = obj.exec(str);
+      } while (null !== match1);
+    }
+    const items1 = [];
+    const obj2 = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
+    let match2 = obj2.exec(str);
+    if (null !== match2) {
+      do {
+        let tmp8 = match2[1];
+        let tmp9 = "xmlns" !== tmp8 && "xml" !== tmp8;
+        if (tmp9) {
+          if (-1 === items1.indexOf(tmp8)) {
+            let arr2 = items1.push(tmp8);
+          }
+        }
+        match2 = obj2.exec(str);
+      } while (null !== match2);
+    }
+    const found = items1.filter((item) => -1 === items.indexOf(item));
+    let replaced = str;
+    if (0 !== found.length) {
+      const items2 = [];
+      for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
+        let tmp12 = found[num3];
+        let text = closure_0[tmp12];
+        if (!text) {
+          text = `http://fallback.namespace/${tmp12}`;
+        }
+        let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
+      }
+      const _RegExp = RegExp;
+      const joined = items2.join("");
+      const regExp = new RegExp("<" + tmp2 + "([^>]*)>");
+      replaced = str.replace(regExp, `<${tmp2}$1${tmp17}>`);
+    }
+    return replaced;
+  } else {
+    return str;
+  }
+}

@@ -1,15 +1,15 @@
 // _runtime/metro/04601__.js
-import _typeof_mod from "04450__.js";
-import requiredArgs_mod from "../04451_requiredArgs.js";
+import startOfDay_mod from "../04584_startOfDay.js";
+import requiredArgs_mod from "../04421_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfDay = startOfDay_mod;
+if (!startOfDay) {
+  const obj = { default: startOfDay };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfDay;
 }
-_typeof = tmp3;
+startOfDay = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,13 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isWeekend(arg0) {
-  requiredArgs.default(1, arguments);
-  const day = _typeof.default(arg0).getDay();
-  let tmp3 = 0 === day;
-  if (!tmp3) {
-    tmp3 = 6 === day;
-  }
-  return tmp3;
+export default function isSameDay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfDay.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfDay.default(arg1).getTime();
 };
 export default exports.default;

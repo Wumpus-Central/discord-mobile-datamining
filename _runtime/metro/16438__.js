@@ -1,6 +1,25 @@
 // _runtime/metro/16438__.js
-import _mod16386 from "16386__.js";
-import _mod16387 from "16387__.js";
+import module_16439_mod from "16439__.js";
 
-export default _mod16386 &&
-  _mod16387(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);
+const call = prototype.call;
+let module_16439 = module_16439_mod;
+if (module_16439) {
+  const bind = prototype.bind;
+  module_16439 = bind.bind(call, call);
+}
+if (!module_16439) {
+  module_16439 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
+
+export default module_16439;

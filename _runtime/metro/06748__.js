@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "4a45d5464752b264a97efb61145f651f",
-  name: "img_account_sync_ebay_white",
+  hash: "7700e8b6e3143c87285472edb9723d43",
+  name: "img_domain_dark",
   type: "png",
 });

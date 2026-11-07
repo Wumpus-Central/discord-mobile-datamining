@@ -1,104 +1,47 @@
 // _runtime/metro/05581__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class TapGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, TapGesture);
-    tmp2 = c2;
-    obj = c2(TapGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "TapGestureHandler";
-    result = tmp3Result.shouldCancelWhenOutside(true);
-    return tmp3Result;
+const require = globalThis.__r;
+
+({ useEffect: c2, useRef: c3 } = noop);
+
+export (INITIAL_CONTAINER_HEIGHT) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
   }
+  if (tmp3) {
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        const obj2 = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
+        let mutable = require("01652__.js").makeMutable(obj2);
+        let obj = require("01652__.js");
+      } else {
+        mutable = require("01652__.js").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = require("01652__.js");
+      }
+      tmp2.current = mutable;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+    }
+  }
+  closure_2(() => () => {
+    if (ref.current) {
+      ref(dependencyMap[1]).cancelAnimation(tmp.current);
+      const obj = ref(dependencyMap[1]);
+    }
+  }, []);
+  let current = tmp2.current;
+  if (current == null) {
+    current = INITIAL_CONTAINER_HEIGHT;
+  }
+  return current;
 }
-_classCallCheck = TapGesture;
-_inherits(TapGesture, fn(5470).BaseGesture);
-const entry = {
-  key: "minPointers",
-  value: function minPointers(minPointers) {
-    this.config.minPointers = minPointers;
-    return this;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "numberOfTaps",
-    value: function numberOfTaps(numberOfTaps) {
-      this.config.numberOfTaps = numberOfTaps;
-      return this;
-    },
-  },
-  {
-    key: "maxDistance",
-    value: function maxDistance(maxDist) {
-      this.config.maxDist = maxDist;
-      return this;
-    },
-  },
-  {
-    key: "maxDuration",
-    value: function maxDuration(maxDurationMs) {
-      this.config.maxDurationMs = maxDurationMs;
-      return this;
-    },
-  },
-  {
-    key: "maxDelay",
-    value: function maxDelay(maxDelayMs) {
-      this.config.maxDelayMs = maxDelayMs;
-      return this;
-    },
-  },
-  {
-    key: "maxDeltaX",
-    value: function maxDeltaX(maxDeltaX) {
-      this.config.maxDeltaX = maxDeltaX;
-      return this;
-    },
-  },
-  {
-    key: "maxDeltaY",
-    value: function maxDeltaY(maxDeltaY) {
-      this.config.maxDeltaY = maxDeltaY;
-      return this;
-    },
-  },
-];
-
-export const TapGesture = _createClass(TapGesture, items);

@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "5d0fc8ffcdec42d0b7247a83095dc9f2",
-  name: "img_account_sync_xbox_white",
-  type: "svg",
+  hash: "8fce658b14b12e381e1ecc554a57f171",
+  name: "img_roblox_white",
+  type: "png",
 });

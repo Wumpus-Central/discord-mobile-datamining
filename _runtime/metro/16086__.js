@@ -3,9 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 160,
   scales: [1],
-  hash: "76c09ebc2fd9700ae36ec8729cee1e9d",
-  name: "NotificationsTab",
-  type: "lottie",
+  hash: "b002cec8fdbd5414b4068fe272d35071",
+  name: "phibi_1",
+  type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f5152f59510615cd9a196a52f24801ee",
-  name: "ThreadIcon",
+  hash: "50398ad483a7c69d1d35b3cb9c9b7bde",
+  name: "ForumSpoilerIcon",
   type: "png",
 });

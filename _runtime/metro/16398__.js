@@ -1,16 +1,49 @@
 // _runtime/metro/16398__.js
-import _mod16399 from "16399__.js";
+import emitUnicodeLanguageId from "../16399_emitUnicodeLanguageId.js";
+import compareKV from "../16400_compareKV.js";
+import likelySubtags from "../16403_likelySubtags.js";
+import _mod16404 from "16404__.js";
+import e_mod from "../01159_e.js";
 
-export default (arg0, arg1) => {
-  let tmp3 = _mod16399[arg0];
-  if (!tmp3) {
-    let obj = arg1;
-    if (!arg1) {
-      obj = {};
+const require = globalThis.__r;
+
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod16404, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
     }
-    _mod16399[arg0] = obj;
-    tmp3 = obj;
-    const tmpResult = _mod16399;
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(
+          compareKV.CanonicalizeUnicodeLocaleId(require("16402__.js").parseUnicodeLocaleId(arr3[num3])),
+        );
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
   }
-  return tmp3;
-};
+  return items;
+}
+export const isStructurallyValidLanguageTag = require("16402__.js").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("16402__.js").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("16402__.js").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("16402__.js").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("16402__.js").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("16402__.js").parseUnicodeLocaleId;

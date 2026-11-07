@@ -1,6 +1,22 @@
 // _runtime/metro/13110__.js
-import defaultRecognizer from "../13111_defaultRecognizer.js";
-import _mod13113 from "13113__.js";
-import _mod13114 from "13114__.js";
+import _mod13050 from "13050__.js";
 
-export default { AtrulePrelude: defaultRecognizer, Selector: _mod13113, Value: _mod13114 };
+const Hash = _mod13050.TYPE.Hash;
+let obj = {
+  name: "IdSelector",
+  structure: { name: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Hash);
+    const obj = { type: "IdSelector", loc: this.getLocation(tokenStart, this.scanner.tokenStart), name: null };
+    const scanner = this.scanner;
+    obj.name = scanner.substrToCursor(tokenStart + 1);
+    return obj;
+  },
+  generate(name) {
+    this.chunk("#");
+    this.chunk(name.name);
+  },
+};
+
+export default obj;

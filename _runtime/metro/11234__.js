@@ -1,13 +1,6 @@
 // _runtime/metro/11234__.js
-import registerAsset from "01119__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "8b4b2bddd719de3088e180cf9d96ecec",
-  name: "RetryIcon",
-  type: "png",
-});
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+
+export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");

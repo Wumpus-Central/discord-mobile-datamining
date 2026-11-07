@@ -13,7 +13,7 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
       } else {
         c2 = 0;
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp7) {
       if (tmp3 === c2) {

@@ -1,4 +1,6 @@
 // _runtime/metro/08972__.js
-import _modDef8973 from "08973__.js";
+import emptyFunction from "05179__.js";
 
-export default _modDef8973({ contain: null, cover: null, stretch: null });
+const point = { x: emptyFunction.number, y: emptyFunction.number };
+
+export default emptyFunction.shape(point);

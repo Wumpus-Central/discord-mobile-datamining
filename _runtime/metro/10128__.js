@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/MatteLightIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/custom_app_icons/HexagonIcon",
+  width: 102,
+  height: 102,
   scales: [2, 3],
-  hash: "766fd7e004517bb3fbea8bf5121a6049",
-  name: "MatteLightIcon",
+  hash: "6fc713ff4969740a35633ad9d71eaf93",
+  name: "HexagonIcon",
   type: "png",
 });

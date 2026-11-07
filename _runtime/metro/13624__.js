@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e2f35893f933ba61ccefbd78592b084f",
-  name: "ExperimentalCheckpointIcon",
+  hash: "d25dc6aac0ffe1d35c3be44e5c9ce017",
+  name: "ArrowAngleRightUpIcon",
   type: "png",
 });

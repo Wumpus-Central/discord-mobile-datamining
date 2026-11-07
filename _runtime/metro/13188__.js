@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "c633d33c98eaf36e731a0f2d3f8db716",
-  name: "ChatShieldIcon",
-  type: "png",
+  httpServerLocation: "/assets/modules/conjure/home/images",
+  width: 640,
+  height: 360,
+  scales: [1],
+  hash: "1959740f5a804a73d247c5716c4838a6",
+  name: "conjure-home-aram-widget",
+  type: "svg",
 });

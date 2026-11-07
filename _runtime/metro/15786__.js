@@ -1,13 +1,13 @@
 // _runtime/metro/15786__.js
+import registerAsset from "01119__.js";
 
-export default {
-  2: "need dictionary",
-  1: "stream end",
-  0: "",
-  "-1": "file error",
-  "-2": "stream error",
-  "-3": "data error",
-  "-4": "insufficient memory",
-  "-5": "buffer error",
-  "-6": "incompatible version",
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark",
+  width: 24,
+  height: 23,
+  scales: [2, 3],
+  hash: "0e23713e9cb6c9f18c86b80cbd5851e5",
+  name: "tier_3_24px",
+  type: "png",
+});

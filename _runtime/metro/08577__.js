@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "421762234dc1c14955fde3d3dd6a6217",
-  name: "ChatWarningIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "c9a4f850f67785dd3a5d71532b973724",
+  name: "ic_verified_icon_white_16px",
   type: "png",
 });

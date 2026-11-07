@@ -1,13 +1,51 @@
 // _runtime/metro/04487__.js
-let closure_0 = { lastWeek: "'el' eeee 'pasado a la' p", yesterday: "'ayer a la' p", today: "'hoy a la' p", tomorrow: "'ma\u00F1ana a la' p", nextWeek: "eeee 'a la' p", other: "P" };
-let closure_1 = { lastWeek: "'el' eeee 'pasado a las' p", yesterday: "'ayer a las' p", today: "'hoy a las' p", tomorrow: "'ma\u00F1ana a las' p", nextWeek: "eeee 'a las' p", other: "P" };
+import module_4422_mod from "04422__.js";
 
-export default function formatRelative(arg0, getUTCHours, arg2, arg3) {
-  if (1 !== getUTCHours.getUTCHours()) {
-    let tmp2 = closure_1[arg0];
-  } else {
-    tmp2 = closure_0[arg0];
+let module_4422 = module_4422_mod;
+if (!module_4422) {
+  const obj = { default: module_4422 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4422;
+}
+module_4422 = tmp3;
+const dependencyMap = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
+let closure_2 = {
+  lastWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (module_4422.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
+    } else {
+      str = "'domenica scorsa alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} scorso alle' p`;
+      }
+    }
+    return str;
+  },
+  yesterday: "'ieri alle' p",
+  today: "'oggi alle' p",
+  tomorrow: "'domani alle' p",
+  nextWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (module_4422.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
+    } else {
+      str = "'domenica prossima alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
+      }
+    }
+    return str;
+  },
+  other: "P"
+};
+
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_2[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
   }
-  return tmp2;
+  return tmpResult;
 };
 export default exports.default;

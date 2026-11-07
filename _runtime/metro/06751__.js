@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "924c5a5eda5a5885b3a2345095a2f59c",
-  name: "img_account_sync_tiktok_light",
+  hash: "18bf95267062a719213a10081e62b607",
+  name: "img_amazon_music",
   type: "png",
 });

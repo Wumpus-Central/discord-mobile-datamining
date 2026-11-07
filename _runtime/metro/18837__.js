@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/icymi/native/images",
-  width: 77,
-  height: 95.5,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "ebbb7db0461de915440e3bdd6a8249c9",
-  name: "flash",
+  hash: "55929208ca176923ba23d97478360818",
+  name: "ic_guild_grid_24px",
   type: "png",
 });

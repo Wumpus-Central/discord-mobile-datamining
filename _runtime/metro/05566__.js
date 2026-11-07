@@ -1,91 +1,19 @@
 // _runtime/metro/05566__.js
-import resolveInternalConfigProps from "../05521_resolveInternalConfigProps.js";
+import _modDef5563 from "05563__.js";
+import noop from "00019__.js";
 
-const require = globalThis.__r;
+const jsx = fn(21).jsx;
 
-require = arg1;
-let dependencyMap = arg6;
-
-export function useComposedGesture(type) {
-  _require = type;
-  const substr = [...arguments].slice();
-  const flatMapResult = substr.flatMap((type) => {
-    if (obj.isComposedGesture(type)) {
-      if (type.type === closure_0) {
-        let gestures = type.gestures;
-      }
-      return gestures;
-    }
-    gestures = [type];
-    obj = resolveInternalConfigProps;
-  });
-  dependencyMap = flatMapResult;
-  const flatMapResult1 = flatMapResult.flatMap((handlerTags) => {
-    if (obj.isComposedGesture(handlerTags)) {
-      handlerTags = handlerTags.handlerTags;
-    } else {
-      handlerTags = [];
-      handlerTags[0] = handlerTags.handlerTag;
-    }
-    return handlerTags;
-  });
-  if (obj2.containsDuplicates(flatMapResult1)) {
-    const _Error2 = Error;
-    const error = new Error(tmp2(5454).tagMessage("Each gesture can be used only once in the gesture composition."));
-    throw error;
-  } else {
-    let obj = {
-      shouldUseReanimatedDetector: flatMapResult.some((config) => config.config.shouldUseReanimatedDetector),
-      dispatchesAnimatedEvents: flatMapResult.some((config) => config.config.dispatchesAnimatedEvents),
-    };
-    if (obj.shouldUseReanimatedDetector) {
-      if (obj.dispatchesAnimatedEvents) {
-        const _Error = Error;
-        const error1 = new Error(
-          tmp2(5454).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."),
-        );
-        throw error1;
-      }
-    }
-    const Reanimated = tmp2(5494).Reanimated;
-    let composedEventHandler;
-    if (Reanimated != null) {
-      composedEventHandler = Reanimated.useComposedEventHandler(
-        flatMapResult.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null),
-      );
-    }
-    const found = flatMapResult.filter(
-      (detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler,
-    );
-    let animatedEventHandler;
-    if (found.length > 0) {
-      animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
-    }
-    const obj3 = {
-      handlerTags: flatMapResult1,
-      type,
-      config: obj,
-      detectorCallbacks: null,
-      externalSimultaneousHandlers: null,
-      gestures: null,
-    };
-    const obj4 = {
-      jsEventHandler(arg0) {
-        for (const item10007 of c1) {
-          if (item10007.detectorCallbacks.jsEventHandler) {
-            let detectorCallbacks = tmp.detectorCallbacks;
-            let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
-          }
-          continue;
-        }
-      },
-      reanimatedEventHandler: composedEventHandler,
-      animatedEventHandler,
-    };
-    obj3.detectorCallbacks = obj4;
-    obj3.externalSimultaneousHandlers = [];
-    obj3.gestures = flatMapResult;
-    return obj3;
+export default function _default(delayLongPress) {
+  let num = delayLongPress.delayLongPress;
+  if (num === undefined) {
+    num = 600;
   }
-  obj2 = require("resolveInternalConfigProps");
+  let extraButtonProps = delayLongPress.extraButtonProps;
+  if (extraButtonProps === undefined) {
+    extraButtonProps = { rippleColor: "transparent", exclusive: true };
+  }
+  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(_modDef5563, { delayLongPress: num, extraButtonProps });
 }

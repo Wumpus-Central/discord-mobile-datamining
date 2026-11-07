@@ -1,34 +1,16 @@
 // _runtime/metro/13100__.js
-const obj = {
-  name: "Selector",
-  structure: null,
+import _mod13050 from "13050__.js";
+
+const CDO = _mod13050.TYPE.CDO;
+
+export default {
+  name: "CDO",
+  structure: [],
   parse() {
-    const self = this;
-    const sequence = this.readSequence(this.scope.Selector);
-    if (null === this.getFirstListNode(sequence)) {
-      self.error("Selector is expected");
-    }
-    const element = { type: "Selector", loc: self.getLocationFromList(sequence), children: sequence };
-    return element;
+    this.eat(CDO);
+    return { type: "CDO", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
   },
-  generate(arg0) {
-    this.children(arg0);
+  generate() {
+    this.chunk("<!--");
   },
 };
-const obj2 = { children: null };
-const items = [
-  [
-    "TypeSelector",
-    "IdSelector",
-    "ClassSelector",
-    "AttributeSelector",
-    "PseudoClassSelector",
-    "PseudoElementSelector",
-    "Combinator",
-    "WhiteSpace",
-  ],
-];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;

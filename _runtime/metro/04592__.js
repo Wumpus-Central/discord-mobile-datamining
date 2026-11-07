@@ -1,42 +1,79 @@
 // _runtime/metro/04592__.js
-import 04593__ from "04593__.js";
-import 04594__ from "04594__.js";
-import 04595__ from "04595__.js";
-import date_mod from "04894__.js";
-import date_mod from "04895__.js";
+import _typeof_mod from "04420__.js";
+import requiredArgs_mod from "../04421_requiredArgs.js";
 
-if (!module_4593) {
-  const obj = { default: module_4593 };
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4593;
+  tmp3 = _typeof;
 }
-if (!module_4594) {
-  const obj2 = { default: module_4594 };
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4594;
+  tmp5 = requiredArgs;
 }
-if (!module_4595) {
-  const obj3 = { default: module_4595 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4595;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp5;
 
-export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function max(arg0) {
+  requiredArgs.default(1, arguments);
+  if (!arg0) {
+    if ("object" === _typeof(arg0)) {
+      if (null !== arg0) {
+        const _Array = Array;
+        const call = slice.call;
+        let arr = typeof call === "unknown" ? slice() : call(arg0);
+      }
+    }
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else {
+    arr = arg0;
+  }
+  const item = arr.forEach((item) => {
+    defaultResult = _typeof.default(item);
+    let isNaNResult = undefined === defaultResult || defaultResult < defaultResult;
+    if (!isNaNResult) {
+      const _isNaN = isNaN;
+      const _Number = Number;
+      isNaNResult = isNaN(Number(defaultResult));
+    }
+  });
+  let date1 = _typeof;
+  if (!_typeof) {
+    const _Date2 = Date;
+    date1 = new Date(NaN);
+  }
+  return date1;
+};
 export default exports.default;

@@ -1,47 +1,28 @@
 // _runtime/metro/04768__.js
-import module_4454_mod from "04454__.js";
-import _typeof_mod from "04450__.js";
-import module_4690_mod from "04690__.js";
-import requiredArgs_mod from "../04451_requiredArgs.js";
+import startOfWeek_mod from "../04579_startOfWeek.js";
+import requiredArgs_mod from "../04421_requiredArgs.js";
 
-let module_4454 = module_4454_mod;
-if (!module_4454) {
-  const obj = { default: module_4454 };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4454;
+  tmp3 = startOfWeek;
 }
-module_4454 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_4690 = module_4690_mod;
-if (!module_4690) {
-  const obj3 = { default: module_4690 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4690;
-}
-module_4690 = tmp7;
+startOfWeek = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function setUTCWeek(arg0, arg1, arg2) {
+export default function isSameWeek(arg0, arg1, arg2) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4690.default(defaultResult1, arg2) - module_4454.default(arg1);
-  defaultResult1.setUTCDate(defaultResult1.getUTCDate() - 7 * diff);
-  return defaultResult1;
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

@@ -1,41 +1,75 @@
 // _runtime/metro/13080__.js
-import _mod13027 from "13027__.js";
+import _mod13052 from "13052__.js";
 
-const Comment = _mod13027.TYPE.Comment;
-let obj = {
-  name: "Comment",
-  structure: { value: String },
-  parse() {
-    const self = this;
-    const tokenStart = this.scanner.tokenStart;
-    const tokenEnd = this.scanner.tokenEnd;
-    this.eat(Comment);
-    const sum = tokenEnd - tokenStart + 2;
-    let tmp3 = sum >= 2;
-    if (2 <= sum) {
-      const source = self.scanner.source;
-      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
+function getFirstMatchNode(node) {
+  if ("node" in node) {
+    node = node.node;
+  } else {
+    node = getFirstMatchNode(node.match[0]);
+  }
+  return node;
+}
+function getLastMatchNode(node) {
+  if ("node" in node) {
+    node = node.node;
+  } else {
+    node = getLastMatchNode(node.match[node.match.length - 1]);
+  }
+  return node;
+}
+
+export default {
+  matchFragments(arg0, value, matched, arg3, arg4) {
+    closure_0 = arg0;
+    closure_1 = value;
+    closure_2 = arg3;
+    closure_3 = arg4;
+    items = [];
+    if (null !== matched.matched) {
+      function findFragments(matched) {
+        if (null !== matched.syntax) {
+          if (matched.syntax.type === closure_2) {
+            if (matched.syntax.name === closure_3) {
+              if ("node" in matched) {
+                let node = matched.node;
+              } else if ("node" in matched.match[0]) {
+                node = str.node;
+              } else {
+                node = closure_2(str.match[0]);
+              }
+              if ("node" in matched) {
+                let node2 = matched.node;
+              } else if ("node" in matched.match[matched.match.length - 1]) {
+                node2 = str2.node;
+              } else {
+                node2 = closure_3(str2.match[str2.match.length - 1]);
+              }
+              const syntax = node.syntax;
+              syntax.walk(node2, (arg0, arg1, parent) => {
+                if (arg0 === node) {
+                  let iter = arg1;
+                  const obj2 = new _mod13052();
+                  obj2.appendData(iter.data);
+                  while (iter.data !== node2) {
+                    iter = iter.next;
+                    if (null === iter) {
+                      break;
+                    }
+                  }
+                  const obj = { parent, nodes: obj2 };
+                  items.push(obj);
+                }
+              });
+            }
+          }
+        }
+        if (Array.isArray(matched.match)) {
+          const match = matched.match;
+          const item = match.forEach(findFragments);
+        }
+      }
+      findFragments(matched.matched);
     }
-    if (tmp3) {
-      const source2 = self.scanner.source;
-      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
-    }
-    let diff = tokenEnd;
-    if (tmp3) {
-      diff = tokenEnd - 2;
-    }
-    const obj = {
-      type: "Comment",
-      loc: self.getLocation(tokenStart, self.scanner.tokenStart),
-      value: self.scanner.source.substring(tokenStart + 2, diff),
-    };
-    return obj;
-  },
-  generate(value) {
-    this.chunk("/*");
-    this.chunk(value.value);
-    this.chunk("*/");
+    return items;
   },
 };
-
-export default obj;

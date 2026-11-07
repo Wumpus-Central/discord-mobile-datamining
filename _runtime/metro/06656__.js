@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "e9fce92f06bbfad622591815c7f5f9ac",
-  name: "img_account_sync_twitch_white",
+  hash: "6dfdeab813b7b4024164980d2fd4bf7a",
+  name: "img_account_sync_league_of_legends_light_and_dark",
   type: "png",
 });

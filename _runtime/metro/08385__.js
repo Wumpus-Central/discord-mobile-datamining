@@ -1,22 +1,21 @@
 // _runtime/metro/08385__.js
-import _mod8370 from "08370__.js";
-
-require = arg1;
-const dependencyMap = arg6;
-let c2 = 0;
-let c3 = "<?xpacket begin";
 
 export default {
-  isXMLFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod8370.getStringFromDataView(dataView, c2, length.length) === length;
+  get(arg0) {
+    if (arg0) {
+      return arg0;
+    } else {
+      if (typeof globalThis.DOMParser !== "undefined") {
+        const dOMParser = new globalThis.DOMParser();
+        return dOMParser;
+      } else {
+        try {
+          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
+          const obj = { onError: result.onErrorStopParsing };
+          const dOMParser1 = new result.DOMParser(obj);
+          return dOMParser1;
+        } catch (err) {}
+      }
     }
-    return tmp;
-  },
-  findOffsets(byteLength) {
-    const xmpChunks = [];
-    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
-    return { xmpChunks };
   },
 };

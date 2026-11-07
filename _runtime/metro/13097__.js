@@ -1,57 +1,93 @@
 // _runtime/metro/13097__.js
-import _mod13027 from "13027__.js";
+import _mod13050 from "13050__.js";
+import _mod13094 from "13094__.js";
 
-const Ident = _mod13027.TYPE.Ident;
-const Function = _mod13027.TYPE.Function;
-const Colon = _mod13027.TYPE.Colon;
-const RightParenthesis = _mod13027.TYPE.RightParenthesis;
-const obj = {
-  name: "PseudoElementSelector",
-  structure: null,
-  parse() {
-    const self = this;
-    this.eat(Colon);
-    this.eat(Colon);
-    if (this.scanner.tokenType === Function) {
-      const str = self.consumeFunctionName();
-      const formatted = str.toLowerCase();
-      const pseudo = self.pseudo;
-      if (!pseudo.hasOwnProperty(formatted)) {
-        const list = self.createList();
-        list.push(self.Raw(self.scanner.tokenIndex, null, false));
-        self.eat(RightParenthesis);
-      }
-      const scanner = self.scanner;
-      scanner.skipSC();
-      let skipSCResult1 = self.pseudo[formatted];
-      const call = skipSCResult1.call;
-      const scanner2 = self.scanner;
-      skipSCResult1 = scanner2.skipSC();
-      const tmp11 = typeof call === "unknown" ? skipSCResult1() : call(self);
+function consumeRaw(arg0) {
+  return this.Raw(arg0, null, true);
+}
+function consumeRule() {
+  return this.parseWithFallback(this.Rule, consumeRaw);
+}
+function consumeRawDeclaration(arg0) {
+  return this.Raw(arg0, _mod13094.mode.semicolonIncluded, true);
+}
+function consumeDeclaration() {
+  const self = this;
+  if (this.scanner.tokenType === Semicolon) {
+    const call = consumeRawDeclaration.call;
+    const tokenIndex = self.scanner.tokenIndex;
+    if (typeof call === "unknown") {
+      let RawResult = self.Raw(tokenIndex, _mod13094.mode.semicolonIncluded, true);
     } else {
-      const element = {
-        type: "PseudoElementSelector",
-        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-        name: self.consume(Ident),
-        children: null,
-      };
-      return element;
+      RawResult = call(self, tokenIndex);
     }
-  },
-  generate(name) {
+    return RawResult;
+  } else {
+    if (self.scanner.tokenType === tmp) {
+      self.scanner.next();
+      const iter = self.scanner;
+    }
+    return self.parseWithFallback(self.Declaration, consumeRawDeclaration);
+  }
+}
+const WhiteSpace = _mod13050.TYPE.WhiteSpace;
+const Comment = _mod13050.TYPE.Comment;
+const Semicolon = _mod13050.TYPE.Semicolon;
+const AtKeyword = _mod13050.TYPE.AtKeyword;
+const LeftCurlyBracket = _mod13050.TYPE.LeftCurlyBracket;
+const RightCurlyBracket = _mod13050.TYPE.RightCurlyBracket;
+const obj = {
+  name: "Block",
+  structure: null,
+  parse(arg0) {
+    const tmp = arg0 ? consumeDeclaration : consumeRule;
     const self = this;
-    this.chunk("::");
-    this.chunk(name.name);
-    if (null !== name.children) {
-      self.chunk("(");
-      self.children(name);
-      self.chunk(")");
+    const list = this.createList();
+    this.eat(LeftCurlyBracket);
+    if (!this.scanner.eof) {
+      const tokenType = self.scanner.tokenType;
+      while (RightCurlyBracket !== tokenType) {
+        if (WhiteSpace !== tokenType) {
+          if (Comment !== tokenType) {
+            if (AtKeyword === tokenType) {
+              let arr = list.push(self.parseWithFallback(self.Atrule, consumeRaw));
+            } else {
+              let call = tmp.call;
+              let arr3 = list.push(typeof call === "unknown" ? tmp() : call(self));
+            }
+          }
+          if (self.scanner.eof) {
+            break;
+          }
+        }
+        let iter = self.scanner;
+        let nextResult = iter.next();
+      }
     }
+    if (!self.scanner.eof) {
+      self.eat(RightCurlyBracket);
+    }
+    const element = {
+      type: "Block",
+      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+      children: list,
+    };
+    return element;
   },
-  walkContext: "function",
+  generate(arg0) {
+    this.chunk("{");
+    this.children(arg0, function (type) {
+      if ("Declaration" === type.type) {
+        const self = this;
+        this.chunk(";");
+      }
+    });
+    this.chunk("}");
+  },
+  walkContext: "block",
 };
-const obj2 = { name: String, children: null };
-const items = [["Raw"], null];
+const obj2 = { children: null };
+const items = [["Atrule", "Rule", "Declaration"]];
 obj2.children = items;
 obj.structure = obj2;
 

@@ -1,16 +1,20 @@
 // _runtime/metro/13108__.js
-import _mod13027 from "13027__.js";
+import _mod13050 from "13050__.js";
 
-const WhiteSpace = _mod13027.TYPE.WhiteSpace;
-let closure_1 = Object.freeze({ type: "WhiteSpace", loc: null, value: " " });
-const obj = {
-  name: "WhiteSpace",
+const Hash = _mod13050.TYPE.Hash;
+let obj = {
+  name: "Hash",
   structure: { value: String },
   parse() {
-    this.eat(WhiteSpace);
-    return closure_1;
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Hash);
+    const obj = { type: "Hash", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
+    const scanner = this.scanner;
+    obj.value = scanner.substrToCursor(tokenStart + 1);
+    return obj;
   },
   generate(value) {
+    this.chunk("#");
     this.chunk(value.value);
   },
 };

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/HoloWavesIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "44efb56cf36c8202533bcbc557ebf8e5",
-  name: "MidnightPrismIcon",
+  hash: "88fd60fc6961a4cc52d32c54b3209f38",
+  name: "HoloWavesIcon",
   type: "png",
 });

@@ -134,7 +134,7 @@ export function wrapTransportSend(send, arg1) {
               const obj6 = { value, done: true };
               return obj6;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {

@@ -1,12 +1,12 @@
 // _runtime/metro/08164__.js
-import _modDef8161 from "08161__.js";
+import _modDef8140 from "08140__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeComponentTransfer = arg1;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeComponentTransfer {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = c2(this, FeComponentTransfer);
+    tmp = c2(this, FeSpecularLighting);
     tmp2 = closure_4;
-    obj = closure_4(FeComponentTransfer);
+    obj = closure_4(FeSpecularLighting);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,17 +45,17 @@ class FeComponentTransfer {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeComponentTransfer, _modDef8161);
+_inherits(FeSpecularLighting, _modDef8140);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeComponentTransfer(8138).warnUnimplementedFilter();
+    const result = FeSpecularLighting(8117).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeComponentTransfer, items);
-importDefaultResultResult.displayName = "FeComponentTransfer";
+const importDefaultResultResult = _createClass(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

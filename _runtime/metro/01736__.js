@@ -469,7 +469,7 @@ let items = [
                   upload.__dispatch("loadstart", obj9);
                 }
               }
-              obj2 = { data: "Array", contentType: "channel" };
+              obj2 = { data: "Array", contentType: "flexDirection" };
             } else {
               self.__dispatch("loadstart");
               const _setTimeout = setTimeout;

@@ -1,7 +1,13 @@
 // _runtime/metro/08086__.js
-import baseAssignValue from "../00667_baseAssignValue.js";
-import _mod8087 from "08087__.js";
+import registerAsset from "01119__.js";
 
-export default _mod8087((arg0, arg1, arg2) => {
-  baseAssignValue(arg0, arg2, arg1);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "a568e12daf3f479ad26c9db6582fe1a2",
+  name: "CreditCardIcon",
+  type: "png",
 });

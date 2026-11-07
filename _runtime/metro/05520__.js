@@ -1,100 +1,17 @@
 // _runtime/metro/05520__.js
+import ComposedGestureName from "../05482_ComposedGestureName.js";
+import resolveInternalConfigProps from "../05491_resolveInternalConfigProps.js";
+import _mod5508 from "05508__.js";
 
-export function isComposedGesture(gesture) {
-  return "handlerTags" in gesture;
-}
-export function prepareRelations(config, handlerTag) {
-  const simultaneousWith1 = config.simultaneousWith;
-  closure_0 = handlerTag;
-  if (simultaneousWith1) {
-    const _Array = Array;
-    if (Array.isArray(simultaneousWith1)) {
-      const item = simultaneousWith1.forEach(function processSingleGesture(externalSimultaneousHandlers) {
-        if ("handlerTags" in externalSimultaneousHandlers) {
-          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
-        } else {
-          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
-        }
-        if (!prop.includes(closure_0)) {
-          prop.push(closure_0);
-        }
-      });
-    } else {
-      if ("handlerTags" in simultaneousWith1) {
-        let prop = simultaneousWith1.externalSimultaneousHandlers;
-      } else {
-        prop = simultaneousWith1.gestureRelations.simultaneousHandlers;
-      }
-      if (!prop.includes(handlerTag)) {
-        prop.push(handlerTag);
-      }
-    }
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
+
+export function useNativeGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
   }
-  const simultaneousWith = config.simultaneousWith;
-  if (simultaneousWith) {
-    const _Array2 = Array;
-    if (Array.isArray(simultaneousWith)) {
-      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
-        if ("handlerTags" in handlerTags) {
-          handlerTags = handlerTags.handlerTags;
-        } else {
-          handlerTags = [];
-          handlerTags[0] = handlerTags.handlerTag;
-        }
-        return handlerTags;
-      });
-    } else if ("handlerTags" in simultaneousWith) {
-      flatMapResult = simultaneousWith.handlerTags;
-    } else {
-      flatMapResult = [simultaneousWith.handlerTag];
-    }
-  } else {
-    const obj = { simultaneousHandlers: [], waitFor: null, blocksHandlers: null };
-    const requireToFail = config.requireToFail;
-    if (requireToFail) {
-      const _Array3 = Array;
-      if (Array.isArray(requireToFail)) {
-        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
-          if ("handlerTags" in handlerTags) {
-            handlerTags = handlerTags.handlerTags;
-          } else {
-            handlerTags = [];
-            handlerTags[0] = handlerTags.handlerTag;
-          }
-          return handlerTags;
-        });
-      } else if ("handlerTags" in requireToFail) {
-        flatMapResult1 = requireToFail.handlerTags;
-      } else {
-        flatMapResult1 = [requireToFail.handlerTag];
-      }
-    } else {
-      obj.waitFor = [];
-      const block = config.block;
-      if (block) {
-        const _Array4 = Array;
-        if (Array.isArray(block)) {
-          let flatMapResult2 = block.flatMap((handlerTags) => {
-            if ("handlerTags" in handlerTags) {
-              handlerTags = handlerTags.handlerTags;
-            } else {
-              handlerTags = [];
-              handlerTags[0] = handlerTags.handlerTag;
-            }
-            return handlerTags;
-          });
-        } else if ("handlerTags" in block) {
-          flatMapResult2 = block.handlerTags;
-        } else {
-          flatMapResult2 = [block.handlerTag];
-        }
-      } else {
-        obj.blocksHandlers = [];
-        return obj;
-      }
-    }
-  }
-}
-export function containsDuplicates(flatMapResult1) {
-  return new Set(flatMapResult1).size !== flatMapResult1.length;
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5508.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
 }

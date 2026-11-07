@@ -1,15 +1,4 @@
 // _runtime/metro/13152__.js
-const require = globalThis.__r;
+import _mod13151 from "13151__.js";
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export const parse = require("13153__.js").parse;
-export const compile = require("compile").compile;
-export const generate = require("compile").generate;
-export default function nthCheck(arg0) {
-  return require("compile").compile(require("13153__.js").parse(arg0));
-}
-export function sequence(arg0) {
-  return require("compile").generate(require("13153__.js").parse(arg0));
-}
+export default _mod13151;

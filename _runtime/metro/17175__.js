@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/virtual_currency/native/orb_wallet/svgs",
-  width: 50,
-  height: 37,
-  scales: [1],
-  hash: "2e363b0731271ecec5e35c52d433340f",
-  name: "claim_in_shop_graphic",
-  type: "svg",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
+  scales: [2, 3],
+  hash: "8eabe75983473aecbcb03200bb7a397b",
+  name: "ic_alert",
+  type: "png",
 });

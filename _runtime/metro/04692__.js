@@ -1,9 +1,8 @@
 // _runtime/metro/04692__.js
-import _mod4455 from "04455__.js";
-import _typeof_mod from "04450__.js";
-import requiredArgs_mod from "../04451_requiredArgs.js";
-import startOfUTCWeek_mod from "../04453_startOfUTCWeek.js";
-import module_4454_mod from "04454__.js";
+import _typeof_mod from "04420__.js";
+import startOfISOWeek_mod from "../04578_startOfISOWeek.js";
+import startOfISOWeekYear_mod from "../04581_startOfISOWeekYear.js";
+import requiredArgs_mod from "../04421_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -13,108 +12,37 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let startOfISOWeek = startOfISOWeek_mod;
+if (!startOfISOWeek) {
+  const obj2 = { default: startOfISOWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfISOWeek;
 }
-requiredArgs = tmp5;
-let startOfUTCWeek = startOfUTCWeek_mod;
-if (!startOfUTCWeek) {
-  const obj3 = { default: startOfUTCWeek };
+startOfISOWeek = tmp5;
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj3 = { default: startOfISOWeekYear };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfUTCWeek;
+  tmp7 = startOfISOWeekYear;
 }
-startOfUTCWeek = tmp7;
-let module_4454 = module_4454_mod;
-if (!module_4454) {
-  const obj4 = { default: module_4454 };
+startOfISOWeekYear = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
   let tmp9 = obj4;
 } else {
-  tmp9 = module_4454;
+  tmp9 = requiredArgs;
 }
-module_4454 = tmp9;
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function getUTCWeekYear(arg0, firstWeekContainsDate) {
+export default function getISOWeek(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const uTCFullYear = defaultResult1.getUTCFullYear();
-  const defaultOptions = _mod4455.getDefaultOptions();
-  let prop;
-  if (null != firstWeekContainsDate) {
-    prop = firstWeekContainsDate.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    let prop1;
-    if (null != firstWeekContainsDate) {
-      const locale = firstWeekContainsDate.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              prop1 = options.firstWeekContainsDate;
-            }
-          }
-        }
-      }
-    }
-    prop = prop1;
-  }
-  if (null === prop) {
-    prop = defaultOptions.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    const locale2 = defaultOptions.locale;
-    let prop2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            prop2 = options2.firstWeekContainsDate;
-          }
-        }
-      }
-    }
-    prop = prop2;
-  }
-  let num = 1;
-  if (null !== prop) {
-    num = 1;
-    if (undefined !== prop) {
-      num = prop;
-    }
-  }
-  const defaultResult2 = module_4454.default(num);
-  if (defaultResult2 >= 1) {
-    if (defaultResult2 <= 7) {
-      const _Date = Date;
-      const date = new Date(0);
-      date.setUTCFullYear(uTCFullYear + 1, 0, defaultResult2);
-      date.setUTCHours(0, 0, 0, 0);
-      const _Date2 = Date;
-      const date1 = new Date(0);
-      date1.setUTCFullYear(uTCFullYear, 0, defaultResult2);
-      date1.setUTCHours(0, 0, 0, 0);
-      const defaultResult3 = startOfUTCWeek.default(date, firstWeekContainsDate);
-      const time = defaultResult1.getTime();
-      if (time >= defaultResult3.getTime()) {
-        let sum = uTCFullYear + 1;
-      } else {
-        const time1 = defaultResult1.getTime();
-        sum = uTCFullYear;
-        if (time1 < defaultResult4.getTime()) {
-          sum = uTCFullYear - 1;
-        }
-      }
-      return sum;
-    }
-  }
-  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  throw rangeError;
+  const time = startOfISOWeek.default(defaultResult1).getTime();
+  const defaultResult2 = startOfISOWeek.default(defaultResult1);
+  return Math.round((time - startOfISOWeekYear.default(defaultResult1).getTime()) / c4) + 1;
 };
 export default exports.default;

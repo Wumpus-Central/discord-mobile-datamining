@@ -3,10 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation:
-    "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==",
+  httpServerLocation: "/assets/modules/hexagon_campaign",
   scales: [1],
-  hash: "c33ae574de9a896278e9c8a489b63169",
-  name: "da.messages.c33ae574de9a896278e9c8a489b63169.compiled.messages",
+  hash: "799213af087ff609366f4dfb3513af09",
+  name: "HexagonCampaign.compiled.messages",
   type: "jsona",
 });

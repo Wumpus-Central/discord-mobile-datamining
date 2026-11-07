@@ -1,43 +1,11 @@
 // _runtime/metro/05274__.js
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-({ useRef: closure_0, useEffect: closure_1 } = noop);
-let deps = Symbol("UNINITIALIZED");
-
-export function useDisposableMemo(fn2, _temp, items, current2) {
-  const obj = { value: "r", deps, pendingDisposal: null };
-  const tmp2 = React(obj);
-  closure_0 = tmp2;
-  const obj2 = React(_temp);
-  obj2.current = _temp;
-  const tmp3 = React(current2);
-  deps = tmp3;
-  tmp3.current = current2;
-  if (tmp2.current.deps === deps) {
-    if (tmp2.current.deps !== deps) {
-      if (tmp3.current) {
-        tmp3.current.current = undefined;
-      }
-      try {
-        obj2.current(tmp2.current.value);
-      } catch (err) {}
-    }
-    const obj3 = { value: fn2(), deps: items, pendingDisposal: null };
-    tmp2.current = obj3;
-    if (tmp3.current) {
-      tmp3.current.current = tmp2.current.value;
-    }
-  }
-  duration(
-    () => () => {
-      if (ref3.current) {
-        ref3.current.current = undefined;
-      }
-      try {
-        ref2.current(ref.current.value);
-      } catch (err) {}
-    },
-    [],
-  );
-  return tmp2.current.value;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/packages/design/components/Rive/native/generated/rives",
+  scales: [1],
+  hash: "55f61166c3a14f05bf149ad73e3d6952",
+  name: "CheckpointCharacter",
+  type: "riv",
+});

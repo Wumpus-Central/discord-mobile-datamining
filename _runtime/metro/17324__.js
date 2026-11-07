@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "313d0291c31affa2231c3200ee7f2822",
-  name: "CircleQuestionIcon",
+  httpServerLocation: "/assets/modules/hexagon_campaign/images",
+  width: 88,
+  height: 88,
+  scales: [2, 3, 4],
+  hash: "1314a80c1b4760307a1e41ed1c339f0e",
+  name: "hexagon_campaign_logo",
   type: "png",
 });

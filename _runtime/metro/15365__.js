@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/images",
-  width: 608,
-  height: 608,
-  scales: [2, 3],
-  hash: "6936c050862daceed7175a327466cd4a",
-  name: "quests_embed_mobile_missing",
+  httpServerLocation: "/assets/images/native/gifting/standard",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "8d849400b440a33fbe389f999a0310ea",
+  name: "cake_idle",
   type: "png",
 });

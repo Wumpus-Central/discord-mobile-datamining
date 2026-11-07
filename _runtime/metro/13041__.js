@@ -1,37 +1,20 @@
 // _runtime/metro/13041__.js
+import _mod13160 from "13160__.js";
+import _mod13161 from "13161__.js";
+import 13042__ from "13042__.js";
+import patchDictionary from "../13085_patchDictionary.js";
+import 13132__ from "13132__.js";
 
-export default function createConvertors(arg0) {
-  closure_0 = arg0;
-  return {
-    fromPlainObject(arg0) {
-      closure_0(arg0, {
-        enter(children) {
-          children = children.children;
-          if (children) {
-            children = children.children instanceof closure_1_0(13029) === false;
-          }
-          if (children) {
-            const obj = new closure_1_0(13029)();
-            children.children = obj.fromArray(children.children);
-          }
-        },
-      });
-      return arg0;
-    },
-    toPlainObject(arg0) {
-      closure_0(arg0, {
-        leave(children) {
-          children = children.children;
-          if (children) {
-            children = children.children instanceof closure_1_0(closure_1_1[0]);
-          }
-          if (children) {
-            const children2 = children.children;
-            children.children = children2.toArray();
-          }
-        },
-      });
-      return arg0;
-    },
-  };
-}
+module.exports.version = _mod13161.version;
+
+export default module_13042.create((function merge() {
+  const obj = {};
+  for (let num = 0; num < arguments.length; num = num + 1) {
+    let tmp = arguments[num];
+    for (const key10011 in tmp) {
+      obj[key10011] = tmp[key10011];
+      continue;
+    }
+  }
+  return obj;
+})(patchDictionary, module_13132, _mod13160));

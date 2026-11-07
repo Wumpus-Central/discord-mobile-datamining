@@ -1,16 +1,24 @@
 // _runtime/metro/07103__.js
-import Link from "../01500_Link.js";
 import noop from "00019__.js";
 
-require = fn;
-const Animated = fn(17).Animated;
+const UIManager = fn(17).UIManager;
 const jsx = fn(21).jsx;
-
-export function Background(style) {
-  const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj2 = {};
-  const merged1 = Object.assign(merged);
-  items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
-  obj2.style = items;
-  return <Animated.View />;
-}
+try {
+  let closure_0 = fn(7104).default;
+  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
+  exports.MaskedView = function MaskedView(children) {
+    children = children.children;
+    const merged = Object.assign(children, Object.assign({ children: 0 }));
+    let tmp2 = children;
+    if (closure_2) {
+      tmp2 = children;
+      if (closure_0) {
+        const obj = {};
+        const merged1 = Object.assign(merged);
+        obj.children = children;
+        tmp2 = <tmp3 />;
+      }
+    }
+    return tmp2;
+  };
+} catch (err) {}

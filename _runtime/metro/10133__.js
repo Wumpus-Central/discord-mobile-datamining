@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/GalaxyIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 261.5,
+  height: 152,
   scales: [2, 3],
-  hash: "2bb189919203a7299ceda12e2b9f8582",
-  name: "GalaxyIcon",
+  hash: "5691c33dd2c3544121435e1c3a569b50",
+  name: "img_nitro_longer_message_upsell_light",
   type: "png",
 });

@@ -1,4 +1,10 @@
 // _runtime/metro/05650__.js
-import BottomSheetRefreshControlAndroidDefault from "../05651_BottomSheetRefreshControlAndroid.js";
+import PlatformConfig2 from "../05648_PlatformConfig.js";
 
-export default BottomSheetRefreshControlAndroidDefault;
+require = arg1;
+const dependencyMap = arg6;
+
+export function getInvertedTransformStyle(horizontal) {
+  const PlatformConfig = PlatformConfig2.PlatformConfig;
+  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
+}

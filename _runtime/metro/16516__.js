@@ -1,54 +1,45 @@
 // _runtime/metro/16516__.js
-import noop from "00019__.js";
-import module_16498_mod from "16498__.js";
-import _isNativeReflectConstruct_mod from "16517__.js";
-import jsxProd from "../react/00021_jsxProd.js";
+import _typeof from "16517__.js";
 
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-let module_16498 = module_16498_mod;
-if (!module_16498) {
-  let obj = { default: module_16498 };
-  let tmp4 = obj;
-} else {
-  tmp4 = module_16498;
-}
-module_16498 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  const obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-_isNativeReflectConstruct = tmp6;
-
-export default () => () => {
-  closure_0 = closure_0.default();
-  return {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
+if (_typeof) {
+  if (typeof _typeof === "object") {
+    let _default = _typeof;
+  }
+  let obj = globalThis;
+  const _Intl = Intl;
+  if (typeof Intl === "undefined") {
+    if (undefined !== global) {
+      obj = { PluralRules: _default.default };
+      global.Intl = obj;
+      _default = _default.default;
+      _default.polyfill = true;
+    } else {
+      const _window = window;
+      if (typeof window === "undefined") {
+        const self = this;
+        const obj2 = { PluralRules: _default.default };
+        this.Intl = obj2;
       }
-    },
-    features: {
-      storybookSwitcher(arg0) {
-        closure_0 = arg0;
-        return (arg0) => {
-          closure_0 = arg0;
-          return function StorybookSwitcherContainer(arg0) {
-            const obj = { storybookUi: emitter, emitter, children: null };
-            const merged = Object.assign(arg0);
-            obj.children = <emitter />;
-            return (
-              <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>
-                {null}
-              </_isNativeReflectConstruct.default>
-            );
-          };
-        };
-      },
-    },
-  };
-};
+    }
+    obj = { PluralRules: _default.default };
+    obj.window.Intl = obj;
+  } else {
+    const _Intl5 = Intl;
+    if (Intl.PluralRules) {
+      const _Intl2 = Intl;
+      if (Intl.PluralRules.prototype.selectRange) {
+        const items = ["en", "es", "ru", "zh"];
+        const _Intl4 = Intl;
+        if (PluralRules.supportedLocalesOf(items).length < items.length) {
+          const _Intl6 = Intl;
+          Intl.PluralRules = _default.default;
+          _default.default.polyfill = true;
+        }
+      }
+    }
+    const _Intl3 = Intl;
+    Intl.PluralRules = _default.default;
+    _default.default.polyfill = true;
+  }
+}
+_default = { default: _typeof };

@@ -1,6 +1,7 @@
 // _runtime/metro/04762__.js
-import _mod4756 from "04756__.js";
+import _mod4726 from "04726__.js";
 
+let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -26,15 +27,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ExtendedYearParser, Parser) {
+function _setPrototypeOf(TimestampMillisecondsParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ExtendedYearParser, Parser) {
-      ExtendedYearParser.__proto__ = Parser;
-      return ExtendedYearParser;
+    _setPrototypeOf = function _setPrototypeOf(TimestampMillisecondsParser, Parser) {
+      TimestampMillisecondsParser.__proto__ = Parser;
+      return TimestampMillisecondsParser;
     };
   }
-  return _setPrototypeOf(ExtendedYearParser, Parser);
+  return _setPrototypeOf(TimestampMillisecondsParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -52,9 +53,9 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4756.Parser;
+const Parser = _mod4726.Parser;
 let _createSuperInternal;
-class ExtendedYearParser {
+class TimestampMillisecondsParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -81,7 +82,7 @@ class ExtendedYearParser {
       if (tmp13) {
         _ReferenceError2 = ReferenceError;
         tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
+        str6 = "this hasn't been initialised - super() hasn't been called";
         tmp21 = new.target;
         referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
         tmp23 = referenceError;
@@ -91,33 +92,36 @@ class ExtendedYearParser {
         if ("priority" in applyResult) {
           _Object = Object;
           definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 130,
+            value: 20,
             enumerable: true,
             configurable: true,
             writable: true,
           });
         } else {
-          num3 = 130;
-          applyResult.priority = 130;
+          num3 = 20;
+          applyResult.priority = 20;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
           tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
+          str5 = "this hasn't been initialised - super() hasn't been called";
           tmp17 = new.target;
           referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["G", "y", "Y", "R", "w", "I", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj.value = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", {
+              value: "*",
+              enumerable: true,
+              configurable: true,
+              writable: true,
+            });
           } else {
-            applyResult.incompatibleTokens = items1;
+            str4 = "*";
+            applyResult.incompatibleTokens = "*";
           }
           return applyResult;
         }
@@ -133,7 +137,7 @@ class ExtendedYearParser {
     }
   }
 }
-let dependencyMap = ExtendedYearParser;
+closure_1 = TimestampMillisecondsParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,14 +149,14 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-ExtendedYearParser.prototype = Object.create(prototype, {
-  constructor: { value: ExtendedYearParser, writable: true, configurable: true },
+TimestampMillisecondsParser.prototype = Object.create(prototype, {
+  constructor: { value: TimestampMillisecondsParser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(ExtendedYearParser, Parser);
+  _setPrototypeOf(TimestampMillisecondsParser, Parser);
 }
 let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
+closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -210,23 +214,17 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("u" === arg1) {
-      let parseNDigitsSignedResult = _createSuperInternal(4758).parseNDigitsSigned(4, arg0);
-    } else {
-      parseNDigitsSignedResult = _createSuperInternal(4758).parseNDigitsSigned(arg1.length, arg0);
-    }
-    return parseNDigitsSignedResult;
+  value: function parse(arg0) {
+    return _createSuperInternal(closure_1[0]).parseAnyDigitsSigned(arg0);
   },
 };
 let items = [
   entry,
   {
     key: "set",
-    value: function set(setUTCFullYear, arg1, arg2) {
-      setUTCFullYear.setUTCFullYear(arg2, 0, 1);
-      setUTCFullYear.setUTCHours(0, 0, 0, 0);
-      return setUTCFullYear;
+    value: function set(arg0, arg1, arg2) {
+      items = [new Date(arg2), { timestampIsSet: true }];
+      return items;
     },
   },
 ];
@@ -248,4 +246,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ExtendedYearParser };
+export { TimestampMillisecondsParser };

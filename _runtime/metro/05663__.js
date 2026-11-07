@@ -1,9 +1,21 @@
 // _runtime/metro/05663__.js
-import _mod5664 from "05664__.js";
-import _mod5665 from "05665__.js";
-import _mod5666 from "05666__.js";
-import _mod5668 from "05668__.js";
-
-export default function _slicedToArray(arg0, arg1) {
-  return _mod5664(arg0) || _mod5665(arg0, arg1) || _mod5666(arg0, arg1) || _mod5668();
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    exports = getPrototypeOf.bind();
+  } else {
+    exports = (arg0) => {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
+  }
+  module.exports = exports;
+  return exports(arg0);
 }
+let exports = _getPrototypeOf;
+
+export default _getPrototypeOf;

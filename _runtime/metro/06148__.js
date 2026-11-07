@@ -1,21 +1,14 @@
 // _runtime/metro/06148__.js
-import get_ActivityIndicator from "00017__.js";
+import _modDef6123 from "06123__.js";
+import noop from "00019__.js";
 
-({ BackHandler: closure_0, Platform } = get_ActivityIndicator);
-const items = ["ios", "android"];
-
-export const isSearchBarAvailableForCurrentPlatform = items.includes("android");
-export const isHeaderBarButtonsAvailableForCurrentPlatform = false;
-export function executeNativeBackPress() {
-  React.exitApp();
-  return true;
-}
-export function parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled) {
-  if (undefined === fullScreenSwipeEnabled) {
-    return "undefined";
-  } else if (true === fullScreenSwipeEnabled) {
-    return "true";
-  } else if (false === fullScreenSwipeEnabled) {
-    return "false";
+export default function useTransitionProgress() {
+  const context = noop.useContext(_modDef6123);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
+    throw error;
+  } else {
+    return context;
   }
 }

@@ -1,71 +1,40 @@
 // _runtime/metro/13113__.js
-import _mod13027 from "13027__.js";
+import _mod13050 from "13050__.js";
 
-const Delim = _mod13027.TYPE.Delim;
-const Ident = _mod13027.TYPE.Ident;
-const Dimension = _mod13027.TYPE.Dimension;
-const Percentage = _mod13027.TYPE.Percentage;
-const Number = _mod13027.TYPE.Number;
-const Hash = _mod13027.TYPE.Hash;
-const Colon = _mod13027.TYPE.Colon;
-const LeftSquareBracket = _mod13027.TYPE.LeftSquareBracket;
-
-export default {
-  getNode(arg0) {
+const Comma = _mod13050.TYPE.Comma;
+const obj = {
+  name: "MediaQueryList",
+  structure: null,
+  parse(arg0) {
     const self = this;
-    const tokenType = this.scanner.tokenType;
-    if (LeftSquareBracket === tokenType) {
-      return self.AttributeSelector();
-    } else if (Hash === tokenType) {
-      return self.IdSelector();
-    } else if (Colon === tokenType) {
-      const scanner = self.scanner;
-      if (scanner.lookupType(1) === tmp6) {
-        let result = self.PseudoElementSelector();
-      } else {
-        result = self.PseudoClassSelector();
-      }
-      return result;
-    } else if (Ident === tokenType) {
-      return self.TypeSelector();
-    } else {
-      if (Number !== tokenType) {
-        if (Percentage !== tokenType) {
-          if (Dimension === tokenType) {
-            const source = self.scanner.source;
-            if (46 === source.charCodeAt(self.scanner.tokenStart)) {
-              self.error("Identifier is expected", self.scanner.tokenStart + 1);
-            }
-          } else if (Delim === tokenType) {
-            const source2 = self.scanner.source;
-            const charCodeAtResult = source2.charCodeAt(self.scanner.tokenStart);
-            if (43 !== charCodeAtResult) {
-              if (62 !== charCodeAtResult) {
-                if (126 !== charCodeAtResult) {
-                  if (47 === charCodeAtResult) {
-                    return self.Combinator();
-                  } else if (46 === charCodeAtResult) {
-                    return self.ClassSelector();
-                  } else {
-                    if (42 !== charCodeAtResult) {
-                      if (124 !== charCodeAtResult) {
-                        if (35 === charCodeAtResult) {
-                          return self.IdSelector();
-                        }
-                      }
-                    }
-                    return self.TypeSelector();
-                  }
-                }
-              }
-            }
-            arg0.space = null;
-            arg0.ignoreWSAfter = true;
-            return self.Combinator();
+    const list = this.createList();
+    const scanner = this.scanner;
+    scanner.skipSC();
+    if (!this.scanner.eof) {
+      list.push(self.MediaQuery(arg0));
+      if (self.scanner.tokenType === Comma) {
+        self.scanner.next();
+        while (!self.scanner.eof) {
+          let arr3 = list.push(self.MediaQuery(arg0));
+          if (self.scanner.tokenType !== Comma) {
+            break;
           }
         }
+        const iter = self.scanner;
       }
-      return self.Percentage();
     }
+    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0, function () {
+      this.chunk(",");
+    });
   },
 };
+const obj2 = { children: null };
+const items = [["MediaQuery"]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

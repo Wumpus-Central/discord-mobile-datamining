@@ -1,32 +1,72 @@
 // _runtime/metro/13317__.js
-import _mod13255 from "13255__.js";
-import _mod13282 from "13282__.js";
-import _mod13283 from "13283__.js";
+import _mod13278 from "13278__.js";
+import _mod13305 from "13305__.js";
+import _mod13306 from "13306__.js";
+import _mod13310 from "13310__.js";
+import _mod13318 from "13318__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function initAndBind(arg0, debug) {
-  if (true === debug.debug) {
-    const obj = _mod13255;
-    if (_mod13283.DEBUG_BUILD) {
-      const logger = obj.logger;
-      logger.enable();
+export function sampleSpan(tracesSampler, normalizedRequest) {
+  if (obj.hasTracingEnabled(tracesSampler)) {
+    const isolationScope = _mod13305.getIsolationScope();
+    const obj2 = {};
+    const merged = Object.assign(normalizedRequest);
+    obj2.normalizedRequest =
+      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
+    if (typeof tracesSampler.tracesSampler === "function") {
+      let num = tracesSampler.tracesSampler(obj2);
+    } else if (undefined !== obj2.parentSampled) {
+      num = obj2.parentSampled;
     } else {
-      obj.consoleSandbox(() => {
-        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
-      });
+      num = 1;
+      if (undefined !== tracesSampler.tracesSampleRate) {
+        num = tracesSampler.tracesSampleRate;
+      }
     }
+    const tmpResult = _mod13305;
+    const parseSampleRateResult = _mod13318.parseSampleRate(num);
+    if (undefined === parseSampleRateResult) {
+      if (_mod13306.DEBUG_BUILD) {
+        const logger3 = _mod13278.logger;
+        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
+      }
+      items = [false];
+      let items3 = items;
+    } else if (parseSampleRateResult) {
+      const _Math = Math;
+      if (Math.random() < parseSampleRateResult) {
+        const items1 = [true, parseSampleRateResult];
+        let items2 = items1;
+      } else {
+        if (_mod13306.DEBUG_BUILD) {
+          const logger2 = _mod13278.logger;
+          const _Number = Number;
+          const _HermesInternal = HermesInternal;
+          logger2.log(
+            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
+              Number(num) +
+              ")",
+          );
+        }
+        items2 = [false, parseSampleRateResult];
+      }
+    } else {
+      if (_mod13306.DEBUG_BUILD) {
+        const logger = _mod13278.logger;
+        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
+        if (typeof tracesSampler.tracesSampler === "function") {
+          str = "tracesSampler returned 0 or false";
+        }
+        logger.log(`[Tracing] Discarding transaction because ${str}`);
+      }
+      items3 = [false, parseSampleRateResult];
+    }
+    return items3;
+  } else {
+    const items4 = [false];
+    return items4;
   }
-  const currentScope = _mod13282.getCurrentScope();
-  currentScope.update(debug.initialScope);
-  const obj4 = new arg0(debug);
-  const currentScope1 = _mod13282.getCurrentScope();
-  currentScope1.setClient(obj4);
-  obj4.init();
-  return obj4;
-}
-export function setCurrentClient(arg0) {
-  const currentScope = _mod13282.getCurrentScope();
-  currentScope.setClient(arg0);
+  obj = _mod13310;
 }

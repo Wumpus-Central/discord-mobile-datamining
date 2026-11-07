@@ -1,105 +1,247 @@
 // _runtime/metro/10634__.js
-import repeatedTimeunitPattern from "../10463_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10470_AbstractParserWithWordBoundaryChecking.js";
-import _mod10632 from "10632__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import repeatedTimeunitPattern from "../10446_repeatedTimeunitPattern.js";
+import findMostLikelyADYear from "../10447_findMostLikelyADYear.js";
 
-const ENMonthNameMiddleEndianParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-const regExp = new RegExp(
+const combined =
   "(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10632.MONTH_DICTIONARY) +
-    ")(?:-|/|\\s*,?\\s*)(" +
-    _mod10632.ORDINAL_NUMBER_PATTERN +
-    ")(?!\\s*(?:am|pm))\\s*(?:(?:al|\\-|\\alle|\\del|\\s)\\s*(" +
-    _mod10632.ORDINAL_NUMBER_PATTERN +
-    ")\\s*)?(?:(?:-|/|\\s*,?\\s*)(" +
-    _mod10632.YEAR_PATTERN +
-    "))?(?=\\W|$)(?!\\:\\d)",
-  "i",
-);
-class ENMonthNameMiddleEndianParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ENMonthNameMiddleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENMonthNameMiddleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+  exports.NUMBER_PATTERN +
+  ")\\s{0,5}(" +
+  repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) +
+  ")\\s{0,5}";
+const regExp = new RegExp(combined, "i");
+const combined1 =
+  "(" +
+  exports.NUMBER_PATTERN +
+  ")\\s{0,5}(" +
+  repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_NO_ABBR_DICTIONARY) +
+  ")\\s{0,5}";
+
+export function parseDuration(arg0) {
+  let str = arg0;
+  const obj = {};
+  let match = regExp.exec(arg0);
+  while (match) {
+    let str2 = match[1];
+    let formatted = str2.toLowerCase();
+    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
+      let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      let _parseInt = parseInt;
+      parsed = parseInt(formatted);
     }
-    return tmp3(self, constructResult);
+    let str3 = match[2];
+    obj[exports.TIME_UNIT_DICTIONARY[str3.toLowerCase(str3)]] = parsed;
+    let substr = str.substring(match[0].length);
+    match = regExp.exec(substr);
+    str = substr;
+  }
+  return obj;
+}
+export function parseNumberPattern(match) {
+  const formatted = match.toLowerCase();
+  if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
+    let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
+  } else {
+    const _parseInt = parseInt;
+    parsed = parseInt(formatted);
+  }
+  return parsed;
+}
+export function parseOrdinalNumberPattern(match) {
+  const formatted = match.toLowerCase();
+  if (undefined !== exports.ORDINAL_NUMBER_DICTIONARY[formatted]) {
+    return exports.ORDINAL_NUMBER_DICTIONARY[formatted];
+  } else {
+    const _parseInt = parseInt;
+    return parseInt(formatted);
   }
 }
-_inherits(ENMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
-  },
+export function parseYear(match) {
+  if (obj.test(match)) {
+    const _parseInt2 = parseInt;
+    const parsed = parseInt(match);
+    let findMostLikelyADYearResult = parsed;
+    if (parsed < 100) {
+      findMostLikelyADYearResult = findMostLikelyADYear.findMostLikelyADYear(parsed);
+    }
+    return findMostLikelyADYearResult;
+  } else {
+    const formatted = match.toLowerCase();
+    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
+      return exports.INTEGER_WORD_DICTIONARY[formatted];
+    } else {
+      const _parseInt = parseInt;
+      return parseInt(match);
+    }
+  }
+  obj = /\d+/;
+}
+export const WEEKDAY_DICTIONARY = {
+  söndag: 0,
+  sön: 0,
+  so: 0,
+  måndag: 1,
+  mån: 1,
+  må: 1,
+  tisdag: 2,
+  tis: 2,
+  ti: 2,
+  onsdag: 3,
+  ons: 3,
+  on: 3,
+  torsdag: 4,
+  tors: 4,
+  to: 4,
+  fredag: 5,
+  fre: 5,
+  fr: 5,
+  lördag: 6,
+  lör: 6,
+  lö: 6,
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, index) {
-      const tmp3 = ENMonthNameMiddleEndianParser(10632).MONTH_DICTIONARY[index[1].toLowerCase(index[1])];
-      const result = ENMonthNameMiddleEndianParser(10632).parseOrdinalNumberPattern(index[2]);
-      if (result > 31) {
-        return null;
-      } else {
-        const date = { day: result, month: tmp3 };
-        const parsingComponents = createParsingComponents.createParsingComponents(date);
-        if (index[4]) {
-          parsingComponents.assign("year", ENMonthNameMiddleEndianParser(10632).parseYear(index[4]));
-        } else {
-          parsingComponents.imply(
-            "year",
-            ENMonthNameMiddleEndianParser(10464).findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
-          );
-        }
-        if (index[3]) {
-          const result1 = ENMonthNameMiddleEndianParser(10632).parseOrdinalNumberPattern(index[3]);
-          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
-          parsingResult.start = parsingComponents;
-          parsingResult.end = parsingComponents.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-          return parsingResult;
-        } else {
-          return parsingComponents;
-        }
-      }
-    },
-  },
-];
-
-export default _createClass(ENMonthNameMiddleEndianParser, items);
+export const MONTH_DICTIONARY = {
+  januari: 1,
+  jan: 1,
+  "jan.": 1,
+  februari: 2,
+  feb: 2,
+  "feb.": 2,
+  mars: 3,
+  mar: 3,
+  "mar.": 3,
+  april: 4,
+  apr: 4,
+  "apr.": 4,
+  maj: 5,
+  juni: 6,
+  jun: 6,
+  "jun.": 6,
+  juli: 7,
+  jul: 7,
+  "jul.": 7,
+  augusti: 8,
+  aug: 8,
+  "aug.": 8,
+  september: 9,
+  sep: 9,
+  "sep.": 9,
+  sept: 9,
+  oktober: 10,
+  okt: 10,
+  "okt.": 10,
+  november: 11,
+  nov: 11,
+  "nov.": 11,
+  december: 12,
+  dec: 12,
+  "dec.": 12,
+};
+export const ORDINAL_NUMBER_DICTIONARY = {
+  första: 1,
+  andra: 2,
+  tredje: 3,
+  fjärde: 4,
+  femte: 5,
+  sjätte: 6,
+  sjunde: 7,
+  åttonde: 8,
+  nionde: 9,
+  tionde: 10,
+  elfte: 11,
+  tolfte: 12,
+  trettonde: 13,
+  fjortonde: 14,
+  femtonde: 15,
+  sextonde: 16,
+  sjuttonde: 17,
+  artonde: 18,
+  nittonde: 19,
+  tjugonde: 20,
+  tjugoförsta: 21,
+  tjugoandra: 22,
+  tjugotredje: 23,
+  tjugofjärde: 24,
+  tjugofemte: 25,
+  tjugosjätte: 26,
+  tjugosjunde: 27,
+  tjugoåttonde: 28,
+  tjugonionde: 29,
+  trettionde: 30,
+  trettioförsta: 31,
+};
+export const INTEGER_WORD_DICTIONARY = {
+  en: 1,
+  ett: 1,
+  två: 2,
+  tre: 3,
+  fyra: 4,
+  fem: 5,
+  sex: 6,
+  sju: 7,
+  åtta: 8,
+  nio: 9,
+  tio: 10,
+  elva: 11,
+  tolv: 12,
+  tretton: 13,
+  fjorton: 14,
+  femton: 15,
+  sexton: 16,
+  sjutton: 17,
+  arton: 18,
+  nitton: 19,
+  tjugo: 20,
+  trettiо: 30,
+  fyrtio: 40,
+  femtio: 50,
+  sextio: 60,
+  sjuttio: 70,
+  åttio: 80,
+  nittio: 90,
+  hundra: 100,
+  tusen: 1000,
+};
+export const TIME_UNIT_DICTIONARY = {
+  sek: "second",
+  sekund: "second",
+  sekunder: "second",
+  min: "minute",
+  minut: "minute",
+  minuter: "minute",
+  tim: "hour",
+  timme: "hour",
+  timmar: "hour",
+  dag: "day",
+  dagar: "day",
+  vecka: "week",
+  veckor: "week",
+  mån: "month",
+  månad: "month",
+  månader: "month",
+  år: "year",
+  kvartаl: "quarter",
+  kvartal: "quarter",
+};
+export const TIME_UNIT_NO_ABBR_DICTIONARY = {
+  sekund: "second",
+  sekunder: "second",
+  minut: "minute",
+  minuter: "minute",
+  timme: "hour",
+  timmar: "hour",
+  dag: "day",
+  dagar: "day",
+  vecka: "week",
+  veckor: "week",
+  månad: "month",
+  månader: "month",
+  år: "year",
+  kvartal: "quarter",
+};
+export const NUMBER_PATTERN =
+  "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|\\d+)";
+export const ORDINAL_NUMBER_PATTERN =
+  "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_NUMBER_DICTIONARY) + "|\\d{1,2}(?:e|:e))";
+export const TIME_UNIT_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")";
+export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);
+export const TIME_UNITS_NO_ABBR_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined1);
