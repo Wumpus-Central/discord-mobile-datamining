@@ -1,15 +1,15 @@
-// === Module 14723: useSetMediaPostThumbnail ===
+// === Module 14756: useSetMediaPostThumbnail ===
 
-// Module 14723 (useSetMediaPostThumbnail)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9884 */;
+// Module 14756 (useSetMediaPostThumbnail)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9868 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8298 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8277 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const DraftType = fn(7800).DraftType;
+const DraftType = fn(7777).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
 

@@ -1,27 +1,27 @@
-// === Module 14635: CollectiblesShopGiftPurchaseSection ===
+// === Module 14668: CollectiblesShopGiftPurchaseSection ===
 
-// Module 14635 (CollectiblesShopGiftPurchaseSection)
+// Module 14668 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6117 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6091 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8855 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8834 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7708).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7685).useNativeCheckoutStore;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
 const PremiumConstants = fn(1387);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -180,7 +180,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 8006: GuildRoomTypes ===
+// === Module 7984: GuildRoomTypes ===
 
-// Module 8006 (GuildRoomTypes)
+// Module 7984 (GuildRoomTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomTypes.tsx");

@@ -1,11 +1,11 @@
-// === Module 11297: AnimatedCounter ===
+// === Module 11279: AnimatedCounter ===
 
-// Module 11297 (AnimatedCounter)
+// Module 11279 (AnimatedCounter)
 import _modDef38 from "module_38" /* 38 */;
-import native from "native" /* 5229 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import springPresets from "springPresets" /* 5792 */;
-import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11298 */;
+import native from "native" /* 5199 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import springPresets from "springPresets" /* 5762 */;
+import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11280 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -205,7 +205,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_9 = createStyles.createStyles({ container: { flex: 0, flexGrow: 0, flexShrink: 0, justifyContent: "flex-start", alignItems: "flex-start", overflow: "hidden" }, hidden: { opacity: 0 } });
 let obj = { ABOVE: -1, [-1]: "ABOVE", NEUTRAL: 0, [0]: "NEUTRAL", BELOW: 1, [1]: "BELOW" };
 let items = [, , ];

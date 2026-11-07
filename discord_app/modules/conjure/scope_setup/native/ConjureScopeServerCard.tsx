@@ -1,13 +1,13 @@
-// === Module 12943: ConjureScopeServerCard ===
+// === Module 12954: ConjureScopeServerCard ===
 
-// Module 12943 (ConjureScopeServerCard)
+// Module 12954 (ConjureScopeServerCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4024 from "module_4024" /* 4024 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12306 */;
-import ConjureClarificationEntityPickerDefault from "ConjureClarificationEntityPicker" /* 12944 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12304 */;
+import ConjureClarificationEntityPickerDefault from "ConjureClarificationEntityPicker" /* 12955 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = [];
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { surface: { marginTop: nativeDefault.space.PX_8, padding: 0, overflow: "hidden" }, header: null, content: null, footer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, padding: 0, overflow: "hidden" };
 obj2.header = { gap: nativeDefault.space.PX_4, padding: nativeDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -51,11 +51,11 @@ export default function ConjureScopeServerCard(card) {
   const obj2 = { style: tmp.header, children: null };
   const obj3 = { variant: "body-md/semibold", color: "text-default", accessibilityRole: "header", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef4024.ickKBI);
+  obj3.children = intl.string(_modDef4026.ickKBI);
   items = [timestampProducer(Text_Text.Text, obj3), ];
   const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef4024.OyM4SV);
+  obj4.children = intl2.string(_modDef4026.OyM4SV);
   items[1] = timestampProducer(Text_Text.Text, obj4);
   obj2.children = items;
   const items1 = [metroImportDefault(View, obj2), , ];
@@ -72,7 +72,7 @@ export default function ConjureScopeServerCard(card) {
   const obj8 = { style: tmp.footer, children: null };
   const obj9 = { variant: "primary", size: "sm", text: null, disabled: null, onPress: null };
   const intl3 = util.intl;
-  obj9.text = intl3.string(_modDef4024.PTIP7V);
+  obj9.text = intl3.string(_modDef4026.PTIP7V);
   obj9.disabled = null == id || null == onPickServer;
   obj9.onPress = function onPress() {
     if (null != id) {

@@ -1,6 +1,6 @@
-// === Module 19859: NativeOnDemandResourceModule ===
+// === Module 19928: NativeOnDemandResourceModule ===
 
-// Module 19859 (NativeOnDemandResourceModule)
+// Module 19928 (NativeOnDemandResourceModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// === Module 12758: EditPollCreationImageAltTextModal ===
+// === Module 12771: EditPollCreationImageAltTextModal ===
 
-// Module 12758 (EditPollCreationImageAltTextModal)
+// Module 12771 (EditPollCreationImageAltTextModal)
 import nativeDefault from "native" /* 575 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12757 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12770 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MAX_POLL_ANSWER_LENGTH = fn(8498).MAX_POLL_ANSWER_LENGTH;
+const MAX_POLL_ANSWER_LENGTH = fn(8477).MAX_POLL_ANSWER_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 18, paddingTop: 10 }, separator: null, contentContainer: null, imageContainer: null, formContainer: null, textInput: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.separator = { borderBottomWidth: 1, borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
@@ -31,7 +31,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   imageSize = imageSize.imageSize;
   value = undefined;
   const tmp = closure_10();
-  const tmp4 = value(12755)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+  const tmp4 = value(12768)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
   const upload = tmp4.upload;
   let str;
   if (upload != null) {
@@ -51,44 +51,44 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   }, items);
   const obj2 = { top: true, style: tmp.container, children: null };
   const obj3 = { style: tmp.header, children: null };
-  const obj4 = { onPress: onSave(12757).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const obj4 = { onPress: onSave(12770).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = onSave(1113).intl;
   obj4.accessibilityLabel = intl.string(onSave(1113).t.cpT0Cq);
-  obj4.children = closure_8(onSave(1187).Icon, { source: value(8450) });
+  obj4.children = closure_8(onSave(1187).Icon, { source: value(8429) });
   const items1 = [closure_8(closure_5, obj4), , ];
   const obj6 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = onSave(1113).intl;
   obj6.children = intl2.string(onSave(1113).t.Cq44Rg);
-  items1[1] = closure_8(onSave(5781).Text, obj6);
+  items1[1] = closure_8(onSave(5751).Text, obj6);
   const obj7 = { onPress: callback, activeOpacity: 0.5, children: null };
   const obj8 = { variant: "body-md/medium", color: "text-brand", children: null };
   const intl3 = onSave(1113).intl;
   obj8.children = intl3.string(onSave(1113).t["R3BPH+"]);
-  obj7.children = closure_8(onSave(5781).Text, obj8);
+  obj7.children = closure_8(onSave(5751).Text, obj8);
   items1[2] = closure_8(closure_5, obj7);
   obj3.children = items1;
   const items2 = [closure_9(closure_6, obj3), closure_8(closure_6, { style: tmp.separator }), ];
   const obj10 = { style: tmp.contentContainer, children: null };
   const obj11 = { style: tmp.imageContainer, children: tmp4.renderImage };
-  const obj5 = { source: value(8450) };
+  const obj5 = { source: value(8429) };
   const obj9 = { style: tmp.separator };
   const items3 = [closure_8(closure_6, obj11), ];
   const obj12 = { style: tmp.formContainer, children: null };
   const items4 = [closure_8(onSave(1187).Spacer, { size: 27 }), , , ];
   const obj13 = { children: null };
-  const tmp2Result = value(7041);
+  const tmp2Result = value(7016);
   const intl4 = onSave(1113).intl;
   obj13.children = intl4.string(onSave(1113).t["/2Gnoa"]);
-  items4[1] = closure_8(value(9210), obj13);
+  items4[1] = closure_8(value(9192), obj13);
   const obj14 = { showTopContainer: false, showBorder: false, multiline: false, value, onChange: tmp5[1], clearButtonVisibility: onSave(1187).ClearButtonVisibility.WITH_CONTENT, style: tmp.textInput, textContentType: "none", maxLength: MAX_POLL_ANSWER_LENGTH, autoFocus: true, autoCorrect: true, accessibilityLabel: null };
   const intl5 = onSave(1113).intl;
   obj14.accessibilityLabel = intl5.string(onSave(1113).t["/2Gnoa"]);
-  items4[2] = closure_8(onSave(8267).FormInput, obj14);
+  items4[2] = closure_8(onSave(8246).FormInput, obj14);
   items4[3] = closure_8(onSave(1187).Spacer, { size: 27 });
   obj12.children = items4;
   items3[1] = closure_9(closure_6, obj12);
   obj10.children = items3;
   items2[2] = closure_9(tmp2Result, obj10);
   obj2.children = items2;
-  return closure_9(onSave(7378).SafeAreaPaddingView, obj2);
+  return closure_9(onSave(7355).SafeAreaPaddingView, obj2);
 };

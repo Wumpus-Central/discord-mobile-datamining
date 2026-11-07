@@ -1,11 +1,11 @@
-// === Module 11424: useLikelyAtoWarning ===
+// === Module 11406: useLikelyAtoWarning ===
 
-// Module 11424 (useLikelyAtoWarning)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10940 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11416 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 11417 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 11418 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11419 */;
+// Module 11406 (useLikelyAtoWarning)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10923 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11398 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 11399 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 11400 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11401 */;
 import size from "module_2" /* 2 */;
 
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;

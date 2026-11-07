@@ -1,19 +1,19 @@
-// === Module 15137: GameDiversityTier8LargeBadge ===
+// === Module 15169: GameDiversityTier8LargeBadge ===
 
-// Module 15137 (GameDiversityTier8LargeBadge)
-import assetHelpers from "assetHelpers" /* 7160 */;
-import _modDef15138 from "module_15138" /* 15138 */;
-import _modDef15139 from "module_15139" /* 15139 */;
-import _modDef15140 from "module_15140" /* 15140 */;
+// Module 15169 (GameDiversityTier8LargeBadge)
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef15170 from "module_15170" /* 15170 */;
+import _modDef15171 from "module_15171" /* 15171 */;
+import _modDef15172 from "module_15172" /* 15172 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15138 }, 3: null };
-let obj2 = { uri: _modDef15138 };
-obj[2] = { uri: _modDef15139 };
-const obj3 = { uri: _modDef15139 };
-obj[3] = { uri: _modDef15140 };
+let obj = { 1: null, 2: { uri: _modDef15170 }, 3: null };
+let obj2 = { uri: _modDef15170 };
+obj[2] = { uri: _modDef15171 };
+const obj3 = { uri: _modDef15171 };
+obj[3] = { uri: _modDef15172 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier8LargeBadge.native.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 8295: ForumSearchStore ===
+// === Module 8274: ForumSearchStore ===
 
-// Module 8295 (ForumSearchStore)
+// Module 8274 (ForumSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 
 const dependencyMap = {};
 const Store = initializeDefault.Store;

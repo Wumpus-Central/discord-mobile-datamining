@@ -1,22 +1,22 @@
-// === Module 15419: NUFChannelsManager ===
+// === Module 15454: NUFChannelsManager ===
 
-// Module 15419 (NUFChannelsManager)
+// Module 15454 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import UserUtils from "UserUtils" /* 5224 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5344 */;
-import RootNavigationRef from "RootNavigationRef" /* 5345 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
+import UserUtils from "UserUtils" /* 5194 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5314 */;
+import RootNavigationRef from "RootNavigationRef" /* 5315 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 import UserStore from "UserStore" /* 1385 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
 
 require = fn;
 const GuildFeatures = fn(1072).GuildFeatures;
-const GuildMemberFlags = fn(5088).GuildMemberFlags;
+const GuildMemberFlags = fn(5058).GuildMemberFlags;
 let c9 = "2020_02_nuf_channels";
 let c10 = "2020_02_nuf_voice_channels";
 class NUFChannelsManager extends tmp2 {
@@ -84,7 +84,7 @@ class NUFChannelsManager extends tmp2 {
             const tmpResult4 = UserUtils;
           }
           if (isNewUserResult) {
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15420, dependencyMap.paths), "NUFChannelsActionSheet");
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15455, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = Storage3.Storage;
             const result = Storage2.set(c9, true);
           }
@@ -98,8 +98,8 @@ class NUFChannelsManager extends tmp2 {
       value = Storage.get(closure_1_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(5224).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(5224);
+        isNewUserResult = applyArgumentsResult(5194).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(5194);
       }
       return isNewUserResult;
     };

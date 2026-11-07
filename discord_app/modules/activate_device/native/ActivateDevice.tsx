@@ -1,11 +1,11 @@
-// === Module 15954: ActivateDevice ===
+// === Module 16002: ActivateDevice ===
 
-// Module 15954 (ActivateDevice)
+// Module 16002 (ActivateDevice)
 import nativeDefault from "native" /* 575 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2022 */;
-import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 14383 */;
-import _modDef15958 from "module_15958" /* 15958 */;
-import _modDef15959 from "module_15959" /* 15959 */;
+import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 14417 */;
+import _modDef16006 from "module_16006" /* 16006 */;
+import _modDef16007 from "module_16007" /* 16007 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { background: { flex: 1 }, imageStyle: null, safeArea: null, content: null, scroller: null, scrollerContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -81,11 +81,11 @@ export (onClose) => {
       const userCodeData = first.userCodeData;
       items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef15958);
+        closure_3(_modDef16006);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[11]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef15959);
+          closure_3(_modDef16007);
         }
       }
     }
@@ -121,7 +121,7 @@ export (onClose) => {
   const obj7 = { source: null, style: null };
   let obj2 = first(first1[7]);
   const tmp23 = require("FastImage");
-  obj7.source = first(first1[18]).makeSource(require("module_15966"));
+  obj7.source = first(first1[18]).makeSource(require("module_16014"));
   obj7.style = tmp.imageStyle;
   const items6 = [closure_8(tmp23, obj7), ];
   const rect = { bottom: true, top: true, style: tmp.safeArea, children: null };

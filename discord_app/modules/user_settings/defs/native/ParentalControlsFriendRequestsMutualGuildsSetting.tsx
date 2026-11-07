@@ -1,26 +1,26 @@
-// === Module 18212: ParentalControlsFriendRequestsMutualGuildsSetting ===
+// === Module 18259: ParentalControlsFriendRequestsMutualGuildsSetting ===
 
-// Module 18212 (ParentalControlsFriendRequestsMutualGuildsSetting)
+// Module 18259 (ParentalControlsFriendRequestsMutualGuildsSetting)
 import util from "util" /* 1113 */;
 import FlagUtilsAll from "FlagUtils" /* 1403 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7252 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16980 */;
-import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16984 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7227 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17028 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 17032 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7814 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7791 */;
 
 require = fn;
 const FriendSourceFlags = fn(1072).FriendSourceFlags;
-const SettingBuilders = fn(11703);
+const SettingBuilders = fn(11685);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mozb8f);
   },
-  parent: fn(8524).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8503).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsMutualGuildsSettingValue() {
-    const selectedTeenId = controlledSetting(8463).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(16980).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8442).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(17028).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualGuilds;

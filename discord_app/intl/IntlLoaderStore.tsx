@@ -3,9 +3,9 @@
 // Module 2187 (IntlLoaderStore)
 import util from "util" /* 1113 */;
 import _modDef2188 from "module_2188" /* 2188 */;
-import bg from "bg" /* 4445 */;
-import formatjs from "formatjs" /* 4920 */;
-import moment from "moment" /* 4951 */;
+import bg from "bg" /* 4415 */;
+import formatjs from "formatjs" /* 4890 */;
+import moment from "moment" /* 4921 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import module_2025 from "module_2025" /* 2025 */;
 
@@ -21,7 +21,7 @@ let closure_6 = async function _setAppLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -56,7 +56,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -99,7 +99,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                   return obj;
                 } else {
                   dependencyMap = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } catch (tmp11) {
                 dependencyMap = tmp;
@@ -158,7 +158,7 @@ let closure_6 = async function _setAppLocale(arg0) {
       } else {
         closure_129_1.setLoadingSucceeded(closure_129_0);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp10) {
       c3 = tmp;
@@ -177,7 +177,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -234,7 +234,7 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -265,7 +265,7 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -284,7 +284,7 @@ let closure_9 = async function _setMomentLocale(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -335,7 +335,7 @@ let closure_9 = async function _setMomentLocale(arg0) {
       closure_129_1.push("en-US");
       closure_130_0(closure_130_2[10]).locale(closure_129_1);
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp26) {
       c4 = tmp;
       throw tmp26;
@@ -349,14 +349,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "add",
+    error: "alignItems",
     localeData: _modDef2188,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "add" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "alignItems" });
       }
     },
     setLoadingFailed(error, arg1) {

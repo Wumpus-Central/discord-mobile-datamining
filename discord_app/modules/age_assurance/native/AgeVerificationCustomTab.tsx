@@ -1,9 +1,9 @@
-// === Module 8079: AgeVerificationCustomTab ===
+// === Module 8058: AgeVerificationCustomTab ===
 
-// Module 8079 (AgeVerificationCustomTab)
+// Module 8058 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5898 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5867 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -52,7 +52,7 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -134,7 +134,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -179,7 +179,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
           } else {
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
         c3 = 0;

@@ -1,20 +1,20 @@
-// === Module 20129: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 20198: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 20129 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 20198 (GuildSettingsRoleEditConnectionConfiguration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import shared from "shared" /* 5177 */;
-import useThemeDefault from "useTheme" /* 5399 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import PlatformsDefault from "Platforms" /* 6654 */;
-import TableRow from "TableRow" /* 7063 */;
-import Pressables from "Pressables" /* 7068 */;
-import XSmallIcon from "XSmallIcon" /* 7145 */;
-import TableRowGroup from "TableRowGroup" /* 7151 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11758 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 20130 */;
+import shared from "shared" /* 5147 */;
+import useThemeDefault from "useTheme" /* 5369 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import PlatformsDefault from "Platforms" /* 6629 */;
+import TableRow from "TableRow" /* 7038 */;
+import Pressables from "Pressables" /* 7043 */;
+import XSmallIcon from "XSmallIcon" /* 7120 */;
+import TableRowGroup from "TableRowGroup" /* 7126 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11749 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 20199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,7 +37,7 @@ function Header(arg0) {
     application2 = integration.application;
   }
   if (null != application2) {
-    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
+    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
     let bot;
     if (integration != null) {
       const application = integration.application;
@@ -58,7 +58,7 @@ function Header(arg0) {
       }
       let tmp11;
       if (null != bot1) {
-        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
+        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
         tmp11 = application_id(native.Avatar, obj3);
       }
       let name1;
@@ -132,7 +132,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7452).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7429).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -175,7 +175,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(20130).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(20199).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -183,9 +183,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(20130);
-  const tmpResult = metadataField(20130);
-  str1 = metadataField(20130).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(20199);
+  const tmpResult = metadataField(20199);
+  str1 = metadataField(20199).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -261,7 +261,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj5.children = onInputValueChange(metadataField(1187).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer"), ];
       const obj7 = { variant: "body-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(5781).Text, obj7);
+      items1[1] = onInputValueChange(metadataField(5751).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -297,9 +297,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
           _slicedToArray(tmp3, num);
         }
     };
-    return onInputValueChange(metadataField(7452).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(7429).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(20130).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(20199).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
@@ -523,11 +523,11 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1072).PlatformTypes;
-const Constants = fn(7433);
+const Constants = fn(7410);
 ({ MetadataFields: metroImportDefault, OperatorTypes: closure_8, MetadataItemTypes: closure_9, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_10, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { numericalInputContainerIOSInline: { marginTop: -2 }, numericalInputContainerAndroidInline: null, numericalInputContainerBase: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm }, numericalInput: null, appNumericalInput: null, appNumericalInputContainer: null, appNumericalInputText: null, numericalInputDisabled: null, metadataRow: null, metadataRowText: null };
 let obj3 = { transform: null };
 let items = [{ translateY: 10 }];

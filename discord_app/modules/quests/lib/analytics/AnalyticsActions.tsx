@@ -1,20 +1,20 @@
-// === Module 7961: AnalyticsActions ===
+// === Module 7939: AnalyticsActions ===
 
-// Module 7961 (AnalyticsActions)
+// Module 7939 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5916 */;
-import QuestTypes from "QuestTypes" /* 6864 */;
-import AdCreativeType from "AdCreativeType" /* 6868 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7740 */;
-import QuestDataUtils from "QuestDataUtils" /* 7941 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7964 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7965 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7967 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7970 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
+import QuestTypes from "QuestTypes" /* 6839 */;
+import AdCreativeType from "AdCreativeType" /* 6843 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7717 */;
+import QuestDataUtils from "QuestDataUtils" /* 7918 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7942 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7943 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7945 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7948 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7962 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7940 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1359 */;
-import QuestStore from "QuestStore" /* 7945 */;
+import QuestStore from "QuestStore" /* 7922 */;
 
 require = fn;
 function getCommonProperties(adContentId, sourceQuestContent, QUEST, shouldExtendSession) {
@@ -180,7 +180,7 @@ let closure_13 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

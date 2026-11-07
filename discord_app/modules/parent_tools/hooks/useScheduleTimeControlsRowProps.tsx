@@ -1,10 +1,10 @@
-// === Module 17073: useScheduleTimeControlsRowProps ===
+// === Module 17121: useScheduleTimeControlsRowProps ===
 
-// Module 17073 (useScheduleTimeControlsRowProps)
+// Module 17121 (useScheduleTimeControlsRowProps)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
 import _modDef2664 from "module_2664" /* 2664 */;
-import Text_Text from "Text/Text" /* 5781 */;
+import Text_Text from "Text/Text" /* 5751 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSchedul
 
 export default function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
-    const obj2 = { subLabel: null, trailing: "Array" };
+    const obj2 = { subLabel: null, trailing: "r" };
     const obj3 = { variant: "body-xs/medium", color: "text-muted", children: null };
     const intl = util.intl;
     obj3.children = intl.string(_modDef2664.fOBIZH);

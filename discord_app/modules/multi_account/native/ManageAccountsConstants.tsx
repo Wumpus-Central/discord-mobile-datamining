@@ -1,6 +1,6 @@
-// === Module 18739: ManageAccountsConstants ===
+// === Module 18789: ManageAccountsConstants ===
 
-// Module 18739 (ManageAccountsConstants)
+// Module 18789 (ManageAccountsConstants)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

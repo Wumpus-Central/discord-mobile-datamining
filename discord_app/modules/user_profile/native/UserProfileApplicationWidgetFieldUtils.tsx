@@ -1,19 +1,19 @@
-// === Module 12521: UserProfileApplicationWidgetFieldUtils ===
+// === Module 12534: UserProfileApplicationWidgetFieldUtils ===
 
-// Module 12521 (UserProfileApplicationWidgetFieldUtils)
+// Module 12534 (UserProfileApplicationWidgetFieldUtils)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12522 */;
-import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 12523 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12535 */;
+import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 12536 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, fieldIcon: { width: 16, height: 16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,19 +1,19 @@
-// === Module 12163: GameConsoleDeviceListActionSheet ===
+// === Module 12154: GameConsoleDeviceListActionSheet ===
 
-// Module 12163 (GameConsoleDeviceListActionSheet)
+// Module 12154 (GameConsoleDeviceListActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7378 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 12154 */;
-import _modDef12164 from "module_12164" /* 12164 */;
-import _modDef12165 from "module_12165" /* 12165 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 12145 */;
+import _modDef12155 from "module_12155" /* 12155 */;
+import _modDef12156 from "module_12156" /* 12156 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5921 */;
+import GameConsoleStore from "GameConsoleStore" /* 5894 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ function TransferFooter(arg0) {
 function DeviceOption(children) {
   const tmp = closure_14();
   const obj = { style: tmp.deviceOption, children: null };
-  const obj2 = { style: tmp.deviceIcon, source: _modDef12164 };
+  const obj2 = { style: tmp.deviceIcon, source: _modDef12155 };
   items = [closure_1_11(FastImageDefault, obj2), closure_1_11(Text_Text.Text, { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "body-md/semibold", children: children.name })];
   obj.children = items;
   return application_id(metroImportDefault, obj);
@@ -43,7 +43,7 @@ function DeviceOption(children) {
 function EmptyState() {
   const tmp = closure_14();
   const obj = { style: tmp.emptyContainer, children: null };
-  const obj2 = { source: _modDef12165, style: tmp.emptyArt };
+  const obj2 = { source: _modDef12156, style: tmp.emptyArt };
   items = [closure_1_11(FastImageDefault, obj2), , ];
   const obj3 = { style: tmp.emptyHeader, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -61,7 +61,7 @@ get_ActivityIndicator = fn(17);
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { padding: 16, justifyContent: "center", paddingBottom: 90 }, loading: { minHeight: 56 }, footerContainer: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 }, radioItem: null, deviceIcon: null, deviceOption: null, deviceText: null, emptyContainer: null, emptyArt: null, emptyHeader: null, emptyBody: null, infoBox: null };
 let obj3 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 };
 obj2.radioItem = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xs, padding: 16 };
@@ -95,7 +95,7 @@ export default function GameConsoleListActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -113,7 +113,7 @@ export default function GameConsoleListActionSheet(arg0) {
             timestampProducer(true);
             v1 = 1;
             dependencyMap = 1;
-            const obj4 = { value: tmp4(12156).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
+            const obj4 = { value: tmp4(12147).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -124,11 +124,11 @@ export default function GameConsoleListActionSheet(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          v1(5404).hideActionSheet();
+          v1(5374).hideActionSheet();
           const ComponentDispatch = tmp4(1108).ComponentDispatch;
           ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp13) {
         dependencyMap = tmp;

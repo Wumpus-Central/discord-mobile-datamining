@@ -1,16 +1,16 @@
-// === Module 15410: InAppReportsSettingsUpsellsElement ===
+// === Module 15445: InAppReportsSettingsUpsellsElement ===
 
-// Module 15410 (InAppReportsSettingsUpsellsElement)
+// Module 15445 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 575 */;
-import useMountEffectDefault from "useMountEffect" /* 5751 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5916 */;
-import SettingsIcon from "SettingsIcon" /* 7656 */;
-import openUserSettings from "openUserSettings" /* 7658 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8447 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 15404 */;
+import useMountEffectDefault from "useMountEffect" /* 5721 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
+import SettingsIcon from "SettingsIcon" /* 7633 */;
+import openUserSettings from "openUserSettings" /* 7635 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8426 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 15439 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 
 require = fn;
 function SettingsUpsellsTableRow(arg0) {
@@ -40,7 +40,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, settingsContainer: null, goToSettingsText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.settingsContainer = { width: "100%", marginBottom: nativeDefault.space.PX_8 };

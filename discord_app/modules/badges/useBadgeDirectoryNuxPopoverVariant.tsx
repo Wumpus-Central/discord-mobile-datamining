@@ -1,11 +1,11 @@
-// === Module 15122: useBadgeDirectoryNuxPopoverVariant ===
+// === Module 15154: useBadgeDirectoryNuxPopoverVariant ===
 
-// Module 15122 (useBadgeDirectoryNuxPopoverVariant)
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8860 */;
-import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 15123 */;
+// Module 15154 (useBadgeDirectoryNuxPopoverVariant)
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8839 */;
+import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 15155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8855 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8834 */;
 
 require = fn;
 function useBadgeDirectoryNuxPopoverState(fetchCatalog) {

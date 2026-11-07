@@ -1,12 +1,12 @@
-// === Module 13387: joinFrameActivity ===
+// === Module 13410: joinFrameActivity ===
 
-// Module 13387 (joinFrameActivity)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7572 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11848 */;
+// Module 13410 (joinFrameActivity)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import VoiceStateStore from "VoiceStateStore" /* 5833 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import VoiceStateStore from "VoiceStateStore" /* 5803 */;
 
 require = fn;
 let closure_12 = async function _joinFrameActivity(arg0) {
@@ -20,7 +20,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -425,7 +425,7 @@ let closure_13 = async function _getVoiceChannelAppChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -510,10 +510,10 @@ let closure_14 = async function _getActivityChannelId() {
   }
   return channel_id1;
 };
-const makeFrameId = fn(6927).makeFrameId;
+const makeFrameId = fn(6902).makeFrameId;
 const Constants = fn(1072);
 ({ AbortCodes: closure_8, ChannelTypes: closure_9, RPCEvents: closure_10 } = Constants);
-const ActivityIntent = fn(11864).ActivityIntent;
+const ActivityIntent = fn(11855).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/joinFrameActivity.tsx");
 

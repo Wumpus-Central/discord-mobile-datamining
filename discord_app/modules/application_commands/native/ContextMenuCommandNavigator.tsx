@@ -1,9 +1,9 @@
-// === Module 19254: ContextMenuCommandNavigator ===
+// === Module 19313: ContextMenuCommandNavigator ===
 
-// Module 19254 (ContextMenuCommandNavigator)
+// Module 19313 (ContextMenuCommandNavigator)
 import nativeDefault from "native" /* 575 */;
-import HeaderShared from "HeaderShared" /* 9918 */;
-import AppFrameContainerDefault from "AppFrameContainer" /* 19155 */;
+import HeaderShared from "HeaderShared" /* 9902 */;
+import AppFrameContainerDefault from "AppFrameContainer" /* 19206 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,9 +11,9 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9992);
+const NativeStackNavigator = fn(9976);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj3 = { content: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_7 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/application_commands/native/C
 
 export default function ContextMenuCommandNavigator() {
   _require = closure_7();
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7753).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7730).trackAppUIViewed(), []);
   importDefault = require("Navigator").useAccessibilityNativeStackOptions();
   let obj2 = { children: null };
   let obj3 = {
@@ -57,7 +57,7 @@ export default function ContextMenuCommandNavigator() {
   obj5.title = intl.string(require("util").t.PHjkRE);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(19255).default;
+    return closure_0(19314).default;
   };
   items = [
     closure_4(Screen, obj4),
@@ -72,7 +72,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(19257).default;
+        return closure_0(19316).default;
       }
     })
   ];

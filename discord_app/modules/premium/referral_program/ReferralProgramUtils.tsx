@@ -1,17 +1,17 @@
-// === Module 8615: ReferralProgramUtils ===
+// === Module 8594: ReferralProgramUtils ===
 
-// Module 8615 (ReferralProgramUtils)
+// Module 8594 (ReferralProgramUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 5003 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 5004 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5200 */;
+import dismissible_content from "dismissible_content" /* 4973 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4974 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5170 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7731 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7708 */;
 
 require = fn;
-const ContentDismissActionType = fn(5016).ContentDismissActionType;
+const ContentDismissActionType = fn(4986).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
 
@@ -80,8 +80,8 @@ export function markReferralIncentivePopoverSeen() {
   const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.REFERRAL_PROGRAM_INCENTIVE_POPOVER);
 }
 export function useIsReferralProgramPopoverShowable() {
-  let isEligibleSenderForReferralProgram = stateFromStores1(8616).useIsEligibleSenderForReferralProgram(false);
-  let obj = stateFromStores1(8616);
+  let isEligibleSenderForReferralProgram = stateFromStores1(8595).useIsEligibleSenderForReferralProgram(false);
+  let obj = stateFromStores1(8595);
   items = [ReferralTrialStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => ReferralTrialStore.getReferralsRemaining());
   const obj2 = stateFromStores1(504);

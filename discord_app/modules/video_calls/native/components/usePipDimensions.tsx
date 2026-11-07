@@ -1,7 +1,7 @@
-// === Module 11883: usePipDimensions ===
+// === Module 11874: usePipDimensions ===
 
-// Module 11883 (usePipDimensions)
-import DeviceOrientation from "DeviceOrientation" /* 8995 */;
+// Module 11874 (usePipDimensions)
+import DeviceOrientation from "DeviceOrientation" /* 8977 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

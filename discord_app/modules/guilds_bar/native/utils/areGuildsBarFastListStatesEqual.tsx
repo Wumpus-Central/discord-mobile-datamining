@@ -1,6 +1,6 @@
-// === Module 18717: areGuildsBarFastListStatesEqual ===
+// === Module 18767: areGuildsBarFastListStatesEqual ===
 
-// Module 18717 (areGuildsBarFastListStatesEqual)
+// Module 18767 (areGuildsBarFastListStatesEqual)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/areGuildsBarFastListStatesEqual.tsx");

@@ -1,9 +1,9 @@
-// === Module 10683: NativeMenuActionCreators ===
+// === Module 10666: NativeMenuActionCreators ===
 
-// Module 10683 (NativeMenuActionCreators)
+// Module 10666 (NativeMenuActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HapticUtils from "HapticUtils" /* 5406 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5407 */;
+import HapticUtils from "HapticUtils" /* 5376 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5377 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/native_menu/native/NativeMenuActionCreators.tsx");

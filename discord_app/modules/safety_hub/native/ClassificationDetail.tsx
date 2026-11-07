@@ -1,23 +1,23 @@
-// === Module 13519: ClassificationDetail ===
+// === Module 13544: ClassificationDetail ===
 
-// Module 13519 (ClassificationDetail)
+// Module 13544 (ClassificationDetail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef3348 from "module_3348" /* 3348 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import LinkingDefault from "Linking" /* 5864 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6619 */;
-import MetricEvents from "MetricEvents" /* 6624 */;
-import TableRow from "TableRow" /* 7063 */;
-import SafetyHubModels from "SafetyHubModels" /* 8062 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9207 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 13523 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 13525 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import LinkingDefault from "Linking" /* 5834 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6594 */;
+import MetricEvents from "MetricEvents" /* 6599 */;
+import TableRow from "TableRow" /* 7038 */;
+import SafetyHubModels from "SafetyHubModels" /* 8040 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9189 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 13548 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 13550 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import SafetyHubStore from "SafetyHubStore" /* 8085 */;
+import SafetyHubStore from "SafetyHubStore" /* 8064 */;
 
 require = fn;
 function ClassificationHeader(classificationTypeText) {
@@ -69,7 +69,7 @@ function ClassificationHeader(classificationTypeText) {
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5781).Text, { variant: "body-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
+  obj.children = closure_13(classificationTypeText(5751).Text, { variant: "body-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
   return closure_13(closure_4, obj);
 }
 function SectionHeader(arg0) {
@@ -200,13 +200,13 @@ function ClassificationPolicyCard(classificationDescription) {
   };
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(11439).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
+  obj3.children = closure_13(policyExplainerLink(11421).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
   items = [closure_13(closure_4, obj3), ];
   const obj5 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj6 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = policyExplainerLink(1113).intl;
   obj6.children = intl.format(policyExplainerLink(1113).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
-  obj5.children = closure_13(policyExplainerLink(5781).Text, obj6);
+  obj5.children = closure_13(policyExplainerLink(5751).Text, obj6);
   items[1] = closure_13(closure_4, obj5);
   obj2.children = items;
   obj.children = closure_14(tmp2, obj2);
@@ -300,12 +300,12 @@ function ClassificationDetailFooter(onClose) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8061);
+const SafetyHubConstants = fn(8039);
 ({ SafetyHubAnalyticsActionSource: closure_9, SafetyHubAnalyticsActions: closure_10, SafetyHubLinks: closure_11 } = SafetyHubConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, container: null, header: null, headerText: null, sectionContainer: null, actionsTaken: null, classificationDetailContainer: null, letUsKnowContainer: null, appealWindowExpiredContainer: null, appealWindowExpiredText: null, confirmMinimumAgeSection: null, guidelinesFooter: null, classificationPolicyCard: null, classificationPolicyCardIcon: null, classificationPolicyCardContent: null, classificationActionDescription: null, bulletText: null, redirectButtonWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.container = { display: "flex", flexDirection: "column", height: "100%", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32 };

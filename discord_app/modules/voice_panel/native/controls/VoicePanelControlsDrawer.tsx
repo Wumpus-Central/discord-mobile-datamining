@@ -1,14 +1,14 @@
-// === Module 19653: VoicePanelControlsDrawer ===
+// === Module 19722: VoicePanelControlsDrawer ===
 
-// Module 19653 (VoicePanelControlsDrawer)
+// Module 19722 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import Suspender from "Suspender" /* 6147 */;
-import useRefValueDefault from "useRefValue" /* 7047 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11380 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 14035 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19654 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19665 */;
+import Suspender from "Suspender" /* 6121 */;
+import useRefValueDefault from "useRefValue" /* 7022 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 14060 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19723 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19734 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,11 +21,11 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11381);
+const VoicePanelConstants = fn(11363);
 ({ MODE_CHANGE_PHYSICS: metroImportDefault, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function LazyContentFreezer(shown) {
@@ -181,7 +181,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(19650), obj4);
+    tmp32 = closure_9(tmp(19719), obj4);
   }
   const items9 = [tmp32, , , ];
   let tmp36 = !tmp6;

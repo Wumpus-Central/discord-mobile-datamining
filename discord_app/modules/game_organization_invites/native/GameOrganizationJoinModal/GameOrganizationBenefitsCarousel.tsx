@@ -1,13 +1,13 @@
-// === Module 13431: GameOrganizationBenefitsCarousel ===
+// === Module 13454: GameOrganizationBenefitsCarousel ===
 
-// Module 13431 (GameOrganizationBenefitsCarousel)
+// Module 13454 (GameOrganizationBenefitsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2530 from "module_2530" /* 2530 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import Stack_Stack from "Stack/Stack" /* 6185 */;
-import Card from "Card" /* 7065 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import Stack_Stack from "Stack/Stack" /* 6159 */;
+import Card from "Card" /* 7040 */;
+import GameOrganizationBenefits from "GameOrganizationBenefits" /* 13455 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ require = fn;
 function BenefitCard(arg0) {
   ({ img, isLast } = arg0);
   ({ text, width } = arg0);
-  const tmp = closure_10();
+  const tmp = closure_9();
   items = [tmp.card, { width }, ];
   let cardSpacing = !isLast;
   if (!isLast) {
@@ -46,23 +46,17 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-let items = [{ message: _modDef2530.WUVzdk }, ];
-let obj = { message: _modDef2530.WUVzdk };
-items[1] = { message: _modDef2530.MEQJ1m };
-const createStyles = fn(5170);
-let obj4 = { carouselContainer: { marginHorizontal: -PX_16 }, carousel: { alignItems: "stretch" }, carouselContent: { paddingHorizontal: PX_16 }, card: null, cardSpacing: null, benefitImage: null, pagination: null };
-let obj2 = { message: _modDef2530.MEQJ1m };
-obj4.card = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
-obj4.cardSpacing = { marginRight: PX_12 };
-let obj5 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
-obj4.benefitImage = { width: "100%", aspectRatio: 1.7, borderRadius: nativeDefault.radii.lg, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj4.pagination = { paddingBottom: 0 };
-let closure_10 = createStyles.createStyles(obj4);
+const createStyles = fn(5140);
+let obj2 = { carouselContainer: { marginHorizontal: -PX_16 }, carousel: { alignItems: "stretch" }, carouselContent: { paddingHorizontal: PX_16 }, card: { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 }, cardSpacing: { marginRight: PX_12 }, benefitImage: null, pagination: null };
+let obj3 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
+obj2.benefitImage = { width: "100%", aspectRatio: 1.7, borderRadius: nativeDefault.radii.lg, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.pagination = { paddingBottom: 0 };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationBenefitsCarousel.tsx");
 
 export default function GameOrganizationBenefitsCarousel() {
-  const tmp = closure_10();
+  const tmp = closure_9();
   [width, require] = noop.useState(null);
   const tmp5 = _slicedToArray(noop.useState(0), 2);
   importDefault = tmp5[1];
@@ -83,25 +77,27 @@ export default function GameOrganizationBenefitsCarousel() {
   }, items);
   const obj2 = { style: tmp.carouselContainer, onLayout: callback, children: null };
   const callback1 = noop.useCallback((nativeEvent) => {
-    closure_1(Math.min(Math.max(Math.round(nativeEvent.nativeEvent.contentOffset.x / sum), 0), items.length - 1));
+    const bound = Math.max(Math.round(nativeEvent.nativeEvent.contentOffset.x / sum), 0);
+    closure_1(Math.min(bound, GameOrganizationBenefits.GAME_ORGANIZATION_BENEFITS.length - 1));
   }, items1);
   const obj3 = { style: tmp.carousel, width: sum, pageIndictor: false, scrollViewProps: { contentContainerStyle: tmp.carouselContent, onScroll: callback1, scrollEventThrottle: 16, snapToInterval: sum, snapToAlignment: "start", decelerationRate: "fast" }, children: null };
   const tmp4 = _slicedToArray(noop.useState(null), 2);
-  obj3.children = items.map((item, index) => {
+  const prop = require("GameOrganizationBenefits").GAME_ORGANIZATION_BENEFITS;
+  obj3.children = prop.map((item, index) => {
     const obj = { text: null, img: null, width: null, isLast: null };
-    ({ message, img } = item);
+    ({ key, message, img } = item);
     const intl = util.intl;
     obj.text = intl.string(message);
     obj.img = img;
     obj.width = rounded;
-    obj.isLast = index === items.length - 1;
-    return timestampProducer(BenefitCard, obj, index);
+    obj.isLast = index === GameOrganizationBenefits.GAME_ORGANIZATION_BENEFITS.length - 1;
+    return timestampProducer(BenefitCard, obj, key);
   });
   obj2.children = closure_6(require("Carousel"), obj3, rounded);
   const children = [closure_6(View, obj2), ];
   let tmp12Result = null;
-  if (items.length > 1) {
-    const obj4 = { containerStyle: tmp.pagination, numberOfItems: items.length, currentIndex: tmp5[0] };
+  if (require("GameOrganizationBenefits").GAME_ORGANIZATION_BENEFITS.length > 1) {
+    const obj4 = { containerStyle: tmp.pagination, numberOfItems: require("GameOrganizationBenefits").GAME_ORGANIZATION_BENEFITS.length, currentIndex: tmp5[0] };
     tmp12Result = closure_6(require("native").CarouselPagination, obj4);
   }
   children[1] = tmp12Result;

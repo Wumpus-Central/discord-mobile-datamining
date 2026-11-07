@@ -1,6 +1,6 @@
-// === Module 15544: useScrollToSection ===
+// === Module 15579: useScrollToSection ===
 
-// Module 15544 (useScrollToSection)
+// Module 15579 (useScrollToSection)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

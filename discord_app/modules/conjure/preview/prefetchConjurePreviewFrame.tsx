@@ -1,14 +1,14 @@
-// === Module 11020: prefetchConjurePreviewFrame ===
+// === Module 11004: prefetchConjurePreviewFrame ===
 
-// Module 11020 (prefetchConjurePreviewFrame)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6929 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6961 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 11021 */;
-import createProxyTicket from "createProxyTicket" /* 11023 */;
-import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 11024 */;
+// Module 11004 (prefetchConjurePreviewFrame)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6904 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6936 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 11005 */;
+import createProxyTicket from "createProxyTicket" /* 11007 */;
+import loadEmbeddedAppCSPForLaunchDefault from "loadEmbeddedAppCSPForLaunch" /* 11008 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 11013 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 10997 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
 
 require = fn;
 let closure_7 = async function _loadPolicyAndApplication(arg0) {
@@ -22,7 +22,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -54,7 +54,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -62,7 +62,7 @@ let closure_7 = async function _loadPolicyAndApplication(arg0) {
     }
   }
 };
-const isLaunched = fn(6927).isLaunched;
+const isLaunched = fn(6902).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/prefetchConjurePreviewFrame.tsx");
 

@@ -1,19 +1,19 @@
-// === Module 7063: TableRow ===
+// === Module 7038: TableRow ===
 
-// Module 7063 (TableRow)
+// Module 7038 (TableRow)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import useToken from "useToken" /* 5754 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import useFontScale from "useFontScale" /* 5796 */;
-import TableRowDivider from "TableRowDivider" /* 7060 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 7064 */;
-import Card from "Card" /* 7065 */;
-import TableRowArrow from "TableRowArrow" /* 7072 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 7074 */;
-import Badge from "Badge" /* 7075 */;
-import TableRowBadge from "TableRowBadge" /* 7077 */;
-import DragIcon from "DragIcon" /* 7078 */;
+import useToken from "useToken" /* 5724 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import useFontScale from "useFontScale" /* 5766 */;
+import TableRowDivider from "TableRowDivider" /* 7035 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 7039 */;
+import Card from "Card" /* 7040 */;
+import TableRowArrow from "TableRowArrow" /* 7047 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 7049 */;
+import Badge from "Badge" /* 7050 */;
+import TableRowBadge from "TableRowBadge" /* 7052 */;
+import DragIcon from "DragIcon" /* 7053 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -272,7 +272,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const React6 = { padding: 0 };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
   let num = 1;
@@ -333,9 +333,9 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj2.dragHandle = { marginEnd: 8 };
   return obj2;
 });
-TableRow.Icon = fn(7071).TableRowIcon;
-TableRow.Arrow = fn(7072).TableRowArrow;
-TableRow.TrailingText = fn(7074).TableRowTrailingText;
+TableRow.Icon = fn(7046).TableRowIcon;
+TableRow.Arrow = fn(7047).TableRowArrow;
+TableRow.TrailingText = fn(7049).TableRowTrailingText;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 

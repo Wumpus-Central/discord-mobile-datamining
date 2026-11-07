@@ -1,9 +1,9 @@
-// === Module 9201: StartEventUtils ===
+// === Module 9183: StartEventUtils ===
 
-// Module 9201 (StartEventUtils)
+// Module 9183 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildStore from "GuildStore" /* 5041 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildStore from "GuildStore" /* 5011 */;
 
 const require = fn;
 function createStageChannelForEvent() {
@@ -27,7 +27,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -240,8 +240,8 @@ let closure_14 = async function _setEventAsActive(arg0) {
   closure_130_1 = flag;
   return "flexDirection";
 };
-let closure_4 = fn(5023).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(5025);
+let closure_4 = fn(4993).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(4995);
 ({ GuildScheduledEventEntityTypes: metroImportDefault, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);

@@ -1,15 +1,15 @@
-// === Module 10017: ConversationListScreen ===
+// === Module 10001: ConversationListScreen ===
 
-// Module 10017 (ConversationListScreen)
+// Module 10001 (ConversationListScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9988 */;
-import ConversationListItemDefault from "ConversationListItem" /* 10018 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9972 */;
+import ConversationListItemDefault from "ConversationListItem" /* 10002 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7866 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7843 */;
 
 const require = globalThis.__r;
 
@@ -23,11 +23,11 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const ConversationConstants = fn(5809);
+const ConversationConstants = fn(5779);
 ({ MAX_CONVERSATIONS_PER_CHANNEL: closure_9, MOBILE_FETCH_LIMIT: closure_10, MOBILE_PREVIEW_MESSAGE_COUNT: closure_11 } = ConversationConstants);
 const jsx = fn(21).jsx;
 const viewabilityConfig = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, content: null, footerSpacer: null, spinner: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -38,7 +38,7 @@ let closure_14 = createStyles.createStyles((arg0) => {
   obj.spinner = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0, alignItems: "center" };
   return obj;
 });
-createStyles = fn(5170);
+createStyles = fn(5140);
 let obj = { empty: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_15 = createStyles.createStyles(obj);
 const ListEmptyComponent = noop.memo(function EmptyComponent() {
@@ -112,7 +112,7 @@ export default function ConversationListScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -238,6 +238,6 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(7380).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
+  obj7.children = jsx(tmp(7357).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
   return <memo style={tmp3.container}>{null}</memo>;
 };

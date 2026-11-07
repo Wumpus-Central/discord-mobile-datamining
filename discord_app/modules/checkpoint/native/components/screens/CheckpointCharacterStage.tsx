@@ -1,17 +1,17 @@
-// === Module 13672: CheckpointCharacterStage ===
+// === Module 13696: CheckpointCharacterStage ===
 
-// Module 13672 (CheckpointCharacterStage)
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13674 */;
-import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 13840 */;
+// Module 13696 (CheckpointCharacterStage)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13698 */;
+import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 13864 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13643 */;
+import CheckpointStore from "CheckpointStore" /* 13667 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { flexGrow: 1 }, rive: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.rive = {};
@@ -35,9 +35,9 @@ export default function CheckpointCharacterStage(stage) {
   const tmp4 = layout(isHidden[7])();
   items = [textureScale];
   const stateFromStores = stage(isHidden[10]).useStateFromStores(items, () => textureScale.selectedCharacterTraits);
-  const items1 = [stage, stateFromStores, layout, characterBottomInset, height, tmp5];
+  const items1 = [stage, isHidden, stateFromStores, layout, characterBottomInset, height, tmp5];
   const memo = noop.useMemo(() => {
-    const obj2 = { stage, traits: stateFromStores, layout, mobileLift: null, textureScale: null };
+    const obj2 = { stage, isHidden, traits: stateFromStores, layout, mobileLift: null, textureScale: null };
     let num = 0;
     if ("MobilePortrait" === layout) {
       let num2 = 30;

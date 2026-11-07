@@ -1,6 +1,6 @@
-// === Module 6235: ? ===
+// === Module 6210: ? ===
 
-// Module 6235
+// Module 6210
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-plant.png.js");

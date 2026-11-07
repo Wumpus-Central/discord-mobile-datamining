@@ -1,11 +1,11 @@
-// === Module 10198: getEmojiPopoutMessage ===
+// === Module 10181: getEmojiPopoutMessage ===
 
-// Module 10198 (getEmojiPopoutMessage)
+// Module 10181 (getEmojiPopoutMessage)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import _modDef4311 from "module_4311" /* 4311 */;
-import ExpressionSourceRecord from "ExpressionSourceRecord" /* 7046 */;
+import _modDef4281 from "module_4281" /* 4281 */;
+import ExpressionSourceRecord from "ExpressionSourceRecord" /* 7021 */;
 import size from "module_2" /* 2 */;
 
 const EmojiSourceDataTypes = ExpressionSourceRecord.EmojiSourceDataTypes;
@@ -20,7 +20,7 @@ export function getEmojiPopoutData(sourceType) {
     const obj2 = { type: obj.UNAVAILABLE, text: null, description: null, emojiDescription: null, analyticsType: null };
     const intl11 = util.intl;
     const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.NITRO_EMOJI_PACKS) };
-    obj2.emojiDescription = intl11.format(_modDef4311["/jdd/7"], obj3);
+    obj2.emojiDescription = intl11.format(_modDef4281["/jdd/7"], obj3);
     obj2.analyticsType = constants.NITRO_EMOJI_PACK;
     return obj2;
   } else {

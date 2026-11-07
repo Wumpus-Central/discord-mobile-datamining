@@ -1,14 +1,14 @@
-// === Module 19452: FramePanelContainer ===
+// === Module 19511: FramePanelContainer ===
 
-// Module 19452 (FramePanelContainer)
-import WakeLockDefault from "WakeLock" /* 12010 */;
-import FramePanelControllerDefault from "FramePanelController" /* 19453 */;
-import FramePanelUIDefault from "FramePanelUI" /* 19455 */;
+// Module 19511 (FramePanelContainer)
+import WakeLockDefault from "WakeLock" /* 12001 */;
+import FramePanelControllerDefault from "FramePanelController" /* 19512 */;
+import FramePanelUIDefault from "FramePanelUI" /* 19514 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6926 */;
+import FramesStore from "FramesStore" /* 6901 */;
 
 const require = fn;
-const isLaunched = fn(6927).isLaunched;
+const isLaunched = fn(6902).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);

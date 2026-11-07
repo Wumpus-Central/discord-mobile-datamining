@@ -1,15 +1,15 @@
-// === Module 15174: UserProfileGameDetailsRow ===
+// === Module 15212: UserProfileGameDetailsRow ===
 
-// Module 15174 (UserProfileGameDetailsRow)
+// Module 15212 (UserProfileGameDetailsRow)
 import nativeDefault from "native" /* 575 */;
 import StringUtils from "StringUtils" /* 2150 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15147 */;
-import useWidgetGamePressDefault from "useWidgetGamePress" /* 15175 */;
-import UserProfileWidgetGameCover from "UserProfileWidgetGameCover" /* 15176 */;
-import UserProfileWidgetGameCommentInputDefault from "UserProfileWidgetGameCommentInput" /* 15179 */;
-import QuoteIcon from "QuoteIcon" /* 15180 */;
-import UserProfileWidgetGameTagsDefault from "UserProfileWidgetGameTags" /* 15182 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15179 */;
+import useWidgetGamePressDefault from "useWidgetGamePress" /* 15213 */;
+import UserProfileWidgetGameCover from "UserProfileWidgetGameCover" /* 15214 */;
+import UserProfileWidgetGameCommentInputDefault from "UserProfileWidgetGameCommentInput" /* 15217 */;
+import QuoteIcon from "QuoteIcon" /* 15218 */;
+import UserProfileWidgetGameTagsDefault from "UserProfileWidgetGameTags" /* 15220 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
-let obj = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, editingCommentRow: { alignItems: "flex-start" }, details: null, comment: null, commentText: null };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+const createStyles = fn(5140);
+let obj = { row: { flexDirection: "row", alignItems: "center", gap: fn(15197).GAME_COVER_DETAILS_GAP }, editingCommentRow: { alignItems: "flex-start" }, details: null, comment: null, commentText: null };
+let obj3 = { flexDirection: "row", alignItems: "center", gap: fn(15197).GAME_COVER_DETAILS_GAP };
 obj.details = { flex: 1, gap: nativeDefault.space.PX_8 };
 const obj4 = { flex: 1, gap: nativeDefault.space.PX_8 };
 obj.comment = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };

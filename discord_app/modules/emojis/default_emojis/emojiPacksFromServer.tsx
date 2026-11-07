@@ -1,7 +1,7 @@
-// === Module 5123: emojiPacksFromServer ===
+// === Module 5093: emojiPacksFromServer ===
 
-// Module 5123 (emojiPacksFromServer)
-import EmojiTypes from "EmojiTypes" /* 5119 */;
+// Module 5093 (emojiPacksFromServer)
+import EmojiTypes from "EmojiTypes" /* 5089 */;
 import size from "module_2" /* 2 */;
 
 function indexEmojiPacks(arg0) {

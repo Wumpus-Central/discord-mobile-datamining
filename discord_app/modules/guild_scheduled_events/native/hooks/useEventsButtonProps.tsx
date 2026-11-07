@@ -1,19 +1,19 @@
-// === Module 14140: useEventsButtonProps ===
+// === Module 14165: useEventsButtonProps ===
 
-// Module 14140 (useEventsButtonProps)
+// Module 14165 (useEventsButtonProps)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7024 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9082 */;
-import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 9188 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6999 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9064 */;
+import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 9170 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6922 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
+import ReadStateStore from "ReadStateStore" /* 6897 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6830 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6856).ReadStateTypes;
+const ReadStateTypes = fn(6831).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
@@ -41,7 +41,7 @@ export default function useEventsButtonProps(id) {
   }, items3);
   const handleLongPress = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(14141, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, { guildId: user.id });
+    obj.openLazy(asyncRequireImpl(14166, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, { guildId: user.id });
   }, items4);
   if (arr4.length > 0) {
     const intl2 = tmp(1113).intl;
@@ -51,13 +51,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1113).intl;
     name = intl.string(tmp(1113).t.tlopTM);
   }
-  let mode = tmp(14145).ChannelModes.DEFAULT;
+  let mode = tmp(14170).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(14145).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(14170).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 };

@@ -1,17 +1,17 @@
-// === Module 7755: modules/Messages ===
+// === Module 7732: modules/Messages ===
 
-// Module 7755 (modules/Messages)
+// Module 7732 (modules/Messages)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5048 */;
-import _mod5049 from "module_5049" /* 5049 */;
-import requireSortedDescending from "requireSortedDescending" /* 6646 */;
-import isReadableChannel from "isReadableChannel" /* 7762 */;
-import KvMessage2 from "KvMessage" /* 7765 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5018 */;
+import _mod5019 from "module_5019" /* 5019 */;
+import requireSortedDescending from "requireSortedDescending" /* 6621 */;
+import isReadableChannel from "isReadableChannel" /* 7739 */;
+import KvMessage2 from "KvMessage" /* 7742 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6648 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import SaveableChannelsStore from "SaveableChannelsStore" /* 7756 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6623 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7733 */;
 
 require = fn;
 let closure_8 = new LoggerDefault("Messages");
@@ -140,7 +140,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -282,13 +282,13 @@ prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009,
   const result = GatewayConnectionStore.lastTimeConnectedChanged();
   const KvMessage = KvMessage2.KvMessage;
   const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
-  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), _mod5049.ConflictOptions.Skip);
+  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), _mod5019.ConflictOptions.Skip);
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
   const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
   const result = GatewayConnectionStore.lastTimeConnectedChanged();
   const KvMessage = KvMessage2.KvMessage;
-  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), _mod5049.ConflictOptions.Replace);
+  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), _mod5019.ConflictOptions.Replace);
   messagesTransactionResult.trimChannel(guildId, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
 prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, database) {
@@ -334,7 +334,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

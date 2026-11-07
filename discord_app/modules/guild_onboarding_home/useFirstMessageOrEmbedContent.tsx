@@ -1,6 +1,6 @@
-// === Module 18940: useFirstMessageOrEmbedContent ===
+// === Module 18990: useFirstMessageOrEmbedContent ===
 
-// Module 18940 (useFirstMessageOrEmbedContent)
+// Module 18990 (useFirstMessageOrEmbedContent)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");

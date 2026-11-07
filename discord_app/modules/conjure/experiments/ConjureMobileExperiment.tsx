@@ -1,6 +1,6 @@
-// === Module 9783: ConjureMobileExperiment ===
+// === Module 9767: ConjureMobileExperiment ===
 
-// Module 9783 (ConjureMobileExperiment)
+// Module 9767 (ConjureMobileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
@@ -28,6 +28,6 @@ export function useIsConjureMobileEnabled(canConjureCustomWidget, ConjureAppChan
     return enabled;
   }, items1);
 }
-export function isConjureMobileEnabled(openConjureHomeScreen) {
-  return apexExperiment.getConfig({ location: openConjureHomeScreen }).enabled;
+export function isConjureMobileEnabled(ConjureProjectLinkCard) {
+  return apexExperiment.getConfig({ location: ConjureProjectLinkCard }).enabled;
 }

@@ -1,6 +1,6 @@
-// === Module 6595: CheckpointExperiments ===
+// === Module 6570: CheckpointExperiments ===
 
-// Module 6595 (CheckpointExperiments)
+// Module 6570 (CheckpointExperiments)
 import ApexExperiment_mod from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

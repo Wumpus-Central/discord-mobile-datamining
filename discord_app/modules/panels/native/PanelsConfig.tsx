@@ -1,6 +1,6 @@
-// === Module 18334: PanelsConfig ===
+// === Module 18381: PanelsConfig ===
 
-// Module 18334 (PanelsConfig)
+// Module 18381 (PanelsConfig)
 import native from "native" /* 1187 */;
 import size from "module_2" /* 2 */;
 

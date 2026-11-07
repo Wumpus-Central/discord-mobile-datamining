@@ -1,20 +1,20 @@
-// === Module 17229: BountiesScrollRecapFooter ===
+// === Module 17277: BountiesScrollRecapFooter ===
 
-// Module 17229 (BountiesScrollRecapFooter)
+// Module 17277 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 5295 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import OrbsIcon from "OrbsIcon" /* 9634 */;
+import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 5265 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import OrbsIcon from "OrbsIcon" /* 9616 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 }, orbRow: null, rive: null, orbAmount: null };
   const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };
@@ -35,7 +35,7 @@ export function BountiesScrollRecapFooter(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = closure_7();
   const intl = util.intl;
-  const stringResult = intl.string(util.t.d6Rrn6);
+  const stringResult = intl.string(util.t.CzRXoC);
   const obj = { style: tmp.container, pointerEvents: "none", accessible: true, accessibilityRole: "text", accessibilityLabel: "" + stringResult + ", +" + orbAmount, children: null };
   items = [hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: "text-brand", accessible: false, children: stringResult }), ];
   const obj2 = { style: tmp.orbRow, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };

@@ -1,15 +1,15 @@
-// === Module 7487: useIsNewMember ===
+// === Module 7464: useIsNewMember ===
 
-// Module 7487 (useIsNewMember)
+// Module 7464 (useIsNewMember)
 import DurationsDefault from "Durations" /* 1089 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import ImpersonateStore from "ImpersonateStore" /* 5075 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import ImpersonateStore from "ImpersonateStore" /* 5045 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildMemberFlags = fn(5088).GuildMemberFlags;
+const GuildMemberFlags = fn(5058).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
 

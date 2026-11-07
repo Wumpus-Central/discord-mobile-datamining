@@ -1,25 +1,25 @@
-// === Module 18855: AnnouncementMessageRow ===
+// === Module 18905: AnnouncementMessageRow ===
 
-// Module 18855 (AnnouncementMessageRow)
+// Module 18905 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6982 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9016 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10324 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10938 */;
-import ICYMIShared from "ICYMIShared" /* 18857 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8998 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10307 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10921 */;
+import ICYMIShared from "ICYMIShared" /* 18907 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6830 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(18856).ITEM_PADDING;
+const ITEM_PADDING = fn(18906).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(18815);
+const createICYMIStyles = fn(18865);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset } };
   return obj;

@@ -1,8 +1,8 @@
-// === Module 20161: EnableCommunitySharedStyles ===
+// === Module 20230: EnableCommunitySharedStyles ===
 
-// Module 20161 (EnableCommunitySharedStyles)
+// Module 20230 (EnableCommunitySharedStyles)
 import _mod17 from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 5170 */;
+import createStyles from "createStyles" /* 5140 */;
 import size from "module_2" /* 2 */;
 
 const Platform = _mod17.Platform;

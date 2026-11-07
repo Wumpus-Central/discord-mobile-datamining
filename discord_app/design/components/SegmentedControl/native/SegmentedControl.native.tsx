@@ -1,6 +1,6 @@
-// === Module 9312: SegmentedControl ===
+// === Module 9294: SegmentedControl ===
 
-// Module 9312 (SegmentedControl)
+// Module 9294 (SegmentedControl)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_9 = createStyles.createStyles((borderRadius, paddingVertical) => {
   const obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" }, indicatorContainer: { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" }, indicator: null };
   const obj2 = { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
@@ -337,7 +337,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
     obj.variant = variant;
     return _undefined6(state(_undefined3[8]).SegmentedControlItem, obj, id);
   }), items13);
-  const Gesture = tmp2(5450).Gesture;
+  const Gesture = tmp2(5420).Gesture;
   const tmp2Result8 = require("module_1652");
   const items16 = [closure_16, sharedValue, activeIndex];
   _require = undefined;
@@ -397,7 +397,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   let tmp56Result = tmp56(tmp58, { horizontal: true, accessibilityRole: str4, alwaysBounceHorizontal: false, contentContainerStyle: tmp4.scrollContentContainer, keyboardShouldPersistTaps: keyboardShouldPersistTaps.keyboardShouldPersistTaps, children: tmp57 });
   if ("experimental_Large" === str) {
     const obj10 = { gesture: onEndResult, children: tmp57 };
-    tmp56Result = tmp56(tmp2(5450).GestureDetector, obj10);
+    tmp56Result = tmp56(tmp2(5420).GestureDetector, obj10);
   }
   return tmp56Result;
 }

@@ -1,6 +1,6 @@
-// === Module 8857: Constants ===
+// === Module 8836: Constants ===
 
-// Module 8857 (Constants)
+// Module 8836 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/Constants.tsx");

@@ -1,30 +1,30 @@
-// === Module 18046: UserSettingsDesignSystemTableRow ===
+// === Module 18093: UserSettingsDesignSystemTableRow ===
 
-// Module 18046 (UserSettingsDesignSystemTableRow)
+// Module 18093 (UserSettingsDesignSystemTableRow)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import LinearGradientDefault from "LinearGradient" /* 5745 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import Stack_Stack from "Stack/Stack" /* 6185 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7062 */;
-import TableRow from "TableRow" /* 7063 */;
-import TableRowIcon from "TableRowIcon" /* 7071 */;
-import TableRadioGroup from "TableRadioGroup" /* 7149 */;
-import TableRowGroup from "TableRowGroup" /* 7151 */;
-import TableRadioRow from "TableRadioRow" /* 7152 */;
-import TableSwitchRow from "TableSwitchRow" /* 7452 */;
-import SettingsIcon from "SettingsIcon" /* 7656 */;
-import RowButton from "RowButton" /* 8269 */;
-import _modDef16248 from "module_16248" /* 16248 */;
-import _modDef16249 from "module_16249" /* 16249 */;
-import _modDef16250 from "module_16250" /* 16250 */;
-import _modDef16251 from "module_16251" /* 16251 */;
+import LinearGradientDefault from "LinearGradient" /* 5715 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import Stack_Stack from "Stack/Stack" /* 6159 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7037 */;
+import TableRow from "TableRow" /* 7038 */;
+import TableRowIcon from "TableRowIcon" /* 7046 */;
+import TableRadioGroup from "TableRadioGroup" /* 7124 */;
+import TableRowGroup from "TableRowGroup" /* 7126 */;
+import TableRadioRow from "TableRadioRow" /* 7127 */;
+import TableSwitchRow from "TableSwitchRow" /* 7429 */;
+import SettingsIcon from "SettingsIcon" /* 7633 */;
+import RowButton from "RowButton" /* 8248 */;
+import _modDef16296 from "module_16296" /* 16296 */;
+import _modDef16297 from "module_16297" /* 16297 */;
+import _modDef16298 from "module_16298" /* 16298 */;
+import _modDef16299 from "module_16299" /* 16299 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -217,26 +217,26 @@ export default function UserSettingsDesignSystemTableRow() {
   const obj65 = { title: "Online Status", hasIcons: true, defaultValue: "option1", onChange: onPress, children: null };
   const obj66 = { icon: null, label: "Online", value: "option1" };
   const obj63 = { IconComponent: SettingsIcon.SettingsIcon };
-  obj66.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef16251 });
+  obj66.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef16299 });
   const items9 = [closure_11(TableRadioRow.TableRadioRow, obj66), , , ];
   const obj68 = { icon: null, label: "Idle", value: "option2" };
-  const obj67 = { variant: "text-status-online", source: _modDef16251 };
-  obj68.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef16248 });
+  const obj67 = { variant: "text-status-online", source: _modDef16299 };
+  obj68.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef16296 });
   items9[1] = closure_11(TableRadioRow.TableRadioRow, obj68);
   const obj70 = { icon: null, label: "Do Not Disturb", value: "option3" };
-  const obj69 = { variant: "text-status-idle", source: _modDef16248 };
-  obj70.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef16249 });
+  const obj69 = { variant: "text-status-idle", source: _modDef16296 };
+  obj70.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef16297 });
   items9[2] = closure_11(TableRadioRow.TableRadioRow, obj70);
   const obj72 = { icon: null, label: "Invisible", value: "option4" };
-  const obj71 = { variant: "text-status-dnd", source: _modDef16249 };
-  obj72.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef16250 });
+  const obj71 = { variant: "text-status-dnd", source: _modDef16297 };
+  obj72.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef16298 });
   items9[3] = closure_11(TableRadioRow.TableRadioRow, obj72);
   obj65.children = items9;
   items3[6] = closure_12(TableRadioGroup.TableRadioGroup, obj65);
   const obj74 = { spacing: 12, children: null };
   const items10 = [closure_11(Text_Text.Text, { variant: "heading-xs/semibold", children: "Row buttons" }), , , ];
   const obj75 = { icon: null, label: "Boost your server", onPress: null };
-  const obj73 = { variant: "text-status-offline", source: _modDef16250 };
+  const obj73 = { variant: "text-status-offline", source: _modDef16298 };
   obj75.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
   obj75.onPress = onPress;
   items10[1] = closure_11(RowButton.RowButton, obj75);

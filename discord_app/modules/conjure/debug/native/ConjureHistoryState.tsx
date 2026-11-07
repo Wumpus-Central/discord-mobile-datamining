@@ -1,17 +1,17 @@
-// === Module 13230: ConjureHistoryState ===
+// === Module 13253: ConjureHistoryState ===
 
-// Module 13230 (ConjureHistoryState)
+// Module 13253 (ConjureHistoryState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4024 from "module_4024" /* 4024 */;
-import Text_Text from "Text/Text" /* 5781 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import Text_Text from "Text/Text" /* 5751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { placeholder: { alignItems: "center", gap: nativeDefault.space.PX_4, padding: nativeDefault.space.PX_24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,12 +27,12 @@ export function ConjureHistoryPlaceholder(state) {
   obj.accessibilityRole = str;
   if ("failed" === state.state.status) {
     const intl = util.intl;
-    emptyTitle = intl.string(_modDef4024.h1SE6R);
+    emptyTitle = intl.string(_modDef4026.h1SE6R);
   }
   items = [React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: emptyTitle }), ];
   if ("failed" === state.state.status) {
     const intl2 = util.intl;
-    emptyBody = intl2.string(_modDef4024["8SErdg"]);
+    emptyBody = intl2.string(_modDef4026["8SErdg"]);
   }
   items[1] = React4(Text_Text.Text, { variant: "body-xs/normal", color: "text-muted", children: emptyBody });
   obj.children = items;
@@ -45,12 +45,12 @@ export function ConjureHistoryNotice(state) {
   } else if ("failed" === state.status) {
     const obj2 = { variant: "body-xs/normal", color: "text-feedback-critical", children: null };
     const intl2 = util.intl;
-    obj2.children = intl2.string(_modDef4024.h1SE6R);
+    obj2.children = intl2.string(_modDef4026.h1SE6R);
     let tmp = React4(Text_Text.Text, obj2);
   } else if (state.truncated) {
     const obj = { variant: "body-xs/normal", color: "text-muted", children: null };
     const intl = util.intl;
-    obj.children = intl.string(_modDef4024.V7Ri8H);
+    obj.children = intl.string(_modDef4026.V7Ri8H);
     tmp = React4(Text_Text.Text, obj);
   }
 }

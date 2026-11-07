@@ -1,8 +1,8 @@
-// === Module 19765: createEmbeddedAppShimHost ===
+// === Module 19834: createEmbeddedAppShimHost ===
 
-// Module 19765 (createEmbeddedAppShimHost)
+// Module 19834 (createEmbeddedAppShimHost)
 import apply from "apply" /* 12 */;
-import protocol from "protocol" /* 19761 */;
+import protocol from "protocol" /* 19830 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

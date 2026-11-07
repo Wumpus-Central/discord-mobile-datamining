@@ -1,7 +1,7 @@
-// === Module 8911: UserProfileBanner ===
+// === Module 8893: UserProfileBanner ===
 
-// Module 8911 (UserProfileBanner)
-import BannerDefault from "Banner" /* 8919 */;
+// Module 8893 (UserProfileBanner)
+import BannerDefault from "Banner" /* 8901 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const BANNER_HEIGHT = fn(1072).BANNER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_9 = createStyles.createStyles({ bannerContainer: { position: "relative" }, gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileBanner.tsx");

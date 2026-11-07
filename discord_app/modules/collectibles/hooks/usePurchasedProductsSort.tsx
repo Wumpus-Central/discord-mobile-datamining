@@ -1,8 +1,8 @@
-// === Module 17253: usePurchasedProductsSort ===
+// === Module 17301: usePurchasedProductsSort ===
 
-// Module 17253 (usePurchasedProductsSort)
+// Module 17301 (usePurchasedProductsSort)
 import _mod19 from "module_19" /* 19 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7834 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7811 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

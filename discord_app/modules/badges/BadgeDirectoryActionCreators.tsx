@@ -1,6 +1,6 @@
-// === Module 8860: BadgeDirectoryActionCreators ===
+// === Module 8839: BadgeDirectoryActionCreators ===
 
-// Module 8860 (BadgeDirectoryActionCreators)
+// Module 8839 (BadgeDirectoryActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -30,7 +30,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -192,7 +192,7 @@ let closure_12 = async function _fetchBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -322,7 +322,7 @@ let closure_14 = async function _ackBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

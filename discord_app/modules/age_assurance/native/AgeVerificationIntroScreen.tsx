@@ -1,10 +1,10 @@
-// === Module 8249: AgeVerificationIntroScreen ===
+// === Module 8228: AgeVerificationIntroScreen ===
 
-// Module 8249 (AgeVerificationIntroScreen)
+// Module 8228 (AgeVerificationIntroScreen)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6809 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8046 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6784 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { getStartedContainer: { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, flex: 1 }, getStartedHeaderContainer: null, ageGroupLearnMoreContainer: null, getStartedHeaderText: null, getStartedFooterContainer: null, getStartedFooterButtonsContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, flex: 1 };
 obj2.getStartedHeaderContainer = { alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -33,38 +33,38 @@ export default function GetStartedScreen(onComplete) {
   const modalSessionId = onComplete.modalSessionId;
   const entryPoint = onComplete.entryPoint;
   const tmp = closure_10();
-  let initiateAgeVerification = modalSessionId(8110).useInitiateAgeVerification({ onComplete: onComplete.onClose, entryPoint });
+  let initiateAgeVerification = modalSessionId(8089).useInitiateAgeVerification({ onComplete: onComplete.onClose, entryPoint });
   initiateAgeVerification = initiateAgeVerification.initiateAgeVerification;
   let obj2 = { children: null };
   let obj3 = { children: null };
   let obj4 = { style: tmp.getStartedContainer, children: null };
   let obj5 = { style: tmp.getStartedHeaderContainer, children: null };
-  items = [closure_7(modalSessionId(8065).ShieldSpotIllustration, {}), , ];
+  items = [closure_7(modalSessionId(8044).ShieldSpotIllustration, {}), , ];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.getStartedHeaderText, children: null };
-  let obj = modalSessionId(8110);
-  obj6.children = modalSessionId(6806).getAgeVerificationGetStartedTitle(entryPoint);
-  items[1] = closure_7(modalSessionId(5781).Text, obj6);
+  let obj = modalSessionId(8089);
+  obj6.children = modalSessionId(6781).getAgeVerificationGetStartedTitle(entryPoint);
+  items[1] = closure_7(modalSessionId(5751).Text, obj6);
   const obj8 = { variant: "heading-sm/medium", color: "text-default", style: tmp.getStartedHeaderText, children: null };
-  const obj7 = modalSessionId(6806);
-  obj8.children = modalSessionId(6806).getAgeVerificationGetStartedSubtitle(entryPoint);
-  items[2] = closure_7(modalSessionId(5781).Text, obj8);
+  const obj7 = modalSessionId(6781);
+  obj8.children = modalSessionId(6781).getAgeVerificationGetStartedSubtitle(entryPoint);
+  items[2] = closure_7(modalSessionId(5751).Text, obj8);
   obj5.children = items;
   const items1 = [closure_8(closure_5, obj5), , ];
   const obj10 = { hasIcons: true, children: null };
-  const obj9 = modalSessionId(6806);
-  const ageVerificationGetStartedSteps = modalSessionId(8250).getAgeVerificationGetStartedSteps(modalSessionId);
+  const obj9 = modalSessionId(6781);
+  const ageVerificationGetStartedSteps = modalSessionId(8229).getAgeVerificationGetStartedSteps(modalSessionId);
   obj10.children = ageVerificationGetStartedSteps.map((children, index) => {
     const description = children.description;
-    const obj = { index: index + 1, tip: closure_1_7(modalSessionId(5781).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }), description: null };
+    const obj = { index: index + 1, tip: closure_1_7(modalSessionId(5751).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }), description: null };
     let tmpResult = null;
     if (null != description) {
       const obj2 = { variant: "body-xs/medium", color: "text-subtle", children: description };
-      tmpResult = closure_1_7(modalSessionId(5781).Text, obj2);
+      tmpResult = closure_1_7(modalSessionId(5751).Text, obj2);
     }
     obj.description = tmpResult;
-    return closure_1_7(initiateAgeVerification(8251), obj, index);
+    return closure_1_7(initiateAgeVerification(8230), obj, index);
   });
-  items1[1] = closure_7(modalSessionId(7151).TableRowGroup, obj10);
+  items1[1] = closure_7(modalSessionId(7126).TableRowGroup, obj10);
   const obj12 = { style: tmp.ageGroupLearnMoreContainer, children: null };
   const obj13 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl = modalSessionId(1113).intl;
@@ -75,7 +75,7 @@ export default function GetStartedScreen(onComplete) {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.LEARN_MORE);
     }
   });
-  obj12.children = closure_7(modalSessionId(5781).Text, obj13);
+  obj12.children = closure_7(modalSessionId(5751).Text, obj13);
   items1[2] = closure_7(closure_5, obj12);
   obj4.children = items1;
   obj3.children = closure_8(closure_5, obj4);
@@ -98,7 +98,7 @@ export default function GetStartedScreen(onComplete) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -112,7 +112,7 @@ export default function GetStartedScreen(onComplete) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const result = v3(6809).trackAgeVerificationModalClicked(modalSessionId, v3(6809).AgeVerificationModalVersion.PRIMARY, v3(6809).AgeVerificationModalCta.GET_STARTED);
+            const result = v3(6784).trackAgeVerificationModalClicked(modalSessionId, v3(6784).AgeVerificationModalVersion.PRIMARY, v3(6784).AgeVerificationModalCta.GET_STARTED);
             c1 = 1;
             v3 = 1;
             const obj5 = { value: initiateAgeVerification(), done: false };
@@ -127,7 +127,7 @@ export default function GetStartedScreen(onComplete) {
           return obj;
         } else {
           v3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp10) {
         v3 = tmp;
@@ -135,7 +135,7 @@ export default function GetStartedScreen(onComplete) {
       }
     }
   });
-  const obj11 = modalSessionId(8250);
+  const obj11 = modalSessionId(8229);
   const obj14 = {
     handleOnHelpUrlHook() {
       const obj = AgeVerificationActionCreatorsDefault;
@@ -143,9 +143,9 @@ export default function GetStartedScreen(onComplete) {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.LEARN_MORE);
     }
   };
-  obj17.icon = closure_7(modalSessionId(8252).LinkExternalSmallIcon, { color: initiateAgeVerification(575).colors.WHITE });
+  obj17.icon = closure_7(modalSessionId(8231).LinkExternalSmallIcon, { color: initiateAgeVerification(575).colors.WHITE });
   obj17.loading = initiateAgeVerification.loading;
-  obj16.children = closure_7(modalSessionId(5788).Button, obj17);
+  obj16.children = closure_7(modalSessionId(5758).Button, obj17);
   obj15.children = closure_7(closure_5, obj16);
   items2[1] = closure_7(closure_5, obj15);
   obj2.children = items2;

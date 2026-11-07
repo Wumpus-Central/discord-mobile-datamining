@@ -1,20 +1,20 @@
-// === Module 13997: ForumPostPlaceholder ===
+// === Module 14022: ForumPostPlaceholder ===
 
-// Module 13997 (ForumPostPlaceholder)
+// Module 14022 (ForumPostPlaceholder)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5400 */;
-import Card from "Card" /* 7065 */;
+import timing_timing from "timing/timing" /* 5370 */;
+import Card from "Card" /* 7040 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
 const _modDef1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { postPlaceholder: { height: 2 * nativeDefault.space.PX_64, marginBottom: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = { code: "(function ForumPostPlaceholderTsx1(){let[reducedMotion,ROW_OPACITY_END,withDelay,INITIAL_DELAY_MS,withRepeat,withSequence,withTiming,timingConfig]=this.__closure;if(reducedMotion){return{opacity:ROW_OPACITY_END};}return{opacity:withDelay(INITIAL_DELAY_MS,withRepeat(withSequence(withTiming(ROW_OPACITY_END,timingConfig),withTiming(1,timingConfig)),-1,true))};})" };

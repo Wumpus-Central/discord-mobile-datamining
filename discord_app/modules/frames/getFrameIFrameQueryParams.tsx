@@ -1,10 +1,10 @@
-// === Module 19401: getFrameIFrameQueryParams ===
+// === Module 19460: getFrameIFrameQueryParams ===
 
-// Module 19401 (getFrameIFrameQueryParams)
-import DiscordEnvironment from "DiscordEnvironment" /* 11968 */;
-import getFrameLaunchContextQueryParamsDefault from "getFrameLaunchContextQueryParams" /* 19402 */;
-import getFrameSurfaceQueryParamsDefault from "getFrameSurfaceQueryParams" /* 19403 */;
-import _mod19404 from "module_19404" /* 19404 */;
+// Module 19460 (getFrameIFrameQueryParams)
+import DiscordEnvironment from "DiscordEnvironment" /* 11959 */;
+import getFrameLaunchContextQueryParamsDefault from "getFrameLaunchContextQueryParams" /* 19461 */;
+import getFrameSurfaceQueryParamsDefault from "getFrameSurfaceQueryParams" /* 19462 */;
+import _mod19463 from "module_19463" /* 19463 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/getFrameIFrameQueryParams.tsx");
@@ -21,7 +21,7 @@ export default function getFrameIFrameQueryParams(data, platform) {
 };
 export function useFrameIFrameQueryParams(data, platform) {
   items = [data.data.url];
-  let memoOne = _mod19404.useMemoOne(() => DiscordEnvironment.getDiscordEnvQueryParams(), items);
+  let memoOne = _mod19463.useMemoOne(() => DiscordEnvironment.getDiscordEnvQueryParams(), items);
   if (memoOne === undefined) {
     memoOne = DiscordEnvironment.getDiscordEnvQueryParams();
     const tmpResult = DiscordEnvironment;

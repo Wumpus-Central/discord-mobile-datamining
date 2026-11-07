@@ -1,10 +1,10 @@
-// === Module 13640: onTapCheckpointCard ===
+// === Module 13664: onTapCheckpointCard ===
 
-// Module 13640 (onTapCheckpointCard)
-import CheckpointExperiments from "CheckpointExperiments" /* 6595 */;
-import Tracking from "Tracking" /* 13641 */;
-import openCheckpoint from "openCheckpoint" /* 13644 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+// Module 13664 (onTapCheckpointCard)
+import CheckpointExperiments from "CheckpointExperiments" /* 6570 */;
+import Tracking from "Tracking" /* 13665 */;
+import openCheckpoint from "openCheckpoint" /* 13668 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 
 require = fn;
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 7860: utils/CollectiblesUtils ===
+// === Module 7837: utils/CollectiblesUtils ===
 
-// Module 7860 (utils/CollectiblesUtils)
-import DateUtils from "DateUtils" /* 4992 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7676 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7861 */;
+// Module 7837 (utils/CollectiblesUtils)
+import DateUtils from "DateUtils" /* 4962 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7653 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7838 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");

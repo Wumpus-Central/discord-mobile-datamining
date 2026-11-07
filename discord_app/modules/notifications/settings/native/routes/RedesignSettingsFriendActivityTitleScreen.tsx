@@ -1,9 +1,9 @@
-// === Module 18245: RedesignSettingsFriendActivityTitleScreen ===
+// === Module 18292: RedesignSettingsFriendActivityTitleScreen ===
 
-// Module 18245 (RedesignSettingsFriendActivityTitleScreen)
-import SettingBuilders from "SettingBuilders" /* 11703 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18235 */;
-import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 18240 */;
+// Module 18292 (RedesignSettingsFriendActivityTitleScreen)
+import SettingBuilders from "SettingBuilders" /* 11685 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18282 */;
+import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 18287 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

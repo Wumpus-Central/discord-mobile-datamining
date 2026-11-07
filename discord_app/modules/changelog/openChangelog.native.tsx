@@ -1,10 +1,10 @@
-// === Module 19736: openChangelog ===
+// === Module 19805: openChangelog ===
 
-// Module 19736 (openChangelog)
+// Module 19805 (openChangelog)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ChangelogConstants from "ChangelogConstants" /* 5072 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5344 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
+import ChangelogConstants from "ChangelogConstants" /* 5042 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5314 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
 import size from "module_2" /* 2 */;
 
 const CHANGELOG_MODAL_KEY = ChangelogConstants.CHANGELOG_MODAL_KEY;
@@ -20,6 +20,6 @@ export function openChangelog() {
     isModalOpenResult = NavigationRouteUtils.isModalOpen();
   }
   if (!isModalOpenResult) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17806, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17855, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
   }
 }

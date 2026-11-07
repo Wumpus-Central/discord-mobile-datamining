@@ -1,9 +1,9 @@
-// === Module 8484: UploadStore ===
+// === Module 8463: UploadStore ===
 
-// Module 8484 (UploadStore)
+// Module 8463 (UploadStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageStore from "MessageStore" /* 6219 */;
+import MessageStore from "MessageStore" /* 6194 */;
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;

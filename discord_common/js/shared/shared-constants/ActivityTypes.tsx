@@ -1,6 +1,6 @@
-// === Module 5918: ActivityTypes ===
+// === Module 5891: ActivityTypes ===
 
-// Module 5918 (ActivityTypes)
+// Module 5891 (ActivityTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ActivityTypes.tsx");

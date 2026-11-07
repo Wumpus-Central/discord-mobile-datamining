@@ -1,8 +1,8 @@
-// === Module 19612: trackVoicePanelTabOpened ===
+// === Module 19573: trackVoicePanelTabOpened ===
 
-// Module 19612 (trackVoicePanelTabOpened)
+// Module 19573 (trackVoicePanelTabOpened)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ReadStateStore from "ReadStateStore" /* 6922 */;
+import ReadStateStore from "ReadStateStore" /* 6897 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -16,4 +16,4 @@ export default function trackVoicePanelTabOpened(arg0, tab, source) {
   AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, { tab, source, is_chat_badged: hasUnreadResult });
   const obj3 = { tab, source, is_chat_badged: hasUnreadResult };
 };
-export const VoicePanelTabAnalyticsSources = { STORE: "store", GESTURE: "gesture", PREJOIN_BUTTON: "prejoin button", CONNECTED_BUTTON: "connected button", VOICE_CONTROLS: "voice controls", HEADER_BUTTON: "header button" };
+export const VoicePanelTabAnalyticsSources = { STORE: "store", GESTURE: "gesture", PREJOIN_BUTTON: "prejoin button", CONNECTED_BUTTON: "connected button", VOICE_CONTROLS: "voice controls", HEADER_BUTTON: "header button", DOCK_CONTEXT_MENU: "dock context menu" };

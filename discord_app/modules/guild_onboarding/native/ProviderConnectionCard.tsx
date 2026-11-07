@@ -1,11 +1,11 @@
-// === Module 7427: ProviderConnectionCard ===
+// === Module 7404: ProviderConnectionCard ===
 
-// Module 7427 (ProviderConnectionCard)
+// Module 7404 (ProviderConnectionCard)
 import native from "native" /* 1187 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import shared from "shared" /* 5177 */;
-import LinkIcon from "LinkIcon" /* 5882 */;
-import PlatformsDefault from "Platforms" /* 6654 */;
+import shared from "shared" /* 5147 */;
+import LinkIcon from "LinkIcon" /* 5851 */;
+import PlatformsDefault from "Platforms" /* 6629 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,7 +56,7 @@ export default function ProviderConnectionCard(connection) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -72,7 +72,7 @@ export default function ProviderConnectionCard(connection) {
             } else {
               const obj4 = {};
               const obj5 = v3(1252);
-              const merged = Object.assign(provider_id(5916).collectGuildAnalyticsMetadata(guildId));
+              const merged = Object.assign(provider_id(5889).collectGuildAnalyticsMetadata(guildId));
               obj4.connection_type = "provider";
               provider_id = connection.provider_id;
               if (provider_id == null) {
@@ -95,7 +95,7 @@ export default function ProviderConnectionCard(connection) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           v3 = tmp;

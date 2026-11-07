@@ -1,10 +1,10 @@
-// === Module 18064: UserSettingsDesignSystemTooltip ===
+// === Module 18111: UserSettingsDesignSystemTooltip ===
 
-// Module 18064 (UserSettingsDesignSystemTooltip)
-import LayerScope from "LayerScope" /* 5768 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7378 */;
-import DeviceOrientation from "DeviceOrientation" /* 8995 */;
+// Module 18111 (UserSettingsDesignSystemTooltip)
+import LayerScope from "LayerScope" /* 5738 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
+import DeviceOrientation from "DeviceOrientation" /* 8977 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,11 +45,11 @@ function Content() {
     }
   }), items1);
   const tmp8 = first2(items, 2);
-  const tooltip = visible(10093).useTooltip(ref, memo);
+  const tooltip = visible(10077).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
-    children: closure_5(visible(5788).Button, {
+    children: closure_5(visible(5758).Button, {
       ref,
       onPress() {
         dependencyMap(!first);
@@ -59,8 +59,8 @@ function Content() {
       size: "md"
     })
   };
-  const items2 = [closure_5(View, obj4), closure_5(visible(7452).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), , ];
-  const obj2 = visible(10093);
+  const items2 = [closure_5(View, obj4), closure_5(visible(7429).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), , ];
+  const obj2 = visible(10077);
   const obj5 = {
     ref,
     onPress() {
@@ -70,7 +70,7 @@ function Content() {
     text: str,
     size: "md"
   };
-  items2[2] = closure_5(visible(7149).TableRadioGroup, { title: "Position", value: first2, onChange: tmp11[1], hasIcons: false, children: closure_9.map((label) => closure_1_5(first(7152).TableRadioRow, { label, value: label }, label)) });
+  items2[2] = closure_5(visible(7124).TableRadioGroup, { title: "Position", value: first2, onChange: tmp11[1], hasIcons: false, children: closure_9.map((label) => closure_1_5(first(7127).TableRadioRow, { label, value: label }, label)) });
   items2[3] = closure_5(TooltipNote, {});
   obj3.children = items2;
   return closure_7(closure_6, obj3);
@@ -88,7 +88,7 @@ class TooltipNote {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1 } });
 let closure_9 = ["top", "bottom", "left", "right"];
 const size = fn(2);

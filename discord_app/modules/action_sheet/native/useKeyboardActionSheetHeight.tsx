@@ -1,10 +1,10 @@
-// === Module 11405: useKeyboardActionSheetHeight ===
+// === Module 11387: useKeyboardActionSheetHeight ===
 
-// Module 11405 (useKeyboardActionSheetHeight)
+// Module 11387 (useKeyboardActionSheetHeight)
 import useWindowDimensions from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1627 */;
-import NavigatorConstants from "NavigatorConstants" /* 5744 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5766 */;
+import NavigatorConstants from "NavigatorConstants" /* 5714 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5736 */;
 import size from "module_2" /* 2 */;
 
 const useWindowDimensionsDefault = useWindowDimensions;

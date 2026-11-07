@@ -1,19 +1,19 @@
-// === Module 18981: SearchScreenSearchBar ===
+// === Module 19031: SearchScreenSearchBar ===
 
-// Module 18981 (SearchScreenSearchBar)
+// Module 19031 (SearchScreenSearchBar)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
-import mergeProps from "mergeProps" /* 5335 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7197 */;
-import layout_SearchBarDefault from "layout/SearchBar" /* 18982 */;
-import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 18984 */;
-import SearchFilterButtonDefault from "SearchFilterButton" /* 18989 */;
+import mergeProps from "mergeProps" /* 5305 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7172 */;
+import layout_SearchBarDefault from "layout/SearchBar" /* 19032 */;
+import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 19034 */;
+import SearchFilterButtonDefault from "SearchFilterButton" /* 19039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 }, headerWithBackButton: { paddingLeft: 0 }, headerSearch: { flex: 1, flexGrow: 1 }, headerControlsRight: { paddingRight: 16, paddingLeft: 12 }, suggestionsAnchor: { height: 0 }, suggestions: { position: "absolute", left: 0, right: -50, top: 8 }, suggestionsWithBackButton: { left: -28 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenSearchBar.tsx");

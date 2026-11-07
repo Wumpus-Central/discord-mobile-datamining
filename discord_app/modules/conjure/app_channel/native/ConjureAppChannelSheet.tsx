@@ -1,21 +1,21 @@
-// === Module 14787: ConjureAppChannelSheet ===
+// === Module 14820: ConjureAppChannelSheet ===
 
-// Module 14787 (ConjureAppChannelSheet)
+// Module 14820 (ConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5404 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import useChannelNameDefault from "useChannelName" /* 5806 */;
-import Stack_Stack from "Stack/Stack" /* 6185 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 7507 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8289 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9216 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 10984 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11118 */;
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14785 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5374 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import useChannelNameDefault from "useChannelName" /* 5776 */;
+import Stack_Stack from "Stack/Stack" /* 6159 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 7484 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8268 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9198 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 10967 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11104 */;
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14818 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14784 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14817 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
 
 const ConjureRemixSheetDefault = ConjureRemixSheet;
 
@@ -319,7 +319,7 @@ const Constants = fn(1072);
 ({ ChannelSettingsSections: metroImportDefault, InstantInviteSources: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { content: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, centered: { textAlign: "center" } };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -346,10 +346,10 @@ export default noop.memo(function ConjureAppChannelSheet(channelId) {
     const obj5 = { spacing: stateFromStores(575).space.PX_24, children: null };
     const obj6 = { channel: stateFromStores };
     obj5.children = closure_10(ConjureAppChannelSheetContent, obj6);
-    obj4.children = closure_10(tmp2(6185).Stack, obj5);
-    obj3.children = closure_10(tmp2(7378).SafeAreaPaddingView, obj4);
-    obj2.children = closure_10(tmp2(5422).BottomSheetScrollView, obj3);
-    tmp6 = closure_10(tmp2(5418).BottomSheet, obj2);
+    obj4.children = closure_10(tmp2(6159).Stack, obj5);
+    obj3.children = closure_10(tmp2(7355).SafeAreaPaddingView, obj4);
+    obj2.children = closure_10(tmp2(5392).BottomSheetScrollView, obj3);
+    tmp6 = closure_10(tmp2(5388).BottomSheet, obj2);
   }
   return tmp6;
 });

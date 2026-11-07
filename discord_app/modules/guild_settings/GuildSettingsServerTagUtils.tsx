@@ -1,9 +1,9 @@
-// === Module 9175: GuildSettingsServerTagUtils ===
+// === Module 9157: GuildSettingsServerTagUtils ===
 
-// Module 9175 (GuildSettingsServerTagUtils)
-import GuildTagUtils from "GuildTagUtils" /* 8828 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
+// Module 9157 (GuildSettingsServerTagUtils)
+import GuildTagUtils from "GuildTagUtils" /* 8807 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
 
 require = fn;
 const Permissions = fn(1072).Permissions;

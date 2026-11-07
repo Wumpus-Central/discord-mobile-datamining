@@ -1,8 +1,8 @@
-// === Module 11245: serializeAppStartLogs ===
+// === Module 11227: serializeAppStartLogs ===
 
-// Module 11245 (serializeAppStartLogs)
+// Module 11227 (serializeAppStartLogs)
 import applyDefault from "apply" /* 12 */;
-import ThreadUtils from "ThreadUtils" /* 8438 */;
+import ThreadUtils from "ThreadUtils" /* 8417 */;
 import size from "module_2" /* 2 */;
 
 function getDisplayName(tag) {

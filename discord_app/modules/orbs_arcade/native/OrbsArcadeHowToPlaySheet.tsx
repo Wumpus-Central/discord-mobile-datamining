@@ -1,10 +1,10 @@
-// === Module 17294: OrbsArcadeHowToPlaySheet ===
+// === Module 17342: OrbsArcadeHowToPlaySheet ===
 
-// Module 17294 (OrbsArcadeHowToPlaySheet)
-import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 17295 */;
-import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17296 */;
+// Module 17342 (OrbsArcadeHowToPlaySheet)
+import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 17343 */;
+import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17344 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17282 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17330 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -31,9 +31,9 @@ export default function OrbsArcadeHowToPlaySheet(gameId) {
       str = "";
     }
     obj3.description = str;
-    const obj4 = { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", location: tmp(17292).OrbsArcadeCtaLocation.HOW_TO_PLAY_SHEET, surface: gameId.surface, secondaryAction: tmp(17296).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
-    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", location: tmp(17292).OrbsArcadeCtaLocation.HOW_TO_PLAY_SHEET, surface: gameId.surface, secondaryAction: tmp(17296).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
-    tmp5Result2 = jsx(tmp(10973).PromoSheet, { illustration: tmp5Result, title: null, description: null, gradientColor: "blue", actions: null });
+    const obj4 = { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", location: tmp(17340).OrbsArcadeCtaLocation.HOW_TO_PLAY_SHEET, surface: gameId.surface, secondaryAction: tmp(17344).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
+    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", location: tmp(17340).OrbsArcadeCtaLocation.HOW_TO_PLAY_SHEET, surface: gameId.surface, secondaryAction: tmp(17344).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
+    tmp5Result2 = jsx(tmp(10956).PromoSheet, { illustration: tmp5Result, title: null, description: null, gradientColor: "blue", actions: null });
   }
   return tmp5Result2;
 };

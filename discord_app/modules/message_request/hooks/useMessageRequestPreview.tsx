@@ -1,12 +1,12 @@
-// === Module 14377: useMessageRequestPreview ===
+// === Module 14411: useMessageRequestPreview ===
 
-// Module 14377 (useMessageRequestPreview)
+// Module 14411 (useMessageRequestPreview)
 import applyDefault from "apply" /* 12 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MessageStore from "MessageStore" /* 6219 */;
-import ReadStateStore from "ReadStateStore" /* 6922 */;
-import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 14378 */;
+import MessageStore from "MessageStore" /* 6194 */;
+import ReadStateStore from "ReadStateStore" /* 6897 */;
+import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 14412 */;
 
 require = fn;
 function loadMessageRequestData() {
@@ -30,7 +30,7 @@ let closure_11 = async function _loadMessageRequestData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_11 = async function _loadMessageRequestData() {
             c3 = 0;
             closure_128_9 = null;
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             closure_128_12();
             c1 = 2;
@@ -105,7 +105,7 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {

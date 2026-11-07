@@ -1,14 +1,14 @@
-// === Module 11880: useShouldForcePipOrientation ===
+// === Module 11871: useShouldForcePipOrientation ===
 
-// Module 11880 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6931 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11881 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6923 */;
+// Module 11871 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6906 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11872 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const CallConstants = fn(5835);
+const CallConstants = fn(5805);
 ({ isStreamParticipant: closure_6, ParticipantTypes: metroImportDefault } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -77,17 +77,17 @@ export function useShouldForcePipOrientation(channel) {
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_6(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8995).OrientationType.LANDSCAPE;
+        return tmp2(8977).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === channel(2143).EmbeddedActivityOrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8995).OrientationType;
+    OrientationType = tmp2(8977).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp2(2143).EmbeddedActivityOrientationLockState.PORTRAIT) {
-      LANDSCAPE = tmp2(8995).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8977).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

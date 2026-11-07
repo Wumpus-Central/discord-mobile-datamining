@@ -10,7 +10,7 @@ import size from "module_2" /* 2 */;
 const CollectibleShopTab = CollectiblesShopConstants.CollectibleShopTab;
 ({ ApplicationDirectoryProfileSections: closure_1, GlobalDiscoveryAppsSections: c2 } = GlobalDiscoveryAppsConstants);
 let c3 = "@me";
-const items = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"];
+const items = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list", "@waterwheels"];
 const obj = {
   INDEX: "/",
   APP: "/app",
@@ -591,5 +591,6 @@ export const FAVORITES = "@favorites";
 export const NOTIFICATIONS_INBOX = "@inbox";
 export const EMPTY_NUX_SERVER = "@guilds-empty-nux";
 export const MOBILE_GUILD_UPSELL_LIST = "@guild-upsell-list";
+export const WATERWHEELS = "@waterwheels";
 export const PSEUDO_GUILD_IDS = items;
 export const Routes = PathUtils.wrapPaths(frozen, [":", "?", "@"]);

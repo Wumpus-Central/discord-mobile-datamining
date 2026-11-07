@@ -1,17 +1,17 @@
-// === Module 14175: ApplicationCommandBar ===
+// === Module 14200: ApplicationCommandBar ===
 
-// Module 14175 (ApplicationCommandBar)
+// Module 14200 (ApplicationCommandBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import usePreviousDefault from "usePrevious" /* 6812 */;
-import Pressables from "Pressables" /* 7068 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14000 */;
-import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 14176 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import usePreviousDefault from "usePrevious" /* 6787 */;
+import Pressables from "Pressables" /* 7043 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14025 */;
+import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 14201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
 
 require = fn;
 function ApplicationCommandOptionItem(arg0) {
@@ -92,7 +92,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { applicationCommandBar: { flexDirection: "column", backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" }, applicationIcon: null, applicationTopWrapperScrollView: null, applicationName: null, applicationOptionalOptionsDivider: null, applicationOptionalOptionsDividerWithNoRequired: null, applicationOptionalOptionsIndicator: null, applicationDescriptionContainer: null, applicationDescriptionDivider: null, applicationCommandOption: null, applicationCommandOptionText: null, activeCommandOption: null, activeCommandOptionText: null, completeCommandOptionText: null, errorCommandOptionText: null, optionDescriptionContainer: null, descriptionEllipsis: null, descriptionEllipsisDots: null, completeCommandOption: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md, marginRight: 16 };
 obj2.applicationIcon = size;
@@ -106,8 +106,8 @@ obj2.applicationDescriptionContainer = { flexShrink: 1 };
 let obj3 = { flexDirection: "column", backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" };
 obj2.applicationDescriptionDivider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
 let obj4 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
-obj2.applicationCommandOption = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6858).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
-let obj5 = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6858).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+obj2.applicationCommandOption = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6833).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+let obj5 = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6833).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
 obj2.applicationCommandOptionText = { color: nativeDefault.colors.TEXT_DEFAULT };
 let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.activeCommandOption = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -122,7 +122,7 @@ obj2.descriptionEllipsis = { marginLeft: 10, backgroundColor: nativeDefault.colo
 const obj10 = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj2.descriptionEllipsisDots = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj11 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.completeCommandOption = { backgroundColor: fn(6858).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+obj2.completeCommandOption = { backgroundColor: fn(6833).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 let closure_11 = createStyles.createStyles(obj2);
 function ApplicationCommandOptionDescription(option) {
   option = option.option;
@@ -306,9 +306,9 @@ export default function _default(command) {
   let tmp22 = null != memo;
   if (tmp22) {
     const obj4 = { style: tmp.applicationIcon, source: memo };
-    tmp22 = ref(section(5872), obj4);
+    tmp22 = ref(section(5842), obj4);
   }
-  const items5 = [tmp22, ref(command(5781).Text, { style: tmp.applicationName, lineClamp: 1, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
+  const items5 = [tmp22, ref(command(5751).Text, { style: tmp.applicationName, lineClamp: 1, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
   let options = command.options;
   let mapped;
   if (options != null) {
@@ -350,7 +350,7 @@ export default function _default(command) {
     const obj7 = { style: tmp.applicationOptionalOptionsIndicator, lineClamp: 1, variant: "body-sm/medium", color: "text-muted", children: null };
     const intl = tmp12(1113).intl;
     obj7.children = intl.string(tmp12(1113).t.U19GM3);
-    items7[1] = tmp25(tmp12(5781).Text, obj7);
+    items7[1] = tmp25(tmp12(5751).Text, obj7);
     const options1 = command.options;
     let mapped1;
     if (options1 != null) {
@@ -380,7 +380,7 @@ export default function _default(command) {
   }
   items5[3] = tmp19Result;
   obj3.children = items5;
-  const items8 = [c10(closure_6, obj3), ref(command(8267).FormDivider, { style: tmp.applicationDescriptionDivider }), ref(stateFromStores, { command, option: currentOption, optionState: tmp17 }), ref(command(8267).FormDivider, { style: tmp.applicationDescriptionDivider })];
+  const items8 = [c10(closure_6, obj3), ref(command(8246).FormDivider, { style: tmp.applicationDescriptionDivider }), ref(stateFromStores, { command, option: currentOption, optionState: tmp17 }), ref(command(8246).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj2.children = items8;
   return c10(onPressOption, obj2);
 };

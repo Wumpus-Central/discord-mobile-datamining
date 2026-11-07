@@ -1,19 +1,19 @@
-// === Module 18056: UserSettingsDesignSystemContextMenu ===
+// === Module 18103: UserSettingsDesignSystemContextMenu ===
 
-// Module 18056 (UserSettingsDesignSystemContextMenu)
+// Module 18103 (UserSettingsDesignSystemContextMenu)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import _modDef5896 from "module_5896" /* 5896 */;
-import Card from "Card" /* 7065 */;
-import _modDef7348 from "module_7348" /* 7348 */;
-import _modDef8516 from "module_8516" /* 8516 */;
-import _modDef11759 from "module_11759" /* 11759 */;
-import _modDef11764 from "module_11764" /* 11764 */;
-import _modDef14588 from "module_14588" /* 14588 */;
-import _modDef18057 from "module_18057" /* 18057 */;
-import _modDef18058 from "module_18058" /* 18058 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import _modDef5865 from "module_5865" /* 5865 */;
+import Card from "Card" /* 7040 */;
+import _modDef7325 from "module_7325" /* 7325 */;
+import _modDef8495 from "module_8495" /* 8495 */;
+import _modDef11750 from "module_11750" /* 11750 */;
+import _modDef11755 from "module_11755" /* 11755 */;
+import _modDef14621 from "module_14621" /* 14621 */;
+import _modDef18104 from "module_18104" /* 18104 */;
+import _modDef18105 from "module_18105" /* 18105 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ function DemoContextMenu(align) {
         const obj2 = text(num[13]);
         const obj3 = { length };
         return Array.from({ length }).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 2419702024201420700000000, action: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000455974455667326 };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "<string:989856263>", action: "<string:100664152>" };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -68,7 +68,7 @@ function DemoContextMenu(align) {
       const _Array2 = Array;
       const obj4 = { length: num };
       mapped = Array.from(obj4).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 2419702024201420700000000, action: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000455974455667326 };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "<string:989856263>", action: "<string:100664152>" };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -103,9 +103,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let items = [_modDef14588, _modDef7348, _modDef8516, _modDef11764, _modDef5896, _modDef18057, _modDef18058, _modDef11759];
+let items = [_modDef14621, _modDef7325, _modDef8495, _modDef11755, _modDef5865, _modDef18104, _modDef18105, _modDef11750];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 9533: HTMLTextTypes ===
+// === Module 9515: HTMLTextTypes ===
 
-// Module 9533 (HTMLTextTypes)
+// Module 9515 (HTMLTextTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/html_parser/HTMLTextTypes.tsx");

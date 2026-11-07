@@ -1,7 +1,7 @@
-// === Module 14075: GuildDirectoryCreateOrAddDescription ===
+// === Module 14100: GuildDirectoryCreateOrAddDescription ===
 
-// Module 14075 (GuildDirectoryCreateOrAddDescription)
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 14073 */;
+// Module 14100 (GuildDirectoryCreateOrAddDescription)
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 14098 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({ container: { flex: 1 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAddDescription.tsx");
@@ -29,7 +29,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -51,7 +51,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
               template = template.template;
               if (null == template) {
                 c5 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 c4 = 1;
                 c5 = 1;
@@ -88,7 +88,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
           return obj;
         }
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp29) {
         c5 = tmp;
         throw tmp29;
@@ -102,11 +102,11 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = directoryChannelId(1113).intl;
   obj4.children = intl.string(directoryChannelId(1113).t["5bQcoa"]);
-  items = [closure_6(directoryChannelId(5781).Text, obj4), ];
+  items = [closure_6(directoryChannelId(5751).Text, obj4), ];
   let obj5 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = directoryChannelId(1113).intl;
   obj5.children = intl2.string(directoryChannelId(1113).t.Ie60Wc);
-  items[1] = closure_6(directoryChannelId(5781).Text, obj5);
+  items[1] = closure_6(directoryChannelId(5751).Text, obj5);
   obj3.children = items;
   const items1 = [closure_7(closure_4, obj3), ];
   let obj6 = {
@@ -129,5 +129,5 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   items1[1] = closure_6(GuildDirectoryEditDescriptionTemplateDefault, obj6);
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(directoryChannelId(14065).GuildDirectoryAddModalScreen, obj);
+  return closure_6(directoryChannelId(14090).GuildDirectoryAddModalScreen, obj);
 };

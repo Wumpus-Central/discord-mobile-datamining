@@ -1,9 +1,161 @@
-// === Module 5129: getBurstAnimation ===
+// === Module 5099: getBurstAnimation ===
 
-// Module 5129 (getBurstAnimation)
+// Module 5099 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
+  {
+    load() {
+      return closure_0(5100);
+    }
+  },
+  {
+    load() {
+      return closure_0(5101);
+    }
+  },
+  {
+    load() {
+      return closure_0(5102);
+    }
+  },
+  {
+    load() {
+      return closure_0(5103);
+    }
+  },
+  {
+    load() {
+      return closure_0(5104);
+    }
+  },
+  {
+    load() {
+      return closure_0(5105);
+    }
+  },
+  {
+    load() {
+      return closure_0(5106);
+    }
+  },
+  {
+    load() {
+      return closure_0(5107);
+    }
+  },
+  {
+    load() {
+      return closure_0(5108);
+    }
+  },
+  {
+    load() {
+      return closure_0(5109);
+    }
+  },
+  {
+    load() {
+      return closure_0(5110);
+    }
+  },
+  {
+    load() {
+      return closure_0(5111);
+    }
+  },
+  {
+    load() {
+      return closure_0(5112);
+    }
+  },
+  {
+    load() {
+      return closure_0(5113);
+    }
+  },
+  {
+    load() {
+      return closure_0(5114);
+    }
+  },
+  {
+    load() {
+      return closure_0(5115);
+    }
+  },
+  {
+    load() {
+      return closure_0(5116);
+    }
+  },
+  {
+    load() {
+      return closure_0(5117);
+    }
+  }
+];
+const items1 = [
+  {
+    load() {
+      return closure_0(5118);
+    }
+  },
+  {
+    load() {
+      return closure_0(5119);
+    }
+  },
+  {
+    load() {
+      return closure_0(5120);
+    }
+  },
+  {
+    load() {
+      return closure_0(5121);
+    }
+  },
+  {
+    load() {
+      return closure_0(5122);
+    }
+  },
+  {
+    load() {
+      return closure_0(5123);
+    }
+  },
+  {
+    load() {
+      return closure_0(5124);
+    }
+  },
+  {
+    load() {
+      return closure_0(5125);
+    }
+  },
+  {
+    load() {
+      return closure_0(5126);
+    }
+  },
+  {
+    load() {
+      return closure_0(5127);
+    }
+  },
+  {
+    load() {
+      return closure_0(5128);
+    }
+  },
+  {
+    load() {
+      return closure_0(5129);
+    }
+  },
   {
     load() {
       return closure_0(5130);
@@ -33,158 +185,6 @@ const items = [
     load() {
       return closure_0(5135);
     }
-  },
-  {
-    load() {
-      return closure_0(5136);
-    }
-  },
-  {
-    load() {
-      return closure_0(5137);
-    }
-  },
-  {
-    load() {
-      return closure_0(5138);
-    }
-  },
-  {
-    load() {
-      return closure_0(5139);
-    }
-  },
-  {
-    load() {
-      return closure_0(5140);
-    }
-  },
-  {
-    load() {
-      return closure_0(5141);
-    }
-  },
-  {
-    load() {
-      return closure_0(5142);
-    }
-  },
-  {
-    load() {
-      return closure_0(5143);
-    }
-  },
-  {
-    load() {
-      return closure_0(5144);
-    }
-  },
-  {
-    load() {
-      return closure_0(5145);
-    }
-  },
-  {
-    load() {
-      return closure_0(5146);
-    }
-  },
-  {
-    load() {
-      return closure_0(5147);
-    }
-  }
-];
-const items1 = [
-  {
-    load() {
-      return closure_0(5148);
-    }
-  },
-  {
-    load() {
-      return closure_0(5149);
-    }
-  },
-  {
-    load() {
-      return closure_0(5150);
-    }
-  },
-  {
-    load() {
-      return closure_0(5151);
-    }
-  },
-  {
-    load() {
-      return closure_0(5152);
-    }
-  },
-  {
-    load() {
-      return closure_0(5153);
-    }
-  },
-  {
-    load() {
-      return closure_0(5154);
-    }
-  },
-  {
-    load() {
-      return closure_0(5155);
-    }
-  },
-  {
-    load() {
-      return closure_0(5156);
-    }
-  },
-  {
-    load() {
-      return closure_0(5157);
-    }
-  },
-  {
-    load() {
-      return closure_0(5158);
-    }
-  },
-  {
-    load() {
-      return closure_0(5159);
-    }
-  },
-  {
-    load() {
-      return closure_0(5160);
-    }
-  },
-  {
-    load() {
-      return closure_0(5161);
-    }
-  },
-  {
-    load() {
-      return closure_0(5162);
-    }
-  },
-  {
-    load() {
-      return closure_0(5163);
-    }
-  },
-  {
-    load() {
-      return closure_0(5164);
-    }
-  },
-  {
-    load() {
-      return closure_0(5165);
-    }
   }
 ];
 let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1, arg2) {
@@ -198,7 +198,7 @@ let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1, arg2) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

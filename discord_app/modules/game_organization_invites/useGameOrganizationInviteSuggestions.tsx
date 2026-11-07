@@ -1,13 +1,13 @@
-// === Module 16042: useGameOrganizationInviteSuggestions ===
+// === Module 16090: useGameOrganizationInviteSuggestions ===
 
-// Module 16042 (useGameOrganizationInviteSuggestions)
-import InstantInviteUtils from "InstantInviteUtils" /* 9218 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9248 */;
+// Module 16090 (useGameOrganizationInviteSuggestions)
+import InstantInviteUtils from "InstantInviteUtils" /* 9200 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9230 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9231 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9213 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -58,7 +58,7 @@ export default function useGameOrganizationInviteSuggestions() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -80,7 +80,7 @@ export default function useGameOrganizationInviteSuggestions() {
               obj5.omitUserIds = set;
               c4 = 3;
               c5 = 1;
-              const obj6 = { value: closure_2_0(9248).loadInviteSuggestions(obj5), done: false };
+              const obj6 = { value: closure_2_0(9230).loadInviteSuggestions(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp8) {
@@ -91,7 +91,7 @@ export default function useGameOrganizationInviteSuggestions() {
             c3 = 0;
             tmp4(false);
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -117,11 +117,11 @@ export default function useGameOrganizationInviteSuggestions() {
             c3 = 0;
             tmp4(false);
             if ("" !== tmp31.current) {
-              const result = closure_2_0(9248).searchInviteSuggestions(tmp31.current);
-              const obj = closure_2_0(9248);
+              const result = closure_2_0(9230).searchInviteSuggestions(tmp31.current);
+              const obj = closure_2_0(9230);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp31) {
           if (tmp5 === c3) {

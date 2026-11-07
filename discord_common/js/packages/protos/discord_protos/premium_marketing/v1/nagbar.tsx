@@ -1,17 +1,17 @@
-// === Module 9755: nagbar ===
+// === Module 9739: nagbar ===
 
-// Module 9755 (nagbar)
+// Module 9739 (nagbar)
 import _mod1197 from "module_1197" /* 1197 */;
 import wrappers from "wrappers" /* 1227 */;
-import localized_string from "localized_string" /* 9737 */;
-import help_article from "help_article" /* 9738 */;
+import localized_string from "localized_string" /* 9721 */;
+import help_article from "help_article" /* 9722 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const MessageType = fn(1197).MessageType;
 class Nagbar$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , ];
+    items = [, , , , , , , , ];
     items[0] = { no: 1, name: "body", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "cta_label", kind: "scalar", T: 9 };
     items[2] = {
@@ -40,17 +40,25 @@ class Nagbar$Type extends MessageType {
             return require("localized_string").LocalizedString;
           }
     };
-    obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
+    items[6] = {
+      no: 7,
+      name: "cta_label_localized",
+      kind: "message",
+      T() {
+            return require("localized_string").LocalizedString;
+          }
+    };
+    obj = { no: 8, name: "navigable_storefront_application_id", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_0(closure_1_1[4]).LocalizedString;
+        return closure_1_0(closure_1_1[5]).UInt64Value;
       }
     }
     obj.T = T;
-    items[6] = obj;
-    items[7] = {
-      no: 8,
-      name: "navigable_storefront_application_id",
+    items[7] = obj;
+    items[8] = {
+      no: 9,
+      name: "shop_collection_id",
       kind: "message",
       T() {
             return require("wrappers").UInt64Value;
@@ -100,8 +108,11 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let LocalizedString = localized_string.LocalizedString;
         obj.ctaLabelLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.ctaLabelLocalized);
       } else if (8 === tmp5) {
+        let UInt64Value2 = wrappers.UInt64Value;
+        obj.navigableStorefrontApplicationId = UInt64Value2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.navigableStorefrontApplicationId);
+      } else if (9 === tmp5) {
         let UInt64Value = wrappers.UInt64Value;
-        obj.navigableStorefrontApplicationId = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.navigableStorefrontApplicationId);
+        obj.shopCollectionId = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.shopCollectionId);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -170,6 +181,12 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
     const joined3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if (body.shopCollectionId) {
+    const UInt64Value2 = wrappers.UInt64Value;
+    const tagResult8 = tag.tag(9, _mod1197.WireType.LengthDelimited);
+    const joined4 = UInt64Value2.internalBinaryWrite(body.shopCollectionId, tag.tag(9, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = UInt64Value2.internalBinaryWrite(body.shopCollectionId, tag.tag(9, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -209,20 +226,28 @@ let items = [
       return require("localized_string").LocalizedString;
     }
   },
+  {
+    no: 7,
+    name: "cta_label_localized",
+    kind: "message",
+    T() {
+      return require("localized_string").LocalizedString;
+    }
+  },
 ,
 
 ];
-let obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
+let obj = { no: 8, name: "navigable_storefront_application_id", kind: "message", T: null };
 class T {
   constructor() {
-    return closure_1_0(closure_1_1[4]).LocalizedString;
+    return closure_1_0(closure_1_1[5]).UInt64Value;
   }
 }
 obj.T = T;
-items[6] = obj;
-items[7] = {
-  no: 8,
-  name: "navigable_storefront_application_id",
+items[7] = obj;
+items[8] = {
+  no: 9,
+  name: "shop_collection_id",
   kind: "message",
   T() {
     return require("wrappers").UInt64Value;

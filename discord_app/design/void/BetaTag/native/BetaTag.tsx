@@ -1,18 +1,18 @@
-// === Module 14809: BetaTag ===
+// === Module 14842: BetaTag ===
 
-// Module 14809 (BetaTag)
+// Module 14842 (BetaTag)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
-import LinearGradientDefault from "LinearGradient" /* 5745 */;
-import Text_Text from "Text/Text" /* 5781 */;
+import LinearGradientDefault from "LinearGradient" /* 5715 */;
+import Text_Text from "Text/Text" /* 5751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7716).Gradients;
+const Gradients = fn(7693).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" }, text: { textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj2);
 let obj4 = { SMALL: "small", MEDIUM: "medium" };

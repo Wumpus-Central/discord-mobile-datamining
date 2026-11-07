@@ -1,24 +1,24 @@
-// === Module 11789: useMemberListAction ===
+// === Module 11780: useMemberListAction ===
 
-// Module 11789 (useMemberListAction)
-import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 11790 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11794 */;
+// Module 11780 (useMemberListAction)
+import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 11781 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11785 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const View = fn(17).View;
-const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10870).USERS_LIST_PADDING_BETWEEN_SECTIONS;
+const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10853).USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const Constants = fn(1072);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "Array", listActionHeight: "channel" };
-const createStyles = fn(5170);
+let closure_16 = { listActionRenderer: "Array", listActionHeight: "flexDirection" };
+const createStyles = fn(5140);
 let closure_17 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");

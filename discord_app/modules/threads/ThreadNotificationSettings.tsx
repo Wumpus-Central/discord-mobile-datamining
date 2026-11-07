@@ -1,10 +1,10 @@
-// === Module 6972: ThreadNotificationSettings ===
+// === Module 6947: ThreadNotificationSettings ===
 
-// Module 6972 (ThreadNotificationSettings)
+// Module 6947 (ThreadNotificationSettings)
 import FlagUtils from "FlagUtils" /* 1403 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5104 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6830 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5074 */;
 
 const require = globalThis.__r;
 

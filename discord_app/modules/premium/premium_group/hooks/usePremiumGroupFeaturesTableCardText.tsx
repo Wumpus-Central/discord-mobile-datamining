@@ -1,12 +1,12 @@
-// === Module 15609: usePremiumGroupFeaturesTableCardText ===
+// === Module 15651: usePremiumGroupFeaturesTableCardText ===
 
-// Module 15609 (usePremiumGroupFeaturesTableCardText)
+// Module 15651 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import user from "user" /* 1398 */;
 import _modDef3444 from "module_3444" /* 3444 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8609 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 15610 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8588 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 15652 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
 
 require = fn;

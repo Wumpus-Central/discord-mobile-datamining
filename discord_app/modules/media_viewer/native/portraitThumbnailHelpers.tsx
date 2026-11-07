@@ -1,6 +1,6 @@
-// === Module 8960: portraitThumbnailHelpers ===
+// === Module 8942: portraitThumbnailHelpers ===
 
-// Module 8960 (portraitThumbnailHelpers)
+// Module 8942 (portraitThumbnailHelpers)
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function lerpVarWidthThumbnailScrollBounds_portraitThumbnailHelpersTsx1(positions,position){if(positions.length===0)return 0;if(position<0){return 0;}if(position>=positions.length){position=positions.length;}const index=Math.floor(position);const fraction=position-index;if(index>=positions.length){return positions[positions.length-1].scrollStart;}const startPos=positions[index].scrollStart;const endPos=index<positions.length-1?positions[index+1].scrollStart:startPos;return startPos+fraction*(endPos-startPos);})" }];

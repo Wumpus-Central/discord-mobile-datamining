@@ -1,14 +1,14 @@
-// === Module 9796: QuestDecisionRoundtripTracker ===
+// === Module 9780: QuestDecisionRoundtripTracker ===
 
-// Module 9796 (QuestDecisionRoundtripTracker)
+// Module 9780 (QuestDecisionRoundtripTracker)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AdCreativeType from "AdCreativeType" /* 6868 */;
-import NetStats from "NetStats" /* 7738 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 7741 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7918 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7943 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7942 */;
-import NetworkStore from "NetworkStore" /* 6059 */;
+import AdCreativeType from "AdCreativeType" /* 6843 */;
+import NetStats from "NetStats" /* 7715 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 7718 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7895 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7920 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7919 */;
+import NetworkStore from "NetworkStore" /* 6032 */;
 
 require = fn;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
@@ -69,10 +69,10 @@ class QuestDecisionRoundtripTracker {
   }
 }
 const prototype = QuestDecisionRoundtripTracker.prototype;
-prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource) {
+prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource, arg2) {
   const self = this;
-  let tmp = placement;
-  if (placement === undefined) {
+  let tmp = arg2;
+  if (arg2 === undefined) {
     tmp = null;
   }
   const SymbolResult = Symbol();

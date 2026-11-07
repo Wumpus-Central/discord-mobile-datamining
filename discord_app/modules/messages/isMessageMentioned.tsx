@@ -1,9 +1,9 @@
-// === Module 6601: isMessageMentioned ===
+// === Module 6576: isMessageMentioned ===
 
-// Module 6601 (isMessageMentioned)
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import GuildStore from "GuildStore" /* 5041 */;
+// Module 6576 (isMessageMentioned)
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildStore from "GuildStore" /* 5011 */;
 
 function isMentioned(suppressRoles) {
   ({ userId, mentionUsers, mentionRoles, suppressEveryone } = suppressRoles);

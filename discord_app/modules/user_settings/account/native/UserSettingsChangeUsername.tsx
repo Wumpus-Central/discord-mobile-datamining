@@ -1,9 +1,9 @@
-// === Module 16863: UserSettingsChangeUsername ===
+// === Module 16911: UserSettingsChangeUsername ===
 
-// Module 16863 (UserSettingsChangeUsername)
+// Module 16911 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
+import Text_Text from "Text/Text" /* 5751 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,16 +12,16 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(6636).match(showHint.usernameStatus);
-  let obj = { type: showHint(16864).NameValidationState.ERROR, message: null };
-  const P = showHint(6636).P;
+  const match = showHint(6611).match(showHint.usernameStatus);
+  let obj = { type: showHint(16912).NameValidationState.ERROR, message: null };
+  const P = showHint(6611).P;
   obj.message = P.select();
-  const str = showHint(6636);
-  const obj2 = { type: showHint(16864).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(6636).P;
+  const str = showHint(6611);
+  const obj2 = { type: showHint(16912).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(6611).P;
   obj2.message = P2.select();
-  const withResult = match.with(obj, (children) => closure_1_11(showHint(5781).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children }));
-  return match.with(obj, (children) => closure_1_11(showHint(5781).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5781).Text, { variant: "body-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
+  const withResult = match.with(obj, (children) => closure_1_11(showHint(5751).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children }));
+  return match.with(obj, (children) => closure_1_11(showHint(5751).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5751).Text, { variant: "body-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
     let tmp = null;
     if (showHint) {
       const obj = { variant: "body-xs/medium", color: "text-default", children: null };
@@ -37,7 +37,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 }, inputs: { flex: 1, flexDirection: "row", marginTop: 8 }, username: { flex: 2 }, discriminator: { flex: 1 }, divider: null, dividerInner: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.divider = { width: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -138,7 +138,7 @@ export default function UserSettingsChangeUsername() {
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        yield closure_2_2(7239).saveAccountChanges(user, { close: false });
+        yield closure_2_2(7214).saveAccountChanges(user, { close: false });
         closure_129_0 = value;
         if (!closure_129_0.ok) {
           const v6OrEarlierAPIError = new closure_0(1282).V6OrEarlierAPIError(closure_129_0);

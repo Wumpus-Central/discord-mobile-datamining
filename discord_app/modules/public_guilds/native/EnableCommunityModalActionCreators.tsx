@@ -1,13 +1,13 @@
-// === Module 20157: EnableCommunityModalActionCreators ===
+// === Module 20226: EnableCommunityModalActionCreators ===
 
-// Module 20157 (EnableCommunityModalActionCreators)
+// Module 20226 (EnableCommunityModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9172 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9173 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9154 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9155 */;
 
 require = fn;
-const CREATE_NEW_CHANNEL_VALUE = fn(8595).CREATE_NEW_CHANNEL_VALUE;
+const CREATE_NEW_CHANNEL_VALUE = fn(8574).CREATE_NEW_CHANNEL_VALUE;
 const ENABLED_COMMUNITY_MODAL_KEY = "ENABLED_COMMUNITY_MODAL_KEY";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/public_guilds/native/EnableCommunityModalActionCreators.tsx");
@@ -23,7 +23,7 @@ export default {
       rulesChannelId = CREATE_NEW_CHANNEL_VALUE;
     }
     GuildSettingsActionCreatorsDefault.updateGuild({ rulesChannelId });
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20158, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20227, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
     const tmpResult = ModalActionCreatorsDefault;
   },
   close() {

@@ -1,6 +1,6 @@
-// === Module 5839: CollectiblesMarketingSurface ===
+// === Module 5809: CollectiblesMarketingSurface ===
 
-// Module 5839 (CollectiblesMarketingSurface)
+// Module 5809 (CollectiblesMarketingSurface)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesMarketingSurface.tsx");

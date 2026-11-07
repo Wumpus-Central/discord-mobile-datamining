@@ -1,18 +1,18 @@
-// === Module 20037: GuildSettingsModalAuditLogFilter ===
+// === Module 20106: GuildSettingsModalAuditLogFilter ===
 
-// Module 20037 (GuildSettingsModalAuditLogFilter)
+// Module 20106 (GuildSettingsModalAuditLogFilter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import UserUtilsDefault from "UserUtils" /* 5224 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5230 */;
-import FormRadio from "FormRadio" /* 7153 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10955 */;
-import AuditLogUtils from "AuditLogUtils" /* 20035 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 20038 */;
+import UserUtilsDefault from "UserUtils" /* 5194 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5200 */;
+import FormRadio from "FormRadio" /* 7128 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10938 */;
+import AuditLogUtils from "AuditLogUtils" /* 20104 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 20107 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20033 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20102 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1072).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = noop.memo(function AuditLogFilterUserRow(selected) {

@@ -1,14 +1,14 @@
-// === Module 7014: Spellchecker ===
+// === Module 6989: Spellchecker ===
 
-// Module 7014 (Spellchecker)
+// Module 6989 (Spellchecker)
 import LoggerDefault from "Logger" /* 3 */;
 import DOMUtils from "DOMUtils" /* 2153 */;
-import fallbackLocalesDefault from "fallbackLocales" /* 7015 */;
-import _mod7016 from "module_7016" /* 7016 */;
+import fallbackLocalesDefault from "fallbackLocales" /* 6990 */;
+import _mod6991 from "module_6991" /* 6991 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import DiscordNative from "DiscordNative" /* 4981 */;
+import DiscordNative from "DiscordNative" /* 4951 */;
 import apply from "apply" /* 12 */;
 
 require = fn;
@@ -59,7 +59,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod7016;
+      obj = _mod6991;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -222,7 +222,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod7016.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod6991.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {

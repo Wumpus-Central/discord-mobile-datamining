@@ -1,6 +1,6 @@
-// === Module 6951: OverlayVisibility ===
+// === Module 6926: OverlayVisibility ===
 
-// Module 6951 (OverlayVisibility)
+// Module 6926 (OverlayVisibility)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/overlay/OverlayVisibility.native.tsx");

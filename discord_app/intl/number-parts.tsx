@@ -1,6 +1,6 @@
-// === Module 10448: numberParts ===
+// === Module 10431: numberParts ===
 
-// Module 10448 (numberParts)
+// Module 10431 (numberParts)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("intl/number-parts.tsx");

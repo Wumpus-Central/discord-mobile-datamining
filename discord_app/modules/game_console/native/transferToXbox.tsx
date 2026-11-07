@@ -1,7 +1,7 @@
-// === Module 12166: transferToXbox ===
+// === Module 12157: transferToXbox ===
 
-// Module 12166 (transferToXbox)
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 12158 */;
+// Module 12157 (transferToXbox)
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 12149 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ let closure_8 = async function _transferToXbox(arg0) {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -100,7 +100,7 @@ let closure_8 = async function _transferToXbox(arg0) {
         closure_130_2(closure_130_3[12]).stopOwnStream(false);
         closure_130_5.openURL(closure_129_2);
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } else {
         const obj17 = {
           importer() {

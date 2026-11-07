@@ -1,6 +1,6 @@
-// === Module 14693: useGiftingPromotionConfig ===
+// === Module 14726: useGiftingPromotionConfig ===
 
-// Module 14693 (useGiftingPromotionConfig)
+// Module 14726 (useGiftingPromotionConfig)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/hooks/useGiftingPromotionConfig.tsx");

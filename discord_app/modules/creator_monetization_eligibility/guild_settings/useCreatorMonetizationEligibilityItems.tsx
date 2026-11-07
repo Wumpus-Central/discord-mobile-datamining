@@ -1,9 +1,9 @@
-// === Module 20205: useCreatorMonetizationEligibilityItems ===
+// === Module 20274: useCreatorMonetizationEligibilityItems ===
 
-// Module 20205 (useCreatorMonetizationEligibilityItems)
+// Module 20274 (useCreatorMonetizationEligibilityItems)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import formatDurationFromDaysDefault from "formatDurationFromDays" /* 20208 */;
+import formatDurationFromDaysDefault from "formatDurationFromDays" /* 20277 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           tmp13();
         }
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp16) {
         c2 = tmp;
         throw tmp16;
@@ -135,7 +135,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let handleContactSupportClick;
       if (!noRecentViolations) {
         handleContactSupportClick = function handleContactSupportClick() {
-          const tmp = onEligibilityBecameStale(5860);
+          const tmp = onEligibilityBecameStale(5830);
           return tmp(onEligibilityBecameStale(2185).getSubmitRequestURL());
         };
       }

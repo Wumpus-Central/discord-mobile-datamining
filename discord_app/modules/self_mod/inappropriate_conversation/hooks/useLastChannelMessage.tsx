@@ -1,7 +1,7 @@
-// === Module 11453: useLastChannelMessage ===
+// === Module 11435: useLastChannelMessage ===
 
-// Module 11453 (useLastChannelMessage)
-import MessageStore from "MessageStore" /* 6219 */;
+// Module 11435 (useLastChannelMessage)
+import MessageStore from "MessageStore" /* 6194 */;
 
 const require = globalThis.__r;
 

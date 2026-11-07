@@ -1,13 +1,13 @@
-// === Module 17059: FamilyCenterTopActivity ===
+// === Module 17107: FamilyCenterTopActivity ===
 
-// Module 17059 (FamilyCenterTopActivity)
+// Module 17107 (FamilyCenterTopActivity)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import GuildIcon from "GuildIcon" /* 7045 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import GuildIcon from "GuildIcon" /* 7020 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7814 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7791 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 const obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, section: { flex: 1 }, avatarList: null, touchableHitBox: null, guildAvatar: null, guildAvatarText: null };
 let obj3 = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
 obj2.avatarList = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_4, flexWrap: "wrap", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12 };
@@ -39,7 +39,7 @@ export default function FamilyCenterTopActivity() {
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17060, dependencyMap.paths), "FamilyCenterTopUsers", { topUserActivities: stateFromStores });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17108, dependencyMap.paths), "FamilyCenterTopUsers", { topUserActivities: stateFromStores });
   }, items2);
   if (0 !== stateFromStores.length) {
     const obj3 = { style: tmp.container, children: null };
@@ -59,7 +59,7 @@ export default function FamilyCenterTopActivity() {
               user = user.getUser(user_id.user_id);
               let tmp2 = null;
               if (null != user) {
-                const obj = { user, size: closure_0(stateFromStores1[16]).AvatarSizes.SMALL, guildId: "Array" };
+                const obj = { user, size: closure_0(stateFromStores1[16]).AvatarSizes.SMALL, guildId: "r" };
                 tmp2 = closure_1_7(closure_0(stateFromStores1[16]).Avatar, obj, user.id);
               }
               return tmp2;

@@ -1,15 +1,15 @@
-// === Module 7738: NetStats ===
+// === Module 7715: NetStats ===
 
-// Module 7738 (NetStats)
+// Module 7715 (NetStats)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import configure from "configure" /* 1479 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5351 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 6106 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5321 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 6080 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6648 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7739 */;
-import GuildStore from "GuildStore" /* 5041 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6623 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7716 */;
+import GuildStore from "GuildStore" /* 5011 */;
 import NetworkUtils_mod from "utils/NetworkUtils" /* 1478 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
@@ -158,7 +158,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -226,7 +226,7 @@ prototype["track"] = function track() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

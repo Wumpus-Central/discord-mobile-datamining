@@ -1,10 +1,10 @@
-// === Module 9028: showShareActionSheet ===
+// === Module 9010: showShareActionSheet ===
 
-// Module 9028 (showShareActionSheet)
+// Module 9010 (showShareActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 9029 */;
-import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 9030 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 9011 */;
+import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 9012 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export function showShareActionSheet(source, SECURE_FRAMES_STREAM_BOTTOM_SHEET) 
     let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
     const obj2 = require("ShowShareActionSheetUtils");
   } else {
-    mediaShareParams = { mediaFallbackUrl: "Array", mediaStagingOptions: "channel" };
+    mediaShareParams = { mediaFallbackUrl: "Array", mediaStagingOptions: "flexDirection" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {

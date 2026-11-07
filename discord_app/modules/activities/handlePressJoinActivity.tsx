@@ -1,18 +1,18 @@
-// === Module 11965: handlePressJoinActivity ===
+// === Module 11956: handlePressJoinActivity ===
 
-// Module 11965 (handlePressJoinActivity)
+// Module 11956 (handlePressJoinActivity)
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6116 */;
-import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 11921 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11962 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6090 */;
+import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 11912 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11953 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 2140 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5833 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
+import VoiceStateStore from "VoiceStateStore" /* 5803 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 
 require = fn;
 function handlePressJoinActivity(arg0) {
@@ -145,7 +145,7 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -174,7 +174,7 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp13) {
           c0 = tmp;
           throw tmp13;

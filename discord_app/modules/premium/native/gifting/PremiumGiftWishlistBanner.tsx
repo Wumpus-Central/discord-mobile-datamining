@@ -1,10 +1,10 @@
-// === Module 10799: PremiumGiftWishlistBanner ===
+// === Module 10782: PremiumGiftWishlistBanner ===
 
-// Module 10799 (PremiumGiftWishlistBanner)
+// Module 10782 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8842 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10804 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8821 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10787 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,17 +13,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_7 = fn(7492).WishlistRecommendationReason;
+let closure_7 = fn(7469).WishlistRecommendationReason;
 const PremiumConstants = fn(1387);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1074).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8846).UserProfileSections;
+const UserProfileSections = fn(8825).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = { title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 }, subtitle: null, placeholderRow: null, placeholder: null, wishlistItemShadow: null };
   const obj2 = { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 };
@@ -116,7 +116,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

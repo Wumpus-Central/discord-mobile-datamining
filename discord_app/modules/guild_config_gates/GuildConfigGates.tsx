@@ -1,9 +1,9 @@
-// === Module 20132: GuildConfigGates ===
+// === Module 20201: GuildConfigGates ===
 
-// Module 20132 (GuildConfigGates)
+// Module 20201 (GuildConfigGates)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildConfigGatesStore from "GuildConfigGatesStore" /* 20133 */;
+import GuildConfigGatesStore from "GuildConfigGatesStore" /* 20202 */;
 
 require = fn;
 const Endpoints = fn(1072).Endpoints;
@@ -40,7 +40,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

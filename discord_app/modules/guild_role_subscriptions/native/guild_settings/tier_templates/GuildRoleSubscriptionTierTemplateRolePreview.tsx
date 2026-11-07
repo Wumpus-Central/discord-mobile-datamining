@@ -1,15 +1,15 @@
-// === Module 20325: GuildRoleSubscriptionTierTemplateRolePreview ===
+// === Module 20394: GuildRoleSubscriptionTierTemplateRolePreview ===
 
-// Module 20325 (GuildRoleSubscriptionTierTemplateRolePreview)
+// Module 20394 (GuildRoleSubscriptionTierTemplateRolePreview)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6199 */;
-import RoleIconDefault from "RoleIcon" /* 7457 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6173 */;
+import RoleIconDefault from "RoleIcon" /* 7434 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { flexDirection: "row", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: null, contextRow: null };
 let obj3 = { flexDirection: "row", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { marginStart: nativeDefault.space.PX_16 };

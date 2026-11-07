@@ -1,23 +1,23 @@
-// === Module 14353: GuildPowerupsPerkCard ===
+// === Module 14387: GuildPowerupsPerkCard ===
 
-// Module 14353 (GuildPowerupsPerkCard)
+// Module 14387 (GuildPowerupsPerkCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import shared from "shared" /* 5177 */;
-import useThemeDefault from "useTheme" /* 5399 */;
-import LinearGradientDefault from "LinearGradient" /* 5745 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14305 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14306 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14350 */;
+import shared from "shared" /* 5147 */;
+import useThemeDefault from "useTheme" /* 5369 */;
+import LinearGradientDefault from "LinearGradient" /* 5715 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14339 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14340 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14384 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, card: { padding: 0, overflow: "hidden" }, contentContainer: null, imageContainer: null, gradient: null, headerContainer: null, badge: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.contentContainer = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16 };

@@ -1,12 +1,12 @@
-// === Module 20143: GuildTemplateSettingsUtils ===
+// === Module 20212: GuildTemplateSettingsUtils ===
 
-// Module 20143 (GuildTemplateSettingsUtils)
+// Module 20212 (GuildTemplateSettingsUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7736 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7713 */;
 
 const require = globalThis.__r;
 
@@ -41,11 +41,11 @@ export function useGuildTemplate(guildId) {
     closure_0 = async function _fetchGuildTemplate(arg0) {
       closure_129_0 = closure_0;
       tmp3(null);
-      await closure_2_1(7594).loadTemplatesForGuild(closure_0);
+      await closure_2_1(7571).loadTemplatesForGuild(closure_0);
       if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const aPIError = new guildId(6604).APIError(closure_129_1);
+        const aPIError = new guildId(6579).APIError(closure_129_1);
         tmp3(aPIError);
         closure_1(closure_129_0);
         c6 = 3;

@@ -1,9 +1,9 @@
-// === Module 17639: EmojiPartyingFaceIcon ===
+// === Module 17688: EmojiPartyingFaceIcon ===
 
-// Module 17639 (EmojiPartyingFaceIcon)
+// Module 17688 (EmojiPartyingFaceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5871 */;
-import _mod17640 from "module_17640" /* 17640 */;
+import BaseIconImage from "BaseIconImage" /* 5841 */;
+import _mod17689 from "module_17689" /* 17689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiPartyingFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17640, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17689, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

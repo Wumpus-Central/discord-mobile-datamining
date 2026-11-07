@@ -1,11 +1,11 @@
-// === Module 7780: MemberSafetySupplementalUtils ===
+// === Module 7757: MemberSafetySupplementalUtils ===
 
-// Module 7780 (MemberSafetySupplementalUtils)
+// Module 7757 (MemberSafetySupplementalUtils)
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import shared from "shared" /* 5177 */;
-import PlatformsDefault from "Platforms" /* 6654 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7781 */;
+import shared from "shared" /* 5147 */;
+import PlatformsDefault from "Platforms" /* 6629 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7758 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -36,7 +36,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

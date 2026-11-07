@@ -1,12 +1,12 @@
-// === Module 6091: getDefaultBackgroundData ===
+// === Module 6065: getDefaultBackgroundData ===
 
-// Module 6091 (getDefaultBackgroundData)
+// Module 6065 (getDefaultBackgroundData)
 import util from "util" /* 1113 */;
-import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6085 */;
-import _modDef6092 from "module_6092" /* 6092 */;
-import _modDef6093 from "module_6093" /* 6093 */;
-import _modDef6094 from "module_6094" /* 6094 */;
-import _modDef6095 from "module_6095" /* 6095 */;
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6059 */;
+import _modDef6066 from "module_6066" /* 6066 */;
+import _modDef6067 from "module_6067" /* 6067 */;
+import _modDef6068 from "module_6068" /* 6068 */;
+import _modDef6069 from "module_6069" /* 6069 */;
 import size from "module_2" /* 2 */;
 
 const DefaultVideoBackground = VideoBackgroundConstants.DefaultVideoBackground;
@@ -15,19 +15,19 @@ const result = size.fileFinishedImporting("modules/video_backgrounds/getDefaultB
 
 export default function getDefaultBackgroundData() {
   const obj = {};
-  const obj2 = { id: DefaultVideoBackground.OPTION_1, source: _modDef6092, name: null };
+  const obj2 = { id: DefaultVideoBackground.OPTION_1, source: _modDef6066, name: null };
   const intl = util.intl;
   obj2.name = intl.string(util.t.SHUTBj);
   obj[DefaultVideoBackground.OPTION_1] = obj2;
-  const obj3 = { id: DefaultVideoBackground.OPTION_2, source: _modDef6093, name: null };
+  const obj3 = { id: DefaultVideoBackground.OPTION_2, source: _modDef6067, name: null };
   const intl2 = util.intl;
   obj3.name = intl2.string(util.t.UxTcIq);
   obj[DefaultVideoBackground.OPTION_2] = obj3;
-  const obj4 = { id: DefaultVideoBackground.OPTION_3, source: _modDef6094, name: null };
+  const obj4 = { id: DefaultVideoBackground.OPTION_3, source: _modDef6068, name: null };
   const intl3 = util.intl;
   obj4.name = intl3.string(util.t.HFBsc8);
   obj[DefaultVideoBackground.OPTION_3] = obj4;
-  const obj5 = { id: DefaultVideoBackground.OPTION_4, source: _modDef6095, name: null };
+  const obj5 = { id: DefaultVideoBackground.OPTION_4, source: _modDef6069, name: null };
   const intl4 = util.intl;
   obj5.name = intl4.string(util.t["/Dl3+Z"]);
   obj[DefaultVideoBackground.OPTION_4] = obj5;

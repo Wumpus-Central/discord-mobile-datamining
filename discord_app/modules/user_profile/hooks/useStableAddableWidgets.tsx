@@ -1,6 +1,6 @@
-// === Module 15157: useStableAddableWidgets ===
+// === Module 15192: useStableAddableWidgets ===
 
-// Module 15157 (useStableAddableWidgets)
+// Module 15192 (useStableAddableWidgets)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useStableAddableWidgets.tsx");
 
 export default function useStableAddableWidgets(arg0) {
-  const arr = first(15150)();
+  const arr = first(15182)();
   let tmp = _slicedToArray(noop.useState(arr), 2);
   first = tmp[0];
   if (arr.length > first.length) {
@@ -23,15 +23,15 @@ export default function useStableAddableWidgets(arg0) {
         HermesBuiltin.arraySpread(first.filter((applicationId) => {
           let tmp = null != length;
           if (tmp) {
-            tmp = applicationId instanceof closure_0(7876).ApplicationWidget && length.includes(applicationId.applicationId);
-            const tmp5 = applicationId instanceof closure_0(7876).ApplicationWidget && length.includes(applicationId.applicationId);
+            tmp = applicationId instanceof closure_0(7853).ApplicationWidget && length.includes(applicationId.applicationId);
+            const tmp5 = applicationId instanceof closure_0(7853).ApplicationWidget && length.includes(applicationId.applicationId);
           }
           return !tmp;
         }), HermesBuiltin.arraySpread(first.filter(function isHighlighted(applicationId) {
           let tmp = null != length;
           if (tmp) {
-            tmp = applicationId instanceof closure_0(7876).ApplicationWidget && length.includes(applicationId.applicationId);
-            const tmp5 = applicationId instanceof closure_0(7876).ApplicationWidget && length.includes(applicationId.applicationId);
+            tmp = applicationId instanceof closure_0(7853).ApplicationWidget && length.includes(applicationId.applicationId);
+            const tmp5 = applicationId instanceof closure_0(7853).ApplicationWidget && length.includes(applicationId.applicationId);
           }
           return tmp;
         }), 0));

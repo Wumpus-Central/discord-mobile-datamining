@@ -1,12 +1,12 @@
-// === Module 19278: SpamMessageList ===
+// === Module 19337: SpamMessageList ===
 
-// Module 19278 (SpamMessageList)
+// Module 19337 (SpamMessageList)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import transitionToChannel from "transitionToChannel" /* 5912 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6619 */;
-import MetricEvents from "MetricEvents" /* 6624 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
+import transitionToChannel from "transitionToChannel" /* 5885 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6594 */;
+import MetricEvents from "MetricEvents" /* 6599 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -152,7 +152,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { sectionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 }, rowContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 }, actionContainer: { flexDirection: "row", alignItems: "flex-start", height: "100%" }, actionButton: null, acceptButton: null, pressableRow: null, activityIndicator: null, list: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj2.actionButton = size;

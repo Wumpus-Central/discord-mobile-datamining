@@ -1,30 +1,25 @@
-// === Module 15543: usePromotionMarketingComponent ===
+// === Module 15578: usePromotionMarketingComponent ===
 
-// Module 15543 (usePromotionMarketingComponent)
-import constants from "constants" /* 9772 */;
+// Module 15578 (usePromotionMarketingComponent)
+import constants from "constants" /* 9756 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserOfferStore from "UserOfferStore" /* 7729 */;
-import PromotionsStore from "PromotionsStore" /* 9732 */;
-
-const require = globalThis.__r;
+import UserOfferStore from "UserOfferStore" /* 7706 */;
+import PromotionsStore from "PromotionsStore" /* 9714 */;
 
 require = fn;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
-
-export function usePromotionMarketingComponent(PREMIUM_TAB) {
-  _require = PREMIUM_TAB;
+function usePromotionMarketingComponentData(arg0) {
+  _require = arg0;
   const effect = noop.useEffect(() => {
-    const result = PREMIUM_TAB(stateFromStores[4]).maybeFetchActivePromotions();
+    const result = closure_0(stateFromStores[4]).maybeFetchActivePromotions();
   }, []);
   items = [PromotionsStore, ref];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const marketingComponentByType = PromotionsStore.getMarketingComponentByType(closure_0);
-    if (null == marketingComponentByType) {
+    const tmp = closure_0();
+    if (null == tmp) {
       return null;
     } else {
-      const promotionByTypeAndId = PromotionsStore.getPromotionByTypeAndId(constants.PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
+      const promotionByTypeAndId = PromotionsStore.getPromotionByTypeAndId(constants.PromotionTypes.MARKETING_MOMENT, tmp.promotionId);
       let trialId;
       if (promotionByTypeAndId != null) {
         trialId = promotionByTypeAndId.trialId;
@@ -33,7 +28,7 @@ export function usePromotionMarketingComponent(PREMIUM_TAB) {
         const userTrialOffer = UserOfferStore.getUserTrialOffer(promotionByTypeAndId.trialId);
         return null;
       }
-      return marketingComponentByType;
+      return tmp;
     }
   });
   const obj2 = require("initialize");
@@ -89,4 +84,15 @@ export function usePromotionMarketingComponent(PREMIUM_TAB) {
     tmp8 = stateFromStores;
   }
   return tmp8;
+}
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
+
+export function usePromotionMarketingComponent(PREMIUM_TAB) {
+  closure_0 = PREMIUM_TAB;
+  return usePromotionMarketingComponentData(() => PromotionsStore.getMarketingComponentByType(closure_0));
+}
+export function usePromotionMarketingSurface(arg0) {
+  closure_0 = arg0;
+  return usePromotionMarketingComponentData(() => PromotionsStore.getMarketingComponentBySurface(closure_0));
 }

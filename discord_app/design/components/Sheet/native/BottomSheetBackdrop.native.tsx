@@ -1,16 +1,16 @@
-// === Module 5755: Sheet/BottomSheetBackdrop ===
+// === Module 5725: Sheet/BottomSheetBackdrop ===
 
-// Module 5755 (Sheet/BottomSheetBackdrop)
+// Module 5725 (Sheet/BottomSheetBackdrop)
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import BottomSheetModal from "BottomSheetModal" /* 5422 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
-import Backdrop from "Backdrop" /* 5756 */;
+import BottomSheetModal from "BottomSheetModal" /* 5392 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
+import Backdrop from "Backdrop" /* 5726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_4 = createStyles.createStyles({ container: { flex: 1 } });
 let closure_5 = { code: "(function BottomSheetBackdropNativeTsx1(){let[scheduleOnRN,handleOnPress]=this.__closure;scheduleOnRN(handleOnPress);})" };
 let closure_6 = { code: "(function BottomSheetBackdropNativeTsx2(){let[interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity]=this.__closure;return{opacity:interpolate(animatedIndex.get(),[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity])};})" };

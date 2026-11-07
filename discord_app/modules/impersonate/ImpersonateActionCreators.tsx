@@ -1,19 +1,19 @@
-// === Module 7007: ImpersonateActionCreators ===
+// === Module 6982: ImpersonateActionCreators ===
 
-// Module 7007 (ImpersonateActionCreators)
+// Module 6982 (ImpersonateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ImpersonateTypes from "ImpersonateTypes" /* 5081 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5916 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildChannelStore from "GuildChannelStore" /* 5100 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import GuildRoleStore from "GuildRoleStore" /* 5076 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
-import ImpersonateStore from "ImpersonateStore" /* 5075 */;
+import ImpersonateTypes from "ImpersonateTypes" /* 5051 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5889 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildChannelStore from "GuildChannelStore" /* 5070 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildRoleStore from "GuildRoleStore" /* 5046 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6830 */;
+import ImpersonateStore from "ImpersonateStore" /* 5045 */;
 
 require = fn;
 function updateImpersonating(guildId, type) {
@@ -47,7 +47,7 @@ function updateImpersonating(guildId, type) {
 }
 const Constants = fn(1072);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(5026).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4996).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 

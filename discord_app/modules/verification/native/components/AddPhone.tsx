@@ -1,13 +1,13 @@
-// === Module 7299: AddPhone ===
+// === Module 7276: AddPhone ===
 
-// Module 7299 (AddPhone)
+// Module 7276 (AddPhone)
 import nativeDefault from "native" /* 575 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6117 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7205 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 5013 */;
+import PhoneStore from "PhoneStore" /* 7180 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4983 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ const UserFlags = fn(1072).UserFlags;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16, flex: 1 }, title: { textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
@@ -50,7 +50,7 @@ export default function AddPhone(reason) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

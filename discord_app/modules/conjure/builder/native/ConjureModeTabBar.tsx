@@ -1,12 +1,12 @@
-// === Module 12411: ConjureModeTabBar ===
+// === Module 12424: ConjureModeTabBar ===
 
-// Module 12411 (ConjureModeTabBar)
+// Module 12424 (ConjureModeTabBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import spring_spring from "spring/spring" /* 5791 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 8933 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import spring_spring from "spring/spring" /* 5761 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 8915 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -162,7 +162,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let closure_11 = createStyles.createStyles((borderRadius, arg1) => {
   const obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + 4, paddingVertical: 4, flexDirection: "row", alignItems: "center" }, indicatorContainer: { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" }, indicator: null, indicatorHidden: null, item: null, itemFirst: null, itemLast: null, label: null, labelText: null, prefix: null };
   const obj2 = { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + 4, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
@@ -178,7 +178,7 @@ let closure_11 = createStyles.createStyles((borderRadius, arg1) => {
   obj.prefix = { flexShrink: 0 };
   return obj;
 });
-createStyles = fn(5170);
+createStyles = fn(5140);
 let closure_12 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE });
 let closure_13 = { code: "(function ConjureModeTabBarTsx1(){let[indicatorWidth]=this.__closure;return indicatorWidth.get();})" };
 let closure_14 = { code: "(function ConjureModeTabBarTsx2(_,previous){let[previousIndicatorWidth]=this.__closure;if(previous!=null)previousIndicatorWidth.set(previous);})" };

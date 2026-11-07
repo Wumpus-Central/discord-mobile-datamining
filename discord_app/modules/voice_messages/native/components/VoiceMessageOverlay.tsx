@@ -1,28 +1,28 @@
-// === Module 14424: VoiceMessageOverlay ===
+// === Module 14457: VoiceMessageOverlay ===
 
-// Module 14424 (VoiceMessageOverlay)
+// Module 14457 (VoiceMessageOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5400 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5420 */;
-import useToken from "useToken" /* 5754 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5765 */;
-import _modDef5894 from "module_5894" /* 5894 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6179 */;
-import LegacyTokens from "LegacyTokens" /* 6858 */;
-import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7042 */;
-import useRefValueDefault from "useRefValue" /* 7047 */;
-import inlineStyles from "inlineStyles" /* 8122 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12996 */;
-import _modDef14425 from "module_14425" /* 14425 */;
-import VoiceMessageChatDefault from "VoiceMessageChat" /* 14426 */;
+import timing_timing from "timing/timing" /* 5370 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5390 */;
+import useToken from "useToken" /* 5724 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5735 */;
+import _modDef5863 from "module_5863" /* 5863 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6153 */;
+import LegacyTokens from "LegacyTokens" /* 6833 */;
+import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7017 */;
+import useRefValueDefault from "useRefValue" /* 7022 */;
+import inlineStyles from "inlineStyles" /* 8101 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13019 */;
+import _modDef14458 from "module_14458" /* 14458 */;
+import VoiceMessageChatDefault from "VoiceMessageChat" /* 14459 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 import apply from "apply" /* 12 */;
 
 const module_1652_mod = _mod1652;
@@ -276,7 +276,7 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx13.__initData = tmp57;
   const animatedStyle3 = require("module_1652").useAnimatedStyle(VoiceMessageOverlayTsx13);
   const tmp5Result21 = require("module_1652");
-  const tmp14Result = importDefault(tmp3 ? 8732 : 11286);
+  const tmp14Result = importDefault(tmp3 ? 8711 : 11268);
   const tmp63 = useKeyboardAnimatedValueDefault(safeAreaBottom);
   const items16 = [closure_38, initialAnimation, tmp63, CHAT_INPUT_HEIGHT, 32, 8];
   _require = undefined;
@@ -305,7 +305,7 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result }), ];
-  const obj4 = { style: null, source: _modDef14425 };
+  const obj4 = { style: null, source: _modDef14458 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
@@ -315,18 +315,18 @@ function LockPill(voiceMessageAnimationState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13932).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(13933).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(13956).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(13957).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1072).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(13000).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(13023).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let module_1652 = module_1652_mod;
 let closure_16 = module_1652.createAnimatedComponent(fn(1187).Icon);
 let module_1652 = module_1652_mod;
-let closure_17 = module_1652.createAnimatedComponent(fn(5781).Text);
+let closure_17 = module_1652.createAnimatedComponent(fn(5751).Text);
 let closure_18 = apply.memoize(() => module_1652.createAnimatedComponent(inlineStyles.Ellipse));
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_19 = createStyles.createStyles(() => {
   const obj = { innerContainer: { flexDirection: "row", alignItems: "flex-end", paddingTop: 8, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL, paddingBottom: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM }, contentContainer: { position: "absolute", bottom: 0, width: "100%", alignItems: "center", overflow: "hidden" }, contentContainerFloating: { justifyContent: "flex-end", overflow: "visible" }, floatingSendButton: null, floatingSendButtonActive: null, floatingSendButtonIconActive: null, voiceChatContainer: null, lockContainer: null, lockParentContainer: null, chevon: null };
   const size = { width: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH, height: nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT };
@@ -590,7 +590,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   const obj9 = { style: tmp5.voiceChatContainer, children: null };
   const obj10 = { isRecording: tmp8, initialAnimation: sharedValue, leftAccessory: null, rightAccessory: null };
   const tmpResult2 = require("WakeLock");
-  const obj11 = { icon: _modDef5894, variant: null, size: "sm", maxFontSizeMultiplier: 2, accessibilityLabel: null, onPressIn: null, onPress: null };
+  const obj11 = { icon: _modDef5863, variant: null, size: "sm", maxFontSizeMultiplier: 2, accessibilityLabel: null, onPressIn: null, onPress: null };
   let str = "tertiary";
   if (tmp16 === VoiceMessageAnimationState.CANCELLING) {
     str = "destructive";
@@ -616,7 +616,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   ({ floatingSendButton: obj14.style, floatingSendButtonActive: obj14.activeStyle, floatingSendButtonIconActive: obj14.activeIconStyle } = tmp5);
   if (!tmp8) {
     if (!exiting) {
-      let SendMessageIcon = tmp(12147).MicrophoneIcon;
+      let SendMessageIcon = tmp(12138).MicrophoneIcon;
     }
     const obj13 = { children: null };
     obj12.IconComponent = SendMessageIcon;
@@ -637,7 +637,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
     obj13.children = items13;
     return closure_14(closure_15, obj13);
   }
-  SendMessageIcon = tmp(5884).SendMessageIcon;
+  SendMessageIcon = tmp(5853).SendMessageIcon;
   tmp3Result2 = ChatInputActionButtonDefault;
 });
 const memoResult = noop.memo(function VoiceMessageEllipse(arg0) {

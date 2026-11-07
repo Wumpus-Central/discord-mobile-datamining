@@ -1,19 +1,19 @@
-// === Module 19049: SmartSearchSkeleton ===
+// === Module 19099: SmartSearchSkeleton ===
 
-// Module 19049 (SmartSearchSkeleton)
+// Module 19099 (SmartSearchSkeleton)
 import nativeDefault from "native" /* 575 */;
-import _modDef4279 from "module_4279" /* 4279 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 19037 */;
+import _modDef4249 from "module_4249" /* 4249 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 19087 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(12419);
+const AILoaderConstants = fn(12432);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_6 } = AILoaderConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let items = [_modDef4279.Sb2fo2, _modDef4279.rXNe0Z, _modDef4279["22g6Ju"], _modDef4279.IogGZY, _modDef4279.UEnMJF, _modDef4279.kk7BVL, _modDef4279.UVa49v];
-const createStyles = fn(5170);
+let items = [_modDef4249.Sb2fo2, _modDef4249.rXNe0Z, _modDef4249["22g6Ju"], _modDef4249.IogGZY, _modDef4249.UEnMJF, _modDef4249.kk7BVL, _modDef4249.UVa49v];
+const createStyles = fn(5140);
 let closure_10 = createStyles.createStyles((arg0) => {
   let num;
   if (arg0) {
@@ -40,10 +40,10 @@ export default noop.memo(function SmartSearchSkeleton(isCollapsed) {
   isCollapsed = isCollapsed.isCollapsed;
   let reducedMotion;
   const tmp = closure_10(isCollapsed);
-  reducedMotion = noop.useContext(reducedMotion(5184).AccessibilityPreferencesContext).reducedMotion;
+  reducedMotion = noop.useContext(reducedMotion(5154).AccessibilityPreferencesContext).reducedMotion;
   items = [reducedMotion.enabled];
   const memo = noop.useMemo(() => {
-    items = [_modDef4279.ffCCEe, ...closure_1_9.sort(() => Math.random() - 0.5)];
+    items = [_modDef4249.ffCCEe, ...closure_1_9.sort(() => Math.random() - 0.5)];
     return items.map((item) => {
       const intl = reducedMotion(dependencyMap[8]).intl;
       return intl.string(item);
@@ -60,7 +60,7 @@ export default noop.memo(function SmartSearchSkeleton(isCollapsed) {
   }, items);
   let obj = { style: tmp.block, children: null };
   let obj2 = { style: tmp.header, children: null };
-  const items1 = [closure_7(reducedMotion(12418).AILoader, { size: 12, color: "interactive-text-default" }), closure_7(reducedMotion(12976).AIShimmer, { text: memo, variant: "body-sm/semibold", color: "interactive-text-default", delay: memo1.shimmerDelayMs, initialDelay: memo1.shimmerInitialDelayMs, duration: memo1.shimmerDurationMs, style: tmp.label })];
+  const items1 = [closure_7(reducedMotion(12431).AILoader, { size: 12, color: "interactive-text-default" }), closure_7(reducedMotion(12987).AIShimmer, { text: memo, variant: "body-sm/semibold", color: "interactive-text-default", delay: memo1.shimmerDelayMs, initialDelay: memo1.shimmerInitialDelayMs, duration: memo1.shimmerDurationMs, style: tmp.label })];
   obj2.children = items1;
   const items2 = [closure_8(View, obj2), ];
   const obj4 = { style: tmp.skeletons, children: null };

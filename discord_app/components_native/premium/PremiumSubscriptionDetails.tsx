@@ -1,60 +1,60 @@
-// === Module 15475: PremiumSubscriptionDetails ===
+// === Module 15510: PremiumSubscriptionDetails ===
 
-// Module 15475 (PremiumSubscriptionDetails)
+// Module 15510 (PremiumSubscriptionDetails)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7410 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7691 */;
-import _modDef8627 from "module_8627" /* 8627 */;
-import _modDef10068 from "module_10068" /* 10068 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10696 */;
-import _modDef10717 from "module_10717" /* 10717 */;
-import _modDef10718 from "module_10718" /* 10718 */;
-import _modDef10719 from "module_10719" /* 10719 */;
-import _modDef10720 from "module_10720" /* 10720 */;
-import _modDef10721 from "module_10721" /* 10721 */;
-import _modDef10723 from "module_10723" /* 10723 */;
-import _modDef10726 from "module_10726" /* 10726 */;
-import _modDef15476 from "module_15476" /* 15476 */;
-import _modDef15477 from "module_15477" /* 15477 */;
-import _modDef15478 from "module_15478" /* 15478 */;
-import _modDef15479 from "module_15479" /* 15479 */;
-import _modDef15480 from "module_15480" /* 15480 */;
-import _modDef15481 from "module_15481" /* 15481 */;
-import _modDef15482 from "module_15482" /* 15482 */;
-import _modDef15483 from "module_15483" /* 15483 */;
-import _modDef15484 from "module_15484" /* 15484 */;
-import _modDef15485 from "module_15485" /* 15485 */;
-import _modDef15486 from "module_15486" /* 15486 */;
-import _modDef15487 from "module_15487" /* 15487 */;
-import _modDef15488 from "module_15488" /* 15488 */;
-import _modDef15489 from "module_15489" /* 15489 */;
-import _modDef15490 from "module_15490" /* 15490 */;
-import _modDef15491 from "module_15491" /* 15491 */;
-import _modDef15492 from "module_15492" /* 15492 */;
-import _modDef15493 from "module_15493" /* 15493 */;
-import _modDef15494 from "module_15494" /* 15494 */;
-import _modDef15495 from "module_15495" /* 15495 */;
-import _modDef15496 from "module_15496" /* 15496 */;
-import _modDef15497 from "module_15497" /* 15497 */;
-import _modDef15498 from "module_15498" /* 15498 */;
-import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 15500 */;
-import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 15512 */;
-import SubscriptionRenewalMutationsNoticeDefault from "SubscriptionRenewalMutationsNotice" /* 15513 */;
-import SubscriptionAccountHoldNoticeDefault from "SubscriptionAccountHoldNotice" /* 15514 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7668 */;
+import _modDef8606 from "module_8606" /* 8606 */;
+import _modDef10052 from "module_10052" /* 10052 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10679 */;
+import _modDef10700 from "module_10700" /* 10700 */;
+import _modDef10701 from "module_10701" /* 10701 */;
+import _modDef10702 from "module_10702" /* 10702 */;
+import _modDef10703 from "module_10703" /* 10703 */;
+import _modDef10704 from "module_10704" /* 10704 */;
+import _modDef10706 from "module_10706" /* 10706 */;
+import _modDef10709 from "module_10709" /* 10709 */;
+import _modDef15511 from "module_15511" /* 15511 */;
+import _modDef15512 from "module_15512" /* 15512 */;
+import _modDef15513 from "module_15513" /* 15513 */;
+import _modDef15514 from "module_15514" /* 15514 */;
+import _modDef15515 from "module_15515" /* 15515 */;
+import _modDef15516 from "module_15516" /* 15516 */;
+import _modDef15517 from "module_15517" /* 15517 */;
+import _modDef15518 from "module_15518" /* 15518 */;
+import _modDef15519 from "module_15519" /* 15519 */;
+import _modDef15520 from "module_15520" /* 15520 */;
+import _modDef15521 from "module_15521" /* 15521 */;
+import _modDef15522 from "module_15522" /* 15522 */;
+import _modDef15523 from "module_15523" /* 15523 */;
+import _modDef15524 from "module_15524" /* 15524 */;
+import _modDef15525 from "module_15525" /* 15525 */;
+import _modDef15526 from "module_15526" /* 15526 */;
+import _modDef15527 from "module_15527" /* 15527 */;
+import _modDef15528 from "module_15528" /* 15528 */;
+import _modDef15529 from "module_15529" /* 15529 */;
+import _modDef15530 from "module_15530" /* 15530 */;
+import _modDef15531 from "module_15531" /* 15531 */;
+import _modDef15532 from "module_15532" /* 15532 */;
+import _modDef15533 from "module_15533" /* 15533 */;
+import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 15535 */;
+import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 15547 */;
+import SubscriptionRenewalMutationsNoticeDefault from "SubscriptionRenewalMutationsNotice" /* 15548 */;
+import SubscriptionAccountHoldNoticeDefault from "SubscriptionAccountHoldNotice" /* 15549 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import IAPStore from "IAPStore" /* 7696 */;
+import IAPStore from "IAPStore" /* 7673 */;
 
 const require = globalThis.__r;
 
-const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(15499);
+const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(15534);
 require = fn;
 function handleCancelSubscription() {
   const self = this;
@@ -80,7 +80,7 @@ let closure_27 = async function _handleCancelSubscription() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -126,7 +126,7 @@ let closure_27 = async function _handleCancelSubscription() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -226,7 +226,7 @@ let closure_30 = async function _onResubscribeClick(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -292,7 +292,7 @@ let closure_30 = async function _onResubscribeClick(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp19) {
         c3 = tmp;
         throw tmp19;
@@ -461,7 +461,7 @@ class PremiumSubscriptionHeader {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -500,7 +500,7 @@ class PremiumSubscriptionHeader {
                 c3 = 0;
                 closure_128_2(false);
                 c4 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } catch (tmp23) {
               closure_2 = tmp23;
@@ -627,7 +627,7 @@ let size = { height: 35, width: 49 };
 const size1 = { height: 36, width: 51 };
 const size2 = { width: 51, height: 36 };
 let obj = { fontSize: 14, marginTop: 10, color: nativeDefault.unsafe_rawColors.WHITE };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj3 = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, header: { padding: 16 }, headerBackground: null, wumpusImg: null, logoContainer: null, container: null, buttonContainer: null, buttonWrapper: null, cancelLink: null, appleAccountMismatchNotice: null, appleAccountMismatchNoticeText: null, desktopSubtext: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -649,82 +649,82 @@ const collapsedCategories = createStyles.createStyles(obj3);
 let obj8 = { ACTIVE: "active", RESUB: "resub", ERROR: "error" };
 let obj9 = {};
 let obj10 = {};
-obj10[obj8.ACTIVE] = _modDef10720;
-obj10[obj8.ERROR] = _modDef15476;
-obj10[obj8.RESUB] = _modDef15477;
+obj10[obj8.ACTIVE] = _modDef10703;
+obj10[obj8.ERROR] = _modDef15511;
+obj10[obj8.RESUB] = _modDef15512;
 obj9[fn(2171).Branding.BUNDLE] = obj10;
 let obj11 = {};
-obj11[obj8.ACTIVE] = _modDef10717;
-obj11[obj8.ERROR] = _modDef15476;
-obj11[obj8.RESUB] = _modDef15477;
+obj11[obj8.ACTIVE] = _modDef10700;
+obj11[obj8.ERROR] = _modDef15511;
+obj11[obj8.RESUB] = _modDef15512;
 obj9[fn(2171).Branding.TIER_0] = obj11;
 let obj12 = {};
-obj12[obj8.ACTIVE] = _modDef10718;
-obj12[obj8.ERROR] = _modDef15476;
-obj12[obj8.RESUB] = _modDef15477;
+obj12[obj8.ACTIVE] = _modDef10701;
+obj12[obj8.ERROR] = _modDef15511;
+obj12[obj8.RESUB] = _modDef15512;
 obj9[fn(2171).Branding.TIER_1] = obj12;
 let obj13 = {};
-obj13[obj8.ACTIVE] = _modDef10719;
-obj13[obj8.ERROR] = _modDef15476;
-obj13[obj8.RESUB] = _modDef15477;
+obj13[obj8.ACTIVE] = _modDef10702;
+obj13[obj8.ERROR] = _modDef15511;
+obj13[obj8.RESUB] = _modDef15512;
 obj9[fn(2171).Branding.TIER_2] = obj13;
 let obj14 = {};
-obj14[obj8.ACTIVE] = _modDef10721;
-obj14[obj8.ERROR] = _modDef15478;
-obj14[obj8.RESUB] = _modDef15479;
+obj14[obj8.ACTIVE] = _modDef10704;
+obj14[obj8.ERROR] = _modDef15513;
+obj14[obj8.RESUB] = _modDef15514;
 obj9[fn(2171).Branding.PREMIUM_GUILD] = obj14;
 let obj15 = {};
 let obj16 = {};
-obj16[obj8.ACTIVE] = _modDef15480;
-obj16[obj8.ERROR] = _modDef15480;
-obj16[obj8.RESUB] = _modDef15480;
+obj16[obj8.ACTIVE] = _modDef15515;
+obj16[obj8.ERROR] = _modDef15515;
+obj16[obj8.RESUB] = _modDef15515;
 obj15[fn(2171).Branding.BUNDLE] = obj16;
 let obj17 = {};
-obj17[obj8.ACTIVE] = _modDef10068;
-obj17[obj8.ERROR] = _modDef15481;
-obj17[obj8.RESUB] = _modDef15482;
+obj17[obj8.ACTIVE] = _modDef10052;
+obj17[obj8.ERROR] = _modDef15516;
+obj17[obj8.RESUB] = _modDef15517;
 obj15[fn(2171).Branding.TIER_0] = obj17;
 let obj18 = {};
-obj18[obj8.ACTIVE] = _modDef15483;
-obj18[obj8.ERROR] = _modDef15484;
-obj18[obj8.RESUB] = _modDef15485;
+obj18[obj8.ACTIVE] = _modDef15518;
+obj18[obj8.ERROR] = _modDef15519;
+obj18[obj8.RESUB] = _modDef15520;
 obj15[fn(2171).Branding.TIER_1] = obj18;
 let obj19 = {};
-obj19[obj8.ACTIVE] = _modDef10723;
-obj19[obj8.ERROR] = _modDef15486;
-obj19[obj8.RESUB] = _modDef15487;
+obj19[obj8.ACTIVE] = _modDef10706;
+obj19[obj8.ERROR] = _modDef15521;
+obj19[obj8.RESUB] = _modDef15522;
 obj15[fn(2171).Branding.TIER_2] = obj19;
 let obj20 = {};
-obj20[obj8.ACTIVE] = _modDef15488;
-obj20[obj8.ERROR] = _modDef15489;
-obj20[obj8.RESUB] = _modDef15490;
+obj20[obj8.ACTIVE] = _modDef15523;
+obj20[obj8.ERROR] = _modDef15524;
+obj20[obj8.RESUB] = _modDef15525;
 obj15[fn(2171).Branding.PREMIUM_GUILD] = obj20;
 let closure_22 = { [fn(2171).Branding.BUNDLE]: { [obj8.ACTIVE]: size, [obj8.ERROR]: size, [obj8.RESUB]: size }, [fn(2171).Branding.TIER_0]: { [obj8.ACTIVE]: { height: 35, width: 29 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 }, [fn(2171).Branding.TIER_1]: { [obj8.ACTIVE]: { height: 35, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 }, [fn(2171).Branding.TIER_2]: { [obj8.ACTIVE]: { height: 37, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 }, [fn(2171).Branding.PREMIUM_GUILD]: { [obj8.ACTIVE]: { width: 51, height: 36 }, [obj8.ERROR]: size2, [obj8.RESUB]: size2 } };
 let obj21 = {};
 let obj22 = {};
-obj22[obj8.ACTIVE] = _modDef15491;
-obj22[obj8.ERROR] = _modDef15491;
-obj22[obj8.RESUB] = _modDef15492;
+obj22[obj8.ACTIVE] = _modDef15526;
+obj22[obj8.ERROR] = _modDef15526;
+obj22[obj8.RESUB] = _modDef15527;
 obj21[fn(2171).Branding.BUNDLE] = obj22;
 let obj23 = {};
-obj23[obj8.ACTIVE] = _modDef10726;
-obj23[obj8.ERROR] = _modDef10726;
-obj23[obj8.RESUB] = _modDef15493;
+obj23[obj8.ACTIVE] = _modDef10709;
+obj23[obj8.ERROR] = _modDef10709;
+obj23[obj8.RESUB] = _modDef15528;
 obj21[fn(2171).Branding.TIER_0] = obj23;
 let obj24 = {};
-obj24[obj8.ACTIVE] = _modDef15494;
-obj24[obj8.ERROR] = _modDef15494;
-obj24[obj8.RESUB] = _modDef15495;
+obj24[obj8.ACTIVE] = _modDef15529;
+obj24[obj8.ERROR] = _modDef15529;
+obj24[obj8.RESUB] = _modDef15530;
 obj21[fn(2171).Branding.TIER_1] = obj24;
 let obj25 = {};
-obj25[obj8.ACTIVE] = _modDef8627;
-obj25[obj8.ERROR] = _modDef8627;
-obj25[obj8.RESUB] = _modDef15496;
+obj25[obj8.ACTIVE] = _modDef8606;
+obj25[obj8.ERROR] = _modDef8606;
+obj25[obj8.RESUB] = _modDef15531;
 obj21[fn(2171).Branding.TIER_2] = obj25;
 let obj26 = {};
-obj26[obj8.ACTIVE] = _modDef15497;
-obj26[obj8.ERROR] = _modDef15497;
-obj26[obj8.RESUB] = _modDef15498;
+obj26[obj8.ACTIVE] = _modDef15532;
+obj26[obj8.ERROR] = _modDef15532;
+obj26[obj8.RESUB] = _modDef15533;
 obj21[fn(2171).Branding.PREMIUM_GUILD] = obj26;
 const dependencyMap3 = { [fn(2171).Branding.BUNDLE]: { height: 33, width: 205 }, [fn(2171).Branding.TIER_0]: { height: 32, width: 59 }, [fn(2171).Branding.TIER_1]: { height: 16, width: 156 }, [fn(2171).Branding.TIER_2]: { height: 32, width: 78 }, [fn(2171).Branding.PREMIUM_GUILD]: { height: 17, width: 184 } };
 let closure_25 = { [obj8.ACTIVE]: obj, [obj8.ERROR]: obj, [obj8.RESUB]: obj2 };
@@ -781,7 +781,7 @@ export function onCancelClick(subscription, analyticsLocations) {
   } else {
     const obj3 = {
       subscription,
-      mode: tmp(15500).WhatYouLoseMode.CANCEL,
+      mode: tmp(15535).WhatYouLoseMode.CANCEL,
       onContinue(arg0) {
           return handleCancelSubscription(closure_0, closure_1, arg0);
         }

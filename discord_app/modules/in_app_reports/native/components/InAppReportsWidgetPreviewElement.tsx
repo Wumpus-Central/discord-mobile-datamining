@@ -1,21 +1,21 @@
-// === Module 15396: InAppReportsWidgetPreviewElement ===
+// === Module 15431: InAppReportsWidgetPreviewElement ===
 
-// Module 15396 (InAppReportsWidgetPreviewElement)
+// Module 15431 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7873 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7877 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8906 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 15163 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15193 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7850 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7854 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8888 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 15196 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15227 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: { backgroundColor: nativeDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

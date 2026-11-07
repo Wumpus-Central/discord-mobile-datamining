@@ -1,6 +1,6 @@
-// === Module 5398: useCustomThemeDisplaySettings ===
+// === Module 5368: useCustomThemeDisplaySettings ===
 
-// Module 5398 (useCustomThemeDisplaySettings)
+// Module 5368 (useCustomThemeDisplaySettings)
 import initialize from "initialize" /* 504 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
 import _slicedToArray from "module_32" /* 32 */;

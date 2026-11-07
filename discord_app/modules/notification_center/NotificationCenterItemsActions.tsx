@@ -1,14 +1,14 @@
-// === Module 18775: NotificationCenterItemsActions ===
+// === Module 18825: NotificationCenterItemsActions ===
 
-// Module 18775 (NotificationCenterItemsActions)
+// Module 18825 (NotificationCenterItemsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import UserSettings from "UserSettings" /* 4995 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6827 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6940 */;
+import UserSettings from "UserSettings" /* 4965 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6802 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6915 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6938 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6913 */;
 
 require = fn;
 let closure_6 = async function _fetchNotificationCenterItems(arg0) {
@@ -22,7 +22,7 @@ let closure_6 = async function _fetchNotificationCenterItems(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -228,7 +228,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -287,7 +287,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         } else {
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp19) {
         closure_3 = tmp19;

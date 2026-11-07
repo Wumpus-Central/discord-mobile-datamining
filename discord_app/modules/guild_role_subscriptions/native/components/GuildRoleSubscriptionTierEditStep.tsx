@@ -1,13 +1,13 @@
-// === Module 20275: GuildRoleSubscriptionTierEditStep ===
+// === Module 20344: GuildRoleSubscriptionTierEditStep ===
 
-// Module 20275 (GuildRoleSubscriptionTierEditStep)
+// Module 20344 (GuildRoleSubscriptionTierEditStep)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7378 */;
-import FormSeparatorDefault from "FormSeparator" /* 17469 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
+import FormSeparatorDefault from "FormSeparator" /* 17518 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,14 +35,14 @@ function Footer(arg0) {
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5788).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  obj.children = timestampProducer(tmp5(5758).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
   return timestampProducer(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" }, scrollContainer: { flexGrow: 1 }, headerContainer: null, title: null, subtitle: null, separator: null, footerContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
 obj2.headerContainer = { position: "relative", paddingTop: nativeDefault.space.PX_48, paddingBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, alignItems: "center" };

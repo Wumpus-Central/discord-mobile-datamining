@@ -1,6 +1,6 @@
-// === Module 17554: getGradientStartPont ===
+// === Module 17603: getGradientStartPont ===
 
-// Module 17554 (getGradientStartPont)
+// Module 17603 (getGradientStartPont)
 import size from "module_2" /* 2 */;
 
 let items = [{ code: "(function getHorizontalOrVerticalStartPoint_getGradientStartPontTsx1(angle,width,height){switch(angle){case 0:return[-width/2,0];case 90:return[0,-height/2];case 180:return[width/2,0];default:return[0,height/2];}})" }];

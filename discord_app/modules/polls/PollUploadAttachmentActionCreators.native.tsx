@@ -1,9 +1,9 @@
-// === Module 12745: PollUploadAttachmentActionCreators ===
+// === Module 12758: PollUploadAttachmentActionCreators ===
 
-// Module 12745 (PollUploadAttachmentActionCreators)
-import FileManagerUtils from "FileManagerUtils" /* 8870 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9884 */;
-import PollAttachmentUtils from "PollAttachmentUtils" /* 12746 */;
+// Module 12758 (PollUploadAttachmentActionCreators)
+import FileManagerUtils from "FileManagerUtils" /* 8849 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9868 */;
+import PollAttachmentUtils from "PollAttachmentUtils" /* 12759 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -52,7 +52,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       } else if (1 === tmp8) {
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } else if (2 === tmp8) {
         if (arg0 === 1) {
           c8 = 3;
@@ -67,7 +67,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_3) {
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             filePathForGif = closure_132_0(closure_132_2[3]).getFilePathForGif(fileNameFromGifUrl);
             const obj9 = closure_132_0(closure_132_2[4]);
@@ -91,7 +91,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_5) {
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             c7 = 4;
             c8 = 1;
@@ -168,8 +168,8 @@ let closure_8 = async function _removeAllPollUploadAttachments(arg0) {
   }
   return value;
 };
-const DraftType = fn(7800).DraftType;
-const POLL_ATTACHMENT_FOLDER = fn(8498).POLL_ATTACHMENT_FOLDER;
+const DraftType = fn(7777).DraftType;
+const POLL_ATTACHMENT_FOLDER = fn(8477).POLL_ATTACHMENT_FOLDER;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 

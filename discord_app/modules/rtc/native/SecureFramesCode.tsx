@@ -1,8 +1,8 @@
-// === Module 9377: SecureFramesCode ===
+// === Module 9359: SecureFramesCode ===
 
-// Module 9377 (SecureFramesCode)
+// Module 9359 (SecureFramesCode)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5781 */;
+import Text_Text from "Text/Text" /* 5751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { codeText: { fontFamily: fn(1083).Fonts.CODE_NORMAL }, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, codeHeader: null, code: null, loading: null };
 let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.codeHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };

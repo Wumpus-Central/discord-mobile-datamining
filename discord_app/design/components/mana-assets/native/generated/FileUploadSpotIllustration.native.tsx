@@ -1,19 +1,19 @@
-// === Module 19346: FileUploadSpotIllustration ===
+// === Module 19405: FileUploadSpotIllustration ===
 
-// Module 19346 (FileUploadSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7160 */;
-import _modDef19347 from "module_19347" /* 19347 */;
-import _modDef19348 from "module_19348" /* 19348 */;
-import _modDef19349 from "module_19349" /* 19349 */;
+// Module 19405 (FileUploadSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef19406 from "module_19406" /* 19406 */;
+import _modDef19407 from "module_19407" /* 19407 */;
+import _modDef19408 from "module_19408" /* 19408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19347 }, 3: null };
-let obj2 = { uri: _modDef19347 };
-obj[2] = { uri: _modDef19348 };
-const obj3 = { uri: _modDef19348 };
-obj[3] = { uri: _modDef19349 };
+let obj = { 1: null, 2: { uri: _modDef19406 }, 3: null };
+let obj2 = { uri: _modDef19406 };
+obj[2] = { uri: _modDef19407 };
+const obj3 = { uri: _modDef19407 };
+obj[3] = { uri: _modDef19408 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FileUploadSpotIllustration.native.tsx");
 

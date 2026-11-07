@@ -1,8 +1,8 @@
-// === Module 11018: ConjureWorkerTickets ===
+// === Module 11002: ConjureWorkerTickets ===
 
-// Module 11018 (ConjureWorkerTickets)
+// Module 11002 (ConjureWorkerTickets)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import conjureLocalDev from "conjureLocalDev" /* 11019 */;
+import conjureLocalDev from "conjureLocalDev" /* 11003 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,13 +17,14 @@ function mintTicket() {
   return applyArgumentsResult;
 }
 let closure_7 = async function _mintTicket() {
-  c2 = 0;
   c3 = 0;
-  return (async (arg0) => {
-    closure_1 = workerTicket;
+  c4 = 0;
+  return (async (arg0, value) => {
+    closure_2 = workerTicket;
     const HTTP = HTTPUtils.HTTP;
-    await HTTP.post({ url, rejectWithError: true });
-    return closure_1(value.body);
+    const request = { url, body, rejectWithError: true };
+    await HTTP.post(request);
+    return closure_2(value.body);
   })();
 };
 function workerTicket(ticket) {
@@ -103,6 +104,6 @@ export function mintWorkerTicket(projectId) {
   map.delete(projectId);
   ticket = mintTicket(Endpoints.CONJURE_PROJECT_WS_TICKET(projectId));
 }
-export function mintRemixTicket(id) {
-  return mintTicket(Endpoints.CONJURE_PROJECT_REMIX_TICKET(id));
+export function mintRemixTicket(id, arg1) {
+  return mintTicket(Endpoints.CONJURE_PROJECT_REMIX_TICKET(id), arg1);
 }

@@ -1,6 +1,6 @@
-// === Module 16786: ? ===
+// === Module 16834: ? ===
 
-// Module 16786
+// Module 16834
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/upsells/profiles/banners/fantasy_land_banner.gif.js");

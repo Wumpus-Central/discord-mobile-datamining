@@ -1,10 +1,10 @@
-// === Module 16971: handleDisableAccount ===
+// === Module 17019: handleDisableAccount ===
 
-// Module 16971 (handleDisableAccount)
+// Module 17019 (handleDisableAccount)
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6116 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 16931 */;
-import GuildStore from "GuildStore" /* 5041 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6090 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 16979 */;
+import GuildStore from "GuildStore" /* 5011 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -36,7 +36,7 @@ export default function handleDisableAccount() {
     const obj2 = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
     if (flag) {
       obj2.onSubmit = function onSubmit(password) {
-        return currentUser(7239).disableAccount(password, true);
+        return currentUser(7214).disableAccount(password, true);
       };
       const intl3 = util.intl;
       obj2.title = intl3.string(util.t["8lQ2rR"]).toUpperCase();
@@ -45,7 +45,7 @@ export default function handleDisableAccount() {
       const str3 = intl3.string(util.t["8lQ2rR"]);
     } else {
       obj2.onSubmit = function onSubmit(password) {
-        return currentUser(7239).disableAccount(password, false);
+        return currentUser(7214).disableAccount(password, false);
       };
       const intl2 = util.intl;
       obj2.title = intl2.string(util.t.jf5GGb).toUpperCase();

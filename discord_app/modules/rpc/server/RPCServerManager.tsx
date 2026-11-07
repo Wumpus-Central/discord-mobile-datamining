@@ -1,40 +1,40 @@
-// === Module 16548: RPCServerManager ===
+// === Module 16596: RPCServerManager ===
 
-// Module 16548 (RPCServerManager)
+// Module 16596 (RPCServerManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import frameDeepLinks from "frameDeepLinks" /* 7603 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7967 */;
-import getSocketFrameDefault from "getSocketFrame" /* 9425 */;
-import transformUserDefault from "transformUser" /* 9430 */;
-import RPCHelpers from "RPCHelpers" /* 11985 */;
-import transformMessage from "transformMessage" /* 11986 */;
-import getRemoteIconURLDefault from "getRemoteIconURL" /* 11987 */;
-import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 16549 */;
-import useThermalState from "useThermalState" /* 16555 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16557 */;
+import frameDeepLinks from "frameDeepLinks" /* 7580 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7945 */;
+import getSocketFrameDefault from "getSocketFrame" /* 9407 */;
+import transformUserDefault from "transformUser" /* 9412 */;
+import RPCHelpers from "RPCHelpers" /* 11976 */;
+import transformMessage from "transformMessage" /* 11977 */;
+import getRemoteIconURLDefault from "getRemoteIconURL" /* 11978 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 16597 */;
+import useThermalState from "useThermalState" /* 16603 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16605 */;
 import _slicedToArray from "module_32" /* 32 */;
-import QuestStore from "QuestStore" /* 7945 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import GuildStore from "GuildStore" /* 5041 */;
+import QuestStore from "QuestStore" /* 7922 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildStore from "GuildStore" /* 5011 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import PresenceStore from "PresenceStore" /* 5917 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import PresenceStore from "PresenceStore" /* 5890 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5833 */;
+import VoiceStateStore from "VoiceStateStore" /* 5803 */;
 
 require = fn;
-const TransportTypes = fn(6608).TransportTypes;
+const TransportTypes = fn(6583).TransportTypes;
 const Constants = fn(1072);
 ({ ActivityActionTypes: closure_16, RelationshipTypes: closure_17, AnalyticEvents: closure_18, RPCCommands: closure_19, RPCEvents: closure_20, RPCCloseCodes: closure_21, ChannelTypes: closure_22 } = Constants);
-const FrameLayoutModes = fn(6927).FrameLayoutModes;
-const ActivityLayoutMode = fn(11864).ActivityLayoutMode;
-const MediaEngineContextTypes = fn(5924).MediaEngineContextTypes;
+const FrameLayoutModes = fn(6902).FrameLayoutModes;
+const ActivityLayoutMode = fn(11855).ActivityLayoutMode;
+const MediaEngineContextTypes = fn(5897).MediaEngineContextTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
 class RPCServerManager {
@@ -121,7 +121,7 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = obj.rpcServer;
         const result = rpcServer.dispatchToSubscriptions(constants3.VOICE_CHANNEL_SELECT, {}, (socket) => {
-          obj = obj(16554);
+          obj = obj(16602);
           if (obj.isGuildVoiceSocket(socket.socket)) {
             channel = channel.getChannel(channelId);
             let type;
@@ -248,7 +248,7 @@ class RPCServerManager {
       if (subscriptions.some((evt) => {
         let tmp = evt.evt === constants2.FRAME_DEEP_LINK;
         if (tmp) {
-          obj = obj(7603);
+          obj = obj(7580);
           tmp = obj.getFrameDeepLinkChannelId(getSocketFrameDefault(evt.socket)) === channelId;
         }
         return tmp;
@@ -259,7 +259,7 @@ class RPCServerManager {
           const rpcServer = tmp.rpcServer;
           const obj2 = { hash: takeFrameDeepLinkResult };
           const result = rpcServer.dispatchToSubscriptions(constants3.FRAME_DEEP_LINK, function targetsChannelFrame(socket) {
-            obj = obj(7603);
+            obj = obj(7580);
             return obj.getFrameDeepLinkChannelId(getSocketFrameDefault(socket.socket)) === channelId;
           }, obj2);
         }
@@ -389,7 +389,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(11985);
+            obj = obj(11976);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -404,7 +404,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(11985);
+            obj = obj(11976);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -419,7 +419,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(constants2.NONE, user);
           const rpcServer = tmp2.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(11985);
+            obj = obj(11976);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -441,7 +441,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(11985);
+              obj = obj(11976);
               rpcServer = obj.transformBaseRelationship(relationshipType, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) => closure_0(dependencyMap[31]).transformApplicationRelationship(closure_0, socket.socket.application.id));
@@ -466,7 +466,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(11985);
+              obj = obj(11976);
               rpcServer = obj.transformBaseRelationship(tmp, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) => closure_0(dependencyMap[31]).transformApplicationRelationship(closure_0, socket.socket.application.id));
@@ -496,7 +496,7 @@ class RPCServerManager {
             closure_0 = obj.transformBaseRelationship(relationshipType, user);
             const rpcServer = tmp.rpcServer;
             const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-              obj = obj(11985);
+              obj = obj(11976);
               return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
             });
           }

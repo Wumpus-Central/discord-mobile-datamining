@@ -1,9 +1,9 @@
-// === Module 11638: trackBadgeDirectoryAction ===
+// === Module 11597: trackBadgeDirectoryAction ===
 
-// Module 11638 (trackBadgeDirectoryAction)
+// Module 11597 (trackBadgeDirectoryAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserStore from "UserStore" /* 1385 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8855 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8834 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/badges/trackBadgeDirectoryAct
 
 export default function trackBadgeDirectoryAction(arg0) {
   ({ badge, displayedUserId } = arg0);
-  ({ actionName, isSociallyNavigated } = arg0);
+  ({ actionName, isSociallyNavigated, hasUnreadIndicator, source, surface } = arg0);
   const currentUser = UserStore.getCurrentUser();
   if (currentUser != null) {
     const id = currentUser.id;
@@ -33,7 +33,7 @@ export default function trackBadgeDirectoryAction(arg0) {
     const badges = BadgeDirectoryStore.getBadges(displayedUserId);
     length = badges.filter((owned) => owned.owned).length;
   }
-  const obj2 = { badge_action: actionName, badge_id: null, badge_tier: null, badge_owner_id: null, is_owned: null, progress_to_next_tier: null, is_earnable: null, is_socially_navigated: null, total_badges_owned: null };
+  const obj2 = { badge_action: actionName, badge_id: null, badge_tier: null, badge_owner_id: null, is_owned: null, progress_to_next_tier: null, is_earnable: null, is_socially_navigated: null, total_badges_owned: null, has_unread_indicator: null, surface: null, source: null };
   let badge_id;
   if (badge != null) {
     badge_id = badge.badge_id;
@@ -76,5 +76,8 @@ export default function trackBadgeDirectoryAction(arg0) {
   obj2.is_earnable = flag2;
   obj2.is_socially_navigated = isSociallyNavigated;
   obj2.total_badges_owned = length;
+  obj2.has_unread_indicator = hasUnreadIndicator;
+  obj2.surface = surface;
+  obj2.source = source;
   AnalyticsUtilsDefault.track(AnalyticEvents.BADGE_DIRECTORY_ACTION, obj2);
 };

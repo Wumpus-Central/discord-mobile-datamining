@@ -1,9 +1,9 @@
-// === Module 10972: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10955: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 10972 (useTrackFavoritesGuildUpsellModalOpened)
+// Module 10955 (useTrackFavoritesGuildUpsellModalOpened)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7410 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
 import noop from "module_19" /* 19 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;

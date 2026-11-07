@@ -1,6 +1,6 @@
-// === Module 13014: conjureHomeCarouselFan ===
+// === Module 13037: conjureHomeCarouselFan ===
 
-// Module 13014 (conjureHomeCarouselFan)
+// Module 13037 (conjureHomeCarouselFan)
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function conjureHomeCarouselFan_conjureHomeCarouselFanTsx1(steps,stepPx){let[MAX_DEG,CONJURE_HOME_CAROUSEL_STEP_DEG]=this.__closure;const angleDeg=Math.max(-MAX_DEG,Math.min(MAX_DEG,steps*CONJURE_HOME_CAROUSEL_STEP_DEG));const radius=stepPx/(CONJURE_HOME_CAROUSEL_STEP_DEG*Math.PI/180);const dropPx=radius*(1-Math.cos(angleDeg*Math.PI/180));return{angleDeg:angleDeg,dropPx:dropPx};})" }, 12, 4];

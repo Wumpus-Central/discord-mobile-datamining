@@ -1,27 +1,27 @@
-// === Module 11688: LocalActivityStore ===
+// === Module 11670: LocalActivityStore ===
 
-// Module 11688 (LocalActivityStore)
+// Module 11670 (LocalActivityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import ActivityTypes from "ActivityTypes" /* 5918 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9844 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 11697 */;
+import ActivityTypes from "ActivityTypes" /* 5891 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9828 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11679 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import RunningGameStore from "RunningGameStore" /* 2137 */;
-import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11689 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11690 */;
-import SpotifyStore from "SpotifyStore" /* 6651 */;
+import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11671 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11672 */;
+import SpotifyStore from "SpotifyStore" /* 6626 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6794 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 import DetectableGameStore from "DetectableGameStore" /* 2156 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 11694 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
-import SessionsStore from "SessionsStore" /* 5922 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 11676 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import SessionsStore from "SessionsStore" /* 5895 */;
 
 require = fn;
 function updateActivities() {

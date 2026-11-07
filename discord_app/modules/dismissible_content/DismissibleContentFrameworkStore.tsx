@@ -1,13 +1,13 @@
-// === Module 5006: DismissibleContentFrameworkStore ===
+// === Module 4976: DismissibleContentFrameworkStore ===
 
-// Module 5006 (DismissibleContentFrameworkStore)
+// Module 4976 (DismissibleContentFrameworkStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 5007 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 5010 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4977 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 4980 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

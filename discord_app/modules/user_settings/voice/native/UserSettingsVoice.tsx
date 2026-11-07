@@ -1,28 +1,28 @@
-// === Module 12115: UserSettingsVoice ===
+// === Module 12106: UserSettingsVoice ===
 
-// Module 12115 (UserSettingsVoice)
+// Module 12106 (UserSettingsVoice)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import Stack_Stack from "Stack/Stack" /* 6185 */;
-import TableRowGroup from "TableRowGroup" /* 7151 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7378 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12118 */;
-import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 12119 */;
-import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 12121 */;
-import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 12123 */;
-import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 12127 */;
-import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 12128 */;
-import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 12130 */;
-import VideoBackgroundOptionsRadioGroupDefault from "VideoBackgroundOptionsRadioGroup" /* 12138 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import Stack_Stack from "Stack/Stack" /* 6159 */;
+import TableRowGroup from "TableRowGroup" /* 7126 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12109 */;
+import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 12110 */;
+import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 12112 */;
+import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 12114 */;
+import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 12118 */;
+import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 12119 */;
+import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 12121 */;
+import VideoBackgroundOptionsRadioGroupDefault from "VideoBackgroundOptionsRadioGroup" /* 12129 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(12116).isMobileOverlaySupported;
-const guideURL = fn(12117).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(12107).isMobileOverlaySupported;
+const guideURL = fn(12108).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16 }, tableRow: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoice.tsx");

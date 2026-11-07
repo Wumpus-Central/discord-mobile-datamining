@@ -1,16 +1,16 @@
-// === Module 11498: ConjureAppIconTile ===
+// === Module 11480: ConjureAppIconTile ===
 
-// Module 11498 (ConjureAppIconTile)
-import Text_Text from "Text/Text" /* 5781 */;
-import AppsIcon from "AppsIcon" /* 8770 */;
-import useConjureDefaultAppIconDefault from "useConjureDefaultAppIcon" /* 11499 */;
-import useConjureProjectIcon from "useConjureProjectIcon" /* 11501 */;
+// Module 11480 (ConjureAppIconTile)
+import Text_Text from "Text/Text" /* 5751 */;
+import AppsIcon from "AppsIcon" /* 8749 */;
+import useConjureDefaultAppIconDefault from "useConjureDefaultAppIcon" /* 11481 */;
+import useConjureProjectIcon from "useConjureProjectIcon" /* 11483 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_5 = createStyles.createStyles((width, width2, backgroundColor, color) => {
   const obj = { tile: null, character: { color, fontSize: Math.round(width / 2), lineHeight: Math.round(0.625 * width) }, glyph: { width: width2, height: width2 } };
   const size = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor };

@@ -1,18 +1,18 @@
-// === Module 8680: experiment ===
+// === Module 8659: experiment ===
 
-// Module 8680 (experiment)
+// Module 8659 (experiment)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import wrappers from "wrappers" /* 1227 */;
-import rules from "rules" /* 8681 */;
-import duration from "duration" /* 8682 */;
+import rules from "rules" /* 8660 */;
+import duration from "duration" /* 8661 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const Experiment_NumberLineSettings_Mode = { EXCLUSIVE: 0, [0]: "EXCLUSIVE", SYNCED: 1, [1]: "SYNCED", PRE_ALLOCATED: 2, [2]: "PRE_ALLOCATED" };
 let obj2 = { CHANGE_SOURCE_UNSPECIFIED: 0, [0]: "CHANGE_SOURCE_UNSPECIFIED", MANUAL: 1, [1]: "MANUAL", CAP_PROPOSED: 2, [2]: "CAP_PROPOSED", CAP_PROPOSED_WITH_MODIFICATIONS: 3, [3]: "CAP_PROPOSED_WITH_MODIFICATIONS", CAP_AUTOMATED: 4, [4]: "CAP_AUTOMATED" };
 const obj3 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", USER: 1, [1]: "USER", INSTALLATION: 2, [2]: "INSTALLATION", GUILD: 3, [3]: "GUILD", CUSTOM: 4, [4]: "CUSTOM" };
-const obj4 = { SURFACE_UNSPECIFIED: 0, [0]: "SURFACE_UNSPECIFIED", API: 1, [1]: "API", APP: 2, [2]: "APP", DEVELOPER_PORTAL: 3, [3]: "DEVELOPER_PORTAL", ADMIN_PANEL: 4, [4]: "ADMIN_PANEL", ADS_BUDGET_AB: 5, [5]: "ADS_BUDGET_AB", AV_WORKER: 6, [6]: "AV_WORKER", SEO: 7, [7]: "SEO", MARKETING: 8, [8]: "MARKETING", DESIGN_DOCS: 9, [9]: "DESIGN_DOCS" };
+const obj4 = { SURFACE_UNSPECIFIED: 0, [0]: "SURFACE_UNSPECIFIED", API: 1, [1]: "API", APP: 2, [2]: "APP", DEVELOPER_PORTAL: 3, [3]: "DEVELOPER_PORTAL", ADMIN_PANEL: 4, [4]: "ADMIN_PANEL", ADS_BUDGET_AB: 5, [5]: "ADS_BUDGET_AB", AV_WORKER: 6, [6]: "AV_WORKER", SEO: 7, [7]: "SEO", MARKETING: 8, [8]: "MARKETING", DESIGN_DOCS: 9, [9]: "DESIGN_DOCS", APP_LAUNCH: 10, [10]: "APP_LAUNCH" };
 const obj5 = { ENABLED: 0, [0]: "ENABLED", DISABLED: 1, [1]: "DISABLED" };
 const obj6 = { FULL: 0, [0]: "FULL", FORCE_CONTROL: 3, [3]: "FORCE_CONTROL", OVERRIDES_ONLY: 4, [4]: "OVERRIDES_ONLY", OFF: 5, [5]: "OFF" };
 const obj7 = { DEFAULT: 0, [0]: "DEFAULT", HOLDOUT: 1, [1]: "HOLDOUT", NUMBERLINE: 2, [2]: "NUMBERLINE" };

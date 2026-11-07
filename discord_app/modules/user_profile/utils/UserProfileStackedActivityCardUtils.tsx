@@ -1,8 +1,8 @@
-// === Module 15099: UserProfileStackedActivityCardUtils ===
+// === Module 15131: UserProfileStackedActivityCardUtils ===
 
-// Module 15099 (UserProfileStackedActivityCardUtils)
+// Module 15131 (UserProfileStackedActivityCardUtils)
 import apply from "apply" /* 12 */;
-import ActivityTypes from "ActivityTypes" /* 5918 */;
+import ActivityTypes from "ActivityTypes" /* 5891 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");

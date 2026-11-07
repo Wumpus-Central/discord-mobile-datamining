@@ -1,10 +1,10 @@
-// === Module 19125: useFriendRequestCounts ===
+// === Module 19176: useFriendRequestCounts ===
 
-// Module 19125 (useFriendRequestCounts)
+// Module 19176 (useFriendRequestCounts)
 import initialize from "initialize" /* 504 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7899 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7876 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
 
 require = fn;
 const size = fn(2);

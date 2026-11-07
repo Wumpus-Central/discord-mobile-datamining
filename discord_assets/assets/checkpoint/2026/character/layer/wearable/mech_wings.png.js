@@ -1,6 +1,6 @@
-// === Module 6547: ? ===
+// === Module 6522: ? ===
 
-// Module 6547
+// Module 6522
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/wearable/mech_wings.png.js");

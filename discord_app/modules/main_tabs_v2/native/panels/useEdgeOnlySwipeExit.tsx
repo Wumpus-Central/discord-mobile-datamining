@@ -1,7 +1,7 @@
-// === Module 12413: useEdgeOnlySwipeExit ===
+// === Module 12426: useEdgeOnlySwipeExit ===
 
-// Module 12413 (useEdgeOnlySwipeExit)
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11401 */;
+// Module 12426 (useEdgeOnlySwipeExit)
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11383 */;
 import noop from "module_19" /* 19 */;
 
 const MainTabsNavigatorPanelContextDefault = MainTabsNavigatorPanelContext;

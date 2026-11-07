@@ -1,18 +1,18 @@
-// === Module 13432: OutcomeStep ===
+// === Module 13456: OutcomeStep ===
 
-// Module 13432 (OutcomeStep)
-import transitionToGuild from "transitionToGuild" /* 7617 */;
+// Module 13456 (OutcomeStep)
+import transitionToGuild from "transitionToGuild" /* 7594 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5041 */;
+import GuildStore from "GuildStore" /* 5011 */;
 
 require = fn;
-const GameOrganizationInviteConstants = fn(11522);
+const GameOrganizationInviteConstants = fn(11504);
 ({ GameOrganizationInviteAcceptFailureReason: closure_6, GameOrganizationInviteAcceptStatus: metroImportDefault, GameOrganizationLinkedGuildJoinStatus: closure_8 } = GameOrganizationInviteConstants);
-const onPress = fn(13422).closeGameOrganizationJoinModal;
+const onPress = fn(13445).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_12 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/steps/OutcomeStep.tsx");
@@ -23,7 +23,7 @@ export function OutcomeStep(code) {
   dependencyMap = undefined;
   let flag;
   const tmp = closure_12();
-  const tmp4 = stateFromStores(13419)(code.code);
+  const tmp4 = stateFromStores(13442)(code.code);
   let guildId;
   if (tmp4 != null) {
     guildId = tmp4.guildId;
@@ -82,7 +82,7 @@ export function OutcomeStep(code) {
   if (displayNoun == null) {
     displayNoun = null;
   }
-  const tmp2ResultResult = stateFromStores(13420)({ displayNoun, lowercase: true });
+  const tmp2ResultResult = stateFromStores(13443)({ displayNoun, lowercase: true });
   let str;
   if (tmp4 != null) {
     str = tmp4.organization.name;
@@ -186,26 +186,26 @@ export function OutcomeStep(code) {
     ({ subtitle, cta } = obj22);
     const obj23 = { spacing: tmp2(575).space.PX_8, children: null };
     const obj24 = { variant: "heading-xl/semibold", style: tmp.text, accessibilityRole: "header", children: obj22.title };
-    const items3 = [closure_10(tmp6(5781).Text, obj24), ];
+    const items3 = [closure_10(tmp6(5751).Text, obj24), ];
     let tmp27Result = null != subtitle;
     if (tmp27Result) {
       const obj25 = { variant: "body-md/normal", color: "text-muted", style: tmp.text, children: subtitle };
-      tmp27Result = closure_10(tmp6(5781).Text, obj25);
+      tmp27Result = closure_10(tmp6(5751).Text, obj25);
     }
     const obj26 = { children: null };
     const obj27 = { children: null };
     items3[1] = tmp27Result;
     obj23.children = items3;
-    obj27.children = closure_11(tmp6(6185).Stack, obj23);
-    const items4 = [closure_10(tmp6(8064).ModalContent, obj27), ];
+    obj27.children = closure_11(tmp6(6159).Stack, obj23);
+    const items4 = [closure_10(tmp6(8043).ModalContent, obj27), ];
     const obj28 = { children: null };
     const obj56 = { text: null, size: "lg", onPress: null, disabled: null };
     ({ text: obj29.text, onPress: obj29.onPress } = cta);
     obj56.disabled = tmp9;
-    obj28.children = closure_10(tmp6(5788).Button, obj56);
-    items4[1] = closure_10(tmp6(13428).ModalFooter, obj28);
+    obj28.children = closure_10(tmp6(5758).Button, obj56);
+    items4[1] = closure_10(tmp6(13451).ModalFooter, obj28);
     obj26.children = items4;
-    return closure_11(tmp2(13424), obj26);
+    return closure_11(tmp2(13447), obj26);
   }
-  const tmp2Result = stateFromStores(13420);
+  const tmp2Result = stateFromStores(13443);
 }

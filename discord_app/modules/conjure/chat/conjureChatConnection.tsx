@@ -1,13 +1,13 @@
-// === Module 11008: conjureChatConnection ===
+// === Module 10992: conjureChatConnection ===
 
-// Module 11008 (conjureChatConnection)
+// Module 10992 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import _modDef4024 from "module_4024" /* 4024 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10991 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11009 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11011 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11012 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10974 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10993 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10995 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10996 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -68,7 +68,7 @@ let obj = {
   voice_channel_pin: handleProjectEvent,
   staff_notice: handleProjectEvent,
   side_reply(id, projectId) {
-    DispatcherDefault.dispatch({ type: "CONJURE_CHAT_SIDE_REPLY", projectId: projectId.projectId, id: id.id, inReplyTo: id.in_reply_to, content: id.content, timestamp: id.ts });
+    DispatcherDefault.dispatch({ type: "CONJURE_CHAT_SIDE_REPLY", projectId: projectId.projectId, id: id.id, inReplyTo: id.in_reply_to, content: id.content, timestamp: id.ts, attachments: id.attachments });
   },
   source_checkpoint(turnId, projectId) {
     DispatcherDefault.dispatch({ type: "CONJURE_CHAT_SOURCE_CHECKPOINT", projectId: projectId.projectId, turnId: turnId.turn_id, sourceSha: turnId.source_sha });
@@ -102,7 +102,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef4024["913RMa"]);
+      const stringResult = intl.string(_modDef4026["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -191,7 +191,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef4024["0+RUWx"]);
+      const stringResult = intl.string(_modDef4026["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;

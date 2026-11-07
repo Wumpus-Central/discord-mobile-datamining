@@ -1,6 +1,6 @@
-// === Module 12792: ConjureViewability ===
+// === Module 12804: ConjureViewability ===
 
-// Module 12792 (ConjureViewability)
+// Module 12804 (ConjureViewability)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureViewability.tsx");

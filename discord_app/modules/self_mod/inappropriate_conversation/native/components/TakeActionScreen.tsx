@@ -1,25 +1,25 @@
-// === Module 18002: TakeActionScreen ===
+// === Module 18049: TakeActionScreen ===
 
-// Module 18002 (TakeActionScreen)
+// Module 18049 (TakeActionScreen)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5864 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7575 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7591 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11427 */;
+import LinkingDefault from "Linking" /* 5834 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7552 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7568 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11409 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(11414);
+const Constants = fn(11396);
 ({ MODAL_LOCATION_CONTEXT_MOBILE: closure_10, NOFILTR_URL: closure_11, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 }, helplineGroup: null, textCenter: null };
 let obj3 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
 obj2.helplineGroup = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_4 };
@@ -76,7 +76,7 @@ export default function TakeActionButtons(senderId) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -94,15 +94,15 @@ export default function TakeActionButtons(senderId) {
             v1 = 1;
             dependencyMap = 1;
             const obj5 = {
-              value: tmp4(8443).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
+              value: tmp4(8422).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
                         dependencyMap(true);
                         const obj2 = { text: null, variant: "success" };
                         const intl = closure_0(1113).intl;
                         obj2.text = intl.string(closure_0(1113).t.gn2c6X);
-                        c1(5867).open(closure_2_13, obj2);
+                        c1(5837).open(closure_2_13, obj2);
                       }, () => {
                         const intl = closure_1_0(1113).intl;
-                        closure_1_0(5866).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
+                        closure_1_0(5836).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
                       }),
               done: false
             };
@@ -115,9 +115,9 @@ export default function TakeActionButtons(senderId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_5(false);
-          const result = v1(7591).showReportSuccessToast(closure_128_0, closure_128_1);
-          closure_128_3(tmp4(11427).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-          const obj = v1(7591);
+          const result = v1(7568).showReportSuccessToast(closure_128_0, closure_128_1);
+          closure_128_3(tmp4(11409).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          const obj = v1(7568);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

@@ -1,24 +1,24 @@
-// === Module 13614: ForwardPreview ===
+// === Module 13638: ForwardPreview ===
 
-// Module 13614 (ForwardPreview)
+// Module 13638 (ForwardPreview)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
-import useThemeDefault from "useTheme" /* 5399 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6245 */;
-import ImageIcon from "ImageIcon" /* 8751 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8802 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 9481 */;
-import ClipView from "ClipView" /* 9611 */;
-import ChatItemDefault from "ChatItem" /* 10023 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10671 */;
-import ImagesIcon2 from "ImagesIcon" /* 12994 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13615 */;
-import MosaicMediaType from "MosaicMediaType" /* 13616 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13618 */;
+import useThemeDefault from "useTheme" /* 5369 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6220 */;
+import ImageIcon from "ImageIcon" /* 8730 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8781 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 9463 */;
+import ClipView from "ClipView" /* 9593 */;
+import ChatItemDefault from "ChatItem" /* 10007 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10654 */;
+import ImagesIcon2 from "ImagesIcon" /* 13017 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13639 */;
+import MosaicMediaType from "MosaicMediaType" /* 13640 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13642 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -33,7 +33,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(575).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(5170).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(5140).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -51,7 +51,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(5170);
+  let obj = attachmentCount(5140);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -61,7 +61,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 56;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
 let size = { width: 4, height: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
 obj2.quote = size;

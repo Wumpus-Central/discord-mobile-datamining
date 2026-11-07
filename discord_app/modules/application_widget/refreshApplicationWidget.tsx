@@ -1,11 +1,11 @@
-// === Module 12381: refreshApplicationWidget ===
+// === Module 12379: refreshApplicationWidget ===
 
-// Module 12381 (refreshApplicationWidget)
+// Module 12379 (refreshApplicationWidget)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
 const Endpoints = fn(1072).Endpoints;
-const promiseDeduper = new fn(5288).PromiseDeduper();
+const promiseDeduper = new fn(5258).PromiseDeduper();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/refreshApplicationWidget.tsx");
 
@@ -22,7 +22,7 @@ export function refreshApplicationWidget(play) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

@@ -1,9 +1,9 @@
-// === Module 5847: RegionalFeatureConfigUtils ===
+// === Module 5817: RegionalFeatureConfigUtils ===
 
-// Module 5847 (RegionalFeatureConfigUtils)
+// Module 5817 (RegionalFeatureConfigUtils)
 import initialize from "initialize" /* 504 */;
-import MediaTakedownRegulation from "MediaTakedownRegulation" /* 5854 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5848 */;
+import MediaTakedownRegulation from "MediaTakedownRegulation" /* 5824 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5818 */;
 
 const require = globalThis.__r;
 

@@ -1,7 +1,7 @@
-// === Module 7441: ClipboardUtils ===
+// === Module 7418: ClipboardUtils ===
 
-// Module 7441 (ClipboardUtils)
-import _modDef7442 from "module_7442" /* 7442 */;
+// Module 7418 (ClipboardUtils)
+import _modDef7419 from "module_7419" /* 7419 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = async function _copy(arg0) {
@@ -15,7 +15,7 @@ let closure_3 = async function _copy(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -29,7 +29,7 @@ let closure_3 = async function _copy(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          _modDef7442.setString(closure_0);
+          _modDef7419.setString(closure_0);
           if (dependencyMap != null) {
             dependencyMap();
           }
@@ -47,7 +47,7 @@ let closure_3 = async function _copy(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp13) {
       c2 = tmp;
@@ -70,5 +70,5 @@ export function copy() {
   return applyArgumentsResult;
 }
 export function getString() {
-  return _modDef7442.getString();
+  return _modDef7419.getString();
 }

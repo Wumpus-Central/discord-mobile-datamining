@@ -1,25 +1,25 @@
-// === Module 6650: SelfPresenceStore ===
+// === Module 6625: SelfPresenceStore ===
 
-// Module 6650 (SelfPresenceStore)
+// Module 6625 (SelfPresenceStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import UserSettings from "UserSettings" /* 4995 */;
-import ActivityTypes from "ActivityTypes" /* 5918 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7678 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10898 */;
-import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 15761 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
-import SpotifyStore from "SpotifyStore" /* 6651 */;
+import UserSettings from "UserSettings" /* 4965 */;
+import ActivityTypes from "ActivityTypes" /* 5891 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7655 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10881 */;
+import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 15803 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
+import SpotifyStore from "SpotifyStore" /* 6626 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 import DetectableGameStore from "DetectableGameStore" /* 2156 */;
-import IdleStore from "IdleStore" /* 6785 */;
+import IdleStore from "IdleStore" /* 6760 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2160 */;
-import LocalActivityStore from "LocalActivityStore" /* 11688 */;
-import PresenceStore from "PresenceStore" /* 5917 */;
-import SessionsStore from "SessionsStore" /* 5922 */;
+import LocalActivityStore from "LocalActivityStore" /* 11670 */;
+import PresenceStore from "PresenceStore" /* 5890 */;
+import SessionsStore from "SessionsStore" /* 5895 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -158,7 +158,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5917).sortActivity;
+const sortActivity = fn(5890).sortActivity;
 const Constants = fn(1072);
 const StatusTypes = Constants.StatusTypes;
 const AppStates = Constants.AppStates;

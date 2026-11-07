@@ -1,13 +1,13 @@
-// === Module 8607: PremiumGroupInviteEmbed ===
+// === Module 8586: PremiumGroupInviteEmbed ===
 
-// Module 8607 (PremiumGroupInviteEmbed)
+// Module 8586 (PremiumGroupInviteEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3444 from "module_3444" /* 3444 */;
-import createStyles from "createStyles" /* 5170 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8488 */;
-import _modDef8608 from "module_8608" /* 8608 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8609 */;
+import createStyles from "createStyles" /* 5140 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8467 */;
+import _modDef8587 from "module_8587" /* 8587 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8588 */;
 import PremiumGroupConstants from "PremiumGroupConstants" /* 2184 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ export function createPremiumGroupInviteEmbed(message, theme, id, channel) {
     ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } = createStyles.createNativeStyleProperties(obj2)(theme));
     const tmp9 = createStyles.createNativeStyleProperties(obj2)(theme);
     const author = message.author;
-    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8608);
+    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8587);
     const obj3 = { sender: author, channel, isSender: id === author.id, inviteState: constants.UNKNOWN };
     const premiumGroupInviteEmbedText = PremiumGroupUtils.getPremiumGroupInviteEmbedText(obj3);
     if (null != premiumGroupInviteEmbedText) {

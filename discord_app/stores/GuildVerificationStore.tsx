@@ -1,14 +1,14 @@
-// === Module 6788: GuildVerificationStore ===
+// === Module 6763: GuildVerificationStore ===
 
-// Module 6788 (GuildVerificationStore)
+// Module 6763 (GuildVerificationStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRecord from "GuildRecord" /* 5037 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 5088 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import GuildRoleStore from "GuildRoleStore" /* 5076 */;
-import GuildStore from "GuildStore" /* 5041 */;
+import GuildRecord from "GuildRecord" /* 5007 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 5058 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildRoleStore from "GuildRoleStore" /* 5046 */;
+import GuildStore from "GuildStore" /* 5011 */;
 import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

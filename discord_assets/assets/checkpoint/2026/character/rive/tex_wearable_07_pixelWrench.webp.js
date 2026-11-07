@@ -1,6 +1,6 @@
-// === Module 13829: ? ===
+// === Module 13853: ? ===
 
-// Module 13829
+// Module 13853
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wearable_07_pixelWrench.webp.js");

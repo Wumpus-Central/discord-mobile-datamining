@@ -1,8 +1,8 @@
-// === Module 12543: UserProfileConfirmRemoveFriend ===
+// === Module 12556: UserProfileConfirmRemoveFriend ===
 
-// Module 12543 (UserProfileConfirmRemoveFriend)
+// Module 12556 (UserProfileConfirmRemoveFriend)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 6122 */;
+import AlertModal from "AlertModal" /* 6096 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,19 +1,19 @@
-// === Module 18369: MessagesItemChannelAvatar ===
+// === Module 18416: MessagesItemChannelAvatar ===
 
-// Module 18369 (MessagesItemChannelAvatar)
+// Module 18416 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 575 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10935 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10918 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5917 */;
-import TypingStore from "TypingStore" /* 13936 */;
+import PresenceStore from "PresenceStore" /* 5890 */;
+import TypingStore from "TypingStore" /* 13961 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11199).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(5882).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = { borderRadius: nativeDefault.radii.round, marginRight: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
   let num = 1;
@@ -105,7 +105,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "Button", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "74c95ff71d003758ade1ed320482bf52", style: "lt.messages.74c95ff71d003758ade1ed320482bf52.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
+      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "Button", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "f27ca55731d682c99e0574ecbc9d6d61", style: "no.messages.f27ca55731d682c99e0574ecbc9d6d61.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
         tmp12 = status;
@@ -116,7 +116,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1187).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "Button", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "74c95ff71d003758ade1ed320482bf52", style: "lt.messages.74c95ff71d003758ade1ed320482bf52.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
+      tmp11Result = jsx(tmp3(1187).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "Button", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "f27ca55731d682c99e0574ecbc9d6d61", style: "no.messages.f27ca55731d682c99e0574ecbc9d6d61.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
     }
   }
   return tmp11Result;

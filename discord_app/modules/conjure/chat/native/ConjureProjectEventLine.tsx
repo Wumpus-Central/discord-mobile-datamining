@@ -1,12 +1,12 @@
-// === Module 12841: ConjureProjectEventLine ===
+// === Module 12852: ConjureProjectEventLine ===
 
-// Module 12841 (ConjureProjectEventLine)
-import Text_Text from "Text/Text" /* 5781 */;
-import useConjureRemixSettingsRequestDefault from "useConjureRemixSettingsRequest" /* 12807 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12830 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12834 */;
-import ConjureVoiceChannelPinCardDefault from "ConjureVoiceChannelPinCard" /* 12844 */;
-import ConjureSettingsRequestCardDefault from "ConjureSettingsRequestCard" /* 12846 */;
+// Module 12852 (ConjureProjectEventLine)
+import Text_Text from "Text/Text" /* 5751 */;
+import useConjureRemixSettingsRequestDefault from "useConjureRemixSettingsRequest" /* 12819 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12841 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12845 */;
+import ConjureVoiceChannelPinCardDefault from "ConjureVoiceChannelPinCard" /* 12855 */;
+import ConjureSettingsRequestCardDefault from "ConjureSettingsRequestCard" /* 12857 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,23 +1,23 @@
-// === Module 17012: IOSConversationSuggestionsSetting ===
+// === Module 17060: IOSConversationSuggestionsSetting ===
 
-// Module 17012 (IOSConversationSuggestionsSetting)
+// Module 17060 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import _mod5085 from "module_5085" /* 5085 */;
+import _mod5055 from "module_5055" /* 5055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const identity = fn(1254);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 fn(17).NativeModules.IntentsHandler;
-const SettingBuilders = fn(11703);
+const SettingBuilders = fn(11685);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(8524).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8503).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
     const effect = noop.useEffect(() => {
       conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
@@ -26,7 +26,7 @@ const toggle = SettingBuilders.createToggle({
         isEnabled(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
       });
     }, []);
-    return closure_4((isEnabled) => isEnabled.isEnabled, _mod5085.shallow);
+    return closure_4((isEnabled) => isEnabled.isEnabled, _mod5055.shallow);
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);

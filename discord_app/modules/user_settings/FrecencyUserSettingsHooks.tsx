@@ -1,7 +1,7 @@
-// === Module 10385: FrecencyUserSettingsHooks ===
+// === Module 10368: FrecencyUserSettingsHooks ===
 
-// Module 10385 (FrecencyUserSettingsHooks)
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5000 */;
+// Module 10368 (FrecencyUserSettingsHooks)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4970 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 

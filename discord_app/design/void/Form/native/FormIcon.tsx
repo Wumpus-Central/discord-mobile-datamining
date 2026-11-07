@@ -1,12 +1,12 @@
-// === Module 7404: FormIcon ===
+// === Module 7381: FormIcon ===
 
-// Module 7404 (FormIcon)
+// Module 7381 (FormIcon)
 import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_3 = createStyles.createStyles({ icon: { opacity: 0.6 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormIcon.tsx");

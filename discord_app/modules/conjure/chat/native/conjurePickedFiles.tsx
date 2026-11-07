@@ -1,11 +1,11 @@
-// === Module 12954: conjurePickedFiles ===
+// === Module 12965: conjurePickedFiles ===
 
-// Module 12954 (conjurePickedFiles)
-import UploadDefault from "Upload" /* 8300 */;
-import UploadPlatform from "UploadPlatform" /* 8301 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8311 */;
-import ImagePickerDefault from "ImagePicker" /* 8312 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12776 */;
+// Module 12965 (conjurePickedFiles)
+import UploadDefault from "Upload" /* 8279 */;
+import UploadPlatform from "UploadPlatform" /* 8280 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8290 */;
+import ImagePickerDefault from "ImagePicker" /* 8291 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12789 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_4 = async function _pickConjurePhotos() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ let closure_7 = async function _uploadConjurePickedFile(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

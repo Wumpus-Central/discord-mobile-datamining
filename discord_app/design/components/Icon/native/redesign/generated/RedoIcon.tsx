@@ -1,9 +1,9 @@
-// === Module 17346: RedoIcon ===
+// === Module 17394: RedoIcon ===
 
-// Module 17346 (RedoIcon)
+// Module 17394 (RedoIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5871 */;
-import _mod17347 from "module_17347" /* 17347 */;
+import BaseIconImage from "BaseIconImage" /* 5841 */;
+import _mod17395 from "module_17395" /* 17395 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function RedoIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17347, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17395, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

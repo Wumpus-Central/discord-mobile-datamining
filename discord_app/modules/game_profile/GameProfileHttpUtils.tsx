@@ -1,15 +1,15 @@
-// === Module 9554: GameProfileHttpUtils ===
+// === Module 9536: GameProfileHttpUtils ===
 
-// Module 9554 (GameProfileHttpUtils)
+// Module 9536 (GameProfileHttpUtils)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import StoreUtils from "StoreUtils" /* 6613 */;
+import StoreUtils from "StoreUtils" /* 6588 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7838 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7815 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import GameProfileStore from "GameProfileStore" /* 9421 */;
+import GameProfileStore from "GameProfileStore" /* 9403 */;
 
 require = fn;
 let closure_9 = async function _getShopCollection() {
@@ -54,7 +54,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
         const obj7 = { type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: closure_130_0, games: closure_130_1 };
         closure_131_1(closure_131_2[6]).dispatch(obj7);
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp18) {
       c5 = tmp;
@@ -163,7 +163,7 @@ let closure_12 = async function _getGameAnnouncements() {
   })();
 };
 const Endpoints = fn(1072).Endpoints;
-let closure_8 = fn(9555).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+let closure_8 = fn(9537).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 const initialize = fn(504);
 let obj2 = {
   getQueryId(arg0, arg1) {
@@ -203,7 +203,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -243,7 +243,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;

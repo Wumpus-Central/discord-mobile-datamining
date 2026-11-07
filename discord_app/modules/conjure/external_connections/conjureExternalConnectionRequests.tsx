@@ -1,7 +1,7 @@
-// === Module 12349: conjureExternalConnectionRequests ===
+// === Module 12347: conjureExternalConnectionRequests ===
 
-// Module 12349 (conjureExternalConnectionRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 11095 */;
+// Module 12347 (conjureExternalConnectionRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 11081 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_3 = async function _fetchProjectMcpConnection(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

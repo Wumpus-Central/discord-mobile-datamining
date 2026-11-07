@@ -1,11 +1,11 @@
-// === Module 14208: EmojiSuggestionBarSmall ===
+// === Module 14238: EmojiSuggestionBarSmall ===
 
-// Module 14208 (EmojiSuggestionBarSmall)
+// Module 14238 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10164 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10188 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 14198 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10147 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10171 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 14223 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -74,10 +74,10 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   });
 }
 const jsx = fn(21).jsx;
-const sum = fn(10080).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(10064).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 let closure_6 = sum + nativeDefault.space.PX_8;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = { position: "absolute", top: null, right: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, height: sum, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };

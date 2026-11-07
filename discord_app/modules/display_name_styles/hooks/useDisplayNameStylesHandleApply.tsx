@@ -1,6 +1,6 @@
-// === Module 17589: useDisplayNameStylesHandleApply ===
+// === Module 17638: useDisplayNameStylesHandleApply ===
 
-// Module 17589 (useDisplayNameStylesHandleApply)
+// Module 17638 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const HexagonCampaignConstants = fn(5195);
+const HexagonCampaignConstants = fn(5165);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: closure_8, HexagonCampaignPerk: closure_9 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
@@ -46,7 +46,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -88,7 +88,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
                     try {
@@ -106,8 +106,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           closure_0 = tmp8;
                           closure_128_0 = undefined;
                           if (closure_2_1) {
-                            const result = displayNameStyles(16719).saveHexagonCampaignPreviousDisplayNameStyles();
-                            const obj4 = displayNameStyles(16719);
+                            const result = displayNameStyles(16767).saveHexagonCampaignPreviousDisplayNameStyles();
+                            const obj4 = displayNameStyles(16767);
                           }
                           if (closure_1_10) {
                             closure_1_12.current = true;
@@ -115,15 +115,15 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                             const obj5 = { displayNameStyles };
                             colors = 3;
                             c5 = 1;
-                            const obj6 = { value: displayNameStyles(7239).saveProfileAndAccountChanges(obj5), done: false };
+                            const obj6 = { value: displayNameStyles(7214).saveProfileAndAccountChanges(obj5), done: false };
                             return obj6;
                           } else if (closure_1_7) {
-                            const result1 = displayNameStyles(8830).setTryItOutDisplayNameStyles(displayNameStyles);
-                            const tmp31Result = displayNameStyles(8830);
+                            const result1 = displayNameStyles(8809).setTryItOutDisplayNameStyles(displayNameStyles);
+                            const tmp31Result = displayNameStyles(8809);
                           } else {
                             const obj7 = { guildId, displayNameStyles };
-                            displayNameStyles(8827).setPendingChanges(obj7);
-                            const tmp31Result2 = displayNameStyles(8827);
+                            displayNameStyles(8806).setPendingChanges(obj7);
+                            const tmp31Result2 = displayNameStyles(8806);
                           }
                         }
                       } else if (1 === tmp8) {
@@ -172,14 +172,14 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                       const obj13 = { font_name: displayNameStyles(1395).DisplayNameFont[closure_2], effect_name: displayNameStyles(1396).DisplayNameEffect[c3], colors, entry_point };
                       closure_2_1(1252).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                       if (closure_129_1) {
-                        const result2 = displayNameStyles(16719).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
-                        const obj10 = displayNameStyles(16719);
+                        const result2 = displayNameStyles(16767).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
+                        const obj10 = displayNameStyles(16767);
                       }
                       if (closure_1_8 != null) {
                         closure_1_8();
                       }
                       c5 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     } catch (tmp63) {
                       closure_2 = tmp63;
                       if (tmp5 === c3) {

@@ -1,14 +1,14 @@
-// === Module 14315: useGuildPowerupCardFooterConfig ===
+// === Module 14349: useGuildPowerupCardFooterConfig ===
 
-// Module 14315 (useGuildPowerupCardFooterConfig)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 14280 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14284 */;
-import GuildStore from "GuildStore" /* 5041 */;
+// Module 14349 (useGuildPowerupCardFooterConfig)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 14310 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14314 */;
+import GuildStore from "GuildStore" /* 5011 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5376);
+const GuildPowerupsConstants = fn(5346);
 ({ GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP, GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4, PowerupActiveStatusType: hasOwnProperty } = GuildPowerupsConstants);
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);

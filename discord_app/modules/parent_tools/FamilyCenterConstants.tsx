@@ -1,6 +1,6 @@
-// === Module 7815: FamilyCenterConstants ===
+// === Module 7792: FamilyCenterConstants ===
 
-// Module 7815 (FamilyCenterConstants)
+// Module 7792 (FamilyCenterConstants)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import _modDef2664 from "module_2664" /* 2664 */;
@@ -314,6 +314,7 @@ const size = fn(2);
 const result3 = size.fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
 
 export const RESTRICTED_HOURS_LAYER_KEY = "RESTRICTED_HOURS_LAYER";
+export const CHANGE_SPENDING_LIMIT_MODAL_KEY = "CHANGE_SPENDING_LIMIT_MODAL";
 export const FAMILY_CENTER_REFETCH_COOLDOWN = result;
 export const FAMILY_CENTER_AGE_VERIFICATION_RESUME_TIMEOUT = result1;
 export const MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS = 8;

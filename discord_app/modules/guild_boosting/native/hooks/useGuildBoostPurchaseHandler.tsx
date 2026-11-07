@@ -1,6 +1,6 @@
-// === Module 14320: useGuildBoostPurchaseHandler ===
+// === Module 14354: useGuildBoostPurchaseHandler ===
 
-// Module 14320 (useGuildBoostPurchaseHandler)
+// Module 14354 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -43,8 +43,8 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10696).getNewAnalyticsLoadId();
-            const obj7 = args(7687);
+            newAnalyticsLoadId = args(10679).getNewAnalyticsLoadId();
+            const obj7 = args(7664);
             c3 = 1;
             c4 = 1;
             const obj4 = {
@@ -77,9 +77,9 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          args(6848).closeApplyBoostModal();
+          args(6823).closeApplyBoostModal();
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp10) {
         c4 = tmp;

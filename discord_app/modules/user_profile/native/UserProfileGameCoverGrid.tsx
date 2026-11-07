@@ -1,15 +1,15 @@
-// === Module 15189: UserProfileGameCoverGrid ===
+// === Module 15223: UserProfileGameCoverGrid ===
 
-// Module 15189 (UserProfileGameCoverGrid)
-import UserProfileWidgetExpandableItems from "UserProfileWidgetExpandableItems" /* 15173 */;
+// Module 15223 (UserProfileGameCoverGrid)
+import UserProfileWidgetExpandableItems from "UserProfileWidgetExpandableItems" /* 15211 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
-let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", gap: fn(15171).GAME_COVER_GAP } };
+const createStyles = fn(5140);
+let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", gap: fn(15197).GAME_COVER_GRID_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileGameCoverGrid.tsx");

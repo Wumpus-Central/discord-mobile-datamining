@@ -1,6 +1,6 @@
-// === Module 6075: SpatialAudioConstants ===
+// === Module 6049: SpatialAudioConstants ===
 
-// Module 6075 (SpatialAudioConstants)
+// Module 6049 (SpatialAudioConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/spatial_audio/SpatialAudioConstants.tsx");

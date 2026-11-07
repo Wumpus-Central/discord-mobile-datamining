@@ -1,10 +1,10 @@
-// === Module 10011: lurkGuildFromRoute ===
+// === Module 9995: lurkGuildFromRoute ===
 
-// Module 10011 (lurkGuildFromRoute)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6982 */;
+// Module 9995 (lurkGuildFromRoute)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5041 */;
+import GuildStore from "GuildStore" /* 5011 */;
 
 const require = fn;
 let closure_7 = async function _lurk(arg0) {
@@ -18,7 +18,7 @@ let closure_7 = async function _lurk(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

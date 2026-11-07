@@ -1,6 +1,6 @@
-// === Module 16070: Menu ===
+// === Module 16118: Menu ===
 
-// Module 16070 (Menu)
+// Module 16118 (Menu)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -8,12 +8,12 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5179 */;
-import timing_timing from "timing/timing" /* 5400 */;
-import spring_spring from "spring/spring" /* 5791 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6179 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6180 */;
-import PassthroughTouchViewDefault from "PassthroughTouchView" /* 16073 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
+import timing_timing from "timing/timing" /* 5370 */;
+import spring_spring from "spring/spring" /* 5761 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6153 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6154 */;
+import PassthroughTouchViewDefault from "PassthroughTouchView" /* 16121 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,8 +25,8 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1072).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25 };
-let obj = { duration: 250, easing: fn(16071).STANDARD_EASING };
-const createStyles = fn(5170);
+let obj = { duration: 250, easing: fn(16119).STANDARD_EASING };
+const createStyles = fn(5140);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -147,7 +147,7 @@ export function Menu(toggleButtonRef) {
   const items4 = [menuClose, callback1];
   const memo = obj.useMemo(() => ({ menuClose, menuDismiss: callback1 }), items4);
   const obj3 = require("module_1652");
-  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(16072).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(16120).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
   if ("left" === position) {
     let str2 = "column";
   } else {

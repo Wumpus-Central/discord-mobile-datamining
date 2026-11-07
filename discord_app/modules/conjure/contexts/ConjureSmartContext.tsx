@@ -1,12 +1,12 @@
-// === Module 12303: ConjureSmartContext ===
+// === Module 12298: ConjureSmartContext ===
 
-// Module 12303 (ConjureSmartContext)
-import conjureSmartContextConnection from "conjureSmartContextConnection" /* 11108 */;
+// Module 12298 (ConjureSmartContext)
+import conjureSmartContextConnection from "conjureSmartContextConnection" /* 11094 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10987 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10986 */;
-import ConjureSmartContextStore from "ConjureSmartContextStore" /* 10997 */;
+import ConjureChatStore from "ConjureChatStore" /* 10970 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10969 */;
+import ConjureSmartContextStore from "ConjureSmartContextStore" /* 10980 */;
 
 const require = globalThis.__r;
 
@@ -57,9 +57,9 @@ export function useConjureContextSwitchRow(projectId, contextSwitch) {
   } else if ("reverted" === status) {
     const obj3 = { label: null, body: null, note: null, action: null };
     const intl5 = tmp(tmp2[7]).intl;
-    obj3.label = intl5.string(require("module_4024").uQRAzS);
+    obj3.label = intl5.string(require("module_4026").uQRAzS);
     const intl6 = tmp(tmp2[7]).intl;
-    obj3.body = intl6.string(require("module_4024")["24OcbD"]);
+    obj3.body = intl6.string(require("module_4026")["24OcbD"]);
     return obj3;
   } else {
     let tmp13 = "failed" === error;
@@ -72,9 +72,9 @@ export function useConjureContextSwitchRow(projectId, contextSwitch) {
     }
     const obj4 = { label: null, body: null, note: null, action: null };
     const intl = tmp(tmp2[7]).intl;
-    obj4.label = intl.string(require("module_4024").iBrh0c);
+    obj4.label = intl.string(require("module_4026").iBrh0c);
     const intl2 = tmp(tmp2[7]).intl;
-    obj4.body = intl2.string(require("module_4024").sRY8wn);
+    obj4.body = intl2.string(require("module_4026").sRY8wn);
     if ("busy" === error) {
       const intl4 = tmp(tmp2[7]).intl;
       let stringResult = intl4.string(tmp14(tmp2[8]).QoixaY);

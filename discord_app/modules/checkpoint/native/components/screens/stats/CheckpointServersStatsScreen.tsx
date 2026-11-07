@@ -1,21 +1,21 @@
-// === Module 13871: CheckpointServersStatsScreen ===
+// === Module 13895: CheckpointServersStatsScreen ===
 
-// Module 13871 (CheckpointServersStatsScreen)
+// Module 13895 (CheckpointServersStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _modDef3216 from "module_3216" /* 3216 */;
 import _modDef3248 from "module_3248" /* 3248 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import GuildIcon from "GuildIcon" /* 7045 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13851 */;
-import CheckpointTextDefault from "CheckpointText" /* 13853 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 13858 */;
-import _modDef13859 from "module_13859" /* 13859 */;
-import _modDef13860 from "module_13860" /* 13860 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13872 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13873 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 13874 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import GuildIcon from "GuildIcon" /* 7020 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13875 */;
+import CheckpointTextDefault from "CheckpointText" /* 13877 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 13882 */;
+import _modDef13883 from "module_13883" /* 13883 */;
+import _modDef13884 from "module_13884" /* 13884 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13896 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13897 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 13898 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13643 */;
+import CheckpointStore from "CheckpointStore" /* 13667 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -44,12 +44,12 @@ function GuildCard(guild) {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(6224);
+const CheckpointConstants = fn(6199);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { width: "100%", flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, globalContainer: null, header: null, heading: null, globalHeading: null, globe: null, title: null, titleText: null, guilds: null, globalGuilds: null, guildCard: null, guildContent: null, guildRankRow: null, guildDetails: null, guildName: null, topGuildIcon: null, guildIcon: null, globalGuildIcon: null };
 let obj3 = { width: "100%", flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.globalContainer = { justifyContent: "flex-start", gap: nativeDefault.space.PX_24 };
@@ -119,7 +119,7 @@ export default function CheckpointServersStatsScreen() {
       const obj5 = { style: tmp.heading, children: null };
       const obj6 = { style: tmp.title, children: null };
       const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-      const items1 = [closure_6(tmp2(9864).ServerIcon, obj7), ];
+      const items1 = [closure_6(tmp2(9848).ServerIcon, obj7), ];
       const obj8 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
       const tmp16 = CheckpointScreenDefault;
       const intl3 = tmp2(1113).intl;
@@ -180,8 +180,8 @@ export default function CheckpointServersStatsScreen() {
   let obj = require("initialize");
   const obj15 = { animatedUri: null, staticUri: null, style: null };
   const tmp6 = CheckpointScreenDefault;
-  obj15.animatedUri = _modDef13859;
-  obj15.staticUri = _modDef13860;
+  obj15.animatedUri = _modDef13883;
+  obj15.staticUri = _modDef13884;
   obj15.style = tmp.globe;
   const items6 = [closure_6(CheckpointApngPlayerDefault, obj15), ];
   const obj16 = { isStepHeading: true, children: null };

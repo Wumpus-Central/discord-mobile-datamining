@@ -1,13 +1,13 @@
-// === Module 19020: guild_channels/ChannelTitle ===
+// === Module 19070: guild_channels/ChannelTitle ===
 
-// Module 19020 (guild_channels/ChannelTitle)
+// Module 19070 (guild_channels/ChannelTitle)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const UnreadSetting = fn(6856).UnreadSetting;
+const UnreadSetting = fn(6831).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_5 = createStyles.createStyleProperties({ muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
 const obj = { muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };
 const size = fn(2);

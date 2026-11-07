@@ -1,13 +1,13 @@
-// === Module 18241: EffectiveNotifSettingsActionCreators ===
+// === Module 18288: EffectiveNotifSettingsActionCreators ===
 
-// Module 18241 (EffectiveNotifSettingsActionCreators)
+// Module 18288 (EffectiveNotifSettingsActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 15822 */;
+import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 15864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15808 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15850 */;
 
 require = fn;
 function scheduleRetry() {
@@ -39,7 +39,7 @@ let closure_12 = async function _fetchEffectiveNotifSettings() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -101,7 +101,7 @@ let closure_12 = async function _fetchEffectiveNotifSettings() {
               closure_129_3 = undefined;
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -144,14 +144,14 @@ let closure_12 = async function _fetchEffectiveNotifSettings() {
               closure_129_3 = undefined;
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             c3 = 0;
             if (closure_129_3 === closure_128_1) {
               closure_129_3 = undefined;
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
         c3 = 0;

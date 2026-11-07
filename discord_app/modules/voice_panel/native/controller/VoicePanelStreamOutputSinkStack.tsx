@@ -1,6 +1,6 @@
-// === Module 19493: VoicePanelStreamOutputSinkStack ===
+// === Module 19552: VoicePanelStreamOutputSinkStack ===
 
-// Module 19493 (VoicePanelStreamOutputSinkStack)
+// Module 19552 (VoicePanelStreamOutputSinkStack)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

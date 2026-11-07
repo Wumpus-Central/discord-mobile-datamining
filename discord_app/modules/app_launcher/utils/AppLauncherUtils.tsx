@@ -1,22 +1,22 @@
-// === Module 9867: AppLauncherUtils ===
+// === Module 9851: AppLauncherUtils ===
 
-// Module 9867 (AppLauncherUtils)
+// Module 9851 (AppLauncherUtils)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import Server from "Server" /* 2116 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2148 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5829 */;
-import getPlatformDefault from "getPlatform" /* 5836 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6963 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7799 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11665 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11910 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5799 */;
+import getPlatformDefault from "getPlatform" /* 5806 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6938 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7776 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11647 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11901 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9868 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9852 */;
 import ApplicationRecord from "ApplicationRecord" /* 2140 */;
-import AppLauncherStore from "AppLauncherStore" /* 12606 */;
+import AppLauncherStore from "AppLauncherStore" /* 12619 */;
 
 const require = globalThis.__r;
 
@@ -67,8 +67,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1072).ApplicationFlags;
-const BuiltInSectionId = fn(6193).BuiltInSectionId;
-const MessageSendLocation = fn(5175).MessageSendLocation;
+const BuiltInSectionId = fn(6167).BuiltInSectionId;
+const MessageSendLocation = fn(5145).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -166,7 +166,7 @@ export function executeAppLauncherCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -234,7 +234,7 @@ export function executeAppLauncherCommand(arg0) {
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;

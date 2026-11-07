@@ -1,9 +1,9 @@
-// === Module 14310: SoundboardIcon ===
+// === Module 14344: SoundboardIcon ===
 
-// Module 14310 (SoundboardIcon)
+// Module 14344 (SoundboardIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5871 */;
-import _mod14311 from "module_14311" /* 14311 */;
+import BaseIconImage from "BaseIconImage" /* 5841 */;
+import _mod14345 from "module_14345" /* 14345 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function SoundboardIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14311, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14345, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

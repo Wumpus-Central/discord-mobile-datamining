@@ -1,6 +1,6 @@
-// === Module 19337: ? ===
+// === Module 19396: ? ===
 
-// Module 19337
+// Module 19396
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/gifting/new_gifting_badges.png.js");

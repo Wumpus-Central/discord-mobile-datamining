@@ -1,23 +1,23 @@
-// === Module 18538: GuildRoleSubscriptionsChannelLongPressActionSheet ===
+// === Module 18585: GuildRoleSubscriptionsChannelLongPressActionSheet ===
 
-// Module 18538 (GuildRoleSubscriptionsChannelLongPressActionSheet)
+// Module 18585 (GuildRoleSubscriptionsChannelLongPressActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7405 */;
-import ActionSheet from "ActionSheet" /* 7449 */;
-import Form from "Form" /* 8267 */;
-import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 11125 */;
-import _modDef14594 from "module_14594" /* 14594 */;
-import _modDef18435 from "module_18435" /* 18435 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7382 */;
+import ActionSheet from "ActionSheet" /* 7426 */;
+import Form from "Form" /* 8246 */;
+import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 11111 */;
+import _modDef14627 from "module_14627" /* 14627 */;
+import _modDef18482 from "module_18482" /* 18482 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const StaticChannelRoute = fn(5026).StaticChannelRoute;
+const StaticChannelRoute = fn(4996).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { headerIcon: null };
 let size = { marginRight: 16, tintColor: nativeDefault.colors.CHANNEL_ICON, width: 20, height: 20 };
 obj2.headerIcon = size;
@@ -31,14 +31,14 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   const obj2 = { leading: null, title: null };
   const obj3 = { style: closure_7().headerIcon, children: null };
   const tmp = closure_7();
-  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef14594 });
+  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef14627 });
   obj2.leading = closure_5(View, obj3);
   const intl = util.intl;
   obj2.title = intl.string(util.t["KzCF/6"]);
   items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ];
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj4 = { disableColor: true, source: _modDef14594 };
-  obj5.leading = closure_5(native.Icon, { source: _modDef18435 });
+  const obj4 = { disableColor: true, source: _modDef14627 };
+  obj5.leading = closure_5(native.Icon, { source: _modDef18482 });
   const obj7 = { text: null };
   const intl2 = util.intl;
   obj7.text = intl2.string(util.t.WqhZss);

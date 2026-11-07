@@ -1,6 +1,6 @@
-// === Module 11080: leaveEmbeddedActivity ===
+// === Module 11065: leaveEmbeddedActivity ===
 
-// Module 11080 (leaveEmbeddedActivity)
+// Module 11065 (leaveEmbeddedActivity)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

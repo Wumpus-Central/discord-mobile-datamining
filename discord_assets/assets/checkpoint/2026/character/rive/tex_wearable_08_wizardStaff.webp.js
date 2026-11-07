@@ -1,6 +1,6 @@
-// === Module 13830: ? ===
+// === Module 13854: ? ===
 
-// Module 13830
+// Module 13854
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wearable_08_wizardStaff.webp.js");

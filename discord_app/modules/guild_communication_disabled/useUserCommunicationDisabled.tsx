@@ -1,8 +1,8 @@
-// === Module 8526: useUserCommunicationDisabled ===
+// === Module 8505: useUserCommunicationDisabled ===
 
-// Module 8526 (useUserCommunicationDisabled)
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5089 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
+// Module 8505 (useUserCommunicationDisabled)
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5059 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -68,7 +68,7 @@ export function useCurrentUserCommunicationDisabled(guild_id) {
   }
   const items3 = [prop, ];
   const tmpResult = id(504);
-  items3[1] = id(5089).isMemberCommunicationDisabled(stateFromStores1);
+  items3[1] = id(5059).isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 }
 export function userCommunicationDisabled(id, guildId) {

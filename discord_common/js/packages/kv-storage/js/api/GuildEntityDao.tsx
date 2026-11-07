@@ -1,8 +1,8 @@
-// === Module 5061: GuildEntityDao ===
+// === Module 5031: GuildEntityDao ===
 
-// Module 5061 (GuildEntityDao)
-import Table from "Table" /* 5053 */;
-import TableId from "TableId" /* 5055 */;
+// Module 5031 (GuildEntityDao)
+import Table from "Table" /* 5023 */;
+import TableId from "TableId" /* 5025 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

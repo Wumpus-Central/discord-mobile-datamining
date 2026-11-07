@@ -1,20 +1,20 @@
-// === Module 15661: GuildBoostingGuildList ===
+// === Module 15703: GuildBoostingGuildList ===
 
-// Module 15661 (GuildBoostingGuildList)
+// Module 15703 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5399 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import GuildIconDefault from "GuildIcon" /* 7045 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7248 */;
-import transitionToGuild from "transitionToGuild" /* 7617 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8560 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9207 */;
-import _modDef10430 from "module_10430" /* 10430 */;
-import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 15630 */;
+import useThemeDefault from "useTheme" /* 5369 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import GuildIconDefault from "GuildIcon" /* 7020 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7223 */;
+import transitionToGuild from "transitionToGuild" /* 7594 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8539 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9189 */;
+import _modDef10413 from "module_10413" /* 10413 */;
+import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 15672 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import SortedGuildStore from "SortedGuildStore" /* 6852 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import SortedGuildStore from "SortedGuildStore" /* 6827 */;
 
 require = fn;
 function GuildBoostingGuildListItem(guildId) {
@@ -41,23 +41,23 @@ function GuildBoostingGuildListItem(guildId) {
     };
     const obj3 = { guild: stateFromStores, size: null, style: null, selected: false };
     const tmp2Result = TouchableHitBoxDefault;
-    obj3.size = tmp5(7045).GuildIconSizes.LARGE;
+    obj3.size = tmp5(7020).GuildIconSizes.LARGE;
     obj3.style = tmp.guildIcon;
     const items1 = [closure_7(GuildIconDefault, obj3), , ];
     const obj4 = { style: tmp.guildCardDescription, children: null };
     const obj5 = { variant: "body-md/semibold", children: stateFromStores.name };
-    const items2 = [closure_7(tmp5(5781).Text, obj5), ];
+    const items2 = [closure_7(tmp5(5751).Text, obj5), ];
     const obj6 = { style: tmp.subscriptionInfo, children: null };
     const obj7 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
     const tmp2Result3 = GuildIconDefault;
-    obj7.source = _modDef10430;
+    obj7.source = _modDef10413;
     obj7.style = tmp.premiumGuildImage;
     const items3 = [closure_7(FastImageDefault, obj7), ];
     const obj8 = { variant: "body-xs/medium", children: null };
     const intl = tmp5(1113).intl;
     const obj9 = { subscriberCount: tmp8 };
     obj8.children = intl.format(tmp5(1113).t.If4iTS, obj9);
-    items3[1] = closure_7(tmp5(5781).Text, obj8);
+    items3[1] = closure_7(tmp5(5751).Text, obj8);
     obj6.children = items3;
     items2[1] = closure_8(View, obj6);
     obj4.children = items2;
@@ -74,7 +74,7 @@ const View = fn(17).View;
 let closure_6 = fn(1072).NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { guildCard: { padding: 12, paddingLeft: 16, borderRadius: nativeDefault.radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, guildIcon: { marginRight: 16 }, guildCardDescription: { flex: 1 }, subscriptionInfo: { flexDirection: "row", alignItems: "center" }, premiumGuildImage: { width: 18, height: 12, marginLeft: -5 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

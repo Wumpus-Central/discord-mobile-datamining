@@ -1,12 +1,12 @@
-// === Module 14161: TimestampSearchHeader ===
+// === Module 14186: TimestampSearchHeader ===
 
-// Module 14161 (TimestampSearchHeader)
+// Module 14186 (TimestampSearchHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import ClockIcon from "ClockIcon" /* 5895 */;
-import Form from "Form" /* 8267 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11195 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import ClockIcon from "ClockIcon" /* 5864 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5883 */;
+import Form from "Form" /* 8246 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = "body-sm/semibold";
 let c7 = "body-sm/medium";
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND }, headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 12 }, icon: { marginRight: 12 }, description: { paddingHorizontal: 16, paddingBottom: 12 }, divider: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj.divider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };

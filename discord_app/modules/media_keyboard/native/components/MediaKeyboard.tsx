@@ -1,32 +1,32 @@
-// === Module 12721: MediaKeyboard ===
+// === Module 12734: MediaKeyboard ===
 
-// Module 12721 (MediaKeyboard)
+// Module 12734 (MediaKeyboard)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChatInputUtils from "ChatInputUtils" /* 5353 */;
-import Upload from "Upload" /* 8300 */;
-import ThreadIcon from "ThreadIcon" /* 8737 */;
-import ImageIcon from "ImageIcon" /* 8751 */;
-import AppsIcon from "AppsIcon" /* 8770 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10666 */;
-import PollsIcon from "PollsIcon" /* 10669 */;
-import AttachmentIcon from "AttachmentIcon" /* 10671 */;
-import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10673 */;
-import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10675 */;
-import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12726 */;
-import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 12760 */;
-import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 12761 */;
+import ChatInputUtils from "ChatInputUtils" /* 5323 */;
+import Upload from "Upload" /* 8279 */;
+import ThreadIcon from "ThreadIcon" /* 8716 */;
+import ImageIcon from "ImageIcon" /* 8730 */;
+import AppsIcon from "AppsIcon" /* 8749 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10649 */;
+import PollsIcon from "PollsIcon" /* 10652 */;
+import AttachmentIcon from "AttachmentIcon" /* 10654 */;
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10656 */;
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10658 */;
+import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12739 */;
+import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 12773 */;
+import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 12774 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8298 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8277 */;
 
 require = fn;
-const DraftType = fn(7800).DraftType;
+const DraftType = fn(7777).DraftType;
 const MediaKeyboardConstants = fn(1623);
 ({ MediaKeyboardTarget: closure_6, MediaPickerActionSheetEngagedActions: metroImportDefault } = MediaKeyboardConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
 const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
-const KEYBOARD_ANIMATION_CONFIG = fn(12554).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12567).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 18485: FavoritesGuildAddCategoryActionSheet ===
+// === Module 18532: FavoritesGuildAddCategoryActionSheet ===
 
-// Module 18485 (FavoritesGuildAddCategoryActionSheet)
+// Module 18532 (FavoritesGuildAddCategoryActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5404 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10967 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5374 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10950 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 function FavoritesGuildAddCategoryActionSheet() {
   const tmp = closure_9();
   [value, obj4.onChange] = noop.useState("");
-  const result = value(5044).isFavoritesGuildCategoryNameValid(value);
+  const result = value(5014).isFavoritesGuildCategoryNameValid(value);
   importDefault = result;
   items = [result, value];
   const callback = noop.useCallback(() => {
@@ -26,7 +26,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   const obj3 = { title: null };
   const intl = value(1113).intl;
   obj3.title = intl.string(value(1113).t["ISN+NM"]);
-  obj2.header = closure_6(value(7405).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_6(value(7382).BottomSheetTitleHeader, obj3);
   const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, clearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = value(1113).intl;
   obj4.label = intl2.string(value(1113).t.OCAkGP);
@@ -35,21 +35,21 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(7173).TextInput, obj4), ];
+  const items1 = [closure_6(value(7148).TextInput, obj4), ];
   const obj5 = { text: null, onPress: null, disabled: null };
   const intl4 = value(1113).intl;
   obj5.text = intl4.string(value(1113).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5788).Button, obj5);
+  items1[1] = closure_6(value(5758).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(5418).BottomSheet, obj2);
+  return closure_7(value(5388).BottomSheet, obj2);
 }
-const maxLength = fn(5032).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+const maxLength = fn(5002).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.body = { gap: nativeDefault.space.PX_16 };

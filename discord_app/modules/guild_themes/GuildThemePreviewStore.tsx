@@ -1,10 +1,10 @@
-// === Module 5372: GuildThemePreviewStore ===
+// === Module 5342: GuildThemePreviewStore ===
 
-// Module 5372 (GuildThemePreviewStore)
+// Module 5342 (GuildThemePreviewStore)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import guildThemeSerialization from "guildThemeSerialization" /* 5040 */;
+import guildThemeSerialization from "guildThemeSerialization" /* 5010 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -21,9 +21,9 @@ function handleEnd() {
   }
   return flag;
 }
-const GuildThemePreviewConstants = fn(5373);
+const GuildThemePreviewConstants = fn(5343);
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
-const timeout = new fn(5014).Timeout();
+const timeout = new fn(4984).Timeout();
 let closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
 const Store = initializeDefault.Store;
 class GuildThemePreviewStore extends Store {
@@ -130,7 +130,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: tmp, customUserThemeSettings: "Array" };
+      const obj2 = { presetId: tmp, customUserThemeSettings: "r" };
       const isEqualResult = apply.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {

@@ -1,18 +1,18 @@
-// === Module 12854: useConjurePatchNotesComposer ===
+// === Module 12865: useConjurePatchNotesComposer ===
 
-// Module 12854 (useConjurePatchNotesComposer)
-import ConjureUtils from "ConjureUtils" /* 7506 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12855 */;
+// Module 12865 (useConjurePatchNotesComposer)
+import ConjureUtils from "ConjureUtils" /* 7483 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12866 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 5100 */;
+import GuildChannelStore from "GuildChannelStore" /* 5070 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(5100).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5175).MessageSendLocation;
+let closure_7 = fn(5070).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5145).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePatchNotesComposer.tsx");
 
@@ -106,7 +106,7 @@ export default function useConjurePatchNotesComposer(projectId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ export default function useConjurePatchNotesComposer(projectId) {
             c2 = 0;
             if (closure_129_0.cancelled) {
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               closure_1_10(false);
               closure_1_11(true);
@@ -230,7 +230,7 @@ export default function useConjurePatchNotesComposer(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

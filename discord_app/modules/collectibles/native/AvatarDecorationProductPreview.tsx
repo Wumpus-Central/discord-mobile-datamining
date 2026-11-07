@@ -1,16 +1,16 @@
-// === Module 15263: AvatarDecorationProductPreview ===
+// === Module 15297: AvatarDecorationProductPreview ===
 
-// Module 15263 (AvatarDecorationProductPreview)
+// Module 15297 (AvatarDecorationProductPreview)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useShopProductItems from "useShopProductItems" /* 8834 */;
-import useCurrentUser from "useCurrentUser" /* 8841 */;
+import useShopProductItems from "useShopProductItems" /* 8813 */;
+import useCurrentUser from "useCurrentUser" /* 8820 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_4 = createStyles.createStyles({ fullSizePreview: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");

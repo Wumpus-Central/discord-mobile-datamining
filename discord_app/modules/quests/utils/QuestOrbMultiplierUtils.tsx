@@ -1,6 +1,6 @@
-// === Module 9809: QuestOrbMultiplierUtils ===
+// === Module 9793: QuestOrbMultiplierUtils ===
 
-// Module 9809 (QuestOrbMultiplierUtils)
+// Module 9793 (QuestOrbMultiplierUtils)
 import PerksStateUtils from "PerksStateUtils" /* 1391 */;
 import user from "user" /* 1398 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;

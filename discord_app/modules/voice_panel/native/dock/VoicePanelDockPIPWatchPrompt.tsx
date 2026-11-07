@@ -1,14 +1,14 @@
-// === Module 19606: VoicePanelDockPIPWatchPrompt ===
+// === Module 19679: VoicePanelDockPIPWatchPrompt ===
 
-// Module 19606 (VoicePanelDockPIPWatchPrompt)
+// Module 19679 (VoicePanelDockPIPWatchPrompt)
 import nativeDefault from "native" /* 575 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import native from "native" /* 5229 */;
-import timing_timing from "timing/timing" /* 5400 */;
-import StreamActionCreators from "StreamActionCreators" /* 8000 */;
-import VoicePanelDockActionCreators from "VoicePanelDockActionCreators" /* 19607 */;
+import native from "native" /* 5199 */;
+import timing_timing from "timing/timing" /* 5370 */;
+import StreamActionCreators from "StreamActionCreators" /* 7978 */;
+import VoicePanelDockActionCreators from "VoicePanelDockActionCreators" /* 19678 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6794 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -151,7 +151,7 @@ function renderWatchPrompt(arg0, arg1, transitionState, cleanUp) {
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { duration: 200 };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { container: null, dismissButton: null, buttonRow: null, label: null };
 let obj3 = {};
 let merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

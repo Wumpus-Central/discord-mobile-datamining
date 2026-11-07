@@ -1,12 +1,12 @@
-// === Module 6997: GuildJoinRequestStore ===
+// === Module 6972: GuildJoinRequestStore ===
 
-// Module 6997 (GuildJoinRequestStore)
+// Module 6972 (GuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5203 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5204 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5173 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5174 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -82,7 +82,7 @@ function handleGuildJoinRequestCreateOrUpdate(request) {
   }
   return false;
 }
-const joinRequestFromServer = fn(5202).joinRequestFromServer;
+const joinRequestFromServer = fn(5172).joinRequestFromServer;
 const map = new Map();
 const dependencyMap = {};
 let closure_8 = {};
@@ -93,9 +93,9 @@ function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_ID(arg0) {
 function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_STATUS(arg0, arg1) {
 
 }
-const secondaryIndexMap = new fn(5097).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
-const secondaryIndexMap1 = new fn(5097).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
-const secondaryIndexMap2 = new fn(5097).SecondaryIndexMap(guildJoinRequestsIndex, (actionedAt) => "" + actionedAt.actionedAt);
+const secondaryIndexMap = new fn(5067).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
+const secondaryIndexMap1 = new fn(5067).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
+const secondaryIndexMap2 = new fn(5067).SecondaryIndexMap(guildJoinRequestsIndex, (actionedAt) => "" + actionedAt.actionedAt);
 const dependencyMap2 = {};
 const dependencyMap3 = {};
 let closure_18 = {};

@@ -1,19 +1,19 @@
-// === Module 10929: WinnerTrophyBadge ===
+// === Module 10912: WinnerTrophyBadge ===
 
-// Module 10929 (WinnerTrophyBadge)
-import assetHelpers from "assetHelpers" /* 7160 */;
-import _modDef10930 from "module_10930" /* 10930 */;
-import _modDef10931 from "module_10931" /* 10931 */;
-import _modDef10932 from "module_10932" /* 10932 */;
+// Module 10912 (WinnerTrophyBadge)
+import assetHelpers from "assetHelpers" /* 7135 */;
+import _modDef10913 from "module_10913" /* 10913 */;
+import _modDef10914 from "module_10914" /* 10914 */;
+import _modDef10915 from "module_10915" /* 10915 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10930 }, 3: null };
-let obj2 = { uri: _modDef10930 };
-obj[2] = { uri: _modDef10931 };
-const obj3 = { uri: _modDef10931 };
-obj[3] = { uri: _modDef10932 };
+let obj = { 1: null, 2: { uri: _modDef10913 }, 3: null };
+let obj2 = { uri: _modDef10913 };
+obj[2] = { uri: _modDef10914 };
+const obj3 = { uri: _modDef10914 };
+obj[3] = { uri: _modDef10915 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WinnerTrophyBadge.native.tsx");
 

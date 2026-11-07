@@ -1,15 +1,15 @@
-// === Module 6938: NotificationCenterItemsStore ===
+// === Module 6913: NotificationCenterItemsStore ===
 
-// Module 6938 (NotificationCenterItemsStore)
+// Module 6913 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6221 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6939 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6940 */;
-import ExperimentStore from "ExperimentStore" /* 5384 */;
-import MessageRecord from "MessageRecord" /* 5113 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6196 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6914 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6915 */;
+import ExperimentStore from "ExperimentStore" /* 5354 */;
+import MessageRecord from "MessageRecord" /* 5083 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -195,9 +195,9 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6935).isGuildEventEnded;
+const isGuildEventEnded = fn(6910).isGuildEventEnded;
 const RelationshipTypes = fn(1072).RelationshipTypes;
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "user", notifCenterTabFocused: "2026-07-clips-game-events-on-player" };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
@@ -369,7 +369,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "user", notifCenterTabFocused: "2026-07-clips-game-events-on-player" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -495,7 +495,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "user", notifCenterTabFocused: "2026-07-clips-game-events-on-player" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -551,7 +551,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         items = [];
-        obj = id(6940);
+        obj = id(6915);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -645,7 +645,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "user", notifCenterTabFocused: "2026-07-clips-game-events-on-player" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {

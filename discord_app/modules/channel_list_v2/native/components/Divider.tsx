@@ -1,12 +1,12 @@
-// === Module 14051: Divider ===
+// === Module 14076: Divider ===
 
-// Module 14051 (Divider)
+// Module 14076 (Divider)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_4 = createStyles.createStyles(() => {
   const obj = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 8, marginBottom: 8, marginHorizontal: 16 } };
   return obj;

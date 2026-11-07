@@ -1,22 +1,22 @@
-// === Module 16559: definitions ===
+// === Module 16607: definitions ===
 
-// Module 16559 (definitions)
+// Module 16607 (definitions)
 import Constants2 from "Constants" /* 1083 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2143 */;
 import EntitlementTypes from "EntitlementTypes" /* 2170 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5829 */;
-import ActivityTypes from "ActivityTypes" /* 5918 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7979 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 9002 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9844 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10896 */;
-import ActivityPlatform from "ActivityPlatform" /* 11981 */;
-import ThermalStates from "ThermalStates" /* 16556 */;
-import SKUTypes from "SKUTypes" /* 16560 */;
-import discord_common_helpers from "discord_common/helpers" /* 16561 */;
-import contextMenuIcons from "contextMenuIcons" /* 16562 */;
-import Constants from "Constants" /* 11864 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5799 */;
+import ActivityTypes from "ActivityTypes" /* 5891 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7957 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8984 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9828 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10879 */;
+import ActivityPlatform from "ActivityPlatform" /* 11972 */;
+import ThermalStates from "ThermalStates" /* 16604 */;
+import SKUTypes from "SKUTypes" /* 16608 */;
+import discord_common_helpers from "discord_common/helpers" /* 16609 */;
+import contextMenuIcons from "contextMenuIcons" /* 16610 */;
+import Constants from "Constants" /* 11855 */;
 import size from "module_2" /* 2 */;
 
 function joiEnum(number, EmbeddedActivityOrientationLockState, arg2) {
@@ -2345,7 +2345,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "unicodeVersion", response: "add" },
+  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "channelId", response: "" },
   [discord_common_helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

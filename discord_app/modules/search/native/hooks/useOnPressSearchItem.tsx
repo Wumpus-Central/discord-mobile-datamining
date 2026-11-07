@@ -1,20 +1,20 @@
-// === Module 19002: useOnPressSearchItem ===
+// === Module 19052: useOnPressSearchItem ===
 
-// Module 19002 (useOnPressSearchItem)
+// Module 19052 (useOnPressSearchItem)
 import util from "util" /* 1113 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
-import LinkingDefault from "Linking" /* 5864 */;
-import ToastUtils from "ToastUtils" /* 5866 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7572 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 9037 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14094 */;
-import TrackingDefault from "Tracking" /* 14115 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14119 */;
+import LinkingDefault from "Linking" /* 5834 */;
+import ToastUtils from "ToastUtils" /* 5836 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 9019 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14119 */;
+import TrackingDefault from "Tracking" /* 14140 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14144 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7869 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import SearchQueryStore from "SearchQueryStore" /* 14108 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7846 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import SearchQueryStore from "SearchQueryStore" /* 14133 */;
 
 const require = globalThis.__r;
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -54,7 +54,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       } else {
         value.openGuildVoiceModal(closure_129_0, "Channel List");
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -93,13 +93,13 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9933);
+const SearchConstants = fn(9917);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: closure_10 } = SearchConstants);
-const SearchNavigatorScreens = fn(19003).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9932).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(19053).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9916).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(5026).StaticChannelRoute;
+const StaticChannelRoute = fn(4996).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useOnPressSearchItem.tsx");
 
@@ -206,7 +206,7 @@ export function useOnPressConversationCitation(searchContext) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -267,7 +267,7 @@ export function useOnPressConversationCitation(searchContext) {
               }
             });
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
       } catch (tmp12) {
@@ -546,11 +546,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(14094).delayUntilNavigationComplete(() => {
+      const result = searchContext(14119).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(14094);
+      let obj2 = searchContext(14119);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

@@ -1,8 +1,8 @@
-// === Module 8674: renderMessageMarkup ===
+// === Module 8653: renderMessageMarkup ===
 
-// Module 8674 (renderMessageMarkup)
-import MarkupUtilsDefault from "MarkupUtils" /* 5910 */;
-import MarkupPostProcessors from "MarkupPostProcessors" /* 8675 */;
+// Module 8653 (renderMessageMarkup)
+import MarkupUtilsDefault from "MarkupUtils" /* 5879 */;
+import MarkupPostProcessors from "MarkupPostProcessors" /* 8654 */;
 import size from "module_2" /* 2 */;
 
 function getInitialParserState(channelId) {

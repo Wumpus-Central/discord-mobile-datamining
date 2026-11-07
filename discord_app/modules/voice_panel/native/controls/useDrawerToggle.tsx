@@ -1,13 +1,13 @@
-// === Module 19611: useDrawerToggle ===
+// === Module 19684: useDrawerToggle ===
 
-// Module 19611 (useDrawerToggle)
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19612 */;
+// Module 19684 (useDrawerToggle)
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19573 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsModes = fn(11379).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11361).VoicePanelControlsModes;
 let closure_5 = { code: "(function useDrawerToggleTsx1(){let[controlsSpecs,VoicePanelControlsModes]=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");

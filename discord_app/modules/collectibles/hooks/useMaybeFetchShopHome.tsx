@@ -1,12 +1,12 @@
-// === Module 18098: useMaybeFetchShopHome ===
+// === Module 18145: useMaybeFetchShopHome ===
 
-// Module 18098 (useMaybeFetchShopHome)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7818 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7861 */;
+// Module 18145 (useMaybeFetchShopHome)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7795 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7838 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5384 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7819 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5842 */;
+import ExperimentStore from "ExperimentStore" /* 5354 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7796 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5812 */;
 
 const require = globalThis.__r;
 

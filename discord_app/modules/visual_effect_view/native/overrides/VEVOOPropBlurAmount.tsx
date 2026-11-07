@@ -1,18 +1,18 @@
-// === Module 18252: VEVOOPropBlurAmount ===
+// === Module 18299: VEVOOPropBlurAmount ===
 
-// Module 18252 (VEVOOPropBlurAmount)
-import FormSwitch from "FormSwitch" /* 7453 */;
-import Form from "Form" /* 8267 */;
+// Module 18299 (VEVOOPropBlurAmount)
+import FormSwitch from "FormSwitch" /* 7430 */;
+import Form from "Form" /* 8246 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VEVOOStore = fn(5759);
+const VEVOOStore = fn(5729);
 ({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: closure_6 } = VEVOOStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx");
@@ -69,7 +69,7 @@ export default noop.memo(function VEVOOPropBlurAmount() {
     }
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(18253), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange, accessibilityLabel: "Blur Amount" });
+  obj.subLabel = jsx(first(18300), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange, accessibilityLabel: "Blur Amount" });
   return jsx(Form.FormRow, {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,

@@ -1,13 +1,13 @@
-// === Module 11516: useShowChannelOptInNotice ===
+// === Module 11498: useShowChannelOptInNotice ===
 
-// Module 11516 (useShowChannelOptInNotice)
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
+// Module 11498 (useShowChannelOptInNotice)
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6830 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
-const ChannelFlags = fn(5026).ChannelFlags;
+const ChannelFlags = fn(4996).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
 

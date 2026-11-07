@@ -1,8 +1,8 @@
-// === Module 6934: isConjureApplication ===
+// === Module 6909: isConjureApplication ===
 
-// Module 6934 (isConjureApplication)
+// Module 6909 (isConjureApplication)
 import ApplicationStore from "ApplicationStore" /* 2162 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
 
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/isConjureApplication.tsx");

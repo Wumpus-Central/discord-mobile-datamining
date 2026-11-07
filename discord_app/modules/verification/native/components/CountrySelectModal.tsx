@@ -1,10 +1,10 @@
-// === Module 7302: CountrySelectModal ===
+// === Module 7279: CountrySelectModal ===
 
-// Module 7302 (CountrySelectModal)
+// Module 7279 (CountrySelectModal)
 import util from "util" /* 1113 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
-import NavigatorHeader from "NavigatorHeader" /* 7089 */;
-import Navigator from "Navigator" /* 7256 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
+import NavigatorHeader from "NavigatorHeader" /* 7064 */;
+import Navigator from "Navigator" /* 7231 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,10 +22,10 @@ export default function CountrySelectModal() {
     obj2.render = function render() {
       return closure_1_4(closure_1_1(dependencyMap[5]), {
         onClose() {
-          return closure_1_1(6824).pop();
+          return closure_1_1(6799).pop();
         },
         onCountrySelected(countryCode) {
-          return closure_1_1(7300).setCountryCode(countryCode);
+          return closure_1_1(7277).setCountryCode(countryCode);
         }
       });
     };
@@ -33,7 +33,7 @@ export default function CountrySelectModal() {
     return obj;
   }, []);
   const effect = noop.useEffect(() => () => {
-    closure_1_1(7294).runAfterInteractions(closure_1_1(7330).setCountrySelectorClosed, 400);
+    closure_1_1(7270).runAfterInteractions(closure_1_1(7307).setCountrySelectorClosed, 400);
   }, []);
   return jsx(Navigator.Navigator, { screens, initialRouteName: "COUNTRY_SELECT" });
 };

@@ -1,9 +1,9 @@
-// === Module 15005: useEntranceAnimation ===
+// === Module 15037: useEntranceAnimation ===
 
-// Module 15005 (useEntranceAnimation)
+// Module 15037 (useEntranceAnimation)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5400 */;
+import timing_timing from "timing/timing" /* 5370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

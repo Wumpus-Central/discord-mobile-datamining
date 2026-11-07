@@ -1,6 +1,6 @@
-// === Module 11790: isGameOrganizationInviteRecipient ===
+// === Module 11781: isGameOrganizationInviteRecipient ===
 
-// Module 11790 (isGameOrganizationInviteRecipient)
+// Module 11781 (isGameOrganizationInviteRecipient)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/isGameOrganizationInviteRecipient.tsx");

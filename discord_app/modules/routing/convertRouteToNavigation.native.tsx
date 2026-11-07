@@ -1,16 +1,16 @@
-// === Module 12241: convertRouteToNavigation ===
+// === Module 12232: convertRouteToNavigation ===
 
-// Module 12241 (convertRouteToNavigation)
+// Module 12232 (convertRouteToNavigation)
 import Constants from "Constants" /* 1072 */;
-import matchPathCompat from "matchPathCompat" /* 5206 */;
-import RouteUtils from "RouteUtils" /* 5219 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5344 */;
-import RootNavigationRef from "RootNavigationRef" /* 5345 */;
-import useChatLayout from "useChatLayout" /* 5347 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6959 */;
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9935 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11118 */;
-import handleConjureRouteDefault from "handleConjureRoute" /* 12242 */;
+import matchPathCompat from "matchPathCompat" /* 5176 */;
+import RouteUtils from "RouteUtils" /* 5189 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5314 */;
+import RootNavigationRef from "RootNavigationRef" /* 5315 */;
+import useChatLayout from "useChatLayout" /* 5317 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6934 */;
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9919 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11104 */;
+import handleConjureRouteDefault from "handleConjureRoute" /* 12233 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

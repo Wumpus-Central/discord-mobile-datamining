@@ -1,16 +1,16 @@
-// === Module 11081: activityLaunchErrorUtils ===
+// === Module 11066: activityLaunchErrorUtils ===
 
-// Module 11081 (activityLaunchErrorUtils)
+// Module 11066 (activityLaunchErrorUtils)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4995 */;
-import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6227 */;
-import InteractionUtils from "InteractionUtils" /* 8792 */;
-import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 11028 */;
-import fetchDeveloperApplications from "fetchDeveloperApplications" /* 11083 */;
+import UserSettings from "UserSettings" /* 4965 */;
+import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6202 */;
+import InteractionUtils from "InteractionUtils" /* 8771 */;
+import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 11012 */;
+import fetchDeveloperApplications from "fetchDeveloperApplications" /* 11068 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 11082 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5828 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 11067 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5798 */;
 
 require = fn;
 let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
@@ -24,7 +24,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -162,7 +162,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(5828).DevShelfFetchState;
+const DevShelfFetchState = fn(5798).DevShelfFetchState;
 const AbortCodes = fn(1072).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = { ClientError: 0, [0]: "ClientError", CallbackError: 1, [1]: "CallbackError", ApiError: 2, [2]: "ApiError" };

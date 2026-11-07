@@ -1,12 +1,12 @@
-// === Module 18379: useMessagesData ===
+// === Module 18426: useMessagesData ===
 
-// Module 18379 (useMessagesData)
+// Module 18426 (useMessagesData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6648 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6623 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7482 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7459 */;
 
 const require = fn;
 const MessagesDataHeader = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };

@@ -1,9 +1,9 @@
-// === Module 7569: subscribeGuildMembers ===
+// === Module 7546: subscribeGuildMembers ===
 
-// Module 7569 (subscribeGuildMembers)
+// Module 7546 (subscribeGuildMembers)
 import applyDefault from "apply" /* 12 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6840 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6815 */;
 
 const require = fn;
 let c5 = false;
@@ -29,8 +29,8 @@ export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7538).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7538);
+      closure_0(7515).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7515);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) => closure_1_0(closure_1_2[4]).unsubscribeMembers(guildId, userIds));
@@ -71,8 +71,8 @@ export function useEnsureHydratedGuildUsers(guild_id, items1) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7538).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7538);
+      closure_0(7515).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7515);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) => closure_1_0(closure_1_2[4]).unsubscribeMembers(guildId, userIds));

@@ -1,35 +1,35 @@
-// === Module 15014: UserProfileOverflowMenu ===
+// === Module 15046: UserProfileOverflowMenu ===
 
-// Module 15014 (UserProfileOverflowMenu)
+// Module 15046 (UserProfileOverflowMenu)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import UserUtilsDefault from "UserUtils" /* 5224 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import ToastUtils from "ToastUtils" /* 5866 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
-import ClipboardUtils from "ClipboardUtils" /* 7441 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7572 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7574 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8842 */;
-import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 11790 */;
-import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11816 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12652 */;
-import GuildInviteUtils from "GuildInviteUtils" /* 15015 */;
-import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 15024 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15028 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 15033 */;
+import UserUtilsDefault from "UserUtils" /* 5194 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import ToastUtils from "ToastUtils" /* 5836 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
+import ClipboardUtils from "ClipboardUtils" /* 7418 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7551 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8821 */;
+import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 11781 */;
+import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11807 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12665 */;
+import GuildInviteUtils from "GuildInviteUtils" /* 15047 */;
+import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 15056 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15060 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 15065 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6923 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(7460).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7437).UserProfileThemeTypes;
 const Constants = fn(1072);
 ({ AVATAR_MAX_SIZE: closure_11, ChannelTypesSets: closure_12, RelationshipTypes: map1 } = Constants);
-const ParticipantTypes = fn(5835).ParticipantTypes;
+const ParticipantTypes = fn(5805).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const size = fn(2);
@@ -299,7 +299,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
               trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15030, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15062, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
               const obj = { action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations };
               const obj3 = { userId: id, showUserProfile: callback1 };
               ActionSheetActionCreatorsDefault.hideActionSheet();

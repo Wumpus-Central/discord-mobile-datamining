@@ -1,15 +1,15 @@
-// === Module 9302: InviteButton ===
+// === Module 9284: InviteButton ===
 
-// Module 9302 (InviteButton)
+// Module 9284 (InviteButton)
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7978).InviteSendStates;
+const InviteSendStates = fn(7956).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_5 = createStyles.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");

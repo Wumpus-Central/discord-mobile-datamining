@@ -1,29 +1,29 @@
-// === Module 20142: GuildSettingsModalTemplate ===
+// === Module 20211: GuildSettingsModalTemplate ===
 
-// Module 20142 (GuildSettingsModalTemplate)
+// Module 20211 (GuildSettingsModalTemplate)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import ToastUtils from "ToastUtils" /* 5866 */;
-import CopyIcon2 from "CopyIcon" /* 5886 */;
-import AlertModal from "AlertModal" /* 6122 */;
-import Stack_Stack from "Stack/Stack" /* 6185 */;
-import Card from "Card" /* 7065 */;
-import Input from "Input" /* 7174 */;
-import CircleXIcon2 from "CircleXIcon" /* 7183 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7424 */;
-import ClipboardUtils from "ClipboardUtils" /* 7441 */;
-import HeaderActionButton from "HeaderActionButton" /* 7653 */;
-import native from "native" /* 9090 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13393 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 20143 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import ToastUtils from "ToastUtils" /* 5836 */;
+import CopyIcon2 from "CopyIcon" /* 5855 */;
+import AlertModal from "AlertModal" /* 6096 */;
+import Stack_Stack from "Stack/Stack" /* 6159 */;
+import Card from "Card" /* 7040 */;
+import Input from "Input" /* 7149 */;
+import CircleXIcon2 from "CircleXIcon" /* 7158 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7401 */;
+import ClipboardUtils from "ClipboardUtils" /* 7418 */;
+import HeaderActionButton from "HeaderActionButton" /* 7630 */;
+import native from "native" /* 9072 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13416 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 20212 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const SceneLoadingIndicator = Text(7295);
-const Form = Text(8267);
+const SceneLoadingIndicator = Text(7271);
+const Form = Text(8246);
 require = fn;
 function TemplateForm(guildId) {
   guildId = guildId.guildId;
@@ -126,7 +126,7 @@ function TemplateForm(guildId) {
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(6122).showConfirmModal(obj2);
+        guildId(6096).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -169,7 +169,7 @@ function TemplateForm(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(13393);
+                const obj2 = guildTemplate(13416);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -202,7 +202,7 @@ function TemplateForm(guildId) {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_0 = closure_2;
-              const aPIError = new handleSave(6604).APIError(closure_128_0);
+              const aPIError = new handleSave(6579).APIError(closure_128_0);
               closure_1_7(aPIError);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -356,14 +356,14 @@ function CopyRow(children) {
     tmp10 = importDefault;
   }
   const tmp = closure_10();
-  items = [metroImportDefault(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(575).colors.WHITE }), metroImportDefault(tmp4(5781).Text, { variant: "body-sm/normal", children: children.label })];
+  items = [metroImportDefault(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(575).colors.WHITE }), metroImportDefault(tmp4(5751).Text, { variant: "body-sm/normal", children: children.label })];
   obj.children = items;
   return React5(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { container: { flex: 1 }, containerContent: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, copyRow: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.copyRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -467,7 +467,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(20144)(guildTemplate.code);
+  const tmp3 = guildTemplate(20213)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

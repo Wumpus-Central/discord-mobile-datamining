@@ -1,21 +1,21 @@
-// === Module 19315: MobileSurvey ===
+// === Module 19374: MobileSurvey ===
 
-// Module 19315 (MobileSurvey)
+// Module 19374 (MobileSurvey)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import LinkingDefault from "Linking" /* 5864 */;
-import _modDef12169 from "module_12169" /* 12169 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 17986 */;
+import LinkingDefault from "Linking" /* 5834 */;
+import _modDef12160 from "module_12160" /* 12160 */;
+import SurveyActionCreators from "SurveyActionCreators" /* 18033 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SurveyStore from "SurveyStore" /* 7583 */;
+import SurveyStore from "SurveyStore" /* 7560 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MobileSurvey.tsx");
@@ -38,7 +38,7 @@ export default function MobileSurvey() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -66,7 +66,7 @@ export default function MobileSurvey() {
               return obj;
             }
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;
@@ -102,10 +102,10 @@ export default function MobileSurvey() {
       return SurveyActionCreators.surveyHide(stateFromStores.key, true);
     };
     obj3.renderConfirmRightIcon = function renderConfirmRightIcon() {
-      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef12169 });
+      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef12160 });
     };
-    tmp5 = jsx(stateFromStores(6188), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(6188);
+    tmp5 = jsx(stateFromStores(6162), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(6162);
   }
   return tmp5;
 };

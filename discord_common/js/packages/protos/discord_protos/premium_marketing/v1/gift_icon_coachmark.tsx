@@ -1,9 +1,9 @@
-// === Module 9746: gift_icon_coachmark ===
+// === Module 9730: gift_icon_coachmark ===
 
-// Module 9746 (gift_icon_coachmark)
+// Module 9730 (gift_icon_coachmark)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9737 */;
-import theme_aware_asset from "theme_aware_asset" /* 9747 */;
+import localized_string from "localized_string" /* 9721 */;
+import theme_aware_asset from "theme_aware_asset" /* 9731 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

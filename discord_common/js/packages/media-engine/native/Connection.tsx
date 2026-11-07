@@ -1,23 +1,23 @@
-// === Module 5957: Connection ===
+// === Module 5930: Connection ===
 
-// Module 5957 (Connection)
+// Module 5930 (Connection)
 import inject from "inject" /* 2132 */;
-import VideoQualityManager from "VideoQualityManager" /* 5959 */;
-import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 5962 */;
-import _modDef5963 from "module_5963" /* 5963 */;
-import VideoCodecUtils from "VideoCodecUtils" /* 6006 */;
-import _modDef6010 from "module_6010" /* 6010 */;
-import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 6011 */;
-import reduceDefault from "reduce" /* 6012 */;
-import _modDef6015 from "module_6015" /* 6015 */;
+import VideoQualityManager from "VideoQualityManager" /* 5932 */;
+import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 5935 */;
+import _modDef5936 from "module_5936" /* 5936 */;
+import VideoCodecUtils from "VideoCodecUtils" /* 5979 */;
+import _modDef5983 from "module_5983" /* 5983 */;
+import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 5984 */;
+import reduceDefault from "reduce" /* 5985 */;
+import _modDef5988 from "module_5988" /* 5988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BaseConnection from "BaseConnection" /* 5958 */;
+import BaseConnection from "BaseConnection" /* 5931 */;
 
 require = fn;
-let Constants = fn(5924);
+let Constants = fn(5897);
 ({ StatsFilter: hasOwnProperty, ExperimentFlags: closure_6, DESKTOP_BITRATE_ENHANCED: metroImportDefault, DESKTOP_BITRATE: closure_8, MEDIA_SINK_WANTS_PROPERTIES: closure_9, MediaTypes: closure_10, SIMULCAST_HQ_QUALITY: closure_11 } = Constants);
-Constants = fn(5947);
+Constants = fn(5920);
 ({ NATIVE_MODE_VALUES: closure_12, InputModes: map1, ConnectionStates: closure_14, Codecs: closure_15, MediaEngineContextTypes: closure_16, SpeakingFlags: closure_17, ResolutionTypes: closure_18, NativeFeatures: closure_19, NoiseCancellerError: closure_20, DEFAULT_VOLUME: closure_21, DEFAULT_STREAM_VOLUME: closure_22, DEFAULT_SOUNDSHARE_VOICE_BITRATE: closure_23, DEFAULT_CALL_BITRATE: closure_24, DEFAULT_CALL_MIN_BITRATE: closure_25, DEFAULT_CALL_MAX_BITRATE: closure_26, DEFAULT_PRIORITY_SPEAKER_DUCKING: closure_27, PING_INTERVAL: closure_28 } = Constants);
 let c29 = 0;
 let Connection;
@@ -223,7 +223,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
-      const tmp2 = _modDef5963(closure_0.videoStreamParameters);
+      const tmp2 = _modDef5936(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
         if (null != arr) {
@@ -371,8 +371,8 @@ class Connection extends tmp4 {
               closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
             } else if (diff > 0) {
               if (diff1 >= 0) {
-                closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * _modDef6015(diff1 / (diff + diff1), 0, 1));
-                const tmp6 = _modDef6015(diff1 / (diff + diff1), 0, 1);
+                closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * _modDef5988(diff1 / (diff + diff1), 0, 1));
+                const tmp6 = _modDef5988(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -784,7 +784,7 @@ prototype["getStats"] = function getStats() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -889,7 +889,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef6010(sorted, sorted1);
+  _modDef5983(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1695,10 +1695,10 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "r" };
+        return { v: "uri" };
       } else {
         items = [];
-        if (!_modDef6010(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef5983(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;
@@ -1938,6 +1938,7 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
   return { videoEncoder: obj, videoDecoders, audioEncoder, audioDecoders };
 };
 prototype["getConnectionTransportOptions"] = function getConnectionTransportOptions() {
+  const self = this;
   const obj = { selfMute: this.selfMute, inputMode: dependencyMap[this.inputMode], inputModeOptions: this.createInputModeOptions(), minimumJitterBufferLevel: this.minimumJitterBufferLevel, postponeDecodeLevel: this.postponeDecodeLevel };
   const merged = Object.assign(this.getAttenuationOptions());
   obj.fec = true;
@@ -1951,10 +1952,18 @@ prototype["getConnectionTransportOptions"] = function getConnectionTransportOpti
   ({ videoDegradationPreference: obj.encodingVideoDegradationPreference, reconnectInterval: obj.reconnectInterval } = this);
   let supportsFeatureResult = inject.supportsFeature(constants8.VIDEO_EFFECTS);
   if (supportsFeatureResult) {
-    supportsFeatureResult = this.context === constants5.STREAM;
+    supportsFeatureResult = self.context === constants5.STREAM;
   }
   if (supportsFeatureResult) {
     obj.enableVideoEffects = true;
+  }
+  let hasItem = self.context === constants5.STREAM;
+  if (hasItem) {
+    const experimentFlags = self.experimentFlags;
+    hasItem = experimentFlags.has(constants.STREAM_OPUS_DTX);
+  }
+  if (hasItem) {
+    obj.dtx = true;
   }
   return obj;
 };

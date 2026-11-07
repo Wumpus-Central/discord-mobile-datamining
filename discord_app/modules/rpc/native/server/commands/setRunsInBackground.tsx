@@ -1,17 +1,17 @@
-// === Module 16620: setRunsInBackground ===
+// === Module 16668: setRunsInBackground ===
 
-// Module 16620 (setRunsInBackground)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11076 */;
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16550 */;
-import FramesStore from "FramesStore" /* 6926 */;
+// Module 16668 (setRunsInBackground)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11061 */;
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16598 */;
+import FramesStore from "FramesStore" /* 6901 */;
 
-const Constants = fn(6608);
+const Constants = fn(6583);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = fn(1072).RPCCommands;
-const ActivityPanelModes = fn(5811).ActivityPanelModes;
-const FrameIntent = fn(6927).FrameIntent;
+const ActivityPanelModes = fn(5781).ActivityPanelModes;
+const FrameIntent = fn(6902).FrameIntent;
 const obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16558);
+const CONTEXT_MENU_ICON_NAMES = fn(16606);
 const obj3 = {
   scope: null,
   handler(args) {

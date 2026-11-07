@@ -1,18 +1,18 @@
-// === Module 14925: components/GameIcon ===
+// === Module 14958: components/GameIcon ===
 
-// Module 14925 (components/GameIcon)
+// Module 14958 (components/GameIcon)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import FastImageDefault from "FastImage" /* 5872 */;
+import FastImageDefault from "FastImage" /* 5842 */;
 import noop from "module_19" /* 19 */;
 
-const Pressables = FireIcon(7068);
-const FireIcon2 = FireIcon(14927);
+const Pressables = FireIcon(7043);
+const FireIcon2 = FireIcon(14960);
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.gameIconImage = size;

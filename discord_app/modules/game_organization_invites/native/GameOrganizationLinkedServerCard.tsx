@@ -1,13 +1,13 @@
-// === Module 13430: GameOrganizationLinkedServerCard ===
+// === Module 13453: GameOrganizationLinkedServerCard ===
 
-// Module 13430 (GameOrganizationLinkedServerCard)
+// Module 13453 (GameOrganizationLinkedServerCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import Stack_Stack from "Stack/Stack" /* 6185 */;
-import GuildIcon from "GuildIcon" /* 7045 */;
-import Card from "Card" /* 7065 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import Stack_Stack from "Stack/Stack" /* 6159 */;
+import GuildIcon from "GuildIcon" /* 7020 */;
+import Card from "Card" /* 7040 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -16,8 +16,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const XLARGE = fn(7045).GuildIconSizes.XLARGE;
-const createStyles = fn(5170);
+const XLARGE = fn(7020).GuildIconSizes.XLARGE;
+const createStyles = fn(5140);
 const obj2 = { card: { padding: nativeDefault.space.PX_16 }, icon: null, info: null, autoWidth: null, dot: null, onlineDot: null, membersDot: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.icon = { borderRadius: nativeDefault.radii.lg };

@@ -1,7 +1,7 @@
-// === Module 13874: CheckpointRankTag ===
+// === Module 13898: CheckpointRankTag ===
 
-// Module 13874 (CheckpointRankTag)
-import CheckpointTagDefault from "CheckpointTag" /* 13875 */;
+// Module 13898 (CheckpointRankTag)
+import CheckpointTagDefault from "CheckpointTag" /* 13899 */;
 import noop from "module_19" /* 19 */;
 
 const jsxs = fn(21).jsxs;

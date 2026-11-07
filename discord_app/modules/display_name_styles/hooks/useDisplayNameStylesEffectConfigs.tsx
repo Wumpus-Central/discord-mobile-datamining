@@ -1,10 +1,10 @@
-// === Module 10911: useDisplayNameStylesEffectConfigs ===
+// === Module 10894: useDisplayNameStylesEffectConfigs ===
 
-// Module 10911 (useDisplayNameStylesEffectConfigs)
+// Module 10894 (useDisplayNameStylesEffectConfigs)
 import util from "util" /* 1113 */;
 import DisplayNameFont from "DisplayNameFont" /* 1395 */;
 import _modDef3056 from "module_3056" /* 3056 */;
-import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 10912 */;
+import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 10895 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

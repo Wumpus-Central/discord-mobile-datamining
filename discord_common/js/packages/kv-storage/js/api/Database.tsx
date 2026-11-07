@@ -1,10 +1,10 @@
-// === Module 5056: Database ===
+// === Module 5026: Database ===
 
-// Module 5056 (Database)
+// Module 5026 (Database)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
-import TableId from "TableId" /* 5055 */;
-import Host2 from "Host" /* 5057 */;
-import Runtime2 from "Runtime" /* 5058 */;
+import TableId from "TableId" /* 5025 */;
+import Host2 from "Host" /* 5027 */;
+import Runtime2 from "Runtime" /* 5028 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -198,7 +198,7 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

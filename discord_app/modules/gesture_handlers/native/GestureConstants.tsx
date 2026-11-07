@@ -1,6 +1,6 @@
-// === Module 11400: GestureConstants ===
+// === Module 11382: GestureConstants ===
 
-// Module 11400 (GestureConstants)
+// Module 11382 (GestureConstants)
 import _mod1652 from "module_1652" /* 1652 */;
 import size from "module_2" /* 2 */;
 

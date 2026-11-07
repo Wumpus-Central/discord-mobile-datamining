@@ -1,6 +1,6 @@
-// === Module 8054: NativePermissionManagerModule ===
+// === Module 8032: NativePermissionManagerModule ===
 
-// Module 8054 (NativePermissionManagerModule)
+// Module 8032 (NativePermissionManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 10806: SocialLayerStorefrontActionCreators ===
+// === Module 10789: SocialLayerStorefrontActionCreators ===
 
-// Module 10806 (SocialLayerStorefrontActionCreators)
+// Module 10789 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9583 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7493 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9565 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7470 */;
 
 const require = globalThis.__r;
 
@@ -32,7 +32,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -268,7 +268,7 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -428,7 +428,7 @@ let closure_22 = async function _fetchSocialLayerStorefrontEntries() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -533,7 +533,7 @@ let closure_23 = async function _fetchSocialLayerStorefrontById(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -710,7 +710,7 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

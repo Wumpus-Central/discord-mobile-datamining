@@ -1,6 +1,6 @@
-// === Module 18905: NavigationTTIRegionDebugState ===
+// === Module 18955: NavigationTTIRegionDebugState ===
 
-// Module 18905 (NavigationTTIRegionDebugState)
+// Module 18955 (NavigationTTIRegionDebugState)
 import size from "module_2" /* 2 */;
 
 const set = new Set();

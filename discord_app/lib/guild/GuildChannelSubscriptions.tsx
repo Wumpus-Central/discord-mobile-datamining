@@ -1,6 +1,6 @@
-// === Module 7536: GuildChannelSubscriptions ===
+// === Module 7513: GuildChannelSubscriptions ===
 
-// Module 7536 (GuildChannelSubscriptions)
+// Module 7513 (GuildChannelSubscriptions)
 import applyDefault from "apply" /* 12 */;
 import privDefault from "priv" /* 1453 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 15233: AddToWishlistItemCard ===
+// === Module 15267: AddToWishlistItemCard ===
 
-// Module 15233 (AddToWishlistItemCard)
+// Module 15267 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 575 */;
-import SKUPreviewDefault from "SKUPreview" /* 9568 */;
-import HeartOutlineIcon from "HeartOutlineIcon" /* 9637 */;
+import SKUPreviewDefault from "SKUPreview" /* 9550 */;
+import HeartOutlineIcon from "HeartOutlineIcon" /* 9619 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { heartOverlay: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_4, right: nativeDefault.space.PX_4, zIndex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 obj2.heartOverlay = rect;
@@ -56,7 +56,7 @@ export default function AddToWishlistItemCard(sku) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

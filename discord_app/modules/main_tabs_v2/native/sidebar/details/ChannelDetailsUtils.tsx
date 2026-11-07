@@ -1,8 +1,8 @@
-// === Module 11815: ChannelDetailsUtils ===
+// === Module 11806: ChannelDetailsUtils ===
 
-// Module 11815 (ChannelDetailsUtils)
+// Module 11806 (ChannelDetailsUtils)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10275 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10258 */;
 import size from "module_2" /* 2 */;
 
 const ChannelDetailsButtonTypes = ChannelDetailsConstants.ChannelDetailsButtonTypes;

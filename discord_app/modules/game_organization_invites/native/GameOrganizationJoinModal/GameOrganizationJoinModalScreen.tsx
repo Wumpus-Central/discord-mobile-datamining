@@ -1,18 +1,18 @@
-// === Module 13424: GameOrganizationJoinModalScreen ===
+// === Module 13447: GameOrganizationJoinModalScreen ===
 
-// Module 13424 (GameOrganizationJoinModalScreen)
+// Module 13447 (GameOrganizationJoinModalScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import NavigatorConstants from "NavigatorConstants" /* 5744 */;
-import ModalScreen from "ModalScreen" /* 8063 */;
-import ExpressiveGradient from "ExpressiveGradient" /* 10103 */;
+import NavigatorConstants from "NavigatorConstants" /* 5714 */;
+import ModalScreen from "ModalScreen" /* 8041 */;
+import ExpressiveGradient from "ExpressiveGradient" /* 8042 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_6 = createStyles.createStyles({ content: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationJoinModalScreen.tsx");

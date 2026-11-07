@@ -1,17 +1,17 @@
-// === Module 9918: HeaderShared ===
+// === Module 9902: HeaderShared ===
 
-// Module 9918 (HeaderShared)
+// Module 9902 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import useToken from "useToken" /* 5754 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import Pressables from "Pressables" /* 7068 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9920 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9925 */;
-import ChannelActionsDefault from "ChannelActions" /* 9930 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 14774 */;
+import useToken from "useToken" /* 5724 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import Pressables from "Pressables" /* 7043 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9904 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9909 */;
+import ChannelActionsDefault from "ChannelActions" /* 9914 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 14807 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -156,10 +156,10 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9919).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9903).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { headerRightContainer: { marginRight: 16 }, headerWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 }, actionButtonPressable: { padding: 8, zIndex: 100, width: 40, height: 40, borderRadius: 20 }, actionButtonIcon: null, headerText: null, subtitleText: null, headerTextButton: null, headerTextButtonAndroid: null, headerTextButtonDisabled: null, titleContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 };
 obj.actionButtonIcon = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };

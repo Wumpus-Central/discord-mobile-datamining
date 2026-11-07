@@ -1,10 +1,10 @@
-// === Module 15003: MediaViewerItem ===
+// === Module 15035: MediaViewerItem ===
 
-// Module 15003 (MediaViewerItem)
+// Module 15035 (MediaViewerItem)
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8926 */;
-import useEntranceAnimation from "useEntranceAnimation" /* 15005 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8908 */;
+import useEntranceAnimation from "useEntranceAnimation" /* 15037 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,20 +1,20 @@
-// === Module 16918: TwoFASetupLanding ===
+// === Module 16966: TwoFASetupLanding ===
 
-// Module 16918 (TwoFASetupLanding)
+// Module 16966 (TwoFASetupLanding)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7378 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 16915 */;
-import TwoFASetupStyles from "TwoFASetupStyles" /* 16919 */;
-import _modDef16920 from "module_16920" /* 16920 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 16963 */;
+import TwoFASetupStyles from "TwoFASetupStyles" /* 16967 */;
+import _modDef16968 from "module_16968" /* 16968 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" }, authIcon: { width: 120, height: 120, marginBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
@@ -26,7 +26,7 @@ export default function TwoFASetupLanding() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
   const obj5 = { source: null, style: null };
-  obj5.source = _modDef16920;
+  obj5.source = _modDef16968;
   obj5.style = tmp.authIcon;
   items = [React4(FastImageDefault, obj5), , ];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };

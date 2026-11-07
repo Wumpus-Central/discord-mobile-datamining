@@ -1,9 +1,9 @@
-// === Module 8104: AppleNeutralIcon ===
+// === Module 8083: AppleNeutralIcon ===
 
-// Module 8104 (AppleNeutralIcon)
+// Module 8083 (AppleNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5871 */;
-import _mod8105 from "module_8105" /* 8105 */;
+import BaseIconImage from "BaseIconImage" /* 5841 */;
+import _mod8084 from "module_8084" /* 8084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function AppleNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8105, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8084, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

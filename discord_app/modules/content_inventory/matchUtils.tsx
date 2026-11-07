@@ -1,11 +1,11 @@
-// === Module 9000: matchUtils ===
+// === Module 8982: matchUtils ===
 
-// Module 9000 (matchUtils)
-import CrunchyrollConnectionConstants from "CrunchyrollConnectionConstants" /* 9001 */;
-import SpotifyConstants from "SpotifyConstants" /* 9003 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 9004 */;
-import ContentInventoryListenedMediaProvider from "ContentInventoryListenedMediaProvider" /* 9006 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9007 */;
+// Module 8982 (matchUtils)
+import CrunchyrollConnectionConstants from "CrunchyrollConnectionConstants" /* 8983 */;
+import SpotifyConstants from "SpotifyConstants" /* 8985 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8986 */;
+import ContentInventoryListenedMediaProvider from "ContentInventoryListenedMediaProvider" /* 8988 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8989 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -108,7 +108,7 @@ export function findMatchingEntry(entries, activity) {
   _require = activity;
   const found = entries.filter(require("utils").isEntryActive);
   if (activity.type === require("ActivityTypes").ActivityTypes.PLAYING) {
-    const found1 = found.filter(tmp(9004).isGamingLikeEntry);
+    const found1 = found.filter(tmp(8986).isGamingLikeEntry);
     let found2 = found1.find((extra) => {
       let name = closure_0;
       let game_name = extra.extra;
@@ -126,11 +126,11 @@ export function findMatchingEntry(entries, activity) {
       }
       return tmp;
     });
-  } else if (activity.type === tmp(5918).ActivityTypes.LISTENING) {
-    const found3 = found.filter(tmp(9004).isListenedSessionEntry);
+  } else if (activity.type === tmp(5891).ActivityTypes.LISTENING) {
+    const found3 = found.filter(tmp(8986).isListenedSessionEntry);
     found2 = found3.find((item) => isMatchingListeningActivity(item, closure_0));
-  } else if (activity.type === tmp(5918).ActivityTypes.WATCHING) {
-    const found4 = entries.filter(tmp(9004).isWatchedMediaEntry);
+  } else if (activity.type === tmp(5891).ActivityTypes.WATCHING) {
+    const found4 = entries.filter(tmp(8986).isWatchedMediaEntry);
     found2 = found4.find((extra) => {
       const tmp3 = isCrunchyrollActivityDefault(activity);
       let tmp4 = !tmp3;

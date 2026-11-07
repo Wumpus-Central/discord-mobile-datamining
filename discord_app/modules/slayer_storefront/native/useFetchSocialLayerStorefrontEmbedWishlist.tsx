@@ -1,19 +1,19 @@
-// === Module 11729: useFetchSocialLayerStorefrontEmbedWishlist ===
+// === Module 11711: useFetchSocialLayerStorefrontEmbedWishlist ===
 
-// Module 11729 (useFetchSocialLayerStorefrontEmbedWishlist)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8850 */;
-import WishlistFetchSource from "WishlistFetchSource" /* 9579 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9580 */;
+// Module 11711 (useFetchSocialLayerStorefrontEmbedWishlist)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8829 */;
+import WishlistFetchSource from "WishlistFetchSource" /* 9561 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9562 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7871 */;
-import WishlistStore from "WishlistStore" /* 9573 */;
+import UserProfileStore from "UserProfileStore" /* 7848 */;
+import WishlistStore from "WishlistStore" /* 9555 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = { user: "a", profile: "flexDirection", wishlistId: "container", wishlist: "chorro", updatedAt: "chorro de agua", storedUpdatedAt: "c\u00F3mic", fetching: "c\u00F3mics", error: "emoci\u00F3n" };
+let closure_8 = { user: "a", profile: "flexDirection", wishlistId: "container", wishlist: "conjure.town", updatedAt: "conjure.city", storedUpdatedAt: "messageId", fetching: "(function CustomizeCommunityTsx2(){let[isNew,brandColor,withSequence,withTiming,Easing,withDelay]=this.__closure;const rawBorderColor=isNew?brandColor+\"FF\":brandColor+\"00\";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+\"00\",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};})", error: true };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/useFetchSocialLayerStorefrontEmbedWishlist.tsx");
 

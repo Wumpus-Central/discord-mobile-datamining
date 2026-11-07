@@ -1,29 +1,29 @@
-// === Module 10937: ChannelRow ===
+// === Module 10920: ChannelRow ===
 
-// Module 10937 (ChannelRow)
+// Module 10920 (ChannelRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import DateUtils from "DateUtils" /* 4992 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import useChannelName from "useChannelName" /* 5806 */;
-import TextIcon2 from "TextIcon" /* 8744 */;
-import ForumIcon from "ForumIcon" /* 8752 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10938 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 13630 */;
+import DateUtils from "DateUtils" /* 4962 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import useChannelName from "useChannelName" /* 5776 */;
+import TextIcon2 from "TextIcon" /* 8723 */;
+import ForumIcon from "ForumIcon" /* 8731 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10921 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 13654 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import ReadStateStore from "ReadStateStore" /* 6922 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import ReadStateStore from "ReadStateStore" /* 6897 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10863).UserRowModes;
-const ReadStateTypes = fn(6856).ReadStateTypes;
+const UserRowModes = fn(10846).UserRowModes;
+const ReadStateTypes = fn(6831).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { guildIcon: { flexShrink: 0, flexGrow: 0 }, subLabel: { display: "flex", flexDirection: "row", alignItems: "center" }, subLabelIcon: { width: 12, height: 12, marginRight: 2 }, subLabelSeparator: { marginHorizontal: nativeDefault.space.PX_4 }, threadName: { flexShrink: 1 } };
 let closure_15 = createStyles.createStyles(obj);
 let obj3 = { marginHorizontal: nativeDefault.space.PX_4 };

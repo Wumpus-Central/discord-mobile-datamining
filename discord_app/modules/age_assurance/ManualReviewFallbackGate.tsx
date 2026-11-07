@@ -1,9 +1,9 @@
-// === Module 8090: ManualReviewFallbackGate ===
+// === Module 8069: ManualReviewFallbackGate ===
 
-// Module 8090 (ManualReviewFallbackGate)
-import SafetyHubUtils from "SafetyHubUtils" /* 8060 */;
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8091 */;
-import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 8092 */;
+// Module 8069 (ManualReviewFallbackGate)
+import SafetyHubUtils from "SafetyHubUtils" /* 8038 */;
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8070 */;
+import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 8071 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export function shouldShowManualReviewFallback(AUTOMATED_UNDERAGE_APPEALS) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -128,7 +128,7 @@ export function shouldShowManualReviewFallback(AUTOMATED_UNDERAGE_APPEALS) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

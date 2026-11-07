@@ -92,7 +92,7 @@ prototype["loadStoredState"] = function loadStoredState(version, buildOverrideEx
         tmp12[key10020] = v3Result;
         tmp9 = v3Result;
       }
-      let obj3 = { hashedName: tmp9, variantId: arg1[key10020], isOverride: true, exposureTrackingEnabled: false, useAsEligibility: false };
+      let obj3 = { hashedName: tmp9, variantId: arg1[key10020], isOverride: true, isAppLaunch: false, exposureTrackingEnabled: false, useAsEligibility: false };
       closure_13[key10020] = obj3;
       continue;
     }
@@ -147,9 +147,10 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
               if (tmp19 == null) {
                 num = 0;
               }
-              let obj2 = { hashedName: tmp17, variantId: tmp18, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null, config: null };
+              let obj2 = { hashedName: tmp17, variantId: tmp18, trackedVariantId: null, isOverride: null, isAppLaunch: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null, config: null };
               obj2.trackedVariantId = tmp21;
               obj2.isOverride = num & ApexTypes.ExperimentFlags.IsOverride;
+              obj2.isAppLaunch = num & ApexTypes.ExperimentFlags.IsAppLaunch;
               obj2.revision = tmp20;
               obj2.exposureTrackingEnabled = num & ApexTypes.ExperimentFlags.ExposureTrackingEnabled;
               obj2.useAsEligibility = num & ApexTypes.ExperimentFlags.UseAsEligibility;
@@ -189,9 +190,10 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
       if (tmp17 == null) {
         num = 0;
       }
-      let obj3 = { hashedName: tmp15, variantId: tmp16, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null };
+      let obj3 = { hashedName: tmp15, variantId: tmp16, trackedVariantId: null, isOverride: null, isAppLaunch: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null };
       obj3.trackedVariantId = tmp19;
       obj3.isOverride = num & ApexTypes.ExperimentFlags.IsOverride;
+      obj3.isAppLaunch = num & ApexTypes.ExperimentFlags.IsAppLaunch;
       obj3.revision = tmp18;
       obj3.exposureTrackingEnabled = num & ApexTypes.ExperimentFlags.ExposureTrackingEnabled;
       obj3.useAsEligibility = num & ApexTypes.ExperimentFlags.UseAsEligibility;
@@ -211,7 +213,7 @@ prototype["createOverride"] = function createOverride(experimentName, variantId)
     tmp2[experimentName] = v3Result;
     tmp3 = v3Result;
   }
-  obj[experimentName] = { hashedName: tmp3, variantId, isOverride: true, exposureTrackingEnabled: false };
+  obj[experimentName] = { hashedName: tmp3, variantId, isOverride: true, isAppLaunch: false, exposureTrackingEnabled: false };
   closure_11 = obj;
   const result = this.trackExposureSuppression(experimentName, "client_override");
 };
@@ -228,7 +230,7 @@ prototype["createSessionOverride"] = function createSessionOverride(experimentNa
     tmp2[experimentName] = v3Result;
     tmp3 = v3Result;
   }
-  obj[experimentName] = { hashedName: tmp3, variantId, isOverride: true, exposureTrackingEnabled: false };
+  obj[experimentName] = { hashedName: tmp3, variantId, isOverride: true, isAppLaunch: false, exposureTrackingEnabled: false };
   closure_12 = obj;
 };
 prototype["deleteSessionOverride"] = function deleteSessionOverride(experimentName) {

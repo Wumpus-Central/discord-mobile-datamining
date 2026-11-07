@@ -1,9 +1,9 @@
-// === Module 11293: useFavoritesGuildChannelActions ===
+// === Module 11275: useFavoritesGuildChannelActions ===
 
-// Module 11293 (useFavoritesGuildChannelActions)
+// Module 11275 (useFavoritesGuildChannelActions)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import FavoriteStore from "FavoriteStore" /* 5022 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import FavoriteStore from "FavoriteStore" /* 4992 */;
 
 const require = globalThis.__r;
 

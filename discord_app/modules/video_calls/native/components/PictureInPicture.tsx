@@ -1,16 +1,16 @@
-// === Module 11879: PictureInPicture ===
+// === Module 11870: PictureInPicture ===
 
-// Module 11879 (PictureInPicture)
+// Module 11870 (PictureInPicture)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5765 */;
-import spring_spring from "spring/spring" /* 5791 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11880 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11883 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11884 */;
-import useDraggablePip from "useDraggablePip" /* 11885 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5735 */;
+import spring_spring from "spring/spring" /* 5761 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11871 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11874 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11875 */;
+import useDraggablePip from "useDraggablePip" /* 11876 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,10 +19,10 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const toggleFocus = fn(11144).toggleFocus;
+const toggleFocus = fn(11130).toggleFocus;
 const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { pipOuterContainer: null, pipInnerContainer: null, elevationShadow: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

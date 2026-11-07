@@ -1,25 +1,26 @@
-// === Module 11572: UserProfilePrimaryInfo ===
+// === Module 11554: UserProfilePrimaryInfo ===
 
-// Module 11572 (UserProfilePrimaryInfo)
+// Module 11554 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 5224 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5867 */;
-import QuestTypes from "QuestTypes" /* 6864 */;
-import Pressables from "Pressables" /* 7068 */;
-import openUserSettings from "openUserSettings" /* 7658 */;
-import GuildTagUtils from "GuildTagUtils" /* 8828 */;
-import BadgeId from "BadgeId" /* 8847 */;
-import useBadges from "useBadges" /* 8907 */;
-import BotTagDefault from "BotTag" /* 9300 */;
-import GuildTagDefault from "GuildTag" /* 9393 */;
-import captureAdUserAction from "captureAdUserAction" /* 9791 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9794 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10908 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11615 */;
-import BadgeUtils from "BadgeUtils" /* 11619 */;
+import UserUtilsDefault from "UserUtils" /* 5194 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
+import QuestTypes from "QuestTypes" /* 6839 */;
+import Pressables from "Pressables" /* 7043 */;
+import openUserSettings from "openUserSettings" /* 7635 */;
+import GuildTagUtils from "GuildTagUtils" /* 8807 */;
+import BadgeId from "BadgeId" /* 8826 */;
+import useBadges from "useBadges" /* 8889 */;
+import BotTagDefault from "BotTag" /* 9282 */;
+import GuildTagDefault from "GuildTag" /* 9375 */;
+import captureAdUserAction from "captureAdUserAction" /* 9775 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9778 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10891 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11597 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11598 */;
+import BadgeUtils from "BadgeUtils" /* 11602 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8855 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8834 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -391,10 +392,13 @@ class ProfileBadgeRows {
     closure_8 = undefined;
     c9 = undefined;
     closure_10 = undefined;
-    closure_11 = undefined;
+    c11 = undefined;
     closure_12 = undefined;
-    closure_13 = undefined;
+    trackUserProfileAction = undefined;
     closure_14 = undefined;
+    closure_15 = undefined;
+    closure_16 = undefined;
+    closure_17 = undefined;
     width = undefined;
     tmp = closure_19();
     closure_5 = tmp;
@@ -429,50 +433,71 @@ class ProfileBadgeRows {
     tmp11 = userId === id;
     closure_10 = tmp11;
     tmp4Result = tmp4(stringResult2[35]);
-    str = "ProfileBadgeRows (other)";
-    if (tmp11) {
-      str = "ProfileBadgeRows (own)";
-    }
-    isBadgeUnreadStateEnabled = tmp4Result.useIsBadgeUnreadStateEnabled({ location: str });
-    closure_11 = isBadgeUnreadStateEnabled;
-    tmp4Result1 = tmp4(stringResult2[36]);
     string = badges;
-    token = tmp4Result1.useToken(badges(stringResult2[10]).colors.BADGE_PRIMARY_BACKGROUND);
+    token = tmp4Result.useToken(badges(stringResult2[10]).colors.BADGE_PRIMARY_BACKGROUND);
+    tmp4Result1 = tmp4(stringResult2[35]);
+    tmp14 = tmp11;
+    token1 = tmp4Result1.useToken(badges(stringResult2[10]).colors.BACKGROUND_SURFACE_HIGH);
+    if (tmp11) {
+      tmp14 = isBadgeManagementEnabled;
+    }
+    if (tmp14) {
+      tmp14 = tmp7;
+    }
+    c11 = tmp14;
     tmp4Result2 = tmp4(stringResult2[36]);
-    token1 = tmp4Result2.useToken(badges(stringResult2[10]).colors.BACKGROUND_SURFACE_HIGH);
-    tmp4Result3 = tmp4(stringResult2[37]);
     items = [];
     items[0] = badgeSize;
-    items1 = [, , ];
-    items1[0] = tmp11;
-    items1[1] = isBadgeUnreadStateEnabled;
-    items1[2] = userId;
-    stateFromStores = tmp4Result3.useStateFromStores(items, () => {
-      let tmp = closure_10;
-      if (closure_10) {
-        tmp = isBadgeUnreadStateEnabled;
-      }
-      if (tmp) {
+    items1 = [, ];
+    items1[0] = tmp14;
+    items1[1] = userId;
+    stateFromStores = tmp4Result2.useStateFromStores(items, () => {
+      let tmp = closure_11;
+      if (closure_11) {
         tmp = BadgeDirectoryStore.getUnreadBadges(userId).length > 0;
       }
       return tmp;
     }, items1);
-    obj7 = style;
+    tmp4Result3 = tmp4(stringResult2[37]);
+    if (stateFromStores) {
+      stateFromStores = tmp4Result3.useIsBadgeUnreadStateEnabled({ location: "ProfileBadgeRows", hasUnread: stateFromStores });
+    }
+    closure_12 = stateFromStores;
+    tmp4Result4 = tmp4(stringResult2[38]);
+    trackUserProfileAction = tmp4Result4.useUserProfileAnalyticsContext().trackUserProfileAction;
+    obj8 = style;
+    closure_14 = style.useRef(false);
     items2 = [, ];
-    items2[0] = userId;
-    items2[1] = onOpenBadgeDirectory;
+    items2[0] = stateFromStores;
+    items2[1] = trackUserProfileAction;
+    effect = style.useEffect(() => {
+      let tmp = stateFromStores;
+      if (stateFromStores) {
+        tmp = !ref.current;
+      }
+      if (tmp) {
+        ref.current = true;
+        trackUserProfileAction({ action: "VIEW_BADGES_UNREAD_INDICATOR" });
+      }
+    }, items2);
+    items3 = [, , , ];
+    items3[0] = stateFromStores;
+    items3[1] = tmp11;
+    items3[2] = userId;
+    items3[3] = onOpenBadgeDirectory;
     callback = style.useCallback(() => {
       if (onOpenBadgeDirectory != null) {
         tmp();
       }
+      trackBadgeDirectoryActionDefault({ actionName: "badge_directory_opened", displayedUserId: userId, isSociallyNavigated: !closure_10, hasUnreadIndicator: stateFromStores, source: "profile_badge_row" });
       const result = openBadgeDirectoryScreen.openBadgeDirectoryScreen({ targetUserId: userId });
-    }, items2);
-    items3 = [];
-    items3[0] = badges;
-    closure_12 = style.useMemo(() => BadgeUtils.getLegacyIconUrlByBadgeId(badges), items3);
+    }, items3);
     items4 = [];
     items4[0] = badges;
-    closure_13 = style.useMemo(() => BadgeUtils.getLegacyDescriptionByBadgeId(badges), items4);
+    closure_15 = style.useMemo(() => BadgeUtils.getLegacyIconUrlByBadgeId(badges), items4);
+    items5 = [];
+    items5[0] = badges;
+    closure_16 = style.useMemo(() => BadgeUtils.getLegacyDescriptionByBadgeId(badges), items5);
     mapped = badges.map((id) => {
       const obj = { id: id.id, userId, source: null, label: null, badgeSize: null, themeType: null, showToastOnPress: null };
       const obj2 = { uri: BadgeUtils.getProfileBadgeIconUrl(id) };
@@ -483,38 +508,38 @@ class ProfileBadgeRows {
       obj.showToastOnPress = flag;
       return gesture(ProfileBadge, obj, id.id);
     });
-    closure_14 = mapped;
+    closure_17 = mapped;
     if (isTryItOut) {
       isTryItOut = null == badges.find((id) => "premium" === id.id);
     }
     if (isTryItOut) {
-      tmp17 = closure_14;
-      tmp18 = ProfileBadge;
+      tmp18 = closure_14;
+      tmp19 = ProfileBadge;
       obj1 = { source: null, id: "premium", userId: null, label: null, badgeSize: null, showToastOnPress: null };
-      obj1.source = string(stringResult2[40]);
+      obj1.source = string(stringResult2[42]);
       obj1.userId = userId;
       intl2 = tmp4(stringResult2[22]).intl;
-      obj24 = { date: null };
-      tmp19 = globalThis;
+      obj25 = { date: null };
+      tmp20 = globalThis;
       _Date = Date;
-      tmp20 = new.target;
       tmp21 = new.target;
+      tmp22 = new.target;
       date = new Date();
-      tmp23 = date;
-      obj24.date = date;
-      obj1.label = intl2.formatToPlainString(tmp4(stringResult2[22]).t["8zbGNR"], obj24);
+      tmp24 = date;
+      obj25.date = date;
+      obj1.label = intl2.formatToPlainString(tmp4(stringResult2[22]).t["8zbGNR"], obj25);
       obj1.badgeSize = intl;
       obj1.showToastOnPress = tmp8;
       arr1 = mapped.push(closure_14(ProfileBadge, obj1));
     }
-    width = string(stringResult2[41])().width;
-    items5 = [, , , , ];
-    items5[0] = mapped;
-    items5[1] = badgeRowHorizontalPadding;
-    items5[2] = intl;
-    items5[3] = width;
-    items5[4] = isBadgeManagementEnabled;
-    memo = obj7.useMemo(() => {
+    width = string(stringResult2[43])().width;
+    items6 = [, , , , ];
+    items6[0] = mapped;
+    items6[1] = badgeRowHorizontalPadding;
+    items6[2] = intl;
+    items6[3] = width;
+    items6[4] = isBadgeManagementEnabled;
+    memo = obj8.useMemo(() => {
       if (isBadgeManagementEnabled) {
         return [];
       } else {
@@ -526,14 +551,14 @@ class ProfileBadgeRows {
         obj.length = Math.ceil(mapped.length / rounded);
         return Array.from(obj, (arg0, arg1) => mapped.slice(arg1 * rounded, (arg1 + 1) * rounded));
       }
-    }, items5);
+    }, items6);
     if (isBadgeManagementEnabled) {
       mapped1 = undefined;
       if (catalogBadges != null) {
         num = 0;
-        substr = catalogBadges.slice(0, tmp4(stringResult2[39]).MAX_DISPLAYED_PROFILE_BADGES);
+        substr = catalogBadges.slice(0, tmp4(stringResult2[41]).MAX_DISPLAYED_PROFILE_BADGES);
         mapped1 = substr.map((badge_id) => {
-          value = closure_12.get(badge_id.badge_id);
+          value = closure_15.get(badge_id.badge_id);
           let obj = getBadgeName(badge_id.badge_id);
           if (obj.startsWith(DEFAULT_PREMIUM_BADGE_ID)) {
             obj = DEFAULT_PREMIUM_BADGE_ID;
@@ -545,7 +570,7 @@ class ProfileBadgeRows {
             tmp5 = obj3;
           }
           obj2.source = tmp5;
-          obj2.label = BadgeUtils.getProfileBadgeLabel(closure_13.get(badge_id.badge_id), badge_id);
+          obj2.label = BadgeUtils.getProfileBadgeLabel(closure_16.get(badge_id.badge_id), badge_id);
           obj2.badgeSize = intl;
           obj2.themeType = themeType;
           obj2.showToastOnPress = flag;
@@ -554,7 +579,7 @@ class ProfileBadgeRows {
       }
       if (mapped1 == null) {
         num2 = 0;
-        mapped1 = mapped.slice(0, tmp4(stringResult2[39]).MAX_DISPLAYED_PROFILE_BADGES);
+        mapped1 = mapped.slice(0, tmp4(stringResult2[41]).MAX_DISPLAYED_PROFILE_BADGES);
       }
       length = undefined;
       if (catalogBadges != null) {
@@ -564,163 +589,163 @@ class ProfileBadgeRows {
         length = mapped.length;
       }
       diff = length - mapped1.length;
-      tmp31Result = null;
+      tmp32Result = null;
       if (tmp7) {
-        tmp31Result = null;
+        tmp32Result = null;
         if (stateFromStores) {
-          tmp31 = width;
+          tmp32 = closure_15;
           size = { width: null, height: null, style: null, pointerEvents: "none", "aria-hidden": true, children: null };
-          tmp33 = closure_18;
-          size.width = closure_18;
-          size.height = closure_18;
+          tmp34 = width;
+          size.width = width;
+          size.height = width;
           size.style = tmp.unreadDot;
-          tmp34 = closure_14;
-          stringResult = string(stringResult2[42]);
-          obj25 = { cx: null, cy: null, r: null, fill: null };
+          tmp35 = closure_14;
+          stringResult = string(stringResult2[44]);
+          obj26 = { cx: null, cy: null, r: null, fill: null };
           num3 = 2;
-          result = closure_18 / 2;
-          obj25.cx = result;
-          obj25.cy = result;
-          obj25.r = result;
+          result = width / 2;
+          obj26.cx = result;
+          obj26.cy = result;
+          obj26.r = result;
           if (profileBackgroundColor == null) {
             profileBackgroundColor = token1;
           }
-          obj25.fill = profileBackgroundColor;
-          items6 = [, ];
-          items6[0] = tmp34(tmp4(stringResult2[42]).Circle, obj25);
-          obj26 = { cx: null, cy: null, r: null, fill: null };
-          obj26.cx = result;
-          obj26.cy = result;
-          tmp36 = PX_6;
-          obj26.r = PX_6 / 2;
-          obj26.fill = token;
-          items6[1] = tmp34(tmp4(stringResult2[42]).Circle, obj26);
-          size.children = items6;
-          tmp31Result = tmp31(stringResult, size);
+          obj26.fill = profileBackgroundColor;
+          items7 = [, ];
+          items7[0] = tmp35(tmp4(stringResult2[44]).Circle, obj26);
+          obj27 = { cx: null, cy: null, r: null, fill: null };
+          obj27.cx = result;
+          obj27.cy = result;
+          tmp37 = closure_17;
+          obj27.r = closure_17 / 2;
+          obj27.fill = token;
+          items7[1] = tmp35(tmp4(stringResult2[44]).Circle, obj27);
+          size.children = items7;
+          tmp32Result = tmp32(stringResult, size);
         }
       }
       num4 = 0;
       if (0 === mapped1.length) {
-        tmp47 = null;
+        tmp48 = null;
         if (tmp7) {
-          tmp47 = null;
+          tmp48 = null;
           if (tmp11) {
-            tmp48 = width;
-            obj27 = { ref: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-            obj27.ref = badgeDirectoryEntryPointRef;
+            tmp49 = closure_15;
+            obj28 = { ref: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+            obj28.ref = badgeDirectoryEntryPointRef;
             intl6 = tmp4(stringResult2[22]).intl;
             stringResult1 = intl6.string(tmp4(stringResult2[22]).t.l6w3Vj);
             if (stateFromStores) {
               intl7 = tmp4(stringResult2[22]).intl;
-              tmp51 = globalThis;
+              tmp52 = globalThis;
               _HermesInternal3 = HermesInternal;
-              str5 = ", ";
-              str6 = "";
+              str4 = ", ";
+              str5 = "";
               combined = "" + stringResult1 + ", " + intl7.string(tmp4(stringResult2[22]).t.y2b7CA);
             } else {
               combined = stringResult1;
             }
-            obj27.accessibilityLabel = combined;
-            obj27.onPress = callback;
-            items7 = [, , ];
-            items7[0] = tmp.addBadgesChip;
-            obj28 = { minHeight: null };
-            num5 = 4;
-            obj28.minHeight = intl + 4;
-            items7[1] = obj28;
-            items7[2] = Text;
-            obj27.style = items7;
-            callback = closure_14;
-            obj29 = { size: "xs", color: null };
-            obj29.color = string(stringResult2[10]).colors.TEXT_STRONG;
+            obj28.accessibilityLabel = combined;
+            obj28.onPress = callback;
             items8 = [, , ];
-            items8[0] = closure_14(tmp4(stringResult2[43]).PlusMediumIcon, obj29);
+            items8[0] = tmp.addBadgesChip;
+            obj29 = { minHeight: null };
+            num5 = 4;
+            obj29.minHeight = intl + 4;
+            items8[1] = obj29;
+            items8[2] = Text;
+            obj28.style = items8;
+            callback = closure_14;
+            obj30 = { size: "xs", color: null };
+            obj30.color = string(stringResult2[10]).colors.TEXT_STRONG;
+            items9 = [, , ];
+            items9[0] = closure_14(tmp4(stringResult2[45]).PlusMediumIcon, obj30);
             Text = tmp4(stringResult2[18]).Text;
-            obj30 = { variant: "body-xs/normal", color: "text-strong", children: null };
+            obj31 = { variant: "body-xs/normal", color: "text-strong", children: null };
             intl = tmp4(stringResult2[22]).intl;
             string = intl.string;
             stringResult2 = string(tmp4(stringResult2[22]).t.l6w3Vj);
-            obj30.children = stringResult2;
-            tmp = closure_14(Text, obj30);
-            items8[1] = tmp;
-            items8[2] = tmp31Result;
-            obj27.children = items8;
-            tmp48Result = tmp48(tmp4(stringResult2[16]).PressableOpacity, obj27);
+            obj31.children = stringResult2;
+            tmp = closure_14(Text, obj31);
+            items9[1] = tmp;
+            items9[2] = tmp32Result;
+            obj28.children = items9;
+            tmp49Result = tmp49(tmp4(stringResult2[16]).PressableOpacity, obj28);
           }
         }
-        return tmp47;
+        return tmp48;
       } else {
-        tmp54 = closure_5;
-        obj31 = { style: null, children: null };
-        items9 = [, , , ];
-        ({ badgeRow: arr14[0], limitedBadgeRow: arr14[1] } = tmp);
-        obj32 = { paddingHorizontal: null };
-        obj32.paddingHorizontal = badgeRowHorizontalPadding;
-        items9[2] = obj32;
-        items9[3] = Text;
-        obj31.style = items9;
-        items10 = [, , ];
-        items10[0] = mapped1;
-        tmp39 = diff > 0;
-        tmp53 = width;
-        if (tmp39) {
-          tmp37 = closure_14;
-          obj33 = { variant: null, color: "mobile-text-heading-primary", accessibilityLabel: null, children: null };
-          obj33.variant = tmp2.textVariant;
+        tmp55 = closure_5;
+        obj32 = { style: null, children: null };
+        items10 = [, , , ];
+        ({ badgeRow: arr15[0], limitedBadgeRow: arr15[1] } = tmp);
+        obj33 = { paddingHorizontal: null };
+        obj33.paddingHorizontal = badgeRowHorizontalPadding;
+        items10[2] = obj33;
+        items10[3] = Text;
+        obj32.style = items10;
+        items11 = [, , ];
+        items11[0] = mapped1;
+        tmp40 = diff > 0;
+        tmp54 = closure_15;
+        if (tmp40) {
+          tmp38 = closure_14;
+          obj34 = { variant: null, color: "mobile-text-heading-primary", accessibilityLabel: null, children: null };
+          obj34.variant = tmp2.textVariant;
           intl3 = tmp4(stringResult2[22]).intl;
-          obj34 = { overflow_count: null };
-          obj34.overflow_count = diff;
-          obj33.accessibilityLabel = intl3.formatToPlainString(tmp4(stringResult2[22]).t.eIHfGZ, obj34);
-          tmp38 = globalThis;
+          obj35 = { overflow_count: null };
+          obj35.overflow_count = diff;
+          obj34.accessibilityLabel = intl3.formatToPlainString(tmp4(stringResult2[22]).t.eIHfGZ, obj35);
+          tmp39 = globalThis;
           _HermesInternal = HermesInternal;
-          str2 = "+";
-          obj33.children = "+" + diff;
-          tmp39 = closure_14(tmp4(stringResult2[18]).Text, obj33);
+          str = "+";
+          obj34.children = "+" + diff;
+          tmp40 = closure_14(tmp4(stringResult2[18]).Text, obj34);
         }
-        items10[1] = tmp39;
-        items10[2] = tmp31Result;
-        obj31.children = items10;
-        tmp53Result = tmp53(tmp54, obj31);
-        tmp41 = closure_14;
-        obj35 = { style: null, ref: null, collapsable: false, children: null };
-        obj35.style = tmp.badges;
-        obj35.ref = badgeDirectoryEntryPointRef;
-        tmp42 = tmp53Result;
+        items11[1] = tmp40;
+        items11[2] = tmp32Result;
+        obj32.children = items11;
+        tmp54Result = tmp54(tmp55, obj32);
+        tmp42 = closure_14;
+        obj36 = { style: null, ref: null, collapsable: false, children: null };
+        obj36.style = tmp.badges;
+        obj36.ref = badgeDirectoryEntryPointRef;
+        tmp43 = tmp54Result;
         if (!tmp7) {
-          obj35.children = tmp53Result;
-          return tmp41(tmp54, obj35);
+          obj36.children = tmp54Result;
+          return tmp42(tmp55, obj36);
         } else {
           intl4 = tmp4(stringResult2[22]).intl;
           stringResult3 = intl4.string(tmp4(stringResult2[22]).t.PEjP4L);
           if (stateFromStores) {
             intl5 = tmp4(stringResult2[22]).intl;
-            tmp45 = globalThis;
+            tmp46 = globalThis;
             _HermesInternal2 = HermesInternal;
-            str3 = ", ";
-            str4 = "";
+            str2 = ", ";
+            str3 = "";
             combined1 = "" + stringResult3 + ", " + intl5.string(tmp4(stringResult2[22]).t.y2b7CA);
           } else {
             combined1 = stringResult3;
           }
-          obj36 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-          obj36.accessibilityLabel = combined1;
-          obj36.onPress = callback;
-          obj36.children = tmp53Result;
-          tmp41Result = tmp41(tmp4(stringResult2[16]).PressableOpacity, obj36);
+          obj37 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+          obj37.accessibilityLabel = combined1;
+          obj37.onPress = callback;
+          obj37.children = tmp54Result;
+          tmp42Result = tmp42(tmp4(stringResult2[16]).PressableOpacity, obj37);
         }
       }
     } else {
-      tmp25 = closure_14;
-      tmp26 = closure_5;
-      obj37 = { style: null, children: null };
-      obj37.style = tmp.badges;
-      obj37.children = memo.map((children, index) => {
+      tmp26 = closure_14;
+      tmp27 = closure_5;
+      obj38 = { style: null, children: null };
+      obj38.style = tmp.badges;
+      obj38.children = memo.map((children, index) => {
         const obj = { style: null, children };
         items = [badgeRow.badgeRow, { paddingHorizontal: badgeRowHorizontalPadding }, Text];
         obj.style = items;
         return gesture(hasOwnProperty, obj, index);
       });
-      return closure_14(closure_5, obj37);
+      return closure_14(closure_5, obj38);
     }
     return;
   }
@@ -772,17 +797,17 @@ function GuildTag(primaryGuildOverride) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8846).getBadgeName;
-const Constants = fn(7460);
+const getBadgeName = fn(8825).getBadgeName;
+const Constants = fn(7437);
 ({ DIVIDER_DOT: closure_9, PROFILE_SIDE_PADDING: closure_10, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const GuildTagBadgeSize = fn(8485).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8857).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8464).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8836).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
-const collapsedCategories = PX_6 + 4;
-let createStyles = fn(5170);
+let closure_18 = PX_6 + 4;
+let createStyles = fn(5140);
 let obj2 = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, displayNameText: { flexShrink: 1, minWidth: 0 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 }, transparentBackground: { backgroundColor: "transparent" }, badge: { resizeMode: "contain" }, badges: { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 }, badgeRow: null, limitedBadgeRow: null, unreadDot: null, addBadgesChip: null };
 let obj3 = { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 };
 obj2.badgeRow = { borderRadius: nativeDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
@@ -793,7 +818,7 @@ obj2.addBadgesChip = { flexDirection: "row", alignItems: "center", alignSelf: "c
 const expandedHeight = createStyles.createStyles(obj2);
 let closure_20 = { headingVariant: "heading-xl/semibold", textVariant: "body-md/normal", badgeSize: 20, badgeRowHorizontalPadding: 7, guildTagBadgeSize: GuildTagBadgeSize.SIZE_16, guildTagTextVariant: "body-sm/medium", guildTagHorizontalPadding: 8 };
 const guild = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "heading-lg/semibold", textVariant: "body-sm/normal", badgeSize: 16, badgeRowHorizontalPadding: 6, guildTagBadgeSize: GuildTagBadgeSize.SIZE_12, guildTagTextVariant: "body-xs/medium", guildTagHorizontalPadding: 6 } };
-createStyles = fn(5170);
+createStyles = fn(5140);
 let closure_22 = createStyles.createStyles((arg0) => {
   let sum = arg0;
   if (obj.isIOS()) {

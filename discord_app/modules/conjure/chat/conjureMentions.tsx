@@ -1,13 +1,13 @@
-// === Module 12827: conjureMentions ===
+// === Module 12838: conjureMentions ===
 
-// Module 12827 (conjureMentions)
-import _modDef4024 from "module_4024" /* 4024 */;
-import UserUtils from "UserUtils" /* 5224 */;
-import conjureFileMentions from "conjureFileMentions" /* 12313 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12826 */;
+// Module 12838 (conjureMentions)
+import _modDef4026 from "module_4026" /* 4026 */;
+import UserUtils from "UserUtils" /* 5194 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 11720 */;
+import conjureFileMentions from "conjureFileMentions" /* 12311 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12316 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12314 */;
 
 const require = globalThis.__r;
 
@@ -125,32 +125,32 @@ export function useRequestConjureMentionedUsers(text) {
   return require("initialize").useStateFromStores(items2, () => memo.filter((item) => null != user.getUser(item)).length, items3);
 }
 export function withConjureMentionNames(body) {
-  const f104012 = (arg0) => user.getUser(arg0);
-  const f104013 = (arg0) => attachment.getAttachment(arg0);
+  const f104414 = (arg0) => user.getUser(arg0);
+  const f104415 = (arg0) => attachment.getAttachment(arg0);
   return body.replace(closure_6, (arg0, arg1, arg2) => {
     if (null == arg1) {
       let str2 = arg2;
       if (arg2 == null) {
         str2 = "";
       }
-      const tmp7Result = f129434(str2);
+      const tmp7Result = f130004(str2);
       let name;
       if (tmp7Result != null) {
         name = tmp7Result.name;
       }
       if (name == null) {
         const intl = closure_0(1113).intl;
-        name = intl.string(_modDef4024.ff9Q4C);
+        name = intl.string(_modDef4026.ff9Q4C);
       }
       const _HermesInternal2 = HermesInternal;
       return "@" + name;
     } else {
       let combined = arg0;
-      const tmp3 = f129433(arg1);
+      const tmp3 = f130003(arg1);
       if (null != tmp3) {
         const _HermesInternal = HermesInternal;
-        combined = "@" + closure_0(5224).getName(tmp3);
-        const obj = closure_0(5224);
+        combined = "@" + closure_0(5194).getName(tmp3);
+        const obj = closure_0(5194);
       }
       return combined;
     }
@@ -161,32 +161,32 @@ export function useConjureMentionNames(trimmed) {
   items = [UserStore, ConjureStoredAttachmentStore];
   const items1 = [trimmed];
   return require("initialize").useStateFromStores(items, () => {
-    const f129433 = (arg0) => user.getUser(arg0);
-    const f129434 = (arg0) => attachment.getAttachment(arg0);
+    const f130003 = (arg0) => user.getUser(arg0);
+    const f130004 = (arg0) => attachment.getAttachment(arg0);
     return trimmed.replace(re6, (arg0, arg1, arg2) => {
       if (null == arg1) {
         let str2 = arg2;
         if (arg2 == null) {
           str2 = "";
         }
-        const tmp7Result = f129434(str2);
+        const tmp7Result = f130004(str2);
         let name;
         if (tmp7Result != null) {
           name = tmp7Result.name;
         }
         if (name == null) {
           const intl = closure_0(1113).intl;
-          name = intl.string(_modDef4024.ff9Q4C);
+          name = intl.string(_modDef4026.ff9Q4C);
         }
         const _HermesInternal2 = HermesInternal;
         return "@" + name;
       } else {
         let combined = arg0;
-        const tmp3 = f129433(arg1);
+        const tmp3 = f130003(arg1);
         if (null != tmp3) {
           const _HermesInternal = HermesInternal;
-          combined = "@" + closure_0(5224).getName(tmp3);
-          const obj = closure_0(5224);
+          combined = "@" + closure_0(5194).getName(tmp3);
+          const obj = closure_0(5194);
         }
         return combined;
       }

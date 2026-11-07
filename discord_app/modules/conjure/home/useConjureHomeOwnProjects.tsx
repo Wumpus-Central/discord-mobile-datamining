@@ -1,9 +1,9 @@
-// === Module 13177: useConjureHomeOwnProjects ===
+// === Module 13200: useConjureHomeOwnProjects ===
 
-// Module 13177 (useConjureHomeOwnProjects)
-import conjureHomeProjectOrder from "conjureHomeProjectOrder" /* 13178 */;
-import ConjureChatStore from "ConjureChatStore" /* 10987 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
+// Module 13200 (useConjureHomeOwnProjects)
+import conjureHomeProjectOrder from "conjureHomeProjectOrder" /* 13201 */;
+import ConjureChatStore from "ConjureChatStore" /* 10970 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
 
 const require = globalThis.__r;
 
@@ -12,11 +12,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/home/useConjureHomeOwnProjects.tsx");
 
 export default function useConjureHomeOwnProjects() {
-  const f104639 = () => ownedProjects.getOwnedProjects();
+  const f105060 = () => ownedProjects.getOwnedProjects();
   items = [ConjureProjectStore, ConjureChatStore];
-  return f104639(504).useStateFromStoresArray(items, () => {
+  return f105060(504).useStateFromStoresArray(items, () => {
     const obj = conjureHomeProjectOrder;
-    return obj.sortConjureProjectsByActivity(f104639().map((id) => {
+    return obj.sortConjureProjectsByActivity(f105060().map((id) => {
       const findOpenTurnResult = closure_1_0(dependencyMap[4]).findOpenTurn(messages.getMessages(id.id));
       const obj3 = { project: id, turnStartedAt: null, finishedAt: null };
       let conjureTurnStartedAtResult = null;
@@ -38,7 +38,7 @@ export function useConjureProjectsByActivity(getListedConjureProjects) {
   const items1 = [ConjureProjectStore, ConjureChatStore];
   return require("initialize").useStateFromStoresArray(items1, () => {
     const obj = conjureHomeProjectOrder;
-    return obj.sortConjureProjectsByActivity(f104639().map((id) => {
+    return obj.sortConjureProjectsByActivity(f105060().map((id) => {
       const findOpenTurnResult = closure_1_0(dependencyMap[4]).findOpenTurn(messages.getMessages(id.id));
       const obj3 = { project: id, turnStartedAt: null, finishedAt: null };
       let conjureTurnStartedAtResult = null;

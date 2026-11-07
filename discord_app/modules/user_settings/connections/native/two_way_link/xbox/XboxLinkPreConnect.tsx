@@ -1,19 +1,20 @@
-// === Module 9838: XboxLinkPreConnect ===
+// === Module 9822: XboxLinkPreConnect ===
 
-// Module 9838 (XboxLinkPreConnect)
-import _modDef9839 from "module_9839" /* 9839 */;
+// Module 9822 (XboxLinkPreConnect)
+import _modDef9823 from "module_9823" /* 9823 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const XboxLinkModalScenes = fn(9829).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9813).XboxLinkModalScenes;
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_7 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkPreConnect.tsx");
 
-export default function XboxLinkPreConnect() {
+export default function XboxLinkPreConnect(autoStart) {
+  let navigation;
   const tmp = closure_7();
   navigation = navigation(1499).useNavigation();
   items = [navigation];
@@ -24,11 +25,12 @@ export default function XboxLinkPreConnect() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef9839 }), []);
-  const obj2 = { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
+  const memo = noop.useMemo(() => ({ uri: _modDef9823 }), []);
+  const obj2 = { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null, autoStart: null };
   const intl = navigation(1113).intl;
   obj2.title = intl.string(navigation(1113).t["e/z3na"]);
   const intl2 = navigation(1113).intl;
   obj2.body = intl2.string(navigation(1113).t["7tXu0i"]);
-  return jsx(navigation(9840).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
+  obj2.autoStart = autoStart.autoStart;
+  return jsx(navigation(9824).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null, autoStart: null });
 };

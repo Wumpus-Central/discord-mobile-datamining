@@ -1,13 +1,13 @@
-// === Module 18031: UserSettingsDesignSystemText ===
+// === Module 18078: UserSettingsDesignSystemText ===
 
-// Module 18031 (UserSettingsDesignSystemText)
+// Module 18078 (UserSettingsDesignSystemText)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5754 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import TextVariants from "TextVariants" /* 5782 */;
-import Stack_Stack from "Stack/Stack" /* 6185 */;
-import TableRow from "TableRow" /* 7063 */;
-import TableRowGroup from "TableRowGroup" /* 7151 */;
+import useToken from "useToken" /* 5724 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import TextVariants from "TextVariants" /* 5752 */;
+import Stack_Stack from "Stack/Stack" /* 6159 */;
+import TableRow from "TableRow" /* 7038 */;
+import TableRowGroup from "TableRowGroup" /* 7126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

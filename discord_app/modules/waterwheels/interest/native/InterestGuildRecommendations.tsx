@@ -1,21 +1,24 @@
-// === Module 19888: InterestGuildRecommendations ===
+// === Module 19957: InterestGuildRecommendations ===
 
-// Module 19888 (InterestGuildRecommendations)
+// Module 19957 (InterestGuildRecommendations)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _modDef2534 from "module_2534" /* 2534 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import GuildIconDefault from "GuildIcon" /* 7045 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 9405 */;
-import ClipViewDefault from "ClipView" /* 9611 */;
-import InterestGhostDefault from "InterestGhost" /* 18711 */;
-import InterestGuildProfileSheetDefault from "InterestGuildProfileSheet" /* 19889 */;
-import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 19892 */;
-import InterestGuildActions from "InterestGuildActions" /* 19893 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import GuildIconDefault from "GuildIcon" /* 7020 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 9387 */;
+import ClipViewDefault from "ClipView" /* 9593 */;
+import InterestGhostDefault from "InterestGhost" /* 18761 */;
+import InterestGuildProfileSheetDefault from "InterestGuildProfileSheet" /* 19958 */;
+import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 19961 */;
+import InterestGuildActions from "InterestGuildActions" /* 19962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 5021 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4991 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function InterestGuildSkeleton() {
@@ -74,12 +77,12 @@ function InterestGuildSkeleton() {
   return closure_9(View, obj);
 }
 function ProgressiveGuildRows(arg0) {
-  ({ guilds, onJoinTapped: require, onProfileOpened: importDefault, onJoinResult: dependencyMap } = arg0);
-  _slicedToArray = undefined;
-  [tmp2, c3] = noop.useState(5);
+  ({ guilds, onRowLayout: require, onJoinTapped: importDefault, onProfileOpened: dependencyMap, onJoinResult: _slicedToArray } = arg0);
+  noop = undefined;
+  [tmp2, c4] = noop.useState(5);
   const effect = noop.useEffect(() => {
-    const timeout = setTimeout(() => closure_1_3(10), 80);
-    const timeout2 = setTimeout(() => closure_1_3(15), 160);
+    const timeout = setTimeout(() => closure_1_4(10), 80);
+    const timeout2 = setTimeout(() => closure_1_4(15), 160);
     return () => {
       clearTimeout(closure_0);
       clearTimeout(closure_1);
@@ -87,7 +90,7 @@ function ProgressiveGuildRows(arg0) {
   }, []);
   const obj = { children: null };
   const substr = guilds.slice(0, tmp2);
-  obj.children = substr.map((guild, rowPosition) => React6(closure_15, { guild, rowPosition, onJoinTapped, onProfileOpened, onJoinResult }, guild.id));
+  obj.children = substr.map((guild, rowPosition) => React6(closure_15, { guild, rowPosition, onRowLayout, onJoinTapped, onProfileOpened, onJoinResult }, guild.id));
   return closure_9(closure_11, obj);
 }
 const View = fn(17).View;
@@ -95,110 +98,124 @@ const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const NavigatorHeader = fn(7089);
+const NavigatorHeader = fn(7064);
 const headerBackButton = NavigatorHeader.getHeaderBackButton();
-const createStyles = fn(5170);
-let obj = { screen: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, header: null, content: null, intro: null, completion: null, guildIcon: null, guildIconImage: null, centered: null, row: null, joinSpace: null, joinTarget: null, rowHeader: null, profile: null, details: null, name: null, nameText: null, badge: null, online: null, dot: null, empty: null, skeletonIcon: null, skeletonNameFrame: null, skeletonCountFrame: null, skeletonDescriptionFrame: null, skeletonLine: null, skeletonName: null, skeletonShortName: null, skeletonCount: null, skeletonDescription: null, skeletonShortDescription: null, skeletonButton: null };
-let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-obj.header = { height: nativeDefault.space.PX_64, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-let obj5 = { height: nativeDefault.space.PX_64, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-obj.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
-let obj6 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
-obj.intro = { alignItems: "center", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
-let obj7 = { alignItems: "center", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
-obj.completion = { color: nativeDefault.colors.TEXT_BRAND };
-let size = { width: nativeDefault.space.PX_40, height: nativeDefault.space.PX_40, overflow: "hidden" };
-obj.guildIcon = size;
-let obj8 = { color: nativeDefault.colors.TEXT_BRAND };
-obj.guildIconImage = { borderRadius: nativeDefault.radii.none };
-obj.centered = { textAlign: "center" };
-let obj9 = { borderRadius: nativeDefault.radii.none };
-obj.row = { paddingVertical: nativeDefault.space.PX_16, borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, gap: nativeDefault.space.PX_8 };
-let obj10 = { paddingVertical: nativeDefault.space.PX_16, borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, gap: nativeDefault.space.PX_8 };
-obj.joinSpace = { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8 };
-const rect = { position: "absolute", right: 0, top: nativeDefault.space.PX_24 };
-obj.joinTarget = rect;
-let obj11 = { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8 };
-obj.rowHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
-let obj12 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
-obj.profile = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, minHeight: nativeDefault.space.PX_48 };
-obj.details = { flex: 1, minWidth: 0 };
-let obj13 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, minHeight: nativeDefault.space.PX_48 };
-obj.name = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj.nameText = { flexShrink: 1 };
-const size1 = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16, marginRight: 0 };
-obj.badge = size1;
-let obj14 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj.online = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-const size2 = { width: nativeDefault.space.PX_6, height: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
-obj.dot = size2;
-let obj15 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj.empty = { alignItems: "center", gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
-const size3 = { width: nativeDefault.space.PX_40, height: nativeDefault.space.PX_40, borderRadius: nativeDefault.radii.sm };
-obj.skeletonIcon = size3;
-let obj16 = { alignItems: "center", gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
-obj.skeletonNameFrame = { height: fn(5781).TextStyleSheet["body-md/semibold"].lineHeight, justifyContent: "center" };
-let obj17 = { height: fn(5781).TextStyleSheet["body-md/semibold"].lineHeight, justifyContent: "center" };
-obj.skeletonCountFrame = { height: fn(5781).TextStyleSheet["body-xs/medium"].lineHeight, justifyContent: "center" };
-let obj18 = { height: fn(5781).TextStyleSheet["body-xs/medium"].lineHeight, justifyContent: "center" };
-obj.skeletonDescriptionFrame = { height: fn(5781).TextStyleSheet["body-sm/normal"].lineHeight, justifyContent: "center" };
-let obj19 = { height: fn(5781).TextStyleSheet["body-sm/normal"].lineHeight, justifyContent: "center" };
-obj.skeletonLine = { height: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.round };
-obj.skeletonName = { width: "72%" };
-obj.skeletonShortName = { width: "56%" };
-const size4 = { width: "40%", height: nativeDefault.space.PX_8 };
-obj.skeletonCount = size4;
-obj.skeletonDescription = { width: "96%" };
-obj.skeletonShortDescription = { width: "78%" };
-const size5 = { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
-obj.skeletonButton = size5;
-let closure_13 = createStyles.createStyles(obj);
+const createStyles = fn(5140);
+let closure_13 = createStyles.createStyles(() => {
+  let PX_64 = arg0;
+  if (arg0 === undefined) {
+    PX_64 = nativeDefault.space.PX_64;
+  }
+  const obj = { screen: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, header: null, navLeading: null, navTrailing: null, content: null, intro: null, completion: null, guildIcon: null, guildIconImage: null, centered: null, row: null, joinSpace: null, joinTarget: null, rowHeader: null, profile: null, details: null, name: null, nameText: null, badge: null, online: null, dot: null, empty: null, skeletonIcon: null, skeletonNameFrame: null, skeletonCountFrame: null, skeletonDescriptionFrame: null, skeletonLine: null, skeletonName: null, skeletonShortName: null, skeletonCount: null, skeletonDescription: null, skeletonShortDescription: null, skeletonButton: null };
+  const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+  obj.header = { height: nativeDefault.space.PX_64, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+  obj.navLeading = { minWidth: PX_64, flexShrink: 0, alignItems: "flex-start" };
+  obj.navTrailing = { minWidth: PX_64, flexShrink: 0, alignItems: "flex-end" };
+  const obj3 = { height: nativeDefault.space.PX_64, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+  obj.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
+  const obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
+  obj.intro = { alignItems: "center", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
+  const obj5 = { alignItems: "center", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
+  obj.completion = { color: nativeDefault.colors.TEXT_BRAND };
+  const size = { width: nativeDefault.space.PX_40, height: nativeDefault.space.PX_40, overflow: "hidden" };
+  obj.guildIcon = size;
+  const obj6 = { color: nativeDefault.colors.TEXT_BRAND };
+  obj.guildIconImage = { borderRadius: nativeDefault.radii.none };
+  obj.centered = { textAlign: "center" };
+  const obj7 = { borderRadius: nativeDefault.radii.none };
+  obj.row = { paddingVertical: nativeDefault.space.PX_16, borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, gap: nativeDefault.space.PX_8 };
+  const obj8 = { paddingVertical: nativeDefault.space.PX_16, borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, gap: nativeDefault.space.PX_8 };
+  obj.joinSpace = { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8 };
+  const rect = { position: "absolute", right: 0, top: nativeDefault.space.PX_24 };
+  obj.joinTarget = rect;
+  const obj9 = { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8 };
+  obj.rowHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
+  const obj10 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
+  obj.profile = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, minHeight: nativeDefault.space.PX_48 };
+  obj.details = { flex: 1, minWidth: 0 };
+  const obj11 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, minHeight: nativeDefault.space.PX_48 };
+  obj.name = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+  obj.nameText = { flexShrink: 1 };
+  const size1 = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16, marginRight: 0 };
+  obj.badge = size1;
+  const obj12 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+  obj.online = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+  const size2 = { width: nativeDefault.space.PX_6, height: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
+  obj.dot = size2;
+  const obj13 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+  obj.empty = { alignItems: "center", gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
+  const size3 = { width: nativeDefault.space.PX_40, height: nativeDefault.space.PX_40, borderRadius: nativeDefault.radii.sm };
+  obj.skeletonIcon = size3;
+  const obj14 = { alignItems: "center", gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
+  obj.skeletonNameFrame = { height: Text_Text.TextStyleSheet["body-md/semibold"].lineHeight, justifyContent: "center" };
+  const obj15 = { height: Text_Text.TextStyleSheet["body-md/semibold"].lineHeight, justifyContent: "center" };
+  obj.skeletonCountFrame = { height: Text_Text.TextStyleSheet["body-xs/medium"].lineHeight, justifyContent: "center" };
+  const obj16 = { height: Text_Text.TextStyleSheet["body-xs/medium"].lineHeight, justifyContent: "center" };
+  obj.skeletonDescriptionFrame = { height: Text_Text.TextStyleSheet["body-sm/normal"].lineHeight, justifyContent: "center" };
+  const obj17 = { height: Text_Text.TextStyleSheet["body-sm/normal"].lineHeight, justifyContent: "center" };
+  obj.skeletonLine = { height: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.round };
+  obj.skeletonName = { width: "72%" };
+  obj.skeletonShortName = { width: "56%" };
+  const size4 = { width: "40%", height: nativeDefault.space.PX_8 };
+  obj.skeletonCount = size4;
+  obj.skeletonDescription = { width: "96%" };
+  obj.skeletonShortDescription = { width: "78%" };
+  const size5 = { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
+  obj.skeletonButton = size5;
+  return obj;
+});
 let closure_15 = noop.memo(function InterestGuildRow(guild) {
   guild = guild.guild;
-  ({ rowPosition: importDefault, onJoinTapped: dependencyMap, onProfileOpened: _slicedToArray, onJoinResult: noop } = guild);
+  ({ rowPosition: importDefault, onRowLayout: dependencyMap, onJoinTapped: _slicedToArray, onProfileOpened: noop, onJoinResult: View } = guild);
   const tmp = closure_13();
-  const token = guild(5754).useToken(nativeDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
-  let obj = guild(5754);
-  const token1 = guild(5754).useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const obj2 = guild(5754);
+  const token = guild(5724).useToken(nativeDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
+  let obj = guild(5724);
+  const token1 = guild(5724).useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const obj2 = guild(5724);
+  const obj5 = {
+    onLayout(arg0) {
+      return dependencyMap(importDefault + 1, arg0);
+    },
+    children: null
+  };
   const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: guild.id, icon: guild.icon, size: 40 });
-  const obj5 = { accessibilityRole: "button", accessibilityLabel: guild.name, accessibilityHint: null, onPress: null, style: null, children: null };
+  const obj6 = { accessibilityRole: "button", accessibilityLabel: guild.name, accessibilityHint: null, onPress: null, style: null, children: null };
   const intl = guild(1113).intl;
-  obj5.accessibilityHint = intl.string(_modDef2534.nkweXX);
-  obj5.onPress = function openProfile() {
-    _slicedToArray(guild.id, closure_1_1);
+  obj6.accessibilityHint = intl.string(_modDef2534.nkweXX);
+  obj6.onPress = function openProfile() {
+    noop(guild.id, closure_1_1);
     const obj = ActionSheetActionCreatorsDefault;
     const resolved = Promise.resolve({ default: InterestGuildProfileSheetDefault });
     obj.openLazy(resolved, "GuildProfileActionSheet:" + guild.id, {
       guildId: guild.id,
       guildName: guild.name,
       onJoinTapped() {
-        return closure_1_2(user.id, closure_1_1, "profile_sheet");
+        return closure_1_3(user.id, closure_1_1, "profile_sheet");
       },
       onJoinResult(arg0) {
-        return closure_1_4(user.id, arg0);
+        return closure_1_5(user.id, arg0);
       }
     });
   };
-  obj5.style = tmp.row;
-  const obj6 = { style: tmp.rowHeader, children: null };
-  const obj7 = { style: tmp.profile, children: null };
-  const obj8 = { style: null, children: null };
+  obj6.style = tmp.row;
+  const obj7 = { style: tmp.rowHeader, children: null };
+  const obj8 = { style: tmp.profile, children: null };
+  const obj9 = { style: null, children: null };
   items = [tmp.guildIcon, ];
-  const obj9 = { borderRadius: null };
+  const obj10 = { borderRadius: null };
   const obj4 = { id: guild.id, icon: guild.icon, size: 40 };
-  obj9.borderRadius = token * nativeDefault.space.PX_40 / token1;
-  items[1] = obj9;
-  obj8.style = items;
-  const obj10 = { icon: guildIconURL, value: guild.name, size: null, selected: false, style: null };
+  obj10.borderRadius = token * nativeDefault.space.PX_40 / token1;
+  items[1] = obj10;
+  obj9.style = items;
+  const obj11 = { icon: guildIconURL, value: guild.name, size: null, selected: false, style: null };
   const tmp11 = ClipViewDefault;
-  obj10.size = guild(7045).GuildIconSizes.NORMAL;
-  obj10.style = tmp.guildIconImage;
-  obj8.children = closure_9(GuildIconDefault, obj10);
-  const items1 = [closure_9(tmp11, obj8), ];
-  const obj11 = { style: tmp.details, spacing: nativeDefault.space.PX_0, children: null };
-  const obj12 = { style: tmp.name, children: null };
-  const items2 = [closure_9(guild(5781).Text, { style: tmp.nameText, variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: guild.name }), , ];
+  obj11.size = guild(7020).GuildIconSizes.NORMAL;
+  obj11.style = tmp.guildIconImage;
+  obj9.children = closure_9(GuildIconDefault, obj11);
+  const items1 = [closure_9(tmp11, obj9), ];
+  const obj12 = { style: tmp.details, spacing: nativeDefault.space.PX_0, children: null };
+  const obj13 = { style: tmp.name, children: null };
+  const items2 = [closure_9(guild(5751).Text, { style: tmp.nameText, variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: guild.name }), , ];
   const features = guild.features;
   let hasItem = features.includes(constants2.VERIFIED);
   if (!hasItem) {
@@ -206,90 +223,94 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
     hasItem = features2.includes(constants2.PARTNERED);
   }
   if (hasItem) {
-    const obj14 = { guild: null, style: null };
+    const obj15 = { guild: null, style: null };
     const tmp4Result = GuildBadgeV2Default;
-    const obj15 = { id: null, name: null, icon: null, features: null };
-    ({ id: obj16.id, name: obj16.name, icon: obj16.icon } = guild);
+    const obj16 = { id: null, name: null, icon: null, features: null };
+    ({ id: obj17.id, name: obj17.name, icon: obj17.icon } = guild);
     const _Set = Set;
     const set = new Set(guild.features);
-    obj15.features = set;
-    obj14.guild = tmp2(5033).constructFromPartialGuildRecord(obj15);
-    obj14.style = tmp.badge;
-    hasItem = closure_9(tmp4Result, obj14);
-    const tmp2Result = tmp2(5033);
+    obj16.features = set;
+    obj15.guild = tmp2(5003).constructFromPartialGuildRecord(obj16);
+    obj15.style = tmp.badge;
+    hasItem = closure_9(tmp4Result, obj15);
+    const tmp2Result = tmp2(5003);
   }
   items2[1] = hasItem;
-  items2[2] = closure_9(guild(7461).ChevronSmallRightIcon, { size: "xxs", accessible: false });
-  obj12.children = items2;
-  const items3 = [closure_10(View, obj12), ];
-  const obj17 = { style: tmp.online, children: null };
+  items2[2] = closure_9(guild(7438).ChevronSmallRightIcon, { size: "xxs", accessible: false });
+  obj13.children = items2;
+  const items3 = [closure_10(View, obj13), ];
+  const obj18 = { style: tmp.online, children: null };
   const items4 = [closure_9(View, { style: tmp.dot }), ];
-  const obj19 = { variant: "body-xs/medium", color: "text-muted", children: null };
+  const obj20 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl2 = tmp2(1113).intl;
-  obj19.children = intl2.format(guild(1113).t["LC+S+m"], { membersOnline: guild.approximate_presence_count });
-  items4[1] = closure_9(guild(5781).Text, obj19);
-  obj17.children = items4;
-  items3[1] = closure_10(View, obj17);
-  obj11.children = items3;
-  items1[1] = closure_10(guild(6185).Stack, obj11);
-  obj7.children = items1;
-  const items5 = [closure_10(View, obj7), closure_9(View, { style: tmp.joinSpace })];
-  obj6.children = items5;
-  const items6 = [closure_10(View, obj6), ];
+  obj20.children = intl2.format(guild(1113).t["LC+S+m"], { membersOnline: guild.approximate_presence_count });
+  items4[1] = closure_9(guild(5751).Text, obj20);
+  obj18.children = items4;
+  items3[1] = closure_10(View, obj18);
+  obj12.children = items3;
+  items1[1] = closure_10(guild(6159).Stack, obj12);
+  obj8.children = items1;
+  const items5 = [closure_10(View, obj8), closure_9(View, { style: tmp.joinSpace })];
+  obj7.children = items5;
+  const items6 = [closure_10(View, obj7), ];
   let tmp10Result = null != guild.description;
   if (tmp10Result) {
     tmp10Result = "" !== guild.description;
   }
   if (tmp10Result) {
-    const obj22 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 2, children: guild.description };
-    tmp10Result = closure_9(tmp2(5781).Text, obj22);
+    const obj23 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 2, children: guild.description };
+    tmp10Result = closure_9(tmp2(5751).Text, obj23);
   }
-  const obj23 = { children: null };
   items6[1] = tmp10Result;
-  obj5.children = items6;
-  const items7 = [closure_10(guild(7068).PressableHighlight, obj5), ];
+  obj6.children = items6;
+  const items7 = [closure_10(guild(7043).PressableHighlight, obj6), ];
   const obj24 = {
     style: tmp.joinTarget,
     children: closure_9(InterestGuildJoinButtonDefault, {
       guildId: guild.id,
       guildName: guild.name,
       onJoinTapped() {
-        return dependencyMap(guild.id, importDefault, "row");
+        return _slicedToArray(guild.id, importDefault, "row");
       },
       onJoinResult(arg0) {
-        return noop(guild.id, arg0);
+        return View(guild.id, arg0);
       }
     })
   };
   items7[1] = closure_9(View, obj24);
-  obj23.children = items7;
-  return closure_10(View, obj23);
+  obj5.children = items7;
+  return closure_10(View, obj5);
 });
-size = fn(2);
+let size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildRecommendations.tsx");
 
 export default function InterestGuildRecommendations(analyticsContext) {
   analyticsContext = analyticsContext.analyticsContext;
-  const gameIds = analyticsContext.gameIds;
+  ({ getMaxRowSeen: importDefault, gameIds } = analyticsContext);
   const resource = analyticsContext.resource;
-  ({ onBack: _slicedToArray, onComplete: noop } = analyticsContext);
-  let ref;
-  const tmp = closure_13();
+  ({ onBack: noop, onComplete: View } = analyticsContext);
+  c6 = undefined;
+  [tmp2, c6] = resource(noop.useState(0), 2);
+  const tmp3 = resource(noop.useState(0), 2);
+  closure_7 = tmp3[1];
+  const tmp6 = closure_13(Math.max(require("native").space.PX_64, tmp2, tmp3[0]));
   const syncExternalStore = noop.useSyncExternalStore(resource.subscribe, resource.getSnapshot);
-  items = [ref];
+  const tmp = resource(noop.useState(0), 2);
+  items = [c6];
   const items1 = [syncExternalStore.guilds];
-  const stateFromStores = analyticsContext(resource[25]).useStateFromStores(items, () => {
+  const stateFromStores = analyticsContext(gameIds[25]).useStateFromStores(items, () => {
     const guilds = syncExternalStore.guilds;
     return guilds.some((id) => member.isMember(id.id));
   }, items1);
-  let obj2 = analyticsContext(resource[25]);
-  const interestScrollHeader = analyticsContext(resource[26]).useInterestScrollHeader();
+  const tmp10 = require("useInterestRowVisibility")(analyticsContext.onRowSeen);
+  let obj2 = analyticsContext(gameIds[25]);
+  const interestScrollHeader = analyticsContext(gameIds[27]).useInterestScrollHeader(tmp10.onScroll);
   ({ scrollY, onScroll } = interestScrollHeader);
-  ref = noop.useRef(0);
+  const ref = noop.useRef(0);
   const effect = noop.useEffect(() => {
-    closure_6.current = Date.now();
+    closure_9.current = Date.now();
   }, []);
-  noop.useRef(false);
+  const ref2 = noop.useRef(false);
   noop.useRef(null);
   let str = "error";
   if (!syncExternalStore.failed) {
@@ -306,7 +327,7 @@ export default function InterestGuildRecommendations(analyticsContext) {
   const items2 = [analyticsContext, gameIds.length, syncExternalStore, str];
   function handleBack() {
     AnalyticsUtilsDefault.track(constants.WATERWHEELS_INTEREST_SERVERS_BACK, analyticsContext);
-    _slicedToArray();
+    noop();
   }
   const effect1 = noop.useEffect(() => {
     let tmp2 = "loading" !== str;
@@ -323,10 +344,10 @@ export default function InterestGuildRecommendations(analyticsContext) {
       AnalyticsUtilsDefault.track(constants.WATERWHEELS_INTEREST_SERVERS_VIEWED, obj2);
     }
   }, items2);
-  let obj3 = analyticsContext(resource[26]);
-  analyticsContext(resource[28]).useNavigatorBackPressHandler(() => {
+  let obj3 = analyticsContext(gameIds[27]);
+  analyticsContext(gameIds[29]).useNavigatorBackPressHandler(() => {
     AnalyticsUtilsDefault.track(constants.WATERWHEELS_INTEREST_SERVERS_BACK, analyticsContext);
-    _slicedToArray();
+    noop();
     return true;
   });
   const items3 = [analyticsContext, gameIds];
@@ -349,7 +370,7 @@ export default function InterestGuildRecommendations(analyticsContext) {
     obj2.row_position = row_position;
     AnalyticsUtilsDefault.track(constants.WATERWHEELS_INTEREST_SERVERS_PROFILE_OPENED, obj2);
   }, items4);
-  const obj4 = { style: tmp.screen, children: null };
+  const obj4 = { style: tmp6.screen, children: null };
   const callback2 = noop.useCallback((guild_id, result) => {
     const obj2 = {};
     const merged = Object.assign(analyticsContext);
@@ -362,119 +383,131 @@ export default function InterestGuildRecommendations(analyticsContext) {
     obj2.result = result;
     AnalyticsUtilsDefault.track(constants.WATERWHEELS_INTEREST_SERVERS_JOIN_RESULT, obj2);
   }, items5);
-  const obj5 = { style: tmp.header, children: null };
-  const obj6 = { accessibilityLabel: null, onPress: null };
-  const intl = tmp3(tmp4[10]).intl;
-  obj6.accessibilityLabel = intl.string(analyticsContext(resource[10]).t["13/7kX"]);
-  obj6.onPress = handleBack;
-  const items6 = [str(closure_12, obj6), , ];
-  const obj7 = { title: null, scrollY: null };
-  const intl2 = tmp3(tmp4[10]).intl;
-  obj7.title = intl2.string(gameIds(resource[15])["mdhU/Q"]);
-  obj7.scrollY = scrollY;
-  items6[1] = str(analyticsContext(resource[26]).InterestCompactTitle, obj7);
-  const intl3 = tmp3(tmp4[10]).intl;
-  const t = tmp3(tmp4[10]).t;
-  function handleComplete() {
-    if (!ref2.current) {
-      tmp.current = true;
-      const guilds = syncExternalStore.guilds;
-      const found = guilds.filter((id) => member.isMember(id.id));
-      const mapped = found.map((id) => id.id);
-      const obj2 = {};
-      const merged = Object.assign(analyticsContext);
-      obj2.joined_count = mapped.length;
-      obj2.joined_guild_ids = mapped;
-      const obj = AnalyticsUtilsDefault;
-      obj2.pending_join_count = InterestGuildActions.getInterestGuildJoinsInFlight().length;
-      let tmp10 = "loading" === syncExternalStore.status;
-      if (!tmp10) {
-        tmp10 = "idle" === syncExternalStore.status;
+  const obj5 = { style: tmp6.header, children: null };
+  const obj6 = {
+    style: tmp6.navLeading,
+    onLayout(nativeEvent) {
+      return _undefined(nativeEvent.nativeEvent.layout.width);
+    },
+    children: null
+  };
+  const obj7 = { accessibilityLabel: null, onPress: null };
+  const intl = tmp8(gameIds[10]).intl;
+  obj7.accessibilityLabel = intl.string(analyticsContext(gameIds[10]).t["13/7kX"]);
+  obj7.onPress = handleBack;
+  obj6.children = ref(str, obj7);
+  const items6 = [ref(View, obj6), , ];
+  const obj8 = { title: null, scrollY: null };
+  const intl2 = tmp8(gameIds[10]).intl;
+  obj8.title = intl2.string(require("module_2534")["mdhU/Q"]);
+  obj8.scrollY = scrollY;
+  items6[1] = ref(analyticsContext(gameIds[27]).InterestCompactTitle, obj8);
+  const obj9 = {
+    style: tmp6.navTrailing,
+    onLayout(nativeEvent) {
+      return closure_7(nativeEvent.nativeEvent.layout.width);
+    },
+    children: null
+  };
+  const intl3 = tmp8(gameIds[10]).intl;
+  const t = tmp8(gameIds[10]).t;
+  const obj10 = { top: true, children: null };
+  const tmp8Result = analyticsContext(gameIds[29]);
+  obj9.children = ref(analyticsContext(gameIds[31]).HeaderTextButton, {
+    label: intl3.string(stateFromStores ? t.i4jeWR : t["5Wxrcd"]),
+    labelStyle: tmp6.completion,
+    onPress: function handleComplete() {
+      if (!ref2.current) {
+        tmp.current = true;
+        const guilds = syncExternalStore.guilds;
+        const found = guilds.filter((id) => member.isMember(id.id));
+        const mapped = found.map((id) => id.id);
+        const obj2 = {};
+        const merged = Object.assign(analyticsContext);
+        obj2.max_row_seen = closure_1_1();
+        obj2.joined_count = mapped.length;
+        obj2.joined_guild_ids = mapped;
+        const obj = AnalyticsUtilsDefault;
+        obj2.pending_join_count = InterestGuildActions.getInterestGuildJoinsInFlight().length;
+        let tmp11 = "loading" === syncExternalStore.status;
+        if (!tmp11) {
+          tmp11 = "idle" === syncExternalStore.status;
+        }
+        obj2.recommendations_loading = tmp11;
+        obj2.recommendations_failed = syncExternalStore.failed;
+        const _Math = Math;
+        const _Date = Date;
+        obj2.duration_ms = Math.max(0, Date.now() - ref.current);
+        obj.track(constants.WATERWHEELS_INTEREST_SERVERS_COMPLETE, obj2);
+        View();
       }
-      obj2.recommendations_loading = tmp10;
-      obj2.recommendations_failed = syncExternalStore.failed;
-      const _Math = Math;
-      const _Date = Date;
-      obj2.duration_ms = Math.max(0, Date.now() - ref.current);
-      obj.track(constants.WATERWHEELS_INTEREST_SERVERS_COMPLETE, obj2);
-      noop();
     }
-  }
-  const obj8 = { top: true, children: null };
-  const tmp3Result = analyticsContext(resource[28]);
-  items6[2] = str(analyticsContext(resource[31]).HeaderTextButton, { label: intl3.string(stateFromStores ? t.i4jeWR : t["5Wxrcd"]), labelStyle: tmp.completion, onPress: handleComplete });
+  });
+  items6[2] = ref(View, obj9);
   obj5.children = items6;
-  obj8.children = closure_10(syncExternalStore, obj5);
-  const items7 = [str(analyticsContext(resource[30]).SafeAreaPaddingView, obj8), ];
-  const obj10 = { contentContainerStyle: tmp.content, onScroll, scrollEventThrottle: 16, children: null };
-  const obj11 = { style: tmp.intro, children: null };
-  const obj12 = { variant: "heading-xl/semibold", color: "text-strong", children: null };
-  const intl4 = tmp3(tmp4[10]).intl;
-  obj12.children = intl4.string(gameIds(resource[15]).TQdfcH);
-  const items8 = [str(analyticsContext(resource[9]).Heading, obj12), ];
-  const obj13 = { variant: "body-sm/normal", color: "text-default", style: tmp.centered, children: null };
-  const intl5 = tmp3(tmp4[10]).intl;
-  obj13.children = intl5.string(gameIds(resource[15])["G++b7J"]);
-  items8[1] = str(analyticsContext(resource[9]).Text, obj13);
-  obj11.children = items8;
-  const items9 = [closure_10(syncExternalStore, obj11), , , , ];
-  let tmp15Result = gameIds.length > 0;
-  if (tmp15Result) {
-    const obj14 = { gameIds };
-    tmp15Result = tmp15(tmp16(tmp4[33]), obj14);
+  obj10.children = ref2(View, obj5);
+  const items7 = [ref(analyticsContext(gameIds[30]).SafeAreaPaddingView, obj10), ];
+  const obj12 = { contentContainerStyle: tmp6.content, onScroll, onLayout: tmp10.onViewportLayout, scrollEventThrottle: 16, children: null };
+  const obj13 = { style: tmp6.intro, children: null };
+  const obj14 = { variant: "heading-xl/semibold", color: "text-strong", children: null };
+  const intl4 = tmp8(gameIds[10]).intl;
+  obj14.children = intl4.string(require("module_2534").TQdfcH);
+  const items8 = [ref(analyticsContext(gameIds[9]).Heading, obj14), ];
+  const obj15 = { variant: "body-sm/normal", color: "text-default", style: tmp6.centered, lineBreakStrategyIOS: "push-out", textBreakStrategy: "balanced", children: null };
+  const intl5 = tmp8(gameIds[10]).intl;
+  obj15.children = intl5.string(require("module_2534")["G++b7J"]);
+  items8[1] = ref(analyticsContext(gameIds[9]).Text, obj15);
+  obj13.children = items8;
+  const items9 = [ref2(View, obj13), , , , ];
+  let tmp20Result = gameIds.length > 0;
+  if (tmp20Result) {
+    const obj16 = { gameIds };
+    tmp20Result = tmp20(require("InterestPickedGames"), obj16);
   }
-  items9[1] = tmp15Result;
-  let tmp15Result3 = syncExternalStore.guilds.length > 0;
-  if (tmp15Result3) {
-    const obj15 = { guilds: syncExternalStore.guilds, onJoinTapped: callback, onProfileOpened: callback1, onJoinResult: callback2 };
-    tmp15Result3 = tmp15(ProgressiveGuildRows, obj15, syncExternalStore.key);
+  items9[1] = tmp20Result;
+  let tmp20Result3 = syncExternalStore.guilds.length > 0;
+  if (tmp20Result3) {
+    const obj17 = { onLayout: tmp10.onContentLayout, children: null };
+    const obj18 = { guilds: syncExternalStore.guilds, onRowLayout: tmp10.onRowLayout, onJoinTapped: callback, onProfileOpened: callback1, onJoinResult: callback2 };
+    obj17.children = tmp20(ProgressiveGuildRows, obj18, syncExternalStore.key);
+    tmp20Result3 = tmp20(View, obj17);
   }
-  items9[2] = tmp15Result3;
-  let tmp15Result4 = 0 === syncExternalStore.guilds.length;
-  if (tmp15Result4) {
-    tmp15Result4 = "loading" === syncExternalStore.status;
+  items9[2] = tmp20Result3;
+  let tmp20Result4 = 0 === syncExternalStore.guilds.length;
+  if (tmp20Result4) {
+    tmp20Result4 = "loading" === syncExternalStore.status;
   }
-  if (tmp15Result4) {
-    tmp15Result4 = tmp15(InterestGuildSkeleton, {});
+  if (tmp20Result4) {
+    tmp20Result4 = tmp20(InterestGuildSkeleton, {});
   }
-  items9[3] = tmp15Result4;
-  let tmp13Result = 0 === syncExternalStore.guilds.length;
-  if (tmp13Result) {
-    tmp13Result = "loading" !== syncExternalStore.status;
+  items9[3] = tmp20Result4;
+  let tmp18Result = 0 === syncExternalStore.guilds.length;
+  if (tmp18Result) {
+    tmp18Result = "loading" !== syncExternalStore.status;
   }
-  if (tmp13Result) {
-    const obj16 = { style: tmp.empty, children: null };
-    const obj17 = { variant: "heading-sm/semibold", color: "text-strong", children: null };
-    const intl6 = tmp3(tmp4[10]).intl;
-    obj17.children = intl6.string(tmp16(tmp4[15]).rtXXRe);
-    const items10 = [tmp15(tmp3(tmp4[9]).Heading, obj17), , , ];
-    const obj18 = { variant: "body-sm/normal", color: "text-muted", style: tmp.centered, children: null };
-    const intl7 = tmp3(tmp4[10]).intl;
-    obj18.children = intl7.string(tmp16(tmp4[15]).A3YsGV);
-    items10[1] = tmp15(tmp3(tmp4[9]).Text, obj18);
-    const obj19 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl8 = tmp3(tmp4[10]).intl;
-    obj19.text = intl8.string(tmp16(tmp4[15]).uGhymA);
-    obj19.onPress = function handleRetry() {
+  if (tmp18Result) {
+    const obj19 = { style: tmp6.empty, children: null };
+    const obj20 = { variant: "body-lg/normal", color: "text-muted", style: tmp6.centered, children: null };
+    const intl6 = tmp8(gameIds[10]).intl;
+    obj20.children = intl6.string(require("module_2534").A3YsGV);
+    const items10 = [tmp20(tmp8(gameIds[9]).Text, obj20), ];
+    const obj21 = { variant: "secondary", size: "sm", text: null, onPress: null };
+    const intl7 = tmp8(gameIds[10]).intl;
+    obj21.text = intl7.string(require("module_2534").uGhymA);
+    obj21.onPress = function handleRetry() {
       const obj2 = {};
       const merged = Object.assign(analyticsContext);
       obj2.load_state = str;
       AnalyticsUtilsDefault.track(constants.WATERWHEELS_INTEREST_SERVERS_RETRY, obj2);
       resource.retry();
     };
-    items10[2] = tmp15(tmp3(tmp4[34]).Button, obj19);
-    const obj20 = { label: null, labelStyle: null, onPress: null };
-    const intl9 = tmp3(tmp4[10]).intl;
-    obj20.label = intl9.string(tmp3(tmp4[10]).t.i4jeWR);
-    obj20.labelStyle = tmp.completion;
-    obj20.onPress = handleComplete;
-    items10[3] = tmp15(tmp3(tmp4[31]).HeaderTextButton, obj20);
-    obj16.children = items10;
-    tmp13Result = closure_10(tmp14, obj16);
+    items10[1] = tmp20(tmp8(gameIds[35]).Button, obj21);
+    obj19.children = items10;
+    tmp18Result = tmp18(View, obj19);
   }
-  items9[4] = tmp13Result;
-  obj10.children = items9;
-  items7[1] = closure_10(gameIds(resource[32]).ScrollView, obj10);
+  items9[4] = tmp18Result;
+  obj12.children = items9;
+  items7[1] = ref2(require("module_1652").ScrollView, obj12);
   obj4.children = items7;
-  return closure_10(syncExternalStore, obj4);
+  return ref2(View, obj4);
 };

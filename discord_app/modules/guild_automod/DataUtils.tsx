@@ -1,6 +1,6 @@
-// === Module 13505: DataUtils ===
+// === Module 13530: DataUtils ===
 
-// Module 13505 (DataUtils)
+// Module 13530 (DataUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/DataUtils.tsx");
@@ -51,7 +51,7 @@ export function _transformMetadataToCamelCase(body) {
                                   if (null != closure_1_0[item]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
-                                    reduced = keys.reduce(/* F105547 */ function() { ... }, {});
+                                    reduced = keys.reduce(/* F105971 */ function() { ... }, {});
                                   }
                                   acc[camelCaseResult] = reduced;
                                 }
@@ -133,7 +133,7 @@ export function _transformMetadataToSnakeCase(metadata) {
                                   if (null != closure_1_0[item]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
-                                    reduced = keys.reduce(/* F105548 */ function() { ... }, {});
+                                    reduced = keys.reduce(/* F105972 */ function() { ... }, {});
                                   }
                                   acc[snakeCaseResult] = reduced;
                                 }

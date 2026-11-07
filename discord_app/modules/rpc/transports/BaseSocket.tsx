@@ -1,8 +1,8 @@
-// === Module 11991: BaseSocket ===
+// === Module 11982: BaseSocket ===
 
-// Module 11991 (BaseSocket)
+// Module 11982 (BaseSocket)
 import applyDefault from "apply" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 9432 */;
+import RPCErrorDefault from "RPCError" /* 9414 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

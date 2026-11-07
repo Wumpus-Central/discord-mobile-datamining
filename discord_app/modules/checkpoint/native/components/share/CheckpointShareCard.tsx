@@ -1,15 +1,15 @@
-// === Module 13649: CheckpointShareCard ===
+// === Module 13673: CheckpointShareCard ===
 
-// Module 13649 (CheckpointShareCard)
+// Module 13673 (CheckpointShareCard)
 import nativeDefault from "native" /* 575 */;
-import CheckpointCardTypes from "CheckpointCardTypes" /* 6247 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6248 */;
-import CheckpointCardFrame from "CheckpointCardFrame" /* 13650 */;
-import CheckpointShareCardYear from "CheckpointShareCardYear" /* 13654 */;
-import CheckpointShareCardContext from "CheckpointShareCardContext" /* 13655 */;
-import CheckpointShareCardStatsDefault from "CheckpointShareCardStats" /* 13656 */;
-import CheckpointShareCardPowerBarDefault from "CheckpointShareCardPowerBar" /* 13657 */;
-import CheckpointShareCardFooterDefault from "CheckpointShareCardFooter" /* 13658 */;
+import CheckpointCardTypes from "CheckpointCardTypes" /* 6222 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6223 */;
+import CheckpointCardFrame from "CheckpointCardFrame" /* 13674 */;
+import CheckpointShareCardYear from "CheckpointShareCardYear" /* 13678 */;
+import CheckpointShareCardContext from "CheckpointShareCardContext" /* 13679 */;
+import CheckpointShareCardStatsDefault from "CheckpointShareCardStats" /* 13680 */;
+import CheckpointShareCardPowerBarDefault from "CheckpointShareCardPowerBar" /* 13681 */;
+import CheckpointShareCardFooterDefault from "CheckpointShareCardFooter" /* 13682 */;
 import noop from "module_19" /* 19 */;
 
 const CheckpointCardFrameDefault = CheckpointCardFrame;
@@ -20,19 +20,19 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 200;
-const result = fn(13650).CHECKPOINT_CARD_HEIGHT * 0.6944444444444444;
+const result = fn(13674).CHECKPOINT_CARD_HEIGHT * 0.6944444444444444;
 const characterLayout = { size: 224, top: 24, left: -12 };
 const rect = { size: 224, top: nativeDefault.space.PX_24, left: -4 };
 let layout = { iconSize: 16, textVariant: "body-sm/medium" };
 let obj2 = {};
 const merged = Object.assign(layout);
-obj2.reactionsIcon = fn(13652).EmojiSlightlySmilingFaceIcon;
-const createStyles = fn(5170);
+obj2.reactionsIcon = fn(13676).EmojiSlightlySmilingFaceIcon;
+const createStyles = fn(5140);
 const obj3 = { card: { overflow: "hidden" }, portraitCard: null, characterAndStatsCard: null, characterAndStatsCanvas: null, portraitStats: null, characterAndStatsStats: null, statRow: null };
-let size = { width: 200, height: fn(13650).CHECKPOINT_CARD_HEIGHT };
+let size = { width: 200, height: fn(13674).CHECKPOINT_CARD_HEIGHT };
 obj3.portraitCard = size;
 obj3.characterAndStatsCard = { width: 300, height: result };
-let size1 = { width: 432, height: fn(13650).CHECKPOINT_CARD_HEIGHT, transform: null, transformOrigin: "top left" };
+let size1 = { width: 432, height: fn(13674).CHECKPOINT_CARD_HEIGHT, transform: null, transformOrigin: "top left" };
 let items = [{ scale: 0.6944444444444444 }];
 size1.transform = items;
 obj3.characterAndStatsCanvas = size1;

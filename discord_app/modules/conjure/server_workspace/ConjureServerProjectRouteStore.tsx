@@ -1,13 +1,13 @@
-// === Module 7478: ConjureServerProjectRouteStore ===
+// === Module 7455: ConjureServerProjectRouteStore ===
 
-// Module 7478 (ConjureServerProjectRouteStore)
+// Module 7455 (ConjureServerProjectRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureServerProject from "conjureServerProject" /* 7479 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
+import conjureServerProject from "conjureServerProject" /* 7456 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
 
 require = fn;
-const StaticChannelRoute = fn(5026).StaticChannelRoute;
+const StaticChannelRoute = fn(4996).StaticChannelRoute;
 let map = new Map();
 const Store = initializeDefault.Store;
 class ConjureServerProjectRouteStore extends Store {

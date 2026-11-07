@@ -1,8 +1,8 @@
-// === Module 12387: ConjureChatMoreSheet ===
+// === Module 12385: ConjureChatMoreSheet ===
 
-// Module 12387 (ConjureChatMoreSheet)
-import _modDef4024 from "module_4024" /* 4024 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
+// Module 12385 (ConjureChatMoreSheet)
+import _modDef4026 from "module_4026" /* 4026 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,7 +12,7 @@ function MoreRow(row) {
     const obj2 = { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null };
     ({ label: obj3.label, subLabel: obj3.subLabel } = row);
     const obj4 = { IconComponent: row.IconComponent };
-    obj2.icon = jsx(row(7071).TableRowIcon, { IconComponent: row.IconComponent });
+    obj2.icon = jsx(row(7046).TableRowIcon, { IconComponent: row.IconComponent });
     ({ value: obj3.value, disabled: obj3.disabled } = row);
     obj2.onValueChange = function onValueChange(arg0) {
       let tmp = arg0;
@@ -24,7 +24,7 @@ function MoreRow(row) {
       }
       row.onValueChange(arg0);
     };
-    return jsx(row(7452).TableSwitchRow, { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null });
+    return jsx(row(7429).TableSwitchRow, { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null });
   } else {
     let str = "default";
     if (true === row.destructive) {
@@ -32,15 +32,15 @@ function MoreRow(row) {
     }
     let obj = { label: row.label, variant: str, icon: null, onPress: null };
     const obj7 = { IconComponent: row.IconComponent, variant: str };
-    obj.icon = jsx(row(7071).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
+    obj.icon = jsx(row(7046).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
     obj.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet(ConjureChatMoreSheet);
       row.onPress();
     };
-    return jsx(row(7063).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
+    return jsx(row(7038).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 }
-const conjureDesignFeedbackStore = fn(12388);
+const conjureDesignFeedbackStore = fn(12386);
 ({ enterConjureDesignFeedback: c3, exitConjureDesignFeedback: closure_4, useConjureDesignFeedback: hasOwnProperty } = conjureDesignFeedbackStore);
 const jsx = fn(21).jsx;
 const ConjureChatMoreSheet = "ConjureChatMoreSheet";
@@ -51,10 +51,10 @@ export default function ConjureChatMoreSheet(canAnnotate) {
   let tmp = null;
   const merged = Object.assign(canAnnotate, Object.assign({ canAnnotate: 0 }));
   const id = merged.project.id;
-  const isConjureProjectMuted = id(11015).useIsConjureProjectMuted(id);
-  const obj = id(11015);
-  const conjureControlActive = id(11064).useConjureControlActive(id);
-  const obj2 = id(11064);
+  const isConjureProjectMuted = id(10999).useIsConjureProjectMuted(id);
+  const obj = id(10999);
+  const conjureControlActive = id(11049).useConjureControlActive(id);
+  const obj2 = id(11049);
   const obj4 = {};
   const merged1 = Object.assign(merged);
   obj4.muted = isConjureProjectMuted;
@@ -74,11 +74,11 @@ export default function ConjureChatMoreSheet(canAnnotate) {
     tmp = obj5;
   }
   obj4.annotate = tmp;
-  const result = id(12390).conjureChatMoreSections(obj4);
+  const result = id(12388).conjureChatMoreSections(obj4);
   const obj6 = { dismissAccessibilityLabel: null, children: null };
   const intl = tmp3(1113).intl;
-  obj6.dismissAccessibilityLabel = intl.string(_modDef4024.OsD9T0);
+  obj6.dismissAccessibilityLabel = intl.string(_modDef4026.OsD9T0);
   obj6.children = result.map((arr) => jsx(id(dependencyMap[13]).TableRowGroup, { hasIcons: true, children: arr.map((row) => closure_1_6(closure_1_8, { row }, row.key)) }, arr[0].key));
-  return jsx(id(7449).ActionSheet, { dismissAccessibilityLabel: null, children: null });
+  return jsx(id(7426).ActionSheet, { dismissAccessibilityLabel: null, children: null });
 };
 export const CONJURE_CHAT_MORE_SHEET_KEY = "ConjureChatMoreSheet";

@@ -1,20 +1,20 @@
-// === Module 6221: MessageRecordUtils ===
+// === Module 6196: MessageRecordUtils ===
 
-// Module 6221 (MessageRecordUtils)
+// Module 6196 (MessageRecordUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import findCodedLinksDefault from "findCodedLinks" /* 5904 */;
-import useMessageAuthor from "useMessageAuthor" /* 6596 */;
-import isMessageMentioned from "isMessageMentioned" /* 6601 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6602 */;
-import transformMessagPollDefault from "transformMessagPoll" /* 6637 */;
-import EmbedUtils from "EmbedUtils" /* 6638 */;
-import StickersUtils from "StickersUtils" /* 6640 */;
-import InteractionRecord from "InteractionRecord" /* 6222 */;
-import MessageRecord_mod from "MessageRecord" /* 5113 */;
+import findCodedLinksDefault from "findCodedLinks" /* 5873 */;
+import useMessageAuthor from "useMessageAuthor" /* 6571 */;
+import isMessageMentioned from "isMessageMentioned" /* 6576 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6577 */;
+import transformMessagPollDefault from "transformMessagPoll" /* 6612 */;
+import EmbedUtils from "EmbedUtils" /* 6613 */;
+import StickersUtils from "StickersUtils" /* 6615 */;
+import InteractionRecord from "InteractionRecord" /* 6197 */;
+import MessageRecord_mod from "MessageRecord" /* 5083 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -304,7 +304,7 @@ function createMessageRecord(message, arg1) {
   });
   const tmp10Result4 = GiftCodeUtils;
 }
-let MessageRecord = fn(5113);
+let MessageRecord = fn(5083);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1072);

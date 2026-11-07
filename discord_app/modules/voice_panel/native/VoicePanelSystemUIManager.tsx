@@ -1,19 +1,19 @@
-// === Module 19590: VoicePanelSystemUIManager ===
+// === Module 19662: VoicePanelSystemUIManager ===
 
-// Module 19590 (VoicePanelSystemUIManager)
+// Module 19662 (VoicePanelSystemUIManager)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11380 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 11875 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 11866 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6923 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11381).VoicePanelModes;
-const VoicePanelControlsModes = fn(11379).VoicePanelControlsModes;
-const ParticipantTypes = fn(5835).ParticipantTypes;
+const VoicePanelModes = fn(11363).VoicePanelModes;
+const VoicePanelControlsModes = fn(11361).VoicePanelControlsModes;
+const ParticipantTypes = fn(5805).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = { code: "(function VoicePanelSystemUIManagerTsx1(){let[focused,mode,controlsSpecs,windowDimensions]=this.__closure;var _focused$get;return{focusedId:(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,mode:mode.get(),controlsMode:controlsSpecs.get().mode,landscape:windowDimensions.get().landscape};})" };
@@ -160,7 +160,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   let tmp25 = null;
   if (tmp6[0]) {
     const obj2 = { hidden: !tmp5, barStyle: "light-content" };
-    tmp25 = closure_9(tmp(11370), obj2);
+    tmp25 = closure_9(tmp(11352), obj2);
   }
   const obj3 = { children: null };
   const items6 = [tmp25, closure_9(HomeIndicatorDefault, { prefersHidden: tmp8, prefersDeferringSystemGestures: tmp9[0] })];

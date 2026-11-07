@@ -1,7 +1,7 @@
-// === Module 15379: useJoinFromSupportedPlatformsIconKeys ===
+// === Module 15414: useJoinFromSupportedPlatformsIconKeys ===
 
-// Module 15379 (useJoinFromSupportedPlatformsIconKeys)
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9844 */;
+// Module 15414 (useJoinFromSupportedPlatformsIconKeys)
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9828 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,7 +54,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx");
 
 export { IconKey };
-export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = { [fn(9844).ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP, [fn(9844).ActivityGamePlatforms.ANDROID]: IconKey.ANDROID, [fn(9844).ActivityGamePlatforms.IOS]: IconKey.IOS, [fn(9844).ActivityGamePlatforms.XBOX]: IconKey.XBOX, [fn(9844).ActivityGamePlatforms.PLAYSTATION_4]: IconKey.PLAYSTATION, [fn(9844).ActivityGamePlatforms.PLAYSTATION_5]: IconKey.PLAYSTATION, [fn(9844).ActivityGamePlatforms.SAMSUNG]: null, [fn(9844).ActivityGamePlatforms.EMBEDDED]: null, [fn(9844).ActivityGamePlatforms.META_QUEST]: IconKey.VR };
+export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = { [fn(9828).ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP, [fn(9828).ActivityGamePlatforms.ANDROID]: IconKey.ANDROID, [fn(9828).ActivityGamePlatforms.IOS]: IconKey.IOS, [fn(9828).ActivityGamePlatforms.XBOX]: IconKey.XBOX, [fn(9828).ActivityGamePlatforms.PLAYSTATION_4]: IconKey.PLAYSTATION, [fn(9828).ActivityGamePlatforms.PLAYSTATION_5]: IconKey.PLAYSTATION, [fn(9828).ActivityGamePlatforms.SAMSUNG]: null, [fn(9828).ActivityGamePlatforms.EMBEDDED]: null, [fn(9828).ActivityGamePlatforms.META_QUEST]: IconKey.VR };
 export { getJoinFromSupportedPlatformsIconKeys };
 export function useJoinFromSupportedPlatformsIconKeys(platforms) {
   platforms = platforms.platforms;

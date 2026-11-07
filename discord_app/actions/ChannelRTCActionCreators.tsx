@@ -1,10 +1,10 @@
-// === Module 5915: ChannelRTCActionCreators ===
+// === Module 5888: ChannelRTCActionCreators ===
 
-// Module 5915 (ChannelRTCActionCreators)
+// Module 5888 (ChannelRTCActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5916 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5889 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

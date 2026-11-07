@@ -1,17 +1,17 @@
-// === Module 15213: UserProfilePrivateInfoBanner ===
+// === Module 15247: UserProfilePrivateInfoBanner ===
 
-// Module 15213 (UserProfilePrivateInfoBanner)
+// Module 15247 (UserProfilePrivateInfoBanner)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import createStyles from "createStyles" /* 5170 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import createStyles from "createStyles" /* 5140 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
-let obj = { banner: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
+let obj = { banner: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_4 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateInfoBanner.tsx");
 

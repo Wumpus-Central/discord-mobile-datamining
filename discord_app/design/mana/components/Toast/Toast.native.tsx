@@ -1,9 +1,9 @@
-// === Module 16116: Toast ===
+// === Module 16164: Toast ===
 
-// Module 16116 (Toast)
+// Module 16164 (Toast)
 import nativeDefault from "native" /* 575 */;
-import _mod16117 from "module_16117" /* 16117 */;
-import ToastEntity from "ToastEntity" /* 16118 */;
+import _mod16165 from "module_16165" /* 16165 */;
+import ToastEntity from "ToastEntity" /* 16166 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,10 +11,10 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let wrapper = { success: { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7424).CircleCheckIcon }, critical: null };
-let obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7424).CircleCheckIcon };
-wrapper.critical = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(7177).CircleErrorIcon };
-const createStyles = fn(5170);
+let wrapper = { success: { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7401).CircleCheckIcon }, critical: null };
+let obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7401).CircleCheckIcon };
+wrapper.critical = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(7152).CircleErrorIcon };
+const createStyles = fn(5140);
 let closure_9 = createStyles.createStyles((arg0) => {
   wrapper = { flexDirection: "row", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, justifyContent: "center", alignItems: "center", maxWidth: nativeDefault.modules.toast.MAX_WIDTH, backgroundColor: null };
   if ("default" === arg0) {
@@ -59,7 +59,7 @@ export function Toast(variant) {
   obj3.style = items1;
   const memo = secondaryIconColor.useMemo(() => {
     if (null == obj[str]) {
-      obj = _mod16117;
+      obj = _mod16165;
       if (obj.isToastEntity(icon)) {
         const obj3 = { entity: tmp4 };
         return timestampProducer(ToastEntity.ToastEntity, obj3);
@@ -76,7 +76,7 @@ export function Toast(variant) {
         tmp9 = tmp8;
       }
       icon = tmp9;
-      obj2 = _mod16117;
+      obj2 = _mod16165;
       tmp8 = icon;
     }
     if (null == icon) {

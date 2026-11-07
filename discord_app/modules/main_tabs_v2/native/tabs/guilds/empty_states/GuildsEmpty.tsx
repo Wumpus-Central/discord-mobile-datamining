@@ -1,20 +1,20 @@
-// === Module 18616: GuildsEmpty ===
+// === Module 18663: GuildsEmpty ===
 
-// Module 18616 (GuildsEmpty)
+// Module 18663 (GuildsEmpty)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import FavoritesUtils from "FavoritesUtils" /* 5044 */;
-import getInitialNavigationState from "getInitialNavigationState" /* 5346 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import Stack_Stack from "Stack/Stack" /* 6185 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14482 */;
-import CheersSpotIllustration from "CheersSpotIllustration" /* 18617 */;
+import FavoritesUtils from "FavoritesUtils" /* 5014 */;
+import getInitialNavigationState from "getInitialNavigationState" /* 5316 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import Stack_Stack from "Stack/Stack" /* 6159 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14515 */;
+import CheersSpotIllustration from "CheersSpotIllustration" /* 18664 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 
 require = fn;
 function handleJoinGuild() {
@@ -75,12 +75,12 @@ class GuildsEmptyContent {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const isGuildLurker = fn(5037).isGuildLurker;
+const isGuildLurker = fn(5007).isGuildLurker;
 const Constants = fn(1072);
 ({ ME: closure_11, MOBILE_GUILD_UPSELL_LIST: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { scrollView: { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm }, header: null, headerTitle: null, scrollViewContentContainer: null, headerInner: null, content: null, illustrationWrapper: null, buttonContainer: null, textWrapper: null, headerText: null, text: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm };
 obj.header = { zIndex: 100, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -97,7 +97,7 @@ obj.buttonContainer = { paddingBottom: nativeDefault.space.PX_16, paddingHorizon
 let obj8 = { paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.textWrapper = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
 let obj10 = {};
-const merged = Object.assign(fn(5781).TextStyleSheet["heading-sm/semibold"]);
+const merged = Object.assign(fn(5751).TextStyleSheet["heading-sm/semibold"]);
 obj10.fontSize = 18;
 obj10.marginBottom = 8;
 obj.headerText = obj10;
@@ -125,7 +125,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   const obj2 = navigation(563);
   obj3.type = navigation(1260).ImpressionTypes.VIEW;
   obj3.name = navigation(1260).ImpressionNames.GUILDS_EMPTY_NUX;
-  selectedGuildId(6186)(obj3);
+  selectedGuildId(6160)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -187,9 +187,9 @@ export default noop.memo(function GuildsEmpty(arg0) {
       }
     }
   }, items1);
-  const tmp7 = selectedGuildId(6186);
-  const isScreenLandscape = navigation(8865).useIsScreenLandscape();
-  navigation(17339);
+  const tmp7 = selectedGuildId(6160);
+  const isScreenLandscape = navigation(8844).useIsScreenLandscape();
+  navigation(17387);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };
@@ -200,7 +200,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
     const obj7 = { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl = tmp2(1113).intl;
     obj7.children = intl.string(tmp2(1113).t["7hB4kg"]);
-    obj6.children = closure_13(tmp2(5781).Text, obj7);
+    obj6.children = closure_13(tmp2(5751).Text, obj7);
     obj5.children = closure_13(closure_5, obj6);
     const items3 = [closure_13(closure_5, obj5), ];
     let tmp18;

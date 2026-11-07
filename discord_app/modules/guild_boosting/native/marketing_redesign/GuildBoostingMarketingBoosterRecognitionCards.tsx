@@ -1,17 +1,17 @@
-// === Module 15722: GuildBoostingMarketingBoosterRecognitionCards ===
+// === Module 15764: GuildBoostingMarketingBoosterRecognitionCards ===
 
-// Module 15722 (GuildBoostingMarketingBoosterRecognitionCards)
+// Module 15764 (GuildBoostingMarketingBoosterRecognitionCards)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9157 */;
-import HeartIcon from "HeartIcon" /* 9570 */;
-import BoostGemIcon from "BoostGemIcon" /* 10058 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 15648 */;
-import _modDef15723 from "module_15723" /* 15723 */;
-import _modDef15724 from "module_15724" /* 15724 */;
-import _modDef15725 from "module_15725" /* 15725 */;
-import _modDef15726 from "module_15726" /* 15726 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9139 */;
+import HeartIcon from "HeartIcon" /* 9552 */;
+import BoostGemIcon from "BoostGemIcon" /* 10042 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 15690 */;
+import _modDef15765 from "module_15765" /* 15765 */;
+import _modDef15766 from "module_15766" /* 15766 */;
+import _modDef15767 from "module_15767" /* 15767 */;
+import _modDef15768 from "module_15768" /* 15768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,10 +27,10 @@ function Card(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let obj2 = { card: { minHeight: 124, width: 172, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", flexDirection: "column", alignItems: "center", margin: 5, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 13, paddingVertical: 16 }, description: { textAlign: "center" }, iconContainer: { height: 30, marginBottom: 10 } };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(5170);
+createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({ container: { marginTop: 50, display: "flex", flexDirection: "column", alignItems: "center" }, title: { textAlign: "center", marginHorizontal: 34 }, recognitionCardsContainer: { marginTop: 15, display: "flex", flexDirection: "row", justifyContent: "center", flexWrap: "wrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx");
@@ -43,19 +43,19 @@ export default function GuildBoostingMarketingBoosterRecognitionCards() {
   obj2.children = intl.string(util.t.IzKs3o);
   items = [React4(Text_Text.Heading, obj2), ];
   const obj3 = { style: tmp.recognitionCardsContainer, children: null };
-  const obj4 = { icon: _modDef15723, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+  const obj4 = { icon: _modDef15765, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.TZigSO);
   const items1 = [React4(Card, obj4), , , ];
-  const obj5 = { icon: _modDef15724, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+  const obj5 = { icon: _modDef15766, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
   const intl3 = util.intl;
   obj5.children = intl3.string(util.t.hjQuV2);
   items1[1] = React4(Card, obj5);
-  const obj6 = { icon: _modDef15725, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+  const obj6 = { icon: _modDef15767, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
   const intl4 = util.intl;
   obj6.children = intl4.string(util.t["2RUcaM"]);
   items1[2] = React4(Card, obj6);
-  const obj7 = { icon: _modDef15726, IconComponent: HeartIcon.HeartIcon, children: null };
+  const obj7 = { icon: _modDef15768, IconComponent: HeartIcon.HeartIcon, children: null };
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t.bJoZKV);
   items1[3] = React4(Card, obj7);

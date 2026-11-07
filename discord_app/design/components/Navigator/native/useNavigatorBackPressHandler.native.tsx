@@ -1,7 +1,7 @@
-// === Module 7095: useNavigatorBackPressHandler ===
+// === Module 7070: useNavigatorBackPressHandler ===
 
-// Module 7095 (useNavigatorBackPressHandler)
-import useBackPressHandler from "useBackPressHandler" /* 6180 */;
+// Module 7070 (useNavigatorBackPressHandler)
+import useBackPressHandler from "useBackPressHandler" /* 6154 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

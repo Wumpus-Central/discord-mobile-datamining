@@ -1,6 +1,6 @@
-// === Module 10052: getTrialCtaOverride ===
+// === Module 10036: getTrialCtaOverride ===
 
-// Module 10052 (getTrialCtaOverride)
+// Module 10036 (getTrialCtaOverride)
 import PremiumUtils from "PremiumUtils" /* 2171 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 16211: IOSAudioInterruptExperiment ===
+// === Module 16259: IOSAudioInterruptExperiment ===
 
-// Module 16211 (IOSAudioInterruptExperiment)
+// Module 16259 (IOSAudioInterruptExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

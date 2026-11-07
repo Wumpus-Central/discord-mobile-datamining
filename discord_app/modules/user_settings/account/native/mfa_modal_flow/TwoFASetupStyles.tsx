@@ -1,10 +1,10 @@
-// === Module 16919: TwoFASetupStyles ===
+// === Module 16967: TwoFASetupStyles ===
 
-// Module 16919 (TwoFASetupStyles)
+// Module 16967 (TwoFASetupStyles)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
-import createStyles from "createStyles" /* 5170 */;
-import TextStyles from "TextStyles" /* 6803 */;
+import createStyles from "createStyles" /* 5140 */;
+import TextStyles from "TextStyles" /* 6778 */;
 import size from "module_2" /* 2 */;
 
 const obj = { text: { textAlign: "center", marginLeft: 20, marginRight: 20 }, modalHeader: null, modalBody: null };

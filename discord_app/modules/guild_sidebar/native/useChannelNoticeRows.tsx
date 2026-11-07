@@ -1,21 +1,21 @@
-// === Module 18599: useChannelNoticeRows ===
+// === Module 18646: useChannelNoticeRows ===
 
-// Module 18599 (useChannelNoticeRows)
-import dismissible_content from "dismissible_content" /* 5003 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5200 */;
+// Module 18646 (useChannelNoticeRows)
+import dismissible_content from "dismissible_content" /* 4973 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5170 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildProgressStore from "GuildProgressStore" /* 14256 */;
-import GuildChannelStore from "GuildChannelStore" /* 5100 */;
-import GuildStore from "GuildStore" /* 5041 */;
+import GuildProgressStore from "GuildProgressStore" /* 14286 */;
+import GuildChannelStore from "GuildChannelStore" /* 5070 */;
+import GuildStore from "GuildStore" /* 5011 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_9 = fn(7812).ChannelListChannelNoticeRow;
+let closure_9 = fn(7789).ChannelListChannelNoticeRow;
 const MFALevels = fn(1072).MFALevels;
-const DismissibleContentConstants = fn(5016);
+const DismissibleContentConstants = fn(4986);
 ({ ContentDismissActionType: closure_11, DismissibleContentGroupName: closure_12 } = DismissibleContentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");

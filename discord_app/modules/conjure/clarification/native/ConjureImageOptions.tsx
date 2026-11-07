@@ -1,22 +1,22 @@
-// === Module 12951: clarification/ConjureImageOptions ===
+// === Module 12962: clarification/ConjureImageOptions ===
 
-// Module 12951 (clarification/ConjureImageOptions)
+// Module 12962 (clarification/ConjureImageOptions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4024 from "module_4024" /* 4024 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5230 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import TrashIcon from "TrashIcon" /* 5893 */;
-import Card from "Card" /* 7065 */;
-import FormCheckbox from "FormCheckbox" /* 7080 */;
-import FormRadio from "FormRadio" /* 7153 */;
-import IconButton from "IconButton" /* 8119 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8745 */;
-import openMediaModal from "openMediaModal" /* 8925 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12319 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 12949 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 12952 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5200 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import TrashIcon from "TrashIcon" /* 5862 */;
+import Card from "Card" /* 7040 */;
+import FormCheckbox from "FormCheckbox" /* 7055 */;
+import FormRadio from "FormRadio" /* 7128 */;
+import IconButton from "IconButton" /* 8098 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8724 */;
+import openMediaModal from "openMediaModal" /* 8907 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12317 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 12960 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 12963 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -44,7 +44,7 @@ function ImageOptionPicture(onMeasured) {
     const items1 = [React5(ImageWarningIcon.ImageWarningIcon, obj4), ];
     const obj5 = { variant: "body-xs/medium", color: "text-muted", style: tmp.brokenText, children: null };
     const intl = util.intl;
-    obj5.children = intl.string(_modDef4024.lhgD88);
+    obj5.children = intl.string(_modDef4026.lhgD88);
     items1[1] = React5(Text_Text.Text, obj5);
     obj3.children = items1;
     obj2.children = React6(metroImportDefault, obj3);
@@ -109,11 +109,11 @@ function ImageOptionTile(option) {
   obj6.disabled = tmp11;
   ({ accessibilityRole: obj5.accessibilityRole, accessibilityState: obj5.accessibilityState } = radioA11yNative);
   const intl2 = util.intl;
-  obj6.accessibilityLabel = intl2.formatToPlainString(_modDef4024.AQbxhf, { answer: option.label });
+  obj6.accessibilityLabel = intl2.formatToPlainString(_modDef4026.AQbxhf, { answer: option.label });
   if (null != onRemove) {
     const obj8 = { name: "remove", label: null };
     const intl3 = util.intl;
-    obj8.label = intl3.string(_modDef4024.HQEXJM);
+    obj8.label = intl3.string(_modDef4026.HQEXJM);
     const items1 = [obj8];
     let tmp12 = items1;
   } else if (null != option.image) {
@@ -179,7 +179,7 @@ function ImageOptionTile(option) {
           obj16.onPress = onRemove;
           const intl4 = util.intl;
           const obj17 = { answer: option.label };
-          obj16.accessibilityLabel = intl4.formatToPlainString(_modDef4024.JGjZMs, obj17);
+          obj16.accessibilityLabel = intl4.formatToPlainString(_modDef4026.JGjZMs, obj17);
           obj14.children = tmp13(IconButton.IconButton, obj16);
           tmp13Result = tmp13(metroImportDefault, obj14);
         }
@@ -200,13 +200,13 @@ function ImageOptionTile(option) {
   obj18.children = tmp13Result3;
   tmp13(metroImportDefault, obj18);
   const obj7 = { answer: option.label };
-  stringResult = intl.string(_modDef4024["4/eeDD"]);
+  stringResult = intl.string(_modDef4026["4/eeDD"]);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, own: null, galleryContent: null, rowTile: null, card: null, ring: null, ringSelected: null, frame: null, frameInert: null, image: null, broken: null, brokenText: null, indicator: null, caption: null, view: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.own = { marginTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
@@ -401,7 +401,7 @@ export default function ConjureImageOptions(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -420,7 +420,7 @@ export default function ConjureImageOptions(projectId) {
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(12954).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(12965).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -434,11 +434,11 @@ export default function ConjureImageOptions(projectId) {
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(12954).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(12954);
+            closure_129_4.onUpload(tmp2(12965).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(12965);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp16) {
         c3 = tmp;

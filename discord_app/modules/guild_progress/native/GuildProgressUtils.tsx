@@ -1,15 +1,15 @@
-// === Module 14255: GuildProgressUtils ===
+// === Module 14285: GuildProgressUtils ===
 
-// Module 14255 (GuildProgressUtils)
+// Module 14285 (GuildProgressUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14258 */;
-import GuildChannelStore from "GuildChannelStore" /* 5100 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
-import GuildProgressStore from "GuildProgressStore" /* 14256 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14288 */;
+import GuildChannelStore from "GuildChannelStore" /* 5070 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
+import GuildProgressStore from "GuildProgressStore" /* 14286 */;
 
 const require = globalThis.__r;
 
@@ -91,7 +91,7 @@ function useIOSCompletionStates(guild) {
   }
   const tmpResult4 = require("initialize");
 }
-const Steps = fn(14250).Steps;
+const Steps = fn(14280).Steps;
 const Constants = fn(1072);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -101,7 +101,7 @@ export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export function openActionSheet(guild) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(14257, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
+  obj.openLazy(asyncRequireImpl(14287, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
 }
 export function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);

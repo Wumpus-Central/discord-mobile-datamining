@@ -1,11 +1,11 @@
-// === Module 5113: MessageRecord ===
+// === Module 5083: MessageRecord ===
 
-// Module 5113 (MessageRecord)
+// Module 5083 (MessageRecord)
 import FlagUtils from "FlagUtils" /* 1403 */;
-import ReactionUtils from "ReactionUtils" /* 5114 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5772 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5804 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5805 */;
+import ReactionUtils from "ReactionUtils" /* 5084 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5742 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5774 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5775 */;
 import Record from "Record" /* 1405 */;
 
 require = fn;

@@ -870,12 +870,12 @@ export default {
   getAvatarDecorationURL,
   hasAnimatedGuildIcon,
   isAnimatedIconHash,
-  getUserAvatarSource(stateFromStores, flag, size) {
+  getUserAvatarSource(stateFromStores, flag, diff) {
     if (flag === undefined) {
       flag = false;
     }
-    let tmp = size;
-    if (size === undefined) {
+    let tmp = diff;
+    if (diff === undefined) {
       tmp = size;
     }
     let tmp2 = getUserAvatarURLWithoutFallback(stateFromStores, flag, tmp, null, canUseWebpResult);

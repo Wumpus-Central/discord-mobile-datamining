@@ -1,9 +1,9 @@
-// === Module 6924: ConjureProjectStore ===
+// === Module 6899: ConjureProjectStore ===
 
-// Module 6924 (ConjureProjectStore)
+// Module 6899 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6925 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6900 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -36,6 +36,7 @@ let obj = null;
 const set4 = new Set();
 const map4 = new Map();
 let error = "unattempted";
+error = "unattempted";
 const Store = initializeDefault.Store;
 class ConjureProjectStore extends Store {
 }
@@ -175,6 +176,9 @@ prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(ar
 prototype["getOwnedProjectsFetchState"] = function getOwnedProjectsFetchState() {
   return error;
 };
+prototype["getSharedWithMeProjectsFetchState"] = function getSharedWithMeProjectsFetchState() {
+  return error;
+};
 prototype["isConjureProjectApplication"] = function isConjureProjectApplication(applicationId) {
   let tmp = null != applicationId;
   if (tmp) {
@@ -232,6 +236,7 @@ obj = {
     obj = null;
     c17 = false;
     error = "unattempted";
+    error = "unattempted";
     maxProjects = null;
     c19 = false;
     failureCode = null;
@@ -241,6 +246,7 @@ obj = {
     if (null != guildId) {
       const result = map4.set(guildId, "loading");
     } else {
+      error = "loading";
       error = "loading";
       c14 = false;
     }
@@ -293,6 +299,8 @@ obj = {
     if (null != guildId) {
       set4.add(guildId);
       const result1 = map4.set(guildId, "success");
+    } else {
+      error = "success";
     }
     (function pruneProjectScopedState() {
       const keys = set2.keys();
@@ -322,6 +330,7 @@ obj = {
     if (null != guildId) {
       const result = map4.set(guildId, "error");
     } else {
+      error = "error";
       error = "error";
     }
     { type: "error", fetchedAt: Date.now() };
@@ -494,19 +503,19 @@ export function canPublishProject(project) {
   }
   return tmp3;
 }
-export function canRemixProject(owner_user_id) {
+export function canRemixProject(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let isProjectPublicResult = owner_user_id.owner_user_id === id;
+  let isProjectPublicResult = project.owner_user_id === id;
   if (!isProjectPublicResult) {
-    isProjectPublicResult = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
-    const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
+    isProjectPublicResult = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
+    const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
   }
   if (!isProjectPublicResult) {
-    isProjectPublicResult = ConjureProjectTypes.isProjectPublic(owner_user_id);
+    isProjectPublicResult = ConjureProjectTypes.isProjectPublic(project);
   }
   return isProjectPublicResult;
 }

@@ -1,6 +1,6 @@
-// === Module 9152: PinotTypes ===
+// === Module 9134: PinotTypes ===
 
-// Module 9152 (PinotTypes)
+// Module 9134 (PinotTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { CHANNEL_SUMMARIES: "channel_summaries", CHANNEL_MESSAGES: "channel_messages" };

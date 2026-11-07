@@ -1,11 +1,11 @@
-// === Module 16254: SpeakerPulse ===
+// === Module 16302: SpeakerPulse ===
 
-// Module 16254 (SpeakerPulse)
+// Module 16302 (SpeakerPulse)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5400 */;
+import timing_timing from "timing/timing" /* 5370 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = 0.16;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { pulse: { backgroundColor: nativeDefault.colors.WHITE }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.border = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };

@@ -1,15 +1,15 @@
-// === Module 9595: BundleSampleV2 ===
+// === Module 9577: BundleSampleV2 ===
 
-// Module 9595 (BundleSampleV2)
+// Module 9577 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import utils from "utils" /* 2108 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9597 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9608 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9615 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9579 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9590 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9597 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -142,7 +142,7 @@ function BundleSampleV2Composed(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(9596).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(9578).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
@@ -170,7 +170,7 @@ obj.fgClip = obj5;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj.fgImage = {};
 const styles = StyleSheet.create(obj);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };

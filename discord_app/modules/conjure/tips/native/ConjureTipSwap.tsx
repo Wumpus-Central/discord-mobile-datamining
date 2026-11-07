@@ -1,8 +1,8 @@
-// === Module 12822: ConjureTipSwap ===
+// === Module 12834: ConjureTipSwap ===
 
-// Module 12822 (ConjureTipSwap)
+// Module 12834 (ConjureTipSwap)
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5400 */;
+import timing_timing from "timing/timing" /* 5370 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

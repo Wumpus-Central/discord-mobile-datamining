@@ -1,6 +1,6 @@
-// === Module 6477: ? ===
+// === Module 6452: ? ===
 
-// Module 6477
+// Module 6452
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/face/bored.png.js");

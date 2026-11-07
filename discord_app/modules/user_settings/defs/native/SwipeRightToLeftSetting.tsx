@@ -1,12 +1,12 @@
-// === Module 17729: SwipeRightToLeftSetting ===
+// === Module 17778: SwipeRightToLeftSetting ===
 
-// Module 17729 (SwipeRightToLeftSetting)
+// Module 17778 (SwipeRightToLeftSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 4995 */;
-import SettingsConstants from "SettingsConstants" /* 8524 */;
-import SettingBuilders from "SettingBuilders" /* 11703 */;
+import UserSettings from "UserSettings" /* 4965 */;
+import SettingsConstants from "SettingsConstants" /* 8503 */;
+import SettingBuilders from "SettingBuilders" /* 11685 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

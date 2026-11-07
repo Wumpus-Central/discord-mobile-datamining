@@ -1,6 +1,6 @@
-// === Module 11829: getGameOrganizationInviteURL ===
+// === Module 11820: getGameOrganizationInviteURL ===
 
-// Module 11829 (getGameOrganizationInviteURL)
+// Module 11820 (getGameOrganizationInviteURL)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/getGameOrganizationInviteURL.tsx");

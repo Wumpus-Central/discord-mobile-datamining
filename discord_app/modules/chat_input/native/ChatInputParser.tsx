@@ -1,6 +1,6 @@
-// === Module 12988: ChatInputParser ===
+// === Module 13013: ChatInputParser ===
 
-// Module 12988 (ChatInputParser)
+// Module 13013 (ChatInputParser)
 import applyDefault from "apply" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;

@@ -1,17 +1,20 @@
-// === Module 7945: QuestStore ===
+// === Module 7922: QuestStore ===
 
-// Module 7945 (QuestStore)
+// Module 7922 (QuestStore)
+import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7943 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7950 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7951 */;
-import getQuestLogger from "getQuestLogger" /* 7952 */;
-import QuestServerUtils from "QuestServerUtils" /* 7953 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6844 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7920 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7927 */;
+import QuestUserStatusUtils from "QuestUserStatusUtils" /* 7928 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7929 */;
+import getQuestLogger from "getQuestLogger" /* 7930 */;
+import QuestServerUtils from "QuestServerUtils" /* 7931 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 7946 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7947 */;
+import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 7923 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7924 */;
 
 require = fn;
 function initializeState() {
@@ -65,6 +68,45 @@ function initializeState() {
   const map12 = new Map();
   map = new Map();
 }
+function syncQuestProgressingOnDesktop(questId, userStatus) {
+  if (null != userStatus.userStatus) {
+    userStatus = userStatus.userStatus;
+    let progress;
+    if (userStatus != null) {
+      progress = userStatus.progress;
+    }
+    if (progress == null) {
+      progress = {};
+    }
+    const values = Object.values(progress);
+    for (const item10011 of values) {
+      let obj2 = apply;
+      if (!obj2.isNil(item10011)) {
+        let DESKTOP = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.DESKTOP;
+        if (DESKTOP.has(item10011.eventName)) {
+          let heartbeat = item10011.heartbeat;
+          let lastBeatAt;
+          if (heartbeat != null) {
+            lastBeatAt = heartbeat.lastBeatAt;
+          }
+          if (null != lastBeatAt) {
+            let addResult = set6.add(arg0);
+          } else {
+            let heartbeat2 = item10011.heartbeat;
+            let lastBeatAt1;
+            if (heartbeat2 != null) {
+              lastBeatAt1 = heartbeat2.lastBeatAt;
+            }
+            if (null == lastBeatAt1) {
+              let deleteResult = set6.delete(arg0);
+            }
+          }
+        }
+      }
+      continue;
+    }
+  }
+}
 function updateQuestData(questId, result2) {
   map = new Map(map);
   value = map.get(questId);
@@ -72,45 +114,7 @@ function updateQuestData(questId, result2) {
     const obj = {};
     const merged = Object.assign(value);
     const merged1 = Object.assign(result2);
-    (function syncQuestProgressingOnDesktop(questId, userStatus) {
-      if (null != userStatus.userStatus) {
-        userStatus = userStatus.userStatus;
-        let progress;
-        if (userStatus != null) {
-          progress = userStatus.progress;
-        }
-        if (progress == null) {
-          progress = {};
-        }
-        const values = Object.values(progress);
-        for (const item10011 of values) {
-          let obj2 = require("apply");
-          if (!obj2.isNil(item10011)) {
-            let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
-            if (DESKTOP.has(item10011.eventName)) {
-              let heartbeat = item10011.heartbeat;
-              let lastBeatAt;
-              if (heartbeat != null) {
-                lastBeatAt = heartbeat.lastBeatAt;
-              }
-              if (null != lastBeatAt) {
-                let addResult = set.add(arg0);
-              } else {
-                let heartbeat2 = item10011.heartbeat;
-                let lastBeatAt1;
-                if (heartbeat2 != null) {
-                  lastBeatAt1 = heartbeat2.lastBeatAt;
-                }
-                if (null == lastBeatAt1) {
-                  let deleteResult = set.delete(arg0);
-                }
-              }
-            }
-          }
-          continue;
-        }
-      }
-    })(questId, result2);
+    syncQuestProgressingOnDesktop(questId, result2);
     const result = map.set(questId, obj);
     if (map1.has(questId)) {
       value2 = map1.get(questId);
@@ -160,7 +164,15 @@ function _runExpirationCheck() {
   }
   const obj = require("QuestExpirationUtils");
 }
-const QuestsExperimentLocations = fn(6861).QuestsExperimentLocations;
+function _startExpirationChecker() {
+  if (null != c33) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(c33);
+    c33 = null;
+  }
+  _runExpirationCheck();
+}
+const QuestsExperimentLocations = fn(6836).QuestsExperimentLocations;
 new Map();
 let c33 = null;
 let c34 = null;
@@ -346,6 +358,43 @@ const questStore = new QuestStore(DispatcherDefault, {
     const state1 = ConsoleQuestUIStore.getState();
     state1.reset();
   },
+  QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function handleFetchQuestToDeliverSuccess(questWithUserStatus) {
+    questWithUserStatus = questWithUserStatus.questWithUserStatus;
+    if (null == questWithUserStatus) {
+      return false;
+    } else {
+      value = map.get(questWithUserStatus.id);
+      let userStatus;
+      if (value != null) {
+        userStatus = value.userStatus;
+      }
+      if (userStatus == null) {
+        userStatus = null;
+      }
+      const mostRecentQuestUserStatus = QuestUserStatusUtils.getMostRecentQuestUserStatus(userStatus, questWithUserStatus.userStatus);
+      let tmp3 = questWithUserStatus;
+      if (mostRecentQuestUserStatus !== questWithUserStatus.userStatus) {
+        const obj = {};
+        const merged = Object.assign(questWithUserStatus);
+        obj.userStatus = mostRecentQuestUserStatus;
+        tmp3 = obj;
+      }
+      const _Map = Map;
+      map = new Map(map);
+      map = map.set(tmp3.id, tmp3);
+      syncQuestProgressingOnDesktop(tmp3.id, tmp3);
+      const _Map2 = Map;
+      map1 = new Map(closure_24);
+      closure_24 = map1.set(tmp3.id, QuestExpirationUtils.isQuestExpired(tmp3));
+      if (null != c33) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(c33);
+        c33 = null;
+      }
+      _runExpirationCheck();
+      const tmp25Result = QuestExpirationUtils;
+    }
+  },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function handleFetchCurrentQuestsBegin() {
     c3 = true;
   },
@@ -372,11 +421,11 @@ const questStore = new QuestStore(DispatcherDefault, {
       let tmp9 = nextResult;
       let result = map.set(nextResult.id, nextResult);
       let tmp13 = mapped;
-      let obj5 = mapped(7951);
+      let obj5 = mapped(7929);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(6864).QuestContent.QUEST_BAR)) {
-        let tmp13Result = tmp13(7952);
+      if (targetedContent.includes(mapped(6839).QuestContent.QUEST_BAR)) {
+        let tmp13Result = tmp13(7930);
         let obj4 = { location: QuestsExperimentLocations.QUESTS_STORE };
         let questLogger = tmp13Result.getQuestLogger(obj4);
         let _HermesInternal2 = HermesInternal;
@@ -398,19 +447,12 @@ const questStore = new QuestStore(DispatcherDefault, {
     for (const item10131 of values) {
       if (!map.has(item10131.id)) {
         let result3 = map.set(item10131.id, item10131);
-        let obj10 = mapped(7951);
+        let obj10 = mapped(7929);
         let result4 = map1.set(item10131.id, obj10.isQuestExpired(item10131));
       }
       continue;
     }
-    (function _startExpirationChecker() {
-      if (null != c33) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(c33);
-        c33 = null;
-      }
-      _runExpirationCheck();
-    })();
+    _startExpirationChecker();
     if (null != questEnrollmentBlockedUntil) {
       let _Date = Date;
       new Date(questEnrollmentBlockedUntil);
@@ -435,7 +477,7 @@ const questStore = new QuestStore(DispatcherDefault, {
           timeout = setTimeout(() => {
             c34 = null;
             c26 = null;
-            closure_1_40.emitChange();
+            closure_1_42.emitChange();
           }, Math.max(diff, 0));
         }
       }
@@ -553,45 +595,7 @@ const questStore = new QuestStore(DispatcherDefault, {
       const obj2 = {};
       const merged = Object.assign(value);
       const merged1 = Object.assign(obj);
-      (function syncQuestProgressingOnDesktop(questId, userStatus) {
-        if (null != userStatus.userStatus) {
-          userStatus = userStatus.userStatus;
-          let progress;
-          if (userStatus != null) {
-            progress = userStatus.progress;
-          }
-          if (progress == null) {
-            progress = {};
-          }
-          const values = Object.values(progress);
-          for (const item10011 of values) {
-            let obj2 = require("apply");
-            if (!obj2.isNil(item10011)) {
-              let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
-                let lastBeatAt;
-                if (heartbeat != null) {
-                  lastBeatAt = heartbeat.lastBeatAt;
-                }
-                if (null != lastBeatAt) {
-                  let addResult = set.add(arg0);
-                } else {
-                  let heartbeat2 = item10011.heartbeat;
-                  let lastBeatAt1;
-                  if (heartbeat2 != null) {
-                    lastBeatAt1 = heartbeat2.lastBeatAt;
-                  }
-                  if (null == lastBeatAt1) {
-                    let deleteResult = set.delete(arg0);
-                  }
-                }
-              }
-            }
-            continue;
-          }
-        }
-      })(questId, obj);
+      syncQuestProgressingOnDesktop(questId, obj);
       const result = map.set(questId, obj2);
       if (map1.has(questId)) {
         value2 = map1.get(questId);
@@ -643,45 +647,7 @@ const questStore = new QuestStore(DispatcherDefault, {
       const obj2 = {};
       const merged = Object.assign(value);
       const merged1 = Object.assign(obj);
-      (function syncQuestProgressingOnDesktop(questId, userStatus) {
-        if (null != userStatus.userStatus) {
-          userStatus = userStatus.userStatus;
-          let progress;
-          if (userStatus != null) {
-            progress = userStatus.progress;
-          }
-          if (progress == null) {
-            progress = {};
-          }
-          const values = Object.values(progress);
-          for (const item10011 of values) {
-            let obj2 = require("apply");
-            if (!obj2.isNil(item10011)) {
-              let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
-                let lastBeatAt;
-                if (heartbeat != null) {
-                  lastBeatAt = heartbeat.lastBeatAt;
-                }
-                if (null != lastBeatAt) {
-                  let addResult = set.add(arg0);
-                } else {
-                  let heartbeat2 = item10011.heartbeat;
-                  let lastBeatAt1;
-                  if (heartbeat2 != null) {
-                    lastBeatAt1 = heartbeat2.lastBeatAt;
-                  }
-                  if (null == lastBeatAt1) {
-                    let deleteResult = set.delete(arg0);
-                  }
-                }
-              }
-            }
-            continue;
-          }
-        }
-      })(questId, obj);
+      syncQuestProgressingOnDesktop(questId, obj);
       const result = map.set(questId, obj2);
       if (map1.has(questId)) {
         value2 = map1.get(questId);
@@ -732,45 +698,7 @@ const questStore = new QuestStore(DispatcherDefault, {
         const obj3 = {};
         const merged1 = Object.assign(value3);
         const merged2 = Object.assign(obj);
-        (function syncQuestProgressingOnDesktop(questId, userStatus) {
-          if (null != userStatus.userStatus) {
-            userStatus = userStatus.userStatus;
-            let progress;
-            if (userStatus != null) {
-              progress = userStatus.progress;
-            }
-            if (progress == null) {
-              progress = {};
-            }
-            const values = Object.values(progress);
-            for (const item10011 of values) {
-              let obj2 = require("apply");
-              if (!obj2.isNil(item10011)) {
-                let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
-                if (DESKTOP.has(item10011.eventName)) {
-                  let heartbeat = item10011.heartbeat;
-                  let lastBeatAt;
-                  if (heartbeat != null) {
-                    lastBeatAt = heartbeat.lastBeatAt;
-                  }
-                  if (null != lastBeatAt) {
-                    let addResult = set.add(arg0);
-                  } else {
-                    let heartbeat2 = item10011.heartbeat;
-                    let lastBeatAt1;
-                    if (heartbeat2 != null) {
-                      lastBeatAt1 = heartbeat2.lastBeatAt;
-                    }
-                    if (null == lastBeatAt1) {
-                      let deleteResult = set.delete(arg0);
-                    }
-                  }
-                }
-              }
-              continue;
-            }
-          }
-        })(questId, obj);
+        syncQuestProgressingOnDesktop(questId, obj);
         const result1 = map.set(questId, obj3);
         if (map1.has(questId)) {
           const value4 = map1.get(questId);
@@ -786,6 +714,7 @@ const questStore = new QuestStore(DispatcherDefault, {
         }
       }
     }
+    tmp5 = null != userStatus && null == userStatus.claimedAt;
   },
   QUESTS_FETCH_REWARD_CODE_FAILURE: function handleFetchRewardCodeFailure(questId) {
     set = new Set(set);
@@ -848,45 +777,7 @@ const questStore = new QuestStore(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(value3);
           const merged2 = Object.assign(obj2);
-          (function syncQuestProgressingOnDesktop(questId, userStatus) {
-            if (null != userStatus.userStatus) {
-              userStatus = userStatus.userStatus;
-              let progress;
-              if (userStatus != null) {
-                progress = userStatus.progress;
-              }
-              if (progress == null) {
-                progress = {};
-              }
-              const values = Object.values(progress);
-              for (const item10011 of values) {
-                let obj2 = require("apply");
-                if (!obj2.isNil(item10011)) {
-                  let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
-                  if (DESKTOP.has(item10011.eventName)) {
-                    let heartbeat = item10011.heartbeat;
-                    let lastBeatAt;
-                    if (heartbeat != null) {
-                      lastBeatAt = heartbeat.lastBeatAt;
-                    }
-                    if (null != lastBeatAt) {
-                      let addResult = set.add(arg0);
-                    } else {
-                      let heartbeat2 = item10011.heartbeat;
-                      let lastBeatAt1;
-                      if (heartbeat2 != null) {
-                        lastBeatAt1 = heartbeat2.lastBeatAt;
-                      }
-                      if (null == lastBeatAt1) {
-                        let deleteResult = set.delete(arg0);
-                      }
-                    }
-                  }
-                }
-                continue;
-              }
-            }
-          })(questId, obj2);
+          syncQuestProgressingOnDesktop(questId, obj2);
           const result2 = map.set(questId, obj3);
           if (map1.has(questId)) {
             const value4 = map1.get(questId);
@@ -934,45 +825,7 @@ const questStore = new QuestStore(DispatcherDefault, {
       const obj2 = {};
       const merged = Object.assign(value);
       const merged1 = Object.assign(obj);
-      (function syncQuestProgressingOnDesktop(questId, userStatus) {
-        if (null != userStatus.userStatus) {
-          userStatus = userStatus.userStatus;
-          let progress;
-          if (userStatus != null) {
-            progress = userStatus.progress;
-          }
-          if (progress == null) {
-            progress = {};
-          }
-          const values = Object.values(progress);
-          for (const item10011 of values) {
-            let obj2 = require("apply");
-            if (!obj2.isNil(item10011)) {
-              let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
-                let lastBeatAt;
-                if (heartbeat != null) {
-                  lastBeatAt = heartbeat.lastBeatAt;
-                }
-                if (null != lastBeatAt) {
-                  let addResult = set.add(arg0);
-                } else {
-                  let heartbeat2 = item10011.heartbeat;
-                  let lastBeatAt1;
-                  if (heartbeat2 != null) {
-                    lastBeatAt1 = heartbeat2.lastBeatAt;
-                  }
-                  if (null == lastBeatAt1) {
-                    let deleteResult = set.delete(arg0);
-                  }
-                }
-              }
-            }
-            continue;
-          }
-        }
-      })(questId, obj);
+      syncQuestProgressingOnDesktop(questId, obj);
       const result = map.set(questId, obj2);
       if (map1.has(questId)) {
         value2 = map1.get(questId);
@@ -1035,45 +888,7 @@ const questStore = new QuestStore(DispatcherDefault, {
       const obj5 = {};
       const merged = Object.assign(value);
       const merged1 = Object.assign(obj3);
-      (function syncQuestProgressingOnDesktop(questId, userStatus) {
-        if (null != userStatus.userStatus) {
-          userStatus = userStatus.userStatus;
-          let progress;
-          if (userStatus != null) {
-            progress = userStatus.progress;
-          }
-          if (progress == null) {
-            progress = {};
-          }
-          const values = Object.values(progress);
-          for (const item10011 of values) {
-            let obj2 = require("apply");
-            if (!obj2.isNil(item10011)) {
-              let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
-                let lastBeatAt;
-                if (heartbeat != null) {
-                  lastBeatAt = heartbeat.lastBeatAt;
-                }
-                if (null != lastBeatAt) {
-                  let addResult = set.add(arg0);
-                } else {
-                  let heartbeat2 = item10011.heartbeat;
-                  let lastBeatAt1;
-                  if (heartbeat2 != null) {
-                    lastBeatAt1 = heartbeat2.lastBeatAt;
-                  }
-                  if (null == lastBeatAt1) {
-                    let deleteResult = set.delete(arg0);
-                  }
-                }
-              }
-            }
-            continue;
-          }
-        }
-      })(quest_id, obj3);
+      syncQuestProgressingOnDesktop(quest_id, obj3);
       const result1 = map.set(quest_id, obj5);
       if (map1.has(quest_id)) {
         const value3 = map1.get(quest_id);
@@ -1130,48 +945,10 @@ const questStore = new QuestStore(DispatcherDefault, {
     map = new Map(map);
     value = map.get(questId);
     if (null != value) {
-      let obj2 = {};
+      const obj2 = {};
       const merged = Object.assign(value);
       const merged1 = Object.assign(obj);
-      (function syncQuestProgressingOnDesktop(questId, userStatus) {
-        if (null != userStatus.userStatus) {
-          userStatus = userStatus.userStatus;
-          let progress;
-          if (userStatus != null) {
-            progress = userStatus.progress;
-          }
-          if (progress == null) {
-            progress = {};
-          }
-          const values = Object.values(progress);
-          for (const item10011 of values) {
-            let obj2 = require("apply");
-            if (!obj2.isNil(item10011)) {
-              let DESKTOP = require("FirstPartyQuestTaskTypes").FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
-                let lastBeatAt;
-                if (heartbeat != null) {
-                  lastBeatAt = heartbeat.lastBeatAt;
-                }
-                if (null != lastBeatAt) {
-                  let addResult = set.add(arg0);
-                } else {
-                  let heartbeat2 = item10011.heartbeat;
-                  let lastBeatAt1;
-                  if (heartbeat2 != null) {
-                    lastBeatAt1 = heartbeat2.lastBeatAt;
-                  }
-                  if (null == lastBeatAt1) {
-                    let deleteResult = set.delete(arg0);
-                  }
-                }
-              }
-            }
-            continue;
-          }
-        }
-      })(questId, obj);
+      syncQuestProgressingOnDesktop(questId, obj);
       const result = map.set(questId, obj2);
       if (map1.has(questId)) {
         const value3 = map1.get(questId);

@@ -1,12 +1,12 @@
-// === Module 12199: StageChannelBackground ===
+// === Module 12190: StageChannelBackground ===
 
-// Module 12199 (StageChannelBackground)
+// Module 12190 (StageChannelBackground)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_2 = createStyles.createStyles(obj2);
 const size = fn(2);

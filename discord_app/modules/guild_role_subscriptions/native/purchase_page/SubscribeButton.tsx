@@ -1,16 +1,16 @@
-// === Module 18922: SubscribeButton ===
+// === Module 18972: SubscribeButton ===
 
-// Module 18922 (SubscribeButton)
+// Module 18972 (SubscribeButton)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6117 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5095 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5065 */;
 
 require = fn;
 function emphasisHook(children) {
@@ -20,28 +20,28 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(17477);
+  let obj = changeToListingId(17526);
   const obj3 = { children: null };
   const obj2 = activeListingId(2166)(activeSubscription.currentPeriodEnd);
   const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1113).intl;
   const formatResult = activeListingId(2166)(activeSubscription.currentPeriodEnd).format("MMMM Do");
   obj4.children = intl.format(activeSubscription(1113).t.lA7ztO, { activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0], billingEndDate: activeListingId(2166)(activeSubscription.currentPeriodEnd).format("MMMM Do"), emphasisHook });
-  items = [closure_12(activeSubscription(5781).Text, obj4), closure_12(activeSubscription(1187).Spacer, { size: 16 }), ];
+  items = [closure_12(activeSubscription(5751).Text, obj4), closure_12(activeSubscription(1187).Spacer, { size: 16 }), ];
   const obj6 = { text: null, onPress: null };
   const intl2 = activeSubscription(1113).intl;
   obj6.text = intl2.string(activeSubscription(1113).t.SACegK);
   obj6.onPress = function handleSwitchTiers() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(18923, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
+    obj.openLazy(asyncRequireImpl(18973, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
   };
-  items[2] = closure_12(activeSubscription(18916).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(18966).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }
 const View = fn(17).View;
 const AnalyticsLocations = fn(1072).AnalyticsLocations;
-const StaticChannelRoute = fn(5026).StaticChannelRoute;
+const StaticChannelRoute = fn(4996).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const size = fn(2);
@@ -96,7 +96,7 @@ export default function SubscribeButton(listingId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ export default function SubscribeButton(listingId) {
           c3 = 0;
           closure_128_1(false);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp22) {
         closure_2 = tmp22;

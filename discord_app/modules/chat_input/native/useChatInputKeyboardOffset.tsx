@@ -1,14 +1,14 @@
-// === Module 14202: useChatInputKeyboardOffset ===
+// === Module 14227: useChatInputKeyboardOffset ===
 
-// Module 14202 (useChatInputKeyboardOffset)
+// Module 14227 (useChatInputKeyboardOffset)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1641 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5355 */;
-import useToken from "useToken" /* 5754 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5766 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5325 */;
+import useToken from "useToken" /* 5724 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5736 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/chat_input/native/useChatInputKeyboardOffset.tsx");

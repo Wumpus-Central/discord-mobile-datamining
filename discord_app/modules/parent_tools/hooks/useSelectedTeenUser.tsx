@@ -1,10 +1,10 @@
-// === Module 17056: useSelectedTeenUser ===
+// === Module 17104: useSelectedTeenUser ===
 
-// Module 17056 (useSelectedTeenUser)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8462 */;
+// Module 17104 (useSelectedTeenUser)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8441 */;
 import UserStore from "UserStore" /* 1385 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7817 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7814 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7794 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7791 */;
 
 const require = globalThis.__r;
 
@@ -56,4 +56,15 @@ export function useShouldLoadSettingsForSelectedTeenUser() {
     tmp4 = tmp5;
   }
   return tmp4;
+}
+export function useHasLoadedSettingsForTeen(id1) {
+  _require = id1;
+  items = [FamilyCenterControlledSettingsStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
+    let hasSettingsForUserResult = null != closure_0;
+    if (hasSettingsForUserResult) {
+      hasSettingsForUserResult = FamilyCenterControlledSettingsStore.hasSettingsForUser(tmp);
+    }
+    return hasSettingsForUserResult;
+  });
 }

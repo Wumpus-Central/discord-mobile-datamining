@@ -1,10 +1,10 @@
-// === Module 19472: ExpressionPickerStore ===
+// === Module 19531: ExpressionPickerStore ===
 
-// Module 19472 (ExpressionPickerStore)
+// Module 19531 (ExpressionPickerStore)
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1228 */;
-import uniqueIdDefault from "uniqueId" /* 6187 */;
+import uniqueIdDefault from "uniqueId" /* 6161 */;
 import identity_mod from "module_1254" /* 1254 */;
-import module_5358 from "module_5358" /* 5358 */;
+import module_5328 from "module_5328" /* 5328 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewT
 let closure_3 = Object.freeze({ activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, showEmojiPacks: false, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false });
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-const withEqualityFnResult = identity(module_5358.persist(() => closure_3, {
+const withEqualityFnResult = identity(module_5328.persist(() => closure_3, {
   name: "expression-picker-last-active-view",
   partialize(lastActiveView) {
     return { lastActiveView: lastActiveView.lastActiveView };
@@ -170,11 +170,11 @@ export function toggleExpressionPicker(activeView, activeViewType, activeChannel
 }
 export function setExpressionPickerView(activeView) {
   _require = activeView;
-  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ activeView, lastActiveView: withEqualityFnResult.getState().activeView, showEmojiPacks: false, showSelectedEmojiPackId: "channel" }));
+  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ activeView, lastActiveView: withEqualityFnResult.getState().activeView, showEmojiPacks: false, showSelectedEmojiPackId: "alignItems" }));
 }
 export function setShowEmojiPacks(showEmojiPacks) {
   _require = showEmojiPacks;
-  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ showEmojiPacks, showSelectedEmojiPackId: "Array" }));
+  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ showEmojiPacks, showSelectedEmojiPackId: "r" }));
 }
 export function setSearchQuery(searchQuery) {
   _require = searchQuery;

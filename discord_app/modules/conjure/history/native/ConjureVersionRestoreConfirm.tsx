@@ -1,12 +1,12 @@
-// === Module 12364: ConjureVersionRestoreConfirm ===
+// === Module 12362: ConjureVersionRestoreConfirm ===
 
-// Module 12364 (ConjureVersionRestoreConfirm)
+// Module 12362 (ConjureVersionRestoreConfirm)
 import util from "util" /* 1113 */;
-import _modDef4024 from "module_4024" /* 4024 */;
-import useAlertStore from "useAlertStore" /* 6118 */;
-import AlertModal from "AlertModal" /* 6122 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7062 */;
-import TableRowGroup from "TableRowGroup" /* 7151 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import useAlertStore from "useAlertStore" /* 6092 */;
+import AlertModal from "AlertModal" /* 6096 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7037 */;
+import TableRowGroup from "TableRowGroup" /* 7126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,17 +18,17 @@ function ConjureVersionRestoreAlert(matchingBackup) {
   const checked = tmp[0];
   const obj = { title: null, content: null, extraContent: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef4024.NDY6Zv);
+  obj.title = intl.string(_modDef4026.NDY6Zv);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef4024.z2x5zj);
+  obj.content = intl2.string(_modDef4026.z2x5zj);
   let tmp3Result;
   if (null != matchingBackup) {
     const obj2 = { hasIcons: false, children: null };
     const obj3 = { label: null, subLabel: null, checked: null, onPress: null };
     const intl3 = util.intl;
-    obj3.label = intl3.string(_modDef4024["+/pFME"]);
+    obj3.label = intl3.string(_modDef4026["+/pFME"]);
     const intl4 = util.intl;
-    obj3.subLabel = intl4.string(_modDef4024["+I112y"]);
+    obj3.subLabel = intl4.string(_modDef4026["+I112y"]);
     obj3.checked = checked;
     obj3.onPress = tmp[1];
     obj2.children = hasOwnProperty(TableCheckboxRow.TableCheckboxRow, obj3);
@@ -38,7 +38,7 @@ function ConjureVersionRestoreAlert(matchingBackup) {
   const obj4 = { children: null };
   const obj5 = { variant: "primary", text: null, onPress: null };
   const intl5 = util.intl;
-  obj5.text = intl5.string(_modDef4024.K3Q49G);
+  obj5.text = intl5.string(_modDef4026.K3Q49G);
   obj5.onPress = function onPress() {
     let tmp2 = null;
     if (first) {

@@ -1,6 +1,6 @@
-// === Module 15849: GuildProductsStore ===
+// === Module 15899: GuildProductsStore ===
 
-// Module 15849 (GuildProductsStore)
+// Module 15899 (GuildProductsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -11,7 +11,7 @@ let closure_3 = {};
 let closure_4 = {};
 let closure_5 = {};
 let closure_6 = 10 * DurationsDefault.Millis.MINUTE;
-const secondaryIndexMap = new fn(5097).SecondaryIndexMap((guild_id) => {
+const secondaryIndexMap = new fn(5067).SecondaryIndexMap((guild_id) => {
   items = ["guild:" + guild_id.guild_id];
   if (guild_id.published) {
     const _HermesInternal = HermesInternal;

@@ -1,17 +1,17 @@
-// === Module 15262: IndividualProductPreview ===
+// === Module 15296: IndividualProductPreview ===
 
-// Module 15262 (IndividualProductPreview)
+// Module 15296 (IndividualProductPreview)
 import nativeDefault from "native" /* 575 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
-import LinearGradientDefault from "LinearGradient" /* 5745 */;
-import useCurrentUser from "useCurrentUser" /* 8841 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11551 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11669 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 15263 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 15264 */;
-import FractionalNitroPreview from "FractionalNitroPreview" /* 15265 */;
-import OrbBadgePreview from "OrbBadgePreview" /* 15268 */;
+import LinearGradientDefault from "LinearGradient" /* 5715 */;
+import useCurrentUser from "useCurrentUser" /* 8820 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11533 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11651 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 15297 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 15298 */;
+import FractionalNitroPreview from "FractionalNitroPreview" /* 15299 */;
+import OrbBadgePreview from "OrbBadgePreview" /* 15302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -81,7 +81,7 @@ const CollectiblesShopConstants = fn(1074);
 ({ EXTERNAL_PRODUCT_SKU_IDS: hasOwnProperty, ShopCtaEnum: closure_6 } = CollectiblesShopConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { collectiblePreview: { marginTop: nativeDefault.space.PX_12, position: "relative", height: 280 }, profilePreviewContainer: { position: "relative", flex: 1, alignItems: "center", overflow: "hidden" }, profilePreview: { width: "66%" }, profilePreviewGradient: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

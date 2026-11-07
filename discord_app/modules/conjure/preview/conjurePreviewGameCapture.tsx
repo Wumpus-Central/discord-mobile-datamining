@@ -1,11 +1,11 @@
-// === Module 11066: conjurePreviewGameCapture ===
+// === Module 11051: conjurePreviewGameCapture ===
 
-// Module 11066 (conjurePreviewGameCapture)
-import conjureMediaTickets from "conjureMediaTickets" /* 11069 */;
+// Module 11051 (conjurePreviewGameCapture)
+import conjureMediaTickets from "conjureMediaTickets" /* 11054 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 11067 */;
-import ConjureGameCapturesStore from "ConjureGameCapturesStore" /* 11068 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 11052 */;
+import ConjureGameCapturesStore from "ConjureGameCapturesStore" /* 11053 */;
 
 require = fn;
 function getGameCaptureUrl() {
@@ -61,7 +61,7 @@ let closure_10 = async function _loadGameCapture(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_12 = async function _readConjurePreviewGameCapture(arg0) {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

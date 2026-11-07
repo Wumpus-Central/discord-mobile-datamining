@@ -1,12 +1,12 @@
-// === Module 19950: SubscriptionManager ===
+// === Module 20019: SubscriptionManager ===
 
-// Module 19950 (SubscriptionManager)
+// Module 20019 (SubscriptionManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
 import BillingInfoStore from "BillingInfoStore" /* 2172 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
-import EntitlementStore from "EntitlementStore" /* 7677 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
+import EntitlementStore from "EntitlementStore" /* 7654 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
 
 let require = fn;
 const PremiumConstants = fn(1387);
@@ -32,7 +32,7 @@ const prototype = function SubscriptionManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -57,12 +57,12 @@ const prototype = function SubscriptionManager() {
               if (!isSubscriptionFetching) {
                 c2 = 1;
                 currentUser = 1;
-                const obj6 = { value: tmp2(6614).fetchSubscriptions(), done: false };
+                const obj6 = { value: tmp2(6589).fetchSubscriptions(), done: false };
                 return obj6;
               }
             }
             currentUser = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -94,7 +94,7 @@ const prototype = function SubscriptionManager() {
         if (!hasItem) {
           c2 = 2;
           currentUser = 1;
-          const obj8 = { value: tmp2(7680).fetchUserEntitlementsForApplication(closure_1_7), done: false };
+          const obj8 = { value: tmp2(7657).fetchUserEntitlementsForApplication(closure_1_7), done: false };
           return obj8;
         }
       } catch (tmp22) {
@@ -142,7 +142,7 @@ const prototype = function SubscriptionManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -178,7 +178,7 @@ const prototype = function SubscriptionManager() {
           return obj;
         }
         v3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp8) {
         v3 = tmp;
         throw tmp8;
@@ -196,7 +196,7 @@ const prototype = function SubscriptionManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -213,7 +213,7 @@ const prototype = function SubscriptionManager() {
             applyArgumentsResult = tmp4;
             dependencyMap = 1;
             c2 = 1;
-            const obj6 = { value: applyArgumentsResult(6614).fetchIpCountryCode(), done: false };
+            const obj6 = { value: applyArgumentsResult(6589).fetchIpCountryCode(), done: false };
             return obj6;
           }
         } else {
@@ -228,7 +228,7 @@ const prototype = function SubscriptionManager() {
             } else if (null != ipCountryCode.ipCountryCode) {
               dependencyMap = 2;
               c2 = 1;
-              const obj8 = { value: applyArgumentsResult(6614).fetchPaymentSources(), done: false };
+              const obj8 = { value: applyArgumentsResult(6589).fetchPaymentSources(), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -240,7 +240,7 @@ const prototype = function SubscriptionManager() {
             return obj;
           }
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp13) {
         c2 = tmp;

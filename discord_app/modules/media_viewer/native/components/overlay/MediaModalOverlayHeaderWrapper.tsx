@@ -1,14 +1,14 @@
-// === Module 9035: MediaModalOverlayHeaderWrapper ===
+// === Module 9017: MediaModalOverlayHeaderWrapper ===
 
-// Module 9035 (MediaModalOverlayHeaderWrapper)
+// Module 9017 (MediaModalOverlayHeaderWrapper)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import NavigatorConstants from "NavigatorConstants" /* 5744 */;
+import NavigatorConstants from "NavigatorConstants" /* 5714 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_5 = createStyles.createStyles((paddingTop, arg1, arg2) => {
   const obj = { bar: { flexDirection: "row", alignItems: "center", height: NavigatorConstants.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 } };
   return obj;

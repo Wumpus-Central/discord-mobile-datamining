@@ -1,15 +1,15 @@
-// === Module 9653: collectibles/CollectiblesUtils ===
+// === Module 9635: collectibles/CollectiblesUtils ===
 
-// Module 9653 (collectibles/CollectiblesUtils)
+// Module 9635 (collectibles/CollectiblesUtils)
 import Constants from "Constants" /* 1072 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2183 */;
-import PriceUtils from "PriceUtils" /* 7500 */;
-import IAPStoreDefault from "IAPStore" /* 7696 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7830 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7831 */;
-import types from "types" /* 8859 */;
-import _modDef9654 from "module_9654" /* 9654 */;
+import PriceUtils from "PriceUtils" /* 7477 */;
+import IAPStoreDefault from "IAPStore" /* 7673 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7807 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7808 */;
+import types from "types" /* 8838 */;
+import _modDef9636 from "module_9636" /* 9636 */;
 import size from "module_2" /* 2 */;
 
 function hasAtLeastOneGPlaySynced(nextResult) {
@@ -26,7 +26,7 @@ function hasAtLeastOneGPlaySynced(nextResult) {
               let everyResult = variants.every((variants) => {
                 if (obj.getIsVariantProduct(variants)) {
                   variants = variants.variants;
-                  let everyResult = variants.every(/* F96042 */ function() { ... });
+                  let everyResult = variants.every(/* F96381 */ function() { ... });
                 } else {
                   const googleSkuIds = variants.googleSkuIds;
                   let tmp4;
@@ -239,7 +239,7 @@ export function isGPlaySynced(variants) {
                 let everyResult = variants.every((variants) => {
                   if (obj.getIsVariantProduct(variants)) {
                     variants = variants.variants;
-                    let everyResult = variants.every(/* F96042 */ function() { ... });
+                    let everyResult = variants.every(/* F96381 */ function() { ... });
                   } else {
                     const googleSkuIds = variants.googleSkuIds;
                     let tmp4;
@@ -362,5 +362,5 @@ export function filterHiddenCategories(result1) {
   });
 }
 export function createOrbProfileBadge() {
-  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9654, description: "", isPreviewMode: true };
+  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9636, description: "", isPreviewMode: true };
 }

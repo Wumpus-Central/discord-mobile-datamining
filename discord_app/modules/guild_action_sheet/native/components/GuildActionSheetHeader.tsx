@@ -1,14 +1,14 @@
-// === Module 16052: GuildActionSheetHeader ===
+// === Module 16100: GuildActionSheetHeader ===
 
-// Module 16052 (GuildActionSheetHeader)
+// Module 16100 (GuildActionSheetHeader)
 import nativeDefault from "native" /* 575 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5033 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5867 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16054 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5003 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16102 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 16053 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7532 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 16101 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7509 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(11491).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(11473).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,
@@ -34,10 +34,10 @@ function CommunityPill(guildVisibility) {
   };
   if (tmp4) {
     const obj2 = { size: "xs", color: ExperimentalWebIcon(575).colors.BADGE_INVERTED_BACKGROUND, secondaryColor: ExperimentalWebIcon(575).colors.BADGE_INVERTED_TEXT, style: tmp.communityPillIcon };
-    let tmp7Result = closure_9(tmp2(9406).ExperimentalWebBadgeIcon, obj2);
+    let tmp7Result = closure_9(tmp2(9388).ExperimentalWebBadgeIcon, obj2);
     let tmp10 = closure_9;
   } else {
-    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(9410), disableColor: true };
+    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(9392), disableColor: true };
     tmp7Result = closure_9(tmp2(1187).Icon, obj3);
     tmp10 = closure_9;
   }
@@ -54,7 +54,7 @@ const View = fn(17).View;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { content: { padding: 16 }, avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 }, headerContainer: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, avatarBackground: null, description: null, memberInfo: null, nameRow: null, communityPill: null, communityPillIcon: null, communityPillText: null, guildBanner: null };
 let size = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.avatarBackground = size;

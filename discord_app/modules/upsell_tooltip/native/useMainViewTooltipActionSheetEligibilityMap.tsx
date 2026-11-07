@@ -1,33 +1,33 @@
-// === Module 19352: useMainViewTooltipActionSheetEligibilityMap ===
+// === Module 19411: useMainViewTooltipActionSheetEligibilityMap ===
 
-// Module 19352 (useMainViewTooltipActionSheetEligibilityMap)
+// Module 19411 (useMainViewTooltipActionSheetEligibilityMap)
 import initialize from "initialize" /* 504 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import dismissible_content from "dismissible_content" /* 5003 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5200 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7726 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8616 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8620 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10746 */;
-import MarketingComponentType from "MarketingComponentType" /* 10747 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10753 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13938 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15543 */;
-import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 17610 */;
-import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19324 */;
-import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19353 */;
-import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19354 */;
-import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19355 */;
-import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 19356 */;
-import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19357 */;
-import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19358 */;
+import dismissible_content from "dismissible_content" /* 4973 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5170 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7703 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8595 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8599 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10729 */;
+import MarketingComponentType from "MarketingComponentType" /* 10730 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10736 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13963 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 15578 */;
+import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 17659 */;
+import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19383 */;
+import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19412 */;
+import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19413 */;
+import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19414 */;
+import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 19415 */;
+import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19416 */;
+import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19417 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7731 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19326 */;
-import PromotionsStore from "PromotionsStore" /* 9732 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7708 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19385 */;
+import PromotionsStore from "PromotionsStore" /* 9714 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 5013 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4983 */;
 
 require = fn;
 const PremiumConstants = fn(1387);

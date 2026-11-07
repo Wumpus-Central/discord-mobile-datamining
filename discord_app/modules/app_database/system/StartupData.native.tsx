@@ -1,7 +1,7 @@
-// === Module 5066: StartupData ===
+// === Module 5036: StartupData ===
 
-// Module 5066 (StartupData)
-import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 5067 */;
+// Module 5036 (StartupData)
+import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 5037 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_database/system/StartupData.native.tsx");

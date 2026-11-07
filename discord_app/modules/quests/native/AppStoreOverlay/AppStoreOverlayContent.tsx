@@ -1,8 +1,8 @@
-// === Module 14864: AppStoreOverlayContent ===
+// === Module 14897: AppStoreOverlayContent ===
 
-// Module 14864 (AppStoreOverlayContent)
-import openURL from "openURL" /* 5860 */;
-import LinkingDefault from "Linking" /* 5864 */;
+// Module 14897 (AppStoreOverlayContent)
+import openURL from "openURL" /* 5830 */;
+import LinkingDefault from "Linking" /* 5834 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -89,8 +89,8 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
               if (null != rating.category_id) {
                 appStoreOverlayCategoryLabel = null;
                 if ("" !== rating.category_id) {
-                  appStoreOverlayCategoryLabel = closure_1_0(14865).getAppStoreOverlayCategoryLabel(os.os, rating.category_id);
-                  const obj3 = closure_1_0(14865);
+                  appStoreOverlayCategoryLabel = closure_1_0(14898).getAppStoreOverlayCategoryLabel(os.os, rating.category_id);
+                  const obj3 = closure_1_0(14898);
                 }
               }
               const obj4 = { type: "chart", label: null, rank: null, category: null };

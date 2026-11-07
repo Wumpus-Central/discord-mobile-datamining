@@ -1,12 +1,12 @@
-// === Module 19069: ThreadMemberListHooks ===
+// === Module 19119: ThreadMemberListHooks ===
 
-// Module 19069 (ThreadMemberListHooks)
+// Module 19119 (ThreadMemberListHooks)
 import util from "util" /* 1113 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7536 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7538 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7513 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7515 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 5076 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7531 */;
+import GuildRoleStore from "GuildRoleStore" /* 5046 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7508 */;
 
 const require = globalThis.__r;
 

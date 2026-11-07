@@ -1,24 +1,24 @@
-// === Module 8903: useUserProfileColors ===
+// === Module 8885: useUserProfileColors ===
 
-// Module 8903 (useUserProfileColors)
+// Module 8885 (useUserProfileColors)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import useThemeDefault from "useTheme" /* 5399 */;
-import useToken from "useToken" /* 5754 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7437 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8894 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import useThemeDefault from "useTheme" /* 5369 */;
+import useToken from "useToken" /* 5724 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7414 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8875 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
 require = fn;
 const ThemeTypes = fn(1083).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");
 
-export function useUserProfileColors(theme) {
-  ({ primaryColor, secondaryColor } = theme);
+export function useUserProfileColors(profileTheme) {
+  ({ primaryColor, secondaryColor } = profileTheme);
   const tmp2 = useThemeDefault();
-  const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);
+  const profileThemeValues = useProfileThemeValues.useProfileThemeValues(profileTheme.theme);
   items = [AccessibilityStore];
   const obj3 = { gradientFallbackBackground: null, gradientSecondaryBackground: null, containerBackground: null, containerBorderColor: null, avatarBackground: null, statusBackground: null };
   const stateFromStores = initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);

@@ -1,21 +1,21 @@
-// === Module 14264: GuildPowerupsModal ===
+// === Module 14294: GuildPowerupsModal ===
 
-// Module 14264 (GuildPowerupsModal)
+// Module 14294 (GuildPowerupsModal)
 import nativeDefault from "native" /* 575 */;
-import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 14299 */;
-import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 14328 */;
-import GuildPowerupsLevelsSectionDefault from "GuildPowerupsLevelsSection" /* 14345 */;
-import GuildPowerupsPerksSectionDefault from "GuildPowerupsPerksSection" /* 14351 */;
+import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 14333 */;
+import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 14362 */;
+import GuildPowerupsLevelsSectionDefault from "GuildPowerupsLevelsSection" /* 14379 */;
+import GuildPowerupsPerksSectionDefault from "GuildPowerupsPerksSection" /* 14385 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildPowerupsConstants = fn(5376);
+const GuildPowerupsConstants = fn(5346);
 ({ BoostInfoType: closure_6, GuildPowerupType: metroImportDefault } = GuildPowerupsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerLeftContainer: null, headerRightContainer: null, boostInfoContainer: null, boostInfoSeparator: null, scrollView: null, boostButtonContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };

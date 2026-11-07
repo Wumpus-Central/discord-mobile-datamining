@@ -1,6 +1,6 @@
-// === Module 11023: createProxyTicket ===
+// === Module 11007: createProxyTicket ===
 
-// Module 11023 (createProxyTicket)
+// Module 11007 (createProxyTicket)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -17,7 +17,7 @@ let closure_7 = async function _createProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

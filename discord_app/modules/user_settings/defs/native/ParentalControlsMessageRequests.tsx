@@ -1,19 +1,19 @@
-// === Module 18209: ParentalControlsMessageRequests ===
+// === Module 18256: ParentalControlsMessageRequests ===
 
-// Module 18209 (ParentalControlsMessageRequests)
+// Module 18256 (ParentalControlsMessageRequests)
 import util from "util" /* 1113 */;
 import _modDef2664 from "module_2664" /* 2664 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6809 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8046 */;
-import useSelectedTeen from "useSelectedTeen" /* 8463 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16979 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16980 */;
-import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16984 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 18195 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7814 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6784 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
+import useSelectedTeen from "useSelectedTeen" /* 8442 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 17027 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17028 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 17032 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 18242 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7791 */;
 
 require = fn;
-const SettingBuilders = fn(11703);
+const SettingBuilders = fn(11685);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -23,7 +23,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(_modDef2664["7aYkh1"]);
   },
-  parent: fn(8524).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8503).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();

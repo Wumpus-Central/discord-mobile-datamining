@@ -1,16 +1,16 @@
-// === Module 17472: LabeledDataBlock ===
+// === Module 17521: LabeledDataBlock ===
 
-// Module 17472 (LabeledDataBlock)
+// Module 17521 (LabeledDataBlock)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import Pressables from "Pressables" /* 7068 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import Pressables from "Pressables" /* 7043 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.CARD_MUTED_BG, borderRadius: nativeDefault.radii.sm, flexBasis: "auto", flexGrow: 1, padding: 16 }, title: { marginRight: 4 }, titleSection: { flexDirection: "row", alignItems: "center", marginBottom: 16 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

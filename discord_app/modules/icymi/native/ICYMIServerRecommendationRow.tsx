@@ -1,23 +1,23 @@
-// === Module 18881: ICYMIServerRecommendationRow ===
+// === Module 18931: ICYMIServerRecommendationRow ===
 
-// Module 18881 (ICYMIServerRecommendationRow)
+// Module 18931 (ICYMIServerRecommendationRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5033 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import GuildIconDefault from "GuildIcon" /* 7045 */;
-import FastestListDefault from "FastestList" /* 7310 */;
-import ClipViewDefault from "ClipView" /* 9611 */;
-import ICYMIShared from "ICYMIShared" /* 18857 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5003 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import GuildIconDefault from "GuildIcon" /* 7020 */;
+import FastestListDefault from "FastestList" /* 7287 */;
+import ClipViewDefault from "ClipView" /* 9593 */;
+import ICYMIShared from "ICYMIShared" /* 18907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import ICYMIStore from "ICYMIStore" /* 8998 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import ICYMIStore from "ICYMIStore" /* 8980 */;
 
 require = fn;
 function CutoutGuildBanner(guild) {
@@ -39,7 +39,7 @@ function CutoutGuildBanner(guild) {
   const obj4 = { cutouts: null, children: null };
   const size = { shape: null, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const obj = guild(504);
-  size.shape = guild(9611).CutoutShape.RoundedRect;
+  size.shape = guild(9593).CutoutShape.RoundedRect;
   const items2 = [size];
   obj4.cutouts = items2;
   if (null != guild.banner) {
@@ -55,7 +55,7 @@ function CutoutGuildBanner(guild) {
   obj4.children = tmp12Result;
   const items4 = [closure_14(ClipViewDefault, obj4), ];
   const obj7 = { style: tmp.guildIcon, guild: memo, size: null, animate: null };
-  obj7.size = guild(7045).GuildIconSizes.LARGE;
+  obj7.size = guild(7020).GuildIconSizes.LARGE;
   obj7.animate = !stateFromStores;
   items4[1] = closure_14(GuildIconDefault, obj7);
   obj3.children = items4;
@@ -78,7 +78,7 @@ function FeaturedServer(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -95,15 +95,15 @@ function FeaturedServer(guild) {
             closure_1 = tmp5;
             closure_128_0 = undefined;
             closure_1(true);
-            closure_1(9016).itemInteracted("recommended_guilds", "recommended_guilds", "press_join_guild");
-            const obj17 = closure_1(9016);
+            closure_1(8998).itemInteracted("recommended_guilds", "recommended_guilds", "press_join_guild");
+            const obj17 = closure_1(8998);
             let obj5 = { itemId: guild.id, itemType: "recommended_guilds", actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "join", actionDestinationType: "guild" } };
-            closure_1(9016).feedItemActioned(obj5);
-            const obj18 = closure_1(9016);
+            closure_1(8998).feedItemActioned(obj5);
+            const obj18 = closure_1(8998);
             items = [guild.id];
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: closure_1(9016).gravityJoinGuild(items, "recommended_guilds"), done: false };
+            const obj6 = { value: closure_1(8998).gravityJoinGuild(items, "recommended_guilds"), done: false };
             return obj6;
           }
         } else if (1 === tmp5) {
@@ -121,9 +121,9 @@ function FeaturedServer(guild) {
             obj12.analyticsSource = obj13;
             obj11.state = obj12;
             closure_128_0 = obj11;
-            const result = closure_1(9016).addedRecommendedGuild();
-            let obj8 = closure_1(9016);
-            const dehydrated = closure_1(9016).fetchDehydrated({ isReloading: true, forceRefresh: true });
+            const result = closure_1(8998).addedRecommendedGuild();
+            let obj8 = closure_1(8998);
+            const dehydrated = closure_1(8998).fetchDehydrated({ isReloading: true, forceRefresh: true });
             dehydrated.then(asyncGeneratorStep(async () => {
               if (dependencyMap === 2) {
                 dependencyMap = 3;
@@ -135,7 +135,7 @@ function FeaturedServer(guild) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -152,7 +152,7 @@ function FeaturedServer(guild) {
                       closure_0 = tmp4;
                       v2 = 1;
                       dependencyMap = 1;
-                      const obj5 = { value: v2(9016).reloadICYMITab(), done: false };
+                      const obj5 = { value: v2(8998).reloadICYMITab(), done: false };
                       return obj5;
                     }
                   } else if (1 === tmp4) {
@@ -166,7 +166,7 @@ function FeaturedServer(guild) {
                     } else {
                       v2 = 2;
                       dependencyMap = 1;
-                      const obj8 = { value: v2(9016).getGuildChannelScores(), done: false };
+                      const obj8 = { value: v2(8998).getGuildChannelScores(), done: false };
                       return obj8;
                     }
                   } else if (arg0 === 1) {
@@ -177,9 +177,9 @@ function FeaturedServer(guild) {
                     const obj9 = { value, done: true };
                     return obj9;
                   } else {
-                    const recommendedGuilds = v2(9016).getRecommendedGuilds();
+                    const recommendedGuilds = v2(8998).getRecommendedGuilds();
                     dependencyMap = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } catch (tmp14) {
                   dependencyMap = tmp;
@@ -187,19 +187,19 @@ function FeaturedServer(guild) {
                 }
               }
             }));
-            let obj9 = closure_1(9016);
+            let obj9 = closure_1(8998);
             const obj14 = {};
             const merged = Object.assign(closure_128_0);
             dependencyMap = 2;
             c3 = 1;
-            const obj15 = { value: closure_1(6982).transitionToGuildSync(closure_129_0.id, obj14), done: false };
+            const obj15 = { value: closure_1(6957).transitionToGuildSync(closure_129_0.id, obj14), done: false };
             return obj15;
           } else {
             closure_129_1(false);
             const obj16 = { text: null };
             const intl = tmp2(1113).intl;
             obj16.text = intl.string(tmp2(1113).t.CG4Hks);
-            closure_1(5867).open("RecommeendedServersRow", obj16);
+            closure_1(5837).open("RecommeendedServersRow", obj16);
             c3 = 3;
             const obj19 = { value: undefined, done: true };
             return obj19;
@@ -214,7 +214,7 @@ function FeaturedServer(guild) {
         } else {
           closure_129_1(false);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp36) {
         c3 = tmp;
@@ -227,7 +227,7 @@ function FeaturedServer(guild) {
   let obj2 = { style: tmp.featuredServerContainer, children: null };
   const items2 = [closure_14(CutoutGuildBanner, { guild }), , ];
   let obj3 = { style: tmp.featuredServerInnerContainer, children: null };
-  const items3 = [closure_14(guild(5781).Text, { maxFontSizeMultiplier: 1, lineClamp: 1, style: tmp.featuredServerTitle, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: guild.name }), closure_14(guild(5781).Text, { maxFontSizeMultiplier: 1, lineClamp: 3, variant: "body-xs/normal", color: "text-default", children: guild.description })];
+  const items3 = [closure_14(guild(5751).Text, { maxFontSizeMultiplier: 1, lineClamp: 1, style: tmp.featuredServerTitle, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: guild.name }), closure_14(guild(5751).Text, { maxFontSizeMultiplier: 1, lineClamp: 3, variant: "body-xs/normal", color: "text-default", children: guild.description })];
   obj3.children = items3;
   items2[1] = closure_15(View, obj3);
   let obj6 = { style: tmp.buttonContainer, children: null };
@@ -242,7 +242,7 @@ function FeaturedServer(guild) {
   }
   obj7.text = stringResult;
   obj7.onPress = callback;
-  obj6.children = closure_14(guild(5788).Button, obj7);
+  obj6.children = closure_14(guild(5758).Button, obj7);
   items2[2] = closure_14(View, obj6);
   obj2.children = items2;
   return closure_15(View, obj2);
@@ -267,7 +267,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjects: closure_10, AnalyticsPages: closure_11, AnalyticsSections: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createICYMIStyles = fn(18815);
+const createICYMIStyles = fn(18865);
 let closure_17 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginVertical: nativeDefault.space.PX_24 }, title: null, subtitle: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, featuredServerContainer: null };
   const obj2 = { marginVertical: nativeDefault.space.PX_24 };

@@ -1,16 +1,16 @@
-// === Module 19486: SoundboardSoundPreviewActionSheet ===
+// === Module 19545: SoundboardSoundPreviewActionSheet ===
 
-// Module 19486 (SoundboardSoundPreviewActionSheet)
+// Module 19545 (SoundboardSoundPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7612 */;
-import SoundboardUtils from "SoundboardUtils" /* 7620 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19470 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7589 */;
+import SoundboardUtils from "SoundboardUtils" /* 7597 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19529 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 import UserStore from "UserStore" /* 1385 */;
-import SoundboardStore from "SoundboardStore" /* 6216 */;
+import SoundboardStore from "SoundboardStore" /* 6191 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { soundPresentation: { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 }, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
 let obj3 = { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 };
 obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAKING };

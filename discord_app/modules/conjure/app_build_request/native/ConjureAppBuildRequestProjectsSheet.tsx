@@ -1,12 +1,12 @@
-// === Module 12957: ConjureAppBuildRequestProjectsSheet ===
+// === Module 12968: ConjureAppBuildRequestProjectsSheet ===
 
-// Module 12957 (ConjureAppBuildRequestProjectsSheet)
+// Module 12968 (ConjureAppBuildRequestProjectsSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import BottomSheetModal from "BottomSheetModal" /* 5422 */;
-import TableRowGroup from "TableRowGroup" /* 7151 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7405 */;
-import ActionSheet from "ActionSheet" /* 7449 */;
+import BottomSheetModal from "BottomSheetModal" /* 5392 */;
+import TableRowGroup from "TableRowGroup" /* 7126 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7382 */;
+import ActionSheet from "ActionSheet" /* 7426 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_6 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 } };
   return obj;

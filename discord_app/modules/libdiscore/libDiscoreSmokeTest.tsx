@@ -1,10 +1,10 @@
-// === Module 20470: libDiscoreSmokeTest ===
+// === Module 20538: libDiscoreSmokeTest ===
 
-// Module 20470 (libDiscoreSmokeTest)
+// Module 20538 (libDiscoreSmokeTest)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import initLibdiscore from "initLibdiscore" /* 1367 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 5045 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 5015 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -29,7 +29,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

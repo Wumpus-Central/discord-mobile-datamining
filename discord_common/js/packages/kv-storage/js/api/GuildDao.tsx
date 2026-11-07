@@ -1,8 +1,8 @@
-// === Module 5060: GuildDao ===
+// === Module 5030: GuildDao ===
 
-// Module 5060 (GuildDao)
-import Table from "Table" /* 5053 */;
-import TableId from "TableId" /* 5055 */;
+// Module 5030 (GuildDao)
+import Table from "Table" /* 5023 */;
+import TableId from "TableId" /* 5025 */;
 import size from "module_2" /* 2 */;
 
 let GuildDao;

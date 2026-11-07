@@ -1,14 +1,14 @@
-// === Module 10360: autocompleter/AutocompleteUtils ===
+// === Module 10343: autocompleter/AutocompleteUtils ===
 
-// Module 10360 (autocompleter/AutocompleteUtils)
+// Module 10343 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 5224 */;
-import useChannelName from "useChannelName" /* 5806 */;
-import FormDividerDefault from "FormDivider" /* 8273 */;
-import TimestampUtils from "TimestampUtils" /* 8692 */;
+import UserUtilsDefault from "UserUtils" /* 5194 */;
+import useChannelName from "useChannelName" /* 5776 */;
+import FormDividerDefault from "FormDivider" /* 8252 */;
+import TimestampUtils from "TimestampUtils" /* 8671 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 5100 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
+import GuildChannelStore from "GuildChannelStore" /* 5070 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -16,16 +16,16 @@ function AutocompleteFormDivider() {
   const tmp = closure_17();
   return jsx(FormDividerDefault, { style: closure_17().itemDivider });
 }
-let closure_3 = fn(5023).isGuildSelectableChannelType;
+let closure_3 = fn(4993).isGuildSelectableChannelType;
 const Constants = fn(1072);
 ({ AutoCompleteResultTypes: metroImportDefault, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10361);
+const ApplicationCommandsConstants = fn(10344);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: closure_10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(6194);
+const ChannelAutocompleteConstants = fn(6168);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 const obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const re19 = /[\r\n]/;

@@ -1,6 +1,6 @@
-// === Module 8291: InviteRecord ===
+// === Module 8270: InviteRecord ===
 
-// Module 8291 (InviteRecord)
+// Module 8270 (InviteRecord)
 import _modDef2166 from "module_2166" /* 2166 */;
 import Record from "Record" /* 1405 */;
 import UserRecord from "UserRecord" /* 1404 */;

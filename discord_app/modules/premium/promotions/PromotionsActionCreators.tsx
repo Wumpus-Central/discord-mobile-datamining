@@ -1,14 +1,14 @@
-// === Module 9775: PromotionsActionCreators ===
+// === Module 9759: PromotionsActionCreators ===
 
-// Module 9775 (PromotionsActionCreators)
+// Module 9759 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import wrappers from "wrappers" /* 1227 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9776 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9760 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 import UserStore from "UserStore" /* 1385 */;
-import PromotionsStore from "PromotionsStore" /* 9732 */;
+import PromotionsStore from "PromotionsStore" /* 9714 */;
 
 require = fn;
 function fetchActivePromotions() {
@@ -82,11 +82,11 @@ function dismissOutboundPromotionNotice() {
   DispatcherDefault.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
   const lastDismissedOutboundPromotionStartDate = PromotionsStore.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
-    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(5000).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(4970).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("userContent", async (arg0) => {
       const StringValue = wrappers.StringValue;
       arg0.lastDismissedOutboundPromotionStartDate = StringValue.create({ value: lastDismissedOutboundPromotionStartDate });
-    }, lastDismissedOutboundPromotionStartDate(5000).UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, lastDismissedOutboundPromotionStartDate(4970).UserSettingsDelay.INFREQUENT_USER_ACTION);
   }
 }
 function fetchClaimedOutboundPromotionCodes() {
@@ -110,7 +110,7 @@ let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

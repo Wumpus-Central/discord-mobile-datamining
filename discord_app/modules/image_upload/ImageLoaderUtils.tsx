@@ -177,7 +177,7 @@ export function loadImage(url, bind) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -225,7 +225,7 @@ export function loadImage(url, bind) {
                       let obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
                     try {
@@ -262,7 +262,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F122434 */ function() { ... });
+                            image.onerror = closure_2_4(/* F122974 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

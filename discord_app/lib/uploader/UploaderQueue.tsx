@@ -1,6 +1,6 @@
-// === Module 10352: UploaderQueue ===
+// === Module 10335: UploaderQueue ===
 
-// Module 10352 (UploaderQueue)
+// Module 10335 (UploaderQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -39,7 +39,7 @@ prototype["drainQueue"] = function drainQueue() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -64,7 +64,7 @@ prototype["drainQueue"] = function drainQueue() {
               tmp3.log("drainQueue() - No uploads left, setting drainingQueue to false");
               self.drainingQueue = false;
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               c3 = 1;
               tmp3.log("drainQueue() - start uploader");

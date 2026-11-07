@@ -1,6 +1,6 @@
-// === Module 19838: NativeJSWatchdogModule ===
+// === Module 19907: NativeJSWatchdogModule ===
 
-// Module 19838 (NativeJSWatchdogModule)
+// Module 19907 (NativeJSWatchdogModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 6022: SystemAnalyticsStoreTypes ===
+// === Module 5995: SystemAnalyticsStoreTypes ===
 
-// Module 6022 (SystemAnalyticsStoreTypes)
+// Module 5995 (SystemAnalyticsStoreTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/system_analytics/SystemAnalyticsStoreTypes.tsx");

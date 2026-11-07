@@ -1,18 +1,18 @@
-// === Module 19064: PeopleScreen ===
+// === Module 19114: PeopleScreen ===
 
-// Module 19064 (PeopleScreen)
-import TrackingDefault from "Tracking" /* 14115 */;
+// Module 19114 (PeopleScreen)
+import TrackingDefault from "Tracking" /* 14140 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 14123 */;
-import SearchQueryStore from "SearchQueryStore" /* 14108 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 14148 */;
+import SearchQueryStore from "SearchQueryStore" /* 14133 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(9933);
+const SearchConstants = fn(9917);
 ({ SearchListItemTypes: metroImportDefault, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-let closure_9 = fn(9932).SearchResultContentEntityTypes;
+let closure_9 = fn(9916).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
@@ -53,7 +53,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -90,7 +90,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
             const result = closure_1(stateFromStores[12]).trackSearchResultClicked(obj7);
             onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           c5 = tmp;

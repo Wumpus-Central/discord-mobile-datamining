@@ -1,19 +1,19 @@
-// === Module 7846: CollectiblesShopHomeRecord ===
+// === Module 7823: CollectiblesShopHomeRecord ===
 
-// Module 7846 (CollectiblesShopHomeRecord)
-import ShopBlockType from "ShopBlockType" /* 5843 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7820 */;
+// Module 7823 (CollectiblesShopHomeRecord)
+import ShopBlockType from "ShopBlockType" /* 5813 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7797 */;
 
 require = fn;
-const CountdownTimerBlockRecord = fn(7847).CountdownTimerBlockRecord;
-const FeaturedBlockRecord = fn(7848).FeaturedBlockRecord;
-const FeedBlockRecord = fn(7851).FeedBlockRecord;
-let closure_6 = fn(7852).GameServerHostingBannerBlockRecord;
-const HeroBlockRecord = fn(7853).HeroBlockRecord;
-let closure_8 = fn(7854).ImmersiveBannerBlockRecord;
-const ShelfBlockRecord = fn(7855).ShelfBlockRecord;
-let closure_10 = fn(7856).SocialLayerStorefrontPromotionalBannerBlockRecord;
-const WideBannerBlockRecord = fn(7857).WideBannerBlockRecord;
+const CountdownTimerBlockRecord = fn(7824).CountdownTimerBlockRecord;
+const FeaturedBlockRecord = fn(7825).FeaturedBlockRecord;
+const FeedBlockRecord = fn(7828).FeedBlockRecord;
+let closure_6 = fn(7829).GameServerHostingBannerBlockRecord;
+const HeroBlockRecord = fn(7830).HeroBlockRecord;
+let closure_8 = fn(7831).ImmersiveBannerBlockRecord;
+const ShelfBlockRecord = fn(7832).ShelfBlockRecord;
+let closure_10 = fn(7833).SocialLayerStorefrontPromotionalBannerBlockRecord;
+const WideBannerBlockRecord = fn(7834).WideBannerBlockRecord;
 const prototype = function CollectiblesShopHomeRecord(shop_blocks) {
   const obj = Object.create(new.target.prototype);
   shop_blocks = shop_blocks.shop_blocks;

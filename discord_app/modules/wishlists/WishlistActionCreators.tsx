@@ -1,16 +1,16 @@
-// === Module 9580: WishlistActionCreators ===
+// === Module 9562: WishlistActionCreators ===
 
-// Module 9580 (WishlistActionCreators)
+// Module 9562 (WishlistActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import StorefrontUtils from "StorefrontUtils" /* 7496 */;
+import StorefrontUtils from "StorefrontUtils" /* 7473 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserProfileStore from "UserProfileStore" /* 7871 */;
+import UserProfileStore from "UserProfileStore" /* 7848 */;
 import UserStore from "UserStore" /* 1385 */;
 import BillingInfoStore from "BillingInfoStore" /* 2172 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7492 */;
-import WishlistRecord from "WishlistRecord" /* 9574 */;
+import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7469 */;
+import WishlistRecord from "WishlistRecord" /* 9556 */;
 
 require = fn;
 function extraWishlistParams() {
@@ -44,7 +44,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(9574).getWishlistSkuIds;
+const getWishlistSkuIds = fn(9556).getWishlistSkuIds;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);
@@ -114,7 +114,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -243,7 +243,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -341,7 +341,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

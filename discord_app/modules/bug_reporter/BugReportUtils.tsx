@@ -1,12 +1,12 @@
-// === Module 11240: bug_reporter/BugReportUtils ===
+// === Module 11222: bug_reporter/BugReportUtils ===
 
-// Module 11240 (bug_reporter/BugReportUtils)
+// Module 11222 (bug_reporter/BugReportUtils)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6827 */;
-import DebugUploadManager from "DebugUploadManager" /* 11241 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6802 */;
+import DebugUploadManager from "DebugUploadManager" /* 11223 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -33,7 +33,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

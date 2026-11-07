@@ -1,8 +1,8 @@
-// === Module 19995: AutomodStore ===
+// === Module 20064: AutomodStore ===
 
-// Module 19995 (AutomodStore)
-import _mod5085 from "module_5085" /* 5085 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 19996 */;
+// Module 20064 (AutomodStore)
+import _mod5055 from "module_5055" /* 5055 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 20065 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(13499).AutomodTriggerType;
+const AutomodTriggerType = fn(13524).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1254);
@@ -103,7 +103,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -228,7 +228,7 @@ export function useSyncAutomodRules(arg0) {
     items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _mod5085.shallow), 2);
+  }, _mod5055.shallow), 2);
   const first = tmp2[0];
   closure_3 = tmp4;
   items = [tmp[0], ];
@@ -244,7 +244,7 @@ export function useSyncAutomodRules(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -308,7 +308,7 @@ export function useSyncAutomodRulesEffect(arg0) {
     items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_5085").shallow), 2);
+  }, require("module_5055").shallow), 2);
   first = tmp2[0];
   asyncGeneratorStep = tmp4;
   items = [tmp[0], ];
@@ -324,7 +324,7 @@ export function useSyncAutomodRulesEffect(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -393,7 +393,7 @@ export function useSyncAutomodRulesEffect(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -421,7 +421,7 @@ export function useSyncAutomodRulesEffect(arg0) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp6) {
           c0 = tmp;
@@ -445,5 +445,5 @@ export function useAutomodRulesList(arg0) {
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("module_5085").shallow);
+  }, require("module_5055").shallow);
 }

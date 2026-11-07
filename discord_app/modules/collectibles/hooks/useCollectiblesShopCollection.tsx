@@ -1,11 +1,11 @@
-// === Module 18156: useCollectiblesShopCollection ===
+// === Module 18203: useCollectiblesShopCollection ===
 
-// Module 18156 (useCollectiblesShopCollection)
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9687 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9688 */;
+// Module 18203 (useCollectiblesShopCollection)
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9669 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9670 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9686 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7820 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9668 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7797 */;
 
 require = fn;
 const size = fn(2);
@@ -32,7 +32,7 @@ export default function useCollectiblesShopCollection(id) {
   if (id == null) {
     str = "";
   }
-  items = [str, flag, flag2];
+  items = [str, flag, flag2, flag(flag2[3]).useStorefrontPricingKey()];
   const effect = str.useEffect(() => {
     if ("" !== str) {
       const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
@@ -41,13 +41,14 @@ export default function useCollectiblesShopCollection(id) {
       const collections = CollectiblesShopManager.requestCollections(items, obj);
     }
   }, items);
+  let obj2 = flag(flag2[3]);
   const items1 = [collection];
   const items2 = [str];
-  const stateFromStoresObject = flag(flag2[4]).useStateFromStoresObject(items1, () => ({ collection: StorefrontCollectionStore.getCollection(str), fetchState: StorefrontCollectionStore.getFetchState(str) }), items2);
+  const stateFromStoresObject = flag(flag2[5]).useStateFromStoresObject(items1, () => ({ collection: StorefrontCollectionStore.getCollection(str), fetchState: StorefrontCollectionStore.getFetchState(str) }), items2);
   collection = stateFromStoresObject.collection;
   fetchState = stateFromStoresObject.fetchState;
-  let obj2 = flag(flag2[4]);
-  fetchResolvedAbsent = flag(flag2[5]).useFetchResolvedAbsent(str, fetchState);
+  const obj3 = flag(flag2[5]);
+  fetchResolvedAbsent = flag(flag2[6]).useFetchResolvedAbsent(str, fetchState);
   const items3 = [collection];
   memo = str.useMemo(() => {
     let result = null;
@@ -72,7 +73,7 @@ export default function useCollectiblesShopCollection(id) {
     }
     return str;
   }, items4);
-  const obj3 = flag(flag2[5]);
+  const obj4 = flag(flag2[6]);
   return {
     category: memo,
     state: memo1,

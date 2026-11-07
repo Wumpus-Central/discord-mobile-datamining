@@ -1,6 +1,6 @@
-// === Module 10153: PremiumFeatureUtils ===
+// === Module 10136: PremiumFeatureUtils ===
 
-// Module 10153 (PremiumFeatureUtils)
+// Module 10136 (PremiumFeatureUtils)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1386 */;
 
@@ -20,7 +20,7 @@ function getUserMaxFileSize(currentUser) {
       PremiumTypeUtils;
     }
     if (currentUser.premiumType === TIER_2.TIER_2) {
-      const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(8303);
+      const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(8282);
       getNitroFileUploadLimitBytes = nitroFileUploadLimitBytes.getNitroFileUploadLimitBytes;
       obj = { location: "getUserMaxFileSize" };
       let fileSize = getNitroFileUploadLimitBytes(obj);

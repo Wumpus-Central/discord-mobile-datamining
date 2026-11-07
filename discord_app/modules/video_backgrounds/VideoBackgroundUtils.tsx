@@ -1,11 +1,11 @@
-// === Module 6089: VideoBackgroundUtils ===
+// === Module 6063: VideoBackgroundUtils ===
 
-// Module 6089 (VideoBackgroundUtils)
+// Module 6063 (VideoBackgroundUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5916 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5889 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
 
 require = fn;
 function isAnimatedBackgroundOption(type) {
@@ -92,7 +92,7 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(6085);
+const VideoBackgroundConstants = fn(6059);
 ({ DefaultVideoBackground: hasOwnProperty, VideoFilterType: closure_6, ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: metroImportDefault } = VideoBackgroundConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -165,7 +165,7 @@ export function trackBackgroundOptionDeleted(type) {
 }
 export function getVideoBackgroundProtoFromOption(type) {
   if (null == type) {
-    let obj = { oneofKind: "r" };
+    let obj = { oneofKind: "uri" };
   } else {
     let tmp = null != type && typeof type === "object";
     if (tmp) {

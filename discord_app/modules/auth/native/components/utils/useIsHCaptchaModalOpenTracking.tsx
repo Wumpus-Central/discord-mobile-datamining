@@ -1,18 +1,18 @@
-// === Module 18315: useIsHCaptchaModalOpenTracking ===
+// === Module 18362: useIsHCaptchaModalOpenTracking ===
 
-// Module 18315 (useIsHCaptchaModalOpenTracking)
-import RootNavigationRef from "RootNavigationRef" /* 5345 */;
+// Module 18362 (useIsHCaptchaModalOpenTracking)
+import RootNavigationRef from "RootNavigationRef" /* 5315 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(18263).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(18264);
+let closure_3 = fn(18310).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(18311);
 ({ RegisterTransitionSteps: closure_4, RegistrationTransitionActionTypes: hasOwnProperty } = RegistrationConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
 
 export function useIsHCaptchaModalOpenTracking() {
-  context = noop.useContext(context(18260).TrackRegistrationContext);
+  context = noop.useContext(context(18307).TrackRegistrationContext);
   items = [context];
   const layoutEffect = noop.useLayoutEffect(() => {
     const rootNavigationRef = RootNavigationRef.getRootNavigationRef();

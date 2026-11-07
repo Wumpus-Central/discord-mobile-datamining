@@ -1,12 +1,12 @@
-// === Module 18659: transitionGuildsBarToGuildOrOpenSelectedChannel ===
+// === Module 18706: transitionGuildsBarToGuildOrOpenSelectedChannel ===
 
-// Module 18659 (transitionGuildsBarToGuildOrOpenSelectedChannel)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5344 */;
-import RootNavigationRef from "RootNavigationRef" /* 5345 */;
-import transitionToChannel from "transitionToChannel" /* 5912 */;
-import transitionToGuild from "transitionToGuild" /* 7617 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
+// Module 18706 (transitionGuildsBarToGuildOrOpenSelectedChannel)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5314 */;
+import RootNavigationRef from "RootNavigationRef" /* 5315 */;
+import transitionToChannel from "transitionToChannel" /* 5885 */;
+import transitionToGuild from "transitionToGuild" /* 7594 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 
 require = fn;
 const ME = fn(1072).ME;

@@ -1,25 +1,25 @@
-// === Module 20427: AppStoreParentalRevocationScreen ===
+// === Module 20495: AppStoreParentalRevocationScreen ===
 
-// Module 20427 (AppStoreParentalRevocationScreen)
+// Module 20495 (AppStoreParentalRevocationScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2960 from "module_2960" /* 2960 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import LinkingDefault from "Linking" /* 5864 */;
-import Stack_Stack from "Stack/Stack" /* 6185 */;
-import ModalScreen from "ModalScreen" /* 8063 */;
-import ModalContent from "ModalContent" /* 8064 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8252 */;
-import ModalFooter from "ModalFooter" /* 13428 */;
-import ModalActionButton from "ModalActionButton" /* 13627 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 20411 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import LinkingDefault from "Linking" /* 5834 */;
+import Stack_Stack from "Stack/Stack" /* 6159 */;
+import ModalScreen from "ModalScreen" /* 8041 */;
+import ModalContent from "ModalContent" /* 8043 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8231 */;
+import ModalFooter from "ModalFooter" /* 13451 */;
+import ModalActionButton from "ModalActionButton" /* 13651 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 20479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { content: { flexGrow: 1, width: "100%" }, upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" }, lowerHalf: { flex: 1 }, text: { textAlign: "center" }, body: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

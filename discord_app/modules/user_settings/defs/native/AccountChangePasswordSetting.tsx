@@ -1,10 +1,10 @@
-// === Module 16908: AccountChangePasswordSetting ===
+// === Module 16956: AccountChangePasswordSetting ===
 
-// Module 16908 (AccountChangePasswordSetting)
+// Module 16956 (AccountChangePasswordSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import SettingsConstants from "SettingsConstants" /* 8524 */;
-import SettingBuilders from "SettingBuilders" /* 11703 */;
+import SettingsConstants from "SettingsConstants" /* 8503 */;
+import SettingBuilders from "SettingBuilders" /* 11685 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

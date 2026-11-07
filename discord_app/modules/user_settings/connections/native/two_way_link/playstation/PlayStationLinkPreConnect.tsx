@@ -1,19 +1,20 @@
-// === Module 14842: PlayStationLinkPreConnect ===
+// === Module 14875: PlayStationLinkPreConnect ===
 
-// Module 14842 (PlayStationLinkPreConnect)
-import _modDef14843 from "module_14843" /* 14843 */;
+// Module 14875 (PlayStationLinkPreConnect)
+import _modDef14876 from "module_14876" /* 14876 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(14839).PlayStationLinkModalScenes;
+let closure_4 = fn(14872).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx");
 
-export function PlayStationLinkPreConnect(platformType) {
+export function PlayStationLinkPreConnect(arg0) {
   let navigation;
+  ({ platformType, autoStart } = arg0);
   const tmp = closure_6();
   navigation = navigation(1499).useNavigation();
   items = [navigation];
@@ -24,11 +25,12 @@ export function PlayStationLinkPreConnect(platformType) {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef14843 }), []);
-  const obj2 = { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
+  const memo = noop.useMemo(() => ({ uri: _modDef14876 }), []);
+  const obj2 = { platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null, autoStart: null };
   const intl = navigation(1113).intl;
   obj2.title = intl.string(navigation(1113).t["6n+UPR"]);
   const intl2 = navigation(1113).intl;
   obj2.body = intl2.string(navigation(1113).t.JaaqIf);
-  return jsx(navigation(9840).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
+  obj2.autoStart = autoStart;
+  return jsx(navigation(9824).TwoWayLinkPreConnect, { platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null, autoStart: null });
 }

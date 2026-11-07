@@ -1,6 +1,6 @@
-// === Module 13651: ? ===
+// === Module 13675: ? ===
 
-// Module 13651
+// Module 13675
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/checkpoint_2026_share_card_texture.png.js");

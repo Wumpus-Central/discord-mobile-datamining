@@ -1,18 +1,18 @@
-// === Module 13943: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 13968: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 13943 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 13968 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 575 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5000 */;
-import dismissible_content from "dismissible_content" /* 5003 */;
-import openUserSettings from "openUserSettings" /* 7658 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4970 */;
+import dismissible_content from "dismissible_content" /* 4973 */;
+import openUserSettings from "openUserSettings" /* 7635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-let closure_7 = fn(5419).ACTION_SHEET_BORDER_RADIUS;
-const ContentDismissActionType = fn(5016).ContentDismissActionType;
+let closure_7 = fn(5389).ACTION_SHEET_BORDER_RADIUS;
+const ContentDismissActionType = fn(4986).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let obj = { launch: null, new_presets: null };
@@ -20,7 +20,7 @@ let items = [fn(1398).TypingSuggestion.UNSPECIFIED, fn(1398).TypingSuggestion.YA
 obj.launch = items;
 let items1 = [fn(1398).TypingSuggestion.CHIRPING, fn(1398).TypingSuggestion.KEYSMASHING, fn(1398).TypingSuggestion.PURRING];
 obj.new_presets = items1;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_12 = createStyles.createStyles(() => {
   obj = { gradient: { borderTopLeftRadius: borderTopRightRadius, borderTopRightRadius, overflow: "hidden" }, content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, examples: null, newBadge: null, title: null, body: null, actions: null, row: null, outerRow: null, innerRow: null, outerStack: null, innerStack: null };
   const obj2 = { borderTopLeftRadius: borderTopRightRadius, borderTopRightRadius, overflow: "hidden" };

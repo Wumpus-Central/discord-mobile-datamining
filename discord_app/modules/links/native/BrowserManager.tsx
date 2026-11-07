@@ -1,12 +1,12 @@
-// === Module 5897: BrowserManager ===
+// === Module 5866: BrowserManager ===
 
-// Module 5897 (BrowserManager)
+// Module 5866 (BrowserManager)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import LinkingDefault from "Linking" /* 5864 */;
-import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 5898 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5899 */;
+import LinkingDefault from "Linking" /* 5834 */;
+import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 5867 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5868 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const NativeBrowserManagerModuleDefault = NativeBrowserManagerModule;
@@ -23,7 +23,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -54,7 +54,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;

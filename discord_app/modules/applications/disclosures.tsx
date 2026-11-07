@@ -1,9 +1,9 @@
-// === Module 9851: disclosures ===
+// === Module 9835: disclosures ===
 
-// Module 9851 (disclosures)
+// Module 9835 (disclosures)
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import applications from "applications" /* 9852 */;
+import applications from "applications" /* 9836 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -30,7 +30,7 @@ let closure_5 = async function _ackDisclosures(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -64,7 +64,7 @@ let closure_5 = async function _ackDisclosures(arg0) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -77,7 +77,7 @@ const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = fn(9852).ApplicationDisclosureType;
+export const ApplicationDisclosure = fn(9836).ApplicationDisclosureType;
 export function getDisclosures() {
   const self = this;
   const apply = closure_4.apply;

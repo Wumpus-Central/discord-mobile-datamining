@@ -1,12 +1,12 @@
-// === Module 19136: useUserRowWithSubLabelHeight ===
+// === Module 19187: useUserRowWithSubLabelHeight ===
 
-// Module 19136 (useUserRowWithSubLabelHeight)
+// Module 19187 (useUserRowWithSubLabelHeight)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5754 */;
-import useFontScale from "useFontScale" /* 5796 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11195 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12601 */;
-import ActionStatusSubLabel from "ActionStatusSubLabel" /* 18801 */;
+import useToken from "useToken" /* 5724 */;
+import useFontScale from "useFontScale" /* 5766 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5883 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12614 */;
+import ActionStatusSubLabel from "ActionStatusSubLabel" /* 18851 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useUserRowWithSubLabelHeight.tsx");

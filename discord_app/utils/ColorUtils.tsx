@@ -1,10 +1,10 @@
-// === Module 5167: ColorUtils ===
+// === Module 5137: ColorUtils ===
 
-// Module 5167 (ColorUtils)
+// Module 5137 (ColorUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
-import utils_ColorDefault from "utils/Color" /* 5168 */;
+import utils_ColorDefault from "utils/Color" /* 5138 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

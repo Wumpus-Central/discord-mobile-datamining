@@ -1,9 +1,9 @@
-// === Module 10991: conjureAgentReaction ===
+// === Module 10974: conjureAgentReaction ===
 
-// Module 10991 (conjureAgentReaction)
+// Module 10974 (conjureAgentReaction)
 import util from "util" /* 1113 */;
-import _modDef4024 from "module_4024" /* 4024 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5116 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5086 */;
 import size from "module_2" /* 2 */;
 
 const re3 = /^\d{17,20}$/;
@@ -46,5 +46,5 @@ export function getConjureAgentReactionLabel(reaction) {
     emojiName = UnicodeEmojisDefault.convertSurrogateToName(reaction.emoji, false);
   }
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef4024.lxXLho, { emojiName });
+  return intl.formatToPlainString(_modDef4026.lxXLho, { emojiName });
 }

@@ -1,24 +1,24 @@
-// === Module 12992: useConjureProjectCreator ===
+// === Module 13007: useConjureProjectCreator ===
 
-// Module 12992 (useConjureProjectCreator)
+// Module 13007 (useConjureProjectCreator)
 import util from "util" /* 1113 */;
-import _modDef4024 from "module_4024" /* 4024 */;
-import UserUtils from "UserUtils" /* 5224 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12826 */;
-import ListUtils from "ListUtils" /* 12993 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import UserUtils from "UserUtils" /* 5194 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 11720 */;
+import ListUtils from "ListUtils" /* 13008 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureChatStore from "ConjureChatStore" /* 10987 */;
+import ConjureChatStore from "ConjureChatStore" /* 10970 */;
 
 require = fn;
-function useConjureProjectPeople(stateFromStores) {
+function useConjureProjectPeople(project) {
   let id;
-  if (stateFromStores != null) {
-    id = stateFromStores.id;
+  if (project != null) {
+    id = project.id;
   }
   let owner_user_id;
-  if (stateFromStores != null) {
-    owner_user_id = stateFromStores.owner_user_id;
+  if (project != null) {
+    owner_user_id = project.owner_user_id;
   }
   items = [ConjureChatStore];
   const items1 = [id, owner_user_id];
@@ -77,8 +77,8 @@ function useConjureProjectPeople(stateFromStores) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/useConjureProjectCreator.tsx");
 
-export default function useConjureProjectCreator(stateFromStores) {
-  const tmp = useConjureProjectPeople(stateFromStores);
+export default function useConjureProjectCreator(project) {
+  const tmp = useConjureProjectPeople(project);
   const creator = tmp.creator;
   const collaborators = tmp.collaborators;
   items = [creator, collaborators];
@@ -94,12 +94,12 @@ export default function useConjureProjectCreator(stateFromStores) {
       if (0 === mapped.length) {
         intl = intl(1113).intl;
         obj2 = { creator: name };
-        let formatToPlainStringResult = intl.formatToPlainString(_modDef4024.t5RWBS, obj2);
+        let formatToPlainStringResult = intl.formatToPlainString(_modDef4026.t5RWBS, obj2);
       } else {
         const intl2 = intl(1113).intl;
-        const obj4 = { creator: name, collaborators: intl(12993).getListSummaryLabel(mapped) };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef4024["b5uCe/"], obj4);
-        const intlResult = intl(12993);
+        const obj4 = { creator: name, collaborators: intl(13008).getListSummaryLabel(mapped) };
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef4026["b5uCe/"], obj4);
+        const intlResult = intl(13008);
       }
       obj.label = formatToPlainStringResult;
     }
@@ -109,11 +109,11 @@ export function getConjureProjectCreatorLabel(creator, names) {
   if (0 === names.length) {
     const intl2 = util.intl;
     const obj3 = { creator };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4024.t5RWBS, obj3);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef4026.t5RWBS, obj3);
   } else {
     const intl = util.intl;
     const obj = { creator, collaborators: ListUtils.getListSummaryLabel(names) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4024["b5uCe/"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4026["b5uCe/"], obj);
   }
   return formatToPlainStringResult;
 }

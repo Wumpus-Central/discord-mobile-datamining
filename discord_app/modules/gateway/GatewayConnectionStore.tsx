@@ -1,27 +1,27 @@
-// === Module 6648: GatewayConnectionStore ===
+// === Module 6623: GatewayConnectionStore ===
 
-// Module 6648 (GatewayConnectionStore)
+// Module 6623 (GatewayConnectionStore)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6952 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 15762 */;
-import ConnectionStateDefault from "ConnectionState" /* 15776 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15797 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 15805 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6927 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 15804 */;
+import ConnectionStateDefault from "ConnectionState" /* 15818 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15839 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 15847 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6649 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import CallStore from "CallStore" /* 6624 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
-import RTCRegionStore from "RTCRegionStore" /* 6019 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6650 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7984 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
+import RTCRegionStore from "RTCRegionStore" /* 5992 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6625 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7962 */;
 
 require = fn;
 let closure_25 = async function _handleConnectionOpen(arg0) {
@@ -39,7 +39,7 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -185,7 +185,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1072);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
-fn(15762).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(15804).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -513,13 +513,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(6797).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6772).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(15762).socket;
+          const socket = closure_0(15804).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(15762).socket;
+            const socket2 = closure_0(15804).socket;
             socket2.streamDelete(item);
           }
         });

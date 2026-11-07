@@ -1,14 +1,14 @@
-// === Module 12306: ConjureNativeCardSurface ===
+// === Module 12304: ConjureNativeCardSurface ===
 
-// Module 12306 (ConjureNativeCardSurface)
+// Module 12304 (ConjureNativeCardSurface)
 import nativeDefault from "native" /* 575 */;
-import Card from "Card" /* 7065 */;
+import Card from "Card" /* 7040 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let context = noop.createContext(undefined);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { surface: { padding: nativeDefault.space.PX_12 } };
 let closure_5 = createStyles.createStyles(obj);
 const size = fn(2);

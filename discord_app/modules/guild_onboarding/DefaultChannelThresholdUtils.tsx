@@ -1,11 +1,11 @@
-// === Module 9131: DefaultChannelThresholdUtils ===
+// === Module 9113: DefaultChannelThresholdUtils ===
 
-// Module 9131 (DefaultChannelThresholdUtils)
+// Module 9113 (DefaultChannelThresholdUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7353 */;
+import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7330 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7354 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7331 */;
 
 require = fn;
 let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
@@ -19,7 +19,7 @@ let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChang
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -220,7 +220,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -329,7 +329,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
     }
   })();
 };
-let closure_7 = fn(7355).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+let closure_7 = fn(7332).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: closure_9 } = Constants);
 const size = fn(2);

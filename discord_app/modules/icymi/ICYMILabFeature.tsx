@@ -1,6 +1,6 @@
-// === Module 9019: ICYMILabFeature ===
+// === Module 9001: ICYMILabFeature ===
 
-// Module 9019 (ICYMILabFeature)
+// Module 9001 (ICYMILabFeature)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/icymi/ICYMILabFeature.tsx");

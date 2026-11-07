@@ -1,24 +1,24 @@
-// === Module 17104: ConnectedAppsScreen ===
+// === Module 17152: ConnectedAppsScreen ===
 
-// Module 17104 (ConnectedAppsScreen)
+// Module 17152 (ConnectedAppsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import shared from "shared" /* 5177 */;
-import useThemeDefault from "useTheme" /* 5399 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import Card from "Card" /* 7065 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 15219 */;
-import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity" /* 17105 */;
-import ConnectedAccountDefault from "ConnectedAccount" /* 17106 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 17115 */;
+import shared from "shared" /* 5147 */;
+import useThemeDefault from "useTheme" /* 5369 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import Card from "Card" /* 7040 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 15253 */;
+import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity" /* 17153 */;
+import ConnectedAccountDefault from "ConnectedAccount" /* 17154 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 17163 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7362 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7339 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6652 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6627 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 
-const _modDef4443 = tmp2(4443);
+const _modDef4413 = tmp2(4413);
 require = fn;
 function ConnectionsSection(onAdd) {
   onAdd = onAdd.onAdd;
@@ -67,7 +67,7 @@ function ConnectionsSection(onAdd) {
   const items5 = [closure_12(closure_5, obj8), ];
   const obj11 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl4 = tmp4(1113).intl;
-  obj11.children = intl4.string(_modDef4443["0y44+Q"]);
+  obj11.children = intl4.string(_modDef4413["0y44+Q"]);
   items5[1] = closure_11(require("Text/Text").Text, obj11);
   obj7.children = items5;
   const items6 = [closure_12(closure_5, obj7), ];
@@ -81,7 +81,7 @@ function ConnectionsSection(onAdd) {
       accounts.map((account) => closure_2_11(ConnectedAccountDefault, { theme, locale, account }, account.id))
     ];
     obj12.children = items7;
-    let tmp12Result = closure_12(tmp4(6185).Stack, obj12);
+    let tmp12Result = closure_12(tmp4(6159).Stack, obj12);
   } else {
     if (!fetching) {
       if (!tmp7.isLoading) {
@@ -98,8 +98,8 @@ function ConnectionsSection(onAdd) {
                     style: tile.tile,
                     accessibilityLabel: accessibilityLabel.name,
                     onPress() {
-                      closure_1(9826)({ platformType: type, location: constants.CONNECTIONS_EMPTY_STATE });
-                      const result = type(17114).trackEmptyStateCardClicked({ platformType: type });
+                      closure_1(9810)({ platformType: type, location: constants.CONNECTIONS_EMPTY_STATE });
+                      const result = type(17162).trackEmptyStateCardClicked({ platformType: type });
                     },
                     children: null
                   };
@@ -115,7 +115,7 @@ function ConnectionsSection(onAdd) {
         const intl5 = tmp4(1113).intl;
         obj15.text = intl5.string(tmp4(1113).t["UKOtz+"]);
         obj15.onPress = onAdd;
-        obj14.children = closure_11(tmp4(5788).Button, obj15);
+        obj14.children = closure_11(tmp4(5758).Button, obj15);
         items8[1] = closure_11(closure_5, obj14);
         obj13.children = items8;
         tmp12Result = closure_12(closure_5, obj13);
@@ -132,7 +132,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsLocations = fn(1072).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_24 }, section: null, header: null, title: null, tiles: null, tile: null, moreButton: null, addAction: null, icon: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_24 };
 obj2.section = { marginBottom: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
@@ -154,9 +154,9 @@ let result = size.fileFinishedImporting("modules/user_settings/connected_apps/na
 
 export default function ConnectedAppsScreen() {
   const tmp = closure_14();
-  const authorizedApps = apps(17115).useAuthorizedApps();
+  const authorizedApps = apps(17163).useAuthorizedApps();
   apps = authorizedApps.apps;
-  let obj = apps(17115);
+  let obj = apps(17163);
   const stackNavigation = apps(1499).useStackNavigation();
   items = [stackNavigation];
   const callback = noop.useCallback(() => {
@@ -174,10 +174,10 @@ export default function ConnectedAppsScreen() {
   items1[1] = { paddingBottom: stackNavigation(1627)().bottom + stackNavigation(575).space.PX_24 };
   obj3.contentContainerStyle = items1;
   const obj5 = { children: null };
-  const items2 = [closure_11(ConnectionsSection, { onAdd: callback }), closure_11(apps(17115).AuthorizedAppsHeader, {})];
+  const items2 = [closure_11(ConnectionsSection, { onAdd: callback }), closure_11(apps(17163).AuthorizedAppsHeader, {})];
   obj5.children = items2;
   obj3.ListHeaderComponent = closure_12(closure_13, obj5);
-  obj3.ListEmptyComponent = closure_11(apps(17115).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
+  obj3.ListEmptyComponent = closure_11(apps(17163).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
   obj3.data = apps;
   obj3.renderItem = function renderItem(app) {
     const index = app.index;
@@ -186,5 +186,5 @@ export default function ConnectedAppsScreen() {
   obj3.keyExtractor = function keyExtractor(id) {
     return id.id;
   };
-  return closure_11(apps(7380).FlashList, obj3);
+  return closure_11(apps(7357).FlashList, obj3);
 };

@@ -1,13 +1,13 @@
-// === Module 12629: ExpandableList ===
+// === Module 12642: ExpandableList ===
 
-// Module 12629 (ExpandableList)
+// Module 12642 (ExpandableList)
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5400 */;
-import timingPresets from "timingPresets" /* 5403 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import usePreviousDefault from "usePrevious" /* 6812 */;
-import TableRow from "TableRow" /* 7063 */;
+import timing_timing from "timing/timing" /* 5370 */;
+import timingPresets from "timingPresets" /* 5373 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import usePreviousDefault from "usePrevious" /* 6787 */;
+import TableRow from "TableRow" /* 7038 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_9 = createStyles.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
 let closure_10 = { code: "(function ExpandableListTsx1(){let[expanded,collapsedListHeight,remainingListHeight]=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();})" };
 let closure_11 = { code: "(function ExpandableListTsx2(){let[collapsedListHeight,withTiming,containerHeight,timingStandard]=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}})" };

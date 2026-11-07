@@ -1,14 +1,14 @@
-// === Module 17035: FamilyCenterActivityPage ===
+// === Module 17083: FamilyCenterActivityPage ===
 
-// Module 17035 (FamilyCenterActivityPage)
+// Module 17083 (FamilyCenterActivityPage)
 import nativeDefault from "native" /* 575 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7378 */;
-import useUserLinks from "useUserLinks" /* 8461 */;
-import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 13568 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 17036 */;
-import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 17038 */;
-import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 17048 */;
-import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 17052 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
+import useUserLinks from "useUserLinks" /* 8440 */;
+import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 13592 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 17084 */;
+import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 17086 */;
+import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 17096 */;
+import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 17100 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { scrollView: { flex: 1 }, dataConfirmation: { marginTop: nativeDefault.space.PX_8 }, container: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
 obj2.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };

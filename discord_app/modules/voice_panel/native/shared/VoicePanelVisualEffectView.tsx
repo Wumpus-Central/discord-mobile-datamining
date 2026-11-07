@@ -1,6 +1,6 @@
-// === Module 19622: VoicePanelVisualEffectView ===
+// === Module 19694: VoicePanelVisualEffectView ===
 
-// Module 19622 (VoicePanelVisualEffectView)
+// Module 19694 (VoicePanelVisualEffectView)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ DynamicColorIOS: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { wrapper: null, border: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.wrapper = {};

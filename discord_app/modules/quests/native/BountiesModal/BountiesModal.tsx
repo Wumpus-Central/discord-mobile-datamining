@@ -1,6 +1,6 @@
-// === Module 17181: BountiesModal ===
+// === Module 17229: BountiesModal ===
 
-// Module 17181 (BountiesModal)
+// Module 17229 (BountiesModal)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

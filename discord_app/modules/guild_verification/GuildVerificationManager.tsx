@@ -1,12 +1,12 @@
-// === Module 19800: GuildVerificationManager ===
+// === Module 19869: GuildVerificationManager ===
 
-// Module 19800 (GuildVerificationManager)
+// Module 19869 (GuildVerificationManager)
 import Constants from "Constants" /* 1072 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 9056 */;
-import HubUtilsDefault from "HubUtils" /* 14949 */;
-import GuildVerificationUtils from "GuildVerificationUtils" /* 14950 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 9038 */;
+import HubUtilsDefault from "HubUtils" /* 14982 */;
+import GuildVerificationUtils from "GuildVerificationUtils" /* 14983 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
 import size from "module_2" /* 2 */;
 
 function handleInviteData(invite) {

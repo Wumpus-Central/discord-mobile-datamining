@@ -1,20 +1,21 @@
-// === Module 15316: transformMessageAttachments ===
+// === Module 15350: transformMessageAttachments ===
 
-// Module 15316 (transformMessageAttachments)
+// Module 15350 (transformMessageAttachments)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6209 */;
-import noConflictDefault from "noConflict" /* 8308 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8470 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8781 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8782 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8801 */;
-import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8803 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8932 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 10249 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 13617 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6183 */;
+import MediaFormatParamUtils from "MediaFormatParamUtils" /* 6185 */;
+import noConflictDefault from "noConflict" /* 8287 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8449 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8760 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8761 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8780 */;
+import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8782 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8914 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 10232 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 13641 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;
@@ -55,11 +56,11 @@ export default function transformMessageAttachments(arg0) {
     if (isImageFileResult) {
       if (null != width) {
         if (null != height) {
-          const obj7 = RowGeneratorUtilsDefault;
-          let imageSrc = obj7.getImageSrc(proxy_url, width, height, !dependencyMap);
+          const obj8 = RowGeneratorUtilsDefault;
+          let imageSrc = obj8.getImageSrc(proxy_url, width, height, !dependencyMap);
         }
         let str4 = "default";
-        if (tmpResult10.isAndroid()) {
+        if (tmpResult11.isAndroid()) {
           str4 = "default";
           if (isVideoFileResult) {
             str4 = "cronet";
@@ -79,7 +80,7 @@ export default function transformMessageAttachments(arg0) {
             height2 = size2.height;
           }
         }
-        tmpResult10 = PlatformUtils;
+        tmpResult11 = PlatformUtils;
         let num4 = 0;
         if (closure_1_1) {
           num4 = 0;
@@ -91,7 +92,7 @@ export default function transformMessageAttachments(arg0) {
           }
         }
         const result1 = sanitizeMediaDimension.sanitizeMediaDimension(num4);
-        const tmpResult11 = sanitizeMediaDimension;
+        const tmpResult12 = sanitizeMediaDimension;
         let num5 = 0;
         if (closure_1_1) {
           num5 = 0;
@@ -103,16 +104,16 @@ export default function transformMessageAttachments(arg0) {
           }
         }
         const result2 = sanitizeMediaDimension.sanitizeMediaDimension(num5);
-        const tmpResult12 = sanitizeMediaDimension;
+        const tmpResult13 = sanitizeMediaDimension;
         if (flags == null) {
           flags = 0;
         }
         let tmp29;
-        if (tmpResult13.hasFlag(flags, MessageAttachmentFlags.IS_CLIP)) {
+        if (tmpResult14.hasFlag(flags, MessageAttachmentFlags.IS_CLIP)) {
           const obj6 = { attachmentTagText: null, attachmentTagIconType: "clip", attachmentTagBackgroundColor: null, attachmentTagTextColor: null };
           const intl = util.intl;
           obj6.attachmentTagText = intl.string(util.t.gESDiU);
-          ({ clipTagBackgroundColor: obj12.attachmentTagBackgroundColor, clipTagTextColor: obj12.attachmentTagTextColor } = closure_1_9);
+          ({ clipTagBackgroundColor: obj13.attachmentTagBackgroundColor, clipTagTextColor: obj13.attachmentTagTextColor } = closure_1_9);
           tmp29 = obj6;
         }
         let localUri = imageSrc;
@@ -146,13 +147,13 @@ export default function transformMessageAttachments(arg0) {
         }
         if (result3) {
           result3 = PlaintextFilePreviewHelpers.isPlaintextPreviewableFile(filename);
-          const tmpResult14 = PlaintextFilePreviewHelpers;
+          const tmpResult15 = PlaintextFilePreviewHelpers;
         }
         const size1 = { url: localUri, isSuspiciousDownload: null, textPreviewLabel: null, textPreviewHint: null, videoUrl: null, filename: null, size: null, description: null, alt: null, altTextHint: null, showDescription: null, durationSecs: null, waveform: null, width: null, height: null, hint: null, role: null, attachmentType: null, id: null, isAnimated: null, uploaderId: null, uploaderItemId: null, backgroundColor: null, placeholder: null, placeholderVersion: null, mediaViewerBufferForPlaybackMs: 1000, mediaViewerBufferForPlaybackAfterRebufferMs: 1000, mediaViewerMinBufferMs: 20000, mediaViewerMaxBufferMs: 20000, mediaViewerEnableDecoderFallback: false, mediaViewerEnableAsyncBufferQueueing: true, mediaViewerHttpEngine: null, srcIsAnimated: null, inlinePlaybackDisabled: null };
         let tmp32 = null != localUri;
         if (tmp32) {
           tmp32 = null != SuspiciousDownloadUtils.isSuspiciousDownload(localUri);
-          const tmpResult15 = SuspiciousDownloadUtils;
+          const tmpResult16 = SuspiciousDownloadUtils;
         }
         size1.isSuspiciousDownload = tmp32;
         let stringResult;
@@ -169,7 +170,7 @@ export default function transformMessageAttachments(arg0) {
         size1.textPreviewHint = stringResult1;
         size1.videoUrl = tmp17;
         size1.filename = getDisplayFilenameDefault(attachment);
-        tmpResult13 = FlagUtils;
+        tmpResult14 = FlagUtils;
         size1.size = noConflictDefault.filesize(size);
         size1.description = description;
         const intl4 = util.intl;
@@ -230,8 +231,8 @@ export default function transformMessageAttachments(arg0) {
         size1.srcIsAnimated = hasFlagResult;
         size1.inlinePlaybackDisabled = isWebPlayerVideoFileResult;
         const str6 = intl4.string(util.t.jCV1Tz);
-        const obj8 = { attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags, shouldAgeVerify };
-        const merged = Object.assign(ExplicitMediaUtils.getAttachmentObscurityProps(obj8));
+        const obj7 = { attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags, shouldAgeVerify };
+        const merged = Object.assign(ExplicitMediaUtils.getAttachmentObscurityProps(obj7));
         const merged1 = Object.assign(tmp29);
         return size1;
       }
@@ -246,9 +247,10 @@ export default function transformMessageAttachments(arg0) {
     }
     imageSrc = url;
     if (tmp14) {
-      let text = url;
+      let withMediaFormatResult = url;
       if (null != proxy_url) {
-        text = `${proxy_url}?format=webp`;
+        withMediaFormatResult = MediaFormatParamUtils.withMediaFormat(proxy_url, "webp");
+        const tmpResult18 = MediaFormatParamUtils;
       }
       let tmp19 = url;
       if (null != proxy_url) {
@@ -257,7 +259,7 @@ export default function transformMessageAttachments(arg0) {
           tmp19 = proxy_url;
         }
       }
-      imageSrc = text;
+      imageSrc = withMediaFormatResult;
       tmp17 = tmp19;
     }
     hasFlagResult = FlagUtils.hasFlag(num, MessageAttachmentFlags.IS_ANIMATED);

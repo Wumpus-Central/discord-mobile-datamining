@@ -1,6 +1,6 @@
-// === Module 18525: UnclaimedGamesStore ===
+// === Module 18572: UnclaimedGamesStore ===
 
-// Module 18525 (UnclaimedGamesStore)
+// Module 18572 (UnclaimedGamesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

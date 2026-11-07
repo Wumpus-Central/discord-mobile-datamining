@@ -1,17 +1,17 @@
-// === Module 11413: ChatViewStickyHeader ===
+// === Module 11395: ChatViewStickyHeader ===
 
-// Module 11413 (ChatViewStickyHeader)
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11415 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11420 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11424 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11425 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11444 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11450 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11474 */;
-import PinotLazy from "PinotLazy" /* 11477 */;
-import ForumPostActionBarDefault from "ForumPostActionBar" /* 11507 */;
-import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11511 */;
-import ChatBannerDefault from "ChatBanner" /* 11514 */;
+// Module 11395 (ChatViewStickyHeader)
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11397 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11402 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11406 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11407 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11426 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11432 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11456 */;
+import PinotLazy from "PinotLazy" /* 11459 */;
+import ForumPostActionBarDefault from "ForumPostActionBar" /* 11489 */;
+import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11493 */;
+import ChatBannerDefault from "ChatBanner" /* 11496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   }
   return tmp5;
 }
-const LOCATION_CONTEXT_MOBILE = fn(11414).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11396).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);

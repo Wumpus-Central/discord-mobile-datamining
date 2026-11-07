@@ -1,7 +1,7 @@
-// === Module 18602: GameClaimCoachmarkExperiment ===
+// === Module 18649: GameClaimCoachmarkExperiment ===
 
-// Module 18602 (GameClaimCoachmarkExperiment)
-import createExperiment from "module_5382" /* 5382 */;
+// Module 18649 (GameClaimCoachmarkExperiment)
+import createExperiment from "module_5352" /* 5352 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-02_game_claim_coachmark", label: "Game Claim Coachmark", defaultConfig: { enabled: false }, treatments: null };

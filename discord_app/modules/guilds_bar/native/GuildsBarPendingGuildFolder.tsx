@@ -1,11 +1,11 @@
-// === Module 18657: GuildsBarPendingGuildFolder ===
+// === Module 18704: GuildsBarPendingGuildFolder ===
 
-// Module 18657 (GuildsBarPendingGuildFolder)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 13438 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 18637 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18644 */;
+// Module 18704 (GuildsBarPendingGuildFolder)
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 13462 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 18684 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18691 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
@@ -16,9 +16,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(18644);
+  let obj = id(18691);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(18644).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
+  const guildsBarAnimatedWrapperStyles = id(18691).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
   items = [SelectedGuildStore];
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => {
@@ -50,12 +50,12 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   const sharedValue = id(1652).useSharedValue("" + id);
   const memo1 = noop.useMemo(() => ({
     onPress() {
-      const result = id(5406).triggerHapticFeedback(id(5406).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj = id(5406);
-      const result1 = closure_1(6982).toggleGuildFolderExpand(closure_1_0);
+      const result = id(5376).triggerHapticFeedback(id(5376).HapticFeedbackTypes.IMPACT_LIGHT);
+      const obj = id(5376);
+      const result1 = closure_1(6957).toggleGuildFolderExpand(closure_1_0);
     }
   }), items2);
-  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "INTERACTION_QUEUE", config: null, externalChildren: null, children: null };
+  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "INTERACTION_MODAL_CREATE", config: null, externalChildren: null, children: null };
   const obj3 = id(1652);
   obj4.id = "" + id;
   obj4.accessibilityActions = accessibilityActions;
@@ -69,9 +69,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(18643).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(18690).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(12549).HourglassIcon, {});
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "INTERACTION_QUEUE", config: null, externalChildren: null, children: null });
+  obj4.children = jsx(id(12562).HourglassIcon, {});
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "INTERACTION_MODAL_CREATE", config: null, externalChildren: null, children: null });
 });

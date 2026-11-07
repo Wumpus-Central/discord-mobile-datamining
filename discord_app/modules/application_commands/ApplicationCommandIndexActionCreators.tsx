@@ -1,6 +1,6 @@
-// === Module 9872: ApplicationCommandIndexActionCreators ===
+// === Module 9856: ApplicationCommandIndexActionCreators ===
 
-// Module 9872 (ApplicationCommandIndexActionCreators)
+// Module 9856 (ApplicationCommandIndexActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -21,7 +21,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -58,7 +58,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -207,7 +207,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp10) {
         c2 = tmp;

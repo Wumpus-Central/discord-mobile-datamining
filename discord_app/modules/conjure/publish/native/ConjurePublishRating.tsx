@@ -1,17 +1,17 @@
-// === Module 12963: ConjurePublishRating ===
+// === Module 12974: ConjurePublishRating ===
 
-// Module 12963 (ConjurePublishRating)
+// Module 12974 (ConjurePublishRating)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import timing_timing from "timing/timing" /* 5400 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import spring_spring from "spring/spring" /* 5791 */;
-import springPresets from "springPresets" /* 5792 */;
-import ConjureRatingFeedbackSheet from "ConjureRatingFeedbackSheet" /* 12965 */;
+import timing_timing from "timing/timing" /* 5370 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import spring_spring from "spring/spring" /* 5761 */;
+import springPresets from "springPresets" /* 5762 */;
+import ConjureRatingFeedbackSheet from "ConjureRatingFeedbackSheet" /* 12976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
 require = fn;
 function Star(rating) {
@@ -61,9 +61,9 @@ function Star(rating) {
   ConjurePublishRatingTsx1.__initData = tmp7;
   const animatedStyle = require("module_1652").useAnimatedStyle(ConjurePublishRatingTsx1);
   if (tmp2) {
-    let StarOutlineIcon = tmp3(10201).StarIcon;
+    let StarOutlineIcon = tmp3(10184).StarIcon;
   } else {
-    StarOutlineIcon = tmp3(10199).StarOutlineIcon;
+    StarOutlineIcon = tmp3(10182).StarOutlineIcon;
   }
   let obj3 = { style: tmp.star, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: null, onPress: null, children: null };
   let obj2 = require("module_1652");
@@ -80,7 +80,7 @@ function Star(rating) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, stars: { flexDirection: "row" }, star: null, thanks: null };
 let obj3 = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
 obj2.star = { padding: nativeDefault.space.PX_4 };
@@ -153,8 +153,8 @@ export default function ConjurePublishRating(arg0) {
       if (null != tmp2) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
-        obj.openLazy(asyncRequireImpl(12965, dependencyMap.paths), ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY, obj2);
-        const tmp6 = asyncRequireImpl(12965, dependencyMap.paths);
+        obj.openLazy(asyncRequireImpl(12976, dependencyMap.paths), ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY, obj2);
+        const tmp6 = asyncRequireImpl(12976, dependencyMap.paths);
       }
     };
     return closure_1_7(Star, obj, rating);

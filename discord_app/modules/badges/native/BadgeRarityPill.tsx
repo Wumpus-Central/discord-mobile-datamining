@@ -1,17 +1,17 @@
-// === Module 11628: BadgeRarityPill ===
+// === Module 11611: BadgeRarityPill ===
 
-// Module 11628 (BadgeRarityPill)
+// Module 11611 (BadgeRarityPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import BadgeRarity from "BadgeRarity" /* 1389 */;
-import ColorUtils from "ColorUtils" /* 5167 */;
-import shared from "shared" /* 5177 */;
-import useThemeDefault from "useTheme" /* 5399 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11629 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11631 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11633 */;
-import ExperimentalMythicIcon from "ExperimentalMythicIcon" /* 11635 */;
+import ColorUtils from "ColorUtils" /* 5137 */;
+import shared from "shared" /* 5147 */;
+import useThemeDefault from "useTheme" /* 5369 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11612 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11614 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11616 */;
+import ExperimentalMythicIcon from "ExperimentalMythicIcon" /* 11618 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 0.24;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { pill: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, minHeight: 20, borderRadius: nativeDefault.radii.round, borderWidth: 1 }, label: { textTransform: "uppercase" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

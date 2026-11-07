@@ -1,18 +1,18 @@
-// === Module 10987: ConjureChatStore ===
+// === Module 10970: ConjureChatStore ===
 
-// Module 10987 (ConjureChatStore)
+// Module 10970 (ConjureChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import _modDef4024 from "module_4024" /* 4024 */;
-import conjureChatTurns from "conjureChatTurns" /* 10988 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 10989 */;
-import conjureChatHistory from "conjureChatHistory" /* 10990 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10991 */;
-import conjureAgentHiddenMessages from "conjureAgentHiddenMessages" /* 10992 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import conjureChatTurns from "conjureChatTurns" /* 10971 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 10972 */;
+import conjureChatHistory from "conjureChatHistory" /* 10973 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10974 */;
+import conjureAgentHiddenMessages from "conjureAgentHiddenMessages" /* 10975 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
 
 require = fn;
 function patchTurn(projectId, turnId, fn) {
@@ -189,7 +189,7 @@ function applyAgentReactions(arr) {
       for (const item10022 of steps) {
         if ("reaction" === item10022.kind) {
           if (null != item10022.message_id) {
-            let obj2 = map(10991);
+            let obj2 = map(10974);
             let result = obj2.agentReactionFromStep(item10022);
             if (null != result) {
               let result1 = map.set(item10022.message_id, tmp10);
@@ -737,15 +737,15 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
   CONJURE_CHAT_SIDE_REPLY: function handleChatSideReply(inReplyTo) {
     ({ projectId, id } = inReplyTo);
     inReplyTo = inReplyTo.inReplyTo;
-    ({ content, timestamp } = inReplyTo);
+    ({ content, timestamp, attachments } = inReplyTo);
     value = map.get(projectId);
     if (null == value) {
       return false;
     } else if (value.some((id) => id.id === id)) {
       return false;
     } else {
-      const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(10990).newMessage("assistant", content, obj3);
+      const obj3 = { ts: timestamp, id, attachments };
+      const newMessageResult = id(10973).newMessage("assistant", content, obj3);
       newMessageResult.kind = "side_reply";
       newMessageResult.in_reply_to = inReplyTo;
       const findIndexResult = value.findIndex((id) => id.id === inReplyTo);
@@ -762,12 +762,12 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             everyResult = steps.every((kind) => "preview_ready" === kind.kind);
           }
           if (everyResult) {
-            everyResult = !id(10988).isOutsideTurn(tmp10);
-            const tmpResult = id(10988);
+            everyResult = !id(10971).isOutsideTurn(tmp10);
+            const tmpResult = id(10971);
           }
           if (everyResult) {
-            everyResult = !id(10988).turnSettled(tmp10);
-            const tmpResult3 = id(10988);
+            everyResult = !id(10971).turnSettled(tmp10);
+            const tmpResult3 = id(10971);
           }
           tmp9 = everyResult;
         }
@@ -795,7 +795,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
               if (!tmpResult4.turnSettled(items[findLastIndexResult])) {
                 items.splice(findIndexResult + 1, 0, _slicedToArray(items.splice(findLastIndexResult, 1), 1)[0]);
               }
-              tmpResult4 = id(10988);
+              tmpResult4 = id(10971);
             }
           }
         }
@@ -808,7 +808,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items1[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items1);
       }
-      const obj2 = id(10990);
+      const obj2 = id(10973);
     }
   },
   CONJURE_CHAT_PUBLISH_NOTICE: function handleChatPublishNotice(arg0) {
@@ -821,7 +821,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(10990).newMessage("assistant", content, obj3);
+      const newMessageResult = id(10973).newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
       newMessageResult.finished = true;
@@ -839,7 +839,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!tmpResult.turnSettled(value[findLastIndexResult])) {
           turn_id = value[findLastIndexResult];
         }
-        tmpResult = id(10988);
+        tmpResult = id(10971);
       }
       if (null != turn_id) {
         if (0 !== turn_id.steps.length) {
@@ -866,9 +866,9 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             obj6 = {};
           }
           arraySpreadResult4 = arraySpreadResult4 + 1;
-          items[arraySpreadResult4] = id(10990).newMessage("assistant", "", obj6);
+          items[arraySpreadResult4] = id(10973).newMessage("assistant", "", obj6);
           items = map.set(projectId, items);
-          const tmpResult2 = id(10990);
+          const tmpResult2 = id(10973);
         } else {
           const items1 = [, ];
           const arraySpreadResult6 = HermesBuiltin.arraySpread(value.slice(findLastIndexResult + 1), HermesBuiltin.arraySpread(value.slice(0, findLastIndexResult), 0));
@@ -882,7 +882,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items2);
       }
-      const obj2 = id(10990);
+      const obj2 = id(10973);
     }
   },
   CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
@@ -978,8 +978,8 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     if (!tmp2) {
       let tmp5 = null != value;
       if (tmp5) {
-        tmp5 = -1 !== step(10988).resolveTurnIndex(value, undefined);
-        let obj2 = step(10988);
+        tmp5 = -1 !== step(10971).resolveTurnIndex(value, undefined);
+        let obj2 = step(10971);
       }
       tmp2 = tmp5;
     }
@@ -1220,7 +1220,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                 items = [];
                 const obj2 = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj2.message = intl.string(_modDef4024.lmiuFX);
+                obj2.message = intl.string(_modDef4026.lmiuFX);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                 obj.steps = items;
                 tmp7 = obj;

@@ -1,8 +1,8 @@
-// === Module 16002: GuildBadgeLightning ===
+// === Module 16050: GuildBadgeLightning ===
 
-// Module 16002 (GuildBadgeLightning)
-import inlineStyles from "inlineStyles" /* 8122 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15996 */;
+// Module 16050 (GuildBadgeLightning)
+import inlineStyles from "inlineStyles" /* 8101 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 16044 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,15 +1,15 @@
-// === Module 17890: IntlTestingSettingsPage ===
+// === Module 17937: IntlTestingSettingsPage ===
 
-// Module 17890 (IntlTestingSettingsPage)
+// Module 17937 (IntlTestingSettingsPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1152 from "module_1152" /* 1152 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import TableRow from "TableRow" /* 7063 */;
-import TableRowGroup from "TableRowGroup" /* 7151 */;
-import _modDef17891 from "module_17891" /* 17891 */;
-import _modDef17923 from "module_17923" /* 17923 */;
+import TableRow from "TableRow" /* 7038 */;
+import TableRowGroup from "TableRowGroup" /* 7126 */;
+import _modDef17938 from "module_17938" /* 17938 */;
+import _modDef17970 from "module_17970" /* 17970 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ function TestLocaleSelector() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -61,7 +61,7 @@ function TestLocaleSelector() {
         } else {
           tmp2(tmp5[11]).updateLocale(closure_129_0);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp14) {
         c4 = tmp;
@@ -125,7 +125,7 @@ get_ActivityIndicator = fn(17);
 const setAppLocale = fn(2187).setAppLocale;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -146,19 +146,19 @@ export default function IntlTestingSettingsPage() {
   items = [closure_10(LocaleInfo, {}), closure_10(TestLocaleSelector, {}), , , , , , ];
   const obj3 = { variant: "body-md/normal", children: null };
   const intl = require("util").intl;
-  obj3.children = intl.format(_modDef17891.HMvEC5, {});
+  obj3.children = intl.format(_modDef17938.HMvEC5, {});
   items[2] = closure_10(require("Text/Text").Text, obj3);
   const obj4 = { variant: "body-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj4.children = intl2.format(_modDef17923.swfLzV, {});
+  obj4.children = intl2.format(_modDef17970.swfLzV, {});
   items[3] = closure_10(require("Text/Text").Text, obj4);
   const obj5 = { variant: "body-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj5.children = intl3.format(_modDef17891.rmps8y, {});
+  obj5.children = intl3.format(_modDef17938.rmps8y, {});
   items[4] = closure_10(require("Text/Text").Text, obj5);
   const obj6 = { variant: "body-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj6.children = intl4.format(_modDef17891.uczI4g, {
+  obj6.children = intl4.format(_modDef17938.uczI4g, {
     linkTarget() {
 
     }
@@ -166,14 +166,14 @@ export default function IntlTestingSettingsPage() {
   items[5] = closure_10(require("Text/Text").Text, obj6);
   const obj8 = { variant: "body-md/normal", children: null };
   const intl5 = require("util").intl;
-  obj8.children = intl5.format(_modDef17891.rdfRyh, {});
+  obj8.children = intl5.format(_modDef17938.rdfRyh, {});
   items[6] = closure_10(require("Text/Text").Text, obj8);
   const obj9 = { variant: "body-md/normal", children: null };
   const intl6 = require("util").intl;
-  obj9.children = intl6.format(_modDef17891.XOdbAy, {
+  obj9.children = intl6.format(_modDef17938.XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(5781).Text, { variant: "body-sm/normal", color: "text-overlay-light", children }) };
+      const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(5751).Text, { variant: "body-sm/normal", color: "text-overlay-light", children }) };
       return closure_1_10(closure_1_6, obj);
     }
   });

@@ -1,17 +1,17 @@
-// === Module 13476: GuildDisableCommunication ===
+// === Module 13501: GuildDisableCommunication ===
 
-// Module 13476 (GuildDisableCommunication)
+// Module 13501 (GuildDisableCommunication)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useMountEffectDefault from "useMountEffect" /* 5751 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5765 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import TableRadioGroup from "TableRadioGroup" /* 7149 */;
-import TableRadioRow from "TableRadioRow" /* 7152 */;
-import TextArea from "TextArea" /* 7339 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11564 */;
+import useMountEffectDefault from "useMountEffect" /* 5721 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5735 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import TableRadioGroup from "TableRadioGroup" /* 7124 */;
+import TableRadioRow from "TableRadioRow" /* 7127 */;
+import TextArea from "TextArea" /* 7316 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11546 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(5084);
+const GuildDisableCommunicationConstants = fn(5054);
 ({ DisableCommunicationDuration, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8, SET_COMMUNICATION_DISABLED_MODAL_NAME: closure_9 } = GuildDisableCommunicationConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
@@ -68,7 +68,7 @@ let items = [
     }
   }
 ];
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, reasonTextArea: null, buttonContainer: null };
 let obj = {
   value: DisableCommunicationDuration.DURATION_60_SEC,
@@ -102,7 +102,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -116,7 +116,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(13477);
+            const obj4 = tmp4(13502);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = { value: obj4.setCommunicationDisabledDuration(guild_id, id.id, items[asyncGeneratorStep].value, ref.current), done: false };
@@ -131,8 +131,8 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           return obj6;
         } else {
           const intl = user(1113).intl;
-          const obj8 = tmp4(5867);
-          const name = tmp4(6199).getName(closure_129_1, null, closure_129_0);
+          const obj8 = tmp4(5837);
+          const name = tmp4(6173).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
@@ -143,7 +143,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
           closure_129_2();
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp18) {
         c3 = tmp;

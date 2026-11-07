@@ -1,8 +1,8 @@
-// === Module 20406: SafetyFlowsActionCreators ===
+// === Module 20474: SafetyFlowsActionCreators ===
 
-// Module 20406 (SafetyFlowsActionCreators)
+// Module 20474 (SafetyFlowsActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6827 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6802 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -40,7 +40,7 @@ let closure_7 = async function _resendVerificationCode() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

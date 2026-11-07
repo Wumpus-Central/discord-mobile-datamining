@@ -1,13 +1,13 @@
-// === Module 13605: ChannelTabsStore ===
+// === Module 13629: ChannelTabsStore ===
 
-// Module 13605 (ChannelTabsStore)
+// Module 13629 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import TabsExperimentDefault from "TabsExperiment" /* 13606 */;
+import TabsExperimentDefault from "TabsExperiment" /* 13630 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 
 require = fn;
 function handleChannelDelete(channel) {
@@ -69,7 +69,7 @@ function handleChannelDelete(channel) {
     return false;
   }
 }
-const isStaticChannelRoute = fn(5026).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4996).isStaticChannelRoute;
 let tabs = [];
 let c8 = null;
 let closure_9 = 1;

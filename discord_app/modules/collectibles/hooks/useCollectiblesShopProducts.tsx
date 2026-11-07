@@ -1,16 +1,16 @@
-// === Module 9685: useCollectiblesShopProducts ===
+// === Module 9667: useCollectiblesShopProducts ===
 
-// Module 9685 (useCollectiblesShopProducts)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7818 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8882 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9687 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9688 */;
+// Module 9667 (useCollectiblesShopProducts)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7795 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8861 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9669 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9686 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8883 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7820 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7821 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9668 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8862 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7797 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7798 */;
 
 const require = globalThis.__r;
 
@@ -165,7 +165,7 @@ export function useCollectiblesShopProduct(skuId, arg1) {
   let memo1;
   closure_13 = undefined;
   closure_14 = undefined;
-  items = [skuId, flag3];
+  items = [skuId, flag3, require("getStorefrontNativeStoreQuery").useStorefrontPricingKey()];
   const effect = flag3.useEffect(() => {
     if (flag3) {
       const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
@@ -173,6 +173,9 @@ export function useCollectiblesShopProduct(skuId, arg1) {
       const products = CollectiblesShopManager.requestProducts(items);
     }
   }, items);
+  let obj2 = require("getStorefrontNativeStoreQuery");
+  let tmp = _require;
+  let tmp2 = flag;
   let items1 = [flag5];
   const items2 = [skuId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ products: StorefrontProductStore.getProductsForSku(closure_0), fetchState: StorefrontProductStore.getFetchStateForSku(closure_0) }), items2);
@@ -193,7 +196,7 @@ export function useCollectiblesShopProduct(skuId, arg1) {
     str = str2;
   }
   const items3 = [flag, str, flag4];
-  const effect1 = obj2.useEffect(() => {
+  const effect1 = obj3.useEffect(() => {
     let tmp = flag;
     if (flag) {
       tmp = "" !== str;
@@ -205,14 +208,14 @@ export function useCollectiblesShopProduct(skuId, arg1) {
       const collections = CollectiblesShopManager.requestCollections(items, obj);
     }
   }, items3);
-  let obj3 = require("initialize");
+  const obj4 = require("initialize");
   const items4 = [flag4];
   const items5 = [str];
-  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items4, () => ({ collection: StorefrontCollectionStore.getCollection(str), fetchState: StorefrontCollectionStore.getFetchState(str) }), items5);
+  const stateFromStoresObject1 = tmp(tmp2[8]).useStateFromStoresObject(items4, () => ({ collection: StorefrontCollectionStore.getCollection(str), fetchState: StorefrontCollectionStore.getFetchState(str) }), items5);
   collection = stateFromStoresObject1.collection;
   fetchState2 = stateFromStoresObject1.fetchState;
   const items6 = [first, flag5, skuId];
-  memo = obj2.useMemo(() => {
+  memo = obj3.useMemo(() => {
     let tmp2 = null;
     if (null != first) {
       let tmp5;
@@ -229,7 +232,7 @@ export function useCollectiblesShopProduct(skuId, arg1) {
     return tmp2;
   }, items6);
   const items7 = [flag, collection];
-  memo1 = obj2.useMemo(() => {
+  memo1 = obj3.useMemo(() => {
     let result = null;
     if (flag) {
       result = null;
@@ -239,19 +242,19 @@ export function useCollectiblesShopProduct(skuId, arg1) {
     }
     return result;
   }, items7);
-  const obj4 = { id: skuId, sawFetch: false };
+  const obj5 = { id: skuId, sawFetch: false };
   const tmp10 = flag2;
-  const tmp2Result = require("initialize");
+  let tmpResult = tmp(tmp2[8]);
   [tmp12, tmp13] = flag2(flag3.useState({ id: skuId, sawFetch: false }), 2);
   let flag6 = tmp12.sawFetch;
   if (tmp12.id !== skuId) {
-    const obj5 = { id: skuId, sawFetch: null != fetchState };
-    tmp13(obj5);
+    const obj6 = { id: skuId, sawFetch: null != fetchState };
+    tmp13(obj6);
     flag6 = tmp16;
   } else {
     if (!tmp14) {
-      const obj6 = { id: skuId, sawFetch: true };
-      tmp13(obj6);
+      const obj7 = { id: skuId, sawFetch: true };
+      tmp13(obj7);
       flag6 = true;
     }
     tmp14 = null == fetchState || tmp12.sawFetch;
@@ -265,13 +268,13 @@ export function useCollectiblesShopProduct(skuId, arg1) {
   [tmp20, tmp21] = tmp10(flag3.useState({ id: str3, sawFetch: false }), 2);
   let flag7 = tmp20.sawFetch;
   if (tmp20.id !== str3) {
-    const obj7 = { id: str3, sawFetch: null != fetchState2 };
-    tmp21(obj7);
+    const obj8 = { id: str3, sawFetch: null != fetchState2 };
+    tmp21(obj8);
     flag7 = tmp24;
   } else {
     if (!tmp22) {
-      const obj8 = { id: str3, sawFetch: true };
-      tmp21(obj8);
+      const obj9 = { id: str3, sawFetch: true };
+      tmp21(obj9);
       flag7 = true;
     }
     tmp22 = null == fetchState2 || tmp20.sawFetch;
@@ -279,7 +282,7 @@ export function useCollectiblesShopProduct(skuId, arg1) {
   closure_14 = tmp26;
   const items8 = [fetchState, "" !== skuId && null == fetchState && flag6, fetchState2, "" !== str3 && null == fetchState2 && flag7, flag, str, memo, memo1];
   const items9 = [flag2, memo];
-  const memo2 = obj2.useMemo(() => {
+  const memo2 = obj3.useMemo(() => {
     str = "error";
     if ("error" !== fetchState) {
       str = "error";
@@ -313,7 +316,7 @@ export function useCollectiblesShopProduct(skuId, arg1) {
     }
     return str;
   }, items8);
-  const effect2 = obj2.useEffect(() => {
+  const effect2 = obj3.useEffect(() => {
     let tmp = flag2;
     if (flag2) {
       tmp = null != memo;
@@ -367,13 +370,15 @@ export function useCollectiblesShopProducts(resolvedSkuIds, arg1) {
   let stateFromStoresObject1;
   items = [resolvedSkuIds];
   memo = memo.useMemo(() => closure_0.filter((item) => "" !== item), items);
-  const items1 = [memo.join(",")];
+  const joined = memo.join(",");
+  const items1 = [joined, require("getStorefrontNativeStoreQuery").useStorefrontPricingKey()];
   const effect = memo.useEffect(() => {
     if (memo.length > 0) {
       const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
       const products = CollectiblesShopManager.requestProducts(tmp);
     }
   }, items1);
+  let obj3 = require("getStorefrontNativeStoreQuery");
   const items2 = [stateFromStoresObject1];
   const items3 = [memo];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => {
@@ -391,7 +396,7 @@ export function useCollectiblesShopProducts(resolvedSkuIds, arg1) {
     }
     return obj;
   }, items3);
-  let obj3 = require("initialize");
+  let obj4 = require("initialize");
   const items4 = [stateFromStoresObject1];
   const items5 = [memo];
   stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items4, () => {
@@ -442,7 +447,7 @@ export function useCollectiblesShopProducts(resolvedSkuIds, arg1) {
       const collections = CollectiblesShopManager.requestCollections(memo2);
     }
   }, items8);
-  let obj4 = require("initialize");
+  const obj5 = require("initialize");
   const items9 = [stateFromStoresObject];
   const items10 = [memo2];
   const stateFromStoresObject2 = require("initialize").useStateFromStoresObject(items9, () => {
@@ -453,7 +458,7 @@ export function useCollectiblesShopProducts(resolvedSkuIds, arg1) {
     }
     return obj;
   }, items10);
-  const obj6 = require("initialize");
+  const obj7 = require("initialize");
   const items11 = [stateFromStoresObject];
   const items12 = [memo2];
   const stateFromStoresObject3 = require("initialize").useStateFromStoresObject(items11, () => {
@@ -464,9 +469,9 @@ export function useCollectiblesShopProducts(resolvedSkuIds, arg1) {
     }
     return obj;
   }, items12);
-  const tmp8 = stateFromStoresObject3(stateFromStoresObject1);
-  let tmp9 = stateFromStoresObject3(stateFromStoresObject3);
-  const items13 = [memo, stateFromStoresObject, stateFromStoresObject1, memo1, stateFromStoresObject2, stateFromStoresObject3, tmp8, tmp9, flag, flag2];
+  let tmp9 = stateFromStoresObject3(stateFromStoresObject1);
+  const tmp10 = stateFromStoresObject3(stateFromStoresObject3);
+  const items13 = [memo, stateFromStoresObject, stateFromStoresObject1, memo1, stateFromStoresObject2, stateFromStoresObject3, tmp9, tmp10, flag, flag2];
   return memo.useMemo(() => {
     const obj = {};
     const iter = memo[Symbol.iterator]();

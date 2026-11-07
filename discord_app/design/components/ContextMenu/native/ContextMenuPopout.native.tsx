@@ -1,6 +1,6 @@
-// === Module 16114: ContextMenuPopout ===
+// === Module 16162: ContextMenuPopout ===
 
-// Module 16114 (ContextMenuPopout)
+// Module 16162 (ContextMenuPopout)
 import logAppStart from "logAppStart" /* 1 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,14 +8,14 @@ import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import native from "native" /* 5229 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5450 */;
-import Backdrop from "Backdrop" /* 5756 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5765 */;
-import spring_spring from "spring/spring" /* 5791 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6180 */;
-import ContextMenuState from "ContextMenuState" /* 10013 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 10014 */;
+import native from "native" /* 5199 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
+import Backdrop from "Backdrop" /* 5726 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5735 */;
+import spring_spring from "spring/spring" /* 5761 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6154 */;
+import ContextMenuState from "ContextMenuState" /* 9997 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9998 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -66,16 +66,16 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let obj2 = { container: null, titleContainer: null, divider: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj2.container = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(10014).CONTEXT_MENU_MIN_WIDTH };
-let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(10014).CONTEXT_MENU_MIN_WIDTH };
-obj2.titleContainer = { padding: fn(10014).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(10014).CONTEXT_MENU_ITEM_PADDING };
-obj2.divider = { borderBottomWidth: fn(10014).CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.container = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(9998).CONTEXT_MENU_MIN_WIDTH };
+let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(9998).CONTEXT_MENU_MIN_WIDTH };
+obj2.titleContainer = { padding: fn(9998).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(9998).CONTEXT_MENU_ITEM_PADDING };
+obj2.divider = { borderBottomWidth: fn(9998).CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
 let closure_10 = createStyles.createStyles(obj2);
-let items = [{ code: "(function getCollapsedOffset_ContextMenuPopoutNativeTsx1(width,height,positionX,positionY){let[CONTEXT_MENU_MIN_SCALE]=this.__closure;const scaleOffset=1-CONTEXT_MENU_MIN_SCALE;return{translateX:(positionX==='left'?-1:1)*(width/2)*scaleOffset,translateY:(positionY==='below'?-1:1)*(height/2)*scaleOffset};})" }, fn(10014).CONTEXT_MENU_MIN_SCALE];
+let items = [{ code: "(function getCollapsedOffset_ContextMenuPopoutNativeTsx1(width,height,positionX,positionY){let[CONTEXT_MENU_MIN_SCALE]=this.__closure;const scaleOffset=1-CONTEXT_MENU_MIN_SCALE;return{translateX:(positionX==='left'?-1:1)*(width/2)*scaleOffset,translateY:(positionY==='below'?-1:1)*(height/2)*scaleOffset};})" }, fn(9998).CONTEXT_MENU_MIN_SCALE];
 let closure_129_0;
 [tmp5, tmp6] = items;
 function getCollapsedOffset(arg0, arg1, arg2, arg3) {
@@ -103,14 +103,14 @@ let closure_13 = { code: "(function ContextMenuPopoutNativeTsx3(values){let[getC
 let closure_14 = { code: "(function ContextMenuPopoutNativeTsx4(values){let[getCollapsedOffset,positionX,positionY,hasEnteredSV,withSpring,CONTEXT_MENU_SPRING,CONTEXT_MENU_MIN_SCALE,scheduleOnRN,onClose]=this.__closure;const{translateX:translateX,translateY:translateY}=getCollapsedOffset(values.currentWidth,values.currentHeight,positionX,positionY);return{initialValues:hasEnteredSV.get()?{opacity:1,transform:[{translateX:0},{translateY:0},{scale:1}]}:{},animations:{opacity:withSpring(0,CONTEXT_MENU_SPRING),transform:[{translateX:withSpring(translateX,CONTEXT_MENU_SPRING)},{translateY:withSpring(translateY,CONTEXT_MENU_SPRING)},{scale:withSpring(CONTEXT_MENU_MIN_SCALE,CONTEXT_MENU_SPRING)}]},callback:function(finished){if(finished){scheduleOnRN(onClose);}}};})" };
 let closure_15 = { code: "(function update_ContextMenuPopoutNativeTsx5(e){let[updateContextMenuState,state]=this.__closure;updateContextMenuState(e.absoluteX,e.absoluteY,state);})" };
 let closure_16 = { code: "(function ContextMenuPopoutNativeTsx6(){let[state,scheduleOnRN,requestClose]=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;scheduleOnRN(requestClose,isDismiss);})" };
-createStyles = fn(5170);
+createStyles = fn(5140);
 let obj7 = { accessibleDismiss: null };
 let obj8 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj8.height = "auto";
 obj7.accessibleDismiss = obj8;
 let closure_18 = createStyles.createStyles(obj7);
-let items2 = [{ code: "(function backdropEnteringAnimation_ContextMenuPopoutNativeTsx7(){let[withSpring,CONTEXT_MENU_SPRING]=this.__closure;return{initialValues:{opacity:0},animations:{opacity:withSpring(1,CONTEXT_MENU_SPRING)}};})" }, fn(5791).withSpring, fn(10014).CONTEXT_MENU_SPRING];
+let items2 = [{ code: "(function backdropEnteringAnimation_ContextMenuPopoutNativeTsx7(){let[withSpring,CONTEXT_MENU_SPRING]=this.__closure;return{initialValues:{opacity:0},animations:{opacity:withSpring(1,CONTEXT_MENU_SPRING)}};})" }, fn(5761).withSpring, fn(9998).CONTEXT_MENU_SPRING];
 let closure_130_0;
 let closure_130_1;
 [tmp8, tmp9, tmp10] = items2;
@@ -193,10 +193,10 @@ export function ContextMenuPopout(cleanUp) {
   const callback = noop.useCallback(ContextMenuPopoutNativeTsx2, items4);
   if ("below" === positionY) {
     const diff1 = diff - bottom;
-    let diff2 = diff1 - tmp6(10014).CONTEXT_MENU_EDGE_OFFSET;
+    let diff2 = diff1 - tmp6(9998).CONTEXT_MENU_EDGE_OFFSET;
   } else {
     const diff3 = diff - top;
-    diff2 = diff3 - tmp6(10014).CONTEXT_MENU_EDGE_OFFSET;
+    diff2 = diff3 - tmp6(9998).CONTEXT_MENU_EDGE_OFFSET;
   }
   c7 = diff2;
   const tmp20 = scale(noop.useState(menu.height >= diff2), 2);
@@ -437,7 +437,7 @@ export function ContextMenuPopout(cleanUp) {
     const obj8 = { children: null };
     const obj9 = { style: tmp2.titleContainer, children: null };
     const obj10 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
-    obj9.children = tmp57(tmp6(5781).Text, obj10);
+    obj9.children = tmp57(tmp6(5751).Text, obj10);
     const items18 = [tmp57(c5, obj9), tmp57(ContextMenuDivider, {})];
     obj8.children = items18;
     tmp55Result = tmp55(tmp56, obj8);

@@ -1,10 +1,10 @@
-// === Module 8260: ManualReviewPendingAlertModal ===
+// === Module 8239: ManualReviewPendingAlertModal ===
 
-// Module 8260 (ManualReviewPendingAlertModal)
+// Module 8239 (ManualReviewPendingAlertModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import _modDef3348 from "module_3348" /* 3348 */;
-import AlertModal from "AlertModal" /* 6122 */;
+import AlertModal from "AlertModal" /* 6096 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

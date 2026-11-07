@@ -1,6 +1,6 @@
-// === Module 14157: GamePlatformAvailability ===
+// === Module 14182: GamePlatformAvailability ===
 
-// Module 14157 (GamePlatformAvailability)
+// Module 14182 (GamePlatformAvailability)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GamePlatformAvailability.tsx");

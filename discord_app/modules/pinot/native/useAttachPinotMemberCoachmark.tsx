@@ -1,12 +1,12 @@
-// === Module 11490: useAttachPinotMemberCoachmark ===
+// === Module 11472: useAttachPinotMemberCoachmark ===
 
-// Module 11490 (useAttachPinotMemberCoachmark)
+// Module 11472 (useAttachPinotMemberCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3316 from "module_3316" /* 3316 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import ExperimentalWebIcon from "ExperimentalWebIcon" /* 11491 */;
-import PinotAnalytics from "PinotAnalytics" /* 11493 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import ExperimentalWebIcon from "ExperimentalWebIcon" /* 11473 */;
+import PinotAnalytics from "PinotAnalytics" /* 11475 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ function renderWebIcon() {
 }
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
-const ContentDismissActionType = fn(5016).ContentDismissActionType;
+const ContentDismissActionType = fn(4986).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

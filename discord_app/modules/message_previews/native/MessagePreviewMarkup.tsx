@@ -1,14 +1,14 @@
-// === Module 11197: MessagePreviewMarkup ===
+// === Module 11181: MessagePreviewMarkup ===
 
-// Module 11197 (MessagePreviewMarkup)
+// Module 11181 (MessagePreviewMarkup)
 import privDefault from "priv" /* 1453 */;
 import _modDef2067 from "module_2067" /* 2067 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5846 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5910 */;
-import MarkupTypes from "MarkupTypes" /* 6190 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6191 */;
-import MarkupRulesDefault from "MarkupRules" /* 6192 */;
-import MarkupMessagePreviewReactRulesDefault from "MarkupMessagePreviewReactRules" /* 11198 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5816 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5879 */;
+import MarkupTypes from "MarkupTypes" /* 6164 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 6165 */;
+import MarkupRulesDefault from "MarkupRules" /* 6166 */;
+import MarkupMessagePreviewReactRulesDefault from "MarkupMessagePreviewReactRules" /* 11182 */;
 import size from "module_2" /* 2 */;
 
 function parseMessagePreviewMarkup(fontScale) {

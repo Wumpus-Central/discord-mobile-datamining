@@ -1,23 +1,23 @@
-// === Module 7753: TTIAnalyticsUtils ===
+// === Module 7730: TTIAnalyticsUtils ===
 
-// Module 7753 (TTIAnalyticsUtils)
+// Module 7730 (TTIAnalyticsUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DeviceUtils from "DeviceUtils" /* 5127 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5344 */;
-import RootNavigationRef from "RootNavigationRef" /* 5345 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5351 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 6048 */;
-import AppStartInfo2 from "AppStartInfo" /* 7913 */;
+import DeviceUtils from "DeviceUtils" /* 5097 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5314 */;
+import RootNavigationRef from "RootNavigationRef" /* 5315 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5321 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 6021 */;
+import AppStartInfo2 from "AppStartInfo" /* 7890 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CacheStore from "CacheStore" /* 7754 */;
-import ExperimentStore from "ExperimentStore" /* 5384 */;
+import CacheStore from "CacheStore" /* 7731 */;
+import ExperimentStore from "ExperimentStore" /* 5354 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1359 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1376 */;
 
@@ -115,7 +115,7 @@ let closure_26 = async function _consumeAppOpenBadgeState() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -191,7 +191,7 @@ let closure_28 = async function _trackAppUIViewedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -307,7 +307,7 @@ let closure_28 = async function _trackAppUIViewedAsync(arg0) {
           }
         })();
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp6) {
       c6 = tmp;
@@ -326,7 +326,7 @@ let closure_29 = async function _logLegacyAppUiViewed(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -383,7 +383,7 @@ let closure_29 = async function _logLegacyAppUiViewed(arg0) {
         const merged2 = Object.assign(closure_133_0);
         closure_134_1(closure_134_2[22]).track(closure_134_11.APP_UI_VIEWED, obj9, { logEventProperties: true });
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp7) {
       c8 = tmp;
@@ -412,7 +412,7 @@ let closure_33 = async function _trackAppUIViewed() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -598,7 +598,7 @@ let closure_33 = async function _trackAppUIViewed() {
           })(closure_131_9);
         }
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp72) {
       c6 = tmp;
@@ -638,7 +638,7 @@ let closure_35 = async function _trackAppLaunchCompletedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -674,7 +674,7 @@ let closure_35 = async function _trackAppLaunchCompletedAsync(arg0) {
         closure_133_0 = ExperimentStore(closure_3, closure_2, value);
         closure_132_1(closure_132_2[22]).track(closure_132_11.APP_LAUNCH_COMPLETED, closure_133_0, { logEventProperties: true });
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp21) {
       c8 = tmp;
@@ -683,8 +683,8 @@ let closure_35 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7912).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(5026).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(7889).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(4996).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1266);
 const load_id = v1.v4();

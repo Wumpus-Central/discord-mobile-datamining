@@ -1,6 +1,6 @@
-// === Module 7716: ColorConstants ===
+// === Module 7693: ColorConstants ===
 
-// Module 7716 (ColorConstants)
+// Module 7693 (ColorConstants)
 import nativeDefault from "native" /* 575 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;

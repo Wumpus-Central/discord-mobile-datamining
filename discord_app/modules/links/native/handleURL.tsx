@@ -1,9 +1,9 @@
-// === Module 5861: handleURL ===
+// === Module 5831: handleURL ===
 
-// Module 5861 (handleURL)
+// Module 5831 (handleURL)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 5405 */;
+import ActionSheetStore from "ActionSheetStore" /* 5375 */;
 
 const require = fn;
 function sanitizeURLPart(str) {
@@ -24,7 +24,7 @@ let closure_10 = async function _handleURL(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_10 = async function _handleURL(arg0) {
             if (null != obj.sanitizeUrl(closure_1_0)) {
               let SAFARI = constants.SAFARI;
               if (closure_1_0.startsWith("https:")) {
-                const browserManagerSelectedBrowser = closure_0(5897).getBrowserManagerSelectedBrowser();
+                const browserManagerSelectedBrowser = closure_0(5866).getBrowserManagerSelectedBrowser();
                 let tmp10 = closure_1_1;
                 if (closure_1_1 == null) {
                   tmp10 = browserManagerSelectedBrowser;
@@ -85,40 +85,40 @@ let closure_10 = async function _handleURL(arg0) {
                     const tmp8Result = closure_0(1377);
                   }
                 }
-                const obj3 = closure_0(5897);
+                const obj3 = closure_0(5866);
               }
               if (constants.IN_APP === SAFARI) {
-                const result = closure_0(5897).browserManagerOpenUrl(closure_1_0, constants.IN_APP);
+                const result = closure_0(5866).browserManagerOpenUrl(closure_1_0, constants.IN_APP);
                 result.catch(() => {
                   const intl = closure_2_0(1113).intl;
-                  closure_2_0(5866).presentFailedToast("" + intl.string(closure_2_0(1113).t.HryVrx) + " " + closure_1_0);
+                  closure_2_0(5836).presentFailedToast("" + intl.string(closure_2_0(1113).t.HryVrx) + " " + closure_1_0);
                 });
-                const obj7 = closure_0(5897);
+                const obj7 = closure_0(5866);
                 let isIOSResult = closure_0(1377).isIOS();
                 if (isIOSResult) {
                   isIOSResult = open.isOpen();
                 }
                 if (isIOSResult) {
-                  closure_1(5404).hideAllActionSheets();
-                  const tmpResult = closure_1(5404);
+                  closure_1(5374).hideAllActionSheets();
+                  const tmpResult = closure_1(5374);
                 }
                 const obj8 = closure_0(1377);
               } else if (constants.CHROME === SAFARI) {
-                const result1 = closure_0(5897).browserManagerOpenUrl(closure_1_0, constants.CHROME);
+                const result1 = closure_0(5866).browserManagerOpenUrl(closure_1_0, constants.CHROME);
                 result1.catch(() => {
                   const intl = closure_2_0(1113).intl;
-                  closure_2_0(5866).presentFailedToast("" + intl.string(closure_2_0(1113).t.HryVrx) + " " + closure_1_0);
+                  closure_2_0(5836).presentFailedToast("" + intl.string(closure_2_0(1113).t.HryVrx) + " " + closure_1_0);
                 });
-                const obj6 = closure_0(5897);
+                const obj6 = closure_0(5866);
               } else {
                 const SAFARI2 = constants.SAFARI;
-                const result2 = closure_0(5897).browserManagerOpenUrl(closure_1_0, constants.SAFARI);
-                const obj5 = closure_0(5897);
+                const result2 = closure_0(5866).browserManagerOpenUrl(closure_1_0, constants.SAFARI);
+                const obj5 = closure_0(5866);
               }
             } else {
               let intl = closure_0(1113).intl;
-              closure_0(5866).presentFailedToast(intl.string(closure_0(1113).t.XiqzAp));
-              const obj2 = closure_0(5866);
+              closure_0(5836).presentFailedToast(intl.string(closure_0(1113).t.XiqzAp));
+              const obj2 = closure_0(5836);
             }
             obj = closure_1(2067);
           };
@@ -141,7 +141,7 @@ let closure_10 = async function _handleURL(arg0) {
             }
             closure_131_4();
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             closure_131_0 = closure_132_1(closure_132_2[15])(closure_131_0);
             if (obj6.test(closure_131_0)) {
@@ -174,8 +174,8 @@ let closure_10 = async function _handleURL(arg0) {
                                   closure_0 = arg0;
                                   return new Promise((arg0) => {
                                     closure_0 = arg0;
-                                    const result = closure_2_1(5862).tryOpenUrlAsUniversalLink(closure_0);
-                                    const obj = closure_2_1(5862);
+                                    const result = closure_2_1(5832).tryOpenUrlAsUniversalLink(closure_0);
+                                    const obj = closure_2_1(5832);
                                     result.then(() => {
                                       logger.info("Universal link opened successfully.");
                                       closure_0(true);
@@ -195,7 +195,7 @@ let closure_10 = async function _handleURL(arg0) {
         } else if (2 === tmp8) {
           c6 = 0;
           c8 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else {
           if (3 === tmp8) {
             if (arg0 === 1) {
@@ -214,7 +214,7 @@ let closure_10 = async function _handleURL(arg0) {
                   value: (function tryHandleCustomScheme(arg0) {
                                   let arr = arg0;
                                   closure_0 = arg0;
-                                  const iter = closure_0(5863).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
+                                  const iter = closure_0(5833).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
                                   while (iter !== undefined) {
                                     ({ regex, protocol } = nextResult);
                                     let match = regex.exec(arr);
@@ -238,9 +238,9 @@ let closure_10 = async function _handleURL(arg0) {
                                       logger.info("tryHandleCustomScheme", arr);
                                       let promise = new Promise((arg0) => {
                                         closure_0 = arg0;
-                                        const obj = closure_2_1(5862);
-                                        const tryOpenSchemeResult = closure_2_1(5862).tryOpenScheme(closure_0);
-                                        closure_2_1(5862).tryOpenScheme(closure_0).then(() => {
+                                        const obj = closure_2_1(5832);
+                                        const tryOpenSchemeResult = closure_2_1(5832).tryOpenScheme(closure_0);
+                                        closure_2_1(5832).tryOpenScheme(closure_0).then(() => {
                                           logger.info("Custom scheme opened successfully.");
                                           closure_0(true);
                                         }).catch(() => {
@@ -304,7 +304,7 @@ let closure_10 = async function _handleURL(arg0) {
                                     }
                                     return num;
                                   }
-                                  const iter = closure_0(5865).LINKING_WHITELIST_VALUES[Symbol.iterator]();
+                                  const iter = closure_0(5835).LINKING_WHITELIST_VALUES[Symbol.iterator]();
                                   const nextResult = iter.next();
                                   while (iter !== undefined) {
                                     regex = nextResult.regex;

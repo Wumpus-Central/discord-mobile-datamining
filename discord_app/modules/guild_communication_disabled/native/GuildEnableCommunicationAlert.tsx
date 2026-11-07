@@ -1,8 +1,8 @@
-// === Module 13478: GuildEnableCommunicationAlert ===
+// === Module 13503: GuildEnableCommunicationAlert ===
 
-// Module 13478 (GuildEnableCommunicationAlert)
+// Module 13503 (GuildEnableCommunicationAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import CountDownDefault from "CountDown" /* 10287 */;
+import CountDownDefault from "CountDown" /* 10270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,13 +10,13 @@ import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const View = fn(17).View;
-const GuildDisableCommunicationConstants = fn(5084);
+const GuildDisableCommunicationConstants = fn(5054);
 ({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: metroImportDefault, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8 } = GuildDisableCommunicationConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_12 = createStyles.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: { fontFamily: Fonts.PRIMARY_SEMIBOLD } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
@@ -36,7 +36,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -52,7 +52,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(13477).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(13502).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -66,9 +66,9 @@ export default function GuildEnableCommunicationAlert(guildId) {
           const obj7 = { text: null, variant: "success" };
           const intl = tmp4(1113).intl;
           obj7.text = intl.string(tmp4(1113).t["/Mmbfv"]);
-          v1(5867).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
+          v1(5837).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp9) {
         dependencyMap = tmp;
@@ -78,8 +78,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
   };
   const tmp2 = closure_12();
   dependencyMap = tmp2;
-  closure_3 = _slicedToArray(userId(8526)(userId, guildId), 1)[0];
-  userId(5751)(() => {
+  closure_3 = _slicedToArray(userId(8505)(userId, guildId), 1)[0];
+  userId(5721)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
   });
   let obj = {};
@@ -111,8 +111,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
   let obj3 = { style: tmp2.description, variant: "body-sm/medium", children: null };
   const intl4 = tmp9(1113).intl;
   const user = UserStore.getUser(userId);
-  const tmp7 = userId(6188);
-  let str = userId(6199).getName(guildId, null, user);
+  const tmp7 = userId(6162);
+  let str = userId(6173).getName(guildId, null, user);
   if (str == null) {
     str = "";
   }
@@ -127,14 +127,14 @@ export default function GuildEnableCommunicationAlert(guildId) {
       return closure_2_10(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
     }
   });
-  items = [closure_10(guildId(5781).Text, obj3), ];
+  items = [closure_10(guildId(5751).Text, obj3), ];
   let obj5 = { style: null, variant: "body-sm/medium", children: null };
   const items1 = [, ];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
   obj5.style = items1;
   const intl5 = tmp9(1113).intl;
   obj5.children = intl5.format(guildId(1113).t.KtENkK, { link });
-  items[1] = closure_10(guildId(5781).Text, obj5);
+  items[1] = closure_10(guildId(5751).Text, obj5);
   obj2.children = items;
   obj.children = closure_11(View, obj2);
   return closure_10(tmp7, obj);

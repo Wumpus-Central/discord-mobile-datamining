@@ -1,15 +1,24 @@
-// === Module 13428: ModalFooter ===
+// === Module 13451: ModalFooter ===
 
-// Module 13428 (ModalFooter)
+// Module 13451 (ModalFooter)
+import nativeDefault from "native" /* 575 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5735 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
-let closure_2 = createStyles.createStyles({ footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 } });
+const createStyles = fn(5140);
+const obj2 = { footer: { flexDirection: "column", alignItems: "center", justifyContent: "flex-end", overflow: "hidden", paddingTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, wrapper: { width: "100%", flexDirection: "column", justifyContent: "flex-end" } };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
 
 export function ModalFooter(children) {
-  return <View style={closure_2().footer}>{children.children}</View>;
+  const tmp = closure_4();
+  const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
+  const obj = { style: null, children: null };
+  items = [tmp.footer, { marginBottom: -insets.bottom, paddingBottom: Math.max(insets.bottom, nativeDefault.space.PX_16) }];
+  obj.style = items;
+  obj.children = <View style={tmp.wrapper}>{children.children}</View>;
+  return <View style={null}>{null}</View>;
 }

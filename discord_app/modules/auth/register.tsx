@@ -1,16 +1,16 @@
-// === Module 18275: auth/register ===
+// === Module 18322: auth/register ===
 
-// Module 18275 (auth/register)
+// Module 18322 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import APIErrorDefault from "APIError" /* 6605 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6617 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6827 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 18277 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 18278 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 18279 */;
+import APIErrorDefault from "APIError" /* 6580 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6592 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6802 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 18324 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 18325 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 18326 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -30,7 +30,7 @@ let closure_11 = async function _scorePassword() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -104,7 +104,7 @@ let closure_12 = async function _registerPhone(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -278,7 +278,7 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(18276);
+const ParentalConsentStore = fn(18323);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, AnalyticsSections: metroImportDefault, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1097);

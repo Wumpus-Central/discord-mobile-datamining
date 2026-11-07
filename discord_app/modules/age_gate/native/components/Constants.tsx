@@ -1,6 +1,6 @@
-// === Module 7471: Constants ===
+// === Module 7448: Constants ===
 
-// Module 7471 (Constants)
+// Module 7448 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_gate/native/components/Constants.tsx");

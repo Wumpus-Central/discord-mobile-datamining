@@ -1,7 +1,7 @@
-// === Module 20336: useInviteApplicationBypassInfo ===
+// === Module 20405: useInviteApplicationBypassInfo ===
 
-// Module 20336 (useInviteApplicationBypassInfo)
-import PermissionStore from "PermissionStore" /* 5102 */;
+// Module 20405 (useInviteApplicationBypassInfo)
+import PermissionStore from "PermissionStore" /* 5072 */;
 
 const require = globalThis.__r;
 

@@ -1,22 +1,22 @@
-// === Module 6942: ChannelSectionStore ===
+// === Module 6917: ChannelSectionStore ===
 
-// Module 6942 (ChannelSectionStore)
+// Module 6917 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import ApexExperiment from "ApexExperiment" /* 1449 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6944 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6945 */;
-import FriendsSidebarTracking from "FriendsSidebarTracking" /* 6946 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6919 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6920 */;
+import FriendsSidebarTracking from "FriendsSidebarTracking" /* 6921 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
-import ExperimentStore from "ExperimentStore" /* 5384 */;
-import SearchMessageStore from "SearchMessageStore" /* 6943 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
+import ExperimentStore from "ExperimentStore" /* 5354 */;
+import SearchMessageStore from "SearchMessageStore" /* 6918 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -136,7 +136,7 @@ function handlePermissionsChange() {
 }
 const Constants = fn(1072);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(5026);
+const ChannelConstants = fn(4996);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1083).Permissions;
 let c17 = false;

@@ -1,6 +1,6 @@
-// === Module 8061: SafetyHubConstants ===
+// === Module 8039: SafetyHubConstants ===
 
-// Module 8061 (SafetyHubConstants)
+// Module 8039 (SafetyHubConstants)
 import Constants from "Constants" /* 1072 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import size from "module_2" /* 2 */;
@@ -13,7 +13,7 @@ const obj3 = { DIDNT_VIOLATE_POLICY: 0, [0]: "DIDNT_VIOLATE_POLICY", TOO_STRICT_
 const items1 = [, , , ];
 ({ DIDNT_VIOLATE_POLICY: arr2[0], TOO_STRICT_UNFAIR: arr2[1], DONT_AGREE_PENALTY: arr2[2], SOMETHING_ELSE: arr2[3] } = obj3);
 const obj4 = { impression_group: null };
-const frozen = Object.freeze({ SPEED_BUMP: AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP, COLLECT_SIGNAL: AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL, CONFIRM_SUBMISSION: AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION, REQUEST_SENT: AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT, THANKS: AnalyticsSections.APPEAL_INGESTION_THANKS, SPAM: AnalyticsSections.APPEAL_INGESTION_SPAM });
+const frozen = Object.freeze({ SPEED_BUMP: AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP, COLLECT_SIGNAL: AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL, CONFIRM_SUBMISSION: AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION, REQUEST_SENT: AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT, THANKS: AnalyticsSections.APPEAL_INGESTION_THANKS });
 obj4.impression_group = discord_common_AnalyticsUtils.ImpressionGroups.APPEAL_INGESTION;
 const obj5 = { SPEED_BUMP: "speed-bump", COLLECT_SIGNAL: "collect-signal", CONFIRM_SUBMISSION: "confirm-submission", REQUEST_SENT: "request-sent", THANKS: "thanks" };
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubConstants.tsx");
@@ -25,7 +25,6 @@ prototype.COMMUNITY_GUIDELINES = "https://discord.com/guidelines";
 prototype.APPEALS_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731";
 prototype.WARNING_SYSTEM_HELPCENTER_LINK = "https://support.discord.com/hc/articles/18210965981847";
 prototype.AGE_VERIFICATION_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731";
-prototype.SPAM_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__";
 prototype.LEARN_MORE_UU_APPEAL_LINK = "https://support.discord.com/hc/articles/360041820932";
 prototype.APP_APPEAL_LINK = "https://dis.gd/app-appeal";
 class SafetyHubPolicyNoticeKeys {
@@ -52,7 +51,7 @@ export const SafetyHubLinks = prototype;
 export { SafetyHubPolicyNoticeKeys };
 export const SafetySystemNotificationCtaType = { POLICY_VIOLATION_DETAIL: "policy_violation_detail", LEARN_MORE_LINK: "learn_more_link" };
 export const SafetySystemNotificationEmbedKeys = prototype2;
-export const SafetyHubAnalyticsActions = { ViewViolationDetail: 0, [0]: "ViewViolationDetail", ViewViolationsDropdown: 1, [1]: "ViewViolationsDropdown", ClickLetUsKnow: 2, [2]: "ClickLetUsKnow", ClickAgeVerificationLink: 3, [3]: "ClickAgeVerificationLink", ClickSpamWebformLink: 4, [4]: "ClickSpamWebformLink", ClickLearnMoreLink: 5, [5]: "ClickLearnMoreLink", ClickCommunityGuidelinesLink: 6, [6]: "ClickCommunityGuidelinesLink", ClickWarningSystemHelpcenterLink: 7, [7]: "ClickWarningSystemHelpcenterLink", ClickAppAppealLink: 8, [8]: "ClickAppAppealLink" };
+export const SafetyHubAnalyticsActions = { ViewViolationDetail: 0, [0]: "ViewViolationDetail", ViewViolationsDropdown: 1, [1]: "ViewViolationsDropdown", ClickLetUsKnow: 2, [2]: "ClickLetUsKnow", ClickAgeVerificationLink: 3, [3]: "ClickAgeVerificationLink", ClickLearnMoreLink: 5, [5]: "ClickLearnMoreLink", ClickCommunityGuidelinesLink: 6, [6]: "ClickCommunityGuidelinesLink", ClickWarningSystemHelpcenterLink: 7, [7]: "ClickWarningSystemHelpcenterLink", ClickAppAppealLink: 8, [8]: "ClickAppAppealLink" };
 export const SafetyHubAnalyticsActionSource = { SystemDM: 0, [0]: "SystemDM", StandingTab: 1, [1]: "StandingTab", AppealIngestion: 2, [2]: "AppealIngestion" };
 export const AppealIngestionSections = frozen;
 export const AppealIngestionSignal = obj3;

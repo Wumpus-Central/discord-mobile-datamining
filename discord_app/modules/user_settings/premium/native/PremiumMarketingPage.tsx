@@ -1,95 +1,123 @@
-// === Module 15589: PremiumMarketingPage ===
+// === Module 15624: PremiumMarketingPage ===
 
-// Module 15589 (PremiumMarketingPage)
+// Module 15624 (PremiumMarketingPage)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import dismissible_content from "dismissible_content" /* 5003 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 5004 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5200 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
+import dismissible_content from "dismissible_content" /* 4973 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4974 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5170 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7229 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
+import PremiumFeaturesCardsDefault from "PremiumFeaturesCards" /* 10028 */;
+import _modDef14067 from "module_14067" /* 14067 */;
+import MarketingPageBannerTileDefault from "MarketingPageBannerTile" /* 15581 */;
+import NitroMobileRefreshExperiment from "NitroMobileRefreshExperiment" /* 15625 */;
+import PremiumMarketingFloatingSubscribeExperimentDefault from "PremiumMarketingFloatingSubscribeExperiment" /* 15626 */;
+import PlanSelectHeaderDefault from "PlanSelectHeader" /* 15627 */;
+import premium_HeaderDefault from "premium/Header" /* 15628 */;
+import PlanSelectCardsDefault from "PlanSelectCards" /* 15631 */;
+import PremiumMarketingFloatingSubscribeButtonDefault from "PremiumMarketingFloatingSubscribeButton" /* 15661 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
+function NitroMobileRefreshGate(children) {
+  return closure_1_11(closure_1_10, { children: children.children(NitroMobileRefreshExperiment.useIsNitroMobileRefreshEnabled("PremiumMarketingPage")) });
+}
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContentDismissActionType = fn(5016).ContentDismissActionType;
+const ContentDismissActionType = fn(4986).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5170);
-let obj2 = { container: { display: "flex" }, scrollContainer: { flexDirection: "column", alignItems: "center", marginTop: 16 }, arrowIcon: { tintColor: nativeDefault.colors.TEXT_DEFAULT }, backButton: null, sectionWithTopMargin: { marginTop: 48 }, sectionWithPadding: { paddingHorizontal: 12 }, sectionWidth: { maxWidth: 464 }, accountCreditContainer: { width: "100%" }, accountCreditContainerWithSpacing: { marginTop: 24, marginBottom: 20 }, themedBackground: null, backButtonBackground: null };
+({ Fragment: closure_10, jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5140);
+let obj2 = { container: { display: "flex" }, scrollContainer: { flexDirection: "column", alignItems: "center", marginTop: 16 }, arrowIcon: { tintColor: nativeDefault.colors.TEXT_DEFAULT }, backButton: null, sectionWithTopMargin: { marginTop: 48 }, sectionWithPadding: { paddingHorizontal: 12 }, planSelectCardsSection: null, sectionWidth: null, accountCreditContainer: null, accountCreditContainerWithSpacing: null, themedBackground: null, backButtonBackground: null };
 let obj4 = { transform: null, position: "absolute", left: 16 };
 let items = [{ scaleX: -1 }];
 obj4.transform = items;
 obj2.backButton = obj4;
 let obj3 = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
-obj2.themedBackground = { backgroundColor: fn(6858).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-let obj5 = { backgroundColor: fn(6858).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-obj2.backButtonBackground = { backgroundColor: fn(6858).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
-let closure_12 = createStyles.createStyles(obj2);
+obj2.planSelectCardsSection = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.sectionWidth = { maxWidth: 464 };
+obj2.accountCreditContainer = { width: "100%" };
+obj2.accountCreditContainerWithSpacing = { marginTop: 24, marginBottom: 20 };
+let obj5 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.themedBackground = { backgroundColor: fn(6833).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+let obj6 = { backgroundColor: fn(6833).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+obj2.backButtonBackground = { backgroundColor: fn(6833).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingPage.tsx");
 
 export default function PremiumMarketingPage(userHasSubscription) {
   userHasSubscription = userHasSubscription.userHasSubscription;
-  ({ onClose, entitlements, onPaymentSuccess, onPaymentDismiss, isFullScreenPresentation } = userHasSubscription);
-  ({ subscriptionDetails, billingInfo, accountCredit, applicationId, premiumFeatureCardOrder } = userHasSubscription);
+  ({ subscriptionDetails: importDefault, billingInfo: dependencyMap, accountCredit: _slicedToArray, applicationId: noop, onClose, premiumFeatureCardOrder: closure_5, entitlements, onPaymentSuccess: closure_6, onPaymentDismiss: UserStore, isFullScreenPresentation } = userHasSubscription);
   if (isFullScreenPresentation === undefined) {
     isFullScreenPresentation = false;
   }
-  let analyticsLocations;
-  _slicedToArray = undefined;
-  noop = undefined;
-  c5 = undefined;
-  enabled = undefined;
-  let ref;
+  c11 = undefined;
+  c12 = undefined;
+  let bottom;
+  let showAfterLastCard;
+  let enabled;
   let sharedValue;
+  let onLayout;
+  let onFirstCardLayout;
   let promotionMarketingComponent;
   onClose = undefined;
-  const commonTriggerPoint = userHasSubscription(analyticsLocations[10]).useCommonTriggerPoint(userHasSubscription(analyticsLocations[11]).OpenNitroTriggerPoint);
-  const tmp4 = onClose();
-  let obj = userHasSubscription(analyticsLocations[10]);
-  const navigation = userHasSubscription(analyticsLocations[12]).useNavigation();
-  analyticsLocations = navigation(analyticsLocations[13])().analyticsLocations;
-  let obj2 = userHasSubscription(analyticsLocations[12]);
-  [c3, c4] = noop.useState(false);
+  closure_25 = undefined;
+  c26 = undefined;
+  let flag;
+  closure_28 = undefined;
+  const commonTriggerPoint = userHasSubscription(15617).useCommonTriggerPoint(userHasSubscription(15618).OpenNitroTriggerPoint);
+  const tmp4 = bottom();
+  closure_8 = tmp4;
+  let obj = userHasSubscription(15617);
+  const navigation = userHasSubscription(1499).useNavigation();
+  const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
+  let obj2 = userHasSubscription(1499);
+  [c11, c12] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  let top = userHasSubscription(analyticsLocations[14]).useYouBarSettingsCustomHeaderPaddingTop();
-  const rect = navigation(analyticsLocations[15])();
+  let top = userHasSubscription(15619).useYouBarSettingsCustomHeaderPaddingTop();
+  const rect = useSafeAreaInsetsDefault();
+  bottom = rect.bottom;
   if (isFullScreenPresentation) {
     top = rect.top;
   }
-  const obj4 = userHasSubscription(analyticsLocations[14]);
-  const config = navigation(analyticsLocations[16]).useConfig({ location: "PremiumMarketingPage" });
-  ({ enabled, showAfterLastCard: c5 } = config);
+  let obj4 = userHasSubscription(15619);
+  const config = PremiumMarketingFloatingSubscribeExperimentDefault.useConfig({ location: "PremiumMarketingPage" });
+  enabled = config.enabled;
+  showAfterLastCard = config.showAfterLastCard;
   let tmp9 = !userHasSubscription;
   if (!userHasSubscription) {
     tmp9 = enabled;
   }
   enabled = tmp9;
-  ref = obj3.useRef(0);
   noop.useRef(0);
   noop.useRef(0);
-  const tmp6Result = navigation(analyticsLocations[16]);
-  sharedValue = userHasSubscription(analyticsLocations[17]).useSharedValue(false);
-  const callback = obj3.useCallback((nativeEvent) => {
+  noop.useRef(0);
+  const tmp6Result = PremiumMarketingFloatingSubscribeExperimentDefault;
+  sharedValue = userHasSubscription(1652).useSharedValue(false);
+  onLayout = noop.useCallback((nativeEvent) => {
     const layout = nativeEvent.nativeEvent.layout;
     const y = layout.y;
-    closure_7.current = y;
-    closure_9.current = y + layout.height;
+    closure_17.current = y;
+    closure_19.current = y + layout.height;
+  }, []);
+  onFirstCardLayout = noop.useCallback((nativeEvent) => {
+    closure_18.current = nativeEvent.nativeEvent.layout.y + nativeEvent.nativeEvent.layout.height;
   }, []);
   items = [navigation, userHasSubscription];
-  const callback1 = obj3.useCallback((nativeEvent) => {
-    closure_8.current = nativeEvent.nativeEvent.layout.y + nativeEvent.nativeEvent.layout.height;
-  }, []);
-  const layoutEffect = obj3.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({ headerShown: userHasSubscription });
   }, items);
-  const tmpResult = userHasSubscription(analyticsLocations[17]);
-  promotionMarketingComponent = userHasSubscription(analyticsLocations[18]).usePromotionMarketingComponent(tmp(tmp2[19]).MarketingComponentType.PREMIUM_TAB);
-  const items1 = [promotionMarketingComponent];
-  const effect = obj3.useEffect(() => {
+  const tmpResult = userHasSubscription(1652);
+  promotionMarketingComponent = userHasSubscription(15578).usePromotionMarketingComponent(tmp(10730).MarketingComponentType.PREMIUM_TAB);
+  let items1 = [promotionMarketingComponent];
+  const effect = noop.useEffect(() => {
     let isDismissed = null == promotionMarketingComponent;
     if (!isDismissed) {
       isDismissed = "premiumTab" !== promotionMarketingComponent.properties.properties.oneofKind;
@@ -105,55 +133,176 @@ export default function PremiumMarketingPage(userHasSubscription) {
   if (onClose == null) {
     onClose = () => navigation.pop();
   }
-  let tmp16 = !userHasSubscription;
+  let tmp14 = !userHasSubscription;
   if (!userHasSubscription) {
     const obj5 = { style: null, accessibilityLabel: null, source: null, size: null, iconStyle: null, onPress: null };
-    const items2 = [, ];
+    let items2 = [, ];
     ({ backButton: arr3[0], backButtonBackground: arr3[1] } = tmp4);
     obj5.style = items2;
-    const intl = tmp(tmp2[24]).intl;
-    obj5.accessibilityLabel = intl.string(tmp(tmp2[24]).t["13/7kX"]);
-    obj5.source = tmp6(tmp2[25]);
-    obj5.size = tmp(tmp2[23]).CircularIconButton.Sizes.MEDIUM_32;
+    const intl = tmp(1113).intl;
+    obj5.accessibilityLabel = intl.string(tmp(1113).t["13/7kX"]);
+    obj5.source = _modDef14067;
+    obj5.size = tmp(15469).CircularIconButton.Sizes.MEDIUM_32;
     obj5.iconStyle = tmp4.arrowIcon;
     obj5.onPress = function onPress() {
       return onClose();
     };
-    tmp16 = sharedValue(tmp(tmp2[23]).CircularIconButton, obj5);
+    tmp14 = c11(tmp(15469).CircularIconButton, obj5);
   }
+  closure_25 = tmp14;
   let hasAccountCreditResult = null != entitlements;
   if (hasAccountCreditResult) {
-    hasAccountCreditResult = tmp6(tmp2[26]).hasAccountCredit(entitlements);
-    const tmp6Result4 = tmp6(tmp2[26]);
+    hasAccountCreditResult = PremiumUtilsDefault.hasAccountCredit(entitlements);
+    const tmp6Result2 = PremiumUtilsDefault;
   }
-  const tmpResult4 = userHasSubscription(analyticsLocations[18]);
-  const items3 = [ref];
-  const stateFromStores = userHasSubscription(analyticsLocations[27]).useStateFromStores(items3, () => ref.getCurrentUser());
-  let flag;
+  c26 = hasAccountCreditResult;
+  const tmpResult6 = userHasSubscription(15578);
+  let items3 = [UserStore];
+  const stateFromStores = userHasSubscription(504).useStateFromStores(items3, () => onPaymentDismiss.getCurrentUser());
+  flag = undefined;
   if (stateFromStores != null) {
     flag = stateFromStores.isFractionalPremiumWithNoStandardSub();
   }
   if (flag == null) {
     flag = false;
   }
-  const tmpResult5 = userHasSubscription(analyticsLocations[27]);
-  const promotionMarketingComponent1 = userHasSubscription(analyticsLocations[18]).usePromotionMarketingComponent(tmp(tmp2[19]).MarketingComponentType.MARKETING_PAGE_BANNER);
-  const items4 = [, , ];
+  const tmpResult7 = userHasSubscription(504);
+  closure_28 = userHasSubscription(15578).usePromotionMarketingComponent(tmp(10730).MarketingComponentType.MARKETING_PAGE_BANNER);
+  const tmpResult8 = userHasSubscription(15578);
+  const premiumTrialOffer = userHasSubscription(7703).usePremiumTrialOffer();
+  const tmpResult9 = userHasSubscription(7703);
+  let items4 = [, , ];
   ({ container: arr5[0], themedBackground: arr5[1] } = tmp4);
   let num = 0;
+  const premiumDiscountOffer = userHasSubscription(8599).usePremiumDiscountOffer();
   if (!userHasSubscription) {
     num = top;
   }
-  const obj6 = { style: items4, children: null };
+  function renderScrollContent(arg0) {
+    if (arg0) {
+      const obj = { style: closure_8.sectionWidth, onBack: onClose };
+      let tmp3 = closure_2_11(PlanSelectHeaderDefault, obj);
+    } else {
+      tmp3 = closure_25;
+    }
+    items = [tmp3, closure_1_1, dependencyMap, , , , , , , ];
+    if (!c26) {
+      items[3] = null;
+      if (arg0) {
+        items[4] = null;
+        let tmp21 = null != closure_28;
+        if (tmp21) {
+          tmp21 = "marketingPageBanner" === closure_28.properties.properties.oneofKind;
+        }
+        if (tmp21) {
+          const obj2 = { style: null, bannerFields: null, analyticsPage: "Marketing Page Banner Tile", onPaymentSuccess: null, onPaymentDismiss: null, componentId: null, promotionId: null };
+          const items1 = [, , ];
+          ({ sectionWithPadding: arr4[0], sectionWidth: arr4[1] } = closure_8);
+          const obj3 = { marginBottom: nativeDefault.space.PX_24 };
+          items1[2] = obj3;
+          obj2.style = items1;
+          obj2.bannerFields = closure_28.properties.properties.marketingPageBanner;
+          obj2.onPaymentSuccess = onPaymentSuccess;
+          obj2.onPaymentDismiss = onPaymentDismiss;
+          ({ id: obj5.componentId, promotionId: obj5.promotionId } = closure_28);
+          tmp21 = closure_2_11(MarketingPageBannerTileDefault, obj2);
+        }
+        items[5] = tmp21;
+        if (arg0) {
+          const obj4 = { style: null, order: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null, onLayout: null, onFirstCardLayout: null };
+          const items2 = [, ];
+          ({ planSelectCardsSection: arr6[0], sectionWidth: arr6[1] } = closure_8);
+          obj4.style = items2;
+          obj4.order = order;
+          obj4.applicationId = applicationId;
+          obj4.onPaymentSuccess = onPaymentSuccess;
+          obj4.onPaymentDismiss = onPaymentDismiss;
+          obj4.onLayout = onLayout;
+          obj4.onFirstCardLayout = onFirstCardLayout;
+          let tmp29Result = closure_2_11(PlanSelectCardsDefault, obj4);
+          let tmp40 = closure_2_11;
+          let tmp42 = importDefault;
+          let tmp32 = closure_8;
+        } else {
+          const obj6 = { style: null, order: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null, onLayout: null, onFirstCardLayout: null };
+          tmp32 = closure_8;
+          const items3 = [, ];
+          ({ sectionWithPadding: arr5[0], sectionWidth: arr5[1] } = closure_8);
+          obj6.style = items3;
+          obj6.order = order;
+          obj6.applicationId = applicationId;
+          obj6.onPaymentSuccess = onPaymentSuccess;
+          obj6.onPaymentDismiss = onPaymentDismiss;
+          obj6.onLayout = onLayout;
+          obj6.onFirstCardLayout = onFirstCardLayout;
+          tmp29Result = closure_2_11(PremiumFeaturesCardsDefault, obj6);
+          tmp40 = closure_2_11;
+          tmp42 = importDefault;
+        }
+        items[6] = tmp29Result;
+        const obj7 = { style: null };
+        const items4 = [, ];
+        ({ sectionWithTopMargin: arr7[0], sectionWidth: arr7[1] } = tmp32);
+        obj7.style = items4;
+        items[7] = tmp40(tmp42(15636), obj7);
+        const obj8 = { style: null, isFractionalOnly: null };
+        const items5 = [, , ];
+        ({ sectionWithTopMargin: arr8[0], sectionWithPadding: arr8[1], sectionWidth: arr8[2] } = tmp32);
+        obj8.style = items5;
+        obj8.isFractionalOnly = flag;
+        items[8] = tmp40(tmp42(15641), obj8);
+        const items6 = [, , , ];
+        ({ sectionWithTopMargin: arr9[0], sectionWithPadding: arr9[1], sectionWidth: arr9[2] } = tmp32);
+        let tmp54 = null;
+        if (enabled) {
+          const obj9 = { marginBottom: null };
+          const _Math = Math;
+          obj9.marginBottom = Math.max(bottom, tmp42(575).space.PX_16) + 48;
+          tmp54 = obj9;
+        }
+        const obj10 = { style: null, showSubscribeButton: null };
+        items6[3] = tmp54;
+        obj10.style = items6;
+        let tmp58 = !userHasSubscription;
+        if (!userHasSubscription) {
+          tmp58 = !enabled;
+        }
+        const obj11 = { children: null };
+        obj10.showSubscribeButton = tmp58;
+        items[9] = tmp40(tmp42(15658), obj10);
+        obj11.children = items;
+        return application_id(closure_2_10, obj11);
+      } else {
+        if (userHasSubscription) {
+          let sectionWithTopMargin = closure_8.sectionWithTopMargin;
+        } else {
+          sectionWithTopMargin = {};
+        }
+        const obj12 = { style: null };
+        const items7 = [sectionWithTopMargin, closure_8.sectionWidth];
+        obj12.style = items7;
+        closure_2_11(premium_HeaderDefault, obj12);
+      }
+    } else {
+      let items8 = [closure_8.accountCreditContainer, ];
+      const obj13 = { style: null, children: null };
+      items8[1] = userHasSubscription ? {} : closure_8.accountCreditContainerWithSpacing;
+      obj13.style = items8;
+      items8 = children;
+      obj13.children = children;
+      closure_2_11(hasOwnProperty, obj13);
+    }
+  }
+  let obj6 = { style: items4, children: null };
   items4[2] = { paddingTop: num };
-  const items5 = [sharedValue(navigation(analyticsLocations[28]), {}), , ];
-  const obj7 = {
+  let items5 = [c11(UserSettingsAccountUnverifiedHeaderDefault, {}), , ];
+  let obj7 = {
     contentContainerStyle: tmp4.scrollContainer,
     onScroll: function handleScroll(nativeEvent) {
       nativeEvent = nativeEvent.nativeEvent;
       const contentOffset = nativeEvent.contentOffset;
-      let tmp2 = !c3;
-      if (!c3) {
+      let tmp2 = !c11;
+      if (!c11) {
         tmp2 = nativeEvent.layoutMeasurement.height + contentOffset.y >= tmp.height;
       }
       if (tmp2) {
@@ -162,7 +311,7 @@ export default function PremiumMarketingPage(userHasSubscription) {
         _undefined(true);
       }
       if (enabled) {
-        if (c5) {
+        if (showAfterLastCard) {
           let current = ref3.current;
         } else {
           current = ref.current + ref2.current;
@@ -178,88 +327,25 @@ export default function PremiumMarketingPage(userHasSubscription) {
     showsVerticalScrollIndicator: false,
     children: null
   };
-  const items6 = [tmp16, subscriptionDetails, billingInfo, , , , , , , ];
-  if (!hasAccountCreditResult) {
-    items6[3] = null;
-    const obj8 = { style: null };
-    const items7 = [userHasSubscription ? tmp4.sectionWithTopMargin : {}, tmp4.sectionWidth];
-    obj8.style = items7;
-    items6[4] = tmp22(tmp6(tmp2[30]), obj8);
-    let tmp22Result = null != promotionMarketingComponent1;
-    if (tmp22Result) {
-      tmp22Result = "marketingPageBanner" === promotionMarketingComponent1.properties.properties.oneofKind;
+  if (!userHasSubscription) {
+    if (null == premiumTrialOffer) {
+      if (null == premiumDiscountOffer) {
+        let obj8 = { children: renderScrollContent };
+        let renderScrollContentResult = tmp21(enabled, obj8);
+      }
+      obj7.children = renderScrollContentResult;
+      items5[1] = tmp21(tmp22, obj7);
+      let tmp21Result2 = null;
+      if (tmp9) {
+        let obj9 = { style: tmp4.sectionWidth, isVisible: sharedValue, backgroundColor: tmp4.themedBackground.backgroundColor };
+        tmp21Result2 = tmp21(PremiumMarketingFloatingSubscribeButtonDefault, obj9);
+      }
+      items5[2] = tmp21Result2;
+      obj6.children = items5;
+      return tmp19(order, obj6);
     }
-    if (tmp22Result) {
-      const obj9 = { style: null, bannerFields: null, analyticsPage: "Marketing Page Banner Tile", onPaymentSuccess: null, onPaymentDismiss: null, componentId: null, promotionId: null };
-      const items8 = [, , ];
-      ({ sectionWithPadding: arr10[0], sectionWidth: arr10[1] } = tmp4);
-      const obj10 = { marginBottom: tmp6(tmp2[8]).space.PX_24 };
-      items8[2] = obj10;
-      obj9.style = items8;
-      obj9.bannerFields = promotionMarketingComponent1.properties.properties.marketingPageBanner;
-      obj9.onPaymentSuccess = onPaymentSuccess;
-      obj9.onPaymentDismiss = onPaymentDismiss;
-      ({ id: obj17.componentId, promotionId: obj17.promotionId } = promotionMarketingComponent1);
-      tmp22Result = tmp22(tmp6(tmp2[31]), obj9);
-      const tmp6Result5 = tmp6(tmp2[31]);
-    }
-    items6[5] = tmp22Result;
-    const obj11 = { style: null, order: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null, onLayout: null, onFirstCardLayout: null };
-    const items9 = [, ];
-    ({ sectionWithPadding: arr11[0], sectionWidth: arr11[1] } = tmp4);
-    obj11.style = items9;
-    obj11.order = premiumFeatureCardOrder;
-    obj11.applicationId = applicationId;
-    obj11.onPaymentSuccess = onPaymentSuccess;
-    obj11.onPaymentDismiss = onPaymentDismiss;
-    obj11.onLayout = callback;
-    obj11.onFirstCardLayout = callback1;
-    items6[6] = tmp22(tmp6(tmp2[32]), obj11);
-    const obj12 = { style: null };
-    const items10 = [, ];
-    ({ sectionWithTopMargin: arr12[0], sectionWidth: arr12[1] } = tmp4);
-    obj12.style = items10;
-    items6[7] = tmp22(tmp6(tmp2[33]), obj12);
-    const obj13 = { style: null, isFractionalOnly: null };
-    const items11 = [, , ];
-    ({ sectionWithTopMargin: arr13[0], sectionWithPadding: arr13[1], sectionWidth: arr13[2] } = tmp4);
-    obj13.style = items11;
-    obj13.isFractionalOnly = flag;
-    items6[8] = tmp22(tmp6(tmp2[34]), obj13);
-    const items12 = [, , , ];
-    ({ sectionWithTopMargin: arr14[0], sectionWithPadding: arr14[1], sectionWidth: arr14[2] } = tmp4);
-    let tmp28 = null;
-    if (tmp9) {
-      const obj14 = { marginBottom: null };
-      const _Math = Math;
-      obj14.marginBottom = Math.max(rect.bottom, tmp6(tmp2[8]).space.PX_16) + 48;
-      tmp28 = obj14;
-    }
-    const obj15 = { style: null, showSubscribeButton: null };
-    items12[3] = tmp28;
-    obj15.style = items12;
-    let tmp30 = !userHasSubscription;
-    if (!userHasSubscription) {
-      tmp30 = !enabled;
-    }
-    obj15.showSubscribeButton = tmp30;
-    items6[9] = tmp22(tmp6(tmp2[35]), obj15);
-    obj7.children = items6;
-    items5[1] = tmp20(tmp23, obj7);
-    let tmp22Result3 = null;
-    if (tmp9) {
-      const obj16 = { style: tmp4.sectionWidth, isVisible: sharedValue, backgroundColor: tmp4.themedBackground.backgroundColor };
-      tmp22Result3 = tmp22(tmp6(tmp2[36]), obj16);
-    }
-    items5[2] = tmp22Result3;
-    obj6.children = items5;
-    return tmp20(tmp21, obj6);
-  } else {
-    const items13 = [tmp4.accountCreditContainer, ];
-    const obj18 = { style: null, children: null };
-    items13[1] = userHasSubscription ? {} : tmp4.accountCreditContainerWithSpacing;
-    obj18.style = items13;
-    obj18.children = accountCredit;
-    tmp22(tmp21, obj18);
   }
+  renderScrollContentResult = renderScrollContent(false);
+  tmp19 = c12;
+  const tmpResult10 = userHasSubscription(8599);
 };

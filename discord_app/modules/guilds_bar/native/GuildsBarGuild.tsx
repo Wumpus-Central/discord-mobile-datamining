@@ -1,33 +1,33 @@
-// === Module 18664: GuildsBarGuild ===
+// === Module 18711: GuildsBarGuild ===
 
-// Module 18664 (GuildsBarGuild)
+// Module 18711 (GuildsBarGuild)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import GuildIcon from "GuildIcon" /* 7045 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 18636 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18644 */;
-import isGuildsBarGuildDataEqualDefault from "isGuildsBarGuildDataEqual" /* 18676 */;
-import useGuildsBarBadgesDefault from "useGuildsBarBadges" /* 18677 */;
-import usePreloadedGuildAssetDefault from "usePreloadedGuildAsset" /* 18683 */;
-import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 18684 */;
+import GuildIcon from "GuildIcon" /* 7020 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 18683 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18691 */;
+import isGuildsBarGuildDataEqualDefault from "isGuildsBarGuildDataEqual" /* 18723 */;
+import useGuildsBarBadgesDefault from "useGuildsBarBadges" /* 18724 */;
+import usePreloadedGuildAssetDefault from "usePreloadedGuildAsset" /* 18730 */;
+import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 18731 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6854 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6966 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
-import SortedGuildStore from "SortedGuildStore" /* 6852 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6829 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6941 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
+import SortedGuildStore from "SortedGuildStore" /* 6827 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildRecord = fn(5037);
+const GuildRecord = fn(5007);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(18635).useItemDragState;
-const TRANSITION_PHYSICS = fn(18632).TRANSITION_PHYSICS;
+const useItemDragState = fn(18682).useItemDragState;
+const TRANSITION_PHYSICS = fn(18679).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { guildIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.guildIcon = size;
@@ -119,7 +119,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
               const obj2 = c1(1252);
             }
           }
-          c1(18659)(_undefined);
+          c1(18706)(_undefined);
         }
       }
       const obj3 = { title: null, body: null };
@@ -127,7 +127,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
       obj3.title = intl.string(c0(1113).t.R0RpRX);
       const intl2 = c0(1113).intl;
       obj3.body = intl2.string(c0(1113).t.m9gRVN);
-      return c1(6116).show(obj3);
+      return c1(6090).show(obj3);
     }
   }), items4);
   const memo1 = noop.useMemo(() => {
@@ -290,21 +290,21 @@ export default noop.memo(function GuildsBarGuild(guildId) {
   if (enableHome) {
     if (!flag2) {
       const obj10 = { guildId, onActiveHookChange: callback };
-      tmp28Result = closure_16(tmp4(18665), obj10);
+      tmp28Result = closure_16(tmp4(18712), obj10);
     }
   }
   obj8.expandedChildren = tmp28Result;
   if (isUnavailable) {
-    const obj11 = { source: tmp4(18687), style: tmp.guildIcon };
-    let tmp28Result2 = closure_16(tmp4(5872), obj11);
-    const tmp4Result3 = tmp4(5872);
+    const obj11 = { source: tmp4(18734), style: tmp.guildIcon };
+    let tmp28Result2 = closure_16(tmp4(5842), obj11);
+    const tmp4Result3 = tmp4(5842);
   } else if (null != tmp15) {
     const obj12 = { source: tmp15, style: tmp.guildIcon };
-    tmp28Result2 = closure_16(tmp4(5872), obj12);
+    tmp28Result2 = closure_16(tmp4(5842), obj12);
   } else {
-    const obj13 = { value: guildName, selected, animate: selected, size: tmp2(7045).GuildIconSizes.LARGE };
-    tmp28Result2 = closure_16(tmp4(7045), obj13);
-    const tmp4Result4 = tmp4(7045);
+    const obj13 = { value: guildName, selected, animate: selected, size: tmp2(7020).GuildIconSizes.LARGE };
+    tmp28Result2 = closure_16(tmp4(7020), obj13);
+    const tmp4Result4 = tmp4(7020);
   }
   obj8.children = tmp28Result2;
   return closure_16(GuildsBarAnimatedItemWrapperDefault, obj8);

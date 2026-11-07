@@ -1,68 +1,43 @@
-// === Module 19639: VoicePanelScreenshareButton ===
+// === Module 19710: VoicePanelScreenshareButton ===
 
-// Module 19639 (VoicePanelScreenshareButton)
-import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useAlertStore from "useAlertStore" /* 6118 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14773 */;
+// Module 19710 (VoicePanelScreenshareButton)
+import _modDef38 from "module_38" /* 38 */;
+import NativeViewDefault from "NativeView" /* 7023 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
+import useVoicePanelScreenshareToggleDefault from "useVoicePanelScreenshareToggle" /* 19570 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19698 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 
-const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
-
-require = fn;
-const AnalyticEvents = fn(1072).AnalyticEvents;
+const require = fn;
 const jsx = fn(21).jsx;
 const MetaQuestUtils = fn(1624);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(14314).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(14348).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(19640).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(19576).MobilePhoneShareIcon;
 }
-const createStyles = fn(5170);
-let closure_8 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" } });
+const createStyles = fn(5140);
+let closure_7 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
 
 export default function ScreenshareButton(arg0) {
-  let isActive;
-  let isFeatureEnabled;
-  let onPress;
-  closure_4 = undefined;
   ({ props, wrapperSpecs } = arg0);
-  const channelId = onPress.useContext(isActive(isFeatureEnabled[8])).channelId;
-  const tmp3 = closure_8();
-  const voicePanelButtonStyles = channelId(isFeatureEnabled[9]).useVoicePanelButtonStyles(wrapperSpecs);
-  let obj = channelId(isFeatureEnabled[9]);
-  items = [closure_4];
-  const stateFromStores = channelId(isFeatureEnabled[10]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  isActive(isFeatureEnabled[11])(null != stateFromStores, "null channel in VoicePanelScreenshareButton");
-  const tmp8 = isActive(isFeatureEnabled[12])(stateFromStores);
-  isActive = tmp8.isActive;
-  isFeatureEnabled = tmp8.isFeatureEnabled;
-  onPress = tmp8.onPress;
-  const VideoGuardExperiment = channelId(isFeatureEnabled[13]).VideoGuardExperiment;
-  const videoEnabled = VideoGuardExperiment.useConfig({ location: "VoicePanelScreenshareButton" }).videoEnabled;
-  closure_4 = tmp9;
-  const items1 = [isActive, isFeatureEnabled, onPress, !videoEnabled];
-  let tmp11 = !tmp9;
-  const callback = onPress.useCallback(() => {
-    if (closure_4) {
-      const obj2 = { title: null };
-      const obj3 = useAlertStore;
-      const intl = util.intl;
-      obj2.title = intl.string(util.t.GFr0GR);
-      obj3.openAlert(VoicePanelVideoGuardErrorAlert.VOICE_PANEL_VIDEO_GUARD_ERROR_KEY, jsx(VoicePanelVideoGuardErrorAlertDefault, { title: null }));
-    } else if (isFeatureEnabled) {
-      const obj4 = { source: "connected button", was_active: isActive };
-      AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED, obj4);
-      onPress();
-    }
-  }, items1);
-  if (videoEnabled) {
-    tmp11 = !isFeatureEnabled;
+  const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
+  const tmp3 = closure_7();
+  const voicePanelButtonStyles = channelId(19697).useVoicePanelButtonStyles(wrapperSpecs);
+  const obj = channelId(19697);
+  items = [ChannelStore];
+  const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  _modDef38(null != stateFromStores, "null channel in VoicePanelScreenshareButton");
+  const tmp8 = useVoicePanelScreenshareToggleDefault(stateFromStores, "VoicePanelScreenshareButton", "connected button");
+  ({ isActive, videoBlocked } = tmp8);
+  let tmp9 = !videoBlocked;
+  if (!videoBlocked) {
+    tmp9 = !tmp8.isFeatureEnabled;
   }
-  if (tmp11) {
+  if (tmp9) {
     let color = voicePanelButtonStyles.iconFillMuted.color;
   } else {
     color = voicePanelButtonStyles.iconFill.color;
@@ -70,16 +45,16 @@ export default function ScreenshareButton(arg0) {
   if (isActive) {
     color = voicePanelButtonStyles.iconFillSelected.color;
   }
-  if (videoEnabled) {
-    let MobilePhoneDenyIcon = MobilePhoneShareIcon;
+  if (videoBlocked) {
+    let MobilePhoneDenyIcon = tmp4(19711).MobilePhoneDenyIcon;
   } else {
-    MobilePhoneDenyIcon = tmp4(tmp2[18]).MobilePhoneDenyIcon;
+    MobilePhoneDenyIcon = MobilePhoneShareIcon;
   }
-  const element = { onPress: callback, disabled: tmp11, props, accessibilityLabel: null, style: null, children: null };
-  let obj2 = channelId(isFeatureEnabled[10]);
-  let intl = tmp4(tmp2[16]).intl;
+  const element = { onPress: tmp8.onPress, disabled: tmp9, props, accessibilityLabel: null, style: null, children: null };
+  const obj2 = channelId(504);
+  const intl = tmp4(1113).intl;
   const string = intl.string;
-  const t = tmp4(tmp2[16]).t;
+  const t = tmp4(1113).t;
   if (isActive) {
     let stringResult = string(t.CpkXwZ);
   } else {
@@ -91,9 +66,9 @@ export default function ScreenshareButton(arg0) {
     iconBgSelected = voicePanelButtonStyles.iconBgSelected;
   }
   element.style = iconBgSelected;
-  let obj3 = { style: tmp3.iconContainer, children: null };
-  const tmpResult = isActive(isFeatureEnabled[19]);
+  const obj3 = { style: tmp3.iconContainer, children: null };
+  const tmpResult = VoicePanelAnimatedButtonWrapperDefault;
   obj3.children = <MobilePhoneDenyIcon color={color} />;
-  element.children = jsx(isActive(isFeatureEnabled[20]), { style: tmp3.iconContainer, children: null });
-  return <tmpResult onPress={callback} disabled={tmp11} props={props} accessibilityLabel={null} style={null}>{null}</tmpResult>;
+  element.children = jsx(NativeViewDefault, { style: tmp3.iconContainer, children: null });
+  return <tmpResult onPress={tmp8.onPress} disabled={tmp9} props={props} accessibilityLabel={null} style={null}>{null}</tmpResult>;
 };

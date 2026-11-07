@@ -1,10 +1,10 @@
-// === Module 7370: LastMentionTimestampStore ===
+// === Module 7347: LastMentionTimestampStore ===
 
-// Module 7370 (LastMentionTimestampStore)
+// Module 7347 (LastMentionTimestampStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6830 */;
 import UserStore from "UserStore" /* 1385 */;
 
 let timestamp = null;

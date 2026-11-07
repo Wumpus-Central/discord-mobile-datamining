@@ -1,7 +1,7 @@
-// === Module 13199: conjureProjectGroups ===
+// === Module 13222: conjureProjectGroups ===
 
-// Module 13199 (conjureProjectGroups)
-import conjureServerProject from "conjureServerProject" /* 7479 */;
+// Module 13222 (conjureProjectGroups)
+import conjureServerProject from "conjureServerProject" /* 7456 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/project_groups/conjureProjectGroups.tsx");
@@ -15,7 +15,7 @@ export function groupConjureProjects(arg0, stateFromStoresArray, stateFromStores
   while (iter !== undefined) {
     let tmp2 = nextResult;
     let obj2 = conjureServerProject;
-    let result = obj2.conjureServerProjectGuildId(nextResult);
+    let result = obj2.conjureServerAppGuildId(nextResult);
     let tmp6 = result;
     if (null != result) {
       value = map.get(tmp6);

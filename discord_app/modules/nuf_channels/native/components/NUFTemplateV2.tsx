@@ -1,15 +1,15 @@
-// === Module 15421: NUFTemplateV2 ===
+// === Module 15456: NUFTemplateV2 ===
 
-// Module 15421 (NUFTemplateV2)
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
+// Module 15456 (NUFTemplateV2)
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_5 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 46, paddingLeft: 18, paddingRight: 18 }, illustration: { alignSelf: "stretch", alignItems: "center", marginBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplateV2.tsx");

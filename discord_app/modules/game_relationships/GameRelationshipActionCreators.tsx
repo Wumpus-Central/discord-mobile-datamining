@@ -1,10 +1,10 @@
-// === Module 10877: GameRelationshipActionCreators ===
+// === Module 10860: GameRelationshipActionCreators ===
 
-// Module 10877 (GameRelationshipActionCreators)
+// Module 10860 (GameRelationshipActionCreators)
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5177 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6116 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6604 */;
+import shared from "shared" /* 5147 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6090 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6579 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -42,7 +42,7 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_9 = async function _removeGameFriend() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(5177).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(5147).AccessibilityAnnouncer;
       const intl = closure_1_0(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1113).t.zRf8cO));
     }
@@ -131,7 +131,7 @@ let closure_10 = async function _cancelGameFriendRequest() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(5177).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(5147).AccessibilityAnnouncer;
       const intl = closure_1_0(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1113).t.XMf21q));
     }
@@ -170,7 +170,7 @@ export default {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
     }).catch((error) => {
-      const aPIError = new onSuccess(6604).APIError(error);
+      const aPIError = new onSuccess(6579).APIError(error);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1113).intl;

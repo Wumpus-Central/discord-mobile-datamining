@@ -1,6 +1,6 @@
-// === Module 13644: openCheckpoint ===
+// === Module 13668: openCheckpoint ===
 
-// Module 13644 (openCheckpoint)
+// Module 13668 (openCheckpoint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _openCheckpoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -91,7 +91,7 @@ let closure_5 = async function _openCheckpoint(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(13643).CheckpointFetchStates;
+const CheckpointFetchStates = fn(13667).CheckpointFetchStates;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/openCheckpoint.native.tsx");
 

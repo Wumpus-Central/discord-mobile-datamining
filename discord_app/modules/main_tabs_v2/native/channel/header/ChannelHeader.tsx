@@ -1,22 +1,22 @@
-// === Module 14774: ChannelHeader ===
+// === Module 14807: ChannelHeader ===
 
-// Module 14774 (ChannelHeader)
+// Module 14807 (ChannelHeader)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import RootNavigationRef from "RootNavigationRef" /* 5345 */;
-import ChatInputUtils from "ChatInputUtils" /* 5353 */;
-import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11701 */;
-import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 14775 */;
-import HomeChannelHeaderDefault from "HomeChannelHeader" /* 14776 */;
-import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 14777 */;
-import ForumChannelHeaderDefault from "ForumChannelHeader" /* 14782 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14783 */;
+import RootNavigationRef from "RootNavigationRef" /* 5315 */;
+import ChatInputUtils from "ChatInputUtils" /* 5323 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11683 */;
+import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 14808 */;
+import HomeChannelHeaderDefault from "HomeChannelHeader" /* 14809 */;
+import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 14810 */;
+import ForumChannelHeaderDefault from "ForumChannelHeader" /* 14815 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14816 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 
 require = fn;
 const ComponentActions = fn(1072).ComponentActions;
-const StaticChannelRoute = fn(5026).StaticChannelRoute;
+const StaticChannelRoute = fn(4996).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx");
@@ -38,7 +38,7 @@ export default function ChannelHeader(channelId) {
   items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(563);
-  const isChannelContentGated = channelId(6814).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(6789).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;

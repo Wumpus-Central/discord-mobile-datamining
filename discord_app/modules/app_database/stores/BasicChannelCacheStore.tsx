@@ -1,11 +1,11 @@
-// === Module 5020: BasicChannelCacheStore ===
+// === Module 4990: BasicChannelCacheStore ===
 
-// Module 5020 (BasicChannelCacheStore)
+// Module 4990 (BasicChannelCacheStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 5021 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4991 */;
 
 new LoggerDefault("BasicChannelCacheStore");
 const Store = initializeDefault.Store;

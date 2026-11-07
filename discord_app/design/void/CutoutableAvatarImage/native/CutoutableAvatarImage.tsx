@@ -1,22 +1,22 @@
-// === Module 15086: CutoutableAvatarImage ===
+// === Module 15118: CutoutableAvatarImage ===
 
-// Module 15086 (CutoutableAvatarImage)
+// Module 15118 (CutoutableAvatarImage)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import v1 from "v1" /* 1266 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5791 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import ClipView from "ClipView" /* 9611 */;
-import getChannelIcon from "getChannelIcon" /* 15088 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 15089 */;
+import spring_spring from "spring/spring" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import ClipView from "ClipView" /* 9593 */;
+import getChannelIcon from "getChannelIcon" /* 15120 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 15121 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
-const inlineStyles = Circle(8122);
-const inlineStylesDefault = tmp9(8122);
+const inlineStyles = Circle(8101);
+const inlineStylesDefault = tmp9(8101);
 require = fn;
 function StaticNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
@@ -189,7 +189,7 @@ function CutoutAvatarImage(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHANNEL_SPRING_CONFIG = fn(15087).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(15119).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const logger = new LoggerDefault("UIKit - AvatarImage");

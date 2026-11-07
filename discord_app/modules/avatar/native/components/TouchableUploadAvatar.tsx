@@ -1,20 +1,20 @@
-// === Module 19873: TouchableUploadAvatar ===
+// === Module 19942: TouchableUploadAvatar ===
 
-// Module 19873 (TouchableUploadAvatar)
+// Module 19942 (TouchableUploadAvatar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import Pressables from "Pressables" /* 7068 */;
-import _modDef14588 from "module_14588" /* 14588 */;
-import _modDef15937 from "module_15937" /* 15937 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import Pressables from "Pressables" /* 7043 */;
+import _modDef14621 from "module_14621" /* 14621 */;
+import _modDef15985 from "module_15985" /* 15985 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { avatarContainer: { display: "flex", paddingTop: 24 }, defaultLogoStyle: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 }, uploadedAvatarStyle: { width: 200, height: 200, borderRadius: 100, position: "relative" }, avatarWrapper: null, uploadAvatarWrapper: null, uploadAvatarIcon: null };
 let size = { borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "dashed", borderWidth: 2, borderRadius: nativeDefault.radii.round, width: 200, height: 200, justifyContent: "center", alignItems: "center", position: "relative", overflow: "visible" };
 obj2.avatarWrapper = size;
@@ -33,7 +33,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef15937;
+    let tmp3 = _modDef15985;
   } else {
     tmp3 = avatarSource;
   }
@@ -49,7 +49,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     const obj4 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
     items = [React4(FastImageDefault, obj4), ];
     const obj5 = { style: tmp.uploadAvatarWrapper, children: null };
-    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef14588, style: tmp.uploadAvatarIcon };
+    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef14621, style: tmp.uploadAvatarIcon };
     obj5.children = React4(native.Icon, obj6);
     items[1] = React4(View, obj5);
     obj3.children = items;

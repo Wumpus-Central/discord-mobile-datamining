@@ -1,13 +1,13 @@
-// === Module 7732: ReferralTrialActionCreators ===
+// === Module 7709: ReferralTrialActionCreators ===
 
-// Module 7732 (ReferralTrialActionCreators)
+// Module 7709 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7733 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7710 */;
 import UserRecord from "UserRecord" /* 1404 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
 import Backoff from "Backoff" /* 559 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -141,7 +141,7 @@ let closure_15 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {

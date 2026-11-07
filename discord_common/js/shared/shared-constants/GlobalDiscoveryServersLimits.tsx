@@ -1,6 +1,6 @@
-// === Module 20369: GlobalDiscoveryServersLimits ===
+// === Module 20437: GlobalDiscoveryServersLimits ===
 
-// Module 20369 (GlobalDiscoveryServersLimits)
+// Module 20437 (GlobalDiscoveryServersLimits)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GlobalDiscoveryServersLimits.tsx");

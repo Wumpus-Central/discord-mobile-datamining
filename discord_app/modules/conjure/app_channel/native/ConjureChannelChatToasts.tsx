@@ -1,13 +1,13 @@
-// === Module 18970: ConjureChannelChatToasts ===
+// === Module 19020: ConjureChannelChatToasts ===
 
-// Module 18970 (ConjureChannelChatToasts)
+// Module 19020 (ConjureChannelChatToasts)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtils from "UserUtils" /* 5224 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import Card from "Card" /* 7065 */;
-import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 18971 */;
+import UserUtils from "UserUtils" /* 5194 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import Card from "Card" /* 7040 */;
+import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 19021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function ChatToast(message) {
     const obj2 = { style: tmp.opaque, children: null };
     const callback = noop.useCallback(() => onOpenChat(message), items);
     const obj3 = { variant: "primary", shadow: "high", border: "subtle", style: tmp.card, onPress: callback, children: null };
-    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
     const items1 = [hasOwnProperty(native.Avatar, obj4), ];
     const obj5 = { style: tmp.body, children: null };
     const obj6 = { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, children: name };
@@ -46,7 +46,7 @@ function ChatToast(message) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, alignItems: "flex-end", gap: nativeDefault.space.PX_8 };
 obj2.column = rect;

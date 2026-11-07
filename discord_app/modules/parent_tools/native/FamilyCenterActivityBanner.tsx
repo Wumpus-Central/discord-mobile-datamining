@@ -1,15 +1,15 @@
-// === Module 17038: FamilyCenterActivityBanner ===
+// === Module 17086: FamilyCenterActivityBanner ===
 
-// Module 17038 (FamilyCenterActivityBanner)
+// Module 17086 (FamilyCenterActivityBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2664 from "module_2664" /* 2664 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import useUserLinks from "useUserLinks" /* 8461 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8462 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 13569 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 17039 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import useUserLinks from "useUserLinks" /* 8440 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8441 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 13593 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 17087 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,9 +33,9 @@ function FamilyCenterActivityBannerButton() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let closure_6 = createStyles.createStyles({ container: { width: "100%" } });
-createStyles = fn(5170);
+createStyles = fn(5140);
 let obj3 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 }, art: null, header: null, description: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 };
 obj3.art = { maxWidth: 243, maxHeight: 119, marginBottom: nativeDefault.space.PX_8 };
@@ -62,7 +62,7 @@ export default function FamilyCenterActivityBanner() {
   const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2664.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2664.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
   const obj5 = { source: null, style: null };
   const formatResult = intl3.format(_modDef2664.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
-  obj5.source = importDefault(tmp3 ? 17046 : 17047);
+  obj5.source = importDefault(tmp3 ? 17094 : 17095);
   obj5.style = tmp4.art;
   items = [React4(FastImageDefault, obj5), React4(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), React4(Text_Text.Text, { style: tmp4.description, variant: "body-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;

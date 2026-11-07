@@ -1,10 +1,10 @@
-// === Module 14131: SearchFetcher ===
+// === Module 14156: SearchFetcher ===
 
-// Module 14131 (SearchFetcher)
+// Module 14156 (SearchFetcher)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef1487 from "module_1487" /* 1487 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -35,7 +35,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -80,7 +80,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             if (null == closure_129_0) {
               c4 = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else if (!closure_130_3.isCanceled) {
               if (200 === closure_129_0.status) {
                 closure_130_0(closure_129_0);
@@ -94,7 +94,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                 if (closure_130_3.query.attempts > 5) {
                   c4 = 0;
                   c6 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const _parseInt = parseInt;
                   closure_129_1 = parseInt(closure_129_0.headers["retry-after"]);
@@ -116,7 +116,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
           }
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
         c6 = 3;
       } catch (tmp49) {

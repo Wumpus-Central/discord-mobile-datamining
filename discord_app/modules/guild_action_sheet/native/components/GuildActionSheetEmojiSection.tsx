@@ -1,16 +1,16 @@
-// === Module 16062: GuildActionSheetEmojiSection ===
+// === Module 16110: GuildActionSheetEmojiSection ===
 
-// Module 16062 (GuildActionSheetEmojiSection)
+// Module 16110 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 575 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import HapticUtils from "HapticUtils" /* 5406 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5407 */;
-import ToastUtils from "ToastUtils" /* 5866 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9891 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import HapticUtils from "HapticUtils" /* 5376 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5377 */;
+import ToastUtils from "ToastUtils" /* 5836 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9875 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6876 */;
+import EmojiStore from "EmojiStore" /* 6851 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -22,7 +22,7 @@ const Constants = fn(1072);
 ({ UpsellTypes: closure_9, AnalyticsSections: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: nativeDefault.colors.TEXT_SUBTLE };
 obj2.dotSeparator = size;

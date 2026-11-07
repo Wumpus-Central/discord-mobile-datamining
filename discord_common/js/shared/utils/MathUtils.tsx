@@ -1,6 +1,6 @@
-// === Module 14402: MathUtils ===
+// === Module 14436: MathUtils ===
 
-// Module 14402 (MathUtils)
+// Module 14436 (MathUtils)
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function roundIfClose_MathUtilsTsx1(num,precision){const decimalPart=num-Math.floor(num);if(decimalPart>=1-precision){return Math.ceil(num);}if(decimalPart<=precision){return Math.floor(num);}return num;})" }];

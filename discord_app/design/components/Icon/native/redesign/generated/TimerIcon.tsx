@@ -1,9 +1,9 @@
-// === Module 11809: TimerIcon ===
+// === Module 11800: TimerIcon ===
 
-// Module 11809 (TimerIcon)
+// Module 11800 (TimerIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5871 */;
-import _mod11810 from "module_11810" /* 11810 */;
+import BaseIconImage from "BaseIconImage" /* 5841 */;
+import _mod11801 from "module_11801" /* 11801 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TimerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11810, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11801, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

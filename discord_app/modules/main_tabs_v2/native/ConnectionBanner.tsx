@@ -1,22 +1,22 @@
-// === Module 18759: ConnectionBanner ===
+// === Module 18809: ConnectionBanner ===
 
-// Module 18759 (ConnectionBanner)
+// Module 18809 (ConnectionBanner)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import LinearGradientDefault from "LinearGradient" /* 5745 */;
-import useToken from "useToken" /* 5754 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import spring_spring from "spring/spring" /* 5791 */;
-import _modDef7129 from "module_7129" /* 7129 */;
-import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 18760 */;
-import ConnectionFineIcon from "ConnectionFineIcon" /* 18762 */;
+import LinearGradientDefault from "LinearGradient" /* 5715 */;
+import useToken from "useToken" /* 5724 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import spring_spring from "spring/spring" /* 5761 */;
+import _modDef7104 from "module_7104" /* 7104 */;
+import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 18810 */;
+import ConnectionFineIcon from "ConnectionFineIcon" /* 18812 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 15827 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 15877 */;
 
 require = fn;
 function ConnectionBannerIcon(state) {
@@ -67,7 +67,7 @@ function ConnectionBannerContent(state) {
 function BackOnlineGlow(opacity) {
   let token;
   const tmp = closure_21();
-  token = token(5754).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
+  token = token(5724).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
   items = [token];
   const memo = noop.useMemo(() => {
     const obj = _modDef671(token);
@@ -84,10 +84,10 @@ function BackOnlineGlow(opacity) {
   const items1 = [tmp.glow, { opacity: opacity.progress }];
   obj2.style = items1;
   const obj3 = { style: tmp.glow, maskElement: null, children: null };
-  let obj = token(5754);
+  let obj = token(5724);
   obj3.maskElement = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors, locations, start, end });
   obj3.children = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: locations2, start: start2, end: end2 });
-  obj2.children = closure_12(_modDef7129, obj3);
+  obj2.children = closure_12(_modDef7104, obj3);
   return closure_12(_modDef1652.View, obj2);
 }
 function ConnectionBannerInner() {
@@ -191,8 +191,8 @@ function ConnectionBannerInner() {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const constants = fn(15827).ConnectivityIndicatorState;
-const YouBarConstants = fn(17337);
+const constants = fn(15877).ConnectivityIndicatorState;
+const YouBarConstants = fn(17385);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -205,7 +205,7 @@ const end = { x: 1, y: 0.5 };
 const locations2 = [0, 0.4, 0.75, 1];
 const start2 = { x: 0, y: 0 };
 const end2 = { x: 0, y: 1 };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { position: "absolute", left: 0, right: 0, bottom: 0 }, glow: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }, glowMaskGradient: { flex: 1 }, content: null, leadingSlot: null, spinner: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, height: CONNECTION_BANNER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.content = rect;
@@ -221,10 +221,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(15828).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(15878).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
-  let obj = stateFromStores(15828);
+  let obj = stateFromStores(15878);
   items = [ConnectivityIndicatorStateStore];
   stateFromStores = hidden(504).useStateFromStores(items, () => state.getState());
   dependencyMap = noop.useRef(null);

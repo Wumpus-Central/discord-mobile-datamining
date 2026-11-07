@@ -1,9 +1,9 @@
-// === Module 19759: TopEmojisDataManager ===
+// === Module 19828: TopEmojisDataManager ===
 
-// Module 19759 (TopEmojisDataManager)
-import TopEmojisUtils from "TopEmojisUtils" /* 10083 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7373 */;
+// Module 19828 (TopEmojisDataManager)
+import TopEmojisUtils from "TopEmojisUtils" /* 10067 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
 
 require = fn;
 const EmojiInteractionPoint = fn(1388).EmojiInteractionPoint;

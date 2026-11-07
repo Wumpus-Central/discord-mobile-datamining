@@ -1,9 +1,9 @@
-// === Module 15631: Tier048Px ===
+// === Module 15673: Tier048Px ===
 
-// Module 15631 (Tier048Px)
-import shared from "shared" /* 5177 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import _mod8898 from "module_8898" /* 8898 */;
+// Module 15673 (Tier048Px)
+import shared from "shared" /* 5147 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import _mod8880 from "module_8880" /* 8880 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,55 +14,55 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/Tier048Px.tsx");
 
 export function getTier048PxSource(theme) {
-  return _mod8898.getIllustrationSource(theme, {
+  return _mod8880.getIllustrationSource(theme, {
     dark() {
-      return require("module_15632");
+      return require("module_15674");
     },
     darker() {
-      return require("module_15633");
+      return require("module_15675");
     },
     light() {
-      return require("module_15634");
+      return require("module_15676");
     }
   });
 }
 export function useTier048PxSource() {
   const obj = shared;
-  return _mod8898.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15632");
+      return require("module_15674");
     },
     darker() {
-      return require("module_15633");
+      return require("module_15675");
     },
     light() {
-      return require("module_15634");
+      return require("module_15676");
     }
   });
 }
 export function Tier048Px(arg0) {
   const obj = shared;
-  const illustrationSource = _mod8898.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15632");
+      return require("module_15674");
     },
     darker() {
-      return require("module_15633");
+      return require("module_15675");
     },
     light() {
-      return require("module_15634");
+      return require("module_15676");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_15632");
+      return require("module_15674");
     },
     darker() {
-      return require("module_15633");
+      return require("module_15675");
     },
     light() {
-      return require("module_15634");
+      return require("module_15676");
     }
   };
   const merged = Object.assign(arg0);

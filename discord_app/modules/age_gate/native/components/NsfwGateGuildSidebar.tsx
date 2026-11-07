@@ -1,22 +1,22 @@
-// === Module 18630: NsfwGateGuildSidebar ===
+// === Module 18677: NsfwGateGuildSidebar ===
 
-// Module 18630 (NsfwGateGuildSidebar)
+// Module 18677 (NsfwGateGuildSidebar)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7472 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7449 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import GuildStore from "GuildStore" /* 5041 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildStore from "GuildStore" /* 5011 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7471).NsfwGateSource;
+const NsfwGateSource = fn(7448).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: closure_10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, emptyStateContainer: { flex: 1 } };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 7342: MultipleChoiceField ===
+// === Module 7319: MultipleChoiceField ===
 
-// Module 7342 (MultipleChoiceField)
+// Module 7319 (MultipleChoiceField)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6803 */;
+import TextStyles from "TextStyles" /* 6778 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 const obj2 = { container: { marginVertical: 12, flexDirection: "column" }, formHeader: null };
 const obj3 = {};
 const merged = Object.assign(TextStyles(fn(1083).Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16, { uppercase: false }));

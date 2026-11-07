@@ -1,12 +1,15 @@
-// === Module 15547: PremiumMarketingButtonActions ===
+// === Module 15582: PremiumMarketingButtonActions ===
 
-// Module 15547 (PremiumMarketingButtonActions)
-import ProductIds from "ProductIds" /* 7692 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7706 */;
-import cta_button from "cta_button" /* 9739 */;
-import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 15548 */;
-import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 15549 */;
-import PromotionsStore from "PromotionsStore" /* 9732 */;
+// Module 15582 (PremiumMarketingButtonActions)
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
+import openUserSettings from "openUserSettings" /* 7635 */;
+import ProductIds from "ProductIds" /* 7669 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7683 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7795 */;
+import cta_button from "cta_button" /* 9723 */;
+import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 15583 */;
+import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 15584 */;
+import PromotionsStore from "PromotionsStore" /* 9714 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +21,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx");
 
 export function getButtonActionHandler(arg0) {
-  ({ buttonAction, applicationId: require, analyticsLocations: importDefault, analyticsPage: dependencyMap, onPaymentSuccess: PromotionsStore, onPaymentDismiss: PremiumTypes } = arg0);
+  ({ buttonAction, applicationId: require, shopCollectionId: importDefault, analyticsLocations: dependencyMap, analyticsPage: PromotionsStore, onPaymentSuccess: PremiumTypes, onPaymentDismiss: closure_5 } = arg0);
   if (cta_button.ButtonAction.OPEN_SOCIAL_LAYER_STOREFRONT === buttonAction) {
     return () => {
       if (null != require) {
@@ -39,18 +42,31 @@ export function getButtonActionHandler(arg0) {
             const obj = { analyticsLocation: { page, section: constants.FOOTER, object: constants2.BUTTON_CTA, objectType: metroImportDefault.BUY }, analyticsLocations, onPaymentSuccess, onPaymentDismiss };
             return openPremiumPlanSelectionActionSheetDefault(obj);
           };
+        } else if (cta_button.ButtonAction.OPEN_SHOP === buttonAction) {
+          return () => {
+            const obj = { analyticsLocations, analyticsSource: AnalyticsLocationDefault.PREMIUM_MARKETING };
+            if (null != closure_1_1) {
+              const result = CollectiblesActionCreators.dispatchOpenCollectiblesShop(obj);
+              const obj5 = { screen: constants3.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, params: null };
+              const obj6 = { categorySkuId: tmp2, analyticsContext: null };
+              obj5.params = obj6;
+              openUserSettings.openUserSettings(obj5);
+            } else {
+              CollectiblesActionCreators.openCollectiblesShop(obj);
+            }
+          };
         } else {
           const OPEN_MARKETING_PAGE = cta_button.ButtonAction.OPEN_MARKETING_PAGE;
-          return () => require("openUserSettings").openUserSettings({ screen: constants3.PREMIUM });
+          return () => require("openUserSettings").openUserSettings({ screen: constants2.PREMIUM });
         }
       }
     }
     return () => {
-      onPaymentSuccess.getMarketingMomentRewardSkuIds();
+      page.getMarketingMomentRewardSkuIds();
       let obj = {
-        analyticsLocation: { page, section: constants.FOOTER, object: constants2.BUTTON_CTA, objectType: TIER_2.TIER_2 },
+        analyticsLocation: { page, section: onPaymentDismiss.FOOTER, object: constants.BUTTON_CTA, objectType: TIER_2.TIER_2 },
         analyticsLocations,
-        premiumType: onPaymentDismiss.TIER_2,
+        premiumType: onPaymentSuccess.TIER_2,
         onPaymentSuccess,
         onPaymentDismiss: function handlePaymentDismiss(arg0) {
           ({ productId, isSuccess } = arg0);
@@ -71,7 +87,7 @@ export function getButtonActionHandler(arg0) {
           tmp5 = productId === ProductIds.ProductIds.PREMIUM_TIER_2_MONTHLY || productId === ProductIds.ProductIds.PREMIUM_TIER_2_YEARLY;
         }
       };
-      analyticsLocations(page[5])(obj);
+      require("openPremiumPlanSelectionActionSheet")(obj);
     };
   }
 }

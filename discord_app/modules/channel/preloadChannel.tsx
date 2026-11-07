@@ -1,6 +1,6 @@
-// === Module 5914: preloadChannel ===
+// === Module 5887: preloadChannel ===
 
-// Module 5914 (preloadChannel)
+// Module 5887 (preloadChannel)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

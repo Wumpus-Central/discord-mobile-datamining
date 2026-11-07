@@ -1,7 +1,7 @@
-// === Module 13944: CustomTypingIndicatorDynamicAsset ===
+// === Module 13969: CustomTypingIndicatorDynamicAsset ===
 
-// Module 13944 (CustomTypingIndicatorDynamicAsset)
-import FastImageDefault from "FastImage" /* 5872 */;
+// Module 13969 (CustomTypingIndicatorDynamicAsset)
+import FastImageDefault from "FastImage" /* 5842 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_6 = createStyles.createStyles((width, gap) => {
   const obj = { emojiRow: { flexDirection: "row", gap }, emoji: { width, height: width }, text: { flexShrink: 1 } };
   return obj;

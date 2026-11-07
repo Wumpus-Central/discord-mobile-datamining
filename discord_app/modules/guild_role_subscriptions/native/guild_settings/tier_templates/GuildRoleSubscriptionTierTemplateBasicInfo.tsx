@@ -1,19 +1,19 @@
-// === Module 20324: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 20393: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 20324 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 20393 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17481 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17530 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { paddingBottom: nativeDefault.space.PX_24 }, header: null, headerText: null, image: null };
 const obj3 = { paddingBottom: nativeDefault.space.PX_24 };
 obj2.header = { flexDirection: "row", gap: nativeDefault.space.PX_16 };

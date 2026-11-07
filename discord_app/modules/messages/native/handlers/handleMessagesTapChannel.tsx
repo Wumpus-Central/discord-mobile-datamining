@@ -1,11 +1,11 @@
-// === Module 11742: handleMessagesTapChannel ===
+// === Module 11733: handleMessagesTapChannel ===
 
-// Module 11742 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7616 */;
+// Module 11733 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7593 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
 
 const require = fn;
 function maybeStartLurking() {
@@ -35,7 +35,7 @@ let closure_15 = async function _maybeStartLurking(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -115,7 +115,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
             closure_130_1(closure_130_3[11])({ guildId, staticRoute: channelId, itemId: messageId, navigationReplace: closure_129_1 });
           }
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       }
       if (null != messageId) {
@@ -135,7 +135,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
                 if (closure_129_7.type === closure_130_10.GUILD_STAGE_VOICE) {
                   if (!closure_130_9.can(closure_130_12.CONNECT, closure_129_7)) {
                     c4 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 }
                 if (closure_129_3 != null) {
@@ -202,7 +202,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
       return { value, done: true };
     } else if (value) {
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else if (3 === tmp5) {
     if (arg0 === 1) {
@@ -243,7 +243,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
       return { value, done: true };
     } else if (value) {
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else if (arg0 === 1) {
     c4 = 3;
@@ -271,8 +271,8 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
   ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
   return "flexDirection";
 };
-const isGuildVocalChannelType = fn(5023).isGuildVocalChannelType;
-const isGuildLurker = fn(5037).isGuildLurker;
+const isGuildVocalChannelType = fn(4993).isGuildVocalChannelType;
+const isGuildLurker = fn(5007).isGuildLurker;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_10, LinkingTypes: closure_11, Permissions: closure_12, Routes: map1 } = Constants);
 const size = fn(2);

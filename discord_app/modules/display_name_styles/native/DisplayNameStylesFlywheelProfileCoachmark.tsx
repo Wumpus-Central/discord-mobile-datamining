@@ -1,7 +1,7 @@
-// === Module 19167: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 19223: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 19167 (DisplayNameStylesFlywheelProfileCoachmark)
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 19168 */;
+// Module 19223 (DisplayNameStylesFlywheelProfileCoachmark)
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 19224 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -10,9 +10,9 @@ function CoachmarkImage() {
   return <View style={closure_8().coachmarkImageContainer}>{jsx(DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}</View>;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(5016).ContentDismissActionType;
+const ContentDismissActionType = fn(4986).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
@@ -62,6 +62,6 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     }
   }), items2);
   const obj2 = markAsDismissed(2171);
-  const coachmark = visible(10092).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(10076).useCoachmark(visible.targetRef, memo);
   return null;
 };

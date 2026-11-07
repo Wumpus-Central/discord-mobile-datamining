@@ -1,10 +1,10 @@
-// === Module 10829: UnifiedGiftModal ===
+// === Module 10812: UnifiedGiftModal ===
 
-// Module 10829 (UnifiedGiftModal)
+// Module 10812 (UnifiedGiftModal)
 import util from "util" /* 1113 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
-import NavigatorHeader from "NavigatorHeader" /* 7089 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10830 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
+import NavigatorHeader from "NavigatorHeader" /* 7064 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10813 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

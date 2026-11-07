@@ -1,19 +1,19 @@
-// === Module 16718: useUserProfileEditForm ===
+// === Module 16766: useUserProfileEditForm ===
 
-// Module 16718 (useUserProfileEditForm)
+// Module 16766 (useUserProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8823 */;
-import UserProfileStore from "UserProfileStore" /* 7871 */;
-import WidgetStore from "WidgetStore" /* 12537 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8802 */;
+import UserProfileStore from "UserProfileStore" /* 7848 */;
+import WidgetStore from "WidgetStore" /* 12550 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 const FormStates = fn(1072).FormStates;
-const HexagonCampaignPerk = fn(5195).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5165).HexagonCampaignPerk;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
 
@@ -50,7 +50,7 @@ export default function useUserProfileEditForm() {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       c13 = 2;
@@ -69,7 +69,7 @@ export default function useUserProfileEditForm() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -91,7 +91,7 @@ export default function useUserProfileEditForm() {
               const obj5 = { avatarDecoration: pendingChanges.pendingAvatarDecoration };
               dependencyMap = 1;
               c3 = 1;
-              const obj6 = { value: tmp5(7239).saveProfileAndAccountChanges(obj5), done: false };
+              const obj6 = { value: tmp5(7214).saveProfileAndAccountChanges(obj5), done: false };
               return obj6;
             }
           }
@@ -105,8 +105,8 @@ export default function useUserProfileEditForm() {
             ok = closure_128_0.ok;
           }
           if (ok) {
-            const result = tmp5(7239).resetPendingAccountChanges();
-            const obj = tmp5(7239);
+            const result = tmp5(7214).resetPendingAccountChanges();
+            const obj = tmp5(7214);
           }
         }
         c3 = 3;

@@ -1,24 +1,24 @@
-// === Module 11871: ChannelCallModal ===
+// === Module 11862: ChannelCallModal ===
 
-// Module 11871 (ChannelCallModal)
+// Module 11862 (ChannelCallModal)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5344 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7410 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8030 */;
-import VoiceChatHooks from "VoiceChatHooks" /* 11148 */;
-import RevealProvider from "RevealProvider" /* 11873 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11874 */;
-import CameraPreviewDefault from "CameraPreview" /* 11876 */;
-import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 12018 */;
-import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 12019 */;
-import PanGestureAnimationsDefault from "PanGestureAnimations" /* 12231 */;
-import RouteManagerUtils from "RouteManagerUtils" /* 12232 */;
-import useModalPanGestureDefault from "useModalPanGesture" /* 13384 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5314 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8008 */;
+import VoiceChatHooks from "VoiceChatHooks" /* 11134 */;
+import RevealProvider from "RevealProvider" /* 11864 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11865 */;
+import CameraPreviewDefault from "CameraPreview" /* 11867 */;
+import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 12009 */;
+import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 12010 */;
+import PanGestureAnimationsDefault from "PanGestureAnimations" /* 12222 */;
+import RouteManagerUtils from "RouteManagerUtils" /* 12223 */;
+import useModalPanGestureDefault from "useModalPanGesture" /* 13407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6923 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
 
 require = fn;
 class ChannelCallCameraPreview {
@@ -56,10 +56,10 @@ class ChannelCallModal {
     return jsx(closure_30, obj);
   }
 }
-const ChannelCallStore = fn(11144);
+const ChannelCallStore = fn(11130);
 ({ useChannelCallOrientationHandlers: metroImportDefault, resetChannelCallStore: closure_8, useChannelCallStore: closure_9, setVoiceChatDrawerState: closure_10, useIsVoiceChatFocused: closure_11 } = ChannelCallStore);
-const VoiceChatDrawerState = fn(11145).VoiceChatDrawerState;
-const Constants = fn(11872);
+const VoiceChatDrawerState = fn(11131).VoiceChatDrawerState;
+const Constants = fn(11863);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -71,14 +71,14 @@ let closure_18 = noop.memo(function NavigatorContainer(arg0) {
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(12018).terminate();
-        const obj = closure_1_1(12018);
-        closure_1_1(11370).setHidden(false);
-        const obj2 = closure_1_1(11370);
+        closure_1_1(12009).terminate();
+        const obj = closure_1_1(12009);
+        closure_1_1(11352).setHidden(false);
+        const obj2 = closure_1_1(11352);
         if (!obj3.isModalOpen(closure_1_31)) {
           closure_1_8();
         }
-        obj3 = channel(5344);
+        obj3 = channel(5314);
       };
     }
   }, items);
@@ -395,9 +395,9 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
   const animatedStyle = require("module_1652").useAnimatedStyle(ChannelCallModalTsx9);
   let tmp63 = null;
   if (null != stateFromStores) {
-    const obj9 = { value: tmp12Result(tmp12(7435).CHANNEL_CALL).analyticsLocations, children: null };
+    const obj9 = { value: tmp12Result(tmp12(7412).CHANNEL_CALL).analyticsLocations, children: null };
     const obj10 = { gesture: null, children: null };
-    const Gesture = tmp(5450).Gesture;
+    const Gesture = tmp(5420).Gesture;
     obj10.gesture = Gesture.Exclusive(withRefResult, result1);
     const obj11 = { style: animatedStyle, children: null };
     const obj12 = { value: tmp62, children: null };
@@ -406,10 +406,10 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
     const obj15 = { channel: stateFromStores };
     items23[1] = closure_15(ChannelCallCameraPreview, obj15);
     obj12.children = items23;
-    obj11.children = closure_16(tmp(11150).VoiceChatNavigationContext.Provider, obj12);
+    obj11.children = closure_16(tmp(11136).VoiceChatNavigationContext.Provider, obj12);
     obj10.children = closure_15(tmp12(1652).View, obj11);
-    obj9.children = closure_15(tmp(5450).GestureDetector, obj10);
-    tmp63 = closure_15(tmp(7410).AnalyticsLocationProvider, obj9);
+    obj9.children = closure_15(tmp(5420).GestureDetector, obj10);
+    tmp63 = closure_15(tmp(7387).AnalyticsLocationProvider, obj9);
   }
   return tmp63;
 });

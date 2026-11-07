@@ -1,18 +1,18 @@
-// === Module 9318: EndEventActionSheet ===
+// === Module 9300: EndEventActionSheet ===
 
-// Module 9318 (EndEventActionSheet)
+// Module 9300 (EndEventActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9064 */;
-import CallsUtils from "CallsUtils" /* 9319 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9046 */;
+import CallsUtils from "CallsUtils" /* 9301 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(5025).EXPLICIT_END_EVENT_SHEET_KEY;
+let closure_4 = fn(4995).EXPLICIT_END_EVENT_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: { fontSize: 24, fontFamily: fn(1072).Fonts.PRIMARY_BOLD, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, subtitle: { marginTop: 8, textAlign: "center" }, cancelButtonContainer: { marginTop: 24, alignSelf: "stretch" }, confirmButtonContainer: { marginTop: 8, alignSelf: "stretch" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/native
 export default function EndEventActionSheet(channel) {
   channel = channel.channel;
   const tmp = closure_7();
-  const activeEvent = channel(9188).useActiveEvent(channel.id);
+  const activeEvent = channel(9170).useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
   } else {
@@ -38,13 +38,13 @@ export default function EndEventActionSheet(channel) {
     const obj5 = { style: tmp.subtitle, variant: "body-md/medium", color: "text-default", children: null };
     const intl2 = tmp2(1113).intl;
     obj5.children = intl2.string(tmp2(1113).t["0I0B8f"]);
-    items[1] = closure_5(tmp2(5781).Text, obj5);
+    items[1] = closure_5(tmp2(5751).Text, obj5);
     const obj6 = { style: tmp.cancelButtonContainer, children: null };
     const obj7 = { text: null, grow: true, onPress: null };
     const intl3 = tmp2(1113).intl;
     obj7.text = intl3.string(tmp2(1113).t.P60OAX);
     obj7.onPress = handleClose;
-    obj6.children = closure_5(tmp2(5788).Button, obj7);
+    obj6.children = closure_5(tmp2(5758).Button, obj7);
     items[2] = closure_5(View, obj6);
     const obj8 = { style: tmp.confirmButtonContainer, children: null };
     const obj9 = { text: null, variant: "destructive", grow: true, onPress: null };
@@ -57,11 +57,11 @@ export default function EndEventActionSheet(channel) {
         CallsUtils.handleDisconnect(channel);
       }
     };
-    obj8.children = closure_5(tmp2(5788).Button, obj9);
+    obj8.children = closure_5(tmp2(5758).Button, obj9);
     items[3] = closure_5(View, obj8);
     obj3.children = items;
     obj2.children = closure_6(View, obj3);
-    return closure_5(activeEvent(14945), obj2);
+    return closure_5(activeEvent(14978), obj2);
   }
-  let obj = channel(9188);
+  let obj = channel(9170);
 };

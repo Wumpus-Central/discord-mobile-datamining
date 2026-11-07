@@ -1,9 +1,9 @@
-// === Module 14113: TwitterNeutralIcon ===
+// === Module 14138: TwitterNeutralIcon ===
 
-// Module 14113 (TwitterNeutralIcon)
+// Module 14138 (TwitterNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5871 */;
-import _mod14114 from "module_14114" /* 14114 */;
+import BaseIconImage from "BaseIconImage" /* 5841 */;
+import _mod14139 from "module_14139" /* 14139 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TwitterNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14114, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14139, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

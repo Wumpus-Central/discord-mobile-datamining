@@ -1,7 +1,7 @@
-// === Module 8439: ThreadNotificationSettingsToast ===
+// === Module 8418: ThreadNotificationSettingsToast ===
 
-// Module 8439 (ThreadNotificationSettingsToast)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5867 */;
+// Module 8418 (ThreadNotificationSettingsToast)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/threads/ThreadNotificationSettingsToast.native.tsx");

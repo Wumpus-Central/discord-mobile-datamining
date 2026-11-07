@@ -1,18 +1,18 @@
-// === Module 16978: AgeNoticeSettingsNotices ===
+// === Module 17026: AgeNoticeSettingsNotices ===
 
-// Module 16978 (AgeNoticeSettingsNotices)
+// Module 17026 (AgeNoticeSettingsNotices)
 import nativeDefault from "native" /* 575 */;
 import _modDef3284 from "module_3284" /* 3284 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5847 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6806 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6809 */;
-import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6818 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8046 */;
-import useUserIsTeen from "useUserIsTeen" /* 8460 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10270 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 16845 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16885 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16979 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5817 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6781 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6784 */;
+import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6793 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
+import useUserIsTeen from "useUserIsTeen" /* 8439 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10253 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 16893 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16933 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 17027 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -44,7 +44,7 @@ function TeenNotice(noticeType) {
   obj3.text = intl2.string(noticeType(1113).t.hvVgAZ);
   obj3.onPress = callback;
   obj2.action = obj3;
-  obj.children = jsx(noticeType(8116).InlineNotice, { type: "info", message: null, role: "status", action: null });
+  obj.children = jsx(noticeType(8095).InlineNotice, { type: "info", message: null, role: "status", action: null });
   return <View style={closure_10().container}>{null}</View>;
 }
 class MessageRequestsTeenNotice {
@@ -80,7 +80,7 @@ function UnconfirmedNotice(message) {
   obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1113).t.FDSSia);
   obj3.onPress = callback1;
   obj2.action = obj3;
-  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8116).InlineNotice, { type: "info", message: null, role: "status", action: null });
+  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8095).InlineNotice, { type: "info", message: null, role: "status", action: null });
   return <View style={closure_10().container}>{null}</View>;
 }
 class MessageRequestsUnconfirmedNotice {
@@ -90,11 +90,11 @@ class MessageRequestsUnconfirmedNotice {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(6817).AGE_NOTICE_SETTINGS_LOCATION;
-const Constants = fn(7577);
+let closure_6 = fn(6792).AGE_NOTICE_SETTINGS_LOCATION;
+const Constants = fn(7554);
 ({ SafetySettingsNoticeAction: metroImportDefault, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

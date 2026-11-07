@@ -1,11 +1,11 @@
-// === Module 5037: GuildRecord ===
+// === Module 5007: GuildRecord ===
 
-// Module 5037 (GuildRecord)
+// Module 5007 (GuildRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import StringUtils from "StringUtils" /* 2150 */;
-import ServerNSFWLevelExperiment from "ServerNSFWLevelExperiment" /* 5038 */;
-import PlainRecord from "PlainRecord" /* 5034 */;
+import ServerNSFWLevelExperiment from "ServerNSFWLevelExperiment" /* 5008 */;
+import PlainRecord from "PlainRecord" /* 5004 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

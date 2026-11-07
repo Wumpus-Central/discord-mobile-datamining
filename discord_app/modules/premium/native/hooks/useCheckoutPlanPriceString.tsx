@@ -1,13 +1,13 @@
-// === Module 15461: useCheckoutPlanPriceString ===
+// === Module 15496: useCheckoutPlanPriceString ===
 
-// Module 15461 (useCheckoutPlanPriceString)
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7691 */;
+// Module 15496 (useCheckoutPlanPriceString)
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7668 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const useNativeCheckoutStore = fn(7708).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7685).useNativeCheckoutStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
 

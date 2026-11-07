@@ -1,9 +1,9 @@
-// === Module 8741: TextSpoilerIcon ===
+// === Module 8720: TextSpoilerIcon ===
 
-// Module 8741 (TextSpoilerIcon)
+// Module 8720 (TextSpoilerIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5871 */;
-import _mod8712 from "module_8712" /* 8712 */;
+import BaseIconImage from "BaseIconImage" /* 5841 */;
+import _mod8691 from "module_8691" /* 8691 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TextSpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8712, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8691, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

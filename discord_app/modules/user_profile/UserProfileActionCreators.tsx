@@ -1,16 +1,16 @@
-// === Module 8830: UserProfileActionCreators ===
+// === Module 8809: UserProfileActionCreators ===
 
-// Module 8830 (UserProfileActionCreators)
+// Module 8809 (UserProfileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import shared from "shared" /* 5177 */;
-import InlineUploaderDefault from "InlineUploader" /* 7240 */;
-import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 7244 */;
-import MessageParserDefault from "MessageParser" /* 7923 */;
-import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 8831 */;
+import shared from "shared" /* 5147 */;
+import InlineUploaderDefault from "InlineUploader" /* 7215 */;
+import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 7219 */;
+import MessageParserDefault from "MessageParser" /* 7900 */;
+import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 8810 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -26,7 +26,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
             c9 = 1;
           } else {
             c9 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
       } else if (1 === tmp7) {

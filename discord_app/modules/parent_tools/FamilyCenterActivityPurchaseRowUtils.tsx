@@ -1,12 +1,12 @@
-// === Module 17065: FamilyCenterActivityPurchaseRowUtils ===
+// === Module 17113: FamilyCenterActivityPurchaseRowUtils ===
 
-// Module 17065 (FamilyCenterActivityPurchaseRowUtils)
+// Module 17113 (FamilyCenterActivityPurchaseRowUtils)
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
 import _modDef2664 from "module_2664" /* 2664 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7824 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7825 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7801 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7802 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 9535: GameProfileLinkAccount ===
+// === Module 9517: GameProfileLinkAccount ===
 
-// Module 9535 (GameProfileLinkAccount)
+// Module 9517 (GameProfileLinkAccount)
 import nativeDefault from "native" /* 575 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7208 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9439 */;
-import GameProfileSection from "GameProfileSection" /* 9536 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9537 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7183 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9421 */;
+import GameProfileSection from "GameProfileSection" /* 9518 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9519 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, cardImagesContainer: null, ellipseGroup: null, ellipse: null, cardImageApplication: null, userAvatar: null, cardContent: null, cardText: null, skeletonCardImage: null, skeletonUserAvatar: null, skeletonEllipse: null, skeletonCardContent: null, skeletonAnimationRoot: null, skeletonCardImagesContainerSmall: null, skeletonCardContentHeading: null, skeletonCardContentBody: null, skeletonCardContentBodySecondary: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj.cardImagesContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center" };

@@ -36,7 +36,8 @@ export const CollectiblesUpgradedSearchBarWidthPx = { DEFAULT: 182, [182]: "DEFA
 export const STATE_TRANSITION_THRESHOLD_PX = 20;
 export const SHOP_SEARCH_QUERY_MAX_LENGTH = 256;
 export const CollectiblesSearchBarCTAName = { SEARCH_ICON: "search icon", SEARCH_BAR: "search bar", SEARCH_BAR_CLEAR: "search bar clear" };
-export const CollectiblesSearchBarTileType = { SEARCH: "SEARCH", SEARCH_SUGGESTION: "search suggestion" };
+export const CollectiblesSearchBarTileType = { SEARCH: "SEARCH" };
+export const CollectiblesSearchInputMethod = { ENTER: "enter", SUGGESTION: "suggestion" };
 export const BROWSE_CATEGORY_QUERY_PARAM = "category";
 export const GAME_SERVER_GAME_ID_QUERY_PARAM = "game_server_game_id";
 export { CollectibleShopTab };

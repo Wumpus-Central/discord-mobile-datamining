@@ -1,22 +1,22 @@
-// === Module 14266: GameServerActionCreators ===
+// === Module 14296: GameServerActionCreators ===
 
-// Module 14266 (GameServerActionCreators)
+// Module 14296 (GameServerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import StoreUtils from "StoreUtils" /* 6613 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8563 */;
-import GameServerMocks from "GameServerMocks" /* 14268 */;
-import GameServerStatus from "GameServerStatus" /* 14269 */;
-import regionResponseToRegionDefault from "regionResponseToRegion" /* 14271 */;
+import StoreUtils from "StoreUtils" /* 6588 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8542 */;
+import GameServerMocks from "GameServerMocks" /* 14298 */;
+import GameServerStatus from "GameServerStatus" /* 14299 */;
+import regionResponseToRegionDefault from "regionResponseToRegion" /* 14301 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 import UserStore from "UserStore" /* 1385 */;
-import OwnedGameServersStore from "OwnedGameServersStore" /* 14267 */;
+import OwnedGameServersStore from "OwnedGameServersStore" /* 14297 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GAME_SERVER_COLLECTION_ID = fn(5377).GAME_SERVER_COLLECTION_ID;
+const GAME_SERVER_COLLECTION_ID = fn(5347).GAME_SERVER_COLLECTION_ID;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);
@@ -317,10 +317,10 @@ export function wakeMyGameServer(arg0) {
   return HTTP.post({ url: constants.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true }).then((body) => {
     body = body.body;
     let tmp3 = body;
-    if (body.status === closure_0(14269).GameServerStatus.SLEEPING) {
+    if (body.status === closure_0(14299).GameServerStatus.SLEEPING) {
       const obj2 = {};
       const merged = Object.assign(body);
-      obj2.status = closure_0(14269).GameServerStatus.STARTING;
+      obj2.status = closure_0(14299).GameServerStatus.STARTING;
       tmp3 = obj2;
     }
     const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

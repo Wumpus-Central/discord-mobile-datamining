@@ -1,16 +1,16 @@
-// === Module 9873: CommandPermissionContext ===
+// === Module 9857: CommandPermissionContext ===
 
-// Module 9873 (CommandPermissionContext)
+// Module 9857 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import Server from "Server" /* 2116 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7472 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7449 */;
 import noop from "module_19" /* 19 */;
-import ImpersonateStore from "ImpersonateStore" /* 5075 */;
+import ImpersonateStore from "ImpersonateStore" /* 5045 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -55,8 +55,8 @@ function computePermissions(isPrivate, arg1) {
   obj2.computedPermissions = deserializer.deserialize(0);
   return obj2;
 }
-const ChannelRecordBase = fn(5023).ChannelRecordBase;
-const isGuildNSFW = fn(5037).isGuildNSFW;
+const ChannelRecordBase = fn(4993).ChannelRecordBase;
+const isGuildNSFW = fn(5007).isGuildNSFW;
 const Constants = fn(1072);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);

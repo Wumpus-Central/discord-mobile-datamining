@@ -1,15 +1,15 @@
-// === Module 17172: OrbChallengeListItem ===
+// === Module 17220: OrbChallengeListItem ===
 
-// Module 17172 (OrbChallengeListItem)
+// Module 17220 (OrbChallengeListItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2298 from "module_2298" /* 2298 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7461 */;
-import OrbsIcon from "OrbsIcon" /* 9634 */;
-import _modDef9813 from "module_9813" /* 9813 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14895 */;
-import OrbChallengeTypes from "OrbChallengeTypes" /* 15880 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7438 */;
+import OrbsIcon from "OrbsIcon" /* 9616 */;
+import _modDef9797 from "module_9797" /* 9797 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14928 */;
+import OrbChallengeTypes from "OrbChallengeTypes" /* 15930 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ function OrbChallengeAsset(achievementStatus) {
   const tmp = closure_12();
   if (achievementStatus !== OrbChallengeTypes.UserAchievementStatus.COMPLETED) {
     if (achievementStatus !== OrbChallengeTypes.UserAchievementStatus.CLAIMED) {
-      const size = { assetUrl: _modDef9813, isAnimatedAsset, height: 40, width: 40 };
+      const size = { assetUrl: _modDef9797, isAnimatedAsset, height: 40, width: 40 };
       let tmp8 = React5(QuestDockRewardTileDefault, size);
     }
     return tmp8;
@@ -28,7 +28,7 @@ function OrbChallengeAsset(achievementStatus) {
   const obj = { style: tmp.completedRing, accessible: true, accessibilityLabel: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(_modDef2298.k6h2J3);
-  const size1 = { assetUrl: _modDef9813, isAnimatedAsset, height: 32, width: 32, style: tmp.completedTile };
+  const size1 = { assetUrl: _modDef9797, isAnimatedAsset, height: 32, width: 32, style: tmp.completedTile };
   obj.children = React5(QuestDockRewardTileDefault, size1);
   tmp8 = React5(metroImportDefault, obj);
 }
@@ -37,7 +37,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let c11 = false;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { item: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, pressableItem: null, pressedItem: null, content: null, completedRing: null, completedTile: null, inlineOrbIcon: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.pressableItem = { marginHorizontal: -nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: -nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm };
@@ -81,7 +81,7 @@ export function OrbChallengeListItem(achievementIdentifier) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

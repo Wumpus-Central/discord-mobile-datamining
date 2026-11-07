@@ -1,6 +1,6 @@
-// === Module 6628: StripeActionCreators ===
+// === Module 6603: StripeActionCreators ===
 
-// Module 6628 (StripeActionCreators)
+// Module 6603 (StripeActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _createStripeSetupIntent() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_5 = async function _createSetupIntentForPaymentElements() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

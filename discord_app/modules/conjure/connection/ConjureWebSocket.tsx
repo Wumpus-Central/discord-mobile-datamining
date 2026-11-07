@@ -1,6 +1,6 @@
-// === Module 11113: ConjureWebSocket ===
+// === Module 11099: ConjureWebSocket ===
 
-// Module 11113 (ConjureWebSocket)
+// Module 11099 (ConjureWebSocket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/connection/ConjureWebSocket.tsx");
@@ -431,6 +431,20 @@ prototype["sendSmartContext"] = function sendSmartContext(enabled) {
       const socket = self.socket;
       const _JSON = JSON;
       const obj = { type: "set_smart_context", enabled };
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendDownstreamUpdates"] = function sendDownstreamUpdates(enabled) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "set_downstream_updates", enabled };
       socket.send(JSON.stringify(obj));
     }
   }

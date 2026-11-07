@@ -1,15 +1,15 @@
-// === Module 19294: SettingsOverviewScreen ===
+// === Module 19353: SettingsOverviewScreen ===
 
-// Module 19294 (SettingsOverviewScreen)
+// Module 19353 (SettingsOverviewScreen)
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import SettingBuilders from "SettingBuilders" /* 11703 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17743 */;
+import SettingBuilders from "SettingBuilders" /* 11685 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17792 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 
 require = fn;
-const MobileUserSettings = fn(8524).MobileUserSettings;
+const MobileUserSettings = fn(8503).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");

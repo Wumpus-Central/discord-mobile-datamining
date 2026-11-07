@@ -1,23 +1,23 @@
-// === Module 7754: CacheStore ===
+// === Module 7731: CacheStore ===
 
-// Module 7754 (CacheStore)
+// Module 7731 (CacheStore)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TryLoad from "TryLoad" /* 5068 */;
-import modules_MessagesDefault from "modules/Messages" /* 7755 */;
-import timeRequireDefault from "timeRequire" /* 7770 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7897 */;
-import AuthenticationUtils from "AuthenticationUtils" /* 7909 */;
+import TryLoad from "TryLoad" /* 5038 */;
+import modules_MessagesDefault from "modules/Messages" /* 7732 */;
+import timeRequireDefault from "timeRequire" /* 7747 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7874 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7886 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6648 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6623 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 
 require = fn;
 function handleClearCaches(type) {
@@ -45,7 +45,7 @@ let closure_20 = async function _loadChannelHistory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -126,7 +126,7 @@ let closure_21 = async function _loadEarlyCache(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -207,28 +207,28 @@ let closure_21 = async function _loadEarlyCache(arg0) {
             return applyArgumentsResult;
           })(closure_1_0, dependencyMap));
           if (null != closure_0) {
-            let timeAsyncResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: private_channels", async () => closure_1(5069).getAsync(closure_1_0, null));
+            let timeAsyncResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: private_channels", async () => closure_1(5039).getAsync(closure_1_0, null));
           } else {
             timeAsyncResult = Promise.resolve([]);
           }
           if (null == closure_0) {
             let resolved = Promise.resolve({});
           } else {
-            resolved = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_settings", async () => closure_1(7767).getAll(closure_1_0));
+            resolved = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_settings", async () => closure_1(7744).getAll(closure_1_0));
           }
           if (null == closure_0) {
             let resolved1 = Promise.resolve([]);
           } else {
-            resolved1 = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: read_states", async () => closure_1(7768).getAll(closure_1_0));
+            resolved1 = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: read_states", async () => closure_1(7745).getAll(closure_1_0));
           }
           if (null == closure_0) {
             let resolveResult = allResult.Promise.resolve([]);
             const _Promise5 = allResult.Promise;
           } else {
-            resolveResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_guild_settings", async () => closure_1(7769).getAll(closure_1_0));
+            resolveResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_guild_settings", async () => closure_1(7746).getAll(closure_1_0));
           }
-          timeRequireDefault("AllCacheStores", () => closure_1_0(7771));
-          timeRequireDefault("MobileAppDatabaseManager", () => closure_1_0(7885));
+          timeRequireDefault("AllCacheStores", () => closure_1_0(7748));
+          timeRequireDefault("MobileAppDatabaseManager", () => closure_1_0(7862));
           items = [
             result,
             measureAsyncResult,
@@ -412,7 +412,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -449,7 +449,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
               if (c22) {
                 c6 = 1;
                 c7 = 1;
-                const obj6 = { value: TryLoad.tryLoadAsync(async () => closure_1(10).timeAsync("\u{1F4BE}", "cache: guilds", async () => closure_2_1(7891).getAsync(closure_1_0))), done: false };
+                const obj6 = { value: TryLoad.tryLoadAsync(async () => closure_1(10).timeAsync("\u{1F4BE}", "cache: guilds", async () => closure_2_1(7868).getAsync(closure_1_0))), done: false };
                 return obj6;
               } else {
                 c6 = 2;
@@ -496,7 +496,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
             if ("@me" !== closure_132_2) {
               c6 = 3;
               c7 = 1;
-              const obj13 = { value: closure_133_0(closure_133_2[24]).tryLoadAsync(async () => closure_1(7891).getOneAsync(closure_1_0, dependencyMap)), done: false };
+              const obj13 = { value: closure_133_0(closure_133_2[24]).tryLoadAsync(async () => closure_1(7868).getOneAsync(closure_1_0, dependencyMap)), done: false };
               return obj13;
             }
           }
@@ -537,7 +537,7 @@ let closure_24 = async function _loadInitialGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -632,7 +632,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -668,7 +668,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                       items = [
                         closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                           if (null != closure_1_0) {
-                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: cache_version", async () => closure_2_1(7895).okAsync(closure_1_0));
+                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: cache_version", async () => closure_2_1(7872).okAsync(closure_1_0));
                             const obj = closure_2_1(initialGuildId[13]);
                           } else {
                             timeAsyncResult = Promise.resolve(true);
@@ -682,7 +682,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                       items[1] = closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                         if (null != closure_1_0) {
                           if (!closure_2_22) {
-                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: lazy guilds", async () => closure_2_1(7891).getAsync(closure_1_0));
+                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: lazy guilds", async () => closure_2_1(7868).getAsync(closure_1_0));
                             const obj = closure_2_1(initialGuildId[13]);
                           }
                           return timeAsyncResult;
@@ -692,7 +692,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                       let obj2 = closure_0(initialGuildId[24]);
                       items[2] = closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                         if (null != closure_1_0) {
-                          let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: basic_channels", async () => closure_2_1(7889).getAsync(closure_1_0));
+                          let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: basic_channels", async () => closure_2_1(7866).getAsync(closure_1_0));
                           const obj2 = closure_2_1(initialGuildId[13]);
                         } else {
                           const obj = { all: [], stale: [], channels: [] };
@@ -884,7 +884,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
           }
         });
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp20) {
       c7 = tmp;
@@ -899,7 +899,7 @@ function resumeFluxAndSocket(arg0) {
   const Emitter = initializeDefault.Emitter;
   Emitter.batched(() => {
     try {
-      f141391();
+      f142023();
       dispatcher = dispatcher.dispatcher;
       if (dispatcher.hasStuffToDispatchNow()) {
         c2 = true;
@@ -1000,7 +1000,7 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1130,13 +1130,13 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
                 c5 = 1;
                 const obj11 = {
                   value: (function dontLoadLateLazyCache() {
-                                const f141391 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                                const f142023 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
                                 const socket = closure_5.getSocket();
                                 dependencyMap = false;
                                 const Emitter = socket(504).Emitter;
                                 Emitter.batched(() => {
                                   try {
-                                    f141391();
+                                    f142023();
                                     dispatcher = dispatcher.dispatcher;
                                     if (dispatcher.hasStuffToDispatchNow()) {
                                       c2 = true;

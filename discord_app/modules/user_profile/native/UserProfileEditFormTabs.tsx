@@ -1,17 +1,17 @@
-// === Module 16816: UserProfileEditFormTabs ===
+// === Module 16864: UserProfileEditFormTabs ===
 
-// Module 16816 (UserProfileEditFormTabs)
+// Module 16864 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ChatInputUtils from "ChatInputUtils" /* 5353 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7873 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8906 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9087 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15145 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15163 */;
-import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15234 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16815 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16817 */;
+import ChatInputUtils from "ChatInputUtils" /* 5323 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7850 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8888 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9069 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15177 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15196 */;
+import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15268 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16863 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16865 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,10 +23,10 @@ function MainPage() {
   return timestampProducer(View, { style: closure_9().page, children: noop.useContext(UserProfileEditFormMainPageContextDefault) });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7460).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7437).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING }, page: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING };
 obj.page = { paddingHorizontal: PROFILE_SIDE_PADDING, paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
@@ -63,7 +63,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     num2 = 1;
   }
   [first, closure_5] = first.useState(num2);
-  arr = tmp2(15144)(userId);
+  arr = tmp2(15176)(userId);
   closure_7 = tmp8;
   let items1 = [arr];
   const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
@@ -143,7 +143,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     str = "overlay";
   }
   obj6.variant = str;
-  const items7 = [arr(tmp10(12344).Tabs, obj6), arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
+  const items7 = [arr(tmp10(12342).Tabs, obj6), arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
   obj5.children = items7;
   return closure_8(closure_5, obj5);
 });

@@ -1,12 +1,12 @@
-// === Module 16230: Ellipsis ===
+// === Module 16278: Ellipsis ===
 
-// Module 16230 (Ellipsis)
+// Module 16278 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5400 */;
+import timing_timing from "timing/timing" /* 5370 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
 const _modDef1652 = _mod1652;
 
@@ -103,7 +103,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let c7 = 233.33333333333334;
 let c8 = 116.66666666666667;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { typingIndicator: { justifyContent: "center", alignItems: "center", flexDirection: "row", marginRight: 4 }, typingIndicatorDot: null };
 let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, marginRight: 2, height: 6, width: 6 };
 obj.typingIndicatorDot = size;

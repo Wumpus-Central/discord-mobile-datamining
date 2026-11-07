@@ -1,16 +1,17 @@
-// === Module 7816: FamilyCenterActionCreators ===
+// === Module 7793: FamilyCenterActionCreators ===
 
-// Module 7816 (FamilyCenterActionCreators)
+// Module 7793 (FamilyCenterActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7568 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7817 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7794 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 function maybeFetchCollectiblesForInvoices() {
   const self = this;
-  const apply = closure_9.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -18,7 +19,7 @@ function maybeFetchCollectiblesForInvoices() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
+let closure_10 = async function _maybeFetchCollectiblesForInvoices(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -29,7 +30,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -58,7 +59,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
           const _Array = Array;
           c2 = 1;
           c1 = 1;
-          const obj4 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[4]).maybeFetchCollectiblesProduct(item))), done: false };
+          const obj4 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[5]).maybeFetchCollectiblesProduct(item))), done: false };
           return obj4;
         }
       } else if (arg0 === 1) {
@@ -70,7 +71,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -80,7 +81,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
 };
 function maybeFetchCollectiblesForGifts() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -88,7 +89,7 @@ function maybeFetchCollectiblesForGifts() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
+let closure_12 = async function _maybeFetchCollectiblesForGifts(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -99,7 +100,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -123,7 +124,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
           const _Array = Array;
           c2 = 1;
           c1 = 1;
-          const obj4 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[4]).maybeFetchCollectiblesProduct(item))), done: false };
+          const obj4 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[5]).maybeFetchCollectiblesProduct(item))), done: false };
           return obj4;
         }
       } else if (arg0 === 1) {
@@ -135,7 +136,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -143,7 +144,38 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
     }
   }
 };
-let closure_12 = async function _updateLinkForUserId() {
+function showTeenSettingsLoadErrorToast() {
+  SafetyToastsActionCreatorsDefault.showFailedToast(SafetyToastType.FAMILY_CENTER_TEEN_SETTINGS_LOAD_ERROR);
+}
+let closure_16 = async function _requestTeenSettingsAndConsents(arg0) {
+  closure_2 = tmp3;
+  closure_129_0 = closure_0;
+  const HTTP = require("HTTPUtils").HTTP;
+  await HTTP.get({ url: closure_2_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
+  if (1 === tmp7) {
+    c3 = 0;
+    closure_129_4 = closure_130_14.get(closure_129_0);
+    if (null != closure_129_4) {
+      if (closure_129_4.size > 0) {
+        const item = closure_129_4.forEach((fn) => fn());
+      }
+      c5 = 3;
+    }
+    closure_130_15();
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    const body = value.body;
+    const settings = body.settings;
+    const consents = body.consents;
+    closure_130_1(closure_130_2[8]).dispatch({ type: "FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS", userId: closure_129_0, settings, consents });
+    c3 = 0;
+    closure_130_1(closure_130_2[8]);
+  }
+  return value;
+};
+let closure_17 = async function _updateLinkForUserId() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {
@@ -157,7 +189,7 @@ let closure_12 = async function _updateLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -182,7 +214,7 @@ let closure_12 = async function _updateLinkForUserId() {
             const obj5 = {
               value: HTTP.patch(request).then((body) => {
                         body = body.body;
-                        link_status(closure_1_2[5]).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: body });
+                        link_status(closure_1_2[8]).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: body });
                         return body;
                       }),
               done: false
@@ -198,7 +230,7 @@ let closure_12 = async function _updateLinkForUserId() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -207,7 +239,7 @@ let closure_12 = async function _updateLinkForUserId() {
     }
   })();
 };
-let closure_13 = async function _removeLinkForUserId() {
+let closure_18 = async function _removeLinkForUserId() {
   c2 = 0;
   c1 = 0;
   return (async (arg0) => {
@@ -221,7 +253,7 @@ let closure_13 = async function _removeLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -246,7 +278,7 @@ let closure_13 = async function _removeLinkForUserId() {
             const obj5 = {
               value: HTTP.del(request).then((body) => {
                         body = body.body;
-                        c1(c2[5]).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: body, deletedUserId });
+                        c1(c2[8]).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: body, deletedUserId });
                         return body;
                       }),
               done: false
@@ -262,7 +294,7 @@ let closure_13 = async function _removeLinkForUserId() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -271,7 +303,7 @@ let closure_13 = async function _removeLinkForUserId() {
     }
   })();
 };
-let closure_14 = async function _getLinkCodeForCurrentUser() {
+let closure_19 = async function _getLinkCodeForCurrentUser() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -282,7 +314,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -305,7 +337,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
             value: value.then((body) => {
                       body = body.body;
                       const link_code = body.link_code;
-                      closure_1_1(closure_1_2[5]).dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: link_code, expiresAt: body.expires_at });
+                      closure_1_1(closure_1_2[8]).dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: link_code, expiresAt: body.expires_at });
                       return link_code;
                     }),
             done: false
@@ -321,7 +353,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -329,7 +361,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
     }
   }
 };
-let closure_15 = async function _shareIarWithParents() {
+let closure_20 = async function _shareIarWithParents() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -340,7 +372,7 @@ let closure_15 = async function _shareIarWithParents() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -370,7 +402,7 @@ let closure_15 = async function _shareIarWithParents() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -378,9 +410,12 @@ let closure_15 = async function _shareIarWithParents() {
     }
   }
 };
-const FamilyCenterAction = fn(7815).FamilyCenterAction;
+const FamilyCenterAction = fn(7792).FamilyCenterAction;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, Endpoints: metroImportDefault } = Constants);
+const SafetyToastType = fn(7554).SafetyToastType;
+const map = new Map();
+const map1 = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActionCreators.tsx");
 
@@ -405,7 +440,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -429,12 +464,12 @@ export default {
               let age_group;
               closure_140_6 = undefined;
               if (flag) {
-                actions(users[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-                const obj13 = actions(users[5]);
+                actions(users[8]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+                const obj13 = actions(users[8]);
               }
               c14 = 1;
-              const HTTP = totals(users[6]).HTTP;
-              const obj5 = { url: totalSpendCurrency.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: totals(users[6]).rejectWithMigratedError() };
+              const HTTP = totals(users[7]).HTTP;
+              const obj5 = { url: totalSpendCurrency.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: totals(users[7]).rejectWithMigratedError() };
               c15 = 2;
               c16 = 1;
               const obj7 = { value: HTTP.get(obj5), done: false };
@@ -442,7 +477,7 @@ export default {
             }
           } else if (1 === tmp7) {
             c14 = 0;
-            actions(users[5]).dispatch({ type: "FAMILY_CENTER_INITIAL_LOAD_FAILURE" });
+            actions(users[8]).dispatch({ type: "FAMILY_CENTER_INITIAL_LOAD_FAILURE" });
             c16 = 3;
             return { value: null, done: true };
           } else {
@@ -583,7 +618,7 @@ export default {
                 if (tmp49) {
                   c15 = 3;
                   c16 = 1;
-                  const obj10 = { value: spendingLimit(closure_140_6.invoices), done: false };
+                  const obj10 = { value: monthlyPurchases(closure_140_6.invoices), done: false };
                   return obj10;
                 }
               }
@@ -606,15 +641,15 @@ export default {
                 return obj;
               }
               const obj14 = { type: "FAMILY_CENTER_INITIAL_LOAD", familyCenterTeenActivity: closure_140_6, linkedUsers: linked_users, users: users2, ageGroup: age_group };
-              actions(users[5]).dispatch(obj14);
+              actions(users[8]).dispatch(obj14);
               let tmp67 = null != body.restricted_schedule;
               if (tmp67) {
                 tmp67 = null != closure_140_6.teenId;
               }
               if (tmp67) {
                 const obj16 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_140_6.teenId, restrictedSchedule: body.restricted_schedule };
-                actions(users[5]).dispatch(obj16);
-                const obj6 = actions(users[5]);
+                actions(users[8]).dispatch(obj16);
+                const obj6 = actions(users[8]);
               }
               c16 = 3;
               const obj17 = { value: closure_140_6, done: true };
@@ -627,7 +662,7 @@ export default {
             if (tmp54) {
               c15 = 4;
               c16 = 1;
-              const obj18 = { value: invoices(closure_140_6.gifts), done: false };
+              const obj18 = { value: gifts(closure_140_6.gifts), done: false };
               return obj18;
             }
           }
@@ -651,7 +686,7 @@ export default {
       const body = value.body;
       closure_128_1 = { linkedUsers: body.linked_users, users: body.users };
       const merged = Object.assign(closure_128_1);
-      closure_129_1(closure_129_2[5]).dispatch({ type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" });
+      closure_129_1(closure_129_2[8]).dispatch({ type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" });
       return closure_128_1;
     })();
   },
@@ -659,7 +694,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     return (async () => {
-      const HTTP = teen_id(dependencyMap[6]).HTTP;
+      const HTTP = teen_id(dependencyMap[7]).HTTP;
       const request = { url: constants.FAMILY_CENTER_CONNECTION_PREREQUISITES, query: { teen_id, link_code }, rejectWithError: true };
       await HTTP.get(request);
       return value.body;
@@ -700,7 +735,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -714,28 +749,27 @@ export default {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              closure_9 = tmp3;
               closure_8 = tmp7;
               closure_136_0 = undefined;
               let body;
               let teen_audit_log;
               closure_136_3 = undefined;
-              topGuildActivities(totalSpendAmount[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-              c11 = 1;
+              topGuildActivities(totalSpendAmount[8]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+              let v0 = 1;
               const result = gifts.FAMILY_CENTER_TEEN_ACTIVITY(topUserActivities);
-              const HTTP = topUserActivities(totalSpendAmount[6]).HTTP;
+              const HTTP = topUserActivities(totalSpendAmount[7]).HTTP;
               const obj6 = { url: result, rejectWithError: null };
-              const obj16 = topGuildActivities(totalSpendAmount[5]);
-              obj6.rejectWithError = topUserActivities(totalSpendAmount[6]).rejectWithMigratedError();
+              const obj16 = topGuildActivities(totalSpendAmount[8]);
+              obj6.rejectWithError = topUserActivities(totalSpendAmount[7]).rejectWithMigratedError();
               c12 = 2;
               c13 = 1;
               const obj7 = { value: HTTP.get(obj6), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {
-            c11 = 0;
-            closure_136_4 = tmp69;
-            topGuildActivities(totalSpendAmount[5]).dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_FAILURE" });
+            v0 = 0;
+            closure_136_4 = closure_10;
+            topGuildActivities(totalSpendAmount[8]).dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_FAILURE" });
             throw closure_136_4;
           } else {
             if (2 === tmp7) {
@@ -743,13 +777,13 @@ export default {
                 c13 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                c11 = 0;
+                v0 = 0;
                 c13 = 3;
                 const obj8 = { value, done: true };
                 return obj8;
               } else {
                 closure_136_0 = value;
-                c11 = 0;
+                v0 = 0;
                 body = closure_136_0.body;
                 teen_audit_log = body.teen_audit_log;
                 const obj9 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, totals: teen_audit_log.totals, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
@@ -827,7 +861,7 @@ export default {
                 if (invoices) {
                   c12 = 3;
                   c13 = 1;
-                  const obj10 = { value: closure_8(closure_136_3.invoices), done: false };
+                  const obj10 = { value: tmp3(closure_136_3.invoices), done: false };
                   return obj10;
                 }
               }
@@ -850,11 +884,11 @@ export default {
                 return obj;
               }
               const obj13 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: closure_136_3 };
-              topGuildActivities(totalSpendAmount[5]).dispatch(obj13);
+              topGuildActivities(totalSpendAmount[8]).dispatch(obj13);
               if (null != body.restricted_schedule) {
                 const obj14 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_137_0, restrictedSchedule: body.restricted_schedule };
-                topGuildActivities(totalSpendAmount[5]).dispatch(obj14);
-                const obj5 = topGuildActivities(totalSpendAmount[5]);
+                topGuildActivities(totalSpendAmount[8]).dispatch(obj14);
+                const obj5 = topGuildActivities(totalSpendAmount[8]);
               }
               c13 = 3;
               const obj15 = { value: closure_136_3, done: true };
@@ -867,12 +901,13 @@ export default {
             if (gifts) {
               c12 = 4;
               c13 = 1;
-              const obj17 = { value: tmp69(closure_136_3.gifts), done: false };
+              const obj17 = { value: v0(closure_136_3.gifts), done: false };
               return obj17;
             }
           }
         } catch (tmp69) {
-          if (tmp4 === c11) {
+          closure_10 = tmp69;
+          if (tmp4 === v0) {
             c13 = tmp2;
             throw tmp69;
           } else {
@@ -888,8 +923,8 @@ export default {
     closure_2 = startId;
     asyncGeneratorStep = event_id;
     return (async () => {
-      const HTTP = topUserActivities(totalSpendAmount[6]).HTTP;
-      await HTTP.get({ url: tmp2.FAMILY_CENTER_TEEN_ACTIVITY_MORE(topUserActivities, topGuildActivities, closure_2, closure_3), rejectWithError: topUserActivities(totalSpendAmount[6]).rejectWithMigratedError() });
+      const HTTP = topUserActivities(totalSpendAmount[7]).HTTP;
+      await HTTP.get({ url: tmp2.FAMILY_CENTER_TEEN_ACTIVITY_MORE(topUserActivities, topGuildActivities, closure_2, closure_3), rejectWithError: topUserActivities(totalSpendAmount[7]).rejectWithMigratedError() });
       const teen_audit_log = value.body.teen_audit_log;
       const obj8 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
       const top_user_activities = teen_audit_log.top_user_activities;
@@ -941,9 +976,9 @@ export default {
       }
       obj8.gifts = gifts;
       closure_134_1 = obj8;
-      topGuildActivities(totalSpendAmount[7]).track(tmp5.FAMILY_CENTER_ACTION, { action: gifts.LoadMore, selected_teen_id: closure_135_0, action_display_type: closure_135_1 });
-      topGuildActivities(totalSpendAmount[7]);
-      topGuildActivities(totalSpendAmount[5]).dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS", familyCenterTeenActivity: closure_134_1 });
+      topGuildActivities(totalSpendAmount[9]).track(tmp5.FAMILY_CENTER_ACTION, { action: gifts.LoadMore, selected_teen_id: closure_135_0, action_display_type: closure_135_1 });
+      topGuildActivities(totalSpendAmount[9]);
+      topGuildActivities(totalSpendAmount[8]).dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS", familyCenterTeenActivity: closure_134_1 });
       return teen_audit_log;
     })();
   },
@@ -951,15 +986,106 @@ export default {
     DispatcherDefault.dispatch({ type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: REQUESTS });
   },
   fetchTeenSettingsAndConsents(id) {
-    _require = id;
-    const HTTP = require("HTTPUtils").HTTP;
-    const obj = { url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
-    value = HTTP.get(obj);
-    return value.then((body) => {
-      ({ settings, consents } = body.body);
-      DispatcherDefault.dispatch({ type: "FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS", userId, settings, consents });
-    });
+    closure_0 = id;
+    return (async () => {
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: "HermesInternal" };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_0 = tmp3;
+              value = map.get(closure_0);
+              if (null != value) {
+                c4 = 3;
+                const obj4 = { value, done: true };
+                return obj4;
+              } else {
+                const tmp26 = (function requestTeenSettingsAndConsents() {
+                  const self = this;
+                  const apply = closure_1_16.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_0);
+                const result = map.set(closure_0, tmp26);
+                c3 = 1;
+                c1 = 2;
+                c4 = 1;
+                const obj5 = { value: tmp26, done: false };
+                return obj5;
+              }
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            map.delete(closure_128_0);
+            throw closure_2;
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            map.delete(closure_128_0);
+            c4 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            c3 = 0;
+            map.delete(closure_128_0);
+            c4 = 3;
+            return { value: "HermesInternal", done: "HermesInternal" };
+          }
+        } catch (tmp30) {
+          closure_2 = tmp30;
+          if (tmp4 === c3) {
+            c4 = tmp2;
+            throw tmp30;
+          } else {
+            c1 = tmp;
+          }
+        }
+      }
+    })();
   },
+  onTeenSettingsLoadFailure(arg0, arg1) {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    let set = map1.get(arg0);
+    if (set == null) {
+      const _Set = Set;
+      set = new Set();
+    }
+    set.add(arg1);
+    const result = map1.set(arg0, set);
+    return () => {
+      set.delete(closure_1);
+      if (0 === set.size) {
+        map1.delete(closure_0);
+      }
+    };
+  },
+  showTeenSettingsLoadErrorToast,
   updateTeenSettings(arg0, arg1, arg2) {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -975,7 +1101,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -990,13 +1116,13 @@ export default {
               return obj3;
             } else {
               let settings2;
-              const protoFieldClass = tmp5(5001).getProtoFieldClass(tmp5(1196).PreloadedUserSettings, tmp2);
+              const protoFieldClass = tmp5(4971).getProtoFieldClass(tmp5(1196).PreloadedUserSettings, tmp2);
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp2];
               }
-              const tmp33Result = tmp5(5001);
+              const tmp33Result = tmp5(4971);
               const modifiedProto = tmp33Result.createModifiedProto(tmp13, closure_2, protoFieldClass, tmp5(1196).PreloadedUserSettings, tmp2);
               if (null != modifiedProto) {
                 const HTTP = tmp5(1282).HTTP;
@@ -1012,7 +1138,7 @@ export default {
               } else {
                 c3 = 3;
               }
-              const obj12 = tmp5(5001);
+              const obj12 = tmp5(4971);
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -1046,7 +1172,7 @@ export default {
 };
 export function updateLinkForUserId() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1056,7 +1182,7 @@ export function updateLinkForUserId() {
 }
 export function removeLinkForUserId() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1066,7 +1192,7 @@ export function removeLinkForUserId() {
 }
 export function getLinkCodeForCurrentUser() {
   const self = this;
-  const apply = closure_14.apply;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1076,7 +1202,7 @@ export function getLinkCodeForCurrentUser() {
 }
 export function shareIarWithParents() {
   const self = this;
-  const apply = closure_15.apply;
+  const apply = closure_20.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

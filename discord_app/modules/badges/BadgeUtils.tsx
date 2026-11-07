@@ -1,11 +1,11 @@
-// === Module 11619: BadgeUtils ===
+// === Module 11602: BadgeUtils ===
 
-// Module 11619 (BadgeUtils)
+// Module 11602 (BadgeUtils)
 import util from "util" /* 1113 */;
 import StringUtils from "StringUtils" /* 2150 */;
-import Constants from "Constants" /* 8846 */;
-import BadgeId from "BadgeId" /* 8847 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8856 */;
+import Constants from "Constants" /* 8825 */;
+import BadgeId from "BadgeId" /* 8826 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8835 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -181,11 +181,11 @@ export function findTier(badge, next_tier) {
   }
   return found;
 }
-export function getBadgeUnlockLabel(badge, c1) {
+export function getBadgeUnlockLabel(badge, previousTierKey) {
   const intl = util.intl;
-  closure_0 = c1;
+  closure_0 = previousTierKey;
   let found;
-  if (null != c1) {
+  if (null != previousTierKey) {
     const tiers = badge.tiers;
     found = tiers.find((key) => key.key === closure_0);
   }

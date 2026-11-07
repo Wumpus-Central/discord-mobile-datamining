@@ -1,24 +1,24 @@
-// === Module 15222: UserProfileWishlistGrid ===
+// === Module 15256: UserProfileWishlistGrid ===
 
-// Module 15222 (UserProfileWishlistGrid)
+// Module 15256 (UserProfileWishlistGrid)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import native from "native" /* 5229 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7818 */;
+import native from "native" /* 5199 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7819 */;
-import SentGiftsStore from "SentGiftsStore" /* 14656 */;
-import WishlistStore from "WishlistStore" /* 9573 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7796 */;
+import SentGiftsStore from "SentGiftsStore" /* 14689 */;
+import WishlistStore from "WishlistStore" /* 9555 */;
 import UserStore from "UserStore" /* 1385 */;
-import SKUStore from "SKUStore" /* 6976 */;
-import UserProfileStore from "UserProfileStore" /* 7871 */;
+import SKUStore from "SKUStore" /* 6951 */;
+import UserProfileStore from "UserProfileStore" /* 7848 */;
 
 const require = globalThis.__r;
 
@@ -49,9 +49,9 @@ class WishlistEmptyState {
   }
 }
 const View = fn(17).View;
-let closure_10 = fn(9576).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(9574).getWishlistProductLines;
-let Constants = fn(8846);
+let closure_10 = fn(9558).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(9556).getWishlistProductLines;
+let Constants = fn(8825);
 ({ TrackUserProfileWishlistActions: closure_15, UserProfileSections: closure_16 } = Constants);
 Constants = fn(1072);
 ({ Routes: closure_17, SKUProductLines: closure_18 } = Constants);
@@ -61,7 +61,7 @@ const PremiumConstants = fn(1387);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
 let closure_26 = new LoggerDefault("UserProfileWishlistGrid");
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { headerRow: null, headerButtons: null, gridWrapper: null, itemsContainer: null, emptyState: null, emptyStateText: null, disclaimer: null, disclaimerTop: null };
 const tmp6 = new LoggerDefault("UserProfileWishlistGrid");
 obj2.headerRow = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: nativeDefault.space.PX_12 };
@@ -74,8 +74,8 @@ let obj5 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX
 obj2.emptyState = { alignItems: "center", paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_8 };
 obj2.emptyStateText = { textAlign: "center" };
 let obj6 = { alignItems: "center", paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_8 };
-obj2.disclaimer = { padding: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
-let obj7 = { padding: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.disclaimer = { padding: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj7 = { padding: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.disclaimerTop = { marginBottom: nativeDefault.space.PX_16 };
 let closure_27 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -249,7 +249,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -302,7 +302,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                 obj7.analyticsSource = c1(context[43]).USER_PROFILE_WISHLIST;
                                 obj7.screen = constants2.FEATURED_PAGE;
                                 obj7.onNavigateAway = function onNavigateAway() {
-                                  closure_1(8842)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
+                                  closure_1(8821)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
                                 };
                                 const result = wishlistId(context[50]).openCollectiblesShopMobile(obj7);
                                 const obj28 = wishlistId(context[50]);
@@ -402,7 +402,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                             obj29.lockedRecipientUser = lockedRecipientUser;
                             obj29.giftingOrigin = constants3.USER_PROFILE_WISHLIST;
                             obj29.onGiftModalDismiss = function onGiftModalDismiss() {
-                              closure_1(8842)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
+                              closure_1(8821)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
                             };
                             const result4 = wishlistId(context[47]).openSocialLayerStorefrontGiftModal(obj29);
                             const obj55 = wishlistId(context[47]);
@@ -558,7 +558,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     }
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15227, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15261, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
     const obj3 = { wishlistId, analyticsContext: context, analyticsLocations };
   }, items14);
   const callback1 = obj12.useCallback(() => {

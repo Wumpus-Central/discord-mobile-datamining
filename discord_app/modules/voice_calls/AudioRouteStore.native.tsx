@@ -1,12 +1,12 @@
-// === Module 5940: AudioRouteStore ===
+// === Module 5913: AudioRouteStore ===
 
-// Module 5940 (AudioRouteStore)
+// Module 5913 (AudioRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 5941 */;
-import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 5942 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 5914 */;
+import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 5915 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5920 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
 import size from "module_2" /* 2 */;
 
 function handleAudioRouteChanged(arr) {

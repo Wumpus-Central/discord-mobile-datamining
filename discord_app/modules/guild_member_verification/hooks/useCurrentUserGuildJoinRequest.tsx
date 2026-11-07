@@ -1,7 +1,7 @@
-// === Module 7000: useCurrentUserGuildJoinRequest ===
+// === Module 6975: useCurrentUserGuildJoinRequest ===
 
-// Module 7000 (useCurrentUserGuildJoinRequest)
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5202 */;
+// Module 6975 (useCurrentUserGuildJoinRequest)
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5172 */;
 
 const require = globalThis.__r;
 

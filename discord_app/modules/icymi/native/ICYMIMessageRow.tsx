@@ -1,19 +1,19 @@
-// === Module 18861: ICYMIMessageRow ===
+// === Module 18911: ICYMIMessageRow ===
 
-// Module 18861 (ICYMIMessageRow)
+// Module 18911 (ICYMIMessageRow)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6982 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9016 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10324 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10938 */;
-import ICYMIShared from "ICYMIShared" /* 18857 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8998 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10307 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10921 */;
+import ICYMIShared from "ICYMIShared" /* 18907 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6855 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6830 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -190,14 +190,14 @@ function ReplyMessageContent(message) {
   return tmp9;
 }
 const View = fn(17).View;
-const ITEM_PADDING = fn(18856).ITEM_PADDING;
+const ITEM_PADDING = fn(18906).ITEM_PADDING;
 const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_8 = nativeDefault.space.PX_8;
-const createICYMIStyles = fn(18815);
+const createICYMIStyles = fn(18865);
 const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 }, messagePreview: null, replyPreview: null, replyInner: null, afterMessage: null, media: null, footer: null };
   const obj2 = { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 };
@@ -318,8 +318,8 @@ let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.ts
 export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   ({ message, messageContext, visible } = arg0);
-  gravityMessage = gravityMessage(18846).useGravityMessage(message);
-  const obj = gravityMessage(18846);
+  gravityMessage = gravityMessage(18896).useGravityMessage(message);
+  const obj = gravityMessage(18896);
   items = [ChannelStore];
   const stateFromStores = gravityMessage(504).useStateFromStores(items, () => ChannelStore.getChannel(gravityMessage.getChannelId()));
   const obj2 = gravityMessage(504);

@@ -1,15 +1,15 @@
-// === Module 17593: DisplayNameStylesSheetHeader ===
+// === Module 17642: DisplayNameStylesSheetHeader ===
 
-// Module 17593 (DisplayNameStylesSheetHeader)
+// Module 17642 (DisplayNameStylesSheetHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5781 */;
+import Text_Text from "Text/Text" /* 5751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_6, paddingBottom: nativeDefault.space.PX_12 }, row: null, title: null, titleText: null, leading: null, trailing: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_6, paddingBottom: nativeDefault.space.PX_12 };
 obj2.row = { minHeight: nativeDefault.space.PX_32, justifyContent: "center" };

@@ -1,9 +1,9 @@
-// === Module 9821: apexExperiment ===
+// === Module 9805: apexExperiment ===
 
-// Module 9821 (apexExperiment)
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9808 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9809 */;
-import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 9822 */;
+// Module 9805 (apexExperiment)
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9792 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9793 */;
+import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 9806 */;
 import ApexExperiment_mod from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

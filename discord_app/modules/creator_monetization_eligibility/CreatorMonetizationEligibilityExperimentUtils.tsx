@@ -1,6 +1,6 @@
-// === Module 7522: CreatorMonetizationEligibilityExperimentUtils ===
+// === Module 7499: CreatorMonetizationEligibilityExperimentUtils ===
 
-// Module 7522 (CreatorMonetizationEligibilityExperimentUtils)
+// Module 7499 (CreatorMonetizationEligibilityExperimentUtils)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1385 */;
 import BillingInfoStore from "BillingInfoStore" /* 2172 */;

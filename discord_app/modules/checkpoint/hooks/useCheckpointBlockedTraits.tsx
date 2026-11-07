@@ -1,10 +1,10 @@
-// === Module 13671: useCheckpointBlockedTraits ===
+// === Module 13695: useCheckpointBlockedTraits ===
 
-// Module 13671 (useCheckpointBlockedTraits)
+// Module 13695 (useCheckpointBlockedTraits)
 import initialize from "initialize" /* 504 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6268 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6243 */;
 import UserStore from "UserStore" /* 1385 */;
-import CheckpointStore from "CheckpointStore" /* 13643 */;
+import CheckpointStore from "CheckpointStore" /* 13667 */;
 
 require = fn;
 const size = fn(2);
@@ -15,7 +15,7 @@ export default function useCheckpointBlockedTraits() {
   return initialize.useStateFromStoresArray(items, () => {
     ({ selectedCharacterTraits: closure_0, stats: closure_1, character: closure_2 } = hasNitro);
     hasNitro = closure_0(2107).isPremium(currentUser.getCurrentUser());
-    const values = Object.values(closure_0(6269).CheckpointTrait);
+    const values = Object.values(closure_0(6244).CheckpointTrait);
     return values.filter((item) => {
       let result = null != tmp;
       if (result) {

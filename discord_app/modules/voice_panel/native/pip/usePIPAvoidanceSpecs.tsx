@@ -1,19 +1,19 @@
-// === Module 19495: usePIPAvoidanceSpecs ===
+// === Module 19554: usePIPAvoidanceSpecs ===
 
-// Module 19495 (usePIPAvoidanceSpecs)
+// Module 19554 (usePIPAvoidanceSpecs)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5754 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10227 */;
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11379 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11381 */;
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11382 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11385 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11387 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12247 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19303 */;
-import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19417 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19418 */;
+import useToken from "useToken" /* 5724 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10210 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11361 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11363 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11364 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11367 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11369 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12238 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19362 */;
+import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19476 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19477 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;

@@ -1,32 +1,32 @@
-// === Module 15182: UserProfileWidgetGameTags ===
+// === Module 15220: UserProfileWidgetGameTags ===
 
-// Module 15182 (UserProfileWidgetGameTags)
+// Module 15220 (UserProfileWidgetGameTags)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5179 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8854 */;
-import WidgetUtils from "WidgetUtils" /* 12536 */;
-import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 15187 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8833 */;
+import WidgetUtils from "WidgetUtils" /* 12549 */;
+import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 15221 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(8846).TrackUserProfileEditActions;
+let closure_7 = fn(8825).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const hitSlop = { top: 10, bottom: 10 };
-let closure_11 = { top: 10, bottom: 10, left: 12, right: 10 };
-const createStyles = fn(5170);
+const hitSlop = { top: 7, bottom: 7 };
+let closure_11 = Math.max(14, 0);
+const createStyles = fn(5140);
 let obj = { tags: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 }, tag: null, addTag: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
-obj.tag = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
-let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.addTag = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.tag = { minHeight: 30, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj4 = { minHeight: 30, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.addTag = { minHeight: 30, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_SUBTLE };
 let closure_12 = createStyles.createStyles(obj);
-let obj5 = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj5 = { minHeight: 30, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_SUBTLE };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetGameTags.tsx");
 
@@ -62,7 +62,7 @@ export default noop.memo(function UserProfileWidgetGameTags(gameName) {
           let obj = { style: tag.tag, children: null };
           items = [closure_1_8(meta.icon, { size: "xs", color: editableTagsWidgetType(tag[6]).colors.TEXT_MUTED }), , ];
           let obj2 = { size: "xs", color: editableTagsWidgetType(tag[6]).colors.TEXT_MUTED };
-          items[1] = closure_1_8(gameId(tag[13]).Text, { variant: "body-xs/medium", color: "text-muted", children: meta.getText() });
+          items[1] = closure_1_8(gameId(tag[13]).Text, { variant: "body-sm/normal", color: "text-muted", children: meta.getText() });
           let tmp3Result = null != editableTagsWidgetType;
           if (tmp3Result) {
             const obj4 = {
@@ -148,7 +148,7 @@ export default noop.memo(function UserProfileWidgetGameTags(gameName) {
       let intl = util.intl;
       let obj3 = { gameName: gameName.gameName };
       obj2.accessibilityLabel = intl.formatToPlainString(util.t.uLUHj4, obj3);
-      let obj4 = { variant: "body-xs/medium", color: "text-muted", children: null };
+      let obj4 = { variant: "body-sm/normal", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t.fZSejy);
       obj2.children = closure_8(Text_Text.Text, obj4);

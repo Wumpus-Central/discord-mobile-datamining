@@ -1,27 +1,27 @@
-// === Module 14742: EmojiRow ===
+// === Module 14775: EmojiRow ===
 
-// Module 14742 (EmojiRow)
-import ReactionUtils from "ReactionUtils" /* 5114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import HapticUtils from "HapticUtils" /* 5406 */;
-import useToken from "useToken" /* 5754 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7735 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8497 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 10034 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 10088 */;
-import useEmojisForReactionRow from "useEmojisForReactionRow" /* 14743 */;
-import EmojiReactionRowButton from "EmojiReactionRowButton" /* 14744 */;
-import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 14745 */;
+// Module 14775 (EmojiRow)
+import ReactionUtils from "ReactionUtils" /* 5084 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import HapticUtils from "HapticUtils" /* 5376 */;
+import useToken from "useToken" /* 5724 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7712 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8476 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 10018 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 10072 */;
+import useEmojisForReactionRow from "useEmojisForReactionRow" /* 14776 */;
+import EmojiReactionRowButton from "EmojiReactionRowButton" /* 14777 */;
+import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 14778 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5419).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5389).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_7 = createStyles.createStyles({ emojiRowContainer: { flexDirection: "column", justifyContent: "center", alignItems: "center" }, emojiRow: { height: 52, alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 0, marginBottom: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/action_sheet/native/components/EmojiRow.tsx");
@@ -77,7 +77,7 @@ export default function EmojiRow(arg0) {
       return reactions_ReactionUtils.handleAddNewReactions(channel, id.id, ReactionActionCreators.ReactionLocations.MESSAGE);
     }
   };
-  items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, { location: channel(7435).MESSAGE_LONG_PRESS_MENU });
+  items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, { location: channel(7412).MESSAGE_LONG_PRESS_MENU });
   obj7.children = items1;
   return closure_6(emojiFontSize, obj7);
 };

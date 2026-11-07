@@ -1,14 +1,14 @@
-// === Module 19199: VoiceChannelAppIcon ===
+// === Module 19258: VoiceChannelAppIcon ===
 
-// Module 19199 (VoiceChannelAppIcon)
+// Module 19258 (VoiceChannelAppIcon)
 import nativeDefault from "native" /* 575 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9139 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11498 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9121 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11480 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { tile: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.tile = size;

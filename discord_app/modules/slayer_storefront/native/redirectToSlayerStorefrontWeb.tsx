@@ -1,6 +1,6 @@
-// === Module 10811: redirectToSlayerStorefrontWeb ===
+// === Module 10794: redirectToSlayerStorefrontWeb ===
 
-// Module 10811 (redirectToSlayerStorefrontWeb)
+// Module 10794 (redirectToSlayerStorefrontWeb)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

@@ -1,15 +1,15 @@
-// === Module 14553: HubEmailConnectionGuildSelect ===
+// === Module 14586: HubEmailConnectionGuildSelect ===
 
-// Module 14553 (HubEmailConnectionGuildSelect)
+// Module 14586 (HubEmailConnectionGuildSelect)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5033 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import components_Button_Button from "components/Button/Button" /* 5788 */;
-import GuildIconDefault from "GuildIcon" /* 7045 */;
-import Form from "Form" /* 8267 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5003 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import components_Button_Button from "components/Button/Button" /* 5758 */;
+import GuildIconDefault from "GuildIcon" /* 7020 */;
+import Form from "Form" /* 8246 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -70,10 +70,10 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14531).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14564).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { rowContainer: { marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, guildIcon: null, separator: null, header: null, title: null, footerSafeAreaContainer: null, footerContainer: null, error: null };
 let obj3 = { marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.guildIcon = { borderRadius: nativeDefault.radii.sm };
@@ -147,7 +147,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -168,7 +168,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(14544).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(14577).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {
@@ -179,7 +179,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6604).APIError(closure_128_0);
+                  const aPIError = new id(6579).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);

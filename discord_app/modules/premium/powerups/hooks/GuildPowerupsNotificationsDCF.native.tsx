@@ -1,10 +1,12 @@
-// === Module 14285: GuildPowerupsNotificationsDCF ===
+// === Module 14315: GuildPowerupsNotificationsDCF ===
 
-// Module 14285 (GuildPowerupsNotificationsDCF)
-import dismissible_content from "dismissible_content" /* 5003 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7664 */;
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 14279 */;
-import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 14286 */;
+// Module 14315 (GuildPowerupsNotificationsDCF)
+import dismissible_content from "dismissible_content" /* 4973 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7641 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 14309 */;
+import useHasGuildAffinityForBoostUpsellDefault from "useHasGuildAffinityForBoostUpsell" /* 14316 */;
+import useCanBoostGuildFromMobileDefault from "useCanBoostGuildFromMobile" /* 14318 */;
+import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 14320 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
@@ -45,16 +47,25 @@ export function useNewGamesCoachmarkDC() {
   ];
   return items;
 }
-export function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
-  let _location = "useBoostToUnlockCoachmarkDCF-ineligible";
+export function useBoostToUnlockCoachmarkDCF(arg0, id, arg2, GUILD_HEADER_TOOLTIPS) {
+  let tmp = arg0;
+  const tmp4 = useHasGuildAffinityForBoostUpsellDefault(id);
   if (arg0) {
+    tmp = tmp4;
+  }
+  if (tmp) {
+    tmp = tmp5;
+  }
+  tmp5 = useCanBoostGuildFromMobileDefault(arg2);
+  let _location = "useBoostToUnlockCoachmarkDCF-ineligible";
+  if (tmp) {
     _location = "useBoostToUnlockCoachmarkDCF-eligible";
   }
-  const obj = BoostToUnlockMobileCoachmarkExperimentDefault;
+  const tmp2Result = BoostToUnlockMobileCoachmarkExperimentDefault;
   let prop = null;
-  if (arg0) {
+  if (tmp) {
     prop = null;
-    if (obj.useConfig({ location: _location }).showCoachmark) {
+    if (tmp2Result.useConfig({ location: _location }).showCoachmark) {
       prop = dismissible_content.DismissibleContent.BOOST_TO_UNLOCK_COACHMARK;
     }
   }

@@ -1,6 +1,6 @@
-// === Module 7197: useKeyboardIsOpen ===
+// === Module 7172: useKeyboardIsOpen ===
 
-// Module 7197 (useKeyboardIsOpen)
+// Module 7172 (useKeyboardIsOpen)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1496 */;
 import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1497 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
@@ -37,7 +37,7 @@ export default function useKeyboardIsOpen() {
     return tmp2;
   });
 };
-export function subscribeToKeyboardIsOpen(arg0) {
+export function subscribeToKeyboardIsOpen(arg0, arg1) {
   _require = arg0;
   let tmp = arg1;
   if (arg1 === undefined) {

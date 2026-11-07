@@ -1,28 +1,28 @@
-// === Module 13891: CheckpointSummaryStatsScreen ===
+// === Module 13915: CheckpointSummaryStatsScreen ===
 
-// Module 13891 (CheckpointSummaryStatsScreen)
+// Module 13915 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _modDef3216 from "module_3216" /* 3216 */;
 import _modDef3248 from "module_3248" /* 3248 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5116 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6248 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6594 */;
-import GuildIcon from "GuildIcon" /* 7045 */;
-import EmojiDefault from "Emoji" /* 7386 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8234 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9087 */;
-import CheckpointScreen from "CheckpointScreen" /* 13851 */;
-import CheckpointTextDefault from "CheckpointText" /* 13853 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13856 */;
-import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 13892 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5086 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6223 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6569 */;
+import GuildIcon from "GuildIcon" /* 7020 */;
+import EmojiDefault from "Emoji" /* 7363 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8213 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9069 */;
+import CheckpointScreen from "CheckpointScreen" /* 13875 */;
+import CheckpointTextDefault from "CheckpointText" /* 13877 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13880 */;
+import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 13916 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5171 */;
-import CheckpointStore from "CheckpointStore" /* 13643 */;
+import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import CheckpointStore from "CheckpointStore" /* 13667 */;
 
 const GuildIconDefault = GuildIcon;
 const CheckpointScreenDefault = CheckpointScreen;
@@ -61,8 +61,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(6224).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(5170);
+const sum = fn(6199).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5140);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, stats: { alignSelf: "stretch", gap: nativeDefault.space.PX_24 }, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, guildAcronym: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_24 };
 obj2.row = { flexDirection: "row", columnGap: nativeDefault.space.PX_16 };
@@ -77,19 +77,12 @@ obj2.itemIcon = size;
 let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.guildAcronym = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1357);
-let num = 24;
+const PlatformUtils = fn(1357);
+let num;
 if (PlatformUtils.isIOS()) {
-  num = 28;
+  num = 30;
 }
-let obj8 = { fontSize: num, lineHeight: null, textAlign: "center" };
-PlatformUtils = fn(1357);
-let num2;
-if (PlatformUtils.isIOS()) {
-  num2 = 32;
-}
-obj8.lineHeight = num2;
-obj2.textEmoji = obj8;
+obj2.textEmoji = { fontSize: 24, lineHeight: num, textAlign: "center" };
 let closure_11 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/stats/CheckpointSummaryStatsScreen.tsx");

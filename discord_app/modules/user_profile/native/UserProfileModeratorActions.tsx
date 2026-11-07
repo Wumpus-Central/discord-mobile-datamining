@@ -1,29 +1,29 @@
-// === Module 15106: UserProfileModeratorActions ===
+// === Module 15138: UserProfileModeratorActions ===
 
-// Module 15106 (UserProfileModeratorActions)
+// Module 15138 (UserProfileModeratorActions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 5027 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6824 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6982 */;
-import TableRow from "TableRow" /* 7063 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8036 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12541 */;
-import GuildMemberUtils from "GuildMemberUtils" /* 13468 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 13474 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 13492 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 13494 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4997 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
+import TableRow from "TableRow" /* 7038 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8014 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12554 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 13493 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 13499 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 13517 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 13519 */;
 import noop from "module_19" /* 19 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6837 */;
-import ChannelStore from "ChannelStore" /* 5019 */;
-import GuildChannelStore from "GuildChannelStore" /* 5100 */;
-import GuildMemberStore from "GuildMemberStore" /* 5082 */;
-import GuildStore from "GuildStore" /* 5041 */;
-import PermissionStore from "PermissionStore" /* 5102 */;
-import VoiceStateStore from "VoiceStateStore" /* 5833 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6812 */;
+import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildChannelStore from "GuildChannelStore" /* 5070 */;
+import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildStore from "GuildStore" /* 5011 */;
+import PermissionStore from "PermissionStore" /* 5072 */;
+import VoiceStateStore from "VoiceStateStore" /* 5803 */;
 
 require = fn;
 function ModeratorActionRow(isDestructive) {
@@ -42,12 +42,12 @@ function ModeratorActionRow(isDestructive) {
   obj.accessibilityLabel = combined;
   return jsx(TableRow.TableRow, { label, subLabel: sublabel, icon: jsx(TableRow.TableRow.Icon, { IconComponent: icon, variant: str }), arrow: null != hint, variant: str, disabled, onPress, accessibilityLabel: null, accessibilityRole: "button" });
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(5100).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5070).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
-let GuildMemberFlags = fn(5088).GuildMemberFlags;
+let GuildMemberFlags = fn(5058).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { cardContainer: { paddingBottom: 0 }, refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_16 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -310,7 +310,7 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[34]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11358, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(11340, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(<ModeratorActionRow key="move-to-channel" label={null} hint={null} sublabel={null} icon={null} onPress={null} />);
       }
@@ -339,7 +339,7 @@ export default function UserProfileModeratorActions(user) {
         obj11.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MANAGE_USER" });
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13470, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13495, dependencyMap.paths), {
             userId: user.id,
             guildId: stateFromStores.id,
             onClose() {
@@ -347,7 +347,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              guildId(6824).pop();
+              guildId(6799).pop();
             }
           });
         };

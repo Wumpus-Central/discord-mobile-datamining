@@ -1,9 +1,9 @@
-// === Module 9664: useFetchVirtualCurrencyTotalRedeemed ===
+// === Module 9646: useFetchVirtualCurrencyTotalRedeemed ===
 
-// Module 9664 (useFetchVirtualCurrencyTotalRedeemed)
+// Module 9646 (useFetchVirtualCurrencyTotalRedeemed)
 import _mod19 from "module_19" /* 19 */;
-import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9662 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9661 */;
+import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9644 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9643 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

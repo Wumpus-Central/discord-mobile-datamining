@@ -1,12 +1,12 @@
-// === Module 18204: DoubleTapEmojiSetting ===
+// === Module 18251: DoubleTapEmojiSetting ===
 
-// Module 18204 (DoubleTapEmojiSetting)
+// Module 18251 (DoubleTapEmojiSetting)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import UserSettings from "UserSettings" /* 4995 */;
-import EmojiDefault from "Emoji" /* 7386 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8518 */;
+import UserSettings from "UserSettings" /* 4965 */;
+import EmojiDefault from "Emoji" /* 7363 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8497 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,17 +32,17 @@ function SettingsEmoji(emoji) {
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
-const SettingBuilders = fn(11703);
+const SettingBuilders = fn(11685);
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(8524).MobileUserSettings.CHAT,
+  parent: fn(8503).MobileUserSettings.CHAT,
   useTrailing: function useDoubleTapEmojiSettingTrailing() {
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.useSetting();
@@ -74,7 +74,7 @@ const pressable = SettingBuilders.createPressable({
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -111,7 +111,7 @@ const pressable = SettingBuilders.createPressable({
             const obj17 = { emoji: closure_129_0 };
             const result = closure_0(tmp5[15]).showDoubleTapEmojiUpdatedToast(obj17);
             constants = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           constants = tmp;

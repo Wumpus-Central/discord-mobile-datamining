@@ -1,12 +1,12 @@
-// === Module 17569: AndroidClassicChatFontScaleSetting ===
+// === Module 17618: AndroidClassicChatFontScaleSetting ===
 
-// Module 17569 (AndroidClassicChatFontScaleSetting)
+// Module 17618 (AndroidClassicChatFontScaleSetting)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import _mod5085 from "module_5085" /* 5085 */;
-import SettingsConstants from "SettingsConstants" /* 8524 */;
-import FontScaleStore from "FontScaleStore" /* 17517 */;
-import SettingBuilders from "SettingBuilders" /* 11703 */;
+import _mod5055 from "module_5055" /* 5055 */;
+import SettingsConstants from "SettingsConstants" /* 8503 */;
+import FontScaleStore from "FontScaleStore" /* 17566 */;
+import SettingBuilders from "SettingBuilders" /* 11685 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ const toggle = SettingBuilders.createToggle({
   },
   parent: SettingsConstants.MobileUserSettings.APPEARANCE,
   useValue: function useClassicChatFontScaleValue() {
-    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, _mod5085.shallow);
+    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, _mod5055.shallow);
   },
   onValueChange: function onClassicChatFontScaleChange(isClassicChatFontScaleEnabled) {
     _require = isClassicChatFontScaleEnabled;

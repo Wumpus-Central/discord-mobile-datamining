@@ -1,6 +1,6 @@
-// === Module 20108: GuildSettingsModalRolesActionCreators ===
+// === Module 20177: GuildSettingsModalRolesActionCreators ===
 
-// Module 20108 (GuildSettingsModalRolesActionCreators)
+// Module 20177 (GuildSettingsModalRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -26,7 +26,7 @@ let closure_6 = async function _updateGuildRole(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

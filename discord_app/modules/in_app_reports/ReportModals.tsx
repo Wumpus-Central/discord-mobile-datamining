@@ -1,14 +1,14 @@
-// === Module 8443: ReportModals ===
+// === Module 8422: ReportModals ===
 
-// Module 8443 (ReportModals)
-import GuildRecordUtils from "GuildRecordUtils" /* 5033 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5916 */;
-import MenuTypes from "MenuTypes" /* 8444 */;
-import showReportModal from "showReportModal" /* 8445 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8447 */;
+// Module 8422 (ReportModals)
+import GuildRecordUtils from "GuildRecordUtils" /* 5003 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
+import MenuTypes from "MenuTypes" /* 8423 */;
+import showReportModal from "showReportModal" /* 8424 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8426 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StageInstanceStore from "StageInstanceStore" /* 5024 */;
-import MessageRecord from "MessageRecord" /* 5113 */;
+import StageInstanceStore from "StageInstanceStore" /* 4994 */;
+import MessageRecord from "MessageRecord" /* 5083 */;
 import UserRecord from "UserRecord" /* 1404 */;
 
 require = fn;
@@ -208,7 +208,7 @@ export function showUnauthenticatedReportModalForTida(emailToken, onClose) {
 export function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "Array", channel_id: "channel" });
+  const merged = Object.assign({ message_id: "Array", channel_id: "flexDirection" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

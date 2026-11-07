@@ -1,13 +1,13 @@
-// === Module 7898: UserSearchItems ===
+// === Module 7875: UserSearchItems ===
 
-// Module 7898 (UserSearchItems)
+// Module 7875 (UserSearchItems)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5048 */;
-import UserSearchUtils from "UserSearchUtils" /* 7902 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5018 */;
+import UserSearchUtils from "UserSearchUtils" /* 7879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7899 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7900 */;
-import RelationshipStore from "RelationshipStore" /* 5112 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7876 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7877 */;
+import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -40,7 +40,7 @@ prototype["getAll"] = function getAll() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

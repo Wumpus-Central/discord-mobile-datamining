@@ -1,8 +1,8 @@
-// === Module 18160: useSecureFramesVerifiedUsers ===
+// === Module 18207: useSecureFramesVerifiedUsers ===
 
-// Module 18160 (useSecureFramesVerifiedUsers)
+// Module 18207 (useSecureFramesVerifiedUsers)
 import initialize from "initialize" /* 504 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9347 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9329 */;
 
 require = fn;
 const size = fn(2);

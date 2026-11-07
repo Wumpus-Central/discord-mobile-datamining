@@ -1,6 +1,6 @@
-// === Module 18705: InterestGamePickerConstants ===
+// === Module 18752: InterestGamePickerConstants ===
 
-// Module 18705 (InterestGamePickerConstants)
+// Module 18752 (InterestGamePickerConstants)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import size from "module_2" /* 2 */;
@@ -11,7 +11,7 @@ const tmp2 = -nativeDefault.space.PX_8;
 const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(nativeDefault.space.PX_6 / 2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGamePickerConstants.tsx");
 
-export const GRID_COLUMNS = 4;
+export const GRID_COLUMNS = 3;
 export const GRID_GAP = nativeDefault.space.PX_12;
 export const SCREEN_HORIZONTAL_PADDING = nativeDefault.space.PX_16;
 export const TILE_ASPECT_RATIO = 0.75;

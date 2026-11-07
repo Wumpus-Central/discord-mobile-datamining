@@ -1,27 +1,31 @@
-// === Module 13909: CheckpointButton ===
+// === Module 13933: CheckpointButton ===
 
-// Module 13909 (CheckpointButton)
+// Module 13933 (CheckpointButton)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const CheckpointConstants = fn(6224);
-({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_BUTTON_DISABLED_BORDER_MOBILE: closure_6, CHECKPOINT_PRIMARY: metroImportDefault } = CheckpointConstants);
+const CheckpointConstants = fn(6199);
+({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_BUTTON_DISABLED_BORDER_MOBILE: closure_6, CHECKPOINT_CONTROL_ICON_SIZE, CHECKPOINT_PRIMARY: metroImportDefault } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5170);
-let obj2 = { container: { justifyContent: "center", marginRight: -fn(13881).SHADOW_OFFSET, marginBottom: -fn(13881).SHADOW_OFFSET }, button: null, label: null };
-let obj3 = { justifyContent: "center", marginRight: -fn(13881).SHADOW_OFFSET, marginBottom: -fn(13881).SHADOW_OFFSET };
+const createStyles = fn(5140);
+let obj2 = { container: { justifyContent: "center", marginRight: -fn(13905).SHADOW_OFFSET, marginBottom: -fn(13905).SHADOW_OFFSET }, button: null, label: null, icon: null };
+let obj3 = { justifyContent: "center", marginRight: -fn(13905).SHADOW_OFFSET, marginBottom: -fn(13905).SHADOW_OFFSET };
 obj2.button = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2 };
 obj2.label = { textTransform: "uppercase" };
+obj2.icon = { width: CHECKPOINT_CONTROL_ICON_SIZE, height: CHECKPOINT_CONTROL_ICON_SIZE };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointButton.tsx");
 
 export default function CheckpointButton(loading) {
-  ({ Icon, label, accessibilityLabel, disabled } = loading);
-  ({ onPress, accessibilityHint, accessibilityState } = loading);
+  ({ Icon, label, labelVariant } = loading);
+  if (labelVariant === undefined) {
+    labelVariant = disabled(color[5]).CHECKPOINT_PRESSABLE_SIZES.lg.textVariant;
+  }
+  ({ accessibilityLabel, disabled, labelStyle, accessibilityHint, accessibilityState } = loading);
   if (disabled === undefined) {
     disabled = false;
   }
@@ -33,11 +37,7 @@ export default function CheckpointButton(loading) {
   if (str === undefined) {
     str = "start";
   }
-  let str2 = loading.iconSize;
-  if (str2 === undefined) {
-    str2 = "sm";
-  }
-  let color = loading.color;
+  color = loading.color;
   if (color === undefined) {
     color = closure_7;
   }
@@ -47,7 +47,7 @@ export default function CheckpointButton(loading) {
   }
   color = undefined;
   ({ shadowColor, style } = loading);
-  const tmp = closure_10();
+  const tmp3 = closure_10();
   if (disabled) {
     color = obj.useToken("text-subtle");
   }
@@ -57,38 +57,36 @@ export default function CheckpointButton(loading) {
   const memo1 = noop.useMemo(() => ({ color }), items1);
   if (flag) {
     const obj2 = { color };
-    let tmp6 = closure_8(ActivityIndicator, obj2);
+    let tmp7 = closure_8(ActivityIndicator, obj2);
   } else {
-    tmp6 = null;
+    tmp7 = null;
     if (null != Icon) {
-      const obj3 = { color, size: str2 };
-      tmp6 = closure_8(Icon, obj3);
+      const obj3 = { color, size: "custom", style: tmp3.icon };
+      tmp7 = closure_8(Icon, obj3);
     }
   }
-  const obj4 = { size: "lg", containerStyle: tmp.container, style: null, shadowColor, onPress, disabled, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityState: null, children: null };
-  const items2 = [tmp.button, memo, style];
+  const obj4 = { size: "lg", containerStyle: tmp3.container, style: null, shadowColor, onPress: loading.onPress, disabled, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityState: null, children: null };
+  const items2 = [tmp3.button, memo, style];
   obj4.style = items2;
   obj = disabled(color[7]);
-  const tmp11 = borderColor;
-  const tmp2 = disabled;
+  const tmp12 = borderColor;
   if (accessibilityLabel == null) {
     accessibilityLabel = label;
   }
   obj4.accessibilityLabel = accessibilityLabel;
   obj4.accessibilityHint = accessibilityHint;
   obj4.accessibilityState = accessibilityState;
-  const items3 = ["start" === str && tmp6, , ];
-  let tmp14 = null != label;
-  if (tmp14) {
-    const obj5 = { variant: tmp2(tmp3[5]).CHECKPOINT_PRESSABLE_SIZES.lg.textVariant, style: null, children: null };
-    const items4 = [tmp.label, memo1];
+  const items3 = ["start" === str && tmp7, , ];
+  let tmp15 = null != label;
+  if (tmp15) {
+    const obj5 = { variant: labelVariant, style: null, children: null };
+    const items4 = [tmp3.label, memo1, labelStyle];
     obj5.style = items4;
     obj5.children = label;
-    tmp14 = closure_8(tmp11(tmp3[8]), obj5);
-    const tmp11Result = tmp11(tmp3[8]);
+    tmp15 = closure_8(tmp12(tmp4[8]), obj5);
   }
-  items3[1] = tmp14;
-  items3[2] = "end" === str && tmp6;
+  items3[1] = tmp15;
+  items3[2] = "end" === str && tmp7;
   obj4.children = items3;
   return closure_9(borderColor(color[5]), obj4);
 };

@@ -1,19 +1,19 @@
-// === Module 15177: GameCoverImage ===
+// === Module 15215: GameCoverImage ===
 
-// Module 15177 (GameCoverImage)
+// Module 15215 (GameCoverImage)
 import nativeDefault from "native" /* 575 */;
-import GameCoverArt from "GameCoverArt" /* 9474 */;
+import GameCoverArt from "GameCoverArt" /* 9456 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { cover: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-obj.cover = { aspectRatio: 0.75, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj.cover = { aspectRatio: fn(15197).GAME_COVER_ASPECT_RATIO, borderRadius: fn(15197).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 let closure_4 = createStyles.createStyles(obj);
-const obj3 = { aspectRatio: 0.75, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+const obj3 = { aspectRatio: fn(15197).GAME_COVER_ASPECT_RATIO, borderRadius: fn(15197).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/GameCoverImage.tsx");
 

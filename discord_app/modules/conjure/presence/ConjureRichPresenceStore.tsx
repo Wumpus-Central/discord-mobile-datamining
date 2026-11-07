@@ -1,24 +1,24 @@
-// === Module 11691: ConjureRichPresenceStore ===
+// === Module 11673: ConjureRichPresenceStore ===
 
-// Module 11691 (ConjureRichPresenceStore)
+// Module 11673 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActivityTypes from "ActivityTypes" /* 5918 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6959 */;
-import conjureServerProject from "conjureServerProject" /* 7479 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10893 */;
-import conjureChatTurns from "conjureChatTurns" /* 10988 */;
+import ActivityTypes from "ActivityTypes" /* 5891 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6934 */;
+import conjureServerProject from "conjureServerProject" /* 7456 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10876 */;
+import conjureChatTurns from "conjureChatTurns" /* 10971 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 6785 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5073 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5201 */;
-import ConjureChatStore from "ConjureChatStore" /* 10987 */;
-import ConjurePagesStore from "ConjurePagesStore" /* 11692 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6924 */;
+import IdleStore from "IdleStore" /* 6760 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
+import ConjureChatStore from "ConjureChatStore" /* 10970 */;
+import ConjurePagesStore from "ConjurePagesStore" /* 11674 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -146,7 +146,7 @@ function updateActivity(withGracePeriod) {
       let tmp18 = null;
       if (null != project) {
         tmp18 = null;
-        if (null != obj2.conjureServerProjectGuildId(project)) {
+        if (null != obj2.conjureServerAppGuildId(project)) {
           const messages = ConjureChatStore.getMessages(tmp11);
           const findOpenTurnResult = conjureChatTurns.findOpenTurn(messages);
           tmp18 = null;
@@ -303,7 +303,7 @@ function updateActivity(withGracePeriod) {
                       let merged = Object.assign(closure_1_16);
                       details = closure_1_16.details;
                       let prop = closure_1_0(closure_1_1[11]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                      let found = prop.filter(/* F100815 */ function() { ... });
+                      let found = prop.filter(/* F101164 */ function() { ... });
                       let _Math = Math;
                       let _Math2 = Math;
                       obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -314,7 +314,7 @@ function updateActivity(withGracePeriod) {
                         timeout = null;
                       }
                       let _setTimeout = setTimeout;
-                      timeout = setTimeout(/* F100816 */ function() { ... }, closure_1_14);
+                      timeout = setTimeout(/* F101165 */ function() { ... }, closure_1_14);
                       closure_1_24.emitChange();
                     }
                   }, closure_1_14);
@@ -352,7 +352,7 @@ let closure_22 = async function _fetchOwnedProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -467,7 +467,7 @@ let closure_23 = async function _resumeRunningProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -534,7 +534,7 @@ let closure_23 = async function _resumeRunningProjects() {
   }
 };
 let closure_2 = ["party"];
-const StaticChannelRoute = fn(5026).StaticChannelRoute;
+const StaticChannelRoute = fn(4996).StaticChannelRoute;
 let c14 = 300000;
 let c15 = null;
 let c16 = null;

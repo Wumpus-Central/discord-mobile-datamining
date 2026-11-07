@@ -1,7 +1,7 @@
-// === Module 18547: useSubmittedGuildJoinRequestTotal ===
+// === Module 18594: useSubmittedGuildJoinRequestTotal ===
 
-// Module 18547 (useSubmittedGuildJoinRequestTotal)
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6997 */;
+// Module 18594 (useSubmittedGuildJoinRequestTotal)
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6972 */;
 
 const require = fn;
 const size = fn(2);

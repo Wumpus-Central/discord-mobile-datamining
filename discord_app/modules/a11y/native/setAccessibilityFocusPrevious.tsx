@@ -1,7 +1,7 @@
-// === Module 6119: setAccessibilityFocusPrevious ===
+// === Module 6093: setAccessibilityFocusPrevious ===
 
-// Module 6119 (setAccessibilityFocusPrevious)
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 6120 */;
+// Module 6093 (setAccessibilityFocusPrevious)
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 6094 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/a11y/native/setAccessibilityFocusPrevious.tsx");

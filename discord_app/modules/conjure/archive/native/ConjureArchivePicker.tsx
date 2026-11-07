@@ -1,11 +1,11 @@
-// === Module 12396: ConjureArchivePicker ===
+// === Module 12394: ConjureArchivePicker ===
 
-// Module 12396 (ConjureArchivePicker)
+// Module 12394 (ConjureArchivePicker)
 import util from "util" /* 1113 */;
-import _modDef4024 from "module_4024" /* 4024 */;
-import FilePickerUtils from "FilePickerUtils" /* 11249 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12290 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12317 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import FilePickerUtils from "FilePickerUtils" /* 11231 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12281 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12315 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -51,7 +51,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
         items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp14) {
       c6 = tmp;
@@ -97,7 +97,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10986);
+const ConjureConnectionStore = fn(10969);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 let closure_6 = ["zip", "tar", "gz", "tgz", "bz2", "xz"];
 const size = fn(2);
@@ -120,7 +120,7 @@ export function describeConjureArchiveRejection(bytes) {
     const obj2 = { size: null };
     const tmpResult = ConjureAttachmentTypes;
     obj2.size = tmpResult.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(bytes.contentType));
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4024.ThxcOX, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4026.ThxcOX, obj2);
     const tmpResult2 = ConjureAttachmentTypes;
   }
   return formatToPlainStringResult;

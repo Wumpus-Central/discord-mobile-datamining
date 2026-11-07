@@ -1,20 +1,20 @@
-// === Module 19283: RestrictedMessagePreviewHeader ===
+// === Module 19342: RestrictedMessagePreviewHeader ===
 
-// Module 19283 (RestrictedMessagePreviewHeader)
+// Module 19342 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5404 */;
-import ToastUtils from "ToastUtils" /* 5866 */;
-import ClipboardUtils from "ClipboardUtils" /* 7441 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8842 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import ToastUtils from "ToastUtils" /* 5836 */;
+import ClipboardUtils from "ClipboardUtils" /* 7418 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8821 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(14224).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(14254).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 }, avatar: null };
 let obj3 = { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
 obj2.avatar = { marginBottom: nativeDefault.space.PX_4 };
@@ -43,16 +43,16 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14388, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14422, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
-        const result = channel(8854).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = channel(8854);
-        channel(7617).transitionToGuild(arg0);
-        const obj2 = channel(7617);
-        user(5404).hideActionSheet();
-        const obj3 = user(5404);
-        user(6824).popWithKey(closure_1_5);
+        const result = channel(8833).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = channel(8833);
+        channel(7594).transitionToGuild(arg0);
+        const obj2 = channel(7594);
+        user(5374).hideActionSheet();
+        const obj3 = user(5374);
+        user(6799).popWithKey(closure_1_5);
       }
     });
   }, items2);

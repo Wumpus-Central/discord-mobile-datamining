@@ -1,11 +1,11 @@
-// === Module 12698: AppLauncherAttachmentOption ===
+// === Module 12711: AppLauncherAttachmentOption ===
 
-// Module 12698 (AppLauncherAttachmentOption)
+// Module 12711 (AppLauncherAttachmentOption)
 import nativeDefault from "native" /* 575 */;
-import FileIcon from "FileIcon" /* 11212 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11261 */;
+import FileIcon from "FileIcon" /* 11194 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11243 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8298 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8277 */;
 
 require = fn;
 function AttachmentPreviewAppLauncher(arg0) {
@@ -16,9 +16,9 @@ function AttachmentPreviewAppLauncher(arg0) {
   return jsx(AttachmentPreviewDefault, { uri, isImage, isVideo, width, height, style: tmp.selectedImage, defaultPreview: jsx(FileIcon.FileIcon, { size: "sm" }) });
 }
 const View = fn(17).View;
-const DraftType = fn(7800).DraftType;
+const DraftType = fn(7777).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { imageIconWrapper: null, selectedImage: null };
 let size = { justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
 obj2.imageIconWrapper = size;

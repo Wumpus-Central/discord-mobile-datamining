@@ -1,29 +1,29 @@
-// === Module 11144: ChannelCallStore ===
+// === Module 11130: ChannelCallStore ===
 
-// Module 11144 (ChannelCallStore)
+// Module 11130 (ChannelCallStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2143 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5915 */;
-import DeviceOrientation from "DeviceOrientation" /* 8995 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 11146 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 11147 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 11149 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5888 */;
+import DeviceOrientation from "DeviceOrientation" /* 8977 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 11132 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 11133 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 11135 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5018 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 import apply from "apply" /* 12 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(11145);
+const ChannelCallConstants = fn(11131);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5835).ParticipantTypes;
-const timeout = new fn(5014).Timeout();
+const ParticipantTypes = fn(5805).ParticipantTypes;
+const timeout = new fn(4984).Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
 let obj2 = {};
-let size = { x: "Array", y: "Path", width: "channel", height: "location", screenOrientation: fn(8995).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002177745760348538, isInitialized: 15177101738217418000000000000000000000000000000000000000000000000000000000000000000, isVisible: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017361922762208535 };
+let size = { x: "Array", y: "Path", width: "channel", height: "intl", screenOrientation: fn(8977).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: 16125669560158490000000000000000000000000000000000000000000000000000000000000000000, isInitialized: -22181358085869477000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, isVisible: -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003833828883463311 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
-const size1 = { x: "Array", y: "Path", width: "channel", height: "location", screenOrientation: fn(8995).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002177745760348538, isInitialized: 15177101738217418000000000000000000000000000000000000000000000000000000000000000000, isVisible: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017361922762208535 };
+const size1 = { x: "Array", y: "Path", width: "channel", height: "intl", screenOrientation: fn(8977).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: 16125669560158490000000000000000000000000000000000000000000000000000000000000000000, isInitialized: -22181358085869477000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, isVisible: -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003833828883463311 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;
 let closure_8 = Object.freeze(obj);

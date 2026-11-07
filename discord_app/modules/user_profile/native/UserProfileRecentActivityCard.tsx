@@ -1,27 +1,27 @@
-// === Module 15202: UserProfileRecentActivityCard ===
+// === Module 15236: UserProfileRecentActivityCard ===
 
-// Module 15202 (UserProfileRecentActivityCard)
+// Module 15236 (UserProfileRecentActivityCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import StringUtils from "StringUtils" /* 2150 */;
-import shared from "shared" /* 5177 */;
-import native from "native" /* 5229 */;
-import Text_Text from "Text/Text" /* 5781 */;
-import FastImageDefault from "FastImage" /* 5872 */;
-import Pressables from "Pressables" /* 7068 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7410 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7435 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8234 */;
-import utils from "utils" /* 8810 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 9004 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9415 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9439 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 15047 */;
-import BadgesAll from "Badges" /* 15060 */;
-import TrendingType from "TrendingType" /* 15065 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 15072 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 15073 */;
+import shared from "shared" /* 5147 */;
+import native from "native" /* 5199 */;
+import Text_Text from "Text/Text" /* 5751 */;
+import FastImageDefault from "FastImage" /* 5842 */;
+import Pressables from "Pressables" /* 7043 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7387 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8213 */;
+import utils from "utils" /* 8789 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8986 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9397 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9421 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 15079 */;
+import BadgesAll from "Badges" /* 15092 */;
+import TrendingType from "TrendingType" /* 15097 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 15104 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 15105 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -69,8 +69,8 @@ let obj = {
     return true;
   }
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8810).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8810).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8789).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8789).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -128,7 +128,7 @@ items[5] = {
     return tmp3;
   }
 };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj7 = { body: null, content: null, imageContainer: null, imageAspectRatio: null, posterImageAspectRatio: null, largeImage: null, smallImageBackground: null, smallImage: null, badges: null, badgeCell: null };
 let obj6 = {
   Badge: BadgesAll.MarathonBadge,
@@ -308,7 +308,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj7 = { title: entry.extra.activity_name };
           obj8 = obj7;
         } else {
-          obj8 = { title: "r" };
+          obj8 = { title: "uri" };
         }
         tmpResult6 = ContentInventoryTypes;
       }

@@ -36,12 +36,12 @@ import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-function ensureAvatarSource(source) {
-  if (typeof source === "number") {
-    let assetSource = Image.resolveAssetSource(source);
+function ensureAvatarSource(avatarSource) {
+  if (typeof avatarSource === "number") {
+    let assetSource = Image.resolveAssetSource(avatarSource);
   } else {
     const _Array = Array;
-    assetSource = source;
+    assetSource = avatarSource;
   }
   return assetSource;
 }

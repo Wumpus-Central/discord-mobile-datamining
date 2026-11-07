@@ -1,7 +1,7 @@
-// === Module 9656: usePromotionForApplication ===
+// === Module 9638: usePromotionForApplication ===
 
-// Module 9656 (usePromotionForApplication)
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9584 */;
+// Module 9638 (usePromotionForApplication)
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9566 */;
 
 const require = globalThis.__r;
 

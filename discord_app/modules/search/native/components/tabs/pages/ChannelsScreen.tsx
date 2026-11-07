@@ -1,20 +1,20 @@
-// === Module 19072: ChannelsScreen ===
+// === Module 19122: ChannelsScreen ===
 
-// Module 19072 (ChannelsScreen)
+// Module 19122 (ChannelsScreen)
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5179 */;
-import TrackingDefault from "Tracking" /* 14115 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
+import TrackingDefault from "Tracking" /* 14140 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5923 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 14121 */;
-import SearchQueryStore from "SearchQueryStore" /* 14108 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5896 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 14146 */;
+import SearchQueryStore from "SearchQueryStore" /* 14133 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9933);
+const SearchConstants = fn(9917);
 ({ EMPTY_VOICE_STATES: metroImportDefault, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(9932).SearchResultContentEntityTypes;
+let closure_10 = fn(9916).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ChannelsScreen.tsx");
