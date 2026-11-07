@@ -25,26 +25,26 @@ function PostPurchaseFooter(onSendGift) {
   const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = noop.useCallback(() => {
     ModalActionCreatorsDefault.pop();
-    const rootNavigationRef = onSendGift(5345).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(5315).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(13572).GiftIcon, {
+  obj2.icon = closure_10(onSendGift(13596).GiftIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
   });
   const intl = onSendGift(1113).intl;
   obj2.text = intl.string(_modDef2760.g86YiI);
   obj2.onPress = callback;
-  const items1 = [closure_10(onSendGift(5788).Button, obj2)];
+  const items1 = [closure_10(onSendGift(5758).Button, obj2)];
   const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1113).intl;
   obj4.text = intl2.string(_modDef2760["sa/cfM"]);
   obj4.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5788).Button, obj4);
+  items1[1] = closure_10(onSendGift(5758).Button, obj4);
   obj.children = items1;
   return closure_11(View, obj);
 }
@@ -86,44 +86,42 @@ function LevelUpScreen(newTier) {
   newTier = newTier.newTier;
   ({ nextTier, giftsToNextTier } = newTier);
   let isBadgeUnreadStateEnabled;
-  let stateFromStores;
   ({ simulatedProgress, currentTier, onSendGift } = newTier);
-  const tmp3 = closure_12(isBadgeUnreadStateEnabled(stateFromStores[8])().bottom);
-  const giftingBadgeTierIconUrl = newTier(stateFromStores[17]).getGiftingBadgeTierIconUrl(newTier);
-  let obj = newTier(stateFromStores[17]);
-  isBadgeUnreadStateEnabled = newTier(stateFromStores[18]).useIsBadgeUnreadStateEnabled({
-    location: "GiftBadgePostPurchase",
-  });
-  const obj2 = newTier(stateFromStores[18]);
+  let tmp3 = closure_12(isBadgeUnreadStateEnabled(1627)().bottom);
+  const giftingBadgeTierIconUrl = newTier(10736).getGiftingBadgeTierIconUrl(newTier);
+  let obj = newTier(10736);
   items = [BadgeDirectoryStore];
-  const items1 = [isBadgeUnreadStateEnabled, newTier.key];
-  stateFromStores = newTier(stateFromStores[19]).useStateFromStores(
+  const items1 = [newTier.key];
+  const stateFromStores = newTier(504).useStateFromStores(
     items,
     () => {
       const badgeById = BadgeDirectoryStore.getBadgeById(BadgeId.BadgeId.GIFTING);
-      let tmp2 = isBadgeUnreadStateEnabled;
-      if (isBadgeUnreadStateEnabled) {
-        let has_updates;
-        if (badgeById != null) {
-          has_updates = badgeById.has_updates;
-        }
-        tmp2 = true === has_updates;
+      let has_updates;
+      if (badgeById != null) {
+        has_updates = badgeById.has_updates;
       }
-      if (tmp2) {
-        tmp2 = badgeById.current_tier === newTier.key;
+      let tmp3 = true === has_updates;
+      if (tmp3) {
+        tmp3 = badgeById.current_tier === newTier.key;
       }
-      return tmp2;
+      return tmp3;
     },
     items1,
   );
+  const obj2 = newTier(504);
+  isBadgeUnreadStateEnabled = stateFromStores;
+  if (stateFromStores) {
+    isBadgeUnreadStateEnabled = obj3.useIsBadgeUnreadStateEnabled({
+      location: "GiftBadgePostPurchase",
+      hasUnread: stateFromStores,
+    });
+  }
   const effect = noop.useEffect(() => {
-    const result = newTier(stateFromStores[21]).triggerHapticFeedback(
-      isBadgeUnreadStateEnabled(stateFromStores[22]).IMPACT_HEAVY,
-    );
+    const result = newTier(5376).triggerHapticFeedback(isBadgeUnreadStateEnabled(5377).IMPACT_HEAVY);
   }, []);
-  const items2 = [stateFromStores];
+  const items2 = [isBadgeUnreadStateEnabled];
   const effect1 = noop.useEffect(() => {
-    if (stateFromStores) {
+    if (isBadgeUnreadStateEnabled) {
       BadgeDirectoryActionCreators.ackBadge(BadgeId.BadgeId.GIFTING);
     }
   }, items2);
@@ -133,13 +131,13 @@ function LevelUpScreen(newTier) {
   let tmp12Result = null != giftingBadgeTierIconUrl;
   if (tmp12Result) {
     const obj7 = { icon: giftingBadgeTierIconUrl, size: 140 };
-    tmp12Result = closure_10(tmp(tmp2[24]), obj7);
+    tmp12Result = closure_10(tmp(10738), obj7);
   }
   obj6.children = tmp12Result;
   const items3 = [closure_10(View, obj6)];
   const obj8 = { style: tmp3.levelUpBody, children: null };
   const items4 = [
-    closure_10(isBadgeUnreadStateEnabled(stateFromStores[25]), {
+    closure_10(isBadgeUnreadStateEnabled(14686), {
       progress: simulatedProgress,
       currentTier,
       newTier,
@@ -148,28 +146,28 @@ function LevelUpScreen(newTier) {
   ];
   const obj10 = { style: tmp3.messageSection, children: null };
   const obj11 = { variant: "heading-xxl/semibold", style: tmp3.centerText, children: null };
-  const intl = tmp4(tmp2[13]).intl;
+  const intl = tmp4(1113).intl;
   let str = newTier.name;
   if (str == null) {
     str = "";
   }
-  obj11.children = intl.format(isBadgeUnreadStateEnabled(stateFromStores[14]).k8MmO8, { tierName: str });
-  const items5 = [closure_10(newTier(stateFromStores[16]).Text, obj11)];
+  obj11.children = intl.format(isBadgeUnreadStateEnabled(2760).k8MmO8, { tierName: str });
+  const items5 = [closure_10(newTier(5751).Text, obj11)];
   let tmp12Result2 = null != nextTier && null != giftsToNextTier;
   if (tmp12Result2) {
     tmp12Result2 = giftsToNextTier > 0;
   }
   if (tmp12Result2) {
     const obj12 = { variant: "body-md/normal", color: "text-subtle", style: tmp3.centerText, children: null };
-    const intl2 = tmp4(tmp2[13]).intl;
+    const intl2 = tmp4(1113).intl;
     const obj13 = { count: giftsToNextTier, nextTierName: null };
     let str2 = nextTier.name;
     if (str2 == null) {
       str2 = "";
     }
     obj13.nextTierName = str2;
-    obj12.children = intl2.format(tmp(tmp2[14])["6QVlxw"], obj13);
-    tmp12Result2 = closure_10(tmp4(tmp2[16]).Text, obj12);
+    obj12.children = intl2.format(tmp(2760)["6QVlxw"], obj13);
+    tmp12Result2 = closure_10(tmp4(5751).Text, obj12);
   }
   items5[1] = tmp12Result2;
   obj10.children = items5;
@@ -182,16 +180,16 @@ function LevelUpScreen(newTier) {
   return closure_11(View, obj4);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(14651);
+const GiftingBadgeConstants = fn(14684);
 ({
   getRemainingGiftsToNextTier: closure_6,
   getTierForProgress: metroImportDefault,
   getNextTierForProgress: closure_8,
 } = GiftingBadgeConstants);
-const ContentDismissActionType = fn(5016).ContentDismissActionType;
+const ContentDismissActionType = fn(4986).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     screenContainer: { flex: 1 },

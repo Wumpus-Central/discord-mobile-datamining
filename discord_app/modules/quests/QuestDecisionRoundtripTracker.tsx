@@ -67,10 +67,10 @@ class QuestDecisionRoundtripTracker {
   }
 }
 const prototype = QuestDecisionRoundtripTracker.prototype;
-prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource) {
+prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource, arg2) {
   const self = this;
-  let tmp = placement;
-  if (placement === undefined) {
+  let tmp = arg2;
+  if (arg2 === undefined) {
     tmp = null;
   }
   const SymbolResult = Symbol();

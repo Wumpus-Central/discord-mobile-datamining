@@ -8,13 +8,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const QuestDockMode = fn(6861).QuestDockMode;
-const QuestDockConstants = fn(17334);
+const QuestDockMode = fn(6836).QuestDockMode;
+const QuestDockConstants = fn(17382);
 ({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_6 } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   wrapper: {
     alignItems: "center",

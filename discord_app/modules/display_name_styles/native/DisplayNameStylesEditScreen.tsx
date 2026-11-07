@@ -135,7 +135,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [fn(1396).DisplayNameEffect.GRADIENT, fn(1396).DisplayNameEffect.GUMMY, fn(1396).DisplayNameEffect.PRISM];
 let closure_16 = { overrideSettings: true };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   contentContainer: null,
@@ -465,7 +465,7 @@ export default function DisplayNameStylesEditScreen() {
       dismissCampaignFontBadge();
     }
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17592, dependencyMap.paths),
+      asyncRequireImpl(17641, dependencyMap.paths),
       "DisplayNameStylesFontPickerSheet",
       { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut },
     );
@@ -487,13 +487,13 @@ export default function DisplayNameStylesEditScreen() {
     if (stateFromStores != null) {
       id = stateFromStores.id;
     }
-    obj.openLazy(asyncRequireImpl(17595, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
+    obj.openLazy(asyncRequireImpl(17644, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
       userId: id,
       selectedEffectId: first1,
       onSelectEffect,
     });
     const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-    const tmp3 = asyncRequireImpl(17595, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(17644, dependencyMap.paths);
   }, items7);
   const callback7 = obj10.useCallback(() => {
     if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -504,7 +504,7 @@ export default function DisplayNameStylesEditScreen() {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17596, dependencyMap.paths),
+        asyncRequireImpl(17645, dependencyMap.paths),
         "DisplayNameStylesGummyColorPickerSheet",
         obj2,
       );
@@ -519,10 +519,10 @@ export default function DisplayNameStylesEditScreen() {
             return callback(first1, arg0);
           },
         };
-        openLazy(tmp2Result(17606, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+        openLazy(tmp2Result(17655, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
       } else {
         const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-        openLazy(tmp2Result(17608, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+        openLazy(tmp2Result(17657, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
       }
     }
   }, items8);

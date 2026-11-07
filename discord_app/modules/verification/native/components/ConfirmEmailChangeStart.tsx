@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_11 = createStyles.createStyles({
   container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" },
   image: { height: 190, width: 220, resizeMode: "contain" },
@@ -42,8 +42,8 @@ export default function ConfirmEmailChangeStart() {
     const obj5 = { style: tmp.container, children: null };
     let obj6 = { style: tmp.image, source: null };
     const formatResult = intl.format(tmp2(1113).t.oMFSgi, obj3);
-    obj6.source = navigation(7169);
-    const items1 = [closure_9(navigation(5872), obj6), , ,];
+    obj6.source = navigation(7144);
+    const items1 = [closure_9(navigation(5842), obj6), , ,];
     let obj7 = {
       style: tmp.title,
       accessibilityRole: "header",
@@ -53,7 +53,7 @@ export default function ConfirmEmailChangeStart() {
     };
     const intl2 = tmp2(1113).intl;
     obj7.children = intl2.string(tmp2(1113).t.dQ71Wa);
-    items1[1] = closure_9(tmp2(5781).Text, obj7);
+    items1[1] = closure_9(tmp2(5751).Text, obj7);
     items1[2] = formatResult.map((children, index) =>
       React6(Text_Text.Text, { style: body.body, variant: "body-sm/medium", color: "text-default", children }, index),
     );
@@ -63,7 +63,7 @@ export default function ConfirmEmailChangeStart() {
     obj9.text = intl3.string(tmp2(1113).t.rXV81H);
     obj9.onPress = tmp7;
     obj9.loading = tmp6[0];
-    obj8.children = closure_9(tmp2(5788).Button, obj9);
+    obj8.children = closure_9(tmp2(5758).Button, obj9);
     items1[3] = closure_9(closure_6, obj8);
     obj5.children = items1;
     obj4.children = closure_10(closure_6, obj5);

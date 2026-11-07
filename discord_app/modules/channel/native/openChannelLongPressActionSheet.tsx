@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("modules/channel/native/openChannelLon
 
 export function openChannelLongPressActionSheet(id) {
   const combined = "ChannelLongPress-" + id;
-  ActionSheetActionCreatorsDefault.openLazy(combined(2118)(10939, dependencyMap.paths), combined, {
+  ActionSheetActionCreatorsDefault.openLazy(combined(2118)(10922, dependencyMap.paths), combined, {
     channelId: id,
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);

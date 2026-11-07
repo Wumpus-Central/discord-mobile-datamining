@@ -1,6 +1,6 @@
 // discord_app/design/components/LottieIcon/native/generated/SpendEarnOrbsLightThemeLottie.tsx
 import LottieIcon from "../LottieIcon.tsx";
-import _mod14708 from "../../../../../../_runtime/metro/14708__.js";
+import _mod14741 from "../../../../../../_runtime/metro/14741__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,5 +18,5 @@ const result = size.fileFinishedImporting(
 export function SpendEarnOrbsLightThemeLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14708, ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14741, ref: ref.ref, layers, markers: items });
 }

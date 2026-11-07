@@ -10,7 +10,7 @@ import GuildMembershipStore from "../../../../stores/GuildMembershipStore.tsx";
 const require = fn;
 const View = fn(17).View;
 let jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 const obj2 = { button: { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -38,7 +38,7 @@ export default function InterestGuildJoinButton(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -106,12 +106,12 @@ export default function InterestGuildJoinButton(guildId) {
   const items1 = [guildId];
   let stateFromStores = guildId(504).useStateFromStores(items, () => GuildMembershipStore.isMember(guildId), items1);
   let obj = guildId(504);
-  const currentUserGuildJoinRequest = guildId(7000).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(6975).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  const tmp7 = applicationStatus === guildId(5204).GuildJoinRequestApplicationStatuses.SUBMITTED;
+  const tmp7 = applicationStatus === guildId(5174).GuildJoinRequestApplicationStatuses.SUBMITTED;
   _slicedToArray = tmp7;
   [loading, closure_6] = loading.useState(false);
   closure_7 = useGetIsMountedDefault();
@@ -176,6 +176,6 @@ export default function InterestGuildJoinButton(guildId) {
     }
     return applyArgumentsResult;
   };
-  obj6.children = jsx(guildId(5788).Button, obj7);
+  obj6.children = jsx(guildId(5758).Button, obj7);
   return jsx(closure_6, obj6);
 }

@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockStatusStore.tsx
-import _mod5085 from "../../../../../_runtime/metro/05085__.js";
+import _mod5055 from "../../../../../_runtime/metro/05055__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
@@ -68,7 +68,7 @@ export function useDockSubject(arg0) {
         moment = obj;
       }
     }
-  }, _mod5085.shallow);
+  }, _mod5055.shallow);
 }
 export function useDockHasStreamers(arg0) {
   closure_0 = arg0;

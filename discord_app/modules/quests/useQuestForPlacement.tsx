@@ -4,6 +4,7 @@ import AdCreativeType from "../../../discord_common/js/shared/shared-constants/A
 import DiscordAppStateDefault from "../app_state/DiscordAppState.native.tsx";
 import QuestsEligibility from "lib/QuestsEligibility.tsx";
 import QuestActionCreators from "QuestActionCreators.tsx";
+import ReturnFullQuestStatusInDecisionExperiment from "experiments/ReturnFullQuestStatusInDecisionExperiment.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import AdDeliveryStore from "../ads/AdDeliveryStore.tsx";
 import QuestStore from "QuestStore.tsx";
@@ -12,32 +13,40 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 
 function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP, arg2) {
-  let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
-  if (isEligibleForQuests) {
+  if (obj.getIsEligibleForQuests()) {
     let tmp5 = null != fetchedAt;
     if (tmp5) {
       const _Date = Date;
       const sum = fetchedAt.fetchedAt + fetchedAt.ttlMillis;
       tmp5 = sum >= Date.now();
     }
-    isEligibleForQuests = !tmp5;
-  }
-  if (isEligibleForQuests) {
-    if ("active" === obj2.getState()) {
-      if (!AdDeliveryStore.isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
-        if (AdDeliveryStore.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
-          const currentQuests = QuestActionCreators.fetchCurrentQuests();
-          const tmpResult = QuestActionCreators;
-          const questToDeliver = QuestActionCreators.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
-          const tmpResult3 = QuestActionCreators;
+    if (!tmp5) {
+      if ("active" === obj2.getState()) {
+        if (!AdDeliveryStore.isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
+          if (AdDeliveryStore.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
+            const returnFullQuestStatusInDecision =
+              ReturnFullQuestStatusInDecisionExperiment.getReturnFullQuestStatusInDecision("quest-placement-refresh");
+            if (!returnFullQuestStatusInDecision) {
+              const currentQuests = QuestActionCreators.fetchCurrentQuests();
+              const tmpResult4 = QuestActionCreators;
+            }
+            const tmpResult = ReturnFullQuestStatusInDecisionExperiment;
+            const questToDeliver = QuestActionCreators.fetchQuestToDeliver(
+              QUEST_HOME_BANNER_DESKTOP,
+              arg2,
+              returnFullQuestStatusInDecision,
+            );
+            const tmpResult5 = QuestActionCreators;
+          }
         }
+      } else if (null != fetchedAt) {
+        QuestActionCreators.clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
+        const tmpResult6 = QuestActionCreators;
       }
-    } else if (null != fetchedAt) {
-      QuestActionCreators.clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
-      const tmpResult4 = QuestActionCreators;
+      obj2 = DiscordAppStateDefault;
     }
-    obj2 = DiscordAppStateDefault;
   }
+  obj = QuestsEligibility;
 }
 ({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
 let closure_8 = 30 * DurationsDefault.Millis.SECOND;
@@ -126,7 +135,7 @@ export default function useFetchQuestForAdPlacement(arg0) {
     if (!tmpResult2.isQuestExpired(stateFromStores2)) {
       tmp8 = stateFromStores2;
     }
-    tmpResult2 = tmp(tmp2[9]);
+    tmpResult2 = tmp(tmp2[10]);
   }
   return tmp8;
 }
@@ -245,7 +254,7 @@ export function useDeliveredCreativeForPlacement(MOBILE_HOME_DOCK_AREA, QUEST_BA
     if (!tmpResult4.isQuestExpired(stateFromStores2)) {
       tmp9 = stateFromStores2;
     }
-    tmpResult4 = tmp(tmp2[9]);
+    tmpResult4 = tmp(tmp2[10]);
   }
   if (stateFromStores == null) {
     stateFromStores = tmp9;

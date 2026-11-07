@@ -19,9 +19,9 @@ export default function RoleIcon(arg0) {
     fontFamily: "System",
     fontSize: size * num,
     lineHeight: "channel",
-    textAlign: -26148451,
+    textAlign: "Array",
     width: size,
-    marginBottom: 1359021349,
+    marginBottom: "window",
   };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };

@@ -9,35 +9,35 @@ items[2] = { list: "indieGamesByPlayers", label: _modDef3248.OAUTki };
 const obj3 = { list: "indieGamesByPlayers", label: _modDef3248.OAUTki };
 items[3] = { list: "gamesByStreamWatchMinutes", label: _modDef3248.M1L00s };
 const obj5 = {
-  [fn(6225).CheckpointTraitRarity.DEFAULT]: "#FFE047",
-  [fn(6225).CheckpointTraitRarity.COMMON]: "#35ED7E",
-  [fn(6225).CheckpointTraitRarity.RARE]: "#EF3054",
-  [fn(6225).CheckpointTraitRarity.EPIC]: "#7D53DE",
-  [fn(6225).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
+  [fn(6200).CheckpointTraitRarity.DEFAULT]: "#FFE047",
+  [fn(6200).CheckpointTraitRarity.COMMON]: "#35ED7E",
+  [fn(6200).CheckpointTraitRarity.RARE]: "#EF3054",
+  [fn(6200).CheckpointTraitRarity.EPIC]: "#7D53DE",
+  [fn(6200).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
 };
-obj5[fn(6225).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
+obj5[fn(6200).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
 const obj6 = {};
-obj6[fn(6225).CheckpointTraitRarity.DEFAULT] = _modDef3248.bP4GV1;
-obj6[fn(6225).CheckpointTraitRarity.COMMON] = _modDef3248.QwkKWr;
-obj6[fn(6225).CheckpointTraitRarity.RARE] = _modDef3248.KLmNgL;
-obj6[fn(6225).CheckpointTraitRarity.EPIC] = _modDef3248.hAmdLZ;
-obj6[fn(6225).CheckpointTraitRarity.ULTRA] = _modDef3248.Tv4xyf;
-obj6[fn(6225).CheckpointTraitRarity.NITRO] = _modDef3248["0ModIv"];
+obj6[fn(6200).CheckpointTraitRarity.DEFAULT] = _modDef3248.bP4GV1;
+obj6[fn(6200).CheckpointTraitRarity.COMMON] = _modDef3248.QwkKWr;
+obj6[fn(6200).CheckpointTraitRarity.RARE] = _modDef3248.KLmNgL;
+obj6[fn(6200).CheckpointTraitRarity.EPIC] = _modDef3248.hAmdLZ;
+obj6[fn(6200).CheckpointTraitRarity.ULTRA] = _modDef3248.Tv4xyf;
+obj6[fn(6200).CheckpointTraitRarity.NITRO] = _modDef3248["0ModIv"];
 const items1 = [
-  fn(6225).CheckpointTraitRarity.ULTRA,
-  fn(6225).CheckpointTraitRarity.EPIC,
-  fn(6225).CheckpointTraitRarity.RARE,
-  fn(6225).CheckpointTraitRarity.COMMON,
-  fn(6225).CheckpointTraitRarity.DEFAULT,
-  fn(6225).CheckpointTraitRarity.NITRO,
+  fn(6200).CheckpointTraitRarity.ULTRA,
+  fn(6200).CheckpointTraitRarity.EPIC,
+  fn(6200).CheckpointTraitRarity.RARE,
+  fn(6200).CheckpointTraitRarity.COMMON,
+  fn(6200).CheckpointTraitRarity.DEFAULT,
+  fn(6200).CheckpointTraitRarity.NITRO,
 ];
 const items2 = [
-  fn(6225).CheckpointTraitRarity.DEFAULT,
-  fn(6225).CheckpointTraitRarity.COMMON,
-  fn(6225).CheckpointTraitRarity.RARE,
-  fn(6225).CheckpointTraitRarity.EPIC,
-  fn(6225).CheckpointTraitRarity.ULTRA,
-  fn(6225).CheckpointTraitRarity.NITRO,
+  fn(6200).CheckpointTraitRarity.DEFAULT,
+  fn(6200).CheckpointTraitRarity.COMMON,
+  fn(6200).CheckpointTraitRarity.RARE,
+  fn(6200).CheckpointTraitRarity.EPIC,
+  fn(6200).CheckpointTraitRarity.ULTRA,
+  fn(6200).CheckpointTraitRarity.NITRO,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");
@@ -60,7 +60,8 @@ export const CHECKPOINT_NITRO_BADGE_GRADIENT_ID = "checkpointRarityBadgeNitroGra
 export const CHECKPOINT_BACKGROUND_GRADIENT = ["#12606D", "#0B1624"];
 export const CHECKPOINT_GLOBAL_GAME_CATEGORIES = items;
 export const CHECKPOINT_NAV_HEIGHT = 64;
-export const CHECKPOINT_CONTROL_SIZE = 48;
+export const CHECKPOINT_CONTROL_SIZE = 40;
+export const CHECKPOINT_CONTROL_ICON_SIZE = 20;
 export const CHECKPOINT_CONTENT_MAX_WIDTH = 480;
 export const CHECKPOINT_CONTENT_MAX_HEIGHT = 840;
 export const CHECKPOINT_LOGO_SIZE = 40;

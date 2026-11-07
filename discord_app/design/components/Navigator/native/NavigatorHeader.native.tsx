@@ -6,7 +6,7 @@ import Text_Text from "../../Text/native/Text.tsx";
 import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
 import HeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import _mod7096 from "../../../../../_runtime/metro/07096__.js";
+import _mod7071 from "../../../../../_runtime/metro/07071__.js";
 import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -49,12 +49,12 @@ function CloseButton(onPress) {
     return timestampProducer(XSmallIcon.XSmallIcon, obj);
   };
   obj2.accessibilityLabel = stringResult;
-  return closure_6(require("../../../../../_runtime/metro/07096__.js").HeaderBackButton, obj2);
+  return closure_6(require("../../../../../_runtime/metro/07071__.js").HeaderBackButton, obj2);
 }
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  onPress(7095).useNavigatorBackPressHandler(() => {
+  onPress(7070).useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
     }
@@ -67,7 +67,7 @@ function CustomHeaderBackButton(onPress) {
   obj2.backImage = function backImage() {
     return closure_1_6(HeaderBackImage, {});
   };
-  return closure_6(onPress(7096).HeaderBackButton, obj2);
+  return closure_6(onPress(7071).HeaderBackButton, obj2);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -89,13 +89,13 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj2.accessibilityLabel = tmp5;
-  return timestampProducer(_mod7096.HeaderBackButton, obj2);
+  return timestampProducer(_mod7071.HeaderBackButton, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" },
   headerTitle: null,
@@ -107,7 +107,7 @@ let obj2 = {
   submittingIndicator: null,
 };
 let obj4 = {};
-let merged = Object.assign(fn(5781).TextStyleSheet["heading-md/semibold"]);
+let merged = Object.assign(fn(5751).TextStyleSheet["heading-md/semibold"]);
 obj4.color = nativeDefault.colors.TEXT_STRONG;
 obj2.headerTitle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
@@ -216,7 +216,7 @@ export function getHeaderConditionalBackButton(callback1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -249,7 +249,7 @@ export function getHeaderConditionalBackButton(callback1) {
               }
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           c2 = tmp;

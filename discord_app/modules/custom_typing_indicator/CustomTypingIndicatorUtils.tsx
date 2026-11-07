@@ -2,7 +2,7 @@
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import user2 from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes.tsx";
-import _modDef4026 from "intl/CustomTypingIndicator.messages.js";
+import _modDef4028 from "intl/CustomTypingIndicator.messages.js";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import UserProfileSettingsStore from "../user_profile/UserProfileSettingsStore.tsx";
@@ -16,31 +16,33 @@ require = fn;
 const Permissions = fn(1072).Permissions;
 const EmojiIntention = fn(1388).EmojiIntention;
 let obj = {};
-obj[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef4026["6Cdy4a"];
-obj[fn(1398).TypingSuggestion.YAPPING] = _modDef4026.E5VRaj;
-obj[fn(1398).TypingSuggestion.VENTING] = _modDef4026.xmxdPC;
-obj[fn(1398).TypingSuggestion.OVERSHARING] = _modDef4026["qGaH/9"];
-obj[fn(1398).TypingSuggestion.BARKING] = _modDef4026.M282uk;
-obj[fn(1398).TypingSuggestion.BABBLING] = _modDef4026.myNZDT;
-obj[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef4026.F7RLTP;
-obj[fn(1398).TypingSuggestion.MEOWING] = _modDef4026.EfxyQI;
-obj[fn(1398).TypingSuggestion.PURRING] = _modDef4026.PXYYXj;
-obj[fn(1398).TypingSuggestion.CHIRPING] = _modDef4026.mnCAqf;
-obj[fn(1398).TypingSuggestion.KEYSMASHING] = _modDef4026["123+VB"];
-obj[fn(1398).TypingSuggestion.THINKING] = _modDef4026["/wXIQV"];
+obj[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef4028["6Cdy4a"];
+obj[fn(1398).TypingSuggestion.YAPPING] = _modDef4028.E5VRaj;
+obj[fn(1398).TypingSuggestion.VENTING] = _modDef4028.xmxdPC;
+obj[fn(1398).TypingSuggestion.OVERSHARING] = _modDef4028["qGaH/9"];
+obj[fn(1398).TypingSuggestion.BARKING] = _modDef4028.M282uk;
+obj[fn(1398).TypingSuggestion.BABBLING] = _modDef4028.myNZDT;
+obj[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef4028.F7RLTP;
+obj[fn(1398).TypingSuggestion.MEOWING] = _modDef4028.EfxyQI;
+obj[fn(1398).TypingSuggestion.PURRING] = _modDef4028.PXYYXj;
+obj[fn(1398).TypingSuggestion.CHIRPING] = _modDef4028.mnCAqf;
+obj[fn(1398).TypingSuggestion.KEYSMASHING] = _modDef4028["123+VB"];
+obj[fn(1398).TypingSuggestion.THINKING] = _modDef4028["/wXIQV"];
+obj[fn(1398).TypingSuggestion.SQUEAKING] = _modDef4028.khnYc8;
 let obj2 = {};
-obj2[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef4026.kh4K4F;
-obj2[fn(1398).TypingSuggestion.YAPPING] = _modDef4026.m9AeqG;
-obj2[fn(1398).TypingSuggestion.VENTING] = _modDef4026["SZ0/Qu"];
-obj2[fn(1398).TypingSuggestion.OVERSHARING] = _modDef4026.N8cWE8;
-obj2[fn(1398).TypingSuggestion.BARKING] = _modDef4026.L5aWEN;
-obj2[fn(1398).TypingSuggestion.BABBLING] = _modDef4026.AoBaEw;
-obj2[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef4026["3hOLod"];
-obj2[fn(1398).TypingSuggestion.MEOWING] = _modDef4026["0Z9/o9"];
-obj2[fn(1398).TypingSuggestion.PURRING] = _modDef4026.oK1MLW;
-obj2[fn(1398).TypingSuggestion.CHIRPING] = _modDef4026.JPVvqj;
-obj2[fn(1398).TypingSuggestion.KEYSMASHING] = _modDef4026.JfieQ4;
-obj2[fn(1398).TypingSuggestion.THINKING] = _modDef4026.kz3mf0;
+obj2[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef4028.kh4K4F;
+obj2[fn(1398).TypingSuggestion.YAPPING] = _modDef4028.m9AeqG;
+obj2[fn(1398).TypingSuggestion.VENTING] = _modDef4028["SZ0/Qu"];
+obj2[fn(1398).TypingSuggestion.OVERSHARING] = _modDef4028.N8cWE8;
+obj2[fn(1398).TypingSuggestion.BARKING] = _modDef4028.L5aWEN;
+obj2[fn(1398).TypingSuggestion.BABBLING] = _modDef4028.AoBaEw;
+obj2[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef4028["3hOLod"];
+obj2[fn(1398).TypingSuggestion.MEOWING] = _modDef4028["0Z9/o9"];
+obj2[fn(1398).TypingSuggestion.PURRING] = _modDef4028.oK1MLW;
+obj2[fn(1398).TypingSuggestion.CHIRPING] = _modDef4028.JPVvqj;
+obj2[fn(1398).TypingSuggestion.KEYSMASHING] = _modDef4028.JfieQ4;
+obj2[fn(1398).TypingSuggestion.THINKING] = _modDef4028.kz3mf0;
+obj2[fn(1398).TypingSuggestion.SQUEAKING] = _modDef4028.HyvucT;
 let items = [
   fn(1398).TypingSuggestion.UNSPECIFIED,
   fn(1398).TypingSuggestion.YAPPING,
@@ -56,6 +58,7 @@ let items1 = [
   fn(1398).TypingSuggestion.CHIRPING,
   fn(1398).TypingSuggestion.KEYSMASHING,
   fn(1398).TypingSuggestion.THINKING,
+  fn(1398).TypingSuggestion.SQUEAKING,
 ];
 const items2 = [...items1];
 const items3 = [

@@ -55,7 +55,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
                       c3 = 1;
                       ref = 2;
                       v3 = 1;
-                      const obj7 = { value: memo2(10049).loadInAppSkus(differenceResult), done: false };
+                      const obj7 = { value: memo2(10033).loadInAppSkus(differenceResult), done: false };
                       return obj7;
                     }
                   }
@@ -100,8 +100,8 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v3("Unable to fetch");
-              const result = memo2(4983).captureBillingException(closure_128_1);
-              const obj3 = memo2(4983);
+              const result = memo2(4953).captureBillingException(closure_128_1);
+              const obj3 = memo2(4953);
             } else if (arg0 === 1) {
               v3 = 3;
               throw value;
@@ -158,8 +158,8 @@ function useLoadedGoogleSkuIds(memo1) {
   ];
   const effect = noop.useEffect(() => {
     c0 = true;
-    const obj = memo1(10049);
-    ({ settled, release: first } = memo1(10049).retainInAppSkus(c0));
+    const obj = memo1(10033);
+    ({ settled, release: first } = memo1(10033).retainInAppSkus(c0));
     settled.then(() => {
       if (c0) {
         closure_2((arg0) => {

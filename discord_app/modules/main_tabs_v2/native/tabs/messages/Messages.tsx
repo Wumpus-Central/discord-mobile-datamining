@@ -53,7 +53,7 @@ export default noop.memo(function Messages(style) {
   useMessagesReconnectToCallsEffectDefault();
   obj6 = require("PlatformUtils");
   const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(
-    tmp4(18384).DmGdmListRenderTriggerPoint,
+    tmp4(18431).DmGdmListRenderTriggerPoint,
   );
   const layoutEffect = noop.useLayoutEffect(() => {
     TTIAnalyticsUtils.trackAppUIViewed();
@@ -120,12 +120,12 @@ export default noop.memo(function Messages(style) {
   const obj10 = { backgroundColor: nativeDefault.colors.PANEL_BG, children: null };
   const items2 = [closure_5(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), ,];
   if (tmp10.showFullscreenEmptyState) {
-    let tmp24Result = closure_5(tmp(18387), {});
+    let tmp24Result = closure_5(tmp(18434), {});
   } else {
     if ("legend" === list) {
-      let tmp27 = 18392;
+      let tmp27 = 18439;
     } else {
-      tmp27 = "flash" === list ? 18436 : 18437;
+      tmp27 = "flash" === list ? 18483 : 18484;
     }
     const obj11 = { ref };
     const merged = Object.assign(obj7);
@@ -135,7 +135,7 @@ export default noop.memo(function Messages(style) {
   items2[1] = tmp24Result;
   let tmp24Result2 = null;
   if (!doesLandOnHomeDrawer) {
-    tmp24Result2 = closure_5(tmp4(13542).TTIFirstContentfulPaint, { label: "messages_tabs" });
+    tmp24Result2 = closure_5(tmp4(13567).TTIFirstContentfulPaint, { label: "messages_tabs" });
   }
   items2[2] = tmp24Result2;
   obj10.children = items2;

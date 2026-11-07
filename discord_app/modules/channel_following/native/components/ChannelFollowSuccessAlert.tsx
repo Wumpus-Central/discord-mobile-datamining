@@ -11,8 +11,8 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let items = [fn(11362), fn(11363), fn(11364)];
-let items1 = [fn(11365), fn(11366), fn(11367)];
+let items = [fn(11344), fn(11345), fn(11346)];
+let items1 = [fn(11347), fn(11348), fn(11349)];
 const items2 = [
   () => {
     const intl = util.intl;
@@ -55,7 +55,7 @@ const items2 = [
     return intl.string(util.t.jgC65t);
   },
 ];
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({
   text: { marginTop: 16, lineHeight: 20, textAlign: "center" },
   header: { textAlign: "center" },

@@ -23,7 +23,7 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ const Constants = fn(1072);
 } = Constants);
 const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
@@ -148,8 +148,8 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: null,
-    expandedChildren: "guilds-bar-drag-preview",
+    label: "body-sm/medium",
+    expandedChildren: "interactive-text-active",
     children: null,
   };
   const intl = util.intl;
@@ -167,8 +167,8 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: null,
-    expandedChildren: "guilds-bar-drag-preview",
+    label: "body-sm/medium",
+    expandedChildren: "interactive-text-active",
     children: null,
   });
   return <View style={tmp.stretch}>{null}</View>;

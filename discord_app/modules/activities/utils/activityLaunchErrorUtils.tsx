@@ -22,7 +22,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -165,7 +165,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(5828).DevShelfFetchState;
+const DevShelfFetchState = fn(5798).DevShelfFetchState;
 const AbortCodes = fn(1072).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = {

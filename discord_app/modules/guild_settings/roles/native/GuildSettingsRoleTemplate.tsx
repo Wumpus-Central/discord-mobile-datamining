@@ -6,9 +6,9 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef8944 from "../../../../../_runtime/metro/08944__.js";
-import PaginationDefault from "../../../../../_runtime/10765_Pagination.js";
-import _modDef11759 from "../../../../../_runtime/metro/11759__.js";
+import _modDef8926 from "../../../../../_runtime/metro/08926__.js";
+import PaginationDefault from "../../../../../_runtime/10748_Pagination.js";
+import _modDef11750 from "../../../../../_runtime/metro/11750__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -19,7 +19,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: closure_6 } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(20100);
+const GuildSettingsRoleConstants = fn(20169);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: closure_10,
@@ -30,7 +30,7 @@ const Constants = fn(1072);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   carousel: { flex: 1 },
@@ -190,7 +190,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_14(_modDef8944, {
+    children: closure_14(_modDef8926, {
       maximumValue: values.length - 1,
       minimumTrackTintColor: values[value].color,
       minimumValue: constants.COSMETIC,
@@ -301,7 +301,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
           const obj = { style: c3.templateContent, children: null };
           items = [
             gesture(native.Icon, {
-              source: _modDef11759,
+              source: _modDef11750,
               size: native.IconSizes.MEDIUM,
               color: nativeDefault.unsafe_rawColors.GREEN_360,
             }),

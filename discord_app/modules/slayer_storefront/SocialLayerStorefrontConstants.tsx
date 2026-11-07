@@ -1,7 +1,10 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontConstants.tsx
+import Constants from "../../Constants.tsx";
 import UserStoreConstants from "../user/UserStoreConstants.tsx";
+import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const HelpdeskArticles = Constants.HelpdeskArticles;
 const Environments = UserStoreConstants.Environments;
 let str = "1193841000108531764";
 if (window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING) {
@@ -11,7 +14,12 @@ let tmp2 = "1400977487940292751";
 if (window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING) {
   tmp2 = null;
 }
-const re0 = /^\/(?:channels\/\d+\/)?game-shop(?:\/|$)/;
+const GAME_SHOP_TERMS_ANCHORS = {
+  "1288512934112264234": "h_01KQJNEWWHB6E6WFRAF5WTPM8E",
+  "1346069614634864772": "h_01KQJNEWWGZ6CB48FP9VBE2MD1",
+  "614380482620293151": "h_01KZ49EKXDR078KV47FBG58PYP",
+};
+const re4 = /^\/(?:channels\/\d+\/)?game-shop(?:\/|$)/;
 const result = size.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConstants.tsx");
 
 export const STOREFRONT_MARKETING_GUILD_ID = str;
@@ -24,6 +32,16 @@ export const SOCIAL_LAYER_STOREFRONT_COUPON_PURCHASE_COMPLETE_MODAL_TYPE =
 export const BLOONS_TD6_APPLICATION_ID = "614380482620293151";
 export const MARVEL_RIVALS_APPLICATION_ID = "1346069614634864772";
 export const RUST_APPLICATION_ID = "1288512934112264234";
+export { GAME_SHOP_TERMS_ANCHORS };
+export function getGameShopTermsUrl(arg0) {
+  let articleURL = null;
+  if (null != obj[arg0]) {
+    obj = HelpdeskUtilsDefault;
+    const _HermesInternal = HermesInternal;
+    articleURL = obj.getArticleURL("" + HelpdeskArticles.SOCIAL_LAYER_STOREFRONT + "#" + tmp);
+  }
+  return articleURL;
+}
 export const BLOONS_TD6_SPLIT_TENDER_COUPON_SKU_IDS = new Set([
   "1560340689907089505",
   "1560711732412940429",
@@ -36,5 +54,5 @@ export function getChannelsGameShopPrefix(arg0) {
   return "/channels/" + arg0 + "/game-shop";
 }
 export function isGameShopPath(pathname) {
-  return re0.test(pathname);
+  return re4.test(pathname);
 }

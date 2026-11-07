@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const NodeType = fn(11704).NodeType;
+const NodeType = fn(11686).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   controlContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -30,7 +30,7 @@ export default function SettingSegmentedControl(node) {
   settings = undefined;
   ({ defaultIndex: c0, settings } = node.node);
   let tmp = closure_11();
-  const tmp3 = settings(9087)();
+  const tmp3 = settings(9069)();
   const width = tmp3.width;
   let num = 0;
   ({ ref, onLayout } = tmp3);
@@ -41,13 +41,13 @@ export default function SettingSegmentedControl(node) {
   const memo = noop.useMemo(() => {
     items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(16695).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(16743).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(16850).getSettingTitle(id);
+      obj.label = items(16898).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);

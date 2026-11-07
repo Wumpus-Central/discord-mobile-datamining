@@ -5,7 +5,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05745_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05715_LinearGradient.js";
 import LottieAnimationViewDefault from "../../../components_native/common/LottieAnimationView.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
@@ -63,20 +63,20 @@ function BackgroundImageGradient(uri) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const OnboardingPromptType = fn(7355).OnboardingPromptType;
-let closure_15 = fn(7351).GuildOnboardingModalStates;
+const OnboardingPromptType = fn(7332).OnboardingPromptType;
+let closure_15 = fn(7328).GuildOnboardingModalStates;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5744).NAV_BAR_HEIGHT,
+    marginTop: fn(5714).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -95,7 +95,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5744).NAV_BAR_HEIGHT,
+  marginTop: fn(5714).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -244,8 +244,8 @@ export default function GuildOnboardingPrompt(guildId) {
   required1 = tmp15;
   let tmp18 = currentPromptIdx + 1 >= prompts.length;
   if (tmp18) {
-    tmp18 = !tmp2(7360).showRulesInOnboarding(stateFromStores2, stateFromStores);
-    const tmp2Result16 = tmp2(7360);
+    tmp18 = !tmp2(7337).showRulesInOnboarding(stateFromStores2, stateFromStores);
+    const tmp2Result16 = tmp2(7337);
   }
   closure_16 = tmp18;
   const tmp19 = _slicedToArray(stateFromStores.useState(nativeDefault.unsafe_rawColors.PRIMARY_800), 2);
@@ -582,7 +582,7 @@ export default function GuildOnboardingPrompt(guildId) {
             const obj2 = {};
             let tmp = c0;
             const obj = step(1252);
-            const merged = Object.assign(c0(5916).collectGuildAnalyticsMetadata(_undefined));
+            const merged = Object.assign(c0(5889).collectGuildAnalyticsMetadata(_undefined));
             obj2.step = 0;
             obj2.skipped = true;
             obj2.back = false;
@@ -604,7 +604,7 @@ export default function GuildOnboardingPrompt(guildId) {
             } else {
               tmp5();
             }
-            const obj3 = c0(5916);
+            const obj3 = c0(5889);
           }),
         };
         navigation.setOptions(obj4);
@@ -614,7 +614,7 @@ export default function GuildOnboardingPrompt(guildId) {
       let headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
         const obj2 = {};
         const obj = step(1252);
-        const merged = Object.assign(c0(5916).collectGuildAnalyticsMetadata(_undefined));
+        const merged = Object.assign(c0(5889).collectGuildAnalyticsMetadata(_undefined));
         obj2.step = step;
         obj2.skipped = false;
         obj2.back = true;
@@ -622,10 +622,10 @@ export default function GuildOnboardingPrompt(guildId) {
         obj2.in_onboarding = true;
         obj2.is_final_step = false;
         obj.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
-        const obj3 = c0(5916);
+        const obj3 = c0(5889);
         const obj5 = {};
         const obj4 = step(1252);
-        const merged1 = Object.assign(c0(5916).collectGuildAnalyticsMetadata(_undefined));
+        const merged1 = Object.assign(c0(5889).collectGuildAnalyticsMetadata(_undefined));
         obj5.step = step - 1;
         obj5.required = dependencyMap[step - 1].required;
         obj4.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj5);
@@ -635,7 +635,7 @@ export default function GuildOnboardingPrompt(guildId) {
     headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
       const obj2 = {};
       const obj = step(1252);
-      const merged = Object.assign(c0(5916).collectGuildAnalyticsMetadata(_undefined));
+      const merged = Object.assign(c0(5889).collectGuildAnalyticsMetadata(_undefined));
       obj2.step = 0;
       obj2.skipped = false;
       obj2.back = true;
@@ -705,7 +705,7 @@ export default function GuildOnboardingPrompt(guildId) {
           selectOption,
           handleOnPress,
         };
-        tmp64Result = tmp64(tmp2(7379).MultipleChoicePrompt, obj8);
+        tmp64Result = tmp64(tmp2(7356).MultipleChoicePrompt, obj8);
       } else if (tmp66.DROPDOWN === type) {
         const obj9 = {
           guildId,
@@ -716,7 +716,7 @@ export default function GuildOnboardingPrompt(guildId) {
           selectOption,
           handleOnPress,
         };
-        tmp64Result = tmp64(tmp2(7379).DropdownPrompt, obj9);
+        tmp64Result = tmp64(tmp2(7356).DropdownPrompt, obj9);
       } else {
         tmp2(1380).assertNever(tmp11.type);
         const tmp2Result23 = tmp2(1380);

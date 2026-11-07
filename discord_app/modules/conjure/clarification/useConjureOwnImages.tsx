@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/clarification/useConjureOwnImages.tsx
-import _modDef4024 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4026 from "../intl/ConjureUntranslated.messages.js";
 import conjureAttachmentRequests from "../chat/conjureAttachmentRequests.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -70,7 +70,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
   [first1, closure_6] = first1.useState({});
   [first2, closure_8] = first1.useState({});
   let intl = require("util").intl;
-  const stringResult = intl.string(_modDef4024.wTsP5l);
+  const stringResult = intl.string(_modDef4026.wTsP5l);
   items = [first];
   const items1 = [arg1, first, first2];
   const callback = first1.useCallback((arg0) => {
@@ -252,7 +252,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
                 if (null != arg0[closure_0]) {
                   obj = closure_0(closure_2[5]);
                   const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                  result.catch(/* F141852 */ function() { ... });
+                  result.catch(/* F142485 */ function() { ... });
                 }
                 const obj2 = {};
                 const merged = Object.assign(arg0);
@@ -292,7 +292,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
             const obj = { busy: null, error: null };
             const obj2 = { source: "upload", text: null };
             const intl = id(1113).intl;
-            obj2.text = intl.string(closure_1(4024)["kUw/b1"]);
+            obj2.text = intl.string(closure_1(4026)["kUw/b1"]);
             obj.error = obj2;
             return closure_1_6((arg0) => {
               obj = {};
@@ -316,7 +316,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
               if (null != arg0[closure_0]) {
                 obj = closure_0(closure_2[5]);
                 const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                result.catch(/* F141852 */ function() { ... });
+                result.catch(/* F142485 */ function() { ... });
               }
               const obj2 = {};
               const merged = Object.assign(arg0);
@@ -367,7 +367,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
               return false;
             }
             const intl = id(1113).intl;
-            message = intl.string(closure_1(4024).l79PMc);
+            message = intl.string(closure_1(4026).l79PMc);
           });
         };
         return obj;

@@ -32,7 +32,6 @@ export const STEELSERIES_PARTNER_ID = "steelseries";
 export const LOGITECH_PARTNER_ID = "logitech";
 export const XBOX_PARTNER_ID = "xbox";
 export const YOUTUBE_PARTNER_ID = "youtube";
-export const RIOT_PARTNER_ID = "riot";
 export const RUST_PARTNER_ID = "rust";
 export const BEST_BUY_PARTNER_ID = "best_buy";
 export const CALL_OF_DUTY_PARTNER_ID = "call_of_duty";

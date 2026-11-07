@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../../../_runtime/05450_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05420_LegacyBaseButton.js";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -164,7 +164,7 @@ obj.setOptions({
   forcedTheme: ThemeTypes.DARK,
   forceHideSimpleEmbedContent: true,
 });
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let closure_17 = createStyles.createStyles({
   dummyLayout: { position: "absolute", top: 0, left: -9999, width: "100%", opacity: 0 },
 });
@@ -174,7 +174,7 @@ let closure_19 = {
 let closure_20 = {
   code: "(function MediaMessagePreviewTsx2(isFinished){let[scheduleOnRN,setHasEntranceFinished]=this.__closure;if(isFinished){scheduleOnRN(setHasEntranceFinished,true);}})",
 };
-createStyles = fn(5170);
+createStyles = fn(5140);
 let closure_22 = createStyles.createNativeStyleProperties({
   reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT,
   reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT,
@@ -183,7 +183,7 @@ let closure_22 = createStyles.createNativeStyleProperties({
   activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
   activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT,
 });
-createStyles = fn(5170);
+createStyles = fn(5140);
 let obj2 = {
   renderCodedLinks: false,
   renderGiftCode: false,

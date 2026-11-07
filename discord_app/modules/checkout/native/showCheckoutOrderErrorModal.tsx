@@ -30,7 +30,7 @@ function SyncedLoadingAlertModal(onConfirm) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -69,7 +69,7 @@ function SyncedLoadingAlertModal(onConfirm) {
               c3 = 0;
               closure_128_1(false);
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp22) {
             closure_2 = tmp22;
@@ -139,7 +139,7 @@ export function showCheckoutOrderErrorModal(arg0, c6) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -171,7 +171,7 @@ export function showCheckoutOrderErrorModal(arg0, c6) {
             closure_128_0 = value;
             closure_129_0(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -198,7 +198,7 @@ export function showCheckoutOrderErrorModal(arg0, c6) {
     ({ key, onCloseCallback } = obj);
     const merged = Object.assign(obj, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
     const merged1 = Object.assign(merged);
-    closure_0(6118).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
+    closure_0(6092).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
       dismissable: obj.dismissable,
     });
   });

@@ -19,7 +19,7 @@ require = fn;
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   _require = mobileQuestDock;
   const questDockQuest = require("AdCreativeUtils").getQuestDockQuest(mobileQuestDock);
-  const tmp4 = questDockAdCreativeId(7208)();
+  const tmp4 = questDockAdCreativeId(7183)();
   const obj = require("AdCreativeUtils");
   items = [QuestStore];
   let userStatus1;
@@ -35,8 +35,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(7941).isDismissed(questDockQuest.userStatus, tmp(6864).QuestContent.QUEST_BAR_MOBILE);
-    const tmpResult = tmp(7941);
+    isDismissedResult = tmp(7918).isDismissed(questDockQuest.userStatus, tmp(6839).QuestContent.QUEST_BAR_MOBILE);
+    const tmpResult = tmp(7918);
   }
   let claimedAt;
   if (questDockQuest != null) {
@@ -96,7 +96,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   );
   if (require("AdCreativeType").AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(6868).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(6843).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -107,7 +107,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(6868).AdCreativeType.PLAYABLE === type) {
+  } else if (tmp(6843).AdCreativeType.PLAYABLE === type) {
     let tmp19 = isEligibleForQuests;
     if (isEligibleForQuests) {
       tmp19 = !stateFromStores1;
@@ -119,7 +119,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       tmp19 = !tmp4;
     }
     return tmp19;
-  } else if (tmp(6868).AdCreativeType.QUEST === type) {
+  } else if (tmp(6843).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp17 = null != questDockQuest && !tmp4;
@@ -132,9 +132,9 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   const tmpResult12 = require("initialize");
 }
-const QuestConstants = fn(6861);
+const QuestConstants = fn(6836);
 ({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_10, QuestVariants: closure_11 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(6625).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(6600).CAPTCHA_MODAL_KEY;
 const ThemeTypes = fn(1083).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestHooks.native.tsx");
@@ -315,7 +315,7 @@ export function useMobileActivityQuest(quest) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -350,7 +350,7 @@ export function useMobileActivityQuest(quest) {
               return obj;
             }
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } catch (tmp12) {
             c0 = tmp;
             throw tmp12;

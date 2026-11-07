@@ -11,13 +11,13 @@ require = fn;
 let StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
 const BLACK = nativeDefault.unsafe_rawColors.BLACK;
-let ColorUtils = fn(5167);
+let ColorUtils = fn(5137);
 let closure_6 = ColorUtils.hexWithOpacity(BLACK, 0);
-ColorUtils = fn(5167);
+ColorUtils = fn(5137);
 let closure_7 = ColorUtils.hexWithOpacity(BLACK, 0.2);
-ColorUtils = fn(5167);
+ColorUtils = fn(5137);
 let closure_8 = ColorUtils.hexWithOpacity(BLACK, 0.4);
-ColorUtils = fn(5167);
+ColorUtils = fn(5137);
 let closure_9 = ColorUtils.hexWithOpacity(BLACK, 0.5);
 let closure_10 = {
   code: "(function BackgroundBlurFillNativeTsx1(){let[withSpring,interpolateColor,pressed,fallbackColor,fallbackColorPressed,ON_PRESS_SPRING]=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[fallbackColor,fallbackColorPressed]),ON_PRESS_SPRING,'animate-always')};})",
@@ -30,8 +30,8 @@ const result = size.fileFinishedImporting(
   "design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx",
 );
 
-export const BlurTheme = fn(5758).BlurTheme;
-export const BlurStyle = fn(5758).BlurStyle;
+export const BlurTheme = fn(5728).BlurTheme;
+export const BlurStyle = fn(5728).BlurStyle;
 export function BackgroundBlurFill(arg0) {
   ({ blurTheme, blurStyle, tintColor, android_fallbackColor } = arg0);
   ({ style, blurAmount, android_blurTargetViewNativeId } = arg0);
@@ -53,8 +53,8 @@ export function BackgroundBlurFill(arg0) {
   if (tintColor == null) {
     tintColor = noop.useMemo(() => (VisualEffectView.isBlurThemeLight(blurTheme) ? closure_6 : closure_8), items1);
   }
-  obj = blurTheme(5229);
-  const tmpResult = blurTheme(5754);
+  obj = blurTheme(5199);
+  const tmpResult = blurTheme(5724);
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(
       nativeDefault.colors.BACKGROUND_SCRIM,
@@ -103,8 +103,8 @@ export function BackgroundBlurFillAnimated(arg0) {
   if (tintColor == null) {
     tintColor = noop.useMemo(() => (VisualEffectView.isBlurThemeLight(blurTheme) ? closure_6 : closure_8), items1);
   }
-  obj = blurTheme(5229);
-  const tmpResult = blurTheme(5754);
+  obj = blurTheme(5199);
+  const tmpResult = blurTheme(5724);
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(
       nativeDefault.colors.BACKGROUND_SCRIM,
@@ -123,7 +123,7 @@ export function BackgroundBlurFillAnimated(arg0) {
   const items2 = [StyleSheet.absoluteFill, style];
   obj3.style = items2;
   let tmp6 = null != animatedProps;
-  tmpResult2 = blurTheme(5758);
+  tmpResult2 = blurTheme(5728);
   if (tmp6) {
     const obj4 = { animatedProps };
     tmp6 = obj4;

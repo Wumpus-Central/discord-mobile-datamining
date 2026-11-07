@@ -16,7 +16,7 @@ let closure_5 = async function _promptForRegisterCredential() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -214,7 +214,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   });
 };
 obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredentialManagerPasskey(setError) {
-  setRegistering(6831).registerPasskey;
+  setRegistering(6806).registerPasskey;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -270,7 +270,7 @@ obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredential
     .finally(() => setRegistering(false));
 };
 obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setError) {
-  setRegistering(6831).register;
+  setRegistering(6806).register;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -327,7 +327,7 @@ obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setErro
 };
 obj.registerPasskey = function registerPasskey(setError) {
   const obj = setError(1377);
-  const tmp2 = setRegistering(6831);
+  const tmp2 = setRegistering(6806);
   if (isAndroidResult) {
     setError = undefined;
     const setError2 = setError.setError;
@@ -479,7 +479,7 @@ obj.registerPasskey = function registerPasskey(setError) {
 obj.registerSecurityKey = function registerSecurityKey(setError) {
   let register = fn;
   if (fn === undefined) {
-    register = setRegistering(6831).register;
+    register = setRegistering(6806).register;
   }
   setError = undefined;
   setError = setError.setError;

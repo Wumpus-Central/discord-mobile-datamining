@@ -6,5 +6,5 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/age_gate/showNSFWGuildJoinGate.native.tsx");
 
 export function showNSFWGuildJoinGate(id) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7470, dependencyMap.paths), { guildId: id });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7447, dependencyMap.paths), { guildId: id });
 }

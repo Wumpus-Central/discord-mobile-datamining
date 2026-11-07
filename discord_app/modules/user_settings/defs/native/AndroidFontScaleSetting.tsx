@@ -8,16 +8,16 @@ require = fn;
 function formatFontScale(arg0) {
   return 100 * FontScales[Math.round(Math, arg0)] + "%";
 }
-const useFontScaleStore = fn(17517).useFontScaleStore;
+const useFontScaleStore = fn(17566).useFontScaleStore;
 const FontScales = fn(1082).FontScales;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11703);
+const SettingBuilders = fn(11685);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.i19n5L);
   },
-  parent: fn(8524).MobileUserSettings.APPEARANCE,
+  parent: fn(8503).MobileUserSettings.APPEARANCE,
   useProps: function useFontScaleSliderProps() {
     const tmp = useFontScaleStore();
     closure_0 = tmp;

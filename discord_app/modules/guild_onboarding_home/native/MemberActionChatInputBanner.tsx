@@ -9,10 +9,10 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
-import _modDef13405 from "../../../../_runtime/metro/13405__.js";
-import _modDef14042 from "../../../../_runtime/metro/14042__.js";
+import _modDef13428 from "../../../../_runtime/metro/13428__.js";
+import _modDef14067 from "../../../../_runtime/metro/14067__.js";
 import MemberActionUtils from "../MemberActionUtils.tsx";
-import _modDef14045 from "../../../../_runtime/metro/14045__.js";
+import _modDef14070 from "../../../../_runtime/metro/14070__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -40,7 +40,7 @@ function ActionChannelInfo(action) {
     const obj5 = { channelName: tmp4 };
     obj4.children = intl.format(tmp(1113).t.MkzlDL, obj5);
   }
-  return closure_12(action(5781).Text, obj4);
+  return closure_12(action(5751).Text, obj4);
 }
 function ChannelActionEmoji(emoji) {
   emoji = emoji.emoji;
@@ -48,7 +48,7 @@ function ChannelActionEmoji(emoji) {
   const tmp = closure_15();
   const obj = {
     style: tmp.emojiPlaceholder,
-    children: closure_12(id(1187).Icon, { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13405 }),
+    children: closure_12(id(1187).Icon, { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13428 }),
   };
   const tmp6 = closure_12(View, obj);
   id = undefined;
@@ -58,7 +58,7 @@ function ChannelActionEmoji(emoji) {
   if (emoji != null) {
     const name = emoji.name;
   }
-  const obj2 = { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13405 };
+  const obj2 = { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13428 };
   items = [EmojiStore];
   const items1 = [id];
   const stateFromStores = id(563).useStateFromStores(
@@ -90,7 +90,7 @@ function ChannelActionEmoji(emoji) {
       tmp2Result = tmp6;
       if (null != tmp5Result5.getByName(tmp5Result6.convertSurrogateToName(name, false))) {
         const obj6 = { style: tmp.textEmoji, variant: "heading-lg/medium", children: name };
-        tmp2Result = closure_12(tmp3(5781).Text, obj6);
+        tmp2Result = closure_12(tmp3(5751).Text, obj6);
       }
       tmp5Result6 = UnicodeEmojisDefault;
     }
@@ -296,7 +296,7 @@ function MemberActionChatInputBanner(channel) {
         items[1] = state(View, obj3);
         let tmp6Result = c3;
         if (c3) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef14045 };
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef14070 };
           tmp6Result = application_id(native.Icon, obj6);
         }
         items[2] = tmp6Result;
@@ -354,7 +354,7 @@ function MemberActionChatInputBanner(channel) {
             obj3.children = items1;
             items[1] = state(View, obj3);
             const obj7 = { style: _undefined.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef14042 };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef14067 };
             obj7.children = application_id(native.Icon, obj8);
             items[2] = application_id(View, obj7);
             obj.children = items;
@@ -386,7 +386,7 @@ const Routes = fn(1072).Routes;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   animatedContainer: { overflow: "hidden" },
   measurement: { opacity: 0, position: "absolute" },
@@ -445,8 +445,8 @@ let closure_19 = {
 };
 const memoResult = noop.memo(function MemberActionChatInputBannerGuarded(channel) {
   channel = channel.channel;
-  const canSeeOnboardingHome = channel(7484).useCanSeeOnboardingHome(channel.guild_id);
-  const obj = channel(7484);
+  const canSeeOnboardingHome = channel(7461).useCanSeeOnboardingHome(channel.guild_id);
+  const obj = channel(7461);
   items = [GuildMemberStore];
   const stateFromStores = channel(563).useStateFromStores(items, () => {
     const selfMember = GuildMemberStore.getSelfMember(channel.guild_id);

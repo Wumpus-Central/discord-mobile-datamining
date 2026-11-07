@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7202 from "../../../../_runtime/metro/07202__.js";
+import _modDef7177 from "../../../../_runtime/metro/07177__.js";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
 import ScheduledMessagesUtils from "../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
 import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageTypes.tsx";
@@ -51,7 +51,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
   obj6.hitSlop = tmp10;
   obj6.onPress = onCancelReplying.onCancelReplying;
   obj6.children = application_id(native.Icon, {
-    source: _modDef7202,
+    source: _modDef7177,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
@@ -398,14 +398,14 @@ function ChatInputEditBar(onCancelEditing) {
   obj4.onPress = onCancelEditing.onCancelEditing;
   const tmp8 = application_id(Text_Text.Text, obj3);
   obj4.children = application_id(native.Icon, {
-    source: _modDef7202,
+    source: _modDef7177,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj6 = { style: tmp.contextBarRow, children: null };
   const obj7 = { children: null };
   items = [tmp8];
-  const obj5 = { source: _modDef7202, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj5 = { source: _modDef7177, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = application_id(component, {
     style: tmp.floatingRightActions,
     children: application_id(Pressables.PressableOpacity, obj4),
@@ -463,14 +463,14 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj5.onPress = onCancelScheduling;
   const tmp9 = application_id(Pressables.PressableOpacity, obj4);
   obj5.children = application_id(native.Icon, {
-    source: _modDef7202,
+    source: _modDef7177,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj7 = { style: tmp.contextBarRow, children: null };
   const obj8 = { children: null };
   items = [tmp9];
-  const obj6 = { source: _modDef7202, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj6 = { source: _modDef7177, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = application_id(component, {
     style: tmp.floatingRightActions,
     children: application_id(Pressables.PressableOpacity, obj5),
@@ -518,10 +518,10 @@ function ContextBarItem(arg0) {
   }, items2);
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     componentDidAppear() {
-      const result = backgroundColor.set(c0(5400).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5370).withTiming(60, obj));
     },
     componentDidEnter() {
-      const result = backgroundColor.set(c0(5400).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5370).withTiming(60, obj));
     },
     componentWillLeave(current) {
       ref1.current = current;
@@ -544,9 +544,9 @@ function ContextBarItem(arg0) {
       ChatInputContextBarTsx2.__workletHash = 5373252367218;
       ChatInputContextBarTsx2.__initData = tmp3;
       const result = backgroundColor.set(
-        c0(5400).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2),
+        c0(5370).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2),
       );
-      obj = c0(5400);
+      obj = c0(5370);
     },
   }));
   const obj4 = { style: null, children };
@@ -556,13 +556,13 @@ function ContextBarItem(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7800).DraftType;
+const DraftType = fn(7777).DraftType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let obj = { duration: 250, easing: fn(1187).STANDARD_EASING };
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let closure_16 = createStyles.createStyles((arg0) => {
   let MOBILE_FLOATING_ACCESSORY_BACKGROUND = arg0;
   if (arg0 == null) {
@@ -570,7 +570,7 @@ let closure_16 = createStyles.createStyles((arg0) => {
   }
   return { contextBar: { backgroundColor: MOBILE_FLOATING_ACCESSORY_BACKGROUND } };
 });
-createStyles = fn(5170);
+createStyles = fn(5140);
 let closure_17 = createStyles.createStyles(() => {
   obj = {
     contextBarRow: {

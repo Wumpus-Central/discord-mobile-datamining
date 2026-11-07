@@ -350,7 +350,7 @@ let closure_23 = async function _openWithFreshTicket(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -389,7 +389,7 @@ let closure_23 = async function _openWithFreshTicket(arg0) {
           closure_131_5 = closure_5;
           if (closure_131_1.disposed) {
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             closure_132_13(closure_131_0, "failed");
             const _Error = Error;
@@ -400,23 +400,23 @@ let closure_23 = async function _openWithFreshTicket(arg0) {
             closure_132_17(closure_131_0, closure_131_1, str);
             closure_131_1.pendingModelSettings = null;
             closure_131_1.pendingTemplatePrep = null;
-            closure_132_0(closure_132_2[25]).rejectPendingPublish(
+            closure_132_0(closure_132_2[27]).rejectPendingPublish(
               closure_131_0,
               "Connection failed before the publish result arrived",
             );
-            const obj3 = closure_132_0(closure_132_2[25]);
-            const result = closure_132_0(closure_132_2[26]).rejectPendingPublishSchedule(closure_131_0);
-            const obj4 = closure_132_0(closure_132_2[26]);
-            const result1 = closure_132_0(closure_132_2[25]).rejectPendingPatchNotesDraft(
+            const obj3 = closure_132_0(closure_132_2[27]);
+            const result = closure_132_0(closure_132_2[28]).rejectPendingPublishSchedule(closure_131_0);
+            const obj4 = closure_132_0(closure_132_2[28]);
+            const result1 = closure_132_0(closure_132_2[27]).rejectPendingPatchNotesDraft(
               closure_131_0,
               "Connection failed before the draft arrived",
             );
-            const obj5 = closure_132_0(closure_132_2[25]);
-            const result2 = closure_132_0(closure_132_2[25]).failPendingSafetyRecheck(closure_131_0);
-            const obj6 = closure_132_0(closure_132_2[25]);
+            const obj5 = closure_132_0(closure_132_2[27]);
+            const result2 = closure_132_0(closure_132_2[27]).failPendingSafetyRecheck(closure_131_0);
+            const obj6 = closure_132_0(closure_132_2[27]);
             const obj12 = {
               location: "connection",
-              code: closure_132_0(closure_132_2[33]).ConjureErrorCodes.WS_OPEN_FAILED,
+              code: closure_132_0(closure_132_2[35]).ConjureErrorCodes.WS_OPEN_FAILED,
               message: null,
             };
             const _Error2 = Error;
@@ -425,9 +425,9 @@ let closure_23 = async function _openWithFreshTicket(arg0) {
               str2 = closure_131_5.message;
             }
             obj12.message = str2;
-            closure_132_0(closure_132_2[33]).trackConjureErrored(closure_131_0, obj12);
+            closure_132_0(closure_132_2[35]).trackConjureErrored(closure_131_0, obj12);
             c8 = 3;
-            const obj7 = closure_132_0(closure_132_2[33]);
+            const obj7 = closure_132_0(closure_132_2[35]);
           }
         } else if (arg0 === 1) {
           c8 = 3;
@@ -469,7 +469,7 @@ let closure_23 = async function _openWithFreshTicket(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp67) {
       closure_5 = tmp67;
@@ -622,43 +622,45 @@ function closeAllConnections() {
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
   conjureMediaTickets.clearMediaTickets();
 }
-const getOlderHistoryCursor = fn(10987).getOlderHistoryCursor;
-const ConjureBrowserSessionsStore = fn(10996);
-const ConjureSmartContextStore = fn(10997);
-const ConjureDebugLogStore = fn(10998);
-const ConjureLiveReloadStore = fn(11000);
-const ConjureModelSettingsStore = fn(11001);
-const ConjureOverlayBackgroundStore = fn(11002);
-const ConjurePublishStatusStore = fn(11003);
-const ConjureRemixStore = fn(11004);
-const ConjureSettingsStore = fn(11005);
-const ConjureSpendLimitStore = fn(11006);
-const ConjureVoiceChannelPinStore = fn(11007);
+const getOlderHistoryCursor = fn(10970).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(10979);
+const ConjureSmartContextStore = fn(10980);
+const ConjureDebugLogStore = fn(10981);
+const ConjureLiveReloadStore = fn(10983);
+const ConjureManagedCopyStore = fn(10984);
+const ConjureModelSettingsStore = fn(10985);
+const ConjureOverlayBackgroundStore = fn(10986);
+const ConjurePublishStatusStore = fn(10987);
+const ConjureRemixStore = fn(10988);
+const ConjureSettingsStore = fn(10989);
+const ConjureSpendLimitStore = fn(10990);
+const ConjureVoiceChannelPinStore = fn(10991);
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(11033).browserSessionsFrameHandlers);
-let merged1 = Object.assign(fn(11008).chatFrameHandlers);
-const merged2 = Object.assign(fn(11034).debugFrameHandlers);
-const merged3 = Object.assign(fn(11036).hostAccessFrameHandlers);
-const merged4 = Object.assign(fn(11038).liveReloadFrameHandlers);
-const merged5 = Object.assign(fn(11039).modelSettingsFrameHandlers);
-const merged6 = Object.assign(fn(11040).previewFrameHandlers);
-const merged7 = Object.assign(fn(11097).publishFrameHandlers);
-const merged8 = Object.assign(fn(11103).publishScheduleFrameHandlers);
-const merged9 = Object.assign(fn(11105).remixFrameHandlers);
-const merged10 = Object.assign(fn(11106).settingsFrameHandlers);
-const merged11 = Object.assign(fn(11108).smartContextFrameHandlers);
+let merged = Object.assign(fn(11017).browserSessionsFrameHandlers);
+let merged1 = Object.assign(fn(10992).chatFrameHandlers);
+const merged2 = Object.assign(fn(11018).debugFrameHandlers);
+const merged3 = Object.assign(fn(11020).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(11022).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(11023).managedCopyFrameHandlers);
+const merged6 = Object.assign(fn(11024).modelSettingsFrameHandlers);
+const merged7 = Object.assign(fn(11025).previewFrameHandlers);
+const merged8 = Object.assign(fn(11083).publishFrameHandlers);
+const merged9 = Object.assign(fn(11089).publishScheduleFrameHandlers);
+const merged10 = Object.assign(fn(11091).remixFrameHandlers);
+const merged11 = Object.assign(fn(11092).settingsFrameHandlers);
+const merged12 = Object.assign(fn(11094).smartContextFrameHandlers);
 let obj2 = {};
-const merged12 = Object.assign(fn(11109).appBuildRequestStepHandlers);
-const merged13 = Object.assign(fn(11008).chatStepHandlers);
-const merged14 = Object.assign(fn(11034).debugStepHandlers);
-const merged15 = Object.assign(fn(11040).previewStepHandlers);
-const merged16 = Object.assign(fn(11110).projectStepHandlers);
-const merged17 = Object.assign(fn(11097).publishStepHandlers);
-const merged18 = Object.assign(fn(11111).usageStepHandlers);
+const merged13 = Object.assign(fn(11095).appBuildRequestStepHandlers);
+const merged14 = Object.assign(fn(10992).chatStepHandlers);
+const merged15 = Object.assign(fn(11018).debugStepHandlers);
+const merged16 = Object.assign(fn(11025).previewStepHandlers);
+const merged17 = Object.assign(fn(11096).projectStepHandlers);
+const merged18 = Object.assign(fn(11083).publishStepHandlers);
+const merged19 = Object.assign(fn(11097).usageStepHandlers);
 const set1 = new Set([
   "hello",
   "history",
@@ -886,8 +888,8 @@ export function sendUserMessage(projectId, trimmed, arg2) {
       str3 = tmp30.message;
     }
     if (tmp5 == tmp6) {
-      tmp2(tmp[18]).sendFailedStep(tmp3, str3);
-      const tmp2Result = tmp2(tmp[18]);
+      tmp2(tmp[19]).sendFailedStep(tmp3, str3);
+      const tmp2Result = tmp2(tmp[19]);
     }
     return false;
   }

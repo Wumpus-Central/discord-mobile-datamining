@@ -35,7 +35,7 @@ let closure_13 = async function _requestNotifications() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_13 = async function _requestNotifications() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp10) {
       c0 = tmp;
       throw tmp10;
@@ -83,7 +83,7 @@ let closure_14 = async function _joinGuild(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -207,7 +207,7 @@ let closure_16 = async function _runGuarded(arg0) {
 };
 const Constants = fn(1072);
 ({ AbortCodes, PlatformTypes } = Constants);
-let closure_7 = fn(8031).NotificationAuthorizationStatus;
+let closure_7 = fn(8009).NotificationAuthorizationStatus;
 const items = [, ,];
 ({
   USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED: arr[0],
@@ -237,7 +237,7 @@ export function useWaterwheelsActions() {
       })(ref.current, type.value.guild_id);
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD === type) {
       return runGuarded(
-        () => type(7616).startLurking(type.value.guild_id, {}),
+        () => type(7593).startLurking(type.value.guild_id, {}),
         () => {
           const intl = type(1113).intl;
           return intl.string(closure_1_1(2534).d6U01J);
@@ -259,7 +259,7 @@ export function useWaterwheelsActions() {
       );
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_URI === type) {
       return runGuarded(
-        () => type(9037).handleClick({ href: type.value.url }),
+        () => type(9019).handleClick({ href: type.value.url }),
         () => {
           const intl = type(1113).intl;
           return intl.string(closure_1_1(2534)["4a9Wgk"]);

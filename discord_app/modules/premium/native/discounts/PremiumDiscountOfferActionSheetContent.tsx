@@ -18,7 +18,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   contentContainer: {
     paddingHorizontal: 36,

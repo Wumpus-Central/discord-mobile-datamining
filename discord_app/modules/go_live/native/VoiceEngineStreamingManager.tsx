@@ -46,7 +46,7 @@ let closure_18 = async function _handleThumbnailUpload() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -123,8 +123,8 @@ const Constants = fn(1072);
 const getAppIntentScheme = fn(2142).getAppIntentScheme;
 let obj2 = new LoggerDefault("VoiceEngineStreamingManager");
 obj2.enableNativeLogger(true);
-const timeout = new fn(5014).Timeout();
-const timeout1 = new fn(5014).Timeout();
+const timeout = new fn(4984).Timeout();
+const timeout1 = new fn(4984).Timeout();
 let closure_16 = [];
 const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
 class VoiceEngineStreamingManager extends tmp6 {
@@ -166,13 +166,13 @@ prototype["_initialize"] = function _initialize() {
     const currentAppIntent = authStore.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(8000).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(7978).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = authStore.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = closure_1(5915);
+        const tmp2Result = closure_1(5888);
         const participant = tmp2Result.selectParticipant(
           channel.id,
-          tmp9(6797).encodeStreamKey(currentUserActiveStream),
+          tmp9(6772).encodeStreamKey(currentUserActiveStream),
         );
         if ("android" === closure_19.platform) {
           closure_15.start(15000, () => {
@@ -193,9 +193,9 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(closure_12(currentAppIntent));
         }
-        const tmp9Result = tmp9(6797);
+        const tmp9Result = tmp9(6772);
       }
-      const obj3 = currentUserActiveStream(8000);
+      const obj3 = currentUserActiveStream(7978);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");

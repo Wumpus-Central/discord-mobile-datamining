@@ -11,41 +11,54 @@ import GuildStore from "GuildStore.tsx";
 
 require = fn;
 function handleConnectionOpen() {
-  let tmp = null != c9;
-  if (tmp) {
-    tmp = c9 !== metroImportDefault;
+  let tmp = null == c10;
+  if (!tmp) {
+    let tmp4 = c10 === metroImportDefault;
+    if (!tmp4) {
+      tmp4 = tmp2 === React6;
+    }
+    tmp = tmp4;
   }
-  if (tmp) {
-    tmp = null == GuildStore.getGuild(c9);
+  if (!tmp) {
+    tmp = null != GuildStore.getGuild(c10);
   }
-  if (tmp) {
-    tmp = null == UserGuildJoinRequestStore.getRequest(c9);
+  if (!tmp) {
+    tmp = null != UserGuildJoinRequestStore.getRequest(c10);
   }
-  if (tmp) {
-    c9 = null;
-  }
-  let tmp8 = null != c10;
-  if (tmp8) {
-    tmp8 = c10 !== metroImportDefault;
-  }
-  if (tmp8) {
-    tmp8 = null == GuildStore.getGuild(c10);
-  }
-  if (tmp8) {
-    tmp8 = null == UserGuildJoinRequestStore.getRequest(c10);
-  }
-  if (tmp8) {
+  if (!tmp) {
     c10 = null;
   }
-  if (null != c9) {
+  let tmp10 = null == c11;
+  if (!tmp10) {
+    let tmp13 = c11 === metroImportDefault;
+    if (!tmp13) {
+      tmp13 = tmp11 === React6;
+    }
+    tmp10 = tmp13;
+  }
+  if (!tmp10) {
+    tmp10 = null != GuildStore.getGuild(c11);
+  }
+  if (!tmp10) {
+    tmp10 = null != UserGuildJoinRequestStore.getRequest(c11);
+  }
+  if (!tmp10) {
+    c11 = null;
+  }
+  if (null != c10) {
     const _Date = Date;
-    prop[tmp15] = Date.now();
+    prop[tmp19] = Date.now();
   }
 }
 const Constants = fn(1072);
-({ ME: closure_6, MOBILE_GUILD_UPSELL_LIST: metroImportDefault, Routes: closure_8 } = Constants);
-let c9 = null;
+({
+  ME: closure_6,
+  MOBILE_GUILD_UPSELL_LIST: metroImportDefault,
+  Routes: closure_8,
+  WATERWHEELS: closure_9,
+} = Constants);
 let c10 = null;
+let c11 = null;
 let prop = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class SelectedGuildStore extends PersistedStore {}
@@ -67,7 +80,7 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
   if (selectedGuildId == null) {
     selectedGuildId = null;
   }
-  c9 = selectedGuildId;
+  c10 = selectedGuildId;
   lastSelectedGuildId = undefined;
   if (selectedGuildTimestampMillis != null) {
     lastSelectedGuildId = selectedGuildTimestampMillis.lastSelectedGuildId;
@@ -75,7 +88,7 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
   if (lastSelectedGuildId == null) {
     lastSelectedGuildId = null;
   }
-  c10 = lastSelectedGuildId;
+  c11 = lastSelectedGuildId;
   const obj = { path: null };
   const RouteParam = RouteUtils.RouteParam;
   obj.path = React5.CHANNEL(RouteParam.guildId());
@@ -96,24 +109,24 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
   }
   let tmp9 = null != tmp8;
   if (tmp9) {
-    tmp9 = tmp8 !== c9;
+    tmp9 = tmp8 !== c10;
   }
   if (tmp9) {
-    c9 = tmp8;
+    c10 = tmp8;
   }
 };
 prototype["getState"] = function getState() {
   return { selectedGuildTimestampMillis: prop, selectedGuildId, lastSelectedGuildId };
 };
 prototype["getGuildId"] = function getGuildId() {
-  return c9;
+  return c10;
 };
 prototype["getLastSelectedGuildId"] = function getLastSelectedGuildId() {
-  return c10;
+  return c11;
 };
 prototype["getLastSelectedTimestamp"] = function getLastSelectedTimestamp(arg0) {
   let num = -1;
-  if (c9 !== arg0) {
+  if (c10 !== arg0) {
     num = prop[arg0];
   }
   return num;
@@ -124,12 +137,12 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: function handleOverlayInitialize(selectedGuildId) {
     selectedGuildId = selectedGuildId.selectedGuildId;
-    c10 = undefined;
+    c11 = undefined;
     handleConnectionOpen();
   },
   CHANNEL_SELECT: function handleChannelSelect(guildId) {
     guildId = guildId.guildId;
-    if (c9 === guildId) {
+    if (c10 === guildId) {
       return false;
     } else {
       if (null != tmp) {
@@ -141,9 +154,9 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
         prop[guildId] = Date.now();
       }
       if (null != guildId) {
-        c10 = guildId;
+        c11 = guildId;
       }
-      c9 = guildId;
+      c10 = guildId;
     }
   },
   GUILD_MEMBER_REMOVE: function handleGuildMemberRemove(guildId) {
@@ -155,11 +168,11 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
     } else {
       delete tmp[tmp2];
       let flag = false;
-      if (c10 === guildId) {
-        c10 = null;
+      if (c11 === guildId) {
+        c11 = null;
         flag = true;
       }
-      if (c9 === guildId) {
+      if (c10 === guildId) {
         tmp3 = (function pickFallbackGuildId(guildId) {
           closure_0 = guildId;
           if (null != lastSelectedGuildId) {
@@ -200,12 +213,12 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
           }
         })(guildId);
         if (null == tmp3) {
-          c9 = null;
+          c10 = null;
           router_utils.replaceWith(React5.ME);
           flag = true;
         }
       }
-      c9 = tmp3;
+      c10 = tmp3;
       router_utils.replaceWith(React5.CHANNEL(tmp3));
       flag = true;
     }
@@ -218,11 +231,11 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
     } else {
       delete tmp[tmp2];
       let flag = false;
-      if (c10 === id) {
-        c10 = null;
+      if (c11 === id) {
+        c11 = null;
         flag = true;
       }
-      if (c9 === id) {
+      if (c10 === id) {
         let tmp8 = (function pickFallbackGuildId(guildId) {
           closure_0 = guildId;
           if (null != lastSelectedGuildId) {
@@ -263,19 +276,19 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
           }
         })(id);
         if (null == tmp8) {
-          c9 = null;
+          c10 = null;
           router_utils.replaceWith(React5.ME);
           flag = true;
         }
       }
-      c9 = tmp8;
+      c10 = tmp8;
       router_utils.replaceWith(React5.CHANNEL(tmp8));
       flag = true;
     }
   },
   LOGOUT: function handleLogout() {
-    c9 = null;
     c10 = null;
+    c11 = null;
   },
 });
 const size = fn(2);

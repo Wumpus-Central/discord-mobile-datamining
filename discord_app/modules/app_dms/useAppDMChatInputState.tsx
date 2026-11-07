@@ -8,7 +8,7 @@ import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 const require = fn;
-const useQueryState = fn(9868).useQueryState;
+const useQueryState = fn(9852).useQueryState;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let items = [
   fn(2116).ApplicationCommandType.PRIMARY_ENTRY_POINT,

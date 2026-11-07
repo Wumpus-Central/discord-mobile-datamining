@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/chat/conjureAgentReaction.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4024 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4026 from "../intl/ConjureUntranslated.messages.js";
 import UnicodeEmojisDefault from "../../emojis/UnicodeEmojis.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -49,5 +49,5 @@ export function getConjureAgentReactionLabel(reaction) {
     emojiName = UnicodeEmojisDefault.convertSurrogateToName(reaction.emoji, false);
   }
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef4024.lxXLho, { emojiName });
+  return intl.formatToPlainString(_modDef4026.lxXLho, { emojiName });
 }

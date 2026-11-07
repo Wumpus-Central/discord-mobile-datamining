@@ -13,10 +13,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: closure_6 } = get_ActivityIndicator);
 const NOOP = fn(1072).NOOP;
-const UserRowModes = fn(10863).UserRowModes;
+const UserRowModes = fn(10846).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,

@@ -23,7 +23,7 @@ let closure_38 = async function _migrateDefaultStorage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -239,7 +239,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8305);
+const ClipsConstants = fn(8284);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6,
   ClipSaveTypes: metroImportDefault,
@@ -254,7 +254,7 @@ const ClipsConstants = fn(8305);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ MessageAttachmentFlags: closure_14, MessageReferenceTypes: closure_15, VoiceFlags: closure_16 } = Constants);
-const StreamSettingsConstants = fn(6020);
+const StreamSettingsConstants = fn(5993);
 const ApplicationStreamFPS = StreamSettingsConstants.ApplicationStreamFPS;
 let c18 = "default";
 let c19 = "Discord Clips";
@@ -289,13 +289,13 @@ let obj = {
   clipSignals: { enableDistributedSignals: true, enableGameSignals: true },
   debugTooltipsEnabled: false,
   enableAutoclipping: "flexDirection",
-  showPovClipsInGallery: "nested-text",
+  showPovClipsInGallery: true,
 };
 obj = {
   clipsSettings: obj,
   hardwareClassification: null,
   hardwareClassificationVersion: 0,
-  clipsDefaultSettingsState: fn(16133).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  clipsDefaultSettingsState: fn(16181).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
   hasAutoEnabledClipsForHardware: false,
   newClipIds: [],
   hasClips: false,

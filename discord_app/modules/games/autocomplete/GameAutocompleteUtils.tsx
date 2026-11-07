@@ -21,6 +21,22 @@ export function shouldSuppressAutocompleteFetch(arr, fn) {
   }
   return false;
 }
+export function isRetryableGameSearchError(status) {
+  status = status.status;
+  let tmp = null != status;
+  if (tmp) {
+    let tmp2 = 429 === status;
+    if (!tmp2) {
+      let tmp3 = status >= 500;
+      if (tmp3) {
+        tmp3 = 503 !== status;
+      }
+      tmp2 = tmp3;
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+}
 export function normalizeGameAutocompleteQuery(name) {
   if (null == name) {
     return null;

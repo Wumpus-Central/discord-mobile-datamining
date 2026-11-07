@@ -114,7 +114,7 @@ class VideoComponent {
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: hasOwnProperty, View: closure_6, AppState: metroImportDefault } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: {
     flex: 1,
@@ -320,7 +320,7 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(5229).ThemeContext;
+Video.contextType = fn(5199).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 

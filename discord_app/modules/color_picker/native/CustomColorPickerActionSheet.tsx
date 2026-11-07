@@ -47,7 +47,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let c8 = "#000000";
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   suggestedColor: null,
@@ -130,8 +130,8 @@ export default function CustomColorPickerActionSheet(arg0) {
   const intl2 = onSelect(1113).intl;
   obj9.text = intl2.string(onSelect(1113).t.XqMe3N);
   obj9.onPress = callback1;
-  obj7.trailing = sharedValue2(onSelect(5788).Button, obj9);
-  obj5.header = sharedValue2(onSelect(7405).BottomSheetTitleHeader, obj7);
+  obj7.trailing = sharedValue2(onSelect(5758).Button, obj9);
+  obj5.header = sharedValue2(onSelect(7382).BottomSheetTitleHeader, obj7);
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { accessibilityLabel: null, value: null, onChange: null, maxLength: 7 };
   const intl3 = onSelect(1113).intl;
@@ -154,7 +154,7 @@ export default function CustomColorPickerActionSheet(arg0) {
       const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
     }
   };
-  const items3 = [sharedValue2(onSelect(7173).TextInput, obj11), ,];
+  const items3 = [sharedValue2(onSelect(7148).TextInput, obj11), ,];
   const obj12 = { suggestedColors: null, onSelect: null, color: null };
   const obj8 = onSelect(1652);
   const tmp13 = updateInputHexValueFromHsv;
@@ -177,7 +177,7 @@ export default function CustomColorPickerActionSheet(arg0) {
   }
   obj12.color = memo;
   items3[1] = sharedValue2(SuggestedColors, obj12);
-  items3[2] = sharedValue2(tmp16(16710), {
+  items3[2] = sharedValue2(tmp16(16758), {
     hue: sharedValue,
     saturation: sharedValue1,
     value: sharedValue2,
@@ -192,5 +192,5 @@ export default function CustomColorPickerActionSheet(arg0) {
   });
   obj10.children = items3;
   obj5.children = tmp13(tmp14, obj10);
-  return sharedValue2(onSelect(5418).BottomSheet, obj5);
+  return sharedValue2(onSelect(5388).BottomSheet, obj5);
 }

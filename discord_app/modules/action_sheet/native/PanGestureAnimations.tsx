@@ -2,7 +2,7 @@
 import native from "../../../design/void/native.tsx";
 import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../_runtime/05450_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05420_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

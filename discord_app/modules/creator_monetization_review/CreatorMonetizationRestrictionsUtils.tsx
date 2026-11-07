@@ -2,8 +2,8 @@
 import GuildRoleSubscriptionsStore from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
-const FetchState = fn(5095).FetchState;
-const constants = fn(5096).CreatorMonetizationRestrictions;
+const FetchState = fn(5065).FetchState;
+const constants = fn(5066).CreatorMonetizationRestrictions;
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting(

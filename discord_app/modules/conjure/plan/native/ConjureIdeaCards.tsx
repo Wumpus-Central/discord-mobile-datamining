@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/native/ConjureIdeaCards.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4024 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4026 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
@@ -10,8 +10,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
-let obj2 = { ideaCards: { gap: fn(12824).BLOCK_GAP } };
+const createStyles = fn(5140);
+let obj2 = { ideaCards: { gap: fn(12836).BLOCK_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureIdeaCards.tsx");
@@ -21,7 +21,7 @@ export default function ConjureIdeaCards(arg0) {
   let obj = { style: closure_6().ideaCards, children: null };
   const obj2 = { variant: "body-sm/semibold", color: "text-muted", children: null };
   let intl = util.intl;
-  obj2.children = intl.string(_modDef4024["wx/o8Y"]);
+  obj2.children = intl.string(_modDef4026["wx/o8Y"]);
   items = [
     closure_4(Text_Text.Text, obj2),
     ideas.map((title) => {
@@ -40,7 +40,7 @@ export default function ConjureIdeaCards(arg0) {
       };
       let tmpResult = null;
       const intl = util.intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef4024.H8G39M, { title: title.title });
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef4026.H8G39M, { title: title.title });
       items = [
         closure_1_4(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", children: title.title }),
       ];

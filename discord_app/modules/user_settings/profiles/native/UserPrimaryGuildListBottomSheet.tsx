@@ -13,10 +13,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8485).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8464).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" },
   guildIcon: { marginLeft: 4 },
@@ -58,10 +58,10 @@ let closure_11 = noop.memo(function Item(item) {
     if (profile != null) {
       badge = profile.badge;
     }
-    guildTagBadgeUrl = item(8828).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-    let obj = item(8828);
+    guildTagBadgeUrl = item(8807).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+    let obj = item(8807);
   }
-  const radioA11yNative = item(5230).useRadioA11yNative({ selected });
+  const radioA11yNative = item(5200).useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj3 = {
     start,
@@ -92,7 +92,7 @@ let closure_11 = noop.memo(function Item(item) {
   obj3.label = name;
   let tmp10Result = null;
   if (null != item) {
-    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(7045).GuildIconSizes.SMALL_32 };
+    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(7020).GuildIconSizes.SMALL_32 };
     tmp10Result = closure_7(GuildIconDefault, obj4);
   }
   obj3.icon = tmp10Result;
@@ -118,12 +118,12 @@ let closure_11 = noop.memo(function Item(item) {
     obj10.guildTag = tag;
     obj10.guildBadge = guildTagBadgeUrl;
     obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_7(tmp7(9393).BaseGuildTagChiplet, obj10);
+    tmp10Result2 = closure_7(tmp7(9375).BaseGuildTagChiplet, obj10);
   }
-  items = [tmp10Result2, closure_7(item(7153).FormRadio, { selected })];
+  items = [tmp10Result2, closure_7(item(7128).FormRadio, { selected })];
   obj5.children = items;
   obj3.trailing = closure_8(View, obj5);
-  return closure_7(item(7063).TableRow, obj3);
+  return closure_7(item(7038).TableRow, obj3);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");

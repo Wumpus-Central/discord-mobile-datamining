@@ -286,7 +286,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -430,7 +430,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                       let obj2 = closure_2_1(1252);
                     }
                   }
-                  obj = closure_2_0(15799);
+                  obj = closure_2_0(15841);
                 },
                 Math.ceil(Math.random() * closure_2_12),
               );
@@ -452,7 +452,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp9) {
       c4 = tmp;
@@ -580,7 +580,7 @@ function scheduleIntegrityCheck(guild_id) {
   tmp4 = _require;
 }
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ChannelFlags = fn(5026).ChannelFlags;
+const ChannelFlags = fn(4996).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

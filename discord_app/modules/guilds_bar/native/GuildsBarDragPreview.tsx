@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1652 from "../../../../_runtime/metro/01652__.js";
-import _mod5085 from "../../../../_runtime/metro/05085__.js";
+import _mod5055 from "../../../../_runtime/metro/05055__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildsBarDnDStore from "GuildsBarDnDStore.tsx";
@@ -184,7 +184,7 @@ function PreviewItem(overState) {
           id: -1,
           parentId: "flexDirection",
           name: "Array",
-          color: "channel",
+          color: "channelId",
           expanded: null,
           children: null,
         };
@@ -398,30 +398,30 @@ function AnimatedItemPreview(cleanUp) {
     };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(18643), obj5);
+    let tmp22Result = tmp22(tmp4(18690), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
     if (isHomeDrawerEnabled) {
-      tmp25 = transitionState === tmp2(5229).TransitionStates.YEETED;
+      tmp25 = transitionState === tmp2(5199).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(18664), obj6);
-    const tmp4Result = tmp4(18664);
+    tmp22Result = tmp22(tmp4(18711), obj6);
+    const tmp4Result = tmp4(18711);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1652.View, obj4);
 }
-let GuildsNodeType = fn(6852).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(18632).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6827).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(18679).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(5170);
+createStyles = fn(5140);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -505,12 +505,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "safety-tools-button",
-            scrollPosition: "PINOT_MEMBER_NOTICE_ACK",
-            dragRegion: null,
-            windowSize: "HOSTED_FIELDS_FIELDS_EMPTY",
-            dropComplete: "All fields are empty. Cannot tokenize empty card fields.",
-            listInsets: "heading-md/semibold",
+            gestureState: 27.662,
+            scrollPosition: 2.662,
+            dragRegion: "sh",
+            windowSize: 0,
+            dropComplete: false,
+            listInsets: "ADBE Vector Shape - Group",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
@@ -530,7 +530,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod5085.shallow);
+  }, _mod5055.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

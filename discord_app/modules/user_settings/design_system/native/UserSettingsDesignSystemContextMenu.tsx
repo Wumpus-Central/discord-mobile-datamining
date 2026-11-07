@@ -3,15 +3,15 @@ import apply from "../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef5896 from "../../../../../_runtime/metro/05896__.js";
+import _modDef5865 from "../../../../../_runtime/metro/05865__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7348 from "../../../../../_runtime/metro/07348__.js";
-import _modDef8516 from "../../../../../_runtime/metro/08516__.js";
-import _modDef11759 from "../../../../../_runtime/metro/11759__.js";
-import _modDef11764 from "../../../../../_runtime/metro/11764__.js";
-import _modDef14588 from "../../../../../_runtime/metro/14588__.js";
-import _modDef18057 from "../../../../../_runtime/metro/18057__.js";
-import _modDef18058 from "../../../../../_runtime/metro/18058__.js";
+import _modDef7325 from "../../../../../_runtime/metro/07325__.js";
+import _modDef8495 from "../../../../../_runtime/metro/08495__.js";
+import _modDef11750 from "../../../../../_runtime/metro/11750__.js";
+import _modDef11755 from "../../../../../_runtime/metro/11755__.js";
+import _modDef14621 from "../../../../../_runtime/metro/14621__.js";
+import _modDef18104 from "../../../../../_runtime/metro/18104__.js";
+import _modDef18105 from "../../../../../_runtime/metro/18105__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,8 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: 2419702024201420700000000,
-            action: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000455974455667326,
+            variant: "<string:989856263>",
+            action: "<string:100664152>",
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -74,8 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: 2419702024201420700000000,
-          action: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000455974455667326,
+          variant: "<string:989856263>",
+          action: "<string:100664152>",
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -110,14 +110,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [
-  _modDef14588,
-  _modDef7348,
-  _modDef8516,
-  _modDef11764,
-  _modDef5896,
-  _modDef18057,
-  _modDef18058,
-  _modDef11759,
+  _modDef14621,
+  _modDef7325,
+  _modDef8495,
+  _modDef11755,
+  _modDef5865,
+  _modDef18104,
+  _modDef18105,
+  _modDef11750,
 ];
 let closure_8 = [
   "Launch Probe!",
@@ -132,7 +132,7 @@ let closure_8 = [
   "Unleash Space Vortex",
   "Activate Cloaking Device",
 ];
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { flexDirection: "column", gap: 12, padding: 16 },
   card: { gap: 12 },

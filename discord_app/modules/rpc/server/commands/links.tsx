@@ -55,7 +55,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -161,7 +161,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5860)(href);
+                  closure_1(5830)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -237,7 +237,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6608);
+let Constants = fn(6583);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1072);
 ({
@@ -252,7 +252,7 @@ const items = [,];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16558);
+let CONTEXT_MENU_ICON_NAMES = fn(16606);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -269,7 +269,7 @@ let obj3 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -384,16 +384,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(16558);
+CONTEXT_MENU_ICON_NAMES = fn(16606);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(11985).validatePostMessageTransport(socket.transport);
-    let obj = socket(11985);
+    let result = socket(11976).validatePostMessageTransport(socket.transport);
+    let obj = socket(11976);
     let tmp = socket;
-    const validateApplicationResult = socket(11985).validateApplication(socket.application);
+    const validateApplicationResult = socket(11976).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -426,7 +426,7 @@ let obj6 = {
       }
       tmpResult = tmp(2148);
     }
-    let obj2 = socket(11985);
+    let obj2 = socket(11976);
   },
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

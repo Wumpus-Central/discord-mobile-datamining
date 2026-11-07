@@ -33,9 +33,9 @@ function AssetDescription(asset) {
               style: subscribeLink.subscribeLink,
               onPress() {
                 const obj = { analyticsLocations: null };
-                items = [closure_1_1(7435).CHECKPOINT, closure_1_1(7435).CHECKPOINT_TRAIT];
+                items = [closure_1_1(7412).CHECKPOINT, closure_1_1(7412).CHECKPOINT_TRAIT];
                 obj.analyticsLocations = items;
-                return closure_1_1(10043)(obj);
+                return closure_1_1(10027)(obj);
               },
               accessibilityRole: "link",
               children,
@@ -46,15 +46,15 @@ function AssetDescription(asset) {
       };
       let formatResult = format(_modDef3248["3Wq/bk"], obj);
     } else {
-      formatResult = format(6591).getPlaintextAssetDescription(asset);
-      const formatResult1 = format(6591);
+      formatResult = format(6566).getPlaintextAssetDescription(asset);
+      const formatResult1 = format(6566);
     }
   }
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   title: { textTransform: "capitalize" },

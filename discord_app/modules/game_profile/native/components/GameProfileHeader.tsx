@@ -1,14 +1,14 @@
 // discord_app/modules/game_profile/native/components/GameProfileHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05715_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
 import GameCoverArt from "GameCoverArt.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
-import _modDef9478 from "../../../../../_runtime/metro/09478__.js";
+import _modDef9460 from "../../../../../_runtime/metro/09460__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const _modDef1652 = _mod1652;
@@ -16,11 +16,11 @@ const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(9469);
+const GameProfileConstants = fn(9451);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   artHero: null,
@@ -176,7 +176,7 @@ export default function GameProfileHeader(arg0) {
   const items10 = [timestampProducer(Text_Text.Text, obj14)];
   let tmp15Result3 = game.id === hasOwnProperty;
   if (tmp15Result3) {
-    const obj15 = { source: _modDef9478, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj15 = { source: _modDef9460, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp15Result3 = timestampProducer(FastImageDefault, obj15);
     const tmp9Result2 = FastImageDefault;
   }

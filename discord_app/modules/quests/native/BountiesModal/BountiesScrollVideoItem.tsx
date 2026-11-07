@@ -129,7 +129,7 @@ function BountiesScrollVideoItemInner(bounty) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -184,7 +184,7 @@ function BountiesScrollVideoItemInner(bounty) {
               });
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp27) {
           if (tmp4 === c3) {
@@ -392,7 +392,7 @@ function BountiesScrollVideoItemInner(bounty) {
   return handleVideoProgressAnalytics(closure_6, obj6);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6861).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6836).BOUNTY_ORB_AMOUNT;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
@@ -424,10 +424,10 @@ export function BountiesScrollVideoItem(bounty) {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(14901).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(14934).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(6868).AdCreativeType.BOUNTY,
-    questContent: bounty(6866).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(6843).AdCreativeType.BOUNTY,
+    questContent: bounty(6841).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

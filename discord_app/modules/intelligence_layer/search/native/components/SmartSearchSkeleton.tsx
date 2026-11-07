@@ -1,25 +1,25 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchSkeleton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4279 from "../../SmartSearch.messages.js";
+import _modDef4249 from "../../SmartSearch.messages.js";
 import FormRowPlaceholderDefault from "../../../../search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(12419);
+const AILoaderConstants = fn(12432);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_6 } = AILoaderConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let items = [
-  _modDef4279.Sb2fo2,
-  _modDef4279.rXNe0Z,
-  _modDef4279["22g6Ju"],
-  _modDef4279.IogGZY,
-  _modDef4279.UEnMJF,
-  _modDef4279.kk7BVL,
-  _modDef4279.UVa49v,
+  _modDef4249.Sb2fo2,
+  _modDef4249.rXNe0Z,
+  _modDef4249["22g6Ju"],
+  _modDef4249.IogGZY,
+  _modDef4249.UEnMJF,
+  _modDef4249.kk7BVL,
+  _modDef4249.UVa49v,
 ];
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_10 = createStyles.createStyles((arg0) => {
   let num;
   if (arg0) {
@@ -61,10 +61,10 @@ export default noop.memo(function SmartSearchSkeleton(isCollapsed) {
   isCollapsed = isCollapsed.isCollapsed;
   let reducedMotion;
   const tmp = closure_10(isCollapsed);
-  reducedMotion = noop.useContext(reducedMotion(5184).AccessibilityPreferencesContext).reducedMotion;
+  reducedMotion = noop.useContext(reducedMotion(5154).AccessibilityPreferencesContext).reducedMotion;
   items = [reducedMotion.enabled];
   const memo = noop.useMemo(() => {
-    items = [_modDef4279.ffCCEe, ...closure_1_9.sort(() => Math.random() - 0.5)];
+    items = [_modDef4249.ffCCEe, ...closure_1_9.sort(() => Math.random() - 0.5)];
     return items.map((item) => {
       const intl = reducedMotion(dependencyMap[8]).intl;
       return intl.string(item);
@@ -82,8 +82,8 @@ export default noop.memo(function SmartSearchSkeleton(isCollapsed) {
   let obj = { style: tmp.block, children: null };
   let obj2 = { style: tmp.header, children: null };
   const items1 = [
-    closure_7(reducedMotion(12418).AILoader, { size: 12, color: "interactive-text-default" }),
-    closure_7(reducedMotion(12976).AIShimmer, {
+    closure_7(reducedMotion(12431).AILoader, { size: 12, color: "interactive-text-default" }),
+    closure_7(reducedMotion(12987).AIShimmer, {
       text: memo,
       variant: "body-sm/semibold",
       color: "interactive-text-default",

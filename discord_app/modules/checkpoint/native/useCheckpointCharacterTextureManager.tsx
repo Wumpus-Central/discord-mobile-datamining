@@ -1,5 +1,5 @@
 // discord_app/modules/checkpoint/native/useCheckpointCharacterTextureManager.tsx
-import DataBindByName from "../../../../_runtime/05238_DataBindByName.js";
+import DataBindByName from "../../../../_runtime/05208_DataBindByName.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -25,7 +25,7 @@ let closure_5 = async function _loadImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

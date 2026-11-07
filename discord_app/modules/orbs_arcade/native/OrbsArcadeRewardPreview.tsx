@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import CollectiblesAssetUtils from "../../collectibles/utils/CollectiblesAssetUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AvatarDecorationSampleV2 from "../../collectibles/native/AvatarDecorationSampleV2.tsx";
-import _modDef9609 from "../../../../_runtime/metro/09609__.js";
+import _modDef9591 from "../../../../_runtime/metro/09591__.js";
 import NitroCoinSpotIllustration from "../../../design/components/mana-assets/native/generated/NitroCoinSpotIllustration.native.tsx";
 import OrbsArcadeTypes from "../OrbsArcadeTypes.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -19,7 +19,7 @@ function CollectibleRewardPreview(size) {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.avatar, resizeMode: "contain", source: null, accessible: false };
   const obj2 = { skuId: size.reward.skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
-  obj4.source = _modDef9609;
+  obj4.source = _modDef9591;
   items = [React4(FastImageDefault, obj4)];
   let tmp6Result = null;
   if (null != collectiblesItemAssetUrl) {
@@ -35,7 +35,7 @@ function CollectibleRewardPreview(size) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = {
     container: { width, height: width, alignItems: "center", justifyContent: "center" },

@@ -1,0 +1,46 @@
+// discord_app/modules/conjure/share/useConjureSharedProjectCoverAction.tsx
+import openFrameDefault from "../../frames/openFrame.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
+
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conjure/share/useConjureSharedProjectCoverAction.tsx");
+
+export default function useConjureSharedProjectCoverAction(applicationId, arg1, arg2) {
+  importDefault = applicationId;
+  const tmp = require("useConjureSharedProjectLaunch")(applicationId, arg1, arg2);
+  launch = tmp.launch;
+  ({ canLaunch, launching, failed } = tmp);
+  const tmp2 = require("useConjureSharedProjectAppChannel")(applicationId, arg1, arg2);
+  noop = tmp2;
+  let str = "launch";
+  if (!canLaunch) {
+    let str2 = null;
+    if (null != tmp2) {
+      str2 = "open";
+    }
+    str = str2;
+  }
+  items = [str, launch, applicationId, tmp2];
+  return {
+    type: str,
+    launching,
+    launchFailed: failed,
+    run: noop.useCallback(() => {
+      if ("launch" === str) {
+        let resolved = launch();
+      } else {
+        if ("open" === tmp) {
+          if (null != closure_2) {
+            const obj = { applicationId, channel: tmp2 };
+            openFrameDefault(obj);
+            resolved = Promise.resolve(true);
+          }
+        }
+        resolved = Promise.resolve(false);
+      }
+      return resolved;
+    }, items),
+  };
+}

@@ -12,7 +12,7 @@ const jsx = jsxProd.jsx;
 let obj = {
   banner: {
     padding: nativeDefault.space.PX_12,
-    borderRadius: nativeDefault.radii.lg,
+    borderRadius: nativeDefault.radii.md,
     borderWidth: 1,
     borderColor: nativeDefault.colors.BORDER_MUTED,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

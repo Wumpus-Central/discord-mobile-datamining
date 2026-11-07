@@ -104,7 +104,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const callback1 = noop.useCallback(() => {
     const obj2 = { initialValue: first2, presets: null, onChange: null, highlightedPresets: null, onDismiss: null };
     const obj = ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequireImpl(17614, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(17663, dependencyMap.paths);
     obj2.presets = CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionPresets(enabled);
     obj2.onChange = onChange;
     let prop;
@@ -121,7 +121,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   }, items4);
   const callback2 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17615, dependencyMap.paths),
+      asyncRequireImpl(17664, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );
@@ -162,7 +162,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -205,7 +205,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
                 }
               }
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (arg0 === 1) {
             c4 = 3;
@@ -420,10 +420,10 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, HelpdeskArticles: closure_11 } = Constants);
-const ContentDismissActionType = fn(5016).ContentDismissActionType;
+const ContentDismissActionType = fn(4986).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   screen: { flex: 1 },
   container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 },
@@ -452,7 +452,7 @@ obj2.sectionHeader = { flexDirection: "row", justifyContent: "space-between", al
 let obj5 = { rowGap: nativeDefault.space.PX_8 };
 obj2.description = { marginTop: nativeDefault.space.PX_4 };
 let closure_15 = createStyles.createStyles(obj2);
-let items = [fn(5003).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE];
+let items = [fn(4973).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE];
 let closure_17 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorEditScreen.tsx");

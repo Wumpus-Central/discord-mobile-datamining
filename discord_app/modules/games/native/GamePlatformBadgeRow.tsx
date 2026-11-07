@@ -6,11 +6,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(14157).GamePlatformAvailability.DESKTOP] = fn(9693).ScreenIcon;
-obj[fn(14157).GamePlatformAvailability.MOBILE] = fn(7223).MobilePhoneIcon;
-obj[fn(14157).GamePlatformAvailability.CONSOLE] = fn(9833).GameControllerIcon;
-obj[fn(14157).GamePlatformAvailability.ROBLOX] = fn(9451).RobloxNeutralIcon;
-const createStyles = fn(5170);
+obj[fn(14182).GamePlatformAvailability.DESKTOP] = fn(9675).ScreenIcon;
+obj[fn(14182).GamePlatformAvailability.MOBILE] = fn(7198).MobilePhoneIcon;
+obj[fn(14182).GamePlatformAvailability.CONSOLE] = fn(9817).GameControllerIcon;
+obj[fn(14182).GamePlatformAvailability.ROBLOX] = fn(9433).RobloxNeutralIcon;
+const createStyles = fn(5140);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/native/GamePlatformBadgeRow.tsx");
@@ -20,7 +20,7 @@ export default noop.memo(function GamePlatformBadgeRow(platforms) {
   items = [platforms];
   const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
   const tmp = closure_6();
-  return jsx(platforms(6185).Stack, {
+  return jsx(platforms(6159).Stack, {
     direction: "horizontal",
     align: "center",
     spacing: nativeDefault.space.PX_4,

@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import IndicatorDot from "../../../design/components/IndicatorDot/native/IndicatorDot.native.tsx";
-import _modDef9635 from "../../../../_runtime/metro/09635__.js";
+import _modDef9617 from "../../../../_runtime/metro/09617__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -82,7 +82,7 @@ class BalanceWidgetPillButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 const timestampProducer = createStyles.createStyles({ notificationBadge: { position: "absolute", top: 0, end: 0 } });
 BalanceWidgetPillButton.displayName = "BalanceWidgetPillButton";
 const size = fn(2);

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/SubscriptionIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod17151 from "../../../../../../../_runtime/metro/17151__.js";
+import _mod17199 from "../../../../../../../_runtime/metro/17199__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function SubscriptionIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17151, color: ICON_STRONG, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17199, color: ICON_STRONG, style: color.style });
 }

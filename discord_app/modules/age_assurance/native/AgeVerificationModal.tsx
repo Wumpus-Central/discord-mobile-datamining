@@ -137,10 +137,10 @@ function AgeVerifyScreen(onComplete) {
       "\n  window.open = function(url) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({type: 'AGEKEY_BREAKOUT', url: url}));\n    return null;\n  };\n",
   });
 }
-let closure_4 = fn(6808).AGE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(6783).AGE_VERIFICATION_MODAL_KEY;
 let jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

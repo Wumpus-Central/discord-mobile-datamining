@@ -10,24 +10,24 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/usePinotMemberCoachmark.tsx");
 
 export function usePinotMemberCoachmark(channel, mobile_member_coachmark) {
-  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(11484).useIsPinotMemberCoachmarkEligible(
+  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(11466).useIsPinotMemberCoachmarkEligible(
     channel,
     mobile_member_coachmark,
   );
-  let obj = pinotPromotableChannelId(11484);
-  pinotPromotableChannelId = pinotPromotableChannelId(11479).usePinotPromotableChannelId(
+  let obj = pinotPromotableChannelId(11466);
+  pinotPromotableChannelId = pinotPromotableChannelId(11461).usePinotPromotableChannelId(
     channel,
     mobile_member_coachmark,
   );
-  const obj2 = pinotPromotableChannelId(11479);
+  const obj2 = pinotPromotableChannelId(11461);
   if (isPinotMemberCoachmarkEligible) {
-    items = [tmp(5003).DismissibleContent.PINOT_MEMBER_COACHMARK];
+    items = [tmp(4973).DismissibleContent.PINOT_MEMBER_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];
   }
   const tmp5 = _slicedToArray(
-    pinotPromotableChannelId(7664).useSelectedDismissibleContent(items1, { bypassAutoDismiss: true }),
+    pinotPromotableChannelId(7641).useSelectedDismissibleContent(items1, { bypassAutoDismiss: true }),
     2,
   );
   dependencyMap = tmp6;
@@ -39,7 +39,7 @@ export function usePinotMemberCoachmark(channel, mobile_member_coachmark) {
       PinotMemberNoticeActionCreators.ackPinotMemberNotice(tmp2);
     }
   }, items2);
-  obj4.visible = tmp5[0] === pinotPromotableChannelId(5003).DismissibleContent.PINOT_MEMBER_COACHMARK;
+  obj4.visible = tmp5[0] === pinotPromotableChannelId(4973).DismissibleContent.PINOT_MEMBER_COACHMARK;
   obj4.markAsDismissed = callback;
   return obj4;
 }

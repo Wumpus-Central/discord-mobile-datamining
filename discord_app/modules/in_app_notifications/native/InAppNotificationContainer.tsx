@@ -65,7 +65,7 @@ function NotificationWrapper(notification) {
   }
 }
 let StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(11167);
+const InAppNotificationConstants = fn(11153);
 ({
   DEFAULT_ANIMATION_TIMING: metroImportDefault,
   extrapolateConfig: closure_8,
@@ -80,7 +80,7 @@ const jsx = fn(21).jsx;
 let obj = { duration: 200, easing: null };
 const Easing = fn(1652).Easing;
 obj.easing = Easing.in(fn(1652).Easing.ease);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_16 = createStyles.createStyles({
   safeAreaContainer: {
     position: "absolute",
@@ -134,8 +134,8 @@ export default function InAppNotificationContainer(notification) {
   const tmp = closure_16();
   let isIOSResult = require("utils/PlatformUtils").isIOS();
   if (isIOSResult) {
-    isIOSResult = tmp2(11349).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
-    const tmp2Result = tmp2(11349);
+    isIOSResult = tmp2(11331).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
+    const tmp2Result = tmp2(11331);
   }
   items = [notification];
   const memo = noop.useMemo(() => InAppNotificationUtils.extractMetadataFromNotification(c0), items);
@@ -227,7 +227,7 @@ export default function InAppNotificationContainer(notification) {
       AnalyticsUtilsDefault.track(constants2.IN_APP_NOTIFICATION_SHOWN, obj2);
     }
   }, items3);
-  const Gesture = tmp2(5450).Gesture;
+  const Gesture = tmp2(5420).Gesture;
   const tmp2Result11 = require("initialize");
   const items4 = [
     closure_19,

@@ -9,7 +9,7 @@ const tmp2 = -nativeDefault.space.PX_8;
 const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(nativeDefault.space.PX_6 / 2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGamePickerConstants.tsx");
 
-export const GRID_COLUMNS = 4;
+export const GRID_COLUMNS = 3;
 export const GRID_GAP = nativeDefault.space.PX_12;
 export const SCREEN_HORIZONTAL_PADDING = nativeDefault.space.PX_16;
 export const TILE_ASPECT_RATIO = 0.75;

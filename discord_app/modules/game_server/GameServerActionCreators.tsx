@@ -14,7 +14,7 @@ import OwnedGameServersStore from "OwnedGameServersStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GAME_SERVER_COLLECTION_ID = fn(5377).GAME_SERVER_COLLECTION_ID;
+const GAME_SERVER_COLLECTION_ID = fn(5347).GAME_SERVER_COLLECTION_ID;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);
@@ -371,10 +371,10 @@ export function wakeMyGameServer(arg0) {
     .then((body) => {
       body = body.body;
       let tmp3 = body;
-      if (body.status === closure_0(14269).GameServerStatus.SLEEPING) {
+      if (body.status === closure_0(14299).GameServerStatus.SLEEPING) {
         const obj2 = {};
         const merged = Object.assign(body);
-        obj2.status = closure_0(14269).GameServerStatus.STARTING;
+        obj2.status = closure_0(14299).GameServerStatus.STARTING;
         tmp3 = obj2;
       }
       const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

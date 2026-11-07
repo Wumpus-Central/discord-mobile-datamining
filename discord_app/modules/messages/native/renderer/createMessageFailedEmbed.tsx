@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import FileUtils from "../../../../utils/FileUtils.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import _modDef8818 from "../../../../../_runtime/metro/08818__.js";
-import _modDef8819 from "../../../../../_runtime/metro/08819__.js";
+import _modDef8797 from "../../../../../_runtime/metro/08797__.js";
+import _modDef8798 from "../../../../../_runtime/metro/08798__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const MessageFailureState = RowGeneratorConstants.MessageFailureState;
@@ -29,7 +29,7 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       obj2.failureState = MessageFailureState.UNSPECIFIED;
       obj2.bodyTextColor = colors.failedMessageBodyTextColor;
       colors = renderer_EmbedUtils.getAssetUriForEmbed;
-      obj2.iconURL = colors(_modDef8819);
+      obj2.iconURL = colors(_modDef8798);
       let obj3 = obj2;
     } else {
       obj3 = {
@@ -74,7 +74,7 @@ export function createAutomodBlockedMessageEmbed(errorMessage) {
     failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE,
     disableBackgroundColor: true,
     bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor,
-    iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8818),
+    iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8797),
   };
   return obj;
 }

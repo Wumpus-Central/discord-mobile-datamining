@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import isForwardMessageDefault from "../../../forwarding/isForwardMessage.tsx";
 import MediaFormatTesters from "../../../messages/MediaFormatTesters.tsx";
-import inlineStyles from "../../../../../_runtime/08122_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08101_inlineStyles.js";
 import CirclePlayIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import WaveformIcon from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
 import FileIcon from "../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
@@ -184,7 +184,7 @@ const PreviewableMediaTypes = {
   GIF: "gif",
   VOICE_MESSAGE: "voice_message",
 };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

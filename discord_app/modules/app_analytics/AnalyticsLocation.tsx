@@ -492,6 +492,7 @@ export default {
   POLL_VOTES: "poll votes",
   YOU_SCREEN: "you screen",
   YOU_ACCOUNT_ACTION_SHEET: "you account action sheet",
+  ACCOUNT_SWITCHER_RAIL: "account switcher rail",
   BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW:
     "billing payment modal paused subscription resume invoice preview",
   BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW:

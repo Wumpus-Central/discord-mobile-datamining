@@ -1,11 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetsBoardTab.tsx
-import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import useDisplayableBoardWidgets from "../hooks/useDisplayableBoardWidgets.tsx";
 import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState.tsx";
-import ConjureCustomWidgetAddOptionDefault from "../../conjure/custom_widget/native/ConjureCustomWidgetAddOption.tsx";
 import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice.tsx";
+import ConjureCustomWidgetAddOptionDefault from "../../conjure/custom_widget/native/ConjureCustomWidgetAddOption.tsx";
 import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -22,44 +21,31 @@ export default function UserProfileWidgetsBoardTab(arg0) {
   const tmp3 = UserProfileSharedStylesDefault();
   const isMobileWidgetEditingEnabled =
     MobileWidgetEditingExperiment.useIsMobileWidgetEditingEnabled("UserProfileWidgetsBoardTab");
-  let tmp6 = isCurrentUser;
+  const obj3 = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
-    tmp6 = isMobileWidgetEditingEnabled;
-  }
-  if (tmp6) {
-    tmp6 = !tmp5;
-  }
-  items = [tmp3.profileContent];
-  let tmp9 = tmp6;
-  if (tmp6) {
-    const obj3 = { gap: nativeDefault.space.PX_24 };
-    tmp9 = obj3;
-  }
-  const obj4 = { style: items, children: null };
-  items[1] = tmp9;
-  const obj5 = { children: null };
-  if (tmp6) {
-    const items1 = [React4(UserProfileWidgetsEmptyStateDefault, {}), React4(ConjureCustomWidgetAddOptionDefault, {})];
-    obj5.children = items1;
-    let tmp13 = obj5;
-  } else {
-    let tmp7Result = isCurrentUser;
-    if (isCurrentUser) {
-      tmp7Result = !isMobileWidgetEditingEnabled;
+    if (isMobileWidgetEditingEnabled) {
+      if (obj2.useDisplayableBoardWidgets(userId).length <= 0) {
+        let tmp8Result = React4(UserProfileWidgetsEmptyStateDefault, {});
+      }
+      obj3.children = tmp8Result;
+      return React4(tmp6, obj3);
     }
-    if (tmp7Result) {
-      tmp7Result = React4(UserProfileWidgetsBoardEditNoticeDefault, {});
-    }
-    const items2 = [tmp7Result, ,];
-    if (isCurrentUser) {
-      isCurrentUser = React4(ConjureCustomWidgetAddOptionDefault, {});
-    }
-    items2[1] = isCurrentUser;
-    const obj6 = { userId, isVisible, cardStyle };
-    items2[2] = React4(UserProfileWidgetsBoardDefault, obj6);
-    obj5.children = items2;
-    tmp13 = obj5;
   }
-  obj4.children = timestampProducer(hasOwnProperty, tmp13);
-  return React4(View, obj4);
+  let tmp5Result2 = isCurrentUser;
+  if (isCurrentUser) {
+    tmp5Result2 = !isMobileWidgetEditingEnabled;
+  }
+  if (tmp5Result2) {
+    tmp5Result2 = React4(UserProfileWidgetsBoardEditNoticeDefault, {});
+  }
+  items = [tmp5Result2, ,];
+  if (isCurrentUser) {
+    isCurrentUser = React4(ConjureCustomWidgetAddOptionDefault, {});
+  }
+  const obj4 = { children: null };
+  items[1] = isCurrentUser;
+  items[2] = React4(UserProfileWidgetsBoardDefault, { userId, isVisible, cardStyle });
+  obj4.children = items;
+  tmp8Result = timestampProducer(hasOwnProperty, obj4);
+  obj2 = useDisplayableBoardWidgets;
 }

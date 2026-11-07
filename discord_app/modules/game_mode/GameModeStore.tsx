@@ -34,7 +34,7 @@ function syncExperimentAssignment() {
   }
   return false;
 }
-const DefaultGameModeSettings = fn(5173).DefaultGameModeSettings;
+const DefaultGameModeSettings = fn(5143).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
 let c6 = false;

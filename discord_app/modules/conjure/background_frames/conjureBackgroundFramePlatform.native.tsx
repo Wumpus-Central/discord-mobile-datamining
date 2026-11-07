@@ -8,8 +8,8 @@ import conjureAppPictureInPictureFrames from "native/conjureAppPictureInPictureF
 import FramesStore from "../../frames/FramesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5811).ActivityPanelModes;
-const FramesConstants = fn(6927);
+const ActivityPanelModes = fn(5781).ActivityPanelModes;
+const FramesConstants = fn(6902);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFramePlatform.native.tsx");

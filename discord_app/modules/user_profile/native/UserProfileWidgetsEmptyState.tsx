@@ -6,6 +6,7 @@ import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton.tsx";
 import useAddableWidgetsDefault from "../hooks/useAddableWidgets.tsx";
 import useAddProfileWidgetDefault from "../hooks/native/useAddProfileWidget.tsx";
+import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -15,14 +16,15 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_8 = fn(8846).TrackUserProfileEditActions;
-const PROFILE_SIDE_PADDING = fn(7460).PROFILE_SIDE_PADDING;
+let closure_8 = fn(8825).TrackUserProfileEditActions;
+const PROFILE_SIDE_PADDING = fn(7437).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 let closure_14 = [1.3, 1.6, 2.3, 3.3];
-const createStyles = fn(5170);
+const UserProfileWidgetsEmptyState = "UserProfileWidgetsEmptyState";
+const createStyles = fn(5140);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" },
   textContainer: null,
@@ -35,12 +37,12 @@ obj2.textContainer = { alignSelf: "stretch", gap: nativeDefault.space.PX_8 };
 obj2.centeredText = { textAlign: "center" };
 obj2.scroller = { alignSelf: "stretch", marginHorizontal: -PROFILE_SIDE_PADDING };
 obj2.scrollerContent = { paddingHorizontal: PROFILE_SIDE_PADDING, gap: PX_12 };
-let closure_15 = createStyles.createStyles(obj2);
+let closure_16 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsEmptyState.tsx");
 
 export default function UserProfileWidgetsEmptyState() {
-  const tmp = closure_15();
+  const tmp = closure_16();
   items = [AuthenticationStore];
   _require = require("initialize").useStateFromStores(items, () => id.getId());
   const arr2 = useAddableWidgetsDefault();
@@ -64,6 +66,13 @@ export default function UserProfileWidgetsEmptyState() {
     importDefault(nativeEvent.nativeEvent.layout.width);
   }, []);
   closure_5 = useAddProfileWidgetDefault();
+  const tmp5 = compact(noop.useState(0), 2);
+  const canConjureCustomWidget = require("ConjureCustomWidget").useCanConjureCustomWidget(UserProfileWidgetsEmptyState);
+  const tmp2Result = require("ConjureCustomWidget");
+  let isConjureMobileEnabled = require("ConjureMobileExperiment").useIsConjureMobileEnabled(
+    canConjureCustomWidget,
+    UserProfileWidgetsEmptyState,
+  );
   const obj3 = { style: tmp.container, onLayout: callback, children: null };
   const obj4 = { style: tmp.textContainer, children: null };
   const obj5 = { variant: "heading-sm/semibold", color: "text-strong", style: tmp.centeredText, children: null };
@@ -78,7 +87,7 @@ export default function UserProfileWidgetsEmptyState() {
   const items2 = [closure_11(closure_6, obj4), ,];
   let tmp14Result = tmp6 > 0 && arr2.length > 0;
   if (tmp14Result) {
-    const obj8 = {
+    const obj7 = {
       horizontal: true,
       style: null,
       contentContainerStyle: null,
@@ -89,41 +98,49 @@ export default function UserProfileWidgetsEmptyState() {
       accessibilityLabel: null,
       children: null,
     };
-    ({ scroller: obj7.style, scrollerContent: obj7.contentContainerStyle } = tmp);
-    obj8.snapToInterval = result + PX_12;
+    ({ scroller: obj9.style, scrollerContent: obj9.contentContainerStyle } = tmp);
+    obj7.snapToInterval = result + PX_12;
     const intl3 = tmp2(1113).intl;
-    obj8.accessibilityLabel = intl3.string(tmp2(1113).t["+EIBSA"]);
-    obj8.children = arr2.map((widget) => {
-      closure_0 = widget;
-      return closure_1_10(
-        require("UserProfileWidgetOptionAddButton"),
-        {
-          widget,
-          variant: "compact",
-          width,
-          padding,
-          onPress() {
-            return closure_5(closure_0);
+    obj7.accessibilityLabel = intl3.string(tmp2(1113).t["+EIBSA"]);
+    const items3 = [
+      arr2.map((widget) => {
+        closure_0 = widget;
+        return closure_1_10(
+          require("UserProfileWidgetOptionAddButton"),
+          {
+            widget,
+            variant: "compact",
+            width,
+            padding,
+            onPress() {
+              return closure_5(closure_0);
+            },
           },
-        },
-        widget.getUniqueKey(),
-      );
-    });
-    tmp14Result = closure_10(closure_5, obj8);
+          widget.getUniqueKey(),
+        );
+      }),
+    ];
+    if (isConjureMobileEnabled) {
+      const obj8 = { width: result, padding: PX_16 };
+      isConjureMobileEnabled = closure_10(UserProfileWidgetOptionConjureButtonDefault, obj8);
+    }
+    items3[1] = isConjureMobileEnabled;
+    obj7.children = items3;
+    tmp14Result = closure_11(closure_5, obj7);
   }
   items2[1] = tmp14Result;
-  const obj14 = { variant: "secondary", text: null, onPress: null };
+  const obj10 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1113).intl;
-  obj14.text = intl4.string(require("util").t["/NKLK5"]);
-  obj14.onPress = function onPress() {
+  obj10.text = intl4.string(require("util").t["/NKLK5"]);
+  obj10.onPress = function onPress() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15156, dependencyMap.paths),
+      asyncRequireImpl(15191, dependencyMap.paths),
       "UserProfileWidgetAddActionSheet",
     );
   };
-  items2[2] = closure_10(require("components/Button/Button").Button, obj14);
+  items2[2] = closure_10(require("components/Button/Button").Button, obj10);
   obj3.children = items2;
   return closure_11(closure_6, obj3);
 }

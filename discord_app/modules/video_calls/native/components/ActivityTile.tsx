@@ -40,7 +40,7 @@ function ActivityTileInner(participant) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -67,7 +67,7 @@ function ActivityTileInner(participant) {
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(11869)(obj4), done: false };
+              const obj5 = { value: v1(11860)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -77,8 +77,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(11964).setOrientationLockState(closure_128_3);
-          const obj = tmp2(11964);
+          const result = tmp2(11955).setOrientationLockState(closure_128_3);
+          const obj = tmp2(11955);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -273,12 +273,12 @@ function ActivityTileInner(participant) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(11864).ActivityLayoutMode;
+let ActivityLayoutMode = fn(11855).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1187).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1191).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   pressableOpacity: null,
   activityPreview: null,

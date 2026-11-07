@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/native/navigator/ICYMINavigator.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import NativeStackNavigator from "../../../../../_runtime/09992_NativeStackNavigator.js";
+import NativeStackNavigator from "../../../../../_runtime/09976_NativeStackNavigator.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -23,13 +23,13 @@ export default function ICYMINavigator() {
     closure_2(closure_4.Screen, {
       name: "icymi-screen",
       getComponent() {
-        return closure_0(18813).ICYMITab;
+        return closure_0(18863).ICYMITab;
       },
     }),
     closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return closure_0(18764).ThemedNotificationsModal;
+        return closure_0(18814).ThemedNotificationsModal;
       },
     }),
   ];

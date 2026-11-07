@@ -21,4 +21,5 @@ export const VoicePanelTabAnalyticsSources = {
   CONNECTED_BUTTON: "connected button",
   VOICE_CONTROLS: "voice controls",
   HEADER_BUTTON: "header button",
+  DOCK_CONTEXT_MENU: "dock context menu",
 };

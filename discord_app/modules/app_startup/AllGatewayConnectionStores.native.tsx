@@ -24,6 +24,7 @@ import VoiceChannelAnimationStateStore from "../channel/VoiceChannelAnimationSta
 import VoiceChannelStartTimeStore from "../channel/VoiceChannelStartTimeStore.tsx";
 import ClientThemesBackgroundStore from "../client_themes/ClientThemesBackgroundStore.tsx";
 import CustomThemeMobileStore from "../client_themes/native/CustomThemeMobileStore.tsx";
+import ConjureOverlayWidgetsStore from "../conjure/overlay/ConjureOverlayWidgetsStore.tsx";
 import ConjureRichPresenceStore from "../conjure/presence/ConjureRichPresenceStore.tsx";
 import ConjureProjectStore from "../conjure/projects/ConjureProjectStore.tsx";
 import ConjureServerProjectActivityStore from "../conjure/server_workspace/ConjureServerProjectActivityStore.tsx";

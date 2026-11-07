@@ -12,7 +12,7 @@ const MAX_CHANNEL_NAME_LENGTH = fn(1072).MAX_CHANNEL_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   iconUploader: null,
@@ -157,7 +157,7 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

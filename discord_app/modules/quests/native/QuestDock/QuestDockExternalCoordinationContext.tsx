@@ -7,8 +7,8 @@ import QuestDockStore from "QuestDockStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestDockMode = fn(6861).QuestDockMode;
-let closure_5 = fn(17334).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+const QuestDockMode = fn(6836).QuestDockMode;
+let closure_5 = fn(17382).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = {
@@ -17,12 +17,12 @@ let obj = {
   lastScrollEventSourceId: null,
   questDockOffset: null,
 };
-let ReanimatedHelperTypes = fn(7328);
+let ReanimatedHelperTypes = fn(7305);
 obj.restingQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj.setRestingQuestDockMode = function setRestingQuestDockMode() {};
-ReanimatedHelperTypes = fn(7328);
+ReanimatedHelperTypes = fn(7305);
 obj.lastScrollEventSourceId = ReanimatedHelperTypes.createFakeSharedValue(null);
-ReanimatedHelperTypes = fn(7328);
+ReanimatedHelperTypes = fn(7305);
 obj.questDockOffset = ReanimatedHelperTypes.createFakeSharedValue(0);
 let context = noop.createContext(obj);
 const PlatformUtils = fn(1377);

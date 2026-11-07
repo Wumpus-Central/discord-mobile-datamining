@@ -46,7 +46,7 @@ function FavoriteGame(activityLevel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", gap: 8 },
   favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 },

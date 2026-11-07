@@ -20,7 +20,7 @@ let closure_10 = async function _connectOrLurkStage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -202,15 +202,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(8032).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8010).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8032);
+    const obj2 = flag2(8010);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8032).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8032);
+      flag2(8010).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8010);
     }
   }
 }

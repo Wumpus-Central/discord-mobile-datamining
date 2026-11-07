@@ -55,3 +55,14 @@ export function useShouldLoadSettingsForSelectedTeenUser() {
   }
   return tmp4;
 }
+export function useHasLoadedSettingsForTeen(id1) {
+  _require = id1;
+  items = [FamilyCenterControlledSettingsStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
+    let hasSettingsForUserResult = null != closure_0;
+    if (hasSettingsForUserResult) {
+      hasSettingsForUserResult = FamilyCenterControlledSettingsStore.hasSettingsForUser(tmp);
+    }
+    return hasSettingsForUserResult;
+  });
+}

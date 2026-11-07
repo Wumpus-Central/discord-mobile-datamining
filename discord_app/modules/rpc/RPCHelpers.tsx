@@ -60,7 +60,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -185,7 +185,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -232,7 +232,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp26) {
       closure_5 = tmp26;
@@ -245,8 +245,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(5023).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6608);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4993).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6583);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1072);
 ({
@@ -489,7 +489,7 @@ export function transformChannel(channel, result, arg2) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(6199).getName(dependencyMap, id.id, user),
+            nick: closure_1(6173).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -498,7 +498,7 @@ export function transformChannel(channel, result, arg2) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9430)(user);
+          obj.user = closure_1(9412)(user);
           return obj;
         }
       });

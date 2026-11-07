@@ -16,11 +16,11 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ GuildSettingsSections: metroImportDefault, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(5016).ContentDismissActionType;
+const ContentDismissActionType = fn(4986).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 const obj2 = {
   container: { padding: nativeDefault.space.PX_16, justifyContent: "center" },
   videoContainer: null,
@@ -82,7 +82,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
     paused: stateFromStores,
     ariaHidden: true,
   };
-  obj5.children = closure_10(markAsDismissed(8965), size);
+  obj5.children = closure_10(markAsDismissed(8947), size);
   const items2 = [closure_10(View, obj5), ,];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = {

@@ -79,7 +79,7 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(6861);
+const QuestConstants = fn(6836);
 ({
   DISCORD_APPLICATION_ID: closure_6,
   PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: metroImportDefault,

@@ -19,7 +19,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
-const FileUploadErrorTypes = fn(5175).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(5145).FileUploadErrorTypes;
 const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };

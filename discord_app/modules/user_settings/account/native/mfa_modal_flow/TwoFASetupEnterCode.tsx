@@ -8,10 +8,10 @@ import AppStateStore from "../../../../../stores/native/AppStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const TwoFAModalSetupSections = fn(16916).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(16964).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_9 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

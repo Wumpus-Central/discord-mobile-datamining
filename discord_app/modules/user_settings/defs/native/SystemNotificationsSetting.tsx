@@ -15,7 +15,7 @@ let closure_8 = async function _handleEnableSystemNotification() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -88,16 +88,16 @@ let closure_8 = async function _handleEnableSystemNotification() {
   }
 };
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_5 = fn(8031).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(14182);
+let closure_5 = fn(8009).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(14207);
 ({ EventActionType: closure_6, EventActionLocation: metroImportDefault } = NotificationPermissionConstants);
-const SettingBuilders = fn(11703);
+const SettingBuilders = fn(11685);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(8524).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8503).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_8.apply;

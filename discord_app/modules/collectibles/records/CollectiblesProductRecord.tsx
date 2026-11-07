@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7823);
+const CollectiblesItemRecord = fn(7800);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } =
   CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -260,18 +260,19 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "to",
                 type: "Array",
-                premiumType: "channel",
-                items: 16870978,
-                categorySkuId: 48666368,
-                categoryWillUnpublishAt: 41242880,
-                isCategoryReward: 45809227,
-                prices: 34320128,
-                previewAssets: 45932032,
-                googleSkuIds: 45931520,
-                eligibleOffers: 25996032,
-                variants: 26110720,
-                bundledProducts: 39253248,
-                isFirstParty: 22582272,
+                premiumType: "add",
+                items: 0.0000000000000000000000000000000000000000000000000000000000000000000000012737218537314486,
+                categorySkuId: 115.553,
+                categoryWillUnpublishAt: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000035033610204343,
+                isCategoryReward:
+                  -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006652244466226312,
+                prices: 231584178641883530000000000000000000000000000000000000000000000000000000000000,
+                previewAssets: 696067777422112100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+                googleSkuIds: null,
+                eligibleOffers: null,
+                variants: null,
+                bundledProducts: null,
+                isFirstParty: null,
               };
               let str;
               if (first != null) {

@@ -6,7 +6,7 @@ import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const constants = fn(8846).TrackUserProfileEditActions;
+const constants = fn(8825).TrackUserProfileEditActions;
 const UserProfileAddTagActionSheet = "UserProfileAddTagActionSheet";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/openUserProfileAddTagActionSheet.tsx");
@@ -25,7 +25,7 @@ export default function openUserProfileAddTagActionSheet(widgetEdited) {
     widgetEdited: widgetEdited.widgetType,
   };
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(15188, dependencyMap.paths),
+    asyncRequireImpl(15222, dependencyMap.paths),
     UserProfileAddTagActionSheet,
     widgetEdited,
   );

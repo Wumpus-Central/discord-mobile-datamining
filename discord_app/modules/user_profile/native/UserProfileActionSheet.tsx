@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import isChangelogUserDefault from "../../changelog/utils/isChangelogUser.tsx";
-import BottomSheetModal from "../../../../_runtime/05422_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05392_BottomSheetModal.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
@@ -84,13 +84,13 @@ function ActionSheetAlignedView(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7460).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7437).UserProfileThemeTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5419).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5389).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_18 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },
@@ -554,19 +554,25 @@ export default noop.memo(function UserProfileActionSheet(userId) {
       );
       const effect5 = obj8.useEffect(() => {
         function handleNavigationChange() {
-          key = undefined;
-          if (rootNavigationRef != null) {
-            const currentRoute = rootNavigationRef.getCurrentRoute();
-            if (currentRoute != null) {
-              key = currentRoute.key;
+          const currentRoute = rootNavigationRef.getCurrentRoute();
+          isChatLockedOpen = c0(localUser[45]).getChatLayout().isChatLockedOpen;
+          state = rootNavigationRef.getState();
+          let tmp4 = !isChatLockedOpen;
+          if (!isChatLockedOpen) {
+            tmp4 = isChatLockedOpen;
+          }
+          if (tmp4) {
+            tmp4 = channelId(localUser[46])(state, state);
+          }
+          if (!tmp4) {
+            if (key !== key) {
+              channelId(localUser[47]).hideAllActionSheets();
+              const obj3 = channelId(localUser[47]);
             }
           }
-          if (key !== key) {
-            channelId(localUser[45]).hideAllActionSheets();
-            const obj2 = channelId(localUser[45]);
-          }
+          const obj2 = c0(localUser[45]);
         }
-        rootNavigationRef = rootNavigationRef(handleNavigationChange[44]).getRootNavigationRef();
+        rootNavigationRef = rootNavigationRef(isChatLockedOpen[44]).getRootNavigationRef();
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
             let currentRoute = rootNavigationRef.getCurrentRoute();
@@ -574,15 +580,15 @@ export default noop.memo(function UserProfileActionSheet(userId) {
             if (currentRoute != null) {
               key = currentRoute.key;
             }
+            isChatLockedOpen = rootNavigationRef(isChatLockedOpen[45]).getChatLayout().isChatLockedOpen;
+            state = rootNavigationRef.getState();
             rootNavigationRef.addListener("state", handleNavigationChange);
-            return () => {
-              rootNavigationRef.removeListener("state", handleNavigationChange);
-            };
+            return () => rootNavigationRef.removeListener("state", handleNavigationChange);
           }
         }
       }, []);
       const tmp2Result21 = tmp2(tmp3[36]);
-      navigation = tmp2(tmp3[46]).useNavigation();
+      navigation = tmp2(tmp3[48]).useNavigation();
       if (null == obj4) {
         const obj9 = { value: analyticsLocations, children: null };
         const obj10 = {
@@ -609,11 +615,11 @@ export default noop.memo(function UserProfileActionSheet(userId) {
         }
         obj10.isLoaded = isLoaded;
         const obj11 = { children: null };
-        const obj12 = { style: { marginTop: 42 }, Illustration: tmp2(tmp3[50]).NoResults, body: null };
-        const intl2 = tmp2(tmp3[51]).intl;
-        obj12.body = intl2.string(tmp2(tmp3[51]).t.eAn6z2);
-        obj11.children = sharedValue2(tmp2(tmp3[49]).EmptyState, obj12);
-        obj10.children = sharedValue2(tmp2(tmp3[48]).BottomSheet, obj11);
+        const obj12 = { style: { marginTop: 42 }, Illustration: tmp2(tmp3[52]).NoResults, body: null };
+        const intl2 = tmp2(tmp3[53]).intl;
+        obj12.body = intl2.string(tmp2(tmp3[53]).t.eAn6z2);
+        obj11.children = sharedValue2(tmp2(tmp3[51]).EmptyState, obj12);
+        obj10.children = sharedValue2(tmp2(tmp3[50]).BottomSheet, obj11);
         obj9.children = sharedValue2(tmp2(tmp3[21]).UserProfileAnalyticsProvider, obj10);
         let tmp111Result10 = tmp107(tmp2(tmp3[17]).AnalyticsLocationProvider, obj9);
       } else {
@@ -660,7 +666,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
         }
         const items17 = [tmp111Result, , ,];
         const obj18 = { gradientHeight: diff, bannerHeight: tmp58 };
-        items17[1] = sharedValue2(tmp6(tmp3[53]), obj18);
+        items17[1] = sharedValue2(tmp6(tmp3[55]), obj18);
         const obj19 = {
           scrollsToTop: false,
           style: tmp.container,
@@ -739,7 +745,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
           });
         };
         obj22.initialSection = userId.initialSection;
-        tmp2Result23 = tmp2(tmp3[54]);
+        tmp2Result23 = tmp2(tmp3[56]);
         let tmp84;
         if (tmp2Result24.isIOS()) {
           tmp84 = sharedValue2;
@@ -748,18 +754,18 @@ export default noop.memo(function UserProfileActionSheet(userId) {
         if (obj4.isNonUserBot()) {
           const obj23 = {};
           let merged = Object.assign(obj22);
-          let tmp111Result6 = tmp111(tmp6(tmp3[56]), obj23);
-          const tmp6Result15 = tmp6(tmp3[56]);
+          let tmp111Result6 = tmp111(tmp6(tmp3[58]), obj23);
+          const tmp6Result15 = tmp6(tmp3[58]);
         } else if (obj4.bot) {
           const obj24 = {};
           const merged1 = Object.assign(obj22);
-          tmp111Result6 = tmp111(tmp6(tmp3[57]), obj24);
-          const tmp6Result16 = tmp6(tmp3[57]);
+          tmp111Result6 = tmp111(tmp6(tmp3[59]), obj24);
+          const tmp6Result16 = tmp6(tmp3[59]);
         } else {
           const obj25 = {};
           const merged2 = Object.assign(obj22);
-          tmp111Result6 = tmp111(tmp6(tmp3[58]), obj25);
-          const tmp6Result17 = tmp6(tmp3[58]);
+          tmp111Result6 = tmp111(tmp6(tmp3[60]), obj25);
+          const tmp6Result17 = tmp6(tmp3[60]);
         }
         const items18 = [tmp111Result6];
         let tmp111Result7 = null != tmp51Result;
@@ -771,7 +777,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
           items19[2] = animatedStyle;
           obj26.style = items19;
           const obj28 = { skuId: tmp51Result.skuId, bannerAdjustment: 0 };
-          obj26.children = tmp111(tmp6(tmp3[59]), obj28);
+          obj26.children = tmp111(tmp6(tmp3[61]), obj28);
           tmp111Result7 = tmp111(tmp6(tmp3[13]).View, obj26);
         }
         const obj29 = { children: null };
@@ -786,11 +792,11 @@ export default noop.memo(function UserProfileActionSheet(userId) {
           const obj31 = { backgroundColor: token };
           obj30.tabStyle = obj31;
           obj30.onPress = bottomSheetClose;
-          tmp111Result8 = tmp111(tmp2(tmp3[60]).ActionSheetHeaderBar, obj30);
+          tmp111Result8 = tmp111(tmp2(tmp3[62]).ActionSheetHeaderBar, obj30);
         }
         items17[3] = tmp111Result8;
         obj16.children = items17;
-        const items20 = [first(tmp2(tmp3[48]).BottomSheet, obj16), ,];
+        const items20 = [first(tmp2(tmp3[50]).BottomSheet, obj16), ,];
         if (tmp112Result) {
           const obj32 = {
             animatedPosition: sharedValue,
@@ -814,7 +820,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
           const obj35 = { backgroundColor: token };
           obj34.tabStyle = obj35;
           obj34.onPress = bottomSheetClose;
-          items21[1] = tmp111(tmp2(tmp3[60]).ActionSheetHeaderBar, obj34);
+          items21[1] = tmp111(tmp2(tmp3[62]).ActionSheetHeaderBar, obj34);
           obj32.children = items21;
           tmp112Result = tmp112(profileFrame1, obj32);
         }
@@ -824,20 +830,20 @@ export default noop.memo(function UserProfileActionSheet(userId) {
           obj15.children = items20;
           obj14.children = tmp112(tmp2(tmp3[21]).UserProfileAnalyticsProvider, obj15);
           obj13.children = tmp111(tmp2(tmp3[17]).AnalyticsLocationProvider, obj14);
-          tmp111Result10 = tmp111(tmp2(tmp3[52]).ThemeContextProvider, obj13);
+          tmp111Result10 = tmp111(tmp2(tmp3[54]).ThemeContextProvider, obj13);
         } else {
           const obj36 = { theme: tmp62, primaryColor: null, secondaryColor: null, children: null };
-          const intl = tmp2(tmp3[51]).intl;
-          if (setting === tmp2(tmp3[62]).ProfileVisibility.FRIENDS_ONLY) {
-            let mNZcD8 = tmp2(tmp3[51]).t.mNZcD8;
+          const intl = tmp2(tmp3[53]).intl;
+          if (setting === tmp2(tmp3[64]).ProfileVisibility.FRIENDS_ONLY) {
+            let mNZcD8 = tmp2(tmp3[53]).t.mNZcD8;
           } else {
-            mNZcD8 = tmp2(tmp3[51]).t["wSnI/0"];
+            mNZcD8 = tmp2(tmp3[53]).t["wSnI/0"];
           }
           const obj37 = { text: intl.string(mNZcD8), isExpanded: true };
-          obj36.children = tmp111(tmp2(tmp3[61]).ActionSheetBackdropToast, obj37);
-          tmp111(tmp2(tmp3[52]).ThemeContextProvider, obj36);
+          obj36.children = tmp111(tmp2(tmp3[63]).ActionSheetBackdropToast, obj37);
+          tmp111(tmp2(tmp3[54]).ThemeContextProvider, obj36);
         }
-        tmp2Result24 = tmp2(tmp3[54]);
+        tmp2Result24 = tmp2(tmp3[56]);
       }
       return tmp111Result10;
     }

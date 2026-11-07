@@ -42,19 +42,20 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const EMOJI_CHAT_SIZE = fn(1072).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
 const PlatformUtils = fn(1377);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
   str = "rgba(0,0,0,0.0019607844)";
 }
+let context = noop.createContext(false);
+const createStyles = fn(5140);
 let obj = { spoiler: { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND }, placeholder: null, spoilerRevealed: null, muted: null };
 let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj.muted = { opacity: fn(11199).MUTED_OPACITY_CONTENT };
-let closure_7 = createStyles.createLegacyClassComponentStyles(obj);
+obj.muted = { opacity: fn(5882).MUTED_OPACITY_CONTENT };
+let closure_8 = createStyles.createLegacyClassComponentStyles(obj);
 const redux = noop.createContext(null);
 const PureComponent = noop.PureComponent;
 class Spoiler extends PureComponent {
@@ -84,7 +85,7 @@ class Spoiler extends PureComponent {
 }
 Spoiler.prototype["render"] = function render() {
   const self = this;
-  const tmp = closure_7(this.context);
+  const tmp = closure_8(this.context);
   _require = tmp;
   let revealed = this.props.revealed;
   if (revealed == null) {
@@ -139,7 +140,7 @@ Spoiler.prototype["render"] = function render() {
                 if (Array.isArray(style)) {
                   flattenResult = closure_2_5.flatten(style);
                 }
-                const obj = { children: null, style: null, onPress: "Array" };
+                const obj = { children: null, style: null, onPress: "r" };
                 ({ Children, cloneElement } = validElement);
                 obj.children = Children.map(props.props.children, (props) => {
                   if (validElement.isValidElement(props)) {
@@ -149,7 +150,7 @@ Spoiler.prototype["render"] = function render() {
                     if (Array.isArray(style)) {
                       flattenResult = closure_2_5.flatten(style);
                     }
-                    const obj = { children: null, style: null, onPress: "Array" };
+                    const obj = { children: null, style: null, onPress: "r" };
                     ({ Children, cloneElement } = validElement);
                     obj.children = Children.map(props.props.children, (props) => {
                       if (validElement.isValidElement(props)) {
@@ -159,9 +160,9 @@ Spoiler.prototype["render"] = function render() {
                         if (Array.isArray(style)) {
                           flattenResult = closure_2_5.flatten(style);
                         }
-                        const obj = { children: null, style: null, onPress: "Array" };
+                        const obj = { children: null, style: null, onPress: "r" };
                         ({ Children, cloneElement } = validElement);
-                        obj.children = Children.map(props.props.children, /* F99956 */ function() { ... });
+                        obj.children = Children.map(props.props.children, /* F89643 */ function() { ... });
                         items = [flattenResult, spoiler.spoiler];
                         obj.style = items;
                         return cloneElement(props, obj);
@@ -200,18 +201,19 @@ Spoiler.prototype["render"] = function render() {
       handleTap = self.handleTap;
     }
     obj.onPress = handleTap;
-    obj.children = mapped;
+    const obj2 = { value: !revealed, children: mapped };
+    obj.children = <context.Provider value={!revealed}>{mapped}</context.Provider>;
     return jsx(require("native").LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
 };
-Spoiler.contextType = fn(5229).ThemeContext;
+Spoiler.contextType = fn(5199).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/Spoiler.tsx");
 
 export default function NativeSpoiler(id) {
   id = id.id;
   const merged = Object.assign(id, Object.assign({ id: 0 }));
-  const context = noop.useContext(closure_9);
+  context = noop.useContext(closure_10);
   if (null != id) {
     if (null != context) {
       const obj2 = {};
@@ -226,6 +228,8 @@ export default function NativeSpoiler(id) {
   tmp4 = <Spoiler />;
   const obj = {};
 };
+export const SPOILER_HIDDEN_TEXT_COLOR = str;
+export const SpoilerHiddenContext = context;
 export function SpoilerRevealProvider(children) {
   return <redux.Provider value={_slicedToArray(noop.useState(createSpoilerStore), 1)[0]}>{children.children}</redux.Provider>;
 }

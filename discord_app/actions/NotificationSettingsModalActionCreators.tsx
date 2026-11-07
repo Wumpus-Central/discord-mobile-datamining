@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Endpoints = fn(1072).Endpoints;
-fn(5115).NotificationSettingsUpdateType;
+fn(5085).NotificationSettingsUpdateType;
 const constants = fn(1082).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
@@ -207,7 +207,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -266,7 +266,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp11) {
           c3 = tmp;

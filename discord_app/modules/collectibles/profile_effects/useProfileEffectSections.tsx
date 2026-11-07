@@ -30,7 +30,7 @@ export default function useProfileEffectSections() {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(563);
-  return first(15300)(
+  return first(15334)(
     useMemo(() => {
       let obj = CollectiblesUtils;
       const profileEffects = obj.getProfileEffects(stateFromStores, first);

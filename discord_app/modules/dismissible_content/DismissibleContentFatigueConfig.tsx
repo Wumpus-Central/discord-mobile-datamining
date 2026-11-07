@@ -96,6 +96,7 @@ const items = [
   dismissible_content.DismissibleContent.GUILD_THEME_NUX,
   dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX,
   dismissible_content.DismissibleContent.GUILD_SPACE_NUX_MODAL,
+  dismissible_content.DismissibleContent.GUILD_SPACE_CHANNEL_ROW_HIGHLIGHT,
   dismissible_content.DismissibleContent.IN_APP_NOTIFICATION_EXPAND_NUX,
   dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
   dismissible_content.DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE,

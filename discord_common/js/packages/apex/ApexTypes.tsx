@@ -16,5 +16,7 @@ export const ExperimentFlags = {
   [4]: "DependentExperiment",
   UseAsEligibility: 8,
   [8]: "UseAsEligibility",
+  IsAppLaunch: 16,
+  [16]: "IsAppLaunch",
 };
 export const LOGGED_OUT_USER_ID_SENTINEL = ExperimentsConstants.LOGGED_OUT_USER_ID_SENTINEL;

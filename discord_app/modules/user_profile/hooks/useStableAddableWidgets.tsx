@@ -7,7 +7,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useStableAddableWidgets.tsx");
 
 export default function useStableAddableWidgets(arg0) {
-  const arr = first(15150)();
+  const arr = first(15182)();
   let tmp = _slicedToArray(noop.useState(arr), 2);
   first = tmp[0];
   if (arr.length > first.length) {
@@ -23,10 +23,10 @@ export default function useStableAddableWidgets(arg0) {
             let tmp = null != length;
             if (tmp) {
               tmp =
-                applicationId instanceof closure_0(7876).ApplicationWidget &&
+                applicationId instanceof closure_0(7853).ApplicationWidget &&
                 length.includes(applicationId.applicationId);
               const tmp5 =
-                applicationId instanceof closure_0(7876).ApplicationWidget &&
+                applicationId instanceof closure_0(7853).ApplicationWidget &&
                 length.includes(applicationId.applicationId);
             }
             return !tmp;
@@ -36,10 +36,10 @@ export default function useStableAddableWidgets(arg0) {
               let tmp = null != length;
               if (tmp) {
                 tmp =
-                  applicationId instanceof closure_0(7876).ApplicationWidget &&
+                  applicationId instanceof closure_0(7853).ApplicationWidget &&
                   length.includes(applicationId.applicationId);
                 const tmp5 =
-                  applicationId instanceof closure_0(7876).ApplicationWidget &&
+                  applicationId instanceof closure_0(7853).ApplicationWidget &&
                   length.includes(applicationId.applicationId);
               }
               return tmp;

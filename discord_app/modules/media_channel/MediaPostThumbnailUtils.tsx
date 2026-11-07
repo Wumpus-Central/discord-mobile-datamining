@@ -1,5 +1,6 @@
 // discord_app/modules/media_channel/MediaPostThumbnailUtils.tsx
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
+import MediaFormatParamUtils from "../media/MediaFormatParamUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
@@ -26,13 +27,13 @@ export function getEmbedPreviewImageUrl(arg0) {
 }
 export function getBackgroundImageUrl(coverImage) {
   if (obj.isAnimatedImageUrl(coverImage)) {
-    const _HermesInternal = HermesInternal;
-    let combined = "" + coverImage + "?format=webp";
+    let withMediaFormatResult = MediaFormatParamUtils.withMediaFormat(coverImage, "webp");
+    const tmpResult = MediaFormatParamUtils;
   } else {
     MediaFormatTesters;
-    combined = coverImage;
+    withMediaFormatResult = coverImage;
   }
-  return combined;
+  return withMediaFormatResult;
 }
 export function getThumbnailImage(thumbnail) {
   if (null != thumbnail) {
@@ -41,12 +42,12 @@ export function getThumbnailImage(thumbnail) {
     if (null != url) {
       tmp = url;
       if (null != proxy_url) {
-        let combined = proxy_url;
+        let withMediaFormatResult = proxy_url;
         if (obj.isVideoUrl(url)) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + proxy_url + "?format=webp";
+          withMediaFormatResult = MediaFormatParamUtils.withMediaFormat(proxy_url, "webp");
+          const tmp2Result = MediaFormatParamUtils;
         }
-        tmp = combined;
+        tmp = withMediaFormatResult;
         obj = MediaFormatTesters;
       }
     }

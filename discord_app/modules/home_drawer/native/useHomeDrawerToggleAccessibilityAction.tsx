@@ -25,7 +25,7 @@ export default function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
         name,
         label: stringResult,
         action() {
-          closure_0(5344).setHomeDrawerState(!dependencyMap);
+          closure_0(5314).setHomeDrawerState(!dependencyMap);
           const intl = closure_0(1113).intl;
           const string = intl.string;
           const t = closure_0(1113).t;
@@ -34,9 +34,9 @@ export default function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
           } else {
             stringResult = string(t.hfxfVb);
           }
-          const AccessibilityAnnouncer = closure_0(5179).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer = closure_0(5149).AccessibilityAnnouncer;
           AccessibilityAnnouncer.announce(stringResult);
-          const obj = closure_0(5344);
+          const obj = closure_0(5314);
         },
       };
       return obj;

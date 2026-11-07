@@ -7,8 +7,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
 
 export default function useScreenNameSharedValue() {
-  let rootNavigationRef = sharedValue(5345).getRootNavigationRef();
-  let obj = sharedValue(5345);
+  let rootNavigationRef = sharedValue(5315).getRootNavigationRef();
+  let obj = sharedValue(5315);
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();

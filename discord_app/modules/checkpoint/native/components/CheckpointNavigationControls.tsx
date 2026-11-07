@@ -12,7 +12,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_PRIMARY: hasOwnProperty } = CheckpointConstants);
+({ CHECKPOINT_CONTROL_ICON_SIZE, CHECKPOINT_CONTROL_SIZE, CHECKPOINT_PRIMARY: hasOwnProperty } = CheckpointConstants);
 const HelpdeskArticles = Constants.HelpdeskArticles;
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let obj = {
@@ -21,9 +21,12 @@ let obj = {
   link: null,
   routeControls: null,
   control: null,
-  editControl: null,
-  editIcon: null,
+  controlIcon: null,
+  iconButton: null,
+  summaryActions: null,
+  summaryControl: null,
   share: null,
+  shareLabel: null,
 };
 let rect = {
   position: "absolute",
@@ -41,15 +44,20 @@ obj.control = {
   alignItems: "center",
   justifyContent: "center",
 };
-obj.editControl = { borderWidth: 1, backgroundColor: "rgba(0, 0, 0, 0.05)" };
-obj.editIcon = { width: 20, height: 20 };
+obj.controlIcon = { width: CHECKPOINT_CONTROL_ICON_SIZE, height: CHECKPOINT_CONTROL_ICON_SIZE };
+obj.iconButton = { width: CHECKPOINT_CONTROL_SIZE, paddingHorizontal: 0 };
 let obj2 = { gap: nativeDefault.space.PX_24 };
-obj.share = { paddingHorizontal: nativeDefault.space.PX_64 };
+obj.summaryActions = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
+obj.summaryControl = { borderWidth: 1, backgroundColor: "rgba(0, 0, 0, 0.05)" };
+let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
+obj.share = { paddingHorizontal: nativeDefault.space.PX_40 };
+obj.shareLabel = { fontSize: 18, lineHeight: 24 };
 let closure_9 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointNavigationControls.tsx");
 
 export default function CheckpointNavigationControls(nextDisabled) {
   ({ activeRoute, onBack, onNext: require, color } = nextDisabled);
+  ({ onReplay, onShare } = nextDisabled);
   if (color === undefined) {
     color = closure_5;
   }
@@ -75,8 +83,12 @@ export default function CheckpointNavigationControls(nextDisabled) {
   const rect = flag(flag2[8])();
   items = [tmp.container, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
   let token = require("useToken").useToken("text-subtle");
-  const intl = require("util").intl;
   const obj2 = require("useToken");
+  const token1 = require("useToken").useToken("text-overlay-dark");
+  const obj3 = require("useToken");
+  const token2 = require("useToken").useToken(flag(flag2[5]).colors.BLACK);
+  const intl = require("util").intl;
+  const obj4 = require("useToken");
   if (activeRoute === require("CheckpointNavigation").CheckpointRoute.FINALIZE_CHARACTER) {
     const intl3 = require("util").intl;
     let stringResult1 = intl3.string(require("util").t["R3BPH+"]);
@@ -99,27 +111,27 @@ export default function CheckpointNavigationControls(nextDisabled) {
     }
   }
   if (activeRoute === require("CheckpointNavigation").CheckpointRoute.HOME) {
-    const obj3 = { style: null, children: null };
+    const obj5 = { style: null, children: null };
     const items1 = [items, tmp.homeContainer];
-    obj3.style = items1;
-    const obj4 = {
+    obj5.style = items1;
+    const obj6 = {
       Icon: require("PlayIcon").PlayIcon,
       label: null,
       onPress: null,
       disabled: null,
       accessibilityState: null,
     };
-    const intl6 = require("util").intl;
-    obj4.label = intl6.string(require("util").t.I0v0Qv);
-    obj4.onPress = handleNextPress;
-    obj4.disabled = flag2;
-    const obj5 = { disabled: flag2 };
-    obj4.accessibilityState = obj5;
-    const items2 = [closure_7(tmp5(tmp6[12]), obj4)];
-    const obj6 = { variant: "body-sm/medium", children: null };
-    const tmp5Result = tmp5(tmp6[12]);
     const intl7 = require("util").intl;
-    const obj7 = {
+    obj6.label = intl7.string(require("util").t.I0v0Qv);
+    obj6.onPress = handleNextPress;
+    obj6.disabled = flag2;
+    const obj7 = { disabled: flag2 };
+    obj6.accessibilityState = obj7;
+    const items2 = [closure_7(tmp5(tmp6[12]), obj6)];
+    const obj8 = { variant: "body-sm/medium", children: null };
+    const tmp5Result = tmp5(tmp6[12]);
+    const intl8 = require("util").intl;
+    const obj9 = {
       learnMoreHook(children, id) {
         return metroImportDefault(
           CheckpointTextDefault,
@@ -127,7 +139,7 @@ export default function CheckpointNavigationControls(nextDisabled) {
             variant: "body-sm/medium",
             style: link.link,
             onPress() {
-              const obj = flag(5864);
+              const obj = flag(5834);
               return obj.openURL(flag(2185).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
@@ -137,44 +149,74 @@ export default function CheckpointNavigationControls(nextDisabled) {
         );
       },
     };
-    obj6.children = intl7.format(tmp5(tmp6[15]).hcNhyq, obj7);
-    items2[1] = closure_7(tmp5(tmp6[14]), obj6);
-    obj3.children = items2;
-    let tmp25Result = closure_8(link, obj3);
+    obj8.children = intl8.format(tmp5(tmp6[15]).hcNhyq, obj9);
+    items2[1] = closure_7(tmp5(tmp6[14]), obj8);
+    obj5.children = items2;
+    let tmp29Result = closure_8(link, obj5);
     const tmp5Result4 = tmp5(tmp6[14]);
   } else if (activeRoute === require("CheckpointNavigation").CheckpointRoute.SUMMARY) {
-    const obj8 = { style: null, children: null };
+    const obj10 = { style: null, children: null };
     const items3 = [items, tmp.routeControls];
-    obj8.style = items3;
-    const obj9 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    obj10.style = items3;
+    const obj11 = { style: tmp.summaryActions, children: null };
+    const obj12 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const items4 = [, ,];
-    ({ control: arr4[0], editControl: arr4[1] } = tmp);
-    const obj10 = { borderColor: color };
-    items4[2] = obj10;
-    obj9.style = items4;
-    obj9.onPress = onBack;
+    ({ control: arr4[0], summaryControl: arr4[1] } = tmp);
+    const obj13 = { borderColor: color };
+    items4[2] = obj13;
+    obj12.style = items4;
+    obj12.onPress = onBack;
     const intl4 = require("util").intl;
-    obj9.accessibilityLabel = intl4.string(tmp5(tmp6[15]).Iyyy9s);
-    const obj11 = { size: "custom", color, style: tmp.editIcon };
-    obj9.children = closure_7(require("PencilIcon").PencilIcon, obj11);
-    const items5 = [closure_7(nextBlockedTrait, obj9)];
-    const obj12 = { label: null, onPress: null, color: null, borderColor: null, shadowColor: null, style: null };
+    obj12.accessibilityLabel = intl4.string(require("util").t["13/7kX"]);
+    const obj14 = { size: "custom", color, style: tmp.controlIcon };
+    obj12.children = closure_7(require("ArrowSmallLeftIcon").ArrowSmallLeftIcon, obj14);
+    const items5 = [closure_7(nextBlockedTrait, obj12)];
+    const obj15 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    const items6 = [, ,];
+    ({ control: arr6[0], summaryControl: arr6[1] } = tmp);
+    const obj16 = { borderColor: color };
+    items6[2] = obj16;
+    obj15.style = items6;
+    obj15.onPress = onReplay;
     const intl5 = require("util").intl;
-    obj12.label = intl5.string(require("util").t.RDE0Sc);
-    obj12.onPress = nextDisabled.onShare;
-    obj12.color = color;
-    obj12.borderColor = color;
-    obj12.shadowColor = shadowColor;
-    obj12.style = tmp.share;
-    items5[1] = closure_7(tmp5(tmp6[12]), obj12);
-    obj8.children = items5;
-    tmp25Result = closure_8(link, obj8);
+    obj15.accessibilityLabel = intl5.string(tmp5(tmp6[15]).u40i9u);
+    const obj17 = { size: "custom", color, style: tmp.controlIcon };
+    obj15.children = closure_7(require("RetryIcon").RetryIcon, obj17);
+    items5[1] = closure_7(nextBlockedTrait, obj15);
+    obj11.children = items5;
+    const items7 = [closure_8(link, obj11)];
+    const obj18 = {
+      Icon: require("ShareIcon").ShareIcon,
+      iconPosition: "end",
+      label: null,
+      labelVariant: "mono-md/bold",
+      labelStyle: null,
+      onPress: null,
+      color: null,
+      borderColor: null,
+      shadowColor: null,
+      style: null,
+    };
+    const intl6 = require("util").intl;
+    obj18.label = intl6.string(require("util").t.RDE0Sc);
+    obj18.labelStyle = tmp.shareLabel;
+    obj18.onPress = onShare;
+    obj18.color = token1;
+    obj18.borderColor = token2;
+    obj18.shadowColor = shadowColor;
+    const items8 = [tmp.share];
+    const obj19 = { backgroundColor: color };
+    items8[1] = obj19;
+    obj18.style = items8;
+    items7[1] = closure_7(tmp5(tmp6[12]), obj18);
+    obj10.children = items7;
+    tmp29Result = closure_8(link, obj10);
     const tmp5Result5 = tmp5(tmp6[12]);
   } else {
-    const obj13 = { style: null, children: null };
-    const items6 = [items, tmp.routeControls];
-    obj13.style = items6;
-    const obj14 = {
+    const obj20 = { style: null, children: null };
+    const items9 = [items, tmp.routeControls];
+    obj20.style = items9;
+    const obj21 = {
       style: tmp.control,
       onPress: onBack,
       disabled: backDisabled,
@@ -183,20 +225,19 @@ export default function CheckpointNavigationControls(nextDisabled) {
       accessibilityState: null,
       children: null,
     };
-    const intl8 = require("util").intl;
-    obj14.accessibilityLabel = intl8.string(require("util").t["13/7kX"]);
-    const obj15 = { disabled: backDisabled };
-    obj14.accessibilityState = obj15;
+    const intl9 = require("util").intl;
+    obj21.accessibilityLabel = intl9.string(require("util").t["13/7kX"]);
+    const obj22 = { disabled: backDisabled };
+    obj21.accessibilityState = obj22;
     if (!backDisabled) {
       token = closure_5;
     }
-    const obj16 = { color: token };
-    obj14.children = closure_7(require("ArrowSmallLeftIcon").ArrowSmallLeftIcon, obj16);
-    const items7 = [closure_7(nextBlockedTrait, obj14)];
-    const obj17 = {
+    const obj23 = { size: "custom", color: token, style: tmp.controlIcon };
+    obj21.children = closure_7(require("ArrowSmallLeftIcon").ArrowSmallLeftIcon, obj23);
+    const items10 = [closure_7(nextBlockedTrait, obj21)];
+    const obj24 = {
       Icon: require("ArrowSmallRightIcon").ArrowSmallRightIcon,
       iconPosition: "end",
-      iconSize: "md",
       label: stringResult1,
       onPress: handleNextPress,
       disabled: null,
@@ -204,33 +245,40 @@ export default function CheckpointNavigationControls(nextDisabled) {
       accessibilityHint: null,
       accessibilityLabel: null,
       accessibilityState: null,
+      style: null,
     };
-    let tmp12 = flag;
+    let tmp14 = flag;
     if (!flag) {
-      tmp12 = flag2;
+      tmp14 = flag2;
     }
-    obj17.disabled = tmp12;
-    obj17.loading = flag2;
-    let tmp13;
+    obj24.disabled = tmp14;
+    obj24.loading = flag2;
+    let tmp15;
     if (flag) {
       if (!flag2) {
-        tmp13 = nitroLockedMessage;
+        tmp15 = nitroLockedMessage;
       }
     }
-    obj17.accessibilityHint = tmp13;
+    obj24.accessibilityHint = tmp15;
+    let tmp16 = stringResult1;
     if (stringResult1 == null) {
-      stringResult1 = stringResult;
+      tmp16 = stringResult;
     }
-    obj17.accessibilityLabel = stringResult1;
+    obj24.accessibilityLabel = tmp16;
     if (!flag) {
       flag = flag2;
     }
-    const obj18 = { disabled: flag };
-    obj17.accessibilityState = obj18;
-    items7[1] = closure_7(tmp5(tmp6[12]), obj17);
-    obj13.children = items7;
-    tmp25Result = closure_8(link, obj13);
+    const obj25 = { disabled: flag };
+    obj24.accessibilityState = obj25;
+    let iconButton;
+    if (null == stringResult1) {
+      iconButton = tmp.iconButton;
+    }
+    obj24.style = iconButton;
+    items10[1] = closure_7(tmp5(tmp6[12]), obj24);
+    obj20.children = items10;
+    tmp29Result = closure_8(link, obj20);
     const tmp5Result6 = tmp5(tmp6[12]);
   }
-  return tmp25Result;
+  return tmp29Result;
 }

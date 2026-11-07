@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const result = 8 * Math.SQRT2;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   anchor: { position: "absolute", top: 0, right: 0, bottom: 0, left: 0, zIndex: 1, overflow: "visible" },
   arrow: { position: "absolute", bottom: -1, width: 16, height: 9, overflow: "hidden" },
@@ -45,10 +45,10 @@ export function PinotMemberNoticeHeaderArrow(channelId) {
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj = channelId(504);
-  const isForumChannelSearchActive = channelId(11505).useIsForumChannelSearchActive(channelId);
-  const obj2 = channelId(11505);
-  const obj3 = channelId(11480);
-  const pinotChannelLabelCenter = channelId(11489).usePinotChannelLabelCenter(channelId, ref);
+  const isForumChannelSearchActive = channelId(11487).useIsForumChannelSearchActive(channelId);
+  const obj2 = channelId(11487);
+  const obj3 = channelId(11462);
+  const pinotChannelLabelCenter = channelId(11471).usePinotChannelLabelCenter(channelId, ref);
   const center = pinotChannelLabelCenter.center;
   let tmp9Result2 = null;
   if (obj3.usePinotMemberNotice(stateFromStores, "mobile_channel_header").visible) {

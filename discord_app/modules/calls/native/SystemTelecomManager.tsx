@@ -55,7 +55,7 @@ function toHandle(getGuildId) {
   return combined;
 }
 const AppState = fn(17).AppState;
-const isMultiUserDM = fn(5023).isMultiUserDM;
+const isMultiUserDM = fn(4993).isMultiUserDM;
 let Constants = fn(1072);
 ({
   AnalyticEvents: closure_18,
@@ -64,7 +64,7 @@ let Constants = fn(1072);
   ME: closure_21,
   RTCConnectionStates: closure_22,
 } = Constants);
-Constants = fn(5924);
+Constants = fn(5897);
 ({ Features: closure_23, MediaEngineContextTypes: closure_24 } = Constants);
 let obj = new LoggerDefault("SystemTelecomManager");
 obj.enableNativeLogger(true);
@@ -173,7 +173,7 @@ class SystemTelecomManager {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -250,7 +250,7 @@ class SystemTelecomManager {
                     if (null != recipientId) {
                       dependencyMap = 2;
                       c4 = 1;
-                      const obj7 = { value: v0(7572).ensurePrivateChannel(recipientId), done: false };
+                      const obj7 = { value: v0(7549).ensurePrivateChannel(recipientId), done: false };
                       return obj7;
                     }
                   }
@@ -259,7 +259,7 @@ class SystemTelecomManager {
                     hasChannelResult = ChannelStore.hasChannel(channelId);
                   }
                   if (hasChannelResult) {
-                    const tmp55 = v0(7574);
+                    const tmp55 = v0(7551);
                     const call2 = tmp55.call;
                     if (typeof call2 === "unknown") {
                       tmp55(tmp57, true);
@@ -270,9 +270,9 @@ class SystemTelecomManager {
                     tmp56 = channelId;
                   }
                 } else {
-                  v0(6073).setVideoEnabled(closure_129_2);
+                  v0(6047).setVideoEnabled(closure_129_2);
                   closure_129_7();
-                  const obj2 = v0(6073);
+                  const obj2 = v0(6047);
                 }
                 c4 = 3;
               }
@@ -280,7 +280,7 @@ class SystemTelecomManager {
               c4 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              const tmp9 = v0(7574);
+              const tmp9 = v0(7551);
               const call = tmp9.call;
               if (typeof call === "unknown") {
                 tmp9(tmp11, true);
@@ -321,7 +321,7 @@ class SystemTelecomManager {
       }
     };
     obj.handleSessionStart = function handleSessionStart() {
-      obj = obj(16530);
+      obj = obj(16578);
       obj.flushCallPushToken();
     };
     obj.handleConnectionOpen = function handleConnectionOpen(user) {
@@ -410,7 +410,7 @@ class SystemTelecomManager {
       const item = voiceStates.forEach((channelId) => {
         channelId = channelId.channelId;
         ({ guildId, userId, sessionId, selfVideo } = channelId);
-        obj = obj(16531);
+        obj = obj(16579);
         if (obj.isSystemTelecomEnabledForChannel(guildId, channelId)) {
           if (null != channelId) {
             if (userId === currentUserId.currentUserId) {
@@ -551,7 +551,7 @@ prototype["startCall"] = function startCall(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -586,26 +586,26 @@ prototype["startCall"] = function startCall(arg0) {
                 const result = self.updateActiveCallStatus();
                 const obj9 = tmp5(1266);
                 const _HermesInternal = HermesInternal;
-                tmp29(10348).setRequestedBy("call:" + obj6.uuid);
-                const obj10 = tmp29(10348);
+                tmp29(10331).setRequestedBy("call:" + obj6.uuid);
+                const obj10 = tmp29(10331);
                 if (obj11.isSystemTelecomEnabled()) {
-                  const obj2 = tmp3(16529);
+                  const obj2 = tmp3(16577);
                   ({ uuid, handle } = obj6);
-                  const tmp42Result = tmp5(5806);
+                  const tmp42Result = tmp5(5776);
                   const startOutgoingCallResult = obj2.startOutgoingCall(
                     uuid,
                     handle,
-                    tmp5(5806).computeChannelName(obj6.channel, UserStore, RelationshipStore),
+                    tmp5(5776).computeChannelName(obj6.channel, UserStore, RelationshipStore),
                     obj6.video,
                   );
-                  tmp3(16529).setCallMuted(obj6.uuid, obj6.muted);
+                  tmp3(16577).setCallMuted(obj6.uuid, obj6.muted);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
                   const obj7 = { value: startOutgoingCallResult, done: false };
                   return obj7;
                 }
-                obj11 = tmp5(16531);
+                obj11 = tmp5(16579);
               }
             }
           }

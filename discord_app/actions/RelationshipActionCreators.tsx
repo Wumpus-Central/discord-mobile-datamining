@@ -98,8 +98,8 @@ function fireFriendRequestSurveyAction(arg0) {
 }
 const Constants = fn(1072);
 ({ Endpoints: closure_8, AbortCodes: closure_9, RelationshipTypes: closure_10 } = Constants);
-const ClearFriendRequestFilters = fn(7576).ClearFriendRequestFilters;
-const SafetyToastType = fn(7577).SafetyToastType;
+const ClearFriendRequestFilters = fn(7553).ClearFriendRequestFilters;
+const SafetyToastType = fn(7554).SafetyToastType;
 const RelationshipErrorUXConfig = {
   SHOW_ALWAYS: 0,
   [0]: "SHOW_ALWAYS",
@@ -129,7 +129,7 @@ let obj2 = {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -319,7 +319,7 @@ let obj2 = {
         }
       })
       .catch(() => {
-        const AccessibilityAnnouncer = closure_0(5177).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = closure_0(5147).AccessibilityAnnouncer;
         const intl = closure_0(1113).intl;
         AccessibilityAnnouncer.announce(intl.string(closure_0(1113).t.n6Jo3E));
       });
@@ -412,8 +412,8 @@ let obj2 = {
         );
       })
       .catch(() => {
-        channelId(7591).showFailedToast();
-        const AccessibilityAnnouncer = userId(5177).AccessibilityAnnouncer;
+        channelId(7568).showFailedToast();
+        const AccessibilityAnnouncer = userId(5147).AccessibilityAnnouncer;
         const intl = userId(1113).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
       });
@@ -440,8 +440,8 @@ let obj2 = {
         );
       })
       .catch(() => {
-        channelId(7591).showFailedToast();
-        const AccessibilityAnnouncer = userId(5177).AccessibilityAnnouncer;
+        channelId(7568).showFailedToast();
+        const AccessibilityAnnouncer = userId(5147).AccessibilityAnnouncer;
         const intl = userId(1113).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
       });

@@ -9,6 +9,7 @@ export const SWITCH_ACCOUNTS_MODAL_KEY = "switch-accounts-modal";
 export const MULTI_ACCOUNT_LOGIN_MODAL_KEY = "multiaccount-login-modal";
 export const MANAGE_EDIT_TRANSITION_DURATION = 200;
 export const MultiAccountSwitchLocation = {
+  ACCOUNT_SWITCHER_RAIL: "account_switcher_rail",
   YOU_ACCOUNT_ACTION_SHEET: "you_account_action_sheet",
   CHOOSE_ACCOUNT: "choose_account",
   MANAGE_ACCOUNTS_MODAL: "manage_accounts_modal",

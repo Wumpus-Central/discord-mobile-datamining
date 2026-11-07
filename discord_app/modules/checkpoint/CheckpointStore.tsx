@@ -8,7 +8,7 @@ import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 let obj = { INIT: 0, [0]: "INIT", FETCHING: 1, [1]: "FETCHING", SUCCESS: 2, [2]: "SUCCESS", ERROR: 3, [3]: "ERROR" };
-let obj2 = { isMuted: false, progress: null };
+let obj2 = { volume: 1, isMuted: false, progress: null };
 let closure_5 = {};
 let merged = Object.assign(obj2);
 obj = {};
@@ -32,6 +32,12 @@ prototype["initialize"] = function initialize(arg0) {
     const merged1 = Object.assign(arg0);
   }
 };
+Object.defineProperty(prototype, "volume", {
+  get: function volume() {
+    return obj.volume;
+  },
+  set: undefined,
+});
 Object.defineProperty(prototype, "isMuted", {
   get: function isMuted() {
     return obj.isMuted;
@@ -102,11 +108,25 @@ const items = [
     obj.progress = null;
     return obj;
   },
+  (arg0) => {
+    const merged = Object.assign(arg0);
+    return { volume: 1 };
+  },
 ];
 CheckpointStore.migrations = items;
 const checkpointStore = new CheckpointStore(DispatcherDefault, {
   CHECKPOINT_TOGGLE_MUTE: function handleToggleMute() {
     obj.isMuted = !obj.isMuted;
+  },
+  CHECKPOINT_SET_VOLUME: function handleSetVolume(volume) {
+    volume = volume.volume;
+    if (obj.volume === volume) {
+      if (!obj.isMuted) {
+        return false;
+      }
+    }
+    obj.volume = volume;
+    obj.isMuted = false;
   },
   CHECKPOINT_FETCH_START: function handleFetchStart() {
     INIT = obj.FETCHING;

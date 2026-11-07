@@ -15,7 +15,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   templateContainer: { paddingVertical: 16, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
 };
@@ -65,12 +65,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
           obj4.confirmText = intl4.string(util.t.p89ACt);
           obj4.onConfirm = function onConfirm() {
             importDefault(closure_0);
-            closure_1_1(5404).hideActionSheet();
-            const obj = closure_1_1(5404);
-            const result = closure_0(5866).roleTemplateAppliedToast();
+            closure_1_1(5374).hideActionSheet();
+            const obj = closure_1_1(5374);
+            const result = closure_0(5836).roleTemplateAppliedToast();
           };
           obj4.onCancel = function onCancel() {
-            closure_1_1(5404).hideActionSheet();
+            closure_1_1(5374).hideActionSheet();
           };
           AlertActionCreatorsDefault.show(obj4);
         } else {
@@ -109,12 +109,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
             obj4.confirmText = intl4.string(util.t.p89ACt);
             obj4.onConfirm = function onConfirm() {
               importDefault(closure_0);
-              closure_1_1(5404).hideActionSheet();
-              const obj = closure_1_1(5404);
-              const result = closure_0(5866).roleTemplateAppliedToast();
+              closure_1_1(5374).hideActionSheet();
+              const obj = closure_1_1(5374);
+              const result = closure_0(5836).roleTemplateAppliedToast();
             };
             obj4.onCancel = function onCancel() {
-              closure_1_1(5404).hideActionSheet();
+              closure_1_1(5374).hideActionSheet();
             };
             AlertActionCreatorsDefault.show(obj4);
           } else {

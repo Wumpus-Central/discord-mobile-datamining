@@ -5,9 +5,9 @@ import DatabaseManagerDefault from "system/DatabaseManager.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 let require = fn;
-const items = [fn(5049).TableId.KvCache, "guild_basic_channels"];
+const items = [fn(5019).TableId.KvCache, "guild_basic_channels"];
 const items1 = [items];
-const items2 = [fn(5049).TableId.KvCache, "basic_channels_stale"];
+const items2 = [fn(5019).TableId.KvCache, "basic_channels_stale"];
 items1[1] = items2;
 const Store = initializeDefault.Store;
 class DatabaseDaos extends Store {
@@ -22,9 +22,9 @@ class DatabaseDaos extends Store {
       return DatabaseManagerDefault.database(id);
     };
     closure_129_0 = (database) => {
-      const guildEntityDao = new applyArgumentsResult(5049).GuildEntityDao(
+      const guildEntityDao = new applyArgumentsResult(5019).GuildEntityDao(
         "guild_channels",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return guildEntityDao;
@@ -41,9 +41,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_130_0 = (database) => {
-      const guildDao = new applyArgumentsResult(5049).GuildDao(
+      const guildDao = new applyArgumentsResult(5019).GuildDao(
         "guild_channels_temp",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return guildDao;
@@ -60,9 +60,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_131_0 = (database) => {
-      const dao = new applyArgumentsResult(5049).Dao(
+      const dao = new applyArgumentsResult(5019).Dao(
         "basic_channels",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return dao;
@@ -79,9 +79,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_132_0 = (database) => {
-      const dao = new applyArgumentsResult(5049).Dao(
+      const dao = new applyArgumentsResult(5019).Dao(
         "basic_channels_synced",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return dao;
@@ -98,7 +98,7 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_133_0 = (database) => {
-      const dao = new applyArgumentsResult(5049).Dao("cache", applyArgumentsResult(5049).TableId.KvCache, database);
+      const dao = new applyArgumentsResult(5019).Dao("cache", applyArgumentsResult(5019).TableId.KvCache, database);
       return dao;
     };
     applyArgumentsResult.cache = (arg0) => {
@@ -113,9 +113,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_134_0 = (database) => {
-      const dao = new applyArgumentsResult(5049).Dao(
+      const dao = new applyArgumentsResult(5019).Dao(
         "force_resync_version",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return dao;
@@ -132,9 +132,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_135_0 = (database) => {
-      const guildEntityDao = new applyArgumentsResult(5049).GuildEntityDao(
+      const guildEntityDao = new applyArgumentsResult(5019).GuildEntityDao(
         "guild_emojis",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return guildEntityDao;
@@ -151,9 +151,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_136_0 = (database) => {
-      const entityDao = new applyArgumentsResult(5049).EntityDao(
+      const entityDao = new applyArgumentsResult(5019).EntityDao(
         "guilds",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return entityDao;
@@ -170,9 +170,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_137_0 = (database) => {
-      const entityDao = new applyArgumentsResult(5049).EntityDao(
+      const entityDao = new applyArgumentsResult(5019).EntityDao(
         "guilds_requiring_deleted_ids_sync",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return entityDao;
@@ -189,9 +189,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_138_0 = (database) => {
-      const entityDao = new applyArgumentsResult(5049).EntityDao(
+      const entityDao = new applyArgumentsResult(5019).EntityDao(
         "guilds_requiring_channel_sync",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return entityDao;
@@ -208,9 +208,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_139_0 = (database) => {
-      const messageDao = new applyArgumentsResult(5049).MessageDao(
+      const messageDao = new applyArgumentsResult(5019).MessageDao(
         "messages",
-        applyArgumentsResult(5049).TableId.Messages,
+        applyArgumentsResult(5019).TableId.Messages,
         database,
       );
       return messageDao;
@@ -227,9 +227,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_140_0 = (database) => {
-      const guildEntityDao = new applyArgumentsResult(5049).GuildEntityDao(
+      const guildEntityDao = new applyArgumentsResult(5019).GuildEntityDao(
         "guild_stickers",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return guildEntityDao;
@@ -246,9 +246,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_141_0 = (database) => {
-      const entityDao = new applyArgumentsResult(5049).EntityDao(
+      const entityDao = new applyArgumentsResult(5019).EntityDao(
         "guild_versions",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return entityDao;
@@ -265,9 +265,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_142_0 = (database) => {
-      const entityDao = new applyArgumentsResult(5049).EntityDao(
+      const entityDao = new applyArgumentsResult(5019).EntityDao(
         "non_guild_versions",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return entityDao;
@@ -284,9 +284,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_143_0 = (database) => {
-      const entityDao = new applyArgumentsResult(5049).EntityDao(
+      const entityDao = new applyArgumentsResult(5019).EntityDao(
         "user_settings",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return entityDao;
@@ -303,9 +303,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_144_0 = (database) => {
-      const dao = new applyArgumentsResult(5049).Dao(
+      const dao = new applyArgumentsResult(5019).Dao(
         "read_states",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return dao;
@@ -322,9 +322,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_145_0 = (database) => {
-      const dao = new applyArgumentsResult(5049).Dao(
+      const dao = new applyArgumentsResult(5019).Dao(
         "user_guild_settings",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return dao;
@@ -341,9 +341,9 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     closure_146_0 = (database) => {
-      const entityDao = new applyArgumentsResult(5049).EntityDao(
+      const entityDao = new applyArgumentsResult(5019).EntityDao(
         "user_search_items",
-        applyArgumentsResult(5049).TableId.KvCache,
+        applyArgumentsResult(5019).TableId.KvCache,
         database,
       );
       return entityDao;

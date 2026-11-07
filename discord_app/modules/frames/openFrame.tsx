@@ -5,7 +5,7 @@ import FramesActionCreatorsDefault from "FramesActionCreators.native.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6927);
+const FramesConstants = fn(6902);
 ({ MAIN_SURFACE: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
 const Routes = fn(1072).Routes;
 const size = fn(2);
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/frames/openFrame.tsx");
 export default function openFrame(arg0) {
   ({ applicationId, channel, analyticsContext, launch } = arg0);
   if (null == channel) {
-    const obj2 = { applicationId, surface, analyticsContext, launch, invite: tmp };
+    const obj2 = { applicationId, surface, analyticsContext, launch, invite: tmp, showErrorModal: tmp2 };
     const obj3 = { frameId: null, launched: null };
     obj3.frameId = hasOwnProperty(applicationId, surface);
     obj3.launched = FramesActionCreatorsDefault.launchFrame(obj2);

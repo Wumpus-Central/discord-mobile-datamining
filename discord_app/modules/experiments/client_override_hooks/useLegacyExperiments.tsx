@@ -19,17 +19,17 @@ function parseRegisteredExperiments(stateFromStoresObject) {
       if (typeof type.description === "object") {
         let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1(8678).getExperimentBucketName(item);
-        const obj3 = closure_1(8678);
+        experimentBucketName = closure_1(8657).getExperimentBucketName(item);
+        const obj3 = closure_1(8657);
       }
       obj.label = experimentBucketName;
-      obj.shortLabel = closure_1(8678).getExperimentBucketName(item);
+      obj.shortLabel = closure_1(8657).getExperimentBucketName(item);
       if (item === constants.CONTROL) {
-        let TREATMENT = obj(8680).Variation_Type.CONTROL;
+        let TREATMENT = obj(8659).Variation_Type.CONTROL;
       } else if (item === tmp4.NOT_ELIGIBLE) {
-        TREATMENT = obj(8680).Variation_Type.UNSPECIFIED;
+        TREATMENT = obj(8659).Variation_Type.UNSPECIFIED;
       } else {
-        TREATMENT = obj(8680).Variation_Type.TREATMENT;
+        TREATMENT = obj(8659).Variation_Type.TREATMENT;
       }
       obj.type = TREATMENT;
       return obj;
@@ -61,7 +61,7 @@ function getLegacyOverridesInfo(stateFromStoresObject1) {
   return obj;
 }
 const useMemo = fn(19).useMemo;
-const ExperimentConstants = fn(5385);
+const ExperimentConstants = fn(5355);
 ({ ExperimentBuckets: closure_6, ExperimentTypes: metroImportDefault } = ExperimentConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useLegacyExperiments.tsx");

@@ -5,14 +5,14 @@ import AccessibilityPreferencesContext from "../../../../../discord_common/js/pa
 import IconDefault from "../../../void/Icon/native/Icon.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
-import _modDef7081 from "../../../../../_runtime/metro/07081__.js";
+import _modDef7056 from "../../../../../_runtime/metro/07056__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const module_1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = {
   width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT,
@@ -140,9 +140,9 @@ export function FormCheckbox(checked) {
   const obj2 = { style: null, children: null };
   const items4 = [tmp.checkbox, animatedStyle];
   obj2.style = items4;
-  const obj3 = { source: _modDef7081, size: IconDefault.Sizes.SMALL_20, style: null };
+  const obj3 = { source: _modDef7056, size: IconDefault.Sizes.SMALL_20, style: null };
   const items5 = [tmp.checkmark, animatedStyle1];
   obj3.style = items5;
-  obj2.children = <Icon source={_modDef7081} size={IconDefault.Sizes.SMALL_20} style={null} />;
+  obj2.children = <Icon source={_modDef7056} size={IconDefault.Sizes.SMALL_20} style={null} />;
   return jsx(module_1652.View, { style: null, children: null });
 }

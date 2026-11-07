@@ -131,10 +131,10 @@ function StatusText(status) {
   let obj3 = { style: animatedStyle, children: null };
   if (null != status.userId) {
     const obj4 = { userId: status.userId, dimmed: "left" === status.kind };
-    let tmp43 = closure_8(tmp26(19512).DockUserTitle, obj4);
+    let tmp43 = closure_8(tmp26(19591).DockUserTitle, obj4);
     let tmp44 = closure_8;
   } else {
-    tmp43 = closure_8(tmp26(19512).DockChannelTitle, {});
+    tmp43 = closure_8(tmp26(19591).DockChannelTitle, {});
     tmp44 = closure_8;
   }
   const items5 = [tmp43];
@@ -148,7 +148,7 @@ function StatusText(status) {
       str4 = "text-muted";
     }
     const obj6 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
-    obj5.children = tmp44(tmp26(5781).Text, obj6);
+    obj5.children = tmp44(tmp26(5751).Text, obj6);
     tmp44Result = tmp44(_modDef1652.View, obj5);
   }
   items5[1] = tmp44Result;
@@ -482,10 +482,10 @@ function StatusLayer(exit) {
   obj3.style = items5;
   if (null != status.userId) {
     let obj4 = { userId: status.userId, dimmed: "left" === status.kind, entered: tmp12[0] };
-    let tmp32Result = tmp32(tmp2(19512).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(19591).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(19512).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(19591).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue2(_modDef1652.View, obj3)];
@@ -505,17 +505,17 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(19510);
+const VoicePanelDockStatusStore = fn(19588);
 ({ useDockHasStreamers: closure_6, useDockSubject: metroImportDefault } = VoicePanelDockStatusStore);
-const VoicePanelDockConstants = fn(11399);
+const VoicePanelDockConstants = fn(11381);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const spring = { mass: 0.6, stiffness: 560, damping: 24 };
-const lineHeight = fn(5781).TextStyleSheet["body-xs/medium"].lineHeight;
+const lineHeight = fn(5751).TextStyleSheet["body-xs/medium"].lineHeight;
 let closure_11 = (lineHeight + 1) / 2;
-const sum = fn(5781).TextStyleSheet["body-md/medium"].lineHeight + 1;
-const createStyles = fn(5170);
+const sum = fn(5751).TextStyleSheet["body-md/medium"].lineHeight + 1;
+const createStyles = fn(5140);
 let obj = {
   display: { flexGrow: 1, flexShrink: 1, height: DOCK_TILE_SIZE },
   layer: null,

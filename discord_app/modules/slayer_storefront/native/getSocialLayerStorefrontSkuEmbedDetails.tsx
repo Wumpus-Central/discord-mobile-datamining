@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import util from "../../../intl/index.native.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
-import _modDef10822 from "../../../../_runtime/metro/10822__.js";
+import _modDef10805 from "../../../../_runtime/metro/10805__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -53,7 +53,7 @@ export function getSocialLayerStorefrontSkuEmbedDetails(value, application) {
   obj.badgeText = formatted;
   let uri;
   if (value.exclusive) {
-    uri = Image.resolveAssetSource(_modDef10822).uri;
+    uri = Image.resolveAssetSource(_modDef10805).uri;
   }
   obj.badgeIconUrl = uri;
   return obj;

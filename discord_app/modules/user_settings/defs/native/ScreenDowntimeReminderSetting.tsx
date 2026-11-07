@@ -6,7 +6,7 @@ import NotificationActionCreatorsDefault from "../../../../actions/NotificationA
 import NotificationSettingsStore from "../../../../stores/NotificationSettingsStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11703);
+const SettingBuilders = fn(11685);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -16,7 +16,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(8524).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8503).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);

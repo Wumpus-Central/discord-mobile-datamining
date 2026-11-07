@@ -1,5 +1,7 @@
 // discord_app/modules/waterwheels/interest/native/InterestScrollHeader.tsx
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -8,44 +10,56 @@ const _modDef1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_5 = createStyles.createStyles({
   title: { flex: 1, alignItems: "center", justifyContent: "center", minWidth: 0 },
   normal: { maxWidth: "100%" },
 });
 let closure_6 = {
-  code: "(function InterestScrollHeaderTsx1(event){let[scrollY]=this.__closure;return scrollY.set(event.contentOffset.y);})",
+  code: "(function InterestScrollHeaderTsx1(event){let[scrollY,onViewportScroll,scheduleOnRN]=this.__closure;scrollY.set(event.contentOffset.y);if(onViewportScroll!=null)scheduleOnRN(onViewportScroll,event.contentOffset.y,event.layoutMeasurement.height);})",
 };
 let items = [
   {
-    code: "(function interestHeaderElevation_InterestScrollHeaderTsx2(scrollOffset,collapseOffset){return Math.max(0,Math.min(1,(scrollOffset-collapseOffset)/12));})",
+    code: "(function interestHeaderElevation_InterestScrollHeaderTsx2(scrollOffset,collapseOffset){let[tokens]=this.__closure;const progress=Math.max(0,Math.min(1,(scrollOffset-collapseOffset-tokens.space.PX_16)/tokens.space.PX_48));return progress*progress*(3-2*progress);})",
   },
+  nativeDefault,
 ];
-[tmp3] = items;
+let closure_129_0;
+[tmp3, tmp4] = items;
 function interestHeaderElevation(arg0, arg1) {
-  return Math.max(0, Math.min(1, (arg0 - arg1) / 12));
+  const bound = Math.max(0, Math.min(1, (arg0 - arg1 - require.space.PX_16) / require.space.PX_48));
+  return bound * bound * (3 - 2 * bound);
 }
-interestHeaderElevation.__workletHash = 17152021821049;
+let items1 = [tmp4];
+interestHeaderElevation.__closure = items1;
+interestHeaderElevation.__workletHash = 4728423726260;
 interestHeaderElevation.__initData = tmp3;
 let closure_7 = {
   code: "(function InterestScrollHeaderTsx3(){let[scrollY,collapseOffset]=this.__closure;return{opacity:Math.max(0,Math.min(1,(scrollY.get()-Math.max(0,collapseOffset-64))/64))};})",
 };
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestScrollHeader.tsx");
+let result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestScrollHeader.tsx");
 
-export function useInterestScrollHeader() {
+export function useInterestScrollHeader(onScroll) {
   const sharedValue = _mod1652.useSharedValue(0);
-  items = [closure_6, sharedValue];
+  items = [closure_6, sharedValue, onScroll, _mod1705.scheduleOnRN];
   c0 = undefined;
-  [tmp2, tmp3] = items;
+  c1 = undefined;
+  c2 = undefined;
+  [tmp2, tmp3, tmp4, tmp5] = items;
   class InterestScrollHeaderTsx1 {
     constructor(arg0) {
-      return closure_0.set(arg0.contentOffset.y);
+      result = closure_0.set(onScroll.contentOffset.y);
+      if (null != closure_1) {
+        tmp3 = closure_2;
+        tmp4 = closure_2(tmp2, onScroll.contentOffset.y, onScroll.layoutMeasurement.height);
+      }
+      return;
     }
   }
-  const items1 = [tmp3];
+  const items1 = [tmp3, tmp4, tmp5];
   InterestScrollHeaderTsx1.__closure = items1;
-  InterestScrollHeaderTsx1.__workletHash = 14965981204412;
+  InterestScrollHeaderTsx1.__workletHash = 6332981046127;
   InterestScrollHeaderTsx1.__initData = tmp2;
   return { scrollY: sharedValue, onScroll: _mod1652.useAnimatedScrollHandler(InterestScrollHeaderTsx1) };
 }

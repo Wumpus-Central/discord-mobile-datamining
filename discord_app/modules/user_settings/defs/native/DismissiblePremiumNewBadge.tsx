@@ -3,14 +3,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import native from "../../../../design/void/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05715_LinearGradient.js";
 import SelectedDismissibleContentDefault from "../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Gradients = fn(7716).Gradients;
+const Gradients = fn(7693).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   newTag: { backgroundColor: "transparent" },
   newTagContainer: { borderRadius: nativeDefault.radii.sm, marginLeft: nativeDefault.space.PX_4 },

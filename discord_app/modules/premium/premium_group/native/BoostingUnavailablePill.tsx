@@ -15,7 +15,7 @@ function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(15639, dependencyMap.paths);
+  const tmp = asyncRequireImpl(15681, dependencyMap.paths);
   obj2.aboutText = intl.formatToPlainString(_modDef3444["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }

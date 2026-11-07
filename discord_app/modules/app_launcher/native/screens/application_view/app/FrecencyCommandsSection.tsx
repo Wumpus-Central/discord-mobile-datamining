@@ -11,9 +11,9 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
-  container: { marginBottom: fn(12649).BETWEEN_SECTIONS_MARGIN },
+  container: { marginBottom: fn(12662).BETWEEN_SECTIONS_MARGIN },
   header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 },
 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -51,7 +51,7 @@ export default function FrecencyCommandsSection(commands) {
     const obj3 = { variant: "body-md/medium", color: "text-default", children: null };
     const intl = context(1113).intl;
     obj3.children = intl.string(context(1113).t.acSE0h);
-    obj2.children = arr(context(5781).Heading, obj3);
+    obj2.children = arr(context(5751).Heading, obj3);
     const items1 = [
       arr(View, obj2),
       arr.map((command, index) =>

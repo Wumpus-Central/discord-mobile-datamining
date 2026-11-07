@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_8 = createStyles.createStyles({ content: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -41,7 +41,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12693, dependencyMap.paths),
+      asyncRequireImpl(12706, dependencyMap.paths),
       "AppLauncherAutocompleteActionSheet",
       {
         option,

@@ -53,14 +53,14 @@ export default function OrbsArcadeGameContextMenu(game) {
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      const result = game(17292).trackOrbsArcadeCtaClicked(
+      const result = game(17340).trackOrbsArcadeCtaClicked(
         id,
-        game(17292).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE,
-        game(17292).OrbsArcadeCtaLocation.GAME_TILE,
+        game(17340).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE,
+        game(17340).OrbsArcadeCtaLocation.GAME_TILE,
         surface,
       );
-      const obj = game(17292);
-      const result1 = game(17293).openOrbsArcadeInfoSheet(id.id, surface);
+      const obj = game(17340);
+      const result1 = game(17341).openOrbsArcadeInfoSheet(id.id, surface);
     };
     items = [obj];
     return items;
@@ -92,7 +92,7 @@ export default function OrbsArcadeGameContextMenu(game) {
   } else {
     items4 = [memo];
   }
-  return jsx(game(10012).ContextMenu, {
+  return jsx(game(9996).ContextMenu, {
     items: items4,
     triggerOnTap: true,
     children(ref) {
@@ -101,12 +101,12 @@ export default function OrbsArcadeGameContextMenu(game) {
       const merged1 = Object.assign(merged);
       obj.variant = "secondary-overlay";
       obj.size = "sm";
-      obj.icon = surface(9305);
+      obj.icon = surface(9287);
       const intl = game(1113).intl;
       obj.accessibilityLabel = intl.string(game(1113).t.reWgFH);
       const intl2 = game(1113).intl;
       obj.accessibilityHint = intl2.string(game(1113).t.hd0b7t);
-      return jsx(game(8119).IconButton, { ref: ref.ref });
+      return jsx(game(8098).IconButton, { ref: ref.ref });
     },
   });
 }

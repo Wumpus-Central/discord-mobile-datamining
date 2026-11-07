@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05715_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
@@ -83,7 +83,7 @@ function PlaceholderUser(end) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" },
   memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 },

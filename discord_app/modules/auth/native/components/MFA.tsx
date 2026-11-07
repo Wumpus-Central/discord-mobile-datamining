@@ -21,7 +21,7 @@ export default function ConnectedMFA() {
   ({ inContainer, isMultiAccount } = obj);
   const navigation = isMultiAccount(1499).useNavigation();
   if (inContainer) {
-    inContainer = navigation(7207)();
+    inContainer = navigation(7182)();
   }
   const obj2 = isMultiAccount(1499);
   items = [AuthenticationStore];
@@ -68,7 +68,7 @@ export default function ConnectedMFA() {
       tmp13 = obj4;
     }
     obj3.headerRightContainerStyle = tmp13;
-    return jsx(isMultiAccount(17937).MFAModal, obj3);
+    return jsx(isMultiAccount(17984).MFAModal, obj3);
   } else {
     const tmpResult2 = isMultiAccount(1357);
     tmp4(575).space;

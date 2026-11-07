@@ -6,10 +6,10 @@ const require = globalThis.__r;
 
 const Platform = _mod17.Platform;
 const obj = {};
-Object.defineProperty(obj, "more", { get: () => require("../../../../_runtime/metro/10950__.js"), set: undefined });
-Object.defineProperty(obj, "share", { get: () => require("../../../../_runtime/metro/10951__.js"), set: undefined });
-Object.defineProperty(obj, "revoke", { get: () => require("../../../../_runtime/metro/10952__.js"), set: undefined });
-Object.defineProperty(obj, "copy", { get: () => require("../../../../_runtime/metro/09263__.js"), set: undefined });
+Object.defineProperty(obj, "more", { get: () => require("../../../../_runtime/metro/10933__.js"), set: undefined });
+Object.defineProperty(obj, "share", { get: () => require("../../../../_runtime/metro/10934__.js"), set: undefined });
+Object.defineProperty(obj, "revoke", { get: () => require("../../../../_runtime/metro/10935__.js"), set: undefined });
+Object.defineProperty(obj, "copy", { get: () => require("../../../../_runtime/metro/09245__.js"), set: undefined });
 const frozen = Object.freeze(obj);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteIcons.tsx");
 

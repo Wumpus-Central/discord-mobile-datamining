@@ -51,7 +51,7 @@ function VariantOverflowOption(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let obj = {
   variantsContainer: {
     display: "flex",
@@ -61,7 +61,7 @@ let obj = {
   },
 };
 let closure_6 = createStyles.createStyles(obj);
-createStyles = fn(5170);
+createStyles = fn(5140);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
   const size = {
@@ -102,8 +102,8 @@ export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
   const tmp = closure_6();
-  defaultVariantIndex = defaultVariantIndex(9559).useDefaultVariantIndex(product);
-  const obj = defaultVariantIndex(9559);
+  defaultVariantIndex = defaultVariantIndex(9541).useDefaultVariantIndex(product);
+  const obj = defaultVariantIndex(9541);
   if (obj2.getIsVariantProduct(product)) {
     let num3 = 3;
     if (product.variants.length <= 4) {
@@ -137,5 +137,5 @@ export default noop.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7830);
+  obj2 = defaultVariantIndex(7807);
 });

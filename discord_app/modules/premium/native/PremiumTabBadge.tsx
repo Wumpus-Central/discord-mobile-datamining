@@ -11,7 +11,7 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import shared from "../../../design/shared.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05745_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05715_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
@@ -21,7 +21,7 @@ import useIsEligibleSenderForReferralProgram from "../referral_program/hooks/use
 import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePromotionMarketingComponent from "../hooks/usePromotionMarketingComponent.tsx";
-import _modDef17143 from "../../../../_runtime/metro/17143__.js";
+import _modDef17191 from "../../../../_runtime/metro/17191__.js";
 import PremiumTabBadgeCopy from "../promotions/PremiumTabBadgeCopy.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -63,7 +63,7 @@ function OfferBadge(componentId) {
   tmp4(obj, { disableTrack: null == componentId });
   if (acked) {
     const obj4 = { style: tmp.acked, children: null };
-    const obj5 = { source: _modDef17143, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+    const obj5 = { source: _modDef17191, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
     items = [React5(native.Icon, obj5)];
     const obj6 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
     const items1 = [,];
@@ -81,10 +81,10 @@ function OfferBadge(componentId) {
 }
 const View = fn(17).View;
 let closure_6 = fn(1387).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-const Gradients = fn(7716).Gradients;
+const Gradients = fn(7693).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   tag: { paddingVertical: 4, paddingHorizontal: 8, borderRadius: nativeDefault.radii.round },
   badge: null,
@@ -300,7 +300,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
           obj10.style = items4;
           const obj11 = {
-            source: _modDef17143,
+            source: _modDef17191,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: tmp.icon.color,
             style: tmp.icon,

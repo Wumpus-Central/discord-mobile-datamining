@@ -1,5 +1,5 @@
 // discord_app/design/void/OverlayView/native/OverlayView.tsx
-import _modDef6173 from "../../../../../_runtime/metro/06173__.js";
+import _modDef6147 from "../../../../../_runtime/metro/06147__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 get_ActivityIndicator = fn(17);
@@ -9,11 +9,11 @@ const jsx = fn(21).jsx;
 let PlatformUtils = fn(1377);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(6124).FullWindowOverlay;
+  FullWindowOverlay = fn(6098).FullWindowOverlay;
 }
 PlatformUtils = fn(1377);
 if (PlatformUtils.isIOS()) {
-  View = _modDef6173;
+  View = _modDef6147;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");

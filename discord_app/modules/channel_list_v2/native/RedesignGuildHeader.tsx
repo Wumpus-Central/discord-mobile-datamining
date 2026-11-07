@@ -10,9 +10,9 @@ import spring_spring from "../../../design/animation/reanimated/spring/spring.ts
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import ButtonConstants from "../../../design/components/Button/native/ButtonConstants.native.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
+import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import useIsUsingClientThemeDefault from "../../client_themes/native/useIsUsingClientTheme.tsx";
 import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
-import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 import openGuildActionSheetDefault from "../../guild_action_sheet/native/openGuildActionSheet.tsx";
 import useIsGameCommunityServerPreviewDefault from "../../lurker_mode/native/useIsGameCommunityServerPreview.tsx";
@@ -229,7 +229,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.onPressIn = callback;
     obj6.onPressOut = callback1;
     const obj7 = { style: tmp22, source: animatableSourceWithFallback };
-    const items9 = [closure_13(tmp(5872), obj7)];
+    const items9 = [closure_13(tmp(5842), obj7)];
     const obj8 = { style: null };
     const items10 = [tmp3.bannerOverlay, animatedStyle1];
     obj8.style = items10;
@@ -237,7 +237,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.children = items9;
     const items11 = [closure_14(closure_6, obj6)];
     if (tmp28Result) {
-      tmp28Result = closure_13(tmp(18509), {});
+      tmp28Result = closure_13(tmp(18556), {});
     }
     items11[1] = tmp28Result;
     obj5.children = items11;
@@ -247,7 +247,7 @@ function ReanimatedGuildBanner(guild) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(11199);
+const RedesignChannelListConstants = fn(5882);
 ({
   STICKY_BANNER_ASPECT_RATIO: closure_9,
   BANNER_MAX_HEIGHT_PERCENTAGE: closure_10,
@@ -256,9 +256,9 @@ const RedesignChannelListConstants = fn(11199);
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let closure_15 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-createStyles = fn(5170);
+createStyles = fn(5140);
 let closure_16 = createStyles.createStyles((arg0) => {
   const obj = {
     bannerWrapper: { width: "100%", maxHeight: arg0 * closure_1_10, aspectRatio, overflow: "hidden" },
@@ -271,7 +271,7 @@ let closure_16 = createStyles.createStyles((arg0) => {
   obj.bannerOverlay = obj3;
   return obj;
 });
-createStyles = fn(5170);
+createStyles = fn(5140);
 let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
     let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -280,7 +280,7 @@ let result = createStyles.experimental_createToken((gradient) => {
   }
   return PANEL_BG;
 });
-createStyles = fn(5170);
+createStyles = fn(5140);
 let closure_17 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
 let closure_18 = {
   code: "(function RedesignGuildHeaderTsx1(){let[scrollPosition,bannerHeight]=this.__closure;return{transform:[{translateY:Math.max(0,scrollPosition.get()-bannerHeight)}]};})",

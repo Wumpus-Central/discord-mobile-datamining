@@ -131,13 +131,13 @@ function MemberJoinDates(userId) {
     return member;
   });
   const obj3 = userId(504);
-  const obj4 = userId(7432);
+  const obj4 = userId(7409);
   const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
-  const createdAtDate1 = userId(7432).getCreatedAtDate(joinedAt, stateFromStores);
+  const createdAtDate1 = userId(7409).getCreatedAtDate(joinedAt, stateFromStores);
   const obj7 = { themeType, children: null };
   const intl = tmp4(1113).intl;
   obj7.children = intl.string(userId(1113).t.a6XYD9);
@@ -147,7 +147,7 @@ function MemberJoinDates(userId) {
   obj8.style = items4;
   const obj9 = {
     themeType,
-    icon: closure_11(userId(10821).ClydeIcon, { size: "xs" }),
+    icon: closure_11(userId(10804).ClydeIcon, { size: "xs" }),
     accessibilityLabel: null,
     children: null,
   };
@@ -165,9 +165,9 @@ function MemberJoinDates(userId) {
       importantForAccessibility: "no-hide-descendants",
       children,
     };
-    const items6 = [closure_11(tmp4(5781).Text, obj11)];
+    const items6 = [closure_11(tmp4(5751).Text, obj11)];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    const obj13 = { guild: stateFromStores1, size: tmp4(7045).GuildIconSizes.XXSMALL };
+    const obj13 = { guild: stateFromStores1, size: tmp4(7020).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);
     const intl3 = tmp4(1113).intl;
     const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };
@@ -309,7 +309,7 @@ function BotSlashCommands(channel) {
   return tmp8Result;
 }
 const View = fn(17).View;
-const Constants = fn(7460);
+const Constants = fn(7437);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1072).Routes;
 const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
@@ -331,7 +331,7 @@ const dependencyMap = {
     columnGap: 3,
   },
 };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_16 = createStyles.createStyles({
   card: { flexDirection: "column" },
   textWithIcon: { flexDirection: "row", alignItems: "center" },

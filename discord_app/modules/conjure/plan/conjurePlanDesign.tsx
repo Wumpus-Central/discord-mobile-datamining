@@ -1,23 +1,23 @@
 // discord_app/modules/conjure/plan/conjurePlanDesign.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4024 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4026 from "../intl/ConjureUntranslated.messages.js";
 import conjurePlanTags from "conjurePlanTags.tsx";
 
 require = fn;
 const CONJURE_PLAN_DESIGN_ALTS = {};
-CONJURE_PLAN_DESIGN_ALTS[fn(6925).ConjureSupportedSurface.APP_CHANNEL] = _modDef4024["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6925).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef4024["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6925).ConjureSupportedSurface.ACTIVITY] = _modDef4024["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6925).ConjureSupportedSurface.OVERLAY] = _modDef4024["rPpf5/"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6925).ConjureSupportedSurface.PROFILE_WIDGET] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(6925).ConjureSupportedSurface.AUTOMOD] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(6925).ConjureSupportedSurface.BOT] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(6925).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6900).ConjureSupportedSurface.APP_CHANNEL] = _modDef4026["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6900).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef4026["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6900).ConjureSupportedSurface.ACTIVITY] = _modDef4026["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6900).ConjureSupportedSurface.OVERLAY] = _modDef4026["rPpf5/"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6900).ConjureSupportedSurface.PROFILE_WIDGET] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6900).ConjureSupportedSurface.AUTOMOD] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6900).ConjureSupportedSurface.BOT] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6900).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
 const items = [
-  fn(6925).ConjureSupportedSurface.ACTIVITY,
-  fn(6925).ConjureSupportedSurface.APP_CHANNEL,
-  fn(6925).ConjureSupportedSurface.VOICE_CHANNEL,
-  fn(6925).ConjureSupportedSurface.OVERLAY,
+  fn(6900).ConjureSupportedSurface.ACTIVITY,
+  fn(6900).ConjureSupportedSurface.APP_CHANNEL,
+  fn(6900).ConjureSupportedSurface.VOICE_CHANNEL,
+  fn(6900).ConjureSupportedSurface.OVERLAY,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanDesign.tsx");
@@ -38,7 +38,7 @@ export function conjurePlanDesignAlt(proposal) {
     found = null;
   }
   if (null == found) {
-    let prop = _modDef4024["3/aHX6"];
+    let prop = _modDef4026["3/aHX6"];
   } else {
     prop = obj[found];
   }
@@ -52,7 +52,7 @@ export function conjurePlanReferenceImages(proposal) {
   return reference_images.map((id, index) => {
     const obj = { id: id.id, alt: null };
     const intl = util.intl;
-    obj.alt = intl.formatToPlainString(_modDef4024.xFgQ8L, { number: index + 1 });
+    obj.alt = intl.formatToPlainString(_modDef4026.xFgQ8L, { number: index + 1 });
     return obj;
   });
 }

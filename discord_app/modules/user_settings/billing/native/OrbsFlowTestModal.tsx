@@ -123,9 +123,9 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(9992);
+const NativeStackNavigator = fn(9976);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: null,

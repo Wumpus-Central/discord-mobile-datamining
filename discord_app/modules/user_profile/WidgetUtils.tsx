@@ -83,9 +83,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7874).WIDGET_TITLES_BY_TYPE;
-const ContentDismissActionType = fn(5016).ContentDismissActionType;
-let closure_9 = fn(12538).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(7851).WIDGET_TITLES_BY_TYPE;
+const ContentDismissActionType = fn(4986).ContentDismissActionType;
+let closure_9 = fn(12551).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -107,10 +107,10 @@ export function getGameWidgetSubtitle(games, showEditingControls) {
     }
   }
 }
-export function widgetMaxGames(arg0) {
+export function widgetMaxGames(type) {
   let num = 0;
-  if (arg0 in GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE) {
-    num = GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE[arg0];
+  if (type in GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE) {
+    num = GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE[type];
   }
   return num;
 }

@@ -86,7 +86,7 @@ function syncChannelUpdates(id) {
           }
           const obj5 = PermissionUtilsAll;
           tmp = null != guildId1 && null == obj2[guildId1];
-          closure_4 = obj5.areChannelsLocked(channel, category, obj4(11814).getAppChannelBotUserId(channel));
+          closure_4 = obj5.areChannelsLocked(channel, category, obj4(11805).getAppChannelBotUserId(channel));
           return true;
         }
       }
@@ -96,7 +96,7 @@ function syncChannelUpdates(id) {
 }
 const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_9, ChannelTypes: closure_10, FormStates } = Constants);
-const ADVANCED_MODE_ON_KEY = fn(8038).ADVANCED_MODE_ON_KEY;
+const ADVANCED_MODE_ON_KEY = fn(8016).ADVANCED_MODE_ON_KEY;
 const set = new Set();
 let CLOSED = FormStates.CLOSED;
 let c15 = false;

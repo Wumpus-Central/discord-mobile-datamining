@@ -184,11 +184,11 @@ export function findTier(badge, next_tier) {
   }
   return found;
 }
-export function getBadgeUnlockLabel(badge, c1) {
+export function getBadgeUnlockLabel(badge, previousTierKey) {
   const intl = util.intl;
-  closure_0 = c1;
+  closure_0 = previousTierKey;
   let found;
-  if (null != c1) {
+  if (null != previousTierKey) {
     const tiers = badge.tiers;
     found = tiers.find((key) => key.key === closure_0);
   }

@@ -8,7 +8,7 @@ import RpcCommandInterception from "RpcCommandInterception.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(6608).TransportTypes;
+const TransportTypes = fn(6583).TransportTypes;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -115,7 +115,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

@@ -213,6 +213,7 @@ export const ExperimentFlags = {
   WEB_STREAMING_CPU_FALLBACK: "web_streaming_cpu_fallback",
   WEB_STREAMING_MOTION_CONTENT_HINT: "web_streaming_motion_content_hint",
   WEB_SCREEN_SHARE_AUDIO: "web_screen_share_audio",
+  STREAM_OPUS_DTX: "stream_opus_dtx",
 };
 export const VideoQualityMode = { AUTO: 1, [1]: "AUTO", FULL: 2, [2]: "FULL" };
 export const VideoEncoderLatencyProfile = { DEFAULT: "default", ULTRA_LOW: "ultra_low" };

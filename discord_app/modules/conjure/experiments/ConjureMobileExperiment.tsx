@@ -30,6 +30,6 @@ export function useIsConjureMobileEnabled(canConjureCustomWidget, ConjureAppChan
     items1,
   );
 }
-export function isConjureMobileEnabled(openConjureHomeScreen) {
-  return apexExperiment.getConfig({ location: openConjureHomeScreen }).enabled;
+export function isConjureMobileEnabled(ConjureProjectLinkCard) {
+  return apexExperiment.getConfig({ location: ConjureProjectLinkCard }).enabled;
 }

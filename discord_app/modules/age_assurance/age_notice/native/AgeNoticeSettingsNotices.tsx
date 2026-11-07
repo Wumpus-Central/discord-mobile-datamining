@@ -44,7 +44,7 @@ function TeenNotice(noticeType) {
   obj3.text = intl2.string(noticeType(1113).t.hvVgAZ);
   obj3.onPress = callback;
   obj2.action = obj3;
-  obj.children = jsx(noticeType(8116).InlineNotice, { type: "info", message: null, role: "status", action: null });
+  obj.children = jsx(noticeType(8095).InlineNotice, { type: "info", message: null, role: "status", action: null });
   return <View style={closure_10().container}>{null}</View>;
 }
 class MessageRequestsTeenNotice {
@@ -91,7 +91,7 @@ function UnconfirmedNotice(message) {
   obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1113).t.FDSSia);
   obj3.onPress = callback1;
   obj2.action = obj3;
-  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8116).InlineNotice, {
+  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8095).InlineNotice, {
     type: "info",
     message: null,
     role: "status",
@@ -106,11 +106,11 @@ class MessageRequestsUnconfirmedNotice {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(6817).AGE_NOTICE_SETTINGS_LOCATION;
-const Constants = fn(7577);
+let closure_6 = fn(6792).AGE_NOTICE_SETTINGS_LOCATION;
+const Constants = fn(7554);
 ({ SafetySettingsNoticeAction: metroImportDefault, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -122,7 +122,7 @@ function AvatarDefaultLarge() {
   return application_id(View, obj2);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17337);
+const YouBarConstants = fn(17385);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,
@@ -135,7 +135,7 @@ const YouBarConstants = fn(17337);
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   placeholderAvatar: {
     borderRadius: nativeDefault.radii.round,

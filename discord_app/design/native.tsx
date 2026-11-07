@@ -83,6 +83,7 @@ import TableSwitchRow from "components/TableRow/native/TableSwitchRow.native.tsx
 import FormSwitch from "components/Forms/native/FormSwitch.native.tsx";
 import HeaderActionButton from "components/Navigator/native/HeaderActionButton.native.tsx";
 import ModalScreen from "components/Modal/native/ModalScreen.native.tsx";
+import ExpressiveGradient from "components/ExpressiveGradient/native/ExpressiveGradient.native.tsx";
 import ModalContent from "components/Modal/native/ModalContent.native.tsx";
 import InlineNotice from "mana/components/InlineNotice/InlineNotice.native.tsx";
 import IconButton from "components/Button/native/IconButton.native.tsx";
@@ -105,7 +106,6 @@ import useTooltip from "components/Tooltip/native/useTooltip.native.tsx";
 import TooltipConstants from "components/Tooltip/native/TooltipConstants.native.tsx";
 import AnimatedEnterExitItem from "components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import Coachmark from "components/Coachmark/native/Coachmark.native.tsx";
-import ExpressiveGradient from "components/ExpressiveGradient/native/ExpressiveGradient.native.tsx";
 import useNavigatorBackHandlerDefault from "components/Navigator/native/useNavigatorBackHandler.native.tsx";
 import PromoSheet from "components/Sheet/native/PromoSheet.native.tsx";
 import ActionSheetIconHeader from "components/Sheet/native/ActionSheetIconHeader.native.tsx";

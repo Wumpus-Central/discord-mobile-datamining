@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import useIsUsingClientThemeDefault from "../../client_themes/native/useIsUsingClientTheme.tsx";
 import ChannelListLayout from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
-import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import HeadphonesIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
@@ -46,7 +46,7 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "body-sm/medium";
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_11 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
@@ -110,10 +110,10 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(9928)());
-  const obj = user(9333);
-  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9333).useLocalSelfMuteDeaf());
-  const obj2 = user(9333);
+  const tmp3 = closure_11(channel(9912)());
+  const obj = user(9315);
+  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9315).useLocalSelfMuteDeaf());
+  const obj2 = user(9315);
   items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(
@@ -164,7 +164,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(18457), obj7, user.id);
+  obj4.children = closure_6(tmp(18504), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);

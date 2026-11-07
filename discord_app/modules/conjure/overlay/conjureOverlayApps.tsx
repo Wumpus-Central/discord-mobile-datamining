@@ -1,0 +1,39 @@
+// discord_app/modules/conjure/overlay/conjureOverlayApps.tsx
+import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
+
+const result = size.fileFinishedImporting("modules/conjure/overlay/conjureOverlayApps.tsx");
+
+export function isConjureOverlayApp(install_scope) {
+  let tmp = "user" === install_scope.install_scope;
+  if (tmp) {
+    const supported_surfaces = install_scope.supported_surfaces;
+    let hasItem;
+    if (supported_surfaces != null) {
+      hasItem = supported_surfaces.includes(ConjureProjectTypes.ConjureSupportedSurface.OVERLAY);
+    }
+    tmp = true === hasItem;
+  }
+  if (tmp) {
+    tmp = null != install_scope.overlay_widget;
+  }
+  return tmp;
+}
+export function isConjureServerOverlayApp(install_scope) {
+  let tmp = "guild" === install_scope.install_scope;
+  if (tmp) {
+    tmp = null != install_scope.guild_id;
+  }
+  if (tmp) {
+    const supported_surfaces = install_scope.supported_surfaces;
+    let hasItem;
+    if (supported_surfaces != null) {
+      hasItem = supported_surfaces.includes(ConjureProjectTypes.ConjureSupportedSurface.OVERLAY);
+    }
+    tmp = true === hasItem;
+  }
+  if (tmp) {
+    tmp = null != install_scope.overlay_widget;
+  }
+  return tmp;
+}

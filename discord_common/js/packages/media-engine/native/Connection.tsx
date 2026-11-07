@@ -2,18 +2,18 @@
 import inject from "inject.tsx";
 import VideoQualityManager from "../VideoQualityManager.tsx";
 import discord_common_BaseConnectionEvent from "../BaseConnectionEvent.tsx";
-import _modDef5963 from "../../../../../_runtime/metro/05963__.js";
+import _modDef5936 from "../../../../../_runtime/metro/05936__.js";
 import VideoCodecUtils from "../utils/VideoCodecUtils.tsx";
-import _modDef6010 from "../../../../../_runtime/metro/06010__.js";
+import _modDef5983 from "../../../../../_runtime/metro/05983__.js";
 import discord_common_VoiceEngine from "VoiceEngine.tsx";
-import reduceDefault from "../../../../../_runtime/06012_reduce.js";
-import _modDef6015 from "../../../../../_runtime/metro/06015__.js";
+import reduceDefault from "../../../../../_runtime/05985_reduce.js";
+import _modDef5988 from "../../../../../_runtime/metro/05988__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import BaseConnection from "../BaseConnection.tsx";
 
 require = fn;
-let Constants = fn(5924);
+let Constants = fn(5897);
 ({
   StatsFilter: hasOwnProperty,
   ExperimentFlags: closure_6,
@@ -23,7 +23,7 @@ let Constants = fn(5924);
   MediaTypes: closure_10,
   SIMULCAST_HQ_QUALITY: closure_11,
 } = Constants);
-Constants = fn(5947);
+Constants = fn(5920);
 ({
   NATIVE_MODE_VALUES: closure_12,
   InputModes: map1,
@@ -250,7 +250,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
-      const tmp2 = _modDef5963(closure_0.videoStreamParameters);
+      const tmp2 = _modDef5936(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
         if (null != arr) {
@@ -420,9 +420,9 @@ class Connection extends tmp4 {
               if (diff1 >= 0) {
                 closure_0.emit(
                   discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate,
-                  100 * _modDef6015(diff1 / (diff + diff1), 0, 1),
+                  100 * _modDef5988(diff1 / (diff + diff1), 0, 1),
                 );
-                const tmp6 = _modDef6015(diff1 / (diff + diff1), 0, 1);
+                const tmp6 = _modDef5988(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -1019,7 +1019,7 @@ prototype["getStats"] = function getStats() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1131,7 +1131,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef6010(sorted, sorted1);
+  _modDef5983(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -2012,10 +2012,10 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "r" };
+        return { v: "uri" };
       } else {
         items = [];
-        if (!_modDef6010(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef5983(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;
@@ -2280,6 +2280,7 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
   return { videoEncoder: obj, videoDecoders, audioEncoder, audioDecoders };
 };
 prototype["getConnectionTransportOptions"] = function getConnectionTransportOptions() {
+  const self = this;
   const obj = {
     selfMute: this.selfMute,
     inputMode: dependencyMap[this.inputMode],
@@ -2300,10 +2301,18 @@ prototype["getConnectionTransportOptions"] = function getConnectionTransportOpti
     this);
   let supportsFeatureResult = inject.supportsFeature(constants8.VIDEO_EFFECTS);
   if (supportsFeatureResult) {
-    supportsFeatureResult = this.context === constants5.STREAM;
+    supportsFeatureResult = self.context === constants5.STREAM;
   }
   if (supportsFeatureResult) {
     obj.enableVideoEffects = true;
+  }
+  let hasItem = self.context === constants5.STREAM;
+  if (hasItem) {
+    const experimentFlags = self.experimentFlags;
+    hasItem = experimentFlags.has(constants.STREAM_OPUS_DTX);
+  }
+  if (hasItem) {
+    obj.dtx = true;
   }
   return obj;
 };

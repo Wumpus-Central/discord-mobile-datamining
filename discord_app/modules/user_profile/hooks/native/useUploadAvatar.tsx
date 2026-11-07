@@ -51,7 +51,7 @@ export default function useUploadAvatar(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -71,12 +71,12 @@ export default function useUploadAvatar(guildId) {
               let originalMd5;
               closure_128_3 = undefined;
               closure_128_4 = undefined;
-              tmp22(5404).hideActionSheet();
-              const obj13 = tmp22(5404);
+              tmp22(5374).hideActionSheet();
+              const obj13 = tmp22(5374);
               const obj6 = { size };
               dependencyMap = 1;
               c3 = 1;
-              const obj8 = { value: tmp22(8311).openImagePicker(obj6), done: false };
+              const obj8 = { value: tmp22(8290).openImagePicker(obj6), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -112,21 +112,21 @@ export default function useUploadAvatar(guildId) {
             }
             const obj10 = { imageUri: base64, description: null, originalMd5: null };
             tmp22 = tmp2;
-            const obj2 = tmp2(16704);
-            obj10.description = tmp2(8832).generateAvatarDescription();
+            const obj2 = tmp2(16752);
+            obj10.description = tmp2(8811).generateAvatarDescription();
             obj10.originalMd5 = originalMd5;
             closure_128_4 = obj2.createPendingImage(obj10);
             if (closure_129_1) {
-              tmp2(8830).setTryItOutAvatar(closure_128_4);
-              const tmp28Result = tmp2(8830);
+              tmp2(8809).setTryItOutAvatar(closure_128_4);
+              const tmp28Result = tmp2(8809);
             } else {
               const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-              tmp2(8827).setPendingChanges(obj11);
-              const tmp28Result2 = tmp2(8827);
-              const result = tmp2(8829).announcePendingAvatarChange("set");
-              const obj7 = tmp2(8829);
+              tmp2(8806).setPendingChanges(obj11);
+              const tmp28Result2 = tmp2(8806);
+              const result = tmp2(8808).announcePendingAvatarChange("set");
+              const obj7 = tmp2(8808);
             }
-            const obj4 = tmp2(8832);
+            const obj4 = tmp2(8811);
           }
         } catch (tmp38) {
           c3 = tmp;

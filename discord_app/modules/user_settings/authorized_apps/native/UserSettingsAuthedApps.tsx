@@ -15,12 +15,12 @@ import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(7362).FetchState;
+const FetchState = fn(7339).FetchState;
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   spinner: { padding: nativeDefault.space.PX_16 },
   emptyText: null,
@@ -130,5 +130,5 @@ export function AuthorizedAppRow(app) {
     start,
     end,
   };
-  return closure_10(app(7063).TableRow, obj2);
+  return closure_10(app(7038).TableRow, obj2);
 }

@@ -11,12 +11,12 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1097);
 ({ AgeGateAnalyticAction: closure_8, AgeGateSource: closure_9 } = AgeGateConstants);
-let closure_10 = fn(19709).ExistingUserAgeGateScreens;
+let closure_10 = fn(19778).ExistingUserAgeGateScreens;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HelpdeskArticles: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_15 = createStyles.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 8, textAlign: "center" }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, inputGroup: { marginBottom: 16, width: "100%" }, buttonWrapper: { width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGate.tsx");
@@ -49,7 +49,7 @@ export default function ExistingUserAgeGate(source) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -138,7 +138,7 @@ export default function ExistingUserAgeGate(source) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -180,7 +180,7 @@ export default function ExistingUserAgeGate(source) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp10) {
         c0 = tmp;
         throw tmp10;

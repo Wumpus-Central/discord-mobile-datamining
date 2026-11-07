@@ -7,10 +7,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let FastImageApngExperiment = fn(5873);
-FastImageApngExperiment = FastImageApngExperiment.initializeFastImageApngExperiment();
 let size = fn(2);
-const result1 = size.fileFinishedImporting("components_native/common/FastImage.tsx");
+const result = size.fileFinishedImporting("components_native/common/FastImage.tsx");
 
 export default noop.memo(function FastImage(enableAnimation) {
   ({ accessible, accessibilityLabel, autoPlay } = enableAnimation);

@@ -66,7 +66,7 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 0, animate: "absolute" };
+    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: "barber", animate: "beauty" };
     obj9.cutout = memo1;
     obj9.animate = animate;
     if (null == users) {
@@ -87,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: 600,
+      animate: "activity-panel-focused-view",
     };
     obj12.animate = animate;
     if (null == users) {
@@ -116,7 +116,7 @@ obj[fn(1187).AvatarSizes.REFRESH_MEDIUM_32] = fn(1187).AvatarSizes.XSMALL_20;
 obj[fn(1187).AvatarSizes.XSMALL] = fn(1187).AvatarSizes.SIZE_16;
 obj[fn(1187).AvatarSizes.SIZE_16] = fn(1187).AvatarSizes.XXSMALL_10;
 obj[fn(1187).AvatarSizes.NORMAL] = fn(1187).AvatarSizes.XSMALL;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 const React5 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
   secondFace: { position: "absolute", bottom: 0, right: 0 },

@@ -10,12 +10,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/home/useConjureHomeOwnProjects.tsx");
 
 export default function useConjureHomeOwnProjects() {
-  const f104639 = () => ownedProjects.getOwnedProjects();
+  const f105060 = () => ownedProjects.getOwnedProjects();
   items = [ConjureProjectStore, ConjureChatStore];
-  return f104639(504).useStateFromStoresArray(items, () => {
+  return f105060(504).useStateFromStoresArray(items, () => {
     const obj = conjureHomeProjectOrder;
     return obj.sortConjureProjectsByActivity(
-      f104639().map((id) => {
+      f105060().map((id) => {
         const findOpenTurnResult = closure_1_0(dependencyMap[4]).findOpenTurn(messages.getMessages(id.id));
         const obj3 = { project: id, turnStartedAt: null, finishedAt: null };
         let conjureTurnStartedAtResult = null;
@@ -41,7 +41,7 @@ export function useConjureProjectsByActivity(getListedConjureProjects) {
     () => {
       const obj = conjureHomeProjectOrder;
       return obj.sortConjureProjectsByActivity(
-        f104639().map((id) => {
+        f105060().map((id) => {
           const findOpenTurnResult = closure_1_0(dependencyMap[4]).findOpenTurn(messages.getMessages(id.id));
           const obj3 = { project: id, turnStartedAt: null, finishedAt: null };
           let conjureTurnStartedAtResult = null;

@@ -3,8 +3,8 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import FramesStore from "../../../FramesStore.tsx";
 
 require = fn;
-const asLaunched = fn(6927).asLaunched;
-const ActivityPanelModes = fn(5811).ActivityPanelModes;
+const asLaunched = fn(6902).asLaunched;
+const ActivityPanelModes = fn(5781).ActivityPanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/utils/FramePanelUtils.tsx");
 

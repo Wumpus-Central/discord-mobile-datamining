@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 const NEUTRAL_35 = nativeDefault.unsafe_rawColors.NEUTRAL_35;
 let closure_7 = new privDefault({ max: 50 });
-const promiseDeduper = new fn(5288).PromiseDeduper();
+const promiseDeduper = new fn(5258).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/useBadgeColor.tsx");
 
@@ -30,7 +30,7 @@ export function useBadgeColor(rasterUrl) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -56,7 +56,7 @@ export function useBadgeColor(rasterUrl) {
                   uri,
                   asyncGeneratorStep(async () => {
                     closure_3 = tmp2;
-                    const tmp14 = value(11641);
+                    const tmp14 = value(11623);
                     const pickBadgeColor = tmp14.pickBadgeColor;
                     await pickBadgeColor(2022).getDominantColors({ uri });
                     const tmp8 = pickBadgeColor(value);
@@ -91,7 +91,7 @@ export function useBadgeColor(rasterUrl) {
               closure_1(closure_129_0);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp23) {
           if (tmp4 === c3) {

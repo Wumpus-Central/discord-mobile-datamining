@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import Form from "../../../design/void/Form/native/index.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import Form from "../../../design/void/Form/native/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = "body-sm/semibold";
 let c7 = "body-sm/medium";
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND },
   headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 12 },

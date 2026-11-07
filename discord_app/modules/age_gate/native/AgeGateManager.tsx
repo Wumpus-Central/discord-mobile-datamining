@@ -52,8 +52,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6814).getAgeGateType(source);
-  let obj = source(6814);
+  importDefault = source(6789).getAgeGateType(source);
+  let obj = source(6789);
   ModalActionCreatorsDefault.pushLazy(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {
@@ -66,7 +66,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId)
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

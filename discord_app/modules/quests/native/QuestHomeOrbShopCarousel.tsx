@@ -22,12 +22,12 @@ function ItemSeparator() {
   const obj = { style: { width: PX_12 } };
   return React6(View, obj);
 }
-function QuestHomeOrbShopCarouselHeading(orbAmount) {
-  let flag = orbAmount.belowCarousel;
+function QuestHomeOrbShopCarouselHeading(belowCarousel) {
+  let flag = belowCarousel.belowCarousel;
   if (flag === undefined) {
     flag = false;
   }
-  ({ compactHeading, listEdgeSpacing } = orbAmount);
+  ({ compactHeading, listEdgeSpacing } = belowCarousel);
   if (compactHeading === undefined) {
     compactHeading = false;
   }
@@ -53,7 +53,10 @@ function QuestHomeOrbShopCarouselHeading(orbAmount) {
   }
   const obj3 = { variant: str, color: "text-strong", children: null };
   const intl = util.intl;
-  obj3.children = intl.format(util.t.CXlsRP, { orbAmount: orbAmount.orbRewardAmount });
+  const obj4 = { orbAmount: belowCarousel.orbRewardAmount, productNamePlural: null };
+  const intl2 = util.intl;
+  obj4.productNamePlural = intl2.string(util.t["JDvNF+"]);
+  obj3.children = intl.format(util.t.kJtgUW, obj4);
   obj2.children = React6(Text_Text.Heading, obj3);
   return React6(View, obj2);
 }
@@ -105,14 +108,14 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   return closure_9(cardWidth(listEdgeSpacing[14]).FlashList, obj);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6861).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6836).BOUNTY_ORB_AMOUNT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_20 = nativeDefault.space.PX_20;
 const PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-const data = Array.from({ length: fn(17247).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
-const createStyles = fn(5170);
+const data = Array.from({ length: fn(17295).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const createStyles = fn(5140);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
   const obj2 = { marginTop: nativeDefault.space.PX_32 };

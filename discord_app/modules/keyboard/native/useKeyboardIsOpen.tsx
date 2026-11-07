@@ -35,7 +35,7 @@ export default function useKeyboardIsOpen() {
     return tmp2;
   });
 }
-export function subscribeToKeyboardIsOpen(arg0) {
+export function subscribeToKeyboardIsOpen(arg0, arg1) {
   _require = arg0;
   let tmp = arg1;
   if (arg1 === undefined) {

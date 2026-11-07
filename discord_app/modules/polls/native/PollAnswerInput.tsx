@@ -94,13 +94,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const DraftType = fn(7800).DraftType;
-const PollsConstants = fn(8498);
+const DraftType = fn(7777).DraftType;
+const PollsConstants = fn(8477);
 ({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   defaultContainer: { flexDirection: "row", alignItems: "center" },
   inputContainer: { flex: 1 },
@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12756, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12769, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -208,14 +208,14 @@ export default function PollAnswerInput(answer) {
     blurOnSubmit: false,
     style: null,
     selectionColor: "channel",
-    textContentType: null,
-    accessibilityLabel: null,
-    accessibilityHint: null,
-    maxLength: null,
-    returnKeyType: null,
-    required: null,
-    autoCorrect: null,
-    "aria-invalid": null,
+    textContentType: "<string:3142648740>",
+    accessibilityLabel: "<string:1359024640>",
+    accessibilityHint: true,
+    maxLength: true,
+    returnKeyType: true,
+    required: true,
+    autoCorrect: true,
+    "aria-invalid": true,
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

@@ -13,7 +13,7 @@ import FamilyCenterControlledSettingsStore from "../FamilyCenterControlledSettin
 const require = globalThis.__r;
 
 require = fn;
-const SafetyToastType = fn(7577).SafetyToastType;
+const SafetyToastType = fn(7554).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
@@ -117,8 +117,8 @@ export function useDefaultGuildsRestricted() {
   return controlledSetting1;
 }
 export function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(8463).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(16980).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(8442).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(17028).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -154,7 +154,7 @@ export function useParentalControlledConsent(PERSONALIZATION) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -180,16 +180,16 @@ export function useParentalControlledConsent(PERSONALIZATION) {
               items2 = [closure_0];
             }
             c4 = 1;
-            tmp3(7816).updateTeenConsents(tmp28, items1, items2);
+            tmp3(7793).updateTeenConsents(tmp28, items1, items2);
             c2 = 2;
             c5 = 1;
-            const obj3 = tmp3(7816);
+            const obj3 = tmp3(7793);
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            tmp3(7591).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = tmp3(7591);
+            tmp3(7568).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = tmp3(7568);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

@@ -133,7 +133,7 @@ export function createFetchStore(ApplicationStore, arg1) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -204,7 +204,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                       closure_130_6 = HermesBuiltin.apply(items1, undefined);
                       if (closure_130_6 === closure_1_8) {
                         c7 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       } else {
                         if (null != closure_130_6) {
                           if (
@@ -223,7 +223,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                             })(closure_130_3, closure_131_9)
                           ) {
                             c7 = 3;
-                            return { value: "HermesInternal", done: null };
+                            return { value: "HermesInternal", done: "HermesInternal" };
                           }
                         }
                         failureLockedUntil = closure_130_3.getState().failureLockedUntil;
@@ -231,7 +231,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                           const _Date2 = Date;
                           if (Date.now() < failureLockedUntil) {
                             c7 = 3;
-                            return { value: "HermesInternal", done: null };
+                            return { value: "HermesInternal", done: "HermesInternal" };
                           }
                         }
                       }

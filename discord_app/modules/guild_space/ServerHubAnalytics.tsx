@@ -19,6 +19,7 @@ export const ServerHubVisitSource = {
   LEADER_BADGE: "leader_badge",
   LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message",
   MUSIC_SYSTEM_MESSAGE: "music_system_message",
+  WHITEBOARD_SYSTEM_MESSAGE: "whiteboard_system_message",
 };
 export const ServerHubEditCancelReason = { USER: "user", PERMISSION_LOST: "permission_lost" };
 export function trackServerHubToggleSetting(id, ALL_SYSTEM_MESSAGES, value) {

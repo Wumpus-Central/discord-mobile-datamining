@@ -128,7 +128,7 @@ const AnalyticEvents = fn(1072).AnalyticEvents;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   emoji: { width: 48, height: 48, zIndex: 2 },
   selectedCustomEmoji: { width: 48, height: 48 },
@@ -416,7 +416,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -432,7 +432,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
             } else {
               let tmp22 = tmp2;
               if (memo) {
-                const DoubleTapReactionEmoji = tmp2(4995).DoubleTapReactionEmoji;
+                const DoubleTapReactionEmoji = tmp2(4965).DoubleTapReactionEmoji;
                 const obj5 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
                 tmp22 = first;
                 obj5.emojiName = first.name;
@@ -456,13 +456,13 @@ export default function DoubleTapToReactActionSheet(emoji) {
             emoji_name: closure_129_2.name,
             emoji_animated: closure_129_2.animated,
             recommended: closure_129_4.current,
-            location: tmp22(7435).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+            location: tmp22(7412).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
           };
           tmp22(1252).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp24) {
           c3 = tmp;
           throw tmp24;

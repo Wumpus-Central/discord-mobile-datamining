@@ -14,9 +14,9 @@ import useIsFiveButtonLayout from "../useIsFiveButtonLayout.tsx";
 import openIgnoreThermalStateAlert from "../../../activities/native/openIgnoreThermalStateAlert.tsx";
 import CameraLottie from "../../../../design/components/LottieIcon/native/generated/CameraLottie.tsx";
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
-import _modDef12110 from "../../../../../_runtime/metro/12110__.js";
-import _modDef12111 from "../../../../../_runtime/metro/12111__.js";
-import _modDef12112 from "../../../../../_runtime/metro/12112__.js";
+import _modDef12101 from "../../../../../_runtime/metro/12101__.js";
+import _modDef12102 from "../../../../../_runtime/metro/12102__.js";
+import _modDef12103 from "../../../../../_runtime/metro/12103__.js";
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen.tsx";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import DisconnectRemoteButton from "DisconnectRemoteButton.tsx";
@@ -269,7 +269,7 @@ function LeaveActivityButton(isSmallSize) {
     obj2.applicationId = applicationId;
     const result = leaveEmbeddedActivity.leaveEmbeddedActivity(obj2);
   };
-  obj.source = _modDef12112;
+  obj.source = _modDef12103;
   obj.isSmallSize = isSmallSize.isSmallSize;
   return closure_1_15(CallBarActionAll.PrimaryActionButton, obj);
 }
@@ -308,8 +308,8 @@ function useActionBarSecondButton(channel) {
 }
 function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
-  const isConnectedToVoiceChannel = channel(11148).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(11148);
+  const isConnectedToVoiceChannel = channel(11134).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(11134);
   items = [ChannelRTCStore, AuthenticationStore];
   closure_1 = channel(504).useStateFromStores(items, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
@@ -356,14 +356,14 @@ function useActionBarPrimaryButtons(channel) {
   return obj6;
 }
 const View = fn(17).View;
-const ParticipantTypes = fn(5835).ParticipantTypes;
-const Features = fn(5924).Features;
+const ParticipantTypes = fn(5805).ParticipantTypes;
+const Features = fn(5897).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: {
-    height: fn(11886).CALL_ACTION_BAR_HEIGHT,
+    height: fn(11877).CALL_ACTION_BAR_HEIGHT,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -371,16 +371,16 @@ let obj2 = {
   containerForFiveButtonLayout: null,
 };
 let obj3 = {
-  height: fn(11886).CALL_ACTION_BAR_HEIGHT,
+  height: fn(11877).CALL_ACTION_BAR_HEIGHT,
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "row",
 };
 obj2.containerForFiveButtonLayout = {
-  height: fn(11886).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+  height: fn(11877).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
   paddingHorizontal: 16,
-  paddingTop: fn(11886).FIVE_BUTTON_CONTAINER_PADDING_TOP,
-  paddingBottom: fn(11886).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  paddingTop: fn(11877).FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: fn(11877).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
   justifyContent: "center",
   flexDirection: "row",
 };

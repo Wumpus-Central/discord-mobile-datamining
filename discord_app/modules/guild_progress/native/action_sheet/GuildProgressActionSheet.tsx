@@ -41,7 +41,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(14250);
+const GuildProgressConstants = fn(14280);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1072);
 ({
@@ -52,7 +52,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -79,7 +79,7 @@ export default function GuildProgressActionSheet(guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -94,14 +94,14 @@ export default function GuildProgressActionSheet(guild) {
             return obj3;
           } else {
             let base64;
-            tmp5(9172).init(View);
-            const obj6 = tmp5(9172);
-            tmp2(14255).hideActionSheet(id.id);
-            const obj7 = tmp2(14255);
+            tmp5(9154).init(View);
+            const obj6 = tmp5(9154);
+            tmp2(14285).hideActionSheet(id.id);
+            const obj7 = tmp2(14285);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(8311).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(8290).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -114,11 +114,11 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            tmp5(9172).updateIcon(closure_129_5, base64);
-            const obj = tmp5(9172);
+            tmp5(9154).updateIcon(closure_129_5, base64);
+            const obj = tmp5(9154);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp16) {
         c3 = tmp;

@@ -21,7 +21,7 @@ let closure_10 = async function _refreshProviderAccessToken() {
   }
   return { access_token: closure_130_0 };
 };
-let Constants = fn(6608);
+let Constants = fn(6583);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
 ({ AnalyticsLocations: hasOwnProperty, ComponentActions: closure_6, PlatformTypes: metroImportDefault } = Constants);
@@ -185,7 +185,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

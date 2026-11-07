@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
     container: {

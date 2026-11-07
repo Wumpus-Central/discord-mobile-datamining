@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx
 import LayerScope from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef18067 from "../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
+import _modDef18114 from "../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -51,7 +51,7 @@ function Content() {
       buttonVariant: null,
       gradientColor: null,
     };
-    const obj2 = { type: "image", src: { uri: _modDef18067 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef18114 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;
@@ -160,7 +160,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_10 = createStyles.createStyles({
   container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" },
   flex: { flex: 1, padding: 16 },

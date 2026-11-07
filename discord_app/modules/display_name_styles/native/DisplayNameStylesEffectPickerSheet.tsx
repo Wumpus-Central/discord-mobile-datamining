@@ -66,7 +66,7 @@ get_ActivityIndicator = fn(17);
 let EFFECT_ORDER = fn(1394).EFFECT_ORDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { padding: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_16, alignItems: "center" },
@@ -117,8 +117,8 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   closure_5 = undefined;
   EFFECT_ORDER = undefined;
   const tmp = closure_10();
-  let obj = userId(8833);
-  const displayNameStylesNewEffects = userId(17591).useDisplayNameStylesNewEffects(EFFECT_ORDER);
+  let obj = userId(8812);
+  const displayNameStylesNewEffects = userId(17640).useDisplayNameStylesNewEffects(EFFECT_ORDER);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;
@@ -136,8 +136,8 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     const intl2 = tmp2(1113).intl;
     obj5.text = intl2.string(tmp2(1113).t.XqMe3N);
     obj5.onPress = tmp8;
-    obj4.trailing = closure_8(tmp2(5788).Button, obj5);
-    obj3.header = closure_8(onSelectEffect(17593), obj4);
+    obj4.trailing = closure_8(tmp2(5758).Button, obj5);
+    obj3.header = closure_8(onSelectEffect(17642), obj4);
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.contentContainer, children: null };
     const obj8 = {
@@ -164,11 +164,11 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
         );
       }),
     };
-    obj7.children = closure_8(tmp2(6185).Stack, obj8);
+    obj7.children = closure_8(tmp2(6159).Stack, obj8);
     obj6.children = closure_8(closure_5, obj7);
     obj3.children = closure_8(closure_5, obj6);
-    tmp9 = closure_8(tmp2(5418).BottomSheet, obj3);
-    const tmp12 = onSelectEffect(17593);
+    tmp9 = closure_8(tmp2(5388).BottomSheet, obj3);
+    const tmp12 = onSelectEffect(17642);
   }
   return tmp9;
 }

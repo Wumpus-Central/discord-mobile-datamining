@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/components/StageAudienceActionSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4154 from "../../StageChannel.messages.js";
+import _modDef4156 from "../../StageChannel.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
@@ -49,7 +49,7 @@ function StageAudienceEmptyState() {
   items = [React5(Text_Text.Text, obj2)];
   const obj3 = { style: tmp.centered, variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.string(_modDef4154.eo2IxJ);
+  obj3.children = intl2.string(_modDef4156.eo2IxJ);
   items[1] = React5(Text_Text.Text, obj3);
   obj.children = items;
   return closure_1_10(View, obj);
@@ -61,16 +61,16 @@ function StageAudienceActionSheetContent(channel) {
   channel = channel.channel;
   const tmp = closure_11();
   importDefault = tmp;
-  dependencyMap = channel(6790).useCanModerateRequestToSpeak(channel.id);
-  let obj = channel(6790);
+  dependencyMap = channel(6765).useCanModerateRequestToSpeak(channel.id);
+  let obj = channel(6765);
   const tmp2 = useStageSummaryDefault(channel.id);
-  const canToggleRequestToSpeak = channel(6790).useCanToggleRequestToSpeak(channel);
+  const canToggleRequestToSpeak = channel(6765).useCanToggleRequestToSpeak(channel);
   closure_129_0 = canToggleRequestToSpeak;
-  let obj2 = channel(6790);
-  const sortedRequestToSpeakParticipants = channel(6845).useSortedRequestToSpeakParticipants(channel.id);
+  let obj2 = channel(6765);
+  const sortedRequestToSpeakParticipants = channel(6820).useSortedRequestToSpeakParticipants(channel.id);
   closure_129_1 = sortedRequestToSpeakParticipants;
-  let obj3 = channel(6845);
-  const throttledStageAudience = channel(12066).useThrottledStageAudience(channel.id);
+  let obj3 = channel(6820);
+  const throttledStageAudience = channel(12057).useThrottledStageAudience(channel.id);
   closure_129_2 = throttledStageAudience;
   items = [canToggleRequestToSpeak, sortedRequestToSpeakParticipants, throttledStageAudience];
   const memo = noop.useMemo(() => {
@@ -102,13 +102,13 @@ function StageAudienceActionSheetContent(channel) {
   }, items);
   const obj5 = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   let intl = channel(1113).intl;
-  obj5.dismissAccessibilityLabel = intl.string(_modDef4154["ZSmz+r"]);
+  obj5.dismissAccessibilityLabel = intl.string(_modDef4156["ZSmz+r"]);
   const obj6 = { title: null, subtitle: null };
   let intl2 = channel(1113).intl;
   obj6.title = intl2.string(channel(1113).t.suRApw);
   obj6.subtitle = tmp2;
-  obj5.header = closure_8(channel(7405).BottomSheetTitleHeader, obj6);
-  obj5.children = closure_8(channel(7380).BottomSheetFlashList, {
+  obj5.header = closure_8(channel(7382).BottomSheetTitleHeader, obj6);
+  obj5.children = closure_8(channel(7357).BottomSheetFlashList, {
     contentContainerStyle: tmp.list,
     data: memo,
     renderItem(item) {
@@ -142,12 +142,12 @@ function StageAudienceActionSheetContent(channel) {
     },
     getItemType,
   });
-  return closure_8(channel(7449).ActionSheet, obj5);
+  return closure_8(channel(7426).ActionSheet, obj5);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { list: { paddingBottom: nativeDefault.space.PX_16 }, sectionHeader: null, emptyState: null, centered: null };
 let obj3 = { paddingBottom: nativeDefault.space.PX_16 };
 obj.sectionHeader = { paddingTop: nativeDefault.space.PX_24 };
@@ -309,7 +309,7 @@ export default function StageAudienceActionSheet(channelId) {
     const obj2 = { value: tmp2(AnalyticsLocationDefault.AUDIENCE_SHEET).analyticsLocations, children: null };
     const obj3 = { channel: stateFromStores };
     obj2.children = closure_8(StageAudienceActionSheetContent, obj3);
-    tmp5 = closure_8(tmp3(7410).AnalyticsLocationProvider, obj2);
+    tmp5 = closure_8(tmp3(7387).AnalyticsLocationProvider, obj2);
   }
   return tmp5;
 }

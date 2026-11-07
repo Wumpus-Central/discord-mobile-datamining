@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_7 = createStyles.createStyles({
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   permissionContainer: { flexDirection: "row", marginTop: 8 },
@@ -62,12 +62,12 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [,];
-        items[0] = closure_2_5(items(7424).CircleCheckIcon, {
+        items[0] = closure_2_5(items(7401).CircleCheckIcon, {
           style: items.permissionIcon,
           size: "xs",
           color: c1(575).colors.STATUS_POSITIVE,
         });
-        items[1] = closure_2_5(items(5781).Text, {
+        items[1] = closure_2_5(items(5751).Text, {
           style: items.permissionText,
           variant: "body-sm/normal",
           color: "text-default",

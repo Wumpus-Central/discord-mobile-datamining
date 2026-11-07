@@ -6,18 +6,18 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { cover: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.cover = {
-  aspectRatio: 0.75,
-  borderRadius: nativeDefault.radii.sm,
+  aspectRatio: fn(15197).GAME_COVER_ASPECT_RATIO,
+  borderRadius: fn(15197).GAME_COVER_BORDER_RADIUS,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
 let closure_4 = createStyles.createStyles(obj);
 const obj3 = {
-  aspectRatio: 0.75,
-  borderRadius: nativeDefault.radii.sm,
+  aspectRatio: fn(15197).GAME_COVER_ASPECT_RATIO,
+  borderRadius: fn(15197).GAME_COVER_BORDER_RADIUS,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
 const size = fn(2);

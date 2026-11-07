@@ -48,7 +48,7 @@ let closure_18 = async function _listProjects() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -196,7 +196,7 @@ let closure_20 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {
@@ -245,7 +245,7 @@ let closure_20 = async function _forgetMissingProjects() {
             }
           }
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (1 === tmp5) {
         c5 = 0;
@@ -274,7 +274,7 @@ let closure_20 = async function _forgetMissingProjects() {
           c5 = 0;
           _require.return();
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         if (3 === tmp5) {
@@ -311,7 +311,7 @@ let closure_20 = async function _forgetMissingProjects() {
           c5 = 0;
           _require.return();
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       }
       c5 = 0;
@@ -329,8 +329,8 @@ function currentSession() {
   }
   return { userId: id, generation: ConjureProjectStore.getSessionGeneration() };
 }
-function isCurrentSession(generation) {
-  let tmp = generation.generation === ConjureProjectStore.getSessionGeneration();
+function isCurrentSession(session) {
+  let tmp = session.generation === ConjureProjectStore.getSessionGeneration();
   if (tmp) {
     const currentUser = UserStore.getCurrentUser();
     let id;
@@ -340,7 +340,7 @@ function isCurrentSession(generation) {
     if (id == null) {
       id = null;
     }
-    tmp = generation.userId === id;
+    tmp = session.userId === id;
   }
   return tmp;
 }
@@ -402,7 +402,7 @@ let closure_33 = async function _fetchMissingProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -494,7 +494,7 @@ let closure_34 = async function _fetchMissingConjureProjectNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -571,7 +571,7 @@ let closure_36 = async function _drainMissingProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {
@@ -659,7 +659,7 @@ let closure_38 = async function _requestProjectLimit(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -725,7 +725,7 @@ let closure_38 = async function _requestProjectLimit(arg0) {
           const obj2 = closure_130_1(closure_130_2[8]);
         }
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp37) {
       closure_3 = tmp37;
@@ -751,11 +751,11 @@ function getProject() {
 let closure_41 = async function _getProject(arg0) {
   closure_0 = arg0;
   closure_2 = arg2;
-  c5 = 0;
   c6 = 0;
-  return (async (arg0, value, arg2) => {
-    if (c6 === 2) {
-      c6 = 3;
+  c7 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    if (c7 === 2) {
+      c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp5 === 3) {
       if (arg0 === 1) {
@@ -764,70 +764,82 @@ let closure_41 = async function _getProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
-        c6 = 2;
-        if (0 === c5) {
+        c7 = 2;
+        if (0 === c6) {
           if (arg0 === 1) {
-            c6 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
+            c7 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_4 = tmp3;
-            closure_3 = tmp2;
-            closure_131_0 = closure_0;
-            closure_131_1 = signal;
-            closure_131_2 = closure_2;
-            closure_131_3 = undefined;
+            closure_5 = tmp3;
+            closure_4 = tmp2;
+            closure_132_0 = closure_0;
+            closure_132_1 = signal;
+            closure_132_2 = closure_2;
+            let tmp18;
+            closure_132_3 = undefined;
             const HTTP = HTTPUtils.HTTP;
-            const obj4 = { url: Endpoints.CONJURE_PROJECT(closure_0), rejectWithError: false, signal };
-            c5 = 1;
+            const request = {
+              url: Endpoints.CONJURE_PROJECT(closure_0),
+              query: null,
+              rejectWithError: false,
+              signal: null,
+            };
+            if (null != ticket) {
+              const obj4 = { ticket };
+              tmp18 = obj4;
+            }
+            request.query = tmp18;
+            request.signal = signal;
             c6 = 1;
-            const obj6 = { value: HTTP.get(obj4), done: false };
-            return obj6;
+            c7 = 1;
+            const obj5 = { value: HTTP.get(request), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
-          c6 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
+          c7 = 3;
           obj = { value, done: true };
           return obj;
         } else {
-          closure_131_3 = value;
+          closure_132_3 = value;
           let aborted = null;
-          if (null != closure_131_2) {
-            c6 = 3;
+          if (null != closure_132_2) {
+            c7 = 3;
           }
           aborted = undefined;
           if (!tmp14) {
-            aborted = closure_131_1.aborted;
+            aborted = closure_132_1.aborted;
           }
           if (true !== aborted) {
-            const obj7 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: closure_131_3.body.project };
-            closure_132_1(closure_132_2[8]).dispatch(obj7);
-            aborted = closure_131_0;
+            const obj7 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: closure_132_3.body.project };
+            closure_133_1(closure_133_2[8]).dispatch(obj7);
+            aborted = closure_132_0;
             const obj8 = {
-              bot_permissions_changed: closure_131_3.body.bot_permissions_changed,
-              integration_installed: closure_131_3.body.integration_installed,
-              preview_ready: closure_131_3.body.preview_ready,
-              has_activity: closure_131_3.body.has_activity,
-              owner_authorization_revoked: closure_131_3.body.owner_authorization_revoked,
-              preview_app_channels: closure_131_3.body.preview_app_channels,
+              bot_permissions_changed: closure_132_3.body.bot_permissions_changed,
+              integration_installed: closure_132_3.body.integration_installed,
+              preview_ready: closure_132_3.body.preview_ready,
+              has_activity: closure_132_3.body.has_activity,
+              owner_authorization_revoked: closure_132_3.body.owner_authorization_revoked,
+              preview_app_channels: closure_132_3.body.preview_app_channels,
             };
-            closure_132_13(closure_131_0, obj8);
-            const obj5 = closure_132_1(closure_132_2[8]);
+            closure_133_13(closure_132_0, obj8);
+            const obj6 = closure_133_1(closure_133_2[8]);
           }
-          tmp14 = closure_131_1 == aborted;
+          tmp14 = closure_132_1 == aborted;
         }
-      } catch (tmp18) {
-        c6 = tmp;
-        throw tmp18;
+      } catch (tmp19) {
+        c7 = tmp;
+        throw tmp19;
       }
     }
   })();
@@ -880,7 +892,7 @@ let closure_45 = async function _postProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1003,7 +1015,7 @@ let closure_49 = async function _fetchConjureApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1040,7 +1052,7 @@ let closure_49 = async function _fetchConjureApplication(arg0) {
           obj = closure_130_1(closure_130_2[8]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp18) {
       c4 = tmp;
@@ -1059,7 +1071,7 @@ let closure_50 = async function _refreshPreviewApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1094,7 +1106,7 @@ let closure_50 = async function _refreshPreviewApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp11) {
       c1 = tmp;
       throw tmp11;
@@ -1143,7 +1155,119 @@ let closure_51 = async function _updateProjectSettings() {
   }
   return closure_130_2;
 };
-let closure_52 = async function _fetchApplicationChannels(arg0) {
+let closure_52 = async function _shareConjureProject(arg0) {
+  closure_0 = arg0;
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: "HermesInternal" };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp29;
+            closure_130_0 = closure_0;
+            closure_130_1 = undefined;
+            let body;
+            closure_130_3 = undefined;
+            project = project.getProject(closure_0);
+            let prop;
+            if (project != null) {
+              prop = project.preview_application_id;
+            }
+            closure_130_1 = prop;
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: null, body: null, rejectWithError: true };
+            const _HermesInternal = HermesInternal;
+            request.url = "" + Endpoints.CONJURE_PROJECT(closure_0) + "/server";
+            const obj4 = { guild_id, uses_preview_app: true };
+            request.body = obj4;
+            c5 = 1;
+            c6 = 1;
+            const obj5 = { value: HTTP.put(request), done: false };
+            return obj5;
+          }
+        } else {
+          if (1 === tmp7) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              body = value.body;
+              const obj7 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: body };
+              closure_131_1(closure_131_2[8]).dispatch(obj7);
+              closure_131_56(closure_130_0);
+              closure_130_3 = body.preview_application_id;
+              let tmp11 = null != closure_130_1;
+              if (tmp11) {
+                tmp11 = closure_130_1 !== closure_130_3;
+              }
+              if (tmp11) {
+                closure_131_1(closure_131_2[23])(closure_130_1);
+              }
+              if (null != closure_130_3) {
+                c4 = 1;
+                c5 = 3;
+                c6 = 1;
+                const obj8 = { value: closure_131_48(closure_130_3), done: false };
+                return obj8;
+              }
+              const obj9 = closure_131_1(closure_131_2[8]);
+            }
+          } else {
+            if (2 === tmp7) {
+              c4 = 0;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          }
+          c6 = 3;
+        }
+      } catch (tmp28) {
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp28;
+        } else {
+          c5 = tmp;
+        }
+        tmp29 = c4;
+      }
+    }
+  })();
+};
+let closure_53 = async function _fetchApplicationChannels(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1154,7 +1278,7 @@ let closure_52 = async function _fetchApplicationChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1207,7 +1331,7 @@ let closure_52 = async function _fetchApplicationChannels(arg0) {
 };
 function deleteProject() {
   const self = this;
-  const apply = closure_54.apply;
+  const apply = closure_55.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1215,7 +1339,7 @@ function deleteProject() {
   }
   return applyArgumentsResult;
 }
-let closure_54 = async function _deleteProject() {
+let closure_55 = async function _deleteProject() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -1230,7 +1354,7 @@ let closure_54 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1293,10 +1417,22 @@ let closure_54 = async function _deleteProject() {
     }
   })();
 };
+function refreshConjureInstallState(projectId) {
+  const project = ConjureProjectStore.getProject(projectId);
+  if (null != project) {
+    getProject(projectId).catch(() => {});
+    const promise = getProject(projectId);
+    obj = UserActionCreators;
+    const profile = obj.fetchProfile(conjureAppInServer.conjureProductionBotUserId(project), {
+      withMutualGuilds: true,
+    });
+    profile.catch(() => {});
+  }
+}
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1072).Endpoints;
-const ReadStateTypes = fn(6856).ReadStateTypes;
+const ReadStateTypes = fn(6831).ReadStateTypes;
 let c14 = null;
 let c15 = null;
 let c16 = false;
@@ -1586,12 +1722,22 @@ export function updateProjectSettings() {
   }
   return applyArgumentsResult;
 }
+export function shareConjureProject() {
+  const self = this;
+  const apply = closure_52.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
 export function setGuildHints(first2, arg1) {
   return patchProject(first2, arg1);
 }
 export function fetchApplicationChannels() {
   const self = this;
-  const apply = closure_52.apply;
+  const apply = closure_53.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1603,18 +1749,7 @@ export { deleteProject };
 export function deleteProjectInBackground(id, arg1) {
   deleteProject(id).then(() => {}, arg1);
 }
-export function refreshConjureInstallState(projectId) {
-  const project = ConjureProjectStore.getProject(projectId);
-  if (null != project) {
-    getProject(projectId).catch(() => {});
-    const promise = getProject(projectId);
-    obj = UserActionCreators;
-    const profile = obj.fetchProfile(conjureAppInServer.conjureProductionBotUserId(project), {
-      withMutualGuilds: true,
-    });
-    profile.catch(() => {});
-  }
-}
+export { refreshConjureInstallState };
 export function setSelectedProjectForGuild(guildId, c1) {
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId, projectId: importDefault });
 }

@@ -38,7 +38,6 @@ const frozen = Object.freeze({
   CONFIRM_SUBMISSION: AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,
   REQUEST_SENT: AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT,
   THANKS: AnalyticsSections.APPEAL_INGESTION_THANKS,
-  SPAM: AnalyticsSections.APPEAL_INGESTION_SPAM,
 });
 obj4.impression_group = discord_common_AnalyticsUtils.ImpressionGroups.APPEAL_INGESTION;
 const obj5 = {
@@ -57,8 +56,6 @@ prototype.COMMUNITY_GUIDELINES = "https://discord.com/guidelines";
 prototype.APPEALS_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731";
 prototype.WARNING_SYSTEM_HELPCENTER_LINK = "https://support.discord.com/hc/articles/18210965981847";
 prototype.AGE_VERIFICATION_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731";
-prototype.SPAM_LINK =
-  "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__";
 prototype.LEARN_MORE_UU_APPEAL_LINK = "https://support.discord.com/hc/articles/360041820932";
 prototype.APP_APPEAL_LINK = "https://dis.gd/app-appeal";
 class SafetyHubPolicyNoticeKeys {}
@@ -96,8 +93,6 @@ export const SafetyHubAnalyticsActions = {
   [2]: "ClickLetUsKnow",
   ClickAgeVerificationLink: 3,
   [3]: "ClickAgeVerificationLink",
-  ClickSpamWebformLink: 4,
-  [4]: "ClickSpamWebformLink",
   ClickLearnMoreLink: 5,
   [5]: "ClickLearnMoreLink",
   ClickCommunityGuidelinesLink: 6,

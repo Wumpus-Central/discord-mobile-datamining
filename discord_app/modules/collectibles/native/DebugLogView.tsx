@@ -7,11 +7,11 @@ import DevSettingsStore from "../../devtools/dev_settings/DevSettingsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-const CollectiblesDebugStore = fn(7833);
+const CollectiblesDebugStore = fn(7810);
 ({ useCollectiblesDebugStore: metroImportDefault, addDebugLog: closure_8 } = CollectiblesDebugStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_9, jsx: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   debugLogContainer: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
@@ -67,7 +67,7 @@ export default function DebugLogView() {
       obj4.style = obj5;
       const items2 = ["Debug Log (", arr.length, " entries)"];
       obj4.children = items2;
-      const items3 = [closure_9(tmp2(5781).Text, obj4)];
+      const items3 = [closure_9(tmp2(5751).Text, obj4)];
       const obj6 = {
         onPress: function handleClear() {
           closure_1();
@@ -76,7 +76,7 @@ export default function DebugLogView() {
         children: null,
       };
       const obj7 = { variant: "body-xs/semibold", style: tmp.clearButtonText, children: "Clear" };
-      obj6.children = closure_10(tmp2(5781).Text, obj7);
+      obj6.children = closure_10(tmp2(5751).Text, obj7);
       items3[1] = closure_10(closure_5, obj6);
       obj3.children = items3;
       const items4 = [closure_9(stateFromStores, obj3)];

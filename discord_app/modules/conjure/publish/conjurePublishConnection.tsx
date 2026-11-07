@@ -38,7 +38,7 @@ function rejectPendingPublishOptions(arg0, arg1) {
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
-let set = new Set(fn(11010).CONJURE_PUBLISH_PROGRESS_STAGES);
+let set = new Set(fn(10994).CONJURE_PUBLISH_PROGRESS_STAGES);
 const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map3 = new Map();
 const size = fn(2);
@@ -153,7 +153,7 @@ export function failPendingSafetyRecheck(projectId) {
                             closure_2_7.delete(closure_1_0);
                             if ("pending" === obj2.status) {
                               let _setTimeout = setTimeout;
-                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F99793 */ function() { ... }, 180000));
+                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F100143 */ function() { ... }, 180000));
                             }
                             let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
                             closure_2_1(closure_2_2[4]).dispatch(obj3);
@@ -268,7 +268,7 @@ export function requestConjureSafetyRecheck(projectId) {
                             closure_2_7.delete(closure_1_0);
                             if ("pending" === obj2.status) {
                               let _setTimeout = setTimeout;
-                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F99793 */ function() { ... }, 180000));
+                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F100143 */ function() { ... }, 180000));
                             }
                             let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
                             closure_2_1(closure_2_2[4]).dispatch(obj3);
@@ -397,7 +397,7 @@ export const publishStepHandlers = {
                                 closure_2_7.delete(closure_1_0);
                                 if ("pending" === obj2.status) {
                                   let _setTimeout = setTimeout;
-                                  let result = closure_2_7.set(closure_1_0, setTimeout(/* F99793 */ function() { ... }, 180000));
+                                  let result = closure_2_7.set(closure_1_0, setTimeout(/* F100143 */ function() { ... }, 180000));
                                 }
                                 let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
                                 closure_2_1(closure_2_2[4]).dispatch(obj3);
@@ -508,7 +508,7 @@ export const publishStepHandlers = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -525,7 +525,7 @@ export const publishStepHandlers = {
               if (obj7.validPublishApproval(tmp2.approval_url, tmp2.approval_kind)) {
                 if (publishApprovalUrl.getPublishApprovalUrl(projectId) === tmp2.approval_url) {
                   c2 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
                   v1(tmp21[4]).dispatch(obj5);

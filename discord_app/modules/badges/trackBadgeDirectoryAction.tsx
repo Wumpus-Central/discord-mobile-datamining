@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/badges/trackBadgeDirectoryAct
 
 export default function trackBadgeDirectoryAction(arg0) {
   ({ badge, displayedUserId } = arg0);
-  ({ actionName, isSociallyNavigated } = arg0);
+  ({ actionName, isSociallyNavigated, hasUnreadIndicator, source, surface } = arg0);
   const currentUser = UserStore.getCurrentUser();
   if (currentUser != null) {
     const id = currentUser.id;
@@ -41,6 +41,9 @@ export default function trackBadgeDirectoryAction(arg0) {
     is_earnable: null,
     is_socially_navigated: null,
     total_badges_owned: null,
+    has_unread_indicator: null,
+    surface: null,
+    source: null,
   };
   let badge_id;
   if (badge != null) {
@@ -84,5 +87,8 @@ export default function trackBadgeDirectoryAction(arg0) {
   obj2.is_earnable = flag2;
   obj2.is_socially_navigated = isSociallyNavigated;
   obj2.total_badges_owned = length;
+  obj2.has_unread_indicator = hasUnreadIndicator;
+  obj2.surface = surface;
+  obj2.source = source;
   AnalyticsUtilsDefault.track(AnalyticEvents.BADGE_DIRECTORY_ACTION, obj2);
 }

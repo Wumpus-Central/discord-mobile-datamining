@@ -19,8 +19,8 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(8814).FetchState;
-const CodedLinkExtendedType = fn(10255).CodedLinkExtendedType;
+const FetchState = fn(8793).FetchState;
+const CodedLinkExtendedType = fn(10238).CodedLinkExtendedType;
 let closure_15 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting(

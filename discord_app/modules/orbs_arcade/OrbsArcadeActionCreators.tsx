@@ -30,7 +30,7 @@ let closure_13 = async function _fetchOrbsArcadeGames() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -130,7 +130,7 @@ let closure_14 = async function _resetOrbsArcadeGame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -169,7 +169,7 @@ let closure_14 = async function _resetOrbsArcadeGame(arg0) {
           return obj6;
         } else {
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -208,7 +208,7 @@ let closure_15 = async function _ensureOrbsArcadeEnrollment(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -259,7 +259,7 @@ let closure_15 = async function _ensureOrbsArcadeEnrollment(arg0) {
         const obj7 = { type: "ORBS_ARCADE_GAME_STATE_UPDATE", game_id: closure_129_0.id, game_state: body };
         closure_130_1(closure_130_2[6]).dispatch(obj7);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp27) {
       closure_3 = tmp27;
@@ -401,7 +401,7 @@ let closure_19 = async function _claimOrbsArcadeRewards() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

@@ -20,7 +20,7 @@ let merged = Object.assign(
     obj2.variant = str;
     return jsx(BaseTextButton.BaseTextButton, {});
   },
-  { Icon: fn(5789).BaseTextButton.Icon },
+  { Icon: fn(5759).BaseTextButton.Icon },
 );
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/ToggleButton.native.tsx");

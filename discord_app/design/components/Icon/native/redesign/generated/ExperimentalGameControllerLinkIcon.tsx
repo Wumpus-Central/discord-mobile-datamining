@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ExperimentalGameControllerLinkIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9540 from "../../../../../../../_runtime/metro/09540__.js";
+import _mod9522 from "../../../../../../../_runtime/metro/09522__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,5 +18,5 @@ export function ExperimentalGameControllerLinkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9540, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9522, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

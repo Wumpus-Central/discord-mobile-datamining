@@ -144,7 +144,7 @@ function updateActivity(withGracePeriod) {
       let tmp18 = null;
       if (null != project) {
         tmp18 = null;
-        if (null != obj2.conjureServerProjectGuildId(project)) {
+        if (null != obj2.conjureServerAppGuildId(project)) {
           const messages = ConjureChatStore.getMessages(tmp11);
           const findOpenTurnResult = conjureChatTurns.findOpenTurn(messages);
           tmp18 = null;
@@ -301,7 +301,7 @@ function updateActivity(withGracePeriod) {
                       let merged = Object.assign(closure_1_16);
                       details = closure_1_16.details;
                       let prop = closure_1_0(closure_1_1[11]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                      let found = prop.filter(/* F100815 */ function() { ... });
+                      let found = prop.filter(/* F101164 */ function() { ... });
                       let _Math = Math;
                       let _Math2 = Math;
                       obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -312,7 +312,7 @@ function updateActivity(withGracePeriod) {
                         timeout = null;
                       }
                       let _setTimeout = setTimeout;
-                      timeout = setTimeout(/* F100816 */ function() { ... }, closure_1_14);
+                      timeout = setTimeout(/* F101165 */ function() { ... }, closure_1_14);
                       closure_1_24.emitChange();
                     }
                   }, closure_1_14);
@@ -350,7 +350,7 @@ let closure_22 = async function _fetchOwnedProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -465,7 +465,7 @@ let closure_23 = async function _resumeRunningProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -532,7 +532,7 @@ let closure_23 = async function _resumeRunningProjects() {
   }
 };
 let closure_2 = ["party"];
-const StaticChannelRoute = fn(5026).StaticChannelRoute;
+const StaticChannelRoute = fn(4996).StaticChannelRoute;
 let c14 = 300000;
 let c15 = null;
 let c16 = null;

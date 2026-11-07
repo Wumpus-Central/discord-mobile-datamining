@@ -1,12 +1,12 @@
 // discord_app/modules/checkpoint/native/components/CheckpointScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6224);
+const CheckpointConstants = fn(6199);
 ({
   CHECKPOINT_CONTENT_MAX_HEIGHT: hasOwnProperty,
   CHECKPOINT_CONTENT_MAX_WIDTH: closure_6,
@@ -14,7 +14,7 @@ const CheckpointConstants = fn(6224);
 } = CheckpointConstants);
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_11 = createStyles.createStyles({
   container: { height: "100%", width: "100%" },
   scroll: { width: "100%" },
@@ -29,13 +29,13 @@ export default function CheckpointScreen(centered) {
   if (flag === undefined) {
     flag = false;
   }
-  let insets;
   const tmp = closure_11();
-  insets = flag(insets[7])().insets;
-  const size = flag(insets[6])({ ignoreKeyboard: true });
+  const tmp2 = flag(1627)();
+  dependencyMap = tmp2;
+  const size = flag(1493)({ ignoreKeyboard: true });
   const width = size.width;
   const height = size.height;
-  items = [insets, flag, width, height];
+  items = [tmp2, flag, width, height];
   let obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.scroll, contentContainerStyle: null, showsVerticalScrollIndicator: false, children: null };
   const items1 = [tmp.scrollContent, ,];
@@ -43,16 +43,16 @@ export default function CheckpointScreen(centered) {
     let num = 0;
     if (!flag) {
       const _Math = Math;
-      num = Math.max(0, (width - insets.left - insets.right - 2 * PX_24 - timestampProducer) / 2);
+      num = Math.max(0, (width - closure_1.left - closure_1.right - 2 * PX_24 - timestampProducer) / 2);
     }
     let num3 = 0;
     if (!flag) {
       const _Math2 = Math;
-      num3 = Math.max(0, (height - insets.top - metroImportDefault - insets.bottom - PX_24 - hasOwnProperty) / 2);
+      num3 = Math.max(0, (height - closure_1.top - metroImportDefault - closure_1.bottom - PX_24 - hasOwnProperty) / 2);
     }
     const obj = {
-      paddingLeft: insets.left + PX_24 + num,
-      paddingRight: insets.right + PX_24 + num,
+      paddingLeft: closure_1.left + PX_24 + num,
+      paddingRight: closure_1.right + PX_24 + num,
       paddingBottom: null,
       paddingTop: null,
     };
@@ -60,12 +60,12 @@ export default function CheckpointScreen(centered) {
     if (!flag) {
       num5 = PX_24;
     }
-    obj.paddingBottom = insets.bottom + num5 + num3;
+    obj.paddingBottom = closure_1.bottom + num5 + num3;
     let num6 = 0;
     if (!flag) {
       num6 = metroImportDefault;
     }
-    obj.paddingTop = insets.top + num6 + num3;
+    obj.paddingTop = closure_1.top + num6 + num3;
     return obj;
   }, items);
   if (flag) {
@@ -88,24 +88,21 @@ export function useCheckpointScreenContentHeight() {
     flag = false;
   }
   const height = useWindowDimensionsDefault({ ignoreKeyboard: true }).height;
-  const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
+  const rect = useSafeAreaInsetsDefault();
   if (flag) {
-    let diff = height - insets.top - insets.bottom;
+    let diff = height - rect.top - rect.bottom;
   } else {
     const _Math = Math;
-    diff = Math.min(height - insets.top - metroImportDefault - insets.bottom - PX_24, hasOwnProperty);
+    diff = Math.min(height - rect.top - metroImportDefault - rect.bottom - PX_24, hasOwnProperty);
   }
   return diff;
 }
 export function useCheckpointScreenFrame() {
   ({ height, width } = useWindowDimensionsDefault({ ignoreKeyboard: true }));
-  const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
+  const rect = useSafeAreaInsetsDefault();
   const size = {
     width: Math.min(width, timestampProducer + 2 * PX_24),
-    height: Math.min(
-      height,
-      height - (height - insets.top - metroImportDefault - insets.bottom - PX_24) + hasOwnProperty,
-    ),
+    height: Math.min(height, height - (height - rect.top - metroImportDefault - rect.bottom - PX_24) + hasOwnProperty),
   };
   return size;
 }

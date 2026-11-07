@@ -33,7 +33,7 @@ let closure_11 = async function _pickImage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_11 = async function _pickImage() {
             closure_130_0(obj);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp17) {
         c4 = tmp;
@@ -190,7 +190,7 @@ class ImagePickerIcon {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   imageSelectionRow: { flexDirection: "row", justifyContent: "space-between" },
   buttonColumn: { flex: 1, flexDirection: "column", marginEnd: nativeDefault.space.PX_16 },
@@ -254,13 +254,13 @@ export default function FormImagePicker(children) {
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
   items = [
-    closure_6(tmp6(5781).Text, {
+    closure_6(tmp6(5751).Text, {
       style: tmp2.imageDescription,
       variant: "body-sm/medium",
       color: "text-default",
       children: children.description,
     }),
-    closure_6(tmp6(5788).Button, {
+    closure_6(tmp6(5758).Button, {
       text: stringResult,
       variant: "secondary",
       onPress: function handleSelectImage() {

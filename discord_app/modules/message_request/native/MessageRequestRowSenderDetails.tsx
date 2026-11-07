@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 const obj2 = {
   avatar: {
     borderRadius: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL] / 2,
@@ -57,7 +57,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(19264).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(19323).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };
@@ -67,7 +67,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
       user: otherUser,
       guildId: "HermesInternal",
       disablePlaceholder: null,
-      avatarDecoration: "Main vs Remote",
+      avatarDecoration: "never",
     };
     let avatarDecoration;
     if (otherUser != null) {
@@ -108,26 +108,26 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     stringResult = intl.string(otherUser(1113).t["30mdIx"]);
   }
   obj9.children = stringResult;
-  const items2 = [closure_5(otherUser(5781).Text, obj9)];
+  const items2 = [closure_5(otherUser(5751).Text, obj9)];
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj10 = { variant: "body-md/medium", color: "text-muted", children: null };
-    const items3 = [" ", otherUser(5224).getUserTag(otherUser)];
+    const items3 = [" ", otherUser(5194).getUserTag(otherUser)];
     obj10.children = items3;
-    tmp9Result = closure_6(otherUser(5781).Text, obj10);
-    const tmp2Result = otherUser(5224);
+    tmp9Result = closure_6(otherUser(5751).Text, obj10);
+    const tmp2Result = otherUser(5194);
   }
   items2[1] = tmp9Result;
   obj8.children = items2;
   const items4 = [
-    closure_6(otherUser(5781).Text, obj8),
-    closure_5(otherUser(5781).Text, {
+    closure_6(otherUser(5751).Text, obj8),
+    closure_5(otherUser(5751).Text, {
       style: tmp.timestampSeparator,
       variant: "body-xs/medium",
       color: "text-muted",
       children: "\u00B7",
     }),
-    closure_5(otherUser(5781).Text, {
+    closure_5(otherUser(5751).Text, {
       variant: "body-xs/semibold",
       color: "text-muted",
       children: messageRequestRelativeTimestampText,

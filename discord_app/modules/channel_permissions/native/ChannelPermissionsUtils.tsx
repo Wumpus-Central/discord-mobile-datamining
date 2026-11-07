@@ -15,7 +15,7 @@ export function openAddMembersActionSheet(stateFromStores) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(9155, dependencyMap.paths), "channel-add-members-" + stateFromStores.id, {
+  obj2.openLazy(asyncRequireImpl(9137, dependencyMap.paths), "channel-add-members-" + stateFromStores.id, {
     channel: stateFromStores,
     canSkip: flag,
   });
@@ -23,7 +23,7 @@ export function openAddMembersActionSheet(stateFromStores) {
 export function openChannelMembersActionSheet(id, guild_id) {
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Manage Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(11813, dependencyMap.paths), "channel-members-" + id, {
+  obj2.openLazy(asyncRequireImpl(11804, dependencyMap.paths), "channel-members-" + id, {
     channelId: id,
     guildId: guild_id,
   });

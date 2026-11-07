@@ -10,7 +10,19 @@ const result = size.fileFinishedImporting(
 
 export default {
   showModal(locationStack) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9828, dependencyMap.paths), { locationStack }, c3);
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
+    let flag = obj.startAtSignIn;
+    if (flag === undefined) {
+      flag = false;
+    }
+    ModalActionCreatorsDefault.pushLazy(
+      asyncRequireImpl(9812, dependencyMap.paths),
+      { locationStack, startAtSignIn: flag },
+      c3,
+    );
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(c3);

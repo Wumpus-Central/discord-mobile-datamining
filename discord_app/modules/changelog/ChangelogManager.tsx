@@ -25,7 +25,7 @@ const prototype = function ChangelogManager() {
         const obj6 = { value, done: true };
         return obj6;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -99,12 +99,12 @@ const prototype = function ChangelogManager() {
               c3 = 0;
               tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
               locale = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else if (true !== body[closure_128_2].show_on_startup) {
               c3 = 0;
               tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
               locale = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               closure_128_3 = ChangelogStore.lastSeenChangelogId();
               closure_128_4 = ChangelogStore.lastSeenChangelogDate();
@@ -113,7 +113,7 @@ const prototype = function ChangelogManager() {
                   c3 = 0;
                   tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   locale = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
                 obj10 = tmp3(tmp86[8]);
               }
@@ -139,7 +139,7 @@ const prototype = function ChangelogManager() {
             c3 = 0;
             tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
             locale = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             if (null != closure_128_4) {
               if (null != ChangelogStore.lastSeenChangelogDate()) {
@@ -147,7 +147,7 @@ const prototype = function ChangelogManager() {
                   c3 = 0;
                   tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   locale = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const _Date = Date;
                   const date = new Date(closure_128_5.date);
@@ -160,7 +160,7 @@ const prototype = function ChangelogManager() {
                   c3 = 0;
                   tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   locale = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               }
             }

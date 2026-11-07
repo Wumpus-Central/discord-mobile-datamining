@@ -12,7 +12,7 @@ function SyncingToGamesItem(channels) {
   dependencyMap = channels(1499).useNavigation();
   let obj = channels(1499);
   const tmp = channels;
-  const getOrFetchApplication = channels(7414).useGetOrFetchApplication(channels.applicationId);
+  const getOrFetchApplication = channels(7391).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
     let name;
@@ -25,15 +25,15 @@ function SyncingToGamesItem(channels) {
       children: channels.map((id) => {
         const channel = id;
         let obj = {
-          label: channels(5806).computeChannelName(id, UserStore, RelationshipStore),
+          label: channels(5776).computeChannelName(id, UserStore, RelationshipStore),
           icon: null,
           arrow: true,
           onPress: null,
         };
         const obj3 = { IconComponent: null };
-        const obj2 = channels(5806);
-        obj3.IconComponent = channels(8695).getChannelIconComponent(id);
-        obj.icon = closure_1_6(channels(7063).TableRow.Icon, obj3);
+        const obj2 = channels(5776);
+        obj3.IconComponent = channels(8674).getChannelIconComponent(id);
+        obj.icon = closure_1_6(channels(7038).TableRow.Icon, obj3);
         obj.onPress = function onPress() {
           const obj = { channel, numScreensToPop: null };
           let num = 1;
@@ -46,10 +46,10 @@ function SyncingToGamesItem(channels) {
           obj.numScreensToPop = num;
           closure_2.push(GuildSettingsSections.EDIT_LINKED_LOBBY, obj);
         };
-        return closure_1_6(channels(7063).TableRow, obj, id.id);
+        return closure_1_6(channels(7038).TableRow, obj, id.id);
       }),
     };
-    tmp5Result = closure_6(tmp(7151).TableRowGroup, obj3);
+    tmp5Result = closure_6(tmp(7126).TableRowGroup, obj3);
   }
   return tmp5Result;
 }

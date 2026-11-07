@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx
 import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
-import _modDef15350 from "../../../../../../_runtime/metro/15350__.js";
-import _modDef17088 from "../../../../../../_runtime/metro/17088__.js";
+import _modDef15384 from "../../../../../../_runtime/metro/15384__.js";
+import _modDef17136 from "../../../../../../_runtime/metro/17136__.js";
 import AddFriendsScreenUtils from "AddFriendsScreenUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row" } });
 let closure_8 = {
   code: "(function IncomingRequestRowActionsTsx1(){let[animate,pressed,withTiming]=this.__closure;return{position:'absolute',right:0,flexDirection:'row',opacity:!animate?!pressed.get()?1:0:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};})",
@@ -279,7 +279,7 @@ export function IncomingRequestRowActions(user) {
     c5(require("IconButton").IconButton, {
       size: "sm",
       variant: "tertiary",
-      icon: _modDef17088,
+      icon: _modDef17136,
       onPress: callback1,
       accessibilityLabel: ignoreRequestAccessibilityLabel,
       maxFontSizeMultiplier: 2,
@@ -288,7 +288,7 @@ export function IncomingRequestRowActions(user) {
   const obj9 = {
     size: "sm",
     variant: "tertiary",
-    icon: _modDef17088,
+    icon: _modDef17136,
     onPress: callback1,
     accessibilityLabel: ignoreRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,
@@ -296,7 +296,7 @@ export function IncomingRequestRowActions(user) {
   items13[1] = c5(require("IconButton").IconButton, {
     size: "sm",
     variant: "active",
-    icon: _modDef15350,
+    icon: _modDef15384,
     onPress: callback,
     accessibilityLabel: acceptRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,
@@ -331,7 +331,7 @@ export function IncomingRequestRowActions(user) {
   const obj10 = {
     size: "sm",
     variant: "active",
-    icon: _modDef15350,
+    icon: _modDef15384,
     onPress: callback,
     accessibilityLabel: acceptRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,

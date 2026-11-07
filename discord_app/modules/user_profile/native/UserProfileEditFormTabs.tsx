@@ -24,10 +24,10 @@ function MainPage() {
   });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7460).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7437).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING },
   page: null,
@@ -79,7 +79,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     num2 = 1;
   }
   [first, closure_5] = first.useState(num2);
-  arr = tmp2(15144)(userId);
+  arr = tmp2(15176)(userId);
   closure_7 = tmp8;
   let items1 = [arr];
   const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
@@ -168,7 +168,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   }
   obj6.variant = str;
   const items7 = [
-    arr(tmp10(12344).Tabs, obj6),
+    arr(tmp10(12342).Tabs, obj6),
     arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
   obj5.children = items7;

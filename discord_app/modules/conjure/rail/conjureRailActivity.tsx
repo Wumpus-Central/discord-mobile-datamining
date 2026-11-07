@@ -66,7 +66,7 @@ function readConjureRailActivity(id, arg1) {
   }
   return tmp;
 }
-const isProjectOwner = fn(6924).isProjectOwner;
+const isProjectOwner = fn(6899).isProjectOwner;
 let items = [ConjureProjectStore, ConjureChatStore, ConjurePublishStatusStore, ReadStateStore, UserSettingsProtoStore];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/rail/conjureRailActivity.tsx");

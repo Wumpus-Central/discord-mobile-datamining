@@ -3,7 +3,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
 const Endpoints = fn(1072).Endpoints;
-const MessageSendLocation = fn(5175).MessageSendLocation;
+const MessageSendLocation = fn(5145).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/game_organization_invites/GameOrganizationInviteSendActionCreators.tsx",
@@ -25,7 +25,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -114,7 +114,7 @@ export default {
               closure_128_0 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: closure_1(7572).getOrEnsurePrivateChannel(closure_0), done: false };
+              const obj5 = { value: closure_1(7549).getOrEnsurePrivateChannel(closure_0), done: false };
               return obj5;
             }
           } else if (1 === tmp5) {
@@ -127,9 +127,9 @@ export default {
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj8 = closure_1(7735);
+              const obj8 = closure_1(7712);
               const obj7 = {
-                content: closure_1(11829)(closure_129_1),
+                content: closure_1(11820)(closure_129_1),
                 tts: false,
                 invalidEmojis: [],
                 validNonShortcutEmojis: [],
@@ -149,7 +149,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           c3 = tmp;

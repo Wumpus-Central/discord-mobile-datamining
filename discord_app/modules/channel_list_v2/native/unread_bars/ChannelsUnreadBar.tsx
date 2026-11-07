@@ -9,13 +9,13 @@ import 01652__ from "../../../../../_runtime/metro/01652__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const RedesignChannelListConstants = fn(11199);
+const RedesignChannelListConstants = fn(5882);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: closure_6 } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = module_1652.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_11 = createStyles.createStyles((arg0, arg1) => {
   let num = 5;
   if (arg0) {
@@ -265,11 +265,11 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   ChannelsUnreadBarTsx1.__initData = tmp25;
   const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ChannelsUnreadBarTsx1);
   if (first) {
-    let ArrowSmallUpIcon = tmp7(8754).AtIcon;
+    let ArrowSmallUpIcon = tmp7(8733).AtIcon;
   } else if ("bottom" === position) {
-    ArrowSmallUpIcon = tmp7(13247).ArrowSmallDownIcon;
+    ArrowSmallUpIcon = tmp7(13270).ArrowSmallDownIcon;
   } else {
-    ArrowSmallUpIcon = tmp7(13245).ArrowSmallUpIcon;
+    ArrowSmallUpIcon = tmp7(13268).ArrowSmallUpIcon;
   }
   const tmp4Result = nativeDefault;
   if (first) {

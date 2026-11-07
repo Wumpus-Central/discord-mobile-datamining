@@ -67,8 +67,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(6224).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(5170);
+const sum = fn(6199).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5140);
 let obj2 = {
   container: {
     width: "100%",
@@ -109,19 +109,12 @@ obj2.itemIcon = size;
 let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.guildAcronym = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1357);
-let num = 24;
+const PlatformUtils = fn(1357);
+let num;
 if (PlatformUtils.isIOS()) {
-  num = 28;
+  num = 30;
 }
-let obj8 = { fontSize: num, lineHeight: null, textAlign: "center" };
-PlatformUtils = fn(1357);
-let num2;
-if (PlatformUtils.isIOS()) {
-  num2 = 32;
-}
-obj8.lineHeight = num2;
-obj2.textEmoji = obj8;
+obj2.textEmoji = { fontSize: 24, lineHeight: num, textAlign: "center" };
 let closure_11 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(

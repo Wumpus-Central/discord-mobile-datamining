@@ -25,7 +25,7 @@ export default function GameProfileGameClaimCta(trackAction) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -39,13 +39,13 @@ export default function GameProfileGameClaimCta(trackAction) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              trackAction(v3(9439).GameProfileTrackActionActions.ClaimGame);
+              trackAction(v3(9421).GameProfileTrackActionActions.ClaimGame);
               v1 = 1;
               v3 = 1;
               const obj4 = {
-                value: v1(7598).redirectDeveloperPortalWithHandoffToken(
+                value: v1(7575).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(7602).LoginHandoffSource.GAME_CLAIM,
+                  v3(7579).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };
@@ -60,7 +60,7 @@ export default function GameProfileGameClaimCta(trackAction) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -78,7 +78,7 @@ export default function GameProfileGameClaimCta(trackAction) {
     const intl = trackAction(1113).intl;
     obj.text = intl.string(trackAction(1113).t["mqg+to"]);
     obj.onPress = callback;
-    let tmp3 = jsx(trackAction(5788).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+    let tmp3 = jsx(trackAction(5758).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }

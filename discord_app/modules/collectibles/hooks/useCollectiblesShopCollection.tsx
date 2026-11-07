@@ -30,7 +30,7 @@ export default function useCollectiblesShopCollection(id) {
   if (id == null) {
     str = "";
   }
-  items = [str, flag, flag2];
+  items = [str, flag, flag2, flag(flag2[3]).useStorefrontPricingKey()];
   const effect = str.useEffect(() => {
     if ("" !== str) {
       const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
@@ -39,9 +39,10 @@ export default function useCollectiblesShopCollection(id) {
       const collections = CollectiblesShopManager.requestCollections(items, obj);
     }
   }, items);
+  let obj2 = flag(flag2[3]);
   const items1 = [collection];
   const items2 = [str];
-  const stateFromStoresObject = flag(flag2[4]).useStateFromStoresObject(
+  const stateFromStoresObject = flag(flag2[5]).useStateFromStoresObject(
     items1,
     () => ({
       collection: StorefrontCollectionStore.getCollection(str),
@@ -51,8 +52,8 @@ export default function useCollectiblesShopCollection(id) {
   );
   collection = stateFromStoresObject.collection;
   fetchState = stateFromStoresObject.fetchState;
-  let obj2 = flag(flag2[4]);
-  fetchResolvedAbsent = flag(flag2[5]).useFetchResolvedAbsent(str, fetchState);
+  const obj3 = flag(flag2[5]);
+  fetchResolvedAbsent = flag(flag2[6]).useFetchResolvedAbsent(str, fetchState);
   const items3 = [collection];
   memo = str.useMemo(() => {
     let result = null;
@@ -77,7 +78,7 @@ export default function useCollectiblesShopCollection(id) {
     }
     return str;
   }, items4);
-  const obj3 = flag(flag2[5]);
+  const obj4 = flag(flag2[6]);
   return {
     category: memo,
     state: memo1,

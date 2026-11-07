@@ -4,7 +4,7 @@ import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.t
 import NativeImageManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
 import asyncRequireImpl from "../../../_runtime/02118_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import _mod7352 from "../../../_runtime/metro/07352__.js";
+import _mod7329 from "../../../_runtime/metro/07329__.js";
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -13,7 +13,7 @@ import GuildOnboardingStore from "GuildOnboardingStore.tsx";
 
 require = fn;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod7352));
+  return JSON.parse(JSON.stringify(_mod7329));
 }
 let closure_14 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
@@ -111,7 +111,7 @@ let closure_15 = async function _fetchLandingAsset(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -222,7 +222,7 @@ function openAndWaitForOnboarding(guildId) {
       isFirstOpen: true,
     };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7376, dependencyMap.paths),
+      asyncRequireImpl(7353, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -238,7 +238,7 @@ function openAndWaitForOnboarding(guildId) {
       }
     });
     const pushLazyResult = ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7376, dependencyMap.paths),
+      asyncRequireImpl(7353, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -251,7 +251,7 @@ function openAndWaitForOnboarding(guildId) {
   });
 }
 const Image = fn(17).Image;
-let closure_8 = fn(7351).GUILD_ONBOARDING_MODAL_KEY;
+let closure_8 = fn(7328).GUILD_ONBOARDING_MODAL_KEY;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_9, Routes: closure_10 } = Constants);
 let closure_12 = {};

@@ -85,7 +85,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_16,
@@ -225,7 +225,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(20327, dependencyMap.paths),
+        asyncRequireImpl(20396, dependencyMap.paths),
         "TierTemplatePriceReselectionCard",
         obj2,
       );
@@ -247,7 +247,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress: function handleViewEntireTemplate() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20323, dependencyMap.paths), "TierTemplateCard", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20392, dependencyMap.paths), "TierTemplateCard", {
         template,
         guildId,
         handleSelectTemplateInPreview: callback1,

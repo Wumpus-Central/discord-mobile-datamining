@@ -1,19 +1,19 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import thumbHashToRGBA from "../../../../../_runtime/17428_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/17477_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(6861).QuestDockMode;
-const QuestDockConstants = fn(17334);
+const QuestDockMode = fn(6836).QuestDockMode;
+const QuestDockConstants = fn(17382);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { imageContainer: null, overlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/device_permissions/native/ConjureDevicePermissionSettingsSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4024 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4026 from "../../intl/ConjureUntranslated.messages.js";
 import useConjureDevicePermissionSettingsDefault from "../useConjureDevicePermissionSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_16 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -25,9 +25,9 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
   let obj = { startExpanded: true, header: null, children: null };
   const obj2 = { title: null, subtitle: null };
   let intl = require("util").intl;
-  obj2.title = intl.string(_modDef4024["7a+RNP"]);
+  obj2.title = intl.string(_modDef4026["7a+RNP"]);
   const intl2 = require("util").intl;
-  obj2.subtitle = intl2.formatToPlainString(_modDef4024.IJY15p, { app: appName });
+  obj2.subtitle = intl2.formatToPlainString(_modDef4026.IJY15p, { app: appName });
   obj.header = jsx(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: null, subtitle: null });
   const obj3 = { style: tmp.content, children: null };
   const tmp2 = useConjureDevicePermissionSettingsDefault(applicationId);
@@ -37,7 +37,7 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
       permission = permission.permission;
       const decision = permission.decision;
       const obj = {
-        label: _undefined(11070).getConjureDevicePermissionLabel(permission),
+        label: _undefined(11055).getConjureDevicePermissionLabel(permission),
         subLabel: null,
         value: null,
         onValueChange: null,
@@ -45,7 +45,7 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
       let stringResult;
       if (null == decision) {
         const intl = _undefined(1113).intl;
-        stringResult = intl.string(_modDef4024["wyav+H"]);
+        stringResult = intl.string(_modDef4026["wyav+H"]);
       }
       obj.subLabel = stringResult;
       obj.value = "granted" === decision;
@@ -53,9 +53,9 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
         return permission(permission, arg0);
       };
       return jsx(
-        _undefined(7452).TableSwitchRow,
+        _undefined(7429).TableSwitchRow,
         {
-          label: _undefined(11070).getConjureDevicePermissionLabel(permission),
+          label: _undefined(11055).getConjureDevicePermissionLabel(permission),
           subLabel: null,
           value: null,
           onValueChange: null,

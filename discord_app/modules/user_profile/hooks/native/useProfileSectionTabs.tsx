@@ -2,7 +2,7 @@
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const UserProfileSections = fn(8846).UserProfileSections;
+const UserProfileSections = fn(8825).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 
@@ -74,14 +74,16 @@ export function useProfileSectionTabs(boardTabIndex) {
   if (num >= 0) {
     num2 = num;
   }
+  wishlistTabIndex.useRef(num2);
   items = [wishlistTabIndex, boardTabIndex, activityTabIndex, onTabChange];
   const items1 = [num2];
-  const callback = obj.useCallback((arg0) => {
-    if (wishlistTabIndex === arg0) {
+  const callback = obj.useCallback((current) => {
+    closure_7.current = current;
+    if (wishlistTabIndex === current) {
       let MAIN = UserProfileSections.WISHLIST;
-    } else if (boardTabIndex === arg0) {
+    } else if (boardTabIndex === current) {
       MAIN = UserProfileSections.WIDGETS;
-    } else if (activityTabIndex === arg0) {
+    } else if (activityTabIndex === current) {
       MAIN = UserProfileSections.ACTIVITY;
     } else {
       MAIN = UserProfileSections.MAIN;
@@ -110,9 +112,12 @@ export function useProfileSectionTabs(boardTabIndex) {
     setActiveProfileTabSection: tmp3,
     handleTabChange: callback,
     restoreActiveIndex: wishlistTabIndex.useCallback((activeIndex) => {
-      activeIndex = activeIndex.activeIndex;
-      if (activeIndex.get() !== num2) {
-        activeIndex.setActiveIndex(tmp, false, true);
+      if (ref.current !== num2) {
+        tmp.current = num2;
+        activeIndex = activeIndex.activeIndex;
+        if (activeIndex.get() !== num2) {
+          activeIndex.setActiveIndex(num2, false, true);
+        }
       }
     }, items1),
     activeProfileTabSectionIndex: num2,

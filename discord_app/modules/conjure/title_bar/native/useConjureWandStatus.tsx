@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/title_bar/native/useConjureWandStatus.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4024 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4026 from "../../intl/ConjureUntranslated.messages.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import ConjureActionCreators from "../../projects/ConjureActionCreators.tsx";
 import useConjureTitleBarStatusDefault from "../useConjureTitleBarStatus.tsx";
@@ -29,11 +29,11 @@ export default function useConjureWandStatus() {
   }
   obj.hasBadge = hasUnread;
   const intl = util.intl;
-  items = [intl.string(_modDef4024.uk6jhJ), , ,];
+  items = [intl.string(_modDef4026.uk6jhJ), , ,];
   let stringResult = null;
   if ("working" === kind) {
     const intl2 = util.intl;
-    stringResult = intl2.string(_modDef4024["Y8pS+n"]);
+    stringResult = intl2.string(_modDef4026["Y8pS+n"]);
   }
   items[1] = stringResult;
   let kind1;
@@ -43,7 +43,7 @@ export default function useConjureWandStatus() {
   let stringResult1 = null;
   if ("needs_input" === kind1) {
     const intl3 = util.intl;
-    stringResult1 = intl3.string(_modDef4024.hfIuc7);
+    stringResult1 = intl3.string(_modDef4026.hfIuc7);
   }
   items[2] = stringResult1;
   let kind2;
@@ -53,7 +53,7 @@ export default function useConjureWandStatus() {
   let stringResult2 = null;
   if ("unread" === kind2) {
     const intl4 = util.intl;
-    stringResult2 = intl4.string(_modDef4024["6XGnHJ"]);
+    stringResult2 = intl4.string(_modDef4026["6XGnHJ"]);
   }
   items[3] = stringResult2;
   const found = items.filter((item) => null != item);

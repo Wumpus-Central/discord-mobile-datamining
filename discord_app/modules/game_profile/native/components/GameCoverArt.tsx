@@ -181,7 +181,7 @@ let closure_7 = {
   [GameCoverArtSize.SMALL]: { nameVariant: "body-xs/medium", nameLineClamp: 3, releaseYearVariant: "footnote/normal" },
   [GameCoverArtSize.LARGE]: { nameVariant: "body-md/medium", nameLineClamp: 4, releaseYearVariant: "body-sm/normal" },
 };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj3 = {
   container: { borderRadius: nativeDefault.radii.sm },
   image: null,

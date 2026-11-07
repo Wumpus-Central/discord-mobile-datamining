@@ -25,7 +25,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -143,7 +143,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -195,7 +195,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8575).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8554).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, Endpoints: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);

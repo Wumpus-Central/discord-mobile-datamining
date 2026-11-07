@@ -10,7 +10,7 @@ import NotifSettingsProtoStore from "../NotifSettingsProtoStore.tsx";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_9 = createStyles.createStyles({ root: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/EffectiveNotifSettingsLayout.tsx");
@@ -20,10 +20,10 @@ export default function EffectiveNotifSettingsLayout(node) {
   let isDeclarativeNotificationSettingsRedesignEnabled;
   const tmp = closure_9();
   isDeclarativeNotificationSettingsRedesignEnabled =
-    isDeclarativeNotificationSettingsRedesignEnabled(15822).useIsDeclarativeNotificationSettingsRedesignEnabled(
+    isDeclarativeNotificationSettingsRedesignEnabled(15864).useIsDeclarativeNotificationSettingsRedesignEnabled(
       "EffectiveNotifSettingsLayout",
     );
-  const obj = isDeclarativeNotificationSettingsRedesignEnabled(15822);
+  const obj = isDeclarativeNotificationSettingsRedesignEnabled(15864);
   items = [NotifSettingsProtoStore, AuthenticationStore, UserSettingsProtoStore];
   const stateFromStores = isDeclarativeNotificationSettingsRedesignEnabled(504).useStateFromStores(
     items,
@@ -57,21 +57,21 @@ export default function EffectiveNotifSettingsLayout(node) {
         tmp12 = importDefault;
       }
       const obj5 = { variant: "body-md/medium", accessibilityLiveRegion: "polite", children: intl.string(Nu2TMI) };
-      const items3 = [closure_7(tmp2(5781).Text, obj5), ,];
+      const items3 = [closure_7(tmp2(5751).Text, obj5), ,];
       const obj6 = { text: null, variant: "secondary", disabled: null, onPress: null };
       const intl2 = tmp2(1113).intl;
       obj6.text = intl2.string(tmp2(1113).t["5911Lb"]);
       obj6.disabled = stateFromStores1;
-      obj6.onPress = tmp2(18241).retryEffectiveNotifSettings;
-      items3[1] = closure_7(tmp2(5788).Button, obj6);
+      obj6.onPress = tmp2(18288).retryEffectiveNotifSettings;
+      items3[1] = closure_7(tmp2(5758).Button, obj6);
       let tmp9Result = null;
       if (null != unavailableNode) {
         const obj7 = { node: unavailableNode };
-        tmp9Result = closure_7(tmp12(16846), obj7);
+        tmp9Result = closure_7(tmp12(16894), obj7);
       }
       items3[2] = tmp9Result;
       obj4.children = items3;
-      let tmp8Result = closure_8(tmp2(6185).Stack, obj4);
+      let tmp8Result = closure_8(tmp2(6159).Stack, obj4);
     }
     return tmp8Result;
   }

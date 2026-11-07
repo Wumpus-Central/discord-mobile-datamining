@@ -35,7 +35,7 @@ function useShouldCallReactiveCheck() {
   _require = tmp5;
   const obj = require("initialize");
   const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-    tmp(6811).AgeGatedFeature.REACTIVE_CHECK,
+    tmp(6786).AgeGatedFeature.REACTIVE_CHECK,
   );
   const tmpResult = require("RegionalFeatureConfigUtils");
   const items1 = [AgeVerificationStore];
@@ -93,7 +93,7 @@ let closure_15 = async function _maybePerformReactiveCheck() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -135,13 +135,13 @@ let closure_15 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(6808).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(6783).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const AgeGateConstants = fn(1097);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: closure_10 } = AgeGateConstants);
 let items = [
-  fn(6809).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(6809).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(6809).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(6784).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(6784).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(6784).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];

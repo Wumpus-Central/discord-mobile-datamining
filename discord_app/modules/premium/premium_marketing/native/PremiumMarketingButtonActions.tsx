@@ -1,6 +1,9 @@
 // discord_app/modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx
+import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import ProductIds from "../../native/ProductIds.android.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "../../native/openPremiumPlanSelectionActionSheet.tsx";
+import CollectiblesActionCreators from "../../../collectibles/CollectiblesActionCreators.tsx";
 import cta_button from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx";
 import navigateToSocialLayerStorefrontDefault from "../../../slayer_storefront/navigateToSocialLayerStorefront.tsx";
 import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen.tsx";
@@ -24,10 +27,11 @@ export function getButtonActionHandler(arg0) {
   ({
     buttonAction,
     applicationId: require,
-    analyticsLocations: importDefault,
-    analyticsPage: dependencyMap,
-    onPaymentSuccess: PromotionsStore,
-    onPaymentDismiss: PremiumTypes,
+    shopCollectionId: importDefault,
+    analyticsLocations: dependencyMap,
+    analyticsPage: PromotionsStore,
+    onPaymentSuccess: PremiumTypes,
+    onPaymentDismiss: closure_5,
   } = arg0);
   if (cta_button.ButtonAction.OPEN_SOCIAL_LAYER_STOREFRONT === buttonAction) {
     return () => {
@@ -70,23 +74,36 @@ export function getButtonActionHandler(arg0) {
             };
             return openPremiumPlanSelectionActionSheetDefault(obj);
           };
+        } else if (cta_button.ButtonAction.OPEN_SHOP === buttonAction) {
+          return () => {
+            const obj = { analyticsLocations, analyticsSource: AnalyticsLocationDefault.PREMIUM_MARKETING };
+            if (null != closure_1_1) {
+              const result = CollectiblesActionCreators.dispatchOpenCollectiblesShop(obj);
+              const obj5 = { screen: constants3.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, params: null };
+              const obj6 = { categorySkuId: tmp2, analyticsContext: null };
+              obj5.params = obj6;
+              openUserSettings.openUserSettings(obj5);
+            } else {
+              CollectiblesActionCreators.openCollectiblesShop(obj);
+            }
+          };
         } else {
           const OPEN_MARKETING_PAGE = cta_button.ButtonAction.OPEN_MARKETING_PAGE;
-          return () => require("openUserSettings").openUserSettings({ screen: constants3.PREMIUM });
+          return () => require("openUserSettings").openUserSettings({ screen: constants2.PREMIUM });
         }
       }
     }
     return () => {
-      onPaymentSuccess.getMarketingMomentRewardSkuIds();
+      page.getMarketingMomentRewardSkuIds();
       let obj = {
         analyticsLocation: {
           page,
-          section: constants.FOOTER,
-          object: constants2.BUTTON_CTA,
+          section: onPaymentDismiss.FOOTER,
+          object: constants.BUTTON_CTA,
           objectType: TIER_2.TIER_2,
         },
         analyticsLocations,
-        premiumType: onPaymentDismiss.TIER_2,
+        premiumType: onPaymentSuccess.TIER_2,
         onPaymentSuccess,
         onPaymentDismiss: function handlePaymentDismiss(arg0) {
           ({ productId, isSuccess } = arg0);
@@ -109,7 +126,7 @@ export function getButtonActionHandler(arg0) {
             productId === ProductIds.ProductIds.PREMIUM_TIER_2_YEARLY;
         },
       };
-      analyticsLocations(page[5])(obj);
+      require("openPremiumPlanSelectionActionSheet")(obj);
     };
   }
 }

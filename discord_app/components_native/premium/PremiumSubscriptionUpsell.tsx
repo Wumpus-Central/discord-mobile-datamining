@@ -5,14 +5,14 @@ import ConstantsIOS from "../../ConstantsIOS.tsx";
 import util from "../../intl/index.native.tsx";
 import NumberUtils from "../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../_runtime/05745_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05715_LinearGradient.js";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../common/FastImage.tsx";
 import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef15663 from "../../../_runtime/metro/15663__.js";
-import _modDef15664 from "../../../_runtime/metro/15664__.js";
+import _modDef15705 from "../../../_runtime/metro/15705__.js";
+import _modDef15706 from "../../../_runtime/metro/15706__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -20,7 +20,7 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7716).Gradients;
+const Gradients = fn(7693).Gradients;
 const PremiumConstants = fn(1387);
 ({
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: metroImportDefault,
@@ -28,7 +28,7 @@ const PremiumConstants = fn(1387);
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   title: { textAlign: "center" },
   subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" },
@@ -143,11 +143,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     tmp5Result5 = PremiumUtilsDefault;
-    obj11.source = _modDef15663;
+    obj11.source = _modDef15705;
     const items4 = [React6(FastImageDefault, obj11), ,];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const tmp5Result6 = FastImageDefault;
-    obj12.source = _modDef15664;
+    obj12.source = _modDef15706;
     items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

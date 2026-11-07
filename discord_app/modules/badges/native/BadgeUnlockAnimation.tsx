@@ -5,6 +5,7 @@ import ColorUtils from "../../../utils/ColorUtils.tsx";
 import shared from "../../../design/shared.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import useTimeoutDefault from "../../../hooks/useTimeout.tsx";
+import trackBadgeDirectoryActionDefault from "../trackBadgeDirectoryAction.tsx";
 import BadgeUtils from "../BadgeUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -230,7 +231,7 @@ let closure_13 = Easing5.bezier(0.67, 0, 0.28, 1);
 let c14 = 250;
 let c15 = 1000;
 let c16 = 200;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_17 = createStyles.createStyles({
   pulse: { position: "absolute", top: -40, left: -54, width: 300, height: 200 },
   pulseHidden: { opacity: 0 },
@@ -274,26 +275,21 @@ let result = size.fileFinishedImporting("modules/badges/native/BadgeUnlockAnimat
 export default function BadgeUnlockAnimation(badge) {
   badge = badge.badge;
   _require = badge;
-  const previousTierKey = badge.previousTierKey;
-  importDefault = previousTierKey;
-  ({ contentOpacity: dependencyMap, titleScale: _slicedToArray, unlockLabelOpacity: noop } = badge);
-  let useReducedMotion;
-  let sharedValue;
-  let sharedValue1;
-  let sharedValue2;
+  ({ userId: c1, source: dependencyMap, previousTierKey } = badge);
+  ({ contentOpacity: noop, titleScale: View, unlockLabelOpacity: AccessibilityStore } = badge);
   let sharedValue3;
   let sharedValue4;
-  c13 = undefined;
-  c14 = undefined;
   c15 = undefined;
-  closure_16 = undefined;
+  c16 = undefined;
+  c17 = undefined;
+  closure_18 = undefined;
   let ref;
   let FALLBACK_BADGE_COLOR;
-  c19 = undefined;
-  closure_20 = undefined;
-  const tmp = ref();
-  items = [useReducedMotion];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  c21 = undefined;
+  closure_22 = undefined;
+  const tmp = c17();
+  items = [AccessibilityStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
   let obj = require("initialize");
   const findTierResult = require("BadgeUtils").findTier(badge, previousTierKey);
   let obj2 = require("BadgeUtils");
@@ -303,18 +299,14 @@ export default function BadgeUnlockAnimation(badge) {
   const badgeUnlockArt1 = require("badgeUnlockArt").getBadgeUnlockArt(badge, findTierResult, true);
   const tmp8 = badge.badge_id === require("BadgeId").BadgeId.PREMIUM_TENURE && !stateFromStores;
   let tmp56Result = null != findTierResult && !stateFromStores;
-  useReducedMotion = tmp56Result;
-  let num = 0;
-  if (tmp56Result) {
-    num = 250;
-  }
+  closure_8 = tmp56Result;
   let obj5 = require("badgeUnlockArt");
   let num2 = 1;
-  sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(1);
   const tmp2Result = require("../../../../_runtime/metro/01652__.js");
-  sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(1);
   const tmp2Result10 = require("../../../../_runtime/metro/01652__.js");
-  sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
   const tmp2Result11 = require("../../../../_runtime/metro/01652__.js");
   let num3 = 0;
   if (stateFromStores) {
@@ -328,24 +320,24 @@ export default function BadgeUnlockAnimation(badge) {
   }
   sharedValue4 = require("../../../../_runtime/metro/01652__.js").useSharedValue(num4);
   const tmp2Result13 = require("../../../../_runtime/metro/01652__.js");
-  [tmp17, c13] = noop.useState(stateFromStores);
-  const tmp16 = _slicedToArray(noop.useState(stateFromStores), 2);
-  [tmp19, c14] = noop.useState(0);
-  const callback = noop.useCallback(() => duration((arg0) => arg0 + 1), []);
-  const tmp18 = _slicedToArray(noop.useState(0), 2);
-  [tmp22, c15] = noop.useState(false);
+  [tmp17, c15] = previousTierKey(noop.useState(stateFromStores), 2);
+  const tmp16 = previousTierKey(noop.useState(stateFromStores), 2);
+  [tmp19, c16] = previousTierKey(noop.useState(0), 2);
+  const callback = noop.useCallback(() => _undefined((arg0) => arg0 + 1), []);
+  const tmp18 = previousTierKey(noop.useState(0), 2);
+  [tmp22, c17] = previousTierKey(noop.useState(false), 2);
   if (tmp56Result) {
     num2 = 2;
   }
   let tmp26 = 1000;
-  const tmp21 = _slicedToArray(noop.useState(false), 2);
+  const tmp21 = previousTierKey(noop.useState(false), 2);
   if (tmp19 >= num2 || tmp22) {
     tmp26 = null;
   }
-  useTimeoutDefault(() => duration2(true), tmp26);
-  [tmp29, tmp30] = noop.useState(false);
-  const tmp15Result = _slicedToArray(noop.useState(false), 2);
-  let items1 = [closure_21, badge.sheetIndex];
+  useTimeoutDefault(() => _undefined2(true), tmp26);
+  [tmp29, tmp30] = previousTierKey(noop.useState(false), 2);
+  const tmp15Result = previousTierKey(noop.useState(false), 2);
+  let items1 = [c21, badge.sheetIndex];
   _require = undefined;
   [tmp31, tmp32] = items1;
   class BadgeUnlockAnimationTsx3 {
@@ -380,17 +372,17 @@ export default function BadgeUnlockAnimation(badge) {
     BadgeUnlockAnimationTsx3,
     BadgeUnlockAnimationTsx4,
   );
-  closure_16 = tmp29;
+  closure_18 = tmp29;
   ref = noop.useRef(null);
   const tmp2Result14 = require("../../../../_runtime/metro/01652__.js");
   FALLBACK_BADGE_COLOR = require("useBadgeColor").useBadgeColor(badgeUnlockArt.rasterUrl);
   if (FALLBACK_BADGE_COLOR == null) {
-    FALLBACK_BADGE_COLOR = tmp2(11640).FALLBACK_BADGE_COLOR;
+    FALLBACK_BADGE_COLOR = tmp2(11622).FALLBACK_BADGE_COLOR;
   }
   const items5 = [FALLBACK_BADGE_COLOR];
   const memo = noop.useMemo(() => ({ fill: FALLBACK_BADGE_COLOR }), items5);
   const tmp2Result15 = require("useBadgeColor");
-  [tmp40, c19] = noop.useState(false);
+  [tmp40, c21] = previousTierKey(noop.useState(false), 2);
   const items6 = [stateFromStores];
   const effect = noop.useEffect(() => {
     if (!stateFromStores) {
@@ -400,8 +392,8 @@ export default function BadgeUnlockAnimation(badge) {
       }
     }
   }, items6);
-  closure_20 = noop.useCallback(() => {
-    _undefined2(true);
+  closure_22 = noop.useCallback(() => {
+    _undefined3(true);
     const current = ref.current;
     if (current != null) {
       current.play();
@@ -409,28 +401,37 @@ export default function BadgeUnlockAnimation(badge) {
   }, []);
   const items7 = [tmp29];
   const effect1 = noop.useEffect(() => {
-    if (closure_16) {
+    if (closure_18) {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(BadgeUtils.getBadgeUnlockLabel(c0, c1), "polite");
+      AccessibilityAnnouncer.announce(BadgeUtils.getBadgeUnlockLabel(badge, previousTierKey), "polite");
+      const obj2 = {
+        actionName: "badge_unlock_viewed",
+        badge,
+        displayedUserId,
+        isSociallyNavigated: false,
+        source,
+        surface: "badge_details",
+      };
+      trackBadgeDirectoryActionDefault(obj2);
       if (stateFromStores) {
         const result = sharedValue3.set(1);
         const result1 = sharedValue4.set(0);
-        const obj2 = { duration, easing };
-        const result2 = dependencyMap.set(timing_timing.withTiming(1, obj2, "animate-always"));
-        const result3 = _slicedToArray.set(1);
+        const obj3 = { duration, easing };
+        const result2 = noop.set(timing_timing.withTiming(1, obj3, "animate-always"));
+        const result3 = View.set(1);
         const tmpResult = timing_timing;
       } else {
         const tmpResult25 = _mod1652;
         const Never = _mod1652.ReduceMotion.Never;
         const tmpResult24 = _mod1652;
-        const obj3 = { duration: num, easing };
-        const withTimingResult = timing_timing.withTiming(1.1, obj3, "animate-always");
+        const obj4 = { duration: num, easing };
+        const withTimingResult = timing_timing.withTiming(1.1, obj4, "animate-always");
         const tmpResult27 = timing_timing;
-        const obj4 = { duration: duration2, easing };
-        items = [closure_23, _mod1705.scheduleOnRN, closure_20];
-        c0 = undefined;
-        c1 = undefined;
-        [tmp16, tmp17, tmp18] = items;
+        const obj5 = { duration: duration2, easing };
+        items = [closure_23, _mod1705.scheduleOnRN, closure_22];
+        badge = undefined;
+        displayedUserId = undefined;
+        [tmp20, tmp21, tmp22] = items;
         class BadgeUnlockAnimationTsx5 {
           constructor(arg0) {
             if (true === arg0) {
@@ -441,16 +442,16 @@ export default function BadgeUnlockAnimation(badge) {
             return;
           }
         }
-        const items1 = [tmp17, tmp18];
+        const items1 = [tmp21, tmp22];
         BadgeUnlockAnimationTsx5.__closure = items1;
         BadgeUnlockAnimationTsx5.__workletHash = 11528024484669;
-        BadgeUnlockAnimationTsx5.__initData = tmp16;
-        const withTimingResult1 = tmpResult27.withTiming(1.15, obj4, "animate-always", BadgeUnlockAnimationTsx5);
+        BadgeUnlockAnimationTsx5.__initData = tmp20;
+        const withTimingResult1 = tmpResult27.withTiming(1.15, obj5, "animate-always", BadgeUnlockAnimationTsx5);
         const tmpResult26 = timing_timing;
-        const obj5 = { duration: 150, easing };
+        const obj6 = { duration: 150, easing };
         const tmpResult28 = timing_timing;
-        const withTimingResult2 = timing_timing.withTiming(0.75, obj5, "animate-always");
-        const obj6 = { duration: 350, easing };
+        const withTimingResult2 = timing_timing.withTiming(0.75, obj6, "animate-always");
+        const obj7 = { duration: 350, easing };
         const tmpResult29 = timing_timing;
         const result4 = sharedValue.set(
           tmpResult24.withDelay(
@@ -460,56 +461,56 @@ export default function BadgeUnlockAnimation(badge) {
               withTimingResult,
               withTimingResult1,
               withTimingResult2,
-              timing_timing.withTiming(1, obj6, "animate-always"),
+              timing_timing.withTiming(1, obj7, "animate-always"),
             ),
             _mod1652.ReduceMotion.Never,
           ),
         );
-        if (closure_6) {
+        if (closure_8) {
           const tmpResult30 = _mod1652;
-          const obj7 = { duration: 750, easing: easing4 };
+          const obj8 = { duration: 750, easing: easing4 };
           const tmpResult31 = timing_timing;
           const result5 = sharedValue2.set(
             tmpResult30.withDelay(
               c16,
-              timing_timing.withTiming(1, obj7, "animate-always"),
+              timing_timing.withTiming(1, obj8, "animate-always"),
               _mod1652.ReduceMotion.Never,
             ),
           );
-          const withTimingResult3 = timing_timing.withTiming(1, obj7, "animate-always");
+          const withTimingResult3 = timing_timing.withTiming(1, obj8, "animate-always");
           const tmpResult32 = _mod1652;
-          const obj8 = { duration: 250, easing: easing2 };
+          const obj9 = { duration: 250, easing: easing2 };
           const tmpResult33 = timing_timing;
           const result6 = sharedValue1.set(
             tmpResult32.withDelay(
-              c16 + tmp9,
-              timing_timing.withTiming(0, obj8, "animate-always"),
+              c16 + tmp13,
+              timing_timing.withTiming(0, obj9, "animate-always"),
               _mod1652.ReduceMotion.Never,
             ),
           );
-          const withTimingResult4 = timing_timing.withTiming(0, obj8, "animate-always");
+          const withTimingResult4 = timing_timing.withTiming(0, obj9, "animate-always");
         }
         const withSequenceResult = tmpResult25.withSequence(
           Never,
           withTimingResult,
           withTimingResult1,
           withTimingResult2,
-          timing_timing.withTiming(1, obj6, "animate-always"),
+          timing_timing.withTiming(1, obj7, "animate-always"),
         );
         const tmpResult34 = _mod1652;
-        const obj9 = { duration: 500, easing: easing3 };
+        const obj10 = { duration: 500, easing: easing3 };
         const tmpResult35 = timing_timing;
-        const sum = c16 + tmp9;
+        const sum = c16 + tmp13;
         const result7 = sharedValue3.set(
-          tmpResult34.withDelay(sum, timing_timing.withTiming(1, obj9, "animate-always"), _mod1652.ReduceMotion.Never),
+          tmpResult34.withDelay(sum, timing_timing.withTiming(1, obj10, "animate-always"), _mod1652.ReduceMotion.Never),
         );
-        const withTimingResult5 = timing_timing.withTiming(1, obj9, "animate-always");
+        const withTimingResult5 = timing_timing.withTiming(1, obj10, "animate-always");
         const tmpResult37 = timing_timing;
-        const obj10 = { duration: 400, easing: easing4 };
-        const items2 = [closure_24, _mod1705.scheduleOnRN, c13];
-        c0 = undefined;
-        c1 = undefined;
-        [tmp49, tmp50, tmp51] = items2;
+        const obj11 = { duration: 400, easing: easing4 };
+        const items2 = [closure_24, _mod1705.scheduleOnRN, duration2];
+        badge = undefined;
+        displayedUserId = undefined;
+        [tmp53, tmp54, tmp55] = items2;
         class BadgeUnlockAnimationTsx6 {
           constructor(arg0) {
             if (true === arg0) {
@@ -520,72 +521,72 @@ export default function BadgeUnlockAnimation(badge) {
             return;
           }
         }
-        const items3 = [tmp50, tmp51];
+        const items3 = [tmp54, tmp55];
         BadgeUnlockAnimationTsx6.__closure = items3;
         BadgeUnlockAnimationTsx6.__workletHash = 5104272508772;
-        BadgeUnlockAnimationTsx6.__initData = tmp49;
+        BadgeUnlockAnimationTsx6.__initData = tmp53;
         const sum1 = sum + 750;
         const tmpResult36 = _mod1652;
         const result8 = sharedValue4.set(
           tmpResult36.withDelay(
             sum1,
-            tmpResult37.withTiming(0, obj10, "animate-always", BadgeUnlockAnimationTsx6),
+            tmpResult37.withTiming(0, obj11, "animate-always", BadgeUnlockAnimationTsx6),
             _mod1652.ReduceMotion.Never,
           ),
         );
-        const withTimingResult6 = tmpResult37.withTiming(0, obj10, "animate-always", BadgeUnlockAnimationTsx6);
+        const withTimingResult6 = tmpResult37.withTiming(0, obj11, "animate-always", BadgeUnlockAnimationTsx6);
         const tmpResult38 = _mod1652;
-        const obj11 = { duration, easing };
+        const obj12 = { duration, easing };
         const tmpResult39 = timing_timing;
         const sum2 = sum + duration2;
-        const result9 = dependencyMap.set(
+        const result9 = noop.set(
           tmpResult38.withDelay(
             sum2,
-            timing_timing.withTiming(1, obj11, "animate-always"),
+            timing_timing.withTiming(1, obj12, "animate-always"),
             _mod1652.ReduceMotion.Never,
           ),
         );
-        const withTimingResult7 = timing_timing.withTiming(1, obj11, "animate-always");
+        const withTimingResult7 = timing_timing.withTiming(1, obj12, "animate-always");
         const tmpResult40 = _mod1652;
         const tmpResult41 = _mod1652;
-        const obj12 = { duration, easing };
+        const obj13 = { duration, easing };
         const tmpResult42 = timing_timing;
-        const withTimingResult8 = timing_timing.withTiming(1, obj12, "animate-always");
+        const withTimingResult8 = timing_timing.withTiming(1, obj13, "animate-always");
         const withDelayResult = tmpResult41.withDelay(
           c16,
-          timing_timing.withTiming(1, obj12, "animate-always"),
+          timing_timing.withTiming(1, obj13, "animate-always"),
           _mod1652.ReduceMotion.Never,
         );
         const tmpResult43 = _mod1652;
-        const obj13 = { duration, easing };
+        const obj14 = { duration, easing };
         const tmpResult44 = timing_timing;
-        const result10 = noop.set(
+        const result10 = AccessibilityStore.set(
           tmpResult40.withSequence(
             _mod1652.ReduceMotion.Never,
             withDelayResult,
             tmpResult43.withDelay(
-              tmp9 + duration2 - 500,
-              timing_timing.withTiming(0, obj13, "animate-always"),
+              tmp13 + duration2 - 500,
+              timing_timing.withTiming(0, obj14, "animate-always"),
               _mod1652.ReduceMotion.Never,
             ),
           ),
         );
-        const withTimingResult9 = timing_timing.withTiming(0, obj13, "animate-always");
+        const withTimingResult9 = timing_timing.withTiming(0, obj14, "animate-always");
         const tmpResult45 = _mod1652;
-        const obj14 = { duration, easing: easing5 };
+        const obj15 = { duration, easing: easing5 };
         const tmpResult46 = timing_timing;
-        const result11 = _slicedToArray.set(
+        const result11 = View.set(
           tmpResult45.withDelay(
             sum2,
-            timing_timing.withTiming(1, obj14, "animate-always"),
+            timing_timing.withTiming(1, obj15, "animate-always"),
             _mod1652.ReduceMotion.Never,
           ),
         );
-        const withTimingResult10 = timing_timing.withTiming(1, obj14, "animate-always");
+        const withTimingResult10 = timing_timing.withTiming(1, obj15, "animate-always");
       }
     }
   }, items7);
-  const tmp15Result2 = _slicedToArray(noop.useState(false), 2);
+  const tmp15Result2 = previousTierKey(noop.useState(false), 2);
   const items8 = [closure_25, sharedValue];
   _require = undefined;
   [tmp43, tmp44] = items8;
@@ -654,8 +655,8 @@ export default function BadgeUnlockAnimation(badge) {
     items14[1] = pulseHidden;
     obj7.style = items14;
     let obj8 = { ref, artboard: "Mobile", dataBinding: memo };
-    obj7.children = num(tmp2(5291).BadgeUnlockPulseRive, obj8);
-    tmp55Result = tmp55(tmp53, obj7);
+    obj7.children = stateFromStores(tmp2(5261).BadgeUnlockPulseRive, obj8);
+    tmp55Result = tmp55(View, obj7);
   }
   const items15 = [tmp55Result];
   let obj9 = { style: null, children: null };
@@ -688,7 +689,7 @@ export default function BadgeUnlockAnimation(badge) {
     obj12.hasFill = tmp59;
     obj12.isShown = tmp23;
     obj12.onLoad = callback;
-    obj10.children = num(closure_20, obj12);
+    obj10.children = stateFromStores(FALLBACK_BADGE_COLOR, obj12);
     tmp56Result = tmp56(tmp24(1652).View, obj10);
   }
   const items18 = [tmp56Result];
@@ -716,10 +717,10 @@ export default function BadgeUnlockAnimation(badge) {
   obj14.hasFill = tmp63;
   obj14.isShown = tmp19 >= num2 || tmp22;
   obj14.onLoad = callback;
-  obj13.children = num(closure_20, obj14);
-  items18[1] = num(_modDef1652.View, obj13);
+  obj13.children = stateFromStores(FALLBACK_BADGE_COLOR, obj14);
+  items18[1] = stateFromStores(_modDef1652.View, obj13);
   obj9.children = items18;
-  items15[1] = sharedValue(_modDef1652.View, obj9);
+  items15[1] = closure_8(_modDef1652.View, obj9);
   obj6.children = items15;
-  return sharedValue(stateFromStores, obj6);
+  return closure_8(View, obj6);
 }

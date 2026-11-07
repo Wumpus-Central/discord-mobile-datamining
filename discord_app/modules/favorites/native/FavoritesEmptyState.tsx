@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/native/FavoritesEmptyState.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3606 from "../intl/FavoritesGuild.messages.js";
+import _modDef3608 from "../intl/FavoritesGuild.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: {
     flex: 1,
@@ -44,17 +44,17 @@ export default function FavoritesEmptyState() {
     children: null,
   };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef3606["wh+Rz1"]);
+  obj3.children = intl.string(_modDef3608["wh+Rz1"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj3)];
   const obj4 = { variant: "body-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3606["+SuGKb"]);
+  obj4.children = intl2.string(_modDef3608["+SuGKb"]);
   items1[1] = hasOwnProperty(Text_Text.Text, obj4);
   obj2.children = items1;
   items[1] = timestampProducer(Stack_Stack.Stack, obj2);
   const obj5 = { variant: "primary", text: null, icon: null, onPress: null };
   const intl3 = util.intl;
-  obj5.text = intl3.string(_modDef3606["6kk0gM"]);
+  obj5.text = intl3.string(_modDef3608["6kk0gM"]);
   obj5.icon = hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {});
   obj5.onPress = callback;
   items[2] = hasOwnProperty(components_Button_Button.Button, obj5);

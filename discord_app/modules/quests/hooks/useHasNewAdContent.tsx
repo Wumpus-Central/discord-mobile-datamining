@@ -42,10 +42,10 @@ export default function useHasNewAdContent() {
   const obj2 = stateFromStoresArray(504);
   let prop = null;
   if (stateFromStores) {
-    prop = tmp(5003).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
+    prop = tmp(4973).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
   const tmp6 = _slicedToArray(
-    stateFromStoresArray(7664).useSelectedTimeRecurringDismissibleContent(
+    stateFromStoresArray(7641).useSelectedTimeRecurringDismissibleContent(
       prop,
       { cooldownDurationMs: DAY },
       undefined,

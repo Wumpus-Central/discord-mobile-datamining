@@ -104,7 +104,7 @@ function TypingIndicatorInner(channel) {
     }
   }, items3);
   const tmpResult = require("initialize");
-  analyticsLocations = useAnalyticsLocationsDefault(tmp5(7435).CHAT_TYPING_INDICATOR).analyticsLocations;
+  analyticsLocations = useAnalyticsLocationsDefault(tmp5(7412).CHAT_TYPING_INDICATOR).analyticsLocations;
   const items4 = [stateFromStoresObject, style_owner_user_id, , ,];
   ({ id: arr5[2], type: arr5[3] } = channel);
   items4[4] = analyticsLocations;
@@ -248,8 +248,8 @@ function TypingIndicatorInner(channel) {
       tmp39 = callback;
     }
     obj7.onPress = tmp39;
-    let tmp33Result = closure_12(tmp5(13952), obj7);
-    const tmp5Result2 = tmp5(13952);
+    let tmp33Result = closure_12(tmp5(13977), obj7);
+    const tmp5Result2 = tmp5(13977);
   } else {
     let tmp32Result3 = null;
     if (null != tmp6Result) {
@@ -267,7 +267,7 @@ function TypingIndicatorInner(channel) {
       ellipsizeMode: "tail",
       children: tmp6Result,
     };
-    items14[1] = closure_12(tmp(5781).Text, obj9);
+    items14[1] = closure_12(tmp(5751).Text, obj9);
     obj8.children = items14;
     tmp33Result = closure_14(closure_13, obj8);
   }
@@ -276,7 +276,7 @@ function TypingIndicatorInner(channel) {
   let tmp32Result4 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj10 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
-    tmp32Result4 = closure_12(tmp5(13956), obj10);
+    tmp32Result4 = closure_12(tmp5(13981), obj10);
   }
   items15[1] = tmp32Result4;
   obj5.children = items15;
@@ -291,12 +291,12 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return application_id(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(10033).useChatShowingAutoComplete;
-const SlowmodeType = fn(7929).SlowmodeType;
+let closure_5 = fn(10017).useChatShowingAutoComplete;
+const SlowmodeType = fn(7906).SlowmodeType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = {
     typingWrapper: {

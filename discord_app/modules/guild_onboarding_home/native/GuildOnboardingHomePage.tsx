@@ -20,7 +20,7 @@ function GuildOnboardingHomePage(guildId) {
     GuildOnboardingHomeSettingsStore.getSettings(guildId),
   );
   let tmp4 = stateFromStores;
-  const tmp5 = stateFromStores(7487)(guildId);
+  const tmp5 = stateFromStores(7464)(guildId);
   let tmp6 = !tmp5;
   if (!tmp5) {
     let num;
@@ -85,14 +85,14 @@ function GuildOnboardingHomePage(guildId) {
   } else {
     let obj3 = { guildId, scrollValue: sharedValue, children: null };
     const obj4 = { guildId, hideDescription: tmp5 };
-    const items3 = [closure_9(tmp4(18927), obj4)];
+    const items3 = [closure_9(tmp4(18977), obj4)];
     if (tmp5) {
       let obj5 = { children: null };
       const obj6 = { guildId };
-      const items4 = [closure_9(tmp4(18931), obj6), ,];
+      const items4 = [closure_9(tmp4(18981), obj6), ,];
       const obj7 = { guildId };
-      items4[1] = closure_9(tmp4(18935), obj7);
-      tmp4 = tmp4(18936);
+      items4[1] = closure_9(tmp4(18985), obj7);
+      tmp4 = tmp4(18986);
       const obj8 = { guildId };
       tmp = closure_9(tmp4, obj8);
       items4[2] = tmp;
@@ -100,16 +100,16 @@ function GuildOnboardingHomePage(guildId) {
       let tmp12Result = closure_11(closure_10, obj5);
     } else {
       const obj9 = { guildId };
-      tmp12Result = closure_9(tmp4(18939), obj9);
+      tmp12Result = closure_9(tmp4(18989), obj9);
     }
     items3[1] = tmp12Result;
     obj3.children = items3;
-    closure_11(tmp4(18926), obj3);
-    const tmp4Result = tmp4(18926);
+    closure_11(tmp4(18976), obj3);
+    const tmp4Result = tmp4(18976);
   }
   let obj2 = guildId(504);
 }
-const NO_SETTINGS = fn(7485).NO_SETTINGS;
+const NO_SETTINGS = fn(7462).NO_SETTINGS;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);

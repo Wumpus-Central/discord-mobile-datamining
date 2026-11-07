@@ -2,6 +2,7 @@
 import DurationsDefault from "../../../utils/Durations.tsx";
 import ProtoUtils from "../../../utils/ProtoUtils.tsx";
 import MurmurHashV3Default from "../../../../_runtime/01251_MurmurHashV3.js";
+import MarketingSurfaceTypeUtils from "MarketingSurfaceTypeUtils.tsx";
 import premium_marketing_component_properties from "../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx";
 import constants from "constants.tsx";
 import Record from "../../../lib/Record.tsx";
@@ -52,20 +53,21 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
   if (endDate == null) {
     endDate = null;
   }
-  ({ id, component_type } = start_date);
-  const obj = ProtoUtils;
-  const b64ToProtoResult = obj.b64ToProto(
+  const id = start_date.id;
+  const result = MarketingSurfaceTypeUtils.classifyMarketingSurfaceType(start_date.component_type);
+  const obj2 = ProtoUtils;
+  const b64ToProtoResult = obj2.b64ToProto(
     premium_marketing_component_properties.PremiumMarketingComponentProperties,
     start_date.properties,
   );
   const promotion_id = start_date.promotion_id;
-  let tmp17 = date;
+  let tmp18 = date;
   if (date == null) {
-    tmp17 = startDate;
+    tmp18 = startDate;
   }
-  let tmp18 = date1;
+  let tmp19 = date1;
   if (date1 == null) {
-    tmp18 = endDate;
+    tmp19 = endDate;
   }
   let priority;
   if (startDate != null) {
@@ -75,37 +77,53 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     priority = constants.FALLBACK_PROMOTION_PRIORITY;
   }
   if (typeof MarketingComponentRecord === "function") {
-    const tmp23 = new MarketingComponentRecord(
+    const tmp24 = new MarketingComponentRecord(
       tmp4,
       tmp,
-      obj,
+      obj2,
       startDate,
       require,
       MarketingComponentRecord,
       new.target,
       id,
-      component_type,
+      result,
       b64ToProtoResult,
       promotion_id,
       date,
       date1,
-      tmp17,
+      tmp18,
     );
-    tmp23.id = id;
-    tmp23.componentType = component_type;
-    tmp23.properties = b64ToProtoResult;
-    tmp23.promotionId = promotion_id;
-    tmp23.startDate = date;
-    tmp23.endDate = date1;
-    tmp23.effectiveStartDate = tmp17;
-    tmp23.effectiveEndDate = tmp18;
-    tmp23.promotionEndDate = endDate;
-    tmp23.promotionPriority = priority;
-    return tmp23;
+    tmp24.id = id;
+    tmp24.componentType = result;
+    tmp24.properties = b64ToProtoResult;
+    tmp24.promotionId = promotion_id;
+    tmp24.startDate = date;
+    tmp24.endDate = date1;
+    tmp24.effectiveStartDate = tmp18;
+    tmp24.effectiveEndDate = tmp19;
+    tmp24.promotionEndDate = endDate;
+    tmp24.promotionPriority = priority;
+    return tmp24;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
 };
+Object.defineProperty(prototype, "surface", {
+  get: function surface() {
+    const properties = this.properties.properties;
+    const oneofKind = properties.oneofKind;
+    let tmp = null;
+    if (null != oneofKind) {
+      let tmp2 = properties[oneofKind];
+      if (tmp2 == null) {
+        tmp2 = null;
+      }
+      tmp = tmp2;
+    }
+    return tmp;
+  },
+  set: undefined,
+});
 prototype["getFormatVariableValues"] = function getFormatVariableValues(currentLocale) {
   const self = this;
   if (null == this.promotionEndDate) {

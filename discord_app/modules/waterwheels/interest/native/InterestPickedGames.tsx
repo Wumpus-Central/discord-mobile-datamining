@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_8 },
   icon: null,

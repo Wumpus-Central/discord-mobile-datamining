@@ -370,7 +370,7 @@ function MediaViewer(arg0) {
       windowHeight: height,
       zoomed,
     };
-    tmp63Result = tmp63(tmp(15010), obj15);
+    tmp63Result = tmp63(tmp(15042), obj15);
   }
   obj14.children = tmp63Result;
   items15[2] = callback(_modDef1652.View, obj14);

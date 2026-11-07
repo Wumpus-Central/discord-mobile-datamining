@@ -50,8 +50,8 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           items = [];
         } else {
-          items = guild(11032).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(11032);
+          items = guild(11016).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(11016);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -60,8 +60,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(11032).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(11032);
+          canRemoveConjureBotResult = guild(11016).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(11016);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -69,8 +69,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(11032).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(11032);
+          canRemoveConjureBotResult = guild(11016).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(11016);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;
@@ -214,7 +214,7 @@ let closure_21 = async function _loadMissingApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -246,14 +246,14 @@ let closure_21 = async function _loadMissingApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
     }
   }
 };
-let closure_7 = fn(5100).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(5070).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);

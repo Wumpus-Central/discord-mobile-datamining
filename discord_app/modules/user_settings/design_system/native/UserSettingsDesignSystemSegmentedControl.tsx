@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { margin: 16, flex: 1, alignItems: "center", padding: 40 },
   item: {
@@ -68,17 +68,17 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     return items;
   }, items);
   const tmp5 = closure_9();
-  const segmentedControlState = first(9077).useSegmentedControlState({ items: memo, pageWidth: num, defaultIndex: 1 });
+  const segmentedControlState = first(9059).useSegmentedControlState({ items: memo, pageWidth: num, defaultIndex: 1 });
   let obj2 = { children: null };
   let obj3 = { style: tmp5.container, ref, onLayout, children: null };
   const obj4 = { spacing: 24, children: null };
   let items1 = [
-    closure_8(first(9312).SegmentedControl, { state: segmentedControlState }),
-    closure_8(first(14401).SegmentedControlPages, { state: segmentedControlState }),
+    closure_8(first(9294).SegmentedControl, { state: segmentedControlState }),
+    closure_8(first(14435).SegmentedControlPages, { state: segmentedControlState }),
   ];
   const obj5 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [
-    closure_8(first(5788).Button, {
+    closure_8(first(5758).Button, {
       text: "Add Tab",
       variant: "active",
       size: "sm",
@@ -90,7 +90,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         AccessibilityAnnouncer.announce("Tab added, " + sum + " tabs", "polite");
       },
     }),
-    closure_8(first(5788).Button, {
+    closure_8(first(5758).Button, {
       text: "Remove Tab",
       variant: "destructive",
       size: "sm",
@@ -104,9 +104,9 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     }),
   ];
   obj5.children = items2;
-  items1[2] = closure_7(first(6185).Stack, obj5);
+  items1[2] = closure_7(first(6159).Stack, obj5);
   obj4.children = items1;
-  obj3.children = closure_7(first(6185).Stack, obj4);
+  obj3.children = closure_7(first(6159).Stack, obj4);
   obj2.children = closure_8(closure_5, obj3);
   return closure_8(closure_6, obj2);
 }

@@ -12,7 +12,7 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
     asset = asset.asset;
   }
   themeAndReducedMotionAwareAssetUrl =
-    themeAndReducedMotionAwareAssetUrl(10759).useThemeAndReducedMotionAwareAssetUrl(asset);
+    themeAndReducedMotionAwareAssetUrl(10742).useThemeAndReducedMotionAwareAssetUrl(asset);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp6[1];
   items = [themeAndReducedMotionAwareAssetUrl];
@@ -46,10 +46,10 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
   if (asset2 != null) {
     asset1 = asset2.asset;
   }
-  let obj = themeAndReducedMotionAwareAssetUrl(10759);
+  let obj = themeAndReducedMotionAwareAssetUrl(10742);
   const tmp8 = null == themeAndReducedMotionAwareAssetUrl || tmp6[0] === themeAndReducedMotionAwareAssetUrl;
   const themeAndReducedMotionAwareAssetUrl1 =
-    themeAndReducedMotionAwareAssetUrl(10759).useThemeAndReducedMotionAwareAssetUrl(asset1);
+    themeAndReducedMotionAwareAssetUrl(10742).useThemeAndReducedMotionAwareAssetUrl(asset1);
   closure_129_0 = themeAndReducedMotionAwareAssetUrl1;
   const tmp5Result = _slicedToArray(noop.useState(null), 2);
   closure_129_1 = tmp5Result[1];

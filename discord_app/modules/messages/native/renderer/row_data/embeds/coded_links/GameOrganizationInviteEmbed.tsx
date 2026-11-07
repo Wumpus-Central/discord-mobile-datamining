@@ -3,8 +3,11 @@ import nativeDefault from "../../../../../../../../discord_common/js/packages/to
 import util from "../../../../../../../intl/index.native.tsx";
 import _modDef2530 from "../../../../../../game_organization_invites/GameOrganizationInvitesUntranslated.messages.js";
 import ColorUtils from "../../../../../../../utils/ColorUtils.tsx";
+import _modDef7313 from "../../../../../../../../_runtime/metro/07313__.js";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import renderer_EmbedUtils from "../../../EmbedUtils.tsx";
+import _modDef8680 from "../../../../../../../../_runtime/metro/08680__.js";
 import canGoToGameOrganizationGuildDefault from "../../../../../../game_organization_invites/canGoToGameOrganizationGuild.tsx";
 import getGameOrganizationDisplayNounDefault from "../../../../../../game_organization_invites/getGameOrganizationDisplayNoun.tsx";
 import getGameOrganizationInviteCtaStateDefault from "../../../../../../game_organization_invites/getGameOrganizationInviteCtaState.tsx";
@@ -12,15 +15,15 @@ import GameOrganizationInviteStore from "../../../../../../game_organization_inv
 import GuildStore from "../../../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(10255).CodedLinkExtendedType;
-const constants = fn(11522).GameOrganizationInviteStates;
-const InviteTypes = fn(7978).InviteTypes;
+const CodedLinkExtendedType = fn(10238).CodedLinkExtendedType;
+const constants = fn(11504).GameOrganizationInviteStates;
+const InviteTypes = fn(7956).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx",
 );
 
-export function createGameOrganizationInviteEmbed(code, theme, id) {
+export function createGameOrganizationInviteEmbed(code, theme, id1) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(theme));
   const invite = GameOrganizationInviteStore.getInvite(code);
   if (null == invite) {
@@ -30,13 +33,13 @@ export function createGameOrganizationInviteEmbed(code, theme, id) {
     const merged = Object.assign(baseColors);
     obj2.extendedType = CodedLinkExtendedType.GAME_ORGANIZATION_INVITE;
     obj2.type = InviteTypes.GUILD;
-    ({ titleColor: obj13.titleColor, bodyTextColor: obj13.bodyTextColor } = colors);
+    ({ titleColor: obj15.titleColor, bodyTextColor: obj15.bodyTextColor } = colors);
     if (invite.state === constants.RESOLVING) {
       const obj4 = {};
       const merged1 = Object.assign(obj2);
       const intl6 = util.intl;
       obj4.headerText = intl6.string(util.t["N/g9Z4"]).toUpperCase();
-      ({ resolvingGradientStart: obj12.resolvingGradientStart, resolvingGradientEnd: obj12.resolvingGradientEnd } =
+      ({ resolvingGradientStart: obj14.resolvingGradientStart, resolvingGradientEnd: obj14.resolvingGradientEnd } =
         colors);
       obj4.embedCanBeTapped = false;
       obj4.canBeAccepted = false;
@@ -57,6 +60,7 @@ export function createGameOrganizationInviteEmbed(code, theme, id) {
         internal3.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL),
       );
       obj5.showInvalidIcon = true;
+      obj5.invalidIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7313);
       obj5.embedCanBeTapped = false;
       obj5.canBeAccepted = false;
       return obj5;
@@ -67,13 +71,13 @@ export function createGameOrganizationInviteEmbed(code, theme, id) {
       ({ memberCount, maxMembers } = organization);
       const obj9 = {
         accepted,
-        isInviter: id === inviterId,
+        isInviter: id1 === inviterId,
         canGoToGuild: null,
         noun: null,
         isGameOrganizationFull: null,
       };
       const tmpResult = getGameOrganizationInviteCtaStateDefault;
-      obj9.canGoToGuild = canGoToGameOrganizationGuildDefault(invite, id, null != GuildStore.getGuild(invite.guildId));
+      obj9.canGoToGuild = canGoToGameOrganizationGuildDefault(invite, id1, null != GuildStore.getGuild(invite.guildId));
       obj9.noun = tmp31;
       let tmp10 = tmp5;
       if (null != memberCount && null != maxMembers) {
@@ -84,8 +88,8 @@ export function createGameOrganizationInviteEmbed(code, theme, id) {
       const obj10 = {};
       const merged3 = Object.assign(obj2);
       const intl = util.intl;
-      const obj14 = { noun: tmp31 };
-      obj10.headerText = intl.formatToPlainString(_modDef2530["jKi+kc"], obj14);
+      const obj11 = { noun: tmp31 };
+      obj10.headerText = intl.formatToPlainString(_modDef2530["jKi+kc"], obj11);
       ({ name: obj3.titleText, iconUrl } = organization);
       obj10.thumbnailUrl = iconUrl;
       obj10.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -94,20 +98,22 @@ export function createGameOrganizationInviteEmbed(code, theme, id) {
       let formatToPlainStringResult;
       if (null != memberCount && null != maxMembers) {
         const intl2 = util.intl;
-        const obj24 = { count: memberCount, max: maxMembers };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef2530.VuENGl, obj24);
+        const obj16 = { count: memberCount, max: maxMembers };
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef2530.VuENGl, obj16);
       }
       obj10.memberCountText = formatToPlainStringResult;
+      const tmpResultResult = tmpResult(obj9);
+      obj10.memberCountIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8680);
       const description = organization.description;
       obj10.bodyText = description;
-      const tmpResultResult = tmpResult(obj9);
+      const tmp15Result = renderer_EmbedUtils;
       const internal = nativeDefault.internal;
       items = [
         ColorUtils.hexToRgba(
           internal.resolveSemanticColor(theme, nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_START),
         ),
       ];
-      const tmp15Result = ColorUtils;
+      const tmp15Result3 = ColorUtils;
       const internal2 = nativeDefault.internal;
       items[1] = ColorUtils.hexToRgba(
         internal2.resolveSemanticColor(theme, nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_END),

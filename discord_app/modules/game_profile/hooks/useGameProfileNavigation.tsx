@@ -6,9 +6,9 @@ const require = globalThis.__r;
 
 const require = fn;
 let obj = {};
-obj[fn(9464).GameProfileNavTab.OVERVIEW] = fn(9439).GameProfileTrackActionActions.Overview;
-obj[fn(9464).GameProfileNavTab.COMMUNITIES] = fn(9439).GameProfileTrackActionActions.Communities;
-obj[fn(9464).GameProfileNavTab.COMMERCE] = fn(9439).GameProfileTrackActionActions.GameShop;
+obj[fn(9446).GameProfileNavTab.OVERVIEW] = fn(9421).GameProfileTrackActionActions.Overview;
+obj[fn(9446).GameProfileNavTab.COMMUNITIES] = fn(9421).GameProfileTrackActionActions.Communities;
+obj[fn(9446).GameProfileNavTab.COMMERCE] = fn(9421).GameProfileTrackActionActions.GameShop;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileNavigation.tsx");
 

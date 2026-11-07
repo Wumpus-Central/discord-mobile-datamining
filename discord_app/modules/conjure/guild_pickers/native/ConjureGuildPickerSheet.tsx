@@ -12,9 +12,9 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {
-  channel: fn(6231).SelectOptionType.CHANNEL,
-  role: fn(6231).SelectOptionType.ROLE,
-  user: fn(6231).SelectOptionType.USER,
+  channel: fn(6206).SelectOptionType.CHANNEL,
+  role: fn(6206).SelectOptionType.ROLE,
+  user: fn(6206).SelectOptionType.USER,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/guild_pickers/native/ConjureGuildPickerSheet.tsx");

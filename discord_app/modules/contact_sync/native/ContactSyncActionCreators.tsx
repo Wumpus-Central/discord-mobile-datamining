@@ -15,7 +15,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -39,7 +39,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
           closure_131_0 = phone;
           const email = closure_0.email;
           closure_131_1 = email;
-          const FriendDiscoverySettings2 = React(4995).FriendDiscoverySettings;
+          const FriendDiscoverySettings2 = React(4965).FriendDiscoverySettings;
           const setting = FriendDiscoverySettings2.getSetting();
           closure_131_2 = setting;
           localAccount = localAccount.getLocalAccount(constants2.CONTACTS);
@@ -58,7 +58,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
             setFlagResult1 = React(1403).setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
             const obj6 = React(1403);
           }
-          const FriendDiscoverySettings = React(4995).FriendDiscoverySettings;
+          const FriendDiscoverySettings = React(4965).FriendDiscoverySettings;
           c5 = 1;
           c6 = 1;
           const obj8 = { value: FriendDiscoverySettings.updateSetting(setFlagResult1), done: false };
@@ -96,7 +96,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
         );
         obj10.track(closure_132_5.USER_DISCOVERY_UPDATED, obj11);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp39) {
       c6 = tmp;
@@ -120,7 +120,7 @@ asyncGeneratorStep(async (name) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -162,7 +162,7 @@ asyncGeneratorStep(async (name) => {
             obj.num_chars = num4;
             tmp3(tmp2[5]).track(constants.NAME_SUBMITTED, obj);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
       } catch (tmp18) {
@@ -183,7 +183,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

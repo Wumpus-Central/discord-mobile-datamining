@@ -13,10 +13,10 @@ const ThemeTypes = fn(1083).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");
 
-export function useUserProfileColors(theme) {
-  ({ primaryColor, secondaryColor } = theme);
+export function useUserProfileColors(profileTheme) {
+  ({ primaryColor, secondaryColor } = profileTheme);
   const tmp2 = useThemeDefault();
-  const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);
+  const profileThemeValues = useProfileThemeValues.useProfileThemeValues(profileTheme.theme);
   items = [AccessibilityStore];
   const obj3 = {
     gradientFallbackBackground: null,

@@ -11,7 +11,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const RowType = fn(8038).RowType;
+const RowType = fn(8016).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
@@ -56,7 +56,7 @@ export default function ViewModerators(channel) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -73,16 +73,16 @@ export default function ViewModerators(channel) {
               if (obj11.isEmptyOverwrite(id)) {
                 c1 = 2;
                 c2 = 1;
-                const obj8 = { value: v1(7572).clearPermissionOverwrite(tmp2.id, id.id), done: false };
+                const obj8 = { value: v1(7549).clearPermissionOverwrite(tmp2.id, id.id), done: false };
                 return obj8;
               } else {
                 items = [id];
                 c1 = 1;
                 c2 = 1;
-                const obj9 = { value: tmp2(9130).savePermissionUpdates(tmp2.id, items), done: false };
+                const obj9 = { value: tmp2(9112).savePermissionUpdates(tmp2.id, items), done: false };
                 return obj9;
               }
-              obj11 = tmp2(6790);
+              obj11 = tmp2(6765);
             }
           } else {
             if (1 === tmp5) {
@@ -102,11 +102,11 @@ export default function ViewModerators(channel) {
               const obj = { value, done: true };
               return obj;
             }
-            const result = tmp2(5866).memberOrRoleRemovedToast(closure_128_0.name);
-            const obj2 = tmp2(5866);
-            v1(5404).hideActionSheet();
+            const result = tmp2(5836).memberOrRoleRemovedToast(closure_128_0.name);
+            const obj2 = tmp2(5836);
+            v1(5374).hideActionSheet();
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c2 = tmp;
@@ -204,8 +204,8 @@ export default function ViewModerators(channel) {
             const _HermesInternal = HermesInternal;
             const obj2 = ActionSheetActionCreatorsDefault;
             const obj3 = { channel, canSkip: false };
-            obj2.openLazy(asyncRequireImpl(19210, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
-            const tmp7 = asyncRequireImpl(19210, dependencyMap.paths);
+            obj2.openLazy(asyncRequireImpl(19269, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
+            const tmp7 = asyncRequireImpl(19269, dependencyMap.paths);
           }
         };
         obj9.disabled = !canUpdateStageChannelModerators;
@@ -262,7 +262,7 @@ export function openAddModeratorsActionSheet(channel) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(19210, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
+  obj2.openLazy(asyncRequireImpl(19269, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
     channel,
     canSkip: flag,
   });

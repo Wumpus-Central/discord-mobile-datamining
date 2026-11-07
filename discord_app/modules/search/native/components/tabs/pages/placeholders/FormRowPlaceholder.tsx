@@ -8,14 +8,14 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   itemContainer: {
     flexDirection: "row",
     paddingHorizontal: 16,
     overflow: "hidden",
     height: 64,
-    paddingVertical: fn(9933).SEARCH_ROW_TAP_STATE_PADDING,
+    paddingVertical: fn(9917).SEARCH_ROW_TAP_STATE_PADDING,
     alignItems: "center",
   },
   avatar: null,

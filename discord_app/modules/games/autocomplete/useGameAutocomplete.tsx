@@ -9,7 +9,7 @@ import GameAutocompleteStore from "GameAutocompleteStore.tsx";
 require = fn;
 const QueryIds = fn(1072).QueryIds;
 const initialize = fn(504);
-const fetchStore = initialize.createFetchStore(GameAutocompleteStore, {
+const obj2 = {
   getQueryId(name, arg1) {
     return QueryIds.GAME_AUTOCOMPLETE(GameAutocompleteUtils.normalizeGameAutocompleteQuery(name), arg1);
   },
@@ -20,33 +20,17 @@ const fetchStore = initialize.createFetchStore(GameAutocompleteStore, {
     }
     return results;
   },
-  load(arg0, arg1) {
-    return GameAutocompleteActionCreators.fetchGameAutocomplete(arg0, arg1);
+  load(query, DEFAULT) {
+    return GameAutocompleteActionCreators.fetchGameAutocomplete(query, DEFAULT);
   },
   getIsLoading(arg0, arg1) {
     return GameAutocompleteStore.isFetching(arg0, arg1);
   },
-  retryConfig: {
-    retryableErrors: function isRetryableError(status) {
-      status = status.status;
-      let tmp = null != status;
-      if (tmp) {
-        let tmp2 = 429 === status;
-        if (!tmp2) {
-          let tmp3 = status >= 500;
-          if (tmp3) {
-            tmp3 = 503 !== status;
-          }
-          tmp2 = tmp3;
-        }
-        tmp = tmp2;
-      }
-      return tmp;
-    },
-  },
+  retryConfig: { retryableErrors: fn(8752).isRetryableGameSearchError },
   staleAfter: 3600,
   failureStaleAfter: 60,
-});
+};
+const fetchStore = initialize.createFetchStore(GameAutocompleteStore, obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");
 

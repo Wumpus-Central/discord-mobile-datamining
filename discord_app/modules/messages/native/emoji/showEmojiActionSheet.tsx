@@ -6,7 +6,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/messages/native/emoji/showEmojiActionSheet.tsx");
 
 export default function showEmojiActionSheet(emojiNode) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10189, dependencyMap.paths), "MessageEmojiActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10172, dependencyMap.paths), "MessageEmojiActionSheet", {
     emojiNode,
   });
 }

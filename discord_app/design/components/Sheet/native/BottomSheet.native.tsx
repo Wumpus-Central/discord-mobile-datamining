@@ -6,9 +6,9 @@ import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDime
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import BottomSheetSnapPoints from "BottomSheetSnapPoints.tsx";
-import BottomSheetModal from "../../../../../_runtime/05422_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05392_BottomSheetModal.js";
 import NavigatorConstants from "../../Navigator/native/NavigatorConstants.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05745_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05715_LinearGradient.js";
 import ActionSheetHeaderBar from "ActionSheetHeaderBar.native.tsx";
 import Sheet_BottomSheetBackdrop from "BottomSheetBackdrop.native.tsx";
 import NavScrim from "../../Navigator/native/NavScrim.android.tsx";
@@ -54,7 +54,7 @@ function BorderGradientBackground(borderGradient) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, Platform } = get_ActivityIndicator);
-const ActionSheetConstants = fn(5419);
+const ActionSheetConstants = fn(5389);
 ({
   ACTION_SHEET_START_HEIGHT_RATIO: metroImportDefault,
   ACTION_SHEET_MAX_WIDTH: closure_8,
@@ -68,7 +68,7 @@ const ActionSheetConstants = fn(5419);
 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_18 = createStyles.createStyles((arg0) => {
   let num = arg1;
   if (arg1 === undefined) {
@@ -461,7 +461,7 @@ export function BottomSheet(scrollable) {
       ref: 0,
     }),
   );
-  const context = onExpand.useContext(right(5749));
+  const context = onExpand.useContext(right(5719));
   const transitionState = context.transitionState;
   const close = context.close;
   const onLeave = context.onLeave;
@@ -477,10 +477,10 @@ export function BottomSheet(scrollable) {
   const layoutEffect = obj.useLayoutEffect(() => {
     registerDismissHandler(onDismiss);
   }, items);
-  const tmp10 = onExpand.useContext(left(5184).AccessibilityPreferencesContext).reducedMotion.enabled
+  const tmp10 = onExpand.useContext(left(5154).AccessibilityPreferencesContext).reducedMotion.enabled
     ? registerDismissHandler
     : onLeave;
-  const bottomSheetImperativeHandle = left(5750).useBottomSheetImperativeHandle(scrollable.ref, ref);
+  const bottomSheetImperativeHandle = left(5720).useBottomSheetImperativeHandle(scrollable.ref, ref);
   let items1 = [transitionState, close];
   const effect = obj.useEffect(() => {
     let current = "exiting" !== transitionState;
@@ -502,8 +502,8 @@ export function BottomSheet(scrollable) {
       close();
     }
   }, items1);
-  const tmp9Result = left(5750);
-  const unmountEffect = left(5751).useUnmountEffect(() => {
+  const tmp9Result = left(5720);
+  const unmountEffect = left(5721).useUnmountEffect(() => {
     if (ref.current) {
       if (onDismiss != null) {
         tmp();
@@ -540,7 +540,7 @@ export function BottomSheet(scrollable) {
       onExpand();
     }
   }, items3);
-  const tmp9Result6 = left(5751);
+  const tmp9Result6 = left(5721);
   if (animatedIndex == null) {
     animatedIndex = tmp9Result7.useSharedValue(-1);
   }
@@ -649,7 +649,7 @@ export function BottomSheet(scrollable) {
     resyncOnRotation = tmp9(1377).isAndroid();
     const tmp9Result10 = tmp9(1377);
   }
-  const tmp34 = right(5340)();
+  const tmp34 = right(5310)();
   const items14 = [borderGradient];
   let backgroundComponent = merged.backgroundComponent;
   if (backgroundComponent == null) {
@@ -731,7 +731,7 @@ export function BottomSheet(scrollable) {
   obj2.extraContent = extraContent;
   if (resyncOnRotation) {
     const obj3 = { bottomSheetRef: ref, isExitingRef: ref1 };
-    resyncOnRotation = closure_16(tmp9(5767).BottomSheetRotationResync, obj3);
+    resyncOnRotation = closure_16(tmp9(5737).BottomSheetRotationResync, obj3);
   }
   const items17 = [resyncOnRotation];
   const obj4 = { style: null, children: null };
@@ -750,7 +750,7 @@ export function BottomSheet(scrollable) {
   items19[1] = closure_16(borderGradient, obj7);
   obj4.children = items19;
   obj6.children = closure_17(borderGradient, obj4);
-  items17[1] = closure_16(left(5768).LayerScope, obj6);
+  items17[1] = closure_16(left(5738).LayerScope, obj6);
   obj2.children = items17;
   const tmp36Result = closure_17(flag ? ScrollableBottomSheetInner : ContentSizeBottomSheetInner, obj2);
   let tmp39Result2 = tmp36Result;
@@ -760,7 +760,7 @@ export function BottomSheet(scrollable) {
       tmp44 = null;
     }
     const obj8 = { gradient: tmp44, children: tmp36Result };
-    tmp39Result2 = closure_16(tmp9(5229).ThemeContextProvider, obj8);
+    tmp39Result2 = closure_16(tmp9(5199).ThemeContextProvider, obj8);
   }
   return tmp39Result2;
 }

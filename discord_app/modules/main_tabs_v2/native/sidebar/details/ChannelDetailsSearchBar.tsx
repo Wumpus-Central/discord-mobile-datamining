@@ -4,22 +4,22 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../../../search/native/stores/SearchQueryStore.tsx";
 
 const require = fn;
-let closure_5 = fn(9931).setIsChannelDetailsSearchActive;
+let closure_5 = fn(9915).setIsChannelDetailsSearchActive;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   back: {
     justifyContent: "center",
-    height: fn(14136).SEARCH_BAR_HEIGHT,
-    paddingStart: fn(10275).CHANNEL_DETAILS_MARGIN,
+    height: fn(14161).SEARCH_BAR_HEIGHT,
+    paddingStart: fn(10258).CHANNEL_DETAILS_MARGIN,
     paddingEnd: 8,
   },
 };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = {
   justifyContent: "center",
-  height: fn(14136).SEARCH_BAR_HEIGHT,
-  paddingStart: fn(10275).CHANNEL_DETAILS_MARGIN,
+  height: fn(14161).SEARCH_BAR_HEIGHT,
+  paddingStart: fn(10258).CHANNEL_DETAILS_MARGIN,
   paddingEnd: 8,
 };
 const size = fn(2);

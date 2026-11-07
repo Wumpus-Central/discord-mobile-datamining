@@ -38,9 +38,9 @@ function GuildChannelsList(shouldRender) {
   const merged = Object.assign(shouldRender, Object.assign({ shouldRender: 0 }));
   let found1;
   dependencyMap = undefined;
-  const found = found1(18597)(merged.guild).filter(merged(18521).isMobileGuildActionRow);
+  const found = found1(18644)(merged.guild).filter(merged(18568).isMobileGuildActionRow);
   const hasItem = found.includes(ChannelListGuildActionRow.GUILD_CONJURE);
-  merged(9783);
+  merged(9767);
   found1 = found;
   if (hasItem) {
     found1 = found;
@@ -48,7 +48,7 @@ function GuildChannelsList(shouldRender) {
       found1 = found.filter((item) => item !== constants.GUILD_CONJURE);
     }
   }
-  const arr = found1(18597)(merged.guild);
+  const arr = found1(18644)(merged.guild);
   const tmp4 = merged;
   ({
     rows: c2,
@@ -56,8 +56,8 @@ function GuildChannelsList(shouldRender) {
     applicationAccountLinkMarkAsDismissed,
     startApplicationAccountLinkAuthorization,
     accountLinkApplication,
-  } = found1(18599)(merged.guild));
-  const tmp9 = found1(18599)(merged.guild);
+  } = found1(18646)(merged.guild));
+  const tmp9 = found1(18646)(merged.guild);
   items = [ChannelListStore];
   const stateFromStoresObject = tmp4(504).useStateFromStoresObject(items, () =>
     ChannelListStore.getGuild(merged.guild.id, { guildActionRows: found1, channelNoticeRows }),
@@ -97,7 +97,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj4.guild = stateFromStores;
           obj4.selectedChannelId = selectedChannelId;
           obj4.selectedVoiceChannelId = stateFromStores1;
-          return closure_15(tmp2(18621).default, obj4);
+          return closure_15(tmp2(18668).default, obj4);
         } else {
           if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
             const obj5 = { style: merged.style, guildId: selectedGuildId };
@@ -112,7 +112,7 @@ function ChannelsWrapper(selectedGuildId) {
           }
           return tmp6Result;
         }
-        tmp2Result = tmp2(5044);
+        tmp2Result = tmp2(5014);
       }
     }
     const obj7 = { style: merged.style, selectedGuildId };
@@ -123,7 +123,7 @@ function ChannelsWrapper(selectedGuildId) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ EMPTY_NUX_SERVER: closure_12, MOBILE_GUILD_UPSELL_LIST: map1 } = Constants);
-const ChannelListGuildActionRow = fn(7812).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7789).ChannelListGuildActionRow;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const memoResult = noop.memo(function ChannelList(gameClaimMarkAsDismissed) {

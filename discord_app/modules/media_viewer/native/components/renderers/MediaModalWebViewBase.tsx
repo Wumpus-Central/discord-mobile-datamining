@@ -35,7 +35,7 @@ const PlayerState = {
   VIDEO_CUED: 8,
   [8]: "VIDEO_CUED",
 };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_10 = createStyles.createStyles({
   loading: {
     top: 0,

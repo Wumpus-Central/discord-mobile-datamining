@@ -16,7 +16,7 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(5014).Timeout();
+      const timeout = new code(4984).Timeout();
       dependencyMap[code] = timeout;
       value2 = map.get(code);
       if (null != value2) {
@@ -86,7 +86,7 @@ function updateGiftCode(giftCode) {
                                             closure_2_18.emitChange();
                                           } else if (null != closure_2_7[closure_1_0]) {
                                             let _Math = Math;
-                                            obj2.start(Math.min(closure_2_5, diff), /* F100544 */ function() { ... });
+                                            obj2.start(Math.min(closure_2_5, diff), /* F100888 */ function() { ... });
                                           }
                                           let obj3 = closure_2_1(closure_2_2[3])();
                                         }

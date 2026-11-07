@@ -60,6 +60,8 @@ const obj4 = {
   [8]: "MARKETING",
   DESIGN_DOCS: 9,
   [9]: "DESIGN_DOCS",
+  APP_LAUNCH: 10,
+  [10]: "APP_LAUNCH",
 };
 const obj5 = { ENABLED: 0, [0]: "ENABLED", DISABLED: 1, [1]: "DISABLED" };
 const obj6 = {

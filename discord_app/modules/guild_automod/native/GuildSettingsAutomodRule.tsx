@@ -9,15 +9,15 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAutomodRulesList = fn(19995).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(19997);
+const useAutomodRulesList = fn(20064).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(20066);
 ({ useAutomodEditingRuleActions: metroImportDefault, useAutomodEditingRuleState: closure_8 } =
   GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(13499).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(13524).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   stack: { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING },
 };
@@ -97,7 +97,7 @@ export default function GuildSettingsAutomodRule(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -135,7 +135,7 @@ export default function GuildSettingsAutomodRule(guildId) {
               }
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c3 = tmp;
@@ -319,7 +319,7 @@ export default function GuildSettingsAutomodRule(guildId) {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -338,20 +338,20 @@ export default function GuildSettingsAutomodRule(guildId) {
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(13504).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(13529).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {
                       v0 = 0;
                       closure_129_0 = closure_3;
-                      const aPIError = new closure_0(6604).APIError(closure_129_0);
+                      const aPIError = new closure_0(6579).APIError(closure_129_0);
                       const anyErrorMessage = aPIError.getAnyErrorMessage();
                       closure_0 = anyErrorMessage;
                       if (anyErrorMessage == null) {
                         const intl = closure_0(1113).intl;
                         closure_0 = intl.string(closure_0(1113).t.fEptJP);
                       }
-                      closure_0(5866).presentError(closure_0);
+                      closure_0(5836).presentError(closure_0);
                       throw closure_129_0;
                     } else if (arg0 === 1) {
                       c6 = 3;
@@ -366,7 +366,7 @@ export default function GuildSettingsAutomodRule(guildId) {
                       v0(closure_130_1, closure_0);
                       closure_1.pop();
                       c6 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } catch (tmp41) {
                     closure_3 = tmp41;

@@ -5,7 +5,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5376);
+const GuildPowerupsConstants = fn(5346);
 ({
   GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: closure_4,
   PowerupActiveStatusType: hasOwnProperty,
@@ -13,7 +13,7 @@ const GuildPowerupsConstants = fn(5376);
   BOOSTING_TIER_TO_LEVEL_SKU_ID: metroImportDefault,
 } = GuildPowerupsConstants);
 const GuildFeatures = fn(1072).GuildFeatures;
-let closure_9 = fn(5377).GAME_SERVER_POWERUP_SKU_ID;
+let closure_9 = fn(5347).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/usePowerupActiveStatus.tsx");
 
@@ -54,7 +54,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (hasItem) {
           let INACTIVE = constants.POWERUP_ACTIVATED;
         }
-        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
+        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
       }
       INACTIVE = constants.INACTIVE;
     } else {
@@ -62,7 +62,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "add" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "alignItems" };
             } else {
               let tmp4;
               if (null != metroImportDefault[tmp22]) {
@@ -101,7 +101,12 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           if (tmp10 == null) {
             tmp10 = null;
           }
-          let obj3 = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
+          let obj3 = {
+            type: constants.INACTIVE,
+            powerup: skuId,
+            sourceEntitlement: "r",
+            sourcePowerup: "HermesInternal",
+          };
           if (isActiveFromLevel) {
             const obj4 = {
               type: constants.LEVEL_ACTIVATED,
@@ -130,11 +135,11 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "add" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "alignItems" };
     }
   });
   if (mapped.length <= 0) {
-    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "r", sourcePowerup: "isArray" };
+    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "a", sourcePowerup: "start" };
     let first = obj3;
   } else {
     first = mapped[0];
@@ -174,7 +179,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
         if (hasItem) {
           let INACTIVE = constants.POWERUP_ACTIVATED;
         }
-        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
+        const obj2 = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
       }
       INACTIVE = constants.INACTIVE;
     } else {
@@ -182,7 +187,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == timestampProducer[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "add" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "alignItems" };
             } else {
               let tmp4;
               if (null != metroImportDefault[tmp22]) {
@@ -221,7 +226,12 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
           if (tmp10 == null) {
             tmp10 = null;
           }
-          let obj3 = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
+          let obj3 = {
+            type: constants.INACTIVE,
+            powerup: skuId,
+            sourceEntitlement: "r",
+            sourcePowerup: "HermesInternal",
+          };
           if (isActiveFromLevel) {
             const obj4 = {
               type: constants.LEVEL_ACTIVATED,
@@ -250,7 +260,7 @@ export function usePowerupsActiveStatuses(guildId, powerups) {
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "add" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "alignItems" };
     }
   });
 }

@@ -18,7 +18,7 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -87,8 +87,8 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(9364).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-const Features = fn(5924).Features;
+let closure_9 = fn(9346).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+const Features = fn(5897).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");
@@ -140,7 +140,7 @@ export function useSecureFramesPairwiseFingerprint(userId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

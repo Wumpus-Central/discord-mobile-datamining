@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4024 from "../../intl/ConjureUntranslated.messages.js";
-import BottomSheetModal from "../../../../../_runtime/05422_BottomSheetModal.js";
+import _modDef4026 from "../../intl/ConjureUntranslated.messages.js";
+import BottomSheetModal from "../../../../../_runtime/05392_BottomSheetModal.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -14,7 +14,7 @@ import IconButton from "../../../../design/components/Button/native/IconButton.n
 import useConjureEntryPointPlacementDefault from "../../title_bar/native/useConjureEntryPointPlacement.tsx";
 import ConjureActionCreators from "../ConjureActionCreators.tsx";
 import openConjureHomeScreenDefault from "../../home/native/openConjureHomeScreen.tsx";
-import _modDef11124 from "../../../../../_runtime/metro/11124__.js";
+import _modDef11110 from "../../../../../_runtime/metro/11110__.js";
 import ConjureProjectIcon from "ConjureProjectIcon.tsx";
 import confirmConjureYouBarPinDefault from "../../title_bar/native/confirmConjureYouBarPin.tsx";
 import ConjureProjectGroupListDefault from "ConjureProjectGroupList.tsx";
@@ -27,7 +27,7 @@ function confirmPin() {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 + arg0 } };
   return obj;
@@ -49,12 +49,12 @@ export default function ConjureProjectsSheet() {
   });
   const obj = { title: null, trailing: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef4024.uk6jhJ);
+  obj.title = intl.string(_modDef4026.uk6jhJ);
   let tmp10Result;
   if ("you_screen" === placement) {
-    const obj2 = { icon: _modDef11124, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+    const obj2 = { icon: _modDef11110, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
     const intl2 = util.intl;
-    obj2.accessibilityLabel = intl2.string(_modDef4024.qCBh6V);
+    obj2.accessibilityLabel = intl2.string(_modDef4026.qCBh6V);
     obj2.onPress = confirmPin;
     tmp10Result = hasOwnProperty(IconButton.IconButton, obj2);
   }
@@ -73,16 +73,16 @@ export default function ConjureProjectsSheet() {
   };
   const obj5 = { size: "md", onChange: tmp6, placeholder: null, accessibilityLabel: null };
   const intl3 = util.intl;
-  obj5.placeholder = intl3.string(_modDef4024["2y8sUh"]);
+  obj5.placeholder = intl3.string(_modDef4026["2y8sUh"]);
   const intl4 = util.intl;
-  obj5.accessibilityLabel = intl4.string(_modDef4024.u0kEN9);
+  obj5.accessibilityLabel = intl4.string(_modDef4026.u0kEN9);
   items = [hasOwnProperty(Search_SearchBar.SearchBar, obj5), ,];
   const obj6 = { hasIcons: true, children: null };
   const obj7 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
   const intl5 = util.intl;
-  obj7.label = intl5.string(_modDef4024.bnVYYC);
+  obj7.label = intl5.string(_modDef4026.bnVYYC);
   const intl6 = util.intl;
-  obj7.subLabel = intl6.string(_modDef4024.gnzLwZ);
+  obj7.subLabel = intl6.string(_modDef4026.gnzLwZ);
   obj7.icon = hasOwnProperty(ConjureProjectIcon.ConjureNewProjectIcon, { size: "list" });
   obj7.onPress = function onPress() {
     return openConjureHomeScreenDefault(undefined, { focusComposer: true });

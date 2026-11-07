@@ -9,7 +9,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7343 from "../../../../../_runtime/metro/07343__.js";
+import _modDef7320 from "../../../../../_runtime/metro/07320__.js";
 import HotspotStore2 from "../../../hotspot/index.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import StageSparkleDefault from "../components/StageSparkle.tsx";
@@ -36,7 +36,7 @@ function NavigationBar(guild) {
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef7343 };
+    const obj3 = { source: _modDef7320 };
     obj2.children = gesture(native.Icon, obj3);
     obj.children = gesture(Pressables.PressableOpacity, obj2);
     tmp2 = gesture(metroImportDefault, obj);
@@ -97,13 +97,13 @@ class NotificationToggle {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(6789);
+const StageChannelsConstants = fn(6764);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let constants = fn(5025).GuildScheduledEventPrivacyLevel;
+let constants = fn(4995).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   keyboardAwareView: { flex: 1 },
   closeButtonContainer: { right: 10 },
@@ -202,7 +202,7 @@ export default function StartStageChannelModal(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -228,10 +228,10 @@ export default function StartStageChannelModal(arg0) {
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(8036).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(8014).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(8036);
+                  obj5 = tmp66(8014);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
@@ -245,7 +245,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(6604).APIError(closure_128_1);
+            const aPIError = new closure_0(6579).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -260,8 +260,8 @@ export default function StartStageChannelModal(arg0) {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(7468).hideHotspot(closure_0(7464).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(7468);
+                  tmp66(7445).hideHotspot(closure_0(7441).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(7445);
                 }
               }
             } else if (arg0 === 1) {
@@ -316,7 +316,7 @@ export default function StartStageChannelModal(arg0) {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("../../../../../_runtime/metro/07343__.js");
+      obj.source = require("../../../../../_runtime/metro/07320__.js");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     },

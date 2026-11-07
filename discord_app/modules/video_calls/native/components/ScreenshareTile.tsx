@@ -2,11 +2,11 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05450_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05420_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef11928 from "../../../../../_runtime/metro/11928__.js";
+import _modDef11919 from "../../../../../_runtime/metro/11919__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -50,7 +50,7 @@ export default function ScreenShareTile(onSingleTap) {
   items = [hasOwnProperty(View, { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) }), ,];
   const obj4 = { source: null, style: null, resizeMode: "contain" };
   const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-  obj4.source = _modDef11928;
+  obj4.source = _modDef11919;
   obj4.style = tmp.image;
   items[1] = hasOwnProperty(FastImageDefault, obj4);
   const obj5 = { style: tmp.label, variant: "body-xs/semibold", color: "text-overlay-light", children: null };

@@ -947,18 +947,19 @@ class MessagesConnected {
     });
     tmp2Result78 = tmp2(tmp3[93]);
     socialLayerStorefrontEmbedData = tmp2Result78.useSocialLayerStorefrontEmbedData(stateFromStores);
-    tmp125 = jsxs;
+    tmp125 = tmp26(tmp3[94])(stateFromStores);
+    tmp126 = jsxs;
     obj1 = { profile: null, children: null };
-    tmp26Result = tmp26(tmp3[94]);
-    obj1.profile = tmp2(tmp3[94]).Profiles.Messages;
+    tmp26Result = tmp26(tmp3[95]);
+    obj1.profile = tmp2(tmp3[95]).Profiles.Messages;
     isThreadResult = channel.isThread();
     if (isThreadResult) {
-      tmp128 = jsx;
-      isThreadResult = jsx(tmp26(tmp3[95]), { absolute: true });
+      tmp129 = jsx;
+      isThreadResult = jsx(tmp26(tmp3[96]), { absolute: true });
     }
     items86 = [,];
     items86[0] = isThreadResult;
-    tmp129 = jsx;
+    tmp130 = jsx;
     obj85 = {
       ref: global.ref,
       theme: stateFromStores3,
@@ -1004,6 +1005,7 @@ class MessagesConnected {
       buildOverrides: stateFromStores9,
       fetchingSkuIds: stateFromStoresArray2,
       socialLayerStorefrontEmbedData,
+      conjureProjectLinkEmbeds: tmp125,
       experimentEmbeds: codedLinksExperimentEmbeds,
       quests,
       isFetchingCurrentQuests,
@@ -1075,7 +1077,7 @@ class MessagesConnected {
       voiceInviteDataByChannelId: null,
       officialMessageColor: null,
     };
-    tmp26Result1 = tmp26(tmp3[96]);
+    tmp26Result1 = tmp26(tmp3[97]);
     if (stateFromStores23) {
       stateFromStores23 = tmp77;
     }
@@ -1129,12 +1131,12 @@ class MessagesConnected {
     }
     obj85.officialMessageColor = officialMessageColor;
     merged1 = Object.assign(merged);
-    items86[1] = tmp129(tmp26Result1, obj85);
+    items86[1] = tmp130(tmp26Result1, obj85);
     obj1.children = items86;
-    return tmp125(tmp26Result, obj1);
+    return tmp126(tmp26Result, obj1);
   }
 }
-const PollsInteractionStore = fn(11527);
+const PollsInteractionStore = fn(11509);
 ({ useChannelPollInteractions: closure_28, useMessagePollInteractions: closure_29 } = PollsInteractionStore);
 const Constants = fn(1072);
 ({
@@ -1144,7 +1146,7 @@ const Constants = fn(1072);
   MessageTypes: closure_62,
   Permissions: closure_63,
 } = Constants);
-let closure_64 = fn(11522).GameOrganizationInviteStates;
+let closure_64 = fn(11504).GameOrganizationInviteStates;
 const PremiumConstants = fn(1387);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_65, PremiumTypes: closure_66 } = PremiumConstants);
 const jsxProd = fn(21);

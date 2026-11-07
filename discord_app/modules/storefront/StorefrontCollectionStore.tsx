@@ -109,6 +109,21 @@ prototype["hasPricingCoverage"] = function hasPricingCoverage(arg0) {
   }
   return true === tmp;
 };
+prototype["getPricingKey"] = function getPricingKey(item) {
+  let tmp = null;
+  if (null != item) {
+    tmp = dependencyMap[item];
+  }
+  state = undefined;
+  if (tmp != null) {
+    state = tmp.state;
+  }
+  let pricingKey;
+  if ("success" === state) {
+    pricingKey = tmp.pricingKey;
+  }
+  return pricingKey;
+};
 prototype["getFetchParamsForApplication"] = function getFetchParamsForApplication(arg0) {
   let tmp = null;
   if (null != arg0) {
@@ -242,7 +257,10 @@ const storefrontCollectionStore = new StorefrontCollectionStore(DispatcherDefaul
     });
   },
   STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function handleCollectionsWithProductsFetchSuccess(arg0) {
-    ({ collectionIds, collections, includePricing: closure_0 } = arg0);
+    ({ collectionIds, collections, includePricing: closure_0, pricingKey } = arg0);
+    if (pricingKey === undefined) {
+      pricingKey = "";
+    }
     const fetchedAt = Date.now();
     const set = new Set();
     const item = collections.forEach((collection) => {
@@ -261,8 +279,8 @@ const storefrontCollectionStore = new StorefrontCollectionStore(DispatcherDefaul
           }
         }
       }
-      closure_0[collection.id] = { state: "success", collection, fetchedAt, includePricing: dependencyMap };
-      const obj2 = { state: "success", collection, fetchedAt, includePricing: dependencyMap };
+      closure_0[collection.id] = { state: "success", collection, fetchedAt, includePricing: dependencyMap, pricingKey };
+      const obj2 = { state: "success", collection, fetchedAt, includePricing: dependencyMap, pricingKey };
     });
     const item1 = collectionIds.forEach((item) => {
       if (!set.has(item)) {
@@ -291,7 +309,7 @@ const storefrontCollectionStore = new StorefrontCollectionStore(DispatcherDefaul
     const timestamp = Date.now();
     timestamp[applicationId] = { state: "success", collections, fetchedAt: timestamp, includePricing, skuTypes };
     const item = collections.forEach((collection) => {
-      closure_0[collection.id] = { state: "success", collection, fetchedAt: timestamp, includePricing };
+      closure_0[collection.id] = { state: "success", collection, fetchedAt: timestamp, includePricing, pricingKey: "" };
     });
   },
   STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE: function handleCollectionsForApplicationFetchFailure(arg0) {
@@ -307,15 +325,24 @@ const storefrontCollectionStore = new StorefrontCollectionStore(DispatcherDefaul
     dependencyMap3[pageKey] = { state: "loading", collectionIds };
   },
   STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function handleCollectionsForApplicationPageFetchSuccess(
-    collections,
+    arg0,
   ) {
-    collections = collections.collections;
-    ({ pageKey, listKey, total } = collections);
+    ({ collections, pricingKey } = arg0);
+    ({ pageKey, listKey, total } = arg0);
+    if (pricingKey === undefined) {
+      pricingKey = "";
+    }
     const timestamp = Date.now();
     closure_2[pageKey] = { state: "success", collectionIds: collections.map((id) => id.id), fetchedAt: timestamp };
     closure_3[listKey] = total;
     const item = collections.forEach((collection) => {
-      closure_0[collection.id] = { state: "success", collection, fetchedAt: timestamp, includePricing: true };
+      closure_0[collection.id] = {
+        state: "success",
+        collection,
+        fetchedAt: timestamp,
+        includePricing: true,
+        pricingKey,
+      };
     });
   },
   STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE: function handleCollectionsForApplicationPageFetchFailure(

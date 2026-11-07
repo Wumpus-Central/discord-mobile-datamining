@@ -6,3 +6,4 @@ const result = size.fileFinishedImporting(
 );
 
 export const AppMessageEmbedDisplayType = { DISPLAY: "display", BLOCKED: "blocked" };
+export const ConjureProjectEmbedDisplayType = { READY: "ready", INFO_ONLY: "info_only", NO_ACCESS: "no_access" };

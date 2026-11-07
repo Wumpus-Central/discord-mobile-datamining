@@ -9,7 +9,7 @@ const require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = { container: null, label: null, button: null, buttonText: null };
 let size = {
   width: "100%",
@@ -50,7 +50,7 @@ export default noop.memo(function VoicePanelNoVideoParticipantsCard() {
   const obj2 = { style: tmp.label, variant: "body-md/semibold", color: "text-overlay-light", children: null };
   const intl = channelId(1113).intl;
   obj2.children = intl.string(channelId(1113).t["8eBJ73"]);
-  const items1 = [closure_5(channelId(5781).Text, obj2)];
+  const items1 = [closure_5(channelId(5751).Text, obj2)];
   const obj3 = {
     style: tmp.button,
     onPress: callback,
@@ -63,7 +63,7 @@ export default noop.memo(function VoicePanelNoVideoParticipantsCard() {
   const obj4 = { variant: "body-sm/semibold", style: tmp.buttonText, children: null };
   const intl3 = channelId(1113).intl;
   obj4.children = intl3.string(channelId(1113).t.kLQySL);
-  obj3.children = closure_5(channelId(5781).Text, obj4);
+  obj3.children = closure_5(channelId(5751).Text, obj4);
   items1[1] = closure_5(Pressable, obj3);
   obj.children = items1;
   return closure_6(NativeViewDefault, obj);

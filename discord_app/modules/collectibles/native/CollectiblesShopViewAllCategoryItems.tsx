@@ -229,7 +229,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "svg" };
+  const obj7 = { logoUrl, buttonColor: "Array", categoryName: -655294463 };
   let name;
   if (category != null) {
     name = category.name;
@@ -418,7 +418,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   border: null,

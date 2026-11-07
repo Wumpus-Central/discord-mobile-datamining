@@ -9,7 +9,7 @@ require = fn;
 const MessageType = fn(1197).MessageType;
 class ShopNagbar$Type extends MessageType {
   constructor() {
-    items = [, , , , , , ,];
+    items = [, , , , , , , ,];
     items[0] = { no: 1, name: "body", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "cta_label", kind: "scalar", T: 9 };
     items[2] = {
@@ -42,17 +42,25 @@ class ShopNagbar$Type extends MessageType {
         return require("localized_string").LocalizedString;
       },
     };
-    obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
+    items[6] = {
+      no: 7,
+      name: "cta_label_localized",
+      kind: "message",
+      T() {
+        return require("localized_string").LocalizedString;
+      },
+    };
+    obj = { no: 8, name: "navigable_storefront_application_id", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_0(closure_1_1[4]).LocalizedString;
+        return closure_1_0(closure_1_1[5]).UInt64Value;
       }
     }
     obj.T = T;
-    items[6] = obj;
-    items[7] = {
-      no: 8,
-      name: "navigable_storefront_application_id",
+    items[7] = obj;
+    items[8] = {
+      no: 9,
+      name: "shop_collection_id",
       kind: "message",
       T() {
         return require("wrappers").UInt64Value;
@@ -107,12 +115,20 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           obj.ctaLabelLocalized,
         );
       } else if (8 === tmp5) {
-        let UInt64Value = wrappers.UInt64Value;
-        obj.navigableStorefrontApplicationId = UInt64Value.internalBinaryRead(
+        let UInt64Value2 = wrappers.UInt64Value;
+        obj.navigableStorefrontApplicationId = UInt64Value2.internalBinaryRead(
           pos,
           pos.uint32(),
           readUnknownField,
           obj.navigableStorefrontApplicationId,
+        );
+      } else if (9 === tmp5) {
+        let UInt64Value = wrappers.UInt64Value;
+        obj.shopCollectionId = UInt64Value.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.shopCollectionId,
         );
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -214,6 +230,20 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
       writeUnknownFields,
     );
   }
+  if (body.shopCollectionId) {
+    const UInt64Value2 = wrappers.UInt64Value;
+    const tagResult8 = tag.tag(9, _mod1197.WireType.LengthDelimited);
+    const joined4 = UInt64Value2.internalBinaryWrite(
+      body.shopCollectionId,
+      tag.tag(9, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult4 = UInt64Value2.internalBinaryWrite(
+      body.shopCollectionId,
+      tag.tag(9, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -257,19 +287,27 @@ let items = [
       return require("localized_string").LocalizedString;
     },
   },
+  {
+    no: 7,
+    name: "cta_label_localized",
+    kind: "message",
+    T() {
+      return require("localized_string").LocalizedString;
+    },
+  },
   ,
 ];
-let obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
+let obj = { no: 8, name: "navigable_storefront_application_id", kind: "message", T: null };
 class T {
   constructor() {
-    return closure_1_0(closure_1_1[4]).LocalizedString;
+    return closure_1_0(closure_1_1[5]).UInt64Value;
   }
 }
 obj.T = T;
-items[6] = obj;
-items[7] = {
-  no: 8,
-  name: "navigable_storefront_application_id",
+items[7] = obj;
+items[8] = {
+  no: 9,
+  name: "shop_collection_id",
   kind: "message",
   T() {
     return require("wrappers").UInt64Value;

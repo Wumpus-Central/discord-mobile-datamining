@@ -77,17 +77,17 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(6954);
+let NavigationHistoryStore = fn(6929);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: closure_10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
-const ChannelRecord = fn(5023);
+const ChannelRecord = fn(4993);
 ({ isGuildSelectableChannelType: map1, isGuildVocalChannelType: closure_14 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_25, GuildFeatures: closure_26 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = nativeDefault.radii.md;
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   wrapper: {
     flexGrow: 0,
@@ -307,7 +307,7 @@ let closure_35 = noop.memo(function LaunchPadHeader(tab) {
       spellCheck: false,
       autoFocus: false,
     };
-    let tmp24 = closure_27(tmp2(7305).SearchBar, obj6);
+    let tmp24 = closure_27(tmp2(7282).SearchBar, obj6);
     let tmp23 = closure_27;
   } else if (tab === constants3.MEMBERS) {
     const obj7 = { text: null };
@@ -398,11 +398,11 @@ let closure_35 = noop.memo(function LaunchPadHeader(tab) {
 });
 const results = [];
 let items = [
-  fn(9233).AutocompleterResultTypes.GUILD,
-  fn(9233).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(9233).AutocompleterResultTypes.GROUP_DM,
-  fn(9233).AutocompleterResultTypes.VOICE_CHANNEL,
-  fn(9233).AutocompleterResultTypes.USER,
+  fn(9215).AutocompleterResultTypes.GUILD,
+  fn(9215).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(9215).AutocompleterResultTypes.GROUP_DM,
+  fn(9215).AutocompleterResultTypes.VOICE_CHANNEL,
+  fn(9215).AutocompleterResultTypes.USER,
 ];
 let closure_39 = { code: "(function LaunchPadTsx3(){let[sharedState]=this.__closure;return sharedState.get()===0;})" };
 let closure_40 = {
@@ -892,14 +892,14 @@ export default noop.memo(function LaunchPad(arg0) {
       guildHistory: memo,
       visible,
     };
-    tmp59Result = closure_27(tmp43(19372), obj9);
+    tmp59Result = closure_27(tmp43(19431), obj9);
   }
   items20[1] = tmp59Result;
   const obj10 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp56) {
       const obj11 = { results, query: str };
-      let tmp59Result2 = closure_27(tmp16(19379).SearchResults, obj11);
+      let tmp59Result2 = closure_27(tmp16(19438).SearchResults, obj11);
     }
     obj10.children = tmp59Result2;
     items20[2] = closure_27(View, obj10);
@@ -932,13 +932,13 @@ export default noop.memo(function LaunchPad(arg0) {
     obj12.history = channelHistory;
     obj12.expandedHistory = tmp3;
     obj12.toggleExpandedHistory = callback;
-    tmp59Result2 = closure_27(tmp16(19379).InitialResults, obj12);
+    tmp59Result2 = closure_27(tmp16(19438).InitialResults, obj12);
   } else if (first3 === constants3.DEV_TOOLS) {
-    tmp59Result2 = closure_27(tmp43(18024), {});
+    tmp59Result2 = closure_27(tmp43(18071), {});
   } else if (first3 === constants3.MEMBERS) {
-    tmp59Result2 = closure_27(tmp43(19392), {});
+    tmp59Result2 = closure_27(tmp43(19451), {});
   } else {
-    tmp59Result2 = closure_27(tmp43(19393), {});
+    tmp59Result2 = closure_27(tmp43(19452), {});
   }
   tmp56 = str.trim().length > 0;
 });

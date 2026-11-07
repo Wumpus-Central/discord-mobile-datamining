@@ -46,7 +46,7 @@ let closure_10 = async function _withRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ export function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(7751).requestSafeIdleCallback(
+  combined(7728).requestSafeIdleCallback(
     () => {
       if (map.has(combined)) {
         const obj3 = { bridge_token: combined, cleared_after: null };
@@ -155,7 +155,7 @@ export function startBridgeTo(arg0) {
     },
     { timeout: 5000 },
   );
-  let obj2 = combined(7751);
+  let obj2 = combined(7728);
 }
 export { stopRequest };
 export function withRequest() {

@@ -5,26 +5,21 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserOfferStore from "../../../stores/billing/UserOfferStore.tsx";
 import PromotionsStore from "../promotions/PromotionsStore.tsx";
 
-const require = globalThis.__r;
-
 require = fn;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
-
-export function usePromotionMarketingComponent(PREMIUM_TAB) {
-  _require = PREMIUM_TAB;
+function usePromotionMarketingComponentData(arg0) {
+  _require = arg0;
   const effect = noop.useEffect(() => {
-    const result = PREMIUM_TAB(stateFromStores[4]).maybeFetchActivePromotions();
+    const result = closure_0(stateFromStores[4]).maybeFetchActivePromotions();
   }, []);
   items = [PromotionsStore, ref];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const marketingComponentByType = PromotionsStore.getMarketingComponentByType(closure_0);
-    if (null == marketingComponentByType) {
+    const tmp = closure_0();
+    if (null == tmp) {
       return null;
     } else {
       const promotionByTypeAndId = PromotionsStore.getPromotionByTypeAndId(
         constants.PromotionTypes.MARKETING_MOMENT,
-        marketingComponentByType.promotionId,
+        tmp.promotionId,
       );
       let trialId;
       if (promotionByTypeAndId != null) {
@@ -34,7 +29,7 @@ export function usePromotionMarketingComponent(PREMIUM_TAB) {
         const userTrialOffer = UserOfferStore.getUserTrialOffer(promotionByTypeAndId.trialId);
         return null;
       }
-      return marketingComponentByType;
+      return tmp;
     }
   });
   const obj2 = require("initialize");
@@ -90,4 +85,15 @@ export function usePromotionMarketingComponent(PREMIUM_TAB) {
     tmp8 = stateFromStores;
   }
   return tmp8;
+}
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
+
+export function usePromotionMarketingComponent(PREMIUM_TAB) {
+  closure_0 = PREMIUM_TAB;
+  return usePromotionMarketingComponentData(() => PromotionsStore.getMarketingComponentByType(closure_0));
+}
+export function usePromotionMarketingSurface(arg0) {
+  closure_0 = arg0;
+  return usePromotionMarketingComponentData(() => PromotionsStore.getMarketingComponentBySurface(closure_0));
 }

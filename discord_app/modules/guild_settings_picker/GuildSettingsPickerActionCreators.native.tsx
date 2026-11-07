@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/guild_settings_picker/GuildSe
 
 export function openGuildSettingsPickerModal(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(15968, dependencyMap.paths),
+    asyncRequireImpl(16016, dependencyMap.paths),
     "GuildSettingsPickerBottomSheet",
     arg0,
   );

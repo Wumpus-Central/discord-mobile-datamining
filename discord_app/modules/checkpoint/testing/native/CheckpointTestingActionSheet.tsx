@@ -34,7 +34,7 @@ export default function CheckpointTestingActionSheet() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       label.action();
     };
-    return closure_3(label(7063).TableRow, obj, label.id);
+    return closure_3(label(7038).TableRow, obj, label.id);
   });
   obj.children = jsx(TableRowGroup.TableRowGroup, { hasIcons: false, children: null });
   return jsx(ActionSheet.ActionSheet, { header: null, children: null });

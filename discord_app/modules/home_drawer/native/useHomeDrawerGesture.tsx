@@ -7,7 +7,7 @@ import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtil
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05450_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05420_LegacyBaseButton.js";
 import useLaunchPadTypeDefault from "../../launchpad/native/useLaunchPadType.tsx";
 import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -18,9 +18,9 @@ import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18351).computeMaxX;
+let computeMaxX = fn(18398).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const GestureConstants = fn(11400);
+const GestureConstants = fn(11382);
 ({
   FLING_MIN_DISTANCE: closure_9,
   FLING_MIN_VELOCITY: closure_10,
@@ -28,7 +28,7 @@ const GestureConstants = fn(11400);
   PULL_GESTURE_RESISTANCE,
 } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(11699).LaunchPadTypes;
+const LaunchPadTypes = fn(11681).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let closure_18 = 48 + result;
@@ -102,17 +102,17 @@ let obj = {
   guildsBarDrawerStyle: null,
   guildsBarPullX: null,
 };
-let Gesture = fn(5450).Gesture;
+let Gesture = fn(5420).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7328);
+let ReanimatedHelperTypes = fn(7305);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7328);
+ReanimatedHelperTypes = fn(7305);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7328);
+ReanimatedHelperTypes = fn(7305);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7328);
+ReanimatedHelperTypes = fn(7305);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);

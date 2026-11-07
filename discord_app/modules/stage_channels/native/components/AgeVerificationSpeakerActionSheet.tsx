@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj2 = {
   container: { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_24 },
   header: { alignItems: "center" },
@@ -38,7 +38,7 @@ export default function AgeVerificationSpeakerActionSheet(onClose) {
     contentStyles: { paddingBottom: useSafeAreaInsetsDefault().bottom },
     header: closure_4(View, {
       style: tmp.header,
-      children: closure_4(onClose(7156).TrafficConeSpotIllustration, { width: 120, height: 120 }),
+      children: closure_4(onClose(7131).TrafficConeSpotIllustration, { width: 120, height: 120 }),
     }),
     children: null,
   };
@@ -51,7 +51,7 @@ export default function AgeVerificationSpeakerActionSheet(onClose) {
   };
   const intl = onClose(1113).intl;
   obj4.children = intl.string(onClose(1113).t.zvubnM);
-  items = [closure_4(onClose(5781).Text, obj4)];
+  items = [closure_4(onClose(5751).Text, obj4)];
   const obj5 = { style: tmp.footer, children: null };
   const obj6 = {
     size: "lg",
@@ -70,15 +70,15 @@ export default function AgeVerificationSpeakerActionSheet(onClose) {
   };
   const intl2 = onClose(1113).intl;
   obj6.text = intl2.string(onClose(1113).t.KXVgjt);
-  const items1 = [closure_4(onClose(5788).Button, obj6)];
+  const items1 = [closure_4(onClose(5758).Button, obj6)];
   const obj7 = { size: "lg", onPress: handleDismiss, text: null, variant: "secondary" };
   const intl3 = onClose(1113).intl;
   obj7.text = intl3.string(onClose(1113).t.WAI6xu);
-  items1[1] = closure_4(onClose(5788).Button, obj7);
+  items1[1] = closure_4(onClose(5758).Button, obj7);
   obj5.children = items1;
   items[1] = closure_5(View, obj5);
   obj3.children = items;
   obj.children = closure_5(View, obj3);
-  return closure_4(onClose(7449).ActionSheet, obj);
+  return closure_4(onClose(7426).ActionSheet, obj);
 }
 export const AGE_VERIFICATION_SPEAKER_SHEET_KEY = "AgeVerificationSpeakerActionSheet";

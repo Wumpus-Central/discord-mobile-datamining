@@ -7,3 +7,6 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/dock/Voice
 export function dismissVoicePanelDockWatchPrompt() {
   DispatcherDefault.dispatch({ type: "VOICE_PANEL_DOCK_WATCH_PROMPT_DISMISS" });
 }
+export function dismissVoicePanelDockVideoPIP() {
+  DispatcherDefault.dispatch({ type: "VOICE_PANEL_DOCK_VIDEO_PIP_DISMISS" });
+}

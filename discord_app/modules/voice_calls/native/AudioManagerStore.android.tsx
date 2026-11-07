@@ -66,7 +66,7 @@ let closure_15 = async function _setActiveAudioDevice() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -141,13 +141,13 @@ let closure_15 = async function _setActiveAudioDevice() {
   })();
 };
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
-const MediaEngineContextTypes = fn(5924).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5897).MediaEngineContextTypes;
 const nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAudioManagerModuleDefault);
 let closure_7 = new LoggerDefault("AudioManagerStore");
 let global = [];
-let NativeAudioManagerModule = fn(9321);
+let NativeAudioManagerModule = fn(9303);
 global = NativeAudioManagerModule.getInvalidAndroidDevice();
-NativeAudioManagerModule = fn(9321);
+NativeAudioManagerModule = fn(9303);
 let device = NativeAudioManagerModule.getInvalidAndroidDevice();
 let c11 = false;
 const Store = initializeDefault.Store;

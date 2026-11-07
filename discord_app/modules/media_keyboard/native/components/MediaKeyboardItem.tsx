@@ -7,7 +7,7 @@ import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import _modDef10413 from "../../../../../_runtime/metro/10413__.js";
+import _modDef10396 from "../../../../../_runtime/metro/10396__.js";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ function NewCaption(arg0) {
   items = [tmp.labelContainer, style];
   obj.style = items;
   const items1 = [
-    React6(native.Icon, { source: _modDef10413, style: tmp.icon }),
+    React6(native.Icon, { source: _modDef10396, style: tmp.icon }),
     React6(Text_Text.Text, {
       style: textStyle,
       color: "text-overlay-light",
@@ -380,12 +380,12 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10682);
+const DeviceConstants = fn(10665);
 ({ ALAssetsType: metroImportDefault, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = module_1652.createAnimatedComponent(Pressable);
-let createStyles = fn(5170);
+let createStyles = fn(5140);
 let obj = {
   container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" },
   image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
@@ -413,7 +413,7 @@ const rect = {
   left: 8,
   bottom: 8,
 };
-let ColorUtils = fn(5167);
+let ColorUtils = fn(5137);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.6);
 rect.borderRadius = nativeDefault.radii.xs;
 obj.labelContainer = rect;
@@ -435,20 +435,20 @@ let size2 = {
   borderWidth: 1,
   borderColor: null,
 };
-ColorUtils = fn(5167);
+ColorUtils = fn(5137);
 size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
 obj.checkIconContainer = size2;
 let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj5.borderRadius = nativeDefault.radii.xs;
-ColorUtils = fn(5167);
+ColorUtils = fn(5137);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj.selectedOverlay = obj5;
 obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
 obj.disabled = { opacity: 0.4 };
 obj.imageDisabled = { opacity: 0.2 };
 let closure_12 = createStyles.createStyles(obj);
-createStyles = fn(5170);
+createStyles = fn(5140);
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 let closure_16 = createStyles.createStyleProperties({
   backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,

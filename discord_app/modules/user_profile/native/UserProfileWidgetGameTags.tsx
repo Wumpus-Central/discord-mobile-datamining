@@ -12,15 +12,16 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(8846).TrackUserProfileEditActions;
+let closure_7 = fn(8825).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const hitSlop = { top: 10, bottom: 10 };
-let closure_11 = { top: 10, bottom: 10, left: 12, right: 10 };
-const createStyles = fn(5170);
+const hitSlop = { top: 7, bottom: 7 };
+let closure_11 = Math.max(14, 0);
+const createStyles = fn(5140);
 let obj = { tags: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 }, tag: null, addTag: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
 obj.tag = {
+  minHeight: 30,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_4,
@@ -31,6 +32,7 @@ obj.tag = {
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let obj4 = {
+  minHeight: 30,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_4,
@@ -41,6 +43,8 @@ let obj4 = {
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 obj.addTag = {
+  minHeight: 30,
+  justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
   paddingVertical: nativeDefault.space.PX_4,
   borderRadius: nativeDefault.radii.sm,
@@ -50,6 +54,8 @@ obj.addTag = {
 };
 let closure_12 = createStyles.createStyles(obj);
 let obj5 = {
+  minHeight: 30,
+  justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
   paddingVertical: nativeDefault.space.PX_4,
   borderRadius: nativeDefault.radii.sm,
@@ -93,7 +99,7 @@ export default noop.memo(function UserProfileWidgetGameTags(gameName) {
         items = [closure_1_8(meta.icon, { size: "xs", color: editableTagsWidgetType(tag[6]).colors.TEXT_MUTED }), ,];
         let obj2 = { size: "xs", color: editableTagsWidgetType(tag[6]).colors.TEXT_MUTED };
         items[1] = closure_1_8(gameId(tag[13]).Text, {
-          variant: "body-xs/medium",
+          variant: "body-sm/normal",
           color: "text-muted",
           children: meta.getText(),
         });
@@ -191,7 +197,7 @@ export default noop.memo(function UserProfileWidgetGameTags(gameName) {
       let intl = util.intl;
       let obj3 = { gameName: gameName.gameName };
       obj2.accessibilityLabel = intl.formatToPlainString(util.t.uLUHj4, obj3);
-      let obj4 = { variant: "body-xs/medium", color: "text-muted", children: null };
+      let obj4 = { variant: "body-sm/normal", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t.fZSejy);
       obj2.children = closure_8(Text_Text.Text, obj4);

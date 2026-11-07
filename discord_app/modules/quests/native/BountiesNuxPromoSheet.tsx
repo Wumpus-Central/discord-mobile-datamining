@@ -11,8 +11,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5170);
-const obj2 = { illustrationContainer: { paddingTop: nativeDefault.space.PX_12 } };
+const createStyles = fn(5140);
+let obj2 = { illustrationContainer: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
@@ -25,17 +25,20 @@ export default function BountiesNuxPromoSheet() {
   const intl = util.intl;
   obj.title = intl.string(util.t.DDpHZG);
   const intl2 = util.intl;
-  obj.description = intl2.string(util.t.aC3Dwj);
+  const obj2 = { productNamePlural: null };
+  const intl3 = util.intl;
+  obj2.productNamePlural = intl3.string(util.t["JDvNF+"]);
+  obj.description = intl2.format(util.t.uLPcSI, obj2);
   const tmp = closure_6();
   obj.illustration = (
     <View style={closure_6().illustrationContainer}>
       {jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 })}
     </View>
   );
-  const obj3 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
-  const intl3 = util.intl;
-  obj3.text = intl3.string(util.t.cpT0Cq);
-  obj3.onPress = callback;
+  const obj4 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
+  const intl4 = util.intl;
+  obj4.text = intl4.string(util.t.cpT0Cq);
+  obj4.onPress = callback;
   obj.actions = jsx(components_Button_Button.Button, {
     grow: true,
     size: "lg",

@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: false };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let obj = {
   wrapper: { flexGrow: 1, flexShrink: 1 },
   headerContentCopy: { flexGrow: 1, flexShrink: 1 },
@@ -36,10 +36,10 @@ let obj = {
   image: null,
 };
 let obj3 = { padding: nativeDefault.space.PX_16 };
-obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17372).COMPLETION_GLOW_CLEARANCE };
+obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17421).COMPLETION_GLOW_CLEARANCE };
 obj.contentRewards = { alignItems: "center" };
 obj.contentRewardsCopy = { textAlign: "center" };
-let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17372).COMPLETION_GLOW_CLEARANCE };
+let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17421).COMPLETION_GLOW_CLEARANCE };
 obj.contentEndCardHeader = { marginBottom: nativeDefault.space.PX_16 };
 obj.contentEndCardHeaderCopy = { flexGrow: 1, flexShrink: 1 };
 let obj5 = { marginBottom: nativeDefault.space.PX_16 };
@@ -157,7 +157,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
   const layoutEffect = obj2.useLayoutEffect(() => {
     _undefined(_undefined3[17]).applyOrientationLock("PORTRAIT");
   }, []);
-  const height = tmp5(8933)(obj2.useContext(tmp2(17335).QuestDockGestureContext).windowDimensions).height;
+  const height = tmp5(8915)(obj2.useContext(tmp2(17383).QuestDockGestureContext).windowDimensions).height;
   let str = "md";
   if (height >= 760) {
     let str2 = "lg";
@@ -169,9 +169,9 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
   const tmp2Result7 = require("utils/QuestUtils");
   ({ height: height2, ref, onLayout } = useMeasuredLayoutDefault());
   if (height2 == null) {
-    height2 = tmp2(17372).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
+    height2 = tmp2(17421).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
   }
-  const sum = height2 + tmp2(17372).COMPLETION_GLOW_CLEARANCE;
+  const sum = height2 + tmp2(17421).COMPLETION_GLOW_CLEARANCE;
   const sum1 = sum + tmp5(575).space.PX_16;
   const obj7 = {
     align: "center",
@@ -226,14 +226,14 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         obj14.text = intl3.string(tmp2(1113).t.cfY4PE);
         let tmp5Result;
         if (isQuestAccessSuspended) {
-          tmp5Result = tmp5(17358);
+          tmp5Result = tmp5(17407);
         }
         obj14.onPressDisabled = tmp5Result;
-        tmp28Result = closure_7(tmp2(5788).Button, obj14);
+        tmp28Result = closure_7(tmp2(5758).Button, obj14);
       }
       items9[1] = tmp28Result;
       obj13.children = items9;
-      obj12.children = closure_8(tmp2(6185).Stack, obj13);
+      obj12.children = closure_8(tmp2(6159).Stack, obj13);
       const items10 = [closure_7(tmp5(1652).View, obj12)];
       const obj15 = { style: null, children: null };
       const items11 = [,];
@@ -251,20 +251,20 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         color: "mobile-text-heading-primary",
         children: quest.config.messages.gameTitle,
       };
-      const items12 = [closure_7(tmp2(5781).Heading, obj18)];
+      const items12 = [closure_7(tmp2(5751).Heading, obj18)];
       const obj19 = { variant: "body-sm/medium", color: "text-subtle", children: quest.config.messages.gamePublisher };
-      items12[1] = closure_7(tmp2(5781).Text, obj19);
+      items12[1] = closure_7(tmp2(5751).Text, obj19);
       obj17.children = items12;
-      const items13 = [closure_8(tmp2(6185).Stack, obj17)];
+      const items13 = [closure_8(tmp2(6159).Stack, obj17)];
       const obj20 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
       const intl4 = tmp2(1113).intl;
       obj20.accessibilityLabel = intl4.string(tmp2(1113).t.YsCuyF);
       obj20.onPress = onRestartVideo.onRestartVideo;
       const obj21 = { color: tmp5(575).colors.INTERACTIVE_TEXT_DEFAULT };
-      obj20.children = closure_7(tmp2(11233).RetryIcon, obj21);
-      items13[1] = closure_7(tmp2(7068).PressableOpacity, obj20);
+      obj20.children = closure_7(tmp2(11215).RetryIcon, obj21);
+      items13[1] = closure_7(tmp2(7043).PressableOpacity, obj20);
       obj16.children = items13;
-      const items14 = [closure_8(tmp2(6185).Stack, obj16), ,];
+      const items14 = [closure_8(tmp2(6159).Stack, obj16), ,];
       let tmp28Result2 = null != memo;
       if (tmp28Result2) {
         const obj22 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
@@ -277,8 +277,8 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         const obj24 = { style: tmp.image, source: null, resizeMode: "cover" };
         const obj25 = { uri: memo.url };
         obj24.source = obj25;
-        obj22.children = closure_7(tmp5(5872), obj24);
-        tmp28Result2 = closure_7(tmp2(7068).PressableOpacity, obj22);
+        obj22.children = closure_7(tmp5(5842), obj24);
+        tmp28Result2 = closure_7(tmp2(7043).PressableOpacity, obj22);
       }
       items14[1] = tmp28Result2;
       const obj26 = { direction: "horizontal", spacing: tmp5(575).space.PX_16, align: "center", children: null };
@@ -288,21 +288,21 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         onPress() {
           return _undefined2(QuestTypes.QuestContent.VIDEO_MODAL_END_CARD);
         },
-        text: tmp2(9811).getExternalCtaLabel(quest),
+        text: tmp2(9795).getExternalCtaLabel(quest),
       };
-      const items15 = [closure_7(tmp2(5788).Button, obj27)];
+      const items15 = [closure_7(tmp2(5758).Button, obj27)];
       if (isShareableQuestResult) {
         const obj28 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
         const intl6 = tmp2(1113).intl;
         obj28.accessibilityLabel = intl6.string(tmp2(1113).t.Ej3B3Y);
         obj28.onPress = callback;
         const obj29 = { color: tmp5(575).colors.INTERACTIVE_TEXT_DEFAULT };
-        obj28.children = closure_7(tmp2(14969).ShareIcon, obj29);
-        isShareableQuestResult = closure_7(tmp2(7068).PressableOpacity, obj28);
+        obj28.children = closure_7(tmp2(12410).ShareIcon, obj29);
+        isShareableQuestResult = closure_7(tmp2(7043).PressableOpacity, obj28);
       }
       items15[1] = isShareableQuestResult;
       obj26.children = items15;
-      items14[2] = closure_8(tmp2(6185).Stack, obj26);
+      items14[2] = closure_8(tmp2(6159).Stack, obj26);
       obj15.children = items14;
       items10[1] = closure_8(c6, obj15);
       obj11.children = items10;
@@ -321,7 +321,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
           return obj;
         }
       }
-      return closure_8(tmp2(7378).SafeAreaPaddingView, obj6);
+      return closure_8(tmp2(7355).SafeAreaPaddingView, obj6);
     }
   }
   const obj30 = { style: tmp.contentRewards, ref, onLayout, children: null };
@@ -344,7 +344,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
     stringResult = string(t.qyKLdg);
   }
   obj31.children = stringResult;
-  obj31 = closure_7(tmp2(5781).Heading, obj31);
+  obj31 = closure_7(tmp2(5751).Heading, obj31);
   items16[1] = obj31;
   obj30.children = items16;
   closure_8(c6, obj30);

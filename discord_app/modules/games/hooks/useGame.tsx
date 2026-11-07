@@ -1,11 +1,10 @@
 // discord_app/modules/games/hooks/useGame.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
-import GameActionCreators from "../GameActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameStore from "../GameStore.tsx";
 
-require = fn;
+const require = fn;
 const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1072).QueryIds.GAME,
@@ -27,51 +26,38 @@ const obj2 = {
   getError: null,
 };
 let closure_2 = asyncGeneratorStep(async (arg0) => {
-  if (c1 === 2) {
-    c1 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
+  if (1 === tmp5) {
     if (arg0 === 1) {
+      c5 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
-    } else {
-      return { value: "HermesInternal", done: null };
+      c5 = 3;
+      return { value, done: true };
+    } else if (null != closure_130_0) {
+      items = [closure_130_0];
+      c4 = 2;
+      c5 = 1;
+      return {
+        value: closure_131_0(closure_131_1[6]).fetchGamesWithSupplementalData(items, closure_130_1),
+        done: false,
+      };
     }
-  } else {
-    try {
-      c1 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
-          c1 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else if (null != closure_0) {
-          items = [tmp5];
-          c2 = 1;
-          c1 = 1;
-          const obj5 = { value: GameActionCreators.fetchGamesWithSupplementalData(items), done: false };
-          return obj5;
-        }
-      } else if (arg0 === 1) {
-        c1 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c1 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-      c1 = 3;
-      return { value: "HermesInternal", done: null };
-    } catch (tmp9) {
-      c1 = tmp;
-      throw tmp9;
-    }
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c5 = 3;
+    return { value, done: true };
   }
+  await "HermesInternal";
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = false;
+  }
+  closure_130_1 = flag;
+  return "flexDirection";
 });
 obj2.load = function load() {
   const self = this;

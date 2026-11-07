@@ -174,7 +174,7 @@ function FloatingSlot(arg0) {
   return jsx(_modDef1652.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(13000).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(13023).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = {
   BUTTON_SEND: "send-button",
@@ -182,7 +182,7 @@ const constants = {
   BUTTON_SEND_VOICE_MESSAGE: "voice-message-button",
   BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled",
 };
-const createStyles = fn(5170);
+const createStyles = fn(5140);
 let closure_11 = createStyles.createStyles((width, height) => {
   const obj = {
     button: null,
