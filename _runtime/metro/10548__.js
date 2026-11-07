@@ -1,16 +1,15 @@
 // === Module 10548: ? ===
 
 // Module 10548
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10463 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10470 */;
-import _mod10544 from "module_10544" /* 10544 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10453 */;
+import _mod10540 from "module_10540" /* 10540 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const PTMonthNameLittleEndianParser = require;
+const NLTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +29,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?(?:\\s*(?:desde|de|\\-|\\\u2013|ao?|\\s)\\s*([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(" + repeatedTimeunitPattern.matchAnyPattern(_mod10544.MONTH_DICTIONARY) + ")(?:\\s*(?:de|,)?\\s*(" + _mod10544.YEAR_PATTERN + "))?(?=\\W|$)", "i");
-class PTMonthNameLittleEndianParser {
+const regExp = new RegExp("(dit|deze|vorig|afgelopen|(?:aan)?komend|over|\\+|-)e?\\s*(" + _mod10540.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+class NLTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, PTMonthNameLittleEndianParser);
+    tmp = c2(this, NLTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(PTMonthNameLittleEndianParser);
+    obj = closure_4(NLTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,7 +50,7 @@ class PTMonthNameLittleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(PTMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,37 +61,19 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = PTMonthNameLittleEndianParser(10544).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const parsed = parseInt(index[1]);
-      if (parsed > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", parsed);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", PTMonthNameLittleEndianParser(10544).parseYear(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply("year", PTMonthNameLittleEndianParser(10464).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = NLTimeUnitCasualRelativeFormatParser(10540).parseDuration(arg1[2]);
+      if ("vorig" !== formatted) {
+        if ("afgelopen" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
         }
-        if (index[2]) {
-          const _parseInt = parseInt;
-          const start3 = parsingResult.start;
-          const parsed1 = parseInt(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", parsed1);
-        }
-        return parsingResult;
+        const ParsingComponents = NLTimeUnitCasualRelativeFormatParser(10449).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
+      reverseDurationResult = NLTimeUnitCasualRelativeFormatParser(10448).reverseDuration(parseDurationResult);
     }
   }
 ];
 
-export default _createClass(PTMonthNameLittleEndianParser, items);
+export default _createClass(NLTimeUnitCasualRelativeFormatParser, items);

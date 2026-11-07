@@ -1,16 +1,16 @@
 // === Module 10543: ? ===
 
 // Module 10543
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10463 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10470 */;
-import _mod10544 from "module_10544" /* 10544 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10446 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10453 */;
+import _mod10540 from "module_10540" /* 10540 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const PTWeekdayParser = require;
+const NLMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|passado|pr[o\u00F3]ximo)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10544.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|passado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)", "i");
-class PTWeekdayParser {
+const regExp = new RegExp("(" + repeatedTimeunitPattern.matchAnyPattern(_mod10540.MONTH_DICTIONARY) + ")\\s*(?:[,-]?\\s*(" + _mod10540.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
+class NLMonthNameParser {
   constructor() {
     self = this;
-    tmp = c2(this, PTWeekdayParser);
+    tmp = c2(this, NLMonthNameParser);
     tmp2 = closure_4;
-    obj = closure_4(PTWeekdayParser);
+    obj = closure_4(NLMonthNameParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,7 +51,7 @@ class PTWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(PTWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,30 +62,19 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const tmp4 = PTWeekdayParser(10544).WEEKDAY_DICTIONARY[formatted];
-      if (undefined === tmp4) {
-        return null;
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      parsingComponents.imply("day", 1);
+      const tmp4 = NLMonthNameParser(10540).MONTH_DICTIONARY[arg1[1].toLowerCase(arg1[1])];
+      parsingComponents.assign("month", tmp4);
+      if (arg1[2]) {
+        parsingComponents.assign("year", NLMonthNameParser(10540).parseYear(arg1[2]));
       } else {
-        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
-        let str5 = "this";
-        if ("passado" != formatted1) {
-          str5 = "next";
-          if ("pr\u00F3ximo" != formatted1) {
-            str5 = "next";
-            if ("proximo" != formatted1) {
-              str5 = null;
-              if ("este" == formatted1) {
-                str5 = "this";
-              }
-            }
-          }
-        }
-        return PTWeekdayParser(10490).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
+        parsingComponents.imply("year", NLMonthNameParser(10447).findYearClosestToRef(createParsingComponents.refDate, 1, tmp4));
       }
+      return parsingComponents;
     }
   }
 ];
 
-export default _createClass(PTWeekdayParser, items);
+export default _createClass(NLMonthNameParser, items);

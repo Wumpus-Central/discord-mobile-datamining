@@ -1,30 +1,44 @@
 // === Module 4452: ? ===
 
 // Module 4452
-import requiredArgs_mod from "requiredArgs" /* 4451 */;
-import startOfUTCWeek_mod from "startOfUTCWeek" /* 4453 */;
+import module_2189 from "module_2189" /* 2189 */;
+import module_2192 from "module_2192" /* 2192 */;
+import date_mod from "module_2193" /* 2193 */;
+import date_mod from "module_2195" /* 2195 */;
+import module_4453 from "module_4453" /* 4453 */;
 
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
+if (!module_2189) {
+  const obj = { default: module_2189 };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = module_2189;
 }
-requiredArgs = tmp3;
-let startOfUTCWeek = startOfUTCWeek_mod;
-if (!startOfUTCWeek) {
-  const obj2 = { default: startOfUTCWeek };
+if (!module_2192) {
+  const obj2 = { default: module_2192 };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfUTCWeek;
+  tmp5 = module_2192;
 }
-startOfUTCWeek = tmp5;
+let date = date_mod;
+if (!date) {
+  const obj3 = { default: date };
+  let tmp7 = obj3;
+} else {
+  tmp7 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+if (!module_4453) {
+  const obj5 = { default: module_4453 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4453;
+}
 
-export default function isSameUTCWeek(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfUTCWeek.default(arg0, arg2);
-  const time = defaultResult1.getTime();
-  return time === startOfUTCWeek.default(arg1, arg2).getTime();
-};
+export default { code: "en-GB", formatDistance: tmp3.default, formatLong: tmp11.default, formatRelative: tmp5.default, localize: tmp7.default, match: tmp9.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

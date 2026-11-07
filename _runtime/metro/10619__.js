@@ -1,14 +1,16 @@
 // === Module 10619: ? ===
 
 // Module 10619
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10470 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10446 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10453 */;
+import _mod10615 from "module_10615" /* 10615 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let AbstractParserWithLeftRightBoundaryChecking = require;
+const ENCasualYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class AbstractParserWithLeftBoundaryChecking {
+const regExp = new RegExp("([0-9]{4})[\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod10615.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
+class ENCasualYearMonthDayParser {
   constructor() {
     self = this;
-    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp = c2(this, ENCasualYearMonthDayParser);
     tmp2 = closure_4;
-    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    obj = closure_4(ENCasualYearMonthDayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,61 +51,39 @@ class AbstractParserWithLeftBoundaryChecking {
     return tmp3(self, constructResult);
   }
 }
-AbstractParserWithLeftRightBoundaryChecking = AbstractParserWithLeftBoundaryChecking;
-_inherits(AbstractParserWithLeftBoundaryChecking, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternLeftBoundary",
-  value: function patternLeftBoundary() {
-    return AbstractParserWithLeftRightBoundaryChecking(10617).REGEX_PARTS.leftBoundary;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
-    key: "innerPattern",
-    value: function innerPattern(arg0) {
-      const regExp = new RegExp(this.innerPatternString(arg0), AbstractParserWithLeftRightBoundaryChecking(10617).REGEX_PARTS.flags);
-      return regExp;
-    }
-  },
-  {
-    key: "innerPatternHasChange",
-    value: function innerPatternHasChange(arg0, arg1) {
-      return false;
+    key: "innerExtract",
+    value: function innerExtract(arg0, arg1) {
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(arg1[3]);
+      } else {
+        parsed = ENCasualYearMonthDayParser(10615).MONTH_DICTIONARY[str.toLowerCase(str)];
+      }
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          const _parseInt2 = parseInt;
+          const date = { day: null, month: null, year: null };
+          const _parseInt3 = parseInt;
+          const parsed1 = parseInt(arg1[1]);
+          date.day = parseInt(arg1[4]);
+          date.month = parsed;
+          date.year = parsed1;
+          return date;
+        }
+      }
+      return null;
     }
   }
 ];
-const _moduleResult = _createClass(AbstractParserWithLeftBoundaryChecking, items);
-class AbstractParserWithLeftRightBoundaryChecking {
-  constructor() {
-    self = this;
-    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
-    tmp2 = closure_4;
-    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(AbstractParserWithLeftRightBoundaryChecking, _moduleResult);
-const entry1 = {
-  key: "innerPattern",
-  value: function innerPattern(arg0) {
-    const combined = "" + this.innerPatternString(arg0) + AbstractParserWithLeftRightBoundaryChecking(10617).REGEX_PARTS.rightBoundary;
-    const regExp = new RegExp(combined, AbstractParserWithLeftRightBoundaryChecking(10617).REGEX_PARTS.flags);
-    return regExp;
-  }
-};
-const items1 = [entry1];
 
-export const AbstractParserWithLeftBoundaryChecking = _moduleResult;
-export const AbstractParserWithLeftRightBoundaryChecking = _createClass(AbstractParserWithLeftRightBoundaryChecking, items1);
+export default _createClass(ENCasualYearMonthDayParser, items);

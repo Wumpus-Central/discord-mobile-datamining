@@ -2,12 +2,14 @@
 
 // Module 10583
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10481 from "module_10481" /* 10481 */;
+import now from "now" /* 10470 */;
+import _mod10577 from "module_10577" /* 10577 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+let self = this;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,49 +31,126 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
-let fn = this;
+let self2 = this;
 if (this) {
-  fn = this.__importDefault;
+  self2 = self.__createBinding;
 }
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class ZHHantMergeDateRangeRefiner {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, ZHHantMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(ZHHantMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-}
-_classCallCheck = ZHHantMergeDateRangeRefiner;
-_inherits(ZHHantMergeDateRangeRefiner, fn(_mod10481).default);
-const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(至|到|\-|\~|～|－|ー)\s*$/i;
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function o(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    class RUCasualDateParser {
+      constructor() {
+        self = this;
+        tmp = closure_0(this, RUCasualDateParser);
+        tmp2 = c2;
+        obj = c2(RUCasualDateParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
+      }
+    }
+    _classCallCheck = RUCasualDateParser;
+    _inherits(RUCasualDateParser, _mod10577.AbstractParserWithLeftRightBoundaryChecking);
+    const entry = {
+      key: "innerPatternString",
+      value: function innerPatternString(arg0) {
+            return "(?:\u0441|\u0441\u043E)?\\s*(\u0441\u0435\u0433\u043E\u0434\u043D\u044F|\u0432\u0447\u0435\u0440\u0430|\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430|\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430)";
+          }
+    };
+    let items = [entry, ];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+            const formatted = arg1[1].toLowerCase();
+            if ("\u0441\u0435\u0433\u043E\u0434\u043D\u044F" === formatted) {
+              return closure_7.today(reference.reference);
+            } else if ("\u0432\u0447\u0435\u0440\u0430" === formatted) {
+              return closure_7.yesterday(reference.reference);
+            } else if ("\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
+              return closure_7.tomorrow(reference.reference);
+            } else if ("\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
+              return closure_7.theDayAfter(reference.reference, 2);
+            } else if ("\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
+              return closure_7.theDayAfter(reference.reference, 3);
+            } else if ("\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
+              return closure_7.theDayBefore(reference.reference, 2);
+            } else if ("\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
+              return closure_7.theDayBefore(reference.reference, 3);
+            } else {
+              return tmp2;
+            }
+          }
+    };
+    items[1] = entry1;
+    exports.default = _createClass(RUCasualDateParser, items);
+  } else {
+    const _Object2 = Object;
   }
-};
-const items = [entry];
-
-export default _createClass(ZHHantMergeDateRangeRefiner, items);
+} else {
+  let _Object = Object;
+}

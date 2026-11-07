@@ -1,15 +1,19 @@
 // === Module 5667: ? ===
 
 // Module 5667
+function _setPrototypeOf(arg0, arg1) {
+  if (Object.setPrototypeOf) {
+    const _Object = Object;
+    exports = setPrototypeOf.bind();
+  } else {
+    exports = (arg0, arg1) => {
+      arg0.__proto__ = arg1;
+      return arg0;
+    };
+  }
+  module.exports = exports;
+  return exports(arg0, arg1);
+}
+let exports = _setPrototypeOf;
 
-export default function _arrayLikeToArray(arg0, arg1) {
-  let length = arg1;
-  if (tmp) {
-    length = arg0.length;
-  }
-  const ArrayResult = Array(length);
-  for (let num = 0; num < length; num = num + 1) {
-    ArrayResult[num] = arg0[num];
-  }
-  return ArrayResult;
-};
+export default _setPrototypeOf;

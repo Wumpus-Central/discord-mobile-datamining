@@ -1,7 +1,37 @@
 // === Module 7422: ? ===
 
 // Module 7422
-import registerAsset from "module_1119" /* 1119 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
+const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const enforcing = TurboModuleRegistry.getEnforcing("RNCClipboard");
+const RNCClipboard_TEXT_CHANGED = "RNCClipboard_TEXT_CHANGED";
+const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(enforcing);
+const listenerCount = nativeEventEmitter.listenerCount;
+let fn = listenerCount;
+if (listenerCount) {
+  const listenerCount2 = nativeEventEmitter.listenerCount;
+  fn = listenerCount2.bind(nativeEventEmitter);
+} else {
+  fn = (arg0) => nativeEventEmitter.listeners(arg0).length;
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 38, height: 38, scales: [2, 3], hash: "396b5aebc51e5c35836ff2654ee02ebc", name: "game_icon_placeholder", type: "png" });
+export default enforcing;
+export (arg0) => {
+  if (0 === fn(RNCClipboard_TEXT_CHANGED)) {
+    enforcing.setListener();
+  }
+  const addListenerResult = nativeEventEmitter.addListener(RNCClipboard_TEXT_CHANGED, arg0);
+  addListenerResult._remove = addListenerResult.remove;
+  addListenerResult.remove = function() {
+    this._remove();
+    if (0 === fn(RNCClipboard_TEXT_CHANGED)) {
+      enforcing.removeListener();
+    }
+  };
+  return addListenerResult;
+}
+export () => {
+  nativeEventEmitter.removeAllListeners(RNCClipboard_TEXT_CHANGED);
+  enforcing.removeListener();
+}

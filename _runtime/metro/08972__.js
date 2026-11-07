@@ -1,7 +1,8 @@
 // === Module 8972: ? ===
 
 // Module 8972
-import _modDef8973 from "module_8973" /* 8973 */;
+import emptyFunction from "module_5179" /* 5179 */;
 
+const point = { x: emptyFunction.number, y: emptyFunction.number };
 
-export default _modDef8973({ contain: null, cover: null, stretch: null });
+export default emptyFunction.shape(point);

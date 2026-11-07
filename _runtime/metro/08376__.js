@@ -1,0 +1,16 @@
+// === Module 8376: ? ===
+
+// Module 8376
+import _mod8374 from "module_8374" /* 8374 */;
+
+require = arg1;
+const dependencyMap = arg6;
+const obj = { 1: "InteroperabilityIndex", 2: null, 4096: "RelatedImageFileFormat", 4097: "RelatedImageWidth", 4098: "RelatedImageHeight" };
+obj[2] = {
+  name: "InteroperabilityVersion",
+  description(value) {
+    return _mod8374.getStringValue(value);
+  }
+};
+
+export default obj;

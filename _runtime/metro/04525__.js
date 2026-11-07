@@ -1,24 +1,24 @@
 // === Module 4525: ? ===
 
 // Module 4525
-import module_2197 from "module_2197" /* 2197 */;
 import module_2196 from "module_2196" /* 2196 */;
+import module_2197 from "module_2197" /* 2197 */;
 
-if (!module_2197) {
-  const obj2 = { default: module_2197 };
+if (!module_2196) {
+  const obj2 = { default: module_2196 };
   let obj = obj2;
 } else {
-  obj = module_2197;
+  obj = module_2196;
 }
-if (!module_2196) {
-  const obj4 = { default: module_2196 };
+if (!module_2197) {
+  const obj4 = { default: module_2197 };
   let obj3 = obj4;
 } else {
-  obj3 = module_2196;
+  obj3 = module_2197;
 }
 const date = {
-  ordinalNumber: obj.default({
-    matchPattern: /^第?\d+(年|四半期|月|週|日|時|分|秒)?/i,
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)?/i,
     parsePattern: /\d+/i,
     valueCallback(match) {
       return parseInt(match, 10);
@@ -30,16 +30,14 @@ const date = {
   day: null,
   dayPeriod: null
 };
-const obj6 = { matchPatterns: { narrow: /^(B\.?C\.?|A\.?D\.?)/i, abbreviated: /^(紀元[前後]|西暦)/i, wide: /^(紀元[前後]|西暦)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { narrow: null, any: null };
-const items = [/^B/i, /^A/i];
-obj7.narrow = items;
-const items1 = [/^(紀元前)/i, /^(西暦|紀元後)/i];
-obj7.any = items1;
+const obj6 = { matchPatterns: { narrow: /^(p\.?\s*n\.?\s*e\.?\s*|n\.?\s*e\.?\s*)/i, abbreviated: /^(p\.?\s*n\.?\s*e\.?\s*|n\.?\s*e\.?\s*)/i, wide: /^(przed\s*nasz(ą|a)\s*er(ą|a)|naszej\s*ery)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^p/i, /^n/i];
+obj7.any = items;
 obj6.parsePatterns = obj7;
-date.era = obj3.default(obj6);
+date.era = obj.default(obj6);
 const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^Q[1234]/i, wide: /^第[1234一二三四１２３４]四半期/i },
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^(I|II|III|IV)\s*kw\.?/i, wide: /^(I|II|III|IV)\s*kwarta(ł|l)/i },
   defaultMatchWidth: "wide",
   parsePatterns: null,
   defaultParseWidth: "any",
@@ -47,25 +45,33 @@ const obj8 = {
     return arg0 + 1;
   }
 };
-const obj9 = { any: null };
-const items2 = [/(1|一|１)/i, /(2|二|２)/i, /(3|三|３)/i, /(4|四|４)/i];
+const obj9 = { narrow: null, any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.narrow = items1;
+const items2 = [/^I kw/i, /^II kw/i, /^III kw/i, /^IV kw/i];
 obj9.any = items2;
 obj8.parsePatterns = obj9;
-date.quarter = obj3.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^([123456789]|1[012])/, abbreviated: /^([123456789]|1[012])月/i, wide: /^([123456789]|1[012])月/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { any: null };
-const items3 = [/^1\D/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/];
-obj11.any = items3;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[slmkcwpg]/i, abbreviated: /^(sty|lut|mar|kwi|maj|cze|lip|sie|wrz|pa(ź|z)|lis|gru)/i, wide: /^(stycznia|stycze(ń|n)|lutego|luty|marca|marzec|kwietnia|kwiecie(ń|n)|maja|maj|czerwca|czerwiec|lipca|lipiec|sierpnia|sierpie(ń|n)|wrze(ś|s)nia|wrzesie(ń|n)|pa(ź|z)dziernika|pa(ź|z)dziernik|listopada|listopad|grudnia|grudzie(ń|n))/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items3 = [/^s/i, /^l/i, /^m/i, /^k/i, /^m/i, /^c/i, /^l/i, /^s/i, /^w/i, /^p/i, /^l/i, /^g/i];
+obj11.narrow = items3;
+const items4 = [/^st/i, /^lu/i, /^mar/i, /^k/i, /^maj/i, /^c/i, /^lip/i, /^si/i, /^w/i, /^p/i, /^lis/i, /^g/i];
+obj11.any = items4;
 obj10.parsePatterns = obj11;
-date.month = obj3.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[日月火水木金土]/, short: /^[日月火水木金土]/, abbreviated: /^[日月火水木金土]/, wide: /^[日月火水木金土]曜日/ }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { any: null };
-const items4 = [/^日/, /^月/, /^火/, /^水/, /^木/, /^金/, /^土/];
-obj13.any = items4;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[npwścs]/i, short: /^(nie|pon|wto|(ś|s)ro|czw|pi(ą|a)|sob)/i, abbreviated: /^(niedz|pon|wt|(ś|s)r|czw|pt|sob)\.?/i, wide: /^(niedziela|poniedzia(ł|l)ek|wtorek|(ś|s)roda|czwartek|pi(ą|a)tek|sobota)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { narrow: null, abbreviated: null, any: null };
+const items5 = [/^n/i, /^p/i, /^w/i, /^ś/i, /^c/i, /^p/i, /^s/i];
+obj13.narrow = items5;
+const items6 = [/^n/i, /^po/i, /^w/i, /^(ś|s)r/i, /^c/i, /^pt/i, /^so/i];
+obj13.abbreviated = items6;
+const items7 = [/^n/i, /^po/i, /^w/i, /^(ś|s)r/i, /^c/i, /^pi/i, /^so/i];
+obj13.any = items7;
 obj12.parsePatterns = obj13;
-date.day = obj3.default(obj12);
-const obj14 = { matchPatterns: { any: /^(AM|PM|午前|午後|正午|深夜|真夜中|夜|朝)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^(A|午前)/i, pm: /^(P|午後)/i, midnight: /^深夜|真夜中/i, noon: /^正午/i, morning: /^朝/i, afternoon: /^午後/i, evening: /^夜/i, night: /^深夜/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj3.default(obj14);
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^(^a$|^p$|pó(ł|l)n\.?|o\s*pó(ł|l)n\.?|po(ł|l)\.?|w\s*po(ł|l)\.?|po\s*po(ł|l)\.?|rano|wiecz\.?|noc|w\s*nocy)/i, any: /^(am|pm|pó(ł|l)noc|o\s*pó(ł|l)nocy|po(ł|l)udnie|w\s*po(ł|l)udnie|popo(ł|l)udnie|po\s*po(ł|l)udniu|rano|wieczór|wieczorem|noc|w\s*nocy)/i }, defaultMatchWidth: "any", parsePatterns: { narrow: { am: /^a$/i, pm: /^p$/i, midnight: /pó(ł|l)n/i, noon: /po(ł|l)/i, morning: /rano/i, afternoon: /po\s*po(ł|l)/i, evening: /wiecz/i, night: /noc/i }, any: { am: /^am/i, pm: /^pm/i, midnight: /pó(ł|l)n/i, noon: /po(ł|l)/i, morning: /rano/i, afternoon: /po\s*po(ł|l)/i, evening: /wiecz/i, night: /noc/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
 
 export default date;
 export default exports.default;

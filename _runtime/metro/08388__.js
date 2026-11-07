@@ -1,109 +1,68 @@
 // === Module 8388: ? ===
 
 // Module 8388
-import _modDef8387 from "module_8387" /* 8387 */;
+import _mod8349 from "module_8349" /* 8349 */;
+import _modDef8366 from "module_8366" /* 8366 */;
+import _modDef8389 from "module_8389" /* 8389 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-importDefault = arg2;
-const dependencyMap = arg6;
+require = arg1;
+function getTagName(dataView, sum1) {
+  const tmp = _slicedToArray(_mod8349.getPascalStringFromDataView(dataView, sum1), 2);
+  const first = tmp[0];
+  const obj2 = { tagName: tmp[1], tagNameSize: null };
+  let num = 0;
+  const sum = 1 + first;
+  if (first % 2 === 0) {
+    num = 1;
+  }
+  obj2.tagNameSize = sum + num;
+  return obj2;
+}
+let c4 = "8BIM";
+let c5 = 2;
+let c6 = 4;
+({ length, length: metroImportDefault } = "8BIM");
 
 export default {
-  read(buffer, sum) {
-    const shortAt = _modDef8387.getShortAt(buffer, sum);
-    let tmp6;
-    if (15 <= shortAt) {
-      const byteAt = _modDef8387.getByteAt(buffer, sum + 14);
-      const obj2 = { value: byteAt, description: null };
-      const _HermesInternal = HermesInternal;
-      obj2.description = "" + byteAt + "px";
-      tmp6 = obj2;
-      const tmp3Result = _modDef8387;
-    }
-    let tmp9;
-    if (16 <= shortAt) {
-      const byteAt1 = _modDef8387.getByteAt(buffer, sum + 15);
-      const obj3 = { value: byteAt1, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj3.description = "" + byteAt1 + "px";
-      tmp9 = obj3;
-      const tmp3Result7 = _modDef8387;
-    }
-    let tmp12;
-    if (9 <= shortAt) {
-      const byteAt2 = _modDef8387.getByteAt(buffer, sum + 7);
-      const tmp3Result8 = _modDef8387;
-      const byteAt3 = _modDef8387.getByteAt(buffer, sum + 7 + 1);
-      const obj4 = { value: 256 * byteAt2 + byteAt3, description: `${tmp13}.${tmp14}` };
-      tmp12 = obj4;
-      const tmp3Result9 = _modDef8387;
-    }
-    const obj5 = { "JFIF Version": tmp12, "Resolution Unit": null, XResolution: null, YResolution: null, "JFIF Thumbnail Width": null, "JFIF Thumbnail Height": null };
-    let tmp15;
-    if (10 <= shortAt) {
-      const byteAt4 = _modDef8387.getByteAt(buffer, sum + 9);
-      const obj6 = { value: byteAt4, description: null };
-      let str6 = "None";
-      if (0 !== byteAt4) {
-        let str7 = "inches";
-        if (1 !== byteAt4) {
-          let str8 = "Unknown";
-          if (2 === byteAt4) {
-            str8 = "cm";
+  read(arg0, arg1) {
+    const uint8Array = new Uint8Array(arg0);
+    const dataView = _mod8349.getDataView(uint8Array.buffer);
+    const obj2 = {};
+    let num = 0;
+    if (0 < arg0.length) {
+      const sum = num + metroImportDefault;
+      const stringFromDataView = _mod8349.getStringFromDataView(dataView, num, metroImportDefault);
+      const shortAt = _modDef8366.getShortAt(dataView, sum);
+      const sum1 = sum + c5;
+      const tmp15 = getTagName(dataView, sum1);
+      let name = tmp15.tagName;
+      const sum2 = sum1 + tmp15.tagNameSize;
+      const longAt = _modDef8366.getLongAt(dataView, sum2);
+      const sum3 = sum2 + c6;
+      if (stringFromDataView === c4) {
+        const dataView1 = _mod8349.getDataView(dataView.buffer, sum3, longAt);
+        const obj7 = { id: shortAt, value: null };
+        const tmp5Result = _mod8349;
+        obj7.value = _mod8349.getStringFromDataView(dataView1, 0, longAt);
+        if (_modDef8389[shortAt]) {
+          try {
+            obj7.description = _modDef8389[shortAt].description(dataView1);
+            if (!name) {
+              name = _modDef8389[shortAt].name;
+            }
+            obj2[name] = obj7;
+          } catch (err) {
+            tmp.description = tmp2;
           }
-          str7 = str8;
+        } else if (arg1) {
+          const _HermesInternal = HermesInternal;
+          obj2["undefined-" + shortAt] = obj7;
         }
-        str6 = str7;
+        const tmp5Result2 = _mod8349;
       }
-      obj6.description = str6;
-      tmp15 = obj6;
-      const tmp3Result10 = _modDef8387;
+      num = sum3 + (longAt + longAt % 2);
     }
-    obj5["Resolution Unit"] = tmp15;
-    let tmp17;
-    if (12 <= shortAt) {
-      const shortAt1 = _modDef8387.getShortAt(buffer, sum + 10);
-      const obj7 = { value: shortAt1, description: "" + shortAt1 };
-      tmp17 = obj7;
-      const tmp3Result11 = _modDef8387;
-    }
-    obj5.XResolution = tmp17;
-    let tmp19;
-    if (14 <= shortAt) {
-      const shortAt2 = _modDef8387.getShortAt(buffer, sum + 12);
-      const obj8 = { value: shortAt2, description: "" + shortAt2 };
-      tmp19 = obj8;
-      const tmp3Result12 = _modDef8387;
-    }
-    obj5.YResolution = tmp19;
-    obj5["JFIF Thumbnail Width"] = tmp6;
-    obj5["JFIF Thumbnail Height"] = tmp9;
-    if (undefined !== tmp6) {
-      if (undefined !== tmp9) {
-        const result = 3 * tmp6.value * tmp9.value;
-        let tmp22;
-        if (0 !== result) {
-          if (16 + result <= shortAt) {
-            buffer = buffer.buffer;
-            const obj9 = { value: buffer.slice(sum + 16, sum + 16 + result), description: "<24-bit RGB pixel data>" };
-            tmp22 = obj9;
-          }
-        }
-        if (tmp22) {
-          obj5["JFIF Thumbnail"] = tmp22;
-        }
-      }
-    }
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      while (keys[16] !== undefined) {
-        if (undefined !== obj5[tmp24]) {
-          continue;
-        } else {
-          delete tmp[tmp2];
-          continue;
-        }
-        continue;
-      }
-    }
-    return obj5;
+    return obj2;
   }
 };

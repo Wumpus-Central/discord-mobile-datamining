@@ -1,17 +1,17 @@
 // === Module 4502: ? ===
 
 // Module 4502
-import module_4503 from "module_4503" /* 4503 */;
+import translateSeconds from "translateSeconds" /* 4503 */;
 import module_4504 from "module_4504" /* 4504 */;
 import module_4505 from "module_4505" /* 4505 */;
 import date_mod from "module_4506" /* 4506 */;
 import date_mod from "module_4507" /* 4507 */;
 
-if (!module_4503) {
-  const obj = { default: module_4503 };
+if (!translateSeconds) {
+  const obj = { default: translateSeconds };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4503;
+  tmp3 = translateSeconds;
 }
 if (!module_4504) {
   const obj2 = { default: module_4504 };
@@ -40,5 +40,5 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "hr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

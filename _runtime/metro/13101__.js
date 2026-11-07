@@ -1,41 +1,25 @@
 // === Module 13101: ? ===
 
 // Module 13101
-import _mod13027 from "module_13027" /* 13027 */;
+import _mod13050 from "module_13050" /* 13050 */;
 
-const Comma = _mod13027.TYPE.Comma;
+const Ident = _mod13050.TYPE.Ident;
 const obj = {
-  name: "SelectorList",
-  structure: null,
+  name: "ClassSelector",
+  structure: { name: String },
   parse() {
     const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      list.push(self.Selector());
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.Selector());
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
+    const scanner = this.scanner;
+    if (!scanner.isDelim(46)) {
+      self.error("Full stop is expected");
     }
-    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
-    return element;
+    self.scanner.next();
+    return { type: "ClassSelector", loc: self.getLocation(self.scanner.tokenStart - 1, self.scanner.tokenEnd), name: self.consume(Ident) };
   },
-  generate(arg0) {
-    this.children(arg0, function() {
-      this.chunk(",");
-    });
-  },
-  walkContext: "selector"
+  generate(name) {
+    this.chunk(".");
+    this.chunk(name.name);
+  }
 };
-const obj2 = { children: null };
-const items = [["Selector", "Raw"]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

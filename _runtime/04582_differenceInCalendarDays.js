@@ -1,0 +1,43 @@
+// === Module 4582: differenceInCalendarDays ===
+
+// Module 4582 (differenceInCalendarDays)
+import module_4583_mod from "module_4583" /* 4583 */;
+import startOfDay_mod from "startOfDay" /* 4584 */;
+import requiredArgs_mod from "requiredArgs" /* 4421 */;
+
+let module_4583 = module_4583_mod;
+if (!module_4583) {
+  const obj = { default: module_4583 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4583;
+}
+module_4583 = tmp3;
+let startOfDay = startOfDay_mod;
+if (!startOfDay) {
+  const obj2 = { default: startOfDay };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfDay;
+}
+startOfDay = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let c3 = 86400000;
+
+export default function differenceInCalendarDays(date1, date2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfDay.default(date1);
+  const defaultResult2 = startOfDay.default(date2);
+  const time = defaultResult1.getTime();
+  const diff = time - module_4583.default(defaultResult1);
+  const time1 = defaultResult2.getTime();
+  return Math.round((diff - (time1 - module_4583.default(defaultResult2))) / c3);
+};
+export default exports.default;

@@ -1,7 +1,5 @@
 // === Module 9253: ? ===
 
 // Module 9253
-import registerAsset from "module_1119" /* 1119 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 254, height: 154, scales: [2, 3], hash: "82ae7189682c36bee3dc3a129ab02a11", name: "img_app_crash_darker", type: "png" });
+export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };

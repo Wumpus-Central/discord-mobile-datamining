@@ -1,161 +1,103 @@
 // === Module 9505: ? ===
 
 // Module 9505
-import ElementType from "ElementType" /* 9514 */;
+import cloneNode from "cloneNode" /* 9494 */;
 
-const require = globalThis.__r;
+require = arg1;
+const dependencyMap = arg6;
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
+export function getChildren(children) {
+  return cloneNode.hasChildren(children) ? children.children : [];
 }
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
-                continue;
-              } else {
-                let tmp6 = self2(obj, arg0, key10009);
-                continue;
-              }
-              continue;
-            } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
-              }
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    let fn2 = self;
-    if (self) {
-      fn2 = self.__importDefault;
-    }
-    if (!fn2) {
-      fn2 = (__esModule) => {
-        if (!__esModule) {
-          const obj = { default: __esModule };
-          let tmp = obj;
-        } else {
-          tmp = __esModule;
-        }
-        return tmp;
-      };
-    }
-    const _Object3 = Object;
-    function parseDocument(arg0, fn) {
-      const domHandler = new require("cloneNode").DomHandler(undefined, fn);
-      const parser = new require("QuoteType").Parser(domHandler, fn);
-      parser.end(arg0);
-      return domHandler.root;
-    }
-    function parseDOM(arg0, fn) {
-      const domHandler = new require("cloneNode").DomHandler(undefined, fn);
-      const parser = new require("QuoteType").Parser(domHandler, fn);
-      parser.end(arg0);
-      return domHandler.root.children;
-    }
-    exports.Parser = undefined;
-    exports.DomHandler = undefined;
-    exports.DefaultHandler = undefined;
-    exports.parseDocument = undefined;
-    exports.parseDOM = undefined;
-    exports.createDomStream = undefined;
-    exports.Tokenizer = undefined;
-    exports.ElementType = undefined;
-    exports.getFeed = undefined;
-    exports.parseFeed = undefined;
-    exports.DomUtils = undefined;
-    const _Object4 = Object;
-    let obj = {
-      enumerable: true,
-      get() {
-            return require("QuoteType").Parser;
-          }
-    };
-    Object.defineProperty(exports, "Parser", obj);
-    const _Object5 = Object;
-    const obj2 = {
-      enumerable: true,
-      get() {
-            return require("cloneNode").DomHandler;
-          }
-    };
-    Object.defineProperty(exports, "DomHandler", obj2);
-    const _Object6 = Object;
-    const obj3 = {
-      enumerable: true,
-      get() {
-            return require("cloneNode").DomHandler;
-          }
-    };
-    Object.defineProperty(exports, "DefaultHandler", obj3);
-    exports.parseDocument = parseDocument;
-    exports.parseDOM = parseDOM;
-    exports.createDomStream = function createDomStream(arg0, fn, arg2) {
-      const parser = new require("QuoteType").Parser(new require("cloneNode").DomHandler(arg0, fn, arg2), fn);
-      return parser;
-    };
-    const _Object7 = Object;
-    const obj4 = {
-      enumerable: true,
-      get() {
-            return fn2(require("module_9507")).default;
-          }
-    };
-    Object.defineProperty(exports, "Tokenizer", obj4);
-    exports.ElementType = fn(ElementType);
-    const _Object8 = Object;
-    const obj5 = {
-      enumerable: true,
-      get() {
-            return require("module_9515").getFeed;
-          }
-    };
-    Object.defineProperty(exports, "getFeed", obj5);
-    let closure_5 = { xmlMode: true };
-    exports.parseFeed = function parseFeed(arg0, fn) {
-      let tmp = fn;
-      if (undefined === fn) {
-        tmp = closure_5;
-      }
-      const domHandler = new require("cloneNode").DomHandler(undefined, tmp);
-      const parser = new require("QuoteType").Parser(domHandler, tmp);
-      parser.end(arg0);
-      return require("module_9515").getFeed(domHandler.root.children);
-    };
-    exports.DomUtils = fn(require("module_9515"));
+export function getParent(parent) {
+  return parent.parent || null;
+}
+export function getSiblings(parent) {
+  if (null != (parent.parent || null)) {
+    return cloneNode.hasChildren(tmp) ? tmp.children : [];
   } else {
-    const _Object2 = Object;
+    items = [parent];
+    ({ prev, next } = parent);
+    if (null != prev) {
+      do {
+        let arr = items.unshift(prev);
+        prev = prev.prev;
+      } while (null != prev);
+    }
+    if (null != next) {
+      do {
+        let arr3 = items.push(next);
+        next = next.next;
+      } while (null != next);
+    }
+    return items;
   }
-} else {
-  let _Object = Object;
+}
+export function getAttributeValue(attribs, arg1) {
+  attribs = attribs.attribs;
+  let tmp;
+  if (null !== attribs) {
+    if (undefined !== attribs) {
+      tmp = attribs[arg1];
+    }
+  }
+  return tmp;
+}
+export function hasAttrib(attribs, key10009) {
+  let tmp = null != attribs.attribs;
+  if (!tmp) {
+    if (tmp) {
+      tmp = null != attribs.attribs[key10009];
+    }
+    return tmp;
+  } else {
+    const _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    const call = hasOwnProperty.call;
+    attribs = attribs.attribs;
+    typeof call === "unknown" ? hasOwnProperty(key10009) : call(attribs, key10009);
+  }
+}
+export function getName(name) {
+  return name.name;
+}
+export function nextElementSibling(next) {
+  next = next.next;
+  let tmp = next;
+  if (null !== next) {
+    let iter = next;
+    tmp = next;
+    if (!cloneNode.isTag(next)) {
+      const next2 = iter.next;
+      tmp = next2;
+      while (null !== next2) {
+        iter = next2;
+        tmp = next2;
+        if (cloneNode.isTag(next2)) {
+          break;
+        }
+      }
+    }
+  }
+  return tmp;
+}
+export function prevElementSibling(prev) {
+  prev = prev.prev;
+  let tmp = prev;
+  if (null !== prev) {
+    let tmp4 = prev;
+    tmp = prev;
+    if (!cloneNode.isTag(prev)) {
+      const prev2 = tmp4.prev;
+      tmp = prev2;
+      while (null !== prev2) {
+        tmp4 = prev2;
+        tmp = prev2;
+        if (cloneNode.isTag(prev2)) {
+          break;
+        }
+      }
+    }
+  }
+  return tmp;
 }

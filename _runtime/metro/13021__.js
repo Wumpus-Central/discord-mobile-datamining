@@ -1,13 +1,7 @@
 // === Module 13021: ? ===
 
 // Module 13021
-const TYPE = { EOF: 0, Ident: 1, Function: 2, AtKeyword: 3, Hash: 4, String: 5, BadString: 6, Url: 7, BadUrl: 8, Delim: 9, Number: 10, Percentage: 11, Dimension: 12, WhiteSpace: 13, CDO: 14, CDC: 15, Colon: 16, Semicolon: 17, Comma: 18, LeftSquareBracket: 19, RightSquareBracket: 20, LeftParenthesis: 21, RightParenthesis: 22, LeftCurlyBracket: 23, RightCurlyBracket: 24, Comment: 25 };
-const keys = Object.keys(TYPE);
+import registerAsset from "module_1119" /* 1119 */;
 
-export default {
-  TYPE,
-  NAME: keys.reduce((acc, item) => {
-    acc[obj[item]] = item;
-    return acc;
-  }, {})
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "a223df53550492950018c2a994e89fed", name: "FiltersHorizontalIcon", type: "png" });

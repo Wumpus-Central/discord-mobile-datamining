@@ -1,117 +1,13 @@
 // === Module 8136: ? ===
 
 // Module 8136
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 8130 */;
-import extractPropsDefault from "extractProps" /* 8137 */;
-import _modDef8145 from "module_8145" /* 8145 */;
-import _modDef8146 from "module_8146" /* 8146 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-const G = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class G {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, G);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(G);
-    tmp3 = closure_4;
-    if (metroImportDefault()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      root = root.root;
-      if (root != null) {
-        root.setNativeProps(matrix);
-      }
-    };
-    return tmp3Result;
-  }
-}
-_inherits(G, _modDef8146);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    const propsAndStylesResult = G(8137).propsAndStyles(props);
-    const tmp5 = extractPropsDefault(propsAndStylesResult, this);
-    const obj = G(8137);
-    const extractFontResult = G(8144).extractFont(propsAndStylesResult);
-    if (typeof hasProps === "function") {
-      const keys = Object.keys();
-      if (keys !== undefined) {
-        let flag = true;
-        if (flag) {
-          tmp5.font = extractFontResult;
-        }
-        const obj3 = {
-          ref(arg0) {
-                return self.refMethod(arg0);
-              }
-        };
-        const merged = Object.assign(tmp5);
-        obj3.children = props.children;
-        return jsx(_modDef8145, {
-          ref(arg0) {
-                return self.refMethod(arg0);
-              }
-        });
-      }
-      flag = false;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-    const obj2 = G(8144);
-  }
-};
-let items = [entry];
-const importDefaultResultResult = _createClass(G, items);
-importDefaultResultResult.displayName = "G";
-function hasProps(arg0) {
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGEllipse", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, cx: true, cy: true, rx: true, ry: true };
 
-}
-
-export default importDefaultResultResult;
+export default module_65.get("RNSVGEllipse", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

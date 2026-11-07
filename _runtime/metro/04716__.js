@@ -1,9 +1,8 @@
 // === Module 4716: ? ===
 
 // Module 4716
-import _typeof_mod from "module_4450" /* 4450 */;
-import module_4717_mod from "module_4717" /* 4717 */;
-import requiredArgs_mod from "requiredArgs" /* 4451 */;
+import _typeof_mod from "module_4420" /* 4420 */;
+import requiredArgs_mod from "requiredArgs" /* 4421 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -13,35 +12,19 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_4717 = module_4717_mod;
-if (!module_4717) {
-  const obj2 = { default: module_4717 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4717;
-}
-module_4717 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function getDaysInYear(arg0) {
-  requiredArgs.default(1, arguments);
+export default function isEqual(arg0, arg1) {
+  requiredArgs.default(2, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
-  } else {
-    let num = 365;
-    if (module_4717.default(defaultResult1)) {
-      num = 366;
-    }
-    return num;
-  }
-  date = new Date(defaultResult1);
+  const time = defaultResult1.getTime();
+  return time === _typeof.default(arg1).getTime();
 };
 export default exports.default;

@@ -1,21 +1,25 @@
 // === Module 16421: ? ===
 
 // Module 16421
-let propertyIsEnumerable = {}.propertyIsEnumerable;
-if (!getOwnPropertyDescriptor) {
-  if (getOwnPropertyDescriptor) {
-    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
-      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
-      return tmp && tmp.enumerable;
-    };
-  }
-  arg5.f = propertyIsEnumerable;
-} else {
-  const call = propertyIsEnumerable.call;
-  if (typeof call === "unknown") {
-    let propertyIsEnumerableResult = propertyIsEnumerable(1);
-  } else {
-    propertyIsEnumerableResult = call(obj, 1);
-  }
-  obj = { 1: 2 };
+const require = globalThis.__r;
+
+const require = arg1;
+const dependencyMap = arg6;
+
+export function getSupportedTimeZones(locale) {
+  _require = locale;
+  const timezones = require("module_16422").timezones;
+  return timezones.filter((item) => (function isSupported(timeZone, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const obj = { timeZone };
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
+      return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
 }

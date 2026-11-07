@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/create_guild/native/images", width: 48, height: 48, scales: [2, 3], hash: "cae160e8dcd3fb84e6eda225bda4b4a6", name: "img_clubs", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/directory_channels/native/images", width: 120, height: 80, scales: [2, 3], hash: "8a1b4cbcf69c94f39bb256787c4e1df8", name: "search_empty_state", type: "png" });

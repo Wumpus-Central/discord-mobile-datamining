@@ -1,21 +1,37 @@
 // === Module 13107: ? ===
 
 // Module 13107
+import _mod13050 from "module_13050" /* 13050 */;
+
+const RightParenthesis = _mod13050.TYPE.RightParenthesis;
 const obj = {
-  name: "Value",
+  name: "Function",
   structure: null,
-  parse() {
-    const element = { type: "Value", loc: null, children: null };
-    const sequence = this.readSequence(this.scope.Value);
-    element.loc = this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart);
-    element.children = sequence;
-    return element;
+  parse(call, arg1) {
+    const self = this;
+    const str = this.consumeFunctionName();
+    const formatted = str.toLowerCase();
+    if (arg1.hasOwnProperty(formatted)) {
+      const call2 = tmp4.call;
+      typeof call2 === "unknown" ? arg1[formatted](arg1) : call2(self, arg1);
+    } else {
+      call = call.call;
+      if (!self.scanner.eof) {
+        self.eat(RightParenthesis);
+      }
+      const element = { type: "Function", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: str, children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
+      return element;
+    }
   },
-  generate(arg0) {
-    this.children(arg0);
-  }
+  generate(name) {
+    this.chunk(name.name);
+    this.chunk("(");
+    this.children(name);
+    this.chunk(")");
+  },
+  walkContext: "function"
 };
-const obj2 = { children: null };
+const obj2 = { name: String, children: null };
 const items = [[]];
 obj2.children = items;
 obj.structure = obj2;

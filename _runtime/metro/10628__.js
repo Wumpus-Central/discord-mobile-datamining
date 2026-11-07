@@ -1,14 +1,16 @@
 // === Module 10628: ? ===
 
 // Module 10628
-import _mod10619 from "module_10619" /* 10619 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10446 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10453 */;
+import _mod10615 from "module_10615" /* 10615 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKRelativeDateFormatParser = require;
+const ITWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKRelativeDateFormatParser {
+const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:il\\s*?)?(?:(questa|l'ultima|scorsa|prossima)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10615.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(questa|l'ultima|scorsa|prossima)\\s*settimana)?(?=\\W|$)", "i");
+class ITWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKRelativeDateFormatParser);
+    tmp = c2(this, ITWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(UKRelativeDateFormatParser);
+    obj = closure_4(ITWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,68 +51,43 @@ class UKRelativeDateFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKRelativeDateFormatParser, _mod10619.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(ITWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430 \u0446\u044C\u043E\u043C\u0443|\u0432 \u0446\u044C\u043E\u043C\u0443|\u0443 \u0446\u044C\u043E\u043C\u0443|\u0446\u044C\u043E\u0433\u043E)\\s*(" + UKRelativeDateFormatParser(10463).matchAnyPattern(UKRelativeDateFormatParser(10617).TIME_UNIT_DICTIONARY) + ")(?=\\s*)";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const formatted1 = arg1[2].toLowerCase();
-      const str3 = UKRelativeDateFormatParser(10617).TIME_UNIT_DICTIONARY[formatted1];
-      if ("\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
-        if ("\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
-          if ("\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
-            if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != formatted) {
-              if ("\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
-                if ("\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
-                  if ("\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
-                    if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != formatted) {
-                      const parsingComponents = createParsingComponents.createParsingComponents();
-                      const _Date = Date;
-                      const instant = createParsingComponents.reference.instant;
-                      const date = new Date(instant.getTime());
-                      if (str3.match(/week/i)) {
-                        date.setDate(date.getDate() - date.getDay());
-                        parsingComponents.imply("day", date.getDate());
-                        parsingComponents.imply("month", date.getMonth() + 1);
-                        parsingComponents.imply("year", date.getFullYear());
-                        const date1 = date.getDate();
-                      } else if (str3.match(/month/i)) {
-                        date.setDate(1);
-                        parsingComponents.imply("day", date.getDate());
-                        parsingComponents.assign("year", date.getFullYear());
-                        parsingComponents.assign("month", date.getMonth() + 1);
-                      } else if (str3.match(/year/i)) {
-                        date.setDate(1);
-                        date.setMonth(0);
-                        parsingComponents.imply("day", date.getDate());
-                        parsingComponents.imply("month", date.getMonth() + 1);
-                        parsingComponents.assign("year", date.getFullYear());
-                      }
-                      return parsingComponents;
-                    }
-                  }
-                }
-              }
-              const obj = {};
-              obj[str3] = -1;
-              const ParsingComponents = UKRelativeDateFormatParser(10466).ParsingComponents;
-              return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[2].toLowerCase();
+      let str2 = arg1[1];
+      if (!str2) {
+        str2 = arg1[3];
+      }
+      if (!str2) {
+        str2 = "";
+      }
+      const formatted1 = str2.toLowerCase();
+      let str3 = "ultima";
+      if ("ultima" != formatted1) {
+        str3 = "ultima";
+        if ("scorsa" != formatted1) {
+          str3 = "prossima";
+          if ("prossima" != formatted1) {
+            str3 = null;
+            if ("questa" == formatted1) {
+              str3 = "questa";
             }
           }
         }
       }
-      const ParsingComponents2 = UKRelativeDateFormatParser(10466).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [str3]: 1 });
+      return ITWeekdayParser(10473).createParsingComponentsAtWeekday(reference.reference, ITWeekdayParser(10615).WEEKDAY_DICTIONARY[formatted], str3);
     }
   }
 ];
 
-export default _createClass(UKRelativeDateFormatParser, items);
+export default _createClass(ITWeekdayParser, items);

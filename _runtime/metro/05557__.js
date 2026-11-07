@@ -1,11 +1,107 @@
 // === Module 5557: ? ===
 
 // Module 5557
-import noop from "module_19" /* 19 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
 
-const jsx = fn(21).jsx;
-
-export default function _default(simultaneousWith) {
-  const merged = Object.assign(simultaneousWith);
-  return jsx(importDefault(null != simultaneousWith.simultaneousWith || null != simultaneousWith.requireToFail || null != simultaneousWith.block ? 5558 : 5569), {});
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+let items = [{ code: "(function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};})" }];
+[tmp4] = items;
+function changeEventCalculator(force, force2) {
+  if (undefined === force2) {
+    const obj2 = { forceChange: force.force };
+    let obj = obj2;
+  } else {
+    obj = { forceChange: force.force - force2.force };
+  }
+  const merged = Object.assign(force);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__workletHash = 14930773822007;
+changeEventCalculator.__initData = tmp4;
+class ForceTouchGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ForceTouchGesture);
+    tmp2 = c2;
+    obj = c2(ForceTouchGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "ForceTouchGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = ForceTouchGesture;
+_inherits(ForceTouchGesture, fn(5440).ContinousBaseGesture);
+const entry = {
+  key: "minForce",
+  value: function minForce(minForce) {
+    this.config.minForce = minForce;
+    return this;
+  }
 };
+const items1 = [
+  entry,
+  {
+    key: "maxForce",
+    value: function maxForce(maxForce) {
+      this.config.maxForce = maxForce;
+      return this;
+    }
+  },
+  {
+    key: "feedbackOnActivation",
+    value: function feedbackOnActivation(feedbackOnActivation) {
+      this.config.feedbackOnActivation = feedbackOnActivation;
+      return this;
+    }
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0];
+      return fn(items);
+    }
+  }
+];
+
+export const ForceTouchGesture = _createClass(ForceTouchGesture, items1);

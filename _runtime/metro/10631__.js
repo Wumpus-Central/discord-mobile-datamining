@@ -1,15 +1,14 @@
 // === Module 10631: ? ===
 
 // Module 10631
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10470 */;
-import _mod10632 from "module_10632" /* 10632 */;
+import Filter from "Filter" /* 10465 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENTimeUnitWithinFormatParser = require;
+const ENMergeRelativeDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,14 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:within|in|for)\\s*(?:(?:pi\u00F9 o meno|intorno|approssimativamente|verso|verso le)\\s*(?:~\\s*)?)?(" + _mod10632.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-const regExp1 = new RegExp("(?:(?:pi\u00F9 o meno|intorno|approssimativamente|verso|verso le)\\s*(?:~\\s*)?)?(" + _mod10632.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-class ENTimeUnitWithinFormatParser {
+class ENMergeRelativeDateRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, ENTimeUnitWithinFormatParser);
+    tmp = c2(this, ENMergeRelativeDateRefiner);
     tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitWithinFormatParser);
+    obj = closure_4(ENMergeRelativeDateRefiner);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,22 +48,59 @@ class ENTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMergeRelativeDateRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern(option) {
-    return option.option.forwardDate ? regExp1 : regExp;
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*$/i;
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ENTimeUnitWithinFormatParser(10466).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, ENTimeUnitWithinFormatParser(10632).parseDuration(arg1[1]));
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, text, start) {
+      let match = str.match(this.patternBetween());
+      if (match) {
+        const tmp4 = null != text.text.match(/\s+(prima|dal)$/i);
+        let tmp5 = !tmp4;
+        if (!tmp4) {
+          tmp5 = null == text.text.match(/\s+(dopo|dal|fino)$/i);
+        }
+        let tmp6 = !tmp5;
+        if (!tmp5) {
+          start = start.start;
+          value = start.get("day");
+          if (value) {
+            const start2 = start.start;
+            value = start2.get("month");
+          }
+          if (value) {
+            const start3 = start.start;
+            value = start3.get("year");
+          }
+          tmp6 = value;
+        }
+        match = tmp6;
+      }
+      return match;
+    }
+  },
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, text, start) {
+      const parseDurationResult = ENMergeRelativeDateRefiner(10615).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/\s+(prima|dal)$/i)) {
+        reverseDurationResult = ENMergeRelativeDateRefiner(10448).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = ENMergeRelativeDateRefiner(10449).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeDateRefiner(10449).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
+      return new ENMergeRelativeDateRefiner(10449).ParsingResult(start.reference, text.index, "" + text.text + arg0 + start.text, relativeFromReference);
     }
   }
 ];
 
-export default _createClass(ENTimeUnitWithinFormatParser, items);
+export default _createClass(ENMergeRelativeDateRefiner, items);

@@ -1,7 +1,7 @@
 // === Module 8189: ? ===
 
 // Module 8189
-import _modDef8146 from "module_8146" /* 8146 */;
+import _modDef8125 from "module_8125" /* 8125 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -9,7 +9,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Filter = importDefault;
+const Polygon = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,50 +30,59 @@ function _isNativeReflectConstruct() {
   }
 }
 const jsx = fn(21).jsx;
-class Filter {
+class Polygon {
   constructor() {
     self = this;
-    tmp = c2(this, Filter);
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, Polygon);
+    items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(Filter);
+    obj = closure_4(Polygon);
     tmp3 = closure_3;
     if (closure_6()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polygon(8190)(points) + "z";
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(Filter, _modDef8146);
+_inherits(Polygon, _modDef8125);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
     const props = this.props;
-    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(size);
-    obj.children = this.props.children;
-    return jsx(Filter(8190), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polygon(8190)(points) + "z";
+    }
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polygon(8185), { ref: this.refMethod, d: null });
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Filter, items);
-importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+let items = [entry];
+const importDefaultResultResult = _createClass(Polygon, items);
+importDefaultResultResult.displayName = "Polygon";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

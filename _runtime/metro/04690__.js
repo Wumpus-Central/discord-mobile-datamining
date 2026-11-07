@@ -1,10 +1,8 @@
 // === Module 4690: ? ===
 
 // Module 4690
-import _typeof_mod from "module_4450" /* 4450 */;
-import startOfUTCWeek_mod from "startOfUTCWeek" /* 4453 */;
-import startOfUTCWeekYear_mod from "startOfUTCWeekYear" /* 4691 */;
-import requiredArgs_mod from "requiredArgs" /* 4451 */;
+import _typeof_mod from "module_4420" /* 4420 */;
+import requiredArgs_mod from "requiredArgs" /* 4421 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -14,37 +12,17 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let startOfUTCWeek = startOfUTCWeek_mod;
-if (!startOfUTCWeek) {
-  const obj2 = { default: startOfUTCWeek };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfUTCWeek;
-}
-startOfUTCWeek = tmp5;
-let startOfUTCWeekYear = startOfUTCWeekYear_mod;
-if (!startOfUTCWeekYear) {
-  const obj3 = { default: startOfUTCWeekYear };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfUTCWeekYear;
-}
-startOfUTCWeekYear = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+requiredArgs = tmp5;
 
-export default function getUTCWeek(arg0, arg1) {
+export default function getHours(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = startOfUTCWeek.default(defaultResult1, arg1).getTime();
-  const defaultResult2 = startOfUTCWeek.default(defaultResult1, arg1);
-  return Math.round((time - startOfUTCWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
+  return _typeof.default(arg0).getHours();
 };
 export default exports.default;

@@ -1,96 +1,123 @@
 // === Module 10509: ? ===
 
 // Module 10509
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10463 */;
-import findMostLikelyADYear from "findMostLikelyADYear" /* 10464 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-function parseNumberPattern(str) {
-  str = str.toLowerCase();
-  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    let num6 = exports.INTEGER_WORD_DICTIONARY[str];
-  } else {
-    num6 = 1;
-    if ("ein" !== str) {
-      num6 = 1;
-      if ("einer" !== str) {
-        num6 = 1;
-        if ("einem" !== str) {
-          num6 = 1;
-          if ("einen" !== str) {
-            num6 = 1;
-            if ("eine" !== str) {
-              let num5 = 2;
-              if (!str.match(/wenigen/)) {
-                let num2 = 0.5;
-                if (!str.match(/halb/)) {
-                  num2 = 0.5;
-                  if (!str.match(/halben/)) {
-                    let num3 = 3;
-                    if (!str.match(/einigen/)) {
-                      let num4 = 7;
-                      if (!str.match(/mehreren/)) {
-                        const _parseFloat = parseFloat;
-                        num4 = parseFloat(str);
-                      }
-                      num3 = num4;
-                    }
-                    num2 = num3;
-                  }
-                }
-                num5 = num2;
+const FRSpecificTimeExpressionParser = require;
+const regExp = new RegExp("(^|\\s|T)(?:(?:[\u00E0a])\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
+const regExp1 = new RegExp("^\\s*(\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
+class FRSpecificTimeExpressionParser {
+  constructor() {
+    tmp = c2(this, FRSpecificTimeExpressionParser);
+    return;
+  }
+}
+const entry = {
+  key: "pattern",
+  value: function pattern(arg0) {
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "extract",
+    value: function extract(createParsingResult, index) {
+      const sum = index.index + index[1].length;
+      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
+      if (str2.match(/^\d{4}$/)) {
+        index.index = index.index + index[0].length;
+        return null;
+      } else {
+        const start = parsingResult.start;
+        parsingResult.start = FRSpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
+        if (parsingResult.start) {
+          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
+          if (match) {
+            const start2 = parsingResult.start;
+            parsingResult.end = FRSpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
+            if (parsingResult.end) {
+              parsingResult.text = parsingResult.text + match[0];
+            }
+          }
+          return parsingResult;
+        } else {
+          index.index = index.index + index[0].length;
+          return null;
+        }
+      }
+      str2 = parsingResult.text;
+    }
+  }
+];
+const entry1 = {
+  key: "extractTimeComponent",
+  value: function extractTimeComponent(assign, arg1) {
+    const parsed = parseInt(arg1[2]);
+    let num = 0;
+    if (null != arg1[3]) {
+      const _parseInt = parseInt;
+      num = parseInt(arg1[3]);
+    }
+    if (num < 60) {
+      if (parsed <= 24) {
+        let PM1 = null;
+        if (parsed >= 12) {
+          PM1 = FRSpecificTimeExpressionParser(10451).Meridiem.PM;
+        }
+        let PM = PM1;
+        let tmp5 = parsed;
+        if (null != arg1[5]) {
+          if (parsed > 12) {
+            return null;
+          } else {
+            const formatted = arg1[5][0].toLowerCase();
+            let tmp8 = parsed;
+            if ("a" == formatted) {
+              let num2 = parsed;
+              if (12 == parsed) {
+                num2 = 0;
               }
-              num6 = num5;
+              tmp8 = num2;
+              PM1 = FRSpecificTimeExpressionParser(10451).Meridiem.AM;
+            }
+            PM = PM1;
+            tmp5 = tmp8;
+            if ("p" == formatted) {
+              let sum = tmp8;
+              if (12 != tmp8) {
+                sum = tmp8 + 12;
+              }
+              tmp5 = sum;
+              PM = FRSpecificTimeExpressionParser(10451).Meridiem.PM;
             }
           }
         }
+        assign.assign("hour", tmp5);
+        assign.assign("minute", num);
+        if (null !== PM) {
+          assign.assign("meridiem", PM);
+        } else if (tmp5 < 12) {
+          assign.imply("meridiem", FRSpecificTimeExpressionParser(10451).Meridiem.AM);
+        } else {
+          assign.imply("meridiem", FRSpecificTimeExpressionParser(10451).Meridiem.PM);
+        }
+        if (null != arg1[4]) {
+          const _parseInt2 = parseInt;
+          const parsed1 = parseInt(arg1[4]);
+          if (parsed1 >= 60) {
+            return null;
+          } else {
+            assign.assign("second", parsed1);
+          }
+        }
+        return assign;
       }
     }
+    return null;
   }
-  return num6;
-}
-const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")\\s{0,5}";
-const regExp = new RegExp(combined, "i");
+};
+const items1 = [entry1];
 
-export { parseNumberPattern };
-export function parseYear(match) {
-  if (obj.test(match)) {
-    const _parseInt3 = parseInt;
-    return -parseInt(match.replace(/[^0-9]+/gi, ""));
-  } else {
-    if (obj2.test(match)) {
-      const _parseInt2 = parseInt;
-      return parseInt(match.replace(/[^0-9]+/gi, ""));
-    } else {
-      const _parseInt = parseInt;
-      if (obj3.test(match)) {
-        return _parseInt(match.replace(/[^0-9]+/gi, ""));
-      } else {
-        return findMostLikelyADYear.findMostLikelyADYear(_parseInt(match));
-      }
-      obj3 = /z/i;
-    }
-    obj2 = /n/i;
-  }
-  obj = /v/i;
-}
-export function parseDuration(arg0) {
-  let str = arg0;
-  const obj = {};
-  let match = regExp.exec(arg0);
-  while (match) {
-    let str2 = match[2];
-    let tmp3 = parseNumberPattern(match[1]);
-    obj[exports.TIME_UNIT_DICTIONARY[str2.toLowerCase(str2)]] = tmp3;
-    let substr = str.substring(match[0].length);
-    match = regExp.exec(substr);
-    str = substr;
-  }
-  return obj;
-}
-export const WEEKDAY_DICTIONARY = { sonntag: 0, so: 0, montag: 1, mo: 1, dienstag: 2, di: 2, mittwoch: 3, mi: 3, donnerstag: 4, do: 4, freitag: 5, fr: 5, samstag: 6, sa: 6 };
-export const MONTH_DICTIONARY = { januar: 1, "jänner": 1, janner: 1, jan: 1, "jan.": 1, februar: 2, feber: 2, feb: 2, "feb.": 2, "märz": 3, maerz: 3, "mär": 3, "mär.": 3, mrz: 3, "mrz.": 3, april: 4, apr: 4, "apr.": 4, mai: 5, juni: 6, jun: 6, "jun.": 6, juli: 7, jul: 7, "jul.": 7, august: 8, aug: 8, "aug.": 8, september: 9, sep: 9, "sep.": 9, sept: 9, "sept.": 9, oktober: 10, okt: 10, "okt.": 10, november: 11, nov: 11, "nov.": 11, dezember: 12, dez: 12, "dez.": 12 };
-export const INTEGER_WORD_DICTIONARY = { eins: 1, eine: 1, einem: 1, einen: 1, einer: 1, zwei: 2, drei: 3, vier: 4, "fünf": 5, fuenf: 5, sechs: 6, sieben: 7, acht: 8, neun: 9, zehn: 10, elf: 11, "zwölf": 12, zwoelf: 12 };
-export const TIME_UNIT_DICTIONARY = { sek: "second", sekunde: "second", sekunden: "second", min: "minute", minute: "minute", minuten: "minute", h: "hour", std: "hour", stunde: "hour", stunden: "hour", tag: "day", tage: "day", tagen: "day", woche: "week", wochen: "week", monat: "month", monate: "month", monaten: "month", monats: "month", quartal: "quarter", quartals: "quarter", quartale: "quarter", quartalen: "quarter", a: "year", j: "year", jr: "year", jahr: "year", jahre: "year", jahren: "year", jahres: "year" };
-export const NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)";
-export const YEAR_PATTERN = "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)";
-export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);
+export default _createClass(FRSpecificTimeExpressionParser, items, items1);

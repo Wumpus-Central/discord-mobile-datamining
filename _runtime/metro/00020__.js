@@ -391,17 +391,17 @@ export const Children = {
       items = [];
       c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f78162.call;
+        const call = f78491.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f78162(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f78491(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       return items;
     }
   },
   forEach(element, arg1, arg2) {
-    const f78160 = function() {
+    const f78489 = function() {
       const self = this;
-      const apply = f78160.apply;
+      const apply = f78489.apply;
       if (typeof apply === "unknown") {
         HermesBuiltin.applyArguments(self);
       } else {
@@ -412,9 +412,9 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f78162.call;
+        const call = f78491.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f78162(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f78491(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
   },
@@ -425,23 +425,23 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f78162.call;
+        const call = f78491.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f78162(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f78491(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
     return closure_0;
   },
   toArray(element) {
-    const f78162 = (arg0) => arg0;
+    const f78491 = (arg0) => arg0;
     let items1 = element;
     if (null != element) {
       items = [];
       closure_2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f78162.call;
+        const call = f78491.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f78162(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f78491(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       items1 = items;
     }
@@ -707,9 +707,9 @@ export (arg0, arg1) => {
   const H = obj.H;
   return H.useDeferredValue(arg0, arg1);
 }
-export (arg0, items) => {
+export (callback, items) => {
   const H = obj.H;
-  return H.useEffect(arg0, items);
+  return H.useEffect(callback, items);
 }
 export (arg0) => {
   const H = obj.H;

@@ -1,53 +1,10 @@
 // === Module 13082: ? ===
 
 // Module 13082
-import _mod13027 from "module_13027" /* 13027 */;
-import _mod13071 from "module_13071" /* 13071 */;
+import _mod13067 from "module_13067" /* 13067 */;
+import _mod13069 from "module_13069" /* 13069 */;
+import _mod13070 from "module_13070" /* 13070 */;
+import _mod13081 from "module_13081" /* 13081 */;
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, _mod13071.mode.semicolonIncluded, true);
-}
-const WhiteSpace = _mod13027.TYPE.WhiteSpace;
-const Comment = _mod13027.TYPE.Comment;
-const Semicolon = _mod13027.TYPE.Semicolon;
-const obj = {
-  name: "DeclarationList",
-  structure: null,
-  parse() {
-    const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      while (true) {
-        let tokenType = self.scanner.tokenType;
-        if (WhiteSpace !== tokenType) {
-          if (Comment !== tokenType) {
-            if (Semicolon !== tokenType) {
-              let arr = list.push(self.parseWithFallback(self.Declaration, consumeRaw));
-            }
-            if (self.scanner.eof) {
-              break;
-            }
-          }
-        }
-        let iter = self.scanner;
-        let nextResult = iter.next();
-      }
-    }
-    const element = { type: "DeclarationList", loc: self.getLocationFromList(list), children: list };
-    return element;
-  },
-  generate(arg0) {
-    this.children(arg0, function(type) {
-      if ("Declaration" === type.type) {
-        const self = this;
-        this.chunk(";");
-      }
-    });
-  }
-};
-const obj2 = { children: null };
-const items = [["Declaration"]];
-obj2.children = items;
-obj.structure = obj2;
 
-export default obj;
+export default { SyntaxError: _mod13069, parse: _mod13067, generate: _mod13070, walk: _mod13081 };

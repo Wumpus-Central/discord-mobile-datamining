@@ -1,137 +1,63 @@
 // === Module 8149: ? ===
 
 // Module 8149
-import _mod17 from "module_17" /* 17 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-let closure_0 = { top: 20, left: 20, right: 20, bottom: 30 };
-const Mixin = _mod17.Touchable.Mixin;
-({ touchableHandleStartShouldSetResponder: closure_1, touchableHandleResponderTerminationRequest: c2, touchableHandleResponderGrant: c3, touchableHandleResponderMove: closure_4, touchableHandleResponderRelease: hasOwnProperty, touchableHandleResponderTerminate: closure_6, touchableGetInitialState: metroImportDefault } = Mixin);
-let obj = {};
-const merged = Object.assign(Mixin);
-obj.touchableHandleStartShouldSetResponder = function touchableHandleStartShouldSetResponder(arg0) {
-  const self = this;
-  const onStartShouldSetResponder = this.props.onStartShouldSetResponder;
-  if (onStartShouldSetResponder) {
-    let result = onStartShouldSetResponder(arg0);
-  } else {
-    const call = duration.call;
-    result = typeof call === "unknown" ? duration(arg0) : call(self, arg0);
-  }
-  return result;
-};
-obj.touchableHandleResponderTerminationRequest = function touchableHandleResponderTerminationRequest(arg0) {
-  const self = this;
-  const onResponderTerminationRequest = this.props.onResponderTerminationRequest;
-  if (onResponderTerminationRequest) {
-    let result = onResponderTerminationRequest(arg0);
-  } else {
-    const call = React2.call;
-    result = typeof call === "unknown" ? React2(arg0) : call(self, arg0);
-  }
-  return result;
-};
-obj.touchableHandleResponderGrant = function touchableHandleResponderGrant(arg0) {
-  const self = this;
-  const onResponderGrant = this.props.onResponderGrant;
-  if (onResponderGrant) {
-    let onResponderGrantResult = onResponderGrant(arg0);
-  } else {
-    const call = React3.call;
-    onResponderGrantResult = typeof call === "unknown" ? React3(arg0) : call(self, arg0);
-  }
-  return onResponderGrantResult;
-};
-obj.touchableHandleResponderMove = function touchableHandleResponderMove(arg0) {
-  const self = this;
-  const onResponderMove = this.props.onResponderMove;
-  if (onResponderMove) {
-    let onResponderMoveResult = onResponderMove(arg0);
-  } else {
-    const call = React4.call;
-    onResponderMoveResult = typeof call === "unknown" ? React4(arg0) : call(self, arg0);
-  }
-  return onResponderMoveResult;
-};
-obj.touchableHandleResponderRelease = function touchableHandleResponderRelease(View) {
-  const self = this;
-  const onResponderRelease = this.props.onResponderRelease;
-  if (onResponderRelease) {
-    let onResponderReleaseResult = onResponderRelease(View);
-  } else {
-    const call = hasOwnProperty.call;
-    onResponderReleaseResult = typeof call === "unknown" ? hasOwnProperty(View) : call(self, View);
-  }
-  return onResponderReleaseResult;
-};
-obj.touchableHandleResponderTerminate = function touchableHandleResponderTerminate(arg0) {
-  const self = this;
-  const onResponderTerminate = this.props.onResponderTerminate;
-  if (onResponderTerminate) {
-    let onResponderTerminateResult = onResponderTerminate(arg0);
-  } else {
-    const call = timestampProducer.call;
-    onResponderTerminateResult = typeof call === "unknown" ? timestampProducer(arg0) : call(self, arg0);
-  }
-  return onResponderTerminateResult;
-};
-obj.touchableHandlePress = function touchableHandlePress(nativeEvent) {
-  const onPress = this.props.onPress;
-  if (onPress) {
-    onPress(nativeEvent);
-  }
-};
-obj.touchableHandleActivePressIn = function touchableHandleActivePressIn(nativeEvent) {
-  const onPressIn = this.props.onPressIn;
-  if (onPressIn) {
-    onPressIn(nativeEvent);
-  }
-};
-obj.touchableHandleActivePressOut = function touchableHandleActivePressOut(nativeEvent) {
-  const onPressOut = this.props.onPressOut;
-  if (onPressOut) {
-    onPressOut(nativeEvent);
-  }
-};
-obj.touchableHandleLongPress = function touchableHandleLongPress(nativeEvent) {
-  const onLongPress = this.props.onLongPress;
-  if (onLongPress) {
-    onLongPress(nativeEvent);
-  }
-};
-obj.touchableGetPressRectOffset = function touchableGetPressRectOffset() {
-  return this.props.pressRetentionOffset || closure_0;
-};
-obj.touchableGetHitSlop = function touchableGetHitSlop() {
-  return this.props.hitSlop;
-};
-obj.touchableGetHighlightDelayMS = function touchableGetHighlightDelayMS() {
-  return this.props.delayPressIn || 0;
-};
-obj.touchableGetLongPressDelayMS = function touchableGetLongPressDelayMS() {
-  let num = this.props.delayLongPress;
-  let num2 = 0;
-  if (0 !== num) {
-    if (!num) {
-      num = 500;
+const FeDistantLight = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    num2 = num;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  return num2;
+}
+class FeDistantLight {
+  constructor() {
+    self = this;
+    tmp = c2(this, FeDistantLight);
+    tmp2 = closure_4;
+    obj = closure_4(FeDistantLight);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(FeDistantLight, fn(19).Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const result = FeDistantLight(8117).warnUnimplementedFilter();
+    return null;
+  }
 };
-obj.touchableGetPressOutDelayMS = function touchableGetPressOutDelayMS() {
-  return this.props.delayPressOut || 0;
-};
-const keys = Object.keys(obj);
-let closure_10 = keys.map((item) => obj[item]);
+const items = [entry];
+const importDefaultResultResult = _createClass(FeDistantLight, items);
+importDefaultResultResult.displayName = "FeDistantLight";
+importDefaultResultResult.defaultProps = {};
 
-export default (self) => {
-  for (let num = 0; num < length; num = num + 1) {
-    obj = closure_10[num];
-    let bindResult = obj;
-    if (typeof obj === "function") {
-      bindResult = obj.bind(self);
-    }
-    self[keys[num]] = bindResult;
-  }
-  self.state = metroImportDefault();
-};
+export default importDefaultResultResult;

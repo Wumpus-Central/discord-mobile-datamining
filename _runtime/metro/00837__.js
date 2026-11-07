@@ -237,7 +237,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -452,7 +452,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 }
                 closure_136_0.end();
                 c12 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
           break;

@@ -1,9 +1,37 @@
 // === Module 4589: ? ===
 
 // Module 4589
-let closure_0 = { lastWeek: "'ge\u00E7en hafta' eeee 'saat' p", yesterday: "'d\u00FCn saat' p", today: "'bug\u00FCn saat' p", tomorrow: "'yar\u0131n saat' p", nextWeek: "eeee 'saat' p", other: "P" };
+import module_4424_mod from "module_4424" /* 4424 */;
+import module_4569_mod from "module_4569" /* 4569 */;
+import requiredArgs_mod from "requiredArgs" /* 4421 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+let module_4424 = module_4424_mod;
+if (!module_4424) {
+  const obj = { default: module_4424 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4424;
+}
+module_4424 = tmp3;
+let module_4569 = module_4569_mod;
+if (!module_4569) {
+  const obj2 = { default: module_4569 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4569;
+}
+module_4569 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+
+export default function addYears(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4569.default(interval, 12 * module_4424.default(arg1));
 };
 export default exports.default;

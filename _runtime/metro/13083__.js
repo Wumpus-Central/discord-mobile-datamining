@@ -1,24 +1,30 @@
 // === Module 13083: ? ===
 
 // Module 13083
-import keys2 from "keys2" /* 13023 */;
-import _mod13027 from "module_13027" /* 13027 */;
+import _mod13052 from "module_13052" /* 13052 */;
 
-const Dimension = _mod13027.TYPE.Dimension;
-const obj = {
-  name: "Dimension",
-  structure: { value: String, unit: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    const consumeNumberResult = keys2.consumeNumber(this.scanner.source, tokenStart);
-    this.eat(Dimension);
-    const obj2 = { type: "Dimension", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: this.scanner.source.substring(tokenStart, consumeNumberResult), unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart) };
-    return obj2;
-  },
-  generate(value) {
-    this.chunk(value.value);
-    this.chunk(value.unit);
+function clone(obj) {
+  obj = {};
+  for (const key10006 in arg0) {
+    let arr = arg0[key10006];
+    if (!arr) {
+      obj[key10006] = arr;
+      continue;
+    } else {
+      let _Array = Array;
+      if (!Array.isArray(arr)) {
+        if (!(arr instanceof _mod13052)) {
+          let _Object = Object;
+          let mapped = arr;
+          if (arr.constructor === Object) {
+            mapped = clone(arr);
+          }
+        }
+      }
+      mapped = arr.map(clone);
+    }
   }
-};
+  return obj;
+}
 
-export default obj;
+export default clone;

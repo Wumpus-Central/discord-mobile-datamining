@@ -1,16 +1,15 @@
 // === Module 16432: ? ===
 
 // Module 16432
-import _mod16433 from "module_16433" /* 16433 */;
+import _mod16431 from "module_16431" /* 16431 */;
 
 
-export default (arg0) => {
-  let num = 0;
-  {
-    num = 0;
-    if (0 !== tmp) {
-      num = _mod16433(tmp);
-    }
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod16431, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod16431[tmp2] = tmp;
   }
-  return num;
 };

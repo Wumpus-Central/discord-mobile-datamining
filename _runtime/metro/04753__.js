@@ -1,6 +1,8 @@
 // === Module 4753: ? ===
 
 // Module 4753
+import _mod4726 from "module_4726" /* 4726 */;
+
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -26,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(DateToSystemTimezoneSetter, Setter) {
+function _setPrototypeOf(Hour0to23Parser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(DateToSystemTimezoneSetter, Setter) {
-      DateToSystemTimezoneSetter.__proto__ = Setter;
-      return DateToSystemTimezoneSetter;
+    _setPrototypeOf = function _setPrototypeOf(Hour0to23Parser, Parser) {
+      Hour0to23Parser.__proto__ = Parser;
+      return Hour0to23Parser;
     };
   }
-  return _setPrototypeOf(DateToSystemTimezoneSetter, Setter);
+  return _setPrototypeOf(Hour0to23Parser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -52,171 +54,11 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-function _createClass(DateToSystemTimezoneSetter, items, arg2) {
-  for (let num = 0; num < items.length; num = num + 1) {
-    let tmp2 = items[num];
-    let flag = tmp2.enumerable;
-    if (!flag) {
-      flag = false;
-    }
-    tmp2.enumerable = flag;
-    tmp2.configurable = true;
-    if ("value" in tmp2) {
-      tmp2.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult = Object.defineProperty(tmp, tmp2.key, tmp2);
-  }
-  return DateToSystemTimezoneSetter;
-}
-class Setter {
+const Parser = _mod4726.Parser;
+let _createSuperInternal;
+class Hour0to23Parser {
   constructor() {
-    self = this;
-    if (this instanceof _typeof) {
-      str2 = "subPriority";
-      if ("subPriority" in self) {
-        tmp6 = globalThis;
-        _Object = Object;
-        definePropertyResult = Object.defineProperty(self, "subPriority", { value: 0, enumerable: true, configurable: true, writable: true });
-      } else {
-        num = 0;
-        self.subPriority = 0;
-      }
-      return;
-    } else {
-      tmp = globalThis;
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-let closure_129_0 = Setter;
-const entry = {
-  key: "validate",
-  value: function validate(arg0, arg1) {
-    return true;
-  }
-};
-let items = [entry];
-_createClass(Setter, items);
-let closure_130_0;
-class ValueSetter {
-  constructor(arg0, arg1, arg2, arg3, arg4) {
-    self = this;
-    if (this instanceof _setPrototypeOf) {
-      tmp6 = _typeof;
-      call = _typeof.call;
-      tmp7 = typeof call === "unknown" ? tmp6() : call(self);
-      tmp8 = arg0;
-      tmp9 = arg1;
-      tmp10 = arg2;
-      tmp11 = arg3;
-      tmp12 = arg4;
-      tmp7.value = arg0;
-      tmp7.validateValue = arg1;
-      tmp7.setValue = arg2;
-      tmp7.priority = arg3;
-      if (arg4) {
-        tmp7.subPriority = arg4;
-      }
-      return tmp7;
-    } else {
-      tmp = globalThis;
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-let closure_130_1 = ValueSetter;
-ValueSetter.prototype = Object.create(Setter.prototype, { constructor: { value: ValueSetter, writable: true, configurable: true } });
-_setPrototypeOf(ValueSetter, Setter);
-_typeof = ValueSetter;
-_setPrototypeOf = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-closure_130_0 = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_typeof);
-  if (_setPrototypeOf) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-const entry1 = {
-  key: "validate",
-  value: function validate(arg0, arg1) {
-    return this.validateValue(arg0, this.value, arg1);
-  }
-};
-const items1 = [
-  entry1,
-  {
-    key: "set",
-    value: function set(arg0, arg1, arg2) {
-      return this.setValue(arg0, arg1, this.value, arg2);
-    }
-  }
-];
-_createClass(ValueSetter, items1);
-let closure_131_0;
-class DateToSystemTimezoneSetter {
-  constructor() {
-    if (this instanceof _setPrototypeOf) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -232,11 +74,11 @@ class DateToSystemTimezoneSetter {
           num = num + 1;
         } while (num < length);
       }
-      tmp11 = _typeof;
-      call = _typeof.call;
+      tmp11 = _createSuperInternal;
+      call = _createSuperInternal.call;
       items = [];
       items[0] = tmp;
-      applyResult = call.apply(_typeof, items.concat(array));
+      applyResult = call.apply(_createSuperInternal, items.concat(array));
       tmp13 = undefined === applyResult;
       if (tmp13) {
         _ReferenceError2 = ReferenceError;
@@ -250,10 +92,10 @@ class DateToSystemTimezoneSetter {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 10;
-          applyResult.priority = 10;
+          num3 = 70;
+          applyResult.priority = 70;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -264,13 +106,15 @@ class DateToSystemTimezoneSetter {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          str3 = "subPriority";
-          if ("subPriority" in applyResult) {
+          items1 = ["a", "b", "h", "K", "k", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "subPriority", { value: -1, enumerable: true, configurable: true, writable: true });
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
           } else {
-            num4 = -1;
-            applyResult.subPriority = -1;
+            applyResult.incompatibleTokens = items1;
           }
           return applyResult;
         }
@@ -286,11 +130,24 @@ class DateToSystemTimezoneSetter {
     }
   }
 }
-let closure_131_1 = DateToSystemTimezoneSetter;
-DateToSystemTimezoneSetter.prototype = Object.create(Setter.prototype, { constructor: { value: DateToSystemTimezoneSetter, writable: true, configurable: true } });
-_setPrototypeOf(DateToSystemTimezoneSetter, Setter);
-_typeof = DateToSystemTimezoneSetter;
-_setPrototypeOf = (function _isNativeReflectConstruct() {
+let dependencyMap = Hour0to23Parser;
+if (typeof Parser !== "function") {
+  if (null !== Parser) {
+    let _TypeError = TypeError;
+    let typeError = new TypeError("Super expression must either be null or a function");
+    throw typeError;
+  }
+}
+let prototype = Parser;
+if (Parser) {
+  prototype = Parser.prototype;
+}
+Hour0to23Parser.prototype = Object.create(prototype, { constructor: { value: Hour0to23Parser, writable: true, configurable: true } });
+if (Parser) {
+  _setPrototypeOf(Hour0to23Parser, Parser);
+}
+let num = 0;
+dependencyMap = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -322,10 +179,10 @@ _setPrototypeOf = (function _isNativeReflectConstruct() {
   }
   return false;
 })();
-closure_131_0 = function _createSuperInternal() {
+_createSuperInternal = function _createSuperInternal() {
   const self = this;
-  const obj = _getPrototypeOf(_typeof);
-  if (_setPrototypeOf) {
+  const obj = _getPrototypeOf(_createSuperInternal);
+  if (closure_1) {
     const _Reflect = Reflect;
     let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
   } else {
@@ -346,28 +203,54 @@ closure_131_0 = function _createSuperInternal() {
   }
   return tmp8;
 };
-const entry2 = {
-  key: "set",
-  value: function set(getUTCFullYear, timestampIsSet) {
-    if (timestampIsSet.timestampIsSet) {
-      return getUTCFullYear;
+const entry = {
+  key: "parse",
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("H" === arg1) {
+      return _createSuperInternal(4728).parseNumericPattern(_createSuperInternal(4729).numericPatterns.hour23h, arg0);
+    } else if ("Ho" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
     } else {
-      const _Date = Date;
-      const date = new Date(0);
-      const uTCFullYear = getUTCFullYear.getUTCFullYear();
-      const uTCMonth = getUTCFullYear.getUTCMonth();
-      date.setFullYear(uTCFullYear, uTCMonth, getUTCFullYear.getUTCDate());
-      const uTCHours = getUTCFullYear.getUTCHours();
-      const uTCMinutes = getUTCFullYear.getUTCMinutes();
-      const uTCSeconds = getUTCFullYear.getUTCSeconds();
-      date.setHours(uTCHours, uTCMinutes, uTCSeconds, getUTCFullYear.getUTCMilliseconds());
-      return date;
+      return _createSuperInternal(4728).parseNDigits(arg1.length, arg0);
     }
   }
 };
-const items2 = [entry2];
-_createClass(DateToSystemTimezoneSetter, items2);
+let items = [
+  entry,
+  {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 0;
+      if (tmp) {
+        tmp = arg1 <= 23;
+      }
+      return tmp;
+    }
+  },
+  {
+    key: "set",
+    value: function set(setUTCHours, arg1, arg2) {
+      setUTCHours.setUTCHours(arg2, 0, 0, 0);
+      return setUTCHours;
+    }
+  }
+];
+if (0 < items.length) {
+  do {
+    let tmp5 = items[num];
+    let flag = tmp5.enumerable;
+    if (!flag) {
+      flag = false;
+    }
+    tmp5.enumerable = flag;
+    tmp5.configurable = true;
+    if ("value" in tmp5) {
+      tmp5.writable = true;
+    }
+    let _Object = Object;
+    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    num = num + 1;
+  } while (num < items.length);
+}
 
-export { Setter };
-export { ValueSetter };
-export { DateToSystemTimezoneSetter };
+export { Hour0to23Parser };

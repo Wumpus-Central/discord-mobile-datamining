@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 320.5, height: 175, scales: [2, 3], hash: "d422ef91f74da1b3cc395d635485063d", name: "early_access", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 184, height: 17, scales: [2, 3], hash: "dc6e9b555a9114d9845b29b8de00cc4e", name: "server_boost_logo_dark", type: "png" });

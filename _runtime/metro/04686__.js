@@ -1,10 +1,9 @@
 // === Module 4686: ? ===
 
 // Module 4686
-import _typeof_mod from "module_4450" /* 4450 */;
-import startOfUTCISOWeek_mod from "startOfUTCISOWeek" /* 4687 */;
-import startOfUTCISOWeekYear_mod from "startOfUTCISOWeekYear" /* 4688 */;
-import requiredArgs_mod from "requiredArgs" /* 4451 */;
+import _typeof_mod from "module_4420" /* 4420 */;
+import module_4687_mod from "module_4687" /* 4687 */;
+import requiredArgs_mod from "requiredArgs" /* 4421 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -14,37 +13,35 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let startOfUTCISOWeek = startOfUTCISOWeek_mod;
-if (!startOfUTCISOWeek) {
-  const obj2 = { default: startOfUTCISOWeek };
+let module_4687 = module_4687_mod;
+if (!module_4687) {
+  const obj2 = { default: module_4687 };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfUTCISOWeek;
+  tmp5 = module_4687;
 }
-startOfUTCISOWeek = tmp5;
-let startOfUTCISOWeekYear = startOfUTCISOWeekYear_mod;
-if (!startOfUTCISOWeekYear) {
-  const obj3 = { default: startOfUTCISOWeekYear };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfUTCISOWeekYear;
-}
-startOfUTCISOWeekYear = tmp7;
+module_4687 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+requiredArgs = tmp7;
 
-export default function getUTCISOWeek(arg0) {
+export default function getDaysInYear(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const time = startOfUTCISOWeek.default(defaultResult1).getTime();
-  const defaultResult2 = startOfUTCISOWeek.default(defaultResult1);
-  return Math.round((time - startOfUTCISOWeekYear.default(defaultResult1).getTime()) / c4) + 1;
+  if ("Invalid Date" === String(date)) {
+    return NaN;
+  } else {
+    let num = 365;
+    if (module_4687.default(defaultResult1)) {
+      num = 366;
+    }
+    return num;
+  }
+  date = new Date(defaultResult1);
 };
 export default exports.default;

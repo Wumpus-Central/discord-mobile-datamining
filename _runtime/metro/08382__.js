@@ -1,28 +1,40 @@
 // === Module 8382: ? ===
 
 // Module 8382
-import findOffsets from "findOffsets" /* 8379 */;
+import _modDef8383 from "module_8383" /* 8383 */;
 
-require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  isAvifFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          parseBoxResult = "avif" === parseBoxResult.majorBrand;
+  decode(arg0, buffer) {
+    value = _modDef8383.get();
+    if (undefined !== value) {
+      if (undefined !== arg0) {
+        try {
+          const decoder = new value(arg0);
+          const _DataView = DataView;
+          if (buffer instanceof DataView) {
+            buffer = buffer.buffer;
+          } else {
+            const _Uint8Array = Uint8Array;
+            buffer = Uint8Array.from(buffer);
+          }
+          decoder.decode(buffer);
+        } catch (err) {
         }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
       }
-    } else {
-      return false;
     }
+    const mapped = buffer.map((item) => String.fromCharCode(item));
+    return (function decodeAsciiValue(arg0) {
+      try {
+        const _decodeURIComponent = decodeURIComponent;
+        const _escape = escape;
+        return decodeURIComponent(escape(arg0));
+      } catch (err) {
+        return tmp;
+      }
+    })(mapped.join(""));
   },
-  findAvifOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
-  }
+  TAG_HEADER_SIZE: 5
 };

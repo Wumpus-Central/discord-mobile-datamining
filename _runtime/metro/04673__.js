@@ -1,0 +1,28 @@
+// === Module 4673: ? ===
+
+// Module 4673
+import module_4671_mod from "module_4671" /* 4671 */;
+import requiredArgs_mod from "requiredArgs" /* 4421 */;
+
+let module_4671 = module_4671_mod;
+if (!module_4671) {
+  const obj = { default: module_4671 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4671;
+}
+module_4671 = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function formatDistanceToNowStrict(arg0, arg1) {
+  requiredArgs.default(1, arguments);
+  return module_4671.default(arg0, Date.now(), arg1);
+};
+export default exports.default;

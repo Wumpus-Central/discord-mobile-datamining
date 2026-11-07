@@ -1,5 +1,7 @@
 // === Module 16156: ? ===
 
 // Module 16156
+import registerAsset from "module_1119" /* 1119 */;
 
-export default { MAX_LENGTH: 256, MAX_SAFE_COMPONENT_LENGTH: 16, MAX_SAFE_BUILD_LENGTH: 250, MAX_SAFE_INTEGER: Number.MAX_SAFE_INTEGER || 9007199254740991, RELEASE_TYPES: ["major", "premajor", "minor", "preminor", "patch", "prepatch", "prerelease"], SEMVER_SPEC_VERSION: "2.0.0", FLAG_INCLUDE_PRERELEASE: 1, FLAG_LOOSE: 2 };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "38f50d4a667b2b6d0060105d222e11dd", name: "MessageRequest", type: "lottie" });

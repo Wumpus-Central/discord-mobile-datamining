@@ -1,14 +1,14 @@
 // === Module 10597: ? ===
 
 // Module 10597
-import _mod10594 from "module_10594" /* 10594 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10453 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const RUTimeUnitAgoFormatParser = require;
+const ESTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RUTimeUnitAgoFormatParser {
+class ESTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, RUTimeUnitAgoFormatParser);
+    tmp = c2(this, ESTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitAgoFormatParser);
+    obj = closure_4(ESTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,11 +48,12 @@ class RUTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeUnitAgoFormatParser, _mod10594.AbstractParserWithLeftBoundaryChecking);
+_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(" + RUTimeUnitAgoFormatParser(10592).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))";
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp("(?:en|por|durante|de|dentro de)\\s*(" + ESTimeUnitWithinFormatParser(10590).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+    return regExp;
   }
 };
 const items = [
@@ -60,11 +61,10 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = RUTimeUnitAgoFormatParser(10592).parseDuration(arg1[1]);
-      const ParsingComponents = RUTimeUnitAgoFormatParser(10466).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitAgoFormatParser(10465).reverseDuration(RUTimeUnitAgoFormatParser(10592).parseDuration(arg1[1])));
+      const ParsingComponents = ESTimeUnitWithinFormatParser(10449).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, ESTimeUnitWithinFormatParser(10590).parseDuration(arg1[1]));
     }
   }
 ];
 
-export default _createClass(RUTimeUnitAgoFormatParser, items);
+export default _createClass(ESTimeUnitWithinFormatParser, items);

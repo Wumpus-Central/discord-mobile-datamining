@@ -1,71 +1,29 @@
 // === Module 5585: ? ===
 
 // Module 5585
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod1652 from "module_1652" /* 1652 */;
+import value2 from "value2" /* 5393 */;
+import _mod5397 from "module_5397" /* 5397 */;
+import BottomSheetContext from "BottomSheetContext" /* 5403 */;
+import noop from "module_19" /* 19 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
+
+export default function _default(children) {
+  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
+  if (useGestureEventsHandlersDefault === undefined) {
+    useGestureEventsHandlersDefault = _mod5397.useGestureEventsHandlersDefault;
   }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class FlingGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, FlingGesture);
-    tmp2 = c2;
-    obj = c2(FlingGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "FlingGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = FlingGesture;
-_inherits(FlingGesture, fn(5470).BaseGesture);
-const entry = {
-  key: "numberOfPointers",
-  value: function numberOfPointers(numberOfPointers) {
-    this.config.numberOfPointers = numberOfPointers;
-    return this;
-  }
+  const sharedValue = _mod1652.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
+  const bottomSheetInternal = _mod5397.useBottomSheetInternal();
+  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
+  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
+  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
+  const gestureHandler = _mod5397.useGestureHandler(value2.GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
+  const gestureHandler1 = _mod5397.useGestureHandler(value2.GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
+  items = [gestureHandler, gestureHandler1, sharedValue];
+  value = useMemo(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
+  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
 };
-const items = [
-  entry,
-  {
-    key: "direction",
-    value: function direction(dependencyMap) {
-      this.config.direction = dependencyMap;
-      return this;
-    }
-  }
-];
-
-export const FlingGesture = _createClass(FlingGesture, items);

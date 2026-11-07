@@ -1,39 +1,22 @@
 // === Module 13041: ? ===
 
 // Module 13041
+import _mod13160 from "module_13160" /* 13160 */;
+import _mod13161 from "module_13161" /* 13161 */;
+import module_13042 from "module_13042" /* 13042 */;
+import patchDictionary from "patchDictionary" /* 13085 */;
+import module_13132 from "module_13132" /* 13132 */;
 
-export default function createConvertors(arg0) {
-  closure_0 = arg0;
-  return {
-    fromPlainObject(arg0) {
-      closure_0(arg0, {
-        enter(children) {
-          children = children.children;
-          if (children) {
-            children = children.children instanceof closure_1_0(13029) === false;
-          }
-          if (children) {
-            const obj = new closure_1_0(13029)();
-            children.children = obj.fromArray(children.children);
-          }
-        }
-      });
-      return arg0;
-    },
-    toPlainObject(arg0) {
-      closure_0(arg0, {
-        leave(children) {
-          children = children.children;
-          if (children) {
-            children = children.children instanceof closure_1_0(closure_1_1[0]);
-          }
-          if (children) {
-            const children2 = children.children;
-            children.children = children2.toArray();
-          }
-        }
-      });
-      return arg0;
+module.exports.version = _mod13161.version;
+
+export default module_13042.create((function merge() {
+  const obj = {};
+  for (let num = 0; num < arguments.length; num = num + 1) {
+    let tmp = arguments[num];
+    for (const key10011 in tmp) {
+      obj[key10011] = tmp[key10011];
+      continue;
     }
-  };
-};
+  }
+  return obj;
+})(patchDictionary, module_13132, _mod13160));

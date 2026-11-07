@@ -1,0 +1,11 @@
+// === Module 5547: ? ===
+
+// Module 5547
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
+
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { pointerEvents: true, moduleId: true, unstable_forceActive: true } };
+
+export default module_65.get("RNGestureHandlerRootView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

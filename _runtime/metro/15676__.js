@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 64, height: 64, scales: [1], hash: "7820559d802b687a2589b1c9f32203ab", name: "img_wumpus_nitro_boost", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored", width: 48, height: 48, scales: [2, 3], hash: "434b4bb837ba9a9866eda02df308d953", name: "tier_0_48px_light", type: "png" });

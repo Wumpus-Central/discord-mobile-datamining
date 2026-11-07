@@ -1,13 +1,9 @@
 // === Module 5692: ? ===
 
 // Module 5692
+import _mod17 from "module_17" /* 17 */;
+import FlashList from "FlashList" /* 5631 */;
 
-export default function _assertThisInitialized(arg0) {
-  if (undefined === arg0) {
-    const _ReferenceError = ReferenceError;
-    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    throw referenceError;
-  } else {
-    return arg0;
-  }
-};
+const Animated = _mod17.Animated;
+
+export default Animated.createAnimatedComponent(FlashList.FlashList);

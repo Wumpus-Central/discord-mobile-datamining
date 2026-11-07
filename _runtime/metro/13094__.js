@@ -1,32 +1,106 @@
 // === Module 13094: ? ===
 
 // Module 13094
-import _mod13027 from "module_13027" /* 13027 */;
+import _mod13050 from "module_13050" /* 13050 */;
 
-const LeftParenthesis = _mod13027.TYPE.LeftParenthesis;
-const RightParenthesis = _mod13027.TYPE.RightParenthesis;
-const obj = {
-  name: "Parentheses",
-  structure: null,
-  parse(call, arg1) {
-    const self = this;
-    this.eat(LeftParenthesis);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightParenthesis);
+function getOffsetExcludeWS() {
+  let self = this;
+  if (this.scanner.tokenIndex > 0) {
+    const scanner = self.scanner;
+    if (scanner.lookupType(-1) === WhiteSpace) {
+      let num2 = 1;
+      if (self.scanner.tokenIndex > 1) {
+        const scanner2 = self.scanner;
+        self = self.scanner.tokenIndex;
+        num2 = self - num2;
+        let firstCharOffset = scanner2.getTokenStart(num2);
+      } else {
+        firstCharOffset = self.scanner.firstCharOffset;
+      }
     }
-    const element = { type: "Parentheses", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
-    return element;
+  }
+  return self.scanner.tokenStart;
+}
+function balanceEnd() {
+  return 0;
+}
+const WhiteSpace = _mod13050.TYPE.WhiteSpace;
+const Semicolon = _mod13050.TYPE.Semicolon;
+const LeftCurlyBracket = _mod13050.TYPE.LeftCurlyBracket;
+const Delim = _mod13050.TYPE.Delim;
+let obj = {
+  name: "Raw",
+  structure: { value: String },
+  parse(arg0, balanceEnd, arg2) {
+    const self = this;
+    let tmp = balanceEnd;
+    const scanner = this.scanner;
+    const tokenStart1 = scanner.getTokenStart(arg0);
+    ({ scanner: scanner2, scanner: scanner3 } = this);
+    if (!balanceEnd) {
+      tmp = balanceEnd;
+    }
+    scanner2.skip(scanner3.getRawLength(arg0, tmp));
+    if (arg2) {
+      if (self.scanner.tokenStart > tokenStart1) {
+        const call = getOffsetExcludeWS.call;
+        if (typeof call !== "unknown") {
+          call(self);
+        }
+        if (self.scanner.tokenIndex <= 0) {
+          const tokenStart2 = self.scanner.tokenStart;
+        } else {
+          const scanner4 = self.scanner;
+        }
+        let num3 = 1;
+        if (self.scanner.tokenIndex > 1) {
+          const scanner5 = self.scanner;
+          num3 = self.scanner.tokenIndex - num3;
+          let firstCharOffset = scanner5.getTokenStart(num3);
+        } else {
+          firstCharOffset = self.scanner.firstCharOffset;
+        }
+      }
+    }
+    const tokenStart = self.scanner.tokenStart;
+    const obj = { type: "Raw", loc: self.getLocation(tokenStart1, tokenStart), value: self.scanner.source.substring(tokenStart1, tokenStart) };
+    return obj;
   },
-  generate(arg0) {
-    this.chunk("(");
-    this.children(arg0);
-    this.chunk(")");
+  generate(value) {
+    this.chunk(value.value);
+  },
+  mode: {
+    default: balanceEnd,
+    leftCurlyBracket(arg0) {
+      let num = 0;
+      if (arg0 === LeftCurlyBracket) {
+        num = 1;
+      }
+      return num;
+    },
+    leftCurlyBracketOrSemicolon(arg0) {
+      if (arg0 === LeftCurlyBracket) {
+        let num = 1;
+      } else {
+        num = 0;
+      }
+      return num;
+    },
+    exclamationMarkOrSemicolon(arg0, str, sum) {
+      if (arg0 !== Delim) {
+        let num2 = 0;
+        return num2;
+      }
+      num2 = 1;
+    },
+    semicolonIncluded(arg0) {
+      let num = 0;
+      if (arg0 === Semicolon) {
+        num = 2;
+      }
+      return num;
+    }
   }
 };
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

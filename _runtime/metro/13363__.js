@@ -1,73 +1,71 @@
 // === Module 13363: ? ===
 
 // Module 13363
-import _mod13282 from "module_13282" /* 13282 */;
-import _flush from "_flush" /* 13303 */;
-import _mod13328 from "module_13328" /* 13328 */;
+import _mod13305 from "module_13305" /* 13305 */;
+import _mod13365 from "module_13365" /* 13365 */;
+import setupIntegration from "module_13334" /* 13334 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getCurrentHubShim() {
+
+export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let handled;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  }
+  handled = obj.handled;
   return {
-    bindClient(arg0) {
-      const currentScope = _mod13282.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod13282.withScope,
-    getClient() {
-      return _mod13282.getClient();
-    },
-    getScope: _mod13282.getCurrentScope,
-    getIsolationScope: _mod13282.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod13282.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod13282.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod13328.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod13282.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
-      } else {
-        const currentScope = _mod13282.getCurrentScope();
-        const tmpResult3 = _mod13282;
-        const client = _mod13282.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
-        }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod13282;
+    name: "CaptureConsole",
+    setup(arg0) {
+      closure_0 = arg0;
+      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
+        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
+          ({ args, level } = arg0);
+          let hasItem = _mod13305.getClient() === args;
+          if (hasItem) {
+            hasItem = CONSOLE_LEVELS.includes(level);
+          }
+          if (hasItem) {
+            closure_2 = handled;
+            let obj2 = { level: _mod13365.severityLevelFromString(level), extra: null };
+            const obj3 = { arguments: args };
+            obj2.extra = obj3;
+            const tmpResult = _mod13365;
+            _mod13305.withScope((addEventProcessor) => {
+              addEventProcessor.addEventProcessor((arg0) => {
+                arg0.logger = "console";
+                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
+                return arg0;
+              });
+              if ("assert" !== level) {
+                const found = args.find((item) => item instanceof Error);
+                if (found) {
+                  args(13326).captureException(found, obj2);
+                  const tmp14Result = args(13326);
+                } else {
+                  const tmp14Result2 = args(13287);
+                  const safeJoinResult = args(13287).safeJoin(args, " ");
+                  args(13326).captureMessage(safeJoinResult, obj2);
+                  const obj4 = args(13326);
+                }
+              } else if (!args[0]) {
+                const obj = args(13287);
+                const _HermesInternal = HermesInternal;
+                const combined = "Assertion failed: " + args(13287).safeJoin(args.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", args.slice(1));
+                obj2 = args(13326);
+                obj2.captureMessage(combined, obj2);
+                const tmp4 = args(13287).safeJoin(args.slice(1), " ") || "console.assert";
+              }
+            });
+            const tmpResult2 = _mod13305;
+          }
+        });
+        let tmpResult = CONSOLE_LEVELS(handled[2]);
       }
     }
   };
-}
-
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+});

@@ -1,8 +1,7 @@
 // === Module 5620: ? ===
 
 // Module 5620
-import _mod17 from "module_17" /* 17 */;
+import BottomSheetRefreshControlAndroidDefault from "BottomSheetRefreshControlAndroid" /* 5621 */;
 
-const StyleSheet = _mod17.StyleSheet;
 
-export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });
+export default BottomSheetRefreshControlAndroidDefault;

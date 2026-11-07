@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "579bfc60bdd93580f90ccebe4dc03bbf", name: "img_account_sync_battlenet_light_and_dark", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "6aac6dfb7a93b44151193b49a9d5adfb", name: "img_account_sync_reddit_white", type: "png" });

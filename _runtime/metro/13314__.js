@@ -1,286 +1,107 @@
 // === Module 13314: ? ===
 
 // Module 13314
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod13310 from "module_13310" /* 13310 */;
-import _slicedToArray from "module_32" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
-import __SENTRY_DEBUG__ from "module_13254" /* 13254 */;
-import dateTimestampInSeconds from "module_13269" /* 13269 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 13283 */;
+import _mod13284 from "module_13284" /* 13284 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 13291 */;
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 13293 */;
+import _mod13305 from "module_13305" /* 13305 */;
+import _mod13315 from "module_13315" /* 13315 */;
 
-const ServerRuntimeClient = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
+require = arg1;
+const dependencyMap = arg6;
+function getDynamicSamplingContextFromSpan(spanContext) {
+  const client = _mod13305.getClient();
+  if (client) {
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    if (rootSpan[_frozenDsc]) {
+      return tmp5;
     } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturn;
-class ServerRuntimeClient {
-  constructor(arg0) {
-    self = this;
-    tmp = closure_3(this, ServerRuntimeClient);
-    obj = closure_0(closure_1[9]);
-    result = obj.registerSpanErrorInstrumentation();
-    items = [];
-    items[0] = global;
-    tmp3 = hasOwnProperty;
-    obj2 = hasOwnProperty(ServerRuntimeClient);
-    tmp4 = closure_4;
-    if (metroImportDefault()) {
-      tmp6 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj2, items, tmp3(self).constructor);
-    } else {
-      constructResult = obj2.apply(self, items);
-    }
-    return tmp4(self, constructResult);
-  }
-}
-_inherits(ServerRuntimeClient, _mod13310.BaseClient);
-const entry = {
-  key: "eventFromException",
-  value: function eventFromException(arg0, arg1) {
-    const result = ServerRuntimeClient(13315).eventFromUnknownInput(this, this._options.stackParser, arg0, arg1);
-    result.level = "error";
-    const obj = ServerRuntimeClient(13315);
-    return ServerRuntimeClient(13279).resolvedSyncPromise(result);
-  }
-};
-let items = [
-  entry,
-  {
-    key: "eventFromMessage",
-    value: function eventFromMessage(arg0) {
-      let str = arg1;
-      if (arg1 === undefined) {
-        str = "info";
+      const traceState = rootSpan.spanContext().traceState;
+      value = traceState;
+      if (traceState) {
+        value = traceState.get("sentry.dsc");
       }
-      const obj = ServerRuntimeClient(13279);
-      return obj.resolvedSyncPromise(ServerRuntimeClient(13315).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace));
-    }
-  },
-  {
-    key: "captureException",
-    value: function captureException(arg0, arg1, arg2) {
-      const self = this;
-      if (this._options.autoSessionTracking) {
-        if (self._sessionFlusher) {
-          const isolationScope = ServerRuntimeClient(13282).getIsolationScope();
-          const requestSession = isolationScope.getRequestSession();
-          let tmp4 = requestSession;
-          if (requestSession) {
-            tmp4 = "ok" === requestSession.status;
-          }
-          if (tmp4) {
-            requestSession.status = "errored";
-          }
-          const obj = ServerRuntimeClient(13282);
-        }
+      let result = value;
+      if (value) {
+        result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(value);
+        const tmpResult6 = BAGGAGE_HEADER_NAME;
       }
-      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "captureException", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      items = [arg0, arg1, arg2];
-      return fn(items);
-    }
-  },
-  {
-    key: "captureEvent",
-    value: function captureEvent(type, arg1, arg2) {
-      const self = this;
-      if (this._options.autoSessionTracking) {
-        if (self._sessionFlusher) {
-          if ("exception" === tmp) {
-            if (type.exception) {
-              if (type.exception.values) {
-                if (type.exception.values.length > 0) {
-                  const isolationScope = ServerRuntimeClient(13282).getIsolationScope();
-                  const requestSession = isolationScope.getRequestSession();
-                  let tmp5 = requestSession;
-                  if (requestSession) {
-                    tmp5 = "ok" === requestSession.status;
-                  }
-                  if (tmp5) {
-                    requestSession.status = "errored";
-                  }
-                  const obj = ServerRuntimeClient(13282);
-                }
-              }
-            }
-          }
-          tmp = type.type || "exception";
-        }
-      }
-      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "captureEvent", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      items = [type, arg1, arg2];
-      return fn(items);
-    }
-  },
-  {
-    key: "close",
-    value: function close(arg0) {
-      const self = this;
-      if (this._sessionFlusher) {
-        const _sessionFlusher = self._sessionFlusher;
-        _sessionFlusher.close();
-      }
-      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "close", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      items = [arg0];
-      return fn(items);
-    }
-  },
-  {
-    key: "initSessionFlusher",
-    value: function initSessionFlusher() {
-      const self = this;
-      const release = this._options.release;
-      if (release) {
-        const obj = { release, environment: tmp };
-        const sessionFlusher = new ServerRuntimeClient(13308).SessionFlusher(self, obj);
-        self._sessionFlusher = sessionFlusher;
-      } else if (ServerRuntimeClient(13283).DEBUG_BUILD) {
-        const logger = ServerRuntimeClient(13255).logger;
-        logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
-      }
-    }
-  },
-  {
-    key: "captureCheckIn",
-    value: function captureCheckIn(checkInId, arg1, arg2) {
-      if ("checkInId" in checkInId) {
-        if (checkInId.checkInId) {
-          checkInId = checkInId.checkInId;
-        }
-        const self = this;
-        if (this._isEnabled()) {
-          const options = self.getOptions();
-          const tunnel = options.tunnel;
-          const obj4 = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
-          ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);
-          ({ release: obj2.release, environment: obj2.environment } = options);
-          if ("duration" in checkInId) {
-            obj4.duration = checkInId.duration;
-          }
-          if (arg1) {
-            ({ schedule: obj3.schedule, checkinMargin: obj3.checkin_margin, maxRuntime: obj3.max_runtime, timezone: obj3.timezone, failureIssueThreshold: obj3.failure_issue_threshold, recoveryThreshold: obj3.recovery_threshold } = arg1);
-            obj4.monitor_config = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
-            const obj8 = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
-          }
-          [tmp9, tmp10] = self._getTraceInfoFromScope(arg2);
-          if (tmp10) {
-            const obj9 = { trace: tmp10 };
-            obj4.contexts = obj9;
-          }
-          const obj5 = ServerRuntimeClient(13316);
-          const sdkMetadata = self.getSdkMetadata();
-          const checkInEnvelope = obj5.createCheckInEnvelope(obj4, tmp9, sdkMetadata, tunnel, self.getDsn());
-          if (ServerRuntimeClient(13283).DEBUG_BUILD) {
-            const logger2 = ServerRuntimeClient(13255).logger;
-            logger2.info("Sending checkin:", checkInId.monitorSlug, checkInId.status);
-          }
-          self.sendEnvelope(checkInEnvelope);
-          return checkInId;
-        } else {
-          if (ServerRuntimeClient(13283).DEBUG_BUILD) {
-            const logger = ServerRuntimeClient(13255).logger;
-            logger.warn("SDK not enabled, will not capture checkin.");
-          }
-          return checkInId;
-        }
-      }
-      checkInId = ServerRuntimeClient(13266).uuid4();
-      const obj = ServerRuntimeClient(13266);
-    }
-  },
-  {
-    key: "_captureRequestSession",
-    value: function _captureRequestSession() {
-      if (this._sessionFlusher) {
-        const _sessionFlusher = this._sessionFlusher;
-        const result = _sessionFlusher.incrementSessionStatusCount();
-      } else if (ServerRuntimeClient(13283).DEBUG_BUILD) {
-        const logger = ServerRuntimeClient(13255).logger;
-        logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
-      }
-    }
-  },
-  {
-    key: "_prepareEvent",
-    value: function _prepareEvent(platform, arg1, arg2, arg3) {
-      const self = this;
-      if (this._options.platform) {
-        platform.platform = platform.platform || self._options.platform;
-      }
-      if (self._options.runtime) {
-        const obj = {};
-        const merged = Object.assign(platform.contexts);
-        obj.runtime = platform.contexts || {}.runtime || self._options.runtime;
-        platform.contexts = obj;
-        const tmp3 = platform.contexts || {};
-      }
-      if (self._options.serverName) {
-        platform.server_name = platform.server_name || self._options.serverName;
-      }
-      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "_prepareEvent", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      items = [platform, arg1, arg2, arg3];
-      return fn(items);
-    }
-  },
-  {
-    key: "_getTraceInfoFromScope",
-    value: function _getTraceInfoFromScope(arg0) {
-      if (arg0) {
-        const _getSpanForScopeResult = ServerRuntimeClient(13277)._getSpanForScope(arg0);
-        if (_getSpanForScopeResult) {
-          let spanToTraceContextResult = ServerRuntimeClient(13260).spanToTraceContext(_getSpanForScopeResult);
-          const tmpResult = ServerRuntimeClient(13260);
-        } else {
-          spanToTraceContextResult = ServerRuntimeClient(13282).getTraceContextFromScope(arg0);
-          const tmpResult3 = ServerRuntimeClient(13282);
-        }
-        const tmpResult4 = ServerRuntimeClient(13291);
-        if (_getSpanForScopeResult) {
-          let dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromSpan(_getSpanForScopeResult);
-        } else {
-          const self = this;
-          dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromScope(this, arg0);
-        }
-        items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
-        return items;
+      if (result) {
+        return result;
       } else {
-        const items1 = [undefined, undefined];
-        return items1;
+        const options = client.getOptions();
+        const tmp9 = client.getDsn() || {};
+        let DEFAULT_ENVIRONMENT = options.environment;
+        if (!DEFAULT_ENVIRONMENT) {
+          DEFAULT_ENVIRONMENT = _mod13315.DEFAULT_ENVIRONMENT;
+        }
+        const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp9.publicKey, trace_id: spanContext.spanContext().traceId };
+        const dropUndefinedKeysResult = _mod13284.dropUndefinedKeys(obj2);
+        client.emit("createDsc", dropUndefinedKeysResult);
+        const tmpResult7 = _mod13284;
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
+        const tmp13 = spanToJSONResult.data || {};
+        const tmp14 = tmp13[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+        if (null != tmp14) {
+          const _HermesInternal = HermesInternal;
+          dropUndefinedKeysResult.sample_rate = "" + tmp14;
+        }
+        const description = spanToJSONResult.description;
+        const tmpResult8 = spanTimeInputToSeconds;
+        if (tmp17) {
+          dropUndefinedKeysResult.transaction = description;
+        }
+        tmp17 = "url" !== tmp13[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
+        if (tmpResult9.hasTracingEnabled()) {
+          const _String = String;
+          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
+          const tmpResult10 = spanTimeInputToSeconds;
+        }
+        client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
+        return dropUndefinedKeysResult;
       }
     }
+    const tmpResult = spanTimeInputToSeconds;
+  } else {
+    return {};
   }
-];
+}
+const _frozenDsc = "_frozenDsc";
 
-export const ServerRuntimeClient = _createClass(ServerRuntimeClient, items);
+export function freezeDscOnSpan(arg0, dsc) {
+  const result = _mod13284.addNonEnumerableProperty(arg0, _frozenDsc, dsc);
+}
+export function getDynamicSamplingContextFromClient(trace_id, getOptions) {
+  const options = getOptions.getOptions();
+  const tmp2 = getOptions.getDsn() || {};
+  let DEFAULT_ENVIRONMENT = options.environment;
+  if (!DEFAULT_ENVIRONMENT) {
+    DEFAULT_ENVIRONMENT = _mod13315.DEFAULT_ENVIRONMENT;
+  }
+  const dropUndefinedKeysResult = _mod13284.dropUndefinedKeys({ environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp2.publicKey, trace_id });
+  getOptions.emit("createDsc", dropUndefinedKeysResult);
+  return dropUndefinedKeysResult;
+}
+export function getDynamicSamplingContextFromScope(getOptions, getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  let dsc = propagationContext.dsc;
+  if (!dsc) {
+    const options = getOptions.getOptions();
+    const tmp4 = getOptions.getDsn() || {};
+    let DEFAULT_ENVIRONMENT = options.environment;
+    if (!DEFAULT_ENVIRONMENT) {
+      DEFAULT_ENVIRONMENT = _mod13315.DEFAULT_ENVIRONMENT;
+    }
+    const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp4.publicKey, trace_id: propagationContext.traceId };
+    const dropUndefinedKeysResult = _mod13284.dropUndefinedKeys(obj2);
+    getOptions.emit("createDsc", dropUndefinedKeysResult);
+    dsc = dropUndefinedKeysResult;
+  }
+  return dsc;
+}
+export { getDynamicSamplingContextFromSpan };
+export function spanToBaggageHeader(arg0) {
+  const tmp = getDynamicSamplingContextFromSpan(arg0);
+  return BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(tmp);
+}

@@ -1,23 +1,7 @@
 // === Module 15790: ? ===
 
 // Module 15790
-import _mod15782 from "module_15782" /* 15782 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-let c2 = true;
-let c3 = true;
-try {
-  const _String = String;
-  fromCharCode.apply(null, [0]);
-  try {
-    const _String2 = String;
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(1);
-    fromCharCode2.apply(null, uint8Array);
-    const buf8 = new _mod15782.Buf8(256);
-    require = 252;
-  } catch (err) {
-    c3 = false;
-  }
-} catch (err) {
-  c2 = false;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 203, height: 120, scales: [1, 2, 3], hash: "0c52217e1b36f758b126e56747a120ea", name: "guild_subscription_removal_light", type: "png" });

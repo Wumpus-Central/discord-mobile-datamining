@@ -356,7 +356,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "(function pnpm_createBottomSheetScrollableComponentTsx1(){let[preserveScrollMomentum,SCROLLABLE_DECELERATION_RATE_MAPPER,animatedScrollableState,showsVerticalScrollIndicator,SCROLLABLE_STATE]=this.__closure;return{...(preserveScrollMomentum?{}:{decelerationRate:SCROLLABLE_DECELERATION_RATE_MAPPER[animatedScrollableState.value]}),showsVerticalScrollIndicator:showsVerticalScrollIndicator?animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED:showsVerticalScrollIndicator};})", type: "(function pnpm_BottomSheetRefreshControlAndroidTsx1(){let[animatedScrollableState,SCROLLABLE_STATE]=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};})", listener: "focusHook" };
+          obj = { fired: false, wrapFn: "a", target: "forceUpdate", type: "ChoiceOrder", listener: "__duration" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -381,7 +381,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "(function pnpm_createBottomSheetScrollableComponentTsx1(){let[preserveScrollMomentum,SCROLLABLE_DECELERATION_RATE_MAPPER,animatedScrollableState,showsVerticalScrollIndicator,SCROLLABLE_STATE]=this.__closure;return{...(preserveScrollMomentum?{}:{decelerationRate:SCROLLABLE_DECELERATION_RATE_MAPPER[animatedScrollableState.value]}),showsVerticalScrollIndicator:showsVerticalScrollIndicator?animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED:showsVerticalScrollIndicator};})", type: "(function pnpm_BottomSheetRefreshControlAndroidTsx1(){let[animatedScrollableState,SCROLLABLE_STATE]=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};})", listener: "focusHook" };
+          obj = { fired: false, wrapFn: "a", target: "forceUpdate", type: "ChoiceOrder", listener: "__duration" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

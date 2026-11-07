@@ -1,7 +1,27 @@
 // === Module 5578: ? ===
 
 // Module 5578
-import PressableDefault from "Pressable" /* 5579 */;
+import noop from "module_19" /* 19 */;
 
+({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
 
-export default PressableDefault;
+export function useStableCallback(current) {
+  React3(undefined);
+  React2(() => {
+    closure_1.current = current;
+  });
+  duration(() => () => {
+    ref.current = undefined;
+  }, []);
+  return React(() => {
+    items = [...arguments];
+    current = ref.current;
+    let applyResult;
+    if (current != null) {
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, 0);
+      applyResult = HermesBuiltin.apply(items1, ref);
+    }
+    return applyResult;
+  }, []);
+}

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 185, height: 32, scales: [2, 3], hash: "dba969ce1008f0b8964b0d6bd348ad3e", name: "img_logo_premium_tier_1_full", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 24, height: 24, scales: [2, 3], hash: "6ce9cfa41f5b080fb1f9fac04190337a", name: "emoji", type: "png" });

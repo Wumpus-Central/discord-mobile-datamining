@@ -1,17 +1,17 @@
 // === Module 4490: ? ===
 
 // Module 4490
-import futureSeconds from "futureSeconds" /* 4491 */;
+import module_4491 from "module_4491" /* 4491 */;
 import module_4492 from "module_4492" /* 4492 */;
 import module_4493 from "module_4493" /* 4493 */;
 import date_mod from "module_4494" /* 4494 */;
 import date_mod from "module_4495" /* 4495 */;
 
-if (!futureSeconds) {
-  const obj = { default: futureSeconds };
+if (!module_4491) {
+  const obj = { default: module_4491 };
   let tmp3 = obj;
 } else {
-  tmp3 = futureSeconds;
+  tmp3 = module_4491;
 }
 if (!module_4492) {
   const obj2 = { default: module_4492 };
@@ -40,5 +40,5 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "fi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default { code: "ja", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
 export default exports.default;

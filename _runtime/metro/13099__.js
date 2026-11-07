@@ -1,51 +1,18 @@
 // === Module 13099: ? ===
 
 // Module 13099
-import _mod13027 from "module_13027" /* 13027 */;
-import _mod13071 from "module_13071" /* 13071 */;
+import _mod13050 from "module_13050" /* 13050 */;
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, _mod13071.mode.leftCurlyBracket, true);
-}
-function consumePrelude() {
-  const self = this;
-  const SelectorListResult = this.SelectorList();
-  let tmp2 = "Raw" !== SelectorListResult.type;
-  if (tmp2) {
-    tmp2 = false === self.scanner.eof;
-  }
-  if (tmp2) {
-    tmp2 = self.scanner.tokenType !== LeftCurlyBracket;
-  }
-  if (tmp2) {
-    self.error();
-  }
-  return SelectorListResult;
-}
-const LeftCurlyBracket = _mod13027.TYPE.LeftCurlyBracket;
+const CDC = _mod13050.TYPE.CDC;
 
 export default {
-  name: "Rule",
-  structure: { prelude: ["SelectorList", "Raw"], block: ["Block"] },
+  name: "CDC",
+  structure: [],
   parse() {
-    const self = this;
-    const tokenIndex = this.scanner.tokenIndex;
-    if (this.parseRulePrelude) {
-      let parseWithFallbackResult = self.parseWithFallback(consumePrelude, consumeRaw);
-    } else {
-      const call = consumeRaw.call;
-      if (typeof call === "unknown") {
-        parseWithFallbackResult = self.Raw(tokenIndex, _mod13071.mode.leftCurlyBracket, true);
-      } else {
-        parseWithFallbackResult = call(self, tokenIndex);
-      }
-    }
-    const obj = { type: "Rule", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), prelude: parseWithFallbackResult, block: self.Block(true) };
-    return obj;
+    this.eat(CDC);
+    return { type: "CDC", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
   },
-  generate(prelude) {
-    this.node(prelude.prelude);
-    this.node(prelude.block);
-  },
-  walkContext: "rule"
+  generate() {
+    this.chunk("-->");
+  }
 };

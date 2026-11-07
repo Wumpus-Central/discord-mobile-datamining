@@ -1,14 +1,14 @@
 // === Module 10627: ? ===
 
 // Module 10627
-import _mod10619 from "module_10619" /* 10619 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10453 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKWeekdayParser = require;
+const ITCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKWeekdayParser {
+const re6 = /(?:questo|questa)?\s{0,3}(mattina|pomeriggio|sera|notte|mezzanotte|mezzogiorno)(?=\W|$)/i;
+class ITCasualTimeParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKWeekdayParser);
+    tmp = c2(this, ITCasualTimeParser);
     tmp2 = closure_4;
-    obj = closure_4(UKWeekdayParser);
+    obj = closure_4(ITCasualTimeParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,58 +49,51 @@ class UKWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKWeekdayParser, _mod10619.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(ITCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:\u0443\\s*?)?(?:(\u0446\u0435\u0439|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043C\u0438\u043D\u0443\u043B\u0438\u0439|\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u0456\u0439|\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u044C\u043E\u0433\u043E|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443)\\s*)?(" + UKWeekdayParser(10463).matchAnyPattern(UKWeekdayParser(10617).WEEKDAY_DICTIONARY) + ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*(\u043D\u0430|\u0443|\u0432)\\s*(\u0446\u044C\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443)\\s*\u0442\u0438\u0436\u043D\u0456)?";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return re6;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      let str = arg1[1];
-      if (!str) {
-        str = arg1[3];
-      }
-      if (!str) {
-        str = "";
-      }
-      const toLocaleLowerCaseResult1 = str.toLocaleLowerCase();
-      let str2 = "last";
-      if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
-        str2 = "last";
-        if ("\u043C\u0438\u043D\u0443\u043B\u0438\u0439" != toLocaleLowerCaseResult1) {
-          str2 = "last";
-          if ("\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u0456\u0439" != toLocaleLowerCaseResult1) {
-            str2 = "last";
-            if ("\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u044C\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
-              str2 = "next";
-              if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
-                str2 = "next";
-                if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439" != toLocaleLowerCaseResult1) {
-                  let tmp5 = "\u0446\u0435\u0439" != toLocaleLowerCaseResult1;
-                  if (tmp5) {
-                    tmp5 = "\u0446\u044C\u043E\u0433\u043E" != toLocaleLowerCaseResult1;
-                  }
-                  if (tmp5) {
-                    tmp5 = "\u0446\u044C\u043E\u043C\u0443" != toLocaleLowerCaseResult1;
-                  }
-                  str2 = null;
-                  if (!tmp5) {
-                    str2 = "this";
-                  }
-                }
-              }
+    value: function innerExtract(refDate, arg1) {
+      refDate = refDate.refDate;
+      const parsingComponents = refDate.createParsingComponents();
+      const formatted = arg1[1].toLowerCase();
+      if ("pomeriggio" === formatted) {
+        parsingComponents.imply("meridiem", ITCasualTimeParser(10440).Meridiem.PM);
+        parsingComponents.imply("hour", 15);
+      } else {
+        if ("sera" !== formatted) {
+          if ("notte" !== formatted) {
+            if ("mezzanotte" === formatted) {
+              const _Date = Date;
+              const date = new Date(refDate.getTime());
+              date.setDate(date.getDate() + 1);
+              ITCasualTimeParser(10452).assignSimilarDate(parsingComponents, date);
+              ITCasualTimeParser(10452).implySimilarTime(parsingComponents, date);
+              parsingComponents.imply("hour", 0);
+              parsingComponents.imply("minute", 0);
+              parsingComponents.imply("second", 0);
+            } else if ("mattina" === formatted) {
+              parsingComponents.imply("meridiem", ITCasualTimeParser(10440).Meridiem.AM);
+              parsingComponents.imply("hour", 6);
+            } else if ("mezzogiorno" === formatted) {
+              parsingComponents.imply("meridiem", ITCasualTimeParser(10440).Meridiem.AM);
+              parsingComponents.imply("hour", 12);
             }
           }
         }
+        parsingComponents.imply("meridiem", ITCasualTimeParser(10440).Meridiem.PM);
+        parsingComponents.imply("hour", 20);
       }
-      return UKWeekdayParser(10490).createParsingComponentsAtWeekday(reference.reference, UKWeekdayParser(10617).WEEKDAY_DICTIONARY[arg1[2].toLocaleLowerCase()], str2);
+      return parsingComponents;
     }
   }
 ];
 
-export default _createClass(UKWeekdayParser, items);
+export default _createClass(ITCasualTimeParser, items);

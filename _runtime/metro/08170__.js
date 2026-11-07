@@ -1,13 +1,16 @@
 // === Module 8170: ? ===
 
 // Module 8170
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8115 from "module_8115" /* 8115 */;
+import _modDef8171 from "module_8171" /* 8171 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeDistantLight = fn;
+const ForeignObject = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeDistantLight {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class ForeignObject {
   constructor() {
     self = this;
-    tmp = c2(this, FeDistantLight);
-    tmp2 = closure_4;
-    obj = closure_4(FeDistantLight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, ForeignObject);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(ForeignObject);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,17 +52,29 @@ class FeDistantLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeDistantLight, fn(19).Component);
+_inherits(ForeignObject, _modDef8115);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDistantLight(8138).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(ForeignObject(8116).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeDistantLight, items);
-importDefaultResultResult.displayName = "FeDistantLight";
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(ForeignObject, items);
+importDefaultResultResult.displayName = "ForeignObject";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

@@ -1,16 +1,15 @@
 // === Module 10636: ? ===
 
 // Module 10636
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10463 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10470 */;
-import _mod10632 from "module_10632" /* 10632 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10453 */;
+import _mod10634 from "module_10634" /* 10634 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENCasualYearMonthDayParser = require;
+const SVTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,60 +29,59 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("([0-9]{4})[\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod10632.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
-class ENCasualYearMonthDayParser {
+const regExp = new RegExp("(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" + _mod10634.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+const regExp1 = new RegExp("(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" + _mod10634.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)", "i");
+class SVTimeUnitCasualRelativeFormatParser {
   constructor() {
+    flag = global;
+    if (global === undefined) {
+      flag = true;
+    }
     self = this;
-    tmp = c2(this, ENCasualYearMonthDayParser);
+    tmp = c2(this, SVTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENCasualYearMonthDayParser);
+    obj = closure_4(SVTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.allowAbbreviations = flag;
+    return tmp3Result;
   }
 }
-_inherits(ENCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(SVTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return regExp;
+    return this.allowAbbreviations ? regExp : regExp1;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        let parsed = parseInt(arg1[3]);
-      } else {
-        parsed = ENCasualYearMonthDayParser(10632).MONTH_DICTIONARY[str.toLowerCase(str)];
-      }
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          const _parseInt2 = parseInt;
-          const date = { day: null, month: null, year: null };
-          const _parseInt3 = parseInt;
-          const parsed1 = parseInt(arg1[1]);
-          date.day = parseInt(arg1[4]);
-          date.month = parsed;
-          date.year = parsed1;
-          return date;
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = SVTimeUnitCasualRelativeFormatParser(10634).parseDuration(arg1[2]);
+      if (parseDurationResult) {
+        if ("f\u00F6rra" !== formatted) {
+          if ("passerade" !== formatted) {
+            let reverseDurationResult = parseDurationResult;
+          }
+          const ParsingComponents = SVTimeUnitCasualRelativeFormatParser(10449).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
         }
+        reverseDurationResult = SVTimeUnitCasualRelativeFormatParser(10448).reverseDuration(parseDurationResult);
+      } else {
+        return null;
       }
-      return null;
     }
   }
 ];
 
-export default _createClass(ENCasualYearMonthDayParser, items);
+export default _createClass(SVTimeUnitCasualRelativeFormatParser, items);

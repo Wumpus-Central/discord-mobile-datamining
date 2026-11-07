@@ -1,106 +1,266 @@
 // === Module 13071: ? ===
 
 // Module 13071
-import _mod13027 from "module_13027" /* 13027 */;
-
-function getOffsetExcludeWS() {
-  let self = this;
-  if (this.scanner.tokenIndex > 0) {
-    const scanner = self.scanner;
-    if (scanner.lookupType(-1) === WhiteSpace) {
-      let num2 = 1;
-      if (self.scanner.tokenIndex > 1) {
-        const scanner2 = self.scanner;
-        self = self.scanner.tokenIndex;
-        num2 = self - num2;
-        let firstCharOffset = scanner2.getTokenStart(num2);
-      } else {
-        firstCharOffset = self.scanner.firstCharOffset;
+function getTrace(arg0) {
+  closure_0 = arg0;
+  c1 = null;
+  if (null !== this.matched) {
+    function hasMatch(matched) {
+      if (Array.isArray(matched.match)) {
+        let num = 0;
+        if (0 < matched.match.length) {
+          while (!hasMatch(matched.match[num])) {
+            num = num + 1;
+          }
+          const syntax = matched.syntax;
+          let tmp7 = null !== syntax;
+          if (tmp7) {
+            let tmp8 = "Type" === syntax.type;
+            if (!tmp8) {
+              tmp8 = "Property" === syntax.type;
+            }
+            if (!tmp8) {
+              tmp8 = "Keyword" === syntax.type;
+            }
+            tmp7 = tmp8;
+          }
+          if (tmp7) {
+            items1.unshift(matched.syntax);
+          }
+          return true;
+        }
+      } else if (matched.node === closure_0) {
+        const syntax2 = matched.syntax;
+        let tmp3 = null !== syntax2;
+        if (tmp3) {
+          let tmp2 = "Type" === syntax2.type;
+          if (!tmp2) {
+            tmp2 = "Property" === syntax2.type;
+          }
+          if (!tmp2) {
+            tmp2 = "Keyword" === syntax2.type;
+          }
+          tmp3 = tmp2;
+        }
+        if (tmp3) {
+          items = [matched.syntax];
+          items1 = items;
+        } else {
+          items1 = [];
+        }
+        return true;
       }
+      return false;
     }
+    hasMatch(tmp.matched);
   }
-  return self.scanner.tokenStart;
+  return c1;
 }
-function balanceEnd() {
-  return 0;
-}
-const WhiteSpace = _mod13027.TYPE.WhiteSpace;
-const Semicolon = _mod13027.TYPE.Semicolon;
-const LeftCurlyBracket = _mod13027.TYPE.LeftCurlyBracket;
-const Delim = _mod13027.TYPE.Delim;
-let obj = {
-  name: "Raw",
-  structure: { value: String },
-  parse(arg0, balanceEnd, arg2) {
+
+export default {
+  getTrace,
+  isType(arg0, arg1) {
     const self = this;
-    let tmp = balanceEnd;
-    const scanner = this.scanner;
-    const tokenStart1 = scanner.getTokenStart(arg0);
-    ({ scanner: scanner2, scanner: scanner3 } = this);
-    if (!balanceEnd) {
-      tmp = balanceEnd;
-    }
-    scanner2.skip(scanner3.getRawLength(arg0, tmp));
-    if (arg2) {
-      if (self.scanner.tokenStart > tokenStart1) {
-        const call = getOffsetExcludeWS.call;
-        if (typeof call !== "unknown") {
-          call(self);
+    closure_0 = arg1;
+    const call = getTrace.call;
+    if (typeof call === "unknown") {
+      closure_0 = arg0;
+      c1 = null;
+      if (null !== self.matched) {
+        function hasMatch(matched) {
+          if (Array.isArray(matched.match)) {
+            let num = 0;
+            if (0 < matched.match.length) {
+              while (!hasMatch(matched.match[num])) {
+                num = num + 1;
+              }
+              const syntax = matched.syntax;
+              let tmp7 = null !== syntax;
+              if (tmp7) {
+                let tmp8 = "Type" === syntax.type;
+                if (!tmp8) {
+                  tmp8 = "Property" === syntax.type;
+                }
+                if (!tmp8) {
+                  tmp8 = "Keyword" === syntax.type;
+                }
+                tmp7 = tmp8;
+              }
+              if (tmp7) {
+                items1.unshift(matched.syntax);
+              }
+              return true;
+            }
+          } else if (matched.node === closure_0) {
+            const syntax2 = matched.syntax;
+            let tmp3 = null !== syntax2;
+            if (tmp3) {
+              let tmp2 = "Type" === syntax2.type;
+              if (!tmp2) {
+                tmp2 = "Property" === syntax2.type;
+              }
+              if (!tmp2) {
+                tmp2 = "Keyword" === syntax2.type;
+              }
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              items = [matched.syntax];
+              items1 = items;
+            } else {
+              items1 = [];
+            }
+            return true;
+          }
+          return false;
         }
-        if (self.scanner.tokenIndex <= 0) {
-          const tokenStart2 = self.scanner.tokenStart;
-        } else {
-          const scanner4 = self.scanner;
-        }
-        let num3 = 1;
-        if (self.scanner.tokenIndex > 1) {
-          const scanner5 = self.scanner;
-          num3 = self.scanner.tokenIndex - num3;
-          let firstCharOffset = scanner5.getTokenStart(num3);
-        } else {
-          firstCharOffset = self.scanner.firstCharOffset;
-        }
+        hasMatch(self.matched);
       }
+      let callResult = c1;
+    } else {
+      callResult = call(self, arg0);
     }
-    const tokenStart = self.scanner.tokenStart;
-    const obj = { type: "Raw", loc: self.getLocation(tokenStart1, tokenStart), value: self.scanner.source.substring(tokenStart1, tokenStart) };
-    return obj;
+    return null !== callResult && callResult.some((type) => {
+      let tmp = "Type" === type.type;
+      if (tmp) {
+        tmp = type.name === closure_0;
+      }
+      return tmp;
+    });
   },
-  generate(value) {
-    this.chunk(value.value);
-  },
-  mode: {
-    default: balanceEnd,
-    leftCurlyBracket(arg0) {
-      let num = 0;
-      if (arg0 === LeftCurlyBracket) {
-        num = 1;
+  isProperty(arg0, arg1) {
+    const self = this;
+    closure_0 = arg1;
+    const call = getTrace.call;
+    if (typeof call === "unknown") {
+      closure_0 = arg0;
+      c1 = null;
+      if (null !== self.matched) {
+        function hasMatch(matched) {
+          if (Array.isArray(matched.match)) {
+            let num = 0;
+            if (0 < matched.match.length) {
+              while (!hasMatch(matched.match[num])) {
+                num = num + 1;
+              }
+              const syntax = matched.syntax;
+              let tmp7 = null !== syntax;
+              if (tmp7) {
+                let tmp8 = "Type" === syntax.type;
+                if (!tmp8) {
+                  tmp8 = "Property" === syntax.type;
+                }
+                if (!tmp8) {
+                  tmp8 = "Keyword" === syntax.type;
+                }
+                tmp7 = tmp8;
+              }
+              if (tmp7) {
+                items1.unshift(matched.syntax);
+              }
+              return true;
+            }
+          } else if (matched.node === closure_0) {
+            const syntax2 = matched.syntax;
+            let tmp3 = null !== syntax2;
+            if (tmp3) {
+              let tmp2 = "Type" === syntax2.type;
+              if (!tmp2) {
+                tmp2 = "Property" === syntax2.type;
+              }
+              if (!tmp2) {
+                tmp2 = "Keyword" === syntax2.type;
+              }
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              items = [matched.syntax];
+              items1 = items;
+            } else {
+              items1 = [];
+            }
+            return true;
+          }
+          return false;
+        }
+        hasMatch(self.matched);
       }
-      return num;
-    },
-    leftCurlyBracketOrSemicolon(arg0) {
-      if (arg0 === LeftCurlyBracket) {
-        let num = 1;
-      } else {
-        num = 0;
-      }
-      return num;
-    },
-    exclamationMarkOrSemicolon(arg0, str, sum) {
-      if (arg0 !== Delim) {
-        let num2 = 0;
-        return num2;
-      }
-      num2 = 1;
-    },
-    semicolonIncluded(arg0) {
-      let num = 0;
-      if (arg0 === Semicolon) {
-        num = 2;
-      }
-      return num;
+      let callResult = c1;
+    } else {
+      callResult = call(self, arg0);
     }
+    return null !== callResult && callResult.some((type) => {
+      let tmp = "Property" === type.type;
+      if (tmp) {
+        tmp = type.name === closure_0;
+      }
+      return tmp;
+    });
+  },
+  isKeyword(arg0) {
+    const self = this;
+    const call = getTrace.call;
+    if (typeof call === "unknown") {
+      closure_0 = arg0;
+      let items1 = null;
+      if (null !== self.matched) {
+        function hasMatch(matched) {
+          if (Array.isArray(matched.match)) {
+            let num = 0;
+            if (0 < matched.match.length) {
+              while (!hasMatch(matched.match[num])) {
+                num = num + 1;
+              }
+              const syntax = matched.syntax;
+              let tmp7 = null !== syntax;
+              if (tmp7) {
+                let tmp8 = "Type" === syntax.type;
+                if (!tmp8) {
+                  tmp8 = "Property" === syntax.type;
+                }
+                if (!tmp8) {
+                  tmp8 = "Keyword" === syntax.type;
+                }
+                tmp7 = tmp8;
+              }
+              if (tmp7) {
+                items1.unshift(matched.syntax);
+              }
+              return true;
+            }
+          } else if (matched.node === closure_0) {
+            const syntax2 = matched.syntax;
+            let tmp3 = null !== syntax2;
+            if (tmp3) {
+              let tmp2 = "Type" === syntax2.type;
+              if (!tmp2) {
+                tmp2 = "Property" === syntax2.type;
+              }
+              if (!tmp2) {
+                tmp2 = "Keyword" === syntax2.type;
+              }
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              items = [matched.syntax];
+              items1 = items;
+            } else {
+              items1 = [];
+            }
+            return true;
+          }
+          return false;
+        }
+        hasMatch(self.matched);
+      }
+      let callResult = items1;
+    } else {
+      callResult = call(self, arg0);
+    }
+    let someResult = null !== callResult;
+    if (someResult) {
+      someResult = callResult.some((type) => "Keyword" === type.type);
+    }
+    return someResult;
   }
 };
-
-export default obj;

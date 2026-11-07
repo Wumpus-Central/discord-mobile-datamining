@@ -1,63 +1,33 @@
 // === Module 5498: ? ===
 
 // Module 5498
+import traverseAndConfigureRelations from "traverseAndConfigureRelations" /* 5497 */;
+import noop from "module_19" /* 19 */;
 
-export function assignRef(fn, current) {
-  if (typeof fn === "function") {
-    const tmp = fn(current);
-    let tmp2;
-    if (typeof tmp === "function") {
-      tmp2 = tmp;
+({ useEffect: c2, useMemo: c3 } = noop);
+
+export function useGestureRelationsUpdater(gesture) {
+  closure_0 = gesture;
+  items = [gesture];
+  const tmp = closure_3(() => {
+    let configureRelationsResult = null;
+    if (closure_0) {
+      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
     }
-    return tmp2;
-  } else if (fn) {
-    fn.current = current;
-  }
-}
-export function isHostInstance(preferHostInstanceResult) {
-  let prop;
-  if (preferHostInstanceResult != null) {
-    prop = preferHostInstanceResult.__internalInstanceHandle;
-  }
-  return undefined !== prop;
-}
-export function preferHostInstance(__internalInstanceHandle) {
-  if (null != __internalInstanceHandle) {
-    let prop;
-    if (__internalInstanceHandle != null) {
-      prop = __internalInstanceHandle.__internalInstanceHandle;
+    return configureRelationsResult;
+  }, items);
+  closure_1 = tmp;
+  const items1 = [tmp];
+  closure_2(() => {
+    if (closure_1) {
+      const _requestAnimationFrame = requestAnimationFrame;
+      closure_0 = requestAnimationFrame(() => {
+        const item = closure_1_1.forEach((item, index) => {
+          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
+          NativeProxy.configureRelations(index, item);
+        });
+      });
+      return () => cancelAnimationFrame(closure_0);
     }
-    if (undefined === prop) {
-      const getNativeScrollRef = __internalInstanceHandle.getNativeScrollRef;
-      let nativeScrollRef;
-      if (getNativeScrollRef != null) {
-        nativeScrollRef = getNativeScrollRef();
-      }
-      let prop1;
-      if (nativeScrollRef != null) {
-        prop1 = nativeScrollRef.__internalInstanceHandle;
-      }
-      let tmp4 = __internalInstanceHandle;
-      if (undefined !== prop1) {
-        tmp4 = nativeScrollRef;
-      }
-      return tmp4;
-    }
-  }
-  return __internalInstanceHandle;
-}
-export function resolveHostInstance(viewRef) {
-  let getHostInstance;
-  if (viewRef != null) {
-    getHostInstance = viewRef.getHostInstance;
-  }
-  let tmp2 = viewRef;
-  if (typeof getHostInstance === "function") {
-    let hostInstance = viewRef.getHostInstance();
-    if (hostInstance == null) {
-      hostInstance = viewRef;
-    }
-    tmp2 = hostInstance;
-  }
-  return tmp2;
+  }, items1);
 }

@@ -1,14 +1,15 @@
 // === Module 8187: ? ===
 
 // Module 8187
-import _modDef8161 from "module_8161" /* 8161 */;
+import _modDef8125 from "module_8125" /* 8125 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeTile = arg1;
+const Pattern = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +29,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTile {
+const jsx = fn(21).jsx;
+class Pattern {
   constructor() {
     self = this;
-    tmp = c2(this, FeTile);
+    tmp = c2(this, Pattern);
     tmp2 = closure_4;
-    obj = closure_4(FeTile);
+    obj = closure_4(Pattern);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +50,54 @@ class FeTile {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTile, _modDef8161);
+_inherits(Pattern, _modDef8125);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTile(8138).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    ({ patternTransform, patternUnits, patternContentUnits } = props);
+    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
+    if (!patternTransform) {
+      patternTransform = transform;
+    }
+    if (!patternTransform) {
+      patternTransform = props;
+    }
+    const tmp3Result = Pattern(8109)(patternTransform);
+    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
+    let num = patternUnits;
+    if (patternUnits) {
+      num = Pattern(8179)[patternUnits];
+    }
+    if (!num) {
+      num = 0;
+    }
+    size.patternUnits = num;
+    let num2 = 1;
+    if (patternContentUnits) {
+      num2 = Pattern(8179)[patternContentUnits];
+    }
+    size.patternContentUnits = num2;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp3 = Pattern(8109);
+    const merged = Object.assign(size);
+    const merged1 = Object.assign(Pattern(8114)({ viewBox, preserveAspectRatio }));
+    obj.children = children;
+    return jsx(Pattern(8188), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTile, items);
-importDefaultResultResult.displayName = "FeTile";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Pattern, items);
+importDefaultResultResult.displayName = "Pattern";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

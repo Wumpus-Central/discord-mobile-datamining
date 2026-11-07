@@ -1,37 +1,49 @@
 // === Module 4619: ? ===
 
 // Module 4619
-import module_4454_mod from "module_4454" /* 4454 */;
-import module_4599_mod from "module_4599" /* 4599 */;
-import requiredArgs_mod from "requiredArgs" /* 4451 */;
+import _typeof_mod from "module_4420" /* 4420 */;
+import endOfDay_mod from "endOfDay" /* 4620 */;
+import endOfMonth_mod from "endOfMonth" /* 4621 */;
+import requiredArgs_mod from "requiredArgs" /* 4421 */;
 
-let module_4454 = module_4454_mod;
-if (!module_4454) {
-  const obj = { default: module_4454 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4454;
+  tmp3 = _typeof;
 }
-module_4454 = tmp3;
-let module_4599 = module_4599_mod;
-if (!module_4599) {
-  const obj2 = { default: module_4599 };
+_typeof = tmp3;
+let endOfDay = endOfDay_mod;
+if (!endOfDay) {
+  const obj2 = { default: endOfDay };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4599;
+  tmp5 = endOfDay;
 }
-module_4599 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+endOfDay = tmp5;
+let endOfMonth = endOfMonth_mod;
+if (!endOfMonth) {
+  const obj3 = { default: endOfMonth };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = endOfMonth;
 }
-requiredArgs = tmp7;
+endOfMonth = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function addYears(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4599.default(interval, 12 * module_4454.default(arg1));
+export default function isLastDayOfMonth(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = endOfDay.default(defaultResult1).getTime();
+  const defaultResult2 = endOfDay.default(defaultResult1);
+  return time === endOfMonth.default(defaultResult1).getTime();
 };
 export default exports.default;

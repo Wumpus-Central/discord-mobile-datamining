@@ -1,42 +1,54 @@
 // === Module 13119: ? ===
 
 // Module 13119
-import _mod13027 from "module_13027" /* 13027 */;
+import _mod13050 from "module_13050" /* 13050 */;
 
-const String = _mod13027.TYPE.String;
-const Ident = _mod13027.TYPE.Ident;
-const Url = _mod13027.TYPE.Url;
-const Function = _mod13027.TYPE.Function;
-const LeftParenthesis = _mod13027.TYPE.LeftParenthesis;
-
-export default {
-  parse: {
-    prelude() {
-      const self = this;
-      const list = this.createList();
-      const scanner = this.scanner;
+const Ident = _mod13050.TYPE.Ident;
+const Function = _mod13050.TYPE.Function;
+const Colon = _mod13050.TYPE.Colon;
+const RightParenthesis = _mod13050.TYPE.RightParenthesis;
+const obj = {
+  name: "PseudoClassSelector",
+  structure: null,
+  parse() {
+    const self = this;
+    this.eat(Colon);
+    if (this.scanner.tokenType === Function) {
+      const str = self.consumeFunctionName();
+      const formatted = str.toLowerCase();
+      const pseudo = self.pseudo;
+      if (!pseudo.hasOwnProperty(formatted)) {
+        const list = self.createList();
+        list.push(self.Raw(self.scanner.tokenIndex, null, false));
+        self.eat(RightParenthesis);
+      }
+      const scanner = self.scanner;
       scanner.skipSC();
-      const tokenType = this.scanner.tokenType;
-      if (String === tokenType) {
-        list.push(self.String());
-      } else {
-        if (Url !== tokenType) {
-          if (Function !== tokenType) {
-            self.error("String or url() is expected");
-          }
-        }
-        list.push(self.Url());
-      }
-      let tmp7 = self.lookupNonWSType(0) !== Ident;
-      if (tmp7) {
-        tmp7 = self.lookupNonWSType(0) !== LeftParenthesis;
-      }
-      if (!tmp7) {
-        list.push(self.WhiteSpace());
-        list.push(self.MediaQueryList());
-      }
-      return list;
-    },
-    block: null
-  }
+      let skipSCResult1 = self.pseudo[formatted];
+      const call = skipSCResult1.call;
+      const scanner2 = self.scanner;
+      skipSCResult1 = scanner2.skipSC();
+      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
+    } else {
+      const element = { type: "PseudoClassSelector", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: self.consume(Ident), children: null };
+      return element;
+    }
+  },
+  generate(name) {
+    const self = this;
+    this.chunk(":");
+    this.chunk(name.name);
+    if (null !== name.children) {
+      self.chunk("(");
+      self.children(name);
+      self.chunk(")");
+    }
+  },
+  walkContext: "function"
 };
+const obj2 = { name: String, children: null };
+const items = [["Raw"], null];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

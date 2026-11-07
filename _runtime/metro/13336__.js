@@ -1,0 +1,25 @@
+// === Module 13336: ? ===
+
+// Module 13336
+import _mod13292 from "module_13292" /* 13292 */;
+import _mod13322 from "module_13322" /* 13322 */;
+
+require = arg1;
+const dependencyMap = arg6;
+
+export function createClientReportEnvelope(discarded_events, dsn, arg2) {
+  let result = arg2;
+  items = [{ type: "client_report" }, ];
+  if (!arg2) {
+    result = _mod13292.dateTimestampInSeconds();
+  }
+  items[1] = { timestamp: result, discarded_events };
+  if (dsn) {
+    const obj3 = { dsn };
+    let obj4 = obj3;
+  } else {
+    obj4 = {};
+  }
+  const items1 = [items];
+  return _mod13322.createEnvelope(obj4, items1);
+}

@@ -1,16 +1,16 @@
 // === Module 10635: ? ===
 
 // Module 10635
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10463 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10470 */;
-import _mod10632 from "module_10632" /* 10632 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10446 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10453 */;
+import _mod10634 from "module_10634" /* 10634 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENMonthNameParser = require;
+const SVMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("((?:in)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10632.MONTH_DICTIONARY) + ")\\s*(?:[,-]?\\s*(" + _mod10632.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
-class ENMonthNameParser {
+const regExp = new RegExp("(?:den\\s*?)?([0-9]{1,2})(?:\\s*(?:till|\\-|\\\u2013|\\s)\\s*([0-9]{1,2}))?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10634.MONTH_DICTIONARY) + ")(?:(?:-|/|,?\\s*)([0-9]{4}(?![^\\s]\\d)))?(?=\\W|$)", "i");
+class SVMonthNameLittleEndianParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMonthNameParser);
+    tmp = c2(this, SVMonthNameLittleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMonthNameParser);
+    obj = closure_4(SVMonthNameLittleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,7 +51,7 @@ class ENMonthNameParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(SVMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -63,32 +63,36 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!ENMonthNameParser(10632).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
-        }
-      }
-      let str2 = index[1];
-      if (!str2) {
-        str2 = "";
-      }
-      const parsingResult = createParsingResult.createParsingResult(index.index + str2.length, index.index + index[0].length);
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = ENMonthNameParser(10632).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", ENMonthNameParser(10632).parseYear(index[3]));
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = SVMonthNameLittleEndianParser(10634).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const parsed = parseInt(index[1]);
+      if (parsed > 31) {
+        index.index = index.index + index[1].length;
+        return null;
       } else {
-        const start3 = parsingResult.start;
-        start3.imply("year", ENMonthNameParser(10464).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", parsed);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", SVMonthNameLittleEndianParser(10634).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply("year", SVMonthNameLittleEndianParser(10447).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
+        }
+        if (index[2]) {
+          const _parseInt = parseInt;
+          const start3 = parsingResult.start;
+          const parsed1 = parseInt(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", parsed1);
+        }
+        return parsingResult;
       }
-      return parsingResult;
     }
   }
 ];
 
-export default _createClass(ENMonthNameParser, items);
+export default _createClass(SVMonthNameLittleEndianParser, items);

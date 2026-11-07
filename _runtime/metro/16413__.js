@@ -1,14 +1,30 @@
 // === Module 16413: ? ===
 
 // Module 16413
-import _mod16394 from "module_16394" /* 16394 */;
-import _mod16414 from "module_16414" /* 16414 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod16394(arg0[arg1])) {
-    tmp4 = _mod16414(tmp);
-  }
-  return tmp4;
-};
+export function getSupportedCalendars(locale) {
+  _require = locale;
+  const calendars = require("module_16414").calendars;
+  return calendars.filter((item) => (function isSupportedCalendar(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-ca-");
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
+      if ("gregory" === item) {
+        if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
+}

@@ -1,23 +1,56 @@
 // === Module 13095: ? ===
 
 // Module 13095
-import keys2 from "keys2" /* 13023 */;
-import _mod13027 from "module_13027" /* 13027 */;
+import _mod13050 from "module_13050" /* 13050 */;
 
-const Percentage = _mod13027.TYPE.Percentage;
-let obj = {
-  name: "Percentage",
-  structure: { value: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Percentage);
-    const obj2 = { type: "Percentage", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: this.scanner.source.substring(tokenStart, keys2.consumeNumber(this.scanner.source, tokenStart)) };
-    return obj2;
+const Semicolon = _mod13050.TYPE.Semicolon;
+const LeftCurlyBracket = _mod13050.TYPE.LeftCurlyBracket;
+const obj = {
+  name: "AtrulePrelude",
+  structure: null,
+  parse(key10009) {
+    let formatted = key10009;
+    if (null !== key10009) {
+      formatted = key10009.toLowerCase();
+    }
+    const self = this;
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const atrule = this.atrule;
+    if (atrule.hasOwnProperty(formatted)) {
+      if (typeof self.atrule[formatted].prelude === "function") {
+        const prelude = self.atrule[formatted].prelude;
+        const call = prelude.call;
+        typeof call === "unknown" ? prelude() : call(self);
+      }
+    }
+    let sequence = self.readSequence(self.scope.AtrulePrelude);
+    const scanner2 = self.scanner;
+    scanner2.skipSC();
+    let tmp6 = true !== self.scanner.eof;
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== LeftCurlyBracket;
+    }
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== Semicolon;
+    }
+    if (tmp6) {
+      self.error("Semicolon or block is expected");
+    }
+    if (null === sequence) {
+      sequence = self.createList();
+    }
+    const element = { type: "AtrulePrelude", loc: self.getLocationFromList(sequence), children: sequence };
+    return element;
   },
-  generate(value) {
-    this.chunk(value.value);
-    this.chunk("%");
-  }
+  generate(arg0) {
+    this.children(arg0);
+  },
+  walkContext: "atrulePrelude"
 };
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;
