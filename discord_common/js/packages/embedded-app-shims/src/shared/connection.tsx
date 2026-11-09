@@ -1,8 +1,8 @@
-// === Module 19835: connection ===
+// === Module 19848: connection ===
 
-// Module 19835 (connection)
-import protocol from "protocol" /* 19830 */;
-import Safe4 from "Safe" /* 19831 */;
+// Module 19848 (connection)
+import protocol from "protocol" /* 19843 */;
+import Safe4 from "Safe" /* 19844 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/embedded-app-shims/src/shared/connection.tsx");
@@ -52,8 +52,8 @@ export function createChildConnector(onMessage, arg1) {
   };
 }
 export function offerOverWindow(arg0, arg1, nonce, fn) {
-  const messageChannel = new port1(19831).Safe.Constructor.MessageChannel();
-  let Safe = port1(19831).Safe;
+  const messageChannel = new port1(19844).Safe.Constructor.MessageChannel();
+  let Safe = port1(19844).Safe;
   const MessageChannelResult = Safe.MessageChannel(messageChannel);
   port1 = MessageChannelResult.port1;
   fn({
@@ -74,7 +74,7 @@ export function offerOverWindow(arg0, arg1, nonce, fn) {
       Safe.MessagePort(port1).close();
     }
   });
-  const Safe2 = port1(19831).Safe;
+  const Safe2 = port1(19844).Safe;
   const WindowResult = Safe2.Window(arg0);
   const obj = {
     post(arg0) {
@@ -94,7 +94,7 @@ export function offerOverWindow(arg0, arg1, nonce, fn) {
       Safe.MessagePort(port1).close();
     }
   };
-  const Safe3 = port1(19831).Safe;
+  const Safe3 = port1(19844).Safe;
   items = [MessageChannelResult.port2];
   WindowResult.postMessage({ [closure_0(closure_1[0]).SHIM_MESSAGE_KEY]: "connection_open", nonce }, arg1, Safe3.asIterable(items));
 }

@@ -1,6 +1,6 @@
-// === Module 16666: AuthCommandsFactory ===
+// === Module 16677: AuthCommandsFactory ===
 
-// Module 16666 (AuthCommandsFactory)
+// Module 16677 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import RPCErrorDefault from "RPCError" /* 9414 */;
@@ -35,7 +35,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -375,7 +375,7 @@ let closure_20 = async function _authenticate(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

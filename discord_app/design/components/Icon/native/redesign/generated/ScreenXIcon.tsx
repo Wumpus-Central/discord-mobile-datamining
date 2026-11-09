@@ -1,6 +1,6 @@
-// === Module 19677: ScreenXIcon ===
+// === Module 19690: ScreenXIcon ===
 
-// Module 19677 (ScreenXIcon)
+// Module 19690 (ScreenXIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5841 */;
 import _mod12097 from "module_12097" /* 12097 */;

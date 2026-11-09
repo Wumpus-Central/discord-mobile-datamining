@@ -1,16 +1,16 @@
-// === Module 18933: useWaterwheelsActions ===
+// === Module 18946: useWaterwheelsActions ===
 
-// Module 18933 (useWaterwheelsActions)
+// Module 18946 (useWaterwheelsActions)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
 import openPrivacySettingsDefault from "openPrivacySettings" /* 8033 */;
 import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9007 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9810 */;
-import NotificationUtilsDefault from "NotificationUtils" /* 14215 */;
+import NotificationUtilsDefault from "NotificationUtils" /* 14216 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5011 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14206 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14207 */;
 
 require = fn;
 function openErrorToast(text) {
@@ -37,7 +37,7 @@ let closure_13 = async function _requestNotifications() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_13 = async function _requestNotifications() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c0 = tmp;
       throw tmp10;
@@ -85,7 +85,7 @@ let closure_14 = async function _joinGuild(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

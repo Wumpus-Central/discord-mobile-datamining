@@ -1,6 +1,6 @@
-// === Module 18565: useLiveStageChannels ===
+// === Module 18578: useLiveStageChannels ===
 
-// Module 18565 (useLiveStageChannels)
+// Module 18578 (useLiveStageChannels)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import ChannelStore from "ChannelStore" /* 4989 */;

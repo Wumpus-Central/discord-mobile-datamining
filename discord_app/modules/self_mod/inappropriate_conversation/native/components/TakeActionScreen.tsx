@@ -1,6 +1,6 @@
-// === Module 18049: TakeActionScreen ===
+// === Module 18058: TakeActionScreen ===
 
-// Module 18049 (TakeActionScreen)
+// Module 18058 (TakeActionScreen)
 import nativeDefault from "native" /* 575 */;
 import LinkingDefault from "Linking" /* 5834 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7552 */;
@@ -76,7 +76,7 @@ export default function TakeActionButtons(senderId) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

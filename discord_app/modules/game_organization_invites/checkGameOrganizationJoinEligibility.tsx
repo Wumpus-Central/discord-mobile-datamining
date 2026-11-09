@@ -1,10 +1,10 @@
-// === Module 13436: checkGameOrganizationJoinEligibility ===
+// === Module 13437: checkGameOrganizationJoinEligibility ===
 
-// Module 13436 (checkGameOrganizationJoinEligibility)
-import withGameOrganizationJoinFlowPendingDefault from "withGameOrganizationJoinFlowPending" /* 13438 */;
+// Module 13437 (checkGameOrganizationJoinEligibility)
+import withGameOrganizationJoinFlowPendingDefault from "withGameOrganizationJoinFlowPending" /* 13439 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
-import GameOrganizationCharacterEligibilityStore from "GameOrganizationCharacterEligibilityStore" /* 13437 */;
+import GameOrganizationCharacterEligibilityStore from "GameOrganizationCharacterEligibilityStore" /* 13438 */;
 import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11503 */;
 
 const require = fn;
@@ -19,7 +19,7 @@ let closure_10 = async function _checkGameOrganizationJoinEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

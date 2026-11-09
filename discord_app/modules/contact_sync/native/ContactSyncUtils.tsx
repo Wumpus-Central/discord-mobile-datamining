@@ -1,6 +1,6 @@
-// === Module 14486: ContactSyncUtils ===
+// === Module 14487: ContactSyncUtils ===
 
-// Module 14486 (ContactSyncUtils)
+// Module 14487 (ContactSyncUtils)
 import initialize from "initialize" /* 504 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
@@ -11,7 +11,7 @@ import UserSettings from "UserSettings" /* 4965 */;
 import LinkingDefault from "Linking" /* 5834 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6802 */;
-import ContactSyncManager from "ContactSyncManager" /* 14487 */;
+import ContactSyncManager from "ContactSyncManager" /* 14488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6627 */;
 
@@ -27,7 +27,7 @@ let closure_18 = async function _uploadContacts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -99,9 +99,9 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(14485);
+const ContactSyncPersistedStore = fn(14486);
 ({ useContactSyncStore: closure_6, clearDismissState: metroImportDefault, deleteStoredContacts: closure_8 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(14484);
+const ContactSyncConstants = fn(14485);
 ({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: closure_10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
 const Constants = fn(1072);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = Constants);

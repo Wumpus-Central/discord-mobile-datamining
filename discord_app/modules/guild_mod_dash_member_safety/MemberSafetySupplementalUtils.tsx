@@ -36,7 +36,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 17881: UserSettingsPushNotificationLogs ===
+// === Module 17892: UserSettingsPushNotificationLogs ===
 
-// Module 17881 (UserSettingsPushNotificationLogs)
+// Module 17892 (UserSettingsPushNotificationLogs)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -50,7 +50,7 @@ export default function UserSettingsPushNotificationLogs() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -83,7 +83,7 @@ export default function UserSettingsPushNotificationLogs() {
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -155,7 +155,7 @@ export default function UserSettingsPushNotificationLogs() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -187,7 +187,7 @@ export default function UserSettingsPushNotificationLogs() {
           const obj6 = { message: tmp5(11226)(closure_128_0, false) };
           tmp2(9010).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;

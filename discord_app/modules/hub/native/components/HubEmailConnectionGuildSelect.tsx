@@ -1,6 +1,6 @@
-// === Module 14586: HubEmailConnectionGuildSelect ===
+// === Module 14587: HubEmailConnectionGuildSelect ===
 
-// Module 14586 (HubEmailConnectionGuildSelect)
+// Module 14587 (HubEmailConnectionGuildSelect)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -70,7 +70,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14564).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14565).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5140);
@@ -147,7 +147,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -168,7 +168,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(14577).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(14578).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {

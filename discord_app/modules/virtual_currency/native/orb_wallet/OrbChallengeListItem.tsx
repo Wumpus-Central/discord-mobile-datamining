@@ -1,6 +1,6 @@
-// === Module 17220: OrbChallengeListItem ===
+// === Module 17231: OrbChallengeListItem ===
 
-// Module 17220 (OrbChallengeListItem)
+// Module 17231 (OrbChallengeListItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2298 from "module_2298" /* 2298 */;
@@ -8,8 +8,8 @@ import components_Button_Button from "components/Button/Button" /* 5758 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7438 */;
 import OrbsIcon from "OrbsIcon" /* 9616 */;
 import _modDef9797 from "module_9797" /* 9797 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14928 */;
-import OrbChallengeTypes from "OrbChallengeTypes" /* 15930 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14929 */;
+import OrbChallengeTypes from "OrbChallengeTypes" /* 15940 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -81,7 +81,7 @@ export function OrbChallengeListItem(achievementIdentifier) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

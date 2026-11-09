@@ -1,6 +1,6 @@
-// === Module 18662: GameCommunityMultiGuildUpsellCard ===
+// === Module 18675: GameCommunityMultiGuildUpsellCard ===
 
-// Module 18662 (GameCommunityMultiGuildUpsellCard)
+// Module 18675 (GameCommunityMultiGuildUpsellCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
@@ -132,7 +132,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 13904: EmojiCube ===
+// === Module 13905: EmojiCube ===
 
-// Module 13904 (EmojiCube)
+// Module 13905 (EmojiCube)
 import nativeDefault from "native" /* 575 */;
 import EmojiDefault from "Emoji" /* 7363 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -72,7 +72,7 @@ export default function EmojiCube(emoji) {
   items = [AccessibilityStore];
   const stateFromStores = emoji(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = emoji(504);
-  const result = emoji(13875).useCheckpointScreenFrame().width / 392;
+  const result = emoji(13876).useCheckpointScreenFrame().width / 392;
   let emojiURL;
   if (null != emoji.id) {
     const obj4 = { id: emoji.id, animated: null, size: null };

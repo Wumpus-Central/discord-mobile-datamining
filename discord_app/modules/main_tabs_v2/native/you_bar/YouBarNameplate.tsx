@@ -1,20 +1,20 @@
-// === Module 18797: YouBarNameplate ===
+// === Module 18810: YouBarNameplate ===
 
-// Module 18797 (YouBarNameplate)
+// Module 18810 (YouBarNameplate)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import useToken from "useToken" /* 5724 */;
 import spring_spring from "spring/spring" /* 5761 */;
 import NameplateDefault from "Nameplate" /* 9598 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17467 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17478 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
 const _modDef1652 = _mod1652;
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(17385).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(17396).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 let closure_6 = { code: "(function YouBarNameplateTsx1(){let[withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG]=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};})" };
 const size = fn(2);

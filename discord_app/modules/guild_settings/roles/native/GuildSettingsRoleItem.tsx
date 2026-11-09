@@ -1,6 +1,6 @@
-// === Module 20182: GuildSettingsRoleItem ===
+// === Module 20195: GuildSettingsRoleItem ===
 
-// Module 20182 (GuildSettingsRoleItem)
+// Module 20195 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 575 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -120,7 +120,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -149,7 +149,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                 }
                 GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                 c2 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } catch (tmp16) {
                 c2 = tmp;
                 throw tmp16;

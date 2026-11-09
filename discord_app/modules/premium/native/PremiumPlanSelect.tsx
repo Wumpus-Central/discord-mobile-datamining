@@ -1,6 +1,6 @@
-// === Module 15707: PremiumPlanSelect ===
+// === Module 15717: PremiumPlanSelect ===
 
-// Module 15707 (PremiumPlanSelect)
+// Module 15717 (PremiumPlanSelect)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -19,15 +19,15 @@ import ProductIds from "ProductIds" /* 7669 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9612 */;
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10679 */;
 import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10796 */;
-import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 15534 */;
-import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 15535 */;
-import TreasureChestBannerSpotIllustration from "TreasureChestBannerSpotIllustration" /* 15709 */;
-import _modDef15713 from "module_15713" /* 15713 */;
-import _modDef15714 from "module_15714" /* 15714 */;
-import _modDef15715 from "module_15715" /* 15715 */;
-import _modDef15716 from "module_15716" /* 15716 */;
-import _modDef15717 from "module_15717" /* 15717 */;
-import _modDef15718 from "module_15718" /* 15718 */;
+import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 15544 */;
+import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 15545 */;
+import TreasureChestBannerSpotIllustration from "TreasureChestBannerSpotIllustration" /* 15719 */;
+import _modDef15723 from "module_15723" /* 15723 */;
+import _modDef15724 from "module_15724" /* 15724 */;
+import _modDef15725 from "module_15725" /* 15725 */;
+import _modDef15726 from "module_15726" /* 15726 */;
+import _modDef15727 from "module_15727" /* 15727 */;
+import _modDef15728 from "module_15728" /* 15728 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -181,21 +181,21 @@ function PlanRow(plan) {
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("module_15713");
+    let tmp7Result = require("module_15723");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_19.TIER_1) {
-      tmp7Result = require("module_15717");
+      tmp7Result = require("module_15727");
     } else {
-      tmp7Result = require("module_15718");
+      tmp7Result = require("module_15728");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_19.TIER_0 === premiumTier) {
-      tmp7Result = require("module_15714");
+      tmp7Result = require("module_15724");
     } else if (closure_19.TIER_1 === premiumTier) {
-      tmp7Result = require("module_15715");
+      tmp7Result = require("module_15725");
     } else if (closure_19.TIER_2 === premiumTier) {
-      tmp7Result = require("module_15716");
+      tmp7Result = require("module_15726");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -420,7 +420,7 @@ function PlanSection(showBoostOnlyLabels) {
                   importer() {
                               return shouldShowModernBoostFlow(recommendedBoostCount[51])(recommendedBoostCount[50], recommendedBoostCount.paths).then((result) => {
                                 closure_0 = result.default;
-                                return /* F143347 */ function() { ... };
+                                return /* F143454 */ function() { ... };
                               });
                             },
                   hideActionSheet: true,
@@ -679,7 +679,7 @@ function PlanSections(showCurrentPlan) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 let useNativeCheckoutStore = fn(7685).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(15708);
+const PremiumPlanSelectStore = fn(15718);
 ({ setIsPurchasing: map1, usePremiumPlanSelectStore: closure_14 } = PremiumPlanSelectStore);
 const PremiumConstants = fn(1387);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, PRICE_PLACEHOLDER: closure_17, PremiumSubscriptionSKUs: closure_18, PremiumTypes: closure_19, SubscriptionIntervalTypes: closure_20, SubscriptionPlans: closure_21 } = PremiumConstants);
@@ -727,7 +727,7 @@ obj2.nitroBannerText = { textAlign: "center" };
 let obj8 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
 obj2.recommendedText = { color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 let closure_33 = createStyles.createStyles(obj2);
-let closure_36 = { [_modDef15716]: "imgWumpusNitro", [_modDef15718]: "imgWumpusNitroBoost", [_modDef15715]: "imgWumpusNitroClassic", [_modDef15717]: "imgWumpusNitroClassicBoost", [_modDef15714]: "imgWumpusNitroTier0", [_modDef15713]: "imgBoost" };
+let closure_36 = { [_modDef15726]: "imgWumpusNitro", [_modDef15728]: "imgWumpusNitroBoost", [_modDef15725]: "imgWumpusNitroClassic", [_modDef15727]: "imgWumpusNitroClassicBoost", [_modDef15724]: "imgWumpusNitroTier0", [_modDef15723]: "imgBoost" };
 let items = [
   {
     id: "premium",
@@ -869,7 +869,7 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -989,7 +989,7 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
               } else {
                 const obj3 = {
                   importer() {
-                        return premiumTypeSubscription(basePurchaseFlowAnalyticsFields[51])(basePurchaseFlowAnalyticsFields[58], basePurchaseFlowAnalyticsFields.paths).then(/* F143621 */ function() { ... });
+                        return premiumTypeSubscription(basePurchaseFlowAnalyticsFields[51])(basePurchaseFlowAnalyticsFields[58], basePurchaseFlowAnalyticsFields.paths).then(/* F143728 */ function() { ... });
                       },
                   isDismissable: false
                 };

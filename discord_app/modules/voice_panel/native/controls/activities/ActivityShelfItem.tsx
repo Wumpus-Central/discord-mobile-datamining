@@ -1,6 +1,6 @@
-// === Module 19644: ActivityShelfItem ===
+// === Module 19657: ActivityShelfItem ===
 
-// Module 19644 (ActivityShelfItem)
+// Module 19657 (ActivityShelfItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -17,11 +17,11 @@ import useActivityShelfItem from "useActivityShelfItem" /* 12588 */;
 import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12617 */;
 import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 12674 */;
 import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 12680 */;
-import _modDef14626 from "module_14626" /* 14626 */;
-import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 19641 */;
-import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 19642 */;
-import useActivityUsersDefault from "useActivityUsers" /* 19643 */;
-import _modDef19645 from "module_19645" /* 19645 */;
+import _modDef14627 from "module_14627" /* 14627 */;
+import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 19654 */;
+import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 19655 */;
+import useActivityUsersDefault from "useActivityUsers" /* 19656 */;
+import _modDef19658 from "module_19658" /* 19658 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -67,7 +67,7 @@ function ParticipantsText(arg0) {
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
-  const items1 = [timestampProducer(native.Icon, { source: _modDef14626, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
+  const items1 = [timestampProducer(native.Icon, { source: _modDef14627, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
   const obj4 = { lineClamp: 1, style: tmp.participantsText, variant: "footnote/medium", color: "text-overlay-light", children: null };
   if (action === useActivityShelfItem.ActivityAction.START) {
     let num2 = activityItem.application.maxParticipants;
@@ -162,7 +162,7 @@ export default function ActivityShelfItem(arg0) {
     tmp15Result3 = null;
     if (isTestModeForApplication) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
-      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef19645, color: tmp.developerIconColor.color };
+      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef19658, color: tmp.developerIconColor.color };
       obj9.children = timestampProducer(native.Icon, obj10);
       tmp15Result3 = timestampProducer(NativeViewDefault, obj9);
       const tmp3Result4 = NativeViewDefault;

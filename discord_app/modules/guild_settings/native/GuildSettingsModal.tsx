@@ -1,11 +1,11 @@
-// === Module 20043: GuildSettingsModal ===
+// === Module 20056: GuildSettingsModal ===
 
-// Module 20043 (GuildSettingsModal)
+// Module 20056 (GuildSettingsModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import NavigatorHeader from "NavigatorHeader" /* 7064 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9154 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 18525 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 18538 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5011 */;

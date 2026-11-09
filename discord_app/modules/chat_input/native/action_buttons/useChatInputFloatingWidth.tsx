@@ -1,6 +1,6 @@
-// === Module 14050: useChatInputFloatingWidth ===
+// === Module 14051: useChatInputFloatingWidth ===
 
-// Module 14050 (useChatInputFloatingWidth)
+// Module 14051 (useChatInputFloatingWidth)
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5370 */;
 import noop from "module_19" /* 19 */;

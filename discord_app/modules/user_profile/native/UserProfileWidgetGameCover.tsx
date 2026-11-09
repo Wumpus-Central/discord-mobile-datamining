@@ -1,12 +1,12 @@
-// === Module 15214: UserProfileWidgetGameCover ===
+// === Module 15224: UserProfileWidgetGameCover ===
 
-// Module 15214 (UserProfileWidgetGameCover)
+// Module 15224 (UserProfileWidgetGameCover)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15179 */;
-import useWidgetGamePressDefault from "useWidgetGamePress" /* 15213 */;
-import GameCoverImageDefault from "GameCoverImage" /* 15215 */;
-import UserProfileWidgetRemoveGameButtonDefault from "UserProfileWidgetRemoveGameButton" /* 15216 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15194 */;
+import useWidgetGamePressDefault from "useWidgetGamePress" /* 15223 */;
+import GameCoverImageDefault from "GameCoverImage" /* 15225 */;
+import UserProfileWidgetRemoveGameButtonDefault from "UserProfileWidgetRemoveGameButton" /* 15226 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

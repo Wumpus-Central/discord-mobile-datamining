@@ -1,6 +1,6 @@
-// === Module 15336: EditProfileCollectiblesOrderingExperiment ===
+// === Module 15346: EditProfileCollectiblesOrderingExperiment ===
 
-// Module 15336 (EditProfileCollectiblesOrderingExperiment)
+// Module 15346 (EditProfileCollectiblesOrderingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

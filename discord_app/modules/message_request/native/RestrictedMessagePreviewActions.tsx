@@ -1,6 +1,6 @@
-// === Module 19343: RestrictedMessagePreviewActions ===
+// === Module 19356: RestrictedMessagePreviewActions ===
 
-// Module 19343 (RestrictedMessagePreviewActions)
+// Module 19356 (RestrictedMessagePreviewActions)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import UserUtilsDefault from "UserUtils" /* 5194 */;

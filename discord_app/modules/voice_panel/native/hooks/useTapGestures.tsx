@@ -1,6 +1,6 @@
-// === Module 19629: useTapGestures ===
+// === Module 19642: useTapGestures ===
 
-// Module 19629 (useTapGestures)
+// Module 19642 (useTapGestures)
 import _mod1705 from "module_1705" /* 1705 */;
 import HapticUtils from "HapticUtils" /* 5376 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;

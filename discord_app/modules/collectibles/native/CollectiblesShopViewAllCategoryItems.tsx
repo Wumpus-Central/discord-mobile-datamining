@@ -1,6 +1,6 @@
-// === Module 18202: CollectiblesShopViewAllCategoryItems ===
+// === Module 18215: CollectiblesShopViewAllCategoryItems ===
 
-// Module 18202 (CollectiblesShopViewAllCategoryItems)
+// Module 18215 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import spring_spring from "spring/spring" /* 5761 */;
@@ -216,7 +216,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj7 = { logoUrl, buttonColor: "Array", categoryName: -655294463 };
+  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "a" };
   let name;
   if (category != null) {
     name = category.name;

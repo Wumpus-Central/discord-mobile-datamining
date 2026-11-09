@@ -1,6 +1,6 @@
-// === Module 18561: ChannelsUnreadBar ===
+// === Module 18574: ChannelsUnreadBar ===
 
-// Module 18561 (ChannelsUnreadBar)
+// Module 18574 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 575 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9912 */;

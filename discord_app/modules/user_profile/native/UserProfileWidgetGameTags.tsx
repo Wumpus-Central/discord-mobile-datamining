@@ -1,13 +1,13 @@
-// === Module 15220: UserProfileWidgetGameTags ===
+// === Module 15230: UserProfileWidgetGameTags ===
 
-// Module 15220 (UserProfileWidgetGameTags)
+// Module 15230 (UserProfileWidgetGameTags)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8833 */;
 import WidgetUtils from "WidgetUtils" /* 12549 */;
-import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 15221 */;
+import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 15231 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

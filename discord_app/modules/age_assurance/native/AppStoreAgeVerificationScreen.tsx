@@ -82,7 +82,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -150,7 +150,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
           }
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp36) {
         if (tmp4 === c4) {

@@ -1,12 +1,12 @@
-// === Module 18661: GuildUpsellList ===
+// === Module 18674: GuildUpsellList ===
 
-// Module 18661 (GuildUpsellList)
+// Module 18674 (GuildUpsellList)
 import nativeDefault from "native" /* 575 */;
-import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 18662 */;
+import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 18675 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17935 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17944 */;
 
 const require = fn;
 const View = fn(17).View;

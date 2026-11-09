@@ -1,7 +1,7 @@
-// === Module 20326: useCreatorMonetizationOnboardingMarketing ===
+// === Module 20339: useCreatorMonetizationOnboardingMarketing ===
 
-// Module 20326 (useCreatorMonetizationOnboardingMarketing)
-import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 20272 */;
+// Module 20339 (useCreatorMonetizationOnboardingMarketing)
+import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 20285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

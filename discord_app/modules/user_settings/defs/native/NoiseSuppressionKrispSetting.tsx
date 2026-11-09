@@ -1,6 +1,6 @@
-// === Module 17556: NoiseSuppressionKrispSetting ===
+// === Module 17567: NoiseSuppressionKrispSetting ===
 
-// Module 17556 (NoiseSuppressionKrispSetting)
+// Module 17567 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 12122 */;

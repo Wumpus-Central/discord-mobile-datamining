@@ -1,6 +1,6 @@
-// === Module 18907: ICYMIShared ===
+// === Module 18920: ICYMIShared ===
 
-// Module 18907 (ICYMIShared)
+// Module 18920 (ICYMIShared)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -18,7 +18,7 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 88
 import ICYMIUtils from "ICYMIUtils" /* 8997 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8998 */;
 import ClipView from "ClipView" /* 9593 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 18908 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 18921 */;
 import noop from "module_19" /* 19 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 7541 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -150,7 +150,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjects: closure_10, AnalyticsObjectTypes: closure_11, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(18865);
+const createICYMIStyles = fn(18878);
 let guild = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {

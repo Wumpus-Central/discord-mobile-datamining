@@ -1,6 +1,6 @@
-// === Module 16280: IconPill ===
+// === Module 16290: IconPill ===
 
-// Module 16280 (IconPill)
+// Module 16290 (IconPill)
 import nativeDefault from "native" /* 575 */;
 import IconDefault from "Icon" /* 5760 */;
 import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8263 */;

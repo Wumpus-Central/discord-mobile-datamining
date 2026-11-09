@@ -1,6 +1,6 @@
-// === Module 15803: isGuildSpaceEmbeddedActivity ===
+// === Module 15813: isGuildSpaceEmbeddedActivity ===
 
-// Module 15803 (isGuildSpaceEmbeddedActivity)
+// Module 15813 (isGuildSpaceEmbeddedActivity)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5061 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9828 */;

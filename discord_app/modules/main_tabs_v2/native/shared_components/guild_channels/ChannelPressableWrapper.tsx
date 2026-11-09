@@ -1,6 +1,6 @@
-// === Module 18849: ChannelPressableWrapper ===
+// === Module 18862: ChannelPressableWrapper ===
 
-// Module 18849 (ChannelPressableWrapper)
+// Module 18862 (ChannelPressableWrapper)
 import ChannelListLayout from "ChannelListLayout" /* 11176 */;
 import noop from "module_19" /* 19 */;
 

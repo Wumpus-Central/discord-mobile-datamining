@@ -1,6 +1,6 @@
-// === Module 16607: definitions ===
+// === Module 16617: definitions ===
 
-// Module 16607 (definitions)
+// Module 16617 (definitions)
 import Constants2 from "Constants" /* 1083 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2143 */;
@@ -12,10 +12,10 @@ import OAuth2Scopes from "OAuth2Scopes" /* 8984 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9828 */;
 import StatusDisplayTypes from "StatusDisplayTypes" /* 10879 */;
 import ActivityPlatform from "ActivityPlatform" /* 11972 */;
-import ThermalStates from "ThermalStates" /* 16604 */;
-import SKUTypes from "SKUTypes" /* 16608 */;
-import discord_common_helpers from "discord_common/helpers" /* 16609 */;
-import contextMenuIcons from "contextMenuIcons" /* 16610 */;
+import ThermalStates from "ThermalStates" /* 16614 */;
+import SKUTypes from "SKUTypes" /* 16618 */;
+import discord_common_helpers from "discord_common/helpers" /* 16619 */;
+import contextMenuIcons from "contextMenuIcons" /* 16620 */;
 import Constants from "Constants" /* 11855 */;
 import size from "module_2" /* 2 */;
 
@@ -2345,7 +2345,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "channelId", response: "" },
+  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "unicodeVersion", response: "add" },
   [discord_common_helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

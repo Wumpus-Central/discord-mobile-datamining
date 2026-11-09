@@ -1,6 +1,6 @@
-// === Module 17188: ScanQrCodeSetting ===
+// === Module 17199: ScanQrCodeSetting ===
 
-// Module 17188 (ScanQrCodeSetting)
+// Module 17199 (ScanQrCodeSetting)
 import util from "util" /* 1113 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 8026 */;
@@ -21,7 +21,7 @@ const debounceResult = apply.debounce(asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(17093).QrCodeIcon,
+  IconComponent: fn(17104).QrCodeIcon,
   onPress: apply.debounce(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -96,7 +96,7 @@ const pressable = SettingBuilders.createPressable({
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

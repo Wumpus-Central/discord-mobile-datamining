@@ -1,9 +1,9 @@
-// === Module 13919: TraitPickerControls ===
+// === Module 13920: TraitPickerControls ===
 
-// Module 13919 (TraitPickerControls)
+// Module 13920 (TraitPickerControls)
 import jsxProd from "jsxProd" /* 21 */;
-import useTraitPickerSelection from "useTraitPickerSelection" /* 13920 */;
-import TraitPickerDefault from "TraitPicker" /* 13921 */;
+import useTraitPickerSelection from "useTraitPickerSelection" /* 13921 */;
+import TraitPickerDefault from "TraitPicker" /* 13922 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

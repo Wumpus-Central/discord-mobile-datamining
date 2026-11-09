@@ -1,11 +1,11 @@
-// === Module 19426: LaunchPadWrapper ===
+// === Module 19439: LaunchPadWrapper ===
 
-// Module 19426 (LaunchPadWrapper)
+// Module 19439 (LaunchPadWrapper)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HapticUtils from "HapticUtils" /* 5376 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19424 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19437 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

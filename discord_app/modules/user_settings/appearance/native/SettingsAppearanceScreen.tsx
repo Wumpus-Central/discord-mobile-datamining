@@ -1,6 +1,6 @@
-// === Module 17565: SettingsAppearanceScreen ===
+// === Module 17576: SettingsAppearanceScreen ===
 
-// Module 17565 (SettingsAppearanceScreen)
+// Module 17576 (SettingsAppearanceScreen)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import HeaderShared from "HeaderShared" /* 9902 */;
@@ -12,7 +12,7 @@ import ThemeStore from "ThemeStore" /* 1192 */;
 const require = globalThis.__r;
 
 require = fn;
-const FontScaleStore = fn(17566);
+const FontScaleStore = fn(17577);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: metroImportDefault, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(8503).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
@@ -23,8 +23,8 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 export default noop.memo(function SettingsAppearanceScreen() {
   nativeStackNavigation(5721)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(17567).fetchUserCustomThemes();
-      const obj = closure_0(17567);
+      const userCustomThemes = closure_0(17578).fetchUserCustomThemes();
+      const obj = closure_0(17578);
     }
   });
   items = [ThemeStore, ClientThemesBackgroundStore];
@@ -123,5 +123,5 @@ export default noop.memo(function SettingsAppearanceScreen() {
     return obj.createList(obj2);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(16894), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(16905), { node }, "" + theme + "-" + gradientPresetId);
 });

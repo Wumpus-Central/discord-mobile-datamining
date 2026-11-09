@@ -1,8 +1,8 @@
-// === Module 15210: UserProfileGameDetailsList ===
+// === Module 15220: UserProfileGameDetailsList ===
 
-// Module 15210 (UserProfileGameDetailsList)
+// Module 15220 (UserProfileGameDetailsList)
 import nativeDefault from "native" /* 575 */;
-import UserProfileWidgetExpandableItems from "UserProfileWidgetExpandableItems" /* 15211 */;
+import UserProfileWidgetExpandableItems from "UserProfileWidgetExpandableItems" /* 15221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 18950: useMainTabsChannelScreenStyles ===
+// === Module 18963: useMainTabsChannelScreenStyles ===
 
-// Module 18950 (useMainTabsChannelScreenStyles)
+// Module 18963 (useMainTabsChannelScreenStyles)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;

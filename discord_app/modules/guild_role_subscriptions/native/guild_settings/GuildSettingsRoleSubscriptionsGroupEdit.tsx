@@ -1,9 +1,9 @@
-// === Module 20332: GuildSettingsRoleSubscriptionsGroupEdit ===
+// === Module 20345: GuildSettingsRoleSubscriptionsGroupEdit ===
 
-// Module 20332 (GuildSettingsRoleSubscriptionsGroupEdit)
+// Module 20345 (GuildSettingsRoleSubscriptionsGroupEdit)
 import util from "util" /* 1113 */;
 import ToastUtils from "ToastUtils" /* 5836 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 20345 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 20358 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -88,7 +88,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

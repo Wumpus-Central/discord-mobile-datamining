@@ -1,6 +1,6 @@
-// === Module 16629: fetchIsLinkTrusted ===
+// === Module 16639: fetchIsLinkTrusted ===
 
-// Module 16629 (fetchIsLinkTrusted)
+// Module 16639 (fetchIsLinkTrusted)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -22,7 +22,7 @@ let closure_6 = async function _requestIsLinkTrusted(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -90,7 +90,7 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

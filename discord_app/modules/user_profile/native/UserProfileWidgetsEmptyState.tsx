@@ -1,14 +1,14 @@
-// === Module 15177: UserProfileWidgetsEmptyState ===
+// === Module 15192: UserProfileWidgetsEmptyState ===
 
-// Module 15177 (UserProfileWidgetsEmptyState)
+// Module 15192 (UserProfileWidgetsEmptyState)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8833 */;
-import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton" /* 15178 */;
 import useAddableWidgetsDefault from "useAddableWidgets" /* 15182 */;
-import useAddProfileWidgetDefault from "useAddProfileWidget" /* 15187 */;
-import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton" /* 15189 */;
+import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton" /* 15193 */;
+import useAddProfileWidgetDefault from "useAddProfileWidget" /* 15197 */;
+import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton" /* 15199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -115,7 +115,7 @@ export default function UserProfileWidgetsEmptyState() {
   obj10.onPress = function onPress() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15191, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15201, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
   };
   items2[2] = closure_10(require("components/Button/Button").Button, obj10);
   obj3.children = items2;

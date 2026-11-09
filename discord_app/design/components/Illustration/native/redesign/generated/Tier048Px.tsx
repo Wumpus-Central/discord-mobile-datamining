@@ -1,6 +1,6 @@
-// === Module 15673: Tier048Px ===
+// === Module 15683: Tier048Px ===
 
-// Module 15673 (Tier048Px)
+// Module 15683 (Tier048Px)
 import shared from "shared" /* 5147 */;
 import FastImageDefault from "FastImage" /* 5842 */;
 import _mod8880 from "module_8880" /* 8880 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getTier048PxSource(theme) {
   return _mod8880.getIllustrationSource(theme, {
     dark() {
-      return require("module_15674");
+      return require("module_15684");
     },
     darker() {
-      return require("module_15675");
+      return require("module_15685");
     },
     light() {
-      return require("module_15676");
+      return require("module_15686");
     }
   });
 }
@@ -30,13 +30,13 @@ export function useTier048PxSource() {
   const obj = shared;
   return _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15674");
+      return require("module_15684");
     },
     darker() {
-      return require("module_15675");
+      return require("module_15685");
     },
     light() {
-      return require("module_15676");
+      return require("module_15686");
     }
   });
 }
@@ -44,25 +44,25 @@ export function Tier048Px(arg0) {
   const obj = shared;
   const illustrationSource = _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15674");
+      return require("module_15684");
     },
     darker() {
-      return require("module_15675");
+      return require("module_15685");
     },
     light() {
-      return require("module_15676");
+      return require("module_15686");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_15674");
+      return require("module_15684");
     },
     darker() {
-      return require("module_15675");
+      return require("module_15685");
     },
     light() {
-      return require("module_15676");
+      return require("module_15686");
     }
   };
   const merged = Object.assign(arg0);

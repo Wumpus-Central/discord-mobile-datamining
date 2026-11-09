@@ -1,6 +1,6 @@
-// === Module 13923: TraitOptionItem ===
+// === Module 13924: TraitOptionItem ===
 
-// Module 13923 (TraitOptionItem)
+// Module 13924 (TraitOptionItem)
 import nativeDefault from "native" /* 575 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5200 */;
 import LinearGradientDefault from "LinearGradient" /* 5715 */;

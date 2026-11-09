@@ -1,6 +1,6 @@
-// === Module 19245: ChannelSettingsOverview ===
+// === Module 19258: ChannelSettingsOverview ===
 
-// Module 19245 (ChannelSettingsOverview)
+// Module 19258 (ChannelSettingsOverview)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -45,14 +45,14 @@ import GroupPlusIcon from "GroupPlusIcon" /* 11107 */;
 import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 11111 */;
 import AvailableForumTagDefault from "AvailableForumTag" /* 11272 */;
 import threadActionSheets from "threadActionSheets" /* 11273 */;
-import TableSliderRow from "TableSliderRow" /* 16158 */;
-import SecondsSliderUtils from "SecondsSliderUtils" /* 19248 */;
-import RegionActionCreatorsDefault from "RegionActionCreators" /* 19249 */;
-import openConjureDeleteAppChannelAlertDefault from "openConjureDeleteAppChannelAlert" /* 19250 */;
-import ChannelSettingsUtils from "ChannelSettingsUtils" /* 19251 */;
-import ThreadAutoArchiveBottomSheet from "ThreadAutoArchiveBottomSheet" /* 19252 */;
-import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 19253 */;
-import VoiceChannelAppSettingDefault from "VoiceChannelAppSetting" /* 19254 */;
+import TableSliderRow from "TableSliderRow" /* 16168 */;
+import SecondsSliderUtils from "SecondsSliderUtils" /* 19261 */;
+import RegionActionCreatorsDefault from "RegionActionCreators" /* 19262 */;
+import openConjureDeleteAppChannelAlertDefault from "openConjureDeleteAppChannelAlert" /* 19263 */;
+import ChannelSettingsUtils from "ChannelSettingsUtils" /* 19264 */;
+import ThreadAutoArchiveBottomSheet from "ThreadAutoArchiveBottomSheet" /* 19265 */;
+import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 19266 */;
+import VoiceChannelAppSettingDefault from "VoiceChannelAppSetting" /* 19267 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5074 */;
@@ -62,7 +62,7 @@ import GuildChannelStore from "GuildChannelStore" /* 5070 */;
 import GuildStore from "GuildStore" /* 5011 */;
 import PermissionStore from "PermissionStore" /* 5072 */;
 import ReadStateStore from "ReadStateStore" /* 6897 */;
-import RegionStore from "RegionStore" /* 19246 */;
+import RegionStore from "RegionStore" /* 19259 */;
 import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -120,7 +120,7 @@ const View = fn(17).View;
 const ChannelRecord = fn(4993);
 ({ EDITABLE_VOICE_SETTINGS_TYPES: metroImportDefault, isGuildTextChannelType: closure_8, THREADED_CHANNEL_TYPES: closure_9, THREAD_CHANNEL_TYPES: closure_10, SLOWMODE_CHANNEL_TYPES: closure_11, NSFW_CHANNEL_TYPES: closure_12, TOGGLE_ANNOUNCEMENT_CHANNEL_TYPES: map1, GUILD_WEBHOOK_CHANNEL_TYPES: closure_14 } = ChannelRecord);
 const isGuildNSFW = fn(5007).isGuildNSFW;
-let closure_25 = fn(19247).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(19260).ChannelSettingsAutoFocusElement;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_26, BITRATE_DEFAULT: closure_27, BITRATE_MIN: closure_28, ChannelSettingsSections: closure_29, ChannelTypes: closure_30, ChannelTypesSets: closure_31, GuildFeatures: closure_32, GuildSettingsSections: items, HelpdeskArticles: closure_34, MAX_CHANNEL_NAME_LENGTH: closure_35, MAX_VOICE_USER_LIMIT: closure_36, MAX_STAGE_VOICE_USER_LIMIT: closure_37, Permissions: closure_38, SettingsPaneTypes: closure_39, SLOWMODE_VALUES: closure_40, VideoQualityMode: closure_41 } = Constants);
 const ChannelConstants = fn(4996);
@@ -316,7 +316,7 @@ class ChannelSettingsOverview extends PureComponent {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -420,7 +420,7 @@ class ChannelSettingsOverview extends PureComponent {
                 closure_128_6 = tmp2(7483).conjureChannelAppId(closure_128_1);
                 if (tmp65 != guild2) {
                   if (tmp65 != closure_128_6) {
-                    const conjureServerApp = tmp2(13510).loadConjureServerApp(guild2.id, closure_128_6);
+                    const conjureServerApp = tmp2(13511).loadConjureServerApp(guild2.id, closure_128_6);
                     tmp65 = closure_128_5;
                     conjureServerApp.then((app) => {
                       if (null == app) {
@@ -432,7 +432,7 @@ class ChannelSettingsOverview extends PureComponent {
                       }
                       return tmp6;
                     }, closure_128_5);
-                    const obj9 = tmp2(13510);
+                    const obj9 = tmp2(13511);
                   }
                 }
                 closure_128_5();
@@ -755,7 +755,7 @@ prototype["renderSlowmode"] = function renderSlowmode() {
       obj2.maxValue = length.length - 1;
       obj2.onChange = self.handleSlowmodeChange;
       obj2.formatValue = formatSlowmodeCooldown;
-      obj.children = closure_1_47(tmp8(16158).TableSliderRow, obj2);
+      obj.children = closure_1_47(tmp8(16168).TableSliderRow, obj2);
       items.push(closure_1_47(tmp8(7126).TableRowGroup, obj, "slowmode-section"));
       return items;
     } else {
@@ -796,7 +796,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(19252).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(19265).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1250,7 +1250,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(7038).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(4999).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(19260).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(19273).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1594,7 +1594,7 @@ prototype["renderCategory"] = function renderCategory() {
         tmp7 = self;
         const obj = self(5776);
       }
-      const obj2 = { icon: closure_47(tmp7(18533).FolderPlusIcon, {}), label: null, trailing: null, arrow: null, onPress: null };
+      const obj2 = { icon: closure_47(tmp7(18546).FolderPlusIcon, {}), label: null, trailing: null, arrow: null, onPress: null };
       const intl2 = tmp7(1113).intl;
       obj2.label = intl2.string(tmp7(1113).t.vHCZwr);
       const obj3 = { text: stringResult };

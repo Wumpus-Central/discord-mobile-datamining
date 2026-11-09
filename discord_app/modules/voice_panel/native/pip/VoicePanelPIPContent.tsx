@@ -1,6 +1,6 @@
-// === Module 19668: VoicePanelPIPContent ===
+// === Module 19681: VoicePanelPIPContent ===
 
-// Module 19668 (VoicePanelPIPContent)
+// Module 19681 (VoicePanelPIPContent)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import useWindowDimensions from "useWindowDimensions" /* 1493 */;
@@ -13,10 +13,10 @@ import NativeViewDefault from "NativeView" /* 7023 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
 import VoicePanelCardLayoutManager from "VoicePanelCardLayoutManager" /* 11365 */;
 import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 11937 */;
-import useUserTileBackgroundDefault from "useUserTileBackground" /* 19469 */;
-import VideoActionCreators from "VideoActionCreators" /* 19470 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19472 */;
-import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 19552 */;
+import useUserTileBackgroundDefault from "useUserTileBackground" /* 19482 */;
+import VideoActionCreators from "VideoActionCreators" /* 19483 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19485 */;
+import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 19565 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
@@ -561,7 +561,7 @@ function Stream(participantId) {
   let callback2;
   ({ layoutTransition, onStreamReady } = participantId);
   let tmp = closure_23();
-  const mode = participantId(19562).usePIPState().mode;
+  const mode = participantId(19575).usePIPState().mode;
   closure_129_0 = transitionState;
   closure_129_1 = transitionCleanUp;
   items = [transitionState, transitionCleanUp];
@@ -597,7 +597,7 @@ function Stream(participantId) {
   let tmp5 = transitionState === participantId(5199).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
   const context = obj2.useContext(mode(11362));
   ({ channelId: c2, layoutManager } = context);
-  let obj = participantId(19562);
+  let obj = participantId(19575);
   const items1 = [callback2];
   const stateFromStoresObject = participantId(563).useStateFromStoresObject(items1, () => {
     const participant = ChannelRTCStore.getParticipant(c2, participantId);
@@ -695,7 +695,7 @@ function Stream(participantId) {
   }, items7);
   if (stateFromStores === constants.ENDED) {
     const obj3 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    let tmp23 = closure_21(tmp2(19669).StreamEnded, obj3);
+    let tmp23 = closure_21(tmp2(19682).StreamEnded, obj3);
   } else {
     tmp23 = null;
     if (stateFromStores !== tmp17.FAILED) {
@@ -751,7 +751,7 @@ function areParticipantsEqual(arg0, arg1) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const VoicePanelModes = fn(11363).VoicePanelModes;
-const VoicePanelPIPModes = fn(19473).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19486).VoicePanelPIPModes;
 const Constants = fn(1072);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 const CallConstants = fn(5805);

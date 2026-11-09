@@ -1,6 +1,6 @@
-// === Module 14078: GuildSearchAndInvite ===
+// === Module 14079: GuildSearchAndInvite ===
 
-// Module 14078 (GuildSearchAndInvite)
+// Module 14079 (GuildSearchAndInvite)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useAlertStore from "useAlertStore" /* 6092 */;
@@ -10,9 +10,9 @@ import _modDef9196 from "module_9196" /* 9196 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9198 */;
 import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 9201 */;
 import _modDef11108 from "module_11108" /* 11108 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 14081 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14119 */;
-import useEventsButtonPropsDefault from "useEventsButtonProps" /* 14165 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 14082 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14120 */;
+import useEventsButtonPropsDefault from "useEventsButtonProps" /* 14166 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import GuildChannelStore from "GuildChannelStore" /* 5070 */;
@@ -150,8 +150,8 @@ export default noop.memo(function ConnectedGuildSearchAndInviteInner(guild) {
     const channels = GuildChannelStore.getChannels(guild.id);
     const result = instant_invite_InstantInviteUtils.handleOpenInviteActionsheet(guild, channelId, channels, constants2.GUILD_HEADER);
   });
-  const shouldShowInvitesDisabledNotif = guild(14162).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(14162);
+  const shouldShowInvitesDisabledNotif = guild(14163).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(14163);
   const tmp5 = useEventsButtonPropsDefault(guild);
   const obj3 = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
   if (flag2) {

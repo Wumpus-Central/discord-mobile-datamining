@@ -141,7 +141,7 @@ class PostMessageTransport extends EventEmitter {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -297,7 +297,7 @@ class PostMessageTransport extends EventEmitter {
               logger2.info("Socket Validated: " + closure_132_7.id);
               c7 = 0;
               c9 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
@@ -346,7 +346,7 @@ class PostMessageTransport extends EventEmitter {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -393,7 +393,7 @@ class PostMessageTransport extends EventEmitter {
               c5 = 0;
               closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             c5 = 0;
@@ -552,7 +552,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                   const obj2 = { value, done: true };
                                   return obj2;
                                 } else {
-                                  return { value: "HermesInternal", done: "HermesInternal" };
+                                  return { value: "HermesInternal", done: null };
                                 }
                               } else {
                                 try {
@@ -617,7 +617,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                         const pendingTicketRefreshes2 = tmp60.pendingTicketRefreshes;
                                         pendingTicketRefreshes2.delete(source.iframeId);
                                         c5 = 3;
-                                        return { value: "HermesInternal", done: "HermesInternal" };
+                                        return { value: "HermesInternal", done: null };
                                       }
                                     } else if (arg0 === 1) {
                                       c5 = 3;

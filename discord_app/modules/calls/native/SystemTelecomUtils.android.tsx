@@ -1,7 +1,7 @@
-// === Module 16579: SystemTelecomUtils ===
+// === Module 16589: SystemTelecomUtils ===
 
-// Module 16579 (SystemTelecomUtils)
-import NativeSystemTelecomModuleDefault from "NativeSystemTelecomModule" /* 16577 */;
+// Module 16589 (SystemTelecomUtils)
+import NativeSystemTelecomModuleDefault from "NativeSystemTelecomModule" /* 16587 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 
 const ChannelTypes = fn(1072).ChannelTypes;

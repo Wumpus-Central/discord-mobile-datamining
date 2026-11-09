@@ -1,6 +1,6 @@
-// === Module 15497: PaymentFlowWarningMessage ===
+// === Module 15507: PaymentFlowWarningMessage ===
 
-// Module 15497 (PaymentFlowWarningMessage)
+// Module 15507 (PaymentFlowWarningMessage)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5751 */;

@@ -1,6 +1,6 @@
-// === Module 18100: DesignSystemsTabsSetting ===
+// === Module 18113: DesignSystemsTabsSetting ===
 
-// Module 18100 (DesignSystemsTabsSetting)
+// Module 18113 (DesignSystemsTabsSetting)
 import Constants from "Constants" /* 1072 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;

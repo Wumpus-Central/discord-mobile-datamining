@@ -1,6 +1,6 @@
-// === Module 17451: QuestOrbMultiplierPerkPill ===
+// === Module 17462: QuestOrbMultiplierPerkPill ===
 
-// Module 17451 (QuestOrbMultiplierPerkPill)
+// Module 17462 (QuestOrbMultiplierPerkPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ColorUtils from "ColorUtils" /* 5137 */;
@@ -12,7 +12,7 @@ import Pressables from "Pressables" /* 7043 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9612 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9772 */;
 import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9793 */;
-import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 17452 */;
+import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 17463 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

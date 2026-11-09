@@ -1,6 +1,6 @@
-// === Module 18074: CreateBugReportSetting ===
+// === Module 18087: CreateBugReportSetting ===
 
-// Module 18074 (CreateBugReportSetting)
+// Module 18087 (CreateBugReportSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1360 */;
@@ -15,7 +15,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.aIkGJD);
   },
   parent: null,
-  IconComponent: fn(17875).WrenchIcon,
+  IconComponent: fn(17886).WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
     const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
     if (arg0) {
@@ -33,7 +33,7 @@ const toggle = SettingBuilders.createToggle({
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";
   },
-  usePredicate: fn(18067).useBugReporterExperimentSettingPredicate
+  usePredicate: fn(18080).useBugReporterExperimentSettingPredicate
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");

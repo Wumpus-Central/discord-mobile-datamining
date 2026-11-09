@@ -87,7 +87,7 @@ export default function XboxLinkModal(startAtSignIn) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(onClose(14860), {});
+          return closure_1_6(onClose(14861), {});
         }
       },
       [closure_2_4.EDUCATION]: {
@@ -96,7 +96,7 @@ export default function XboxLinkModal(startAtSignIn) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return jsx(twoWayLinkStyles(14863), { onClose });
+          return jsx(twoWayLinkStyles(14864), { onClose });
         }
       },
       [closure_2_4.ERROR]: {
@@ -105,13 +105,13 @@ export default function XboxLinkModal(startAtSignIn) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return jsx(twoWayLinkStyles(14865), { onClose });
+          return jsx(twoWayLinkStyles(14866), { onClose });
         }
       }
     };
   }, items);
   const obj = flag(9820);
-  const accountLinkStepTracking = flag(14869).useAccountLinkStepTracking(PlatformTypes.XBOX, startAtSignIn.locationStack, tmp6);
+  const accountLinkStepTracking = flag(14870).useAccountLinkStepTracking(PlatformTypes.XBOX, startAtSignIn.locationStack, tmp6);
   const obj2 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: tmp6, headerBackTitle: null };
   const intl = tmp(1113).intl;
   obj2.headerBackTitle = intl.string(flag(1113).t["13/7kX"]);

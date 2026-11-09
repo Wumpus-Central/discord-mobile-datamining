@@ -1,10 +1,10 @@
-// === Module 17810: FriendStreamNotificationsSetting ===
+// === Module 17821: FriendStreamNotificationsSetting ===
 
-// Module 17810 (FriendStreamNotificationsSetting)
+// Module 17821 (FriendStreamNotificationsSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;
-import GoLiveNotificationUtils from "GoLiveNotificationUtils" /* 17811 */;
+import GoLiveNotificationUtils from "GoLiveNotificationUtils" /* 17822 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;
 import size from "module_2" /* 2 */;
 

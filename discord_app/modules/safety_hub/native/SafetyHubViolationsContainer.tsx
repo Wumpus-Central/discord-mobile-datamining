@@ -1,6 +1,6 @@
-// === Module 16954: SafetyHubViolationsContainer ===
+// === Module 16965: SafetyHubViolationsContainer ===
 
-// Module 16954 (SafetyHubViolationsContainer)
+// Module 16965 (SafetyHubViolationsContainer)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -12,8 +12,8 @@ import SafetyHubModels from "SafetyHubModels" /* 8040 */;
 import WarningIcon from "WarningIcon" /* 8096 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9189 */;
 import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 11555 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 13545 */;
-import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15740 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 13546 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15750 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8064 */;
@@ -159,7 +159,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13543, dependencyMap.paths), { classificationId: id, source: React5.StandingTab });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13544, dependencyMap.paths), { classificationId: id, source: React5.StandingTab });
     },
     children: null
   };

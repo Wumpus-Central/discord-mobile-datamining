@@ -1,13 +1,13 @@
-// === Module 13669: CheckpointActionCreators ===
+// === Module 13670: CheckpointActionCreators ===
 
-// Module 13669 (CheckpointActionCreators)
+// Module 13670 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
-import Tracking from "Tracking" /* 13665 */;
+import Tracking from "Tracking" /* 13666 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
-import CheckpointStore from "CheckpointStore" /* 13667 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
@@ -21,7 +21,7 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -122,7 +122,7 @@ let closure_9 = async function _completeCheckpoint() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -192,7 +192,7 @@ let closure_10 = async function _resetCheckpoint() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -274,7 +274,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -352,7 +352,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             }
           }
           c10 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         c8 = 0;
@@ -362,7 +362,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(13667).CheckpointFetchStates;
+const CheckpointFetchStates = fn(13668).CheckpointFetchStates;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

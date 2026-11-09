@@ -1,9 +1,9 @@
-// === Module 20102: GuildSettingsAuditLogStore ===
+// === Module 20115: GuildSettingsAuditLogStore ===
 
-// Module 20102 (GuildSettingsAuditLogStore)
+// Module 20115 (GuildSettingsAuditLogStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AuditLogRecord from "AuditLogRecord" /* 20103 */;
+import AuditLogRecord from "AuditLogRecord" /* 20116 */;
 import GuildMemberStore from "GuildMemberStore" /* 5052 */;
 import GuildRoleStore from "GuildRoleStore" /* 5046 */;
 import GuildStore from "GuildStore" /* 5011 */;
@@ -11,7 +11,7 @@ import BigFlagUtils from "BigFlagUtils" /* 1084 */;
 
 const require = globalThis.__r;
 
-const AuditLogChange = fn(20103).AuditLogChange;
+const AuditLogChange = fn(20116).AuditLogChange;
 let closure_4 = fn(4993).isGuildSelectableChannelType;
 const hasAnyPermission = fn(5047).hasAnyPermission;
 const Constants = fn(1072);

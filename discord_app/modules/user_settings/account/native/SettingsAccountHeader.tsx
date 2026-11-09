@@ -1,6 +1,6 @@
-// === Module 16891: SettingsAccountHeader ===
+// === Module 16902: SettingsAccountHeader ===
 
-// Module 16891 (SettingsAccountHeader)
+// Module 16902 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -9,7 +9,7 @@ import TableRow from "TableRow" /* 7038 */;
 import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7061 */;
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7229 */;
 import openUserSettings from "openUserSettings" /* 7635 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16892 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16903 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;

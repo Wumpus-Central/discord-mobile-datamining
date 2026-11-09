@@ -1,6 +1,6 @@
-// === Module 19061: DMRow ===
+// === Module 19074: DMRow ===
 
-// Module 19061 (DMRow)
+// Module 19074 (DMRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import UserUtils from "UserUtils" /* 5194 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5751 */;
 import _modDef9140 from "module_9140" /* 9140 */;
 import BotTagDefault from "BotTag" /* 9282 */;
 import ActivityStatusDefault from "ActivityStatus" /* 10864 */;
-import _modDef15667 from "module_15667" /* 15667 */;
+import _modDef15677 from "module_15677" /* 15677 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -91,7 +91,7 @@ export default noop.memo(function DMRow(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -130,7 +130,7 @@ export default noop.memo(function DMRow(user) {
           c3 = 0;
           closure_128_8(false);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp23) {
         closure_2 = tmp23;
@@ -171,7 +171,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef15667, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef15677, disableColor: true };
         obj6.children = state(native.Icon, obj7);
         tmp4Result3 = state(timestampProducer, obj6);
       }

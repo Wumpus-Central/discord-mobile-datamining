@@ -1,6 +1,6 @@
-// === Module 17715: EnableSwitchIconsSetting ===
+// === Module 17726: EnableSwitchIconsSetting ===
 
-// Module 17715 (EnableSwitchIconsSetting)
+// Module 17726 (EnableSwitchIconsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
@@ -18,7 +18,7 @@ const toggle = SettingBuilders.createToggle({
   },
   parent: fn(8503).MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
-  onValueChange: fn(16573).setSwitchIconsEnabled,
+  onValueChange: fn(16583).setSwitchIconsEnabled,
   hasIcon: true
 });
 const size = fn(2);

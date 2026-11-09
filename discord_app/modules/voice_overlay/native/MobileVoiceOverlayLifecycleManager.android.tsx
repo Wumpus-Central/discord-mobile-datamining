@@ -1,13 +1,13 @@
-// === Module 16688: MobileVoiceOverlayLifecycleManager ===
+// === Module 16699: MobileVoiceOverlayLifecycleManager ===
 
-// Module 16688 (MobileVoiceOverlayLifecycleManager)
+// Module 16699 (MobileVoiceOverlayLifecycleManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useChannelName from "useChannelName" /* 5776 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5889 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6834 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10330 */;
 import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 12120 */;
-import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 16695 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 16706 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import GuildStore from "GuildStore" /* 5011 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
@@ -24,14 +24,14 @@ require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(5070).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(16689);
-fn(16690);
-fn(16691);
-fn(16692);
+fn(16700);
+fn(16701);
+fn(16702);
+fn(16703);
 fn(8429);
-fn(15472);
-fn(16693);
-fn(16694);
+fn(15482);
+fn(16704);
+fn(16705);
 const registerAsset = fn(8266);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };

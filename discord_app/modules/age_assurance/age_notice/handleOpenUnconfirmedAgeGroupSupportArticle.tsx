@@ -1,6 +1,6 @@
-// === Module 16933: handleOpenUnconfirmedAgeGroupSupportArticle ===
+// === Module 16944: handleOpenUnconfirmedAgeGroupSupportArticle ===
 
-// Module 16933 (handleOpenUnconfirmedAgeGroupSupportArticle)
+// Module 16944 (handleOpenUnconfirmedAgeGroupSupportArticle)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
 import LocationMetadataStore from "LocationMetadataStore" /* 11067 */;

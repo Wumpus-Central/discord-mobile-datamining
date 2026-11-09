@@ -1,6 +1,6 @@
-// === Module 13438: withGameOrganizationJoinFlowPending ===
+// === Module 13439: withGameOrganizationJoinFlowPending ===
 
-// Module 13438 (withGameOrganizationJoinFlowPending)
+// Module 13439 (withGameOrganizationJoinFlowPending)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -20,7 +20,7 @@ let closure_3 = async function _withGameOrganizationJoinFlowPending() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

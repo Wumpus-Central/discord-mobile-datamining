@@ -1,6 +1,6 @@
-// === Module 14459: VoiceMessageChat ===
+// === Module 14460: VoiceMessageChat ===
 
-// Module 14459 (VoiceMessageChat)
+// Module 14460 (VoiceMessageChat)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5370 */;
@@ -201,8 +201,8 @@ function Duration(animationValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13956).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(13957);
+const useVoiceMessagesUIStore = fn(13957).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(13958);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: closure_10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

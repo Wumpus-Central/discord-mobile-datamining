@@ -1,6 +1,6 @@
-// === Module 19655: VoicePanelPreJoinContent ===
+// === Module 19668: VoicePanelPreJoinContent ===
 
-// Module 19655 (VoicePanelPreJoinContent)
+// Module 19668 (VoicePanelPreJoinContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -19,13 +19,13 @@ import StageChannelModalActionCreators from "StageChannelModalActionCreators" /*
 import FormComponents from "FormComponents" /* 9312 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 12614 */;
-import useActivityUsersDefault from "useActivityUsers" /* 19643 */;
+import useActivityUsersDefault from "useActivityUsers" /* 19656 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 import GameConsoleStore from "GameConsoleStore" /* 5894 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15921 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15931 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -166,7 +166,7 @@ function ActivityInfo(activity) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -233,7 +233,7 @@ function ActivityInfo(activity) {
     const obj9 = { style: tmp.previewImage, children: null };
     const tmp2Result = tmp2(7023);
     const obj10 = { imageBackground: tmp19, aspectRatio: 1.7777777777777777 };
-    obj9.children = closure_25(tmp2(19641), obj10);
+    obj9.children = closure_25(tmp2(19654), obj10);
     const items7 = [closure_25(tmp2(7023), obj9), ];
     const obj11 = { style: tmp.joinButtonWrapper, children: null };
     const tmp2Result3 = tmp2(7023);
@@ -516,7 +516,7 @@ const MODE_CHANGE_PHYSICS = fn(11363).MODE_CHANGE_PHYSICS;
 const EDGE_GUTTER = fn(11366).EDGE_GUTTER;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(15925).VoiceChannelWarningSurfaces;
+const constants4 = fn(15935).VoiceChannelWarningSurfaces;
 const Features = fn(5897).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
@@ -712,7 +712,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
   const context = noop.useContext(guildId(11362));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(19509)(channelId);
+  const tmp2 = guildId(19522)(channelId);
   dependencyMap = tmp2;
   items = [SortedVoiceStateStore, VoiceChannelBlockedUserStore, EmbeddedActivitiesStore, MediaEngineStore, ApplicationStreamingStore];
   let items1 = [tmp2, channelId, guildId];
@@ -752,6 +752,6 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       };
       return obj;
     }
-  }, items1, channelId(19658).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(19671).areVoicePanelPreJoinContentPropsEqual);
   return closure_25(channelId(5199).TransitionItem, { item: stateFromStores, renderItem });
 });

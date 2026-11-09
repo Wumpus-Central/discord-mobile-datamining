@@ -1,6 +1,6 @@
-// === Module 14619: useCreateGameInvitePost ===
+// === Module 14620: useCreateGameInvitePost ===
 
-// Module 14619 (useCreateGameInvitePost)
+// Module 14620 (useCreateGameInvitePost)
 import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7517 */;
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11849 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -129,7 +129,7 @@ export function useCreateGameInvitePost(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

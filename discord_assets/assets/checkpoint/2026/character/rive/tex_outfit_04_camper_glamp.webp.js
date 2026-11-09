@@ -1,6 +1,6 @@
-// === Module 13780: ? ===
+// === Module 13781: ? ===
 
-// Module 13780
+// Module 13781
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_04_camper_glamp.webp.js");

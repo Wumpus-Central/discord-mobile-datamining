@@ -1,6 +1,6 @@
-// === Module 19184: NewGroupDMScreen ===
+// === Module 19197: NewGroupDMScreen ===
 
-// Module 19184 (NewGroupDMScreen)
+// Module 19197 (NewGroupDMScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,12 +8,12 @@ import ToastUtils from "ToastUtils" /* 5836 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
 import HeaderShared from "HeaderShared" /* 9902 */;
 import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11790 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19183 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19196 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15945 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15955 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -55,7 +55,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -127,7 +127,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -385,7 +385,7 @@ export default function NewGroupDMScreen(navigation) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -740,7 +740,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

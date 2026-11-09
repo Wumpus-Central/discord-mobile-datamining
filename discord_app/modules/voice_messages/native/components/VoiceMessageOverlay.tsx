@@ -1,6 +1,6 @@
-// === Module 14457: VoiceMessageOverlay ===
+// === Module 14458: VoiceMessageOverlay ===
 
-// Module 14457 (VoiceMessageOverlay)
+// Module 14458 (VoiceMessageOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
@@ -17,8 +17,8 @@ import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7017 *
 import useRefValueDefault from "useRefValue" /* 7022 */;
 import inlineStyles from "inlineStyles" /* 8101 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13019 */;
-import _modDef14458 from "module_14458" /* 14458 */;
-import VoiceMessageChatDefault from "VoiceMessageChat" /* 14459 */;
+import _modDef14459 from "module_14459" /* 14459 */;
+import VoiceMessageChatDefault from "VoiceMessageChat" /* 14460 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
@@ -305,7 +305,7 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result }), ];
-  const obj4 = { style: null, source: _modDef14458 };
+  const obj4 = { style: null, source: _modDef14459 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
@@ -315,8 +315,8 @@ function LockPill(voiceMessageAnimationState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13956).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(13957).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(13957).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(13958).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1072).ComponentActionsKeyed;
 const CHAT_INPUT_HEIGHT = fn(13023).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);

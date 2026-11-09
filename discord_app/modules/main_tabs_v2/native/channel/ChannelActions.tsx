@@ -14,12 +14,12 @@ import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9955 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 9960 */;
 import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 11126 */;
 import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11683 */;
-import useSearchContext from "useSearchContext" /* 14080 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 14081 */;
-import TrackingDefault from "Tracking" /* 14140 */;
-import IconActionButtonDefault from "IconActionButton" /* 14790 */;
-import ConversationCoachmark from "ConversationCoachmark" /* 14800 */;
-import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 14802 */;
+import useSearchContext from "useSearchContext" /* 14081 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 14082 */;
+import TrackingDefault from "Tracking" /* 14141 */;
+import IconActionButtonDefault from "IconActionButton" /* 14791 */;
+import ConversationCoachmark from "ConversationCoachmark" /* 14801 */;
+import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 14803 */;
 import noop from "module_19" /* 19 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 6916 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -393,7 +393,7 @@ export default function ChannelActions(channelId) {
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = closure_14(tmp(14801).ForumChannelCloseSearchButton, obj4);
+    let tmp4Result = closure_14(tmp(14802).ForumChannelCloseSearchButton, obj4);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

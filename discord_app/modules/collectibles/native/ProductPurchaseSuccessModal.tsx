@@ -1,6 +1,6 @@
-// === Module 14731: ProductPurchaseSuccessModal ===
+// === Module 14732: ProductPurchaseSuccessModal ===
 
-// Module 14731 (ProductPurchaseSuccessModal)
+// Module 14732 (ProductPurchaseSuccessModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -11,8 +11,8 @@ import spring_spring from "spring/spring" /* 5761 */;
 import _mod7071 from "module_7071" /* 7071 */;
 import XSmallIcon from "XSmallIcon" /* 7120 */;
 import tinycolorDefault from "tinycolor" /* 7806 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14730 */;
-import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 14732 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14731 */;
+import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 14733 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
@@ -367,7 +367,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj8 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
       const obj9 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp40(tmp2(14736).BalanceWidgetPill, obj9);
+      showOrbBalancePill = tmp40(tmp2(14737).BalanceWidgetPill, obj9);
     }
     obj8.children = showOrbBalancePill;
     const items11 = [tmp40(closure_7, obj8), ];

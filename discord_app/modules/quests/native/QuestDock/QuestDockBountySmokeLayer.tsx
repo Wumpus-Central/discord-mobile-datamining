@@ -1,13 +1,13 @@
-// === Module 17487: QuestDockBountySmokeLayer ===
+// === Module 17498: QuestDockBountySmokeLayer ===
 
-// Module 17487 (QuestDockBountySmokeLayer)
+// Module 17498 (QuestDockBountySmokeLayer)
 import FastImageDefault from "FastImage" /* 5842 */;
-import QuestDockUtils from "QuestDockUtils" /* 17381 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17465 */;
-import _modDef17488 from "module_17488" /* 17488 */;
-import _modDef17489 from "module_17489" /* 17489 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 17490 */;
-import _modDef17491 from "module_17491" /* 17491 */;
+import QuestDockUtils from "QuestDockUtils" /* 17392 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17476 */;
+import _modDef17499 from "module_17499" /* 17499 */;
+import _modDef17500 from "module_17500" /* 17500 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 17501 */;
+import _modDef17502 from "module_17502" /* 17502 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
@@ -15,7 +15,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 require = fn;
 function QuestDockBountySmokePlaceholder() {
   const obj = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-  const obj2 = { uri: _modDef17489 };
+  const obj2 = { uri: _modDef17500 };
   obj.source = obj2;
   obj.style = StyleSheet.absoluteFillObject;
   return metroImportDefault(FastImageDefault, obj);
@@ -50,7 +50,7 @@ function QuestDockBountySmokeLayerIOS(paused) {
   let tmp18Result = !stateFromStores;
   if (!stateFromStores) {
     const obj3 = { style: tmp7 ? video.video : video.hiddenVideo, source: null, resizeMode: "cover", paused: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", onReadyForDisplay: null, onError: null };
-    const obj4 = { uri: _modDef17491 };
+    const obj4 = { uri: _modDef17502 };
     obj3.source = obj4;
     if (!flag) {
       flag = !tmp5;
@@ -115,7 +115,7 @@ function QuestDockBountySmokeLayerAndroidAnimated(paused) {
   if (!stateFromStores) {
     tmp4Result = null;
     if (tmp11) {
-      tmp4Result = tmp4(17492);
+      tmp4Result = tmp4(17503);
     }
   }
   const tmp6Result = tmp6(noop.useState(tmp4Result), 2);
@@ -160,7 +160,7 @@ function QuestDockBountySmokeLayerAndroidAnimated(paused) {
   let tmp30 = !tmp8;
   if (!tmp8) {
     const obj5 = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-    const obj6 = { uri: tmp4(17488) };
+    const obj6 = { uri: tmp4(17499) };
     obj5.source = obj6;
     obj5.style = StyleSheet.absoluteFillObject;
     tmp30 = closure_7(tmp4(5842), obj5);
@@ -208,9 +208,9 @@ export const QUEST_DOCK_BOUNTY_SMOKE_ART_ASPECT_RATIO = 3.75;
 export { QuestDockBountySmokeSurface };
 export function getQuestDockBountySmokeCollapsedPlaceholderUrl() {
   if (obj.isAndroid()) {
-    let tmp2Result = _modDef17488;
+    let tmp2Result = _modDef17499;
   } else {
-    tmp2Result = _modDef17489;
+    tmp2Result = _modDef17500;
   }
   return tmp2Result;
 }

@@ -1,6 +1,6 @@
-// === Module 20012: StageBoostUpsellManager ===
+// === Module 20025: StageBoostUpsellManager ===
 
-// Module 20012 (StageBoostUpsellManager)
+// Module 20025 (StageBoostUpsellManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 4997 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;

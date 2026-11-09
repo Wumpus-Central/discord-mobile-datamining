@@ -1,6 +1,6 @@
-// === Module 16845: useTryItOutProfileTheme ===
+// === Module 16856: useTryItOutProfileTheme ===
 
-// Module 16845 (useTryItOutProfileTheme)
+// Module 16856 (useTryItOutProfileTheme)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useAvatarColor from "useAvatarColor" /* 8786 */;

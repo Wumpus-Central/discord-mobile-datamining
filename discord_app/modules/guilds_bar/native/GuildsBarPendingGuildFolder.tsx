@@ -1,9 +1,9 @@
-// === Module 18704: GuildsBarPendingGuildFolder ===
+// === Module 18717: GuildsBarPendingGuildFolder ===
 
-// Module 18704 (GuildsBarPendingGuildFolder)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 13462 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 18684 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18691 */;
+// Module 18717 (GuildsBarPendingGuildFolder)
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 13463 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 18697 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18704 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 
@@ -16,9 +16,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(18691);
+  let obj = id(18704);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(18691).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
+  const guildsBarAnimatedWrapperStyles = id(18704).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
   items = [SelectedGuildStore];
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => {
@@ -69,7 +69,7 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(18690).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(18703).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
   obj4.children = jsx(id(12562).HourglassIcon, {});

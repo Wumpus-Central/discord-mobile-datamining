@@ -1,8 +1,8 @@
-// === Module 13918: CustomizationControls ===
+// === Module 13919: CustomizationControls ===
 
-// Module 13918 (CustomizationControls)
+// Module 13919 (CustomizationControls)
 import jsxProd from "jsxProd" /* 21 */;
-import TraitPickerControlsDefault from "TraitPickerControls" /* 13919 */;
+import TraitPickerControlsDefault from "TraitPickerControls" /* 13920 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

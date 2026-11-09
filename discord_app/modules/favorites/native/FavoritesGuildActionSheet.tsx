@@ -1,12 +1,12 @@
-// === Module 18517: FavoritesGuildActionSheet ===
+// === Module 18530: FavoritesGuildActionSheet ===
 
-// Module 18517 (FavoritesGuildActionSheet)
+// Module 18530 (FavoritesGuildActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import _modDef3608 from "module_3608" /* 3608 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 18518 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 18519 */;
-import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 18522 */;
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 18531 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 18532 */;
+import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 18535 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 4992 */;
 
@@ -37,7 +37,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   obj5.icon = closure_4(onClose(7428).ActionSheetRow.Icon, { IconComponent: onClose(8716).ThreadIcon });
   obj5.onPress = function onPress() {
     onClose();
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18520, dependencyMap.paths), undefined, "FavoritesGuildCleanupModal");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18533, dependencyMap.paths), undefined, "FavoritesGuildCleanupModal");
   };
   obj4.children = closure_4(onClose(7428).ActionSheetRow, obj5);
   const items1 = [closure_4(onClose(7428).ActionSheetRow.Group, obj4), , ];

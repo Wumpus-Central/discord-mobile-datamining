@@ -1,6 +1,6 @@
-// === Module 19016: useFrameLifecycle ===
+// === Module 19029: useFrameLifecycle ===
 
-// Module 19016 (useFrameLifecycle)
+// Module 19029 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

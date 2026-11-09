@@ -1,6 +1,6 @@
-// === Module 18101: UserSettingsDesignSystemTabs ===
+// === Module 18114: UserSettingsDesignSystemTabs ===
 
-// Module 18101 (UserSettingsDesignSystemTabs)
+// Module 18114 (UserSettingsDesignSystemTabs)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9069 */;
@@ -81,12 +81,12 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp19Result = first2;
   if (first2) {
     const obj5 = { state: segmentedControlState, colors: items1 };
-    tmp19Result = closure_8(tmp(14607), obj5);
+    tmp19Result = closure_8(tmp(14608), obj5);
   }
   const obj6 = { children: null };
   const obj7 = { spacing: 24, children: null };
   items2[1] = tmp19Result;
-  const items3 = [closure_7(closure_5, { children: items2 }), closure_8(first(14435).SegmentedControlPages, { state: segmentedControlState }), , ];
+  const items3 = [closure_7(closure_5, { children: items2 }), closure_8(first(14436).SegmentedControlPages, { state: segmentedControlState }), , ];
   const obj8 = { spacing: 8, direction: "horizontal", children: null };
   const items4 = [
     closure_8(first(5758).Button, {

@@ -1,7 +1,7 @@
-// === Module 20435: GlobalDiscoveryServersFeaturedSearchManager ===
+// === Module 20448: GlobalDiscoveryServersFeaturedSearchManager ===
 
-// Module 20435 (GlobalDiscoveryServersFeaturedSearchManager)
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15897 */;
+// Module 20448 (GlobalDiscoveryServersFeaturedSearchManager)
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15907 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
 
@@ -43,7 +43,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

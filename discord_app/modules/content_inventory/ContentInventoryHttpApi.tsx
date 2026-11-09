@@ -1,6 +1,6 @@
-// === Module 15234: ContentInventoryHttpApi ===
+// === Module 15244: ContentInventoryHttpApi ===
 
-// Module 15234 (ContentInventoryHttpApi)
+// Module 15244 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_6 = async function _getMyContentInventory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -118,7 +118,7 @@ let closure_7 = async function _getContentInventoryOutbox() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -248,7 +248,7 @@ let closure_9 = async function _postTrackToContentInventory() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -293,7 +293,7 @@ let closure_9 = async function _postTrackToContentInventory() {
         } else {
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp19) {
         closure_4 = tmp19;

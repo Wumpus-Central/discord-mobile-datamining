@@ -1,6 +1,6 @@
-// === Module 19598: VoicePanelDockGlow ===
+// === Module 19611: VoicePanelDockGlow ===
 
-// Module 19598 (VoicePanelDockGlow)
+// Module 19611 (VoicePanelDockGlow)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -10,9 +10,9 @@ import LinearGradientDefault from "LinearGradient" /* 5715 */;
 import inlineStyles from "inlineStyles" /* 8101 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8915 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
-import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 14234 */;
-import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 14235 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 14236 */;
+import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 14235 */;
+import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 14236 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 14237 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

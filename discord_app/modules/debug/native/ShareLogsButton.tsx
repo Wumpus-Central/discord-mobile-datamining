@@ -1,6 +1,6 @@
-// === Module 17879: ShareLogsButton ===
+// === Module 17890: ShareLogsButton ===
 
-// Module 17879 (ShareLogsButton)
+// Module 17890 (ShareLogsButton)
 import LogAggregator from "LogAggregator" /* 7 */;
 import util from "util" /* 1113 */;
 import Pressables from "Pressables" /* 7043 */;

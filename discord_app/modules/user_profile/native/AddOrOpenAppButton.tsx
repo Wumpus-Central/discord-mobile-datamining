@@ -1,6 +1,6 @@
-// === Module 15075: AddOrOpenAppButton ===
+// === Module 15076: AddOrOpenAppButton ===
 
-// Module 15075 (AddOrOpenAppButton)
+// Module 15076 (AddOrOpenAppButton)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import ToastUtils from "ToastUtils" /* 5836 */;
 import ClipboardUtils from "ClipboardUtils" /* 7418 */;
@@ -77,7 +77,7 @@ function OpenAppButton(profileApplication) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

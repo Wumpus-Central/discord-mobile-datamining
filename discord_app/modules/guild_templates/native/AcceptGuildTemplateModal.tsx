@@ -50,7 +50,7 @@ function ConnectedAcceptGuildTemplate(code) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ function ConnectedAcceptGuildTemplate(code) {
             closure_129_5(base64);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;

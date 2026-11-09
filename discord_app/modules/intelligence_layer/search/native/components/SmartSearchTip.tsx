@@ -1,6 +1,6 @@
-// === Module 19101: SmartSearchTip ===
+// === Module 19114: SmartSearchTip ===
 
-// Module 19101 (SmartSearchTip)
+// Module 19114 (SmartSearchTip)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;
@@ -62,7 +62,7 @@ export default noop.memo(function SmartSearchTip(children) {
       const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
       return hasOwnProperty(native.Avatar, obj, user.id);
     });
-    tmp4Result = closure_5(tmp5(15117).AvatarPile, obj6);
+    tmp4Result = closure_5(tmp5(15118).AvatarPile, obj6);
   }
   items2[1] = tmp4Result;
   obj2.children = items2;

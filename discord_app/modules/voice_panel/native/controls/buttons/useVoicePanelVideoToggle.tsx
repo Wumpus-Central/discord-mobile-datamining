@@ -1,13 +1,13 @@
-// === Module 19571: useVoicePanelVideoToggle ===
+// === Module 19584: useVoicePanelVideoToggle ===
 
-// Module 19571 (useVoicePanelVideoToggle)
+// Module 19584 (useVoicePanelVideoToggle)
 import util from "util" /* 1113 */;
 import useAlertStore from "useAlertStore" /* 6092 */;
 import StreamPermissionUtils from "StreamPermissionUtils" /* 6779 */;
 import CallsUtils from "CallsUtils" /* 9301 */;
 import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11887 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14806 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 19572 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14807 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 19585 */;
 import noop from "module_19" /* 19 */;
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11868 */;
 import ChannelStore from "ChannelStore" /* 4989 */;

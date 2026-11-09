@@ -1,11 +1,11 @@
-// === Module 16871: GuildProfileEmptyState ===
+// === Module 16882: GuildProfileEmptyState ===
 
-// Module 16871 (GuildProfileEmptyState)
+// Module 16882 (GuildProfileEmptyState)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import components_Button_Button from "components/Button/Button" /* 5758 */;
-import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 16872 */;
+import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 16883 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,7 +47,7 @@ export default function GuildProfileEmptyState() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -76,7 +76,7 @@ export default function GuildProfileEmptyState() {
         } else {
           value.default.openCreateGuildModal();
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         c0 = tmp;
@@ -100,7 +100,7 @@ export default function GuildProfileEmptyState() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ export default function GuildProfileEmptyState() {
         } else {
           const result = value.default.openGuildJoinServerScreen();
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         c0 = tmp;

@@ -1,6 +1,6 @@
-// === Module 18227: ContentAndSocialSetting ===
+// === Module 18240: ContentAndSocialSetting ===
 
-// Module 18227 (ContentAndSocialSetting)
+// Module 18240 (ContentAndSocialSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import FriendsIcon from "FriendsIcon" /* 5840 */;

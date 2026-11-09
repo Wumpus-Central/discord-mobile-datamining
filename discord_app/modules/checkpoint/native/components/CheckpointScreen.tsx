@@ -1,6 +1,6 @@
-// === Module 13875: CheckpointScreen ===
+// === Module 13876: CheckpointScreen ===
 
-// Module 13875 (CheckpointScreen)
+// Module 13876 (CheckpointScreen)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;

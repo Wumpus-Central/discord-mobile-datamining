@@ -1,6 +1,6 @@
-// === Module 19019: ConjureFrameUpdateBar ===
+// === Module 19032: ConjureFrameUpdateBar ===
 
-// Module 19019 (ConjureFrameUpdateBar)
+// Module 19032 (ConjureFrameUpdateBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4026 from "module_4026" /* 4026 */;
@@ -32,7 +32,7 @@ class ConjureFrameUpdateBarContent {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(19015).useConjureFrameUpdateAvailable;
+let closure_6 = fn(19028).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5140);

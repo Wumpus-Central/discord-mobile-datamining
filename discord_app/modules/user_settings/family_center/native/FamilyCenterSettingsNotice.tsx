@@ -1,10 +1,10 @@
-// === Module 17024: FamilyCenterSettingsNotice ===
+// === Module 17035: FamilyCenterSettingsNotice ===
 
-// Module 17024 (FamilyCenterSettingsNotice)
+// Module 17035 (FamilyCenterSettingsNotice)
 import _modDef2664 from "module_2664" /* 2664 */;
 import LayerActionCreators from "LayerActionCreators" /* 7836 */;
 import openLinkedUsersChannelDefault from "openLinkedUsersChannel" /* 10689 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16892 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16903 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

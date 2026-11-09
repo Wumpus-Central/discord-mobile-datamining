@@ -1,6 +1,6 @@
-// === Module 15151: UserProfileGameFriendActionSheet ===
+// === Module 15152: UserProfileGameFriendActionSheet ===
 
-// Module 15151 (UserProfileGameFriendActionSheet)
+// Module 15152 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12554 */;
@@ -87,7 +87,7 @@ export default function UserProfileGameFriendActionSheet(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

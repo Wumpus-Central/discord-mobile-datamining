@@ -1,8 +1,8 @@
-// === Module 13698: CheckpointCharacterTextureUtils ===
+// === Module 13699: CheckpointCharacterTextureUtils ===
 
-// Module 13698 (CheckpointCharacterTextureUtils)
+// Module 13699 (CheckpointCharacterTextureUtils)
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13699 */;
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13700 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointCharacterTextureType = { SLOT: "slot", TRAIT: "trait", LAYOUT: "layout", ALWAYS: "always" };

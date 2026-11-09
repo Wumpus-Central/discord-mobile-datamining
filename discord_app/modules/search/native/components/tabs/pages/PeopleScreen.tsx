@@ -1,11 +1,11 @@
-// === Module 19114: PeopleScreen ===
+// === Module 19127: PeopleScreen ===
 
-// Module 19114 (PeopleScreen)
-import TrackingDefault from "Tracking" /* 14140 */;
+// Module 19127 (PeopleScreen)
+import TrackingDefault from "Tracking" /* 14141 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 14148 */;
-import SearchQueryStore from "SearchQueryStore" /* 14133 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 14149 */;
+import SearchQueryStore from "SearchQueryStore" /* 14134 */;
 
 const require = globalThis.__r;
 
@@ -53,7 +53,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -90,7 +90,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
             const result = closure_1(stateFromStores[12]).trackSearchResultClicked(obj7);
             onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c5 = tmp;

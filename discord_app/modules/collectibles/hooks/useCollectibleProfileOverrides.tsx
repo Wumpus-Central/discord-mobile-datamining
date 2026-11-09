@@ -1,6 +1,6 @@
-// === Module 15287: useCollectibleProfileOverrides ===
+// === Module 15297: useCollectibleProfileOverrides ===
 
-// Module 15287 (useCollectibleProfileOverrides)
+// Module 15297 (useCollectibleProfileOverrides)
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
 import useShopProductItems from "useShopProductItems" /* 8813 */;
 import noop from "module_19" /* 19 */;

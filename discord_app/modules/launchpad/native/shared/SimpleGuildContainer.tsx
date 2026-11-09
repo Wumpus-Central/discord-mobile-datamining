@@ -1,13 +1,13 @@
-// === Module 19434: SimpleGuildContainer ===
+// === Module 19447: SimpleGuildContainer ===
 
-// Module 19434 (SimpleGuildContainer)
+// Module 19447 (SimpleGuildContainer)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5761 */;
 import MaskedBadgeDefault from "MaskedBadge" /* 9907 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18726 */;
-import useSimpleGuildDefaultColorsDefault from "useSimpleGuildDefaultColors" /* 19433 */;
-import CutoutImageDefault from "CutoutImage" /* 19435 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18739 */;
+import useSimpleGuildDefaultColorsDefault from "useSimpleGuildDefaultColors" /* 19446 */;
+import CutoutImageDefault from "CutoutImage" /* 19448 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

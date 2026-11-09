@@ -1,6 +1,6 @@
-// === Module 13671: CheckpointModal ===
+// === Module 13672: CheckpointModal ===
 
-// Module 13671 (CheckpointModal)
+// Module 13672 (CheckpointModal)
 import nativeDefault from "native" /* 575 */;
 import Server from "Server" /* 2116 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -10,15 +10,15 @@ import InteractionComponentTypes from "InteractionComponentTypes" /* 6206 */;
 import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6220 */;
 import CheckpointNavigation from "CheckpointNavigation" /* 6567 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 13610 */;
-import CheckpointFlows from "CheckpointFlows" /* 13686 */;
-import useCheckpointStepAnalytics from "useCheckpointStepAnalytics" /* 13690 */;
-import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 13934 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 13611 */;
+import CheckpointFlows from "CheckpointFlows" /* 13687 */;
+import useCheckpointStepAnalytics from "useCheckpointStepAnalytics" /* 13691 */;
+import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 13935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MessageRecord from "MessageRecord" /* 5083 */;
-import CheckpointStore from "CheckpointStore" /* 13667 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 require = fn;
 function CheckpointModal(didPlayerShareDataWithDiscord) {
@@ -97,7 +97,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -139,7 +139,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
                 }
                 c7 = 3;
                 c8 = 1;
-                const obj8 = { value: closure_0(13669).sendCheckpointCard(closure_132_0, c3, closure_133_0), done: false };
+                const obj8 = { value: closure_0(13670).sendCheckpointCard(closure_132_0, c3, closure_133_0), done: false };
                 return obj8;
               }
             } else if (2 === tmp7) {
@@ -159,12 +159,12 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
               const obj10 = { value, done: true };
               return obj10;
             } else {
-              const result = closure_0(13665).trackCheckpoint2026CardShared(closure_133_0);
+              const result = closure_0(13666).trackCheckpoint2026CardShared(closure_133_0);
               c6 = 0;
-              const obj = closure_0(13665);
-              closure_0(13610).closeForwardModal();
+              const obj = closure_0(13666);
+              closure_0(13611).closeForwardModal();
               c8 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp43) {
             if (tmp4 === c6) {
@@ -203,7 +203,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -529,7 +529,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
       closure_3(CheckpointFlows.getCheckpointReplayRoute({ flow: checkpointFlow, stats }));
     },
     onShare: function handleShare() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13672, dependencyMap.paths), "CheckpointShare", { character: stateFromStores, stats, onForward: handleForward });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13673, dependencyMap.paths), "CheckpointShare", { character: stateFromStores, stats, onForward: handleForward });
     },
     color: tmp22,
     shadowColor: null,
@@ -576,7 +576,7 @@ obj2.logo = size;
 let obj4 = { height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 obj2.headerActions = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
 obj2.customizationSection = { position: "absolute", left: 0, right: 0, bottom: sum1 };
-const rect1 = { top: (CHECKPOINT_NAV_HEIGHT + fn(13685).CHECKPOINT_HEADER_BUTTON_SIZE) / 2, bottom: CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16, left: "59%", marginLeft: 0 };
+const rect1 = { top: (CHECKPOINT_NAV_HEIGHT + fn(13686).CHECKPOINT_HEADER_BUTTON_SIZE) / 2, bottom: CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16, left: "59%", marginLeft: 0 };
 obj2.landscapeCustomizationSection = rect1;
 const rect2 = { position: "absolute", top: null, left: nativeDefault.space.PX_16 };
 let result = (CHECKPOINT_NAV_HEIGHT + CHECKPOINT_LOGO_SIZE) / 2;

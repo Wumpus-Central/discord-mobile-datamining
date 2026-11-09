@@ -1,6 +1,6 @@
-// === Module 17423: useVideoQuestPlayerAnalytics ===
+// === Module 17434: useVideoQuestPlayerAnalytics ===
 
-// Module 17423 (useVideoQuestPlayerAnalytics)
+// Module 17434 (useVideoQuestPlayerAnalytics)
 import MonitoringAgentDefault from "MonitoringAgent" /* 6594 */;
 import MetricEvents from "MetricEvents" /* 6599 */;
 import QuestTypes from "QuestTypes" /* 6839 */;
@@ -10,9 +10,9 @@ import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7925 */;
 import AnalyticsActions from "AnalyticsActions" /* 7939 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7948 */;
 import AdDataUtils from "AdDataUtils" /* 7949 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14919 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 17240 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 17251 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14920 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17251 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 17262 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import NetworkStore from "NetworkStore" /* 6032 */;
@@ -58,7 +58,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
             obj13.trackQuestEvent(obj12);
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp53) {
           closure_5 = tmp53;

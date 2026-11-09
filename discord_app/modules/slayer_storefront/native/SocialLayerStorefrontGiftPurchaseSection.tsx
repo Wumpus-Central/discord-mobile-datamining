@@ -1,6 +1,6 @@
-// === Module 14659: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 14660: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 14659 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 14660 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -145,7 +145,7 @@ export default function SocialLayerStorefrontGiftPurchaseSection(skuId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -1,10 +1,10 @@
-// === Module 18688: RoleColorPickerActionSheet ===
+// === Module 18701: RoleColorPickerActionSheet ===
 
-// Module 18688 (RoleColorPickerActionSheet)
+// Module 18701 (RoleColorPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16754 */;
-import ColorBlockDefault from "ColorBlock" /* 16756 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16765 */;
+import ColorBlockDefault from "ColorBlock" /* 16767 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

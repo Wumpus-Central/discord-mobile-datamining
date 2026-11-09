@@ -1,6 +1,6 @@
-// === Module 17763: DisplayMediaLinksSetting ===
+// === Module 17774: DisplayMediaLinksSetting ===
 
-// Module 17763 (DisplayMediaLinksSetting)
+// Module 17774 (DisplayMediaLinksSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;

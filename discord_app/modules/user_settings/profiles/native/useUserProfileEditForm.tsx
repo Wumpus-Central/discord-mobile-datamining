@@ -1,6 +1,6 @@
-// === Module 16766: useUserProfileEditForm ===
+// === Module 16777: useUserProfileEditForm ===
 
-// Module 16766 (useUserProfileEditForm)
+// Module 16777 (useUserProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -50,7 +50,7 @@ export default function useUserProfileEditForm() {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       c13 = 2;
@@ -69,7 +69,7 @@ export default function useUserProfileEditForm() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

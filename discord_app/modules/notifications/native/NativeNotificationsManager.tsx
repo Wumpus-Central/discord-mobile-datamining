@@ -1,6 +1,6 @@
-// === Module 20416: NativeNotificationsManager ===
+// === Module 20429: NativeNotificationsManager ===
 
-// Module 20416 (NativeNotificationsManager)
+// Module 20429 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import PushNotificationDefault from "PushNotification" /* 11040 */;
@@ -35,7 +35,7 @@ const prototype = function NativeNotificationsManager() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ const prototype = function NativeNotificationsManager() {
                 if (null == closure_131_3) {
                   c6 = 0;
                   c8 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const _Map = Map;
                   const map = new Map();

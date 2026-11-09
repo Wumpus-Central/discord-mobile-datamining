@@ -1,18 +1,18 @@
-// === Module 19032: layout/SearchBar ===
+// === Module 19045: layout/SearchBar ===
 
-// Module 19032 (layout/SearchBar)
+// Module 19045 (layout/SearchBar)
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
 import useChannelName from "useChannelName" /* 5776 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14119 */;
-import TrackingDefault from "Tracking" /* 14140 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14144 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14120 */;
+import TrackingDefault from "Tracking" /* 14141 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14145 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import GuildStore from "GuildStore" /* 5011 */;
 import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
-import SearchQueryStore from "SearchQueryStore" /* 14133 */;
+import SearchQueryStore from "SearchQueryStore" /* 14134 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 

@@ -1,12 +1,12 @@
-// === Module 16301: Avatar ===
+// === Module 16311: Avatar ===
 
-// Module 16301 (Avatar)
+// Module 16311 (Avatar)
 import nativeDefault from "native" /* 575 */;
 import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8799 */;
 import ClipView from "ClipView" /* 9593 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 15118 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 16290 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16291 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 15119 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 16300 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16301 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -311,5 +311,5 @@ export default noop.memo(function Avatar(isMobileOnline) {
     tmp10(cutout, obj14);
   }
 });
-export const AvatarSizes = fn(15118).AvatarSizes;
+export const AvatarSizes = fn(15119).AvatarSizes;
 export { getStatusSize };

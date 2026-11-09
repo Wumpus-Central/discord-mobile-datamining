@@ -1,6 +1,6 @@
-// === Module 15046: UserProfileOverflowMenu ===
+// === Module 15047: UserProfileOverflowMenu ===
 
-// Module 15046 (UserProfileOverflowMenu)
+// Module 15047 (UserProfileOverflowMenu)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import UserUtilsDefault from "UserUtils" /* 5194 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
@@ -13,10 +13,10 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 88
 import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 11781 */;
 import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11807 */;
 import getApplicationInstallURL from "getApplicationInstallURL" /* 12665 */;
-import GuildInviteUtils from "GuildInviteUtils" /* 15047 */;
-import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 15056 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15060 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 15065 */;
+import GuildInviteUtils from "GuildInviteUtils" /* 15048 */;
+import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 15057 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15061 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 15066 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
@@ -299,7 +299,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
               trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15062, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15063, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
               const obj = { action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations };
               const obj3 = { userId: id, showUserProfile: callback1 };
               ActionSheetActionCreatorsDefault.hideActionSheet();

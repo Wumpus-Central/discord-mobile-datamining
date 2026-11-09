@@ -1,6 +1,6 @@
-// === Module 13533: AutomodQuarantineUtils ===
+// === Module 13534: AutomodQuarantineUtils ===
 
-// Module 13533 (AutomodQuarantineUtils)
+// Module 13534 (AutomodQuarantineUtils)
 import util from "util" /* 1113 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5078 */;
 import openUserSettings2 from "openUserSettings" /* 7635 */;

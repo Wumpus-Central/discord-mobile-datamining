@@ -1,6 +1,6 @@
-// === Module 18155: ShopCategory ===
+// === Module 18168: ShopCategory ===
 
-// Module 18155 (ShopCategory)
+// Module 18168 (ShopCategory)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5370 */;
@@ -101,15 +101,15 @@ export function ShopCategory(category) {
   dependencyMap = category(1499).useNavigation();
   const unpublishedAt = category.unpublishedAt;
   let obj = category(1499);
-  const filteredAndSortedProducts = category(17298).useFilteredAndSortedProducts({ products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive });
+  const filteredAndSortedProducts = category(17309).useFilteredAndSortedProducts({ products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive });
   const mobileBannerUrl = category.mobileBannerUrl;
-  let obj2 = category(17298);
+  let obj2 = category(17309);
   let obj3 = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
-  const collectiblesShopDeepLinkProps = category(18152).useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
+  const collectiblesShopDeepLinkProps = category(18165).useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
   const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   const ref = unpublishedAt.useRef(null);
-  const obj4 = category(18152);
+  const obj4 = category(18165);
   items = [category.storeListingId];
   const recyclingState = category(7357).useRecyclingState(null, items, () => {
     const current = ref.current;
@@ -122,9 +122,9 @@ export function ShopCategory(category) {
   if (tmp9) {
     tmp9 = productIndex > 0;
   }
-  const obj7 = category(18156);
-  const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({ shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(18156).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId });
-  const obj8 = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(18156).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
+  const obj7 = category(18169);
+  const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({ shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(18169).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId });
+  const obj8 = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(18169).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
   collectiblesAnalyticsContext = category(9543).useCollectiblesAnalyticsContext();
   const tmp4Result = category(9543);
   isInImprovedMobileShopLoading = category(9656).useIsInImprovedMobileShopLoading();

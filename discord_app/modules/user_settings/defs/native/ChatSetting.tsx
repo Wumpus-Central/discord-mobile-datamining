@@ -1,9 +1,9 @@
-// === Module 17759: ChatSetting ===
+// === Module 17770: ChatSetting ===
 
-// Module 17759 (ChatSetting)
+// Module 17770 (ChatSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import ImageTextIcon from "ImageTextIcon" /* 17760 */;
+import ImageTextIcon from "ImageTextIcon" /* 17771 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;
 import size from "module_2" /* 2 */;
 

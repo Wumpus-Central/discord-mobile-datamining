@@ -1,9 +1,9 @@
-// === Module 14966: GuildProfileCreateTagUpsell ===
+// === Module 14967: GuildProfileCreateTagUpsell ===
 
-// Module 14966 (GuildProfileCreateTagUpsell)
+// Module 14967 (GuildProfileCreateTagUpsell)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
-import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14970 */;
+import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14971 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -18,7 +18,7 @@ export default function GuildProfileCreateTagUpsell(guildId) {
   guildId = guildId.guildId;
   let creatableGuilds;
   const tmp = closure_5();
-  const guildTagCreationUpsell = guildId(14967).useGuildTagCreationUpsell("GuildProfileCreateTagUpsell", creatableGuilds(14969));
+  const guildTagCreationUpsell = guildId(14968).useGuildTagCreationUpsell("GuildProfileCreateTagUpsell", creatableGuilds(14970));
   creatableGuilds = guildTagCreationUpsell.creatableGuilds;
   let tmp5 = null;
   if (guildTagCreationUpsell.isUpsellVisible) {

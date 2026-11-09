@@ -1,6 +1,6 @@
-// === Module 14029: ChatInputActions ===
+// === Module 14030: ChatInputActions ===
 
-// Module 14029 (ChatInputActions)
+// Module 14030 (ChatInputActions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -13,8 +13,8 @@ import AttachmentIcon from "AttachmentIcon" /* 10654 */;
 import CameraIcon from "CameraIcon" /* 10669 */;
 import CalendarPlusIcon from "CalendarPlusIcon" /* 12763 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13019 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 14030 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 14032 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 14031 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 14033 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

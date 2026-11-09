@@ -1,6 +1,6 @@
-// === Module 19181: NewMessageScreen ===
+// === Module 19194: NewMessageScreen ===
 
-// Module 19181 (NewMessageScreen)
+// Module 19194 (NewMessageScreen)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
@@ -23,11 +23,11 @@ import _modDef11108 from "module_11108" /* 11108 */;
 import ChatViewDefault from "ChatView" /* 11354 */;
 import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11787 */;
 import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11789 */;
-import NoResultsDefault from "NoResults" /* 13634 */;
-import NewMessageUserListDefault from "NewMessageUserList" /* 14149 */;
-import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 19120 */;
-import useOnMessageSendDefault from "useOnMessageSend" /* 19182 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19183 */;
+import NoResultsDefault from "NoResults" /* 13635 */;
+import NewMessageUserListDefault from "NewMessageUserList" /* 14150 */;
+import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 19133 */;
+import useOnMessageSendDefault from "useOnMessageSend" /* 19195 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19196 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -98,7 +98,7 @@ let closure_23 = async function _findMatchingPrivateChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ export default function NewMessageScreen(navigation) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -463,7 +463,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(572);
-          obj2.channel = { id: navigation(7460).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "a", parent_id: "start" };
+          obj2.channel = { id: navigation(7460).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "add" };
           obj.dispatch(obj2);
         };
       }
@@ -529,7 +529,7 @@ export default function NewMessageScreen(navigation) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

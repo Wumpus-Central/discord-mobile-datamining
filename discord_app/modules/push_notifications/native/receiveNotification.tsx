@@ -1,6 +1,6 @@
-// === Module 20516: receiveNotification ===
+// === Module 20529: receiveNotification ===
 
-// Module 20516 (receiveNotification)
+// Module 20529 (receiveNotification)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -53,7 +53,7 @@ let closure_22 = async function _waitForDataOrConnection(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -134,7 +134,7 @@ let closure_24 = async function _waitForNavigationReady() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -177,7 +177,7 @@ let closure_24 = async function _waitForNavigationReady() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp11) {
       c0 = tmp;
       throw tmp11;
@@ -226,7 +226,7 @@ let closure_27 = async function _handleStageNotification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -254,7 +254,7 @@ let closure_27 = async function _handleStageNotification(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp7) {
       c1 = tmp;
@@ -273,7 +273,7 @@ let closure_28 = async function _handleGuildEventNotification(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -369,7 +369,7 @@ let closure_28 = async function _handleGuildEventNotification(arg0) {
         const obj = closure_130_0(closure_130_3[18]);
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp31) {
       c4 = tmp;
       throw tmp31;
@@ -387,7 +387,7 @@ let closure_29 = async function _handleRelationshipAddNotification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -481,7 +481,7 @@ let closure_30 = async function _handleCallRingNotification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -513,7 +513,7 @@ let closure_30 = async function _handleCallRingNotification(arg0) {
       } else {
         closure_130_0(closure_130_3[18]).transitionToChannel(closure_129_0.channel_id);
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp15) {
       c4 = tmp;
@@ -532,7 +532,7 @@ let closure_31 = async function _handleCallConnectNotification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -601,7 +601,7 @@ let closure_31 = async function _handleCallConnectNotification(arg0) {
           closure_130_1(closure_130_3[31])(closure_129_0.channel_id);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp50) {
       c4 = tmp;
@@ -620,7 +620,7 @@ let closure_32 = async function _handleFriendSuggestionCreateNotification(arg0) 
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -677,7 +677,7 @@ let closure_32 = async function _handleFriendSuggestionCreateNotification(arg0) 
         obj.sourceAnalyticsLocations = items;
         closure_130_1(closure_130_3[24])(obj);
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp24) {
       c4 = tmp;
@@ -696,7 +696,7 @@ let closure_33 = async function _maybeAckNotificationCenter(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1091,7 +1091,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               let tmp19Result7 = tmp19(5870);
               let tmp19Result3Result = tmp19Result7(data.deeplink);
-              let tmp19Result8 = tmp19(15973);
+              let tmp19Result8 = tmp19(15983);
               let obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -1320,7 +1320,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5870);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15973);
+              tmp19Result8 = tmp19(15983);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -1549,7 +1549,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5870);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15973);
+              tmp19Result8 = tmp19(15983);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -1778,7 +1778,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5870);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15973);
+              tmp19Result8 = tmp19(15983);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2007,7 +2007,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5870);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15973);
+              tmp19Result8 = tmp19(15983);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2236,7 +2236,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5870);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15973);
+              tmp19Result8 = tmp19(15983);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2465,7 +2465,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5870);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15973);
+              tmp19Result8 = tmp19(15983);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2694,7 +2694,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5870);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15973);
+              tmp19Result8 = tmp19(15983);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -2923,7 +2923,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5870);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15973);
+              tmp19Result8 = tmp19(15983);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -3152,7 +3152,7 @@ function receiveNotification_(data, isAppStartupNavigation) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(5870);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(15973);
+              tmp19Result8 = tmp19(15983);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag, isAppStartupNavigation };
               tmp19Result8(obj17);
             }
@@ -3171,7 +3171,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, ComponentActions: closure_12, RelationshipTypes: map1, Routes: closure_14 } = Constants);
 const StreamTypes = fn(6770).StreamTypes;
 let closure_16 = fn(4995).GuildScheduledEventEntityTypes;
-const constants = fn(14211).MultiAccountSwitchLocation;
+const constants = fn(14212).MultiAccountSwitchLocation;
 const logger = new LoggerDefault("receiveNotification");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/push_notifications/native/receiveNotification.tsx");
@@ -3192,14 +3192,14 @@ export default function receiveNotification(getData, arg1) {
         if (data.receiving_user_id !== AuthenticationStore.getId()) {
           tmp6(7731);
           tmp6(6623);
-          tmp6(15805);
+          tmp6(15815);
           let receiving_user_id = data.receiving_user_id;
-          receiving_user_id = tmp6(14214).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
+          receiving_user_id = tmp6(14215).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
           receiving_user_id.then(() => {
             const Emitter = initializeDefault.Emitter;
             Emitter.batched(() => receiveNotification_(data, closure_1_0));
           });
-          const tmp6Result4 = tmp6(14214);
+          const tmp6Result4 = tmp6(14215);
         }
       }
     }

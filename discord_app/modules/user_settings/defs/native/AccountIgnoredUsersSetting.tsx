@@ -1,6 +1,6 @@
-// === Module 17015: AccountIgnoredUsersSetting ===
+// === Module 17026: AccountIgnoredUsersSetting ===
 
-// Module 17015 (AccountIgnoredUsersSetting)
+// Module 17026 (AccountIgnoredUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import RelationshipStore from "RelationshipStore" /* 5082 */;

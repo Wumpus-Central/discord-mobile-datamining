@@ -1,6 +1,6 @@
-// === Module 17638: useDisplayNameStylesHandleApply ===
+// === Module 17649: useDisplayNameStylesHandleApply ===
 
-// Module 17638 (useDisplayNameStylesHandleApply)
+// Module 17649 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -46,7 +46,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -88,7 +88,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -106,8 +106,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           closure_0 = tmp8;
                           closure_128_0 = undefined;
                           if (closure_2_1) {
-                            const result = displayNameStyles(16767).saveHexagonCampaignPreviousDisplayNameStyles();
-                            const obj4 = displayNameStyles(16767);
+                            const result = displayNameStyles(16778).saveHexagonCampaignPreviousDisplayNameStyles();
+                            const obj4 = displayNameStyles(16778);
                           }
                           if (closure_1_10) {
                             closure_1_12.current = true;
@@ -172,14 +172,14 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                       const obj13 = { font_name: displayNameStyles(1395).DisplayNameFont[closure_2], effect_name: displayNameStyles(1396).DisplayNameEffect[c3], colors, entry_point };
                       closure_2_1(1252).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                       if (closure_129_1) {
-                        const result2 = displayNameStyles(16767).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
-                        const obj10 = displayNameStyles(16767);
+                        const result2 = displayNameStyles(16778).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
+                        const obj10 = displayNameStyles(16778);
                       }
                       if (closure_1_8 != null) {
                         closure_1_8();
                       }
                       c5 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     } catch (tmp63) {
                       closure_2 = tmp63;
                       if (tmp5 === c3) {

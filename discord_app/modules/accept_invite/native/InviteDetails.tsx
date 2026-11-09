@@ -1,6 +1,6 @@
-// === Module 14563: InviteDetails ===
+// === Module 14564: InviteDetails ===
 
-// Module 14563 (InviteDetails)
+// Module 14564 (InviteDetails)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -10,11 +10,11 @@ import UserUtilsDefault from "UserUtils" /* 5194 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import GuildBadgeDefault from "GuildBadge" /* 7024 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7955 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 14471 */;
-import InviteRolesListDefault from "InviteRolesList" /* 14565 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 14472 */;
+import InviteRolesListDefault from "InviteRolesList" /* 14566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 14210 */;
+import MultiAccountStore from "MultiAccountStore" /* 14211 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -62,7 +62,7 @@ function InviteDestinationIcon(invite) {
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: "jsxs" };
+        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: "hoa qu\u1EA3" };
         const tmp14 = new UserRecord(invite.inviter);
         obj3.user = tmp14;
         obj3.size = native.AvatarSizes.XLARGE;
@@ -283,7 +283,7 @@ function InviteMemberCounts(invite) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, InviteStates: closure_10 } = Constants);
-let closure_11 = fn(14564).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(14565).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const createStyles = fn(5140);

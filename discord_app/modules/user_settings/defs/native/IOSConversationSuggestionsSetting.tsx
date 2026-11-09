@@ -1,6 +1,6 @@
-// === Module 17060: IOSConversationSuggestionsSetting ===
+// === Module 17071: IOSConversationSuggestionsSetting ===
 
-// Module 17060 (IOSConversationSuggestionsSetting)
+// Module 17071 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;

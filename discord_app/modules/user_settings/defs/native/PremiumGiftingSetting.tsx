@@ -1,6 +1,6 @@
-// === Module 17203: PremiumGiftingSetting ===
+// === Module 17214: PremiumGiftingSetting ===
 
-// Module 17203 (PremiumGiftingSetting)
+// Module 17214 (PremiumGiftingSetting)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2183 */;
@@ -18,7 +18,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(13596).GiftIcon,
+  IconComponent: fn(13597).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },

@@ -1,6 +1,6 @@
-// === Module 14348: ScreenArrowIcon ===
+// === Module 14349: ScreenArrowIcon ===
 
-// Module 14348 (ScreenArrowIcon)
+// Module 14349 (ScreenArrowIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5841 */;
 import _mod12098 from "module_12098" /* 12098 */;

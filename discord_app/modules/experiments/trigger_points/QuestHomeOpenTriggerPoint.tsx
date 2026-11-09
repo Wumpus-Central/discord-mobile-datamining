@@ -1,6 +1,6 @@
-// === Module 17374: QuestHomeOpenTriggerPoint ===
+// === Module 17385: QuestHomeOpenTriggerPoint ===
 
-// Module 17374 (QuestHomeOpenTriggerPoint)
+// Module 17385 (QuestHomeOpenTriggerPoint)
 import ExperimentConstants from "ExperimentConstants" /* 5355 */;
 import Helpers from "Helpers" /* 10797 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 15338: useShouldPinCollectiblesEditPreview ===
+// === Module 15348: useShouldPinCollectiblesEditPreview ===
 
-// Module 15338 (useShouldPinCollectiblesEditPreview)
+// Module 15348 (useShouldPinCollectiblesEditPreview)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import NavigatorConstants from "NavigatorConstants" /* 5714 */;

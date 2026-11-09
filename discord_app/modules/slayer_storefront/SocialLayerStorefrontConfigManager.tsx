@@ -1,6 +1,6 @@
-// === Module 15927: SocialLayerStorefrontConfigManager ===
+// === Module 15937: SocialLayerStorefrontConfigManager ===
 
-// Module 15927 (SocialLayerStorefrontConfigManager)
+// Module 15937 (SocialLayerStorefrontConfigManager)
 import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10789 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
 

@@ -1,11 +1,11 @@
-// === Module 13922: TraitOptionList ===
+// === Module 13923: TraitOptionList ===
 
-// Module 13922 (TraitOptionList)
+// Module 13923 (TraitOptionList)
 import nativeDefault from "native" /* 575 */;
 import HapticUtils from "HapticUtils" /* 5376 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6566 */;
 import inlineStyles from "inlineStyles" /* 8101 */;
-import TraitOptionItem from "TraitOptionItem" /* 13923 */;
+import TraitOptionItem from "TraitOptionItem" /* 13924 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
@@ -62,7 +62,7 @@ export default function TraitOptionList(size) {
   const obj3 = size(1652);
   const tmp7 = options(5739)(bound);
   [tmp9, c11] = disabled(noop.useState(options(1493)().width), 2);
-  const width = size(13923).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const width = size(13924).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + closure_10;
   c12 = sum;
   const items1 = [disabled, isScreenReaderEnabled];
@@ -149,7 +149,7 @@ export default function TraitOptionList(size) {
     size = traitOption;
     closure_1 = index;
     let obj = { size, traitOption, accessibilityLabel: null, isSelected: null, showSelectedBorder: null, hideCornerFlag: null, disabled: null, onPress: null };
-    const tmp2 = options(13923);
+    const tmp2 = options(13924);
     obj.accessibilityLabel = size(6566).getAssetAccessibilityLabel(traitOption, hideCornerFlag);
     obj.isSelected = traitOption.optionId === dependencyMap;
     let tmp5 = isScreenReaderEnabled;

@@ -1,17 +1,17 @@
-// === Module 20292: CreatorBenefitsSection ===
+// === Module 20305: CreatorBenefitsSection ===
 
-// Module 20292 (CreatorBenefitsSection)
+// Module 20305 (CreatorBenefitsSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5147 */;
 import useThemeDefault from "useTheme" /* 5369 */;
 import Text_Text from "Text/Text" /* 5751 */;
-import AvatarRoseExample from "AvatarRoseExample" /* 20293 */;
-import AvatarLokyExample from "AvatarLokyExample" /* 20297 */;
-import AvatarGraggleExample from "AvatarGraggleExample" /* 20301 */;
-import AvatarMoatmonsturrExample from "AvatarMoatmonsturrExample" /* 20305 */;
-import StarKeySpotIllustration from "StarKeySpotIllustration" /* 20309 */;
-import StarCoinsSpotIllustration from "StarCoinsSpotIllustration" /* 20313 */;
+import AvatarRoseExample from "AvatarRoseExample" /* 20306 */;
+import AvatarLokyExample from "AvatarLokyExample" /* 20310 */;
+import AvatarGraggleExample from "AvatarGraggleExample" /* 20314 */;
+import AvatarMoatmonsturrExample from "AvatarMoatmonsturrExample" /* 20318 */;
+import StarKeySpotIllustration from "StarKeySpotIllustration" /* 20322 */;
+import StarCoinsSpotIllustration from "StarCoinsSpotIllustration" /* 20326 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -101,7 +101,7 @@ function BenefitAvatar(Avatar) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(17506).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(17517).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5140);

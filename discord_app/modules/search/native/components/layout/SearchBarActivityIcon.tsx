@@ -1,13 +1,13 @@
-// === Module 19033: SearchBarActivityIcon ===
+// === Module 19046: SearchBarActivityIcon ===
 
-// Module 19033 (SearchBarActivityIcon)
+// Module 19046 (SearchBarActivityIcon)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5370 */;
-import SearchUtils from "SearchUtils" /* 14126 */;
+import SearchUtils from "SearchUtils" /* 14127 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 6918 */;
-import SearchQueryStore from "SearchQueryStore" /* 14133 */;
+import SearchQueryStore from "SearchQueryStore" /* 14134 */;
 
 const require = globalThis.__r;
 

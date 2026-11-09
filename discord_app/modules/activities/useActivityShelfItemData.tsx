@@ -1,6 +1,6 @@
-// === Module 19637: useActivityShelfItemData ===
+// === Module 19650: useActivityShelfItemData ===
 
-// Module 19637 (useActivityShelfItemData)
+// Module 19650 (useActivityShelfItemData)
 import useActivityShelfItemsDefault from "useActivityShelfItems" /* 12570 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 13674: CheckpointCardFrame ===
+// === Module 13675: CheckpointCardFrame ===
 
-// Module 13674 (CheckpointCardFrame)
+// Module 13675 (CheckpointCardFrame)
 import nativeDefault from "native" /* 575 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
 import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6220 */;
@@ -181,7 +181,7 @@ export default function CheckpointCardFrame(character) {
     const obj13 = { rotation: 180, origin: null, children: null };
     const _HermesInternal4 = HermesInternal;
     obj13.origin = "" + x + width / 2 + ", " + c14 + c16 / 2;
-    const size5 = { href: tmp28(13675), x, y: c14 - 0.4348 * c16, width, height: 1.4348 * c16, preserveAspectRatio: "none" };
+    const size5 = { href: tmp28(13676), x, y: c14 - 0.4348 * c16, width, height: 1.4348 * c16, preserveAspectRatio: "none" };
     obj13.children = tmp25(tmp3(8101).Image, size5);
     obj12.children = tmp25(tmp3(8101).G, obj13);
     items12[1] = tmp25(tmp3(8101).G, obj12);
@@ -223,7 +223,7 @@ export default function CheckpointCardFrame(character) {
         return { opacity };
       }
     }
-    obj19.href = tmp28(13675);
+    obj19.href = tmp28(13676);
     const merged = Object.assign(styles);
     obj19.opacity = 0.5;
     obj19.preserveAspectRatio = "xMidYMid slice";

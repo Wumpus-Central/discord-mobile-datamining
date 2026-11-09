@@ -1,10 +1,10 @@
-// === Module 19701: VoicePanelLockedIcon ===
+// === Module 19714: VoicePanelLockedIcon ===
 
-// Module 19701 (VoicePanelLockedIcon)
+// Module 19714 (VoicePanelLockedIcon)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import NativeViewDefault from "NativeView" /* 7023 */;
-import _modDef19702 from "module_19702" /* 19702 */;
+import _modDef19715 from "module_19715" /* 19715 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,6 +21,6 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/Voi
 export default function VoicePanelLockedIcon() {
   const tmp = closure_4();
   const obj = { style: tmp.container, children: null };
-  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef19702, size: native.IconSizes.LARGE });
+  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef19715, size: native.IconSizes.LARGE });
   return <tmp2 style={tmp.container}>{null}</tmp2>;
 };

@@ -41,7 +41,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -76,7 +76,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -114,7 +114,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
                       const obj = files(10329);
                     }
                     c2 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp13) {
                   c2 = tmp;
@@ -268,7 +268,7 @@ prototype["startUpload"] = function startUpload() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -362,7 +362,7 @@ prototype["startUpload"] = function startUpload() {
             } else {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
           const _HermesInternal2 = HermesInternal;

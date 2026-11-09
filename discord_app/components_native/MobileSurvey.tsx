@@ -1,11 +1,11 @@
-// === Module 19374: MobileSurvey ===
+// === Module 19387: MobileSurvey ===
 
-// Module 19374 (MobileSurvey)
+// Module 19387 (MobileSurvey)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import LinkingDefault from "Linking" /* 5834 */;
 import _modDef12160 from "module_12160" /* 12160 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 18033 */;
+import SurveyActionCreators from "SurveyActionCreators" /* 18042 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SurveyStore from "SurveyStore" /* 7560 */;
@@ -38,7 +38,7 @@ export default function MobileSurvey() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -66,7 +66,7 @@ export default function MobileSurvey() {
               return obj;
             }
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;

@@ -1,6 +1,6 @@
-// === Module 15486: isClipsEnabled ===
+// === Module 15496: isClipsEnabled ===
 
-// Module 15486 (isClipsEnabled)
+// Module 15496 (isClipsEnabled)
 import ClipsExperiment from "ClipsExperiment" /* 15184 */;
 import ClipsStore from "ClipsStore" /* 2136 */;
 

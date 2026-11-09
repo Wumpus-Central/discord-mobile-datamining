@@ -1,9 +1,9 @@
-// === Module 15224: UserProfileWidgetContainer ===
+// === Module 15234: UserProfileWidgetContainer ===
 
-// Module 15224 (UserProfileWidgetContainer)
+// Module 15234 (UserProfileWidgetContainer)
 import nativeDefault from "native" /* 575 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7436 */;
-import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 15225 */;
+import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 15235 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

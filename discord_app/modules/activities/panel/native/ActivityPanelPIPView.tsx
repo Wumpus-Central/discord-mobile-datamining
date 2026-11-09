@@ -1,6 +1,6 @@
-// === Module 19491: ActivityPanelPIPView ===
+// === Module 19504: ActivityPanelPIPView ===
 
-// Module 19491 (ActivityPanelPIPView)
+// Module 19504 (ActivityPanelPIPView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -8,8 +8,8 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11367 */;
 import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11957 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19489 */;
-import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19494 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19502 */;
+import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19507 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 12011 */;
@@ -326,7 +326,7 @@ const View = fn(17).View;
 const ActivityPanelConstants = fn(5781);
 const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: closure_10, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_11, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1 } = ActivityPanelConstants);
-let closure_14 = fn(19357).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_14 = fn(19370).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 let ThemeTypes = fn(1072).ThemeTypes;
 const PIP_WINDOW_OFFSET = fn(11364).PIP_WINDOW_OFFSET;
 const ActivityLayoutMode = fn(11855).ActivityLayoutMode;

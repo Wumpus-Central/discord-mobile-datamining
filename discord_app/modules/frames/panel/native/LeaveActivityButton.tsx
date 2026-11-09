@@ -1,8 +1,8 @@
-// === Module 19518: panel/LeaveActivityButton ===
+// === Module 19531: panel/LeaveActivityButton ===
 
-// Module 19518 (panel/LeaveActivityButton)
+// Module 19531 (panel/LeaveActivityButton)
 import leaveFrame from "leaveFrame" /* 11015 */;
-import LeaveActivityButton from "LeaveActivityButton" /* 19359 */;
+import LeaveActivityButton from "LeaveActivityButton" /* 19372 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

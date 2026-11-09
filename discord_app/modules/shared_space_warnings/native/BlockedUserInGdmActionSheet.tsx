@@ -1,6 +1,6 @@
-// === Module 20010: BlockedUserInGdmActionSheet ===
+// === Module 20023: BlockedUserInGdmActionSheet ===
 
-// Module 20010 (BlockedUserInGdmActionSheet)
+// Module 20023 (BlockedUserInGdmActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 5751 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6173 */;
 import TableRow from "TableRow" /* 7038 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 20011 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 20024 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -134,7 +134,7 @@ function BlockedUserInGDMDescription(arg0) {
   }
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(15925);
+const SharedSpaceWarningConstants = fn(15935);
 ({ BlockWarningEngagements: metroImportDefault, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);

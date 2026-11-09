@@ -1,6 +1,6 @@
-// === Module 19035: SearchFilterUtils ===
+// === Module 19048: SearchFilterUtils ===
 
-// Module 19035 (SearchFilterUtils)
+// Module 19048 (SearchFilterUtils)
 import util from "util" /* 1113 */;
 import AtIcon from "AtIcon" /* 8733 */;
 import CalendarIcon from "CalendarIcon" /* 9195 */;
@@ -9,11 +9,11 @@ import AttachmentIcon from "AttachmentIcon" /* 10654 */;
 import RobotIcon from "RobotIcon" /* 12268 */;
 import UserIcon from "UserIcon" /* 12286 */;
 import CalendarPlusIcon from "CalendarPlusIcon" /* 12763 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14119 */;
-import SearchTokens from "SearchTokens" /* 14127 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14144 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15965 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 19036 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14120 */;
+import SearchTokens from "SearchTokens" /* 14128 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14145 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15975 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 19049 */;
 import SearchConstants from "SearchConstants" /* 9917 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -213,7 +213,7 @@ export function getSearchTokenPressHandler(_undefined, token, CONTEXT_MENU) {
 export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   items = [];
-  const keys = Object.keys(items(14127));
+  const keys = Object.keys(items(14128));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

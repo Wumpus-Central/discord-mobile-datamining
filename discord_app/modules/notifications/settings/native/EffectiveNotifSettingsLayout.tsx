@@ -1,13 +1,13 @@
-// === Module 18287: EffectiveNotifSettingsLayout ===
+// === Module 18300: EffectiveNotifSettingsLayout ===
 
-// Module 18287 (EffectiveNotifSettingsLayout)
+// Module 18300 (EffectiveNotifSettingsLayout)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef2992 from "module_2992" /* 2992 */;
-import SettingLayoutDefault from "SettingLayout" /* 16894 */;
+import SettingLayoutDefault from "SettingLayout" /* 16905 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15850 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15860 */;
 
 const require = fn;
 const jsxProd = fn(21);
@@ -21,8 +21,8 @@ export default function EffectiveNotifSettingsLayout(node) {
   const unavailableNode = node.unavailableNode;
   let isDeclarativeNotificationSettingsRedesignEnabled;
   const tmp = closure_9();
-  isDeclarativeNotificationSettingsRedesignEnabled = isDeclarativeNotificationSettingsRedesignEnabled(15864).useIsDeclarativeNotificationSettingsRedesignEnabled("EffectiveNotifSettingsLayout");
-  const obj = isDeclarativeNotificationSettingsRedesignEnabled(15864);
+  isDeclarativeNotificationSettingsRedesignEnabled = isDeclarativeNotificationSettingsRedesignEnabled(15874).useIsDeclarativeNotificationSettingsRedesignEnabled("EffectiveNotifSettingsLayout");
+  const obj = isDeclarativeNotificationSettingsRedesignEnabled(15874);
   items = [NotifSettingsProtoStore, AuthenticationStore, UserSettingsProtoStore];
   const stateFromStores = isDeclarativeNotificationSettingsRedesignEnabled(504).useStateFromStores(items, () => NotifSettingsProtoStore.hasValidEffectiveSettings);
   const obj2 = isDeclarativeNotificationSettingsRedesignEnabled(504);
@@ -55,12 +55,12 @@ export default function EffectiveNotifSettingsLayout(node) {
       const intl2 = tmp2(1113).intl;
       obj6.text = intl2.string(tmp2(1113).t["5911Lb"]);
       obj6.disabled = stateFromStores1;
-      obj6.onPress = tmp2(18288).retryEffectiveNotifSettings;
+      obj6.onPress = tmp2(18301).retryEffectiveNotifSettings;
       items3[1] = closure_7(tmp2(5758).Button, obj6);
       let tmp9Result = null;
       if (null != unavailableNode) {
         const obj7 = { node: unavailableNode };
-        tmp9Result = closure_7(tmp12(16894), obj7);
+        tmp9Result = closure_7(tmp12(16905), obj7);
       }
       items3[2] = tmp9Result;
       obj4.children = items3;

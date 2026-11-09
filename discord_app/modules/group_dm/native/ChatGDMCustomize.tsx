@@ -138,7 +138,7 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

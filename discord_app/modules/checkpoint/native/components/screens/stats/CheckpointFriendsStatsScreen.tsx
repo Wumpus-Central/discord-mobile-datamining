@@ -1,6 +1,6 @@
-// === Module 13911: CheckpointFriendsStatsScreen ===
+// === Module 13912: CheckpointFriendsStatsScreen ===
 
-// Module 13911 (CheckpointFriendsStatsScreen)
+// Module 13912 (CheckpointFriendsStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -11,16 +11,16 @@ import ChatIcon from "ChatIcon" /* 8714 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 10677 */;
 import MicrophoneIcon from "MicrophoneIcon" /* 12138 */;
 import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12238 */;
-import Tracking from "Tracking" /* 13665 */;
-import CheckpointTextDefault from "CheckpointText" /* 13877 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13880 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13896 */;
+import Tracking from "Tracking" /* 13666 */;
+import CheckpointTextDefault from "CheckpointText" /* 13878 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13881 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13897 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 import UserStore from "UserStore" /* 1385 */;
-import CheckpointStore from "CheckpointStore" /* 13667 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 const require = globalThis.__r;
 
@@ -87,7 +87,7 @@ function SidekickMessageInput(user) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -282,7 +282,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp9(1113).intl;
     obj12.accessibilityLabel = intl2.string(tmp9(1113).t.Ve9Ge6);
     const obj13 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj12.children = closure_13(tmp9(13596).GiftIcon, obj13);
+    obj12.children = closure_13(tmp9(13597).GiftIcon, obj13);
     const items7 = [closure_13(sharedValue, obj12), ];
     const obj14 = {
       onPress: function handleSend() {

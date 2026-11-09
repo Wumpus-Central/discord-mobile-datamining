@@ -1,6 +1,6 @@
-// === Module 19584: VoicePanelChannelOptInNotice ===
+// === Module 19597: VoicePanelChannelOptInNotice ===
 
-// Module 19584 (VoicePanelChannelOptInNotice)
+// Module 19597 (VoicePanelChannelOptInNotice)
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7345 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   const intl2 = channel(1113).intl;
   obj2.subLabel = intl2.string(channel(1113).t.PDUCIN);
   const tmp2 = analyticsSection(7023);
-  obj2.icon = jsx(channel(7046).TableRowIcon, { IconComponent: channel(15965).ChannelListMagnifyingGlassIcon });
+  obj2.icon = jsx(channel(7046).TableRowIcon, { IconComponent: channel(15975).ChannelListMagnifyingGlassIcon });
   obj2.onPress = callback;
   obj.children = jsx(channel(7038).TableRow, { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true });
   return <tmp2 style={channel.style}>{null}</tmp2>;

@@ -1,6 +1,6 @@
-// === Module 18298: VEVOO ===
+// === Module 18311: VEVOO ===
 
-// Module 18298 (VEVOO)
+// Module 18311 (VEVOO)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5761 */;
@@ -8,9 +8,9 @@ import springPresets from "springPresets" /* 5762 */;
 import XSmallIcon from "XSmallIcon" /* 7120 */;
 import Form from "Form" /* 8246 */;
 import ActionButtonDefault from "ActionButton" /* 10886 */;
-import VEVOOPropBlurAmountDefault from "VEVOOPropBlurAmount" /* 18299 */;
-import VEVOOPropTintColorDefault from "VEVOOPropTintColor" /* 18301 */;
-import VEVOOPropBlurEffectNameDefault from "VEVOOPropBlurEffectName" /* 18302 */;
+import VEVOOPropBlurAmountDefault from "VEVOOPropBlurAmount" /* 18312 */;
+import VEVOOPropTintColorDefault from "VEVOOPropTintColor" /* 18314 */;
+import VEVOOPropBlurEffectNameDefault from "VEVOOPropBlurEffectName" /* 18315 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5754 */;
 

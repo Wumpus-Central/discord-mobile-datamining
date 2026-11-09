@@ -1,6 +1,6 @@
-// === Module 13460: prefetchGameOrganizationAccountLinkState ===
+// === Module 13461: prefetchGameOrganizationAccountLinkState ===
 
-// Module 13460 (prefetchGameOrganizationAccountLinkState)
+// Module 13461 (prefetchGameOrganizationAccountLinkState)
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
@@ -19,7 +19,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;

@@ -1,6 +1,6 @@
-// === Module 13608: handleForwardBreadcrumb ===
+// === Module 13609: handleForwardBreadcrumb ===
 
-// Module 13608 (handleForwardBreadcrumb)
+// Module 13609 (handleForwardBreadcrumb)
 import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7593 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -23,7 +23,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
               }
             }
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp7) {
           c4 = 0;

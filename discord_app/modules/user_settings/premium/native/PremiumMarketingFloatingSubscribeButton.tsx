@@ -1,6 +1,6 @@
-// === Module 15661: PremiumMarketingFloatingSubscribeButton ===
+// === Module 15671: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 15661 (PremiumMarketingFloatingSubscribeButton)
+// Module 15671 (PremiumMarketingFloatingSubscribeButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -8,7 +8,7 @@ import _modDef1652 from "module_1652" /* 1652 */;
 import LinearGradientDefault from "LinearGradient" /* 5715 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
 import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10409 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 15659 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 15669 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 

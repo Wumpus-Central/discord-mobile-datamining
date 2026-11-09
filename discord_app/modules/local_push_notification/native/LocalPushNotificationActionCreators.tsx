@@ -1,6 +1,6 @@
-// === Module 20517: LocalPushNotificationActionCreators ===
+// === Module 20530: LocalPushNotificationActionCreators ===
 
-// Module 20517 (LocalPushNotificationActionCreators)
+// Module 20530 (LocalPushNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;

@@ -1,6 +1,6 @@
-// === Module 18504: VoiceUser ===
+// === Module 18517: VoiceUser ===
 
-// Module 18504 (VoiceUser)
+// Module 18517 (VoiceUser)
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;

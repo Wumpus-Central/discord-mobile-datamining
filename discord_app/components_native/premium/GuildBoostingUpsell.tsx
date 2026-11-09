@@ -1,6 +1,6 @@
-// === Module 15688: GuildBoostingUpsell ===
+// === Module 15698: GuildBoostingUpsell ===
 
-// Module 15688 (GuildBoostingUpsell)
+// Module 15698 (GuildBoostingUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -15,24 +15,24 @@ import BoostGemIcon from "BoostGemIcon" /* 10042 */;
 import PremiumFeatureListDefault from "PremiumFeatureList" /* 10058 */;
 import StarIcon from "StarIcon" /* 10184 */;
 import StickerIcon from "StickerIcon" /* 11174 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 14346 */;
-import _modDef15523 from "module_15523" /* 15523 */;
-import _modDef15532 from "module_15532" /* 15532 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 14347 */;
 import _modDef15533 from "module_15533" /* 15533 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 15558 */;
-import _modDef15667 from "module_15667" /* 15667 */;
-import _modDef15689 from "module_15689" /* 15689 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 15690 */;
-import _modDef15692 from "module_15692" /* 15692 */;
-import _modDef15693 from "module_15693" /* 15693 */;
-import _modDef15694 from "module_15694" /* 15694 */;
-import _modDef15695 from "module_15695" /* 15695 */;
-import _modDef15696 from "module_15696" /* 15696 */;
-import _modDef15697 from "module_15697" /* 15697 */;
-import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 15698 */;
-import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 15702 */;
-import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 15703 */;
-import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 15704 */;
+import _modDef15542 from "module_15542" /* 15542 */;
+import _modDef15543 from "module_15543" /* 15543 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 15568 */;
+import _modDef15677 from "module_15677" /* 15677 */;
+import _modDef15699 from "module_15699" /* 15699 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 15700 */;
+import _modDef15702 from "module_15702" /* 15702 */;
+import _modDef15703 from "module_15703" /* 15703 */;
+import _modDef15704 from "module_15704" /* 15704 */;
+import _modDef15705 from "module_15705" /* 15705 */;
+import _modDef15706 from "module_15706" /* 15706 */;
+import _modDef15707 from "module_15707" /* 15707 */;
+import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 15708 */;
+import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 15712 */;
+import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 15713 */;
+import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 15714 */;
 import noop from "module_19" /* 19 */;
 import SortedGuildStore from "SortedGuildStore" /* 6827 */;
 
@@ -94,15 +94,15 @@ export default function GuildBoostingUpsell(arg0) {
   const obj5 = { style: tmp.header, children: null };
   const obj6 = { style: tmp.imgPremiumGuild, source: null };
   const tmp8 = useThemeDefault();
-  obj6.source = _modDef15523;
+  obj6.source = _modDef15533;
   const items1 = [timestampProducer(FastImageDefault, obj6), , , ];
   const obj7 = { style: tmp.logoPremiumGuild, source: null };
   const tmp7Result = FastImageDefault;
   const tmp7Result5 = FastImageDefault;
   if (tmp2Result.isThemeDark(tmp8)) {
-    let tmp7Result6 = _modDef15532;
+    let tmp7Result6 = _modDef15542;
   } else {
-    tmp7Result6 = _modDef15533;
+    tmp7Result6 = _modDef15543;
   }
   obj7.source = tmp7Result6;
   items1[1] = timestampProducer(tmp7Result5, obj7);
@@ -131,30 +131,30 @@ export default function GuildBoostingUpsell(arg0) {
   const obj13 = { style: tmp.features, features: null };
   const obj14 = { icon: null, label: null, IconComponent: null, color: null };
   const tmp7Result7 = PremiumFeatureListDefault;
-  obj14.icon = _modDef15693;
+  obj14.icon = _modDef15703;
   const intl5 = util.intl;
   obj14.label = intl5.string(util.t.Ts7BVI);
   obj14.IconComponent = ReactionIcon.ReactionIcon;
   obj14.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
   const items3 = [obj14, , , , ];
-  const obj15 = { icon: _modDef15694, label: null, IconComponent: null, color: null };
+  const obj15 = { icon: _modDef15704, label: null, IconComponent: null, color: null };
   const intl6 = util.intl;
   obj15.label = intl6.string(util.t.QcJbt6);
   obj15.IconComponent = StickerIcon.StickerIcon;
   obj15.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
   items3[1] = obj15;
-  const obj16 = { icon: _modDef15695, label: null, color: "#4173da", IconComponent: null };
+  const obj16 = { icon: _modDef15705, label: null, color: "#4173da", IconComponent: null };
   const intl7 = util.intl;
   obj16.label = intl7.string(util.t.rFNkf5);
   obj16.IconComponent = HeadphonesIcon.HeadphonesIcon;
   items3[2] = obj16;
-  const obj17 = { icon: _modDef15696, label: null, IconComponent: null, color: null };
+  const obj17 = { icon: _modDef15706, label: null, IconComponent: null, color: null };
   const intl8 = util.intl;
   obj17.label = intl8.string(util.t["BpjjS/"]);
   obj17.IconComponent = UploadIcon.UploadIcon;
   obj17.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
   items3[3] = obj17;
-  const obj18 = { icon: _modDef15697, label: null, IconComponent: null, color: null };
+  const obj18 = { icon: _modDef15707, label: null, IconComponent: null, color: null };
   const intl9 = util.intl;
   obj18.label = intl9.string(util.t["9g5Lgb"]);
   obj18.IconComponent = StarIcon.StarIcon;

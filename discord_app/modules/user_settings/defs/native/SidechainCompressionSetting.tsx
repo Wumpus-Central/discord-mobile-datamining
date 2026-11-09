@@ -1,6 +1,6 @@
-// === Module 17559: SidechainCompressionSetting ===
+// === Module 17570: SidechainCompressionSetting ===
 
-// Module 17559 (SidechainCompressionSetting)
+// Module 17570 (SidechainCompressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 6047 */;

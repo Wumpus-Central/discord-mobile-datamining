@@ -1,6 +1,6 @@
-// === Module 18827: NotificationCenterStoreActions ===
+// === Module 18840: NotificationCenterStoreActions ===
 
-// Module 18827 (NotificationCenterStoreActions)
+// Module 18840 (NotificationCenterStoreActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

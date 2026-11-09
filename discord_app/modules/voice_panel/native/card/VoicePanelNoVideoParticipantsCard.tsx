@@ -1,6 +1,6 @@
-// === Module 19632: VoicePanelNoVideoParticipantsCard ===
+// === Module 19645: VoicePanelNoVideoParticipantsCard ===
 
-// Module 19632 (VoicePanelNoVideoParticipantsCard)
+// Module 19645 (VoicePanelNoVideoParticipantsCard)
 import nativeDefault from "native" /* 575 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5888 */;
 import NativeViewDefault from "NativeView" /* 7023 */;

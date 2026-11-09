@@ -1,9 +1,9 @@
-// === Module 18812: ConnectionFineIcon ===
+// === Module 18825: ConnectionFineIcon ===
 
-// Module 18812 (ConnectionFineIcon)
+// Module 18825 (ConnectionFineIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod18813 from "module_18813" /* 18813 */;
+import _mod18826 from "module_18826" /* 18826 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ConnectionFineIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18813, color: ICON_FEEDBACK_POSITIVE, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18826, color: ICON_FEEDBACK_POSITIVE, style: color.style });
 }

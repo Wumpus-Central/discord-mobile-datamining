@@ -1,6 +1,6 @@
-// === Module 18126: UserSettingsDesignSystemBadge ===
+// === Module 18139: UserSettingsDesignSystemBadge ===
 
-// Module 18126 (UserSettingsDesignSystemBadge)
+// Module 18139 (UserSettingsDesignSystemBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5751 */;

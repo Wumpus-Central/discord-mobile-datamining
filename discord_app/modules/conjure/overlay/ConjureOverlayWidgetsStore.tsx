@@ -1,10 +1,10 @@
-// === Module 15868: ConjureOverlayWidgetsStore ===
+// === Module 15878: ConjureOverlayWidgetsStore ===
 
-// Module 15868 (ConjureOverlayWidgetsStore)
+// Module 15878 (ConjureOverlayWidgetsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureOverlayApps from "conjureOverlayApps" /* 15875 */;
-import LayoutStore from "LayoutStore" /* 15869 */;
+import conjureOverlayApps from "conjureOverlayApps" /* 15885 */;
+import LayoutStore from "LayoutStore" /* 15879 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
 
 require = fn;
@@ -58,7 +58,7 @@ function markServerListStale(guildId) {
   }
 }
 const OverlayWidgets = fn(1072).OverlayWidgets;
-const OVERLAY_V3_LAYOUT_ID = fn(15872).OVERLAY_V3_LAYOUT_ID;
+const OVERLAY_V3_LAYOUT_ID = fn(15882).OVERLAY_V3_LAYOUT_ID;
 let items = [];
 let closure_7 = items;
 let closure_8 = items;

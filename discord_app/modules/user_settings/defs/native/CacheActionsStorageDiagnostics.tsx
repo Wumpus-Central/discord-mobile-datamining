@@ -1,6 +1,6 @@
-// === Module 17886: CacheActionsStorageDiagnostics ===
+// === Module 17897: CacheActionsStorageDiagnostics ===
 
-// Module 17886 (CacheActionsStorageDiagnostics)
+// Module 17897 (CacheActionsStorageDiagnostics)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5859 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -31,7 +31,7 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

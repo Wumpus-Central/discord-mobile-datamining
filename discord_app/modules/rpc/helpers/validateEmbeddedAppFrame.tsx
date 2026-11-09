@@ -1,6 +1,6 @@
-// === Module 16599: validateEmbeddedAppFrame ===
+// === Module 16609: validateEmbeddedAppFrame ===
 
-// Module 16599 (validateEmbeddedAppFrame)
+// Module 16609 (validateEmbeddedAppFrame)
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2148 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5799 */;
 import getSocketFrameDefault from "getSocketFrame" /* 9407 */;

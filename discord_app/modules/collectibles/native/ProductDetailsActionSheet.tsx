@@ -470,7 +470,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     tmp10 = closure_14;
   } else {
     tmp10 = closure_14;
-    tmp11 = closure_14(tmp5(15332), {});
+    tmp11 = closure_14(tmp5(15342), {});
   }
   ref = ref1.useRef(null);
 }

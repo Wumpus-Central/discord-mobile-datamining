@@ -1,6 +1,6 @@
-// === Module 20197: GuildSettingsRoleEditConnectionsControls ===
+// === Module 20210: GuildSettingsRoleEditConnectionsControls ===
 
-// Module 20197 (GuildSettingsRoleEditConnectionsControls)
+// Module 20210 (GuildSettingsRoleEditConnectionsControls)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -16,11 +16,11 @@ import TableRadioRow from "TableRadioRow" /* 7127 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7152 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 7409 */;
 import CirclePlusIcon from "CirclePlusIcon" /* 11634 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20184 */;
-import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 20198 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20197 */;
+import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 20211 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7361 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20170 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20183 */;
 
 require = fn;
 function HeaderSection(arg0) {
@@ -215,7 +215,7 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(20200, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(20213, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
@@ -361,7 +361,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
       items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "enumerable", value: true };
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "ip", value: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007461955265119027 };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {

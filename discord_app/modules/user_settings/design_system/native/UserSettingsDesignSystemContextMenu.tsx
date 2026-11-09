@@ -1,6 +1,6 @@
-// === Module 18103: UserSettingsDesignSystemContextMenu ===
+// === Module 18116: UserSettingsDesignSystemContextMenu ===
 
-// Module 18103 (UserSettingsDesignSystemContextMenu)
+// Module 18116 (UserSettingsDesignSystemContextMenu)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5751 */;
@@ -11,9 +11,9 @@ import _modDef7325 from "module_7325" /* 7325 */;
 import _modDef8495 from "module_8495" /* 8495 */;
 import _modDef11750 from "module_11750" /* 11750 */;
 import _modDef11755 from "module_11755" /* 11755 */;
-import _modDef14621 from "module_14621" /* 14621 */;
-import _modDef18104 from "module_18104" /* 18104 */;
-import _modDef18105 from "module_18105" /* 18105 */;
+import _modDef14622 from "module_14622" /* 14622 */;
+import _modDef18117 from "module_18117" /* 18117 */;
+import _modDef18118 from "module_18118" /* 18118 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ function DemoContextMenu(align) {
         const obj2 = text(num[13]);
         const obj3 = { length };
         return Array.from({ length }).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "<string:989856263>", action: "<string:100664152>" };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 73917290777974550000000000000000000000000000000000000000000000000000000000000000000000000, action: 115262918846624450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -68,7 +68,7 @@ function DemoContextMenu(align) {
       const _Array2 = Array;
       const obj4 = { length: num };
       mapped = Array.from(obj4).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "<string:989856263>", action: "<string:100664152>" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 73917290777974550000000000000000000000000000000000000000000000000000000000000000000000000, action: 115262918846624450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -103,7 +103,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let items = [_modDef14621, _modDef7325, _modDef8495, _modDef11755, _modDef5865, _modDef18104, _modDef18105, _modDef11750];
+let items = [_modDef14622, _modDef7325, _modDef8495, _modDef11755, _modDef5865, _modDef18117, _modDef18118, _modDef11750];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
 const createStyles = fn(5140);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };

@@ -1,6 +1,6 @@
-// === Module 15057: ShopThisLookActionSheet ===
+// === Module 15058: ShopThisLookActionSheet ===
 
-// Module 15057 (ShopThisLookActionSheet)
+// Module 15058 (ShopThisLookActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
@@ -8,8 +8,8 @@ import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7795 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7807 */;
-import ShopThisLookUtils from "ShopThisLookUtils" /* 15058 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15060 */;
+import ShopThisLookUtils from "ShopThisLookUtils" /* 15059 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15061 */;
 import noop from "module_19" /* 19 */;
 import StorefrontProductStore from "StorefrontProductStore" /* 8862 */;
 
@@ -106,7 +106,7 @@ function ShopThisLookCard(skuId) {
       if (memo) {
         const obj4 = { style: wishlistButton.cardWrapper, children: null };
         const obj5 = { sku: stateFromStores, size, onPress: callback1 };
-        const items7 = [closure_9(onPress(14687), obj5), ];
+        const items7 = [closure_9(onPress(14688), obj5), ];
         let tmp17Result = null != memo1;
         if (tmp17Result) {
           callback1 = { selectedProduct: memo1, style: null };
@@ -119,8 +119,8 @@ function ShopThisLookCard(skuId) {
         let tmp15Result = closure_10(memo, obj4);
       } else {
         const obj6 = { sku: stateFromStores, size, overlay: tmp(9551).WishlistItemCardOverlay.LOCKED, onPress: tmp10 };
-        tmp15Result = closure_9(onPress(14687), obj6);
-        const tmp13 = onPress(14687);
+        tmp15Result = closure_9(onPress(14688), obj6);
+        const tmp13 = onPress(14688);
       }
     }
   }
@@ -155,8 +155,8 @@ export default function ShopThisLookActionSheet(arg0) {
   const equippedCollectibleSkuIds = require("useMaybeFetchEquippedCollectibleProducts").useEquippedCollectibleSkuIds(userId, guildId);
   let obj = require("useMaybeFetchEquippedCollectibleProducts");
   let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(15061)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
-  const tmp2 = analyticsLocations(15061)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(15062)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+  const tmp2 = analyticsLocations(15062)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
   analyticsLocations = analyticsLocations(7387)(analyticsLocations(7412).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   items = [analyticsLocations];
   dependencyMap = noop.useCallback((initialProductSkuId) => {

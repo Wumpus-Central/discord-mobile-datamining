@@ -1,6 +1,6 @@
-// === Module 16683: discordEnvironmentEvents ===
+// === Module 16694: discordEnvironmentEvents ===
 
-// Module 16683 (discordEnvironmentEvents)
+// Module 16694 (discordEnvironmentEvents)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 

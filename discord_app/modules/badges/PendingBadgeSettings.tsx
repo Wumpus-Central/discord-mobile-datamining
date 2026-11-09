@@ -1,6 +1,6 @@
-// === Module 15243: PendingBadgeSettings ===
+// === Module 15253: PendingBadgeSettings ===
 
-// Module 15243 (PendingBadgeSettings)
+// Module 15253 (PendingBadgeSettings)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BadgeIdResolution from "BadgeIdResolution" /* 8835 */;
 import BadgeUtils from "BadgeUtils" /* 11602 */;
@@ -217,7 +217,7 @@ export function setPendingBadgeVisibility(badgeId) {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp20 });
 }
 export function resetPendingBadgeSettings() {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "channel", pendingBadgeHiddenBadges: "k" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "channel", pendingBadgeHiddenBadges: "channel_id" });
 }
 export function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {
   return undefined !== pendingBadgeDisplayOrder.pendingBadgeDisplayOrder || undefined !== pendingBadgeDisplayOrder.pendingBadgeHiddenBadges;

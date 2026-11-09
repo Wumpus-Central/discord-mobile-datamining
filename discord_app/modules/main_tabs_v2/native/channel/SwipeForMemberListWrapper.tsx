@@ -1,6 +1,6 @@
-// === Module 19026: SwipeForMemberListWrapper ===
+// === Module 19039: SwipeForMemberListWrapper ===
 
-// Module 19026 (SwipeForMemberListWrapper)
+// Module 19039 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
@@ -14,9 +14,9 @@ import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6154 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10855 */;
 import useChatWidthDefault from "useChatWidth" /* 11700 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18380 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 18391 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 19028 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18393 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 18404 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 19041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -469,9 +469,9 @@ export default function _default(channelId) {
   const tmp12Result15 = require("module_1652");
   let tmp63 = null;
   if (tmp12Result16.isJankScreenReportingEnabled()) {
-    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(18386).getBaseScreenName, resolveClosedName: tmp12(18386).getBaseScreenName, onCoveringChange: callback2 };
-    tmp63 = navigation(tmp2(18389), obj4);
-    const tmp2Result = tmp2(18389);
+    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(18399).getBaseScreenName, resolveClosedName: tmp12(18399).getBaseScreenName, onCoveringChange: callback2 };
+    tmp63 = navigation(tmp2(18402), obj4);
+    const tmp2Result = tmp2(18402);
   }
   const items30 = [tmp63, ];
   let obj5 = { gesture: memo2, children: null };

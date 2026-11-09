@@ -1,6 +1,6 @@
-// === Module 18168: useTrackProductCardImpression ===
+// === Module 18181: useTrackProductCardImpression ===
 
-// Module 18168 (useTrackProductCardImpression)
+// Module 18181 (useTrackProductCardImpression)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7808 */;
 import noop from "module_19" /* 19 */;

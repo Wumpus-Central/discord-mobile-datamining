@@ -1,6 +1,6 @@
-// === Module 17835: UserSettingsHighlightNotifications ===
+// === Module 17846: UserSettingsHighlightNotifications ===
 
-// Module 17835 (UserSettingsHighlightNotifications)
+// Module 17846 (UserSettingsHighlightNotifications)
 import GuildIconDefault from "GuildIcon" /* 7020 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7346 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7351 */;

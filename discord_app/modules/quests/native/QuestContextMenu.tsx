@@ -1,6 +1,6 @@
-// === Module 17440: QuestContextMenu ===
+// === Module 17451: QuestContextMenu ===
 
-// Module 17440 (QuestContextMenu)
+// Module 17451 (QuestContextMenu)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
@@ -19,8 +19,8 @@ import captureAdUserAction from "captureAdUserAction" /* 9775 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9778 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9795 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 9809 */;
-import _modDef17372 from "module_17372" /* 17372 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17398 */;
+import _modDef17383 from "module_17383" /* 17383 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17409 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7922 */;
@@ -133,7 +133,7 @@ export default noop.memo(function QuestContextMenu(children) {
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef17372;
+    obj2.iconSource = _modDef17383;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

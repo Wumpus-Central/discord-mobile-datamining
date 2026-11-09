@@ -1,8 +1,8 @@
-// === Module 16078: GuildBadgePottedPlant ===
+// === Module 16088: GuildBadgePottedPlant ===
 
-// Module 16078 (GuildBadgePottedPlant)
+// Module 16088 (GuildBadgePottedPlant)
 import inlineStyles from "inlineStyles" /* 8101 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 16044 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 16054 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

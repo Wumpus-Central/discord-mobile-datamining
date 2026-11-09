@@ -1,6 +1,6 @@
-// === Module 18132: DesignSystemHapticsSetting ===
+// === Module 18145: DesignSystemHapticsSetting ===
 
-// Module 18132 (DesignSystemHapticsSetting)
+// Module 18145 (DesignSystemHapticsSetting)
 import Constants from "Constants" /* 1072 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;

@@ -1,6 +1,6 @@
-// === Module 18569: GameClaimCoachmark ===
+// === Module 18582: GameClaimCoachmark ===
 
-// Module 18569 (GameClaimCoachmark)
+// Module 18582 (GameClaimCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5751 */;
@@ -11,9 +11,9 @@ import Card from "Card" /* 7040 */;
 import Pressables from "Pressables" /* 7043 */;
 import XSmallIcon from "XSmallIcon" /* 7120 */;
 import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8231 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15179 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 18570 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 18571 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15194 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 18583 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 18584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -105,7 +105,7 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -134,7 +134,7 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           v3 = tmp;

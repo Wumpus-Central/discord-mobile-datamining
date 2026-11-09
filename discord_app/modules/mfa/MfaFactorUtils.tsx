@@ -1,10 +1,10 @@
-// === Module 16977: MfaFactorUtils ===
+// === Module 16988: MfaFactorUtils ===
 
-// Module 16977 (MfaFactorUtils)
+// Module 16988 (MfaFactorUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6803 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import WebAuthnStore from "WebAuthnStore" /* 16887 */;
+import WebAuthnStore from "WebAuthnStore" /* 16898 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_6 = async function _isLastRemainingMfaFactor(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

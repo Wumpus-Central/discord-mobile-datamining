@@ -1,6 +1,6 @@
-// === Module 16745: ProfileCustomizationSettingScreen ===
+// === Module 16756: ProfileCustomizationSettingScreen ===
 
-// Module 16745 (ProfileCustomizationSettingScreen)
+// Module 16756 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
@@ -8,8 +8,8 @@ import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators
 import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11548 */;
 import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11665 */;
 import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12552 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16746 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16868 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16757 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -237,7 +237,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -269,7 +269,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
                 closure_128_3(true);
               }
               c2 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp9) {
             c2 = tmp;

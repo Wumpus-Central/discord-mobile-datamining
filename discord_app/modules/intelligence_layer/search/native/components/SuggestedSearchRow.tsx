@@ -1,17 +1,17 @@
-// === Module 19046: SuggestedSearchRow ===
+// === Module 19059: SuggestedSearchRow ===
 
-// Module 19046 (SuggestedSearchRow)
+// Module 19059 (SuggestedSearchRow)
 import nativeDefault from "native" /* 575 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14119 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14141 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14143 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14144 */;
-import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 14160 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14120 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14142 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14144 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14145 */;
+import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 14161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SmartSearchConstants = fn(14121);
+const SmartSearchConstants = fn(14122);
 ({ SUGGESTED_SEARCHES_WINDOW_SIZE: hasOwnProperty, SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT } = SmartSearchConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5140);

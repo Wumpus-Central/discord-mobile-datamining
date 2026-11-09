@@ -1,20 +1,20 @@
-// === Module 13960: TypingIndicator ===
+// === Module 13961: TypingIndicator ===
 
-// Module 13960 (TypingIndicator)
+// Module 13961 (TypingIndicator)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import native from "native" /* 5199 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6173 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
-import useTypingTextDefault from "useTypingText" /* 13964 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13965 */;
-import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 13966 */;
-import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 13967 */;
+import useTypingTextDefault from "useTypingText" /* 13965 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13966 */;
+import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 13967 */;
+import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 13968 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5754 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6852 */;
-import TypingStore from "TypingStore" /* 13961 */;
+import TypingStore from "TypingStore" /* 13962 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -226,8 +226,8 @@ function TypingIndicatorInner(channel) {
       tmp39 = callback;
     }
     obj7.onPress = tmp39;
-    let tmp33Result = closure_12(tmp5(13977), obj7);
-    const tmp5Result2 = tmp5(13977);
+    let tmp33Result = closure_12(tmp5(13978), obj7);
+    const tmp5Result2 = tmp5(13978);
   } else {
     let tmp32Result3 = null;
     if (null != tmp6Result) {
@@ -245,7 +245,7 @@ function TypingIndicatorInner(channel) {
   let tmp32Result4 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj10 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
-    tmp32Result4 = closure_12(tmp5(13981), obj10);
+    tmp32Result4 = closure_12(tmp5(13982), obj10);
   }
   items15[1] = tmp32Result4;
   obj5.children = items15;

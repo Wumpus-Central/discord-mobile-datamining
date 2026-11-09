@@ -1,6 +1,6 @@
-// === Module 14832: ScheduledMessageEditContentModal ===
+// === Module 14833: ScheduledMessageEditContentModal ===
 
-// Module 14832 (ScheduledMessageEditContentModal)
+// Module 14833 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5751 */;
@@ -56,7 +56,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -90,7 +90,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             const arr = v1(6799);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

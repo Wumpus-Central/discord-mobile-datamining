@@ -1,6 +1,6 @@
-// === Module 19776: AgeGateManager ===
+// === Module 19789: AgeGateManager ===
 
-// Module 19776 (AgeGateManager)
+// Module 19789 (AgeGateManager)
 import AgeGateUtils from "AgeGateUtils" /* 6789 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -57,7 +57,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId)
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

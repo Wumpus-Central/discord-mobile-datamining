@@ -1,6 +1,6 @@
-// === Module 15895: GlobalDiscoveryServersSearchCountsStore ===
+// === Module 15905: GlobalDiscoveryServersSearchCountsStore ===
 
-// Module 15895 (GlobalDiscoveryServersSearchCountsStore)
+// Module 15905 (GlobalDiscoveryServersSearchCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6579 */;

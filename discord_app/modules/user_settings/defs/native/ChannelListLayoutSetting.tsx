@@ -1,6 +1,6 @@
-// === Module 17846: ChannelListLayoutSetting ===
+// === Module 17857: ChannelListLayoutSetting ===
 
-// Module 17846 (ChannelListLayoutSetting)
+// Module 17857 (ChannelListLayoutSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5816 */;

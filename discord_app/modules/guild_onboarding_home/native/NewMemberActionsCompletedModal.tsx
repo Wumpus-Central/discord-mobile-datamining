@@ -1,6 +1,6 @@
-// === Module 19865: NewMemberActionsCompletedModal ===
+// === Module 19878: NewMemberActionsCompletedModal ===
 
-// Module 19865 (NewMemberActionsCompletedModal)
+// Module 19878 (NewMemberActionsCompletedModal)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;

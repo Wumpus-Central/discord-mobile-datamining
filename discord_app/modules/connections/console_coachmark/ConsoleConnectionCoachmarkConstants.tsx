@@ -1,6 +1,6 @@
-// === Module 19214: ConsoleConnectionCoachmarkConstants ===
+// === Module 19227: ConsoleConnectionCoachmarkConstants ===
 
-// Module 19214 (ConsoleConnectionCoachmarkConstants)
+// Module 19227 (ConsoleConnectionCoachmarkConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/connections/console_coachmark/ConsoleConnectionCoachmarkConstants.tsx");

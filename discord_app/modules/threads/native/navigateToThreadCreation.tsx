@@ -1,6 +1,6 @@
-// === Module 14250: navigateToThreadCreation ===
+// === Module 14251: navigateToThreadCreation ===
 
-// Module 14250 (navigateToThreadCreation)
+// Module 14251 (navigateToThreadCreation)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5314 */;
 import transitionToChannel from "transitionToChannel" /* 5885 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8271 */;

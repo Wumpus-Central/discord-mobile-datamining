@@ -1,6 +1,6 @@
-// === Module 14634: VoiceChannelAppActionCreators ===
+// === Module 14635: VoiceChannelAppActionCreators ===
 
-// Module 14634 (VoiceChannelAppActionCreators)
+// Module 14635 (VoiceChannelAppActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import leaveFrame from "leaveFrame" /* 11015 */;
 import voiceChannelAppSession from "voiceChannelAppSession" /* 13412 */;

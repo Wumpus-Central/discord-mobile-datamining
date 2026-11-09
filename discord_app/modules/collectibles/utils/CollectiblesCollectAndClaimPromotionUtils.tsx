@@ -1,6 +1,6 @@
-// === Module 15291: CollectiblesCollectAndClaimPromotionUtils ===
+// === Module 15301: CollectiblesCollectAndClaimPromotionUtils ===
 
-// Module 15291 (CollectiblesCollectAndClaimPromotionUtils)
+// Module 15301 (CollectiblesCollectAndClaimPromotionUtils)
 import CollectiblesUtils from "CollectiblesUtils" /* 7808 */;
 import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9668 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7796 */;

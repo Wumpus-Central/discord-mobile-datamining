@@ -1,6 +1,6 @@
-// === Module 14036: AppLauncherButtonIcon ===
+// === Module 14037: AppLauncherButtonIcon ===
 
-// Module 14036 (AppLauncherButtonIcon)
+// Module 14037 (AppLauncherButtonIcon)
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import AppsIcon from "AppsIcon" /* 8749 */;
 import PlusLargeIcon from "PlusLargeIcon" /* 10947 */;

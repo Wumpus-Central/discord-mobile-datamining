@@ -379,7 +379,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -454,7 +454,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               } else {
                                 revision = closure_128_0.revision;
                                 v0(closure_128_0);
@@ -474,7 +474,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -498,7 +498,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp70) {
                         if (tmp4 === v0) {
                           c5 = tmp2;
@@ -520,7 +520,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -595,7 +595,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               } else {
                                 revision = closure_128_0.revision;
                                 v0(closure_128_0);
@@ -615,7 +615,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -639,7 +639,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp70) {
                         if (tmp4 === v0) {
                           c5 = tmp2;
@@ -663,7 +663,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -738,7 +738,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               } else {
                                 revision = closure_128_0.revision;
                                 v0(closure_128_0);
@@ -758,7 +758,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                               if (ref.current.orderId !== closure_129_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -782,7 +782,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp70) {
                         if (tmp4 === v0) {
                           c5 = tmp2;
@@ -866,7 +866,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -985,7 +985,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

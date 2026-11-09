@@ -1,6 +1,6 @@
-// === Module 14278: ChatInputGuardReadonly ===
+// === Module 14279: ChatInputGuardReadonly ===
 
-// Module 14278 (ChatInputGuardReadonly)
+// Module 14279 (ChatInputGuardReadonly)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1099 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;

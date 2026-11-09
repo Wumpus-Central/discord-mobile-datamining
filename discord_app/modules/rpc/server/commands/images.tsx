@@ -1,6 +1,6 @@
-// === Module 16623: images ===
+// === Module 16633: images ===
 
-// Module 16623 (images)
+// Module 16633 (images)
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import ImageUtils from "ImageUtils" /* 1490 */;
 import RPCErrorDefault from "RPCError" /* 9414 */;

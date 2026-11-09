@@ -1,12 +1,12 @@
-// === Module 14158: SmartSearchActionCreators ===
+// === Module 14159: SmartSearchActionCreators ===
 
-// Module 14158 (SmartSearchActionCreators)
+// Module 14159 (SmartSearchActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 14123 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14143 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 14124 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14144 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RelationshipStore from "RelationshipStore" /* 5082 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 14120 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 14121 */;
 
 const require = fn;
 let closure_8 = async function _fetchAnswer(arg0) {
@@ -20,7 +20,7 @@ let closure_8 = async function _fetchAnswer(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -145,18 +145,18 @@ let closure_8 = async function _fetchAnswer(arg0) {
           })(closure_129_10.body.message_citations);
           closure_129_12 = (function resolveSearchStatus(search_status, length) {
             if ("not_qualified" === search_status) {
-              return closure_1_0(14124).SmartSearchStatus.NOT_QUALIFIED;
+              return closure_1_0(14125).SmartSearchStatus.NOT_QUALIFIED;
             } else if ("no_results" === search_status) {
-              return closure_1_0(14124).SmartSearchStatus.EMPTY;
+              return closure_1_0(14125).SmartSearchStatus.EMPTY;
             } else if ("success" === search_status) {
               if (length > 0) {
-                let EMPTY = closure_1_0(14124).SmartSearchStatus.LOADED;
+                let EMPTY = closure_1_0(14125).SmartSearchStatus.LOADED;
               } else {
-                EMPTY = closure_1_0(14124).SmartSearchStatus.EMPTY;
+                EMPTY = closure_1_0(14125).SmartSearchStatus.EMPTY;
               }
               return EMPTY;
             } else {
-              return closure_1_0(14124).SmartSearchStatus.ERROR;
+              return closure_1_0(14125).SmartSearchStatus.ERROR;
             }
           })(closure_129_10.body.search_status, closure_129_11.length);
           const obj15 = { type: "SMART_SEARCH_FETCH_SUCCESS", smartSearchQuery, smartSearchStatus: closure_129_12, answerText: closure_129_10.body.answer_text, citations: closure_129_11, messages: null };

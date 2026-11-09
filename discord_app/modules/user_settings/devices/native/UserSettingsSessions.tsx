@@ -1,12 +1,12 @@
-// === Module 17173: UserSettingsSessions ===
+// === Module 17184: UserSettingsSessions ===
 
-// Module 17173 (UserSettingsSessions)
+// Module 17184 (UserSettingsSessions)
 import nativeDefault from "native" /* 575 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7223 */;
 import _modDef12210 from "module_12210" /* 12210 */;
-import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 17174 */;
-import _modDef17175 from "module_17175" /* 17175 */;
-import _modDef17176 from "module_17176" /* 17176 */;
+import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 17185 */;
+import _modDef17186 from "module_17186" /* 17186 */;
+import _modDef17187 from "module_17187" /* 17187 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -16,9 +16,9 @@ const _modDef8429 = tmp10(8429);
 require = fn;
 function UserSettingsSessions() {
   const tmp = closure_13();
-  let authSessions = otherSessions(16991).useAuthSessions();
+  let authSessions = otherSessions(17002).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
-  const obj = otherSessions(16991);
+  const obj = otherSessions(17002);
   items = [UserStore];
   const stateFromStores = otherSessions(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = otherSessions(504);
@@ -128,11 +128,11 @@ function SessionInfo(session) {
         if ("ios" !== trimmed) {
           if ("android" !== trimmed) {
             if ("horizon os" === trimmed) {
-              const obj2 = { text: os, iconSource: _modDef12210, IconComponent: session(17177).VrHeadsetIcon };
+              const obj2 = { text: os, iconSource: _modDef12210, IconComponent: session(17188).VrHeadsetIcon };
               let tmp9 = session;
               let obj = obj2;
             } else {
-              obj = { text: os, iconSource: _modDef17176, IconComponent: session(9675).ScreenIcon };
+              obj = { text: os, iconSource: _modDef17187, IconComponent: session(9675).ScreenIcon };
               tmp9 = session;
             }
           }
@@ -144,8 +144,8 @@ function SessionInfo(session) {
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(16991).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(16991);
+        formatDateResult = tmp9(17002).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(17002);
       }
       items = [text, platform];
       const found = items.filter(tmp9(1380).isNotNullish);
@@ -209,7 +209,7 @@ function SessionInfo(session) {
   const obj19 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1113).intl;
   obj19.text = intl.string(session(1113).t.cDHCNY);
-  obj19.iconSource = _modDef17176;
+  obj19.iconSource = _modDef17187;
   obj19.IconComponent = session(9675).ScreenIcon;
   tmp9 = session;
   obj = obj19;
@@ -218,7 +218,7 @@ function UnknownLegacySessionsInfo() {
   _require = require("useNavigation").useNavigation();
   const obj2 = { icon: null, label: null, subLabel: null };
   const obj = require("useNavigation");
-  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef17175 });
+  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef17186 });
   const intl = require("util").intl;
   obj2.label = intl.string(require("util").t.iUa0sn);
   const intl2 = require("util").intl;

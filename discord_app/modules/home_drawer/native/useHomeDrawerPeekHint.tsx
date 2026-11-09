@@ -1,13 +1,13 @@
-// === Module 18406: useHomeDrawerPeekHint ===
+// === Module 18419: useHomeDrawerPeekHint ===
 
-// Module 18406 (useHomeDrawerPeekHint)
+// Module 18419 (useHomeDrawerPeekHint)
 import timing_timing from "timing/timing" /* 5370 */;
 import spring_spring from "spring/spring" /* 5761 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18404 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18417 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18398 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 18411 */;
 
 const require = globalThis.__r;
 
@@ -96,7 +96,7 @@ export function useHomeDrawerPeekHint(enablePeekHint, sharedValue8) {
       closure_11.current = setTimeout(() => {
         ref3.current = null;
         ref4.current = false;
-        const result = _undefined.set(c0(5761).withSpring(0, c0(18404).HOME_DRAWER_FLING_PHYSICS));
+        const result = _undefined.set(c0(5761).withSpring(0, c0(18417).HOME_DRAWER_FLING_PHYSICS));
         const current = ref.current;
         if (current != null) {
           current(first1.AUTO_DISMISS);

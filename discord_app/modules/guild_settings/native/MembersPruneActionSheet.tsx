@@ -1,10 +1,10 @@
-// === Module 18999: MembersPruneActionSheet ===
+// === Module 19012: MembersPruneActionSheet ===
 
-// Module 18999 (MembersPruneActionSheet)
+// Module 19012 (MembersPruneActionSheet)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7503 */;
-import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 19001 */;
+import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 19014 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5011 */;
@@ -97,7 +97,7 @@ function MembersPruneActionSheetContent(guild) {
   obj.children = items3;
   return closure_12(guild(days[9]).ActionSheet, obj);
 }
-const PrunePreviewStore = fn(19000);
+const PrunePreviewStore = fn(19013);
 ({ usePrunePreview: hasOwnProperty, setPrunePreview: closure_6, clearAllPrunePreviews: metroImportDefault } = PrunePreviewStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

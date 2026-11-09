@@ -1,12 +1,12 @@
-// === Module 13444: GameOrganizationJoinModal ===
+// === Module 13445: GameOrganizationJoinModal ===
 
-// Module 13444 (GameOrganizationJoinModal)
+// Module 13445 (GameOrganizationJoinModal)
 import NavigatorConstants from "NavigatorConstants" /* 5714 */;
 import NavigatorHeader from "NavigatorHeader" /* 7064 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const GameOrganizationJoinModalConstants = fn(13445);
+const GameOrganizationJoinModalConstants = fn(13446);
 const GameOrganizationJoinScenes = GameOrganizationJoinModalConstants.GameOrganizationJoinScenes;
 let closure_4 = GameOrganizationJoinModalConstants.closeGameOrganizationJoinModal;
 const jsx = fn(21).jsx;
@@ -31,7 +31,7 @@ export default function GameOrganizationJoinModal(code) {
     const obj2 = { height: NavigatorConstants.NAV_BAR_HEIGHT + top };
     obj4.headerLeft = NavigatorHeader.getHeaderCloseButton(closure_4);
     obj4.render = function render() {
-      return jsx(code(13446).ViewStep, { code });
+      return jsx(code(13447).ViewStep, { code });
     };
     obj3[GameOrganizationJoinScenes.VIEW] = obj4;
     const obj6 = {};
@@ -48,7 +48,7 @@ export default function GameOrganizationJoinModal(code) {
         character = character.character;
       }
       obj.character = character;
-      return jsx(code(13452).AcceptStep, { code, character: null });
+      return jsx(code(13453).AcceptStep, { code, character: null });
     };
     obj3[GameOrganizationJoinScenes.ACCEPT] = obj6;
     const obj9 = {};
@@ -60,7 +60,7 @@ export default function GameOrganizationJoinModal(code) {
     obj9.gestureEnabled = false;
     obj9.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return jsx(code(13456).OutcomeStep, { code });
+      return jsx(code(13457).OutcomeStep, { code });
     };
     obj3[GameOrganizationJoinScenes.OUTCOME] = obj9;
     return obj3;
@@ -68,5 +68,5 @@ export default function GameOrganizationJoinModal(code) {
   let obj2 = { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.VIEW, steps: items, headerBackTitle: null };
   const intl = code(1113).intl;
   obj2.headerBackTitle = intl.string(code(1113).t["13/7kX"]);
-  return jsx(code(13457).StepModal, { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.VIEW, steps: items, headerBackTitle: null });
+  return jsx(code(13458).StepModal, { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.VIEW, steps: items, headerBackTitle: null });
 };

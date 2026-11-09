@@ -1,6 +1,6 @@
-// === Module 19640: ActivityItemMissingCard ===
+// === Module 19653: ActivityItemMissingCard ===
 
-// Module 19640 (ActivityItemMissingCard)
+// Module 19653 (ActivityItemMissingCard)
 import nativeDefault from "native" /* 575 */;
 import NativeViewDefault from "NativeView" /* 7023 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -29,7 +29,7 @@ function ActivityItemEmptyCard(activity) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -58,7 +58,7 @@ function ActivityItemEmptyCard(activity) {
           return obj;
         } else {
           v3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         v3 = tmp;

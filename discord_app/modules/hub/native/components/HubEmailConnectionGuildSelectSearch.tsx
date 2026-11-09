@@ -1,6 +1,6 @@
-// === Module 14590: HubEmailConnectionGuildSelectSearch ===
+// === Module 14591: HubEmailConnectionGuildSelectSearch ===
 
-// Module 14590 (HubEmailConnectionGuildSelectSearch)
+// Module 14591 (HubEmailConnectionGuildSelectSearch)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -12,8 +12,8 @@ import fuzzysearchDefault from "fuzzysearch" /* 6954 */;
 import NavigatorHeader from "NavigatorHeader" /* 7064 */;
 import _mod7357 from "module_7357" /* 7357 */;
 import SearchBarNavDefault from "SearchBarNav" /* 7629 */;
-import HubActionCreatorsDefault from "HubActionCreators" /* 14577 */;
-import _modDef14591 from "module_14591" /* 14591 */;
+import HubActionCreatorsDefault from "HubActionCreators" /* 14578 */;
+import _modDef14592 from "module_14592" /* 14592 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ require = fn;
 function EmptyState() {
   const tmp = closure_11();
   const obj = { style: tmp.emptyWrapper, children: null };
-  const obj2 = { style: tmp.emptyStateImage, source: _modDef14591 };
+  const obj2 = { style: tmp.emptyStateImage, source: _modDef14592 };
   items = [React5(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.emptyStateTitle, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -34,7 +34,7 @@ function EmptyState() {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14564).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14565).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const createStyles = fn(5140);
@@ -106,7 +106,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {

@@ -1,6 +1,6 @@
-// === Module 19425: useLaunchPadGesture ===
+// === Module 19438: useLaunchPadGesture ===
 
-// Module 19425 (useLaunchPadGesture)
+// Module 19438 (useLaunchPadGesture)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import HapticUtils from "HapticUtils" /* 5376 */;

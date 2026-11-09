@@ -1,6 +1,6 @@
-// === Module 17535: FastAssetImage ===
+// === Module 17546: FastAssetImage ===
 
-// Module 17535 (FastAssetImage)
+// Module 17546 (FastAssetImage)
 import StoreUtils from "StoreUtils" /* 6588 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

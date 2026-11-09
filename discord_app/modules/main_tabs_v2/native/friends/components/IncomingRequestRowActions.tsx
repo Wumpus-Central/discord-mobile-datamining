@@ -1,10 +1,10 @@
-// === Module 19190: IncomingRequestRowActions ===
+// === Module 19203: IncomingRequestRowActions ===
 
-// Module 19190 (IncomingRequestRowActions)
+// Module 19203 (IncomingRequestRowActions)
 import _modDef1652 from "module_1652" /* 1652 */;
-import _modDef15384 from "module_15384" /* 15384 */;
-import _modDef17136 from "module_17136" /* 17136 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18425 */;
+import _modDef15394 from "module_15394" /* 15394 */;
+import _modDef17147 from "module_17147" /* 17147 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18438 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -248,9 +248,9 @@ export function IncomingRequestRowActions(user) {
   const tmp2Result6 = require("module_1652");
   const tmp39 = c6;
   const tmp40 = c4;
-  const items13 = [c5(require("IconButton").IconButton, { size: "sm", variant: "tertiary", icon: _modDef17136, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 }), ];
-  const obj9 = { size: "sm", variant: "tertiary", icon: _modDef17136, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
-  items13[1] = c5(require("IconButton").IconButton, { size: "sm", variant: "active", icon: _modDef15384, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 });
+  const items13 = [c5(require("IconButton").IconButton, { size: "sm", variant: "tertiary", icon: _modDef17147, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 }), ];
+  const obj9 = { size: "sm", variant: "tertiary", icon: _modDef17147, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  items13[1] = c5(require("IconButton").IconButton, { size: "sm", variant: "active", icon: _modDef15394, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 });
   obj8.children = items13;
   obj7.children = c6(require("Stack/Stack").Stack, obj8);
   const items14 = [c5(_modDef1652.View, obj7), ];
@@ -273,7 +273,7 @@ export function IncomingRequestRowActions(user) {
   if (animate) {
     tmp45 = animatedStyle3;
   }
-  const obj10 = { size: "sm", variant: "active", icon: _modDef15384, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  const obj10 = { size: "sm", variant: "active", icon: _modDef15394, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
   obj13.children = c5(_modDef1652.View, {
     style: tmp45,
     onLayout: function handleWaveLayout(nativeEvent) {

@@ -1,11 +1,11 @@
-// === Module 13901: CheckpointEmojiStatsScreen ===
+// === Module 13902: CheckpointEmojiStatsScreen ===
 
-// Module 13901 (CheckpointEmojiStatsScreen)
+// Module 13902 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
-import CheckpointStore from "CheckpointStore" /* 13667 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 const require = globalThis.__r;
 
@@ -110,7 +110,7 @@ export default function CheckpointEmojiStatsScreen() {
   }
   [emoji, _slicedToArray] = noop.useState(tmp11 ? closure_11 : emojis[0]);
   const tmp2Result = require("CheckpointStatsUtils");
-  noop = require("useCheckpointSound")(require("module_13692"));
+  noop = require("useCheckpointSound")(require("module_13693"));
   let intl = tmp2(tmp3[14]).intl;
   const string = intl.string;
   if (tmp11) {

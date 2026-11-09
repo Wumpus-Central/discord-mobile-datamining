@@ -1,6 +1,6 @@
-// === Module 15852: mute ===
+// === Module 15862: mute ===
 
-// Module 15852 (mute)
+// Module 15862 (mute)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import wrappers from "wrappers" /* 1227 */;

@@ -1,11 +1,11 @@
-// === Module 13439: useGameOrganizationCharacterEligibilityFetch ===
+// === Module 13440: useGameOrganizationCharacterEligibilityFetch ===
 
-// Module 13439 (useGameOrganizationCharacterEligibilityFetch)
+// Module 13440 (useGameOrganizationCharacterEligibilityFetch)
 import DurationsDefault from "Durations" /* 1089 */;
 import isRetryableFetchErrorDefault from "isRetryableFetchError" /* 11814 */;
 import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 11815 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameOrganizationCharacterEligibilityStore from "GameOrganizationCharacterEligibilityStore" /* 13437 */;
+import GameOrganizationCharacterEligibilityStore from "GameOrganizationCharacterEligibilityStore" /* 13438 */;
 
 const initialize = fn(504);
 const obj2 = {
@@ -33,7 +33,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;

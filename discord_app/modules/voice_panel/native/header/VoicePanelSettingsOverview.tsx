@@ -1,6 +1,6 @@
-// === Module 19580: VoicePanelSettingsOverview ===
+// === Module 19593: VoicePanelSettingsOverview ===
 
-// Module 19580 (VoicePanelSettingsOverview)
+// Module 19593 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -25,10 +25,10 @@ import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9349
 import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9364 */;
 import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11327 */;
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 12105 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 14974 */;
-import WrenchIcon from "WrenchIcon" /* 17875 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19578 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 19581 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 14975 */;
+import WrenchIcon from "WrenchIcon" /* 17886 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19591 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 19594 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
@@ -250,7 +250,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19582, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19595, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

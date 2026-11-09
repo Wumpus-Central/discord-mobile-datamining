@@ -1,6 +1,6 @@
-// === Module 15160: ? ===
+// === Module 15161: ? ===
 
-// Module 15160
+// Module 15161
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDiversityTier8SmallBadge.svg.js");

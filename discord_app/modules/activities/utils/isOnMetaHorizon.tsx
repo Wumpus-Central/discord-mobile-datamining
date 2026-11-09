@@ -1,6 +1,6 @@
-// === Module 15102: isOnMetaHorizon ===
+// === Module 15103: isOnMetaHorizon ===
 
-// Module 15102 (isOnMetaHorizon)
+// Module 15103 (isOnMetaHorizon)
 import Constants from "Constants" /* 2142 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9828 */;
 import size from "module_2" /* 2 */;

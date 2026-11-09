@@ -35,7 +35,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

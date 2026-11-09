@@ -12,7 +12,7 @@ import Timers from "Timers" /* 4984 */;
 import useIsSpeaking from "useIsSpeaking" /* 6907 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8792 */;
 import SpotifyActionCreators from "SpotifyActionCreators" /* 11838 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 15802 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 15812 */;
 import RunningGameStore from "RunningGameStore" /* 2137 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6627 */;

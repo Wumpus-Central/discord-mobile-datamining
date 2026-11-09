@@ -1,6 +1,6 @@
-// === Module 16869: useGuildProfileEditForm ===
+// === Module 16880: useGuildProfileEditForm ===
 
-// Module 16869 (useGuildProfileEditForm)
+// Module 16880 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -114,7 +114,7 @@ export default function useGuildProfileEditForm() {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -202,7 +202,7 @@ export default function useGuildProfileEditForm() {
                 }
               }
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -231,9 +231,9 @@ export default function useGuildProfileEditForm() {
                   items = [constants.DISPLAY_NAME_STYLE];
                   obj17.perks = items;
                   obj17.content = stateFromStores(6839).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                  obj17.contentSurface = stateFromStores(16768).HexagonCampaignContentSurface.GUILD_PROFILE;
-                  const result2 = stateFromStores(16768).trackHexagonCampaignPerkAction(obj17);
-                  const obj6 = stateFromStores(16768);
+                  obj17.contentSurface = stateFromStores(16779).HexagonCampaignContentSurface.GUILD_PROFILE;
+                  const result2 = stateFromStores(16779).trackHexagonCampaignPerkAction(obj17);
+                  const obj6 = stateFromStores(16779);
                 }
               } else {
                 let avatar;
@@ -251,9 +251,9 @@ export default function useGuildProfileEditForm() {
                     const intl = stateFromStores(1113).intl;
                     stateFromStores = intl.string(stateFromStores(1113).t.s35OuK);
                   }
-                  const result3 = stateFromStores(16769).showGenericGuildProfileUpdateFailureToast(stateFromStores);
+                  const result3 = stateFromStores(16780).showGenericGuildProfileUpdateFailureToast(stateFromStores);
                   closure_131_4 = true;
-                  const obj19 = stateFromStores(16769);
+                  const obj19 = stateFromStores(16780);
                 }
               }
               let tmp61 = closure_131_3;
@@ -287,9 +287,9 @@ export default function useGuildProfileEditForm() {
               const aPIError1 = new stateFromStores(6579).APIError(closure_131_9);
               firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
               if (null != firstFieldErrorMessage2) {
-                const result4 = stateFromStores(16769).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
+                const result4 = stateFromStores(16780).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
                 closure_131_4 = true;
-                const obj2 = stateFromStores(16769);
+                const obj2 = stateFromStores(16780);
               }
             }
             let tmp24 = closure_131_3;
@@ -312,8 +312,8 @@ export default function useGuildProfileEditForm() {
           }
           if (!tmp82) {
             const intl2 = stateFromStores(1113).intl;
-            const result5 = stateFromStores(16769).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1113).t.s35OuK));
-            const obj11 = stateFromStores(16769);
+            const result5 = stateFromStores(16780).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1113).t.s35OuK));
+            const obj11 = stateFromStores(16780);
           }
           if (closure_131_3) {
             closure_132_13.delay();

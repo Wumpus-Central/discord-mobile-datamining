@@ -1,6 +1,6 @@
-// === Module 19593: VoicePanelDockBadgedIcon ===
+// === Module 19606: VoicePanelDockBadgedIcon ===
 
-// Module 19593 (VoicePanelDockBadgedIcon)
+// Module 19606 (VoicePanelDockBadgedIcon)
 import _mod1705 from "module_1705" /* 1705 */;
 import native from "native" /* 5199 */;
 import timing_timing from "timing/timing" /* 5370 */;
@@ -64,7 +64,7 @@ const sum2 = fn(1187).BADGE_SIZE + 4;
 let closure_9 = sum2 / 2;
 let closure_10 = sum + fn(1187).BADGE_SIZE / 2;
 let closure_11 = sum1 + fn(1187).BADGE_SIZE / 2;
-const GuildsBarActivityIndicator = fn(18726);
+const GuildsBarActivityIndicator = fn(18739);
 const mediaIcon = GuildsBarActivityIndicator.getMediaIcon({ audio: false, video: false, screenshare: true, isCurrentUserConnected: true });
 const createStyles = fn(5140);
 let obj3 = { clip: null, badge: null, badgeIndicator: null };

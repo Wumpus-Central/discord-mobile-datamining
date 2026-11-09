@@ -1,7 +1,7 @@
-// === Module 18393: YouBarStackNavigator ===
+// === Module 18406: YouBarStackNavigator ===
 
-// Module 18393 (YouBarStackNavigator)
-import notifications_Notifications from "notifications/Notifications" /* 18814 */;
+// Module 18406 (YouBarStackNavigator)
+import notifications_Notifications from "notifications/Notifications" /* 18827 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;

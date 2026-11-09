@@ -1,10 +1,10 @@
-// === Module 15721: PremiumPlanSelectYearlyUpsellModal ===
+// === Module 15731: PremiumPlanSelectYearlyUpsellModal ===
 
-// Module 15721 (PremiumPlanSelectYearlyUpsellModal)
+// Module 15731 (PremiumPlanSelectYearlyUpsellModal)
 import FastImageDefault from "FastImage" /* 5842 */;
 import common_AlertDefault from "common/Alert" /* 6162 */;
 import TextStylesDefault from "TextStyles" /* 6778 */;
-import _modDef15722 from "module_15722" /* 15722 */;
+import _modDef15732 from "module_15732" /* 15732 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
@@ -12,7 +12,7 @@ import IAPStore from "IAPStore" /* 7673 */;
 
 const require = fn;
 const View = fn(17).View;
-const usePremiumPlanSelectStore = fn(15708).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(15718).usePremiumPlanSelectStore;
 let closure_9 = fn(1387).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -81,7 +81,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const tmp5Result = productId(2024);
     const obj7 = { style: tmp.image, source: null };
     const tmp19 = common_AlertDefault;
-    obj7.source = _modDef15722;
+    obj7.source = _modDef15732;
     const items2 = [closure_10(FastImageDefault, obj7), , , , , ];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1113).intl;

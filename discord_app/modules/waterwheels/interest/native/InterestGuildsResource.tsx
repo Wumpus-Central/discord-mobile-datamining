@@ -1,6 +1,6 @@
-// === Module 19956: InterestGuildsResource ===
+// === Module 19969: InterestGuildsResource ===
 
-// Module 19956 (InterestGuildsResource)
+// Module 19969 (InterestGuildsResource)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function availableInterestGuilds(guilds) {
@@ -20,7 +20,7 @@ function availableInterestGuilds(guilds) {
   });
   return found.slice(0, 15);
 }
-const MAX_SELECTIONS = fn(18752).MAX_SELECTIONS;
+const MAX_SELECTIONS = fn(18765).MAX_SELECTIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildsResource.tsx");
 class InterestGuildsResource {
@@ -123,7 +123,7 @@ prototype["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -182,7 +182,7 @@ prototype["load"] = function load(arg0, arg1, arg2) {
             closure_129_3.publish(closure_128_0);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         if (tmp4 === v0) {

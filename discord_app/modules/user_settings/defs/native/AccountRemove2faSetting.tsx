@@ -1,10 +1,10 @@
-// === Module 16975: AccountRemove2faSetting ===
+// === Module 16986: AccountRemove2faSetting ===
 
-// Module 16975 (AccountRemove2faSetting)
+// Module 16986 (AccountRemove2faSetting)
 import util from "util" /* 1113 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import account_MFAUtils from "account/MFAUtils" /* 16976 */;
-import MfaFactorUtils from "MfaFactorUtils" /* 16977 */;
+import account_MFAUtils from "account/MFAUtils" /* 16987 */;
+import MfaFactorUtils from "MfaFactorUtils" /* 16988 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_7 = async function _remove2FA() {
       obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -90,7 +90,7 @@ let closure_7 = async function _remove2FA() {
               obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -130,7 +130,7 @@ let closure_7 = async function _remove2FA() {
                 c3 = 0;
                 tmp3(tmp30[6]).batchUpdates(() => closure_1_6.setState({ isCheckingLastFactor: false }));
                 c5 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp30) {
               tmp32 = c3;
@@ -200,8 +200,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return tmp;
   },
-  useDescription: fn(16976).use2FARemoveDisableReason,
-  usePredicate: fn(16889).useIsTOTPEnabled
+  useDescription: fn(16987).use2FARemoveDisableReason,
+  usePredicate: fn(16900).useIsTOTPEnabled
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");

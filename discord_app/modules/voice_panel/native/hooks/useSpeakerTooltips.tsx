@@ -1,16 +1,16 @@
-// === Module 19611: useSpeakerTooltips ===
+// === Module 19624: useSpeakerTooltips ===
 
-// Module 19611 (useSpeakerTooltips)
+// Module 19624 (useSpeakerTooltips)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 4973 */;
-import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 19614 */;
+import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 19627 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(19609);
+const ConsoleVoiceUpsellStore = fn(19622);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: closure_6 } = ConsoleVoiceUpsellStore);
 const VoicePanelControlsModes = fn(11361).VoicePanelControlsModes;
 const ContentDismissActionType = fn(4986).ContentDismissActionType;

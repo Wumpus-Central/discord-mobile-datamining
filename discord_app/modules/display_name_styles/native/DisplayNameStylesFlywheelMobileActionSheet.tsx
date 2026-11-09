@@ -1,11 +1,11 @@
-// === Module 19389: DisplayNameStylesFlywheelMobileActionSheet ===
+// === Module 19402: DisplayNameStylesFlywheelMobileActionSheet ===
 
-// Module 19389 (DisplayNameStylesFlywheelMobileActionSheet)
+// Module 19402 (DisplayNameStylesFlywheelMobileActionSheet)
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 4973 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5170 */;
 import openUserSettings from "openUserSettings" /* 7635 */;
-import openPremiumTryItOutModal from "openPremiumTryItOutModal" /* 16852 */;
+import openPremiumTryItOutModal from "openPremiumTryItOutModal" /* 16863 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -47,7 +47,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   let result = ref(2171).canUsePremiumProfileCustomization(stateFromStores);
   dependencyMap = result;
   let obj4 = ref(2171);
-  enabled2 = markAsDismissed(16771).useTryItOutMobileRefreshConfig("DisplayNameStylesFlywheelMobileActionSheet").enabled;
+  enabled2 = markAsDismissed(16782).useTryItOutMobileRefreshConfig("DisplayNameStylesFlywheelMobileActionSheet").enabled;
   const intl = markAsDismissed(1113).intl;
   const string = intl.string;
   const tmp9 = ref(3056);
@@ -104,7 +104,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp14Result = enabled;
   if (enabled) {
-    tmp14Result = closure_9(tmp2(19390).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp14Result = closure_9(tmp2(19403).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp14Result, ];
   if (enabled) {
@@ -149,19 +149,19 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(19394) };
+      const obj17 = { uri: tmp4(19407) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
       let tmp14Result2 = closure_9(tmp4(5842), obj16);
       const tmp4Result = tmp4(5842);
     } else {
-      const obj18 = { url: tmp4(19394), style: tmp6.image, autoplay: true };
+      const obj18 = { url: tmp4(19407), style: tmp6.image, autoplay: true };
       tmp14Result2 = closure_9(tmp2(9588).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1377);
   }
-  const obj5 = markAsDismissed(16771);
+  const obj5 = markAsDismissed(16782);
   const obj8 = {
     onPress() {
       const current = ref.current;

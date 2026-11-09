@@ -1,14 +1,14 @@
-// === Module 14267: ChatInputGuardGuildMemberVerification ===
+// === Module 14268: ChatInputGuardGuildMemberVerification ===
 
-// Module 14267 (ChatInputGuardGuildMemberVerification)
+// Module 14268 (ChatInputGuardGuildMemberVerification)
 import util from "util" /* 1113 */;
 import LottieAnimationViewDefault from "LottieAnimationView" /* 5745 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
 import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6963 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6999 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 14259 */;
-import _modDef14268 from "module_14268" /* 14268 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 14260 */;
 import _modDef14269 from "module_14269" /* 14269 */;
+import _modDef14270 from "module_14270" /* 14270 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
@@ -30,7 +30,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
   if (guildId(5174).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = _modDef14268;
+    let tmp8 = _modDef14269;
     const intl2 = tmp2(1113).intl;
     let stringResult = intl2.string(tmp2(1113).t.lk30cY);
     class I {
@@ -45,7 +45,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       }
     }
   } else if (tmp2(5174).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = _modDef14269;
+    tmp8 = _modDef14270;
     class I {
       constructor() {
         obj = closure_1(closure_2[10]);

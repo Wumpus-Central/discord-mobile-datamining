@@ -1,6 +1,6 @@
-// === Module 13985: useChatInputRefs ===
+// === Module 13986: useChatInputRefs ===
 
-// Module 13985 (useChatInputRefs)
+// Module 13986 (useChatInputRefs)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ChatInputUtils from "ChatInputUtils" /* 5323 */;
 import StickersUtils from "StickersUtils" /* 6615 */;
@@ -9,7 +9,7 @@ import DraftActionCreatorsDefault from "DraftActionCreators" /* 8413 */;
 import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10318 */;
 import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10320 */;
 import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 13014 */;
-import ChatInputSendUtils from "ChatInputSendUtils" /* 13991 */;
+import ChatInputSendUtils from "ChatInputSendUtils" /* 13992 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 8416 */;
 import StickersStore from "StickersStore" /* 6892 */;
@@ -364,7 +364,7 @@ export default function useChatInputRefs(chatInputProps) {
                 const merged = Object.assign(ref.current);
                 obj4.chatInputRef = chatInputRef;
                 obj2.params = obj4;
-                const result = threadCreationCallback(13991).chatInputSendApplicationCommand(obj2);
+                const result = threadCreationCallback(13992).chatInputSendApplicationCommand(obj2);
               });
             }
             if (!sendCommandResult) {
@@ -385,8 +385,8 @@ export default function useChatInputRefs(chatInputProps) {
                   tmp8 = chatInputRef;
                   obj3.chatInputRef = chatInputRef;
                   obj2.params = obj3;
-                  const result = chatInputProps(13991).chatInputHandleSendText(obj2);
-                  const obj = chatInputProps(13991);
+                  const result = chatInputProps(13992).chatInputHandleSendText(obj2);
+                  const obj = chatInputProps(13992);
                 }
                 const keyboardType = chatInputProps(5325).getKeyboardType();
                 if (keyboardType === chatInputProps(1625).KeyboardTypes.SYSTEM) {

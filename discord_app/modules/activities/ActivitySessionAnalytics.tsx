@@ -1,6 +1,6 @@
-// === Module 16615: ActivitySessionAnalytics ===
+// === Module 16625: ActivitySessionAnalytics ===
 
-// Module 16615 (ActivitySessionAnalytics)
+// Module 16625 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -14,7 +14,7 @@ import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 11066 */;
 import pendingFrameLaunch from "pendingFrameLaunch" /* 11896 */;
 import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11897 */;
 import getShelfItemDataDefault from "getShelfItemData" /* 11904 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14922 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14923 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
@@ -22,7 +22,7 @@ import QuestStore from "QuestStore" /* 7922 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
 import UserStore from "UserStore" /* 1385 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 16616 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 16626 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 
 require = fn;
@@ -106,7 +106,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

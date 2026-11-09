@@ -1,6 +1,6 @@
-// === Module 19624: VoicePanelVideoRenderer ===
+// === Module 19637: VoicePanelVideoRenderer ===
 
-// Module 19624 (VoicePanelVideoRenderer)
+// Module 19637 (VoicePanelVideoRenderer)
 import _mod1705 from "module_1705" /* 1705 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
 import spring_spring from "spring/spring" /* 5761 */;
@@ -8,7 +8,7 @@ import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11367 */;
 import useVideoSpinnerTimerDefault from "useVideoSpinnerTimer" /* 11929 */;
 import DCDVideoRendererDefault from "DCDVideoRenderer" /* 11936 */;
-import VideoActionCreators from "VideoActionCreators" /* 19470 */;
+import VideoActionCreators from "VideoActionCreators" /* 19483 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -21,7 +21,7 @@ const VoicePanelConstants = fn(11363);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 const VoicePanelControlsModes = fn(11361).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(19473).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19486).VoicePanelPIPModes;
 const SCALE_PHYSICS = fn(11364).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

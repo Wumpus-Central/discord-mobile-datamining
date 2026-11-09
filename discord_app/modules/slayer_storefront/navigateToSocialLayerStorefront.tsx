@@ -1,6 +1,6 @@
-// === Module 15583: navigateToSocialLayerStorefront ===
+// === Module 15593: navigateToSocialLayerStorefront ===
 
-// Module 15583 (navigateToSocialLayerStorefront)
+// Module 15593 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1099 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7468 */;
 import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10789 */;
@@ -30,7 +30,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
               }
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } else if (2 === tmp5) {

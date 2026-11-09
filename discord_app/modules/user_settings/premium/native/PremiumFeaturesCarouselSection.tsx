@@ -1,6 +1,6 @@
-// === Module 15636: PremiumFeaturesCarouselSection ===
+// === Module 15646: PremiumFeaturesCarouselSection ===
 
-// Module 15636 (PremiumFeaturesCarouselSection)
+// Module 15646 (PremiumFeaturesCarouselSection)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
@@ -8,10 +8,10 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import LinearGradientDefault from "LinearGradient" /* 5715 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import FastImageDefault from "FastImage" /* 5842 */;
-import _modDef15637 from "module_15637" /* 15637 */;
-import _modDef15638 from "module_15638" /* 15638 */;
-import _modDef15639 from "module_15639" /* 15639 */;
-import _modDef15640 from "module_15640" /* 15640 */;
+import _modDef15647 from "module_15647" /* 15647 */;
+import _modDef15648 from "module_15648" /* 15648 */;
+import _modDef15649 from "module_15649" /* 15649 */;
+import _modDef15650 from "module_15650" /* 15650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -64,7 +64,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef15637;
+    obj.imageSrc = _modDef15647;
     obj.imageStyle = first.emojiImage;
     items = [, ];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -73,7 +73,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef15638;
+    obj2.imageSrc = _modDef15648;
     const items2 = [, ];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
@@ -82,7 +82,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef15639;
+    obj3.imageSrc = _modDef15649;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -90,7 +90,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef15640;
+    obj4.imageSrc = _modDef15650;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);

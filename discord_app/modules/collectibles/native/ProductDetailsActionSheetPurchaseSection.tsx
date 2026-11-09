@@ -1,6 +1,6 @@
-// === Module 15314: ProductDetailsActionSheetPurchaseSection ===
+// === Module 15324: ProductDetailsActionSheetPurchaseSection ===
 
-// Module 15314 (ProductDetailsActionSheetPurchaseSection)
+// Module 15324 (ProductDetailsActionSheetPurchaseSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
@@ -14,7 +14,7 @@ import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6595 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
 import OrbsIcon from "OrbsIcon" /* 9616 */;
-import openGiftModal from "openGiftModal" /* 14662 */;
+import openGiftModal from "openGiftModal" /* 14663 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7811 */;
@@ -88,7 +88,7 @@ function VCButton(balance) {
   items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
   closure_8 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15315, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15325, dependencyMap.paths), {
       skuId: product.skuId,
       analyticsLocations,
       onCheckoutSuccess(arg0) {
@@ -103,7 +103,7 @@ function VCButton(balance) {
               },
             orbBalancePriorToPurchase
           };
-          product(6799).pushLazy(balance(2118)(15323, dependencyMap.paths), obj3, modalKey);
+          product(6799).pushLazy(balance(2118)(15333, dependencyMap.paths), obj3, modalKey);
           const tmp4Result = product(6799);
         } else {
           const ALL = balance(1075).FractionalPremiumSKUsSets.ALL;
@@ -127,12 +127,12 @@ function VCButton(balance) {
               navigation.navigate(constants.PREMIUM_MANAGE_PLAN);
               product(5374).hideActionSheet();
             };
-            tmp4Result3.openLazy(balance(2118)(15324, dependencyMap.paths), "FractionalNitroCollectedActionSheet", obj4);
-            const tmp10 = balance(2118)(15324, dependencyMap.paths);
+            tmp4Result3.openLazy(balance(2118)(15334, dependencyMap.paths), "FractionalNitroCollectedActionSheet", obj4);
+            const tmp10 = balance(2118)(15334, dependencyMap.paths);
           } else {
             const obj5 = { product, useCategoryImage: true, showOrbBalancePill: true, orbBalancePriorToPurchase, stageCollectibleChangeForEditProfile };
-            product(14730).open(obj5);
-            const tmp4Result4 = product(14730);
+            product(14731).open(obj5);
+            const tmp4Result4 = product(14731);
           }
         }
         const obj2 = product(6799);

@@ -1,6 +1,6 @@
-// === Module 14787: useConjureAppChannelSoundButton ===
+// === Module 14788: useConjureAppChannelSoundButton ===
 
-// Module 14787 (useConjureAppChannelSoundButton)
+// Module 14788 (useConjureAppChannelSoundButton)
 import util from "util" /* 1113 */;
 import _modDef4026 from "module_4026" /* 4026 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5799 */;

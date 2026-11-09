@@ -1,12 +1,12 @@
-// === Module 20322: useCreatorMonetizationEligibility ===
+// === Module 20335: useCreatorMonetizationEligibility ===
 
-// Module 20322 (useCreatorMonetizationEligibility)
-import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 20272 */;
+// Module 20335 (useCreatorMonetizationEligibility)
+import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 20285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-let closure_6 = fn(20269).CreatorMonetizationApplicationState;
+let closure_6 = fn(20282).CreatorMonetizationApplicationState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
 
@@ -27,7 +27,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

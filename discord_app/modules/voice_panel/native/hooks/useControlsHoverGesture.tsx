@@ -1,6 +1,6 @@
-// === Module 19599: useControlsHoverGesture ===
+// === Module 19612: useControlsHoverGesture ===
 
-// Module 19599 (useControlsHoverGesture)
+// Module 19612 (useControlsHoverGesture)
 import _mod1705 from "module_1705" /* 1705 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
 import noop from "module_19" /* 19 */;

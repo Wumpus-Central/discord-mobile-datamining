@@ -1,6 +1,6 @@
-// === Module 14321: useGuildPowerupNewPerkMarketingVersion ===
+// === Module 14322: useGuildPowerupNewPerkMarketingVersion ===
 
-// Module 14321 (useGuildPowerupNewPerkMarketingVersion)
+// Module 14322 (useGuildPowerupNewPerkMarketingVersion)
 import Powerups from "Powerups" /* 5349 */;
 import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9157 */;
 import noop from "module_19" /* 19 */;

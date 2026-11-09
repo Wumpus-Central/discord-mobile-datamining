@@ -7,22 +7,21 @@ import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6949 
 import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7548 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
+import GuildStore from "GuildStore" /* 5011 */;
 import PermissionStore from "PermissionStore" /* 5072 */;
 import ReadStateStore from "ReadStateStore" /* 6897 */;
 import FavoriteStore from "FavoriteStore" /* 4992 */;
 
 require = fn;
-function getFavoriteThreadIdsForCleanup(categoryId) {
-  closure_0 = categoryId;
+function getFavoriteThreadIdsForCleanup(categoryIds) {
+  closure_0 = categoryIds;
   const values = Object.values(FavoriteStore.getFavoriteChannels());
   const found = values.filter((type) => {
     if (type.type !== preloaded_user_settings.FavoriteChannelType.REFERENCE_ORIGINAL) {
       return false;
     } else {
       if (null != closure_0) {
-        if (type.parentId !== tmp) {
-          return false;
-        }
+        return false;
       }
       const channel = ChannelStore.getChannel(type.id);
       if (null != channel) {
@@ -38,7 +37,7 @@ function getFavoriteThreadIdsForCleanup(categoryId) {
   });
   return found.map((id) => id.id);
 }
-let closure_13 = async function _loadFavoriteThreadsForCleanup(arg0) {
+let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -49,7 +48,7 @@ let closure_13 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -77,7 +76,7 @@ let closure_13 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -87,39 +86,52 @@ let closure_13 = async function _loadFavoriteThreadsForCleanup(arg0) {
 };
 const THREAD_CHANNEL_TYPES = fn(4993).THREAD_CHANNEL_TYPES;
 const FavoritesConstants = fn(5002);
-({ FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_9, FAVORITES_PRUNE_WHEN_ARCHIVED: closure_10 } = FavoritesConstants);
+({ FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_10, FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_11, FAVORITES_PRUNE_WHEN_ARCHIVED: closure_12 } = FavoritesConstants);
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesCleanup.tsx");
 
 export { getFavoriteThreadIdsForCleanup };
-export function getAutoAddedThreadsCategoryId() {
-  closure_0 = closure_9.toLowerCase();
-  const values = Object.values(FavoriteStore.getFavoriteChannels());
-  const found = values.find((type) => {
-    let tmp = type.type === preloaded_user_settings.FavoriteChannelType.CATEGORY;
-    if (tmp) {
-      let formatted;
-      if (type.nickname != null) {
-        formatted = str.trim().toLowerCase();
-        const str2 = str.trim();
-      }
-      tmp = formatted === closure_0;
+export function getAutoAddedThreadsCategoryIds() {
+  if (favoriteChannels === undefined) {
+    favoriteChannels = FavoriteStore.getFavoriteChannels();
+  }
+  items = [closure_1_11.toLowerCase()];
+  const set = new Set(items);
+  if (FavoriteStore.autoAddThreadsMode === closure_1_10) {
+    const guildsArray = GuildStore.getGuildsArray();
+    for (const item10026 of guildsArray) {
+      let str = item10026.name;
+      let str2 = str.trim();
+      let addResult = set.add(str2.toLowerCase());
+      continue;
     }
-    return tmp;
-  });
-  let id;
-  if (found != null) {
-    id = found.id;
   }
-  if (id == null) {
-    id = null;
+  const items1 = [];
+  const values = Object.values(favoriteChannels);
+  const iter = values[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp10 = nextResult;
+    if (nextResult.type === preloaded_user_settings.FavoriteChannelType.CATEGORY) {
+      if (null != tmp10.nickname) {
+        let str3 = tmp10.nickname;
+        let str4 = str3.trim();
+        let formatted = str4.toLowerCase();
+        let tmp16 = formatted;
+        if (set.has(formatted)) {
+          let arr = items1.push(tmp10.id);
+          let deleteResult = set.delete(tmp16);
+        }
+      }
+    }
+    continue;
   }
-  return id;
+  return items1;
 }
 export function loadFavoriteThreadsForCleanup() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -135,7 +147,7 @@ export function getFavoritesCleanupCandidates(days) {
       const timestamp = Date.now();
       items = [];
       const diff = timestamp - days * DurationsDefault.Millis.DAY;
-      const tmp29 = getFavoriteThreadIdsForCleanup(days.categoryId);
+      const tmp29 = getFavoriteThreadIdsForCleanup(days.categoryIds);
       const iter = tmp29[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -148,7 +160,7 @@ export function getFavoritesCleanupCandidates(days) {
               if (!ReadStateStore.hasUnreadOrMentions(tmp4)) {
                 if (tmp7.threadMetadata.archived) {
                   let arr = items.push(tmp7);
-                } else if (days !== closure_1_10) {
+                } else if (days !== application_id) {
                   let obj = getThreadAutoArchiveTimeOnce;
                   let threadLastActivityTime = obj.getThreadLastActivityTime(tmp7);
                   let tmp16 = threadLastActivityTime;

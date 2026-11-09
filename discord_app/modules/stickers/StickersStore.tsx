@@ -33,7 +33,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

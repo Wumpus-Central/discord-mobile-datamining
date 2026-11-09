@@ -1,6 +1,6 @@
-// === Module 14860: XboxLinkSuccess ===
+// === Module 14861: XboxLinkSuccess ===
 
-// Module 14860 (XboxLinkSuccess)
+// Module 14861 (XboxLinkSuccess)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -58,7 +58,7 @@ export default function XboxLinkDiscordSuccess() {
   }, items1);
   const obj5 = { source: null, style: null };
   const obj2 = first(navigation[10]);
-  obj5.source = require("module_14861");
+  obj5.source = require("module_14862");
   obj5.style = tmp.image;
   const items2 = [closure_12(require("FastImage"), obj5), , , ];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };

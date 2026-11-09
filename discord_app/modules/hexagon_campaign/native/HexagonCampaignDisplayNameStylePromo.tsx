@@ -1,11 +1,11 @@
-// === Module 16783: HexagonCampaignDisplayNameStylePromo ===
+// === Module 16794: HexagonCampaignDisplayNameStylePromo ===
 
-// Module 16783 (HexagonCampaignDisplayNameStylePromo)
+// Module 16794 (HexagonCampaignDisplayNameStylePromo)
 import nativeDefault from "native" /* 575 */;
 import _modDef4411 from "module_4411" /* 4411 */;
 import Text_Text from "Text/Text" /* 5751 */;
-import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16785 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16787 */;
+import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16796 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16798 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

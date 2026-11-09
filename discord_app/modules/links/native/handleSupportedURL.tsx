@@ -1,6 +1,6 @@
-// === Module 15973: handleSupportedURL ===
+// === Module 15983: handleSupportedURL ===
 
-// Module 15973 (handleSupportedURL)
+// Module 15983 (handleSupportedURL)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -24,16 +24,16 @@ import ApplicationUtils from "ApplicationUtils" /* 11035 */;
 import authorizeCallbackDefault from "authorizeCallback" /* 11037 */;
 import closeVoicePanelsDefault from "closeVoicePanels" /* 11062 */;
 import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13416 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13587 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14515 */;
-import BountyActionCreators from "BountyActionCreators" /* 14926 */;
-import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15982 */;
-import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 16015 */;
-import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 16113 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13588 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14516 */;
+import BountyActionCreators from "BountyActionCreators" /* 14927 */;
+import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15992 */;
+import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 16025 */;
+import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 16123 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6910 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15555 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15565 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 
@@ -49,7 +49,7 @@ const NativePermissionTypes = fn(8009).NativePermissionTypes;
 let closure_22 = fn(11036).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(7792).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5872).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15974).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15984).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8503).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -202,7 +202,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj25 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "jsxs" };
+      const obj25 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "hoa qu\u1EA3" };
       const obj30 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj25.navigationSettings = obj30;
       rootNavigationRef1(inviteCode[31])(obj25);
@@ -222,7 +222,7 @@ export default function handleSupportedURL(payload) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -249,7 +249,7 @@ export default function handleSupportedURL(payload) {
                 ({ guildId, skuId } = payload);
                 c2 = 1;
                 dependencyMap = 1;
-                const obj4 = { value: tmp3(10789).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15981).default()), done: false };
+                const obj4 = { value: tmp3(10789).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15991).default()), done: false };
                 return obj4;
               } else {
                 const result = openSocialLayerStorefrontUnsupportedOnMobileAlert();
@@ -359,7 +359,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           pathname(null != remoteAuthFingerprint ? (() => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15986, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15996, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
           }) : (() => {
             let obj = payload(inviteCode[46]);
             const tmp3 = payload(inviteCode[46]).isMetaQuest() ? NativePermissionTypes.HEADSET_CAMERA : NativePermissionTypes.CAMERA;
@@ -416,7 +416,7 @@ export default function handleSupportedURL(payload) {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -483,7 +483,7 @@ export default function handleSupportedURL(payload) {
                     const obj3 = payload(paths[54]);
                   }
                   c4 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp35) {
                 c4 = tmp;
@@ -512,7 +512,7 @@ export default function handleSupportedURL(payload) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -566,7 +566,7 @@ export default function handleSupportedURL(payload) {
                   const obj4 = tmp4(paths[57]);
                 }
                 c2 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } catch (tmp37) {
                 c2 = tmp;
                 throw tmp37;
@@ -624,7 +624,7 @@ export default function handleSupportedURL(payload) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -790,7 +790,7 @@ export default function handleSupportedURL(payload) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {

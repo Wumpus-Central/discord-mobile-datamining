@@ -1,14 +1,14 @@
-// === Module 18918: ICYMIShareModal ===
+// === Module 18931: ICYMIShareModal ===
 
-// Module 18918 (ICYMIShareModal)
+// Module 18931 (ICYMIShareModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5735 */;
 import components_Button_Button from "components/Button/Button" /* 5758 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
 import ShareEventUtils from "ShareEventUtils" /* 9063 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 13636 */;
-import ShareChatInputDefault from "ShareChatInput" /* 13649 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 13637 */;
+import ShareChatInputDefault from "ShareChatInput" /* 13650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -75,7 +75,7 @@ class ICYMIShareModal {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -118,7 +118,7 @@ class ICYMIShareModal {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -161,7 +161,7 @@ class ICYMIShareModal {
                       return obj;
                     }
                     c1 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   } catch (tmp17) {
                     c1 = tmp;
                     throw tmp17;
@@ -181,7 +181,7 @@ class ICYMIShareModal {
             })());
             tmp3(tmp2[19]).pop();
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp7) {
           c4 = tmp;
@@ -284,7 +284,7 @@ export function GameShareModal(content) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -305,7 +305,7 @@ export function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18919).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18932).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

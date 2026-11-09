@@ -1,6 +1,6 @@
-// === Module 14177: AutocompleteWrapper ===
+// === Module 14178: AutocompleteWrapper ===
 
-// Module 14177 (AutocompleteWrapper)
+// Module 14178 (AutocompleteWrapper)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
@@ -17,9 +17,9 @@ import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9875 */;
 import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10343 */;
 import AutocompleteOptions from "AutocompleteOptions" /* 10427 */;
 import TimestampSuggestionUtils from "TimestampSuggestionUtils" /* 10439 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14025 */;
-import Autocomplete from "Autocomplete" /* 14178 */;
-import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 14189 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14026 */;
+import Autocomplete from "Autocomplete" /* 14179 */;
+import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 14190 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 8416 */;

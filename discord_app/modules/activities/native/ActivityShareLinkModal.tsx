@@ -1,6 +1,6 @@
-// === Module 16632: ActivityShareLinkModal ===
+// === Module 16642: ActivityShareLinkModal ===
 
-// Module 16632 (ActivityShareLinkModal)
+// Module 16642 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ToastUtils from "ToastUtils" /* 5836 */;
@@ -8,8 +8,8 @@ import LinkIcon from "LinkIcon" /* 5851 */;
 import ClipboardUtils from "ClipboardUtils" /* 7418 */;
 import HeaderActionButton from "HeaderActionButton" /* 7630 */;
 import getApplicationInstallURL from "getApplicationInstallURL" /* 12665 */;
-import formatResults from "formatResults" /* 13615 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16631 */;
+import formatResults from "formatResults" /* 13616 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16641 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -100,7 +100,7 @@ export default function ActivityShareLinkModal(applicationId) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -119,7 +119,7 @@ export default function ActivityShareLinkModal(applicationId) {
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj4 = { value: Promise.all(first1.map(tmp2(13615).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj4 = { value: Promise.all(first1.map(tmp2(13616).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj4;
             } else {
               c3 = 3;
@@ -130,7 +130,7 @@ export default function ActivityShareLinkModal(applicationId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_0 = value.filter(tmp2(1380).isNotNullish);
-          closure_128_1 = tmp2(16633).resolveActivityShareMessageContent(closure_129_4, closure_129_15, closure_129_13);
+          closure_128_1 = tmp2(16643).resolveActivityShareMessageContent(closure_129_4, closure_129_15, closure_129_13);
           closure_129_7(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0) {
@@ -144,7 +144,7 @@ export default function ActivityShareLinkModal(applicationId) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -177,7 +177,7 @@ export default function ActivityShareLinkModal(applicationId) {
                     return obj;
                   }
                   c1 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp12) {
                   c1 = tmp;
                   throw tmp12;
@@ -195,7 +195,7 @@ export default function ActivityShareLinkModal(applicationId) {
               return applyArgumentsResult;
             };
           })());
-          let obj5 = tmp2(16633);
+          let obj5 = tmp2(16643);
           let obj7 = { text: null };
           const intl = tmp2(1113).intl;
           const obj8 = { applicationName: closure_129_15.name };
@@ -203,8 +203,8 @@ export default function ActivityShareLinkModal(applicationId) {
           tmp3(5837).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
           closure_129_5(true, closure_129_8);
           let obj6 = tmp3(5837);
-          const result = tmp2(16631).closeActivityShareLinkModal();
-          const obj9 = tmp2(16631);
+          const result = tmp2(16641).closeActivityShareLinkModal();
+          const obj9 = tmp2(16641);
         }
         c3 = 3;
         let obj = { value, done: true };

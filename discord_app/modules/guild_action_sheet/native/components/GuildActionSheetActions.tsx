@@ -1,6 +1,6 @@
-// === Module 16036: GuildActionSheetActions ===
+// === Module 16046: GuildActionSheetActions ===
 
-// Module 16036 (GuildActionSheetActions)
+// Module 16046 (GuildActionSheetActions)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
@@ -33,9 +33,9 @@ import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 11663 */;
 import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11741 */;
 import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11756 */;
 import useCanInviteToLinkedGameOrganizationDefault from "useCanInviteToLinkedGameOrganization" /* 11784 */;
-import useIsServerThemeAvailableForGuildDefault from "useIsServerThemeAvailableForGuild" /* 16037 */;
-import markGuildsAsReadDefault from "markGuildsAsRead" /* 16087 */;
-import GuildAntiRaidModalActionCreators from "GuildAntiRaidModalActionCreators" /* 16096 */;
+import useIsServerThemeAvailableForGuildDefault from "useIsServerThemeAvailableForGuild" /* 16047 */;
+import markGuildsAsReadDefault from "markGuildsAsRead" /* 16097 */;
+import GuildAntiRaidModalActionCreators from "GuildAntiRaidModalActionCreators" /* 16106 */;
 import noop from "module_19" /* 19 */;
 import NewChannelsStore from "NewChannelsStore" /* 7787 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -95,7 +95,7 @@ function BrowseChannelsOption(guild) {
       obj4.label = stringResult;
       closure_21(tmp9, obj4);
     }
-    tmp8Result2 = closure_21(tmp3(14072).NewBadge, {});
+    tmp8Result2 = closure_21(tmp3(14073).NewBadge, {});
   }
   const obj3 = guild(504);
 }
@@ -278,7 +278,7 @@ export function GuildUnreadAction(guild) {
 }
 export function GuildActionSheetPrimaryActions(guild) {
   guild = guild.guild;
-  let obj = guild(16088);
+  let obj = guild(16098);
   const tmp3 = useCanCreateAnEventDefault(guild.id);
   items = [GuildRoleStore];
   const items1 = [];
@@ -346,7 +346,7 @@ export function GuildActionSheetGameOrganizationActions(guild) {
     obj2.label = intl.formatToPlainString(_modDef2530.EnTIIr, obj3);
     obj2.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16089, dependencyMap.paths), "GameOrganizationInviteActionSheet", { guildId: guild.id });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16099, dependencyMap.paths), "GameOrganizationInviteActionSheet", { guildId: guild.id });
     };
     obj.children = closure_21(guild(7428).ActionSheetRow, obj2);
     tmp3 = closure_21(guild(7428).ActionSheetRow.Group, obj);
@@ -367,7 +367,7 @@ export function GuildActionSheetDirectoryActions(guild) {
   items.push(closure_21(ChangeIdentityOption, { guild, user: currentUser }));
   items.push(closure_21(RestrictedGuildPrivacyOption, { guild }));
   const tmp4 = closure_7(guild, currentUser);
-  const messageRequestPrivacyOption = guild(16035).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(16045).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }
@@ -400,7 +400,7 @@ export function GuildActionSheetDirectoryActions(guild) {
     };
     t = items.push(closure_21(tmp9(7428).ActionSheetRow, obj3));
   }
-  let obj = guild(16035);
+  let obj = guild(16045);
 }
 export function GuildActionSheetSecondaryActions(guild) {
   guild = guild.guild;
@@ -430,7 +430,7 @@ export function GuildActionSheetSecondaryActions(guild) {
   items.push(closure_21(HideMutedChannelsOption, { guild }));
   items.push(closure_21(RestrictedGuildPrivacyOption, { guild }));
   const obj3 = guild(6940);
-  const messageRequestPrivacyOption = guild(16035).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(16045).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }
@@ -499,12 +499,12 @@ export function GuildActionSheetSecondaryActions(guild) {
       onPress() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           const obj2 = { source: GuildAntiRaidTypes.GuildIncidentActionSources.GUILD_PROFILE };
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13487, dependencyMap.paths), "GuildIncidentActionsActionSheet", { guild, analyticsData: obj2 });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13488, dependencyMap.paths), "GuildIncidentActionsActionSheet", { guild, analyticsData: obj2 });
         }
     };
     t = items.push(closure_21(tmp3(7428).ActionSheetRow, obj9));
   }
-  const tmp3Result = guild(16035);
+  const tmp3Result = guild(16045);
 }
 export function GuildDeveloperOptionAction(guild) {
   guild = guild.guild;

@@ -1,6 +1,6 @@
-// === Module 17834: HighlightNotificationsSetting ===
+// === Module 17845: HighlightNotificationsSetting ===
 
-// Module 17834 (HighlightNotificationsSetting)
+// Module 17845 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import GuildStore from "GuildStore" /* 5011 */;

@@ -1,6 +1,6 @@
-// === Module 16756: ColorBlock ===
+// === Module 16767: ColorBlock ===
 
-// Module 16756 (ColorBlock)
+// Module 16767 (ColorBlock)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import native from "native" /* 1187 */;

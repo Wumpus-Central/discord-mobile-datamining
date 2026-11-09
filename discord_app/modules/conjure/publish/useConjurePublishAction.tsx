@@ -135,7 +135,7 @@ let closure_20 = async function _requestConjureInstallConsent(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -254,7 +254,7 @@ let closure_20 = async function _requestConjureInstallConsent(arg0) {
         return obj;
       }
       c5 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp29) {
       c5 = tmp;
       throw tmp29;
@@ -290,7 +290,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -578,7 +578,7 @@ let closure_24 = async function _waitForAppChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -660,7 +660,7 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -848,7 +848,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -885,13 +885,13 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
                   set.add(closure_0);
                   c10 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f139284 = requestConsent;
+                  f139379 = requestConsent;
                   if (requestConsent == null) {
-                    f139284 = (arg0) => closure_2_19(arg0, closure_1_4);
+                    f139379 = (arg0) => closure_2_19(arg0, closure_1_4);
                   }
                   c11 = 3;
                   c12 = 1;
-                  const obj5 = { value: f139284(closure_0), done: false };
+                  const obj5 = { value: f139379(closure_0), done: false };
                   return obj5;
                 }
               }
@@ -925,7 +925,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
             closure_136_25.delete(closure_135_0);
             if (closure_136_14.isProjectPublishing(closure_135_0)) {
               c12 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               closure_135_5 = closure_136_18(closure_135_0, closure_135_4);
               let integrationStatus;
@@ -967,7 +967,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
                 obj9 = closure_136_0(closure_136_2[31]);
               }
               c12 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } else if (arg0 === 1) {
@@ -979,7 +979,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
           return obj;
         }
         c12 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp50) {
         closure_9 = tmp50;
         if (tmp4 === c10) {

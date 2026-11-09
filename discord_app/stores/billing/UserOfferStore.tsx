@@ -5,7 +5,7 @@ import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PremiumUtils from "PremiumUtils" /* 2171 */;
-import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 15494 */;
+import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 15504 */;
 import DiscountRecord from "DiscountRecord" /* 7707 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 7708 */;
 import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8602 */;
@@ -74,7 +74,7 @@ const PremiumConstants = fn(1387);
 ({ ANNUAL_DISCOUNT_IDS: closure_10, CHURN_DISCOUNT_IDS: closure_11, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = PremiumConstants);
 const OfferTriggerTypes = fn(1083).OfferTriggerTypes;
 let closure_17 = performance.now();
-let cooldownExpirationTimestamps = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u{1F9D1}\u{1F3FE}\u200D\u{1F33E}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 12.1, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
+let cooldownExpirationTimestamps = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u{1F468}\u{1F3FF}\u200D\u2695\uFE0F", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
 let closure_19 = cooldownExpirationTimestamps;
 const PersistedStore = initializeDefault.PersistedStore;
 class UserOfferStore extends PersistedStore {

@@ -1,6 +1,6 @@
-// === Module 16115: subscriptionSettingsDeepLink ===
+// === Module 16125: subscriptionSettingsDeepLink ===
 
-// Module 16115 (subscriptionSettingsDeepLink)
+// Module 16125 (subscriptionSettingsDeepLink)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import openUserSettings from "openUserSettings" /* 7635 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -36,7 +36,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
         closure_130_11();
         closure_130_8();
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
@@ -111,7 +111,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(16116).showSimpleActionSheet(obj);
+            const result = closure_0(16126).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;

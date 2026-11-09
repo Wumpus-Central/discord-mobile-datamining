@@ -1,6 +1,6 @@
-// === Module 15901: BlockedUserUtils ===
+// === Module 15911: BlockedUserUtils ===
 
-// Module 15901 (BlockedUserUtils)
+// Module 15911 (BlockedUserUtils)
 import RelationshipStore from "RelationshipStore" /* 5082 */;
 
 const require = fn;

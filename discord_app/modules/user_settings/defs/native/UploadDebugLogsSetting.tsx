@@ -1,6 +1,6 @@
-// === Module 17851: UploadDebugLogsSetting ===
+// === Module 17862: UploadDebugLogsSetting ===
 
-// Module 17851 (UploadDebugLogsSetting)
+// Module 17862 (UploadDebugLogsSetting)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import DebugUploadManager from "DebugUploadManager" /* 11223 */;
@@ -18,7 +18,7 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

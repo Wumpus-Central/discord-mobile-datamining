@@ -1,6 +1,6 @@
-// === Module 19567: VoicePanelDock ===
+// === Module 19580: VoicePanelDock ===
 
-// Module 19567 (VoicePanelDock)
+// Module 19580 (VoicePanelDock)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -15,11 +15,11 @@ import ContextMenuConstants from "ContextMenuConstants" /* 9998 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11367 */;
 import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11389 */;
-import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 19568 */;
-import useVoicePanelDockStatusDefault from "useVoicePanelDockStatus" /* 19587 */;
-import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 19589 */;
-import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19590 */;
-import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19594 */;
+import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 19581 */;
+import useVoicePanelDockStatusDefault from "useVoicePanelDockStatus" /* 19600 */;
+import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 19602 */;
+import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19603 */;
+import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19607 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 

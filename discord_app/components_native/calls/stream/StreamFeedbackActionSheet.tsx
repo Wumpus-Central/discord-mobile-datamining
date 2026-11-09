@@ -1,13 +1,13 @@
-// === Module 19847: StreamFeedbackActionSheet ===
+// === Module 19860: StreamFeedbackActionSheet ===
 
-// Module 19847 (StreamFeedbackActionSheet)
+// Module 19860 (StreamFeedbackActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import ToastUtils from "ToastUtils" /* 5836 */;
 import FeedbackUtils from "FeedbackUtils" /* 10282 */;
-import trackStreamProblemDefault from "trackStreamProblem" /* 19732 */;
-import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 19849 */;
+import trackStreamProblemDefault from "trackStreamProblem" /* 19745 */;
+import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 19862 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -116,7 +116,7 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19850, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19863, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
           const obj7 = { mediaSessionId: null, rtcConnectionId: null };
           const tmp22Result = ActionSheetActionCreatorsDefault;
         }
@@ -125,5 +125,5 @@ export default function StreamFeedbackActionSheet(stream) {
       ToastUtils.presentFeedbackSent();
     }
   };
-  return jsx(tmp10(19848), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
+  return jsx(tmp10(19861), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
 };

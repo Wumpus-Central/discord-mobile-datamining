@@ -1,14 +1,14 @@
-// === Module 14596: DiscoverabilityModal ===
+// === Module 14597: DiscoverabilityModal ===
 
-// Module 14596 (DiscoverabilityModal)
+// Module 14597 (DiscoverabilityModal)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import Navigator from "Navigator" /* 7231 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14490 */;
-import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 14504 */;
-import NUFActionCreators from "NUFActionCreators" /* 14511 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14491 */;
+import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 14505 */;
+import NUFActionCreators from "NUFActionCreators" /* 14512 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -60,9 +60,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   const callback = noop.useCallback((arg0) => {
-    const result = allowPhone(14511).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(14511);
-    const result1 = allowPhone(14511).closeDiscoverabilityModal(false);
+    const result = allowPhone(14512).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(14512);
+    const result1 = allowPhone(14512).closeDiscoverabilityModal(false);
   }, []);
   const obj2 = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();
@@ -128,7 +128,7 @@ class DiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(14483).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14484).useContactSyncModalStore;
 const jsx = fn(21).jsx;
 const createStyles = fn(5140);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(5714).NAV_BAR_HEIGHT + 32 } };

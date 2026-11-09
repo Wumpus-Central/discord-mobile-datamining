@@ -1,8 +1,8 @@
-// === Module 16133: NotificationsTabLottie ===
+// === Module 16143: NotificationsTabLottie ===
 
-// Module 16133 (NotificationsTabLottie)
+// Module 16143 (NotificationsTabLottie)
 import LottieIcon from "LottieIcon" /* 12083 */;
-import _mod16134 from "module_16134" /* 16134 */;
+import _mod16144 from "module_16144" /* 16144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,5 +15,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 export function NotificationsTabLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod16134, animation: "all", ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod16144, animation: "all", ref: ref.ref, layers, markers: items });
 }

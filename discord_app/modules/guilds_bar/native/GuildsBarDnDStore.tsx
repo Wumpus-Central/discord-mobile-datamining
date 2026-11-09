@@ -1,6 +1,6 @@
-// === Module 18682: GuildsBarDnDStore ===
+// === Module 18695: GuildsBarDnDStore ===
 
-// Module 18682 (GuildsBarDnDStore)
+// Module 18695 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _mod5055 from "module_5055" /* 5055 */;
@@ -16,7 +16,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "description", dropSpecs: "isArray", dragRegion: require("module_1652").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "headers", scrollPosition: true, windowSize: true, setStateShallow: true, dropStart: true, dropComplete: true };
+  let obj = { dragSpecs: "Boolean", overSpecs: "description", dropSpecs: "isArray", dragRegion: require("module_1652").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "anatomical_heart", scrollPosition: true, windowSize: true, setStateShallow: true, dropStart: true, dropComplete: true };
   let obj2 = require("module_1652");
   obj.gestureState = require("module_1652").makeMutable(obj);
   let obj3 = require("module_1652");
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "a", overSpecs: "start" }));
+      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "add" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;

@@ -1,6 +1,6 @@
-// === Module 15062: AddFriendNicknameModal ===
+// === Module 15063: AddFriendNicknameModal ===
 
-// Module 15062 (AddFriendNicknameModal)
+// Module 15063 (AddFriendNicknameModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -40,7 +40,7 @@ export default function AddFriendNicknameModal(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 15292: CollectiblesPromotionBadgeUtils ===
+// === Module 15302: CollectiblesPromotionBadgeUtils ===
 
-// Module 15292 (CollectiblesPromotionBadgeUtils)
+// Module 15302 (CollectiblesPromotionBadgeUtils)
 import StorefrontTypes from "StorefrontTypes" /* 7475 */;
 import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9568 */;
 import size from "module_2" /* 2 */;

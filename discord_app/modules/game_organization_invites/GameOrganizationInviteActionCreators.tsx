@@ -20,7 +20,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -92,7 +92,7 @@ let obj = {
             tmp3(tmp44[3]).dispatch(obj15);
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp44) {
           if (tmp4 === c3) {
@@ -118,7 +118,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -155,7 +155,7 @@ let obj = {
             const obj7 = { type: "INVITABLE_GAME_ORGANIZATIONS_FETCH_SUCCESS", guildIds: closure_129_0, gameOrganizations: body };
             tmp2(572).dispatch(obj7);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -177,7 +177,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -211,7 +211,7 @@ let obj = {
             const obj7 = { type: "GAME_ORGANIZATION_CHARACTER_ELIGIBILITY_FETCH_SUCCESS", code: closure_129_0, characters: body.characters };
             tmp2(572).dispatch(obj7);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;
@@ -233,7 +233,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

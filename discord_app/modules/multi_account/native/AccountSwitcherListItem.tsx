@@ -1,6 +1,6 @@
-// === Module 18317: AccountSwitcherListItem ===
+// === Module 18330: AccountSwitcherListItem ===
 
-// Module 18317 (AccountSwitcherListItem)
+// Module 18330 (AccountSwitcherListItem)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -52,7 +52,7 @@ class AccountStatusIcon {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(14210).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(14211).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5140);

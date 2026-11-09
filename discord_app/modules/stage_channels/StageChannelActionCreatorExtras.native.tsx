@@ -54,7 +54,7 @@ export function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
   ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8245, dependencyMap.paths), metroImportDefault, { channelId, onOpenRTCDebugOverlay });
 }
 export function openEndStageModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15451, dependencyMap.paths), React5, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15461, dependencyMap.paths), React5, { channel });
 }
 export { openStageChannel };
 export function showPlatformUserProfile(arg0) {

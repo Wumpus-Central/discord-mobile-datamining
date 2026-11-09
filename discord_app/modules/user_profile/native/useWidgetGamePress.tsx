@@ -1,6 +1,6 @@
-// === Module 15213: useWidgetGamePress ===
+// === Module 15223: useWidgetGamePress ===
 
-// Module 15213 (useWidgetGamePress)
+// Module 15223 (useWidgetGamePress)
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9397 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9421 */;
 import size from "module_2" /* 2 */;

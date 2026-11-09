@@ -26,7 +26,7 @@ let closure_7 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

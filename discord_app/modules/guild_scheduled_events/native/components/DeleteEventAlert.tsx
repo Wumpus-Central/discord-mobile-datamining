@@ -29,7 +29,7 @@ export default function DeleteEventAlert(eventException) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -77,7 +77,7 @@ export default function DeleteEventAlert(eventException) {
           }
           v1(5374).hideActionSheet();
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         dependencyMap = tmp;

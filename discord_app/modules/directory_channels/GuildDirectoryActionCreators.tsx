@@ -1,10 +1,10 @@
-// === Module 14097: GuildDirectoryActionCreators ===
+// === Module 14098: GuildDirectoryActionCreators ===
 
-// Module 14097 (GuildDirectoryActionCreators)
+// Module 14098 (GuildDirectoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6802 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 14084 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 14085 */;
 import "debounce";
 import debounce_mod from "debounce" /* 551 */;
 
@@ -73,7 +73,7 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(14086).DirectoryEntryCategories;
+const DirectoryEntryCategories = fn(14087).DirectoryEntryCategories;
 let Endpoints = fn(1072).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;
@@ -149,7 +149,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

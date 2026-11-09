@@ -1,6 +1,6 @@
-// === Module 20162: GuildSettingsModalSecurity ===
+// === Module 20175: GuildSettingsModalSecurity ===
 
-// Module 20162 (GuildSettingsModalSecurity)
+// Module 20175 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 575 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9154 */;
 import noop from "module_19" /* 19 */;
@@ -100,7 +100,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   const obj10 = { style: tmp.center, children: null };
   const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  obj11.source = stateFromStores(16974);
+  obj11.source = stateFromStores(16985);
   obj11.style = tmp.image;
   const items6 = [closure_12(stateFromStores(5842), obj11), ];
   const obj12 = { style: tmp.infoWrapper, children: null };

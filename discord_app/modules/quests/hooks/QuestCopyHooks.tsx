@@ -1,6 +1,6 @@
-// === Module 14931: QuestCopyHooks ===
+// === Module 14932: QuestCopyHooks ===
 
-// Module 14931 (QuestCopyHooks)
+// Module 14932 (QuestCopyHooks)
 import initialize from "initialize" /* 504 */;
 import NumberUtils from "NumberUtils" /* 2024 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
@@ -14,7 +14,7 @@ import hooks_QuestHooks from "hooks/QuestHooks" /* 9772 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9790 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9795 */;
 import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11954 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 14933 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 14934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,7 +23,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 const util = v1votF6(1113);
 const utils_QuestUtils = v1votF6(7943);
-const SponsoredQuestUtils = v1votF6(14932);
+const SponsoredQuestUtils = v1votF6(14933);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -692,7 +692,7 @@ export function usePrimaryCtaCopy(arg0) {
     const intl3 = quest(1113).intl;
     return intl3.string(quest(1113).t.l7E81v);
   } else if (constants3.WATCH_VIDEO === memo) {
-    return quest(14920).getVideoQuestWatchCtaText(tmp5);
+    return quest(14921).getVideoQuestWatchCtaText(tmp5);
   } else if (constants3.IN_GAME === memo) {
     if (tmp2Result4.canLaunchActivity(quest)) {
       const features = quest.config.features;
@@ -781,7 +781,7 @@ export function useModalCtaConfig(quest) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -821,7 +821,7 @@ export function useModalCtaConfig(quest) {
           obj6.sourceQuestContent = closure_128_4;
           tmp4(9809).openGameLinkDirectly(closure_128_0, obj6);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         dependencyMap = tmp;

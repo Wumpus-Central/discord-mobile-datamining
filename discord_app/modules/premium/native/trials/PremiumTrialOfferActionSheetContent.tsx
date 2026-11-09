@@ -1,6 +1,6 @@
-// === Module 18010: PremiumTrialOfferActionSheetContent ===
+// === Module 18019: PremiumTrialOfferActionSheetContent ===
 
-// Module 18010 (PremiumTrialOfferActionSheetContent)
+// Module 18019 (PremiumTrialOfferActionSheetContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PremiumUtils from "PremiumUtils" /* 2171 */;
@@ -10,9 +10,9 @@ import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8282 */;
 import FolderIcon from "FolderIcon" /* 8717 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9612 */;
 import UserIcon from "UserIcon" /* 12286 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 14848 */;
-import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 18011 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 18015 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 14849 */;
+import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 18020 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 18024 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

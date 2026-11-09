@@ -1,6 +1,6 @@
-// === Module 19537: SoundboardSoundPickerList ===
+// === Module 19550: SoundboardSoundPickerList ===
 
-// Module 19537 (SoundboardSoundPickerList)
+// Module 19550 (SoundboardSoundPickerList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -16,8 +16,8 @@ import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10143 *
 import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10144 */;
 import chunkDefault from "chunk" /* 10190 */;
 import _modDef10390 from "module_10390" /* 10390 */;
-import SoundButton from "SoundButton" /* 19538 */;
-import _modDef19546 from "module_19546" /* 19546 */;
+import SoundButton from "SoundButton" /* 19551 */;
+import _modDef19559 from "module_19559" /* 19559 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -98,7 +98,7 @@ function SoundPickerButtonRow(row) {
   let obj = row(section[10]);
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(19532);
+const SoundboardStyleConstants = fn(19545);
 ({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: closure_6, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -304,7 +304,7 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
         const obj3 = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: tmp2.category.categoryInfo.guild, style: currentUser.sectionIcon };
         let tmp8Result = metroImportDefault(GuildIconDefault, obj3);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj4 = { source: _modDef19546, style: currentUser.sectionIcon };
+        const obj4 = { source: _modDef19559, style: currentUser.sectionIcon };
         tmp8Result = metroImportDefault(native.Icon, obj4);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
         const obj5 = { source: _modDef10390, style: currentUser.sectionIcon };

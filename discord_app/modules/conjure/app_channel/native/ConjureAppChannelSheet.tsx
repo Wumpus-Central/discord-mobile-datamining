@@ -1,6 +1,6 @@
-// === Module 14820: ConjureAppChannelSheet ===
+// === Module 14821: ConjureAppChannelSheet ===
 
-// Module 14820 (ConjureAppChannelSheet)
+// Module 14821 (ConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5374 */;
 import Text_Text from "Text/Text" /* 5751 */;
@@ -11,9 +11,9 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9198 */;
 import ConjureRemixSheet from "ConjureRemixSheet" /* 10967 */;
 import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11104 */;
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14818 */;
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14819 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14817 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14818 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import PermissionStore from "PermissionStore" /* 5072 */;
 

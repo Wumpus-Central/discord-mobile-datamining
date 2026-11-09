@@ -1,9 +1,9 @@
-// === Module 18857: ForYouEmptyState ===
+// === Module 18870: ForYouEmptyState ===
 
-// Module 18857 (ForYouEmptyState)
+// Module 18870 (ForYouEmptyState)
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5751 */;
-import MailboxSpotIllustration from "MailboxSpotIllustration" /* 18858 */;
+import MailboxSpotIllustration from "MailboxSpotIllustration" /* 18871 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

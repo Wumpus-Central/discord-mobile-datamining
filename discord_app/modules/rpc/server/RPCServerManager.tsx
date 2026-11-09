@@ -1,6 +1,6 @@
-// === Module 16596: RPCServerManager ===
+// === Module 16606: RPCServerManager ===
 
-// Module 16596 (RPCServerManager)
+// Module 16606 (RPCServerManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -12,9 +12,9 @@ import transformUserDefault from "transformUser" /* 9412 */;
 import RPCHelpers from "RPCHelpers" /* 11976 */;
 import transformMessage from "transformMessage" /* 11977 */;
 import getRemoteIconURLDefault from "getRemoteIconURL" /* 11978 */;
-import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 16597 */;
-import useThermalState from "useThermalState" /* 16603 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16605 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 16607 */;
+import useThermalState from "useThermalState" /* 16613 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16615 */;
 import _slicedToArray from "module_32" /* 32 */;
 import QuestStore from "QuestStore" /* 7922 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -121,7 +121,7 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = obj.rpcServer;
         const result = rpcServer.dispatchToSubscriptions(constants3.VOICE_CHANNEL_SELECT, {}, (socket) => {
-          obj = obj(16602);
+          obj = obj(16612);
           if (obj.isGuildVoiceSocket(socket.socket)) {
             channel = channel.getChannel(channelId);
             let type;

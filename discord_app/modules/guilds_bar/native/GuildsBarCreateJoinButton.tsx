@@ -1,12 +1,12 @@
-// === Module 18763: GuildsBarCreateJoinButton ===
+// === Module 18776: GuildsBarCreateJoinButton ===
 
-// Module 18763 (GuildsBarCreateJoinButton)
+// Module 18776 (GuildsBarCreateJoinButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import CirclePlusIcon from "CirclePlusIcon" /* 11634 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18691 */;
-import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 18764 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18704 */;
+import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 18777 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
@@ -25,7 +25,7 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -130,12 +130,12 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
       obj = closure_1_0(dependencyMap[11]);
     }
   }), []);
-  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "body-sm/medium", expandedChildren: "interactive-text-active", children: null };
+  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 1, expandedChildren: "center", children: null };
   const intl = util.intl;
   obj4.label = intl.string(util.t.l5WIbf);
   obj4.expandedChildren = jsx(HomeDrawerAddServerRow.HomeDrawerAddServerRowExpandedChildren, {});
   const colors = nativeDefault.colors;
   obj4.children = jsx(CirclePlusIcon.CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "body-sm/medium", expandedChildren: "interactive-text-active", children: null });
+  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 1, expandedChildren: "center", children: null });
   return <View style={tmp.stretch}>{null}</View>;
 });

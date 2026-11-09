@@ -1,6 +1,6 @@
-// === Module 19962: InterestGuildActions ===
+// === Module 19975: InterestGuildActions ===
 
-// Module 19962 (InterestGuildActions)
+// Module 19975 (InterestGuildActions)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5174 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -19,7 +19,7 @@ let closure_8 = async function _joinInterestGuild(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 14224: useEmojiSuggestions ===
+// === Module 14225: useEmojiSuggestions ===
 
-// Module 14224 (useEmojiSuggestions)
+// Module 14225 (useEmojiSuggestions)
 import EmojiTypes from "EmojiTypes" /* 5089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -98,7 +98,7 @@ function findWordSpan(text, selectionStart, selectionEnd) {
   }
 }
 const LoadState = fn(6851).LoadState;
-const EnglishEmojiSuggestionsConstants = fn(14225);
+const EnglishEmojiSuggestionsConstants = fn(14226);
 ({ QUERY_DENYLIST: metroImportDefault, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const re10 = /(\S+)\s$/;

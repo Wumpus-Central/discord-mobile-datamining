@@ -1,6 +1,6 @@
-// === Module 15468: VoiceMemberList ===
+// === Module 15478: VoiceMemberList ===
 
-// Module 15468 (VoiceMemberList)
+// Module 15478 (VoiceMemberList)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
@@ -9,8 +9,8 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 88
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9198 */;
 import _modDef11108 from "module_11108" /* 11108 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11785 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 15464 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 15471 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 15474 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 15481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -72,7 +72,7 @@ function VoiceSectionRow(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -141,13 +141,13 @@ function VoiceSectionRow(arg0) {
         },
       isActionSheet
     };
-    return closure_21(tmp2(15470), obj2);
+    return closure_21(tmp2(15480), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(15471), obj3);
+    return closure_21(tmp2(15481), obj3);
   }
   let obj = isActionSheet(10170);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
@@ -181,8 +181,8 @@ let closure_26 = noop.memo(function Footer(channel) {
       const intl = tmp4(1113).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1113).t["6Qgrev"]);
       obj3.source = _modDef11108;
-      obj3.size = tmp4(15469).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(15469).CircularIconButton, obj3);
+      obj3.size = tmp4(15479).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(15479).CircularIconButton, obj3);
       const intl2 = tmp4(1113).intl;
       obj2.label = intl2.string(tmp4(1113).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -364,7 +364,7 @@ export default function VoiceMemberList(channel) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(15470);
+                tmp4 = tmp4(15480);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

@@ -1,6 +1,6 @@
-// === Module 19861: FrecencyUserSettingsManager ===
+// === Module 19874: FrecencyUserSettingsManager ===
 
-// Module 19861 (FrecencyUserSettingsManager)
+// Module 19874 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
@@ -66,7 +66,7 @@ let closure_22 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -126,7 +126,7 @@ let closure_22 = async function _saveProtos(arg0) {
         const result = markDirtyIfHasPendingChange.markDirtyIfHasPendingChange();
       });
       c4 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp25) {
       c4 = tmp;
       throw tmp25;

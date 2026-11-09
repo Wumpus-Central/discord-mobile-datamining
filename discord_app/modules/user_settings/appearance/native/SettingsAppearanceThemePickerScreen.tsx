@@ -1,6 +1,6 @@
-// === Module 17569: SettingsAppearanceThemePickerScreen ===
+// === Module 17580: SettingsAppearanceThemePickerScreen ===
 
-// Module 17569 (SettingsAppearanceThemePickerScreen)
+// Module 17580 (SettingsAppearanceThemePickerScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
@@ -16,14 +16,14 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9069 */;
 import ThemeDarkIcon from "ThemeDarkIcon" /* 11321 */;
 import StatusBarDefault from "StatusBar" /* 11352 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16767 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16768 */;
-import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17315 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17316 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17317 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 17570 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17572 */;
-import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17592 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 16778 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16779 */;
+import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17326 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17327 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17328 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 17581 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17583 */;
+import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17603 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -375,7 +375,7 @@ function ThemePicker(defaultIndex) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -478,7 +478,7 @@ function ThemePicker(defaultIndex) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -518,7 +518,7 @@ function ThemePicker(defaultIndex) {
                 callback(tmp12);
                 close();
                 c2 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             }
           }
@@ -577,7 +577,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -744,7 +744,7 @@ function ThemePicker(defaultIndex) {
   }
   if ("nitro" === themeSelector) {
     const obj5 = { themes: mobileThemes, currentThemeIndex: themeIndex, isPreview, isSynced, defaultIndex, deviceWidth: rounded, animatedStyles: obj4, hasOnyxNux, onThemeSelected: callback4 };
-    let tmp62 = obj4(tmp6(17574), obj5);
+    let tmp62 = obj4(tmp6(17585), obj5);
     let tmp63 = obj4;
   } else {
     let tmp58;
@@ -788,7 +788,7 @@ function ThemePicker(defaultIndex) {
     }
     _undefined(str);
   }, items17);
-  const memo3 = obj2.useMemo(tmp6(17580), []);
+  const memo3 = obj2.useMemo(tmp6(17591), []);
   const obj10 = { themes: mobileThemes, themeIndex, animatedStyles: obj4, data: memo3, useGradientBackground: "nitro" === themeSelector, isNitroLocked: null };
   let result = tmp14;
   const tmp3Result15 = require("useNavigatorBackPressHandler");
@@ -811,7 +811,7 @@ function ThemePicker(defaultIndex) {
   let tmp63Result2 = null;
   if ("nitro" === themeSelector) {
     const obj12 = { themes: mobileThemes, themeIndex, isDimmed: true };
-    tmp63Result2 = tmp63(tmp6(17601), obj12);
+    tmp63Result2 = tmp63(tmp6(17612), obj12);
   }
   const items19 = [tmp63Result2, ];
   const items20 = [tmp.container, , ];

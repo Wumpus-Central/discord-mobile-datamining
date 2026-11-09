@@ -1,6 +1,6 @@
-// === Module 18814: notifications/Notifications ===
+// === Module 18827: notifications/Notifications ===
 
-// Module 18814 (notifications/Notifications)
+// Module 18827 (notifications/Notifications)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import native from "native" /* 5199 */;
@@ -12,14 +12,14 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 7183 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7387 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10855 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13567 */;
-import useAppFrameDefault from "useAppFrame" /* 18375 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 18395 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 18815 */;
-import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 18816 */;
-import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 18817 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 18821 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 18822 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13568 */;
+import useAppFrameDefault from "useAppFrame" /* 18388 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 18408 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 18828 */;
+import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 18829 */;
+import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 18830 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 18834 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 18835 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -178,7 +178,7 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1113).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1113).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(16880).LeftBackIconWithBadge, {});
+    obj3.children = closure_7(tmp11(16891).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp11(7043).PressableOpacity, obj3), , ];
     const obj4 = { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp11(1113).intl;

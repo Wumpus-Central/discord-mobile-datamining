@@ -1,6 +1,6 @@
-// === Module 17770: EmbedAndLinkPreviewsSetting ===
+// === Module 17781: EmbedAndLinkPreviewsSetting ===
 
-// Module 17770 (EmbedAndLinkPreviewsSetting)
+// Module 17781 (EmbedAndLinkPreviewsSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;

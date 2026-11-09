@@ -55,7 +55,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -100,7 +100,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
               return obj6;
             } else if (closure_131_11.isPurchasingProduct(purchase2.productId)) {
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               closure_130_1 = closure_131_12.getState().analyticsByProductId[purchase2.productId];
               giftOptionsForKey = closure_131_25[purchase2.productId];
@@ -150,7 +150,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
                 const obj17 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
                 closure_131_1(closure_131_2[17]).dispatch(obj17);
                 c7 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 c6 = 7;
                 c7 = 1;
@@ -441,7 +441,7 @@ let closure_38 = async function _executePendingDowngrade() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -570,7 +570,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -627,7 +627,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
             });
           });
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       }
     } catch (tmp24) {
@@ -662,7 +662,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

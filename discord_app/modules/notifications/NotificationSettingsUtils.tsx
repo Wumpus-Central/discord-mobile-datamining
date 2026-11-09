@@ -1,8 +1,8 @@
-// === Module 16586: notifications/NotificationSettingsUtils ===
+// === Module 16596: notifications/NotificationSettingsUtils ===
 
-// Module 16586 (notifications/NotificationSettingsUtils)
-import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 15864 */;
-import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 16587 */;
+// Module 16596 (notifications/NotificationSettingsUtils)
+import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 15874 */;
+import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 16597 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ function getNamedExperiment(experiment) {
     return tmp;
   }
 }
-const NotificationSettingsConstants = fn(16582);
+const NotificationSettingsConstants = fn(16592);
 ({ NOTIF_CATEGORIES: closure_4, NOTIF_SETTING_MAPPING: hasOwnProperty, NOTIF_SETTING_REDESIGN_MAPPING: closure_6, NOTIF_SETTINGS: metroImportDefault } = NotificationSettingsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");

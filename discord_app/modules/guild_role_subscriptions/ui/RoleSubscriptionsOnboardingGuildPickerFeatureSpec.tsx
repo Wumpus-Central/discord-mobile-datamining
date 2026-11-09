@@ -1,6 +1,6 @@
-// === Module 16018: RoleSubscriptionsOnboardingGuildPickerFeatureSpec ===
+// === Module 16028: RoleSubscriptionsOnboardingGuildPickerFeatureSpec ===
 
-// Module 16018 (RoleSubscriptionsOnboardingGuildPickerFeatureSpec)
+// Module 16028 (RoleSubscriptionsOnboardingGuildPickerFeatureSpec)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import ExperimentStore from "ExperimentStore" /* 5354 */;

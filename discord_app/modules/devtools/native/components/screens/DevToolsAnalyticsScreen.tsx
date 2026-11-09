@@ -1,13 +1,13 @@
-// === Module 17896: DevToolsAnalyticsScreen ===
+// === Module 17907: DevToolsAnalyticsScreen ===
 
-// Module 17896 (DevToolsAnalyticsScreen)
+// Module 17907 (DevToolsAnalyticsScreen)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import ClipboardUtils from "ClipboardUtils" /* 7418 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import AnalyticsLogStore from "AnalyticsLogStore" /* 16533 */;
+import AnalyticsLogStore from "AnalyticsLogStore" /* 16543 */;
 
 require = fn;
 function CommonProperty(arg0) {
@@ -180,10 +180,10 @@ export default function DevToolsAnalyticsScreen() {
   const str2 = str.toLowerCase();
   const items2 = [closure_8(trimmed(7429).TableSwitchRow, { icon: closure_8(trimmed(12685).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] }), ];
   const obj4 = { icon: closure_8(trimmed(12685).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] };
-  items2[1] = closure_8(trimmed(7038).TableRow, { arrow: true, variant: "danger", icon: closure_8(trimmed(5862).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(17891).clearAnalyticsLog });
+  items2[1] = closure_8(trimmed(7038).TableRow, { arrow: true, variant: "danger", icon: closure_8(trimmed(5862).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(17902).clearAnalyticsLog });
   obj3.children = items2;
   const items3 = [closure_9(trimmed(7126).TableRowGroup, obj3), , ];
-  const obj5 = { arrow: true, variant: "danger", icon: closure_8(trimmed(5862).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(17891).clearAnalyticsLog };
+  const obj5 = { arrow: true, variant: "danger", icon: closure_8(trimmed(5862).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(17902).clearAnalyticsLog };
   items3[1] = closure_8(View, { style: tmp.searchFieldContainer, children: closure_8(trimmed(7282).SearchBar, { placeholder: "Search by event name", onChange: tmp8 }) });
   if (0 === loggedEvents.length) {
     let tmp11Result = closure_8(tmp2(7038).TableRow, { label: "No events logged." });

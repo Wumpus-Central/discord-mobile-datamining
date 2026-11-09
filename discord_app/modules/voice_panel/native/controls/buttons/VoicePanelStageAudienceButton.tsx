@@ -1,12 +1,12 @@
-// === Module 19715: VoicePanelStageAudienceButton ===
+// === Module 19728: VoicePanelStageAudienceButton ===
 
-// Module 19715 (VoicePanelStageAudienceButton)
+// Module 19728 (VoicePanelStageAudienceButton)
 import _modDef4156 from "module_4156" /* 4156 */;
 import NativeViewDefault from "NativeView" /* 7023 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19698 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 19706 */;
-import openStageAudienceSheetDefault from "openStageAudienceSheet" /* 19716 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19711 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 19719 */;
+import openStageAudienceSheetDefault from "openStageAudienceSheet" /* 19729 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -25,8 +25,8 @@ export default function StageAudienceButton(props) {
   props = props.props;
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp3 = closure_8();
-  const voicePanelButtonStyles = channelId(19697).useVoicePanelButtonStyles(props.wrapperSpecs);
-  const obj = channelId(19697);
+  const voicePanelButtonStyles = channelId(19710).useVoicePanelButtonStyles(props.wrapperSpecs);
+  const obj = channelId(19710);
   const canModerateRequestToSpeak = channelId(6765).useCanModerateRequestToSpeak(channelId);
   const obj2 = channelId(6765);
   let num = 0;

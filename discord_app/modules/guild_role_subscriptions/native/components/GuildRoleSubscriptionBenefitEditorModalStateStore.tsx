@@ -1,12 +1,12 @@
-// === Module 20362: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 20375: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 20362 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 20375 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _mod5055 from "module_5055" /* 5055 */;
 import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "channel", emojiName: "padding", description: "icon", refId: "add" });
+let closure_2 = Object.freeze({ name: "", emojiId: "channel", emojiName: "start", description: "test", refId: "channelId" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};

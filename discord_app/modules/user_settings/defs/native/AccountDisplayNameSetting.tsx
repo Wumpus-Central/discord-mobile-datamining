@@ -1,6 +1,6 @@
-// === Module 16918: AccountDisplayNameSetting ===
+// === Module 16929: AccountDisplayNameSetting ===
 
-// Module 16918 (AccountDisplayNameSetting)
+// Module 16929 (AccountDisplayNameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserStore from "UserStore" /* 1385 */;

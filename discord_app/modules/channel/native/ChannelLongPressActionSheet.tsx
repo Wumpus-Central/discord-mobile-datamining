@@ -36,9 +36,9 @@ import markChannelUnreadDefault from "markChannelUnread" /* 11120 */;
 import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 11126 */;
 import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 11127 */;
 import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 11988 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 14629 */;
-import openAppChannelToChatDefault from "openAppChannelToChat" /* 14630 */;
-import closeFrameDefault from "closeFrame" /* 14632 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 14630 */;
+import openAppChannelToChatDefault from "openAppChannelToChat" /* 14631 */;
+import closeFrameDefault from "closeFrame" /* 14633 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6809 */;
@@ -85,7 +85,7 @@ let closure_35 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -818,7 +818,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -847,7 +847,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   } else {
                     value.openEndStageModal(closure_128_0);
                     paths = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp10) {
                   paths = tmp;

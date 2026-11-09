@@ -1,6 +1,6 @@
-// === Module 14077: NewBadge ===
+// === Module 14078: NewBadge ===
 
-// Module 14077 (NewBadge)
+// Module 14078 (NewBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;

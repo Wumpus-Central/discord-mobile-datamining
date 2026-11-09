@@ -1,6 +1,6 @@
-// === Module 16655: soundboard ===
+// === Module 16666: soundboard ===
 
-// Module 16655 (soundboard)
+// Module 16666 (soundboard)
 import SoundboardActionCreators from "SoundboardActionCreators" /* 7589 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11973 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -53,7 +53,7 @@ obj4.handler = function handler(args) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -108,7 +108,7 @@ obj4.handler = function handler(args) {
                 const obj4 = tmp2(7597);
               }
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               const obj9 = { errorCode: constants.INVALID_PERMISSIONS };
               const tmp32 = new tmp5(9414)(obj9, "Invalid Permissions.");

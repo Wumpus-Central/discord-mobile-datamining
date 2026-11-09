@@ -1,6 +1,6 @@
-// === Module 18404: useHomeDrawerGesture ===
+// === Module 18417: useHomeDrawerGesture ===
 
-// Module 18404 (useHomeDrawerGesture)
+// Module 18417 (useHomeDrawerGesture)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -11,16 +11,16 @@ import timing_timing from "timing/timing" /* 5370 */;
 import HapticUtils from "HapticUtils" /* 5376 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
 import useLaunchPadTypeDefault from "useLaunchPadType" /* 11682 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18399 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18412 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18398 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18405 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 18411 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18418 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18398).computeMaxX;
+let computeMaxX = fn(18411).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const GestureConstants = fn(11382);
 ({ FLING_MIN_DISTANCE: closure_9, FLING_MIN_VELOCITY: closure_10, PULL_GESTURE_ACTIVATION_DISTANCE: closure_11, PULL_GESTURE_RESISTANCE } = GestureConstants);

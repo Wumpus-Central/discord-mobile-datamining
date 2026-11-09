@@ -1,10 +1,10 @@
-// === Module 14133: SearchQueryStore ===
+// === Module 14134: SearchQueryStore ===
 
-// Module 14133 (SearchQueryStore)
+// Module 14134 (SearchQueryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SearchUtils from "SearchUtils" /* 14126 */;
-import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 14134 */;
+import SearchUtils from "SearchUtils" /* 14127 */;
+import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 14135 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import RelationshipStore from "RelationshipStore" /* 5082 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -183,11 +183,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1113).intl;
       const stringResult = intl.string(obj(1113).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj3.text = "" + stringResult + ": " + obj(14126).quoteChannelName(channelName);
+      obj3.text = "" + stringResult + ": " + obj(14127).quoteChannelName(channelName);
       obj3.channelId = type.channelId;
       obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj3];
-      const obj4 = obj(14126);
+      const obj4 = obj(14127);
     }
     items = items1;
   }

@@ -1,6 +1,6 @@
-// === Module 13588: FamilyCenterModalRequest ===
+// === Module 13589: FamilyCenterModalRequest ===
 
-// Module 13588 (FamilyCenterModalRequest)
+// Module 13589 (FamilyCenterModalRequest)
 import _modDef38 from "module_38" /* 38 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
@@ -21,9 +21,9 @@ import _modDef8429 from "module_8429" /* 8429 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8441 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 8443 */;
 import _modDef11750 from "module_11750" /* 11750 */;
-import ModalFooter from "ModalFooter" /* 13451 */;
-import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 13589 */;
-import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 13599 */;
+import ModalFooter from "ModalFooter" /* 13452 */;
+import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 13590 */;
+import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 13600 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -358,7 +358,7 @@ function FamilyCenterPrereqLoading(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -478,7 +478,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   }, []);
   const obj3 = { style: tmp.content, children: null };
   const obj2 = navigation(563);
-  const items2 = [closure_11(View, { style: tmp.art, children: closure_11(navigation(13603).FamilyShieldSpotIllustration, {}) }), , ];
+  const items2 = [closure_11(View, { style: tmp.art, children: closure_11(navigation(13604).FamilyShieldSpotIllustration, {}) }), , ];
   const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl = navigation(1113).intl;
   let str;
@@ -520,7 +520,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   items4[1] = closure_11(navigation(5758).Button, obj11);
   obj9.children = items4;
   obj8.children = closure_12(navigation(6822).ButtonGroup, obj9);
-  items3[1] = closure_11(navigation(13451).ModalFooter, obj8);
+  items3[1] = closure_11(navigation(13452).ModalFooter, obj8);
   obj6.children = items3;
   return closure_12(navigation(8041).ModalScreen, obj6);
 }
@@ -768,7 +768,7 @@ export default function FamilyCenterRequestModal(userId) {
     obj[FamilyCenterModalRequestRouting.FamilyCenterModalRequestSections.ERROR] = obj11;
     return obj;
   }, items);
-  let obj = { initialRouteName: userId(13589).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
+  let obj = { initialRouteName: userId(13590).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
   const intl = userId(1113).intl;
   obj.headerBackTitle = intl.string(userId(1113).t["13/7kX"]);
   return closure_11(userId(11627).Modal, obj);

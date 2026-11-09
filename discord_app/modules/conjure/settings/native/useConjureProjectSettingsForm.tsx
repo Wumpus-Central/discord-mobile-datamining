@@ -218,7 +218,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -246,7 +246,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
         } else if (1 === tmp7) {
           dependencyMap = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -268,7 +268,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
             const obj = tmp3(dependencyMap[11]);
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
         dependencyMap = 0;

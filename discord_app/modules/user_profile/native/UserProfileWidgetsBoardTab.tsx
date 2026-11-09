@@ -1,13 +1,14 @@
-// === Module 15173: UserProfileWidgetsBoardTab ===
+// === Module 15174: UserProfileWidgetsBoardTab ===
 
-// Module 15173 (UserProfileWidgetsBoardTab)
+// Module 15174 (UserProfileWidgetsBoardTab)
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8888 */;
-import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 15174 */;
-import useDisplayableBoardWidgets from "useDisplayableBoardWidgets" /* 15175 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15177 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 15194 */;
-import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 15195 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15196 */;
+import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 15175 */;
+import useDisplayableBoardWidgets from "useDisplayableBoardWidgets" /* 15176 */;
+import ConjureServerWidgetUpsellDefault from "ConjureServerWidgetUpsell" /* 15178 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15192 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 15204 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 15205 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15206 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,36 +18,42 @@ const jsxProd = fn(21);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoardTab.tsx");
 
-export default function UserProfileWidgetsBoardTab(arg0) {
-  ({ userId, isCurrentUser } = arg0);
-  ({ isVisible, cardStyle } = arg0);
+export default function UserProfileWidgetsBoardTab(isVisible) {
+  ({ userId, cardStyle, isCurrentUser } = isVisible);
   const tmp3 = UserProfileSharedStylesDefault();
   const isMobileWidgetEditingEnabled = MobileWidgetEditingExperiment.useIsMobileWidgetEditingEnabled("UserProfileWidgetsBoardTab");
   const obj3 = { style: tmp3.profileContent, children: null };
+  let tmp8 = isCurrentUser;
+  if (isCurrentUser) {
+    const obj4 = { cardStyle };
+    tmp8 = React4(ConjureServerWidgetUpsellDefault, obj4);
+  }
+  items = [tmp8, ];
   if (isCurrentUser) {
     if (isMobileWidgetEditingEnabled) {
-      if (obj2.useDisplayableBoardWidgets(userId).length <= 0) {
-        let tmp8Result = React4(UserProfileWidgetsEmptyStateDefault, {});
+      if (!tmp5) {
+        let tmp6Result = React4(UserProfileWidgetsEmptyStateDefault, {});
       }
-      obj3.children = tmp8Result;
-      return React4(tmp6, obj3);
+      items[1] = tmp6Result;
+      obj3.children = items;
+      return timestampProducer(View, obj3);
     }
   }
-  let tmp5Result2 = isCurrentUser;
+  let tmp13 = isCurrentUser;
   if (isCurrentUser) {
-    tmp5Result2 = !isMobileWidgetEditingEnabled;
+    tmp13 = !isMobileWidgetEditingEnabled;
   }
-  if (tmp5Result2) {
-    tmp5Result2 = React4(UserProfileWidgetsBoardEditNoticeDefault, {});
+  if (tmp13) {
+    tmp13 = React4(UserProfileWidgetsBoardEditNoticeDefault, {});
   }
-  items = [tmp5Result2, , ];
+  const items1 = [tmp13, , ];
   if (isCurrentUser) {
     isCurrentUser = React4(ConjureCustomWidgetAddOptionDefault, {});
   }
-  const obj4 = { children: null };
-  items[1] = isCurrentUser;
-  items[2] = React4(UserProfileWidgetsBoardDefault, { userId, isVisible, cardStyle });
-  obj4.children = items;
-  tmp8Result = timestampProducer(hasOwnProperty, obj4);
-  obj2 = useDisplayableBoardWidgets;
+  const obj5 = { children: null };
+  items1[1] = isCurrentUser;
+  items1[2] = React4(UserProfileWidgetsBoardDefault, { userId, isVisible: isVisible.isVisible, cardStyle });
+  obj5.children = items1;
+  tmp6Result = timestampProducer(hasOwnProperty, obj5);
+  tmp5 = useDisplayableBoardWidgets.useDisplayableBoardWidgets(userId).length > 0;
 };

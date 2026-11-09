@@ -1,6 +1,6 @@
-// === Module 18684: GuildsBarFolderMenuItems ===
+// === Module 18697: GuildsBarFolderMenuItems ===
 
-// Module 18684 (GuildsBarFolderMenuItems)
+// Module 18697 (GuildsBarFolderMenuItems)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SortedGuildStore from "SortedGuildStore" /* 6827 */;
 
@@ -28,7 +28,7 @@ export function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -86,7 +86,7 @@ export function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -115,7 +115,7 @@ export function getGuildFolderMenuItems(id) {
           } else {
             const result = value.showGuildsBarFolderModal(closure_128_0);
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c2 = tmp;

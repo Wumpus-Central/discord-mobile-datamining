@@ -1,6 +1,6 @@
-// === Module 16847: useUploadAvatar ===
+// === Module 16858: useUploadAvatar ===
 
-// Module 16847 (useUploadAvatar)
+// Module 16858 (useUploadAvatar)
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9875 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -41,7 +41,7 @@ export default function useUploadAvatar(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -100,7 +100,7 @@ export default function useUploadAvatar(guildId) {
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
           tmp22 = tmp2;
-          const obj2 = tmp2(16752);
+          const obj2 = tmp2(16763);
           obj10.description = tmp2(8811).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);

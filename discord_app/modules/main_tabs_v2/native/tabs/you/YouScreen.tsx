@@ -1,6 +1,6 @@
-// === Module 19208: YouScreen ===
+// === Module 19221: YouScreen ===
 
-// Module 19208 (YouScreen)
+// Module 19221 (YouScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
@@ -11,12 +11,12 @@ import Pressables from "Pressables" /* 7043 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8829 */;
 import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8892 */;
 import YouBannerDecorations from "YouBannerDecorations" /* 9712 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 16880 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 16891 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7848 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16896 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16907 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6941 */;
 import UserStore from "UserStore" /* 1385 */;
 import module_1652_mod from "module_1652" /* 1652 */;
@@ -506,7 +506,7 @@ function UnconnectedYouScreen(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(18783);
+const YouConstants = fn(18796);
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YouConstants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 let closure_17 = fn(1074).CollectiblesMobileShopScreen;

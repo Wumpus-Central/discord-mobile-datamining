@@ -1,16 +1,16 @@
-// === Module 13559: Chat ===
+// === Module 13560: Chat ===
 
-// Module 13559 (Chat)
+// Module 13560 (Chat)
 import initialize from "initialize" /* 504 */;
 import ChatNativeComponentDefault from "ChatNativeComponent" /* 10230 */;
-import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 13566 */;
+import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 13567 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
 require = fn;
 function DCDChatList() {
   const tmp = closure_7();
-  navigationTTIContentPainted = navigationTTIContentPainted(13560).useNavigationTTIContentPainted();
+  navigationTTIContentPainted = navigationTTIContentPainted(13561).useNavigationTTIContentPainted();
   items = [navigationTTIContentPainted];
   const memo = noop.useMemo(() => {
     const Gesture = navigationTTIContentPainted(dependencyMap[5]).Gesture;
@@ -20,8 +20,8 @@ function DCDChatList() {
   const callback = noop.useCallback((nativeEvent) => navigationTTIContentPainted(nativeEvent.nativeEvent), items);
   const obj2 = { gesture: memo, children: null };
   const obj3 = { style: tmp.chatList, floatingChatInputEnabled: true, onContentPaintStateChange: callback, children: null };
-  const obj = navigationTTIContentPainted(13560);
-  obj3.children = closure_5(navigationTTIContentPainted(13567).TTIFirstContentfulPaint, { label: "chat_list_android" });
+  const obj = navigationTTIContentPainted(13561);
+  obj3.children = closure_5(navigationTTIContentPainted(13568).TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj2.children = closure_5(ChatListNativeComponentDefault, obj3);
   return closure_5(navigationTTIContentPainted(5420).GestureDetector, obj2);
 }

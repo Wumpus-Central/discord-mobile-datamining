@@ -1,6 +1,6 @@
-// === Module 15033: MediaViewer ===
+// === Module 15034: MediaViewer ===
 
-// Module 15033 (MediaViewer)
+// Module 15034 (MediaViewer)
 import _modDef1652 from "module_1652" /* 1652 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6154 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
@@ -9,8 +9,8 @@ import useVideoControls from "useVideoControls" /* 8910 */;
 import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8941 */;
 import StatusBarDefault from "StatusBar" /* 11352 */;
 import HomeIndicatorDefault from "HomeIndicator" /* 11866 */;
-import MediaViewerItem from "MediaViewerItem" /* 15035 */;
-import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 15040 */;
+import MediaViewerItem from "MediaViewerItem" /* 15036 */;
+import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 15041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -297,7 +297,7 @@ function MediaViewer(arg0) {
   obj14.style = items17;
   if (isMediaViewerImprovementsEnabled) {
     const obj15 = { entranceAnimationDriver: sharedValue, onLongPress, onScrollWorklets, originLayout, pagerIndex, panGestureConfig: mediaViewerPanGestureConfig, renderMedia, sources, useItemVisible, windowWidth: width, windowHeight: height, zoomed };
-    tmp63Result = tmp63(tmp(15042), obj15);
+    tmp63Result = tmp63(tmp(15043), obj15);
   }
   obj14.children = tmp63Result;
   items15[2] = callback(_modDef1652.View, obj14);

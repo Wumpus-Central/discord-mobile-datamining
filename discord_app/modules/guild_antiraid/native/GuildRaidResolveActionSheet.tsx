@@ -1,6 +1,6 @@
-// === Module 13522: GuildRaidResolveActionSheet ===
+// === Module 13523: GuildRaidResolveActionSheet ===
 
-// Module 13522 (GuildRaidResolveActionSheet)
+// Module 13523 (GuildRaidResolveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5751 */;
@@ -53,7 +53,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

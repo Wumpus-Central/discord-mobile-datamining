@@ -1,6 +1,6 @@
-// === Module 13621: ForwardActionCreators ===
+// === Module 13622: ForwardActionCreators ===
 
-// Module 13621 (ForwardActionCreators)
+// Module 13622 (ForwardActionCreators)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -24,7 +24,7 @@ let obj = {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -126,8 +126,8 @@ let obj = {
                   result = "" === closure_128_2;
                 }
                 if (!result) {
-                  result = tmp2(13617).isRatelimitedInChannel(closure_128_0, PermissionStore);
-                  const obj2 = tmp2(13617);
+                  result = tmp2(13618).isRatelimitedInChannel(closure_128_0, PermissionStore);
+                  const obj2 = tmp2(13618);
                 }
                 if (!result) {
                   const obj3 = item(7712);
@@ -148,7 +148,7 @@ let obj = {
               return obj;
             }
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp60) {
           v3 = tmp;

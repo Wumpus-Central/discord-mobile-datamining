@@ -1,6 +1,6 @@
-// === Module 20496: ErrorScreen ===
+// === Module 20509: ErrorScreen ===
 
-// Module 20496 (ErrorScreen)
+// Module 20509 (ErrorScreen)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -32,7 +32,7 @@ export default function ErrorScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ export default function ErrorScreen() {
           c3 = 0;
           closure_129_0(false);
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         if (tmp4 === c3) {

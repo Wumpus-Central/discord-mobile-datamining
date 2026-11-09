@@ -1,6 +1,6 @@
-// === Module 15320: useVirtualCurrencyBalance ===
+// === Module 15330: useVirtualCurrencyBalance ===
 
-// Module 15320 (useVirtualCurrencyBalance)
+// Module 15330 (useVirtualCurrencyBalance)
 import initialize from "initialize" /* 504 */;
 import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9643 */;
 

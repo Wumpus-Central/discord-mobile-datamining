@@ -1,6 +1,6 @@
-// === Module 13936: createAppMessageEmbed ===
+// === Module 13937: createAppMessageEmbed ===
 
-// Module 13936 (createAppMessageEmbed)
+// Module 13937 (createAppMessageEmbed)
 import util from "util" /* 1113 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -19,10 +19,10 @@ import AppLauncherUtils from "AppLauncherUtils" /* 9851 */;
 import ApplicationUtils from "ApplicationUtils" /* 11035 */;
 import getFrameSurfaces from "getFrameSurfaces" /* 11850 */;
 import GamesActionCreatorsDefault from "GamesActionCreators" /* 11854 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 13937 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 13938 */;
-import getPlayInContext from "getPlayInContext" /* 13939 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 13940 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 13938 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 13939 */;
+import getPlayInContext from "getPlayInContext" /* 13940 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 13941 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8793 */;

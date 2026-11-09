@@ -1,11 +1,11 @@
-// === Module 13562: NavigationSpanTracker ===
+// === Module 13563: NavigationSpanTracker ===
 
-// Module 13562 (NavigationSpanTracker)
+// Module 13563 (NavigationSpanTracker)
 import LoggerDefault from "Logger" /* 3 */;
 import v1 from "v1" /* 1266 */;
-import NavigationTTIAnalytics from "NavigationTTIAnalytics" /* 13563 */;
-import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 13564 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 13565 */;
+import NavigationTTIAnalytics from "NavigationTTIAnalytics" /* 13564 */;
+import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 13565 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 13566 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;

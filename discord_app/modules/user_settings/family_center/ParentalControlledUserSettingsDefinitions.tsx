@@ -1,6 +1,6 @@
-// === Module 17029: ParentalControlledUserSettingsDefinitions ===
+// === Module 17040: ParentalControlledUserSettingsDefinitions ===
 
-// Module 17029 (ParentalControlledUserSettingsDefinitions)
+// Module 17040 (ParentalControlledUserSettingsDefinitions)
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7794 */;
 
 const require = fn;

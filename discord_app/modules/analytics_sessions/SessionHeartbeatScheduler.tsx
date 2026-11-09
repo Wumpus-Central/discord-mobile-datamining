@@ -41,7 +41,7 @@ let closure_26 = async function _trackHeartbeat() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -240,7 +240,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -279,7 +279,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
           }
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp16) {
       c3 = tmp;
@@ -365,7 +365,7 @@ let closure_39 = async function _getSession() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

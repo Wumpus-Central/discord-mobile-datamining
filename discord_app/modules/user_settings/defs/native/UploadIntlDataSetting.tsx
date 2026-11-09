@@ -1,6 +1,6 @@
-// === Module 17852: UploadIntlDataSetting ===
+// === Module 17863: UploadIntlDataSetting ===
 
-// Module 17852 (UploadIntlDataSetting)
+// Module 17863 (UploadIntlDataSetting)
 import AssetJsonUtils from "AssetJsonUtils" /* 1117 */;
 import _mod1151 from "module_1151" /* 1151 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -18,7 +18,7 @@ let closure_10 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -131,7 +131,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -270,7 +270,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(17053).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(17064).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useUploadIntlDataTrailing() {
     let tmp = null;
     if (closure_9().isUploading) {

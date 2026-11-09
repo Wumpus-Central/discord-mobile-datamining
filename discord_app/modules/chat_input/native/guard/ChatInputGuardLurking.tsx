@@ -1,6 +1,6 @@
-// === Module 14266: ChatInputGuardLurking ===
+// === Module 14267: ChatInputGuardLurking ===
 
-// Module 14266 (ChatInputGuardLurking)
+// Module 14267 (ChatInputGuardLurking)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
@@ -82,8 +82,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
     const intl11 = tmp2(1113).intl;
     obj2.buttonPrimaryText = intl11.string(tmp2(1113).t.RLch70);
     obj2.buttonPrimaryOnPress = callback2;
-    let tmp15Result = jsx(guildId(14259), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
-    const tmp14 = guildId(14259);
+    let tmp15Result = jsx(guildId(14260), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+    const tmp14 = guildId(14260);
   } else {
     if (null != pendingGameProfileReturn) {
       let obj3 = { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryLoading: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
@@ -123,8 +123,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       obj9.buttonPrimaryText = intl2.string(tmp2(1113).t.RLch70);
       obj9.buttonPrimaryOnPress = callback2;
     }
-    tmp15Result = jsx(guildId(14259), obj9);
-    const tmp17 = guildId(14259);
+    tmp15Result = jsx(guildId(14260), obj9);
+    const tmp17 = guildId(14260);
   }
   return tmp15Result;
 });

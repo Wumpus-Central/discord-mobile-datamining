@@ -1,6 +1,6 @@
-// === Module 13933: CheckpointButton ===
+// === Module 13934: CheckpointButton ===
 
-// Module 13933 (CheckpointButton)
+// Module 13934 (CheckpointButton)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,8 +11,8 @@ const CheckpointConstants = fn(6199);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5140);
-let obj2 = { container: { justifyContent: "center", marginRight: -fn(13905).SHADOW_OFFSET, marginBottom: -fn(13905).SHADOW_OFFSET }, button: null, label: null, icon: null };
-let obj3 = { justifyContent: "center", marginRight: -fn(13905).SHADOW_OFFSET, marginBottom: -fn(13905).SHADOW_OFFSET };
+let obj2 = { container: { justifyContent: "center", marginRight: -fn(13906).SHADOW_OFFSET, marginBottom: -fn(13906).SHADOW_OFFSET }, button: null, label: null, icon: null };
+let obj3 = { justifyContent: "center", marginRight: -fn(13906).SHADOW_OFFSET, marginBottom: -fn(13906).SHADOW_OFFSET };
 obj2.button = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2 };
 obj2.label = { textTransform: "uppercase" };
 obj2.icon = { width: CHECKPOINT_CONTROL_ICON_SIZE, height: CHECKPOINT_CONTROL_ICON_SIZE };

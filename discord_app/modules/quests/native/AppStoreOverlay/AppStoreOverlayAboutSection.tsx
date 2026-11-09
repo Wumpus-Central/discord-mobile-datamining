@@ -1,6 +1,6 @@
-// === Module 14911: AppStoreOverlayAboutSection ===
+// === Module 14912: AppStoreOverlayAboutSection ===
 
-// Module 14911 (AppStoreOverlayAboutSection)
+// Module 14912 (AppStoreOverlayAboutSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5751 */;

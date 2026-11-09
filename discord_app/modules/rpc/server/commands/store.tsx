@@ -1,9 +1,9 @@
-// === Module 16641: merged15 ===
+// === Module 16651: merged15 ===
 
-// Module 16641 (merged15)
+// Module 16651 (merged15)
 import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7657 */;
 import RPCErrorDefault from "RPCError" /* 9414 */;
-import validateTransportType from "validateTransportType" /* 16643 */;
+import validateTransportType from "validateTransportType" /* 16653 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -114,7 +114,7 @@ let closure_13 = async function _getSkusHandler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -276,7 +276,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(16606);
+let CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -292,7 +292,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(16606);
+CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj7 = {
   scope: null,
   handler(arg0) {

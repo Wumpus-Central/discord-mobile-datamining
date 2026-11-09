@@ -1,6 +1,6 @@
-// === Module 15116: UserProfileActivityVoiceChannelUsers ===
+// === Module 15117: UserProfileActivityVoiceChannelUsers ===
 
-// Module 15116 (UserProfileActivityVoiceChannelUsers)
+// Module 15117 (UserProfileActivityVoiceChannelUsers)
 import util from "util" /* 1113 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6173 */;
 import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11553 */;

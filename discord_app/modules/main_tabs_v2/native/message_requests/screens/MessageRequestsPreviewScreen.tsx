@@ -1,9 +1,9 @@
-// === Module 19340: MessageRequestsPreviewScreen ===
+// === Module 19353: MessageRequestsPreviewScreen ===
 
-// Module 19340 (MessageRequestsPreviewScreen)
+// Module 19353 (MessageRequestsPreviewScreen)
 import MessageManagerDefault from "MessageManager" /* 9920 */;
 import ChatViewDefault from "ChatView" /* 11354 */;
-import RestrictedMessageRequestPreviewDefault from "RestrictedMessageRequestPreview" /* 19341 */;
+import RestrictedMessageRequestPreviewDefault from "RestrictedMessageRequestPreview" /* 19354 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6897 */;
 
@@ -17,7 +17,7 @@ export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
   const ref = noop.useRef(null);
   items = [channelId];
-  const isMessageRequestRestrictedViewer = channelId(14252).useIsMessageRequestRestrictedViewer();
+  const isMessageRequestRestrictedViewer = channelId(14253).useIsMessageRequestRestrictedViewer();
   const effect = noop.useEffect(() => {
     const obj = MessageManagerDefault;
     const messages = obj.fetchMessages({ channelId, messageId: ReadStateStore.lastMessageId(channelId) });

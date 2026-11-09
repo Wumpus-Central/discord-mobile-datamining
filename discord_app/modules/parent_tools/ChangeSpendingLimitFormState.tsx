@@ -1,8 +1,8 @@
-// === Module 17119: ChangeSpendingLimitFormState ===
+// === Module 17130: ChangeSpendingLimitFormState ===
 
-// Module 17119 (ChangeSpendingLimitFormState)
+// Module 17130 (ChangeSpendingLimitFormState)
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7793 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 17030 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 17041 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -129,7 +129,7 @@ export function useChangeSpendingLimitFormState(teenId, closeChangeSpendingLimit
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -162,7 +162,7 @@ export function useChangeSpendingLimitFormState(teenId, closeChangeSpendingLimit
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp7) {
           c3 = 0;

@@ -1,6 +1,6 @@
-// === Module 20212: GuildTemplateSettingsUtils ===
+// === Module 20225: GuildTemplateSettingsUtils ===
 
-// Module 20212 (GuildTemplateSettingsUtils)
+// Module 20225 (GuildTemplateSettingsUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

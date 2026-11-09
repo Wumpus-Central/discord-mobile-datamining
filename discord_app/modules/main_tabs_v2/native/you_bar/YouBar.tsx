@@ -1,6 +1,6 @@
-// === Module 18774: YouBar ===
+// === Module 18787: YouBar ===
 
-// Module 18774 (YouBar)
+// Module 18787 (YouBar)
 import apply from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -17,11 +17,11 @@ import openUserSettings from "openUserSettings" /* 7635 */;
 import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9765 */;
 import useVoicePanelDockHeightDefault from "useVoicePanelDockHeight" /* 11380 */;
 import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11650 */;
-import YouBarBackgroundDefault from "YouBarBackground" /* 18796 */;
-import YouBarUserDefault from "YouBarUser" /* 18798 */;
-import YouBarNotificationsButtonDefault from "YouBarNotificationsButton" /* 18807 */;
-import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 18808 */;
-import ConnectionBannerDefault from "ConnectionBanner" /* 18809 */;
+import YouBarBackgroundDefault from "YouBarBackground" /* 18809 */;
+import YouBarUserDefault from "YouBarUser" /* 18811 */;
+import YouBarNotificationsButtonDefault from "YouBarNotificationsButton" /* 18820 */;
+import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 18821 */;
+import ConnectionBannerDefault from "ConnectionBanner" /* 18822 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5164 */;
@@ -31,7 +31,7 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(17385);
+const YouBarConstants = fn(17396);
 ({ YOU_BAR_HEIGHT: closure_10, YOU_BAR_PADDING: closure_11, YOU_BAR_SPRING_CONFIG: closure_12, YOU_BAR_AVATAR_LARGE_SIZE: map1, YOU_BAR_AVATAR_SIZE: closure_14, YOU_BAR_BUTTON_HIT_SLOP: closure_15 } = YouBarConstants);
 const ME = fn(1072).ME;
 const ContentDismissActionType = fn(4986).ContentDismissActionType;
@@ -219,7 +219,7 @@ let closure_26 = noop.memo(function YouBar() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -253,7 +253,7 @@ let closure_26 = noop.memo(function YouBar() {
           const result1 = closure_128_0.showYouAccountActionSheet();
           const result2 = closure_129_2.set(false);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         c3 = tmp;
@@ -392,7 +392,7 @@ let closure_26 = noop.memo(function YouBar() {
   let tmp51Result = tmp33;
   if (null != nameplate) {
     const obj5 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp47 };
-    tmp51Result = closure_18(tmp7(18797), obj5);
+    tmp51Result = closure_18(tmp7(18810), obj5);
   }
   items12[1] = tmp51Result;
   const obj6 = { gesture: memo3, children: null };
@@ -416,12 +416,12 @@ let closure_26 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj10 = { hasNameplate: tmp33, canUnpin: tmp27.canPin };
-    let tmp51Result3 = closure_18(tmp7(18803), obj10);
+    let tmp51Result3 = closure_18(tmp7(18816), obj10);
   } else {
     tmp51Result3 = null;
     if (iCYMIEnabled) {
       const obj11 = { hasNameplate: tmp33 };
-      tmp51Result3 = closure_18(tmp7(18805), obj11);
+      tmp51Result3 = closure_18(tmp7(18818), obj11);
     }
   }
   const items13 = [tmp51Result3, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];
@@ -434,7 +434,7 @@ let closure_26 = noop.memo(function YouBar() {
     const items15 = [tmp.dockRimRow, memo, animatedStyle];
     obj12.style = items15;
     const obj13 = { style: tmp.dockRim };
-    obj12.children = closure_18(tmp7(14233), obj13);
+    obj12.children = closure_18(tmp7(14234), obj13);
     tmp51Result4 = closure_18(tmp7(1652).View, obj12);
   }
   children[1] = tmp51Result4;

@@ -1,9 +1,9 @@
-// === Module 18221: SponsoredContentPreferencesScreen ===
+// === Module 18234: SponsoredContentPreferencesScreen ===
 
-// Module 18221 (SponsoredContentPreferencesScreen)
+// Module 18234 (SponsoredContentPreferencesScreen)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;
-import SettingLayoutDefault from "SettingLayout" /* 16894 */;
+import SettingLayoutDefault from "SettingLayout" /* 16905 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

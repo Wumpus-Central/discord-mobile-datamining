@@ -1,6 +1,6 @@
-// === Module 15386: EmbeddedActivityInviteEmbed ===
+// === Module 15396: EmbeddedActivityInviteEmbed ===
 
-// Module 15386 (EmbeddedActivityInviteEmbed)
+// Module 15396 (EmbeddedActivityInviteEmbed)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import useChannelName from "useChannelName" /* 5776 */;
@@ -8,7 +8,7 @@ import InviteTargetTypes from "InviteTargetTypes" /* 7957 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8465 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8674 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8792 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 15387 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 15397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8793 */;

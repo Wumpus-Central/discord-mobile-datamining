@@ -23,7 +23,7 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -115,7 +115,7 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

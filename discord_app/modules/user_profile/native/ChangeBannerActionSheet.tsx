@@ -1,6 +1,6 @@
-// === Module 16751: ChangeBannerActionSheet ===
+// === Module 16762: ChangeBannerActionSheet ===
 
-// Module 16751 (ChangeBannerActionSheet)
+// Module 16762 (ChangeBannerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
@@ -12,7 +12,7 @@ import ActionSheet from "ActionSheet" /* 7426 */;
 import Form from "Form" /* 8246 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8806 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9612 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16754 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16765 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8802 */;
@@ -69,14 +69,14 @@ function ChangeBannerColorRow(user) {
   obj5.text = intl.string(require("util").t.xzNfPz);
   obj4.label = closure_9(require("Form").FormLabel, obj5);
   const obj6 = { style: tmp.selectedColor, children: null };
-  const items2 = [closure_9(pendingAccentColor(16756), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
+  const items2 = [closure_9(pendingAccentColor(16767), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
   const obj8 = { style: tmp.selectedColorHex, variant: "body-md/medium", color: "interactive-text-default", children: null };
   const obj7 = { style: tmp.bannerColor, color: pendingAccentColor };
   const tmp2Result5 = require("VideoBackground");
   obj8.children = require("utils/ColorUtils").int2hex(pendingAccentColor);
   items2[1] = closure_9(require("Text/Text").Text, obj8);
   const tmp2Result6 = require("utils/ColorUtils");
-  items2[2] = closure_9(require("native").Icon, { style: tmp.rowArrow, size: require("native").Icon.Sizes.CUSTOM, source: pendingAccentColor(16761) });
+  items2[2] = closure_9(require("native").Icon, { style: tmp.rowArrow, size: require("native").Icon.Sizes.CUSTOM, source: pendingAccentColor(16772) });
   obj6.children = items2;
   obj4.trailing = closure_10(View, obj6);
   obj4.onPress = function handleChangeColor() {
@@ -130,7 +130,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -167,11 +167,11 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           originalMd5 = closure_128_0.originalMd5;
           if (null != base64) {
             const obj8 = { assetOrigin: tmp2(7222).AssetOriginTypes.NEW_ASSET, imageUri: base64, description: "", originalAsset: "Array", originalMd5 };
-            closure_129_0(tmp2(16752).createPendingImage(obj8));
-            const obj = tmp2(16752);
+            closure_129_0(tmp2(16763).createPendingImage(obj8));
+            const obj = tmp2(16763);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp20) {
         c3 = tmp;
@@ -234,7 +234,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj9 = { style: tmp.upsellButton, children: null };
     const obj10 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj9.children = closure_9(tmp2(16753), obj10);
+    obj9.children = closure_9(tmp2(16764), obj10);
     tmp4Result6 = closure_9(View, obj9);
   }
   items3[1] = tmp4Result6;

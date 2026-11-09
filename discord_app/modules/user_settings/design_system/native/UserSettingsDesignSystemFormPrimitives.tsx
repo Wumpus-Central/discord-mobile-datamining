@@ -1,6 +1,6 @@
-// === Module 18131: UserSettingsDesignSystemFormPrimitives ===
+// === Module 18144: UserSettingsDesignSystemFormPrimitives ===
 
-// Module 18131 (UserSettingsDesignSystemFormPrimitives)
+// Module 18144 (UserSettingsDesignSystemFormPrimitives)
 import Text_Text from "Text/Text" /* 5751 */;
 import Stack_Stack from "Stack/Stack" /* 6159 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7037 */;
@@ -11,9 +11,9 @@ import TableRadioRow from "TableRadioRow" /* 7127 */;
 import TableSwitchRow from "TableSwitchRow" /* 7429 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 8744 */;
 import VoiceXIcon from "VoiceXIcon" /* 12116 */;
-import Checkbox from "Checkbox" /* 14855 */;
-import TableSliderRow from "TableSliderRow" /* 16158 */;
-import Slider from "Slider" /* 16159 */;
+import Checkbox from "Checkbox" /* 14856 */;
+import TableSliderRow from "TableSliderRow" /* 16168 */;
+import Slider from "Slider" /* 16169 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 17764: DisplayMediaUploadsSetting ===
+// === Module 17775: DisplayMediaUploadsSetting ===
 
-// Module 17764 (DisplayMediaUploadsSetting)
+// Module 17775 (DisplayMediaUploadsSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;

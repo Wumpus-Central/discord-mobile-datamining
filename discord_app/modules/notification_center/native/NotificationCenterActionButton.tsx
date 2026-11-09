@@ -1,6 +1,6 @@
-// === Module 18817: NotificationCenterActionButton ===
+// === Module 18830: NotificationCenterActionButton ===
 
-// Module 18817 (NotificationCenterActionButton)
+// Module 18830 (NotificationCenterActionButton)
 import util from "util" /* 1113 */;
 import IconButton from "IconButton" /* 8098 */;
 import _modDef9287 from "module_9287" /* 9287 */;

@@ -1,6 +1,6 @@
-// === Module 19321: MessageRequestList ===
+// === Module 19334: MessageRequestList ===
 
-// Module 19321 (MessageRequestList)
+// Module 19334 (MessageRequestList)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import transitionToChannel from "transitionToChannel" /* 5885 */;
@@ -170,17 +170,17 @@ export default function MessageRequestList(goToMessageRequestPreview) {
   let data;
   const tmp = closure_9();
   const bottom = data(1627)().bottom;
-  data = data(19327)();
-  dependencyMap = goToMessageRequestPreview(19329).useListHasSingleMessageRequest();
-  let obj = goToMessageRequestPreview(19329);
+  data = data(19340)();
+  dependencyMap = goToMessageRequestPreview(19342).useListHasSingleMessageRequest();
+  let obj = goToMessageRequestPreview(19342);
   const tmp2 = data;
-  const isRestricted = goToMessageRequestPreview(14252).useIsMessageRequestRestrictedViewer();
+  const isRestricted = goToMessageRequestPreview(14253).useIsMessageRequestRestrictedViewer();
   if (0 === data.length) {
     const obj3 = { bodyText: null };
     const intl2 = tmp4(1113).intl;
     obj3.bodyText = intl2.string(tmp4(1113).t.SXrqTf);
-    let tmp9Result = closure_7(tmp2(19332), obj3);
-    const tmp2Result = tmp2(19332);
+    let tmp9Result = closure_7(tmp2(19345), obj3);
+    const tmp2Result = tmp2(19345);
   } else {
     items = [tmp.list, ];
     let num = 0;

@@ -1,6 +1,6 @@
-// === Module 18041: TextDisplayComponent ===
+// === Module 18050: TextDisplayComponent ===
 
-// Module 18041 (TextDisplayComponent)
+// Module 18050 (TextDisplayComponent)
 import MarkupUtilsDefault from "MarkupUtils" /* 5879 */;
 import renderMessageMarkup from "renderMessageMarkup" /* 8653 */;
 import handleMessagesTapLink from "handleMessagesTapLink" /* 10242 */;

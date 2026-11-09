@@ -1,6 +1,6 @@
-// === Module 18420: usePrivateChannelWaveEligible ===
+// === Module 18433: usePrivateChannelWaveEligible ===
 
-// Module 18420 (usePrivateChannelWaveEligible)
+// Module 18433 (usePrivateChannelWaveEligible)
 import MessageStore from "MessageStore" /* 6194 */;
 import RelationshipStore from "RelationshipStore" /* 5082 */;
 

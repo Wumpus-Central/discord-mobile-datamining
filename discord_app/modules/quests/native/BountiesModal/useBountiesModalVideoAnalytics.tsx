@@ -1,13 +1,13 @@
-// === Module 17249: useBountiesModalVideoAnalytics ===
+// === Module 17260: useBountiesModalVideoAnalytics ===
 
-// Module 17249 (useBountiesModalVideoAnalytics)
+// Module 17260 (useBountiesModalVideoAnalytics)
 import MonitoringAgentDefault from "MonitoringAgent" /* 6594 */;
 import MetricEvents from "MetricEvents" /* 6599 */;
 import AdCreativeType from "AdCreativeType" /* 6843 */;
 import AnalyticsActions from "AnalyticsActions" /* 7939 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14919 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 17240 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 17251 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14920 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17251 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 17262 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -98,7 +98,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -178,7 +178,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             obj9.trackAdContentEvent(obj8);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp35) {
           closure_3 = tmp35;

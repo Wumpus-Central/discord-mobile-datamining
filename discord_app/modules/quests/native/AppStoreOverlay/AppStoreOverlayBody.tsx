@@ -1,13 +1,13 @@
-// === Module 14902: AppStoreOverlayBody ===
+// === Module 14903: AppStoreOverlayBody ===
 
-// Module 14902 (AppStoreOverlayBody)
+// Module 14903 (AppStoreOverlayBody)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import FastImageDefault from "FastImage" /* 5842 */;
 import AnalyticsActions from "AnalyticsActions" /* 7939 */;
-import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 14903 */;
-import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 14906 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 14911 */;
+import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 14904 */;
+import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 14907 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 14912 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

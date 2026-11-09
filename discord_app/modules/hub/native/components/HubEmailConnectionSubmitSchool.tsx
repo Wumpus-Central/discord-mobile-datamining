@@ -1,6 +1,6 @@
-// === Module 14585: HubEmailConnectionSubmitSchool ===
+// === Module 14586: HubEmailConnectionSubmitSchool ===
 
-// Module 14585 (HubEmailConnectionSubmitSchool)
+// Module 14586 (HubEmailConnectionSubmitSchool)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -9,7 +9,7 @@ import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAwar
 import Text_Text from "Text/Text" /* 5751 */;
 import components_Button_Button from "components/Button/Button" /* 5758 */;
 import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7147 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14572 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(14564).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14565).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5140);
@@ -48,7 +48,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

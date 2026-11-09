@@ -1,20 +1,20 @@
-// === Module 14526: HeartIllocon ===
+// === Module 14527: HeartIllocon ===
 
-// Module 14526 (HeartIllocon)
+// Module 14527 (HeartIllocon)
 import FastImageDefault from "FastImage" /* 5842 */;
 import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef14527 from "module_14527" /* 14527 */;
 import _modDef14528 from "module_14528" /* 14528 */;
 import _modDef14529 from "module_14529" /* 14529 */;
+import _modDef14530 from "module_14530" /* 14530 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14527 }, 3: null };
-const obj2 = { uri: _modDef14527 };
-obj[2] = { uri: _modDef14528 };
-const obj3 = { uri: _modDef14528 };
-obj[3] = { uri: _modDef14529 };
+let obj = { 1: null, 2: { uri: _modDef14528 }, 3: null };
+const obj2 = { uri: _modDef14528 };
+obj[2] = { uri: _modDef14529 };
+const obj3 = { uri: _modDef14529 };
+obj[3] = { uri: _modDef14530 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");
 

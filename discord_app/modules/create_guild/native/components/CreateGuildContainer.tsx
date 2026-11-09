@@ -1,6 +1,6 @@
-// === Module 14114: CreateGuildContainer ===
+// === Module 14115: CreateGuildContainer ===
 
-// Module 14114 (CreateGuildContainer)
+// Module 14115 (CreateGuildContainer)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -63,7 +63,7 @@ export default function CreateGuildContainer(onCreate) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -98,7 +98,7 @@ export default function CreateGuildContainer(onCreate) {
             closure_129_6(base64);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;
@@ -118,7 +118,7 @@ export default function CreateGuildContainer(onCreate) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

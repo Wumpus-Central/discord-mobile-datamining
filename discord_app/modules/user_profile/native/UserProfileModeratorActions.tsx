@@ -1,6 +1,6 @@
-// === Module 15138: UserProfileModeratorActions ===
+// === Module 15139: UserProfileModeratorActions ===
 
-// Module 15138 (UserProfileModeratorActions)
+// Module 15139 (UserProfileModeratorActions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
@@ -12,10 +12,10 @@ import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
 import TableRow from "TableRow" /* 7038 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 8014 */;
 import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12554 */;
-import GuildMemberUtils from "GuildMemberUtils" /* 13493 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 13499 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 13517 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 13519 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 13494 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 13500 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 13518 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 13520 */;
 import noop from "module_19" /* 19 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6812 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -339,7 +339,7 @@ export default function UserProfileModeratorActions(user) {
         obj11.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MANAGE_USER" });
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13495, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13496, dependencyMap.paths), {
             userId: user.id,
             guildId: stateFromStores.id,
             onClose() {

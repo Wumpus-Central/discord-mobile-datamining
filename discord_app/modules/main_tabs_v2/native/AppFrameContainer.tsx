@@ -1,8 +1,8 @@
-// === Module 19206: AppFrameContainer ===
+// === Module 19219: AppFrameContainer ===
 
-// Module 19206 (AppFrameContainer)
+// Module 19219 (AppFrameContainer)
 import nativeDefault from "native" /* 575 */;
-import useAppFrameDefault from "useAppFrame" /* 18375 */;
+import useAppFrameDefault from "useAppFrame" /* 18388 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

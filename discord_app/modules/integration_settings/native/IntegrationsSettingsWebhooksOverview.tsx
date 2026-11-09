@@ -1,6 +1,6 @@
-// === Module 19286: IntegrationsSettingsWebhooksOverview ===
+// === Module 19299: IntegrationsSettingsWebhooksOverview ===
 
-// Module 19286 (IntegrationsSettingsWebhooksOverview)
+// Module 19299 (IntegrationsSettingsWebhooksOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -9,7 +9,7 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import NavScrim from "NavScrim" /* 5734 */;
 import Stack_Stack from "Stack/Stack" /* 6159 */;
 import Form from "Form" /* 8246 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 19288 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 19301 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -17,7 +17,7 @@ import GuildChannelStore_mod from "GuildChannelStore" /* 5070 */;
 import GuildStore from "GuildStore" /* 5011 */;
 import PermissionStore from "PermissionStore" /* 5072 */;
 import UserStore from "UserStore" /* 1385 */;
-import WebhooksStore from "WebhooksStore" /* 19287 */;
+import WebhooksStore from "WebhooksStore" /* 19300 */;
 
 require = fn;
 function WebhookItem(avatar) {
@@ -109,7 +109,7 @@ function CreateWebhookButton(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -217,7 +217,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(19291).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(19304).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1113).intl;
       dkHRkE = webhookType(1113).t.dkHRkE;

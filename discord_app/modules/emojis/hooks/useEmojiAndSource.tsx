@@ -103,7 +103,7 @@ export function useEmojiAndSource(emojiId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -157,7 +157,7 @@ export function useEmojiAndSource(emojiId) {
             current();
           }
           v3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp34) {
           v3 = tmp;
           throw tmp34;

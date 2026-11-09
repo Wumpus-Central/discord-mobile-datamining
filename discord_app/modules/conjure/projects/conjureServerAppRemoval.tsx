@@ -1,6 +1,6 @@
-// === Module 13510: conjureServerAppRemoval ===
+// === Module 13511: conjureServerAppRemoval ===
 
-// Module 13510 (conjureServerAppRemoval)
+// Module 13511 (conjureServerAppRemoval)
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6936 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
 import ConjureUtils from "ConjureUtils" /* 7483 */;
@@ -215,7 +215,7 @@ let closure_21 = async function _loadMissingApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -249,7 +249,7 @@ let closure_21 = async function _loadMissingApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;

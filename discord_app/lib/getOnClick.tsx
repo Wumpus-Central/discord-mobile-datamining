@@ -59,7 +59,7 @@ let closure_18 = async function _openInviteModal() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -88,7 +88,7 @@ let closure_18 = async function _openInviteModal() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c2 = tmp;
@@ -113,7 +113,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -249,7 +249,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
           return obj;
         }
         c7 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp66) {
         c7 = tmp;
         throw tmp66;
@@ -402,7 +402,7 @@ export default function getOnClick(assetURL) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14992, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14993, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;

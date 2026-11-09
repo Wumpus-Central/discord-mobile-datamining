@@ -1,8 +1,8 @@
-// === Module 18551: useGuildPowerupsBoostAction ===
+// === Module 18564: useGuildPowerupsBoostAction ===
 
-// Module 18551 (useGuildPowerupsBoostAction)
+// Module 18564 (useGuildPowerupsBoostAction)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
-import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 14354 */;
+import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 14355 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7661 */;
@@ -36,7 +36,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

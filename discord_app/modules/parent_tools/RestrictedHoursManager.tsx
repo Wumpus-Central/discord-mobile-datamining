@@ -1,12 +1,12 @@
-// === Module 20499: RestrictedHoursManager ===
+// === Module 20512: RestrictedHoursManager ===
 
-// Module 20499 (RestrictedHoursManager)
+// Module 20512 (RestrictedHoursManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import FamilyCenterModels from "FamilyCenterModels" /* 1409 */;
 import _modDef2664 from "module_2664" /* 2664 */;
 import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 11143 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19766 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19779 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 11141 */;
 import UserStore from "UserStore" /* 1385 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7791 */;

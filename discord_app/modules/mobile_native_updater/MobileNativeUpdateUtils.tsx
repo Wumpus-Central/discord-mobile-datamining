@@ -1,6 +1,6 @@
-// === Module 16032: MobileNativeUpdateUtils ===
+// === Module 16042: MobileNativeUpdateUtils ===
 
-// Module 16032 (MobileNativeUpdateUtils)
+// Module 16042 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
@@ -20,7 +20,7 @@ let closure_5 = async function _checkForNewerBuild() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

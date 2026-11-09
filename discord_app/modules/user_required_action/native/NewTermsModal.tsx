@@ -1,6 +1,6 @@
-// === Module 20042: NewTermsModal ===
+// === Module 20055: NewTermsModal ===
 
-// Module 20042 (NewTermsModal)
+// Module 20055 (NewTermsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -69,7 +69,7 @@ export default function NewTermsModal() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -101,7 +101,7 @@ export default function NewTermsModal() {
           closure_128_0 = value;
           closure_129_1(closure_128_0);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         c3 = tmp;

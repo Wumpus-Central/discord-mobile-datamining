@@ -1,6 +1,6 @@
-// === Module 13501: GuildDisableCommunication ===
+// === Module 13502: GuildDisableCommunication ===
 
-// Module 13501 (GuildDisableCommunication)
+// Module 13502 (GuildDisableCommunication)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -102,7 +102,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -116,7 +116,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(13502);
+            const obj4 = tmp4(13503);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = { value: obj4.setCommunicationDisabledDuration(guild_id, id.id, items[asyncGeneratorStep].value, ref.current), done: false };
@@ -143,7 +143,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
           closure_129_2();
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp18) {
         c3 = tmp;

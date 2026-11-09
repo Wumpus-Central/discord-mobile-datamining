@@ -1,6 +1,6 @@
-// === Module 15198: UserProfileGameWidgetTagMetadata ===
+// === Module 15208: UserProfileGameWidgetTagMetadata ===
 
-// Module 15198 (UserProfileGameWidgetTagMetadata)
+// Module 15208 (UserProfileGameWidgetTagMetadata)
 import util from "util" /* 1113 */;
 import WidgetGameTag from "WidgetGameTag" /* 12553 */;
 import size from "module_2" /* 2 */;

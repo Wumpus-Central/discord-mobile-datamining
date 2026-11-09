@@ -1,14 +1,14 @@
-// === Module 18824: useNotificationCenterItemsLoader ===
+// === Module 18837: useNotificationCenterItemsLoader ===
 
-// Module 18824 (useNotificationCenterItemsLoader)
+// Module 18837 (useNotificationCenterItemsLoader)
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7342 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18825 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18838 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RecentMentionsStore from "RecentMentionsStore" /* 6942 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6913 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18823 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18836 */;
 
 const require = globalThis.__r;
 
@@ -126,7 +126,7 @@ export function useNotificationCenterItemsLoader(isFocused) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

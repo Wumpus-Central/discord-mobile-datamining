@@ -29,7 +29,7 @@ let closure_8 = async function _requestAgeVerification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -208,7 +208,7 @@ let closure_16 = async function _requestAgeVerificationV(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -284,7 +284,7 @@ let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -359,7 +359,7 @@ let closure_19 = async function _registerIncodeInterview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -391,7 +391,7 @@ let closure_19 = async function _registerIncodeInterview() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c1 = tmp;
@@ -411,7 +411,7 @@ let closure_20 = async function _requestIncodeSessionBootstrap() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

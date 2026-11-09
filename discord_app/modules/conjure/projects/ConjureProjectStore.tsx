@@ -16,6 +16,18 @@ function isProjectOwner(project) {
   }
   return project.owner_user_id === id;
 }
+function isRailProject(owner_user_id) {
+  const currentUser = UserStore.getCurrentUser();
+  let id;
+  if (currentUser != null) {
+    id = currentUser.id;
+  }
+  let hasItem = owner_user_id.owner_user_id === id;
+  if (!hasItem) {
+    hasItem = set2.has(owner_user_id.id);
+  }
+  return hasItem;
+}
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
@@ -48,18 +60,19 @@ prototype["getOwnedProjects"] = function getOwnedProjects() {
   return Array.from(map.values()).filter(isProjectOwner);
 };
 prototype["getRailProjects"] = function getRailProjects() {
-  return Array.from(map.values()).filter((owner_user_id) => {
-    currentUser = currentUser.getCurrentUser();
-    let id;
-    if (currentUser != null) {
-      id = currentUser.id;
-    }
-    let hasItem = owner_user_id.owner_user_id === id;
-    if (!hasItem) {
-      hasItem = set.has(owner_user_id.id);
-    }
-    return hasItem;
-  });
+  return Array.from(map.values()).filter(isRailProject);
+};
+prototype["isRailProject"] = function isRailProject(owner_user_id) {
+  const currentUser = UserStore.getCurrentUser();
+  let id;
+  if (currentUser != null) {
+    id = currentUser.id;
+  }
+  let hasItem = owner_user_id.owner_user_id === id;
+  if (!hasItem) {
+    hasItem = set2.has(owner_user_id.id);
+  }
+  return hasItem;
 };
 prototype["getUnloadedParticipatingProjectIds"] = function getUnloadedParticipatingProjectIds() {
   return Array.from(set2).filter((item) => !set.has(item));

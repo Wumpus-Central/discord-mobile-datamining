@@ -1,6 +1,6 @@
-// === Module 19549: PanelSizeUtils ===
+// === Module 19562: PanelSizeUtils ===
 
-// Module 19549 (PanelSizeUtils)
+// Module 19562 (PanelSizeUtils)
 import VoicePanelConstants from "VoicePanelConstants" /* 11363 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 18046: SlayerStorefrontDevTools ===
+// === Module 18055: SlayerStorefrontDevTools ===
 
-// Module 18046 (SlayerStorefrontDevTools)
+// Module 18055 (SlayerStorefrontDevTools)
 import nativeDefault from "native" /* 575 */;
 import GPlayActionCreators from "GPlayActionCreators" /* 10033 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -24,7 +24,7 @@ let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -177,7 +177,7 @@ export default function SlayerStorefrontDevTools() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

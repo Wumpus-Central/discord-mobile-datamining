@@ -1,6 +1,6 @@
-// === Module 18223: ManageSponsoredContentScreen ===
+// === Module 18236: ManageSponsoredContentScreen ===
 
-// Module 18223 (ManageSponsoredContentScreen)
+// Module 18236 (ManageSponsoredContentScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;

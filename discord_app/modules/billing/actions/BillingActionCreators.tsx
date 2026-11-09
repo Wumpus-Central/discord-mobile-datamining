@@ -26,7 +26,7 @@ let closure_20 = async function _deletePaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -74,7 +74,7 @@ let closure_20 = async function _deletePaymentSource(arg0) {
         closure_130_1(closure_130_2[8]).dispatch(obj10);
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp30) {
       closure_3 = tmp30;
@@ -104,7 +104,7 @@ let closure_21 = async function _updatePaymentSource(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -166,7 +166,7 @@ let closure_21 = async function _updatePaymentSource(arg0, arg1) {
           closure_131_1(closure_131_2[8]).dispatch(obj13);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp28) {
         closure_4 = tmp28;
@@ -191,7 +191,7 @@ let closure_22 = async function _fetchPaymentSources() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -210,7 +210,7 @@ let closure_22 = async function _fetchPaymentSources() {
           closure_128_0 = undefined;
           if (BillingInfoStore.isPaymentSourceFetching) {
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             c3 = 1;
             const HTTP = HTTPUtils.HTTP;
@@ -268,7 +268,7 @@ let closure_23 = async function _fetchPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -343,7 +343,7 @@ let closure_24 = async function _fetchWalletInformation() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -439,7 +439,7 @@ let closure_27 = async function _fetchSubscriptions() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -574,7 +574,7 @@ let closure_30 = async function _createSubscription(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -786,7 +786,7 @@ let closure_31 = async function _payInvoiceManually(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -990,7 +990,7 @@ let closure_34 = async function _cancelSubscription(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1076,7 +1076,7 @@ let closure_36 = async function _updateSubscription(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1267,7 +1267,7 @@ let closure_37 = async function _voidPendingPayment(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1297,7 +1297,7 @@ let closure_37 = async function _voidPendingPayment(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -1316,7 +1316,7 @@ let closure_38 = async function _fetchIpCountryCode() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1419,7 +1419,7 @@ let closure_39 = async function _fetchIpLocation() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1538,7 +1538,7 @@ let closure_40 = async function _redeemReactivationOffer(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1594,7 +1594,7 @@ let closure_40 = async function _redeemReactivationOffer(arg0, arg1) {
           closure_131_1(closure_131_2[8]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp30) {
         closure_4 = tmp30;
@@ -1624,7 +1624,7 @@ let closure_41 = async function _redeemUserDiscountOffer(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1673,7 +1673,7 @@ let closure_41 = async function _redeemUserDiscountOffer(arg0) {
           closure_130_1(closure_130_2[8]).dispatch(obj7);
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp29) {
         closure_3 = tmp29;

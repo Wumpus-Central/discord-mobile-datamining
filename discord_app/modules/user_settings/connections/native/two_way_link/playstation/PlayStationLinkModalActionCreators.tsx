@@ -1,6 +1,6 @@
-// === Module 14870: PlayStationLinkModalActionCreators ===
+// === Module 14871: PlayStationLinkModalActionCreators ===
 
-// Module 14870 (PlayStationLinkModalActionCreators)
+// Module 14871 (PlayStationLinkModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
 import size from "module_2" /* 2 */;
@@ -18,7 +18,7 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14871, dependencyMap.paths), { locationStack, platformType, startAtSignIn: flag }, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14872, dependencyMap.paths), { locationStack, platformType, startAtSignIn: flag }, c3);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(c3);

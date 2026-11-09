@@ -1,9 +1,9 @@
-// === Module 17765: ImageDescriptionsSetting ===
+// === Module 17776: ImageDescriptionsSetting ===
 
-// Module 17765 (ImageDescriptionsSetting)
+// Module 17776 (ImageDescriptionsSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
-import UserSettingsText from "UserSettingsText" /* 17766 */;
+import UserSettingsText from "UserSettingsText" /* 17777 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 17417: QuestModalContentCloudBackground ===
+// === Module 17428: QuestModalContentCloudBackground ===
 
-// Module 17417 (QuestModalContentCloudBackground)
+// Module 17428 (QuestModalContentCloudBackground)
 import themes from "themes" /* 5162 */;
 import useTheme from "useTheme" /* 5369 */;
 import LinearGradientDefault from "LinearGradient" /* 5715 */;
@@ -80,7 +80,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj6.style = items2;
-    obj6.source = importDefault(isThemeDarkResult ? 17418 : 17419);
+    obj6.source = importDefault(isThemeDarkResult ? 17429 : 17430);
     obj6.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj6);
     obj3.children = items1;

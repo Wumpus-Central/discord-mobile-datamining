@@ -1,6 +1,6 @@
-// === Module 18159: ShopBlockItem ===
+// === Module 18172: ShopBlockItem ===
 
-// Module 18159 (ShopBlockItem)
+// Module 18172 (ShopBlockItem)
 import nativeDefault from "native" /* 575 */;
 import ShopBlockType from "ShopBlockType" /* 5813 */;
 import noop from "module_19" /* 19 */;

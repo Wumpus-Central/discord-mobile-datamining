@@ -1,6 +1,6 @@
-// === Module 14905: AppStoreOverlayStarRating ===
+// === Module 14906: AppStoreOverlayStarRating ===
 
-// Module 14905 (AppStoreOverlayStarRating)
+// Module 14906 (AppStoreOverlayStarRating)
 import nativeDefault from "native" /* 575 */;
 import StarOutlineIcon from "StarOutlineIcon" /* 10182 */;
 import StarIcon from "StarIcon" /* 10184 */;

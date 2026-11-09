@@ -1,6 +1,6 @@
-// === Module 14178: Autocomplete ===
+// === Module 14179: Autocomplete ===
 
-// Module 14178 (Autocomplete)
+// Module 14179 (Autocomplete)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -19,9 +19,9 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 8674 */;
 import _modDef8779 from "module_8779" /* 8779 */;
 import StickersHooks from "StickersHooks" /* 10385 */;
 import StickerDefault from "Sticker" /* 10401 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 14179 */;
-import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 14180 */;
-import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 14181 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 14180 */;
+import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 14181 */;
+import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 14182 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5011 */;
 import RelationshipStore from "RelationshipStore" /* 5082 */;

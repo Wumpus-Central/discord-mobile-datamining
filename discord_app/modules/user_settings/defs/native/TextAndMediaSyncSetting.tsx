@@ -1,6 +1,6 @@
-// === Module 17776: TextAndMediaSyncSetting ===
+// === Module 17787: TextAndMediaSyncSetting ===
 
-// Module 17776 (TextAndMediaSyncSetting)
+// Module 17787 (TextAndMediaSyncSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6064 */;

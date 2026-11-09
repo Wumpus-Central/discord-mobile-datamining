@@ -197,7 +197,7 @@ function handleRelationshipAddOrUpdate(relationship) {
 }
 const isGuildEventEnded = fn(6910).isGuildEventEnded;
 const RelationshipTypes = fn(1072).RelationshipTypes;
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "user", notifCenterTabFocused: "2026-07-clips-game-events-on-player" };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
@@ -369,7 +369,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "user", notifCenterTabFocused: "2026-07-clips-game-events-on-player" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -495,7 +495,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "user", notifCenterTabFocused: "2026-07-clips-game-events-on-player" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -645,7 +645,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "user", notifCenterTabFocused: "2026-07-clips-game-events-on-player" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_8", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {

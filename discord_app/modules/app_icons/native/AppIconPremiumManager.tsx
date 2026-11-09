@@ -1,6 +1,6 @@
-// === Module 19787: AppIconPremiumManager ===
+// === Module 19800: AppIconPremiumManager ===
 
-// Module 19787 (AppIconPremiumManager)
+// Module 19800 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -53,7 +53,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
             }
           }
           v3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp63) {
         v3 = tmp;

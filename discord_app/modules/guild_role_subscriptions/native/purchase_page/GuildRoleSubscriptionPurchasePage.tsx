@@ -1,6 +1,6 @@
-// === Module 18960: GuildRoleSubscriptionPurchasePage ===
+// === Module 18973: GuildRoleSubscriptionPurchasePage ===
 
-// Module 18960 (GuildRoleSubscriptionPurchasePage)
+// Module 18973 (GuildRoleSubscriptionPurchasePage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5751 */;
 import LinkingDefault from "Linking" /* 5834 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8674 */;
 import _modDef12077 from "module_12077" /* 12077 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 18970 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 18983 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import ChannelStore from "ChannelStore" /* 4989 */;

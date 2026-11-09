@@ -1,6 +1,6 @@
-// === Module 19524: VoicePanelFloatingCTAUtils ===
+// === Module 19537: VoicePanelFloatingCTAUtils ===
 
-// Module 19524 (VoicePanelFloatingCTAUtils)
+// Module 19537 (VoicePanelFloatingCTAUtils)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 4973 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5170 */;
@@ -11,13 +11,13 @@ import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /*
 import StageChannelActionCreators from "StageChannelActionCreators" /* 8014 */;
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9064 */;
 import speakOnStageDefault from "speakOnStage" /* 11330 */;
-import SoundboardIcon from "SoundboardIcon" /* 14344 */;
-import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 19526 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19529 */;
+import SoundboardIcon from "SoundboardIcon" /* 14345 */;
+import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 19539 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19542 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
-import EventBannerStore from "EventBannerStore" /* 19525 */;
+import EventBannerStore from "EventBannerStore" /* 19538 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 
 const require = globalThis.__r;
@@ -27,7 +27,7 @@ function useStageCTAProps(stateFromStores) {
   _require = stateFromStores;
   const context = noop.useContext(showControls(11362));
   showControls = context.showControls;
-  const tmp4 = showControls(19509)(context.channelId);
+  const tmp4 = showControls(19522)(context.channelId);
   const isStageUnifiedCall = require("StageChannelUnifiedCallExperiment").useIsStageUnifiedCall(stateFromStores, "VoicePanelFloatingCTA");
   const obj2 = require("StageChannelUnifiedCallExperiment");
   const tmp7 = showControls(11325)();
@@ -81,7 +81,7 @@ function useStageCTAProps(stateFromStores) {
   }
   closure_129_0 = stateFromStores;
   const tmp5Result = require("useStageBlockedUsersCount");
-  const tmp18 = showControls(19509)(noop.useContext(showControls(11362)).channelId);
+  const tmp18 = showControls(19522)(noop.useContext(showControls(11362)).channelId);
   const isStageUnifiedCall1 = require("StageChannelUnifiedCallExperiment").useIsStageUnifiedCall(stateFromStores, "VoicePanelFloatingCTA");
   const tmp5Result3 = require("StageChannelUnifiedCallExperiment");
   let id2;
@@ -132,7 +132,7 @@ function useFloatingCTAProps(stateFromStores) {
   closure_129_1 = undefined;
   closure_129_2 = undefined;
   const tmp5 = setShowFloatingCTA(5369)();
-  const tmp6 = setShowFloatingCTA(19509)(noop.useContext(setShowFloatingCTA(11362)).channelId);
+  const tmp6 = setShowFloatingCTA(19522)(noop.useContext(setShowFloatingCTA(11362)).channelId);
   let id1;
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
@@ -212,7 +212,7 @@ function useFloatingCTAProps(stateFromStores) {
   const context = noop.useContext(tmp(11362));
   ({ channelId, isDockEnabled } = context);
   tmpResultResult = setShowFloatingCTA(9044)(guild_id, id2, nextRecurrenceIdInEvent);
-  const tmp27 = setShowFloatingCTA(19509)(channelId);
+  const tmp27 = setShowFloatingCTA(19522)(channelId);
   const items4 = [ChannelRTCStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items4, () => {
     let id;

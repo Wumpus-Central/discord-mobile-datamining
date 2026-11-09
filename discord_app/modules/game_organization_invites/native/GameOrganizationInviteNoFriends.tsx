@@ -1,6 +1,6 @@
-// === Module 16092: GameOrganizationInviteNoFriends ===
+// === Module 16102: GameOrganizationInviteNoFriends ===
 
-// Module 16092 (GameOrganizationInviteNoFriends)
+// Module 16102 (GameOrganizationInviteNoFriends)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2530 from "module_2530" /* 2530 */;

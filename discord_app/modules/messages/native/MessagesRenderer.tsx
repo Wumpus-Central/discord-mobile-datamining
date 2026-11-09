@@ -22,9 +22,9 @@ import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10306 */;
 import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11705 */;
 import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11723 */;
 import MessagesHandlers from "MessagesHandlers" /* 11731 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13562 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13951 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 13952 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13563 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13952 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 13953 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -131,7 +131,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -164,7 +164,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[19]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[16]).scrollTo(ref.current, tmp26, obj8);

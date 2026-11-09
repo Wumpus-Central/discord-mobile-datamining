@@ -1,6 +1,6 @@
-// === Module 18537: useIsGuildThemePerkEnabled ===
+// === Module 18550: useIsGuildThemePerkEnabled ===
 
-// Module 18537 (useIsGuildThemePerkEnabled)
+// Module 18550 (useIsGuildThemePerkEnabled)
 import Powerups from "Powerups" /* 5349 */;
 import GuildStore from "GuildStore" /* 5011 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5345 */;

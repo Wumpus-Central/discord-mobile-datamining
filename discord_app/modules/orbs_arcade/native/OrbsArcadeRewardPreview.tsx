@@ -1,13 +1,13 @@
-// === Module 17348: OrbsArcadeRewardPreview ===
+// === Module 17359: OrbsArcadeRewardPreview ===
 
-// Module 17348 (OrbsArcadeRewardPreview)
+// Module 17359 (OrbsArcadeRewardPreview)
 import nativeDefault from "native" /* 575 */;
 import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2105 */;
 import FastImageDefault from "FastImage" /* 5842 */;
 import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9590 */;
 import _modDef9591 from "module_9591" /* 9591 */;
 import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9626 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17331 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17342 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

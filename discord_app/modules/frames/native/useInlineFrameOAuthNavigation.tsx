@@ -49,7 +49,7 @@ export default function useInlineFrameOAuthNavigation(arg0) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

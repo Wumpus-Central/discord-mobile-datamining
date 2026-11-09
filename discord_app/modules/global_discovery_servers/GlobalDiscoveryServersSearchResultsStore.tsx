@@ -1,6 +1,6 @@
-// === Module 15897: GlobalDiscoveryServersSearchResultsStore ===
+// === Module 15907: GlobalDiscoveryServersSearchResultsStore ===
 
-// Module 15897 (GlobalDiscoveryServersSearchResultsStore)
+// Module 15907 (GlobalDiscoveryServersSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6579 */;

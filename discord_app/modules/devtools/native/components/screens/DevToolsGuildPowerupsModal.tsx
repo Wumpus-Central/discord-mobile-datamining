@@ -1,9 +1,9 @@
-// === Module 18027: DevToolsGuildPowerupsModal ===
+// === Module 18036: DevToolsGuildPowerupsModal ===
 
-// Module 18027 (DevToolsGuildPowerupsModal)
+// Module 18036 (DevToolsGuildPowerupsModal)
 import HeaderShared from "HeaderShared" /* 9902 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10265 */;
-import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 18028 */;
+import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 18037 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

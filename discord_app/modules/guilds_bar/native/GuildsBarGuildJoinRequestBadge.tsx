@@ -1,13 +1,13 @@
-// === Module 18696: GuildsBarGuildJoinRequestBadge ===
+// === Module 18709: GuildsBarGuildJoinRequestBadge ===
 
-// Module 18696 (GuildsBarGuildJoinRequestBadge)
+// Module 18709 (GuildsBarGuildJoinRequestBadge)
 import nativeDefault from "native" /* 575 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5174 */;
 import FastImageDefault from "FastImage" /* 5842 */;
-import _modDef14070 from "module_14070" /* 14070 */;
-import _modDef18697 from "module_18697" /* 18697 */;
-import _modDef18698 from "module_18698" /* 18698 */;
-import _modDef18699 from "module_18699" /* 18699 */;
+import _modDef14071 from "module_14071" /* 14071 */;
+import _modDef18710 from "module_18710" /* 18710 */;
+import _modDef18711 from "module_18711" /* 18711 */;
+import _modDef18712 from "module_18712" /* 18712 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,15 +27,15 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = closure_5();
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = _modDef18697;
+    let tmp4 = _modDef18710;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = _modDef18698;
+    tmp4 = _modDef18711;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = _modDef18699;
+    tmp4 = _modDef18712;
   } else {
     tmp4 = null;
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef14070;
+      tmp4 = _modDef14071;
     }
   }
   let tmp9 = null;

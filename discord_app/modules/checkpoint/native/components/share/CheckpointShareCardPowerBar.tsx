@@ -1,6 +1,6 @@
-// === Module 13681: CheckpointShareCardPowerBar ===
+// === Module 13682: CheckpointShareCardPowerBar ===
 
-// Module 13681 (CheckpointShareCardPowerBar)
+// Module 13682 (CheckpointShareCardPowerBar)
 import nativeDefault from "native" /* 575 */;
 import inlineStyles from "inlineStyles" /* 8101 */;
 import noop from "module_19" /* 19 */;
@@ -37,7 +37,7 @@ export default function CheckpointShareCardPowerBar(stats) {
   const tmp = closure_9();
   importDefault = stats(5724).useToken(nativeDefault.colors.BLACK);
   let obj2 = { style: null, children: null };
-  items = [tmp.powerBar, { backgroundColor: noop.useContext(stats(13679).CheckpointShareCardColorsContext).tertiaryBackgroundColor }];
+  items = [tmp.powerBar, { backgroundColor: noop.useContext(stats(13680).CheckpointShareCardColorsContext).tertiaryBackgroundColor }];
   obj2.style = items;
   const obj3 = { style: tmp.powerLevel, children: null };
   items1 = [closure_5(stats(5751).Text, { variant: "mono-md/normal", style: tmp.powerText, allowFontScaling: false, children: "LVL" }), closure_5(stats(5751).Text, { variant: "mono-md/bold", style: tmp.powerText, allowFontScaling: false, children: stats.powerLevel })];

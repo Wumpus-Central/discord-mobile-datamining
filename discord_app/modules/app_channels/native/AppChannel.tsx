@@ -1,6 +1,6 @@
-// === Module 19014: AppChannel ===
+// === Module 19027: AppChannel ===
 
-// Module 19014 (AppChannel)
+// Module 19027 (AppChannel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
@@ -15,8 +15,8 @@ import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11026
 import useChannelContentGate from "useChannelContentGate" /* 11355 */;
 import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11480 */;
 import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12427 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 19023 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 19025 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 19036 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 19038 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -171,7 +171,7 @@ function AppChannel(arg0) {
   return tmp4Result;
 }
 const View = fn(17).View;
-let closure_5 = fn(19015).useConjureFrameUpdateAvailable;
+let closure_5 = fn(19028).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5140);

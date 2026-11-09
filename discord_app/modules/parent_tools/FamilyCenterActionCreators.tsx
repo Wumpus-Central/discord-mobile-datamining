@@ -30,7 +30,7 @@ let closure_10 = async function _maybeFetchCollectiblesForInvoices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_10 = async function _maybeFetchCollectiblesForInvoices(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -100,7 +100,7 @@ let closure_12 = async function _maybeFetchCollectiblesForGifts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_12 = async function _maybeFetchCollectiblesForGifts(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -189,7 +189,7 @@ let closure_17 = async function _updateLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -230,7 +230,7 @@ let closure_17 = async function _updateLinkForUserId() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -253,7 +253,7 @@ let closure_18 = async function _removeLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -294,7 +294,7 @@ let closure_18 = async function _removeLinkForUserId() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -314,7 +314,7 @@ let closure_19 = async function _getLinkCodeForCurrentUser() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -353,7 +353,7 @@ let closure_19 = async function _getLinkCodeForCurrentUser() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -372,7 +372,7 @@ let closure_20 = async function _shareIarWithParents() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -402,7 +402,7 @@ let closure_20 = async function _shareIarWithParents() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -440,7 +440,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -735,7 +735,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -998,7 +998,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1054,7 +1054,7 @@ export default {
             c3 = 0;
             map.delete(closure_128_0);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp30) {
           closure_2 = tmp30;
@@ -1101,7 +1101,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

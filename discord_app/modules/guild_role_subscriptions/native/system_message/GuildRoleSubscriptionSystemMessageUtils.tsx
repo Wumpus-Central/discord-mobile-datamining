@@ -1,6 +1,6 @@
-// === Module 13486: system_message/GuildRoleSubscriptionSystemMessageUtils ===
+// === Module 13487: system_message/GuildRoleSubscriptionSystemMessageUtils ===
 
-// Module 13486 (system_message/GuildRoleSubscriptionSystemMessageUtils)
+// Module 13487 (system_message/GuildRoleSubscriptionSystemMessageUtils)
 import Constants from "Constants" /* 1072 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7712 */;

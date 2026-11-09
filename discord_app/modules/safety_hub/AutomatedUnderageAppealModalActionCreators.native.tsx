@@ -1,6 +1,6 @@
-// === Module 13548: AutomatedUnderageAppealModalActionCreators ===
+// === Module 13549: AutomatedUnderageAppealModalActionCreators ===
 
-// Module 13548 (AutomatedUnderageAppealModalActionCreators)
+// Module 13549 (AutomatedUnderageAppealModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 let obj = {
   open(classificationId, onClose) {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13549, dependencyMap.paths), React4, { classificationId, onClose });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13550, dependencyMap.paths), React4, { classificationId, onClose });
   },
   openV2(classificationId, onClose) {
     _require = classificationId;
@@ -37,7 +37,7 @@ let obj = {
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -85,12 +85,12 @@ let obj = {
                       },
                       onComplete() {
                         closure_0 = dependencyMap;
-                        closure_2_0(13546).resetAgeCheckStatus();
-                        obj = closure_2_0(13546);
+                        closure_2_0(13547).resetAgeCheckStatus();
+                        obj = closure_2_0(13547);
                         closure_2_1(572).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
                         const obj2 = closure_2_1(572);
                         closure_2_1(572).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
-                        const timerId = setTimeout(/* F143637 */ function() { ... }, closure_2_5);
+                        const timerId = setTimeout(/* F143744 */ function() { ... }, closure_2_5);
                       }
                     });
                   }), obj8, closure_1_6);

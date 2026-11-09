@@ -125,7 +125,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -173,7 +173,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
         closure_130_67.length = 0;
         closure_130_68 = false;
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
@@ -185,7 +185,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
         } else {
           closure_130_79(closure_129_0);
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -948,7 +948,7 @@ class ReadState {
       tmp = ReadStateTypes;
       CHANNEL = ReadStateTypes.CHANNEL;
     }
-    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
     merged[0] = ReadStateTypes.CHANNEL;
     merged.channelId = global;
     merged.type = CHANNEL;
@@ -1009,7 +1009,7 @@ ReadState["get"] = function get(channelId) {
       if (CHANNEL === undefined) {
         CHANNEL2 = ReadStateTypes.CHANNEL;
       }
-      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
       merged[0] = ReadStateTypes.CHANNEL;
       merged.channelId = channelId;
       merged.type = CHANNEL2;
@@ -3257,7 +3257,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flexDirection", force: -20.75, isExplicitUserAction: -18, trackAnalytics: 0.54 });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flexDirection", force: "1000000000000000000", isExplicitUserAction: null, trackAnalytics: "1000000000000000001" });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);

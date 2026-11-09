@@ -1,6 +1,6 @@
-// === Module 14040: PremiumAnimatedGiftButton ===
+// === Module 14041: PremiumAnimatedGiftButton ===
 
-// Module 14040 (PremiumAnimatedGiftButton)
+// Module 14041 (PremiumAnimatedGiftButton)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import noop from "module_19" /* 19 */;

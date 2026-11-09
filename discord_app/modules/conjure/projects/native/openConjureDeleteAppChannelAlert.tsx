@@ -1,6 +1,6 @@
-// === Module 19250: openConjureDeleteAppChannelAlert ===
+// === Module 19263: openConjureDeleteAppChannelAlert ===
 
-// Module 19250 (openConjureDeleteAppChannelAlert)
+// Module 19263 (openConjureDeleteAppChannelAlert)
 import useAlertStore from "useAlertStore" /* 6092 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -24,7 +24,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -44,7 +44,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(13512)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(13513)(conjureServerApp), done: false };
                 return obj4;
               }
             }

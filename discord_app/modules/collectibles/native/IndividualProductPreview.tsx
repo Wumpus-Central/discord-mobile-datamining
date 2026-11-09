@@ -1,6 +1,6 @@
-// === Module 15296: IndividualProductPreview ===
+// === Module 15306: IndividualProductPreview ===
 
-// Module 15296 (IndividualProductPreview)
+// Module 15306 (IndividualProductPreview)
 import nativeDefault from "native" /* 575 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
@@ -8,10 +8,10 @@ import LinearGradientDefault from "LinearGradient" /* 5715 */;
 import useCurrentUser from "useCurrentUser" /* 8820 */;
 import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11533 */;
 import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11651 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 15297 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 15298 */;
-import FractionalNitroPreview from "FractionalNitroPreview" /* 15299 */;
-import OrbBadgePreview from "OrbBadgePreview" /* 15302 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 15307 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 15308 */;
+import FractionalNitroPreview from "FractionalNitroPreview" /* 15309 */;
+import OrbBadgePreview from "OrbBadgePreview" /* 15312 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

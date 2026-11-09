@@ -1,9 +1,9 @@
-// === Module 17605: SameAsDeviceThemeSetting ===
+// === Module 17616: SameAsDeviceThemeSetting ===
 
-// Module 17605 (SameAsDeviceThemeSetting)
+// Module 17616 (SameAsDeviceThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17316 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17327 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;

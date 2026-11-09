@@ -1,6 +1,6 @@
-// === Module 17174: AuthSessionsActionCreators ===
+// === Module 17185: AuthSessionsActionCreators ===
 
-// Module 17174 (AuthSessionsActionCreators)
+// Module 17185 (AuthSessionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -33,7 +33,7 @@ let closure_6 = async function _logOutSessions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_6 = async function _logOutSessions(arg0) {
             items = length;
             if (num2 === length.length) {
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             items = [length];

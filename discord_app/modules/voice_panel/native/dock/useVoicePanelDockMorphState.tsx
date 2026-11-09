@@ -1,6 +1,6 @@
-// === Module 19550: useVoicePanelDockMorphState ===
+// === Module 19563: useVoicePanelDockMorphState ===
 
-// Module 19550 (useVoicePanelDockMorphState)
+// Module 19563 (useVoicePanelDockMorphState)
 import spring_spring from "spring/spring" /* 5761 */;
 import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11389 */;
 import noop from "module_19" /* 19 */;

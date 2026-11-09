@@ -1,6 +1,6 @@
-// === Module 17723: AnimateEmojiSetting ===
+// === Module 17734: AnimateEmojiSetting ===
 
-// Module 17723 (AnimateEmojiSetting)
+// Module 17734 (AnimateEmojiSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;

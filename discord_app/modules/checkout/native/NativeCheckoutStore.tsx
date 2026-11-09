@@ -96,7 +96,7 @@ export function createNativeStore(arg0) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -191,7 +191,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -333,7 +333,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -446,7 +446,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -518,7 +518,7 @@ export function createNativeStore(arg0) {
             c4 = 0;
             closure_130_0({ isCreateOrderLoading: false });
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp42) {
           closure_3 = tmp42;
@@ -554,7 +554,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -625,7 +625,7 @@ export function createNativeStore(arg0) {
             c3 = 0;
             closure_129_0({ isCreateOrderLoading: false });
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp41) {
           closure_2 = tmp41;

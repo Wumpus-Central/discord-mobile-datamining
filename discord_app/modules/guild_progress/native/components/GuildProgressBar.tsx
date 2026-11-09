@@ -1,6 +1,6 @@
-// === Module 16109: GuildProgressBar ===
+// === Module 16119: GuildProgressBar ===
 
-// Module 16109 (GuildProgressBar)
+// Module 16119 (GuildProgressBar)
 import nativeDefault from "native" /* 575 */;
 import timing_timing from "timing/timing" /* 5370 */;
 import timingPresets from "timingPresets" /* 5373 */;
@@ -12,8 +12,8 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(5140);
-const obj2 = { wrapper: { position: "relative", backgroundColor: fn(14285).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 }, progress: null };
-let obj3 = { position: "relative", backgroundColor: fn(14285).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
+const obj2 = { wrapper: { position: "relative", backgroundColor: fn(14286).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 }, progress: null };
+let obj3 = { position: "relative", backgroundColor: fn(14286).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
 obj2.progress = { position: "absolute", height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.xs };
 let closure_6 = createStyles.createStyles(obj2);
 let closure_7 = { code: "(function GuildProgressBarTsx1(){let[percentWidth]=this.__closure;return{width:percentWidth.get()+\"%\"};})" };

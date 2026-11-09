@@ -1,6 +1,6 @@
-// === Module 15552: BillingInformation ===
+// === Module 15562: BillingInformation ===
 
-// Module 15552 (BillingInformation)
+// Module 15562 (BillingInformation)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -51,7 +51,7 @@ export function useBillingInformationNative(subscription, subscriptionPeriodStar
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -79,7 +79,7 @@ export function useBillingInformationNative(subscription, subscriptionPeriodStar
                     return obj;
                   } else {
                     v3 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp7) {
                   v3 = tmp;

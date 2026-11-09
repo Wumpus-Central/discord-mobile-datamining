@@ -1,6 +1,6 @@
-// === Module 13983: RefreshChatInputCoachmark ===
+// === Module 13984: RefreshChatInputCoachmark ===
 
-// Module 13983 (RefreshChatInputCoachmark)
+// Module 13984 (RefreshChatInputCoachmark)
 import util from "util" /* 1113 */;
 import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 5291 */;
 import useCoachmark from "useCoachmark" /* 10076 */;

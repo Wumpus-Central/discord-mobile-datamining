@@ -1,6 +1,6 @@
-// === Module 19591: VoicePanelDockStatusViews ===
+// === Module 19604: VoicePanelDockStatusViews ===
 
-// Module 19591 (VoicePanelDockStatusViews)
+// Module 19604 (VoicePanelDockStatusViews)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -9,7 +9,7 @@ import spring_spring from "spring/spring" /* 5761 */;
 import useChannelName from "useChannelName" /* 5776 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7338 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 14236 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 14237 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import GuildStore from "GuildStore" /* 5011 */;
@@ -159,11 +159,11 @@ export function DockChannelIcon(streaming) {
   let channelId;
   let guildId;
   const tmp = closure_16();
-  const tmp4Result = guildId(19592)(channelId(575).Shadow.SHADOW_MEDIUM);
+  const tmp4Result = guildId(19605)(channelId(575).Shadow.SHADOW_MEDIUM);
   const context = noop.useContext(guildId(11362));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp4 = guildId(19592);
+  const tmp4 = guildId(19605);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
@@ -197,7 +197,7 @@ export function DockChannelIcon(streaming) {
     obj3.style = items4;
     const obj5 = { streaming, children: null };
     const obj6 = { guild: stateFromStores, size: null, style: null };
-    const tmp2Result = tmp2(19593);
+    const tmp2Result = tmp2(19606);
     obj6.size = tmp5(7020).GuildIconSizes.SMALL_32;
     obj6.style = tmp.guildIconAsset;
     obj5.children = closure_13(tmp2(7020), obj6);
@@ -215,9 +215,9 @@ export function DockChannelIcon(streaming) {
       const obj9 = { streaming, children: null };
       const obj10 = { user: stateFromStores1, guildId: "Array", size: tmp5(1187).AvatarSizes.REFRESH_MEDIUM_32 };
       obj9.children = closure_13(tmp5(1187).Avatar, obj10);
-      obj7.children = closure_13(tmp2(19593), obj9);
+      obj7.children = closure_13(tmp2(19606), obj9);
       tmp13 = closure_13(View, obj7);
-      const tmp2Result4 = tmp2(19593);
+      const tmp2Result4 = tmp2(19606);
     }
   }
   return tmp13;

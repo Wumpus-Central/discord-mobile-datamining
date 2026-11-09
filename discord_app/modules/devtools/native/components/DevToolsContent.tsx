@@ -1,6 +1,6 @@
-// === Module 18071: DevToolsContent ===
+// === Module 18084: DevToolsContent ===
 
-// Module 18071 (DevToolsContent)
+// Module 18084 (DevToolsContent)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import HapticUtils from "HapticUtils" /* 5376 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5751 */;
 import Pressables from "Pressables" /* 7043 */;
 import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 13268 */;
 import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 13270 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 16740 */;
-import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 18072 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 16751 */;
+import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 18085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BuildOverrideStore from "BuildOverrideStore" /* 11502 */;
@@ -169,11 +169,15 @@ export default noop.memo(function DevToolsContent(arg0) {
       };
       obj.onPress = function onPress() {
         if (!c2) {
-          if (null != screenKey.push) {
-            screenKey.push(screenKey);
+          if (null == closure_1_1) {
+            if (null != screenKey.push) {
+              screenKey.push(screenKey);
+            } else {
+              const obj2 = { screenKey };
+              DevToolsNavigator.navigateToDevTools(obj2);
+            }
           } else {
-            const obj2 = { screenKey };
-            DevToolsNavigator.navigateToDevTools(obj2);
+            tmp();
           }
         }
       };

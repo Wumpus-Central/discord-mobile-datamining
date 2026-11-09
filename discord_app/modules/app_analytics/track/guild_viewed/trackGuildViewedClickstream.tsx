@@ -1,6 +1,6 @@
-// === Module 19169: trackGuildViewedClickstream ===
+// === Module 19182: trackGuildViewedClickstream ===
 
-// Module 19169 (trackGuildViewedClickstream)
+// Module 19182 (trackGuildViewedClickstream)
 import Constants from "Constants" /* 1072 */;
 import RouteUtils from "RouteUtils" /* 5189 */;
 import Clickstream from "Clickstream" /* 7721 */;

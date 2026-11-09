@@ -1,6 +1,6 @@
-// === Module 19013: ThreadParentMessage ===
+// === Module 19026: ThreadParentMessage ===
 
-// Module 19013 (ThreadParentMessage)
+// Module 19026 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
 import router_utils from "router_utils" /* 1099 */;
 import Pressables from "Pressables" /* 7043 */;

@@ -1,6 +1,6 @@
-// === Module 19065: guild_channels/ChannelSubtitle ===
+// === Module 19078: guild_channels/ChannelSubtitle ===
 
-// Module 19065 (guild_channels/ChannelSubtitle)
+// Module 19078 (guild_channels/ChannelSubtitle)
 import Text_Text from "Text/Text" /* 5751 */;
 import ChannelListLayout from "ChannelListLayout" /* 11176 */;
 import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11181 */;

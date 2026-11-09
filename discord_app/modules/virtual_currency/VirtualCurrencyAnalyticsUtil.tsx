@@ -1,6 +1,6 @@
-// === Module 17212: VirtualCurrencyAnalyticsUtil ===
+// === Module 17223: VirtualCurrencyAnalyticsUtil ===
 
-// Module 17212 (VirtualCurrencyAnalyticsUtil)
+// Module 17223 (VirtualCurrencyAnalyticsUtil)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 17285: BountiesModalEndCard ===
+// === Module 17296: BountiesModalEndCard ===
 
-// Module 17285 (BountiesModalEndCard)
+// Module 17296 (BountiesModalEndCard)
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5370 */;
 import timingPresets from "timingPresets" /* 5373 */;

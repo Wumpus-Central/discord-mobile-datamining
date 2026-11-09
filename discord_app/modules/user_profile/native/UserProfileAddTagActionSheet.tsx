@@ -1,12 +1,12 @@
-// === Module 15222: UserProfileAddTagActionSheet ===
+// === Module 15232: UserProfileAddTagActionSheet ===
 
-// Module 15222 (UserProfileAddTagActionSheet)
+// Module 15232 (UserProfileAddTagActionSheet)
 import nativeDefault from "native" /* 575 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7037 */;
 import TableRowGroup from "TableRowGroup" /* 7126 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7850 */;
-import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 15197 */;
-import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 15198 */;
+import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 15207 */;
+import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 15208 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

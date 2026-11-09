@@ -1,6 +1,6 @@
-// === Module 19505: UnenrolledActivityQuestStore ===
+// === Module 19518: UnenrolledActivityQuestStore ===
 
-// Module 19505 (UnenrolledActivityQuestStore)
+// Module 19518 (UnenrolledActivityQuestStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

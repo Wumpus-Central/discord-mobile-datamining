@@ -1,10 +1,10 @@
-// === Module 18724: useGuildsBarBadges ===
+// === Module 18737: useGuildsBarBadges ===
 
-// Module 18724 (useGuildsBarBadges)
+// Module 18737 (useGuildsBarBadges)
 import native from "native" /* 1187 */;
 import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5173 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18695 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18726 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18708 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18739 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 11140 */;

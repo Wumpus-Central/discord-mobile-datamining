@@ -1,6 +1,6 @@
-// === Module 15076: UserProfileActivity ===
+// === Module 15077: UserProfileActivity ===
 
-// Module 15076 (UserProfileActivity)
+// Module 15077 (UserProfileActivity)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import Text_Text from "Text/Text" /* 5751 */;
@@ -14,11 +14,11 @@ import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8833 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 9019 */;
 import closeVoicePanelsDefault from "closeVoicePanels" /* 11062 */;
 import UserActivitySpotify from "UserActivitySpotify" /* 11835 */;
-import UserProfileActivityButtons from "UserProfileActivityButtons" /* 15122 */;
+import UserProfileActivityButtons from "UserProfileActivityButtons" /* 15123 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
-import RequestToStreamStore from "RequestToStreamStore" /* 15077 */;
+import RequestToStreamStore from "RequestToStreamStore" /* 15078 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import GuildStore from "GuildStore" /* 5011 */;
@@ -748,7 +748,7 @@ function VoiceCallActivityCard(arg0) {
   ({ isInChannel, style } = arg0);
   const tmp = closure_25();
   const tmp5 = stateFromStores(5776)(channel);
-  const tmp4 = stateFromStores(15115)(channel);
+  const tmp4 = stateFromStores(15116)(channel);
   items = [GuildStore];
   stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   let obj = channel(504);
@@ -763,9 +763,9 @@ function VoiceCallActivityCard(arg0) {
   let obj2 = channel(504);
   const tmp9 = stateFromStores(7387);
   ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7387)(stateFromStores(7412).USER_PROFILE_VOICE_ACTIVITY_CARD));
-  const tmp11 = stateFromStores(15104)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
+  const tmp11 = stateFromStores(15105)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
   closure_3 = tmp11;
-  stateFromStores(15105)({ userId: user.id, onAction: tmp11 });
+  stateFromStores(15106)({ userId: user.id, onAction: tmp11 });
   const obj5 = { style: null, title: null, titleStyle: null, children: null };
   const items2 = [tmp.card, style];
   obj5.style = items2;
@@ -793,7 +793,7 @@ function VoiceCallActivityCard(arg0) {
       id = stateFromStores.id;
     }
     obj7.guildId = id;
-    const items3 = [closure_22(tmp2(15129), obj7), ];
+    const items3 = [closure_22(tmp2(15130), obj7), ];
     const obj8 = { style: tmp.voiceCallContent, children: null };
     if (stateFromStores1) {
       const obj9 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
@@ -852,7 +852,7 @@ function VoiceCallActivityCard(arg0) {
     obj6.children = items3;
     const items7 = [closure_23(closure_7, obj6), ];
     const obj21 = { channel, isInChannel, onAction: tmp11 };
-    items7[1] = closure_22(channel(15122).VoiceChannelButtons, obj21);
+    items7[1] = closure_22(channel(15123).VoiceChannelButtons, obj21);
     obj5.children = items7;
     return closure_23(tmp14, obj5);
   }

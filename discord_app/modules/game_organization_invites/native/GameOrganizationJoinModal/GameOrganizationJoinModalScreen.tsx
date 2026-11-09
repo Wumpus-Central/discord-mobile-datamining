@@ -1,6 +1,6 @@
-// === Module 13447: GameOrganizationJoinModalScreen ===
+// === Module 13448: GameOrganizationJoinModalScreen ===
 
-// Module 13447 (GameOrganizationJoinModalScreen)
+// Module 13448 (GameOrganizationJoinModalScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import NavigatorConstants from "NavigatorConstants" /* 5714 */;

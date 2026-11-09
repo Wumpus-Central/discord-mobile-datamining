@@ -1,6 +1,6 @@
-// === Module 17013: BlockedUserRowV2 ===
+// === Module 17024: BlockedUserRowV2 ===
 
-// Module 17013 (BlockedUserRowV2)
+// Module 17024 (BlockedUserRowV2)
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7552 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8821 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ function BlockedUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(17014).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(17025).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {

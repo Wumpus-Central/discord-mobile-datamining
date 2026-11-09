@@ -13,7 +13,7 @@ import uploader_UploadUtils from "uploader/UploadUtils" /* 8288 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 8290 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9868 */;
 import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10650 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 14250 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 14251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -63,7 +63,7 @@ let closure_23 = async function _handleAttachFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -762,7 +762,7 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F142323 */ function() { ... });
+                              someResult = assets.some(/* F142428 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }
@@ -1138,7 +1138,7 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F142323 */ function() { ... });
+                              someResult = assets.some(/* F142428 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }

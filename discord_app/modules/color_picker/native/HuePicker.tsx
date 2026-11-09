@@ -1,6 +1,6 @@
-// === Module 16760: HuePicker ===
+// === Module 16771: HuePicker ===
 
-// Module 16760 (HuePicker)
+// Module 16771 (HuePicker)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import LinearGradientDefault from "LinearGradient" /* 5715 */;

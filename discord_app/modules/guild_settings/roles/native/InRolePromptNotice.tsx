@@ -1,13 +1,13 @@
-// === Module 20192: InRolePromptNotice ===
+// === Module 20205: InRolePromptNotice ===
 
-// Module 20192 (InRolePromptNotice)
+// Module 20205 (InRolePromptNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import _modDef11943 from "module_11943" /* 11943 */;
-import GuildSettingsUtils from "GuildSettingsUtils" /* 20193 */;
+import GuildSettingsUtils from "GuildSettingsUtils" /* 20206 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 14443: ChatBeginningRowJoinApplication ===
+// === Module 14444: ChatBeginningRowJoinApplication ===
 
-// Module 14443 (ChatBeginningRowJoinApplication)
+// Module 14444 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 575 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5174 */;
 import Text_Text from "Text/Text" /* 5751 */;

@@ -1,6 +1,6 @@
-// === Module 17149: useTimeValue ===
+// === Module 17160: useTimeValue ===
 
-// Module 17149 (useTimeValue)
+// Module 17160 (useTimeValue)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

@@ -620,7 +620,7 @@ function AppLauncherCommandViewInner(command) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -636,7 +636,7 @@ function AppLauncherCommandViewInner(command) {
           } else if (c2) {
             if (null == tmp2) {
               c2 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               const obj4 = { applicationId: tmp2.applicationId, channel: channel.channel, commandIntegrationTypes: tmp2.integration_types, appLauncherContext: null };
               const obj6 = { entrypoint, location: analyticsLocation, sectionName };
@@ -656,11 +656,11 @@ function AppLauncherCommandViewInner(command) {
           return obj;
         } else if (!value.isAuthorized) {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         closure_128_49();
         c2 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp11) {
         c2 = tmp;
         throw tmp11;

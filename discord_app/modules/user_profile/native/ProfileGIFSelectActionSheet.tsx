@@ -1,6 +1,6 @@
-// === Module 16762: ProfileGIFSelectActionSheet ===
+// === Module 16773: ProfileGIFSelectActionSheet ===
 
-// Module 16762 (ProfileGIFSelectActionSheet)
+// Module 16773 (ProfileGIFSelectActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5388 */;
@@ -36,7 +36,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 17148: ScheduleDowntimeScreen ===
+// === Module 17159: ScheduleDowntimeScreen ===
 
-// Module 17148 (ScheduleDowntimeScreen)
+// Module 17159 (ScheduleDowntimeScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -64,7 +64,7 @@ export default function ScheduleDowntimeScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ export default function ScheduleDowntimeScreen() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -315,7 +315,7 @@ export default function ScheduleDowntimeScreen() {
                 c4 = 2;
                 dependencyMap = 3;
                 c5 = 1;
-                const obj6 = { value: closure_0(17150).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
+                const obj6 = { value: closure_0(17161).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
                 return obj6;
               }
             }
@@ -402,7 +402,7 @@ export default function ScheduleDowntimeScreen() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -426,7 +426,7 @@ export default function ScheduleDowntimeScreen() {
                 c4 = 2;
                 dependencyMap = 3;
                 c5 = 1;
-                const obj6 = { value: closure_0(17150).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
+                const obj6 = { value: closure_0(17161).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
                 return obj6;
               }
             }
@@ -541,7 +541,7 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = first1(tmp2(stringResult[23]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f132851 = (first1) => {
+      const f132942 = (first1) => {
         closure_1_12(first1);
         const result = (closure_0(rule[17]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };

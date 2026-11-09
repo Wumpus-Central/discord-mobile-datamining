@@ -1,10 +1,10 @@
-// === Module 19317: modal/ModalScreen ===
+// === Module 19330: modal/ModalScreen ===
 
-// Module 19317 (modal/ModalScreen)
+// Module 19330 (modal/ModalScreen)
 import nativeDefault from "native" /* 575 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 6160 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7183 */;
-import useAppFrameDefault from "useAppFrame" /* 18375 */;
+import useAppFrameDefault from "useAppFrame" /* 18388 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,8 +36,8 @@ export default function Modal(route) {
     isIpadOSResult = "modal" === params.presentation;
   }
   if (!isIpadOSResult) {
-    isIpadOSResult = modal(19318).shouldExcludeSafeAreaForModalKey(modal.key);
-    const obj2 = modal(19318);
+    isIpadOSResult = modal(19331).shouldExcludeSafeAreaForModalKey(modal.key);
+    const obj2 = modal(19331);
   }
   ({ insets, styles } = useAppFrameDefault({ enabled: !isIpadOSResult }));
   const tmp7 = closure_11(insets.left, insets.right);
@@ -118,6 +118,6 @@ export default function Modal(route) {
   const tmpResult = useTrackImpressionDefault;
   const tmp12Result = modal(1377);
   items4[1] = modal(1377).isIOS() && closure_9(modal(12564).PortalKeyboardRenderer, { portal: false });
-  obj6.children = closure_10(modal(16738).SafeAreaProvider, { children: items4 });
+  obj6.children = closure_10(modal(16749).SafeAreaProvider, { children: items4 });
   return closure_9(closure_6, obj6);
 };

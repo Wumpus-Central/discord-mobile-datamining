@@ -1,6 +1,6 @@
-// === Module 18335: usePasswordScore ===
+// === Module 18348: usePasswordScore ===
 
-// Module 18335 (usePasswordScore)
+// Module 18348 (usePasswordScore)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ export function usePasswordScore(password) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

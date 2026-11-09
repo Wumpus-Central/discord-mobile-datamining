@@ -1,10 +1,10 @@
-// === Module 14632: closeFrame ===
+// === Module 14633: closeFrame ===
 
-// Module 14632 (closeFrame)
+// Module 14633 (closeFrame)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5799 */;
 import leaveFrame from "leaveFrame" /* 11015 */;
-import closeFramePopoutDefault from "closeFramePopout" /* 14633 */;
-import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 14634 */;
+import closeFramePopoutDefault from "closeFramePopout" /* 14634 */;
+import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 14635 */;
 import FramesStore from "FramesStore" /* 6901 */;
 
 require = fn;

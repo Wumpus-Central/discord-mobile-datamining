@@ -1,11 +1,11 @@
-// === Module 14160: SuggestedSearchActionCreators ===
+// === Module 14161: SuggestedSearchActionCreators ===
 
-// Module 14160 (SuggestedSearchActionCreators)
+// Module 14161 (SuggestedSearchActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SmartSearchExperiments from "SmartSearchExperiments" /* 14159 */;
+import SmartSearchExperiments from "SmartSearchExperiments" /* 14160 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 14120 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 14121 */;
 
 require = fn;
 function canFetchSuggestedSearches(guildId) {
@@ -41,7 +41,7 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -175,7 +175,7 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -205,14 +205,14 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c2 = tmp;
       throw tmp10;
     }
   }
 };
-const SmartSearchConstants = fn(14121);
+const SmartSearchConstants = fn(14122);
 ({ SUGGESTED_SEARCHES_REQUEST_LIMIT: hasOwnProperty, SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS } = SmartSearchConstants);
 const Constants = fn(1072);
 ({ Endpoints: closure_6, NOOP: metroImportDefault } = Constants);

@@ -1,6 +1,6 @@
-// === Module 20270: WarningNotice ===
+// === Module 20283: WarningNotice ===
 
-// Module 20270 (WarningNotice)
+// Module 20283 (WarningNotice)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import components_Button_Button from "components/Button/Button" /* 5758 */;

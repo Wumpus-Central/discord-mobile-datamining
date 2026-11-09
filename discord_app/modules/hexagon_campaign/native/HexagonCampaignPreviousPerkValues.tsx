@@ -1,9 +1,9 @@
-// === Module 17315: HexagonCampaignPreviousPerkValues ===
+// === Module 17326: HexagonCampaignPreviousPerkValues ===
 
-// Module 17315 (HexagonCampaignPreviousPerkValues)
+// Module 17326 (HexagonCampaignPreviousPerkValues)
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5167 */;
 import MobileThemesUtils from "MobileThemesUtils" /* 5366 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16767 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 16778 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5164 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ThemeStore from "ThemeStore" /* 1192 */;

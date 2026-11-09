@@ -1,6 +1,6 @@
-// === Module 17052: StaffOnlyFindYourFriendsDeletionSetting ===
+// === Module 17063: StaffOnlyFindYourFriendsDeletionSetting ===
 
-// Module 17052 (StaffOnlyFindYourFriendsDeletionSetting)
+// Module 17063 (StaffOnlyFindYourFriendsDeletionSetting)
 import _mod5055 from "module_5055" /* 5055 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -20,7 +20,7 @@ let closure_8 = async function _onFindYourFriendsDeletionPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -115,7 +115,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(17053).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(17064).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
     if (closure_6((isLoading) => isLoading.isLoading, _mod5055.shallow)) {

@@ -1,31 +1,31 @@
-// === Module 14000: ForumPostGridBody ===
+// === Module 14001: ForumPostGridBody ===
 
-// Module 14000 (ForumPostGridBody)
+// Module 14001 (ForumPostGridBody)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import ForumPostMediaUtils from "ForumPostMediaUtils" /* 9005 */;
-import _modDef14001 from "module_14001" /* 14001 */;
 import _modDef14002 from "module_14002" /* 14002 */;
 import _modDef14003 from "module_14003" /* 14003 */;
-import ForumPostMedia from "ForumPostMedia" /* 14004 */;
+import _modDef14004 from "module_14004" /* 14004 */;
+import ForumPostMedia from "ForumPostMedia" /* 14005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GIFIcon() {
   const tmp = closure_8();
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef14001, disableColor: true, style: closure_8().gifIcon });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef14002, disableColor: true, style: closure_8().gifIcon });
 }
 function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef14002, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef14003, disableColor: true });
 }
 function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_8();
   const obj = { style: tmp.extraMediaCountContainer, children: null };
-  items = [timestampProducer(native.Icon, { source: _modDef14003, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
-  const obj2 = { source: _modDef14003, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [timestampProducer(native.Icon, { source: _modDef14004, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
+  const obj2 = { source: _modDef14004, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
   items[1] = timestampProducer(Text_Text.Text, { style: tmp.extraMediaCount, lineClamp: 1, variant: "body-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount });
   obj.children = items;
   return metroImportDefault(View, obj);
@@ -164,7 +164,7 @@ export default function ForumPostGridBody(thread) {
   if (tmp14Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(14008).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(14009).ForumPostAppliedTagPills, obj5);
     tmp14Result = closure_6(View, obj4);
   }
   items6[1] = tmp14Result;

@@ -1,8 +1,8 @@
-// === Module 14955: CollectiblesShopEntryButton ===
+// === Module 14956: CollectiblesShopEntryButton ===
 
-// Module 14955 (CollectiblesShopEntryButton)
-import YouScreenNavIconDefault from "YouScreenNavIcon" /* 14948 */;
-import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 14956 */;
+// Module 14956 (CollectiblesShopEntryButton)
+import YouScreenNavIconDefault from "YouScreenNavIcon" /* 14949 */;
+import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 14957 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5808 */;
@@ -71,7 +71,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         }
       };
       obj.showRedDot = null != visibleContent;
-      return closure_1_6(shopButtonRef(14948), obj);
+      return closure_1_6(shopButtonRef(14949), obj);
     }
     if (tmp4) {
       let type1;

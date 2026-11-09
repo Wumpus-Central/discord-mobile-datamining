@@ -1,11 +1,11 @@
-// === Module 18738: GuildsBarSeparator ===
+// === Module 18751: GuildsBarSeparator ===
 
-// Module 18738 (GuildsBarSeparator)
+// Module 18751 (GuildsBarSeparator)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import useToken from "useToken" /* 5724 */;
 import NativeViewDefault from "NativeView" /* 7023 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18404 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18417 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

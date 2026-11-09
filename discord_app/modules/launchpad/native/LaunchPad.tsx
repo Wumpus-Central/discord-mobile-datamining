@@ -1,6 +1,6 @@
-// === Module 19430: LaunchPad ===
+// === Module 19443: LaunchPad ===
 
-// Module 19430 (LaunchPad)
+// Module 19443 (LaunchPad)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -12,8 +12,8 @@ import Pressables from "Pressables" /* 7043 */;
 import AutocompleterDefault from "Autocompleter" /* 9216 */;
 import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9227 */;
 import RouteManagerDefault from "RouteManager" /* 12230 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 14629 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 16740 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 14630 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 16751 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 5375 */;
@@ -25,7 +25,7 @@ import ChannelStore from "ChannelStore" /* 4989 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7941 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6941 */;
 import GuildStore from "GuildStore" /* 5011 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15944 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15954 */;
 import ReadStateStore from "ReadStateStore" /* 6897 */;
 import SortedGuildStore from "SortedGuildStore" /* 6827 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6830 */;
@@ -751,14 +751,14 @@ export default noop.memo(function LaunchPad(arg0) {
   let tmp59Result = 0 === str.trim().length && first3 === constants3.SEARCH;
   if (tmp59Result) {
     const obj9 = { selectedGuildId: first1, setSelectedGuild: tmp22, unreadPrivateChannelIds: stateFromStores, unreadGuilds: stateFromStoresArray, guildHistory: memo, visible };
-    tmp59Result = closure_27(tmp43(19431), obj9);
+    tmp59Result = closure_27(tmp43(19444), obj9);
   }
   items20[1] = tmp59Result;
   const obj10 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp56) {
       const obj11 = { results, query: str };
-      let tmp59Result2 = closure_27(tmp16(19438).SearchResults, obj11);
+      let tmp59Result2 = closure_27(tmp16(19451).SearchResults, obj11);
     }
     obj10.children = tmp59Result2;
     items20[2] = closure_27(View, obj10);
@@ -785,13 +785,13 @@ export default noop.memo(function LaunchPad(arg0) {
     obj12.history = channelHistory;
     obj12.expandedHistory = tmp3;
     obj12.toggleExpandedHistory = callback;
-    tmp59Result2 = closure_27(tmp16(19438).InitialResults, obj12);
+    tmp59Result2 = closure_27(tmp16(19451).InitialResults, obj12);
   } else if (first3 === constants3.DEV_TOOLS) {
-    tmp59Result2 = closure_27(tmp43(18071), {});
+    tmp59Result2 = closure_27(tmp43(18084), {});
   } else if (first3 === constants3.MEMBERS) {
-    tmp59Result2 = closure_27(tmp43(19451), {});
+    tmp59Result2 = closure_27(tmp43(19464), {});
   } else {
-    tmp59Result2 = closure_27(tmp43(19452), {});
+    tmp59Result2 = closure_27(tmp43(19465), {});
   }
   tmp56 = str.trim().length > 0;
 });

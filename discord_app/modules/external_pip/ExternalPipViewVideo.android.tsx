@@ -1,13 +1,13 @@
-// === Module 19468: ExternalPipViewVideo ===
+// === Module 19481: ExternalPipViewVideo ===
 
-// Module 19468 (ExternalPipViewVideo)
+// Module 19481 (ExternalPipViewVideo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5859 */;
 import ExternalPipDefault from "ExternalPip" /* 6003 */;
-import VideoActionCreators from "VideoActionCreators" /* 19470 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 19471 */;
+import VideoActionCreators from "VideoActionCreators" /* 19483 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 19484 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -53,8 +53,8 @@ function ExternalPipViewVideoUser(userId) {
     avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
   }
   obj2.avatarURI = avatarURL;
-  const tmp7 = channelId(19469);
-  ({ gradientStops, backgroundColor } = channelId(19469)(obj2));
+  const tmp7 = channelId(19482);
+  ({ gradientStops, backgroundColor } = channelId(19482)(obj2));
   const items2 = [tmp.user, backgroundColor];
   const obj5 = {
     style: noop.useMemo(() => {

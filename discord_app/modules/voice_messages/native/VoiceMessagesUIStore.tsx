@@ -1,11 +1,11 @@
-// === Module 13956: VoiceMessagesUIStore ===
+// === Module 13957: VoiceMessagesUIStore ===
 
-// Module 13956 (VoiceMessagesUIStore)
+// Module 13957 (VoiceMessagesUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5761 */;
 import springPresets from "springPresets" /* 5762 */;
-import VoiceMessageConstants from "VoiceMessageConstants" /* 13957 */;
+import VoiceMessageConstants from "VoiceMessageConstants" /* 13958 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 ({ VoiceMessageAnimationState: c2, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageConstants);
 let obj = module_560.create(() => {
-  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "flexDirection", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_8", showVoiceMessagesTooltip: "auto", savedVoiceMessageUploadData: "80%", isVoiceMessageButtonMounted: "hidden", isUsingHoldGesture: "auto" };
+  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "flexDirection", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_8", showVoiceMessagesTooltip: "PUSH_FEEDBACK_RECEIVED_NOTIFICATION", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: null, isUsingHoldGesture: null };
   items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
   obj.voiceMessageAnimationState = _mod1652.makeMutable(items);

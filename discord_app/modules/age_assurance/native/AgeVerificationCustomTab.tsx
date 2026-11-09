@@ -52,7 +52,7 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -134,7 +134,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -179,7 +179,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
           } else {
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
         c3 = 0;

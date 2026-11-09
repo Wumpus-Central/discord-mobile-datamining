@@ -1,8 +1,8 @@
-// === Module 15250: UserProfileGameFriendsCard ===
+// === Module 15260: UserProfileGameFriendsCard ===
 
-// Module 15250 (UserProfileGameFriendsCard)
+// Module 15260 (UserProfileGameFriendsCard)
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7391 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14439 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14440 */;
 import noop from "module_19" /* 19 */;
 
 const UserProfileCardDefault = tmp2(7436);

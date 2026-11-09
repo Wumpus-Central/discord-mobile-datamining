@@ -65,7 +65,7 @@ function PublishSheetBody(entryPoint) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -99,7 +99,7 @@ function PublishSheetBody(entryPoint) {
           c3 = 0;
           closure_128_3.current = false;
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -118,7 +118,7 @@ function PublishSheetBody(entryPoint) {
             }
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
         c3 = 0;

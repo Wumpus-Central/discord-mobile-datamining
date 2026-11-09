@@ -1,6 +1,6 @@
-// === Module 13540: useExplicitMediaActions ===
+// === Module 13541: useExplicitMediaActions ===
 
-// Module 13540 (useExplicitMediaActions)
+// Module 13541 (useExplicitMediaActions)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ export function useExplicitMediaActions(onError) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

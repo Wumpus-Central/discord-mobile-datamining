@@ -1,6 +1,6 @@
-// === Module 17213: OrbWalletComponents ===
+// === Module 17224: OrbWalletComponents ===
 
-// Module 17213 (OrbWalletComponents)
+// Module 17224 (OrbWalletComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
@@ -20,11 +20,11 @@ import _mod9641 from "module_9641" /* 9641 */;
 import QuestUtils from "QuestUtils" /* 9769 */;
 import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 11558 */;
 import _modDef12672 from "module_12672" /* 12672 */;
-import _modDef14954 from "module_14954" /* 14954 */;
-import OrbWalletUtils from "OrbWalletUtils" /* 17210 */;
-import useNitroProgramReward from "useNitroProgramReward" /* 17214 */;
-import ProgramRewardsActionCreatorsDefault from "ProgramRewardsActionCreators" /* 17218 */;
-import _modDef17219 from "module_17219" /* 17219 */;
+import _modDef14955 from "module_14955" /* 14955 */;
+import OrbWalletUtils from "OrbWalletUtils" /* 17221 */;
+import useNitroProgramReward from "useNitroProgramReward" /* 17225 */;
+import ProgramRewardsActionCreatorsDefault from "ProgramRewardsActionCreators" /* 17229 */;
+import _modDef17230 from "module_17230" /* 17230 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -134,7 +134,7 @@ export function OrbBalanceHeader(orbBalance) {
   const obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.headerAssetSlot, importantForAccessibility: "no-hide-descendants", children: null };
   const obj3 = { source: null, style: null, resizeMode: "contain" };
-  const obj4 = { uri: _modDef17219 };
+  const obj4 = { uri: _modDef17230 };
   obj3.source = obj4;
   obj3.style = tmp.headerAsset;
   obj2.children = closure_1_10(FastImageDefault, obj3);
@@ -149,7 +149,7 @@ export function OrbBalanceHeader(orbBalance) {
     stringResult = intl.formatToPlainString(util.t.zPaLL9, obj6);
     tmp10 = require;
   }
-  const obj7 = { accessible: true, accessibilityLabel: stringResult, accessibilityState: { busy: null == orbBalance }, children: closure_1_10(tmp10(14744).BalanceCounter, { value: orbBalance, onValueChange: onValueReached, onValueReached, targetTotalCounterTime: 1500, textVariant: "display-md", textColor: "text-strong" }) };
+  const obj7 = { accessible: true, accessibilityLabel: stringResult, accessibilityState: { busy: null == orbBalance }, children: closure_1_10(tmp10(14745).BalanceCounter, { value: orbBalance, onValueChange: onValueReached, onValueReached, targetTotalCounterTime: 1500, textVariant: "display-md", textColor: "text-strong" }) };
   const items1 = [closure_1_10(hasOwnProperty, obj7), closure_1_10(OrbWalletHeaderTags, {})];
   obj5.children = items1;
   items[1] = closure_1_11(hasOwnProperty, obj5);
@@ -240,7 +240,7 @@ export function OrbWalletFooter() {
   const obj4 = { text: null, variant: "secondary", size: "md", icon: null, onPress: null };
   const intl = util.intl;
   obj4.text = intl.string(util.t.JALI2K);
-  obj4.icon = _modDef14954;
+  obj4.icon = _modDef14955;
   obj4.onPress = openQuestHomeFromWallet;
   obj3.children = closure_1_10(components_Button_Button.Button, obj4);
   items = [closure_1_10(hasOwnProperty, obj3), ];

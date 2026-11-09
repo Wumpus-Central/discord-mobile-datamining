@@ -1,6 +1,6 @@
-// === Module 19724: VoicePanelVoiceControlsButtons ===
+// === Module 19737: VoicePanelVoiceControlsButtons ===
 
-// Module 19724 (VoicePanelVoiceControlsButtons)
+// Module 19737 (VoicePanelVoiceControlsButtons)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
@@ -30,14 +30,14 @@ import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 12105 *
 import VolumeSliderDefault from "VolumeSlider" /* 12115 */;
 import _modDef12134 from "module_12134" /* 12134 */;
 import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12168 */;
-import SoundboardIcon from "SoundboardIcon" /* 14344 */;
-import useInviteMembersCallback from "useInviteMembersCallback" /* 19527 */;
-import useCanInviteMembers from "useCanInviteMembers" /* 19569 */;
-import _modDef19585 from "module_19585" /* 19585 */;
-import _modDef19586 from "module_19586" /* 19586 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 19595 */;
-import useHideSelfVideoDefault from "useHideSelfVideo" /* 19727 */;
-import ChannelCallUtils from "ChannelCallUtils" /* 19728 */;
+import SoundboardIcon from "SoundboardIcon" /* 14345 */;
+import useInviteMembersCallback from "useInviteMembersCallback" /* 19540 */;
+import useCanInviteMembers from "useCanInviteMembers" /* 19582 */;
+import _modDef19598 from "module_19598" /* 19598 */;
+import _modDef19599 from "module_19599" /* 19599 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 19608 */;
+import useHideSelfVideoDefault from "useHideSelfVideo" /* 19740 */;
+import ChannelCallUtils from "ChannelCallUtils" /* 19741 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
@@ -216,7 +216,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, PlatformTypes: closure_15 } = Constants);
-let closure_16 = fn(19725).SelfStreamAndVideoAlertType;
+let closure_16 = fn(19738).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(5897).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
@@ -318,7 +318,7 @@ export function DeafenSwitch() {
   items = [MediaEngineStore];
   const stateFromStores = initialize.useStateFromStores(items, () => selfDeaf.isSelfDeaf());
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef19586 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef19599 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
   obj2.value = stateFromStores;
@@ -403,7 +403,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f135461 = () => f135461(!VIDEO);
+          const f135555 = () => f135555(!VIDEO);
           const obj2 = {
             importer() {
                   return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -480,7 +480,7 @@ export function VoiceSettingsButton(guildId) {
   const callback = noop.useCallback(() => {
     const result = ChannelCallConnectingScreen.showVoiceSettingsActionSheet(guildId);
   }, items);
-  const obj = { onPress: callback, icon: closure_18(guildId(7046).TableRowIcon, { IconComponent: guildId(7633).SettingsIcon, source: _modDef19585 }), label: null, subLabel: null, trailing: null };
+  const obj = { onPress: callback, icon: closure_18(guildId(7046).TableRowIcon, { IconComponent: guildId(7633).SettingsIcon, source: _modDef19598 }), label: null, subLabel: null, trailing: null };
   const intl = guildId(1113).intl;
   obj.label = intl.string(guildId(1113).t.dsXapM);
   const intl2 = guildId(1113).intl;

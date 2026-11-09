@@ -1,6 +1,6 @@
-// === Module 19213: ConsoleConnectionActionSheet ===
+// === Module 19226: ConsoleConnectionActionSheet ===
 
-// Module 19213 (ConsoleConnectionActionSheet)
+// Module 19226 (ConsoleConnectionActionSheet)
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import PlatformsDefault from "Platforms" /* 6629 */;
@@ -11,7 +11,7 @@ import ActionSheet from "ActionSheet" /* 7426 */;
 import XboxNeutralIcon from "XboxNeutralIcon" /* 9443 */;
 import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 9677 */;
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9811 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 14870 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 14871 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ function connectXbox() {
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(19214).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
+let items = [fn(19227).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/console_coachmark/native/ConsoleConnectionActionSheet.tsx");
 

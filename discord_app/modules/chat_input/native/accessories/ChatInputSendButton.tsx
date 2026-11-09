@@ -1,6 +1,6 @@
-// === Module 14045: ChatInputSendButton ===
+// === Module 14046: ChatInputSendButton ===
 
-// Module 14045 (ChatInputSendButton)
+// Module 14046 (ChatInputSendButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -8,8 +8,8 @@ import useToken from "useToken" /* 5724 */;
 import SendMessageIcon from "SendMessageIcon" /* 5853 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13019 */;
 import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13022 */;
-import VoiceMessageButtonDefault from "VoiceMessageButton" /* 14046 */;
-import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 14050 */;
+import VoiceMessageButtonDefault from "VoiceMessageButton" /* 14047 */;
+import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 14051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;

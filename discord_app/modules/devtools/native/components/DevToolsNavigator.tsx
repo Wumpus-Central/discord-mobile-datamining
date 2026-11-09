@@ -1,12 +1,12 @@
-// === Module 16740: DevToolsNavigator ===
+// === Module 16751: DevToolsNavigator ===
 
-// Module 16740 (DevToolsNavigator)
+// Module 16751 (DevToolsNavigator)
 import Types from "Types" /* 5322 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
 import HeaderShared from "HeaderShared" /* 9902 */;
-import SettingHookHarnessDefault from "SettingHookHarness" /* 16741 */;
-import DevToolsContentDefault from "DevToolsContent" /* 18071 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 16752 */;
+import DevToolsContentDefault from "DevToolsContent" /* 18084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -63,18 +63,23 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
   ,
 
   ];
-  let merged = Object.assign(tmp(17895).DevToolsScreens);
-  let merged1 = Object.assign(tmp(17895).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(17906).DevToolsScreens);
+  let merged1 = Object.assign(tmp(17906).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp, ] = item;
-    return closure_1_4(Navigator.Screen, {
-      name: tmp,
-      children: tmp2,
-      options() {
-        return { title };
-      }
-    }, tmp);
+    let tmp3 = null;
+    if (null != tmp2) {
+      const obj = {
+        name: tmp,
+        children: tmp2,
+        options() {
+            return { title };
+          }
+      };
+      tmp3 = closure_1_4(Navigator.Screen, obj, tmp);
+    }
+    return tmp3;
   });
   const obj4 = {
     name: "home",

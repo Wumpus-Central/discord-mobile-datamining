@@ -1,6 +1,6 @@
-// === Module 14813: ChatLoadingIndicatorExperiment ===
+// === Module 14814: ChatLoadingIndicatorExperiment ===
 
-// Module 14813 (ChatLoadingIndicatorExperiment)
+// Module 14814 (ChatLoadingIndicatorExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

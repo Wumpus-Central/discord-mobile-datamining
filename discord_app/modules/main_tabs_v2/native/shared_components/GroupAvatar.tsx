@@ -1,6 +1,6 @@
-// === Module 15129: GroupAvatar ===
+// === Module 15130: GroupAvatar ===
 
-// Module 15129 (GroupAvatar)
+// Module 15130 (GroupAvatar)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import Text_Text from "Text/Text" /* 5751 */;

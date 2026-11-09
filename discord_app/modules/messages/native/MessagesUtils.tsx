@@ -122,7 +122,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -157,7 +157,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 const findMessageIndexResult = findMessageIndex(SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id));
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -271,7 +271,7 @@ export function getLongPressSelectedMedia(message, mediaIndex, mediaType, tmpRes
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "Button" };
+          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "Array" };
           return obj3;
         }
       }

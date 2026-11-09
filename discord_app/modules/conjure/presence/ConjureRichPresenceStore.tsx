@@ -303,7 +303,7 @@ function updateActivity(withGracePeriod) {
                       let merged = Object.assign(closure_1_16);
                       details = closure_1_16.details;
                       let prop = closure_1_0(closure_1_1[11]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                      let found = prop.filter(/* F101164 */ function() { ... });
+                      let found = prop.filter(/* F101205 */ function() { ... });
                       let _Math = Math;
                       let _Math2 = Math;
                       obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -314,7 +314,7 @@ function updateActivity(withGracePeriod) {
                         timeout = null;
                       }
                       let _setTimeout = setTimeout;
-                      timeout = setTimeout(/* F101165 */ function() { ... }, closure_1_14);
+                      timeout = setTimeout(/* F101206 */ function() { ... }, closure_1_14);
                       closure_1_24.emitChange();
                     }
                   }, closure_1_14);
@@ -352,7 +352,7 @@ let closure_22 = async function _fetchOwnedProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -467,7 +467,7 @@ let closure_23 = async function _resumeRunningProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

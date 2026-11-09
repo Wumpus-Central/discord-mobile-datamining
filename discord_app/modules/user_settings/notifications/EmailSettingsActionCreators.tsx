@@ -1,11 +1,11 @@
-// === Module 17800: EmailSettingsActionCreators ===
+// === Module 17811: EmailSettingsActionCreators ===
 
-// Module 17800 (EmailSettingsActionCreators)
+// Module 17811 (EmailSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6802 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmailSettingsStore from "EmailSettingsStore" /* 15928 */;
+import EmailSettingsStore from "EmailSettingsStore" /* 15938 */;
 
 require = fn;
 let closure_7 = async function _fetchEmailSettings() {
@@ -114,7 +114,7 @@ let closure_10 = async function _updateMarketingEmailSettings() {
   }
   return value;
 };
-const MarketingEmailCategories = fn(17801).MarketingEmailCategories;
+const MarketingEmailCategories = fn(17812).MarketingEmailCategories;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/notifications/EmailSettingsActionCreators.tsx");

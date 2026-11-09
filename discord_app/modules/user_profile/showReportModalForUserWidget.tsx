@@ -1,6 +1,6 @@
-// === Module 15226: showReportModalForUserWidget ===
+// === Module 15236: showReportModalForUserWidget ===
 
-// Module 15226 (showReportModalForUserWidget)
+// Module 15236 (showReportModalForUserWidget)
 import ReportModals from "ReportModals" /* 8422 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 

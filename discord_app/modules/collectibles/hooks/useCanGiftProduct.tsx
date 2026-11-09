@@ -1,6 +1,6 @@
-// === Module 15327: useCanGiftProduct ===
+// === Module 15337: useCanGiftProduct ===
 
-// Module 15327 (useCanGiftProduct)
+// Module 15337 (useCanGiftProduct)
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2183 */;

@@ -1,6 +1,6 @@
-// === Module 19009: usePaginatedMemberApplications ===
+// === Module 19022: usePaginatedMemberApplications ===
 
-// Module 19009 (usePaginatedMemberApplications)
+// Module 19022 (usePaginatedMemberApplications)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ export function usePaginatedMemberApplications(guildId) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

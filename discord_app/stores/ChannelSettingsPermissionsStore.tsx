@@ -1,6 +1,6 @@
-// === Module 19267: ChannelSettingsPermissionsStore ===
+// === Module 19280: ChannelSettingsPermissionsStore ===
 
-// Module 19267 (ChannelSettingsPermissionsStore)
+// Module 19280 (ChannelSettingsPermissionsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;

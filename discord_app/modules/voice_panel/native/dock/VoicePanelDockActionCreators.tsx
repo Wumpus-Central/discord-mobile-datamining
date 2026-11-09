@@ -1,6 +1,6 @@
-// === Module 19678: VoicePanelDockActionCreators ===
+// === Module 19691: VoicePanelDockActionCreators ===
 
-// Module 19678 (VoicePanelDockActionCreators)
+// Module 19691 (VoicePanelDockActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

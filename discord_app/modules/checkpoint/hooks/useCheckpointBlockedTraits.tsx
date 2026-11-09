@@ -1,10 +1,10 @@
-// === Module 13695: useCheckpointBlockedTraits ===
+// === Module 13696: useCheckpointBlockedTraits ===
 
-// Module 13695 (useCheckpointBlockedTraits)
+// Module 13696 (useCheckpointBlockedTraits)
 import initialize from "initialize" /* 504 */;
 import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6243 */;
 import UserStore from "UserStore" /* 1385 */;
-import CheckpointStore from "CheckpointStore" /* 13667 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 require = fn;
 const size = fn(2);

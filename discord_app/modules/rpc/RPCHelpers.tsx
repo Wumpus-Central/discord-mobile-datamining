@@ -59,7 +59,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -184,7 +184,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -231,7 +231,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp26) {
       closure_5 = tmp26;

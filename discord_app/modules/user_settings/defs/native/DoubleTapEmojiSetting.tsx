@@ -1,6 +1,6 @@
-// === Module 18251: DoubleTapEmojiSetting ===
+// === Module 18264: DoubleTapEmojiSetting ===
 
-// Module 18251 (DoubleTapEmojiSetting)
+// Module 18264 (DoubleTapEmojiSetting)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
@@ -74,7 +74,7 @@ const pressable = SettingBuilders.createPressable({
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -111,7 +111,7 @@ const pressable = SettingBuilders.createPressable({
             const obj17 = { emoji: closure_129_0 };
             const result = closure_0(tmp5[15]).showDoubleTapEmojiUpdatedToast(obj17);
             constants = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           constants = tmp;

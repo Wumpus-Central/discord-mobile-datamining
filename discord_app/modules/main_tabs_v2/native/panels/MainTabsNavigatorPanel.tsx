@@ -1,15 +1,15 @@
-// === Module 18376: MainTabsNavigatorPanel ===
+// === Module 18389: MainTabsNavigatorPanel ===
 
-// Module 18376 (MainTabsNavigatorPanel)
+// Module 18389 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import RootNavigationRef from "RootNavigationRef" /* 5315 */;
 import ChatInputUtils from "ChatInputUtils" /* 5323 */;
 import transitionToChannel from "transitionToChannel" /* 5885 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 18377 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18378 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 18383 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 18390 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18391 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 18396 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -86,7 +86,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(18377);
+        obj = obj(18390);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
         obj(5323).dismissKeyboard();

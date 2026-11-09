@@ -1,6 +1,6 @@
-// === Module 14772: EditAttachmentActionSheet ===
+// === Module 14773: EditAttachmentActionSheet ===
 
-// Module 14772 (EditAttachmentActionSheet)
+// Module 14773 (EditAttachmentActionSheet)
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
@@ -20,7 +20,7 @@ import MessageStore from "MessageStore" /* 6194 */;
 require = fn;
 let closure_7 = fn(5145).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
-let maxLength = fn(14759).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+let maxLength = fn(14760).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
@@ -52,7 +52,7 @@ export default function EditAttachmentActionSheet(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

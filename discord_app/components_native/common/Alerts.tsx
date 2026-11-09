@@ -1,6 +1,6 @@
-// === Module 19367: Alerts ===
+// === Module 19380: Alerts ===
 
-// Module 19367 (Alerts)
+// Module 19380 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -9,11 +9,11 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import OverlayViewDefault from "OverlayView" /* 6097 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6154 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7016 */;
-import ModalRegistryDefault from "ModalRegistry" /* 19368 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19381 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15942 */;
-import PermissionVADStore from "PermissionVADStore" /* 16531 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15952 */;
+import PermissionVADStore from "PermissionVADStore" /* 16541 */;
 import SurveyStore from "SurveyStore" /* 7560 */;
 import AlertStore from "AlertStore" /* 10256 */;
 
@@ -261,7 +261,7 @@ let closure_18 = { code: "(function AlertsTsx3(){let[useReducedMotion,visible,wi
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return application_id(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "Array", renderKey: "channel", props: "t" });
+let closure_23 = Object.freeze({ renderAlert: "Array", renderKey: "channel", props: "find" });
 let tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -293,7 +293,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "channel", props: "t" };
+        return { renderAlert: "Array", renderKey: "channel", props: "find" };
       }
     }
   });

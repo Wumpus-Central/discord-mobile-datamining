@@ -1,6 +1,6 @@
-// === Module 16590: VoiceNotificationManager ===
+// === Module 16600: VoiceNotificationManager ===
 
-// Module 16590 (VoiceNotificationManager)
+// Module 16600 (VoiceNotificationManager)
 import nativeDefault from "native" /* 575 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10330 */;
 import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 12187 */;
@@ -25,7 +25,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "Path", connectionState: "container", selfMute: false, deafened: "en-AI", isPushToTalk: "en-001", embeddedActivity: 0, isStreaming: 0 };
+    obj.state = { channelId: "Path", connectionState: "container", selfMute: false, deafened: "Heartbeat", isPushToTalk: "oO--oO", embeddedActivity: "heartbeat", isStreaming: false };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       state = RTCConnectionStore.getState();
@@ -183,7 +183,7 @@ class VoiceNotificationManager {
           obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
           obj.icon = tmp7;
           obj.color = result;
-          obj4 = obj4(16591);
+          obj4 = obj4(16601);
           result = obj4.shouldAcquireCallWifiLock();
           obj.acquireWifiLock = result;
           tmp16 = tmp16(10330);
@@ -220,7 +220,7 @@ prototype["terminate"] = function terminate() {
 };
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
-obj2.state = { channelId: "Path", connectionState: "container", selfMute: false, deafened: "en-AI", isPushToTalk: "en-001", embeddedActivity: 0, isStreaming: 0 };
+obj2.state = { channelId: "Path", connectionState: "container", selfMute: false, deafened: "Heartbeat", isPushToTalk: "oO--oO", embeddedActivity: "heartbeat", isStreaming: false };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   state = RTCConnectionStore.getState();
@@ -378,7 +378,7 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
       obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
       obj.icon = tmp7;
       obj.color = result;
-      obj4 = obj4(16591);
+      obj4 = obj4(16601);
       result = obj4.shouldAcquireCallWifiLock();
       obj.acquireWifiLock = result;
       tmp16 = tmp16(10330);

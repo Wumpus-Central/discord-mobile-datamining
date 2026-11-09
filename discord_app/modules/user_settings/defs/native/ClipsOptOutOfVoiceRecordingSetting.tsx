@@ -1,6 +1,6 @@
-// === Module 17184: ClipsOptOutOfVoiceRecordingSetting ===
+// === Module 17195: ClipsOptOutOfVoiceRecordingSetting ===
 
-// Module 17184 (ClipsOptOutOfVoiceRecordingSetting)
+// Module 17195 (ClipsOptOutOfVoiceRecordingSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -48,7 +48,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
       } else {
         closure_129_1(closure_129_2[3]).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp12) {
       c3 = tmp;

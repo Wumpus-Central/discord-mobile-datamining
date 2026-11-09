@@ -1,6 +1,6 @@
-// === Module 17662: CustomTypingIndicatorEditScreen ===
+// === Module 17673: CustomTypingIndicatorEditScreen ===
 
-// Module 17662 (CustomTypingIndicatorEditScreen)
+// Module 17673 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import user from "user" /* 1398 */;
@@ -10,7 +10,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7387 */;
 import openPremiumModalDefault from "openPremiumModal" /* 10027 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13965 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13966 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -101,7 +101,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const callback1 = noop.useCallback(() => {
     const obj2 = { initialValue: first2, presets: null, onChange: null, highlightedPresets: null, onDismiss: null };
     const obj = ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequireImpl(17663, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(17674, dependencyMap.paths);
     obj2.presets = CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionPresets(enabled);
     obj2.onChange = onChange;
     let prop;
@@ -117,7 +117,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
     obj.openLazy(tmp3, "CustomTypingIndicatorTypingSuggestionPickerSheet", obj2);
   }, items4);
   const callback2 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17664, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17675, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
   }, items5);
   ref = noop.useRef(null);
   const items6 = [analyticsLocations, enabled];
@@ -154,7 +154,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -197,7 +197,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c4 = 3;

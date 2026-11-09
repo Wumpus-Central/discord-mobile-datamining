@@ -1,6 +1,6 @@
-// === Module 18084: DesignSystemsLegacyButtonSetting ===
+// === Module 18097: DesignSystemsLegacyButtonSetting ===
 
-// Module 18084 (DesignSystemsLegacyButtonSetting)
+// Module 18097 (DesignSystemsLegacyButtonSetting)
 import Constants from "Constants" /* 1072 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;

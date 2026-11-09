@@ -1,6 +1,6 @@
-// === Module 15810: GatewaySocketOpCodes ===
+// === Module 15820: GatewaySocketOpCodes ===
 
-// Module 15810 (GatewaySocketOpCodes)
+// Module 15820 (GatewaySocketOpCodes)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2128 */;
 import RTCRegionStore from "RTCRegionStore" /* 5992 */;

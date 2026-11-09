@@ -23,7 +23,7 @@ function ConjureUnpublishUserAppAlert(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -58,7 +58,7 @@ function ConjureUnpublishUserAppAlert(project) {
           obj7.text = intl2.formatToPlainString(tmp5(4026).b8LN7N, obj8);
           tmp5(5837).open("CONJURE_USER_APP_UNPUBLISHED", obj7);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else {
           const intl = tmp2(1113).intl;
           closure_128_0 = intl.string(tmp5(4026)["rE/0SD"]);

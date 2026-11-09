@@ -1,6 +1,6 @@
-// === Module 13680: CheckpointShareCardStats ===
+// === Module 13681: CheckpointShareCardStats ===
 
-// Module 13680 (CheckpointShareCardStats)
+// Module 13681 (CheckpointShareCardStats)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;

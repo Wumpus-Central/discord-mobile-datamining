@@ -1,6 +1,6 @@
-// === Module 14060: VoicePanelChatView ===
+// === Module 14061: VoicePanelChatView ===
 
-// Module 14060 (VoicePanelChatView)
+// Module 14061 (VoicePanelChatView)
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5888 */;
@@ -8,7 +8,7 @@ import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10855 */;
 import _modDef10888 from "module_10888" /* 10888 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 14058 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 14059 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

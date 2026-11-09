@@ -1,13 +1,13 @@
-// === Module 18329: RegisterPhoneOrEmailInput ===
+// === Module 18342: RegisterPhoneOrEmailInput ===
 
-// Module 18329 (RegisterPhoneOrEmailInput)
+// Module 18342 (RegisterPhoneOrEmailInput)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7201 */;
 import noop from "module_19" /* 19 */;
 import PhoneStore from "PhoneStore" /* 7180 */;
 
 require = fn;
-const RegistrationUIStore = fn(18310);
+const RegistrationUIStore = fn(18323);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: closure_6 } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);

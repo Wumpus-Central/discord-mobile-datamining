@@ -1,6 +1,6 @@
-// === Module 18929: CaughtUpRow ===
+// === Module 18942: CaughtUpRow ===
 
-// Module 18929 (CaughtUpRow)
+// Module 18942 (CaughtUpRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import LinearGradientDefault from "LinearGradient" /* 5715 */;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = module_1652.createAnimatedComponent(fn(5751).Text);
-const createICYMIStyles = fn(18865);
+const createICYMIStyles = fn(18878);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -70,7 +70,7 @@ export default function ExploreServersRow(visible) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ export default function ExploreServersRow(visible) {
             const obj6 = v1(8998);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(18882).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(18895).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -111,7 +111,7 @@ export default function ExploreServersRow(visible) {
             }, 500);
           }, 100);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         dependencyMap = tmp;

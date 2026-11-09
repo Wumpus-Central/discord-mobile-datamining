@@ -1,6 +1,6 @@
-// === Module 20500: SentryExperimentFeatureFlagManager ===
+// === Module 20513: SentryExperimentFeatureFlagManager ===
 
-// Module 20500 (SentryExperimentFeatureFlagManager)
+// Module 20513 (SentryExperimentFeatureFlagManager)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import ExperimentStore from "ExperimentStore" /* 5354 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;

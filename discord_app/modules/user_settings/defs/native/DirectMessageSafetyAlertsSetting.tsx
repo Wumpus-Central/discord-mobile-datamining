@@ -1,13 +1,13 @@
-// === Module 17045: DirectMessageSafetyAlertsSetting ===
+// === Module 17056: DirectMessageSafetyAlertsSetting ===
 
-// Module 17045 (DirectMessageSafetyAlertsSetting)
+// Module 17056 (DirectMessageSafetyAlertsSetting)
 import util from "util" /* 1113 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;
 import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11403 */;
 import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11404 */;
 import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 11405 */;
-import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 13537 */;
-import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 17046 */;
+import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 13538 */;
+import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 17057 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;
 import size from "module_2" /* 2 */;
 

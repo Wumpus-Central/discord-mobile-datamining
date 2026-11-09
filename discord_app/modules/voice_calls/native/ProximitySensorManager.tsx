@@ -1,9 +1,9 @@
-// === Module 19992: ProximitySensorManager ===
+// === Module 20005: ProximitySensorManager ===
 
-// Module 19992 (ProximitySensorManager)
+// Module 20005 (ProximitySensorManager)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import VoiceCallTypes from "VoiceCallTypes" /* 5914 */;
-import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 19993 */;
+import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 20006 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;

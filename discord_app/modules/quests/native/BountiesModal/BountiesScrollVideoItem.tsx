@@ -1,10 +1,10 @@
-// === Module 17239: BountiesScrollVideoItem ===
+// === Module 17250: BountiesScrollVideoItem ===
 
-// Module 17239 (BountiesScrollVideoItem)
+// Module 17250 (BountiesScrollVideoItem)
 import QuestContent from "QuestContent" /* 6841 */;
 import AdCreativeType from "AdCreativeType" /* 6843 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14934 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 17240 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14935 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -124,7 +124,7 @@ function BountiesScrollVideoItemInner(bounty) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -179,7 +179,7 @@ function BountiesScrollVideoItemInner(bounty) {
             });
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -310,7 +310,7 @@ export function BountiesScrollVideoItem(bounty) {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(14934).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(14935).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(6843).AdCreativeType.BOUNTY,
     questContent: bounty(6841).QuestContent.VIDEO_MODAL_MOBILE,

@@ -1,6 +1,6 @@
-// === Module 14024: useChatInputHeightWorklet ===
+// === Module 14025: useChatInputHeightWorklet ===
 
-// Module 14024 (useChatInputHeightWorklet)
+// Module 14025 (useChatInputHeightWorklet)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useKeyboardStateSharedValueDefault from "useKeyboardStateSharedValue" /* 13027 */;
 import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13028 */;

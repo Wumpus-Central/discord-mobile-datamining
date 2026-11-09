@@ -1,6 +1,6 @@
-// === Module 14046: VoiceMessageButton ===
+// === Module 14047: VoiceMessageButton ===
 
-// Module 14046 (VoiceMessageButton)
+// Module 14047 (VoiceMessageButton)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import RootNavigationRef from "RootNavigationRef" /* 5315 */;
@@ -10,8 +10,8 @@ import useAccessibilityPressDefault from "useAccessibilityPress" /* 9146 */;
 import useChannelDockHeightDefault from "useChannelDockHeight" /* 11379 */;
 import useChatWidthDefault from "useChatWidth" /* 11700 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13019 */;
-import VoiceMessageUtils from "VoiceMessageUtils" /* 14047 */;
-import useVoiceMessageTooltipDefault from "useVoiceMessageTooltip" /* 14049 */;
+import VoiceMessageUtils from "VoiceMessageUtils" /* 14048 */;
+import useVoiceMessageTooltipDefault from "useVoiceMessageTooltip" /* 14050 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -29,9 +29,9 @@ function triggerHapticGuarded() {
   }
 }
 let AppState = fn(17).AppState;
-const VoiceMessagesUIStore = fn(13956);
+const VoiceMessagesUIStore = fn(13957);
 ({ setIsVoiceMessageButtonMounted: closure_11, setIsUsingHoldGesture: closure_12, setVoiceMessageAnimationState: map1, showVoiceMessagesTooltip: closure_14, useVoiceMessagesUIStore: closure_15, setShowRecordingOverlay: closure_16, hideVoiceMessagesTooltip: closure_17 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(13957);
+const VoiceMessageConstants = fn(13958);
 ({ VoiceMessageAnimationState: closure_18, VOICE_RECORDING_MIN_DURATION_MILLIS: closure_19 } = VoiceMessageConstants);
 const Constants = fn(1072);
 ({ ComponentActions: closure_20, ComponentActionsKeyed: closure_21, MessageFlags: closure_22 } = Constants);
@@ -90,20 +90,20 @@ export default noop.memo(function VoiceMessageButton(arg0) {
   closure_9 = noop.useRef(null);
   const tmp13 = useChatWidthDefault();
   _require = sharedValue(function*(arg0) {
-    yield c0(14047).endAudioRecording();
+    yield c0(14048).endAudioRecording();
     closure_129_2 = value;
     const data = closure_129_2.data;
     const startTimeMillis = closure_129_2.startTimeMillis;
     closure_1_6(false);
     if (closure_129_0) {
       closure_1_9.current = closure_129_1;
-      let result = c0(14047).emitVoiceMessageRecorded(closure_129_1, data.durationSecs, startTimeMillis);
+      let result = c0(14048).emitVoiceMessageRecorded(closure_129_1, data.durationSecs, startTimeMillis);
     }
     if (data.durationSecs < expandedHeight / 1000) {
-      const result1 = c0(14047).emitVoiceMessageRecorded(c0(13534).VoiceMessageRecordingResult.CANCELLED_DURATION, data.durationSecs, startTimeMillis);
+      const result1 = c0(14048).emitVoiceMessageRecorded(c0(13535).VoiceMessageRecordingResult.CANCELLED_DURATION, data.durationSecs, startTimeMillis);
       _undefined();
     }
-    const result2 = c0(14047).emitVoiceMessageRecorded(c0(13534).VoiceMessageRecordingResult.SENT, data.durationSecs, startTimeMillis);
+    const result2 = c0(14048).emitVoiceMessageRecorded(c0(13535).VoiceMessageRecordingResult.SENT, data.durationSecs, startTimeMillis);
     const channel2 = channel.getChannel(closure_0);
     if (null != channel2) {
       const cloudUpload = new c0(8278).CloudUpload({ uri: data.filename, originalUri: data.filename, mimeType: "audio/ogg", filename: "voice-message.ogg", platform: c0(8280).UploadPlatform.REACT_NATIVE, durationSecs: data.durationSecs, waveform: data.waveform }, channel2.id);
@@ -135,7 +135,7 @@ export default noop.memo(function VoiceMessageButton(arg0) {
     closure_1 = tmp2;
     ({ isCancelling: closure_129_0, cancelReason } = closure_0);
     if (cancelReason === undefined) {
-      cancelReason = c0(13534).VoiceMessageRecordingResult.CANCELLED_USER_REQUESTED;
+      cancelReason = c0(13535).VoiceMessageRecordingResult.CANCELLED_USER_REQUESTED;
     }
     closure_129_1 = cancelReason;
     return "flexDirection";
@@ -240,7 +240,7 @@ export default noop.memo(function VoiceMessageButton(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -268,7 +268,7 @@ export default noop.memo(function VoiceMessageButton(arg0) {
               closure_1_6(false);
               c2 = 1;
               c3 = 1;
-              const obj5 = { value: cancel(14047).endAudioRecording(), done: false };
+              const obj5 = { value: cancel(14048).endAudioRecording(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -276,8 +276,8 @@ export default noop.memo(function VoiceMessageButton(arg0) {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_0 = value;
-            const result = cancel(14047).emitVoiceMessageRecorded(cancel(13534).VoiceMessageRecordingResult.CANCELLED_GESTURE_CONFLICT, closure_128_0.data.durationSecs, closure_128_0.startTimeMillis);
-            const obj = cancel(14047);
+            const result = cancel(14048).emitVoiceMessageRecorded(cancel(13535).VoiceMessageRecordingResult.CANCELLED_GESTURE_CONFLICT, closure_128_0.data.durationSecs, closure_128_0.startTimeMillis);
+            const obj = cancel(14048);
           }
           c3 = 3;
           const obj6 = { value, done: true };
@@ -333,7 +333,7 @@ export default noop.memo(function VoiceMessageButton(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -507,7 +507,7 @@ export default noop.memo(function VoiceMessageButton(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -563,7 +563,7 @@ export default noop.memo(function VoiceMessageButton(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -712,7 +712,7 @@ export default noop.memo(function VoiceMessageButton(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

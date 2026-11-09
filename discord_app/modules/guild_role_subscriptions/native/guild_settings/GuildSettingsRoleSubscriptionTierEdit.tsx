@@ -1,6 +1,6 @@
-// === Module 20383: GuildSettingsRoleSubscriptionTierEdit ===
+// === Module 20396: GuildSettingsRoleSubscriptionTierEdit ===
 
-// Module 20383 (GuildSettingsRoleSubscriptionTierEdit)
+// Module 20396 (GuildSettingsRoleSubscriptionTierEdit)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1499 */;
@@ -14,18 +14,18 @@ import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
 import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7491 */;
 import DismissibleActionSheet from "DismissibleActionSheet" /* 10640 */;
 import ErrorBlockDefault from "ErrorBlock" /* 12765 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17513 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20337 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 20348 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 20352 */;
-import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 20355 */;
-import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 20377 */;
-import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 20379 */;
-import ActionableNoticeDefault from "ActionableNotice" /* 20384 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17524 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20350 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 20361 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 20365 */;
+import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 20368 */;
+import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 20390 */;
+import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 20392 */;
+import ActionableNoticeDefault from "ActionableNotice" /* 20397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5065 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 20341 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 20354 */;
 
 require = fn;
 function ArchiveOrDeleteTierSection() {
@@ -137,7 +137,7 @@ function DraftPublishPrompt(ref) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const FetchState = fn(5065).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(17506).GuildRoleSubscriptionsTierScenes;
+const GuildRoleSubscriptionsTierScenes = fn(17517).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
 const ContentDismissActionType = fn(4986).ContentDismissActionType;
 const jsxProd = fn(21);

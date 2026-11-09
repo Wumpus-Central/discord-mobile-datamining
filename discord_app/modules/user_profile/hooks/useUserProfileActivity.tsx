@@ -1,9 +1,9 @@
-// === Module 15130: useUserProfileActivity ===
+// === Module 15131: useUserProfileActivity ===
 
-// Module 15130 (useUserProfileActivity)
+// Module 15131 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 5897 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 15131 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 15132 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9571 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
 import PresenceStore from "PresenceStore" /* 5890 */;

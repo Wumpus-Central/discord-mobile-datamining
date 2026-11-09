@@ -1,6 +1,6 @@
-// === Module 15063: UserProfileOverflowMenuItems ===
+// === Module 15064: UserProfileOverflowMenuItems ===
 
-// Module 15063 (UserProfileOverflowMenuItems)
+// Module 15064 (UserProfileOverflowMenuItems)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
@@ -13,7 +13,7 @@ import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 75
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7568 */;
 import ReportModals from "ReportModals" /* 8422 */;
 import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12554 */;
-import BotReportChooser from "BotReportChooser" /* 15064 */;
+import BotReportChooser from "BotReportChooser" /* 15065 */;
 import Constants from "Constants" /* 1072 */;
 import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11427 */;
 import size from "module_2" /* 2 */;
@@ -111,7 +111,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(15064, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(15065, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {

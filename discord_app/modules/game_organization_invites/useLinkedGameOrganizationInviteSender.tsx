@@ -1,6 +1,6 @@
-// === Module 16091: useLinkedGameOrganizationInviteSender ===
+// === Module 16101: useLinkedGameOrganizationInviteSender ===
 
-// Module 16091 (useLinkedGameOrganizationInviteSender)
+// Module 16101 (useLinkedGameOrganizationInviteSender)
 import getGameOrganizationInviteSendStateKeyDefault from "getGameOrganizationInviteSendStateKey" /* 11810 */;
 import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 11818 */;
 import showGameOrganizationInviteErrorToastDefault from "showGameOrganizationInviteErrorToast" /* 11821 */;

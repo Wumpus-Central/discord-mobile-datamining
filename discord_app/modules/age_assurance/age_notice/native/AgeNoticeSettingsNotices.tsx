@@ -1,6 +1,6 @@
-// === Module 17026: AgeNoticeSettingsNotices ===
+// === Module 17037: AgeNoticeSettingsNotices ===
 
-// Module 17026 (AgeNoticeSettingsNotices)
+// Module 17037 (AgeNoticeSettingsNotices)
 import nativeDefault from "native" /* 575 */;
 import _modDef3284 from "module_3284" /* 3284 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5817 */;
@@ -10,9 +10,9 @@ import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6793 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
 import useUserIsTeen from "useUserIsTeen" /* 8439 */;
 import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10253 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 16893 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16933 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 17027 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 16904 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16944 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 17038 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 

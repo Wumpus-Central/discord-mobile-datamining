@@ -1,9 +1,9 @@
-// === Module 20348: useArchiveOrDelete ===
+// === Module 20361: useArchiveOrDelete ===
 
-// Module 20348 (useArchiveOrDelete)
+// Module 20361 (useArchiveOrDelete)
 import util from "util" /* 1113 */;
 import ToastUtilsAll from "ToastUtils" /* 5836 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17526 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17537 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -31,7 +31,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

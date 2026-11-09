@@ -15,8 +15,8 @@ import showNSFWGuildJoinGate from "showNSFWGuildJoinGate" /* 7446 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 7957 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 9038 */;
 import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11513 */;
-import generateDynamicLinkDefault from "generateDynamicLink" /* 14985 */;
-import ProtocolUtilsDefault from "ProtocolUtils" /* 14987 */;
+import generateDynamicLinkDefault from "generateDynamicLink" /* 14986 */;
+import ProtocolUtilsDefault from "ProtocolUtils" /* 14988 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6910 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -445,7 +445,7 @@ let closure_42 = async function _transitionToGuildFromEventInvite(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -479,7 +479,7 @@ let closure_42 = async function _transitionToGuildFromEventInvite(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp12) {
       c1 = tmp;
       throw tmp12;
@@ -541,12 +541,12 @@ export default {
                     closure_2 = closure_1_2;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(/* F95072 */ function() { ... });
+                      let nextPromise = resolved.then(/* F95114 */ function() { ... });
                     } else {
                       let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
                       closure_2_1(closure_2_3[39]).dispatch(obj2);
                       let tmp4Result = closure_2_1(closure_2_3[39]);
-                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F95073 */ function() { ... });
+                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F95115 */ function() { ... });
                       let promise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2);
                     }
                     return nextPromise;
@@ -618,7 +618,7 @@ export default {
       const obj2 = { type: "INVITE_RESOLVE", code };
       tmp(572).dispatch(obj2);
       const tmpResult = tmp(572);
-      nextPromise = tmp(14979)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(14980)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -631,7 +631,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(14979)(code, arg1, arg2);
+      const promise = tmp(14980)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -683,7 +683,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -790,7 +790,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1026,7 +1026,7 @@ export default {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -1847,8 +1847,8 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(14982).onOpenHubInvite(flags);
-        const obj6 = obj(14982);
+        obj(14983).onOpenHubInvite(flags);
+        const obj6 = obj(14983);
       }
     }
     let num = flags.flags;
@@ -1864,10 +1864,10 @@ export default {
       if (!hasFlagResult) {
         if (flags.new_member) {
           if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(14983).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result4 = tmp6(14983);
+            const result1 = tmp6(14984).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(14984);
           }
-          tmp6Result3 = tmp6(14983);
+          tmp6Result3 = tmp6(14984);
         }
       }
     }
@@ -2330,9 +2330,9 @@ export default {
       const obj4 = require("DynamicLinkTemplates");
     }
     let obj3 = { type: "INVITE_APP_OPENING", code };
-    const attemptId = tmp18(14985).generateAttemptId();
+    const attemptId = tmp18(14986).generateAttemptId();
     inviteType = undefined;
-    const tmp18Result = tmp18(14985);
+    const tmp18Result = tmp18(14986);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }

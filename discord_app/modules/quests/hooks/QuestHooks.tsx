@@ -28,10 +28,10 @@ import QuestActionCreators from "QuestActionCreators" /* 9773 */;
 import AssetUtils from "AssetUtils" /* 9785 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9790 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 9809 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14919 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14922 */;
-import QuestConsoleStartError from "QuestConsoleStartError" /* 14923 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 14924 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14920 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14923 */;
+import QuestConsoleStartError from "QuestConsoleStartError" /* 14924 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 14925 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -1266,7 +1266,7 @@ export function useManuallyStartConsoleQuest(questId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2037,7 +2037,7 @@ export function useFetchQuestHomeBounties(arg0) {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2059,13 +2059,13 @@ export function useFetchQuestHomeBounties(arg0) {
                 if (arr.length > 0) {
                   c1 = 3;
                   c4 = 1;
-                  const obj6 = { value: previewAdCreativeIds(14926).fetchBountyPreview(arr, previewAdCreativeIds(6839).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+                  const obj6 = { value: previewAdCreativeIds(14927).fetchBountyPreview(arr, previewAdCreativeIds(6839).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
                   return obj6;
                 }
               }
               c1 = 2;
               c4 = 1;
-              const obj7 = { value: previewAdCreativeIds(14926).fetchQuestHomeBounties(previewAdCreativeIds(6839).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+              const obj7 = { value: previewAdCreativeIds(14927).fetchQuestHomeBounties(previewAdCreativeIds(6839).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {
@@ -2105,7 +2105,7 @@ export function useFetchQuestHomeBounties(arg0) {
               v0(false);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp34) {
           closure_2 = tmp34;

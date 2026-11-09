@@ -1,10 +1,10 @@
-// === Module 19164: MainTabsEmptyChatPanel ===
+// === Module 19177: MainTabsEmptyChatPanel ===
 
-// Module 19164 (MainTabsEmptyChatPanel)
+// Module 19177 (MainTabsEmptyChatPanel)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import useDrawerWidth from "useDrawerWidth" /* 11702 */;
-import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 19165 */;
+import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 19178 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

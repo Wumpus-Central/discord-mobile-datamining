@@ -30,7 +30,7 @@ import handleMessagesTapImage from "handleMessagesTapImage" /* 11732 */;
 import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11733 */;
 import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11771 */;
 import contentHandlers2 from "contentHandlers" /* 11772 */;
-import ChatDefault from "Chat" /* 13559 */;
+import ChatDefault from "Chat" /* 13560 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 import ActionSheetStore from "ActionSheetStore" /* 5375 */;
@@ -291,8 +291,8 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "Show App Rating Modal",
-        selectedChannelId: "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.",
+        messageChannel: "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.",
+        selectedChannelId: null,
         tapLinkData: null
       };
       channel = applyArgumentsResult.props.channel;

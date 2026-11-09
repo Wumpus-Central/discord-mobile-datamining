@@ -1,6 +1,6 @@
-// === Module 19202: ClearAllIncomingRequestsAlertModal ===
+// === Module 19215: ClearAllIncomingRequestsAlertModal ===
 
-// Module 19202 (ClearAllIncomingRequestsAlertModal)
+// Module 19215 (ClearAllIncomingRequestsAlertModal)
 import util from "util" /* 1113 */;
 import AlertModal from "AlertModal" /* 6096 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7552 */;
@@ -29,7 +29,7 @@ let closure_7 = async function _handleConfirm() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_7 = async function _handleConfirm() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp7) {
       c0 = tmp;

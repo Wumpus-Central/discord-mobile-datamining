@@ -1,6 +1,6 @@
-// === Module 17283: BountiesModalCloseButton ===
+// === Module 17294: BountiesModalCloseButton ===
 
-// Module 17283 (BountiesModalCloseButton)
+// Module 17294 (BountiesModalCloseButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Pressables from "Pressables" /* 7043 */;

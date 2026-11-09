@@ -27,7 +27,7 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -151,7 +151,7 @@ export function consumeConversationFocusParam(state) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -199,7 +199,7 @@ export function consumeConversationFocusParam(state) {
                       const obj = channelId(9969);
                     }
                     dependencyMap = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp17) {
                   dependencyMap = tmp;

@@ -1,6 +1,6 @@
-// === Module 15407: GamePartyStore ===
+// === Module 15417: GamePartyStore ===
 
-// Module 15407 (GamePartyStore)
+// Module 15417 (GamePartyStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

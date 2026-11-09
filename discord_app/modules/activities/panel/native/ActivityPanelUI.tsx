@@ -1,17 +1,17 @@
-// === Module 19490: ActivityPanelUI ===
+// === Module 19503: ActivityPanelUI ===
 
-// Module 19490 (ActivityPanelUI)
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19489 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19509 */;
-import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 19510 */;
+// Module 19503 (ActivityPanelUI)
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19502 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19522 */;
+import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 19523 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 function renderActivityOrPIP(id, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 19491;
+    let tmp4 = 19504;
   } else {
-    tmp4 = 19496;
+    tmp4 = 19509;
   }
   return metroImportDefault(importDefault(tmp4), { transitionState, transitionCleanUp }, id);
 }

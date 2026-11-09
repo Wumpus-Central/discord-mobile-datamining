@@ -1,6 +1,6 @@
-// === Module 19560: usePanelOpenState ===
+// === Module 19573: usePanelOpenState ===
 
-// Module 19560 (usePanelOpenState)
+// Module 19573 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 19427: useLaunchPadAnimatedStyles ===
+// === Module 19440: useLaunchPadAnimatedStyles ===
 
-// Module 19427 (useLaunchPadAnimatedStyles)
+// Module 19440 (useLaunchPadAnimatedStyles)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5761 */;

@@ -1,6 +1,6 @@
-// === Module 15666: GuildBoostSlotsInventory ===
+// === Module 15676: GuildBoostSlotsInventory ===
 
-// Module 15666 (GuildBoostSlotsInventory)
+// Module 15676 (GuildBoostSlotsInventory)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
@@ -12,8 +12,8 @@ import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 
 import BoostingActionCreators from "BoostingActionCreators" /* 6823 */;
 import GuildIcon from "GuildIcon" /* 7020 */;
 import useCountdownDefault from "useCountdown" /* 7700 */;
-import _modDef15667 from "module_15667" /* 15667 */;
-import SubscriptionPlaceholderPattern from "SubscriptionPlaceholderPattern" /* 15668 */;
+import _modDef15677 from "module_15677" /* 15677 */;
+import SubscriptionPlaceholderPattern from "SubscriptionPlaceholderPattern" /* 15678 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import GuildStore from "GuildStore" /* 5011 */;
@@ -195,7 +195,7 @@ function BoostedGuildInfo(guild) {
     const items1 = [closure_1_10(Text_Text.Text, obj5), ];
     const obj6 = { style: tmp.guildInfoRowBottom, children: null };
     const obj7 = { source: null, style: null };
-    obj7.source = _modDef15667;
+    obj7.source = _modDef15677;
     obj7.style = tmp.guildInfoRowIcon;
     const items2 = [closure_1_10(FastImageDefault, obj7), ];
     const obj8 = { style: tmp.guildInfoSubscriptionCount, variant: "body-xs/semibold", color: "interactive-text-active", children: null };
@@ -250,7 +250,7 @@ function BoostedGuild(arg0) {
     tmp11Result = closure_10(View, obj8);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_10(guildBoostSlots(15672), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_10(guildBoostSlots(15682), { guild: stateFromStores, theme: stateFromStores1 });
   obj6.children = items3;
   const items4 = [closure_11(View, obj6), closure_10(BoostedGuildInfo, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length })];
   obj5.children = items4;

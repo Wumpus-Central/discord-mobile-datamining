@@ -1,6 +1,6 @@
-// === Module 18099: UserSettingsDesignSystemSegmentedControl ===
+// === Module 18112: UserSettingsDesignSystemSegmentedControl ===
 
-// Module 18099 (UserSettingsDesignSystemSegmentedControl)
+// Module 18112 (UserSettingsDesignSystemSegmentedControl)
 import nativeDefault from "native" /* 575 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
 import Text_Text from "Text/Text" /* 5751 */;
@@ -61,7 +61,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
   let obj2 = { children: null };
   let obj3 = { style: tmp5.container, ref, onLayout, children: null };
   const obj4 = { spacing: 24, children: null };
-  let items1 = [closure_8(first(9294).SegmentedControl, { state: segmentedControlState }), closure_8(first(14435).SegmentedControlPages, { state: segmentedControlState }), ];
+  let items1 = [closure_8(first(9294).SegmentedControl, { state: segmentedControlState }), closure_8(first(14436).SegmentedControlPages, { state: segmentedControlState }), ];
   const obj5 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [
     closure_8(first(5758).Button, {

@@ -1,6 +1,6 @@
-// === Module 18021: BalanceWidgetMenu ===
+// === Module 18030: BalanceWidgetMenu ===
 
-// Module 18021 (BalanceWidgetMenu)
+// Module 18030 (BalanceWidgetMenu)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import dismissible_content from "dismissible_content" /* 4973 */;
@@ -13,7 +13,7 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
 import _mod9641 from "module_9641" /* 9641 */;
 import QuestUtils from "QuestUtils" /* 9769 */;
 import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10639 */;
-import useOrbBalanceEntrypoint from "useOrbBalanceEntrypoint" /* 17207 */;
+import useOrbBalanceEntrypoint from "useOrbBalanceEntrypoint" /* 17218 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,7 +58,7 @@ class OrbsOnboardingMenuDismissibleContent {
           const obj2 = QuestUtils;
           obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
         };
-        obj.trailing = closure_11(closure_1(18022), {});
+        obj.trailing = closure_11(closure_1(18031), {});
         return closure_11(closure_12, obj);
       } else {
         return null;
@@ -71,7 +71,7 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
   let str;
   str = str(9641).useFetchVirtualCurrencyBalance({ disableFetch: true }).balance;
   let obj = str(9641);
-  const isOrbWalletEntrypointEnabled = str(17207).useIsOrbWalletEntrypointEnabled({ location: "MobileBalanceWidgetMenu" });
+  const isOrbWalletEntrypointEnabled = str(17218).useIsOrbWalletEntrypointEnabled({ location: "MobileBalanceWidgetMenu" });
   items = [str, isOrbWalletEntrypointEnabled];
   const callback = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(constants.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
@@ -110,11 +110,11 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
     obj3.analyticsPage = constants2.USER_PROFILE;
     let result = useOrbBalanceEntrypoint.openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, obj3);
   }, items);
-  str(17207);
+  str(17218);
   if (isOrbWalletEntrypointEnabled) {
     let obj3 = { ref: orbWalletEntryRowRef.orbWalletEntryRowRef, collapsable: false, children: null };
     let obj4 = { balance: str, notificationType: tmp6, onPress: callback };
-    obj3.children = jsx(tmp(18023).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
+    obj3.children = jsx(tmp(18032).OrbWalletEntryRow, { balance: str, notificationType: tmp6, onPress: callback });
     let tmp7Result = <View ref={orbWalletEntryRowRef.orbWalletEntryRowRef} collapsable={false}>{null}</View>;
   } else {
     let intl = tmp(1113).intl;
@@ -130,7 +130,7 @@ function BalanceWidgetMenu(orbWalletEntryRowRef) {
     obj5.accessibilityLabel = intl.formatToPlainString(tmp(1113).t.zPaLL9, obj6);
     obj5.onPress = callback;
     const obj7 = { balance: str, onPress: callback, accessible: false };
-    obj5.trailing = jsx(isOrbWalletEntrypointEnabled(14746), { balance: str, onPress: callback, accessible: false });
+    obj5.trailing = jsx(isOrbWalletEntrypointEnabled(14747), { balance: str, onPress: callback, accessible: false });
     tmp7Result = <OrbsBalanceRow accessibilityLabel={null} onPress={null} trailing={null} />;
   }
   return tmp7Result;
@@ -173,9 +173,9 @@ export { OrbsOnboardingMenuDismissibleContent };
 export function useOpenOrbWalletFromYouScreen() {
   balance = balance(9641).useFetchVirtualCurrencyBalance({ disableFetch: true }).balance;
   const obj = balance(9641);
-  const isOrbWalletEntrypointEnabled = balance(17207).useIsOrbWalletEntrypointEnabled({ location: "MobileBalanceWidgetMenu" });
+  const isOrbWalletEntrypointEnabled = balance(17218).useIsOrbWalletEntrypointEnabled({ location: "MobileBalanceWidgetMenu" });
   items = [balance, isOrbWalletEntrypointEnabled];
-  const obj2 = balance(17207);
+  const obj2 = balance(17218);
   return {
     balance,
     isOrbchievementsEnabled: isOrbWalletEntrypointEnabled,

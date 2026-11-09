@@ -1,11 +1,11 @@
-// === Module 17871: DeviceInfoSetting ===
+// === Module 17882: DeviceInfoSetting ===
 
-// Module 17871 (DeviceInfoSetting)
+// Module 17882 (DeviceInfoSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
 import DeviceUtils from "DeviceUtils" /* 5097 */;
-import CopyClientInfoSetting from "CopyClientInfoSetting" /* 17870 */;
-import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 17872 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 17881 */;
+import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 17883 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 15257: useProfileWishlistReadState ===
+// === Module 15267: useProfileWishlistReadState ===
 
-// Module 15257 (useProfileWishlistReadState)
+// Module 15267 (useProfileWishlistReadState)
 import ProfileReadStateSection from "ProfileReadStateSection" /* 7860 */;
-import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15258 */;
+import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15268 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import WishlistStore from "WishlistStore" /* 9555 */;

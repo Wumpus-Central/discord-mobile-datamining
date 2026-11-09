@@ -1,6 +1,6 @@
-// === Module 16795: UserProfileUpsellCard ===
+// === Module 16806: UserProfileUpsellCard ===
 
-// Module 16795 (UserProfileUpsellCard)
+// Module 16806 (UserProfileUpsellCard)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import LinearGradientDefault from "LinearGradient" /* 5715 */;

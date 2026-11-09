@@ -1,13 +1,13 @@
-// === Module 15400: createConjureProjectLinkEmbed ===
+// === Module 15410: createConjureProjectLinkEmbed ===
 
-// Module 15400 (createConjureProjectLinkEmbed)
+// Module 15410 (createConjureProjectLinkEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4026 from "module_4026" /* 4026 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8465 */;
 import CodedLinksConstants from "CodedLinksConstants" /* 10238 */;
 import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 11715 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 13938 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 13939 */;
 import createStyles from "createStyles" /* 5140 */;
 import size from "module_2" /* 2 */;
 

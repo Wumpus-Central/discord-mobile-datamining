@@ -1,13 +1,13 @@
-// === Module 20059: AssetChooser ===
+// === Module 20072: AssetChooser ===
 
-// Module 20059 (AssetChooser)
+// Module 20072 (AssetChooser)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import FastImageDefault from "FastImage" /* 5842 */;
 import Pressables from "Pressables" /* 7043 */;
-import _modDef20060 from "module_20060" /* 20060 */;
-import _modDef20061 from "module_20061" /* 20061 */;
+import _modDef20073 from "module_20073" /* 20073 */;
+import _modDef20074 from "module_20074" /* 20074 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,7 +48,7 @@ class AssetChooser extends PureComponent {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ class AssetChooser extends PureComponent {
               }
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;
@@ -137,13 +137,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef20060;
+    tmp9Result = _modDef20073;
   }
   items = [metroImportDefault(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef20061 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef20074 };
     obj4.children = metroImportDefault(FastImageDefault, obj5);
     tmp5Result = metroImportDefault(React4, obj4);
     const tmp9Result2 = FastImageDefault;

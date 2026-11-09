@@ -1,6 +1,6 @@
-// === Module 15931: OrbChallengeActionCreators ===
+// === Module 15941: OrbChallengeActionCreators ===
 
-// Module 15931 (OrbChallengeActionCreators)
+// Module 15941 (OrbChallengeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -21,7 +21,7 @@ let closure_5 = async function _claimOrbChallenge() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ let closure_6 = async function _fetchOrbChallenges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

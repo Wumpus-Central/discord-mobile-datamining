@@ -1,6 +1,6 @@
-// === Module 15115: usePersonalizedVoiceChannelUsers ===
+// === Module 15116: usePersonalizedVoiceChannelUsers ===
 
-// Module 15115 (usePersonalizedVoiceChannelUsers)
+// Module 15116 (usePersonalizedVoiceChannelUsers)
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7877 */;
 import ConsentStore from "ConsentStore" /* 6797 */;
 import UserStore from "UserStore" /* 1385 */;

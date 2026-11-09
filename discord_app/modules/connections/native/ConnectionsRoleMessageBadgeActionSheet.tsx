@@ -1,6 +1,6 @@
-// === Module 13480: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 13481: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 13480 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 13481 (ConnectionsRoleMessageBadgeActionSheet)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -27,7 +27,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 5052 */;
 import GuildRoleStore from "GuildRoleStore" /* 5046 */;
 import GuildStore from "GuildStore" /* 5011 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 13481 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 13482 */;
 
 require = fn;
 function PopoutCheck(arg0) {
@@ -137,7 +137,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "a" };
+                const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Array" };
                 tmp26 = value2(native.Avatar, obj6);
               }
               items1[1] = tmp26;

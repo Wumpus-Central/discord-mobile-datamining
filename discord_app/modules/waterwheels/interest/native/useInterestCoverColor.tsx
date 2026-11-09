@@ -1,6 +1,6 @@
-// === Module 18754: useInterestCoverColor ===
+// === Module 18767: useInterestCoverColor ===
 
-// Module 18754 (useInterestCoverColor)
+// Module 18767 (useInterestCoverColor)
 import _modDef671 from "module_671" /* 671 */;
 import privDefault from "priv" /* 1453 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -58,7 +58,7 @@ function fetchInterestCoverColor(arg0, uri) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -182,7 +182,7 @@ export default function useInterestCoverColor(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -218,7 +218,7 @@ export default function useInterestCoverColor(arg0, arg1) {
               v1(obj);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;

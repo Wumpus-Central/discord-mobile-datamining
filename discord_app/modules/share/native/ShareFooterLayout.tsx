@@ -1,6 +1,6 @@
-// === Module 13637: ShareFooterLayout ===
+// === Module 13638: ShareFooterLayout ===
 
-// Module 13637 (ShareFooterLayout)
+// Module 13638 (ShareFooterLayout)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5735 */;

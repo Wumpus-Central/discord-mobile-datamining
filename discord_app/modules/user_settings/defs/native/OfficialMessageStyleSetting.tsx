@@ -1,9 +1,9 @@
-// === Module 17635: OfficialMessageStyleSetting ===
+// === Module 17646: OfficialMessageStyleSetting ===
 
-// Module 17635 (OfficialMessageStyleSetting)
+// Module 17646 (OfficialMessageStyleSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16573 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16583 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 

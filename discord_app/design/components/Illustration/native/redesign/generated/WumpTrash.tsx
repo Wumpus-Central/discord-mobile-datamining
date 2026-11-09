@@ -1,6 +1,6 @@
-// === Module 18343: WumpTrash ===
+// === Module 18356: WumpTrash ===
 
-// Module 18343 (WumpTrash)
+// Module 18356 (WumpTrash)
 import shared from "shared" /* 5147 */;
 import FastImageDefault from "FastImage" /* 5842 */;
 import _mod8880 from "module_8880" /* 8880 */;
@@ -16,10 +16,10 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getWumpTrashSource(theme) {
   return _mod8880.getIllustrationSource(theme, {
     dark() {
-      return require("module_18344");
+      return require("module_18357");
     },
     darker() {
-      return require("module_18345");
+      return require("module_18358");
     }
   });
 }
@@ -27,10 +27,10 @@ export function useWumpTrashSource() {
   const obj = shared;
   return _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18344");
+      return require("module_18357");
     },
     darker() {
-      return require("module_18345");
+      return require("module_18358");
     }
   });
 }
@@ -38,19 +38,19 @@ export function WumpTrash(arg0) {
   const obj = shared;
   const illustrationSource = _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18344");
+      return require("module_18357");
     },
     darker() {
-      return require("module_18345");
+      return require("module_18358");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_18344");
+      return require("module_18357");
     },
     darker() {
-      return require("module_18345");
+      return require("module_18358");
     }
   };
   const merged = Object.assign(arg0);

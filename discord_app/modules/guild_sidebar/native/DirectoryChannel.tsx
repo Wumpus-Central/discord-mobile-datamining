@@ -1,6 +1,6 @@
-// === Module 18588: DirectoryChannel ===
+// === Module 18601: DirectoryChannel ===
 
-// Module 18588 (DirectoryChannel)
+// Module 18601 (DirectoryChannel)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10921 */;
@@ -53,8 +53,8 @@ export default noop.memo(function DirectoryChannel(guildId) {
     obj2.channel = stateFromStores;
     obj2.selected = selected;
     obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(18498), { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
-    const tmp10 = id(18498);
+    tmp7 = jsx(id(18511), { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
+    const tmp10 = id(18511);
   }
   return tmp7;
 });

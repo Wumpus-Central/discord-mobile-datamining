@@ -1,6 +1,6 @@
-// === Module 20271: useCreatorMonetizationAcceptTerms ===
+// === Module 20284: useCreatorMonetizationAcceptTerms ===
 
-// Module 20271 (useCreatorMonetizationAcceptTerms)
+// Module 20284 (useCreatorMonetizationAcceptTerms)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -50,7 +50,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -72,12 +72,12 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
               if (null != tmp4) {
                 c4 = 4;
                 c5 = 1;
-                const obj6 = { value: tmp47(20272).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                const obj6 = { value: tmp47(20285).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
                 return obj6;
               } else {
                 c4 = 3;
                 c5 = 1;
-                const obj7 = { value: tmp47(20272).acceptCreatorMonetizationTermsV2(tmp55), done: false };
+                const obj7 = { value: tmp47(20285).acceptCreatorMonetizationTermsV2(tmp55), done: false };
                 return obj7;
               }
             }

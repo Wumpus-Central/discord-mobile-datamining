@@ -1,6 +1,6 @@
-// === Module 14618: CreateGameInvitePostModal ===
+// === Module 14619: CreateGameInvitePostModal ===
 
-// Module 14618 (CreateGameInvitePostModal)
+// Module 14619 (CreateGameInvitePostModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -29,7 +29,7 @@ function CreateGameInvitePostContent(parentChannel) {
   items = [tags];
   const memo = noop.useMemo(() => new Set(first.map((id) => id.id)), items);
   const tmp4 = noMicTag(noop.useState(""), 2);
-  const createGameInvitePost = parentChannel(14619).useCreateGameInvitePost({
+  const createGameInvitePost = parentChannel(14620).useCreateGameInvitePost({
     parentChannel,
     description: tmp5,
     appliedTagIds: memo,
@@ -143,7 +143,7 @@ function CreateGameInvitePostContent(parentChannel) {
   if (isSlowmodeEnabled) {
     const obj16 = { style: tmp.slowmodeRow, children: null };
     const obj17 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj16.children = closure_8(tmp2(13981), obj17);
+    obj16.children = closure_8(tmp2(13982), obj17);
     tmp15Result4 = closure_8(View, obj16);
   }
   const items9 = [tmp15Result4, ];

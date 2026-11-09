@@ -1,6 +1,6 @@
-// === Module 15321: useOrbCheckoutOrder ===
+// === Module 15331: useOrbCheckoutOrder ===
 
-// Module 15321 (useOrbCheckoutOrder)
+// Module 15331 (useOrbCheckoutOrder)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,8 +18,8 @@ export function useOrbCheckoutOrder(skuId) {
   c3 = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  isOrdersCheckout = isOrdersCheckout(15322).useConfig({ location: "orb_checkout_modal" }).enabled;
-  const obj = isOrdersCheckout(15322);
+  isOrdersCheckout = isOrdersCheckout(15332).useConfig({ location: "orb_checkout_modal" }).enabled;
+  const obj = isOrdersCheckout(15332);
   [tmp2, c2] = noop.useState(null);
   let tmp = _slicedToArray(noop.useState(null), 2);
   [tmp4, c3] = noop.useState(isOrdersCheckout);
@@ -49,7 +49,7 @@ export function useOrbCheckoutOrder(skuId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

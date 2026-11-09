@@ -1,6 +1,6 @@
-// === Module 15034: useMediaViewerPanGesture ===
+// === Module 15035: useMediaViewerPanGesture ===
 
-// Module 15034 (useMediaViewerPanGesture)
+// Module 15035 (useMediaViewerPanGesture)
 import _mod1705 from "module_1705" /* 1705 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
 import spring_spring from "spring/spring" /* 5761 */;

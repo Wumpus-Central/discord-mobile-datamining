@@ -1,6 +1,6 @@
-// === Module 16768: HexagonCampaignAnalytics ===
+// === Module 16779: HexagonCampaignAnalytics ===
 
-// Module 16768 (HexagonCampaignAnalytics)
+// Module 16779 (HexagonCampaignAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AdCreativeType from "AdCreativeType" /* 6843 */;
 import getDeviceMetadataDefault from "getDeviceMetadata" /* 7895 */;

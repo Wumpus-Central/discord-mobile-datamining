@@ -1,7 +1,7 @@
-// === Module 18354: CompanionRemoteAuth ===
+// === Module 18367: CompanionRemoteAuth ===
 
-// Module 18354 (CompanionRemoteAuth)
-import NativeAuthenticationModuleDefault from "NativeAuthenticationModule" /* 18360 */;
+// Module 18367 (CompanionRemoteAuth)
+import NativeAuthenticationModuleDefault from "NativeAuthenticationModule" /* 18373 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -29,13 +29,13 @@ export function CompanionRemoteAuth() {
     fingerprint(dependencyMap[14]).track(constants.LOGIN_SUCCESSFUL, obj2);
   }, []);
   let obj = navigation(1499);
-  state = navigation(18356).useAuthWebsocket(callback, true).state;
+  state = navigation(18369).useAuthWebsocket(callback, true).state;
   items = [navigation];
   const callback1 = noop.useCallback(() => {
     navigation.goBack();
   }, items);
   fingerprint = null;
-  if (state.step === navigation(18355).RemoteAuthStep.PENDING_REMOTE_INIT) {
+  if (state.step === navigation(18368).RemoteAuthStep.PENDING_REMOTE_INIT) {
     fingerprint = state.fingerprint;
   }
   const items1 = [fingerprint];
@@ -50,14 +50,14 @@ export function CompanionRemoteAuth() {
     }
   }, items1);
   const obj4 = { headerText: null, children: null };
-  const obj3 = navigation(18356);
+  const obj3 = navigation(18369);
   const intl = tmp2(1113).intl;
   obj4.headerText = intl.string(navigation(1113).t["7fNJgA"]);
   const obj5 = { style: tmp.statusContainer, children: null };
   const step = state.step;
-  if (navigation(18355).RemoteAuthStep.INITIALIZING !== step) {
-    if (tmp2(18355).RemoteAuthStep.PENDING_REMOTE_INIT !== step) {
-      if (tmp2(18355).RemoteAuthStep.PENDING_TICKET === step) {
+  if (navigation(18368).RemoteAuthStep.INITIALIZING !== step) {
+    if (tmp2(18368).RemoteAuthStep.PENDING_REMOTE_INIT !== step) {
+      if (tmp2(18368).RemoteAuthStep.PENDING_TICKET === step) {
         const user = state.user;
         const obj6 = { children: null };
         const obj7 = { style: tmp.avatar, user, size: tmp2(1187).AvatarSizes.LARGE, guildId: context };
@@ -81,7 +81,7 @@ export function CompanionRemoteAuth() {
         obj6.children = items2;
         let tmp11Result = closure_9(closure_8, obj6);
         const tmp5Result2 = tmp5(5194);
-      } else if (tmp2(18355).RemoteAuthStep.PENDING_LOGIN === step) {
+      } else if (tmp2(18368).RemoteAuthStep.PENDING_LOGIN === step) {
         tmp11Result = closure_7(tmp2(7015).ActivityIndicator, {});
       }
     }

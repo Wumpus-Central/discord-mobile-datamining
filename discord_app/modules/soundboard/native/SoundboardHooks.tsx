@@ -1,6 +1,6 @@
-// === Module 19539: SoundboardHooks ===
+// === Module 19552: SoundboardHooks ===
 
-// Module 19539 (SoundboardHooks)
+// Module 19552 (SoundboardHooks)
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5388 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
-const SoundboardStyleConstants = fn(19532);
+const SoundboardStyleConstants = fn(19545);
 ({ SOUNDS_PER_ROW: closure_6, SOUND_ROW_PADDING: metroImportDefault } = SoundboardStyleConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
@@ -36,7 +36,7 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp8) {
           c0 = tmp;
           throw tmp8;

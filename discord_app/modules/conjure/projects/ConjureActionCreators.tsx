@@ -50,7 +50,7 @@ let closure_18 = async function _listProjects() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -198,7 +198,7 @@ let closure_20 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -247,7 +247,7 @@ let closure_20 = async function _forgetMissingProjects() {
             }
           }
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (1 === tmp5) {
         c5 = 0;
@@ -276,7 +276,7 @@ let closure_20 = async function _forgetMissingProjects() {
           c5 = 0;
           _require.return();
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         if (3 === tmp5) {
@@ -313,7 +313,7 @@ let closure_20 = async function _forgetMissingProjects() {
           c5 = 0;
           _require.return();
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       }
       c5 = 0;
@@ -404,7 +404,7 @@ let closure_33 = async function _fetchMissingProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -496,7 +496,7 @@ let closure_34 = async function _fetchMissingConjureProjectNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -573,7 +573,7 @@ let closure_36 = async function _drainMissingProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -661,7 +661,7 @@ let closure_38 = async function _requestProjectLimit(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -723,7 +723,7 @@ let closure_38 = async function _requestProjectLimit(arg0) {
           const obj2 = closure_130_1(closure_130_2[8]);
         }
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp37) {
       closure_3 = tmp37;
@@ -762,7 +762,7 @@ let closure_41 = async function _getProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -878,7 +878,7 @@ let closure_45 = async function _postProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -996,7 +996,7 @@ let closure_49 = async function _fetchConjureApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1033,7 +1033,7 @@ let closure_49 = async function _fetchConjureApplication(arg0) {
           obj = closure_130_1(closure_130_2[8]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp18) {
       c4 = tmp;
@@ -1052,7 +1052,7 @@ let closure_50 = async function _refreshPreviewApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1087,7 +1087,7 @@ let closure_50 = async function _refreshPreviewApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp11) {
       c1 = tmp;
       throw tmp11;
@@ -1154,7 +1154,7 @@ let closure_52 = async function _shareConjureProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1261,7 +1261,7 @@ let closure_53 = async function _fetchApplicationChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1337,7 +1337,7 @@ let closure_55 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,11 +1,11 @@
-// === Module 18530: FavoritesGuildHeaderActions ===
+// === Module 18543: FavoritesGuildHeaderActions ===
 
-// Module 18530 (FavoritesGuildHeaderActions)
+// Module 18543 (FavoritesGuildHeaderActions)
 import util from "util" /* 1113 */;
 import _modDef3608 from "module_3608" /* 3608 */;
 import IconButton from "IconButton" /* 8098 */;
 import _modDef11630 from "module_11630" /* 11630 */;
-import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 18531 */;
+import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 18544 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

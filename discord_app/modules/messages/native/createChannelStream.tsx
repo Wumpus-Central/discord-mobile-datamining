@@ -1,9 +1,9 @@
-// === Module 13946: createChannelStream ===
+// === Module 13947: createChannelStream ===
 
-// Module 13946 (createChannelStream)
+// Module 13947 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import isNewMessageGroupDefault from "isNewMessageGroup" /* 10241 */;
-import tryInjectMessage from "tryInjectMessage" /* 13947 */;
+import tryInjectMessage from "tryInjectMessage" /* 13948 */;
 import PushFeedbackStore from "PushFeedbackStore" /* 11510 */;
 import EditMessageStore from "EditMessageStore" /* 7899 */;
 import UploadStore from "UploadStore" /* 8463 */;

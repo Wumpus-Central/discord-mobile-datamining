@@ -1,6 +1,6 @@
-// === Module 15383: GuildScheduledEventEmbed ===
+// === Module 15393: GuildScheduledEventEmbed ===
 
-// Module 15383 (GuildScheduledEventEmbed)
+// Module 15393 (GuildScheduledEventEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5003 */;
@@ -18,8 +18,8 @@ import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 9061 */;
 import GuildEventUtils from "GuildEventUtils" /* 9164 */;
 import icons_ShareDefault from "icons/Share" /* 9241 */;
 import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 9291 */;
-import _modDef15384 from "module_15384" /* 15384 */;
-import _modDef15385 from "module_15385" /* 15385 */;
+import _modDef15394 from "module_15394" /* 15394 */;
+import _modDef15395 from "module_15395" /* 15395 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6910 */;
@@ -79,7 +79,7 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15384);
+      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15394);
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;
@@ -153,7 +153,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15385);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15395);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);
@@ -305,7 +305,7 @@ export function createGuildScheduledEventLinkEmbed(code, theme) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

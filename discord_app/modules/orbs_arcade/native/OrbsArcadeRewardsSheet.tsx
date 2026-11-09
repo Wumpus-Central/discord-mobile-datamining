@@ -1,11 +1,11 @@
-// === Module 17354: OrbsArcadeRewardsSheet ===
+// === Module 17365: OrbsArcadeRewardsSheet ===
 
-// Module 17354 (OrbsArcadeRewardsSheet)
+// Module 17365 (OrbsArcadeRewardsSheet)
 import nativeDefault from "native" /* 575 */;
-import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17344 */;
-import OrbsArcadeRewardChainDefault from "OrbsArcadeRewardChain" /* 17355 */;
+import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17355 */;
+import OrbsArcadeRewardChainDefault from "OrbsArcadeRewardChain" /* 17366 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17330 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17341 */;
 
 const require = fn;
 const jsxProd = fn(21);
@@ -52,14 +52,14 @@ export default function OrbsArcadeRewardsSheet(gameId) {
     obj6.header = closure_4(tmp(7382).BottomSheetTitleHeader, obj3);
     const obj7 = { game: stateFromStores, gameState: stateFromStores1 };
     const items4 = [closure_4(OrbsArcadeRewardChainDefault, obj7), ];
-    let obj8 = { game: stateFromStores, sheetKey: "OrbsArcadeRewardsSheet", location: tmp(17340).OrbsArcadeCtaLocation.REWARDS_SHEET, surface: gameId.surface, primaryAction: null, secondaryAction: null, style: null };
+    let obj8 = { game: stateFromStores, sheetKey: "OrbsArcadeRewardsSheet", location: tmp(17351).OrbsArcadeCtaLocation.REWARDS_SHEET, surface: gameId.surface, primaryAction: null, secondaryAction: null, style: null };
     const tmp10 = OrbsArcadeSheetActionsDefault;
-    const result = tmp(17337).hasOrbsArcadeUnclaimedRewards(stateFromStores1);
-    const OrbsArcadeSheetPrimaryAction = tmp(17344).OrbsArcadeSheetPrimaryAction;
+    const result = tmp(17348).hasOrbsArcadeUnclaimedRewards(stateFromStores1);
+    const OrbsArcadeSheetPrimaryAction = tmp(17355).OrbsArcadeSheetPrimaryAction;
     obj8.primaryAction = result ? OrbsArcadeSheetPrimaryAction.CLAIM : OrbsArcadeSheetPrimaryAction.PLAY;
-    const tmpResult = tmp(17337);
-    const result1 = tmp(17337).hasOrbsArcadeUnlockedRewards(stateFromStores1);
-    let OrbsArcadeSheetSecondaryAction = tmp(17344).OrbsArcadeSheetSecondaryAction;
+    const tmpResult = tmp(17348);
+    const result1 = tmp(17348).hasOrbsArcadeUnlockedRewards(stateFromStores1);
+    let OrbsArcadeSheetSecondaryAction = tmp(17355).OrbsArcadeSheetSecondaryAction;
     const obj9 = { spacing: 0, children: null };
     obj8.secondaryAction = result1 ? OrbsArcadeSheetSecondaryAction.CLOSE : OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY;
     actionsContainer = actionsContainer.actionsContainer;
@@ -70,7 +70,7 @@ export default function OrbsArcadeRewardsSheet(gameId) {
     OrbsArcadeSheetSecondaryAction = closure_5(tmp(6159).Stack, obj9);
     obj6.children = OrbsArcadeSheetSecondaryAction;
     closure_4(tmp(7426).ActionSheet, obj6);
-    const tmpResult2 = tmp(17337);
+    const tmpResult2 = tmp(17348);
   }
   const obj2 = gameId(504);
 };

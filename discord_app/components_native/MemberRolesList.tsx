@@ -1,6 +1,6 @@
-// === Module 13521: MemberRolesList ===
+// === Module 13522: MemberRolesList ===
 
-// Module 13521 (MemberRolesList)
+// Module 13522 (MemberRolesList)
 import RolePillDefault from "RolePill" /* 10943 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 5046 */;

@@ -1,6 +1,6 @@
-// === Module 18690: GuildsBarGuildFolder ===
+// === Module 18703: GuildsBarGuildFolder ===
 
-// Module 18690 (GuildsBarGuildFolder)
+// Module 18703 (GuildsBarGuildFolder)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
@@ -13,10 +13,10 @@ import GuildIcon from "GuildIcon" /* 7020 */;
 import NativeViewDefault from "NativeView" /* 7023 */;
 import _modDef8677 from "module_8677" /* 8677 */;
 import ListUtils from "ListUtils" /* 13008 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 18684 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18691 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 18694 */;
-import isGuildsBarGuildLabelEqualDefault from "isGuildsBarGuildLabelEqual" /* 18701 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 18697 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18704 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 18707 */;
+import isGuildsBarGuildLabelEqualDefault from "isGuildsBarGuildLabelEqual" /* 18714 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6941 */;
@@ -229,11 +229,11 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
   }
 }
 const GuildsNodeType = fn(6827).GuildsNodeType;
-const GuildsBarDnDStore = fn(18682);
+const GuildsBarDnDStore = fn(18695);
 ({ useItemDragState: closure_10, useFolderBGHeightOffset: closure_11 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(18687);
+let GuildsBarConstants = fn(18700);
 ({ DEFAULT_FOLDER_COLOR: closure_12, isDefaultFolderColor: map1, normalizeFolderColor: closure_14 } = GuildsBarConstants);
-GuildsBarConstants = fn(18679);
+GuildsBarConstants = fn(18692);
 ({ TRANSITION_PHYSICS: closure_15, FOLDER_SPRING_PHYSICS: closure_16 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
@@ -676,7 +676,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
   let tmp28Result2;
   if (!flag2) {
     const obj11 = { folderId: id, expanded };
-    tmp28Result2 = closure_17(tmp3(18702), obj11);
+    tmp28Result2 = closure_17(tmp3(18715), obj11);
   }
   obj9.expandedChildren = tmp28Result2;
   obj9.children = closure_17(tmp(5199).TransitionGroup, { renderItem: renderGuildFolderContent, getItemKey, items: memo3, wrapChildren: callback });

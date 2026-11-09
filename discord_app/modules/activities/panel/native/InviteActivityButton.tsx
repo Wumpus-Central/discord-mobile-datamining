@@ -1,6 +1,6 @@
-// === Module 19499: InviteActivityButton ===
+// === Module 19512: InviteActivityButton ===
 
-// Module 19499 (InviteActivityButton)
+// Module 19512 (InviteActivityButton)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11849 */;
@@ -23,7 +23,7 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     const obj2 = {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(19500, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(19513, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(11108),
       text: null,
@@ -40,7 +40,7 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     tmp4 = jsx(tmp(5758).Button, {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(19500, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(19513, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(11108),
       text: null,

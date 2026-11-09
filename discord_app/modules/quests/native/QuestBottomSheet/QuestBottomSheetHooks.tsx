@@ -1,13 +1,13 @@
-// === Module 17413: QuestBottomSheetHooks ===
+// === Module 17424: QuestBottomSheetHooks ===
 
-// Module 17413 (QuestBottomSheetHooks)
+// Module 17424 (QuestBottomSheetHooks)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import QuestTypes from "QuestTypes" /* 6839 */;
 import AdCreativeType from "AdCreativeType" /* 6843 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7948 */;
 import captureAdUserAction from "captureAdUserAction" /* 9775 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9778 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 17414 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 17425 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -86,7 +86,7 @@ export function useMobileActivityPressHandler(questId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -127,7 +127,7 @@ export function useMobileActivityPressHandler(questId) {
           obj7.questContentPosition = questContentPosition;
           tmp4(9775).captureAdUserAction(obj7);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         dependencyMap = tmp;

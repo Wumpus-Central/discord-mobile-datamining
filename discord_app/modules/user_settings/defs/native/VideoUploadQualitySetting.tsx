@@ -1,10 +1,10 @@
-// === Module 17767: VideoUploadQualitySetting ===
+// === Module 17778: VideoUploadQualitySetting ===
 
-// Module 17767 (VideoUploadQualitySetting)
+// Module 17778 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
-import UserSettingsText from "UserSettingsText" /* 17766 */;
+import UserSettingsText from "UserSettingsText" /* 17777 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;

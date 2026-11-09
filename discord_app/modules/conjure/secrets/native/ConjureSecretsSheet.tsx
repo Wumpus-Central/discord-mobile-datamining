@@ -84,7 +84,7 @@ export default function ConjureSecretsSheet(projectId) {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

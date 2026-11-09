@@ -1,6 +1,6 @@
-// === Module 14894: FederatedSocialModal ===
+// === Module 14895: FederatedSocialModal ===
 
-// Module 14894 (FederatedSocialModal)
+// Module 14895 (FederatedSocialModal)
 import PlatformsDefault from "Platforms" /* 6629 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -25,7 +25,7 @@ function FederatedSocialModalScreen(onClose) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

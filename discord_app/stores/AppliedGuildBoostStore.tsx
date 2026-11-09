@@ -1,6 +1,6 @@
-// === Module 14378: AppliedGuildBoostStore ===
+// === Module 14379: AppliedGuildBoostStore ===
 
-// Module 14378 (AppliedGuildBoostStore)
+// Module 14379 (AppliedGuildBoostStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

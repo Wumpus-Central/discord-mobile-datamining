@@ -1,6 +1,6 @@
-// === Module 18008: DevToolsRevenuePlaygroundScreen ===
+// === Module 18017: DevToolsRevenuePlaygroundScreen ===
 
-// Module 18008 (DevToolsRevenuePlaygroundScreen)
+// Module 18017 (DevToolsRevenuePlaygroundScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
@@ -12,7 +12,7 @@ import TableRowGroup from "TableRowGroup" /* 7126 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7424 */;
 import TableSwitchRow from "TableSwitchRow" /* 7429 */;
 import BundleUpdaterDefault from "BundleUpdater" /* 13432 */;
-import IAPUtils from "IAPUtils" /* 14700 */;
+import IAPUtils from "IAPUtils" /* 14701 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -196,7 +196,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -289,7 +289,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -665,7 +665,7 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18009, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18018, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   };
@@ -684,7 +684,7 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18009, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18018, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   });

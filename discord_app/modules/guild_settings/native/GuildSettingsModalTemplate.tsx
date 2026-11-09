@@ -1,6 +1,6 @@
-// === Module 20211: GuildSettingsModalTemplate ===
+// === Module 20224: GuildSettingsModalTemplate ===
 
-// Module 20211 (GuildSettingsModalTemplate)
+// Module 20224 (GuildSettingsModalTemplate)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5751 */;
@@ -17,7 +17,7 @@ import ClipboardUtils from "ClipboardUtils" /* 7418 */;
 import HeaderActionButton from "HeaderActionButton" /* 7630 */;
 import native from "native" /* 9072 */;
 import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13416 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 20212 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 20225 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -169,7 +169,7 @@ function TemplateForm(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -467,7 +467,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(20213)(guildTemplate.code);
+  const tmp3 = guildTemplate(20226)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

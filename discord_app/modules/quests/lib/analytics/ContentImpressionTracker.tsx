@@ -1,6 +1,6 @@
-// === Module 14935: ContentImpressionTracker ===
+// === Module 14936: ContentImpressionTracker ===
 
-// Module 14935 (ContentImpressionTracker)
+// Module 14936 (ContentImpressionTracker)
 import MonitoringAgentDefault from "MonitoringAgent" /* 6594 */;
 import MetricEvents from "MetricEvents" /* 6599 */;
 import AdCreativeType from "AdCreativeType" /* 6843 */;
@@ -8,10 +8,10 @@ import QuestDataUtils from "QuestDataUtils" /* 7918 */;
 import getQuestLogger from "getQuestLogger" /* 7930 */;
 import AnalyticsActions from "AnalyticsActions" /* 7939 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7948 */;
-import IosAttributionEligibility from "IosAttributionEligibility" /* 14912 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 14913 */;
-import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 14915 */;
-import IosAttributionMetrics from "IosAttributionMetrics" /* 14917 */;
+import IosAttributionEligibility from "IosAttributionEligibility" /* 14913 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 14914 */;
+import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 14916 */;
+import IosAttributionMetrics from "IosAttributionMetrics" /* 14918 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7922 */;
@@ -97,7 +97,7 @@ class QuestContentImpression {
           let obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -202,7 +202,7 @@ class QuestContentImpression {
               onImpressionCallback();
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;

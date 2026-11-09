@@ -1,6 +1,6 @@
-// === Module 18709: useFavoritesGuildUnreads ===
+// === Module 18722: useFavoritesGuildUnreads ===
 
-// Module 18709 (useFavoritesGuildUnreads)
+// Module 18722 (useFavoritesGuildUnreads)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6896 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5074 */;

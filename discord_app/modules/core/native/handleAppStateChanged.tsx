@@ -1,6 +1,6 @@
-// === Module 20515: handleAppStateChanged ===
+// === Module 20528: handleAppStateChanged ===
 
-// Module 20515 (handleAppStateChanged)
+// Module 20528 (handleAppStateChanged)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
@@ -9,7 +9,7 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ThemeActionCreators from "ThemeActionCreators" /* 5198 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7730 */;
-import BundleUpdaterActionCreatorsDefault from "BundleUpdaterActionCreators" /* 20514 */;
+import BundleUpdaterActionCreatorsDefault from "BundleUpdaterActionCreators" /* 20527 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AppStateStore from "AppStateStore" /* 2117 */;
 

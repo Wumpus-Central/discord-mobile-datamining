@@ -1,6 +1,6 @@
-// === Module 18320: RegisterIdentity ===
+// === Module 18333: RegisterIdentity ===
 
-// Module 18320 (RegisterIdentity)
+// Module 18333 (RegisterIdentity)
 import util from "util" /* 1113 */;
 import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7201 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -35,7 +35,7 @@ function RegisterIdentityBase(inputMode) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ function RegisterIdentityBase(inputMode) {
           c3 = 0;
           closure_128_8(false);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp31) {
         if (tmp4 === c3) {
@@ -126,14 +126,14 @@ function RegisterIdentityBase(inputMode) {
   const tmp5 = closure_11((errors) => errors.errors);
   let message = tmp5;
   let obj2 = inputMode(1499);
-  const identityRegistrationStep = inputMode(18321).useIdentityRegistrationStep(inputMode(1092).AuthStates.REGISTER_IDENTITY, inputMode);
+  const identityRegistrationStep = inputMode(18334).useIdentityRegistrationStep(inputMode(1092).AuthStates.REGISTER_IDENTITY, inputMode);
   const loginEmail = identityRegistrationStep.loginEmail;
   const identityErrorMessage = identityRegistrationStep.identityErrorMessage;
   ({ registerAndVerifyPhone: c6, validateEmail: c7 } = identityRegistrationStep);
   ({ setLoginEmail, loginPhone, updateLoginPhone, preventSubmitIdentity, identityError } = identityRegistrationStep);
-  let obj3 = inputMode(18321);
+  let obj3 = inputMode(18334);
   [tmp8, c8] = loginEmail(identityErrorMessage.useState(false), 2);
-  closure_9 = identityErrorMessage.useContext(inputMode(18307).TrackRegistrationContext);
+  closure_9 = identityErrorMessage.useContext(inputMode(18320).TrackRegistrationContext);
   items = [tmp5.message, identityErrorMessage];
   const memo = identityErrorMessage.useMemo(() => {
     message = identityErrorMessage;
@@ -143,18 +143,18 @@ function RegisterIdentityBase(inputMode) {
     return message;
   }, items);
   const tmp7 = loginEmail(identityErrorMessage.useState(false), 2);
-  setInputMode(18327)(inputMode(1092).AuthStates.REGISTER_IDENTITY);
-  const tmp10 = setInputMode(18327);
-  const tmp12 = setInputMode(18328);
-  tmp12(inputMode(18309).getPreviousRegistrationTransitionStep(inputMode(1092).AuthStates.REGISTER_IDENTITY));
+  setInputMode(18340)(inputMode(1092).AuthStates.REGISTER_IDENTITY);
+  const tmp10 = setInputMode(18340);
+  const tmp12 = setInputMode(18341);
+  tmp12(inputMode(18322).getPreviousRegistrationTransitionStep(inputMode(1092).AuthStates.REGISTER_IDENTITY));
   setInputMode(5721)(() => {
     closure_9({ step: constants.ACCOUNT_IDENTITY, actionType: constants2.VIEWED });
   });
   let obj5 = { headerText, subHeader: subheader, children: null };
   let obj6 = { style: tmp2.container, contentContainerStyle: tmp2.scrollContent, keyboardShouldPersistTaps: "handled", children: null };
   const items1 = [controlComponent, , , ];
-  let obj4 = inputMode(18309);
-  items1[1] = closure_14(inputMode(18329).RegisterPhoneOrEmailInput, { loginPhone, loginEmail, setLoginPhone: updateLoginPhone, setLoginEmail, inputMode, onSubmit: handleSubmit, inputError: identityError, autoFocus: true });
+  let obj4 = inputMode(18322);
+  items1[1] = closure_14(inputMode(18342).RegisterPhoneOrEmailInput, { loginPhone, loginEmail, setLoginPhone: updateLoginPhone, setLoginEmail, inputMode, onSubmit: handleSubmit, inputError: identityError, autoFocus: true });
   let obj7 = { style: tmp2.button, children: null };
   let obj8 = { loading: tmp8, size: "lg", text: null, onPress: null, disabled: null };
   const intl = inputMode(1113).intl;
@@ -184,9 +184,9 @@ function RegisterIdentityBase(inputMode) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const RegistrationUIStore = fn(18310);
+const RegistrationUIStore = fn(18323);
 ({ clearRegistrationErrorMessage: closure_8, setRegistrationErrors: closure_9, updateRegistrationOptions: closure_10, useRegistrationUIStore: closure_11 } = RegistrationUIStore);
-const RegistrationConstants = fn(18311);
+const RegistrationConstants = fn(18324);
 ({ RegisterTransitionSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -201,10 +201,10 @@ let result = size.fileFinishedImporting("modules/auth/native/components/Register
 export function RegisterIdentity() {
   let obj = hasItem(5766);
   const tmp3 = closure_16(45 * Math.min(2, hasItem(5766).useFontScale()));
-  const deviceCountry = hasItem(18330).getDeviceCountry();
+  const deviceCountry = hasItem(18343).getDeviceCountry();
   hasItem = null != deviceCountry;
   if (hasItem) {
-    const EMAIL_FIRST_COUNTRIES = tmp(18331).EMAIL_FIRST_COUNTRIES;
+    const EMAIL_FIRST_COUNTRIES = tmp(18344).EMAIL_FIRST_COUNTRIES;
     hasItem = EMAIL_FIRST_COUNTRIES.has(deviceCountry);
   }
   items = [hasItem];
@@ -234,7 +234,7 @@ export function RegisterIdentity() {
     React5();
     dependencyMap(memo[arg0].mode);
   }, items1);
-  let obj2 = hasItem(18330);
+  let obj2 = hasItem(18343);
   const tmpResult = hasItem(9059);
   const segmentedControlState = tmpResult.useSegmentedControlState({
     pageWidth: 0,

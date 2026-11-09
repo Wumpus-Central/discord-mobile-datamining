@@ -1,17 +1,17 @@
-// === Module 19349: SettingsNavigator ===
+// === Module 19362: SettingsNavigator ===
 
-// Module 19349 (SettingsNavigator)
+// Module 19362 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7227 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16898 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 19350 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16909 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 19363 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16896 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16907 */;
 
 require = fn;
 function SettingHeaderBadge(badge) {

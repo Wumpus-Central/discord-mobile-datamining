@@ -1,6 +1,6 @@
-// === Module 14758: AddImageDescriptionModal ===
+// === Module 14759: AddImageDescriptionModal ===
 
-// Module 14758 (AddImageDescriptionModal)
+// Module 14759 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10264 */;
@@ -68,7 +68,7 @@ function AddDescription(id) {
           obj2.description = ref.current;
           id(9868).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
           const obj = id(9868);
-          id(14757).close();
+          id(14758).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});
@@ -102,7 +102,7 @@ function AddDescription(id) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const DraftType = fn(7777).DraftType;
-const maxLength = fn(14759).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+const maxLength = fn(14760).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5140);

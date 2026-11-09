@@ -1,6 +1,6 @@
-// === Module 13653: DestinationFailedAlertModal ===
+// === Module 13654: DestinationFailedAlertModal ===
 
-// Module 13653 (DestinationFailedAlertModal)
+// Module 13654 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -41,7 +41,7 @@ function FailedUserRow(user) {
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "body-sm/medium", autoStatusCutout: null };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "body-sm/medium", autoStatusCutout: 1.5 };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(13654).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(13654).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5751).Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(13655).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(13655).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5751).Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }

@@ -1,6 +1,6 @@
-// === Module 15608: ? ===
+// === Module 15618: ? ===
 
-// Module 15608
+// Module 15618
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/referral_trial/referral_program_sad_cactus.png.js");

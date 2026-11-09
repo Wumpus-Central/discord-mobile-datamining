@@ -1,6 +1,6 @@
-// === Module 15013: MediaModalOverlayAltText ===
+// === Module 15014: MediaModalOverlayAltText ===
 
-// Module 15013 (MediaModalOverlayAltText)
+// Module 15014 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 575 */;
 import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11723 */;
 import noop from "module_19" /* 19 */;

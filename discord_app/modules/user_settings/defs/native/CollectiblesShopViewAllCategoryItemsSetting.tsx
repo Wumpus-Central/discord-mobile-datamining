@@ -1,8 +1,8 @@
-// === Module 18200: CollectiblesShopViewAllCategoryItemsSetting ===
+// === Module 18213: CollectiblesShopViewAllCategoryItemsSetting ===
 
-// Module 18200 (CollectiblesShopViewAllCategoryItemsSetting)
+// Module 18213 (CollectiblesShopViewAllCategoryItemsSetting)
 import Constants from "Constants" /* 1072 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 17053 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 17064 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 14936: QuestOrbsRewardModal ===
+// === Module 14937: QuestOrbsRewardModal ===
 
-// Module 14936 (QuestOrbsRewardModal)
+// Module 14937 (QuestOrbsRewardModal)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -11,9 +11,9 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
 import XSmallIcon from "XSmallIcon" /* 7120 */;
 import APNGPlayer from "APNGPlayer" /* 9588 */;
 import OrbsIcon from "OrbsIcon" /* 9616 */;
-import _modDef14937 from "module_14937" /* 14937 */;
 import _modDef14938 from "module_14938" /* 14938 */;
 import _modDef14939 from "module_14939" /* 14939 */;
+import _modDef14940 from "module_14940" /* 14940 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -59,7 +59,7 @@ function StaticOrb() {
   const obj2 = { source: null, style: null, fadeDuration: 0 };
   const obj3 = { uri: null };
   const tmp = closure_26();
-  obj3.uri = _modDef14937;
+  obj3.uri = _modDef14938;
   obj2.source = obj3;
   obj2.style = tmp.animatedOrb;
   obj.children = gesture(FastImageDefault, obj2);
@@ -104,7 +104,7 @@ function AnimatedOrbContainer(isAppActive) {
     tmp13 = gesture(React5, obj2);
   }
   const items1 = [tmp13, , ];
-  const obj3 = { uri: _modDef14938, style: null, onLoad: null, animate: null };
+  const obj3 = { uri: _modDef14939, style: null, onLoad: null, animate: null };
   const items2 = [tmp.animatedOrb, ];
   let obj4 = tmp15Result;
   if (!tmp15Result) {
@@ -123,7 +123,7 @@ function AnimatedOrbContainer(isAppActive) {
   obj3.animate = tmp19;
   items1[1] = gesture(closure_25, obj3);
   if (tmp15Result) {
-    const obj5 = { uri: _modDef14939, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
+    const obj5 = { uri: _modDef14940, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
     tmp15Result = gesture(closure_25, obj5);
   }
   items1[2] = tmp15Result;
@@ -276,7 +276,7 @@ export default function QuestOrbsRewardModal(quest) {
     obj2.openQuestHome({ filter: constants.VIRTUAL_CURRENCY, fromContent: num(dependencyMap[33]).QuestContent.REWARD_MODAL });
   }, []);
   const obj6 = { style: tmp.root, children: null };
-  const obj7 = { style: absoluteFill.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(num(14941).OrbsRewardBackground, { style: tmp.background, onReady: callback }) };
+  const obj7 = { style: absoluteFill.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(num(14942).OrbsRewardBackground, { style: tmp.background, onReady: callback }) };
   const items4 = [closure_14(closure_8, obj7), , ];
   let tmp15Result = !tmp8;
   if (!tmp8) {

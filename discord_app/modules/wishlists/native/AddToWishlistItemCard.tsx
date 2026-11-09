@@ -1,6 +1,6 @@
-// === Module 15267: AddToWishlistItemCard ===
+// === Module 15277: AddToWishlistItemCard ===
 
-// Module 15267 (AddToWishlistItemCard)
+// Module 15277 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 575 */;
 import SKUPreviewDefault from "SKUPreview" /* 9550 */;
 import HeartOutlineIcon from "HeartOutlineIcon" /* 9619 */;
@@ -56,7 +56,7 @@ export default function AddToWishlistItemCard(sku) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

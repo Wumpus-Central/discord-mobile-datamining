@@ -1,6 +1,6 @@
-// === Module 17002: WebAuthnNameStep ===
+// === Module 17013: WebAuthnNameStep ===
 
-// Module 17002 (WebAuthnNameStep)
+// Module 17013 (WebAuthnNameStep)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useNavigation from "useNavigation" /* 1499 */;
@@ -33,7 +33,7 @@ export default function WebAuthnNameStep() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ export default function WebAuthnNameStep() {
           v3(tmp32[10]).open("WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", obj8);
           const replaced = closure_128_2.replace(constants.WEBAUTHN_SUCCESS);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         if (tmp5 === c3) {

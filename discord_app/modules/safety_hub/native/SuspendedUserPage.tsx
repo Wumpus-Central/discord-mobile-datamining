@@ -1,6 +1,6 @@
-// === Module 19355: SuspendedUserPage ===
+// === Module 19368: SuspendedUserPage ===
 
-// Module 19355 (SuspendedUserPage)
+// Module 19368 (SuspendedUserPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -10,7 +10,7 @@ import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /
 import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
 import IconButton from "IconButton" /* 8098 */;
 import _modDef8429 from "module_8429" /* 8429 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 16947 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 16958 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8064 */;
 

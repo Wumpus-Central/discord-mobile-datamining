@@ -1,6 +1,6 @@
-// === Module 19683: VoicePanelControls ===
+// === Module 19696: VoicePanelControls ===
 
-// Module 19683 (VoicePanelControls)
+// Module 19696 (VoicePanelControls)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -15,22 +15,22 @@ import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11369 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 12614 */;
 import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13028 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 14061 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19509 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19524 */;
-import useControlsLockDefault from "useControlsLock" /* 19564 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19573 */;
-import VoicePanelAccessibilityViewDefault from "VoicePanelAccessibilityView" /* 19663 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 19684 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19686 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 19690 */;
-import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19691 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19692 */;
-import useControlsButtonsDefault from "useControlsButtons" /* 19695 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19718 */;
-import useControlAccessoryHeightDefault from "useControlAccessoryHeight" /* 19720 */;
-import VoicePanelControlsDimOverlayDefault from "VoicePanelControlsDimOverlay" /* 19721 */;
-import VoicePanelControlsDrawerDefault from "VoicePanelControlsDrawer" /* 19722 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 14062 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19522 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19537 */;
+import useControlsLockDefault from "useControlsLock" /* 19577 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19586 */;
+import VoicePanelAccessibilityViewDefault from "VoicePanelAccessibilityView" /* 19676 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 19697 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19699 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 19703 */;
+import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19704 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19705 */;
+import useControlsButtonsDefault from "useControlsButtons" /* 19708 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19731 */;
+import useControlAccessoryHeightDefault from "useControlAccessoryHeight" /* 19733 */;
+import VoicePanelControlsDimOverlayDefault from "VoicePanelControlsDimOverlay" /* 19734 */;
+import VoicePanelControlsDrawerDefault from "VoicePanelControlsDrawer" /* 19735 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
@@ -322,7 +322,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(19573).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(19586).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "chat", source });
     }
@@ -332,7 +332,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(19573).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(19586).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "app_launcher", source });
     }

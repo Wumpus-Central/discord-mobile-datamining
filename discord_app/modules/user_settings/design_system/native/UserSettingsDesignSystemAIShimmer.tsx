@@ -1,6 +1,6 @@
-// === Module 18137: UserSettingsDesignSystemAIShimmer ===
+// === Module 18150: UserSettingsDesignSystemAIShimmer ===
 
-// Module 18137 (UserSettingsDesignSystemAIShimmer)
+// Module 18150 (UserSettingsDesignSystemAIShimmer)
 import Text_Text from "Text/Text" /* 5751 */;
 import components_Button_Button from "components/Button/Button" /* 5758 */;
 import Stack_Stack from "Stack/Stack" /* 6159 */;

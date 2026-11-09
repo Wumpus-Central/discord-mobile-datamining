@@ -1,9 +1,9 @@
-// === Module 19649: StageModeratorIcon ===
+// === Module 19662: StageModeratorIcon ===
 
-// Module 19649 (StageModeratorIcon)
+// Module 19662 (StageModeratorIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod19650 from "module_19650" /* 19650 */;
+import _mod19663 from "module_19663" /* 19663 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function StageModeratorIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19650, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19663, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

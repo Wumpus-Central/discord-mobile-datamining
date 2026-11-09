@@ -1,6 +1,6 @@
-// === Module 17562: AppearanceSetting ===
+// === Module 17573: AppearanceSetting ===
 
-// Module 17562 (AppearanceSetting)
+// Module 17573 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
@@ -46,7 +46,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(17563).PaintPaletteIcon,
+  IconComponent: fn(17574).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
   screen: {
     route: fn(1072).UserSettingsSections.APPEARANCE,

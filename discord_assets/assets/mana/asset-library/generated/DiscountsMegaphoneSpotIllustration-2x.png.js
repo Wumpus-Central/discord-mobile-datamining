@@ -1,6 +1,6 @@
-// === Module 15309: ? ===
+// === Module 15319: ? ===
 
-// Module 15309
+// Module 15319
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-2x.png.js");

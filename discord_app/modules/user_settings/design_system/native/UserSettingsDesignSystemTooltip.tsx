@@ -1,6 +1,6 @@
-// === Module 18111: UserSettingsDesignSystemTooltip ===
+// === Module 18124: UserSettingsDesignSystemTooltip ===
 
-// Module 18111 (UserSettingsDesignSystemTooltip)
+// Module 18124 (UserSettingsDesignSystemTooltip)
 import LayerScope from "LayerScope" /* 5738 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;

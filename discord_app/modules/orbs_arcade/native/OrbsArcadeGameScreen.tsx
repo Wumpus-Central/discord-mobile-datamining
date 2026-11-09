@@ -1,12 +1,12 @@
-// === Module 19356: OrbsArcadeGameScreen ===
+// === Module 19369: OrbsArcadeGameScreen ===
 
-// Module 19356 (OrbsArcadeGameScreen)
+// Module 19369 (OrbsArcadeGameScreen)
 import nativeDefault from "native" /* 575 */;
 import Link from "Link" /* 1500 */;
 import leaveFrame from "leaveFrame" /* 11015 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6901 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17330 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17341 */;
 
 require = fn;
 const View = fn(17).View;
@@ -15,7 +15,7 @@ const FramesConstants = fn(6902);
 ({ getFrameLaunchParams: closure_8, isLaunched: closure_9, FrameLayoutModes } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const presentation = { layoutMode: FrameLayoutModes.FOCUSED, portraitSafeAreasConfig: fn(19357).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG };
+const presentation = { layoutMode: FrameLayoutModes.FOCUSED, portraitSafeAreasConfig: fn(19370).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG };
 const createStyles = fn(5140);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, wrapper: null, header: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };

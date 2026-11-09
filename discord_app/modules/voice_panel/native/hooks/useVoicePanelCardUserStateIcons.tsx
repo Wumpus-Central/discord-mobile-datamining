@@ -1,11 +1,11 @@
-// === Module 19605: useVoicePanelCardUserStateIcons ===
+// === Module 19618: useVoicePanelCardUserStateIcons ===
 
-// Module 19605 (useVoicePanelCardUserStateIcons)
+// Module 19618 (useVoicePanelCardUserStateIcons)
 import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9314 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
 import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12109 */;
 import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12168 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19524 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19537 */;
 import noop from "module_19" /* 19 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6812 */;
 import ChannelStore from "ChannelStore" /* 4989 */;

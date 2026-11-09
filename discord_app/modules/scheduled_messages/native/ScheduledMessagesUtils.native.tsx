@@ -40,7 +40,7 @@ let closure_5 = async function _editScheduledMessage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -255,7 +255,7 @@ export function showScheduledMessagesModal() {
   ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9900, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
 }
 export function openScheduledMessageEditContentModal(scheduledMessage) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14832, dependencyMap.paths), { scheduledMessage }, "scheduled-message-edit-content", { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14833, dependencyMap.paths), { scheduledMessage }, "scheduled-message-edit-content", { presentation: "modal" });
 }
 export function openRescheduleMessageActionSheet(scheduledMessageId, sendAtTimestamp, channelId) {
   _require = scheduledMessageId;

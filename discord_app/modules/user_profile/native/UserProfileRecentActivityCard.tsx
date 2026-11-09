@@ -1,6 +1,6 @@
-// === Module 15236: UserProfileRecentActivityCard ===
+// === Module 15246: UserProfileRecentActivityCard ===
 
-// Module 15236 (UserProfileRecentActivityCard)
+// Module 15246 (UserProfileRecentActivityCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
@@ -17,11 +17,11 @@ import utils from "utils" /* 8789 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8986 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9397 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9421 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 15079 */;
-import BadgesAll from "Badges" /* 15092 */;
-import TrendingType from "TrendingType" /* 15097 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 15104 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 15105 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 15080 */;
+import BadgesAll from "Badges" /* 15093 */;
+import TrendingType from "TrendingType" /* 15098 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 15105 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 15106 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;

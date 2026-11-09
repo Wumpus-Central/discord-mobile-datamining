@@ -1,10 +1,10 @@
-// === Module 16025: ShareScreen ===
+// === Module 16035: ShareScreen ===
 
-// Module 16025 (ShareScreen)
+// Module 16035 (ShareScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 16029 */;
-import ShareEmbedDefault from "ShareEmbed" /* 16030 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 16039 */;
+import ShareEmbedDefault from "ShareEmbed" /* 16040 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ const ChannelRecord = fn(4993);
 ({ ChannelRecordBase: metroImportDefault, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(13614).MAX_DESTINATION_COUNT;
+const MAX_DESTINATION_COUNT = fn(13615).MAX_DESTINATION_COUNT;
 const UserRowModes = fn(10846).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
@@ -117,7 +117,7 @@ export default function ShareScreen(appEntryKey) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -205,7 +205,7 @@ export default function ShareScreen(appEntryKey) {
                                   const obj2 = { value, done: true };
                                   return obj2;
                                 } else {
-                                  return { value: "HermesInternal", done: "HermesInternal" };
+                                  return { value: "HermesInternal", done: null };
                                 }
                               } else {
                                 try {
@@ -358,7 +358,7 @@ export default function ShareScreen(appEntryKey) {
             closure_129_6(false);
             closure_129_7.current = false;
             React = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           React = 3;

@@ -1,16 +1,16 @@
-// === Module 15196: UserProfileWidgetsBoard ===
+// === Module 15206: UserProfileWidgetsBoard ===
 
-// Module 15196 (UserProfileWidgetsBoard)
+// Module 15206 (UserProfileWidgetsBoard)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6153 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7853 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7854 */;
 import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12445 */;
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15201 */;
-import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 15212 */;
-import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 15214 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15227 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15211 */;
+import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 15222 */;
+import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 15224 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15237 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ let obj = { board: { gap: nativeDefault.space.PX_16 }, emptyState: null, singleG
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj.emptyState = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
-obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(15197).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
+obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(15207).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
 obj.singleGameEmptyStateText = { flex: 1 };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function WidgetSection(userId) {

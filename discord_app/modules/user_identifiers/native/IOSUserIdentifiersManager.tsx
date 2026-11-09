@@ -1,6 +1,6 @@
-// === Module 19897: IOSUserIdentifiersManager ===
+// === Module 19910: IOSUserIdentifiersManager ===
 
-// Module 19897 (IOSUserIdentifiersManager)
+// Module 19910 (IOSUserIdentifiersManager)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -39,7 +39,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -82,7 +82,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           return obj;
         }
         v3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp9) {
         v3 = tmp;
         throw tmp9;
@@ -103,7 +103,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

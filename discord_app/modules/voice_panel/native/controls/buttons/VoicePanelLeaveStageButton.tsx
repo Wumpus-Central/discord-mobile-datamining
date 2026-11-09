@@ -1,6 +1,6 @@
-// === Module 19717: VoicePanelLeaveStageButton ===
+// === Module 19730: VoicePanelLeaveStageButton ===
 
-// Module 19717 (VoicePanelLeaveStageButton)
+// Module 19730 (VoicePanelLeaveStageButton)
 import StageChannelActionCreators from "StageChannelActionCreators" /* 8014 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -19,7 +19,7 @@ export default function LeaveStageButton(arg0) {
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj = channelId(504);
   const tmp = stateFromStores;
-  const voicePanelButtonStyles = channelId(19697).useVoicePanelButtonStyles(wrapperSpecs);
+  const voicePanelButtonStyles = channelId(19710).useVoicePanelButtonStyles(wrapperSpecs);
   let tmp6 = null;
   if (null != stateFromStores) {
     const element = {
@@ -36,7 +36,7 @@ export default function LeaveStageButton(arg0) {
     element.style = voicePanelButtonStyles.iconBg;
     const obj3 = { color: voicePanelButtonStyles.iconFill.color };
     element.children = jsx(tmp3(12050).GroupArrowDownIcon, { color: voicePanelButtonStyles.iconFill.color });
-    tmp6 = jsx(tmp(19698), {
+    tmp6 = jsx(tmp(19711), {
       onPress() {
           return StageChannelActionCreators.audienceAckRequestToSpeak(stateFromStores, true);
         },
@@ -45,7 +45,7 @@ export default function LeaveStageButton(arg0) {
       style: null,
       children: null
     });
-    const tmpResult = tmp(19698);
+    const tmpResult = tmp(19711);
   }
   return tmp6;
 };

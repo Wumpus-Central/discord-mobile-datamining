@@ -1,6 +1,6 @@
-// === Module 18471: HappeningNowCardEvent ===
+// === Module 18484: HappeningNowCardEvent ===
 
-// Module 18471 (HappeningNowCardEvent)
+// Module 18484 (HappeningNowCardEvent)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9041 */;
@@ -10,7 +10,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17597);
+const HappeningNowConstants = fn(17608);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({ HappeningNowCardTrackingType: closure_8, HAPPENING_NOW_CARD_HEIGHT: closure_9, HAPPENING_NOW_EVENT_BANNER_WIDTH } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;

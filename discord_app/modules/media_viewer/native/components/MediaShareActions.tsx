@@ -20,9 +20,9 @@ import showShareActionSheet from "showShareActionSheet" /* 9010 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 9019 */;
 import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11302 */;
 import ShareIcon from "ShareIcon" /* 12410 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 13610 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 13622 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 14823 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 13611 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 13623 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 14824 */;
 import noop from "module_19" /* 19 */;
 import ICYMIStore from "ICYMIStore" /* 8980 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -124,7 +124,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = source.attachmentId;
         if (null != attachmentId) {
-          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "\u05D8\u05D5\u05D5\u05D7 IPv6" };
+          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "\u05DB\u05EA\u05D5\u05D1\u05EA IPv6" };
           const obj4 = { onlyAttachmentIds: null };
           items = [attachmentId];
           obj4.onlyAttachmentIds = items;
@@ -132,7 +132,7 @@ function useMediaShareActions(source) {
           ForwardModalUtils.openForwardModal(obj3);
         }
       } else {
-        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "\u05D8\u05D5\u05D5\u05D7 IPv6" };
+        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "\u05DB\u05EA\u05D5\u05D1\u05EA IPv6" };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
         obj7.onlyEmbedIndices = items1;
@@ -162,7 +162,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13538, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13539, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;

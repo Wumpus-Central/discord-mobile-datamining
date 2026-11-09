@@ -1,14 +1,14 @@
-// === Module 14208: NotificationPermissionUtil ===
+// === Module 14209: NotificationPermissionUtil ===
 
-// Module 14208 (NotificationPermissionUtil)
+// Module 14209 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8032 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14209 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 14216 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14210 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 14217 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14206 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14207 */;
 
 require = fn;
 let closure_11 = async function _requestPushNotificationPermission(arg0) {
@@ -22,7 +22,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -157,7 +157,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
           });
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -166,7 +166,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(14207).EventActionType;
+const EventActionType = fn(14208).EventActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let closure_10 = fn(8009).NotificationAuthorizationStatus;
 const size = fn(2);
@@ -196,7 +196,7 @@ export function useShowReactivationPrompt() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -227,7 +227,7 @@ export function useShowReactivationPrompt() {
               tmp4(true);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c2 = tmp;

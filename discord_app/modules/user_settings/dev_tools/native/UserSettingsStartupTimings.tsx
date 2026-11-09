@@ -1,6 +1,6 @@
-// === Module 17880: UserSettingsStartupTimings ===
+// === Module 17891: UserSettingsStartupTimings ===
 
-// Module 17880 (UserSettingsStartupTimings)
+// Module 17891 (UserSettingsStartupTimings)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import Stack_Stack from "Stack/Stack" /* 6159 */;
@@ -75,7 +75,7 @@ export default function UserSettingsStartupTimings() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -109,7 +109,7 @@ export default function UserSettingsStartupTimings() {
           const obj7 = { message: closure_128_1 };
           tmp2(9010).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;

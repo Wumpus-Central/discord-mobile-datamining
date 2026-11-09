@@ -43,7 +43,7 @@ let closure_10 = async function _prefetchConjureLinkEmbeds(arg0) {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -298,7 +298,7 @@ export function useConjureLinkPrefetch(arg0) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -326,7 +326,7 @@ export function useConjureLinkPrefetch(arg0) {
               return obj;
             } else {
               c0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp7) {
             c0 = tmp;

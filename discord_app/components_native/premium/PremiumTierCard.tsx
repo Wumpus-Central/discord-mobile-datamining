@@ -1,6 +1,6 @@
-// === Module 15733: PremiumTierCard ===
+// === Module 15743: PremiumTierCard ===
 
-// Module 15733 (PremiumTierCard)
+// Module 15743 (PremiumTierCard)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import PremiumUtils from "PremiumUtils" /* 2171 */;
@@ -11,8 +11,8 @@ import _modDef8606 from "module_8606" /* 8606 */;
 import _modDef10052 from "module_10052" /* 10052 */;
 import _modDef10705 from "module_10705" /* 10705 */;
 import _modDef10706 from "module_10706" /* 10706 */;
-import _modDef15734 from "module_15734" /* 15734 */;
-import _modDef15735 from "module_15735" /* 15735 */;
+import _modDef15744 from "module_15744" /* 15744 */;
+import _modDef15745 from "module_15745" /* 15745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,9 +45,9 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef15734;
+    let tmp5Result = _modDef15744;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef15735;
+    tmp5Result = _modDef15745;
   } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result = _modDef8606;
   }

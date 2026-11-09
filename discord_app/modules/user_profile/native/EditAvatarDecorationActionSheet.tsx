@@ -2,7 +2,7 @@
 
 // Module 8800 (EditAvatarDecorationActionSheet)
 import useShopProductItems from "useShopProductItems" /* 8813 */;
-import EditAvatarDecorationSection from "EditAvatarDecorationSection" /* 15339 */;
+import EditAvatarDecorationSection from "EditAvatarDecorationSection" /* 15349 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7811 */;
@@ -136,7 +136,7 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   const obj3 = { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo, size: null };
   const tmp = closure_13();
   obj3.size = tmp10(1187).AvatarSizes.EDIT_AVATAR_DECORATION;
-  const items1 = [closure_10(purchase(8903), obj3), closure_10(purchase(15346), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
+  const items1 = [closure_10(purchase(8903), obj3), closure_10(purchase(15356), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
   obj.children = items1;
   return closure_11(View, obj);
 }

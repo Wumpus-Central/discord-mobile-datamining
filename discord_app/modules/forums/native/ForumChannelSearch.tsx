@@ -1,6 +1,6 @@
-// === Module 14801: ForumChannelSearch ===
+// === Module 14802: ForumChannelSearch ===
 
-// Module 14801 (ForumChannelSearch)
+// Module 14802 (ForumChannelSearch)
 import Tracking from "Tracking" /* 8273 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 9960 */;
 import noop from "module_19" /* 19 */;

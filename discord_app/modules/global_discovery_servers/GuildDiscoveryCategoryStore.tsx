@@ -1,6 +1,6 @@
-// === Module 18883: GuildDiscoveryCategoryStore ===
+// === Module 18896: GuildDiscoveryCategoryStore ===
 
-// Module 18883 (GuildDiscoveryCategoryStore)
+// Module 18896 (GuildDiscoveryCategoryStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

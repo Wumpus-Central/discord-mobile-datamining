@@ -40,7 +40,7 @@ export default function MemberVerificationForm(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -66,7 +66,7 @@ export default function MemberVerificationForm(guild) {
                   closure_1_1(5837).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 VerificationLevels(null);
                 closure_2_8(true);

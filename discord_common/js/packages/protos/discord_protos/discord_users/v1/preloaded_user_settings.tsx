@@ -5927,7 +5927,7 @@ class Favorites$Type extends MessageType32 {
                 }
           }
     };
-    items = [, , , , , , ];
+    items = [, , , , , , , ];
     items[0] = obj;
     items[1] = { no: 2, name: "muted", kind: "scalar", T: 8 };
     obj1 = { no: 3, name: "guild_visible", kind: "message", T: null };
@@ -5949,13 +5949,14 @@ class Favorites$Type extends MessageType32 {
     };
     items[5] = { no: 6, name: "prune_inactive_threads_days", kind: "scalar", T: 13 };
     items[6] = { no: 7, name: "prune_all_favorited_threads", kind: "scalar", T: 8 };
+    items[7] = { no: 8, name: "auto_add_joined_threads_per_guild", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.discord_users.v1.Favorites", items, T);
     return tmp1;
   }
 }
 const prototype32 = Favorites$Type.prototype;
 prototype32["create"] = function create(partialSettings) {
-  const obj = { favoriteChannels: {}, muted: false, autoAddJoinedThreads: false, pruneInactiveThreadsDays: 0, pruneAllFavoritedThreads: false };
+  const obj = { favoriteChannels: {}, muted: false, autoAddJoinedThreads: false, pruneInactiveThreadsDays: 0, pruneAllFavoritedThreads: false, autoAddJoinedThreadsPerGuild: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -5991,6 +5992,8 @@ prototype32["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
         obj.pruneInactiveThreadsDays = pos.uint32();
       } else if (7 === tmp5) {
         obj.pruneAllFavoritedThreads = pos.bool();
+      } else if (8 === tmp5) {
+        obj.autoAddJoinedThreadsPerGuild = pos.bool();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -6097,6 +6100,10 @@ prototype32["internalBinaryWrite"] = function internalBinaryWrite(favoriteChanne
     tag.tag(7, _mod1197.WireType.Varint).bool(favoriteChannels.pruneAllFavoritedThreads);
     const tagResult8 = tag.tag(7, _mod1197.WireType.Varint);
   }
+  if (false !== favoriteChannels.autoAddJoinedThreadsPerGuild) {
+    tag.tag(8, _mod1197.WireType.Varint).bool(favoriteChannels.autoAddJoinedThreadsPerGuild);
+    const tagResult9 = tag.tag(8, _mod1197.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -6139,7 +6146,8 @@ const items25 = [
     }
   },
   { no: 6, name: "prune_inactive_threads_days", kind: "scalar", T: 13 },
-  { no: 7, name: "prune_all_favorited_threads", kind: "scalar", T: 8 }
+  { no: 7, name: "prune_all_favorited_threads", kind: "scalar", T: 8 },
+  { no: 8, name: "auto_add_joined_threads_per_guild", kind: "scalar", T: 8 }
 ];
 let tmp39 = new "binaryReadMap12"("discord_protos.discord_users.v1.Favorites", items25, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, InboxTab);
 let closure_55 = tmp39;

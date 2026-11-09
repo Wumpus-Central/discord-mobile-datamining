@@ -1,6 +1,6 @@
-// === Module 19554: usePIPAvoidanceSpecs ===
+// === Module 19567: usePIPAvoidanceSpecs ===
 
-// Module 19554 (usePIPAvoidanceSpecs)
+// Module 19567 (usePIPAvoidanceSpecs)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import useToken from "useToken" /* 5724 */;
@@ -11,9 +11,9 @@ import MorphablePanelConstants from "MorphablePanelConstants" /* 11364 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11367 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11369 */;
 import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12238 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19362 */;
-import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19476 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19477 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19375 */;
+import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19489 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19490 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;

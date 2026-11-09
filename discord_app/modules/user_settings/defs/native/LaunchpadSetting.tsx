@@ -1,6 +1,6 @@
-// === Module 17845: LaunchpadSetting ===
+// === Module 17856: LaunchpadSetting ===
 
-// Module 17845 (LaunchpadSetting)
+// Module 17856 (LaunchpadSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import UserSettings from "UserSettings" /* 4965 */;

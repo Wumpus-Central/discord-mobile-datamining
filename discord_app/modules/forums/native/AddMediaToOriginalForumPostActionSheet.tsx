@@ -1,6 +1,6 @@
-// === Module 13992: AddMediaToOriginalForumPostActionSheet ===
+// === Module 13993: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 13992 (AddMediaToOriginalForumPostActionSheet)
+// Module 13993 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
@@ -25,7 +25,7 @@ let closure_16 = async function _upload2(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

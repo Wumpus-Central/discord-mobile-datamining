@@ -1,6 +1,6 @@
-// === Module 18903: useICYMIReloadHandler ===
+// === Module 18916: useICYMIReloadHandler ===
 
-// Module 18903 (useICYMIReloadHandler)
+// Module 18916 (useICYMIReloadHandler)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ export function useICYMIReloadHandler(showDot) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -36,7 +36,7 @@ export function useICYMIReloadHandler(showDot) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const ICYMIAnalytics = tmp2(16535).ICYMIAnalytics;
+            const ICYMIAnalytics = tmp2(16545).ICYMIAnalytics;
             let str = "NoDotShown";
             if (tmp2) {
               str = "DotShown";
@@ -86,7 +86,7 @@ export function useICYMIReloadHandler(showDot) {
         } else {
           const recommendedGuilds = v3(8998).getRecommendedGuilds();
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp19) {
         dependencyMap = tmp;

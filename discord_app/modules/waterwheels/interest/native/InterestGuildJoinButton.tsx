@@ -1,6 +1,6 @@
-// === Module 19961: InterestGuildJoinButton ===
+// === Module 19974: InterestGuildJoinButton ===
 
-// Module 19961 (InterestGuildJoinButton)
+// Module 19974 (InterestGuildJoinButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef2534 from "module_2534" /* 2534 */;
 import useGetIsMountedDefault from "useGetIsMounted" /* 8896 */;
@@ -40,7 +40,7 @@ export default function InterestGuildJoinButton(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

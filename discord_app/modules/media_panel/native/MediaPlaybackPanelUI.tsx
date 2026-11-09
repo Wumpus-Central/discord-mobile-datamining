@@ -1,6 +1,6 @@
-// === Module 19738: MediaPlaybackPanelUI ===
+// === Module 19751: MediaPlaybackPanelUI ===
 
-// Module 19738 (MediaPlaybackPanelUI)
+// Module 19751 (MediaPlaybackPanelUI)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -12,10 +12,10 @@ import LayerScope from "LayerScope" /* 5738 */;
 import spring_spring from "spring/spring" /* 5761 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10210 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11367 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 19492 */;
-import useMorphablePanelGesture from "useMorphablePanelGesture" /* 19494 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 19737 */;
-import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 19739 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 19505 */;
+import useMorphablePanelGesture from "useMorphablePanelGesture" /* 19507 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 19750 */;
+import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 19752 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 12011 */;
@@ -25,7 +25,7 @@ const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(16703);
+const MediaPlaybackPanelConstants = fn(16714);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: metroImportDefault, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
 const IS_IOS = fn(11364).IS_IOS;
 const BORDER_RADIUS_PHYSICS = fn(11363).BORDER_RADIUS_PHYSICS;

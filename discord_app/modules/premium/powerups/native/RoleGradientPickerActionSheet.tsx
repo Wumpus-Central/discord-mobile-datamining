@@ -1,9 +1,9 @@
-// === Module 20189: RoleGradientPickerActionSheet ===
+// === Module 20202: RoleGradientPickerActionSheet ===
 
-// Module 20189 (RoleGradientPickerActionSheet)
+// Module 20202 (RoleGradientPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16754 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16765 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const EnhancedRoleColorConstants = fn(20172);
+const EnhancedRoleColorConstants = fn(20185);
 ({ DEFAULT_GRADIENT_ROLE_COLORS: metroImportDefault, GRADIENT_PRESETS: closure_8 } = EnhancedRoleColorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

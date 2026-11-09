@@ -1,6 +1,6 @@
-// === Module 18480: MessagesItemSuggestedFriendsHeader ===
+// === Module 18493: MessagesItemSuggestedFriendsHeader ===
 
-// Module 18480 (MessagesItemSuggestedFriendsHeader)
+// Module 18493 (MessagesItemSuggestedFriendsHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;

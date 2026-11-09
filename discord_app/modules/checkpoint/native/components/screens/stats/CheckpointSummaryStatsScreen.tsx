@@ -1,6 +1,6 @@
-// === Module 13915: CheckpointSummaryStatsScreen ===
+// === Module 13916: CheckpointSummaryStatsScreen ===
 
-// Module 13915 (CheckpointSummaryStatsScreen)
+// Module 13916 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -16,13 +16,13 @@ import GuildIcon from "GuildIcon" /* 7020 */;
 import EmojiDefault from "Emoji" /* 7363 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 8213 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9069 */;
-import CheckpointScreen from "CheckpointScreen" /* 13875 */;
-import CheckpointTextDefault from "CheckpointText" /* 13877 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13880 */;
-import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 13916 */;
+import CheckpointScreen from "CheckpointScreen" /* 13876 */;
+import CheckpointTextDefault from "CheckpointText" /* 13878 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13881 */;
+import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 13917 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
-import CheckpointStore from "CheckpointStore" /* 13667 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 const GuildIconDefault = GuildIcon;
 const CheckpointScreenDefault = CheckpointScreen;

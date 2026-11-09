@@ -1,14 +1,14 @@
-// === Module 16973: TwoFASetupSuccess ===
+// === Module 16984: TwoFASetupSuccess ===
 
-// Module 16973 (TwoFASetupSuccess)
+// Module 16984 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import components_Button_Button from "components/Button/Button" /* 5758 */;
 import FastImageDefault from "FastImage" /* 5842 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 16963 */;
-import _mod16974 from "module_16974" /* 16974 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 16974 */;
+import _mod16985 from "module_16985" /* 16985 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -47,7 +47,7 @@ export default function TwoFASetupSuccess() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -94,9 +94,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(16962).close();
+              setError(16973).close();
               c4 = 0;
-              const obj = setError(16962);
+              const obj = setError(16973);
             }
             c4 = 0;
             c6 = 3;
@@ -134,7 +134,7 @@ export default function TwoFASetupSuccess() {
   let obj3 = { source: null, style: null };
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  obj3.source = _mod16974;
+  obj3.source = _mod16985;
   obj3.style = tmp.image;
   items[1] = closure_7(FastImageDefault, obj3);
   let obj4 = { style: tmp.success, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };

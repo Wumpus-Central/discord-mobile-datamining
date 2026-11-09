@@ -1,15 +1,15 @@
-// === Module 18993: GuildSettingsModalMembersWithTabs ===
+// === Module 19006: GuildSettingsModalMembersWithTabs ===
 
-// Module 18993 (GuildSettingsModalMembersWithTabs)
+// Module 19006 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5174 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7503 */;
 import ContextMenu from "ContextMenu" /* 9996 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 18994 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 18995 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 18997 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 19002 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 19007 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 19008 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 19010 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 19015 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5011 */;
 import PermissionStore from "PermissionStore" /* 5072 */;

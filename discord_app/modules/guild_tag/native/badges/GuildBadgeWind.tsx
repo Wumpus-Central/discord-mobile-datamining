@@ -1,8 +1,8 @@
-// === Module 16065: GuildBadgeWind ===
+// === Module 16075: GuildBadgeWind ===
 
-// Module 16065 (GuildBadgeWind)
+// Module 16075 (GuildBadgeWind)
 import inlineStyles from "inlineStyles" /* 8101 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 16044 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 16054 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

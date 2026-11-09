@@ -1,6 +1,6 @@
-// === Module 18491: openFavoritesGuildCategoryActionSheet ===
+// === Module 18504: openFavoritesGuildCategoryActionSheet ===
 
-// Module 18491 (openFavoritesGuildCategoryActionSheet)
+// Module 18504 (openFavoritesGuildCategoryActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import size from "module_2" /* 2 */;
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/openFavorite
 
 export default function openFavoritesGuildCategoryActionSheet(categoryId) {
   const combined = "FavoritesGuildCategoryLongPress-" + categoryId;
-  ActionSheetActionCreatorsDefault.openLazy(combined(2118)(18492, dependencyMap.paths), combined, {
+  ActionSheetActionCreatorsDefault.openLazy(combined(2118)(18505, dependencyMap.paths), combined, {
     categoryId,
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);

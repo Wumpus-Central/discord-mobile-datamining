@@ -1,6 +1,6 @@
-// === Module 14471: GuildInviteIcon ===
+// === Module 14472: GuildInviteIcon ===
 
-// Module 14471 (GuildInviteIcon)
+// Module 14472 (GuildInviteIcon)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;

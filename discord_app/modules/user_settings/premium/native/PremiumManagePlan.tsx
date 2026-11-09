@@ -1,6 +1,6 @@
-// === Module 15662: PremiumManagePlan ===
+// === Module 15672: PremiumManagePlan ===
 
-// Module 15662 (PremiumManagePlan)
+// Module 15672 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
@@ -23,11 +23,11 @@ import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7653 *
 import PremiumManagementUtils from "PremiumManagementUtils" /* 7663 */;
 import _modDef8590 from "module_8590" /* 8590 */;
 import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 10029 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 15510 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 15553 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 15580 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 15621 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 15641 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 15520 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 15563 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 15590 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 15631 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 15651 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -364,7 +364,7 @@ function SubscriptionAndBillingInfo(subscription) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -402,7 +402,7 @@ function SubscriptionAndBillingInfo(subscription) {
               c3 = 0;
               closure_128_8(false);
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp24) {
             if (tmp4 === c3) {
@@ -644,8 +644,8 @@ export default function PremiumManagePlan() {
   const tmp = closure_31();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(15619).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(15619);
+  const youBarSettingsOutsideSafeAreaTop = navigation(15629).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(15629);
   navigation = navigation(1499).useNavigation();
   items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -686,7 +686,7 @@ export default function PremiumManagePlan() {
   const obj6 = navigation(504);
   let isInReverseTrial = navigation(8604).useIsInReverseTrial();
   const obj8 = navigation(8604);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15621).CountDownMessageTypes.SHORT_TIME);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15631).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString = navigation(2171).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
@@ -797,9 +797,9 @@ export default function PremiumManagePlan() {
         },
       subscription: tmp10
     };
-    const items10 = [closure_28(tmp2(15510), obj17), ];
+    const items10 = [closure_28(tmp2(15520), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_28(tmp2(15551), obj18);
+    items10[1] = closure_28(tmp2(15561), obj18);
     obj16.children = items10;
     tmp27Result = closure_29(closure_7, obj16);
   }

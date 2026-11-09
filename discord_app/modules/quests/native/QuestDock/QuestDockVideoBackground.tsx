@@ -1,6 +1,6 @@
-// === Module 17485: QuestDockVideoBackground ===
+// === Module 17496: QuestDockVideoBackground ===
 
-// Module 17485 (QuestDockVideoBackground)
+// Module 17496 (QuestDockVideoBackground)
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -9,10 +9,10 @@ import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2022 *
 import LinearGradientDefault from "LinearGradient" /* 5715 */;
 import spring_spring from "spring/spring" /* 5761 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8915 */;
-import QuestDockUtils from "QuestDockUtils" /* 17381 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17383 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17465 */;
-import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 17486 */;
+import QuestDockUtils from "QuestDockUtils" /* 17392 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17394 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17476 */;
+import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 17497 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
@@ -54,7 +54,7 @@ function QuestDockBackgroundMediaFade(arg0) {
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
 let QuestDockMode = fn(6836).QuestDockMode;
-const QuestDockConstants = fn(17382);
+const QuestDockConstants = fn(17393);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_10 } = QuestDockConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);

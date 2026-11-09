@@ -1,9 +1,9 @@
-// === Module 16663: commands/activities ===
+// === Module 16674: commands/activities ===
 
-// Module 16663 (commands/activities)
+// Module 16674 (commands/activities)
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9198 */;
 import RPCErrorDefault from "RPCError" /* 9414 */;
-import validateOpenInviteDialog from "validateOpenInviteDialog" /* 16625 */;
+import validateOpenInviteDialog from "validateOpenInviteDialog" /* 16635 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -13,7 +13,7 @@ Constants = fn(1072);
 ({ InstantInviteSources: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 const NativePermissionTypes = fn(8009).NativePermissionTypes;
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16606);
+let CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 const items = [fn(8984).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
@@ -35,7 +35,7 @@ obj3.handler = function handler(socket) {
   }
 };
 obj[RPCCommands.OPEN_INVITE_DIALOG] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_INVITE_DIALOG, obj3);
-CONTEXT_MENU_ICON_NAMES = fn(16606);
+CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj6 = { scope: null, handler: null };
 let obj7 = {};
 const items1 = [fn(8984).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
@@ -54,7 +54,7 @@ obj6.handler = function handler(socket) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

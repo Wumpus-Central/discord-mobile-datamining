@@ -1,6 +1,6 @@
-// === Module 16677: isLeftBuilderPreviewFrame ===
+// === Module 16688: isLeftBuilderPreviewFrame ===
 
-// Module 16677 (isLeftBuilderPreviewFrame)
+// Module 16688 (isLeftBuilderPreviewFrame)
 import isConjureApplicationDefault from "isConjureApplication" /* 6909 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 11005 */;
 import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 11052 */;

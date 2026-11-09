@@ -1,6 +1,6 @@
-// === Module 15986: RemoteAuthModal ===
+// === Module 15996: RemoteAuthModal ===
 
-// Module 15986 (RemoteAuthModal)
+// Module 15996 (RemoteAuthModal)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -16,9 +16,9 @@ import ButtonGroup from "ButtonGroup" /* 6822 */;
 import AuthBackgroundArtDefault from "AuthBackgroundArt" /* 7008 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7015 */;
 import useEaseInEaseOutLayoutAnimationsDefault from "useEaseInEaseOutLayoutAnimations" /* 7658 */;
-import _modDef15985 from "module_15985" /* 15985 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15987 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15991 */;
+import _modDef15995 from "module_15995" /* 15995 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15997 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 16001 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -202,7 +202,7 @@ export default function RemoteAuth(arg0) {
   const obj2 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items1;
-  obj2.source = _modDef15985;
+  obj2.source = _modDef15995;
   items[1] = metroImportDefault(FastImageDefault, obj2);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { skipEntering: true, children: null };

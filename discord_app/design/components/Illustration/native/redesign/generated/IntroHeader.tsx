@@ -1,6 +1,6 @@
-// === Module 20222: IntroHeader ===
+// === Module 20235: IntroHeader ===
 
-// Module 20222 (IntroHeader)
+// Module 20235 (IntroHeader)
 import shared from "shared" /* 5147 */;
 import FastImageDefault from "FastImage" /* 5842 */;
 import _mod8880 from "module_8880" /* 8880 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getIntroHeaderSource(theme) {
   return _mod8880.getIllustrationSource(theme, {
     dark() {
-      return require("module_20223");
+      return require("module_20236");
     },
     darker() {
-      return require("module_20224");
+      return require("module_20237");
     },
     light() {
-      return require("module_20225");
+      return require("module_20238");
     }
   });
 }
@@ -30,13 +30,13 @@ export function useIntroHeaderSource() {
   const obj = shared;
   return _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_20223");
+      return require("module_20236");
     },
     darker() {
-      return require("module_20224");
+      return require("module_20237");
     },
     light() {
-      return require("module_20225");
+      return require("module_20238");
     }
   });
 }
@@ -44,25 +44,25 @@ export function IntroHeader(arg0) {
   const obj = shared;
   const illustrationSource = _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_20223");
+      return require("module_20236");
     },
     darker() {
-      return require("module_20224");
+      return require("module_20237");
     },
     light() {
-      return require("module_20225");
+      return require("module_20238");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_20223");
+      return require("module_20236");
     },
     darker() {
-      return require("module_20224");
+      return require("module_20237");
     },
     light() {
-      return require("module_20225");
+      return require("module_20238");
     }
   };
   const merged = Object.assign(arg0);

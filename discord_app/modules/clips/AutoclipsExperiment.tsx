@@ -1,6 +1,6 @@
-// === Module 20413: AutoclipsExperiment ===
+// === Module 20426: AutoclipsExperiment ===
 
-// Module 20413 (AutoclipsExperiment)
+// Module 20426 (AutoclipsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

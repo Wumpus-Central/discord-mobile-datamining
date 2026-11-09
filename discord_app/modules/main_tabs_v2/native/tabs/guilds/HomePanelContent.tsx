@@ -1,6 +1,6 @@
-// === Module 18678: HomePanelContent ===
+// === Module 18691: HomePanelContent ===
 
-// Module 18678 (HomePanelContent)
+// Module 18691 (HomePanelContent)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -8,10 +8,10 @@ import _mod1652 from "module_1652" /* 1652 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6153 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10855 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 12614 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18404 */;
-import GuildsBarDefault from "GuildsBar" /* 18680 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18417 */;
+import GuildsBarDefault from "GuildsBar" /* 18693 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18398 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 18411 */;
 
 const _modDef1652 = _mod1652;
 
@@ -177,7 +177,7 @@ function HomeDrawerPanelContent() {
   items7[1] = closure_9(_modDef1652.View, obj11);
   let tmp34Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp34Result2 = closure_9(tmp11(18772), {});
+    tmp34Result2 = closure_9(tmp11(18785), {});
   }
   items7[2] = tmp34Result2;
   obj10.children = items7;
@@ -187,7 +187,7 @@ function HomeDrawerPanelContent() {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1072).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(18679).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(18692).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5140);

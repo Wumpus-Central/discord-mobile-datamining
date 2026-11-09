@@ -1,6 +1,6 @@
-// === Module 16277: CloseIcon ===
+// === Module 16287: CloseIcon ===
 
-// Module 16277 (CloseIcon)
+// Module 16287 (CloseIcon)
 import inlineStyles from "inlineStyles" /* 8101 */;
 import noop from "module_19" /* 19 */;
 

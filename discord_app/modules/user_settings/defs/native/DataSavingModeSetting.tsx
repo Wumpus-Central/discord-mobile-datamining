@@ -1,10 +1,10 @@
-// === Module 17768: DataSavingModeSetting ===
+// === Module 17779: DataSavingModeSetting ===
 
-// Module 17768 (DataSavingModeSetting)
+// Module 17779 (DataSavingModeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
-import UserSettingsText from "UserSettingsText" /* 17766 */;
+import UserSettingsText from "UserSettingsText" /* 17777 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;

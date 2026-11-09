@@ -1,6 +1,6 @@
-// === Module 14068: MemberActionChatInputBanner ===
+// === Module 14069: MemberActionChatInputBanner ===
 
-// Module 14068 (MemberActionChatInputBanner)
+// Module 14069 (MemberActionChatInputBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -12,9 +12,9 @@ import FastImageDefault from "FastImage" /* 5842 */;
 import Pressables from "Pressables" /* 7043 */;
 import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7463 */;
 import _modDef13428 from "module_13428" /* 13428 */;
-import _modDef14067 from "module_14067" /* 14067 */;
-import MemberActionUtils from "MemberActionUtils" /* 14069 */;
-import _modDef14070 from "module_14070" /* 14070 */;
+import _modDef14068 from "module_14068" /* 14068 */;
+import MemberActionUtils from "MemberActionUtils" /* 14070 */;
+import _modDef14071 from "module_14071" /* 14071 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
@@ -265,7 +265,7 @@ function MemberActionChatInputBanner(channel) {
         items[1] = state(View, obj3);
         let tmp6Result = c3;
         if (c3) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef14070 };
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef14071 };
           tmp6Result = application_id(native.Icon, obj6);
         }
         items[2] = tmp6Result;
@@ -312,7 +312,7 @@ function MemberActionChatInputBanner(channel) {
             obj3.children = items1;
             items[1] = state(View, obj3);
             const obj7 = { style: _undefined.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef14067 };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef14068 };
             obj7.children = application_id(native.Icon, obj8);
             items[2] = application_id(View, obj7);
             obj.children = items;

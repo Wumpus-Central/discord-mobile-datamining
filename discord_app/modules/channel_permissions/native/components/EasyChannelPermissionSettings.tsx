@@ -1,6 +1,6 @@
-// === Module 19266: EasyChannelPermissionSettings ===
+// === Module 19279: EasyChannelPermissionSettings ===
 
-// Module 19266 (EasyChannelPermissionSettings)
+// Module 19279 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 575 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6090 */;
@@ -11,7 +11,7 @@ import channel_permissions_ChannelPermissionsUtils from "channel_permissions/Cha
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 19267 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 19280 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import GuildMemberStore from "GuildMemberStore" /* 5052 */;
 import GuildRoleStore from "GuildRoleStore" /* 5046 */;
@@ -50,7 +50,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           return obj;
         } else {
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         items = [closure_128_0];
         v2 = 2;
@@ -130,7 +130,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -165,7 +165,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           return obj;
         } else if (!value) {
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         const intl = tmp5(1113).intl;
         const string = intl.string;

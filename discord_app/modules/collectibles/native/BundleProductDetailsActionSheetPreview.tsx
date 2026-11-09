@@ -1,13 +1,13 @@
-// === Module 15294: BundleProductDetailsActionSheetPreview ===
+// === Module 15304: BundleProductDetailsActionSheetPreview ===
 
-// Module 15294 (BundleProductDetailsActionSheetPreview)
+// Module 15304 (BundleProductDetailsActionSheetPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7808 */;
 import useShopProductItems from "useShopProductItems" /* 8813 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 15296 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 15306 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

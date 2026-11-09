@@ -1,12 +1,12 @@
-// === Module 18921: ReactActionSheet ===
+// === Module 18934: ReactActionSheet ===
 
-// Module 18921 (ReactActionSheet)
+// Module 18934 (ReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5742 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8998 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10061 */;
-import ICYMIContext from "ICYMIContext" /* 18866 */;
+import ICYMIContext from "ICYMIContext" /* 18879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -75,7 +75,7 @@ function ReactActionSheetBase(content) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -110,7 +110,7 @@ function ReactActionSheetBase(content) {
             closure_128_5(false);
             closure_128_8("");
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -133,7 +133,7 @@ function ReactActionSheetBase(content) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -167,7 +167,7 @@ function ReactActionSheetBase(content) {
             } else {
               closure_1_5(false);
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp9) {
             c3 = tmp;

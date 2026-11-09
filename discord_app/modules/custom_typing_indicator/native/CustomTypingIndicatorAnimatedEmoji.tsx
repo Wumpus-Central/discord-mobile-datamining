@@ -1,11 +1,11 @@
-// === Module 13979: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 13980: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 13979 (CustomTypingIndicatorAnimatedEmoji)
+// Module 13980 (CustomTypingIndicatorAnimatedEmoji)
 import user from "user" /* 1398 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5370 */;
 import EmojiDefault from "Emoji" /* 7363 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13980 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13981 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2117 */;

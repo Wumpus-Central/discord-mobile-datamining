@@ -1,6 +1,6 @@
-// === Module 15401: GameOrganizationInviteEmbed ===
+// === Module 15411: GameOrganizationInviteEmbed ===
 
-// Module 15401 (GameOrganizationInviteEmbed)
+// Module 15411 (GameOrganizationInviteEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2530 from "module_2530" /* 2530 */;
@@ -10,9 +10,9 @@ import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8452 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8465 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8467 */;
 import _modDef8680 from "module_8680" /* 8680 */;
-import canGoToGameOrganizationGuildDefault from "canGoToGameOrganizationGuild" /* 13433 */;
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 13443 */;
-import getGameOrganizationInviteCtaStateDefault from "getGameOrganizationInviteCtaState" /* 15402 */;
+import canGoToGameOrganizationGuildDefault from "canGoToGameOrganizationGuild" /* 13434 */;
+import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 13444 */;
+import getGameOrganizationInviteCtaStateDefault from "getGameOrganizationInviteCtaState" /* 15412 */;
 import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11503 */;
 import GuildStore from "GuildStore" /* 5011 */;
 

@@ -1,6 +1,6 @@
-// === Module 17725: LanguageSetting ===
+// === Module 17736: LanguageSetting ===
 
-// Module 17725 (LanguageSetting)
+// Module 17736 (LanguageSetting)
 import util from "util" /* 1113 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 

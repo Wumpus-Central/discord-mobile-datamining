@@ -1,6 +1,6 @@
-// === Module 13463: handleTapConjureProjectEmbed ===
+// === Module 13464: handleTapConjureProjectEmbed ===
 
-// Module 13463 (handleTapConjureProjectEmbed)
+// Module 13464 (handleTapConjureProjectEmbed)
 import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11716 */;
 import openFrameDefault from "openFrame" /* 11894 */;
 import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 13002 */;
@@ -69,7 +69,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

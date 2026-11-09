@@ -1,19 +1,19 @@
-// === Module 17377: QuestHooks ===
+// === Module 17388: QuestHooks ===
 
-// Module 17377 (QuestHooks)
+// Module 17388 (QuestHooks)
 import QuestTypes from "QuestTypes" /* 6839 */;
 import AdCreativeType from "AdCreativeType" /* 6843 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6936 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7945 */;
 import AssetUtils from "AssetUtils" /* 9785 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 17405 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 17416 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 5375 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import BountyStore from "BountyStore" /* 7921 */;
 import QuestStore from "QuestStore" /* 7922 */;
-import PlayableStore from "PlayableStore" /* 17378 */;
+import PlayableStore from "PlayableStore" /* 17389 */;
 
 const require = globalThis.__r;
 
@@ -279,7 +279,7 @@ export function useMobileActivityQuest(quest) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -314,7 +314,7 @@ export function useMobileActivityQuest(quest) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp12) {
           c0 = tmp;
           throw tmp12;

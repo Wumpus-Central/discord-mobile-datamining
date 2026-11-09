@@ -1,9 +1,9 @@
-// === Module 19512: FramePanelController ===
+// === Module 19525: FramePanelController ===
 
-// Module 19512 (FramePanelController)
+// Module 19525 (FramePanelController)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 11061 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16671 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19513 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16682 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19526 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import FramesStore from "FramesStore" /* 6901 */;
@@ -61,5 +61,5 @@ export default function FramePanelController(children) {
     }
   }, items1);
   let obj = mainFrameId(504);
-  return jsx(mainFrameId(19485).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
+  return jsx(mainFrameId(19498).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
 };

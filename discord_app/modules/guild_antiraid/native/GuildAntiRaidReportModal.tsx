@@ -1,6 +1,6 @@
-// === Module 16097: GuildAntiRaidReportModal ===
+// === Module 16107: GuildAntiRaidReportModal ===
 
-// Module 16097 (GuildAntiRaidReportModal)
+// Module 16107 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -75,7 +75,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(16098);
+const GuildReportRaidModalConstants = fn(16108);
 ({ getReportRaidHelpArticleURL: metroImportDefault, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -108,7 +108,7 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -125,9 +125,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(13489).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(13489);
-            tmp2(13489).handleReportRaid(guildId);
+            const result = tmp2(13490).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(13490);
+            tmp2(13490).handleReportRaid(guildId);
             const intl = tmp2(1113).intl;
             c1 = 1;
             dependencyMap = 1;

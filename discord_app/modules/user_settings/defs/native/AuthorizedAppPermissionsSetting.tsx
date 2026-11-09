@@ -1,6 +1,6 @@
-// === Module 17167: AuthorizedAppPermissionsSetting ===
+// === Module 17178: AuthorizedAppPermissionsSetting ===
 
-// Module 17167 (AuthorizedAppPermissionsSetting)
+// Module 17178 (AuthorizedAppPermissionsSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;

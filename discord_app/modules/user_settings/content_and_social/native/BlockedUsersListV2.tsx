@@ -1,6 +1,6 @@
-// === Module 17008: BlockedUsersListV2 ===
+// === Module 17019: BlockedUsersListV2 ===
 
-// Module 17008 (BlockedUsersListV2)
+// Module 17019 (BlockedUsersListV2)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -9,8 +9,8 @@ import Text_Text from "Text/Text" /* 5751 */;
 import TableRowGroup from "TableRowGroup" /* 7126 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7387 */;
-import Blocked from "Blocked" /* 17009 */;
-import BlockedUserRowV2Default from "BlockedUserRowV2" /* 17013 */;
+import Blocked from "Blocked" /* 17020 */;
+import BlockedUserRowV2Default from "BlockedUserRowV2" /* 17024 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5082 */;
 

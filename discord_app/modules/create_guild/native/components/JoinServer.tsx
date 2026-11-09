@@ -1,6 +1,6 @@
-// === Module 14560: components/JoinServer ===
+// === Module 14561: components/JoinServer ===
 
-// Module 14560 (components/JoinServer)
+// Module 14561 (components/JoinServer)
 import NavigatorHeader from "NavigatorHeader" /* 7064 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9025 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 17202: PremiumGuildBoostingSetting ===
+// === Module 17213: PremiumGuildBoostingSetting ===
 
-// Module 17202 (PremiumGuildBoostingSetting)
+// Module 17213 (PremiumGuildBoostingSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import BoostGemIcon from "BoostGemIcon" /* 10042 */;

@@ -36,7 +36,7 @@ let closure_13 = async function _fetchStickerPacks() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -124,7 +124,7 @@ let closure_14 = async function _fetchSticker(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -197,7 +197,7 @@ let closure_15 = async function _fetchGuildStickersWithCreator(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -248,7 +248,7 @@ let closure_15 = async function _fetchGuildStickersWithCreator(arg0) {
           };
           closure_131_1(closure_131_2[10]).dispatch(obj7);
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         c5 = tmp;
@@ -268,7 +268,7 @@ let closure_16 = async function _deleteGuildSticker(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -298,7 +298,7 @@ let closure_16 = async function _deleteGuildSticker(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c1 = tmp;

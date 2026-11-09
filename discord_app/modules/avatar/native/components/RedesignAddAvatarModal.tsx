@@ -1,8 +1,8 @@
-// === Module 19952: RedesignAddAvatarModal ===
+// === Module 19965: RedesignAddAvatarModal ===
 
-// Module 19952 (RedesignAddAvatarModal)
+// Module 19965 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 575 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 19930 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 19943 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -46,7 +46,7 @@ export default function RedesignAddAvatarModal(route) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -83,7 +83,7 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16752);
+              const obj = tmp2(16763);
               obj11.description = tmp2(8811).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(8811);

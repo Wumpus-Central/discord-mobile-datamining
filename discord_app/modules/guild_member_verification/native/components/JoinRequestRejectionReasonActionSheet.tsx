@@ -1,6 +1,6 @@
-// === Module 14446: JoinRequestRejectionReasonActionSheet ===
+// === Module 14447: JoinRequestRejectionReasonActionSheet ===
 
-// Module 14446 (JoinRequestRejectionReasonActionSheet)
+// Module 14447 (JoinRequestRejectionReasonActionSheet)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ class JoinRequestRejectionReasonActionSheet {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

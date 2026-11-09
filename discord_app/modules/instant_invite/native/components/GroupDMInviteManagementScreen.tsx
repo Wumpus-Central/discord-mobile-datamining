@@ -32,7 +32,7 @@ function GroupDMInviteManagement(channelId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -74,7 +74,7 @@ function GroupDMInviteManagement(channelId) {
             v1(closure_128_0);
             v3(false);
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           v3 = tmp;

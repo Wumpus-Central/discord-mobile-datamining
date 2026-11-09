@@ -1,6 +1,6 @@
-// === Module 20187: RoleIconActionSheet ===
+// === Module 20200: RoleIconActionSheet ===
 
-// Module 20187 (RoleIconActionSheet)
+// Module 20200 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
@@ -9,10 +9,10 @@ import TableRow from "TableRow" /* 7038 */;
 import TableRowGroup from "TableRowGroup" /* 7126 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7382 */;
 import ActionSheet from "ActionSheet" /* 7426 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20184 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20197 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20170 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20183 */;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
@@ -36,7 +36,7 @@ export default function RoleIconActionSheet(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ export default function RoleIconActionSheet(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -178,18 +178,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(20184).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(20184);
+                  closure_0(20197).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(20197);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(20184);
+                const tmp22 = closure_0(20197);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(20188).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(20201).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }

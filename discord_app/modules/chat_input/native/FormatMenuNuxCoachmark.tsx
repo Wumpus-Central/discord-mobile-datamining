@@ -1,6 +1,6 @@
-// === Module 14226: FormatMenuNuxCoachmark ===
+// === Module 14227: FormatMenuNuxCoachmark ===
 
-// Module 14226 (FormatMenuNuxCoachmark)
+// Module 14227 (FormatMenuNuxCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7172 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const useChatInputKeyboardOffsetDefault = tmp5(14227);
+const useChatInputKeyboardOffsetDefault = tmp5(14228);
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4986).ContentDismissActionType;

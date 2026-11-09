@@ -1,6 +1,6 @@
-// === Module 17085: FamilyCenterInlineWarningNotice ===
+// === Module 17096: FamilyCenterInlineWarningNotice ===
 
-// Module 17085 (FamilyCenterInlineWarningNotice)
+// Module 17096 (FamilyCenterInlineWarningNotice)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import WarningIcon from "WarningIcon" /* 8096 */;

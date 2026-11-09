@@ -1,6 +1,6 @@
-// === Module 15956: getSoundFromMessage ===
+// === Module 15966: getSoundFromMessage ===
 
-// Module 15956 (getSoundFromMessage)
+// Module 15966 (getSoundFromMessage)
 import MessageReferenceTypes from "MessageReferenceTypes" /* 1095 */;
 import SoundboardTypes from "SoundboardTypes" /* 7590 */;
 import MessageStore from "MessageStore" /* 6194 */;

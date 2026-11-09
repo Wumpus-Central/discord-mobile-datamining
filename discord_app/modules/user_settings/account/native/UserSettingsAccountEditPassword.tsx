@@ -1,6 +1,6 @@
-// === Module 16958: UserSettingsAccountEditPassword ===
+// === Module 16969: UserSettingsAccountEditPassword ===
 
-// Module 16958 (UserSettingsAccountEditPassword)
+// Module 16969 (UserSettingsAccountEditPassword)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
@@ -15,7 +15,7 @@ import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreat
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7223 */;
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 7224 */;
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7229 */;
-import _modDef16959 from "module_16959" /* 16959 */;
+import _modDef16970 from "module_16970" /* 16970 */;
 import noop from "module_19" /* 19 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4982 */;
 import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7636 */;
@@ -30,7 +30,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, LoginRequiredActions: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const state = { newPassword: "channel", password: 17075009 };
+const state = { newPassword: "channel", password: 17074241 };
 const createStyles = fn(5140);
 let obj2 = { onePass: { width: 20, height: 20 }, unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 }, container: { padding: 16 }, header: { marginBottom: 20 }, requiredActionsSubtitle: { textAlign: "center", marginTop: 8 }, requiredActionsTitle: { flex: 1, textAlign: "center" }, image: { marginTop: 12, marginBottom: 16, alignSelf: "center" } };
 let closure_14 = createStyles.createLegacyClassComponentStyles(obj2);
@@ -149,7 +149,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef16959, style: tmp.image };
+    const obj4 = { source: _modDef16970, style: tmp.image };
     const items1 = [closure_1_11(FastImageDefault, obj4), , ];
     const obj5 = { style: tmp.requiredActionsTitle, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;

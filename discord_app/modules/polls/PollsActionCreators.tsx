@@ -218,7 +218,7 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -407,7 +407,7 @@ let closure_26 = async function _handleClearPollVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -470,7 +470,7 @@ let closure_26 = async function _handleClearPollVote(arg0) {
             }
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (arg0 === 1) {
         c4 = 3;
@@ -501,7 +501,7 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -652,7 +652,7 @@ let closure_28 = async function _createPoll(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

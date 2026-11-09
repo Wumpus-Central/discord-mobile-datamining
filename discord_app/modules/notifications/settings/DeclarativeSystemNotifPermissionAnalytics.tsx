@@ -1,11 +1,11 @@
-// === Module 18286: DeclarativeSystemNotifPermissionAnalytics ===
+// === Module 18299: DeclarativeSystemNotifPermissionAnalytics ===
 
-// Module 18286 (DeclarativeSystemNotifPermissionAnalytics)
+// Module 18299 (DeclarativeSystemNotifPermissionAnalytics)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16582 */;
-import NotifTypes from "NotifTypes" /* 16584 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16586 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 16592 */;
+import NotifTypes from "NotifTypes" /* 16594 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16596 */;
 import size from "module_2" /* 2 */;
 
 function getNotifTypesUsingSettings(items) {

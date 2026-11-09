@@ -1,6 +1,6 @@
-// === Module 18425: AddFriendsScreenUtils ===
+// === Module 18438: AddFriendsScreenUtils ===
 
-// Module 18425 (AddFriendsScreenUtils)
+// Module 18438 (AddFriendsScreenUtils)
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7552 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10859 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -18,7 +18,7 @@ let closure_7 = async function _sendWave(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

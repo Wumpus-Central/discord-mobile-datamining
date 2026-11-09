@@ -1,10 +1,10 @@
-// === Module 13505: TransferOwnershipModal ===
+// === Module 13506: TransferOwnershipModal ===
 
-// Module 13505 (TransferOwnershipModal)
+// Module 13506 (TransferOwnershipModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import NavigatorHeader from "NavigatorHeader" /* 7064 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 13504 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 13505 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 function closeModal() {
   TransferOwnershipModalActionCreatorsDefault.close();
 }
-const TransferOwnershipConstants = fn(13506);
+const TransferOwnershipConstants = fn(13507);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: closure_6 } = TransferOwnershipConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -63,8 +63,8 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        toUser(13504).close();
-        const obj = toUser(13504);
+        toUser(13505).close();
+        const obj = toUser(13505);
         toUser(9154).close();
         const obj2 = toUser(9154);
         const result = closure_0(5836).showTransferOwnershipSuccess();
@@ -80,7 +80,7 @@ export default function TransferOwnershipModal(guild) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -108,7 +108,7 @@ export default function TransferOwnershipModal(guild) {
               return obj;
             } else {
               c0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp8) {
             c0 = tmp;

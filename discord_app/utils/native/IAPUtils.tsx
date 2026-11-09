@@ -1,6 +1,6 @@
-// === Module 14700: IAPUtils ===
+// === Module 14701: IAPUtils ===
 
-// Module 14700 (IAPUtils)
+// Module 14701 (IAPUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -9,8 +9,8 @@ import ClientInfoUtilsAll from "ClientInfoUtils" /* 1376 */;
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
 import DeviceUtils from "DeviceUtils" /* 5097 */;
 import ProductIds from "ProductIds" /* 7669 */;
-import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 14721 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 14722 */;
+import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 14722 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 14723 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DevSettingsStore from "DevSettingsStore" /* 5754 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -51,7 +51,7 @@ let closure_16 = async function _makeIAPRequest() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ let closure_16 = async function _makeIAPRequest() {
               const obj6 = { requestJSONString, sku, appAccountToken: convertToUUID(currentUser.id), andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("module_14702").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("module_14703").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -141,7 +141,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("module_14702").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("module_14703").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -228,7 +228,7 @@ let closure_18 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -425,7 +425,7 @@ let closure_21 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -446,7 +446,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("module_14702").getStorefront(), done: false };
+            const obj6 = { value: require("module_14703").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -494,9 +494,9 @@ const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 let PlatformUtils = fn(1377);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(14701).default;
+  _default = fn(14702).default;
 }
-let items = [fn(14702).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(14702).ErrorCode.E_UNKNOWN];
+let items = [fn(14703).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(14703).ErrorCode.E_UNKNOWN];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
 let obj = {
@@ -595,7 +595,7 @@ if (PlatformUtils) {
   let obj5 = fn(1377);
 }
 if (PlatformUtils) {
-  obj = fn(14723).default;
+  obj = fn(14724).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();

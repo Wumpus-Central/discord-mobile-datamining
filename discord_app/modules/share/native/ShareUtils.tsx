@@ -1,6 +1,6 @@
-// === Module 16028: ShareUtils ===
+// === Module 16038: ShareUtils ===
 
-// Module 16028 (ShareUtils)
+// Module 16038 (ShareUtils)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5859 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_6 = async function _sendShareMessage(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

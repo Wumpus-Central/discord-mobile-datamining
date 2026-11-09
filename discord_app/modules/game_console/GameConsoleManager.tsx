@@ -1,6 +1,6 @@
-// === Module 19862: GameConsoleManager ===
+// === Module 19875: GameConsoleManager ===
 
-// Module 19862 (GameConsoleManager)
+// Module 19875 (GameConsoleManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
@@ -9,7 +9,7 @@ import Timers from "Timers" /* 4984 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 6047 */;
 import GameConsoleActionCreators from "GameConsoleActionCreators" /* 12145 */;
 import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 12149 */;
-import _modDef19863 from "module_19863" /* 19863 */;
+import _modDef19876 from "module_19876" /* 19876 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
@@ -45,7 +45,7 @@ let closure_15 = async function _syncLocalState(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ let closure_15 = async function _syncLocalState(arg0) {
           const obj2 = closure_130_1(closure_130_2[11]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp16) {
         c4 = tmp;
         throw tmp16;
@@ -259,7 +259,7 @@ const prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef19863(device, result, error);
+          const tmp8Result = _modDef19876(device, result, error);
           if (null != tmp8Result) {
             const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

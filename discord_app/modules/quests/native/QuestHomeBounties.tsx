@@ -1,12 +1,12 @@
-// === Module 17288: QuestHomeBounties ===
+// === Module 17299: QuestHomeBounties ===
 
-// Module 17288 (QuestHomeBounties)
+// Module 17299 (QuestHomeBounties)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 4973 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 17289 */;
-import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 17302 */;
-import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 17308 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 17300 */;
+import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 17313 */;
+import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 17319 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BountyStore from "BountyStore" /* 7921 */;
@@ -83,8 +83,8 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
     if (!stateFromStores) {
       let tmp11 = "none" !== placement && obtainableOrbRewards > 0;
       if (tmp11) {
-        tmp11 = orbShopProducts.length >= tmp(17295).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-        const tmp12 = orbShopProducts.length >= tmp(17295).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+        tmp11 = orbShopProducts.length >= tmp(17306).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+        const tmp12 = orbShopProducts.length >= tmp(17306).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
       }
       if (!tmp11) {
         const obj2 = { style: tmp3.container, children: null };

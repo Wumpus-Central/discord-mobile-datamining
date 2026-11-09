@@ -1,10 +1,10 @@
-// === Module 13930: useFinalizeTraitTabItems ===
+// === Module 13931: useFinalizeTraitTabItems ===
 
-// Module 13930 (useFinalizeTraitTabItems)
+// Module 13931 (useFinalizeTraitTabItems)
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13667 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 const require = globalThis.__r;
 

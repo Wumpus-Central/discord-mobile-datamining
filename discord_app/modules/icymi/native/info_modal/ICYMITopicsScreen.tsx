@@ -1,6 +1,6 @@
-// === Module 18889: ICYMITopicsScreen ===
+// === Module 18902: ICYMITopicsScreen ===
 
-// Module 18889 (ICYMITopicsScreen)
+// Module 18902 (ICYMITopicsScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5200 */;
@@ -13,17 +13,17 @@ import BicycleIcon from "BicycleIcon" /* 10201 */;
 import TvIcon from "TvIcon" /* 10871 */;
 import MusicIcon from "MusicIcon" /* 10877 */;
 import RobotIcon from "RobotIcon" /* 12268 */;
-import MedalIcon from "MedalIcon" /* 13477 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 13597 */;
-import PencilSparkleIcon from "PencilSparkleIcon" /* 14762 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 16535 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 17563 */;
-import ScienceIcon from "ScienceIcon" /* 18891 */;
-import PaintbrushThinIcon from "PaintbrushThinIcon" /* 18892 */;
+import MedalIcon from "MedalIcon" /* 13478 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 13598 */;
+import PencilSparkleIcon from "PencilSparkleIcon" /* 14763 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 16545 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 17574 */;
+import ScienceIcon from "ScienceIcon" /* 18904 */;
+import PaintbrushThinIcon from "PaintbrushThinIcon" /* 18905 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18883 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18896 */;
 
 require = fn;
 function WordTopic(categoryid) {
@@ -78,7 +78,7 @@ function WordTopic(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(18890).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(18903).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5140);
@@ -119,7 +119,7 @@ export default function ICYMITopicsScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

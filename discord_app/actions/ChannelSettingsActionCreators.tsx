@@ -61,7 +61,7 @@ let closure_9 = async function _saveChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -238,7 +238,7 @@ let closure_10 = async function _deleteChannel(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -292,7 +292,7 @@ let closure_10 = async function _deleteChannel(arg0) {
         }
         closure_130_8();
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp22) {
       c4 = tmp;

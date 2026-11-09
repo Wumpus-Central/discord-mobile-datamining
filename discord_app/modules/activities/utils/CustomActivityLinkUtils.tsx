@@ -1,10 +1,10 @@
-// === Module 14988: CustomActivityLinkUtils ===
+// === Module 14989: CustomActivityLinkUtils ===
 
-// Module 14988 (CustomActivityLinkUtils)
+// Module 14989 (CustomActivityLinkUtils)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14991 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14992 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14989 */;
+import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14990 */;
 
 require = fn;
 function fetchCustomActivityLink() {
@@ -28,7 +28,7 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -117,7 +117,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

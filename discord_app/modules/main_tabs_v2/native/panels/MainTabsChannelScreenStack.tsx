@@ -1,6 +1,6 @@
-// === Module 18945: MainTabsChannelScreenStack ===
+// === Module 18958: MainTabsChannelScreenStack ===
 
-// Module 18945 (MainTabsChannelScreenStack)
+// Module 18958 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
@@ -11,13 +11,13 @@ import useThemeDefault from "useTheme" /* 5369 */;
 import Suspender from "Suspender" /* 6121 */;
 import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11383 */;
 import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11701 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18378 */;
-import MainTabsBackgroundChat from "MainTabsBackgroundChat" /* 18379 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18380 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 18949 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 18950 */;
-import ChannelScreenFrameContainerDefault from "ChannelScreenFrameContainer" /* 18951 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 18952 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18391 */;
+import MainTabsBackgroundChat from "MainTabsBackgroundChat" /* 18392 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18393 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 18962 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 18963 */;
+import ChannelScreenFrameContainerDefault from "ChannelScreenFrameContainer" /* 18964 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 18965 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -223,7 +223,7 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const setVisibleChannelScreen = fn(18946).setVisibleChannelScreen;
+const setVisibleChannelScreen = fn(18959).setVisibleChannelScreen;
 const ONYX_BORDER_WIDTH = fn(9903).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: closure_10, AnalyticsSections: closure_11 } = Constants);

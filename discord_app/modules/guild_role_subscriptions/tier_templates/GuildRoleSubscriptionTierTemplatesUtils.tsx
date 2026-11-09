@@ -1,14 +1,14 @@
-// === Module 17532: GuildRoleSubscriptionTierTemplatesUtils ===
+// === Module 17543: GuildRoleSubscriptionTierTemplatesUtils ===
 
-// Module 17532 (GuildRoleSubscriptionTierTemplatesUtils)
+// Module 17543 (GuildRoleSubscriptionTierTemplatesUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtilsAll from "FlagUtils" /* 1403 */;
 import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7498 */;
-import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 16020 */;
+import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 16030 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5065 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 17533 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 17544 */;
 
 const require = globalThis.__r;
 
@@ -55,7 +55,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -137,7 +137,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(17527).useEditStateStore;
+const useEditStateStore = fn(17538).useEditStateStore;
 const GuildFeatures = fn(1072).GuildFeatures;
 const ChannelFlags = fn(4996).ChannelFlags;
 let closure_12 = {};

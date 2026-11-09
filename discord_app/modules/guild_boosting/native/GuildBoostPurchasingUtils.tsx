@@ -40,7 +40,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

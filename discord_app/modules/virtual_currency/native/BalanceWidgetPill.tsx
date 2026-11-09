@@ -1,12 +1,12 @@
-// === Module 14737: virtual_currency/BalanceWidgetPill ===
+// === Module 14738: virtual_currency/BalanceWidgetPill ===
 
-// Module 14737 (virtual_currency/BalanceWidgetPill)
+// Module 14738 (virtual_currency/BalanceWidgetPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 14738 */;
-import OrbLottieAnimation from "OrbLottieAnimation" /* 14739 */;
-import BalanceCounter from "BalanceCounter" /* 14744 */;
-import AnimationUtils from "AnimationUtils" /* 14745 */;
+import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 14739 */;
+import OrbLottieAnimation from "OrbLottieAnimation" /* 14740 */;
+import BalanceCounter from "BalanceCounter" /* 14745 */;
+import AnimationUtils from "AnimationUtils" /* 14746 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

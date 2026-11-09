@@ -1,14 +1,14 @@
-// === Module 15209: UserProfileAddGameCoverButton ===
+// === Module 15219: UserProfileAddGameCoverButton ===
 
-// Module 15209 (UserProfileAddGameCoverButton)
+// Module 15219 (UserProfileAddGameCoverButton)
 import nativeDefault from "native" /* 575 */;
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15201 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15211 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(5140);
-const obj2 = { button: { aspectRatio: fn(15197).GAME_COVER_ASPECT_RATIO, borderRadius: fn(15197).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" } };
+const obj2 = { button: { aspectRatio: fn(15207).GAME_COVER_ASPECT_RATIO, borderRadius: fn(15207).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAddGameCoverButton.tsx");

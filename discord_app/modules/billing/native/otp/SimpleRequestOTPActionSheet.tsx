@@ -1,6 +1,6 @@
-// === Module 18019: SimpleRequestOTPActionSheet ===
+// === Module 18028: SimpleRequestOTPActionSheet ===
 
-// Module 18019 (SimpleRequestOTPActionSheet)
+// Module 18028 (SimpleRequestOTPActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7795 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7808 */;
@@ -32,7 +32,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -175,7 +175,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -265,7 +265,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
     },
     giftParams: { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } }
   };
-  closure_8 = tmp(14669)(obj6);
+  closure_8 = tmp(14670)(obj6);
   const items5 = [product];
   let obj4 = selectedSkuId(11527);
   const obj7 = { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } };

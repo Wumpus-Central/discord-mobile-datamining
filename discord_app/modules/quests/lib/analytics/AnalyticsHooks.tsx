@@ -1,6 +1,6 @@
-// === Module 17307: AnalyticsHooks ===
+// === Module 17318: AnalyticsHooks ===
 
-// Module 17307 (AnalyticsHooks)
+// Module 17318 (AnalyticsHooks)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;

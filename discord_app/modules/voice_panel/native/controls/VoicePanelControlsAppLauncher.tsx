@@ -1,13 +1,13 @@
-// === Module 19734: VoicePanelControlsAppLauncher ===
+// === Module 19747: VoicePanelControlsAppLauncher ===
 
-// Module 19734 (VoicePanelControlsAppLauncher)
+// Module 19747 (VoicePanelControlsAppLauncher)
 import _modDef38 from "module_38" /* 38 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8915 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
 import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12612 */;
-import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 14062 */;
+import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 14063 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 

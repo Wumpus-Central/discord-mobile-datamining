@@ -1,9 +1,9 @@
-// === Module 17180: ClipsSetting ===
+// === Module 17191: ClipsSetting ===
 
-// Module 17180 (ClipsSetting)
+// Module 17191 (ClipsSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import ClipsIcon from "ClipsIcon" /* 17181 */;
+import ClipsIcon from "ClipsIcon" /* 17192 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;
 import size from "module_2" /* 2 */;
 

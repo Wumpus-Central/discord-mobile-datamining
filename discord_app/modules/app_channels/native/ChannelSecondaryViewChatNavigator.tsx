@@ -1,6 +1,6 @@
-// === Module 19309: ChannelSecondaryViewChatNavigator ===
+// === Module 19322: ChannelSecondaryViewChatNavigator ===
 
-// Module 19309 (ChannelSecondaryViewChatNavigator)
+// Module 19322 (ChannelSecondaryViewChatNavigator)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import HeaderShared from "HeaderShared" /* 9902 */;

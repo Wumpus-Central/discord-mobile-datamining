@@ -1,6 +1,6 @@
-// === Module 17832: CommunityActivityAlertsSetting ===
+// === Module 17843: CommunityActivityAlertsSetting ===
 
-// Module 17832 (CommunityActivityAlertsSetting)
+// Module 17843 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 11140 */;

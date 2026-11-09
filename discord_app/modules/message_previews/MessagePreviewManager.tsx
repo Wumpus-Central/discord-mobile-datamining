@@ -1,15 +1,15 @@
-// === Module 17622: MessagePreviewManager ===
+// === Module 17633: MessagePreviewManager ===
 
-// Module 17622 (MessagePreviewManager)
+// Module 17633 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 17623 */;
+import RemoteFetchData from "RemoteFetchData" /* 17634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6623 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15907 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15917 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
 
 require = fn;
@@ -74,7 +74,7 @@ class MessagePreviewManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         while (true) {
@@ -214,7 +214,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -344,7 +344,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -382,7 +382,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
             const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
             tmp5(572).dispatch(obj7);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;

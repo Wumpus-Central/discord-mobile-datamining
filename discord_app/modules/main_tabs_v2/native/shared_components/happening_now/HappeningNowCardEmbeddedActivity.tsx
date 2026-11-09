@@ -1,6 +1,6 @@
-// === Module 18469: HappeningNowCardEmbeddedActivity ===
+// === Module 18482: HappeningNowCardEmbeddedActivity ===
 
-// Module 18469 (HappeningNowCardEmbeddedActivity)
+// Module 18482 (HappeningNowCardEmbeddedActivity)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17597);
+const HappeningNowConstants = fn(17608);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: metroImportDefault } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);

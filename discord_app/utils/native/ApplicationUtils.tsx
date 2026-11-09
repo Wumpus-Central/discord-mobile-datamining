@@ -127,12 +127,12 @@ export function installApplication(arg0) {
     }
   }
 }
-export function openOAuth2Modal(arg0) {
-  _require = arg0;
+export function openOAuth2Modal(conjureServerWidgetConsentRequest) {
+  _require = conjureServerWidgetConsentRequest;
   ModalActionCreatorsDefault.popWithKey(closure_5);
   const obj3 = {};
   const obj2 = ModalActionCreatorsDefault;
-  const merged = Object.assign(arg0);
+  const merged = Object.assign(conjureServerWidgetConsentRequest);
   obj3.dismissOAuthModal = function dismissOAuthModal() {
     const dismissOAuthModal = customInstallUrl.dismissOAuthModal;
     if (dismissOAuthModal != null) {

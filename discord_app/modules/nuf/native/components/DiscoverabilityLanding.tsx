@@ -1,6 +1,6 @@
-// === Module 14597: DiscoverabilityLanding ===
+// === Module 14598: DiscoverabilityLanding ===
 
-// Module 14597 (DiscoverabilityLanding)
+// Module 14598 (DiscoverabilityLanding)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
@@ -11,7 +11,7 @@ import TextStyles from "TextStyles" /* 6778 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const useContactSyncModalStore = fn(14483).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14484).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5140);
@@ -34,7 +34,7 @@ export default function DiscoverabilityLanding(onNext) {
   const allowPhone = tmp2.allowPhone;
   items = [allowPhone, allowEmail];
   noop = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14598, dependencyMap.paths), "Discoverability Landing", { allowPhone, allowEmail });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14599, dependencyMap.paths), "Discoverability Landing", { allowPhone, allowEmail });
   }, items);
   const obj = { style: tmp.container, contentContainerStyle: { paddingTop: onNext(allowPhone[12]).NAV_BAR_HEIGHT + 32, paddingBottom: allowEmail(allowPhone[8])().bottom + 16 }, children: null };
   const obj3 = { style: tmp.headerContainer, children: null };

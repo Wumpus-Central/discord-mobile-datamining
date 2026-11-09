@@ -117,8 +117,8 @@ export function eligibleConjureGuilds(arr, arg1) {
     return num;
   });
 }
-export function hasEligibleConjureGuild(guildsArray, useIsOwnedConjureApplication) {
-  const _location = useIsOwnedConjureApplication;
+export function hasEligibleConjureGuild(guildsArray, useConjureServerWidgetOffers) {
+  const _location = useConjureServerWidgetOffers;
   return guildsArray.some((guildId) => ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guildId.id, location: _location }));
 }
 export function resolveConjureWorkspaceGuildId(ConjureChatStore) {

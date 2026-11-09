@@ -1,6 +1,6 @@
-// === Module 14126: SearchUtils ===
+// === Module 14127: SearchUtils ===
 
-// Module 14126 (SearchUtils)
+// Module 14127 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -8,8 +8,8 @@ import util from "util" /* 1113 */;
 import _modDef2166 from "module_2166" /* 2166 */;
 import UserUtilsDefault from "UserUtils" /* 5194 */;
 import useChannelName from "useChannelName" /* 5776 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 14125 */;
-import SearchTokens from "SearchTokens" /* 14127 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 14126 */;
+import SearchTokens from "SearchTokens" /* 14128 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import GuildChannelStore from "GuildChannelStore" /* 5070 */;

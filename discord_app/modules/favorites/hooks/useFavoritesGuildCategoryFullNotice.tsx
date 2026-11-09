@@ -1,6 +1,6 @@
-// === Module 18489: useFavoritesGuildCategoryFullNotice ===
+// === Module 18502: useFavoritesGuildCategoryFullNotice ===
 
-// Module 18489 (useFavoritesGuildCategoryFullNotice)
+// Module 18502 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import _modDef3608 from "module_3608" /* 3608 */;
@@ -9,14 +9,15 @@ import FavoritesHooks from "FavoritesHooks" /* 10951 */;
 import FavoriteStore from "FavoriteStore" /* 4992 */;
 
 require = fn;
-let closure_4 = fn(5002).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
+const FavoritesConstants = fn(5002);
+({ FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: closure_4, FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: hasOwnProperty } = FavoritesConstants);
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
 
 export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
   items = [FavoriteStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => autoAddJoinedThreads.autoAddJoinedThreads);
+  const stateFromStores = initialize.useStateFromStores(items, () => autoAddThreadsMode.autoAddThreadsMode === closure_1_4);
   FavoritesHooks;
   let tmp6 = null;
   if (stateFromStores) {
@@ -31,7 +32,7 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             str = str.trim();
             const formatted = str.toLowerCase();
             tmp6 = null;
-            if (formatted === closure_4.toLowerCase()) {
+            if (formatted === hasOwnProperty.toLowerCase()) {
               const obj2 = { label: null, tooltip: null };
               const intl = util.intl;
               obj2.label = intl.string(_modDef3608.WsUrMD);

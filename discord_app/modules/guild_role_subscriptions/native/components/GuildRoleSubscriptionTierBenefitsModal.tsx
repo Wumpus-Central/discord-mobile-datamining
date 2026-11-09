@@ -1,6 +1,6 @@
-// === Module 20355: GuildRoleSubscriptionTierBenefitsModal ===
+// === Module 20368: GuildRoleSubscriptionTierBenefitsModal ===
 
-// Module 20355 (GuildRoleSubscriptionTierBenefitsModal)
+// Module 20368 (GuildRoleSubscriptionTierBenefitsModal)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -9,16 +9,16 @@ import FastImageDefault from "FastImage" /* 5842 */;
 import TableRow from "TableRow" /* 7038 */;
 import TableRowGroup from "TableRowGroup" /* 7126 */;
 import CirclePlusIcon from "CirclePlusIcon" /* 11634 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17526 */;
-import useRoleSubscriptionFormatDefault from "useRoleSubscriptionFormat" /* 20333 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20344 */;
-import EmojiAliasDefault from "EmojiAlias" /* 20356 */;
-import useRoleSubscriptionEmojisDefault from "useRoleSubscriptionEmojis" /* 20360 */;
-import GuildRoleSubscriptionsModalActionCreatorsAll from "GuildRoleSubscriptionsModalActionCreators" /* 20361 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17537 */;
+import useRoleSubscriptionFormatDefault from "useRoleSubscriptionFormat" /* 20346 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20357 */;
+import EmojiAliasDefault from "EmojiAlias" /* 20369 */;
+import useRoleSubscriptionEmojisDefault from "useRoleSubscriptionEmojis" /* 20373 */;
+import GuildRoleSubscriptionsModalActionCreatorsAll from "GuildRoleSubscriptionsModalActionCreators" /* 20374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const AllChannelsSwitchDefault = tmp10(20370);
+const AllChannelsSwitchDefault = tmp10(20383);
 require = fn;
 function AddBenefitRow(disabled) {
   let flag = disabled.disabled;
@@ -54,7 +54,7 @@ function ListFooterSection(onChangeTrialInterval) {
   onChangeTrialInterval = onChangeTrialInterval.onChangeTrialInterval;
   let options;
   ({ interval, trialActiveUserLimit, onChangeTrialActiveUserLimit } = onChangeTrialInterval);
-  const tmp4 = options(17531)(interval);
+  const tmp4 = options(17542)(interval);
   options = tmp4.options;
   const selectedOption = tmp4.selectedOption;
   items = [onChangeTrialInterval, options];
@@ -68,7 +68,7 @@ function ListFooterSection(onChangeTrialInterval) {
     onChangeTrialInterval(value);
   }, items);
   const tmp = closure_14();
-  const roleSubscriptionSettingsDisabled = onChangeTrialInterval(20337).useRoleSubscriptionSettingsDisabled();
+  const roleSubscriptionSettingsDisabled = onChangeTrialInterval(20350).useRoleSubscriptionSettingsDisabled();
   let tmp9 = !tmp6;
   if (null != selectedOption) {
     tmp9 = roleSubscriptionSettingsDisabled;
@@ -85,7 +85,7 @@ function ListFooterSection(onChangeTrialInterval) {
   obj4.value = null != selectedOption;
   obj4.onValueChange = callback;
   obj4.disabled = roleSubscriptionSettingsDisabled;
-  const items1 = [closure_12(onChangeTrialInterval(7429).TableSwitchRow, obj4), closure_12(options(20357), { interval: selectedOption, onChange: onChangeTrialInterval, trialIntervalOptions: options, disabled: tmp9 }), closure_12(options(20358), { activeTrialUserlimit: trialActiveUserLimit, onChange: onChangeTrialActiveUserLimit, disabled: tmp9 })];
+  const items1 = [closure_12(onChangeTrialInterval(7429).TableSwitchRow, obj4), closure_12(options(20370), { interval: selectedOption, onChange: onChangeTrialInterval, trialIntervalOptions: options, disabled: tmp9 }), closure_12(options(20371), { activeTrialUserlimit: trialActiveUserLimit, onChange: onChangeTrialActiveUserLimit, disabled: tmp9 })];
   obj3.children = items1;
   obj2.children = closure_13(onChangeTrialInterval(7126).TableRowGroup, obj3);
   return closure_12(closure_7, obj2);
@@ -217,9 +217,9 @@ function Content(arg0) {
                 onDelete() {
                   ref_type = closure_1;
                   if (ref_type.ref_type === constants.CHANNEL) {
-                    closure_2_8((arr) => arr.filter(/* F143431 */ function() { ... }));
+                    closure_2_8((arr) => arr.filter(/* F143538 */ function() { ... }));
                   } else {
-                    closure_2_10((arr) => arr.filter(/* F143432 */ function() { ... }));
+                    closure_2_10((arr) => arr.filter(/* F143539 */ function() { ... }));
                   }
                 },
                 onSave(ref_type) {
@@ -241,7 +241,7 @@ function Content(arg0) {
             },
           disabled: roleSubscriptionSettingsDisabled
         };
-        tmp3Result = closure_12(closure_1(20369), obj);
+        tmp3Result = closure_12(closure_1(20382), obj);
       }
       return tmp3Result;
     },
@@ -322,9 +322,9 @@ class GuildRoleSubscriptionTierBenefitsTab {
 }
 get_ActivityIndicator = fn(17);
 ({ SectionList: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-let AllChannelAccessOptions = fn(17527).AllChannelAccessOptions;
-const useGroupIsFullGateState = fn(20341).useGroupIsFullGateState;
-const GuildRoleSubscriptionsConstants = fn(17506);
+let AllChannelAccessOptions = fn(17538).AllChannelAccessOptions;
+const useGroupIsFullGateState = fn(20354).useGroupIsFullGateState;
+const GuildRoleSubscriptionsConstants = fn(17517);
 ({ GuildRoleSubscriptionBenefitTypes: closure_10, GuildRoleSubscriptionsTierScenes: closure_11 } = GuildRoleSubscriptionsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);

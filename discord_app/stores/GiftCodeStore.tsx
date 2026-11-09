@@ -88,7 +88,7 @@ function updateGiftCode(giftCode) {
                                             closure_2_18.emitChange();
                                           } else if (null != closure_2_7[closure_1_0]) {
                                             let _Math = Math;
-                                            obj2.start(Math.min(closure_2_5, diff), /* F100888 */ function() { ... });
+                                            obj2.start(Math.min(closure_2_5, diff), /* F100929 */ function() { ... });
                                           }
                                           let obj3 = closure_2_1(closure_2_2[3])();
                                         }

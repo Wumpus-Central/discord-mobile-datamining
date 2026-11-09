@@ -1,6 +1,6 @@
-// === Module 16576: SystemTelecomManager ===
+// === Module 16586: SystemTelecomManager ===
 
-// Module 16576 (SystemTelecomManager)
+// Module 16586 (SystemTelecomManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -15,8 +15,8 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 7551 */;
 import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10331 */;
-import SystemTelecomPlatform from "SystemTelecomPlatform" /* 16578 */;
-import SystemTelecomUtils from "SystemTelecomUtils" /* 16579 */;
+import SystemTelecomPlatform from "SystemTelecomPlatform" /* 16588 */;
+import SystemTelecomUtils from "SystemTelecomUtils" /* 16589 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6623 */;
@@ -29,7 +29,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
 import UserStore from "UserStore" /* 1385 */;
 import VoiceStateStore from "VoiceStateStore" /* 5803 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5896 */;
-import NativeSystemTelecomModule from "NativeSystemTelecomModule" /* 16577 */;
+import NativeSystemTelecomModule from "NativeSystemTelecomModule" /* 16587 */;
 import LifecycleManager from "LifecycleManager" /* 2120 */;
 
 require = fn;
@@ -161,7 +161,7 @@ class SystemTelecomManager {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -309,7 +309,7 @@ class SystemTelecomManager {
       }
     };
     obj.handleSessionStart = function handleSessionStart() {
-      obj = obj(16578);
+      obj = obj(16588);
       obj.flushCallPushToken();
     };
     obj.handleConnectionOpen = function handleConnectionOpen(user) {
@@ -398,7 +398,7 @@ class SystemTelecomManager {
       const item = voiceStates.forEach((channelId) => {
         channelId = channelId.channelId;
         ({ guildId, userId, sessionId, selfVideo } = channelId);
-        obj = obj(16579);
+        obj = obj(16589);
         if (obj.isSystemTelecomEnabledForChannel(guildId, channelId)) {
           if (null != channelId) {
             if (userId === currentUserId.currentUserId) {
@@ -539,7 +539,7 @@ prototype["startCall"] = function startCall(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -566,18 +566,18 @@ prototype["startCall"] = function startCall(arg0) {
                 tmp29(10331).setRequestedBy("call:" + obj6.uuid);
                 const obj10 = tmp29(10331);
                 if (obj11.isSystemTelecomEnabled()) {
-                  const obj2 = tmp3(16577);
+                  const obj2 = tmp3(16587);
                   ({ uuid, handle } = obj6);
                   const tmp42Result = tmp5(5776);
                   const startOutgoingCallResult = obj2.startOutgoingCall(uuid, handle, tmp5(5776).computeChannelName(obj6.channel, UserStore, RelationshipStore), obj6.video);
-                  tmp3(16577).setCallMuted(obj6.uuid, obj6.muted);
+                  tmp3(16587).setCallMuted(obj6.uuid, obj6.muted);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
                   const obj7 = { value: startOutgoingCallResult, done: false };
                   return obj7;
                 }
-                obj11 = tmp5(16579);
+                obj11 = tmp5(16589);
               }
             }
           }

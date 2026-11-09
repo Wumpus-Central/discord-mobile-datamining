@@ -79,7 +79,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -114,7 +114,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -164,7 +164,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     obj8.due_duration = diffResult;
                     v1(1252).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
                     c2 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp26) {
                   c2 = tmp;
@@ -188,7 +188,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp8) {
         c0 = tmp;
         throw tmp8;

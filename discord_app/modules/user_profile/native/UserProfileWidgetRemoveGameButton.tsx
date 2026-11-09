@@ -1,6 +1,6 @@
-// === Module 15216: UserProfileWidgetRemoveGameButton ===
+// === Module 15226: UserProfileWidgetRemoveGameButton ===
 
-// Module 15216 (UserProfileWidgetRemoveGameButton)
+// Module 15226 (UserProfileWidgetRemoveGameButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;

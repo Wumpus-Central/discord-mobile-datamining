@@ -1,6 +1,6 @@
-// === Module 16698: EmbeddedActivitiesManager ===
+// === Module 16709: EmbeddedActivitiesManager ===
 
-// Module 16698 (EmbeddedActivitiesManager)
+// Module 16709 (EmbeddedActivitiesManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -18,7 +18,7 @@ import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11890 */;
 import tryLaunchAsFrame from "tryLaunchAsFrame" /* 11892 */;
 import pendingFrameLaunch from "pendingFrameLaunch" /* 11896 */;
 import getShelfItemDataDefault from "getShelfItemData" /* 11904 */;
-import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 16615 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 16625 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
@@ -27,7 +27,7 @@ import ChannelStore from "ChannelStore" /* 4989 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
 import UserStore from "UserStore" /* 1385 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 16616 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 16626 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 import LifecycleManager from "LifecycleManager" /* 2120 */;
 
@@ -408,11 +408,11 @@ class EmbeddedActivitiesManager extends tmp3 {
     applyArgumentsResult.handleActivityLaunchSuccess = function handleActivityLaunchSuccess(arg0) {
       ({ applicationId: closure_0, nonce: closure_1 } = arg0);
       const timerId = setTimeout(() => {
-        const tmp6 = applyArgumentsResult(16615).awaitingAnalyticsContext[closure_0];
+        const tmp6 = applyArgumentsResult(16625).awaitingAnalyticsContext[closure_0];
         let tmp7;
         if (null != tmp6) {
           if (tmp6.nonce === nonce) {
-            const awaitingAnalyticsContext = applyArgumentsResult(16615).awaitingAnalyticsContext;
+            const awaitingAnalyticsContext = applyArgumentsResult(16625).awaitingAnalyticsContext;
             delete tmp[tmp2];
             tmp7 = tmp6;
           }
@@ -479,10 +479,10 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleActivityLaunchCancel = function handleActivityLaunchCancel(arg0) {
       ({ nonce, applicationId } = arg0);
-      const tmp5 = applyArgumentsResult(16615).awaitingAnalyticsContext[applicationId];
+      const tmp5 = applyArgumentsResult(16625).awaitingAnalyticsContext[applicationId];
       if (null != tmp5) {
         if (tmp5.nonce === nonce) {
-          const awaitingAnalyticsContext = applyArgumentsResult(16615).awaitingAnalyticsContext;
+          const awaitingAnalyticsContext = applyArgumentsResult(16625).awaitingAnalyticsContext;
           delete tmp[tmp2];
         }
       }
@@ -546,7 +546,7 @@ class EmbeddedActivitiesManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -781,7 +781,7 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleInteractionQueue = function handleInteractionQueue(arg0) {
       ({ nonce, data } = arg0);
-      if (null == applyArgumentsResult(16615).awaitingAnalyticsContext[data.applicationId]) {
+      if (null == applyArgumentsResult(16625).awaitingAnalyticsContext[data.applicationId]) {
         if (data.interactionType === applyArgumentsResult(6203).InteractionTypes.APPLICATION_COMMAND) {
           items = [AnalyticsLocationDefault.INTERACTION_APPLICATION_COMMAND];
           let tmp3 = items;
@@ -801,7 +801,7 @@ class EmbeddedActivitiesManager extends tmp3 {
         }
         if (flag) {
           const obj2 = { nonce: nonce2, locations, source };
-          applyArgumentsResult(16615).awaitingAnalyticsContext[applicationId] = obj2;
+          applyArgumentsResult(16625).awaitingAnalyticsContext[applicationId] = obj2;
           flag = true;
         }
         if (flag) {
@@ -813,7 +813,7 @@ class EmbeddedActivitiesManager extends tmp3 {
       nonce = nonce.nonce;
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
-          const tmp6 = applyArgumentsResult(16615).awaitingAnalyticsContext[tmp3];
+          const tmp6 = applyArgumentsResult(16625).awaitingAnalyticsContext[tmp3];
           if (null != tmp6) {
             tmp6.interactionId = tmp;
           }
@@ -828,11 +828,11 @@ class EmbeddedActivitiesManager extends tmp3 {
           closure_0 = tmp4;
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            const tmp6 = applyArgumentsResult(16615).awaitingAnalyticsContext[closure_0];
+            const tmp6 = applyArgumentsResult(16625).awaitingAnalyticsContext[closure_0];
             let tmp7;
             if (null != tmp6) {
               if (tmp6.nonce === nonce) {
-                const awaitingAnalyticsContext = applyArgumentsResult(16615).awaitingAnalyticsContext;
+                const awaitingAnalyticsContext = applyArgumentsResult(16625).awaitingAnalyticsContext;
                 delete tmp[tmp2];
                 tmp7 = tmp6;
               }
@@ -847,10 +847,10 @@ class EmbeddedActivitiesManager extends tmp3 {
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
           delete tmp3[tmp4];
-          const tmp9 = applyArgumentsResult(16615).awaitingAnalyticsContext[tmp6];
+          const tmp9 = applyArgumentsResult(16625).awaitingAnalyticsContext[tmp6];
           if (null != tmp9) {
             if (tmp9.nonce === nonce) {
-              const awaitingAnalyticsContext = applyArgumentsResult(16615).awaitingAnalyticsContext;
+              const awaitingAnalyticsContext = applyArgumentsResult(16625).awaitingAnalyticsContext;
               delete tmp[tmp2];
             }
           }

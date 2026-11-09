@@ -53,7 +53,7 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -172,7 +172,7 @@ let closure_11 = async function _redirectDeveloperPortalWithHandoffToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -216,7 +216,7 @@ let closure_11 = async function _redirectDeveloperPortalWithHandoffToken(arg0) {
           closure_130_3 = uRL;
           closure_131_1(closure_131_2[10]).performURLNavigation(closure_130_3.href);
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp7) {
         c5 = tmp;

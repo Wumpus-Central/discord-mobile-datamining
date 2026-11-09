@@ -1,9 +1,9 @@
-// === Module 18533: FolderPlusIcon ===
+// === Module 18546: FolderPlusIcon ===
 
-// Module 18533 (FolderPlusIcon)
+// Module 18546 (FolderPlusIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod18082 from "module_18082" /* 18082 */;
+import _mod18095 from "module_18095" /* 18095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function FolderPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18082, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18095, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

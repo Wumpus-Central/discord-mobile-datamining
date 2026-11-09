@@ -1,6 +1,6 @@
-// === Module 16813: useNameplateSections ===
+// === Module 16824: useNameplateSections ===
 
-// Module 16813 (useNameplateSections)
+// Module 16824 (useNameplateSections)
 import util from "util" /* 1113 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7808 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -29,7 +29,7 @@ export default function useNameplateSections() {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(563);
-  return first(15334)(useMemo(() => {
+  return first(15344)(useMemo(() => {
     let obj = CollectiblesUtils;
     const nameplates = obj.getNameplates(stateFromStores, first);
     const reduced = nameplates.reduce((premium_purchase, skuId) => {

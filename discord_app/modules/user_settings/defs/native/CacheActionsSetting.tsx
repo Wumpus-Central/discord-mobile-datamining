@@ -1,6 +1,6 @@
-// === Module 17882: CacheActionsSetting ===
+// === Module 17893: CacheActionsSetting ===
 
-// Module 17882 (CacheActionsSetting)
+// Module 17893 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4965 */;
@@ -15,10 +15,10 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7382 */;
 import ActionSheet from "ActionSheet" /* 7426 */;
 import FileIcon from "FileIcon" /* 11194 */;
 import FileUpIcon from "FileUpIcon" /* 12397 */;
-import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 17883 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 17884 */;
-import CacheActionCreators from "CacheActionCreators" /* 17887 */;
-import FileWarningIcon from "FileWarningIcon" /* 17888 */;
+import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 17894 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 17895 */;
+import CacheActionCreators from "CacheActionCreators" /* 17898 */;
+import FileWarningIcon from "FileWarningIcon" /* 17899 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6623 */;
@@ -62,7 +62,7 @@ function CacheActionsActionSheet() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -93,7 +93,7 @@ function CacheActionsActionSheet() {
           const intl = closure_128_0(closure_128_2[8]).intl;
           closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t.GgUIfl));
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         c2 = tmp;
@@ -136,7 +136,7 @@ function CacheActionsActionSheet() {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -169,7 +169,7 @@ function CacheActionsActionSheet() {
           const intl = closure_128_0(closure_128_2[8]).intl;
           closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t["23xR5w"]));
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp21) {
         c2 = tmp;
@@ -200,7 +200,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(17888).FileWarningIcon,
+  IconComponent: fn(17899).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: CacheActionsActionSheet }), CacheActionsActionSheet);
   },

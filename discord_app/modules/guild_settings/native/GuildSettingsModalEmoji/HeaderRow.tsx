@@ -1,13 +1,13 @@
-// === Module 20129: HeaderRow ===
+// === Module 20142: HeaderRow ===
 
-// Module 20129 (HeaderRow)
+// Module 20142 (HeaderRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20123 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20136 */;
 
 require = fn;
 function HeaderRow(guild) {
@@ -32,7 +32,7 @@ function HeaderRow(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

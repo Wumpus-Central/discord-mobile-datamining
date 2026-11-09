@@ -1,13 +1,13 @@
-// === Module 13454: GameOrganizationBenefitsCarousel ===
+// === Module 13455: GameOrganizationBenefitsCarousel ===
 
-// Module 13454 (GameOrganizationBenefitsCarousel)
+// Module 13455 (GameOrganizationBenefitsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import FastImageDefault from "FastImage" /* 5842 */;
 import Stack_Stack from "Stack/Stack" /* 6159 */;
 import Card from "Card" /* 7040 */;
-import GameOrganizationBenefits from "GameOrganizationBenefits" /* 13455 */;
+import GameOrganizationBenefits from "GameOrganizationBenefits" /* 13456 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

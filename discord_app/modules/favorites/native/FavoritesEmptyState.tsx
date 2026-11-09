@@ -1,6 +1,6 @@
-// === Module 19165: FavoritesEmptyState ===
+// === Module 19178: FavoritesEmptyState ===
 
-// Module 19165 (FavoritesEmptyState)
+// Module 19178 (FavoritesEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3608 from "module_3608" /* 3608 */;
@@ -9,7 +9,7 @@ import components_Button_Button from "components/Button/Button" /* 5758 */;
 import Stack_Stack from "Stack/Stack" /* 6159 */;
 import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10957 */;
 import PlusMediumIcon from "PlusMediumIcon" /* 11629 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14637 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

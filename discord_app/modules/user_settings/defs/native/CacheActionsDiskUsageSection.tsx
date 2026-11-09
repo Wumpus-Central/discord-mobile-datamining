@@ -1,6 +1,6 @@
-// === Module 17883: CacheActionsDiskUsageSection ===
+// === Module 17894: CacheActionsDiskUsageSection ===
 
-// Module 17883 (CacheActionsDiskUsageSection)
+// Module 17894 (CacheActionsDiskUsageSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5751 */;
 import Stack_Stack from "Stack/Stack" /* 6159 */;
 import FileSizeUtils from "FileSizeUtils" /* 6584 */;
 import Card from "Card" /* 7040 */;
-import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 17886 */;
+import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 17897 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -219,7 +219,7 @@ export function useDiskUsageMeasurement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

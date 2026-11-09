@@ -5,10 +5,10 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import DiscordNativeDefault from "DiscordNative" /* 4951 */;
-import ClipsDefaultSettingsUtils from "ClipsDefaultSettingsUtils" /* 16181 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 16183 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 16185 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 16186 */;
+import ClipsDefaultSettingsUtils from "ClipsDefaultSettingsUtils" /* 16191 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 16193 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 16195 */;
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 16196 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2137 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -25,7 +25,7 @@ let closure_38 = async function _migrateDefaultStorage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -266,7 +266,7 @@ map1 = new Map();
 const map2 = new Map();
 let closure_35 = [];
 let obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: { resolution: StreamSettingsConstants.ApplicationStreamResolutions.RESOLUTION_1080, frameRate: ApplicationStreamFPS.FPS_60, bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT }, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, maxAutoClips: 20, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "flexDirection", showPovClipsInGallery: true };
-obj = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationVersion: 0, clipsDefaultSettingsState: fn(16181).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE, hasAutoEnabledClipsForHardware: false, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
+obj = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationVersion: 0, clipsDefaultSettingsState: fn(16191).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE, hasAutoEnabledClipsForHardware: false, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ClipsStoreClass extends DeviceSettingsStore {
 }

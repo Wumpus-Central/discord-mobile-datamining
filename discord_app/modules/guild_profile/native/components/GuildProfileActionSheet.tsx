@@ -9,8 +9,8 @@ import BottomSheetModal from "BottomSheetModal" /* 5392 */;
 import LinearGradientDefault from "LinearGradient" /* 5715 */;
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5723 */;
 import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 9377 */;
-import GuildProfileCreateTagUpsellDefault from "GuildProfileCreateTagUpsell" /* 14966 */;
-import GuildProfileCTADefault from "GuildProfileCTA" /* 14972 */;
+import GuildProfileCreateTagUpsellDefault from "GuildProfileCreateTagUpsell" /* 14967 */;
+import GuildProfileCTADefault from "GuildProfileCTA" /* 14973 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

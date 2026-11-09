@@ -1,6 +1,6 @@
-// === Module 19160: ChannelDetailsLinkedLobby ===
+// === Module 19173: ChannelDetailsLinkedLobby ===
 
-// Module 19160 (ChannelDetailsLinkedLobby)
+// Module 19173 (ChannelDetailsLinkedLobby)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7391 */;

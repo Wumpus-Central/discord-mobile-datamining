@@ -38,7 +38,7 @@ function QuestRewardDetailsBottomSheet(quest) {
   const defaultRewardName = quest(9790).getDefaultRewardName(quest.config, stateFromStores);
   const obj3 = { direction: "vertical", spacing: memo(575).space.PX_16, style: tmp.wrapper, children: null };
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(575).space.PX_16, children: null };
-  const items3 = [closure_6(memo(14927), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [closure_6(memo(14928), { quest, height: 56, width: 56, withAnimation: true }), ];
   const obj5 = { direction: "vertical", spacing: memo(575).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj6 = { variant: "body-sm/medium", color: "text-subtle", children: null };
   let intl = quest(1113).intl;

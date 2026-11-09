@@ -1,6 +1,6 @@
-// === Module 19932: AddAvatarModal ===
+// === Module 19945: AddAvatarModal ===
 
-// Module 19932 (AddAvatarModal)
+// Module 19945 (AddAvatarModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -12,9 +12,9 @@ import NavigatorHeader from "NavigatorHeader" /* 7064 */;
 import Navigator from "Navigator" /* 7231 */;
 import RecentAvatarUtils from "RecentAvatarUtils" /* 8811 */;
 import VideoBackground from "VideoBackground" /* 8895 */;
-import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 16752 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 19930 */;
-import PresetAvatarSelect from "PresetAvatarSelect" /* 19933 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 16763 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 19943 */;
+import PresetAvatarSelect from "PresetAvatarSelect" /* 19946 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ function AddAvatarScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -71,7 +71,7 @@ function AddAvatarScreen() {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16752);
+              const obj = tmp2(16763);
               obj11.description = tmp2(8811).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(8811);
@@ -142,7 +142,7 @@ function AddAvatarScreen() {
   obj5.children = items2;
   const items3 = [closure_10(View, obj5), , ];
   const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
-  items3[1] = closure_9(selectedAvatar(19942), {
+  items3[1] = closure_9(selectedAvatar(19955), {
     avatarSource: VideoBackground.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -166,7 +166,7 @@ function AddAvatarScreen() {
   obj9.children = closure_9(native.LegacyText, obj10);
   items3[2] = closure_9(View, obj9);
   obj4.children = items3;
-  const items4 = [closure_10(View, obj4), closure_9(selectedAvatar(19933), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
+  const items4 = [closure_10(View, obj4), closure_9(selectedAvatar(19946), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
   let obj11 = { style: tmp.buttonContainer, children: null };
   let obj12 = { text: null, grow: true, onPress: null, disabled: null };
   const intl4 = util.intl;

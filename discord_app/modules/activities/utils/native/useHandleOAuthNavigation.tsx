@@ -1,6 +1,6 @@
-// === Module 19488: useHandleOAuthNavigation ===
+// === Module 19501: useHandleOAuthNavigation ===
 
-// Module 19488 (useHandleOAuthNavigation)
+// Module 19501 (useHandleOAuthNavigation)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import noop from "module_19" /* 19 */;
 

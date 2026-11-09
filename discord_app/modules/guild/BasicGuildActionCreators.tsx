@@ -1,6 +1,6 @@
-// === Module 20433: BasicGuildActionCreators ===
+// === Module 20446: BasicGuildActionCreators ===
 
-// Module 20433 (BasicGuildActionCreators)
+// Module 20446 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -23,7 +23,7 @@ let closure_8 = async function _fetchBasicGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 16948: useAvailableAgeVerificationMethods ===
+// === Module 16959: useAvailableAgeVerificationMethods ===
 
-// Module 16948 (useAvailableAgeVerificationMethods)
+// Module 16959 (useAvailableAgeVerificationMethods)
 import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 8071 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

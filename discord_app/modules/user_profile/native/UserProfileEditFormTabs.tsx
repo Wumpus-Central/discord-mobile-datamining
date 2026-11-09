@@ -1,17 +1,17 @@
-// === Module 16864: UserProfileEditFormTabs ===
+// === Module 16875: UserProfileEditFormTabs ===
 
-// Module 16864 (UserProfileEditFormTabs)
+// Module 16875 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ChatInputUtils from "ChatInputUtils" /* 5323 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7850 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8888 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9069 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15177 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15196 */;
-import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15268 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16863 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16865 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15192 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15206 */;
+import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15278 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16874 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16876 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -63,7 +63,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     num2 = 1;
   }
   [first, closure_5] = first.useState(num2);
-  arr = tmp2(15176)(userId);
+  arr = tmp2(15177)(userId);
   closure_7 = tmp8;
   let items1 = [arr];
   const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);

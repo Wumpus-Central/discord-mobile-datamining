@@ -1,6 +1,6 @@
-// === Module 18832: ForYouItemActionButtons ===
+// === Module 18845: ForYouItemActionButtons ===
 
-// Module 18832 (ForYouItemActionButtons)
+// Module 18845 (ForYouItemActionButtons)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -14,8 +14,8 @@ import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6914 
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7552 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10859 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15973 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18425 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15983 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18438 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -445,7 +445,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(15973)({ payload: closure_1(5870)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(15983)({ payload: closure_1(5870)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {
@@ -482,7 +482,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -519,7 +519,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
         closure_128_1();
         focusChatInput(closure_128_0.message_channel_id);
         navigation = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp18) {
         navigation = tmp;
         throw tmp18;

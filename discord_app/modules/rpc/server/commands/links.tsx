@@ -1,6 +1,6 @@
-// === Module 16626: links ===
+// === Module 16636: links ===
 
-// Module 16626 (links)
+// Module 16636 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5061 */;
@@ -9,12 +9,12 @@ import openUserSettings from "openUserSettings" /* 7635 */;
 import RPCErrorDefault from "RPCError" /* 9414 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11973 */;
 import RPCHelpers from "RPCHelpers" /* 11976 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 16599 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 16627 */;
-import internalDeepLinks from "internalDeepLinks" /* 16628 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 16629 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16631 */;
-import getFrameChannelIdDefault from "getFrameChannelId" /* 16634 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 16609 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 16637 */;
+import internalDeepLinks from "internalDeepLinks" /* 16638 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 16639 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16641 */;
+import getFrameChannelIdDefault from "getFrameChannelId" /* 16644 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
@@ -57,7 +57,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ const items = [, ];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16606);
+let CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -252,7 +252,7 @@ let obj3 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -367,7 +367,7 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(16606);
+CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj6 = {
   scope: null,
   handler(socket) {

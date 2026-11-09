@@ -1,6 +1,6 @@
-// === Module 17543: GuildRoleSubscriptionBenefitUtils ===
+// === Module 17554: GuildRoleSubscriptionBenefitUtils ===
 
-// Module 17543 (GuildRoleSubscriptionBenefitUtils)
+// Module 17554 (GuildRoleSubscriptionBenefitUtils)
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5086 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8674 */;
 import TextIcon2 from "TextIcon" /* 8723 */;

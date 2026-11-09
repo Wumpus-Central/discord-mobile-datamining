@@ -1,6 +1,6 @@
-// === Module 15586: TieredTenureBadgePerkCard ===
+// === Module 15596: TieredTenureBadgePerkCard ===
 
-// Module 15586 (TieredTenureBadgePerkCard)
+// Module 15596 (TieredTenureBadgePerkCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;

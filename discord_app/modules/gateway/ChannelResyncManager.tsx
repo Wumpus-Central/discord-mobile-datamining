@@ -1,12 +1,12 @@
-// === Module 19807: ChannelResyncManager ===
+// === Module 19820: ChannelResyncManager ===
 
-// Module 19807 (ChannelResyncManager)
+// Module 19820 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7870 */;
-import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 15841 */;
+import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 15851 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -247,7 +247,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -381,7 +381,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                     let obj2 = closure_2_1(1252);
                   }
                 }
-                obj = closure_2_0(15841);
+                obj = closure_2_0(15851);
               }, Math.ceil(Math.random() * closure_2_12));
             }
             tmp2 = null != closure_1_0 && id.id !== tmp;
@@ -398,7 +398,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c4 = tmp;

@@ -1,12 +1,12 @@
-// === Module 19516: FramePanelFocusedView ===
+// === Module 19529: FramePanelFocusedView ===
 
-// Module 19516 (FramePanelFocusedView)
+// Module 19529 (FramePanelFocusedView)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 11061 */;
 import FrameRenderTargetDefault from "FrameRenderTarget" /* 12437 */;
 import FrameStackLevel from "FrameStackLevel" /* 12441 */;
-import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 19019 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19496 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19513 */;
+import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 19032 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19509 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19526 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6901 */;
 

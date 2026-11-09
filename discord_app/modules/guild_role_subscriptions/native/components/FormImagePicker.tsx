@@ -1,6 +1,6 @@
-// === Module 20343: FormImagePicker ===
+// === Module 20356: FormImagePicker ===
 
-// Module 20343 (FormImagePicker)
+// Module 20356 (FormImagePicker)
 import nativeDefault from "native" /* 575 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import FastImageDefault from "FastImage" /* 5842 */;
@@ -35,7 +35,7 @@ let closure_11 = async function _pickImage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -72,7 +72,7 @@ let closure_11 = async function _pickImage() {
             closure_130_0(obj);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c4 = tmp;

@@ -1,6 +1,6 @@
-// === Module 19432: SimpleGuild ===
+// === Module 19445: SimpleGuild ===
 
-// Module 19432 (SimpleGuild)
+// Module 19445 (SimpleGuild)
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6941 */;

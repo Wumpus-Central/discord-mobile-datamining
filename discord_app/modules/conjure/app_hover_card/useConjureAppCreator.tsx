@@ -1,7 +1,7 @@
-// === Module 14651: useConjureAppCreator ===
+// === Module 14652: useConjureAppCreator ===
 
-// Module 14651 (useConjureAppCreator)
-import ImagePreload from "ImagePreload" /* 14653 */;
+// Module 14652 (useConjureAppCreator)
+import ImagePreload from "ImagePreload" /* 14654 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -50,7 +50,7 @@ export default function useConjureAppCreator(conjureProjectId, arg1, arg2) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -88,7 +88,7 @@ export default function useConjureAppCreator(conjureProjectId, arg1, arg2) {
               closure_1_7(closure_129_0);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;

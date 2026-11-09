@@ -1,6 +1,6 @@
-// === Module 14173: DoubleTapToReactActionSheet ===
+// === Module 14174: DoubleTapToReactActionSheet ===
 
-// Module 14173 (DoubleTapToReactActionSheet)
+// Module 14174 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -321,7 +321,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -361,7 +361,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp24) {
         c3 = tmp;
         throw tmp24;

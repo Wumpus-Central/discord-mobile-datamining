@@ -1,6 +1,6 @@
-// === Module 15091: shouldShowActivityTimeBar ===
+// === Module 15092: shouldShowActivityTimeBar ===
 
-// Module 15091 (shouldShowActivityTimeBar)
+// Module 15092 (shouldShowActivityTimeBar)
 import ActivityTypes from "ActivityTypes" /* 5891 */;
 import size from "module_2" /* 2 */;
 

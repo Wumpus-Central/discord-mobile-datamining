@@ -1,6 +1,6 @@
-// === Module 14034: AppLauncherOnboardingChatInputButtonAnimation ===
+// === Module 14035: AppLauncherOnboardingChatInputButtonAnimation ===
 
-// Module 14034 (AppLauncherOnboardingChatInputButtonAnimation)
+// Module 14035 (AppLauncherOnboardingChatInputButtonAnimation)
 import Discord from "Discord" /* 0 */;
 import logAppStart from "logAppStart" /* 1 */;
 import initialize from "initialize" /* 504 */;
@@ -11,7 +11,7 @@ import ButtonConstants from "ButtonConstants" /* 5764 */;
 import ClientThemesOverrides from "ClientThemesOverrides" /* 9911 */;
 import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 12568 */;
 import _mod12593 from "module_12593" /* 12593 */;
-import _mod14035 from "module_14035" /* 14035 */;
+import _mod14036 from "module_14036" /* 14036 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 
@@ -80,7 +80,7 @@ export function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj4.style = items1;
   const obj5 = { collapsable: false, style: tmp.glowLottie, source: null, autoPlay: null };
-  obj5.source = _mod14035;
+  obj5.source = _mod14036;
   obj5.autoPlay = !stateFromStores;
   const items2 = [timestampProducer(LottieAnimationViewDefault, obj5), , ];
   const obj6 = { collapsable: false, style: null };

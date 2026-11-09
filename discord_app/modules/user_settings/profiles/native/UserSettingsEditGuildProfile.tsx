@@ -1,6 +1,6 @@
-// === Module 16868: UserSettingsEditGuildProfile ===
+// === Module 16879: UserSettingsEditGuildProfile ===
 
-// Module 16868 (UserSettingsEditGuildProfile)
+// Module 16879 (UserSettingsEditGuildProfile)
 import nativeDefault from "native" /* 575 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8829 */;
 import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11548 */;
@@ -37,7 +37,7 @@ export default function UserSettingsEditGuildProfile(arg0) {
   const tmp4 = guild(7387);
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmp7 = guild(16869)();
+  const tmp7 = guild(16880)();
   guild = tmp7.guild;
   ({ resetPending: c2, handleSubmit: c3 } = tmp7);
   let obj = stateFromStores(504);
@@ -91,13 +91,13 @@ export default function UserSettingsEditGuildProfile(arg0) {
       const obj7 = { currentUser: stateFromStores, header };
       const _HermesInternal = HermesInternal;
       tmp14 = closure_7(hasUnsavedChanges, obj3);
-      items3[1] = closure_7(tmp2(16874), obj7, "" + stateFromStores.id + "-" + guild.id);
+      items3[1] = closure_7(tmp2(16885), obj7, "" + stateFromStores.id + "-" + guild.id);
       obj6.children = items3;
       return closure_9(tmp5(7387).AnalyticsLocationProvider, obj6);
     }
   }
   const obj8 = { children: null };
-  const items4 = [header, closure_7(guild(16871), {})];
+  const items4 = [header, closure_7(guild(16882), {})];
   obj8.children = items4;
   return closure_9(closure_8, obj8);
 };

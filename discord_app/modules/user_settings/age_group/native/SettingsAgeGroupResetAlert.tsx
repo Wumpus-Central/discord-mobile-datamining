@@ -1,6 +1,6 @@
-// === Module 16940: SettingsAgeGroupResetAlert ===
+// === Module 16951: SettingsAgeGroupResetAlert ===
 
-// Module 16940 (SettingsAgeGroupResetAlert)
+// Module 16951 (SettingsAgeGroupResetAlert)
 import _modDef3252 from "module_3252" /* 3252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -25,7 +25,7 @@ export default function SettingsAgeGroupResetAlert() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -65,7 +65,7 @@ export default function SettingsAgeGroupResetAlert() {
           closure_128_0.goBack();
           dependencyMap = 0;
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp29) {
         if (tmp4 === dependencyMap) {

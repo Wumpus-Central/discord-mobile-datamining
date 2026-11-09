@@ -1,12 +1,12 @@
-// === Module 15014: MediaModalOverlayFooterAction ===
+// === Module 15015: MediaModalOverlayFooterAction ===
 
-// Module 15014 (MediaModalOverlayFooterAction)
+// Module 15015 (MediaModalOverlayFooterAction)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5728 */;
 import components_Button_Button from "components/Button/Button" /* 5758 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7355 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 15007 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 15008 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

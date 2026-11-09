@@ -1,6 +1,6 @@
-// === Module 14196: ApplicationCommandLoadingItem ===
+// === Module 14197: ApplicationCommandLoadingItem ===
 
-// Module 14196 (ApplicationCommandLoadingItem)
+// Module 14197 (ApplicationCommandLoadingItem)
 import nativeDefault from "native" /* 575 */;
 import useFontScale from "useFontScale" /* 5766 */;
 import noop from "module_19" /* 19 */;

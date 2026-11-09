@@ -1,6 +1,6 @@
-// === Module 19161: ChannelDetailsTopic ===
+// === Module 19174: ChannelDetailsTopic ===
 
-// Module 19161 (ChannelDetailsTopic)
+// Module 19174 (ChannelDetailsTopic)
 import _modDef1652 from "module_1652" /* 1652 */;
 import UserUtilsDefault from "UserUtils" /* 5194 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5879 */;

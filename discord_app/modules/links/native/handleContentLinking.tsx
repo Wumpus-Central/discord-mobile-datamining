@@ -15,7 +15,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -134,7 +134,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
             }
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         if (safe) {
           const obj10 = { navigationReplace: closure_129_8, openChannel: true, skipMessageFetch, isAppStartupNavigation: closure_129_12 };

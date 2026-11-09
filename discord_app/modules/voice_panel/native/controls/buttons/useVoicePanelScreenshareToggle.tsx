@@ -1,10 +1,10 @@
-// === Module 19570: useVoicePanelScreenshareToggle ===
+// === Module 19583: useVoicePanelScreenshareToggle ===
 
-// Module 19570 (useVoicePanelScreenshareToggle)
+// Module 19583 (useVoicePanelScreenshareToggle)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useAlertStore from "useAlertStore" /* 6092 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14806 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14807 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

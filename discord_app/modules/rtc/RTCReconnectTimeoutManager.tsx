@@ -1,6 +1,6 @@
-// === Module 20000: RTCReconnectTimeoutManager ===
+// === Module 20013: RTCReconnectTimeoutManager ===
 
-// Module 20000 (RTCReconnectTimeoutManager)
+// Module 20013 (RTCReconnectTimeoutManager)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6761 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;

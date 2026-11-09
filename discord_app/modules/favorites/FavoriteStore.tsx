@@ -28,27 +28,27 @@ function initializeFromUserSettings() {
     const keys = Object.keys();
     if (keys !== undefined) {
       while (keys[tmp] !== undefined) {
-        let tmp28 = favoriteChannels[tmp7];
+        let tmp32 = favoriteChannels[tmp7];
         let sum = num4;
-        if (tmp28.type !== preloaded_user_settings.FavoriteChannelType.CATEGORY) {
+        if (tmp32.type !== preloaded_user_settings.FavoriteChannelType.CATEGORY) {
           sum = num4 + 1;
         }
         let obj5 = { id: tmp7, nickname: null, type: null, channelType: null, order: null, parentId: null };
         let nickname = null;
-        if ("" !== tmp28.nickname) {
-          nickname = tmp28.nickname;
+        if ("" !== tmp32.nickname) {
+          nickname = tmp32.nickname;
         }
         obj5.nickname = nickname;
-        ({ type: obj2.type, channelType } = tmp28);
+        ({ type: obj2.type, channelType } = tmp32);
         value = undefined;
         if (channelType != null) {
           value = channelType.value;
         }
         obj5.channelType = value;
-        obj5.order = tmp28.position;
+        obj5.order = tmp32.position;
         let parentId = null;
-        if (tmp28.parentId !== closure_7) {
-          parentId = tmp28.parentId;
+        if (tmp32.parentId !== closure_10) {
+          parentId = tmp32.parentId;
         }
         num5 = num5 + 1;
         obj5.parentId = parentId;
@@ -67,69 +67,71 @@ function initializeFromUserSettings() {
   if (value2 == null) {
     value2 = !apply.isEmpty(obj);
   }
-  flag2 = undefined;
+  let autoAddJoinedThreads;
   if (favorites != null) {
-    flag2 = favorites.autoAddJoinedThreads;
+    autoAddJoinedThreads = favorites.autoAddJoinedThreads;
   }
-  if (flag2 == null) {
-    flag2 = false;
-  }
-  flag3 = undefined;
-  if (favorites != null) {
-    if (favorites.pruneInactiveThreads != null) {
-      flag3 = iter2.value;
+  if (true !== autoAddJoinedThreads) {
+    flag2 = undefined;
+    if (favorites != null) {
+      if (favorites.pruneInactiveThreads != null) {
+        flag2 = iter2.value;
+      }
     }
+    if (flag2 == null) {
+      flag2 = true;
+    }
+    prop = undefined;
+    if (favorites != null) {
+      prop = favorites.pruneInactiveThreadsDays;
+    }
+    if (prop == null) {
+      prop = FAVORITES_PRUNE_WHEN_ARCHIVED;
+    }
+    let prop1;
+    if (favorites != null) {
+      prop1 = favorites.pruneAllFavoritedThreads;
+    }
+    const tmp21 = true === prop1 ? metroImportDefault : FAVORITES_PRUNE_SCOPE_AUTO_ADDED;
+    let flag3 = flag !== flag;
+    if (!flag3) {
+      flag3 = value2 !== value2;
+    }
+    if (!flag3) {
+      flag3 = closure_18 !== FAVORITES_AUTO_ADD_THREADS_NEVER;
+    }
+    if (!flag3) {
+      flag3 = flag2 !== flag2;
+    }
+    if (!flag3) {
+      flag3 = prop !== prop;
+    }
+    if (!flag3) {
+      flag3 = closure_21 !== tmp21;
+    }
+    if (!flag3) {
+      flag3 = !apply.isEqual(obj, obj);
+    }
+    if (flag3) {
+      closure_18 = FAVORITES_AUTO_ADD_THREADS_NEVER;
+      closure_21 = tmp21;
+      flag3 = true;
+    }
+    return flag3;
   }
-  if (flag3 == null) {
-    flag3 = true;
-  }
-  prop = undefined;
-  if (favorites != null) {
-    prop = favorites.pruneInactiveThreadsDays;
-  }
-  if (prop == null) {
-    prop = FAVORITES_PRUNE_WHEN_ARCHIVED;
-  }
-  let prop1;
-  if (favorites != null) {
-    prop1 = favorites.pruneAllFavoritedThreads;
-  }
-  const tmp18 = true === prop1 ? React4 : FAVORITES_PRUNE_SCOPE_AUTO_ADDED;
-  let flag4 = flag !== flag;
-  if (!flag4) {
-    flag4 = value2 !== value2;
-  }
-  if (!flag4) {
-    flag4 = flag2 !== flag2;
-  }
-  if (!flag4) {
-    flag4 = flag3 !== flag3;
-  }
-  if (!flag4) {
-    flag4 = prop !== prop;
-  }
-  if (!flag4) {
-    flag4 = closure_18 !== tmp18;
-  }
-  if (!flag4) {
-    flag4 = !apply.isEqual(obj, obj);
-  }
-  if (flag4) {
-    closure_18 = tmp18;
-    flag4 = true;
-  }
-  return flag4;
 }
 const createChannelRecord = fn(4993).createChannelRecord;
 const FavoritesConstants = fn(5002);
-({ FAVORITES_PRUNE_SCOPE_ALL: closure_4, FAVORITES_PRUNE_SCOPE_AUTO_ADDED } = FavoritesConstants);
+const FAVORITES_AUTO_ADD_THREADS_NEVER = FavoritesConstants.FAVORITES_AUTO_ADD_THREADS_NEVER;
+({ FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: hasOwnProperty, FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_6, FAVORITES_PRUNE_SCOPE_ALL: metroImportDefault, FAVORITES_PRUNE_SCOPE_AUTO_ADDED } = FavoritesConstants);
 const FAVORITES_PRUNE_WHEN_ARCHIVED = FavoritesConstants.FAVORITES_PRUNE_WHEN_ARCHIVED;
-let closure_7 = FavoritesConstants.FAVORITES_UNCATEGORIZED_PARENT_ID;
+let closure_10 = FavoritesConstants.FAVORITES_UNCATEGORIZED_PARENT_ID;
 const Constants = fn(1072);
-({ ChannelTypes: closure_8, FAVORITES: closure_9 } = Constants);
+({ ChannelTypes: closure_11, FAVORITES: closure_12 } = Constants);
 let value2 = false;
+let closure_18 = FAVORITES_AUTO_ADD_THREADS_NEVER;
 let prop = FAVORITES_PRUNE_WHEN_ARCHIVED;
-let closure_18 = FAVORITES_PRUNE_SCOPE_AUTO_ADDED;
+let closure_21 = FAVORITES_PRUNE_SCOPE_AUTO_ADDED;
 const Store = initializeDefault.Store;
 class FavoriteStore extends Store {
 }
@@ -155,20 +157,16 @@ Object.defineProperty(prototype, "favoriteGuildEnabled", {
   },
   set: undefined
 });
-Object.defineProperty(prototype, "autoAddJoinedThreads", {
-  get: function autoAddJoinedThreads() {
-    let tmp = flag2;
-    if (flag2) {
-      tmp = value2;
-    }
-    return tmp;
+Object.defineProperty(prototype, "autoAddThreadsMode", {
+  get: function autoAddThreadsMode() {
+    return value2 ? closure_18 : FAVORITES_AUTO_ADD_THREADS_NEVER;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "pruneInactiveThreads", {
   get: function pruneInactiveThreads() {
-    let tmp = flag3;
-    if (flag3) {
+    let tmp = flag2;
+    if (flag2) {
       tmp = value2;
     }
     return tmp;
@@ -183,7 +181,7 @@ Object.defineProperty(prototype, "pruneInactiveThreadsDays", {
 });
 Object.defineProperty(prototype, "pruneInactiveThreadsScope", {
   get: function pruneInactiveThreadsScope() {
-    return closure_18;
+    return closure_21;
   },
   set: undefined
 });

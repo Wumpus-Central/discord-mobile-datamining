@@ -1,13 +1,13 @@
-// === Module 18680: GuildsBar ===
+// === Module 18693: GuildsBar ===
 
-// Module 18680 (GuildsBar)
+// Module 18693 (GuildsBar)
 import NativeViewDefault from "NativeView" /* 7023 */;
 import FastListDefault from "FastList" /* 7304 */;
 import StartupProfilerDefault from "StartupProfiler" /* 11721 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 18559 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 18681 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 18689 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 18771 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 18572 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 18694 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 18702 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 18784 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

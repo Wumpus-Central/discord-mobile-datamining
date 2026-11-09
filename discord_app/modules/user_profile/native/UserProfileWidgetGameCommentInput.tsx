@@ -1,6 +1,6 @@
-// === Module 15217: UserProfileWidgetGameCommentInput ===
+// === Module 15227: UserProfileWidgetGameCommentInput ===
 
-// Module 15217 (UserProfileWidgetGameCommentInput)
+// Module 15227 (UserProfileWidgetGameCommentInput)
 import util from "util" /* 1113 */;
 import TextArea from "TextArea" /* 7316 */;
 import GameWidgetLimits from "GameWidgetLimits" /* 7852 */;

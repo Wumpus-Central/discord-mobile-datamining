@@ -1,6 +1,6 @@
-// === Module 18488: RedesignCategory ===
+// === Module 18501: RedesignCategory ===
 
-// Module 18488 (RedesignCategory)
+// Module 18501 (RedesignCategory)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -10,9 +10,9 @@ import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7345 */
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7424 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10921 */;
 import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 11744 */;
-import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 14636 */;
-import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 18489 */;
-import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 18490 */;
+import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 14637 */;
+import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 18502 */;
+import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 18503 */;
 import noop from "module_19" /* 19 */;
 import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7786 */;
 import CategoryCollapseStore from "CategoryCollapseStore" /* 7349 */;

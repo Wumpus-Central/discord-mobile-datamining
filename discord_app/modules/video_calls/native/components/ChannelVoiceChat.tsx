@@ -118,7 +118,7 @@ export default noop.memo(function ChannelVoice(channel) {
   obj10.children = closure_6(id(1187).Icon, { source: guild_id(11767), size: id(1187).Icon.Sizes.MEDIUM });
   const items7 = [closure_6(id(7043).PressableOpacity, obj10), ];
   const obj11 = { source: guild_id(11767), size: id(1187).Icon.Sizes.MEDIUM };
-  items7[1] = closure_6(View, { style: tmp.chatHeaderTitleContainer, children: closure_6(id(14622).ChannelTitle, { guildId: guild_id, channelId: id }) });
+  items7[1] = closure_6(View, { style: tmp.chatHeaderTitleContainer, children: closure_6(id(14623).ChannelTitle, { guildId: guild_id, channelId: id }) });
   obj9.children = items7;
   items3[4] = closure_7(View, obj9);
   obj5.children = items3;

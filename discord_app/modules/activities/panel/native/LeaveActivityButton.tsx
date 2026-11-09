@@ -1,6 +1,6 @@
-// === Module 19359: LeaveActivityButton ===
+// === Module 19372: LeaveActivityButton ===
 
-// Module 19359 (LeaveActivityButton)
+// Module 19372 (LeaveActivityButton)
 import util from "util" /* 1113 */;
 import components_Button_Button from "components/Button/Button" /* 5758 */;
 import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11065 */;

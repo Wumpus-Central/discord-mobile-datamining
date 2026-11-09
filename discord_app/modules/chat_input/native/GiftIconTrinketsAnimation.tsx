@@ -1,6 +1,6 @@
-// === Module 14041: GiftIconTrinketsAnimation ===
+// === Module 14042: GiftIconTrinketsAnimation ===
 
-// Module 14041 (GiftIconTrinketsAnimation)
+// Module 14042 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5724 */;
@@ -11,7 +11,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5141 */;
 const PlatformUtils = APNGPlayer(1377);
 const StringUtils = APNGPlayer(2150);
 const APNGPlayer2 = APNGPlayer(9588);
-const DynamicRive = APNGPlayer(14042);
+const DynamicRive = APNGPlayer(14043);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

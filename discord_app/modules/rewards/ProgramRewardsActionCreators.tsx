@@ -1,12 +1,12 @@
-// === Module 17218: ProgramRewardsActionCreators ===
+// === Module 17229: ProgramRewardsActionCreators ===
 
-// Module 17218 (ProgramRewardsActionCreators)
+// Module 17229 (ProgramRewardsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ProgramRewardsUtils from "ProgramRewardsUtils" /* 15916 */;
-import getShouldFetchProgramRewards from "getShouldFetchProgramRewards" /* 17215 */;
+import ProgramRewardsUtils from "ProgramRewardsUtils" /* 15926 */;
+import getShouldFetchProgramRewards from "getShouldFetchProgramRewards" /* 17226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ProgramRewardsStore from "ProgramRewardsStore" /* 15915 */;
+import ProgramRewardsStore from "ProgramRewardsStore" /* 15925 */;
 
 require = fn;
 function fetchProgramRewards() {
@@ -56,7 +56,7 @@ let closure_8 = async function _conditionallyFetchProgramRewards() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_8 = async function _conditionallyFetchProgramRewards() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;
@@ -105,7 +105,7 @@ let closure_9 = async function _conditionallyFetchProgramRewardsIgnoreCacheTTL()
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -139,7 +139,7 @@ let closure_9 = async function _conditionallyFetchProgramRewardsIgnoreCacheTTL()
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c0 = tmp;
       throw tmp10;

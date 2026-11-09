@@ -1,13 +1,13 @@
-// === Module 18427: useSuggestedFriends ===
+// === Module 18440: useSuggestedFriends ===
 
-// Module 18427 (useSuggestedFriends)
+// Module 18440 (useSuggestedFriends)
 import applyDefault from "apply" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FriendSuggestionStore from "FriendSuggestionStore" /* 7880 */;
 
 const require = fn;
-const SuggestedFriendSource = fn(14506).SuggestedFriendSource;
+const SuggestedFriendSource = fn(14507).SuggestedFriendSource;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 

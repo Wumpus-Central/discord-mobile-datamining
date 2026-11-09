@@ -1,6 +1,6 @@
-// === Module 19594: VoicePanelDockControls ===
+// === Module 19607: VoicePanelDockControls ===
 
-// Module 19594 (VoicePanelDockControls)
+// Module 19607 (VoicePanelDockControls)
 import native from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HapticUtils from "HapticUtils" /* 5376 */;
@@ -9,10 +9,10 @@ import IconButton from "IconButton" /* 8098 */;
 import _modDef9956 from "module_9956" /* 9956 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
 import VoiceActionUtils from "VoiceActionUtils" /* 12136 */;
-import _modDef14345 from "module_14345" /* 14345 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19592 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 19595 */;
-import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 19596 */;
+import _modDef14346 from "module_14346" /* 14346 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19605 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 19608 */;
+import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 19609 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import VoicePanelStore from "VoicePanelStore" /* 6930 */;
@@ -86,7 +86,7 @@ function DockSoundboardButton(arg0) {
   const obj = { accessibilityLabel: null, variant: "secondary", size: "sm", icon: null, onPress: null, disabled: null, accessibilityHint: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef14345;
+  obj.icon = _modDef14346;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;

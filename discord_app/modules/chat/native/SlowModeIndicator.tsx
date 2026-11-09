@@ -1,6 +1,6 @@
-// === Module 13981: SlowModeIndicator ===
+// === Module 13982: SlowModeIndicator ===
 
-// Module 13981 (SlowModeIndicator)
+// Module 13982 (SlowModeIndicator)
 import nativeDefault from "native" /* 575 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
 import SlowmodeUtils from "SlowmodeUtils" /* 7907 */;

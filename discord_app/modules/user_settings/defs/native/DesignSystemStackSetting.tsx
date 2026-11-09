@@ -1,6 +1,6 @@
-// === Module 18115: DesignSystemStackSetting ===
+// === Module 18128: DesignSystemStackSetting ===
 
-// Module 18115 (DesignSystemStackSetting)
+// Module 18128 (DesignSystemStackSetting)
 import Constants from "Constants" /* 1072 */;
 import SettingsConstants from "SettingsConstants" /* 8503 */;
 import SettingBuilders from "SettingBuilders" /* 11685 */;

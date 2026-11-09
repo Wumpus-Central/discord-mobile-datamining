@@ -1,6 +1,6 @@
-// === Module 19707: VoicePanelDisconnectCancelButton ===
+// === Module 19720: VoicePanelDisconnectCancelButton ===
 
-// Module 19707 (VoicePanelDisconnectCancelButton)
+// Module 19720 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 575 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5888 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6761 */;
@@ -10,7 +10,7 @@ import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /*
 import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11065 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
 import shouldShowEndStageModalDefault from "shouldShowEndStageModal" /* 12048 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19698 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19711 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
@@ -153,7 +153,7 @@ export default function DisconnectCancelButton(props) {
   if (first === constants.ACTIVITY) {
     PhoneHangUpIcon = tmp8(12046).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(19677).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(19690).ScreenXIcon;
   } else {
     PhoneHangUpIcon = tmp8(9955).PhoneHangUpIcon;
   }

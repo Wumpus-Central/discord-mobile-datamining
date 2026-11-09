@@ -1,6 +1,6 @@
-// === Module 19270: ChannelSettingsPermissionsOverview ===
+// === Module 19283: ChannelSettingsPermissionsOverview ===
 
-// Module 19270 (ChannelSettingsPermissionsOverview)
+// Module 19283 (ChannelSettingsPermissionsOverview)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -10,8 +10,8 @@ import TableRow from "TableRow" /* 7038 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
 import RoleLabel from "RoleLabel" /* 10352 */;
 import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10938 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17615 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19271 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17626 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19284 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -52,7 +52,7 @@ function ChannelPermissionSyncModule(channel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -93,7 +93,7 @@ function ChannelPermissionSyncModule(channel) {
               const obj3 = category(12);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;

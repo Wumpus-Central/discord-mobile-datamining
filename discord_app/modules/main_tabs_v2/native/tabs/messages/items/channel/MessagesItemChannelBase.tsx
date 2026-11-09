@@ -1,6 +1,6 @@
-// === Module 18413: MessagesItemChannelBase ===
+// === Module 18426: MessagesItemChannelBase ===
 
-// Module 18413 (MessagesItemChannelBase)
+// Module 18426 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 575 */;
 import transitionToChannel from "transitionToChannel" /* 5885 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;

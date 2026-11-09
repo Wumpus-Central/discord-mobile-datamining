@@ -1,11 +1,11 @@
-// === Module 14499: ContactSyncLandingOnboardingRedesign ===
+// === Module 14500: ContactSyncLandingOnboardingRedesign ===
 
-// Module 14499 (ContactSyncLandingOnboardingRedesign)
+// Module 14500 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5842 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14492 */;
-import _modDef14500 from "module_14500" /* 14500 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 14501 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14493 */;
+import _modDef14501 from "module_14501" /* 14501 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 14502 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -82,7 +82,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
             closure_128_0();
           }
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         c2 = tmp;
@@ -90,7 +90,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef14500 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef14501 };
   const items1 = [closure_7(FastImageDefault, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/semibold", children: null };
   const intl = onNext(1113).intl;

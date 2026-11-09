@@ -1,11 +1,11 @@
-// === Module 19872: HolidayEventsManager ===
+// === Module 19885: HolidayEventsManager ===
 
-// Module 19872 (HolidayEventsManager)
+// Module 19885 (HolidayEventsManager)
 import getSoundsForPackDefault from "getSoundsForPack" /* 11163 */;
-import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 19873 */;
-import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 19877 */;
-import SoundpackActions from "SoundpackActions" /* 19878 */;
-import setIncomingRingtone from "setIncomingRingtone" /* 19879 */;
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 19886 */;
+import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 19890 */;
+import SoundpackActions from "SoundpackActions" /* 19891 */;
+import setIncomingRingtone from "setIncomingRingtone" /* 19892 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import SoundpackStore from "SoundpackStore" /* 11161 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

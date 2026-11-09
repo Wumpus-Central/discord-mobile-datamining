@@ -1,6 +1,6 @@
-// === Module 18937: NewContentPill ===
+// === Module 18950: NewContentPill ===
 
-// Module 18937 (NewContentPill)
+// Module 18950 (NewContentPill)
 import nativeDefault from "native" /* 575 */;
 import useThemeDefault from "useTheme" /* 5369 */;
 import GuildIcon from "GuildIcon" /* 7020 */;

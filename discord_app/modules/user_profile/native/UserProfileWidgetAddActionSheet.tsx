@@ -1,17 +1,22 @@
-// === Module 15191: UserProfileWidgetAddActionSheet ===
+// === Module 15201: UserProfileWidgetAddActionSheet ===
 
-// Module 15191 (UserProfileWidgetAddActionSheet)
+// Module 15201 (UserProfileWidgetAddActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import _modDef4026 from "module_4026" /* 4026 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
+import BottomSheetModal from "BottomSheetModal" /* 5392 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9767 */;
-import UserProfileWidgetOptionAddButtonDefault from "UserProfileWidgetOptionAddButton" /* 15178 */;
-import useAddProfileWidgetDefault from "useAddProfileWidget" /* 15187 */;
-import ConjureCustomWidget from "ConjureCustomWidget" /* 15188 */;
-import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton" /* 15189 */;
-import useStableAddableWidgetsDefault from "useStableAddableWidgets" /* 15192 */;
-import UserProfileAddableWidgetCategories from "UserProfileAddableWidgetCategories" /* 15193 */;
+import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers" /* 15180 */;
+import turnOnConjureServerWidgetDefault from "turnOnConjureServerWidget" /* 15189 */;
+import UserProfileWidgetOptionAddButtonDefault from "UserProfileWidgetOptionAddButton" /* 15193 */;
+import useAddProfileWidgetDefault from "useAddProfileWidget" /* 15197 */;
+import ConjureCustomWidget from "ConjureCustomWidget" /* 15198 */;
+import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton" /* 15199 */;
+import useStableAddableWidgetsDefault from "useStableAddableWidgets" /* 15202 */;
+import UserProfileAddableWidgetCategories from "UserProfileAddableWidgetCategories" /* 15203 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,13 +32,17 @@ function WidgetCategoryEmptyState(tabName) {
   obj.children = timestampProducer(Text_Text.Text, obj2);
   return timestampProducer(View, obj);
 }
-function WidgetOptionsList(widgets) {
-  widgets = widgets.widgets;
-  _require = useAddProfileWidgetDefault();
-  let obj = { contentContainerStyle: null, children: null };
+function WidgetOptionsScrollView(children) {
+  const obj = { contentContainerStyle: null, children: children.children };
   items = [closure_9().list, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj.contentContainerStyle = items;
-  const items1 = [
+  return timestampProducer(BottomSheetModal.BottomSheetScrollView, obj);
+}
+function WidgetOptionsList(widgets) {
+  widgets = widgets.widgets;
+  closure_0 = useAddProfileWidgetDefault();
+  let obj = { children: null };
+  items = [
     widgets.map((widget) => {
       const obj = {
         widget,
@@ -46,8 +55,8 @@ function WidgetOptionsList(widgets) {
     }),
     widgets.children
   ];
-  obj.children = items1;
-  return closure_7(require("BottomSheetModal").BottomSheetScrollView, obj);
+  obj.children = items;
+  return closure_7(WidgetOptionsScrollView, obj);
 }
 function InterestsOptionsPage(widgets) {
   widgets = widgets.widgets;
@@ -78,6 +87,47 @@ function GameStatsOptionsPage(widgets) {
   }
   return tmp4;
 }
+function hideSheet() {
+  ActionSheetActionCreatorsDefault.hideActionSheet("UserProfileWidgetAddActionSheet");
+}
+function ServerWidgetOptionRow(widget) {
+  widget = widget.widget;
+  const getOrFetchApplication = widget(7391).useGetOrFetchApplication(widget.applicationId);
+  let str;
+  if (getOrFetchApplication != null) {
+    str = getOrFetchApplication.name;
+  }
+  if (str == null) {
+    str = "";
+  }
+  const obj2 = { icon: null, label: null, subLabel: null, onPress: null };
+  const obj = widget(7391);
+  obj2.icon = closure_6(widget(7038).TableRow.Icon, { IconComponent: widget(11634).CirclePlusIcon });
+  obj2.label = str;
+  const intl = tmp(1113).intl;
+  obj2.subLabel = intl.formatToPlainString(_modDef4026.ZZywee, { applicationName: str });
+  obj2.onPress = function onPress() {
+    return turnOnConjureServerWidgetDefault(widget.applicationId, hideSheet);
+  };
+  return closure_6(widget(7038).TableRow, obj2);
+}
+function ServerWidgetsOptionsPage(offers) {
+  offers = offers.offers;
+  if (0 === offers.length) {
+    const obj2 = { tabName: tmp };
+    let tmp4 = timestampProducer(WidgetCategoryEmptyState, obj2);
+  } else {
+    const obj = {
+      children: offers.map((widgets) => {
+          widgets = widgets.widgets;
+          ({ guildId, guildName } = widgets);
+          return closure_1_6(require("TableRowGroup").TableRowGroup, { title: guildName, hasIcons: true, children: widgets.map((widget) => closure_1_6(closure_1_16, { widget }, widget.getUniqueKey())) }, guildId);
+        })
+    };
+    tmp4 = timestampProducer(WidgetOptionsScrollView, obj);
+  }
+  return tmp4;
+}
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -99,34 +149,56 @@ export default function UserProfileWidgetAddActionSheet() {
   const tmp = closure_9();
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   _require = tmp2[1];
-  const tmp3 = useStableAddableWidgetsDefault();
-  importDefault = tmp3;
-  items = [tmp3];
+  const tmp5 = useStableAddableWidgetsDefault();
+  importDefault = tmp5;
+  items = [tmp5];
   const memo = noop.useMemo(() => UserProfileAddableWidgetCategories.partitionAddableWidgets(closure_1), items);
   ({ interestsWidgets, applicationWidgets } = memo);
+  const arr2 = useConjureServerWidgetOffersDefault();
+  const tmp7 = _slicedToArray(noop.useState(false), 2);
+  const first = tmp7[0];
+  let tmp9 = arr2.length > 0;
+  if (tmp9) {
+    tmp9 = !first;
+  }
+  if (tmp9) {
+    tmp7[1](true);
+  }
   const intl = require("util").intl;
   const stringResult = intl.string(require("util").t.NpchGq);
   const intl2 = require("util").intl;
   const stringResult1 = intl2.string(require("util").t.EKR8Ps);
-  const obj2 = { pageWidth: tmp2[0], items: null };
-  const obj = require("SegmentedControlState");
+  const intl3 = require("util").intl;
+  const stringResult2 = intl3.string(_modDef4026.OUrOHL);
+  const obj3 = { pageWidth: tmp2[0], items: null };
+  const obj2 = require("SegmentedControlState");
   const items1 = [{ id: "interests", label: stringResult, page: closure_6(InterestsOptionsPage, { widgets: interestsWidgets, tabName: stringResult }) }, ];
-  const obj3 = { id: "interests", label: stringResult, page: closure_6(InterestsOptionsPage, { widgets: interestsWidgets, tabName: stringResult }) };
+  const obj4 = { id: "interests", label: stringResult, page: closure_6(InterestsOptionsPage, { widgets: interestsWidgets, tabName: stringResult }) };
   items1[1] = { id: "gameStats", label: stringResult1, page: closure_6(GameStatsOptionsPage, { widgets: applicationWidgets, tabName: stringResult1 }) };
-  obj2.items = items1;
-  const segmentedControlState = obj.useSegmentedControlState(obj2);
+  if (first) {
+    const obj6 = { id: "fromYourServers", label: stringResult2, page: null };
+    const obj7 = { offers: arr2, tabName: stringResult2 };
+    obj6.page = closure_6(ServerWidgetsOptionsPage, obj7);
+    const items2 = [obj6];
+    let items3 = items2;
+  } else {
+    items3 = [];
+  }
+  HermesBuiltin.arraySpread(items3, 2);
+  obj3.items = items1;
+  const segmentedControlState = obj2.useSegmentedControlState(obj3);
   const callback = noop.useCallback((nativeEvent) => {
     closure_0(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const obj5 = { header: null, scrollable: true, startExpanded: true, children: null };
-  const obj6 = { title: null };
-  const intl3 = require("util").intl;
-  obj6.title = intl3.string(require("util").t["grUgR+"]);
-  obj5.header = closure_6(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj6);
-  const obj7 = { style: tmp.container, onLayout: callback, children: null };
-  const obj4 = { id: "gameStats", label: stringResult1, page: closure_6(GameStatsOptionsPage, { widgets: applicationWidgets, tabName: stringResult1 }) };
-  const items2 = [closure_6(View, { style: tmp.tabs, children: closure_6(require("Tabs/Tabs").Tabs, { state: segmentedControlState }) }), closure_6(require("SegmentedControlPages").SegmentedControlPages, { state: segmentedControlState })];
-  obj7.children = items2;
-  obj5.children = closure_7(View, obj7);
-  return closure_6(require("ActionSheet").ActionSheet, obj5);
+  const obj8 = { header: null, scrollable: true, startExpanded: true, children: null };
+  const obj9 = { title: null };
+  const intl4 = tmp11(1113).intl;
+  obj9.title = intl4.string(require("util").t["grUgR+"]);
+  obj8.header = closure_6(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj9);
+  const obj10 = { style: tmp.container, onLayout: callback, children: null };
+  const obj5 = { id: "gameStats", label: stringResult1, page: closure_6(GameStatsOptionsPage, { widgets: applicationWidgets, tabName: stringResult1 }) };
+  const items4 = [closure_6(View, { style: tmp.tabs, children: closure_6(require("Tabs/Tabs").Tabs, { state: segmentedControlState }) }), closure_6(require("SegmentedControlPages").SegmentedControlPages, { state: segmentedControlState })];
+  obj10.children = items4;
+  obj8.children = closure_7(View, obj10);
+  return closure_6(require("ActionSheet").ActionSheet, obj8);
 };

@@ -1,6 +1,6 @@
-// === Module 18567: GuildLiveChannelNotice ===
+// === Module 18580: GuildLiveChannelNotice ===
 
-// Module 18567 (GuildLiveChannelNotice)
+// Module 18580 (GuildLiveChannelNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -89,7 +89,7 @@ function UserSummaryRow(arg0) {
       ({ badge: arr3[0], audienceBadge: arr3[1] } = tmp);
       obj3.style = items2;
       let obj4 = { size: "custom", style: max(11176).makeSizeStyle(14) };
-      const items3 = [closure_13(max(14346).HeadphonesIcon, obj4), ];
+      const items3 = [closure_13(max(14347).HeadphonesIcon, obj4), ];
       let obj6 = { variant: "body-xs/semibold", style: { marginLeft: 4 }, maxFontSizeMultiplier: 1, children: audienceCount };
       items3[1] = closure_13(max(5751).Text, obj6);
       obj3.children = items3;
@@ -390,8 +390,8 @@ export default noop.memo(function GuildLiveChannelNotice(guild) {
   let activeEventOrStageInstanceChannel;
   const tmp = closure_29();
   const tmp2 = activeEventOrStageInstanceChannel;
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(18566).useActiveEventOrStageInstanceChannel(guild.id);
-  let obj = activeEventOrStageInstanceChannel(18566);
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(18579).useActiveEventOrStageInstanceChannel(guild.id);
+  let obj = activeEventOrStageInstanceChannel(18579);
   const guildActiveEvent = activeEventOrStageInstanceChannel(9170).useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(9170);
   items = [StageInstanceStore];

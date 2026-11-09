@@ -1,11 +1,11 @@
-// === Module 14238: EmojiSuggestionBarSmall ===
+// === Module 14239: EmojiSuggestionBarSmall ===
 
-// Module 14238 (EmojiSuggestionBarSmall)
+// Module 14239 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import EmojiPickerListRow from "EmojiPickerListRow" /* 10147 */;
 import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10171 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 14223 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 14224 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 13638: ForwardPreview ===
+// === Module 13639: ForwardPreview ===
 
-// Module 13638 (ForwardPreview)
+// Module 13639 (ForwardPreview)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -16,9 +16,9 @@ import ClipView from "ClipView" /* 9593 */;
 import ChatItemDefault from "ChatItem" /* 10007 */;
 import AttachmentIcon2 from "AttachmentIcon" /* 10654 */;
 import ImagesIcon2 from "ImagesIcon" /* 13017 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13639 */;
-import MosaicMediaType from "MosaicMediaType" /* 13640 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13642 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13640 */;
+import MosaicMediaType from "MosaicMediaType" /* 13641 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13643 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;

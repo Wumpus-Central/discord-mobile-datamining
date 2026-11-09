@@ -1,6 +1,6 @@
-// === Module 18770: useGuildsBarSelectedGuildScroller ===
+// === Module 18783: useGuildsBarSelectedGuildScroller ===
 
-// Module 18770 (useGuildsBarSelectedGuildScroller)
+// Module 18783 (useGuildsBarSelectedGuildScroller)
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
 

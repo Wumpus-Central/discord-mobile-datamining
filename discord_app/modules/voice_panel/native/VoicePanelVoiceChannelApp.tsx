@@ -1,14 +1,14 @@
-// === Module 19659: VoicePanelVoiceChannelApp ===
+// === Module 19672: VoicePanelVoiceChannelApp ===
 
-// Module 19659 (VoicePanelVoiceChannelApp)
+// Module 19672 (VoicePanelVoiceChannelApp)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 2020 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19509 */;
-import useControlsLockDefault from "useControlsLock" /* 19564 */;
-import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 19618 */;
-import VoiceChannelAppSurfaceDefault from "VoiceChannelAppSurface" /* 19661 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19522 */;
+import useControlsLockDefault from "useControlsLock" /* 19577 */;
+import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 19631 */;
+import VoiceChannelAppSurfaceDefault from "VoiceChannelAppSurface" /* 19674 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
 import VoicePanelStore from "VoicePanelStore" /* 6930 */;

@@ -1,9 +1,9 @@
-// === Module 18821: NotificationCenterPermissionNudge ===
+// === Module 18834: NotificationCenterPermissionNudge ===
 
-// Module 18821 (NotificationCenterPermissionNudge)
+// Module 18834 (NotificationCenterPermissionNudge)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 17787 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 17798 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -34,8 +34,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   const intl3 = onDismiss(1113).intl;
   obj9.text = intl3.string(onDismiss(1113).t.a4bgO0);
   obj9.onPress = function handlePress() {
-    const pushNotificationPermission = onDismiss(14208).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
-    const obj = onDismiss(14208);
+    const pushNotificationPermission = onDismiss(14209).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
+    const obj = onDismiss(14209);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
   };
   obj8.children = closure_14(onDismiss(5758).Button, obj9);
@@ -65,7 +65,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(4986).ContentDismissActionType;
-const NotificationPermissionConstants = fn(14207);
+const NotificationPermissionConstants = fn(14208);
 ({ EventActionType: closure_10, EventActionLocation: closure_11, NotificationNudgeAnalyticsAction: closure_12, NotificationNudgeSurface: map1 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

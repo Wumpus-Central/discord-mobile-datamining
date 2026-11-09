@@ -1,15 +1,15 @@
-// === Module 14450: ChatPlaceholder ===
+// === Module 14451: ChatPlaceholder ===
 
-// Module 14450 (ChatPlaceholder)
+// Module 14451 (ChatPlaceholder)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5735 */;
 import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7017 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 14451 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 14452 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 14453 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 14452 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 14453 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 14454 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

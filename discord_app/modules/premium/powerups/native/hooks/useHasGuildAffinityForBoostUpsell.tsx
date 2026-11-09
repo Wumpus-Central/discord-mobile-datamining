@@ -1,7 +1,7 @@
-// === Module 14316: useHasGuildAffinityForBoostUpsell ===
+// === Module 14317: useHasGuildAffinityForBoostUpsell ===
 
-// Module 14316 (useHasGuildAffinityForBoostUpsell)
-import hasGuildAffinityForBoostUpsellDefault from "hasGuildAffinityForBoostUpsell" /* 14317 */;
+// Module 14317 (useHasGuildAffinityForBoostUpsell)
+import hasGuildAffinityForBoostUpsellDefault from "hasGuildAffinityForBoostUpsell" /* 14318 */;
 import ConsentStore from "ConsentStore" /* 6797 */;
 import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8990 */;
 

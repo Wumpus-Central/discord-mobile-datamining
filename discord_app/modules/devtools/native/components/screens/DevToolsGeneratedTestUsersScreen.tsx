@@ -1,17 +1,17 @@
-// === Module 17902: DevToolsGeneratedTestUsersScreen ===
+// === Module 17911: DevToolsGeneratedTestUsersScreen ===
 
-// Module 17902 (DevToolsGeneratedTestUsersScreen)
+// Module 17911 (DevToolsGeneratedTestUsersScreen)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5735 */;
 import components_Button_Button from "components/Button/Button" /* 5758 */;
 import Stack_Stack from "Stack/Stack" /* 6159 */;
 import TextInput from "TextInput" /* 7148 */;
-import GeneratedTestUserActionCreators from "GeneratedTestUserActionCreators" /* 17926 */;
+import GeneratedTestUserActionCreators from "GeneratedTestUserActionCreators" /* 17935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GeneratedTestUsersStore from "GeneratedTestUsersStore" /* 17903 */;
+import GeneratedTestUsersStore from "GeneratedTestUsersStore" /* 17912 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -38,7 +38,7 @@ function PoolIdInput(onSubmit) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -165,7 +165,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-let items = [fn(12286).UserIcon, fn(11421).ShieldIcon, fn(13596).GiftIcon, fn(17904).AchievementsIcon, fn(13597).PiggyBankIcon, fn(17906).TreehouseIcon, fn(12093).SpeedometerIcon, fn(17908).CompassIcon, fn(15963).SignPostIcon, fn(17910).CarIcon, fn(17912).TrainIcon, fn(17914).TeacupIcon, fn(17916).InventoryIcon, fn(10199).FoodIcon, fn(17918).BurgerIcon, fn(17920).MagicDoorIcon, fn(17922).PawPrintIcon, fn(17924).RecordPlayerIcon, fn(7633).SettingsIcon];
+let items = [fn(12286).UserIcon, fn(11421).ShieldIcon, fn(13597).GiftIcon, fn(17913).AchievementsIcon, fn(13598).PiggyBankIcon, fn(17915).TreehouseIcon, fn(12093).SpeedometerIcon, fn(17917).CompassIcon, fn(15973).SignPostIcon, fn(17919).CarIcon, fn(17921).TrainIcon, fn(17923).TeacupIcon, fn(17925).InventoryIcon, fn(10199).FoodIcon, fn(17927).BurgerIcon, fn(17929).MagicDoorIcon, fn(17931).PawPrintIcon, fn(17933).RecordPlayerIcon, fn(7633).SettingsIcon];
 const createStyles = fn(5140);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, inputContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -197,7 +197,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -225,7 +225,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c2 = tmp;

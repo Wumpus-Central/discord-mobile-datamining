@@ -400,7 +400,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     const items19 = [, ];
     ({ headerImageContainer: arr20[0], headerImage: arr20[1] } = tmp13);
     obj26.style = items19;
-    obj26.source = tmp4(14693);
+    obj26.source = tmp4(14694);
     items17[2] = c12(tmp4(5842), obj26);
     const obj27 = { style: null };
     const items20 = [, ];
@@ -511,7 +511,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result8 = tmp4(10748);
       }
     } else {
-      const obj43 = { style: tmp13.avatar, guildId: "r", size: "BottomSheet", user: "useAnimatedReaction::OnSnapPointChange" };
+      const obj43 = { style: tmp13.avatar, guildId: "r", size: "(function parse360_Pnpm_ColorsTs5(str){const int=Number.parseFloat(str);return(int%360+360)%360/360;})", user: "(function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;})" };
       const AvatarSizes = tmp(1187).AvatarSizes;
       obj43.size = tmp75Result ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj43.user = recipientUser;

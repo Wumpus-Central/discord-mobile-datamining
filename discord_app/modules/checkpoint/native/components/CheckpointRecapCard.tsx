@@ -1,18 +1,18 @@
-// === Module 13916: CheckpointRecapCard ===
+// === Module 13917: CheckpointRecapCard ===
 
-// Module 13916 (CheckpointRecapCard)
+// Module 13917 (CheckpointRecapCard)
 import nativeDefault from "native" /* 575 */;
 import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6565 */;
-import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 13674 */;
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 13697 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13880 */;
+import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 13675 */;
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 13698 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13881 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const rect = { size: 240, top: nativeDefault.space.PX_16, left: -20 };
-const CheckpointStatNumber = fn(13880);
+const CheckpointStatNumber = fn(13881);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
 const createStyles = fn(5140);
 let obj = { year: null };

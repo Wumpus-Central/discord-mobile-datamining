@@ -1,6 +1,6 @@
-// === Module 17357: OrbsArcadeRewardRing ===
+// === Module 17368: OrbsArcadeRewardRing ===
 
-// Module 17357 (OrbsArcadeRewardRing)
+// Module 17368 (OrbsArcadeRewardRing)
 import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 

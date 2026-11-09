@@ -1,6 +1,6 @@
-// === Module 19673: VoicePanelPIPPushToTalkOverlay ===
+// === Module 19686: VoicePanelPIPPushToTalkOverlay ===
 
-// Module 19673 (VoicePanelPIPPushToTalkOverlay)
+// Module 19686 (VoicePanelPIPPushToTalkOverlay)
 import nativeDefault from "native" /* 575 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
@@ -13,7 +13,7 @@ import module_1652_mod from "module_1652" /* 1652 */;
 
 const require = globalThis.__r;
 
-const _modDef19674 = tmp9(19674);
+const _modDef19687 = tmp9(19687);
 require = fn;
 const PUSH_TO_TALK_PIP_PHYSICS = fn(11363).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
@@ -222,7 +222,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   const items11 = [tmp4.iconContainer, animatedStyle];
   obj8.style = items11;
   const tmpResult2 = require("module_1652");
-  obj8.children = closure_7(closure_11, { style: animatedStyle1, size: require("native").Icon.Sizes.SMALL_20, source: _modDef19674, disableColor: true });
+  obj8.children = closure_7(closure_11, { style: animatedStyle1, size: require("native").Icon.Sizes.SMALL_20, source: _modDef19687, disableColor: true });
   obj7.children = closure_7(NativeView, obj8);
   items10[1] = closure_7(require("LegacyBaseButton").GestureDetector, obj7);
   obj5.children = items10;

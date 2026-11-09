@@ -1,6 +1,6 @@
-// === Module 13503: GuildEnableCommunicationAlert ===
+// === Module 13504: GuildEnableCommunicationAlert ===
 
-// Module 13503 (GuildEnableCommunicationAlert)
+// Module 13504 (GuildEnableCommunicationAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import CountDownDefault from "CountDown" /* 10270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -36,7 +36,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -52,7 +52,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(13502).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(13503).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -68,7 +68,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           obj7.text = intl.string(tmp4(1113).t["/Mmbfv"]);
           v1(5837).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

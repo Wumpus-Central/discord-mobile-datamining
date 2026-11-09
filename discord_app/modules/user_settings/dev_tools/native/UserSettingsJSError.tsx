@@ -1,6 +1,6 @@
-// === Module 18002: UserSettingsJSError ===
+// === Module 18011: UserSettingsJSError ===
 
-// Module 18002 (UserSettingsJSError)
+// Module 18011 (UserSettingsJSError)
 import Text_Text from "Text/Text" /* 5751 */;
 import noop from "module_19" /* 19 */;
 

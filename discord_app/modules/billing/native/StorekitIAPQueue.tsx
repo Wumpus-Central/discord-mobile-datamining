@@ -1,6 +1,6 @@
-// === Module 14721: StorekitIAPQueue ===
+// === Module 14722: StorekitIAPQueue ===
 
-// Module 14721 (StorekitIAPQueue)
+// Module 14722 (StorekitIAPQueue)
 import utils_PriceUtils from "utils/PriceUtils" /* 7478 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -139,7 +139,7 @@ prototype["processQueue"] = function processQueue() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

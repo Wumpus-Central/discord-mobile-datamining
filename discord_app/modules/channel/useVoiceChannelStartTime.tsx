@@ -1,6 +1,6 @@
-// === Module 18615: useVoiceChannelStartTime ===
+// === Module 18628: useVoiceChannelStartTime ===
 
-// Module 18615 (useVoiceChannelStartTime)
+// Module 18628 (useVoiceChannelStartTime)
 import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11692 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6623 */;

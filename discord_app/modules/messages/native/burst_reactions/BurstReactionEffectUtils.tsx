@@ -27,7 +27,7 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -195,7 +195,7 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -332,7 +332,7 @@ export function useBurstReactionAnimationSource(channelId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -417,7 +417,7 @@ export function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -463,7 +463,7 @@ export function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;

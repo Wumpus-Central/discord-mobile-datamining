@@ -1,6 +1,6 @@
-// === Module 16637: providers ===
+// === Module 16647: providers ===
 
-// Module 16637 (providers)
+// Module 16647 (providers)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7408 */;
@@ -161,7 +161,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

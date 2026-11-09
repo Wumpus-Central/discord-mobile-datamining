@@ -1,6 +1,6 @@
-// === Module 19888: FileUploadActionComponent ===
+// === Module 19901: FileUploadActionComponent ===
 
-// Module 19888 (FileUploadActionComponent)
+// Module 19901 (FileUploadActionComponent)
 import util from "util" /* 1113 */;
 import InteractionComponentUtils from "InteractionComponentUtils" /* 6198 */;
 import FileSizeUtils from "FileSizeUtils" /* 6584 */;
@@ -136,7 +136,7 @@ export default function FileUploadActionComponent(maxValues) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -172,7 +172,7 @@ export default function FileUploadActionComponent(maxValues) {
               }
             }
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp5) {
           let v1 = 0;

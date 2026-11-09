@@ -1,14 +1,14 @@
-// === Module 15431: InAppReportsWidgetPreviewElement ===
+// === Module 15441: InAppReportsWidgetPreviewElement ===
 
-// Module 15431 (InAppReportsWidgetPreviewElement)
+// Module 15441 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5751 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7850 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7854 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8888 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 15196 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15227 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 15206 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15237 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

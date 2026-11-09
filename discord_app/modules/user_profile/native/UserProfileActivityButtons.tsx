@@ -1,6 +1,6 @@
-// === Module 15122: UserProfileActivityButtons ===
+// === Module 15123: UserProfileActivityButtons ===
 
-// Module 15122 (UserProfileActivityButtons)
+// Module 15123 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -17,9 +17,9 @@ import StageChannelModalActionCreators from "StageChannelModalActionCreators" /*
 import isStreamingDefault from "isStreaming" /* 8905 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9810 */;
 import GamesActionCreatorsDefault from "GamesActionCreators" /* 11854 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 15123 */;
-import getActivityJoinability from "getActivityJoinability" /* 15124 */;
-import getStreamURLDefault from "getStreamURL" /* 15126 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 15124 */;
+import getActivityJoinability from "getActivityJoinability" /* 15125 */;
+import getStreamURLDefault from "getStreamURL" /* 15127 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
@@ -178,7 +178,7 @@ export function PlayOnSpotifyButton(arg0) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -204,7 +204,7 @@ export function PlayOnSpotifyButton(arg0) {
             } else if (1 === tmp7) {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -416,7 +416,7 @@ export function CustomActivityButton(index) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -459,13 +459,13 @@ export function CustomActivityButton(index) {
                       if (closure_128_0.button_urls.length <= closure_129_2) {
                         c3 = 0;
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } else {
                         closure_128_1 = closure_128_0.button_urls[closure_129_2];
                         if (typeof closure_128_1 !== "string") {
                           c3 = 0;
                           c5 = 3;
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: null };
                         } else {
                           closure_128_2 = tmp3(tmp20[47]).safeParseWithQuery(closure_128_1);
                           let protocol;
@@ -498,7 +498,7 @@ export function CustomActivityButton(index) {
                     }
                     c3 = 0;
                     c5 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp20) {
                   if (tmp4 === c3) {
@@ -525,7 +525,7 @@ export function CustomActivityButton(index) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -568,13 +568,13 @@ export function CustomActivityButton(index) {
                       if (closure_128_0.button_urls.length <= closure_129_2) {
                         c3 = 0;
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } else {
                         closure_128_1 = closure_128_0.button_urls[closure_129_2];
                         if (typeof closure_128_1 !== "string") {
                           c3 = 0;
                           c5 = 3;
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: null };
                         } else {
                           closure_128_2 = tmp3(tmp20[47]).safeParseWithQuery(closure_128_1);
                           let protocol;
@@ -607,7 +607,7 @@ export function CustomActivityButton(index) {
                     }
                     c3 = 0;
                     c5 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp20) {
                   if (tmp4 === c3) {

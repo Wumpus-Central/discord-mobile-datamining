@@ -1,16 +1,16 @@
-// === Module 17657: DisplayNameStylesColorPickerSheet ===
+// === Module 17668: DisplayNameStylesColorPickerSheet ===
 
-// Module 17657 (DisplayNameStylesColorPickerSheet)
+// Module 17668 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef3056 from "module_3056" /* 3056 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import HapticUtils from "HapticUtils" /* 5376 */;
 import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 10895 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16754 */;
-import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader" /* 17642 */;
-import useColorPresetsWithA11yLabelsDefault from "useColorPresetsWithA11yLabels" /* 17647 */;
-import DisplayNameStylesCustomColorButtonDefault from "DisplayNameStylesCustomColorButton" /* 17651 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16765 */;
+import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader" /* 17653 */;
+import useColorPresetsWithA11yLabelsDefault from "useColorPresetsWithA11yLabels" /* 17658 */;
+import DisplayNameStylesCustomColorButtonDefault from "DisplayNameStylesCustomColorButton" /* 17662 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ const createStyles = fn(5140);
 let obj2 = { sheetBackground: { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg }, container: null, contentContainer: null, presetGrid: null, presetColor: null, presetColorSelected: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
 obj2.container = { flex: 1, paddingTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(17646).SHEET_CONTENT_MAX_WIDTH };
+obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(17657).SHEET_CONTENT_MAX_WIDTH };
 let obj4 = { flex: 1, paddingTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.presetGrid = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", columnGap: nativeDefault.space.PX_24, rowGap: nativeDefault.space.PX_20, marginBottom: nativeDefault.space.PX_20 };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 2, borderColor: "transparent" };

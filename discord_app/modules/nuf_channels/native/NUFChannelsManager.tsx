@@ -1,6 +1,6 @@
-// === Module 15454: NUFChannelsManager ===
+// === Module 15464: NUFChannelsManager ===
 
-// Module 15454 (NUFChannelsManager)
+// Module 15464 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -84,7 +84,7 @@ class NUFChannelsManager extends tmp2 {
             const tmpResult4 = UserUtils;
           }
           if (isNewUserResult) {
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15455, dependencyMap.paths), "NUFChannelsActionSheet");
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15465, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = Storage3.Storage;
             const result = Storage2.set(c9, true);
           }

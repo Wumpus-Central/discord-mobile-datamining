@@ -1,6 +1,6 @@
-// === Module 19238: CheckpointProfileEntrypoint ===
+// === Module 19251: CheckpointProfileEntrypoint ===
 
-// Module 19238 (CheckpointProfileEntrypoint)
+// Module 19251 (CheckpointProfileEntrypoint)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import initialize from "initialize" /* 504 */;
@@ -10,16 +10,16 @@ import _modDef3248 from "module_3248" /* 3248 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
 import CheckpointExperiments from "CheckpointExperiments" /* 6570 */;
 import TableRow from "TableRow" /* 7038 */;
-import ExperimentalCheckpointIcon from "ExperimentalCheckpointIcon" /* 13647 */;
-import openCheckpoint from "openCheckpoint" /* 13668 */;
-import CheckpointStore from "CheckpointStore" /* 13667 */;
+import ExperimentalCheckpointIcon from "ExperimentalCheckpointIcon" /* 13648 */;
+import openCheckpoint from "openCheckpoint" /* 13669 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 import size from "module_2" /* 2 */;
 
 function handlePress() {
   openCheckpoint.openCheckpoint("user_profile");
 }
 function handleLongPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19239, dependencyMap.paths), "CheckpointTestingActionSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19252, dependencyMap.paths), "CheckpointTestingActionSheet");
 }
 function CheckpointProfileEntrypointRow() {
   const isCheckpointQAEnabled = CheckpointExperiments.useIsCheckpointQAEnabled("CheckpointProfileEntrypoint");

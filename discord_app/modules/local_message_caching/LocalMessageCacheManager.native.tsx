@@ -1,6 +1,6 @@
-// === Module 16717: LocalMessageCacheManager ===
+// === Module 16728: LocalMessageCacheManager ===
 
-// Module 16717 (LocalMessageCacheManager)
+// Module 16728 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -132,7 +132,7 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -264,7 +264,7 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
 const SendMessageOptionsStore = fn(10319);
 const Constants = fn(1072);
 ({ MessageStates: closure_9, MessageTypes: closure_10 } = Constants);
-const MutexUtils = fn(16718);
+const MutexUtils = fn(16729);
 let closure_11 = MutexUtils.createLock();
 let closure_12 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -341,7 +341,7 @@ class LocalMessageCacheManager extends tmp5 {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -388,7 +388,7 @@ class LocalMessageCacheManager extends tmp5 {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -408,7 +408,7 @@ class LocalMessageCacheManager extends tmp5 {
                             }, 0);
                           }
                           c1 = 3;
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } catch (tmp9) {
                         c1 = tmp;
@@ -421,7 +421,7 @@ class LocalMessageCacheManager extends tmp5 {
                   applyArgumentsResult = values[Symbol.iterator]();
                   if (applyArgumentsResult === undefined) {
                     c10 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     c7 = 1;
                     closure_134_2 = tmp34;
@@ -663,7 +663,7 @@ class LocalMessageCacheManager extends tmp5 {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -704,7 +704,7 @@ class LocalMessageCacheManager extends tmp5 {
               return obj;
             }
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp9) {
             c1 = tmp;
             throw tmp9;
@@ -929,7 +929,7 @@ prototype["_initialize"] = function _initialize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -980,7 +980,7 @@ prototype["_initialize"] = function _initialize() {
                 let obj4 = values(572);
                 let subscription1 = obj4.subscribe("CACHE_LOADED", closure_132_0.handleCacheLoaded);
                 c8 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 c6 = 1;
                 closure_131_1 = tmp10;

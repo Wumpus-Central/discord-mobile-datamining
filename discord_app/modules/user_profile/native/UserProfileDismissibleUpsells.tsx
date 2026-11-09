@@ -1,6 +1,6 @@
-// === Module 15248: UserProfileDismissibleUpsells ===
+// === Module 15258: UserProfileDismissibleUpsells ===
 
-// Module 15248 (UserProfileDismissibleUpsells)
+// Module 15258 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 4973 */;
 import noop from "module_19" /* 19 */;

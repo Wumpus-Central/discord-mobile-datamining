@@ -1,6 +1,6 @@
-// === Module 19628: calculateContentCenterOffset ===
+// === Module 19641: calculateContentCenterOffset ===
 
-// Module 19628 (calculateContentCenterOffset)
+// Module 19641 (calculateContentCenterOffset)
 import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11366 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 12614 */;
 import size from "module_2" /* 2 */;

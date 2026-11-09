@@ -1,6 +1,6 @@
-// === Module 15235: UserProfileActivityEmptyStates ===
+// === Module 15245: UserProfileActivityEmptyStates ===
 
-// Module 15235 (UserProfileActivityEmptyStates)
+// Module 15245 (UserProfileActivityEmptyStates)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;

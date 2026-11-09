@@ -1,6 +1,6 @@
-// === Module 15190: ConjureCustomWidgetSheet ===
+// === Module 15200: ConjureCustomWidgetSheet ===
 
-// Module 15190 (ConjureCustomWidgetSheet)
+// Module 15200 (ConjureCustomWidgetSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef4026 from "module_4026" /* 4026 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -43,7 +43,7 @@ export default function ConjureCustomWidgetSheet() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -153,7 +153,7 @@ export default function ConjureCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(15188).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(15198).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
   const items1 = [closure_9(value(7316).TextArea, obj4), ];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };

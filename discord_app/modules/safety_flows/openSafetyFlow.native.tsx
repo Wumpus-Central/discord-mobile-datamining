@@ -1,6 +1,6 @@
-// === Module 20471: openSafetyFlow ===
+// === Module 20484: openSafetyFlow ===
 
-// Module 20471 (openSafetyFlow)
+// Module 20484 (openSafetyFlow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4983 */;
 
@@ -16,7 +16,7 @@ let closure_6 = async function _openSafetyFlow() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -94,7 +94,7 @@ let closure_6 = async function _openSafetyFlow() {
             } else {
               c5 = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             if (4 === tmp7) {
@@ -148,7 +148,7 @@ let closure_6 = async function _openSafetyFlow() {
               if (null == value) {
                 c5 = 0;
                 c7 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             }
             closure_130_2 = (function getInitialScreenForTask(task_type) {
@@ -173,7 +173,7 @@ let closure_6 = async function _openSafetyFlow() {
           }
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         c7 = 3;
       }

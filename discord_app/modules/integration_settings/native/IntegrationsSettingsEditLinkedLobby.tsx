@@ -1,6 +1,6 @@
-// === Module 19297: IntegrationsSettingsEditLinkedLobby ===
+// === Module 19310: IntegrationsSettingsEditLinkedLobby ===
 
-// Module 19297 (IntegrationsSettingsEditLinkedLobby)
+// Module 19310 (IntegrationsSettingsEditLinkedLobby)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8821 */;

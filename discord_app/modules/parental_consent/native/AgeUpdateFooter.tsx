@@ -1,6 +1,6 @@
-// === Module 20489: AgeUpdateFooter ===
+// === Module 20502: AgeUpdateFooter ===
 
-// Module 20489 (AgeUpdateFooter)
+// Module 20502 (AgeUpdateFooter)
 import util from "util" /* 1113 */;
 import _modDef2960 from "module_2960" /* 2960 */;
 import Text_Text from "Text/Text" /* 5751 */;

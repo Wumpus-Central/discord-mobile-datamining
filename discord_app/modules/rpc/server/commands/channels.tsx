@@ -1,6 +1,6 @@
-// === Module 16619: channels ===
+// === Module 16629: channels ===
 
-// Module 16619 (channels)
+// Module 16629 (channels)
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6904 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8984 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9025 */;
@@ -8,7 +8,7 @@ import isPostMessageSocketDefault from "isPostMessageSocket" /* 9408 */;
 import RPCErrorDefault from "RPCError" /* 9414 */;
 import botScopedAccess from "botScopedAccess" /* 9417 */;
 import RPCHelpers from "RPCHelpers" /* 11976 */;
-import guildVoice from "guildVoice" /* 16602 */;
+import guildVoice from "guildVoice" /* 16612 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4989 */;
@@ -72,7 +72,7 @@ let Constants = fn(6583);
 Constants = fn(1072);
 ({ Routes: closure_14, Permissions: closure_15, RPCCommands, RPCErrors: closure_16, ChannelTypes: closure_17 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16606);
+let CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj3 = { scope: null, validateAccess: null, handler: null };
 let obj4 = {};
 let items = [fn(8984).OAuth2Scopes.RPC, fn(8984).OAuth2Scopes.GUILDS, fn(8984).OAuth2Scopes.GUILDS_CHANNELS_READ, fn(8984).OAuth2Scopes.BOT, fn(8984).OAuth2Scopes.SDK_SOCIAL_LAYER];
@@ -143,7 +143,7 @@ obj3.handler = function handler(args) {
   obj2 = guildVoice;
 };
 obj[RPCCommands.GET_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNEL, obj3);
-CONTEXT_MENU_ICON_NAMES = fn(16606);
+CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj6 = { scope: null, validateAccess: null, handler: null };
 let obj7 = {};
 const items1 = [fn(8984).OAuth2Scopes.RPC, fn(8984).OAuth2Scopes.BOT, fn(8984).OAuth2Scopes.SDK_SOCIAL_LAYER];
@@ -171,7 +171,7 @@ obj6.handler = function handler(args) {
     const tmp19 = new guild(9414)(obj3, "Invalid guild");
     throw tmp19;
   }
-  obj = socket(16602);
+  obj = socket(16612);
   const tmp3 = guild;
   const values = guild(12).values(ChannelStore.loadAllGuildAndPrivateChannelsFromDisk());
   let found = values;
@@ -210,7 +210,7 @@ obj6.handler = function handler(args) {
   return obj5;
 };
 obj[RPCCommands.GET_CHANNELS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNELS, obj6);
-CONTEXT_MENU_ICON_NAMES = fn(16606);
+CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj9 = { scope: null, validateAccess: null, handler: null };
 let obj10 = {};
 const items2 = [fn(8984).OAuth2Scopes.GUILDS_MEMBERS_READ, fn(8984).OAuth2Scopes.GUILDS_CHANNELS_READ, fn(8984).OAuth2Scopes.BOT];
@@ -250,7 +250,7 @@ obj9.handler = function handler(socket) {
   }
 };
 obj[RPCCommands.GET_CHANNEL_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNEL_PERMISSIONS, obj9);
-CONTEXT_MENU_ICON_NAMES = fn(16606);
+CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj12 = { scope: null, handler: null };
 let obj13 = {};
 const items3 = [fn(8984).OAuth2Scopes.RPC, RPC_EMBEDDED_APP_SCOPE, fn(8984).OAuth2Scopes.SDK_SOCIAL_LAYER];
@@ -414,7 +414,7 @@ obj12.handler = function handler(args) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -568,7 +568,7 @@ obj12.handler = function handler(args) {
   obj = require("guildVoice");
 };
 obj[RPCCommands.SELECT_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SELECT_VOICE_CHANNEL, obj12);
-CONTEXT_MENU_ICON_NAMES = fn(16606);
+CONTEXT_MENU_ICON_NAMES = fn(16616);
 const obj15 = { scope: null, handler: null };
 const obj16 = {};
 const items4 = [fn(8984).OAuth2Scopes.RPC, fn(8984).OAuth2Scopes.RPC_VOICE_READ];
@@ -589,7 +589,7 @@ obj15.handler = function handler(socket) {
   return transformChannelResult;
 };
 obj[RPCCommands.GET_SELECTED_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SELECTED_VOICE_CHANNEL, obj15);
-CONTEXT_MENU_ICON_NAMES = fn(16606);
+CONTEXT_MENU_ICON_NAMES = fn(16616);
 obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SELECT_TEXT_CHANNEL, {
   scope: fn(8984).OAuth2Scopes.RPC,
   handler(args) {
@@ -665,7 +665,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
     return nextPromise1;
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(16606);
+CONTEXT_MENU_ICON_NAMES = fn(16616);
 const obj18 = {
   scope: fn(8984).OAuth2Scopes.RPC,
   handler(args) {
