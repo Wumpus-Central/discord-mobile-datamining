@@ -2,4 +2,4 @@
 
 // Module 16484
 
-export const f = Object.getOwnPropertySymbols;
+export default ["constructor", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "toLocaleString", "toString", "valueOf"];

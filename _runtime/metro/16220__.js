@@ -1,10 +1,23 @@
 // === Module 16220: ? ===
 
 // Module 16220
-import _mod16219 from "module_16219" /* 16219 */;
+import _mod16212 from "module_16212" /* 16212 */;
 
 
-export default (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.sort((arg0, arg1) => _mod16219(arg0, arg1, closure_0));
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
+  }
+  try {
+    if (version instanceof _mod16212) {
+      version = version.version;
+    }
+    const tmp72 = new _mod16212(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
+    return null;
+  }
 };

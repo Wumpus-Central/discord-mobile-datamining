@@ -1,20 +1,11 @@
 // === Module 16464: ? ===
 
 // Module 16464
-import _mod16439 from "module_16439" /* 16439 */;
+import _mod16448 from "module_16448" /* 16448 */;
+import _mod16465 from "module_16465" /* 16465 */;
 
-if (_mod16439) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
-    }
-    return applyArgumentsResult;
-  };
-}
+let closure_2 = _mod16448({}.hasOwnProperty);
 
-export default fn;
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod16465(arg0), arg1);
+});

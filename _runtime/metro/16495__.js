@@ -1,42 +1,73 @@
 // === Module 16495: ? ===
 
 // Module 16495
-import _mod16434 from "module_16434" /* 16434 */;
-import _mod16435 from "module_16435" /* 16435 */;
-import _mod16437 from "module_16437" /* 16437 */;
-import _mod16438 from "module_16438" /* 16438 */;
-import _mod16455 from "module_16455" /* 16455 */;
-import _mod16464 from "module_16464" /* 16464 */;
-import _mod16484 from "module_16484" /* 16484 */;
+import _mod16444 from "module_16444" /* 16444 */;
+import text from "text" /* 16453 */;
+import _mod16476 from "module_16476" /* 16476 */;
+import _mod16493 from "module_16493" /* 16493 */;
 import _mod16496 from "module_16496" /* 16496 */;
 
-let closure_4 = _mod16438([].concat);
-if (!assign) {
-  assign = function assign(arg0, arg1) {
-    const tmp = _mod16455(arg0);
-    const f = _mod16484.f;
-    for (let num = 1; length > num; num = num + 1) {
-      let tmp5 = _mod16437(arguments[num]);
-      if (f) {
-        let tmp8 = _mod16496(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
-      } else {
-        arr = _mod16496(tmp5);
+const enumerable = "enumerable";
+const configurable = "configurable";
+const writable = "writable";
+if (_mod16444) {
+  if (_mod16496) {
+    defineProperty = function defineProperty(fn, arg1, value) {
+      _mod16493(fn);
+      const tmp2 = text(arg1);
+      _mod16493(value);
+      let tmp4 = value;
+      if (typeof fn === "function") {
+        tmp4 = value;
+        if ("prototype" === tmp2) {
+          tmp4 = value;
+          if ("value" in value) {
+            tmp4 = value;
+            if (writable in value) {
+              tmp4 = value;
+              if (!value[writable]) {
+                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
+                let tmp8 = tmp7;
+                if (tmp7) {
+                  tmp8 = tmp7[writable];
+                }
+                tmp4 = value;
+                if (tmp8) {
+                  fn[tmp2] = value.value;
+                  const obj = { configurable: configurable in value ? value[configurable] : tmp7[configurable], enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable], writable: false };
+                }
+              }
+            }
+          }
+        }
       }
-      let length2 = arr.length;
-      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
-        let tmp9 = arr[num2];
-        let tmp12 = _mod16434;
-        if (tmp12) {
-          tmp12 = !_mod16464(tmp2, tmp5, tmp9);
+      return defineProperty(fn, tmp2, tmp4);
+    };
+  }
+  let defineProperty2 = defineProperty;
+} else {
+  defineProperty2 = function defineProperty(arg0, arg1, value) {
+    _mod16493(arg0);
+    const tmp2 = text(arg1);
+    _mod16493(value);
+    if (!_mod16476) {
+      if (!("get" in value)) {
+        if (!("set" in value)) {
+          if ("value" in value) {
+            arg0[tmp2] = value.value;
+          }
+          return arg0;
         }
-        if (!tmp12) {
-          tmp[tmp9] = tmp5[tmp9];
-        }
+      }
+      const tmp8 = new TypeError("Accessors not supported");
+      throw tmp8;
+    } else {
+      try {
+        return defineProperty(arg0, tmp2, value);
+      } catch (err) {
       }
     }
-    return tmp;
   };
 }
 
-export default assign;
+export const f = defineProperty2;

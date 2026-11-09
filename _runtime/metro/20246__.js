@@ -1,15 +1,7 @@
 // === Module 20246: ? ===
 
 // Module 20246
-import _mod20247 from "module_20247" /* 20247 */;
-import capitalize from "capitalize" /* 20254 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default _mod20247((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/community_settings", width: 88, height: 80, scales: [2, 3], hash: "1c24dd3dd196a8ef2977a4e0d877d187", name: "safety_check", type: "png" });

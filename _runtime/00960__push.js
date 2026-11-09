@@ -113,10 +113,10 @@ function _shift(fn) {
           return new Promise((arg0, arg1) => {
             closure_0 = arg0;
             closure_1 = arg1;
-            const fn = /* F122634 */ function() { ... };
+            const fn = /* F122705 */ function() { ... };
             closure_0.onsuccess = fn;
             closure_0.oncomplete = fn;
-            const fn2 = /* F122635 */ function() { ... };
+            const fn2 = /* F122706 */ function() { ... };
             closure_0.onerror = fn2;
             closure_0.onabort = fn2;
           }).then(() => transaction);
@@ -128,7 +128,7 @@ function _shift(fn) {
 function createIndexedDbStore(arg0) {
   let dbName = arg0;
   function getStore() {
-    if (null == f81279) {
+    if (null == f81322) {
       let str = dbName.dbName;
       if (!str) {
         str = "sentry-offline";
@@ -150,12 +150,12 @@ function createIndexedDbStore(arg0) {
         closure_0.onerror = fn2;
         closure_0.onabort = fn2;
       });
-      f81279 = (arg0) => {
+      f81322 = (arg0) => {
         closure_0 = arg0;
         return promise.then((transaction) => closure_0(transaction.transaction(openResult, "readwrite").objectStore(openResult)));
       };
     }
-    return f81279;
+    return f81322;
   }
   const obj = { push: null, unshift: null, shift: null };
   closure_4 = asyncGeneratorStep(async (arg0) => {
@@ -325,7 +325,7 @@ export function makeBrowserOfflineTransport() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -353,7 +353,7 @@ export function makeBrowserOfflineTransport() {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp6) {
           c0 = tmp;

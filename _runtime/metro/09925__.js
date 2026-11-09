@@ -2026,7 +2026,7 @@ function ir(self, arg1, preventClose, preventAbort, preventCancel, signal) {
                 let fn = () => {
                   if (closure_1_0 !== closure_3_9) {
                     closure_0 = closure_1_9;
-                    let fn = /* F142238 */ function() { ... };
+                    let fn = /* F142343 */ function() { ... };
                     let call = closure_2_4.call;
                     typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                   }
@@ -2137,7 +2137,7 @@ function ir(self, arg1, preventClose, preventAbort, preventCancel, signal) {
                       let fn = () => {
                         if (closure_1_0 !== closure_3_9) {
                           closure_0 = closure_1_9;
-                          let fn = /* F142238 */ function() { ... };
+                          let fn = /* F142343 */ function() { ... };
                           let call = closure_2_4.call;
                           typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                         }
@@ -2273,7 +2273,7 @@ function ir(self, arg1, preventClose, preventAbort, preventCancel, signal) {
                           let fn = () => {
                             if (closure_1_0 !== closure_3_9) {
                               closure_0 = closure_1_9;
-                              let fn = /* F142238 */ function() { ... };
+                              let fn = /* F142343 */ function() { ... };
                               let call = closure_2_4.call;
                               typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                             }
@@ -2394,7 +2394,7 @@ function ir(self, arg1, preventClose, preventAbort, preventCancel, signal) {
                         let fn = () => {
                           if (closure_1_0 !== closure_3_9) {
                             closure_0 = closure_1_9;
-                            let fn = /* F142238 */ function() { ... };
+                            let fn = /* F142343 */ function() { ... };
                             let call = closure_2_4.call;
                             typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                           }
@@ -2507,7 +2507,7 @@ function ir(self, arg1, preventClose, preventAbort, preventCancel, signal) {
                         let fn = () => {
                           if (closure_1_0 !== closure_3_9) {
                             closure_0 = closure_1_9;
-                            let fn = /* F142238 */ function() { ... };
+                            let fn = /* F142343 */ function() { ... };
                             let call = closure_2_4.call;
                             typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                           }
@@ -2655,7 +2655,7 @@ function ir(self, arg1, preventClose, preventAbort, preventCancel, signal) {
                         let fn = () => {
                           if (closure_1_0 !== closure_3_9) {
                             closure_0 = closure_1_9;
-                            let fn = /* F142238 */ function() { ... };
+                            let fn = /* F142343 */ function() { ... };
                             let call = closure_2_4.call;
                             typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                           }
@@ -2752,7 +2752,7 @@ function ir(self, arg1, preventClose, preventAbort, preventCancel, signal) {
                         let fn = () => {
                           if (closure_1_0 !== closure_3_9) {
                             closure_0 = closure_1_9;
-                            let fn = /* F142238 */ function() { ... };
+                            let fn = /* F142343 */ function() { ... };
                             let call = closure_2_4.call;
                             typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                           }
@@ -2841,7 +2841,7 @@ function ir(self, arg1, preventClose, preventAbort, preventCancel, signal) {
             c0 = true;
             let callResult = new Promise((fn) => fn(c0));
           } else {
-            fn = () => new typeError(/* F143514 */ function() { ... });
+            fn = () => new typeError(/* F143621 */ function() { ... });
             let call = then.call;
             if (typeof call === "unknown") {
               callResult = then(fn, undefined);
@@ -2904,8 +2904,8 @@ function sr(_pulling) {
                                       self._pullAgain = true;
                                     } else {
                                       self._pulling = true;
-                                      fn = /* F127535 */ function() { ... };
-                                      const fn2 = /* F127536 */ function() { ... };
+                                      fn = /* F127606 */ function() { ... };
+                                      const fn2 = /* F127607 */ function() { ... };
                                       const call = then.call;
                                       const _pullAlgorithmResult = self._pullAlgorithm();
                                       const call2 = then.call;
@@ -3152,8 +3152,8 @@ function _r(_controlledReadableStream, _readableStreamController, S, fn, _cancel
                                 self._pullAgain = true;
                               } else {
                                 self._pulling = true;
-                                fn = /* F127535 */ function() { ... };
-                                const fn2 = /* F127536 */ function() { ... };
+                                fn = /* F127606 */ function() { ... };
+                                const fn2 = /* F127607 */ function() { ... };
                                 const call = then.call;
                                 const _pullAlgorithmResult = self._pullAlgorithm();
                                 const call2 = then.call;
@@ -3927,7 +3927,7 @@ let items1 = [
                       return closure_0({ value, done: false });
                     },
               _closeSteps() {
-                      return closure_0({ value: "HermesInternal", done: "HermesInternal" });
+                      return closure_0({ value: "HermesInternal", done: null });
                     },
               _errorSteps(arg0) {
                       return closure_1(arg0);
@@ -4120,7 +4120,7 @@ let items2 = [
     value: function _nextSteps() {
       const self = this;
       if (this._isFinished) {
-        return Promise.resolve({ value: "HermesInternal", done: "HermesInternal" });
+        return Promise.resolve({ value: "HermesInternal", done: null });
       } else {
         const _reader = tmp._reader;
         const tmp5 = new self((arg0, arg1) => {
@@ -4136,7 +4136,7 @@ let items2 = [
               self._ongoingPromise = undefined;
               self._isFinished = true;
               W(_reader);
-              closure_1({ value: "HermesInternal", done: "HermesInternal" });
+              closure_1({ value: "HermesInternal", done: null });
             },
           _errorSteps(arg0) {
               self._ongoingPromise = undefined;
@@ -6735,8 +6735,8 @@ const items9 = [
                                             self._pullAgain = true;
                                           } else {
                                             self._pulling = true;
-                                            fn = /* F127535 */ function() { ... };
-                                            const fn2 = /* F127536 */ function() { ... };
+                                            fn = /* F127606 */ function() { ... };
+                                            const fn2 = /* F127607 */ function() { ... };
                                             const call = then.call;
                                             const _pullAlgorithmResult = self._pullAlgorithm();
                                             const call2 = then.call;
@@ -6900,8 +6900,8 @@ const items9 = [
                                             self._pullAgain = true;
                                           } else {
                                             self._pulling = true;
-                                            fn = /* F127535 */ function() { ... };
-                                            const fn2 = /* F127536 */ function() { ... };
+                                            fn = /* F127606 */ function() { ... };
+                                            const fn2 = /* F127607 */ function() { ... };
                                             const call = then.call;
                                             const _pullAlgorithmResult = self._pullAlgorithm();
                                             const call2 = then.call;
@@ -7687,7 +7687,7 @@ const items10 = [
                                         let fn = () => {
                                           if (closure_1_0 !== closure_3_9) {
                                             closure_0 = closure_1_9;
-                                            let fn = /* F142238 */ function() { ... };
+                                            let fn = /* F142343 */ function() { ... };
                                             let call = closure_2_4.call;
                                             typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                                           }
@@ -7798,7 +7798,7 @@ const items10 = [
                                               let fn = () => {
                                                 if (closure_1_0 !== closure_3_9) {
                                                   closure_0 = closure_1_9;
-                                                  let fn = /* F142238 */ function() { ... };
+                                                  let fn = /* F142343 */ function() { ... };
                                                   let call = closure_2_4.call;
                                                   typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                                                 }
@@ -7934,7 +7934,7 @@ const items10 = [
                                                   let fn = () => {
                                                     if (closure_1_0 !== closure_3_9) {
                                                       closure_0 = closure_1_9;
-                                                      let fn = /* F142238 */ function() { ... };
+                                                      let fn = /* F142343 */ function() { ... };
                                                       let call = closure_2_4.call;
                                                       typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                                                     }
@@ -8055,7 +8055,7 @@ const items10 = [
                                                 let fn = () => {
                                                   if (closure_1_0 !== closure_3_9) {
                                                     closure_0 = closure_1_9;
-                                                    let fn = /* F142238 */ function() { ... };
+                                                    let fn = /* F142343 */ function() { ... };
                                                     let call = closure_2_4.call;
                                                     typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                                                   }
@@ -8168,7 +8168,7 @@ const items10 = [
                                                 let fn = () => {
                                                   if (closure_1_0 !== closure_3_9) {
                                                     closure_0 = closure_1_9;
-                                                    let fn = /* F142238 */ function() { ... };
+                                                    let fn = /* F142343 */ function() { ... };
                                                     let call = closure_2_4.call;
                                                     typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                                                   }
@@ -8316,7 +8316,7 @@ const items10 = [
                                                 let fn = () => {
                                                   if (closure_1_0 !== closure_3_9) {
                                                     closure_0 = closure_1_9;
-                                                    let fn = /* F142238 */ function() { ... };
+                                                    let fn = /* F142343 */ function() { ... };
                                                     let call = closure_2_4.call;
                                                     typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                                                   }
@@ -8413,7 +8413,7 @@ const items10 = [
                                                 let fn = () => {
                                                   if (closure_1_0 !== closure_3_9) {
                                                     closure_0 = closure_1_9;
-                                                    let fn = /* F142238 */ function() { ... };
+                                                    let fn = /* F142343 */ function() { ... };
                                                     let call = closure_2_4.call;
                                                     typeof call === "unknown" ? closure_2_4(fn, undefined) : call(closure_1_9, fn, undefined);
                                                   }
@@ -8502,7 +8502,7 @@ const items10 = [
                                     c0 = true;
                                     let callResult = new Promise((fn) => fn(c0));
                                   } else {
-                                    fn = () => new typeError(/* F143514 */ function() { ... });
+                                    fn = () => new typeError(/* F143621 */ function() { ... });
                                     let call = then.call;
                                     if (typeof call === "unknown") {
                                       callResult = then(fn, undefined);

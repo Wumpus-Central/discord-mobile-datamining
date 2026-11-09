@@ -1,14 +1,48 @@
 // === Module 16461: ? ===
 
 // Module 16461
-import _mod16442 from "module_16442" /* 16442 */;
+import _mod16441 from "module_16441" /* 16441 */;
 import _mod16462 from "module_16462" /* 16462 */;
 
-
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod16442(arg0[arg1])) {
-    tmp4 = _mod16462(tmp);
+let tmp = _mod16441.process && _mod16441.process.versions;
+if (!tmp) {
+  tmp = _mod16441.Deno && _mod16441.Deno.version;
+  const tmp2 = _mod16441.Deno && _mod16441.Deno.version;
+}
+let str = tmp;
+if (tmp) {
+  str = tmp.v8;
+}
+let tmp3;
+if (str) {
+  const parts = str.split(".");
+  if (parts[0] <= 0) {
+    let num3 = +parts[0] + parts[1];
+  } else {
+    num3 = 1;
   }
-  return tmp4;
-};
+  tmp3 = num3;
+  let tmp4 = parts;
+}
+let _module = !tmp3;
+if (!tmp3) {
+  _module = _mod16462;
+}
+if (_module) {
+  const match = _mod16462.match(/Edge\/(\d+)/);
+  let tmp8 = !match;
+  if (match) {
+    tmp8 = match[1] >= 74;
+  }
+  _module = tmp8;
+  tmp4 = match;
+}
+if (_module) {
+  _module = _mod16462.match(/Chrome\/(\d+)/);
+  tmp4 = _module;
+}
+if (_module) {
+  tmp3 = +tmp4[1];
+}
+
+export default tmp3;

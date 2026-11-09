@@ -27,7 +27,7 @@ let closure_9 = async function _runScrollBenchmark(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -111,7 +111,7 @@ let closure_9 = async function _runScrollBenchmark(arg0) {
         return obj;
       }
       c7 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp28) {
       c7 = tmp;
       throw tmp28;
@@ -161,7 +161,7 @@ export function useFlatListBenchmark(arg0, arg1, arg2) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -196,7 +196,7 @@ export function useFlatListBenchmark(arg0, arg1, arg2) {
                   dependencyMap(closure_128_2);
                   closure_2_4(false);
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
                 tmp50 = closure_128_1;
               }

@@ -401,7 +401,7 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -449,11 +449,11 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
                                 set.add(children);
                                 if (tmp5) {
                                   children = children.children;
-                                  let item = children.forEach(/* F81437 */ function() { ... });
+                                  let item = children.forEach(/* F81480 */ function() { ... });
                                 }
                                 tmp5 = children.children && !children.index;
                               }
-                              let item1 = set.forEach(/* F122709 */ function() { ... });
+                              let item1 = set.forEach(/* F122780 */ function() { ... });
                             });
                           }
                           tmp2 = children.children && !children.index;
@@ -545,7 +545,7 @@ function wrapPatchRoutesOnNavigation(patchRoutesOnNavigation, arg1) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -844,11 +844,11 @@ function addRoutesToAllRoutes(arr) {
                         set.add(children);
                         if (tmp5) {
                           children = children.children;
-                          let item = children.forEach(/* F81437 */ function() { ... });
+                          let item = children.forEach(/* F81480 */ function() { ... });
                         }
                         tmp5 = children.children && !children.index;
                       }
-                      let item1 = set.forEach(/* F122709 */ function() { ... });
+                      let item1 = set.forEach(/* F122780 */ function() { ... });
                     });
                   }
                   tmp5 = children.children && !children.index;
@@ -1582,8 +1582,8 @@ export function createReactRouterV6CompatibleTracingIntegration(instrumentPageLo
     }
     const result1 = pickSplat.initializeRouterUtils(closure_1_7, flag);
   };
-  obj3.afterAllSetup = function afterAllSetup(f122702) {
-    result.afterAllSetup(f122702);
+  obj3.afterAllSetup = function afterAllSetup(f122773) {
+    result.afterAllSetup(f122773);
     const _location = feedbackAsyncIntegration.WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1600,11 +1600,11 @@ export function createReactRouterV6CompatibleTracingIntegration(instrumentPageLo
       const _HermesInternal = HermesInternal;
       obj2[_mod681.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
       obj.attributes = obj2;
-      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f122702, obj);
+      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f122773, obj);
       const tmp2Result = feedbackAsyncIntegration;
     }
     if (closure_11) {
-      weakSet.add(f122702);
+      weakSet.add(f122773);
     }
   };
   return obj3;
@@ -1628,7 +1628,7 @@ export function createV6CompatibleWithSentryReactRouterRouting(arg0, _6) {
                 items = [, ];
                 items[0] = tmp;
                 items[1] = tmp2;
-                tmp3 = closure_1_4(/* F122715 */ function() { ... }, items);
+                tmp3 = closure_1_4(/* F122786 */ function() { ... }, items);
                 obj = {};
                 merged = Object.assign(arg0);
                 return closure_1_9.createElement(closure_0, obj);
@@ -1653,7 +1653,7 @@ export function createV6CompatibleWithSentryReactRouterRouting(arg0, _6) {
         items = [, ];
         items[0] = tmp;
         items[1] = tmp2;
-        tmp3 = closure_1_4(/* F122715 */ function() { ... }, items);
+        tmp3 = closure_1_4(/* F122786 */ function() { ... }, items);
         obj = {};
         merged = Object.assign(arg0);
         return closure_1_9.createElement(closure_0, obj);
@@ -1862,11 +1862,11 @@ export function createV6CompatibleWrapUseRoutes(arg0, _6) {
                           set.add(children);
                           if (tmp5) {
                             children = children.children;
-                            let item = children.forEach(/* F81437 */ function() { ... });
+                            let item = children.forEach(/* F81480 */ function() { ... });
                           }
                           tmp5 = children.children && !children.index;
                         }
-                        let item1 = set.forEach(/* F122709 */ function() { ... });
+                        let item1 = set.forEach(/* F122780 */ function() { ... });
                       });
                     }
                     tmp2 = children.children && !children.index;

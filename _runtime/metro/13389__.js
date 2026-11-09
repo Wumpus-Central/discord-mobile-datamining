@@ -22,7 +22,7 @@ let closure_4 = async function _resolveResponse(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_4 = async function _resolveResponse(arg0) {
             }
           }
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (1 !== tmp7) {
         if (2 === tmp7) {
@@ -228,7 +228,7 @@ export function addFetchEndInstrumentationHandler(errorCallback) {
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F143313 */ function*() { ... })();
+            return (/* F143419 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -291,7 +291,7 @@ export function addFetchInstrumentationHandler(errorCallback, arg1) {
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F143313 */ function*() { ... })();
+            return (/* F143419 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;

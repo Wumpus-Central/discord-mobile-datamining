@@ -14,21 +14,21 @@ class Share {
 }
 const entry = {
   key: "share",
-  value: function share(message) {
-    let obj = dialogTitle;
-    if (dialogTitle === undefined) {
+  value: function share(title) {
+    let obj = arg1;
+    if (arg1 === undefined) {
       obj = {};
     }
-    let tmp4 = typeof message === "object";
-    if (typeof message === "object") {
-      tmp4 = null !== message;
+    let tmp4 = typeof title === "object";
+    if (typeof title === "object") {
+      tmp4 = null !== title;
     }
     Share(38)(tmp4, "Content to share must be a valid object");
-    const url = message.url;
+    const url = title.url;
     let tmp7 = typeof url === "string";
     const tmp3 = Share(38);
     if (typeof url !== "string") {
-      tmp7 = typeof message.message === "string";
+      tmp7 = typeof title.message === "string";
     }
     Share(38)(tmp7, "At least one of URL or message is required");
     let tmp10 = typeof obj === "object";
@@ -39,16 +39,16 @@ const entry = {
     Share(38)(tmp10, "Options must be a valid object");
     const tmpResult4 = Share(38);
     Share(38)(ShareModuleDefault, "ShareModule should be registered on Android.");
-    let tmp16 = null == message.title;
+    let tmp16 = null == title.title;
     const tmpResult5 = Share(38);
     if (!tmp16) {
-      tmp16 = typeof message.title === "string";
+      tmp16 = typeof title.title === "string";
     }
     Share(38)(tmp16, "Invalid title: title should be a string.");
-    const obj2 = { title: message.title, message: null };
-    message = undefined;
-    if (typeof message.message === "string") {
-      message = message.message;
+    const obj2 = { title: title.title, message: null };
+    let message;
+    if (typeof title.message === "string") {
+      message = title.message;
     }
     obj2.message = message;
     const tmpResult6 = Share(38);

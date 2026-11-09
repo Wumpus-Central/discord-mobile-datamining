@@ -154,7 +154,7 @@ export function useHeaderConfigProps(headerLargeTitle) {
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "a" };
+    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "Array" };
     let tmp20 = headerBackTitle;
     if (headerBackTitle == null) {
       let title1;
@@ -281,7 +281,7 @@ export function useHeaderConfigProps(headerLargeTitle) {
     tmp44 = closure_10(colors(6098).ScreenStackHeaderSearchBarView, obj19);
   }
   items7[3] = tmp44;
-  const obj21 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fileBytes", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "clock", title: "stopwatch", titleColor: "time", titleFontFamily: "/assets/.cache/intl/ZGVzaWdu", titleFontSize: null, titleFontWeight: "43854aee93f959e2762707342645d1d5", topInsetEnabled: "bg.messages.43854aee93f959e2762707342645d1d5.compiled.messages", disableTopInsetApplication: "jsona", disableLeftInsetApplication: "1", disableRightInsetApplication: "1:00", disableBottomInsetApplication: "clock", translucent: "o\u2019clock", children: "one", headerLeftBarButtonItems: "time", headerRightBarButtonItems: "/assets/.cache/intl/ZGVzaWdu", experimental_userInterfaceStyle: null };
+  const obj21 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fileBytes", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: true, title: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/", titleColor: true, titleFontFamily: "/assets/.cache/intl/ZGVzaWdu", titleFontSize: null, titleFontWeight: "43854aee93f959e2762707342645d1d5", topInsetEnabled: "bg.messages.43854aee93f959e2762707342645d1d5.compiled.messages", disableTopInsetApplication: "jsona", disableLeftInsetApplication: true, disableRightInsetApplication: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe", disableBottomInsetApplication: true, translucent: "/assets/.cache/intl/ZGVzaWdu", children: null, headerLeftBarButtonItems: "bb90c4b064a38745e740b0a8c7189a45", headerRightBarButtonItems: "cs.messages.bb90c4b064a38745e740b0a8c7189a45.compiled.messages", experimental_userInterfaceStyle: "jsona" };
   let tmp50 = false === headerShadowVisible;
   const tmpResult2 = colors(7071);
   if (!tmp50) {

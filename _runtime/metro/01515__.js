@@ -111,7 +111,7 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
                                 const merged1 = Object.assign(getState(state, closure_1_3));
                                 obj.stale = true;
                                 const routes = state.routes;
-                                obj.routes = routes.map(/* F82805 */ function() { ... });
+                                obj.routes = routes.map(/* F82848 */ function() { ... });
                                 tmp2 = obj;
                               }
                               obj2.state = tmp2;

@@ -5945,7 +5945,7 @@ try {
         } else {
           callResult = call(self, arg0);
         }
-        tmp3 = new closure_1_68(obj, /* F130242 */ function() { ... });
+        tmp3 = new closure_1_68(obj, /* F130313 */ function() { ... });
         self.d = tmp3;
         self.compression = 8;
         level = obj.level;
@@ -6014,7 +6014,7 @@ try {
         } else {
           callResult = call(self, arg0);
         }
-        tmp3 = new closure_1_69(obj, /* F130243 */ function() { ... });
+        tmp3 = new closure_1_69(obj, /* F130314 */ function() { ... });
         self.d = tmp3;
         self.compression = 8;
         level = obj.level;
@@ -6503,7 +6503,7 @@ try {
     class UnzipInflate {
       constructor() {
         self = this;
-        tmp = new closure_1_72(/* F130250 */ function() { ... });
+        tmp = new closure_1_72(/* F130321 */ function() { ... });
         this.i = tmp;
         return;
       }
@@ -6533,14 +6533,14 @@ try {
           tmp6 = closure_1_72;
           tmp7 = new.target;
           tmp8 = new.target;
-          tmp9 = new closure_1_72(/* F130251 */ function() { ... });
+          tmp9 = new closure_1_72(/* F130322 */ function() { ... });
           tmp10 = tmp9;
           self.i = tmp9;
         } else {
           tmp = closure_1_73;
           tmp2 = new.target;
           tmp3 = new.target;
-          tmp4 = new closure_1_73(/* F130252 */ function() { ... });
+          tmp4 = new closure_1_73(/* F130323 */ function() { ... });
           tmp5 = tmp4;
           self.i = tmp4;
           self.terminate = self.i.terminate;

@@ -237,7 +237,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -260,7 +260,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               closure_136_6 = undefined;
               closure_136_7 = undefined;
               let value4;
-              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "isArray", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
+              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "guildId", cacheReadInputTokens: "options", toolCalls: [], activeToolBlocks: {} };
               closure_136_2 = obj5;
               closure_136_4 = false;
               closure_136_5 = false;
@@ -452,7 +452,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 }
                 closure_136_0.end();
                 c12 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             }
           break;
@@ -1056,7 +1056,7 @@ export function instrumentAsyncIterableStream(arg0, arg1, c1) {
 export function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "isArray", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
+  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "guildId", cacheReadInputTokens: "options", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
     processEvent(arg0, obj, closure_1, closure_0);
   });
