@@ -382,16 +382,16 @@ export default function QuestBottomSheetFooter(quest) {
     items,
   );
   const obj4 = quest(9772);
-  const hasWatchVideoOnMobileTasks = quest(17377).useHasWatchVideoOnMobileTasks(quest.config);
-  const obj5 = quest(17377);
-  const mobileActivityQuest = quest(17377).useMobileActivityQuest(quest);
+  const hasWatchVideoOnMobileTasks = quest(17388).useHasWatchVideoOnMobileTasks(quest.config);
+  const obj5 = quest(17388);
+  const mobileActivityQuest = quest(17388).useMobileActivityQuest(quest);
   ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-  const obj6 = quest(17377);
-  const primaryCtaCopy = quest(14931).usePrimaryCtaCopy({ quest, application: questApplication });
-  const obj7 = quest(14931);
+  const obj6 = quest(17388);
+  const primaryCtaCopy = quest(14932).usePrimaryCtaCopy({ quest, application: questApplication });
+  const obj7 = quest(14932);
   const userStatus = quest.userStatus;
   let completedAt;
-  const obj8 = quest(17413);
+  const obj8 = quest(17424);
   const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
@@ -401,23 +401,23 @@ export default function QuestBottomSheetFooter(quest) {
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
   }
-  const mobileActivityPressHandler = quest(17413).useMobileActivityPressHandler({
+  const mobileActivityPressHandler = quest(17424).useMobileActivityPressHandler({
     questId: quest.id,
     sourceQuestContent,
     launchMobileActivity,
   });
   const tmp11 = null != completedAt;
   const isQuestAccessSuspended = quest(9772).useIsQuestAccessSuspended();
-  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(17407) };
+  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(17418) };
   let tmp40Result6 = null;
-  if (step !== quest(17409).QuestBottomSheetStep.TASK_SELECT) {
+  if (step !== quest(17420).QuestBottomSheetStep.TASK_SELECT) {
     const obj11 = { onLayout: quest.onLayout, ctaButton: null, backButton: null, style: null, withSafeArea: null };
-    if (tmp2(17409).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+    if (tmp2(17420).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
       const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
       let tmp40Result = closure_10(NextButton, obj12);
     } else {
       tmp40Result = null;
-      if (tmp2(17409).QuestBottomSheetStep.TASK_STATUS === step) {
+      if (tmp2(17420).QuestBottomSheetStep.TASK_STATUS === step) {
         if (tmp11) {
           const obj13 = {
             questId: quest.id,

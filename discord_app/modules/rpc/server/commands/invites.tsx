@@ -8,7 +8,7 @@ const InstantInviteSources = fn(1072).InstantInviteSources;
 const Constants = fn(1083);
 ({ RPCCommands, RPCErrors: closure_6 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16606);
+const CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 const items = [fn(8984).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(8984).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
@@ -28,7 +28,7 @@ obj3.handler = function handler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -94,8 +94,8 @@ obj3.handler = function handler(arg0) {
                   const obj13 = { value: tmp3(11889).sendEmbeddedActivityInviteUser(obj11), done: false };
                   return obj13;
                 }
-                channel = tmp3(16625).validateOpenInviteDialog(tmp68).channel;
-                const obj5 = tmp3(16625);
+                channel = tmp3(16635).validateOpenInviteDialog(tmp68).channel;
+                const obj5 = tmp3(16635);
               }
             }
           }
@@ -115,7 +115,7 @@ obj3.handler = function handler(arg0) {
         } else {
           c2 = 0;
           connectedActivityLocation = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp61) {
         if (tmp4 === c2) {

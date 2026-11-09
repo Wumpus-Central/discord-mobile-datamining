@@ -37,7 +37,7 @@ function PoolIdInput(onSubmit) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -216,22 +216,22 @@ const jsxProd = fn(21);
 let items = [
   fn(12286).UserIcon,
   fn(11421).ShieldIcon,
-  fn(13596).GiftIcon,
-  fn(17904).AchievementsIcon,
-  fn(13597).PiggyBankIcon,
-  fn(17906).TreehouseIcon,
+  fn(13597).GiftIcon,
+  fn(17913).AchievementsIcon,
+  fn(13598).PiggyBankIcon,
+  fn(17915).TreehouseIcon,
   fn(12093).SpeedometerIcon,
-  fn(17908).CompassIcon,
-  fn(15963).SignPostIcon,
-  fn(17910).CarIcon,
-  fn(17912).TrainIcon,
-  fn(17914).TeacupIcon,
-  fn(17916).InventoryIcon,
+  fn(17917).CompassIcon,
+  fn(15973).SignPostIcon,
+  fn(17919).CarIcon,
+  fn(17921).TrainIcon,
+  fn(17923).TeacupIcon,
+  fn(17925).InventoryIcon,
   fn(10199).FoodIcon,
-  fn(17918).BurgerIcon,
-  fn(17920).MagicDoorIcon,
-  fn(17922).PawPrintIcon,
-  fn(17924).RecordPlayerIcon,
+  fn(17927).BurgerIcon,
+  fn(17929).MagicDoorIcon,
+  fn(17931).PawPrintIcon,
+  fn(17933).RecordPlayerIcon,
   fn(7633).SettingsIcon,
 ];
 const createStyles = fn(5140);
@@ -271,7 +271,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c2 = tmp;

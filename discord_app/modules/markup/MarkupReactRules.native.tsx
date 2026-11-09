@@ -46,7 +46,7 @@ class MarkupText {
     tmp3 = closure_0;
     tmp4 = closure_2;
     if (closure_3.useContext(closure_0(closure_2[10]).SpoilerHiddenContext)) {
-      obj = { style: null, onPress: "add", onLongPress: "gap", accessibilityRole: "T" };
+      obj = { style: null, onPress: "match", onLongPress: "padding", accessibilityRole: "__esModule" };
       items = [,];
       items[0] = merged.style;
       tmp5 = closure_14;
@@ -548,7 +548,7 @@ function MarkupStaticRouteLink(state) {
   const node = state.node;
   ({ output, styles, variants } = state);
   let tmp = closure_16();
-  let SignPostIcon = state(15963).SignPostIcon;
+  let SignPostIcon = state(15973).SignPostIcon;
   const channelId = node.channelId;
   if (StaticChannelId.GUILD_HOME !== channelId) {
     if (StaticChannelId.SERVER_GUIDE !== channelId) {
@@ -559,7 +559,7 @@ function MarkupStaticRouteLink(state) {
           }
         }
       }
-      SignPostIcon = tmp2(15965).ChannelListMagnifyingGlassIcon;
+      SignPostIcon = tmp2(15975).ChannelListMagnifyingGlassIcon;
     }
     let str = "button";
     if (state.noStyleAndInteraction) {
@@ -629,7 +629,7 @@ function MarkupStaticRouteLink(state) {
     }
     const tmp2Result = tmp2(8642);
   }
-  SignPostIcon = tmp2(15963).SignPostIcon;
+  SignPostIcon = tmp2(15973).SignPostIcon;
 }
 function MarkupAttachmentLink(state) {
   state = state.state;
@@ -645,7 +645,7 @@ function MarkupAttachmentLink(state) {
     str2 = "body-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15967), size: null };
+  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15977), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1187).Icon.Sizes.EXTRA_SMALL_10;

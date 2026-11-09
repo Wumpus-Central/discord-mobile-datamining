@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const GameOrganizationJoinModalConstants = fn(13445);
+const GameOrganizationJoinModalConstants = fn(13446);
 ({ closeGameOrganizationJoinModal: closure_6, GameOrganizationJoinScenes: metroImportDefault } =
   GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
@@ -31,7 +31,7 @@ export function AcceptStep(code) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -122,7 +122,7 @@ export function AcceptStep(code) {
     }
   };
   const tmp = closure_10();
-  const tmp4 = character(13442)(code);
+  const tmp4 = character(13443)(code);
   dependencyMap = code(1499).useNavigation();
   let obj = code(1499);
   [tmp7, c3] = noop.useState(false);
@@ -143,14 +143,14 @@ export function AcceptStep(code) {
     obj4.children = intl4.formatToPlainString(tmp2(2530).WmxMAI, obj7);
     items = [closure_8(tmp5(5751).Text, obj4)];
     const obj8 = { linkedGuild: tmp4.linkedGuild };
-    items[1] = closure_8(tmp2(13453), obj8);
+    items[1] = closure_8(tmp2(13454), obj8);
     obj3.children = items;
     const items1 = [closure_9(tmp5(6159).Stack, obj3)];
     const obj9 = { spacing: tmp2(575).space.PX_24, children: null };
     const obj10 = { variant: "heading-lg/semibold", children: null };
     let intl = tmp5(1113).intl;
     obj10.children = intl.string(tmp2(2530).yFqGy8);
-    const items2 = [closure_8(tmp5(5751).Text, obj10), closure_8(tmp2(13454), {})];
+    const items2 = [closure_8(tmp5(5751).Text, obj10), closure_8(tmp2(13455), {})];
     obj9.children = items2;
     items1[1] = closure_9(tmp5(6159).Stack, obj9);
     obj2.children = items1;
@@ -182,9 +182,9 @@ export function AcceptStep(code) {
     items4[1] = closure_8(tmp5(5758).Button, obj14);
     obj12.children = items4;
     obj11.children = closure_9(tmp5(6822).ButtonGroup, obj12);
-    items3[1] = closure_8(tmp5(13451).ModalFooter, obj11);
+    items3[1] = closure_8(tmp5(13452).ModalFooter, obj11);
     obj5.children = items3;
-    return closure_9(tmp2(13447), obj5);
+    return closure_9(tmp2(13448), obj5);
   }
   const tmp6 = _slicedToArray(noop.useState(false), 2);
 }

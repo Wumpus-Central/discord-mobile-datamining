@@ -165,7 +165,7 @@ export default noop.memo(function MediaModalYoutube(visible) {
     if (playerState === tmp(8945).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp5[0]) {
         let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
-        return jsx(tmp6(15022), { videoId: youtubeVideoIdFromURI.videoId });
+        return jsx(tmp6(15023), { videoId: youtubeVideoIdFromURI.videoId });
       }
     }
     const isAndroidResult = tmp(1377).isAndroid();

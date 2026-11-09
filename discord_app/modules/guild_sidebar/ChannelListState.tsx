@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "Show App Rating Modal",
+      version: "stopImmediatePropagation",
     });
     merged.id = global;
     obj = closure_25;

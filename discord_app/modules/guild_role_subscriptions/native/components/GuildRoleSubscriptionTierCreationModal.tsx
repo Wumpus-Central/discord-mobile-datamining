@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import RoleTierEditStore from "../RoleTierEditStore.tsx";
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(17506);
+const GuildRoleSubscriptionsConstants = fn(17517);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: closure_9 } =
   GuildRoleSubscriptionsConstants);
 const jsx = fn(21).jsx;
@@ -36,7 +36,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
             closure_128_3();
           }
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c2 = tmp;
@@ -115,7 +115,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
   let obj2 = { guildId, editStateId, groupListingId, children: null };
   let obj3 = {
     guildId,
-    children: jsx(groupListingId(20353), {
+    children: jsx(groupListingId(20366), {
       guildId,
       modalKey,
       onDone: function handleCreate() {
@@ -131,9 +131,9 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
       steps: memo,
     }),
   };
-  obj2.children = jsx(guildId(20337).RoleSubscriptionSettingsDisabledContextProvider, {
+  obj2.children = jsx(guildId(20350).RoleSubscriptionSettingsDisabledContextProvider, {
     guildId,
-    children: jsx(groupListingId(20353), {
+    children: jsx(groupListingId(20366), {
       guildId,
       modalKey,
       onDone: function handleCreate() {
@@ -149,5 +149,5 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
       steps: memo,
     }),
   });
-  return jsx(guildId(20352).EditStateContextProvider, { guildId, editStateId, groupListingId, children: null });
+  return jsx(guildId(20365).EditStateContextProvider, { guildId, editStateId, groupListingId, children: null });
 }

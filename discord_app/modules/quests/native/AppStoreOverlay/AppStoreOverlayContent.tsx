@@ -15,7 +15,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -90,11 +90,11 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
               if (null != rating.category_id) {
                 appStoreOverlayCategoryLabel = null;
                 if ("" !== rating.category_id) {
-                  appStoreOverlayCategoryLabel = closure_1_0(14898).getAppStoreOverlayCategoryLabel(
+                  appStoreOverlayCategoryLabel = closure_1_0(14899).getAppStoreOverlayCategoryLabel(
                     os.os,
                     rating.category_id,
                   );
-                  const obj3 = closure_1_0(14898);
+                  const obj3 = closure_1_0(14899);
                 }
               }
               const obj4 = { type: "chart", label: null, rank: null, category: null };

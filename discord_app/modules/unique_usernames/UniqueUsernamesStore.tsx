@@ -4,7 +4,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import privDefault from "../../../_runtime/01453_priv.js";
 
-let closure_2 = { taken: null, error: "HermesInternal", rateLimited: "r" };
+let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
 let obj = {
   validations: new privDefault({ max: 100, maxAge: 60000 }),
   currentUsernameInvalid: false,

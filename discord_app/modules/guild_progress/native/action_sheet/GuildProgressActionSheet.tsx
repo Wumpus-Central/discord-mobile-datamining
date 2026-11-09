@@ -41,7 +41,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(14280);
+const GuildProgressConstants = fn(14281);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1072);
 ({
@@ -79,7 +79,7 @@ export default function GuildProgressActionSheet(guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -96,8 +96,8 @@ export default function GuildProgressActionSheet(guild) {
             let base64;
             tmp5(9154).init(View);
             const obj6 = tmp5(9154);
-            tmp2(14285).hideActionSheet(id.id);
-            const obj7 = tmp2(14285);
+            tmp2(14286).hideActionSheet(id.id);
+            const obj7 = tmp2(14286);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
@@ -118,7 +118,7 @@ export default function GuildProgressActionSheet(guild) {
             const obj = tmp5(9154);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;

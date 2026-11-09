@@ -3,7 +3,7 @@ import initialize from "../../../../../../../discord_common/js/packages/flux/ind
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import _mod7357 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
-import _mod14657 from "../../../../../../../_runtime/metro/14657__.js";
+import _mod14658 from "../../../../../../../_runtime/metro/14658__.js";
 import MessagesItemChannelBase from "channel/MessagesItemChannelBase.tsx";
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -77,7 +77,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo(function MessagesItemChannelLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod14657.useRecyclingState(false);
+  [tmp2, tmp3] = _mod14658.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

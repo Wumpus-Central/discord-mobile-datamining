@@ -58,7 +58,7 @@ function QuestDockBackgroundMediaFade(arg0) {
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
 let QuestDockMode = fn(6836).QuestDockMode;
-const QuestDockConstants = fn(17382);
+const QuestDockConstants = fn(17393);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_10 } =
   QuestDockConstants);
 const VerticalGradient = fn(1072).VerticalGradient;

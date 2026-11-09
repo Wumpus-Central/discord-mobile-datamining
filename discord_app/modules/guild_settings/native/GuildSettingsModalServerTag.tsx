@@ -158,7 +158,7 @@ export default function GuildSettingsModalServerTag(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -344,7 +344,7 @@ export default function GuildSettingsModalServerTag(guildId) {
             return GuildProfileActionCreators.getGuildProfile(guildId, true);
           },
         };
-        return closure_13(navigation(14965), obj8);
+        return closure_13(navigation(14966), obj8);
       } else if (null == stateFromStores1) {
         return closure_13(tmp2(7271).SceneLoadingIndicator, {});
       } else {
@@ -394,7 +394,7 @@ export default function GuildSettingsModalServerTag(guildId) {
             let badgeColorSecondary = stateFromStores1.badgeColorSecondary;
             size.secondaryTintColor = badgeColorSecondary;
             ({ SIZE_16: obj16.width, SIZE_16: obj16.height } = closure_12);
-            tmp32Result = tmp32(tmp2(16042).GuildBadge, size);
+            tmp32Result = tmp32(tmp2(16052).GuildBadge, size);
           }
           const items12 = [tmp32Result, tmp29];
           obj13.children = items12;
@@ -431,12 +431,12 @@ export default function GuildSettingsModalServerTag(guildId) {
             badgeColorSecondary: obj22.secondaryColor,
           } = stateFromStores1);
           obj19.isDirty = result1;
-          items14[3] = tmp32(tmp39(16039), obj19);
+          items14[3] = tmp32(tmp39(16049), obj19);
           obj15.children = items14;
           let tmp40 = obj15;
         } else {
           const obj20 = { guildId, onUnlockPress: callback2 };
-          const items15 = [tmp32(tmp39(20147), obj20), tmp31Result2];
+          const items15 = [tmp32(tmp39(20160), obj20), tmp31Result2];
           obj15.children = items15;
           tmp40 = obj15;
         }

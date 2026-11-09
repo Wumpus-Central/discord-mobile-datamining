@@ -1,7 +1,7 @@
 // discord_app/modules/devtools/native/components/DevToolsScreens.tsx
 import DevToolsExperimentsScreen from "screens/DevToolsExperimentsScreen.tsx";
 import DevToolsAnalyticsScreen from "screens/DevToolsAnalyticsScreen.tsx";
-import DevToolsBuildOverrideScreen from "screens/DevToolsBuildOverrideScreen.tsx";
+import openBuildOverridesSettings from "../../../user_settings/dev_tools/native/openBuildOverridesSettings.tsx";
 import DevToolsLoggingFlagsScreen from "screens/DevToolsLoggingFlagsScreen.tsx";
 import DevToolsLocalMessageCache from "screens/DevToolsLocalMessageCache.tsx";
 import DevToolsGeneratedTestUsersScreen from "screens/DevToolsGeneratedTestUsersScreen.tsx";
@@ -72,17 +72,17 @@ const obj2 = {
   },
 };
 obj.buildOverride = {
-  headerTitle: "Build Override",
+  headerTitle: "Build Overrides",
   Icon: fn(12391).RefreshIcon,
-  render() {
-    return jsx(DevToolsBuildOverrideScreen.default, {});
+  onPress() {
+    const result = openBuildOverridesSettings.openBuildOverridesSettings();
   },
 };
 const obj3 = {
-  headerTitle: "Build Override",
+  headerTitle: "Build Overrides",
   Icon: fn(12391).RefreshIcon,
-  render() {
-    return jsx(DevToolsBuildOverrideScreen.default, {});
+  onPress() {
+    const result = openBuildOverridesSettings.openBuildOverridesSettings();
   },
 };
 obj.experiments = {
@@ -163,14 +163,14 @@ const obj8 = {
 };
 obj.designSystems = {
   headerTitle: "Design Systems",
-  Icon: fn(17563).PaintPaletteIcon,
+  Icon: fn(17574).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
 };
 const obj9 = {
   headerTitle: "Design Systems",
-  Icon: fn(17563).PaintPaletteIcon,
+  Icon: fn(17574).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   },
@@ -275,14 +275,14 @@ const obj16 = {
 };
 obj.revenuePlayground = {
   headerTitle: "Revenue Playground",
-  Icon: fn(13597).PiggyBankIcon,
+  Icon: fn(13598).PiggyBankIcon,
   render() {
     return jsx(DevToolsRevenuePlaygroundScreen.default, {});
   },
 };
 const obj17 = {
   headerTitle: "Revenue Playground",
-  Icon: fn(13597).PiggyBankIcon,
+  Icon: fn(13598).PiggyBankIcon,
   render() {
     return jsx(DevToolsRevenuePlaygroundScreen.default, {});
   },
@@ -303,14 +303,14 @@ const obj18 = {
 };
 obj.toggles = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(17653).EyeDropperIcon,
+  Icon: fn(17664).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
 };
 const obj19 = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(17653).EyeDropperIcon,
+  Icon: fn(17664).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   },
@@ -373,14 +373,14 @@ const obj23 = {
 };
 obj.actionSheets = {
   headerTitle: "Action Sheets",
-  Icon: fn(17908).CompassIcon,
+  Icon: fn(17917).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
 };
 const obj24 = {
   headerTitle: "Action Sheets",
-  Icon: fn(17908).CompassIcon,
+  Icon: fn(17917).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   },
@@ -430,13 +430,13 @@ const obj27 = {
 };
 obj28.displayNameEffectsBenchmark = {
   headerTitle: "Display Name Effects Benchmark",
-  Icon: fn(17563).PaintPaletteIcon,
+  Icon: fn(17574).PaintPaletteIcon,
   render() {
     return jsx(DevToolsDisplayNameEffectsBenchmarkScreen.default, {});
   },
 };
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
+let result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
 
 export const DevToolsScreens = obj;
 export const PerformanceTestingScreens = obj28;

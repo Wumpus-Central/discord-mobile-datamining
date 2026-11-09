@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/voice_channel_apps/native/Voi
 
 export default function VoiceChannelAppActionSheet(guildId) {
   ({ selectedApplicationId, onChange } = guildId);
-  const voiceChannelAppSettingOptions = onChange(19256).useVoiceChannelAppSettingOptions(
+  const voiceChannelAppSettingOptions = onChange(19269).useVoiceChannelAppSettingOptions(
     guildId.guildId,
     selectedApplicationId,
   );

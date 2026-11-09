@@ -90,7 +90,7 @@ export default function XboxLinkDiscordSuccess() {
   }, items1);
   const obj5 = { source: null, style: null };
   const obj2 = first(navigation[10]);
-  obj5.source = require("../../../../../../../_runtime/metro/14861__.js");
+  obj5.source = require("../../../../../../../_runtime/metro/14862__.js");
   obj5.style = tmp.image;
   const items2 = [closure_12(require("FastImage"), obj5), , ,];
   const obj6 = {

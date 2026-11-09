@@ -641,7 +641,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_18(onRemove(13509), obj);
+          return closure_2_18(onRemove(13510), obj);
         },
       },
       [closure_2_17.MEMBER_BAN]: {
@@ -653,7 +653,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(13513), obj);
+          return closure_2_18(onRemove(13514), obj);
         },
       },
     };

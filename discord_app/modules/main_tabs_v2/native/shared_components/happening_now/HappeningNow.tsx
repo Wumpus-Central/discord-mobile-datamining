@@ -174,7 +174,7 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(17597);
+const HappeningNowConstants = fn(17608);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: metroImportDefault,
   HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8,
@@ -215,7 +215,7 @@ export default noop.memo(function HappeningNow(listRef) {
   const obj2 = {
     withoutUserCards: "HermesInternal",
     guildId: "Array",
-    showMultipleActivitiesPerChannel: 3,
+    showMultipleActivitiesPerChannel: "en-BE",
     isFocused: isFocused1,
   };
   const tmp7 = _slicedToArray(isFocused1(children[15])(listRef.cards, obj2), 2);

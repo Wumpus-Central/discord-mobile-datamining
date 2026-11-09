@@ -38,11 +38,11 @@ require = fn;
 let closure_4 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(5047).isEveryoneRole;
-const RoleColorsStyle = fn(20170).RoleColorsStyle;
-const constants = fn(20165).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(20183).RoleColorsStyle;
+const constants = fn(20178).GuildSettingsRoleEditSections;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(20172).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(20185).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 const createStyles = fn(5140);
@@ -194,10 +194,10 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(20184).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(20197).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(20184);
+          const obj = applyArgumentsResult(20197);
           const obj3 = { text: null, variant: "success" };
           const intl = applyArgumentsResult(1113).intl;
           obj3.text = intl.string(applyArgumentsResult(1113).t.ulZn1j);
@@ -232,11 +232,11 @@ class GuildSettingsRoleEdit extends PureComponent {
                 result.then(success, failure);
                 const obj5 = closure_3_0(11761);
               } else if (typeof success === "function") {
-                closure_3_0(20184).commitSectionChanges(closure_1_5, effectiveSection);
+                closure_3_0(20197).commitSectionChanges(closure_1_5, effectiveSection);
                 navigation.pop();
                 const obj2 = { submitting: false, formErrors: {} };
                 closure_0.setState(obj2);
-                const obj = closure_3_0(20184);
+                const obj = closure_3_0(20197);
                 obj4 = { text: null, variant: "success" };
                 const intl = closure_3_0(1113).intl;
                 obj4.text = intl.string(closure_3_0(1113).t.ulZn1j);
@@ -304,7 +304,7 @@ class GuildSettingsRoleEdit extends PureComponent {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -341,7 +341,7 @@ class GuildSettingsRoleEdit extends PureComponent {
             v1(6957).deleteRole(closure_128_1.id, closure_128_2.id);
             closure_128_3.pop();
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp18) {
             c2 = tmp;
             throw tmp18;
@@ -396,11 +396,11 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(20184).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(20184);
+              const result = applyArgumentsResult(20197).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(20197);
             } else {
-              const result1 = applyArgumentsResult(20184).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(20184);
+              const result1 = applyArgumentsResult(20197).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(20197);
             }
             closure_0(true);
           };

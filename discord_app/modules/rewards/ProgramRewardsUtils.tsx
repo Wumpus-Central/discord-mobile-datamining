@@ -15,8 +15,8 @@ function canFetchXboxProgramReward() {
 }
 const PremiumTypes = fn(1387).PremiumTypes;
 const dependencyMap = {
-  [fn(15918).RewardProgram.NITRO]: canFetchNitroProgramReward,
-  [fn(15918).RewardProgram.XBOX]: canFetchXboxProgramReward,
+  [fn(15928).RewardProgram.NITRO]: canFetchNitroProgramReward,
+  [fn(15928).RewardProgram.XBOX]: canFetchXboxProgramReward,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");

@@ -205,7 +205,7 @@ function FriendAnniversary() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -303,7 +303,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -734,7 +734,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(18009, dependencyMap.paths),
+          asyncRequireImpl(18018, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -755,7 +755,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(18009, dependencyMap.paths),
+          asyncRequireImpl(18018, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );

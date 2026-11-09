@@ -94,8 +94,8 @@ export function reset() {
       initiatedPurchaseFromNewFlow: false,
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "channel",
-      onPaymentDismiss: "sa",
+      onPaymentSuccess: "r",
+      onPaymentDismiss: "channel",
     });
   });
 }

@@ -7,8 +7,8 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Search_SearchBar from "../../../../../design/components/Search/native/SearchBar.native.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import InstantInviteUtilsDefault from "../../../../../utils/InstantInviteUtils.tsx";
-import _modDef15050 from "../../../../../../_runtime/metro/15050__.js";
 import _modDef15051 from "../../../../../../_runtime/metro/15051__.js";
+import _modDef15052 from "../../../../../../_runtime/metro/15052__.js";
 import GuildInviteRowDefault from "GuildInviteRow.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -26,8 +26,8 @@ function EmptyGuildList() {
   obj.title = intl.string(util.t["2bfiLk"]);
   const intl2 = util.intl;
   obj.body = intl2.string(util.t.V6nAfF);
-  obj.darkSource = _modDef15050;
-  obj.lightSource = _modDef15051;
+  obj.darkSource = _modDef15051;
+  obj.lightSource = _modDef15052;
   return timestampProducer(native.ThemedEmptyState, obj);
 }
 function GuildList(recipientId) {
@@ -35,8 +35,8 @@ function GuildList(recipientId) {
   const source = recipientId.source;
   _slicedToArray = undefined;
   dependencyMap = closure_8();
-  let obj = recipientId(15047);
-  [arr, arr2] = recipientId(15047).useServerInviteRows(recipientId, recipientId.query);
+  let obj = recipientId(15048);
+  [arr, arr2] = recipientId(15048).useServerInviteRows(recipientId, recipientId.query);
   if (0 === arr.length) {
     if (0 === arr2.length) {
       items = [];
@@ -99,7 +99,7 @@ function GuildList(recipientId) {
   obj5.title = intl2.string(recipientId(1113).t["c5T+X/"]);
   obj5.data = arr2;
   items[1] = obj5;
-  const tmp3 = _slicedToArray(recipientId(15047).useServerInviteRows(recipientId, recipientId.query), 2);
+  const tmp3 = _slicedToArray(recipientId(15048).useServerInviteRows(recipientId, recipientId.query), 2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

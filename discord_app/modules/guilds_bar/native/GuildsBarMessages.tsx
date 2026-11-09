@@ -48,10 +48,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "getUserMaxFileSize",
-    externalChildren: 28,
-    expandedChildren: 28,
-    children: "center",
+    label: "MEDIA_ENGINE_SET_OPENH264_ENABLED",
+    externalChildren: null,
+    expandedChildren: "",
+    children: "",
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -68,9 +68,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "getUserMaxFileSize",
-    externalChildren: 28,
-    expandedChildren: 28,
-    children: "center",
+    label: "MEDIA_ENGINE_SET_OPENH264_ENABLED",
+    externalChildren: null,
+    expandedChildren: "",
+    children: "",
   });
 });

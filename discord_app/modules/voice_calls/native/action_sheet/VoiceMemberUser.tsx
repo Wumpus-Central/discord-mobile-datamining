@@ -356,7 +356,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
       const obj11 = { style: tmp4.row, children: null };
       let tmp21Result = null;
       if (user.isSpectating) {
-        const obj12 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15477), style: tmp20 };
+        const obj12 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15487), style: tmp20 };
         tmp21Result = closure_12(tmp2(1187).Icon, obj12);
       }
       const items4 = [tmp21Result, , , ,];
@@ -364,7 +364,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
         items4[1] = null;
         let tmp21Result5 = null;
         if (tmp15) {
-          const obj13 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15474), style: tmp20 };
+          const obj13 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15484), style: tmp20 };
           tmp21Result5 = closure_12(tmp2(1187).Icon, obj13);
         }
         items4[2] = tmp21Result5;
@@ -382,21 +382,21 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
           if (localVideoDisabled) {
             const obj15 = {
               size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16,
-              source: channel(15475),
+              source: channel(15485),
               style: tmp4.voiceStatusIconMargin,
               disableColor: true,
             };
             let obj16 = obj15;
           } else {
-            obj16 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15476), style: tmp20 };
+            obj16 = { size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, source: channel(15486), style: tmp20 };
           }
           closure_12(tmp2(1187).Icon, obj16);
         }
       } else {
         if (tmp2Result.isThemeDark(stateFromStores1)) {
-          let tmp7Result = channel(15472);
+          let tmp7Result = channel(15482);
         } else {
-          tmp7Result = channel(15473);
+          tmp7Result = channel(15483);
         }
         const obj17 = {
           size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16,

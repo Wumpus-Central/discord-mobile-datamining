@@ -9,7 +9,7 @@ require = fn;
 function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
-  const tmp3 = onClose(14636)(category);
+  const tmp3 = onClose(14637)(category);
   dependencyMap = tmp3;
   const DeveloperMode = category(4965).DeveloperMode;
   const setting = DeveloperMode.useSetting();

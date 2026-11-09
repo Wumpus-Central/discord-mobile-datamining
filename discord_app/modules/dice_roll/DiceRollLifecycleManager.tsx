@@ -8,7 +8,7 @@ import DiceRollStore from "DiceRollStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const INITIAL_STATE = fn(13955).INITIAL_STATE;
+const INITIAL_STATE = fn(13956).INITIAL_STATE;
 const DiceRollConstants = fn(9861);
 ({
   AFTER_ROLL_DELAY_MS: metroImportDefault,

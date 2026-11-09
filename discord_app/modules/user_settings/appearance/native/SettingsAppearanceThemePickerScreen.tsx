@@ -482,7 +482,7 @@ function ThemePicker(defaultIndex) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -598,7 +598,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -638,7 +638,7 @@ function ThemePicker(defaultIndex) {
                   callback(tmp12);
                   close();
                   c2 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               }
             }
@@ -702,7 +702,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -896,7 +896,7 @@ function ThemePicker(defaultIndex) {
       hasOnyxNux,
       onThemeSelected: callback4,
     };
-    let tmp62 = obj4(tmp6(17574), obj5);
+    let tmp62 = obj4(tmp6(17585), obj5);
     let tmp63 = obj4;
   } else {
     let tmp58;
@@ -940,7 +940,7 @@ function ThemePicker(defaultIndex) {
     }
     _undefined(str);
   }, items17);
-  const memo3 = obj2.useMemo(tmp6(17580), []);
+  const memo3 = obj2.useMemo(tmp6(17591), []);
   const obj10 = {
     themes: mobileThemes,
     themeIndex,
@@ -970,7 +970,7 @@ function ThemePicker(defaultIndex) {
   let tmp63Result2 = null;
   if ("nitro" === themeSelector) {
     const obj12 = { themes: mobileThemes, themeIndex, isDimmed: true };
-    tmp63Result2 = tmp63(tmp6(17601), obj12);
+    tmp63Result2 = tmp63(tmp6(17612), obj12);
   }
   const items19 = [tmp63Result2];
   const items20 = [tmp.container, ,];

@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef14885 from "../../../../../../../_runtime/metro/14885__.js";
+import _modDef14886 from "../../../../../../../_runtime/metro/14886__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(14883).CrunchyrollLinkModalScenes;
+let closure_4 = fn(14884).CrunchyrollLinkModalScenes;
 const Constants = fn(1072);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: closure_6 } = Constants);
 const jsx = fn(21).jsx;
@@ -32,7 +32,7 @@ export default function CrunchyrollLinkLanding() {
   }, items);
   const obj2 = {
     platformType: constants2.CRUNCHYROLL,
-    img: _modDef14885,
+    img: _modDef14886,
     imgStyle: tmp.image,
     headerConnect: null,
     body: null,
@@ -50,7 +50,7 @@ export default function CrunchyrollLinkLanding() {
   obj2.valueProps = memo;
   return jsx(navigation(9819).TwoWayLinkLanding, {
     platformType: constants2.CRUNCHYROLL,
-    img: _modDef14885,
+    img: _modDef14886,
     imgStyle: tmp.image,
     headerConnect: null,
     body: null,

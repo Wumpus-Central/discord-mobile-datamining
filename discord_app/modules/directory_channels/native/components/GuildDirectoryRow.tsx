@@ -66,7 +66,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -136,7 +136,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
                 closure_129_3(false);
               }
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               let guildId;
               if (channel2 != null) {
@@ -156,7 +156,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
             closure_129_3(false);
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp67) {
         if (tmp5 === c3) {

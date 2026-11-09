@@ -11,7 +11,7 @@ const GameOrganizationInviteConstants = fn(11504);
   GameOrganizationInviteAcceptStatus: metroImportDefault,
   GameOrganizationLinkedGuildJoinStatus: closure_8,
 } = GameOrganizationInviteConstants);
-const onPress = fn(13445).closeGameOrganizationJoinModal;
+const onPress = fn(13446).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5140);
@@ -27,7 +27,7 @@ export function OutcomeStep(code) {
   dependencyMap = undefined;
   let flag;
   const tmp = closure_12();
-  const tmp4 = stateFromStores(13442)(code.code);
+  const tmp4 = stateFromStores(13443)(code.code);
   let guildId;
   if (tmp4 != null) {
     guildId = tmp4.guildId;
@@ -86,7 +86,7 @@ export function OutcomeStep(code) {
   if (displayNoun == null) {
     displayNoun = null;
   }
-  const tmp2ResultResult = stateFromStores(13443)({ displayNoun, lowercase: true });
+  const tmp2ResultResult = stateFromStores(13444)({ displayNoun, lowercase: true });
   let str;
   if (tmp4 != null) {
     str = tmp4.organization.name;
@@ -212,9 +212,9 @@ export function OutcomeStep(code) {
     ({ text: obj29.text, onPress: obj29.onPress } = cta);
     obj56.disabled = tmp9;
     obj28.children = closure_10(tmp6(5758).Button, obj56);
-    items4[1] = closure_10(tmp6(13451).ModalFooter, obj28);
+    items4[1] = closure_10(tmp6(13452).ModalFooter, obj28);
     obj26.children = items4;
-    return closure_11(tmp2(13447), obj26);
+    return closure_11(tmp2(13448), obj26);
   }
-  const tmp2Result = stateFromStores(13443);
+  const tmp2Result = stateFromStores(13444);
 }

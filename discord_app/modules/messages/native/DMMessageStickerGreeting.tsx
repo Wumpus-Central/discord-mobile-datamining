@@ -86,8 +86,8 @@ export default function DMMessageStickerGreeting(channel) {
   }
   const intl2 = Text(1113).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(Text(1113).t.m0zYbV, { username: name });
-  const showConvoStarterInDM = Text(14056).useShowConvoStarterInDM(channel);
-  const TextResult = Text(14056);
+  const showConvoStarterInDM = Text(14057).useShowConvoStarterInDM(channel);
+  const TextResult = Text(14057);
   const items2 = [c7];
   const items3 = [showConvoStarterInDM];
   const stateFromStores2 = Text(504).useStateFromStores(
@@ -131,7 +131,7 @@ export default function DMMessageStickerGreeting(channel) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ export default function DMMessageStickerGreeting(channel) {
                   v2(false);
                   showErrorToast(tmp26);
                   c5 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   c3 = 1;
                   const obj4 = { channelId: _undefined.id, source: "In-channel greet" };

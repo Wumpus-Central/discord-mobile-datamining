@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import _modDef9268 from "../../../../../_runtime/metro/09268__.js";
 import IconActionButton from "IconActionButton.tsx";
-import _mod18411 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod18424 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../../message_request/SpamMessageRequestStore.tsx";
@@ -30,7 +30,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return metroImportDefault(_mod18411.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return metroImportDefault(_mod18424.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

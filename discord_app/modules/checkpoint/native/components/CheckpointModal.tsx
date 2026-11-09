@@ -99,7 +99,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -142,7 +142,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
                 c7 = 3;
                 c8 = 1;
                 const obj8 = {
-                  value: closure_0(13669).sendCheckpointCard(closure_132_0, c3, closure_133_0),
+                  value: closure_0(13670).sendCheckpointCard(closure_132_0, c3, closure_133_0),
                   done: false,
                 };
                 return obj8;
@@ -164,12 +164,12 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
               const obj10 = { value, done: true };
               return obj10;
             } else {
-              const result = closure_0(13665).trackCheckpoint2026CardShared(closure_133_0);
+              const result = closure_0(13666).trackCheckpoint2026CardShared(closure_133_0);
               c6 = 0;
-              const obj = closure_0(13665);
-              closure_0(13610).closeForwardModal();
+              const obj = closure_0(13666);
+              closure_0(13611).closeForwardModal();
               c8 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp43) {
             if (tmp4 === c6) {
@@ -208,7 +208,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -571,7 +571,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
       closure_3(CheckpointFlows.getCheckpointReplayRoute({ flow: checkpointFlow, stats }));
     },
     onShare: function handleShare() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13672, dependencyMap.paths), "CheckpointShare", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13673, dependencyMap.paths), "CheckpointShare", {
         character: stateFromStores,
         stats,
         onForward: handleForward,
@@ -651,7 +651,7 @@ let obj4 = { height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 obj2.headerActions = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
 obj2.customizationSection = { position: "absolute", left: 0, right: 0, bottom: sum1 };
 const rect1 = {
-  top: (CHECKPOINT_NAV_HEIGHT + fn(13685).CHECKPOINT_HEADER_BUTTON_SIZE) / 2,
+  top: (CHECKPOINT_NAV_HEIGHT + fn(13686).CHECKPOINT_HEADER_BUTTON_SIZE) / 2,
   bottom: CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16,
   left: "59%",
   marginLeft: 0,

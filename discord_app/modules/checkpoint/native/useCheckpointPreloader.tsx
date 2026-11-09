@@ -10,13 +10,13 @@ import _modDef6230 from "../../../../discord_assets/assets/checkpoint/2026/recap
 import _modDef6233 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
 import _modDef6236 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
 import _modDef6239 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
-import _modDef13692 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
-import _modDef13694 from "../../../../discord_assets/assets/checkpoint/2026/checkpoint-bgm.mp3.js";
-import _modDef13872 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
-import _modDef13883 from "../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef13887 from "../../../../discord_assets/assets/checkpoint/2026/voice_bg_400w.png.js";
-import _modDef13893 from "../../../../discord_assets/assets/checkpoint/2026/messages_loop_400w.png.js";
-import _modDef13909 from "../../../../discord_assets/assets/checkpoint/2026/gaming_loop_400w.png.js";
+import _modDef13693 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
+import _modDef13695 from "../../../../discord_assets/assets/checkpoint/2026/checkpoint-bgm.mp3.js";
+import _modDef13873 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import _modDef13884 from "../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef13888 from "../../../../discord_assets/assets/checkpoint/2026/voice_bg_400w.png.js";
+import _modDef13894 from "../../../../discord_assets/assets/checkpoint/2026/messages_loop_400w.png.js";
+import _modDef13910 from "../../../../discord_assets/assets/checkpoint/2026/gaming_loop_400w.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -24,25 +24,25 @@ const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
-const CheckpointFetchStates = fn(13667).CheckpointFetchStates;
+const CheckpointFetchStates = fn(13668).CheckpointFetchStates;
 const items = [
   _modDef5276,
   _modDef5280,
   _modDef5282,
-  _modDef13872,
+  _modDef13873,
   _modDef6228,
-  _modDef13893,
-  _modDef13887,
-  _modDef13883,
-  _modDef13909,
+  _modDef13894,
+  _modDef13888,
+  _modDef13884,
+  _modDef13910,
   _modDef6224,
   _modDef6227,
   _modDef6230,
   _modDef6233,
   _modDef6236,
   _modDef6239,
-  _modDef13694,
-  _modDef13692,
+  _modDef13695,
+  _modDef13693,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointPreloader.tsx");

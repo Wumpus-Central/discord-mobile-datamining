@@ -13,8 +13,8 @@ export function isAnyUserProfileOpen() {
   return stack.some((key) => key.key.startsWith(showUserProfileActionSheet.USER_PROFILE_ACTION_SHEET_KEY_PREFIX));
 }
 export function openUserProfile(arg0) {
-  ({ userId: require, onOpen: importDefault, onClose: dependencyMap } = arg0);
-  closure_3 = async function _open() {
+  ({ userId: require, channelId: importDefault, onOpen: dependencyMap, onClose: asyncGeneratorStep } = arg0);
+  closure_4 = async function _open() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -25,7 +25,7 @@ export function openUserProfile(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -50,14 +50,14 @@ export function openUserProfile(arg0) {
         } else {
           if (1 === tmp7) {
             dependencyMap = 0;
-            closure_128_2();
+            closure_128_3();
             c3 = 3;
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c3 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              closure_128_1();
+              closure_128_2();
               dependencyMap = 0;
             }
           } else if (arg0 === 1) {
@@ -75,22 +75,22 @@ export function openUserProfile(arg0) {
           return obj5;
         }
         if (null == authStore.getUser(closure_128_0)) {
-          closure_128_2();
+          closure_128_3();
           dependencyMap = 0;
           c3 = 3;
           const obj7 = { value: undefined, done: true };
           return obj7;
         } else {
-          const obj8 = { userId: closure_128_0, onClose: closure_128_2 };
+          const obj8 = { userId: closure_128_0, channelId: closure_128_1, onClose: closure_128_3 };
           v2 = 2;
           c3 = 1;
           const obj9 = { value: v2(8821)(obj8), done: false };
           return obj9;
         }
-      } catch (tmp28) {
+      } catch (tmp29) {
         if (tmp4 === dependencyMap) {
           c3 = tmp2;
-          throw tmp28;
+          throw tmp29;
         } else {
           v2 = tmp;
         }
@@ -99,7 +99,7 @@ export function openUserProfile(arg0) {
   };
   (function open() {
     const self = this;
-    const apply = closure_3.apply;
+    const apply = closure_4.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {

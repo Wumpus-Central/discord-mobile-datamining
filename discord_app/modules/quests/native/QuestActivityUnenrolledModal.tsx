@@ -38,7 +38,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const obj5 = quest(7945);
   const questTaskDetails = quest(9772).useQuestTaskDetails(quest);
   let obj6 = quest(9772);
-  const obj7 = quest(14931);
+  const obj7 = quest(14932);
   const items1 = [getOrFetchApplication];
   const questsInstructionsToWinReward = obj7.useQuestsInstructionsToWinReward({
     quest,
@@ -68,7 +68,7 @@ function QuestActivityUnenrolledModalInner(quest) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -102,7 +102,7 @@ function QuestActivityUnenrolledModalInner(quest) {
           } else {
             v1(6799).pop();
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           dependencyMap = tmp;
@@ -123,7 +123,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const obj9 = quest(5200);
   const isQuestAccessSuspended = quest(9772).useIsQuestAccessSuspended();
   const obj10 = quest(9772);
-  trackQuestContentClickedWithImpression = quest(17307).useTrackQuestContentClickedWithImpression();
+  trackQuestContentClickedWithImpression = quest(17318).useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = noop.useCallback(() => {
     trackQuestContentClickedWithImpression({
@@ -148,7 +148,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const items4 = [tmp18Result];
   const obj18 = { style: tmp4.rewardTileContainer, children: null };
   const size = { quest, height: 87, width: 87, style: tmp4.questRewardTile };
-  obj18.children = closure_11(checked(14927), size);
+  obj18.children = closure_11(checked(14928), size);
   items4[1] = closure_11(closure_7, obj18);
   obj15.children = items4;
   obj14.children = closure_12(closure_7, obj15);

@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/intelligence_layer/search/nativ
 
 export function useSmartSearchRowViewability() {
   const currentNavigationRouteName = stateFromStores(5314).useCurrentNavigationRouteName();
-  const context = noop.useContext(stateFromStores(14231).SwipeForMemberListContext);
+  const context = noop.useContext(stateFromStores(14232).SwipeForMemberListContext);
   const obj = stateFromStores(5314);
   const isFocused = stateFromStores(1500).useIsFocused();
   let isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
@@ -50,7 +50,7 @@ export function useSmartSearchRowViewability() {
   }, items2);
   const effect2 = noop.useEffect(
     () => () => {
-      closure_1_1(14143).setIsRowViewable(false, closure_1_1(14141));
+      closure_1_1(14144).setIsRowViewable(false, closure_1_1(14142));
     },
     [],
   );

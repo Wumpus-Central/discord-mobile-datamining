@@ -13,7 +13,7 @@ const createStyles = fn(5140);
 const obj2 = {
   wrapper: {
     position: "relative",
-    backgroundColor: fn(14285).PROGRESS_BACKGROUND_COLOR,
+    backgroundColor: fn(14286).PROGRESS_BACKGROUND_COLOR,
     borderRadius: nativeDefault.radii.xs,
     height: 8,
   },
@@ -21,7 +21,7 @@ const obj2 = {
 };
 let obj3 = {
   position: "relative",
-  backgroundColor: fn(14285).PROGRESS_BACKGROUND_COLOR,
+  backgroundColor: fn(14286).PROGRESS_BACKGROUND_COLOR,
   borderRadius: nativeDefault.radii.xs,
   height: 8,
 };

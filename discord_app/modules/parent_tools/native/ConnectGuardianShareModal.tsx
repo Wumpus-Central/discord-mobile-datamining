@@ -20,8 +20,8 @@ function ConnectGuardianShareScreen() {
     ModalActionCreatorsDefault.pop();
   }, []);
   let obj = getLinkCode(1113);
-  getLinkCode = getLinkCode(13590).useFamilyCenterActions({ onError: callback }).getLinkCode;
-  const obj2 = getLinkCode(13590);
+  getLinkCode = getLinkCode(13591).useFamilyCenterActions({ onError: callback }).getLinkCode;
+  const obj2 = getLinkCode(13591);
   items = [FamilyCenterStore];
   const stateFromStores = getLinkCode(563).useStateFromStores(items, () => FamilyCenterStore.getLinkCode());
   const obj3 = getLinkCode(563);
@@ -68,7 +68,7 @@ function ConnectGuardianShareScreen() {
         expiresAt: stateFromStores1,
         onRefresh: getLinkCode,
       };
-      let tmp11Result = closure_6(tmp2(17092).ConnectGuardianCard, obj11);
+      let tmp11Result = closure_6(tmp2(17103).ConnectGuardianCard, obj11);
     }
     const obj12 = { children: null };
     const obj13 = { children: null };

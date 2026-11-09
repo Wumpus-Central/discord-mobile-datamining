@@ -178,7 +178,7 @@ function FloatingNav(navigation) {
         );
       }),
     };
-    items7[1] = closure_7(tmp4(14950).YouScreenNavIconMeasurer, obj11);
+    items7[1] = closure_7(tmp4(14951).YouScreenNavIconMeasurer, obj11);
     obj9.children = items7;
     items5[1] = closure_8(closure_5, obj9);
     obj7.children = items5;

@@ -80,7 +80,7 @@ export default function ConjureFileMention(variant) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -127,7 +127,7 @@ export default function ConjureFileMention(variant) {
                   return obj;
                 } else {
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;

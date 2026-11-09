@@ -101,7 +101,7 @@ function CreateThreadViewInner(screenIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -123,13 +123,13 @@ function CreateThreadViewInner(screenIndex) {
                 current(null);
                 c5 = 1;
                 if (null == parentMessageId.parentMessageId) {
-                  current(closure_0(19012).makeEmptyTitleError());
-                  const obj8 = closure_0(19012);
+                  current(closure_0(19025).makeEmptyTitleError());
+                  const obj8 = closure_0(19025);
                   closure_0(5323).dismissKeyboard();
                   tmp60.current = false;
                   c5 = 0;
                   c7 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
                 v2 = 2;
                 c7 = 1;
@@ -147,8 +147,8 @@ function CreateThreadViewInner(screenIndex) {
                 code = body.code;
               }
               if (code === constants.AUTOMOD_TITLE_BLOCKED) {
-                current(closure_0(19012).makeAutomodViolationError(closure_130_0.body, closure_0));
-                const obj5 = closure_0(19012);
+                current(closure_0(19025).makeAutomodViolationError(closure_130_0.body, closure_0));
+                const obj5 = closure_0(19025);
                 closure_0(5323).dismissKeyboard();
                 const obj6 = closure_0(5323);
               } else {
@@ -170,8 +170,8 @@ function CreateThreadViewInner(screenIndex) {
                   tmp23 = null != name;
                 }
                 if (tmp23) {
-                  current(closure_0(19012).makeApiNameRequiredError());
-                  const obj3 = closure_0(19012);
+                  current(closure_0(19025).makeApiNameRequiredError());
+                  const obj3 = closure_0(19025);
                   closure_0(5323).dismissKeyboard();
                   const obj4 = closure_0(5323);
                 }
@@ -247,7 +247,7 @@ function CreateThreadViewInner(screenIndex) {
       style: tmp.threadIconContainer,
       children: closure_13(require("ThreadIcon").ThreadIcon, { size: "lg" }),
     }),
-    closure_13(parentChannel(19011), {
+    closure_13(parentChannel(19024), {
       ref: ref1,
       chatInputRef: ref,
       threadSettingsDraft,
@@ -298,7 +298,7 @@ function CreateThreadViewInner(screenIndex) {
     const obj15 = { style: tmp.border };
     const items8 = [closure_13(closure_6, obj15)];
     const obj16 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-    items8[1] = closure_13(tmp2(19013).ThreadCreationStarterMessage, obj16);
+    items8[1] = closure_13(tmp2(19026).ThreadCreationStarterMessage, obj16);
     obj14.children = items8;
     tmp21Result = closure_14(closure_6, obj14);
   }
@@ -310,11 +310,11 @@ function CreateThreadViewInner(screenIndex) {
   if (parentChannel.rateLimitPerUser > 0) {
     const obj17 = { style: tmp.typingWrapper, children: null };
     const obj18 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj17.children = closure_13(tmp11(13981), obj18);
+    obj17.children = closure_13(tmp11(13982), obj18);
     tmp22Result2 = closure_13(closure_6, obj17);
   }
   items5[2] = tmp22Result2;
-  items5[3] = closure_13(parentChannel(13954), {
+  items5[3] = closure_13(parentChannel(13955), {
     ref,
     channel: parentChannel,
     onJumpToPresent,
@@ -322,7 +322,7 @@ function CreateThreadViewInner(screenIndex) {
     secondaryTextFieldRef: ref1,
     threadCreationCallback: callback1,
   });
-  items5[4] = closure_13(parentChannel(14454), { channelId: parentChannel.id });
+  items5[4] = closure_13(parentChannel(14455), { channelId: parentChannel.id });
   obj6.children = items5;
   items3[1] = closure_14(closure_6, obj6);
   obj5.children = items3;

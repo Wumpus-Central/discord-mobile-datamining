@@ -346,7 +346,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   items19[1] = closure_8(View, obj8);
   if (isFocused) {
     const obj9 = { color: token, progress: derivedValue1, rewardSize: 50, strokeWidth };
-    let tmp66Result = closure_8(tmp4(17357), obj9);
+    let tmp66Result = closure_8(tmp4(17368), obj9);
   } else {
     tmp66Result = null;
   }
@@ -363,7 +363,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     const obj11 = { children: null };
     const items22 = [tmp66Result5];
     const obj12 = { color: token1, progress: derivedValue, rewardSize: 50, strokeWidth };
-    items22[1] = closure_8(tmp4(17357), obj12);
+    items22[1] = closure_8(tmp4(17368), obj12);
     obj11.children = items22;
     tmp56Result = closure_10(closure_9, obj11);
     tmp2Result14 = tmp2(5147);
@@ -373,7 +373,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     let tmp66Result6 = closure_8(tmp2(9626).NitroCoinSpotIllustration, { height: 30 });
   } else {
     const obj13 = { reward, size: 38 };
-    tmp66Result6 = closure_8(tmp4(17348), obj13);
+    tmp66Result6 = closure_8(tmp4(17359), obj13);
   }
   items19[4] = tmp66Result6;
   let tmp66Result7 = null;
@@ -391,7 +391,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     tmp66Result8 = null;
     if (null != grantAtMs) {
       const obj16 = { pointerEvents: "none", style: tmp.confetti, children: null };
-      const obj17 = { ref, source: tmp2(17358), autoPlay: false, loop: false };
+      const obj17 = { ref, source: tmp2(17369), autoPlay: false, loop: false };
       obj16.children = closure_8(tmp4(5745), obj17);
       tmp66Result8 = closure_8(View, obj16);
       const tmp4Result = tmp4(5745);

@@ -355,7 +355,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -398,7 +398,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
               }
               v1(5374).hideActionSheet(closure_1_11);
               dependencyMap = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } catch (tmp24) {
               dependencyMap = tmp;
               throw tmp24;

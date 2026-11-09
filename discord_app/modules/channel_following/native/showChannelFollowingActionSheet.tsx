@@ -62,7 +62,7 @@ export function showChannelFollowingActionSheet(id, guildId, targetChannelId, ta
             onSuccess() {
               closure_1(dependencyMap[5]).openLazy({
                 importer() {
-                  return closure_1_0(paths[4])(paths[6], paths.paths).then(/* F139095 */ function() { ... });
+                  return closure_1_0(paths[4])(paths[6], paths.paths).then(/* F139190 */ function() { ... });
                 },
                 hideActionSheet: true,
                 isDismissable: false
@@ -78,7 +78,7 @@ export function showChannelFollowingActionSheet(id, guildId, targetChannelId, ta
             importer() {
               return closure_1_0(paths[4])(paths[6], paths.paths).then((result) => {
                 closure_0 = result.default;
-                return /* F142377 */ function() { ... };
+                return /* F142482 */ function() { ... };
               });
             },
             hideActionSheet: true,

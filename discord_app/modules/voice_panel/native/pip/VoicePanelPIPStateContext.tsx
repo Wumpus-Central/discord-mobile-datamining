@@ -6,7 +6,7 @@ let size = {
   mode: "isArray",
   width: false,
   height: null,
-  containerHeight: "box-none",
+  containerHeight: 0,
   showSecondaryPIP: null,
   scale: null,
 };

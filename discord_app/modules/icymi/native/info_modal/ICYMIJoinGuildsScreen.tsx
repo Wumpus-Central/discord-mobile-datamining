@@ -280,7 +280,7 @@ get_ActivityIndicator = fn(17);
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createICYMIStyles = fn(18865);
+const createICYMIStyles = fn(18878);
 let closure_15 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: {
@@ -462,7 +462,7 @@ export default function ICYMIJoinGuildsScreen() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -512,7 +512,7 @@ export default function ICYMIJoinGuildsScreen() {
               const obj8 = v3(8998);
               const recommendedGuilds = v3(8998).getRecommendedGuilds();
               const obj9 = v3(8998);
-              v3(6799).popWithKey(stateFromStoresArray(18880).ICYMI_INFO_MODAL_KEY);
+              v3(6799).popWithKey(stateFromStoresArray(18893).ICYMI_INFO_MODAL_KEY);
               dependencyMap = 3;
               const obj13 = { value: undefined, done: true };
               return obj13;
@@ -543,9 +543,9 @@ export default function ICYMIJoinGuildsScreen() {
             const obj19 = v3(8998);
             const recommendedGuilds1 = v3(8998).getRecommendedGuilds();
             const obj20 = v3(8998);
-            v3(6799).popWithKey(stateFromStoresArray(18880).ICYMI_INFO_MODAL_KEY);
+            v3(6799).popWithKey(stateFromStoresArray(18893).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp33) {
           dependencyMap = tmp;

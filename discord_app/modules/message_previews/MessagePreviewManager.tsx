@@ -73,7 +73,7 @@ class MessagePreviewManager extends tmp3 {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           while (true) {
@@ -217,7 +217,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -355,7 +355,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -395,7 +395,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
               const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
               tmp5(572).dispatch(obj7);
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp12) {
             c3 = tmp;

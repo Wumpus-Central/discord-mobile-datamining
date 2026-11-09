@@ -73,8 +73,8 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: "body-sm/medium",
-    expandedChildren: "interactive-text-active",
+    label: 1,
+    expandedChildren: "center",
     children: null,
   };
   const intl = util.intl;

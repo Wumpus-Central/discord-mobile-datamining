@@ -15,7 +15,7 @@ import useKeyboardAnimatedValueDefault from "../../../keyboard/native/useKeyboar
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import inlineStyles from "../../../../../_runtime/08101_inlineStyles.js";
 import ChatInputActionButtonDefault from "../../../chat_input/native/action_buttons/ChatInputActionButton.tsx";
-import _modDef14458 from "../../../../../_runtime/metro/14458__.js";
+import _modDef14459 from "../../../../../_runtime/metro/14459__.js";
 import VoiceMessageChatDefault from "VoiceMessageChat.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -365,7 +365,7 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result })];
-  const obj4 = { style: null, source: _modDef14458 };
+  const obj4 = { style: null, source: _modDef14459 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
@@ -375,8 +375,8 @@ function LockPill(voiceMessageAnimationState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13956).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(13957).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(13957).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(13958).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1072).ComponentActionsKeyed;
 const CHAT_INPUT_HEIGHT = fn(13023).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);

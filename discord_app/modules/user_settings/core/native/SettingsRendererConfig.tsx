@@ -187,6 +187,7 @@ import ViewDebugLogsSettingDefault from "../../defs/native/ViewDebugLogsSetting.
 import CacheActionsSettingDefault from "../../defs/native/CacheActionsSetting.tsx";
 import ShowDevWidgetSettingDefault from "../../defs/native/ShowDevWidgetSetting.tsx";
 import ShowDevToolsSettingDefault from "../../defs/native/ShowDevToolsSetting.tsx";
+import BuildOverridesSettingDefault from "../../defs/native/BuildOverridesSetting.tsx";
 import BugReporterSettingDefault from "../../defs/native/BugReporterSetting.tsx";
 import InternalBuildActiveSettingDefault from "../../defs/native/InternalBuildActiveSetting.tsx";
 import InternalBuildUpdateSettingDefault from "../../defs/native/InternalBuildUpdateSetting.tsx";
@@ -493,6 +494,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   CACHE_ACTIONS,
   SHOW_DEV_WIDGET,
   SHOW_DEV_TOOLS,
+  BUILD_OVERRIDES,
   BUG_REPORTER,
   INTERNAL_BUILD_ACTIVE,
   INTERNAL_BUILD_UPDATE,
@@ -562,7 +564,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_DIRECT_MESSAGES,
   PARENTAL_CONTROLS_MESSAGE_REQUESTS,
   PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE,
-  PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -777,6 +778,7 @@ const frozen = Object.freeze({
   [CACHE_ACTIONS]: CacheActionsSettingDefault,
   [SHOW_DEV_WIDGET]: ShowDevWidgetSettingDefault,
   [SHOW_DEV_TOOLS]: ShowDevToolsSettingDefault,
+  [BUILD_OVERRIDES]: BuildOverridesSettingDefault,
   [BUG_REPORTER]: BugReporterSettingDefault,
   [INTERNAL_BUILD_ACTIVE]: InternalBuildActiveSettingDefault,
   [INTERNAL_BUILD_UPDATE]: InternalBuildUpdateSettingDefault,
@@ -846,7 +848,8 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_DIRECT_MESSAGES]: ParentalControlsDirectMessagesDefault,
   [PARENTAL_CONTROLS_MESSAGE_REQUESTS]: ParentalControlsMessageRequestsDefault,
   [PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE]: ParentalControlsFriendRequestsEveryoneSettingDefault,
-  [PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]: ParentalControlsFriendRequestsMutualFriendsSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]:
+    ParentalControlsFriendRequestsMutualFriendsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS]:
     ParentalControlsFriendRequestsMutualGuildsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS]:

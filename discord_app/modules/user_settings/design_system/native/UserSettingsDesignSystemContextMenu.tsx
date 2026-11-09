@@ -9,9 +9,9 @@ import _modDef7325 from "../../../../../_runtime/metro/07325__.js";
 import _modDef8495 from "../../../../../_runtime/metro/08495__.js";
 import _modDef11750 from "../../../../../_runtime/metro/11750__.js";
 import _modDef11755 from "../../../../../_runtime/metro/11755__.js";
-import _modDef14621 from "../../../../../_runtime/metro/14621__.js";
-import _modDef18104 from "../../../../../_runtime/metro/18104__.js";
-import _modDef18105 from "../../../../../_runtime/metro/18105__.js";
+import _modDef14622 from "../../../../../_runtime/metro/14622__.js";
+import _modDef18117 from "../../../../../_runtime/metro/18117__.js";
+import _modDef18118 from "../../../../../_runtime/metro/18118__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,8 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: "<string:989856263>",
-            action: "<string:100664152>",
+            variant: 73917290777974550000000000000000000000000000000000000000000000000000000000000000000000000,
+            action: 115262918846624450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -74,8 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: "<string:989856263>",
-          action: "<string:100664152>",
+          variant: 73917290777974550000000000000000000000000000000000000000000000000000000000000000000000000,
+          action: 115262918846624450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -110,13 +110,13 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [
-  _modDef14621,
+  _modDef14622,
   _modDef7325,
   _modDef8495,
   _modDef11755,
   _modDef5865,
-  _modDef18104,
-  _modDef18105,
+  _modDef18117,
+  _modDef18118,
   _modDef11750,
 ];
 let closure_8 = [

@@ -22,14 +22,14 @@ export default function ClassificationDetailModal(classificationId) {
   }
   const tmp = closure_7();
   dependencyMap = tmp;
-  const safetyHubInitialized = classificationId(13580).useSafetyHubInitialized();
+  const safetyHubInitialized = classificationId(13581).useSafetyHubInitialized();
   items = [safetyHubInitialized];
   const effect = safetyHubInitialized.useEffect(() => {
     if (!safetyHubInitialized) {
       const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
     }
   }, items);
-  let obj = classificationId(13580);
+  let obj = classificationId(13581);
   const isFocused = classificationId(1500).useIsFocused();
   const items1 = [classificationId, flag, tmp, source];
   const memo = safetyHubInitialized.useMemo(() => {
@@ -44,21 +44,21 @@ export default function ClassificationDetailModal(classificationId) {
         return closure_1(6799).pop();
       }),
       render() {
-        return jsx(source(13544), {
+        return jsx(source(13545), {
           classificationId,
           source,
           onClose() {
             closure_1(6799).pop();
             if (closure_1_1) {
-              closure_0(13579).openAccountStanding();
-              const obj = closure_0(13579);
+              closure_0(13580).openAccountStanding();
+              const obj = closure_0(13580);
             }
             const arr = closure_1(6799);
           },
           onError() {
             closure_1_1(6799).pop();
             const arr = closure_1_1(6799);
-            classificationId(13579).openAccountStanding();
+            classificationId(13580).openAccountStanding();
           },
         });
       },

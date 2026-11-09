@@ -7,14 +7,14 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
 import _modDef10714 from "../../../../_runtime/metro/10714__.js";
 import _modDef10715 from "../../../../_runtime/metro/10715__.js";
-import _modDef15325 from "../../../../_runtime/metro/15325__.js";
+import _modDef15335 from "../../../../_runtime/metro/15335__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef15325 };
+  const obj2 = { source: _modDef15335 };
   items = [React6(FastImageDefault, obj2)];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = {
@@ -161,7 +161,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   const items2 = [tmp12Result];
   const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
   let obj = skuId(7837);
-  obj5.children = tmp15(skuId(14751).CircleQuestionIcon, {
+  obj5.children = tmp15(skuId(14752).CircleQuestionIcon, {
     style: tmp.questionIcon,
     color: consumed(575).colors.WHITE,
   });

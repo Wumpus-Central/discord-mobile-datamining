@@ -16,7 +16,7 @@ let closure_12 = ["1402418171662569542"];
 let items = [, ,];
 ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16606);
+const CONTEXT_MENU_ICON_NAMES = fn(16616);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 let items1 = [
@@ -42,7 +42,7 @@ obj3.handler = function handler(isSocketConnected) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

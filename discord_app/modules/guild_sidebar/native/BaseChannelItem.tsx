@@ -170,7 +170,7 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(14172);
+      let AnimatedPressableHighlight = hideIcon(14173);
     } else {
       AnimatedPressableHighlight = mode(9072).AnimatedPressableHighlight;
     }
@@ -187,8 +187,8 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(14171), obj3);
-    const tmp9 = hideIcon(14171);
+    closure_8(hideIcon(14172), obj3);
+    const tmp9 = hideIcon(14172);
   }
 }
 export const ChannelModes = obj2;

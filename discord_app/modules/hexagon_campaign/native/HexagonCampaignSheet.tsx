@@ -138,7 +138,7 @@ export default function HexagonCampaignSheet() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -169,7 +169,7 @@ export default function HexagonCampaignSheet() {
                 };
                 c3 = 2;
                 c4 = 1;
-                const obj9 = { value: stateFromStores(17314).applyHexagonCampaignPerks(obj7), done: false };
+                const obj9 = { value: stateFromStores(17325).applyHexagonCampaignPerks(obj7), done: false };
                 return obj9;
               }
             }
@@ -207,9 +207,9 @@ export default function HexagonCampaignSheet() {
         obj12.perks = values.filter((item) => closure_1_5[item]);
         obj12.content = stateFromStores(6839).QuestContent.AD_PERK_MODAL;
         obj12.sourceQuestContent = stateFromStores(6839).QuestContent.QUEST_HOME_MOBILE;
-        const result = stateFromStores(16768).trackHexagonCampaignPerkAction(obj12);
-        obj4 = stateFromStores(16768);
-        tmp3(5374).hideActionSheet(stateFromStores(17312).HEXAGON_CAMPAIGN_SHEET_KEY);
+        const result = stateFromStores(16779).trackHexagonCampaignPerkAction(obj12);
+        obj4 = stateFromStores(16779);
+        tmp3(5374).hideActionSheet(stateFromStores(17323).HEXAGON_CAMPAIGN_SHEET_KEY);
         const _Object2 = Object;
         const values2 = Object.values(closure_129_5);
         const _Boolean = Boolean;

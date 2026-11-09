@@ -43,7 +43,7 @@ export default function UserProfileWidgetEditingHeader() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15191, dependencyMap.paths),
+      asyncRequireImpl(15201, dependencyMap.paths),
       "UserProfileWidgetAddActionSheet",
     );
   };

@@ -365,9 +365,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "Show App Rating Modal",
-        selectedChannelId:
+        messageChannel:
           "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.",
+        selectedChannelId: null,
         tapLinkData: null,
       };
       channel = applyArgumentsResult.props.channel;

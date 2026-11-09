@@ -24,7 +24,7 @@ function CloseButton() {
     accessibilityLabel: null,
   });
 }
-const constants = fn(14872).PlayStationLinkModalScenes;
+const constants = fn(14873).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

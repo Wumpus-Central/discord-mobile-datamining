@@ -29,7 +29,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(17385);
+const YouBarConstants = fn(17396);
 ({
   YOU_BAR_HEIGHT: closure_10,
   YOU_BAR_PADDING: closure_11,
@@ -271,7 +271,7 @@ let closure_26 = noop.memo(function YouBar() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -305,7 +305,7 @@ let closure_26 = noop.memo(function YouBar() {
             const result1 = closure_128_0.showYouAccountActionSheet();
             const result2 = closure_129_2.set(false);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c3 = tmp;
@@ -461,7 +461,7 @@ let closure_26 = noop.memo(function YouBar() {
   let tmp51Result = tmp33;
   if (null != nameplate) {
     const obj5 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp47 };
-    tmp51Result = closure_18(tmp7(18797), obj5);
+    tmp51Result = closure_18(tmp7(18810), obj5);
   }
   items12[1] = tmp51Result;
   const obj6 = { gesture: memo3, children: null };
@@ -500,12 +500,12 @@ let closure_26 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj10 = { hasNameplate: tmp33, canUnpin: tmp27.canPin };
-    let tmp51Result3 = closure_18(tmp7(18803), obj10);
+    let tmp51Result3 = closure_18(tmp7(18816), obj10);
   } else {
     tmp51Result3 = null;
     if (iCYMIEnabled) {
       const obj11 = { hasNameplate: tmp33 };
-      tmp51Result3 = closure_18(tmp7(18805), obj11);
+      tmp51Result3 = closure_18(tmp7(18818), obj11);
     }
   }
   const items13 = [tmp51Result3, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];
@@ -518,7 +518,7 @@ let closure_26 = noop.memo(function YouBar() {
     const items15 = [tmp.dockRimRow, memo, animatedStyle];
     obj12.style = items15;
     const obj13 = { style: tmp.dockRim };
-    obj12.children = closure_18(tmp7(14233), obj13);
+    obj12.children = closure_18(tmp7(14234), obj13);
     tmp51Result4 = closure_18(tmp7(1652).View, obj12);
   }
   children[1] = tmp51Result4;

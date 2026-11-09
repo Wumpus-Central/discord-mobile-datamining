@@ -371,10 +371,10 @@ export function wakeMyGameServer(arg0) {
     .then((body) => {
       body = body.body;
       let tmp3 = body;
-      if (body.status === closure_0(14299).GameServerStatus.SLEEPING) {
+      if (body.status === closure_0(14300).GameServerStatus.SLEEPING) {
         const obj2 = {};
         const merged = Object.assign(body);
-        obj2.status = closure_0(14299).GameServerStatus.STARTING;
+        obj2.status = closure_0(14300).GameServerStatus.STARTING;
         tmp3 = obj2;
       }
       const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

@@ -249,7 +249,7 @@ let closure_27 = async function _trackFirstLaunched() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -409,7 +409,7 @@ let closure_39 = async function _init(_payload) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -485,7 +485,7 @@ let closure_40 = async function _initializeApp() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -618,7 +618,7 @@ let closure_40 = async function _initializeApp() {
           closure_129_0(closure_129_3[69]);
           const sessionHeartbeatScheduler = closure_129_0(closure_129_3[70]).initSessionHeartbeatScheduler();
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         if (closure_128_0) {
           let resolved = Promise.resolve();
@@ -700,11 +700,11 @@ let closure_40 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[45])(paths[55], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[56]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(16574).updateSaturation(closure_0(5141).default.saturation);
-            obj = closure_0(16574);
-            closure_0(19420).updateVisualRefresh(true);
-            const obj2 = closure_0(19420);
-            closure_0(19421).updateTheme(closure_0(1192).default.theme);
+            closure_0(16584).updateSaturation(closure_0(5141).default.saturation);
+            obj = closure_0(16584);
+            closure_0(19433).updateVisualRefresh(true);
+            const obj2 = closure_0(19433);
+            closure_0(19434).updateTheme(closure_0(1192).default.theme);
             closure_1_0();
           }));
         });
@@ -749,7 +749,7 @@ let closure_41 = async function _initHeadlessTask() {
       obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -848,14 +848,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_19746 = fn(19746);
-const superagentPatch = fn(19748);
+const module_19759 = fn(19759);
+const superagentPatch = fn(19761);
 get_ActivityIndicator = fn(17);
 ({ AppState: closure_6, NativeEventEmitter: metroImportDefault, Linking: closure_8, LogBox: closure_9, NativeModules: closure_10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(19771);
+const logThirdPartyImportsDone = fn(19784);
 let closure_11 = fn(2187).subscribeToIntlLoadingSuccess;
 const AnalyticsTrackingStore = fn(7716);
-const ManagerRegistry = fn(19772);
+const ManagerRegistry = fn(19785);
 const Constants = fn(1072);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;

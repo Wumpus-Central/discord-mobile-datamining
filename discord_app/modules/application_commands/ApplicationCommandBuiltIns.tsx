@@ -671,7 +671,7 @@ obj21.execute = function execute(arr, guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -926,7 +926,7 @@ obj24.execute = function execute(arr, guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1142,7 +1142,7 @@ obj28.execute = function execute(arr, guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1343,7 +1343,7 @@ obj32.execute = function execute(arr, channel) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1382,7 +1382,7 @@ obj32.execute = function execute(arr, channel) {
           const obj9 = { location: constants.PRIVATE_MESSAGE_COMMAND };
           obj7.sendMessage(id, tmp2(7900).parse(channel2, closure_129_2), true, obj9);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c3 = tmp;

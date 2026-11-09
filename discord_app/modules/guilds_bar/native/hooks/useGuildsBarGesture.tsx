@@ -275,7 +275,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(6827).GuildsNodeType;
-const GuildsBarConstants = fn(18679);
+const GuildsBarConstants = fn(18692);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
@@ -1065,7 +1065,7 @@ export default function useGuildsBarGesture() {
   }, items4);
   let obj7 = require("../../../../../_runtime/metro/01652__.js");
   let items5 = [callback4];
-  const onFastListScrollWorklet = tmp(17386).useExternalScrollEventHandler({ id: "guilds" });
+  const onFastListScrollWorklet = tmp(17397).useExternalScrollEventHandler({ id: "guilds" });
   let items6 = [
     dragDropInProgress,
     dragRegion,

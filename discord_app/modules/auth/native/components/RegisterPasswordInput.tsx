@@ -51,7 +51,7 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-const RegistrationUIStore = fn(18310);
+const RegistrationUIStore = fn(18323);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
@@ -101,7 +101,7 @@ export function RegisterPasswordInput(ref) {
     autoFocus = false;
   }
   obj2.enabled = autoFocus;
-  isPasswordFocused(16174)(obj2);
+  isPasswordFocused(16184)(obj2);
   const tmp8 = _slicedToArray(noop.useState(false), 2);
   isPasswordFocused = tmp8[0];
   dependencyMap = tmp10;
@@ -117,7 +117,7 @@ export function RegisterPasswordInput(ref) {
     onPasswordChange(arg0);
   }, items);
   const tmp14 = onPasswordChange;
-  const tmp6 = isPasswordFocused(16174);
+  const tmp6 = isPasswordFocused(16184);
   const items1 = [PhoneStore];
   stateFromStores = onPasswordChange(504).useStateFromStores(items1, () => {
     const FRANCE_AND_FRENCH_REGION = onPasswordChange(5821).CountryCodesSets.FRANCE_AND_FRENCH_REGION;

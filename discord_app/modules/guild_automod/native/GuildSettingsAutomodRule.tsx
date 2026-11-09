@@ -9,11 +9,11 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAutomodRulesList = fn(20064).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(20066);
+const useAutomodRulesList = fn(20077).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(20079);
 ({ useAutomodEditingRuleActions: metroImportDefault, useAutomodEditingRuleState: closure_8 } =
   GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(13524).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(13525).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
@@ -97,7 +97,7 @@ export default function GuildSettingsAutomodRule(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -135,7 +135,7 @@ export default function GuildSettingsAutomodRule(guildId) {
               }
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c3 = tmp;
@@ -319,7 +319,7 @@ export default function GuildSettingsAutomodRule(guildId) {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -338,7 +338,7 @@ export default function GuildSettingsAutomodRule(guildId) {
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(13529).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(13530).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {
@@ -366,7 +366,7 @@ export default function GuildSettingsAutomodRule(guildId) {
                       v0(closure_130_1, closure_0);
                       closure_1.pop();
                       c6 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp41) {
                     closure_3 = tmp41;

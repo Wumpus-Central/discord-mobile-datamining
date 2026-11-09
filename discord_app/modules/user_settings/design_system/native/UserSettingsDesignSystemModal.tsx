@@ -561,7 +561,7 @@ function SwitchesScreen(onAction) {
   [arr2, c1] = noop.useState(parts.map(() => false));
   const obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
   const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
-  obj.footer = closure_7(parts(13650).ModalFloatingAction, {
+  obj.footer = closure_7(parts(13651).ModalFloatingAction, {
     isVisible: arr2.some((item) => item),
     floatingBackgroundColor: tmp.screen.backgroundColor,
     text: "Come on fhqwhgads",
@@ -600,7 +600,7 @@ function SwitchesScreen(onAction) {
       );
     }),
   });
-  items = [closure_7(closure_5, obj3), closure_7(parts(13650).ModalFloatingActionSpacer, {})];
+  items = [closure_7(closure_5, obj3), closure_7(parts(13651).ModalFloatingActionSpacer, {})];
   obj.children = items;
   return closure_8(DemoScreen, obj);
 }

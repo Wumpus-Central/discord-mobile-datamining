@@ -21,7 +21,7 @@ export default function openVideoQuestModal(questId) {
       }
     }
     if (null == completedAt) {
-      sourceQuestContent(17407)();
+      sourceQuestContent(17418)();
     }
   }
   const v4Result = v1All.v4();
@@ -37,6 +37,6 @@ export default function openVideoQuestModal(questId) {
     },
     sourceQuestContent,
   };
-  const tmp8 = questId(2118)(17415, dependencyMap.paths);
-  return obj3.pushLazy(tmp8, obj4, questId(14919).getVideoQuestModalKey(questId));
+  const tmp8 = questId(2118)(17426, dependencyMap.paths);
+  return obj3.pushLazy(tmp8, obj4, questId(14920).getVideoQuestModalKey(questId));
 }

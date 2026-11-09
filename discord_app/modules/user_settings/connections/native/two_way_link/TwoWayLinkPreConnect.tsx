@@ -62,7 +62,7 @@ export function TwoWayLinkPreConnect(platformType) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -108,7 +108,7 @@ export function TwoWayLinkPreConnect(platformType) {
               return obj5;
             } else {
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -123,7 +123,7 @@ export function TwoWayLinkPreConnect(platformType) {
             c3 = 0;
             if (!closure_129_6.current) {
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               let tmp12 = tmp3(tmp42[11]);
               let getCallbackParamsFromURL = tmp12.openURL;

@@ -65,8 +65,8 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   const setSelectedGiftingPromotionReward = nativeGiftContext.setSelectedGiftingPromotionReward;
   ({ setCurrentAnalyticsStep: c7, productId } = nativeGiftContext);
   let obj2 = defaultSelection(10681);
-  const canPurchaseIAP = defaultSelection(14700).useCanPurchaseIAP(productId);
-  const obj3 = defaultSelection(14700);
+  const canPurchaseIAP = defaultSelection(14701).useCanPurchaseIAP(productId);
+  const obj3 = defaultSelection(14701);
   items = [c7];
   const stateFromStores = defaultSelection(504).useStateFromStores(items, () => {
     const marketingComponentByType = _undefined2.getMarketingComponentByType(

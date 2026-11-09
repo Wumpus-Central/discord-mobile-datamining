@@ -469,20 +469,20 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj6.isActivityFocused = first1;
       const obj7 = { channel: stateFromStores, layoutMode: tmp75 };
       obj6.children = closure_14(tmp4(11957), obj7, tmp3[0]);
-      const items27 = [closure_14(tmp4(19638), obj6)];
+      const items27 = [closure_14(tmp4(19651), obj6)];
       let tmp79Result = null;
       if (stateFromStores2) {
-        tmp79Result = closure_14(tmp4(19639), {});
+        tmp79Result = closure_14(tmp4(19652), {});
       }
       items27[1] = tmp79Result;
       obj5.children = items27;
       obj4.children = closure_15(tmp4(1652).View, obj5);
       let tmp79Result2 = closure_14(tmp8(5420).GestureDetector, obj4);
       let tmp76 = closure_14;
-      const tmp4Result2 = tmp4(19638);
+      const tmp4Result2 = tmp4(19651);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: stateFromStores1, application: first };
-      tmp79Result2 = closure_14(tmp4(19640), obj8);
+      tmp79Result2 = closure_14(tmp4(19653), obj8);
       tmp76 = closure_14;
     } else {
       tmp76 = closure_14;
@@ -495,7 +495,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
         itemDimensions: tmp2Result2[0],
         disableBadges: true,
       };
-      obj10.children = closure_14(tmp4(19644), obj11);
+      obj10.children = closure_14(tmp4(19657), obj11);
       tmp79Result2 = closure_14(tmp8(5420).GestureDetector, obj10);
     }
     const obj12 = { value: tmp4Result(tmp4(7412).ACTIVITY_TILE).analyticsLocations, children: tmp79Result2 };

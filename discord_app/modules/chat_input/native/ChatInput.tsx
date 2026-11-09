@@ -561,7 +561,7 @@ class ChatInput {
             const result = textFieldHeight.set(c0(13026).getChatInputHeightAnimationTiming(height, sharedValue.get()));
             const tmp2Result = c0(13026);
           }
-          obj = c0(14024);
+          obj = c0(14025);
         },
         handleLayoutOfInputContainer(arg0) {
           const current = closure_1_20.chatInputAutocomplete.current;
@@ -590,7 +590,7 @@ class ChatInput {
               const tmpResult = c0(13026);
             }
           }
-          obj = c0(14024);
+          obj = c0(14025);
         },
         handleChangeAutoCompleteVisibility(arg0) {
           dismissCoachmark(closure_1_20.props.current.screenIndex, arg0);
@@ -630,7 +630,7 @@ class ChatInput {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -965,7 +965,7 @@ class ChatInput {
         if ("tapAttachment" === tapAction.action) {
           let current = closure_1_20.chatInput.current;
           current.blur();
-          const obj = c0(14025);
+          const obj = c0(14026);
           const current2 = closure_1_20.chatInput.current;
           const applicationCommandManager = current2.getApplicationCommandManager();
           ({ channelId, optionName } = tapAction);
@@ -987,8 +987,8 @@ class ChatInput {
           focused = text.length > 0;
         }
         if (focused) {
-          const result = c0(13958).trackMobileEmojiSuggestionsExposure({ location: "ChatInputFocusedWithText" });
-          const obj = c0(13958);
+          const result = c0(13959).trackMobileEmojiSuggestionsExposure({ location: "ChatInputFocusedWithText" });
+          const obj = c0(13959);
         }
       };
       obj.handleTextOrFocusChange = function handleTextOrFocusChange(text, focused) {
@@ -1571,7 +1571,7 @@ class ChatInput {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, findNodeHandle: closure_8 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13956).useVoiceMessagesUIStore;
+const useVoiceMessagesUIStore = fn(13957).useVoiceMessagesUIStore;
 const DraftType = fn(7777).DraftType;
 const useChatBottomManagerUIStore = fn(10017);
 ({

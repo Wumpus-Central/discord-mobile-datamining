@@ -33,7 +33,7 @@ let GuildScheduledEventStore = fn(6910);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const MemberListRowTypes = fn(7510).MemberListRowTypes;
 let closure_20 = fn(5070).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(17597).HappeningNowItem;
+const HappeningNowItem = fn(17608).HappeningNowItem;
 const Constants = fn(1072);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: closure_31, StatusTypes: closure_32 } = Constants);
 let items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
@@ -304,7 +304,7 @@ export default function useHappeningNowData(has, guildId) {
                         if (closure_2_3) {
                           const found = embeddedActivitiesForChannel.filter((userIds) => {
                             items = [...userIds.userIds];
-                            return items.some(/* F143389 */ function() { ... });
+                            return items.some(/* F143496 */ function() { ... });
                           });
                           closure_1_4[channel.id] = found.map((activity) => ({ kind: "embedded-activity", userId, voiceState, guildId: set1, activity }));
                         } else {

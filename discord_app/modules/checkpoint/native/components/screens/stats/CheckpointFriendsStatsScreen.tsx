@@ -105,7 +105,7 @@ function SidekickMessageInput(user) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -314,7 +314,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp9(1113).intl;
     obj12.accessibilityLabel = intl2.string(tmp9(1113).t.Ve9Ge6);
     const obj13 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj12.children = closure_13(tmp9(13596).GiftIcon, obj13);
+    obj12.children = closure_13(tmp9(13597).GiftIcon, obj13);
     const items7 = [closure_13(sharedValue, obj12)];
     const obj14 = {
       onPress: function handleSend() {

@@ -194,11 +194,15 @@ export default noop.memo(function DevToolsContent(arg0) {
       };
       obj.onPress = function onPress() {
         if (!c2) {
-          if (null != screenKey.push) {
-            screenKey.push(screenKey);
+          if (null == closure_1_1) {
+            if (null != screenKey.push) {
+              screenKey.push(screenKey);
+            } else {
+              const obj2 = { screenKey };
+              DevToolsNavigator.navigateToDevTools(obj2);
+            }
           } else {
-            const obj2 = { screenKey };
-            DevToolsNavigator.navigateToDevTools(obj2);
+            tmp();
           }
         }
       };

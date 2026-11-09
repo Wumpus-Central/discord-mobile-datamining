@@ -239,7 +239,7 @@ export default function DevToolsAnalyticsScreen() {
     variant: "danger",
     icon: closure_8(trimmed(5862).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(17891).clearAnalyticsLog,
+    onPress: trimmed(17902).clearAnalyticsLog,
   });
   obj3.children = items2;
   const items3 = [closure_9(trimmed(7126).TableRowGroup, obj3), ,];
@@ -248,7 +248,7 @@ export default function DevToolsAnalyticsScreen() {
     variant: "danger",
     icon: closure_8(trimmed(5862).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(17891).clearAnalyticsLog,
+    onPress: trimmed(17902).clearAnalyticsLog,
   };
   items3[1] = closure_8(View, {
     style: tmp.searchFieldContainer,

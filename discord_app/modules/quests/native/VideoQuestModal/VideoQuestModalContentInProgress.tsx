@@ -249,8 +249,8 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     str2 = str;
     if (null != num) {
       let str3 = "lg";
-      if (diff < tmp(17421).QUEST_PROGRESS_DIAMETER_BY_SIZE.lg + num) {
-        if (diff >= tmp(17421).QUEST_PROGRESS_DIAMETER_BY_SIZE["md-lg"] + num) {
+      if (diff < tmp(17432).QUEST_PROGRESS_DIAMETER_BY_SIZE.lg + num) {
+        if (diff >= tmp(17432).QUEST_PROGRESS_DIAMETER_BY_SIZE["md-lg"] + num) {
           str = "md-lg";
         }
         str3 = str;
@@ -258,7 +258,7 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
       str2 = str3;
     }
   }
-  const sum = tmp(17421).QUEST_PROGRESS_DIAMETER_BY_SIZE.md + num;
+  const sum = tmp(17432).QUEST_PROGRESS_DIAMETER_BY_SIZE.md + num;
   const sum1 = sum + 2 * nativeDefault.space.PX_16;
   const tmp10 = c3(duration.useState(null), 2);
   sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
@@ -450,7 +450,7 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     obj13.style = items18;
     obj13.animatedProps = animatedProps;
     const obj15 = { size: str2, onTextBlockLayout: callback1 };
-    obj13.children = closure_11(tmp15(17438), obj15);
+    obj13.children = closure_11(tmp15(17449), obj15);
     const items19 = [closure_11(tmp15(1652).View, obj13)];
     const items20 = [tmp3.rewardContentCentered, ,];
     const tmpResult13 = tmp(1377);
@@ -462,12 +462,12 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     let isAndroidResult = tmp(1377).isAndroid();
     if (isAndroidResult) {
       const obj17 = { align: "top", style: tmp3.cloudsBackground };
-      isAndroidResult = closure_11(tmp15(17417), obj17);
+      isAndroidResult = closure_11(tmp15(17428), obj17);
     }
     const items21 = [isAndroidResult];
     const obj18 = { assetUrl: null, maxHeight: 90, maxWidth: null };
     const tmpResult14 = tmp(1377);
-    const tmp15Result2 = tmp15(17439);
+    const tmp15Result2 = tmp15(17450);
     obj18.assetUrl = tmp(9785).getQuestAsset(quest, tmp(9785).QuestAssetType.LOGO_TYPE, "dark").url;
     obj18.maxWidth = contentWidth - 120;
     items21[1] = closure_11(tmp15Result2, obj18);
@@ -476,7 +476,7 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     obj11.children = items19;
     const items22 = [closure_12(tmp39, obj11), ,];
     const obj19 = { align: "top", style: tmp3.cloudsBackground };
-    items22[1] = closure_11(tmp15(17417), obj19);
+    items22[1] = closure_11(tmp15(17428), obj19);
     const obj20 = {
       direction: "vertical",
       spacing: tmp15(575).space.PX_24,
@@ -510,7 +510,7 @@ let closure_24 = noop.memo(function LandscapeLayout(quest) {
     }
     obj26.location = constants.VIDEO_MODAL_MOBILE;
     obj26.sourceQuestContent = sourceQuestContent;
-    obj25.children = closure_11(tmp15(17440), obj26);
+    obj25.children = closure_11(tmp15(17451), obj26);
     items24[1] = closure_11(tmp39, obj25);
     obj21.children = items24;
     const items25 = [closure_12(tmp(6159).Stack, obj21), ,];
@@ -860,7 +860,7 @@ let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/V
 export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
   ({ onClose, sourceQuestContent } = arg0);
   ({ contentWidth, isFullscreen, onNavigateToPostWatchVideo, onEnd, setIsFullscreen } = arg0);
-  const quest = sourceQuestContent(17416).useVideoQuestModalContext().quest;
+  const quest = sourceQuestContent(17427).useVideoQuestModalContext().quest;
   items = [quest];
   items1 = [quest];
   const memo = noop.useMemo(
@@ -871,13 +871,13 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
     () => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.VIDEO_PLAYER_TRANSCRIPT, undefined, true),
     items1,
   );
-  let obj = sourceQuestContent(17416);
+  let obj = sourceQuestContent(17427);
   [tmp6, dependencyMap] = getQuestImpressionId(noop.useState(false), 2);
   const items2 = [quest];
   const callback = noop.useCallback(() => dependencyMap((arg0) => !arg0), []);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(17442, dependencyMap.paths), "transcript-" + quest.id, { quest });
+    obj.openLazy(asyncRequireImpl(17453, dependencyMap.paths), "transcript-" + quest.id, { quest });
   }, items2);
   const tmp5 = getQuestImpressionId(noop.useState(false), 2);
   getQuestImpressionId = sourceQuestContent(9807).useGetQuestImpressionId();
@@ -911,7 +911,7 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
     }
   }, items3);
   let obj3 = sourceQuestContent(7943);
-  const videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(17443).useVideoQuestClickCtaAndMaybeCloseModal({
+  const videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(17454).useVideoQuestClickCtaAndMaybeCloseModal({
     quest,
     onClose,
     sourceQuestContent,
@@ -930,14 +930,14 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
   const callback5 = noop.useCallback(() => {
     const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
   }, items6);
-  let obj4 = sourceQuestContent(17443);
-  const videoExternallyPaused = sourceQuestContent(17444).useVideoExternallyPaused(quest.id, tmp11);
+  let obj4 = sourceQuestContent(17454);
+  const videoExternallyPaused = sourceQuestContent(17455).useVideoExternallyPaused(quest.id, tmp11);
   const tmp19 =
     quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 6844).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
   let tmp20 = null == tmp19;
   if (!tmp20) {
-    tmp20 = "portrait" === sourceQuestContent(14919).getVideoOrientation(tmp19);
-    const tmpResult = sourceQuestContent(14919);
+    tmp20 = "portrait" === sourceQuestContent(14920).getVideoOrientation(tmp19);
+    const tmpResult = sourceQuestContent(14920);
   }
   return closure_11(tmp20 ? closure_25 : closure_24, {
     quest,

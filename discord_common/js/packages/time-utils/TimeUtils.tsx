@@ -388,7 +388,7 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -591,7 +591,7 @@ export function getTimeUnit(arg0, arg1) {
   importDefault = arg1;
   const tmp2 = findLastIndexDefault(
     items,
-    (unit) => f89783(unit.unit),
+    (unit) => f89826(unit.unit),
     items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === obj.NONE;
@@ -607,7 +607,7 @@ export function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = items.find((unit) => f89783(unit.unit));
+    const found = items.find((unit) => f89826(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -633,10 +633,10 @@ export function getTimeAndUnit(rounded, items) {
     return obj2;
   } else {
     closure_0 = rounded;
-    const f89783 = (dependencyMap) => closure_0.includes(dependencyMap);
-    const tmp12 = f89783(5903)(
+    const f89826 = (dependencyMap) => closure_0.includes(dependencyMap);
+    const tmp12 = f89826(5903)(
       items,
-      (unit) => f89783(unit.unit),
+      (unit) => f89826(unit.unit),
       items.findIndex((max) => {
         max = max.max;
         let tmp = max.unit === obj.NONE;
@@ -652,7 +652,7 @@ export function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = items.find((unit) => f89783(unit.unit));
+      const found = items.find((unit) => f89826(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

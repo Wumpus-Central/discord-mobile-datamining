@@ -18,7 +18,7 @@ import useSafeAreaAvoidingInputsDefault from "../../safe_area/useSafeAreaAvoidin
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef16749 from "../../../../_runtime/metro/16749__.js";
+import _modDef16760 from "../../../../_runtime/metro/16760__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
@@ -50,10 +50,10 @@ const UserProfileFixedBackgroundDefault = tmp(8884);
 const useBadgesDefault = tmp(8889);
 const useMeasuredLayoutDefault = tmp(9069);
 const UserProfileCustomStatusBubbleDefault = tmp(11537);
-const useTryItOutUpsellScrollTrackingDefault = tmp(16772);
-const useScrollToUserProfileEditFormSectionDefault = tmp(16773);
-const EditUserProfileAvatarDefault = tmp(16856);
-const UserProfilePremiumTryItOutUpsellDefault = tmp(16866);
+const useTryItOutUpsellScrollTrackingDefault = tmp(16783);
+const useScrollToUserProfileEditFormSectionDefault = tmp(16784);
+const EditUserProfileAvatarDefault = tmp(16867);
+const UserProfilePremiumTryItOutUpsellDefault = tmp(16877);
 require = fn;
 function EditUserProfileBanner(arg0) {
   ({
@@ -769,7 +769,7 @@ function UserProfileEditFormContent(currentUser) {
               currentUser: _undefined,
               onLayout: closure_50.onTryItOutSectionLayout,
               onPreviewPremium() {
-                return _undefined(16852).openPremiumTryItOutModal();
+                return _undefined(16863).openPremiumTryItOutModal();
               },
             };
             tmp12Result9 = closure_2_15(UserProfilePremiumTryItOutSectionDefault, obj21);
@@ -848,7 +848,7 @@ function UserProfileEditFormContent(currentUser) {
     let tmp50Result = tmp50(tmp, obj);
   } else {
     let obj25 = { isTryItOut };
-    tmp50Result = tmp50(tmp4(16867).UserProfilePremiumUpsellCard, obj25);
+    tmp50Result = tmp50(tmp4(16878).UserProfilePremiumUpsellCard, obj25);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -859,14 +859,14 @@ const Constants = fn(1072);
 const HexagonCampaignConstants = fn(5165);
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-let closure_14 = fn(16748).UserProfileEditAutoFocusElement;
+let closure_14 = fn(16759).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = [1];
 let obj = {
   assetOrigin: fn(7222).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef16749,
-  staticImageUri: _modDef16749,
+  imageUri: _modDef16760,
+  staticImageUri: _modDef16760,
   description: "",
   originalAsset: "add",
 };

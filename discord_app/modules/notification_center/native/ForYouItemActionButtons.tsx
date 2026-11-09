@@ -483,7 +483,7 @@ export function useItemActionButtonPropsV2(
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(15973)({
+      closure_1(15983)({
         payload: closure_1(5870)("https://discord.com/channels/@me/" + channelId).payload,
         safe: true,
         navigationReplace: false,
@@ -525,7 +525,7 @@ export function useItemActionButtonPropsV2(
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -567,7 +567,7 @@ export function useItemActionButtonPropsV2(
           closure_128_1();
           focusChatInput(closure_128_0.message_channel_id);
           navigation = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp18) {
           navigation = tmp;
           throw tmp18;

@@ -8,7 +8,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef17287 from "../../../../_runtime/metro/17287__.js";
+import _modDef17298 from "../../../../_runtime/metro/17298__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -117,7 +117,7 @@ export default function QuestHomeEmptyState(hasContentAbove) {
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
     const obj11 = { style: tmp5.emptyImage, children: null };
-    const obj12 = { style: tmp5.backgroundImage, source: _modDef17287, resizeMode: "cover" };
+    const obj12 = { style: tmp5.backgroundImage, source: _modDef17298, resizeMode: "cover" };
     obj11.children = hasOwnProperty(FastImageDefault, obj12);
     const items4 = [hasOwnProperty(React3, obj11)];
     const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

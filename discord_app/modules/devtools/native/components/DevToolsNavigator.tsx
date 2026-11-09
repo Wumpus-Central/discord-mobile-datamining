@@ -65,22 +65,23 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(17895).DevToolsScreens);
-  let merged1 = Object.assign(tmp(17895).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(17906).DevToolsScreens);
+  let merged1 = Object.assign(tmp(17906).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp] = item;
-    return closure_1_4(
-      Navigator.Screen,
-      {
+    let tmp3 = null;
+    if (null != tmp2) {
+      const obj = {
         name: tmp,
         children: tmp2,
         options() {
           return { title };
         },
-      },
-      tmp,
-    );
+      };
+      tmp3 = closure_1_4(Navigator.Screen, obj, tmp);
+    }
+    return tmp3;
   });
   const obj4 = {
     name: "home",

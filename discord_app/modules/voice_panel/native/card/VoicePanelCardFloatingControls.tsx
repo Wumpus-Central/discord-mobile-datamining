@@ -26,13 +26,13 @@ import _modDef12210 from "../../../../../_runtime/metro/12210__.js";
 import VoicePanelIconButtonDefault from "../shared/VoicePanelIconButton.tsx";
 import useStableParticipant from "../utils/useStableParticipant.tsx";
 import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import _modDef19607 from "../../../../../_runtime/metro/19607__.js";
+import _modDef19620 from "../../../../../_runtime/metro/19620__.js";
 import getRandomNumberInRangeDefault from "../utils/getRandomNumberInRange.tsx";
-import _modDef19647 from "../../../../../_runtime/metro/19647__.js";
-import _modDef19648 from "../../../../../_runtime/metro/19648__.js";
+import _modDef19660 from "../../../../../_runtime/metro/19660__.js";
+import _modDef19661 from "../../../../../_runtime/metro/19661__.js";
 import StageModeratorIcon from "../../../../design/components/Icon/native/redesign/generated/StageModeratorIcon.tsx";
-import _modDef19652 from "../../../../../_runtime/metro/19652__.js";
-import _modDef19653 from "../../../../../_runtime/metro/19653__.js";
+import _modDef19665 from "../../../../../_runtime/metro/19665__.js";
+import _modDef19666 from "../../../../../_runtime/metro/19666__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -43,7 +43,7 @@ const require = globalThis.__r;
 const useVoicePanelCardUserStateIconsDefault = useVoicePanelCardUserStateIcons;
 const module_1652_mod = _mod1652;
 
-const useIsVoicePanelParticipantFocusableDefault = tmp(19551);
+const useIsVoicePanelParticipantFocusableDefault = tmp(19564);
 require = fn;
 function StreamIcon(voicePlatform) {
   voicePlatform = voicePlatform.voicePlatform;
@@ -74,13 +74,13 @@ function StreamIcon(voicePlatform) {
   VoicePanelCardFloatingControlsTsx1.__workletHash = 5506814510669;
   VoicePanelCardFloatingControlsTsx1.__initData = tmp4;
   const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelCardFloatingControlsTsx1);
-  let tmp2Result = _modDef19607;
+  let tmp2Result = _modDef19620;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef19647;
+    tmp2Result = _modDef19660;
   } else if (voicePlatform === constants2.MOBILE) {
     tmp2Result = _modDef12210;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef19648;
+    tmp2Result = _modDef19661;
   }
   const obj2 = { source: tmp2Result, style: null };
   const items2 = [tmp.iconWithoutBackground, animatedStyle];
@@ -401,10 +401,10 @@ let closure_32 = noop.memo(function CloseButton(participant) {
   }, items);
   let obj2 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp2 = useControlsHideStyles(controlsHidden, closure_27);
-  obj2.icon = guildId(19651);
+  obj2.icon = guildId(19664);
   obj2.onPress = callback;
-  const tmp6 = guildId(19508);
-  let result = participant(19603).isStableActivityParticipant(participant);
+  const tmp6 = guildId(19521);
+  let result = participant(19616).isStableActivityParticipant(participant);
   const intl = participant(1113).intl;
   const string = intl.string;
   const t = participant(1113).t;
@@ -472,7 +472,7 @@ let closure_34 = noop.memo(function CardFocusButton(participantId) {
   };
   const obj4 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp11 = useControlsHideStyles(_mod1652.useDerivedValue(VoicePanelCardFloatingControlsTsx3), closure_27);
-  obj4.icon = _modDef19652;
+  obj4.icon = _modDef19665;
   obj4.onPress = callback;
   obj4.accessibilityLabel = stringResult;
   obj3.children = value2(VoicePanelIconButtonDefault, obj4);
@@ -668,7 +668,7 @@ let closure_42 = noop.memo(function RingingIcon(controlsHidden) {
   const obj6 = { style: tmp28, pointerEvents: "none", children: null };
   const tmp2Result2 = _mod1652;
   obj6.children = value2(native.Icon, {
-    source: _modDef19653,
+    source: _modDef19666,
     size: native.IconSizes.SMALL_20,
     style: tmp.ringingIcon,
   });
@@ -715,7 +715,7 @@ let closure_44 = noop.memo(function UserTagChiplet(arg0) {
   if (null != gameRecord) {
     if (!tmp6) {
       let obj = { game: gameRecord, userId, textColor };
-      let tmp9 = closure_16(tmp(19654), obj);
+      let tmp9 = closure_16(tmp(19667), obj);
     }
     return tmp9;
   }
@@ -991,7 +991,7 @@ let closure_48 = noop.memo(function FloatingParticipantLabel(controlsHidden) {
     const obj15 = { style: tmp6.secureFramesIcon, size: "xs", accessibilityLabel: null };
     const intl4 = tmp4(1113).intl;
     obj15.accessibilityLabel = intl4.string(tmp4(1113).t.mR9cf3);
-    isUserSecureFramesVerified = closure_16(tmp4(14974).ShieldLockIcon, obj15);
+    isUserSecureFramesVerified = closure_16(tmp4(14975).ShieldLockIcon, obj15);
   }
   items13[2] = isUserSecureFramesVerified;
   obj8.children = items13;
@@ -1097,11 +1097,11 @@ export default noop.memo(function FloatingControls(arg0) {
       controlsHidden: derivedValue,
       participantId: participant.id,
       targetName: label,
-      isActivityParticipant: tmp4(19603).isStableActivityParticipant(participant),
+      isActivityParticipant: tmp4(19616).isStableActivityParticipant(participant),
       layout,
     };
     stateFromStores = closure_16(closure_34, obj6);
-    const tmp4Result4 = tmp4(19603);
+    const tmp4Result4 = tmp4(19616);
   }
   children[2] = stateFromStores;
   children[3] = tmp16;

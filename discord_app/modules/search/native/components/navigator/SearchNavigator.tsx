@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_4 = fn(9916).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(19053).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(19066).SearchNavigatorScreens;
 const SearchTypes = fn(1072).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -44,7 +44,7 @@ export default noop.memo(function SearchNavigator(route) {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(19311).default;
+        return searchContext(19324).default;
       },
     }),
     closure_7(closure_9.Screen, {
@@ -63,7 +63,7 @@ export default noop.memo(function SearchNavigator(route) {
         return obj;
       },
       getComponent() {
-        return searchContext(19306).default;
+        return searchContext(19319).default;
       },
     }),
   ];
@@ -72,7 +72,7 @@ export default noop.memo(function SearchNavigator(route) {
     name: SearchNavigatorScreens.SEARCH_TABS,
     options: { headerShown: false, fullScreenGestureEnabled: true },
     getComponent() {
-      return searchContext(19311).default;
+      return searchContext(19324).default;
     },
   };
   const obj6 = {
@@ -91,7 +91,7 @@ export default noop.memo(function SearchNavigator(route) {
       return obj;
     },
     getComponent() {
-      return searchContext(19306).default;
+      return searchContext(19319).default;
     },
   };
   const tmp3 = AppFrameContainerDefault;

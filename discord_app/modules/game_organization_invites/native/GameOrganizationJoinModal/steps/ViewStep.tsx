@@ -6,7 +6,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const constants = fn(11504).GameOrganizationCharacterMode;
-let closure_6 = fn(13445).GameOrganizationJoinScenes;
+let closure_6 = fn(13446).GameOrganizationJoinScenes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5140);

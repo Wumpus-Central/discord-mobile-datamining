@@ -50,12 +50,12 @@ const obj = {
   sheetExitProgress: null,
   showControls: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
   showFloatingCTA: null,
-  streamOutputSinkStack: "\u{1F425}",
+  streamOutputSinkStack: "\u{1F427}",
   windowDimensions: 6,
-  wrapperDimensions: 273,
-  useReducedMotion: "flag_white",
-  wrapperOffset: true,
-  pipHandoff: true,
+  wrapperDimensions: 269,
+  useReducedMotion: "/developers",
+  wrapperOffset: null,
+  pipHandoff: "/developers/teams",
 };
 let ReanimatedHelperTypes = fn(7305);
 obj.connected = ReanimatedHelperTypes.createFakeSharedValue(false);

@@ -14,7 +14,7 @@ let closure_5 = async function _readPolicy(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_5 = async function _readPolicy(arg0) {
         c4 = 0;
         closure_130_4.delete(closure_129_0);
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp45) {
       closure_3 = tmp45;

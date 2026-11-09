@@ -69,7 +69,7 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const obj7 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-      settingType: tmp2(20055).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+      settingType: tmp2(20068).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
       label: null,
       subLabel: null,
       disabled: null,
@@ -83,7 +83,7 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const obj8 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-      settingType: tmp2(20055).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+      settingType: tmp2(20068).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
       label: null,
       disabled: null,
     };
@@ -94,7 +94,7 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const obj9 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS,
-      settingType: tmp2(20055).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
+      settingType: tmp2(20068).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
       label: null,
       subLabel: null,
       disabled: null,

@@ -112,7 +112,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -126,12 +126,12 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
               const obj4 = { value, done: true };
               return obj4;
             } else if (extendedOnboarding) {
-              const ICYMIAnalytics = tmp2(16535).ICYMIAnalytics;
+              const ICYMIAnalytics = tmp2(16545).ICYMIAnalytics;
               const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "overview" });
               dependencyMap(true);
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp2(18882).maybeFetchGuildDiscoveryCategories(), done: false };
+              const obj5 = { value: tmp2(18895).maybeFetchGuildDiscoveryCategories(), done: false };
               return obj5;
             } else {
               v1(6799).pop();
@@ -190,7 +190,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   let obj5 = { source: null, style: null };
   const obj6 = { uri: null };
   let obj = extendedOnboarding(1499);
-  obj6.uri = navigation(18884);
+  obj6.uri = navigation(18897);
   obj5.source = obj6;
   obj5.style = tmp.bgImage;
   const items5 = [closure_9(navigation(5842), obj5)];
@@ -202,15 +202,15 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const obj9 = { style: tmp.header, children: null };
   const obj8 = { marginTop: top + navigation(575).space.PX_12 };
   if (tmp5 === ThemeTypes.LIGHT) {
-    let tmp2Result = tmp2(18885);
+    let tmp2Result = tmp2(18898);
   } else {
-    tmp2Result = tmp2(18886);
+    tmp2Result = tmp2(18899);
   }
   const items7 = [closure_9(navigation(5842), { source: { uri: tmp2Result }, style: tmp.headerImg }), , ,];
   const obj11 = { source: null, style: null };
   const obj10 = { source: { uri: tmp2Result }, style: tmp.headerImg };
   const tmp17 = navigation(5842);
-  obj11.source = navigation(18887);
+  obj11.source = navigation(18900);
   obj11.style = tmp.flashIcon;
   items7[1] = closure_9(navigation(5842), obj11);
   const obj12 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
@@ -253,7 +253,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const items11 = [
     closure_9(closure_6, {
       style: tmp.infoIcon,
-      children: closure_9(extendedOnboarding(15093).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
+      children: closure_9(extendedOnboarding(15094).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
     }),
   ];
   const obj22 = {
@@ -271,7 +271,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const obj24 = { style: tmp.infoRow, children: null };
   const obj21 = {
     style: tmp.infoIcon,
-    children: closure_9(extendedOnboarding(15093).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
+    children: closure_9(extendedOnboarding(15094).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
   };
   const obj23 = { style: tmp.divider };
   const items12 = [

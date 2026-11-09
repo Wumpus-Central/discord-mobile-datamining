@@ -4,16 +4,18 @@ import util from "../../../../intl/index.native.tsx";
 import _modDef2267 from "../../dev_tools/UserSettingsDevTools.messages.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import build_overrides_BuildOverrideUtils from "../../../build_overrides/native/BuildOverrideUtils.tsx";
-import DevToolsNavigator from "../../../devtools/native/components/DevToolsNavigator.tsx";
 import useIsStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import openBuildOverridesSettings from "../../dev_tools/native/openBuildOverridesSettings.tsx";
 import DevToolsContent from "../../../devtools/native/components/DevToolsContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import BuildOverrideStore from "../../../build_overrides/BuildOverrideStore.tsx";
 
 require = fn;
 function handleBuildOverrideActivePress() {
-  DevToolsNavigator.navigateToDevTools({ screenKey: "buildOverride" });
+  const result = openBuildOverridesSettings.openBuildOverridesSettings();
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -44,22 +46,27 @@ const obj2 = {
       const _HermesInternal = HermesInternal;
       obj3.label = "" + intl.string(_modDef2267.d11XdP) + " ";
       obj3.value = stateFromStores.id;
-      const items1 = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), ,];
-      const obj4 = { text: null, variant: "secondary", onPress: null };
+      const items1 = [React4(DevToolsContent.DevToolsContentSubLabel, obj3)];
+      const obj4 = { text: null, variant: "secondary", onPress: null, grow: true, shrink: true };
       const intl2 = util.intl;
       obj4.text = intl2.string(util.t.tX4xrt);
       obj4.onPress = build_overrides_BuildOverrideUtils.clearBuildOverride;
-      items1[1] = React4(components_Button_Button.Button, obj4);
+      const items2 = [React4(components_Button_Button.Button, obj4)];
       let tmp7Result = staffOrDeveloperSettingPredicate;
       if (staffOrDeveloperSettingPredicate) {
-        const obj5 = { text: null, variant: "secondary", onPress: null };
-        const intl3 = util.intl;
-        obj5.text = intl3.string(_modDef2267.VBPcR9);
-        obj5.onPress = handleBuildOverrideActivePress;
-        tmp7Result = React4(components_Button_Button.Button, obj5);
+        const obj5 = {
+          icon: React4(SettingsIcon.SettingsIcon, {}),
+          accessibilityLabel: "Build Overrides",
+          variant: "secondary",
+          onPress: handleBuildOverrideActivePress,
+        };
+        tmp7Result = React4(IconButton.IconButton, obj5);
       }
-      const obj6 = { children: null };
-      items1[2] = tmp7Result;
+      const obj6 = { spacing: 4, children: null };
+      const obj7 = { direction: "horizontal", align: "center", spacing: 8, children: null };
+      items2[1] = tmp7Result;
+      obj7.children = items2;
+      items1[1] = hasOwnProperty(Stack_Stack.Stack, obj7);
       obj6.children = items1;
       tmp6Result = hasOwnProperty(Stack_Stack.Stack, obj6);
     }
@@ -81,7 +88,7 @@ const obj2 = {
   },
 };
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx");
 
 export default SettingBuilders.createStatic({
   useTitle() {
@@ -109,22 +116,27 @@ export default SettingBuilders.createStatic({
       const _HermesInternal = HermesInternal;
       obj3.label = "" + intl.string(_modDef2267.d11XdP) + " ";
       obj3.value = stateFromStores.id;
-      const items1 = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), ,];
-      const obj4 = { text: null, variant: "secondary", onPress: null };
+      const items1 = [React4(DevToolsContent.DevToolsContentSubLabel, obj3)];
+      const obj4 = { text: null, variant: "secondary", onPress: null, grow: true, shrink: true };
       const intl2 = util.intl;
       obj4.text = intl2.string(util.t.tX4xrt);
       obj4.onPress = build_overrides_BuildOverrideUtils.clearBuildOverride;
-      items1[1] = React4(components_Button_Button.Button, obj4);
+      const items2 = [React4(components_Button_Button.Button, obj4)];
       let tmp7Result = staffOrDeveloperSettingPredicate;
       if (staffOrDeveloperSettingPredicate) {
-        const obj5 = { text: null, variant: "secondary", onPress: null };
-        const intl3 = util.intl;
-        obj5.text = intl3.string(_modDef2267.VBPcR9);
-        obj5.onPress = handleBuildOverrideActivePress;
-        tmp7Result = React4(components_Button_Button.Button, obj5);
+        const obj5 = {
+          icon: React4(SettingsIcon.SettingsIcon, {}),
+          accessibilityLabel: "Build Overrides",
+          variant: "secondary",
+          onPress: handleBuildOverrideActivePress,
+        };
+        tmp7Result = React4(IconButton.IconButton, obj5);
       }
-      const obj6 = { children: null };
-      items1[2] = tmp7Result;
+      const obj6 = { spacing: 4, children: null };
+      const obj7 = { direction: "horizontal", align: "center", spacing: 8, children: null };
+      items2[1] = tmp7Result;
+      obj7.children = items2;
+      items1[1] = hasOwnProperty(Stack_Stack.Stack, obj7);
       obj6.children = items1;
       tmp6Result = hasOwnProperty(Stack_Stack.Stack, obj6);
     }

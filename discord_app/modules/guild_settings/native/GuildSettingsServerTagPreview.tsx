@@ -86,7 +86,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -105,7 +105,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
               dependencyMap(true);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(16040).adoptGuildIdentity(guildId, true), done: false };
+              const obj5 = { value: tmp2(16050).adoptGuildIdentity(guildId, true), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -124,7 +124,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
               }
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           c3 = tmp;
@@ -152,7 +152,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   obj6.style = items3;
   const obj7 = { source: null, style: null, importantForAccessibility: "no" };
   const tmp10 = _slicedToArray(noop.useState(false), 2);
-  obj7.source = onAdopted(16041);
+  obj7.source = onAdopted(16051);
   obj7.style = tmp.avatar;
   const items4 = [closure_9(onAdopted(5842), obj7)];
   const obj8 = { style: tmp.messageBody, children: null };
@@ -190,7 +190,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
         height: null,
       };
       ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-      tmp15Result = closure_9(tmp2(16042).GuildBadge, size);
+      tmp15Result = closure_9(tmp2(16052).GuildBadge, size);
     }
     obj14.guildBadge = tmp15Result;
     tmp15Result3 = closure_9(tmp2(9375).BaseGuildTagChiplet, obj14);
@@ -213,7 +213,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const obj18 = { source: null, style: null, importantForAccessibility: "no" };
   const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
   const tmp4Result = onAdopted(5842);
-  obj18.source = onAdopted(16086);
+  obj18.source = onAdopted(16096);
   obj18.style = tmp.avatar;
   const items11 = [closure_9(onAdopted(5842), obj18)];
   const obj19 = { style: tmp.messageBody, children: null };

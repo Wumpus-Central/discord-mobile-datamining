@@ -1219,7 +1219,7 @@ function AnimatedWrapper(arg0) {
       }
     };
   } else if (isSelf) {
-    const tmp6Result21 = tmp6(19603);
+    const tmp6Result21 = tmp6(19616);
   }
   obj4.onDoubleTap = fn;
   let fn2;
@@ -1353,7 +1353,7 @@ const VoicePanelConstants = fn(11363);
   VoicePanelCardItemType: closure_15,
 } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11361).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19473).VoicePanelPIPModes;
+let VoicePanelPIPModes = fn(19486).VoicePanelPIPModes;
 const EDGE_GUTTER = fn(11366).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
 const ParticipantTypes = fn(5805).ParticipantTypes;
@@ -2047,13 +2047,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   if (item.type === closure_15.CTA) {
     const id3 = item.id;
     if (closure_11.NO_VIDEO_PARTICIPANTS === id3) {
-      let tmp43Result = closure_22(tmp(19632), {});
+      let tmp43Result = closure_22(tmp(19645), {});
       let tmp41 = closure_22;
     } else if (closure_11.CALLER_DISCONNECTED === id3) {
-      tmp43Result = closure_22(tmp(19633), {});
+      tmp43Result = closure_22(tmp(19646), {});
       tmp41 = closure_22;
     } else if (closure_11.NO_STAGE_SPEAKERS === id3) {
-      tmp43Result = closure_22(tmp(19634), {});
+      tmp43Result = closure_22(tmp(19647), {});
       tmp41 = closure_22;
     }
     const obj3 = {
@@ -2071,7 +2071,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
     let tmp41Result = null != tmp4;
     if (tmp41Result) {
       const obj4 = { isRinging: tmp8, participant: tmp4, label: null, layout: null };
-      const tmpResult3 = tmp(19646);
+      const tmpResult3 = tmp(19659);
       let userNick;
       if (tmp5Result17.isStableParticipantWithUser(tmp4)) {
         userNick = tmp4.userNick;
@@ -2079,10 +2079,10 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj4.label = userNick;
       obj4.layout = callback;
       tmp41Result = tmp41(tmpResult3, obj4);
-      tmp5Result17 = tmp5(19603);
+      tmp5Result17 = tmp5(19616);
     }
     items7[1] = tmp41Result;
-    let result = tmp5(19603).isStableParticipantWithUser(tmp4);
+    let result = tmp5(19616).isStableParticipantWithUser(tmp4);
     if (result) {
       const obj5 = { speakingOrPlayingSoundboard: sharedValue1, id, userId: tmp4.user.id, isSelf, layout: callback };
       result = tmp41(closure_45, obj5);
@@ -2124,13 +2124,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj6.focusOnReady = isCall;
               obj6.layout = callback;
-              let tmp45Result = tmp45(tmp(19624), obj6);
-              const tmpResult4 = tmp(19624);
+              let tmp45Result = tmp45(tmp(19637), obj6);
+              const tmpResult4 = tmp(19637);
             }
             const obj7 = { avError: tmpResultResult, userId: user.id, style: null };
             user = StyleSheet.absoluteFill;
             obj7.style = user;
-            tmp45Result = closure_22(tmp(19635), obj7);
+            tmp45Result = closure_22(tmp(19648), obj7);
             tmp45 = closure_22;
           }
         }
@@ -2175,14 +2175,14 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp41 = closure_22;
     } else if (ParticipantTypes.ACTIVITY === type2) {
       const obj10 = { sharedVisible: sharedValue, applicationId: tmp4.applicationId, layout: callback };
-      tmp43Result = closure_22(tmp(19636), obj10, tmp4.id);
+      tmp43Result = closure_22(tmp(19649), obj10, tmp4.id);
       tmp41 = closure_22;
     }
   }
   const obj12 = {
     isRinging: tmp8,
     avatarURI: "a",
-    avatarDecoration: "start",
+    avatarDecoration: "isArray",
     layout: callback,
     layoutPhysics: memo,
     channelId,

@@ -17,7 +17,7 @@ let closure_7 = async function _remove2FA() {
       obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_7 = async function _remove2FA() {
               obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -128,7 +128,7 @@ let closure_7 = async function _remove2FA() {
                 c3 = 0;
                 tmp3(tmp30[6]).batchUpdates(() => closure_1_6.setState({ isCheckingLastFactor: false }));
                 c5 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp30) {
               tmp32 = c3;
@@ -198,8 +198,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return tmp;
   },
-  useDescription: fn(16976).use2FARemoveDisableReason,
-  usePredicate: fn(16889).useIsTOTPEnabled,
+  useDescription: fn(16987).use2FARemoveDisableReason,
+  usePredicate: fn(16900).useIsTOTPEnabled,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");

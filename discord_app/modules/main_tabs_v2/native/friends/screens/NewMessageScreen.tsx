@@ -96,7 +96,7 @@ let closure_23 = async function _findMatchingPrivateChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -399,7 +399,7 @@ export default function NewMessageScreen(navigation) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -507,8 +507,8 @@ export default function NewMessageScreen(navigation) {
           const obj = source_page(572);
           obj2.channel = {
             id: navigation(7460).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
-            guild_id: "a",
-            parent_id: "start",
+            guild_id: "Array",
+            parent_id: "add",
           };
           obj.dispatch(obj2);
         };
@@ -593,7 +593,7 @@ export default function NewMessageScreen(navigation) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

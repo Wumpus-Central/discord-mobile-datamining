@@ -34,7 +34,7 @@ obj2.container = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(17646).SHEET_CONTENT_MAX_WIDTH };
+obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(17657).SHEET_CONTENT_MAX_WIDTH };
 let obj4 = {
   flex: 1,
   paddingTop: nativeDefault.space.PX_4,

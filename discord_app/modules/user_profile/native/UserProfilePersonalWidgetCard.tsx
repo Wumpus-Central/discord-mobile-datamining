@@ -306,7 +306,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp2Result;
   obj3.children = items1;
   obj.children = closure_10(closure_7, obj3);
-  return closure_9(disableInteraction(15224), obj);
+  return closure_9(disableInteraction(15234), obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);

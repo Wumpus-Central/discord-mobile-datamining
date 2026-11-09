@@ -100,7 +100,7 @@ export function useMobileActivityPressHandler(questId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -150,7 +150,7 @@ export function useMobileActivityPressHandler(questId) {
             obj7.questContentPosition = questContentPosition;
             tmp4(9775).captureAdUserAction(obj7);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           dependencyMap = tmp;

@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesCle
 
 export default function useFavoritesCleanup(arg0) {
   _require = arg0;
-  closure_10 = async function _save() {
+  closure_12 = async function _save() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -23,7 +23,7 @@ export default function useFavoritesCleanup(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -37,11 +37,11 @@ export default function useFavoritesCleanup(arg0) {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            if (React6) {
+            if (closure_2_11) {
               if (!ref.current) {
                 ref.current = true;
-                FavoriteStore(true);
-                timestampProducer(false);
+                metroImportDefault(true);
+                React5(false);
                 c3 = 2;
                 const result = tmp4(10950).setFavoritesAutoAddJoinedThreads(autoAdd);
                 const obj2 = tmp4(10950);
@@ -59,37 +59,37 @@ export default function useFavoritesCleanup(arg0) {
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c3 = 1;
-            if (closure_128_8.current) {
-              closure_128_6(true);
+            if (closure_128_10.current) {
+              closure_128_8(true);
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            closure_128_7.current = false;
-            if (closure_128_8.current) {
-              closure_128_5(false);
+            closure_128_9.current = false;
+            if (closure_128_10.current) {
+              closure_128_7(false);
             }
             c4 = 3;
             const obj = { value, done: true };
             return obj;
           } else {
-            if (closure_128_8.current) {
+            if (closure_128_10.current) {
               closure_128_0();
             }
             c3 = 1;
           }
           c3 = 0;
-          closure_128_7.current = false;
-          if (closure_128_8.current) {
-            closure_128_5(false);
+          closure_128_9.current = false;
+          if (closure_128_10.current) {
+            closure_128_7(false);
           }
         }
         c3 = 0;
-        closure_128_7.current = false;
-        if (closure_128_8.current) {
-          closure_128_5(false);
+        closure_128_9.current = false;
+        if (closure_128_10.current) {
+          closure_128_7(false);
         }
         throw closure_2;
       } catch (tmp52) {
@@ -105,74 +105,91 @@ export default function useFavoritesCleanup(arg0) {
       }
     }
   };
-  items = [FavoriteStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => FavoriteStore.autoAddJoinedThreads);
+  items = [closure_5];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => closure_5.autoAddThreadsMode);
   let obj = require("initialize");
-  const items1 = [FavoriteStore];
-  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => FavoriteStore.pruneInactiveThreads);
+  const items1 = [closure_5];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => closure_5.pruneInactiveThreads);
   let obj2 = require("initialize");
-  const items2 = [FavoriteStore];
-  const stateFromStores2 = require("initialize").useStateFromStores(
-    items2,
-    () => FavoriteStore.pruneInactiveThreadsDays,
-  );
+  const items2 = [closure_5];
+  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => closure_5.pruneInactiveThreadsDays);
   const obj3 = require("initialize");
-  const items3 = [FavoriteStore];
-  const stateFromStores3 = require("initialize").useStateFromStores(
-    items3,
-    () => FavoriteStore.pruneInactiveThreadsScope,
-  );
-  const tmp5 = first2(first3.useState(stateFromStores), 2);
+  const items3 = [closure_5];
+  const stateFromStores3 = require("initialize").useStateFromStores(items3, () => closure_5.pruneInactiveThreadsScope);
+  const tmp5 = _slicedToArray(first2.useState(stateFromStores), 2);
   autoAdd = tmp5[0];
-  const tmp7 = first2(first3.useState(stateFromStores1), 2);
+  const tmp7 = _slicedToArray(first2.useState(stateFromStores1), 2);
   const first1 = tmp7[0];
-  const tmp9 = first2(first3.useState(stateFromStores2), 2);
-  first2 = tmp9[0];
-  const tmp11 = first2(first3.useState(stateFromStores3), 2);
-  first3 = tmp11[0];
+  _slicedToArray = tmp9;
+  const tmp10 = _slicedToArray(first2.useState(stateFromStores2), 2);
+  first2 = tmp10[0];
+  closure_5 = tmp12;
+  [first3, obj5.setScope] = first2.useState(stateFromStores3);
   let obj4 = require("initialize");
-  [tmp14, FavoriteStore] = first2(first3.useState(false), 2);
-  const tmp13 = first2(first3.useState(false), 2);
-  [tmp16, closure_6] = first2(first3.useState(false), 2);
-  closure_7 = first3.useRef(false);
-  closure_8 = first3.useRef(true);
-  const effect = first3.useEffect(() => {
-    closure_8.current = true;
+  [tmp16, closure_7] = _slicedToArray(first2.useState(false), 2);
+  const tmp15 = _slicedToArray(first2.useState(false), 2);
+  [tmp18, closure_8] = _slicedToArray(first2.useState(false), 2);
+  closure_9 = first2.useRef(false);
+  closure_10 = first2.useRef(true);
+  const effect = first2.useEffect(() => {
+    closure_10.current = true;
     return () => {
-      closure_1_8.current = false;
+      closure_1_10.current = false;
     };
   }, []);
-  let tmp18 = autoAdd !== stateFromStores || first1 !== stateFromStores1;
-  if (!tmp18) {
-    let tmp19 = first1;
+  let tmp20 = autoAdd !== stateFromStores || first1 !== stateFromStores1;
+  if (!tmp20) {
+    let tmp21 = first1;
     if (first1) {
-      tmp19 = first2 !== stateFromStores2 || first3 !== stateFromStores3;
-      const tmp20 = first2 !== stateFromStores2 || first3 !== stateFromStores3;
+      tmp21 = first2 !== stateFromStores2 || first3 !== stateFromStores3;
+      const tmp22 = first2 !== stateFromStores2 || first3 !== stateFromStores3;
     }
-    tmp18 = tmp19;
+    tmp20 = tmp21;
   }
-  closure_9 = tmp18;
-  return {
+  closure_11 = tmp20;
+  let obj5 = {
     autoAdd,
     setAutoAdd: tmp5[1],
     prune: first1,
     setPrune: tmp7[1],
     days: first2,
-    setDays: tmp9[1],
-    canSave: tmp18,
-    scope: first3,
-    setScope: tmp11[1],
-    loading: tmp14,
-    error: tmp16,
-    save() {
-      const self = this;
-      const apply = closure_10.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    },
+    setDays: tmp10[1],
+    pruneTiming: null,
+    setPruneTiming: null,
+    canSave: null,
+    scope: null,
+    setScope: null,
+    loading: null,
+    error: null,
+    save: null,
   };
+  let num = -1;
+  if (first1) {
+    num = first2;
+  }
+  obj5.pruneTiming = num;
+  obj5.setPruneTiming = function setPruneTiming(arg0) {
+    if (-1 !== arg0) {
+      closure_3(true);
+      closure_5(arg0);
+    } else {
+      closure_3(false);
+    }
+  };
+  obj5.canSave = tmp20;
+  obj5.scope = first3;
+  obj5.loading = tmp16;
+  obj5.error = tmp18;
+  obj5.save = function save() {
+    const self = this;
+    const apply = closure_12.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+  return obj5;
 }
+export const FAVORITES_PRUNE_NEVER = -1;

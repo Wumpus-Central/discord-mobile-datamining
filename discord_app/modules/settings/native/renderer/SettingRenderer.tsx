@@ -606,8 +606,8 @@ let closure_26 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(16900).useHighlightSettingItem(setting);
-  let obj = trailing(16900);
+  let highlightSettingItem = trailing(16911).useHighlightSettingItem(setting);
+  let obj = trailing(16911);
   items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => callback.locale);
   trailing = undefined;

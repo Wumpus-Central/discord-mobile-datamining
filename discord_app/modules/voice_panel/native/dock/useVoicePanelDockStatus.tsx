@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(19588);
+const VoicePanelDockStatusStore = fn(19601);
 ({
   releaseDockStatus: closure_11,
   initDockStatus: closure_12,

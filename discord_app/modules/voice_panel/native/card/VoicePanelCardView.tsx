@@ -383,7 +383,7 @@ const VoicePanelConstants = fn(11363);
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11361).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19473).VoicePanelPIPModes;
+let VoicePanelPIPModes = fn(19486).VoicePanelPIPModes;
 const EDGE_GUTTER = fn(11366).EDGE_GUTTER;
 const isUserParticipant = fn(5805).isUserParticipant;
 const jsx = fn(21).jsx;

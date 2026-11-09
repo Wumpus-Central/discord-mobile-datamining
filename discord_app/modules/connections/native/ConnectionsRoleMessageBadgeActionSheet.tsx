@@ -139,7 +139,7 @@ class PopoutChecks {
               style: closure_1.popoutCheckGroupPlatformIcon,
               user: tmp7,
               size: native.AvatarSizes.XSMALL,
-              guildId: "a",
+              guildId: "Array",
             };
             tmp26 = value2(native.Avatar, obj6);
           }

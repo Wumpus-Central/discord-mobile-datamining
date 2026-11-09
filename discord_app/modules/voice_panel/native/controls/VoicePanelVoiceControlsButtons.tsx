@@ -31,8 +31,8 @@ import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLo
 import SoundboardIcon from "../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
 import useInviteMembersCallback from "../hooks/useInviteMembersCallback.tsx";
 import useCanInviteMembers from "../hooks/useCanInviteMembers.tsx";
-import _modDef19585 from "../../../../../_runtime/metro/19585__.js";
-import _modDef19586 from "../../../../../_runtime/metro/19586__.js";
+import _modDef19598 from "../../../../../_runtime/metro/19598__.js";
+import _modDef19599 from "../../../../../_runtime/metro/19599__.js";
 import useSoundboardConfigDefault from "../hooks/useSoundboardConfig.tsx";
 import useHideSelfVideoDefault from "../../../calls/useHideSelfVideo.tsx";
 import ChannelCallUtils from "../../../video_calls/native/ChannelCallUtils.tsx";
@@ -222,7 +222,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, PlatformTypes: closure_15 } = Constants);
-let closure_16 = fn(19725).SelfStreamAndVideoAlertType;
+let closure_16 = fn(19738).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(5897).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
@@ -342,7 +342,7 @@ export function DeafenSwitch() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
-    source: _modDef19586,
+    source: _modDef19599,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
@@ -436,7 +436,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f135461 = () => f135461(!VIDEO);
+          const f135555 = () => f135555(!VIDEO);
           const obj2 = {
             importer() {
               return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -521,7 +521,7 @@ export function VoiceSettingsButton(guildId) {
   }, items);
   const obj = {
     onPress: callback,
-    icon: closure_18(guildId(7046).TableRowIcon, { IconComponent: guildId(7633).SettingsIcon, source: _modDef19585 }),
+    icon: closure_18(guildId(7046).TableRowIcon, { IconComponent: guildId(7633).SettingsIcon, source: _modDef19598 }),
     label: null,
     subLabel: null,
     trailing: null,

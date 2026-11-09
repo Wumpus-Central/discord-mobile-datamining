@@ -32,7 +32,7 @@ function GuildFolderSettingsScene(color) {
     if (color == null) {
       tmp3 = defaultColor;
     }
-    obj.openLazy(asyncRequireImpl(18688, dependencyMap.paths), "RoleColorPicker", {
+    obj.openLazy(asyncRequireImpl(18701, dependencyMap.paths), "RoleColorPicker", {
       color: tmp3,
       defaultColor,
       onSelect: onColorChange,
@@ -75,7 +75,7 @@ function GuildFolderSettingsScene(color) {
     tmp11 = closure_8;
   }
   const obj6 = { hasIcons: false, children: null };
-  obj5.trailing = closure_10(onColorChange(16756), { color: tmp11, style: tmp.colorBlock });
+  obj5.trailing = closure_10(onColorChange(16767), { color: tmp11, style: tmp.colorBlock });
   obj6.children = closure_10(color(7038).TableRow, obj5);
   items1[1] = closure_10(color(7126).TableRowGroup, obj6);
   obj3.children = items1;
@@ -84,7 +84,7 @@ function GuildFolderSettingsScene(color) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const GuildsBarConstants = fn(18687);
+const GuildsBarConstants = fn(18700);
 ({ DEFAULT_FOLDER_COLOR: closure_8, normalizeFolderColor: closure_9 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

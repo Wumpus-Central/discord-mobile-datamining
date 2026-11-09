@@ -36,10 +36,10 @@ let obj = {
   image: null,
 };
 let obj3 = { padding: nativeDefault.space.PX_16 };
-obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17421).COMPLETION_GLOW_CLEARANCE };
+obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17432).COMPLETION_GLOW_CLEARANCE };
 obj.contentRewards = { alignItems: "center" };
 obj.contentRewardsCopy = { textAlign: "center" };
-let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17421).COMPLETION_GLOW_CLEARANCE };
+let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17432).COMPLETION_GLOW_CLEARANCE };
 obj.contentEndCardHeader = { marginBottom: nativeDefault.space.PX_16 };
 obj.contentEndCardHeaderCopy = { flexGrow: 1, flexShrink: 1 };
 let obj5 = { marginBottom: nativeDefault.space.PX_16 };
@@ -157,7 +157,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
   const layoutEffect = obj2.useLayoutEffect(() => {
     _undefined(_undefined3[17]).applyOrientationLock("PORTRAIT");
   }, []);
-  const height = tmp5(8915)(obj2.useContext(tmp2(17383).QuestDockGestureContext).windowDimensions).height;
+  const height = tmp5(8915)(obj2.useContext(tmp2(17394).QuestDockGestureContext).windowDimensions).height;
   let str = "md";
   if (height >= 760) {
     let str2 = "lg";
@@ -169,9 +169,9 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
   const tmp2Result7 = require("utils/QuestUtils");
   ({ height: height2, ref, onLayout } = useMeasuredLayoutDefault());
   if (height2 == null) {
-    height2 = tmp2(17421).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
+    height2 = tmp2(17432).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
   }
-  const sum = height2 + tmp2(17421).COMPLETION_GLOW_CLEARANCE;
+  const sum = height2 + tmp2(17432).COMPLETION_GLOW_CLEARANCE;
   const sum1 = sum + tmp5(575).space.PX_16;
   const obj7 = {
     align: "center",
@@ -226,7 +226,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         obj14.text = intl3.string(tmp2(1113).t.cfY4PE);
         let tmp5Result;
         if (isQuestAccessSuspended) {
-          tmp5Result = tmp5(17407);
+          tmp5Result = tmp5(17418);
         }
         obj14.onPressDisabled = tmp5Result;
         tmp28Result = closure_7(tmp2(5758).Button, obj14);

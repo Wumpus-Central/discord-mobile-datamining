@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContactPermissions = fn(14484).ContactPermissions;
+const ContactPermissions = fn(14485).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5140);
@@ -32,10 +32,10 @@ export default function AddFriendScreen(navigation) {
   dependencyMap = undefined;
   let callback;
   const tmp = closure_13();
-  const contactSyncAccount = navigation(14486).useContactSyncAccount();
-  let obj = navigation(14486);
-  let obj2 = navigation(14486);
-  [tmp5, c2] = callback(noop.useState(!navigation(14486).isContactSyncEnabled(contactSyncAccount)), 2);
+  const contactSyncAccount = navigation(14487).useContactSyncAccount();
+  let obj = navigation(14487);
+  let obj2 = navigation(14487);
+  [tmp5, c2] = callback(noop.useState(!navigation(14487).isContactSyncEnabled(contactSyncAccount)), 2);
   callback = noop.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
     let userTag;
@@ -76,8 +76,8 @@ export default function AddFriendScreen(navigation) {
       let tmp5 =
         result === constants2.NOT_DETERMINED || (navigation(1377).isAndroid() && result === constants2.UNAUTHORIZED);
       if (!tmp5) {
-        tmp5 = !navigation(14486).isContactSyncEnabled(contactSyncAccount);
-        const tmp2Result = navigation(14486);
+        tmp5 = !navigation(14487).isContactSyncEnabled(contactSyncAccount);
+        const tmp2Result = navigation(14487);
       }
       dependencyMap(tmp5);
       const tmp4 = navigation(1377).isAndroid() && result === constants2.UNAUTHORIZED;
@@ -99,7 +99,7 @@ export default function AddFriendScreen(navigation) {
   const intl2 = navigation(1113).intl;
   obj5.children = intl2.string(navigation(1113).t["Rn/sLl"]);
   items2[1] = closure_10(navigation(5751).Text, obj5);
-  items2[2] = closure_10(contactSyncAccount(15978), {
+  items2[2] = closure_10(contactSyncAccount(15988), {
     style: tmp.input,
     autoFocusInput: false,
     sourcePage: navigation.route.params.sourcePage,
@@ -112,7 +112,7 @@ export default function AddFriendScreen(navigation) {
   let tmp10Result = null;
   if (tmp5) {
     const obj9 = { style: tmp.rowContainer, location: "Add Friend Modal" };
-    tmp10Result = closure_10(contactSyncAccount(15979), obj9);
+    tmp10Result = closure_10(contactSyncAccount(15989), obj9);
   }
   const obj10 = { children: null };
   items3[1] = tmp10Result;

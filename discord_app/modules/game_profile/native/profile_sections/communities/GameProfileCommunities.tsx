@@ -112,7 +112,7 @@ let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -208,7 +208,7 @@ let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
               closure_130_7(currentlySelectedChannelId2, closure_129_0);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp63) {
           if (tmp4 === c4) {

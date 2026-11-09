@@ -1515,7 +1515,7 @@ export function useManuallyStartConsoleQuest(questId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2353,7 +2353,7 @@ export function useFetchQuestHomeBounties(arg0) {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2376,7 +2376,7 @@ export function useFetchQuestHomeBounties(arg0) {
                   c1 = 3;
                   c4 = 1;
                   const obj6 = {
-                    value: previewAdCreativeIds(14926).fetchBountyPreview(
+                    value: previewAdCreativeIds(14927).fetchBountyPreview(
                       arr,
                       previewAdCreativeIds(6839).AdPlacement.VIDEO_MODAL_MOBILE,
                     ),
@@ -2388,7 +2388,7 @@ export function useFetchQuestHomeBounties(arg0) {
               c1 = 2;
               c4 = 1;
               const obj7 = {
-                value: previewAdCreativeIds(14926).fetchQuestHomeBounties(
+                value: previewAdCreativeIds(14927).fetchQuestHomeBounties(
                   previewAdCreativeIds(6839).AdPlacement.VIDEO_MODAL_MOBILE,
                 ),
                 done: false,
@@ -2432,7 +2432,7 @@ export function useFetchQuestHomeBounties(arg0) {
               v0(false);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp34) {
           closure_2 = tmp34;

@@ -52,8 +52,8 @@ export default function QuestBottomSheetHeader(arg0) {
   let isScreenReaderEnabled;
   let ref;
   let tmp = closure_9();
-  const questCreative = isScreenReaderEnabled(17411).useQuestCreative(quest);
-  let obj = isScreenReaderEnabled(17411);
+  const questCreative = isScreenReaderEnabled(17422).useQuestCreative(quest);
+  let obj = isScreenReaderEnabled(17422);
   closure_129_0 = quest;
   closure_129_1 = step;
   closure_129_2 = undefined;
@@ -68,14 +68,14 @@ export default function QuestBottomSheetHeader(arg0) {
   closure_129_11 = undefined;
   const userStatus = quest.userStatus;
   let completedAt;
-  let obj2 = isScreenReaderEnabled(17379);
+  let obj2 = isScreenReaderEnabled(17390);
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
   closure_129_2 = tmp7;
   const gameTitle = quest.config.messages.gameTitle;
   closure_129_3 = gameTitle;
-  const actionSheetPressHandler = isScreenReaderEnabled(17379).useActionSheetPressHandler(questCreative);
+  const actionSheetPressHandler = isScreenReaderEnabled(17390).useActionSheetPressHandler(questCreative);
   const questTaskDetails = isScreenReaderEnabled(9772).useQuestTaskDetails(quest);
   const tmp2Result = isScreenReaderEnabled(9772);
   const hasWatchVideoTasksResult = isScreenReaderEnabled(7945).hasWatchVideoTasks(quest);
@@ -92,9 +92,9 @@ export default function QuestBottomSheetHeader(arg0) {
   const memo = noop.useMemo(() => QuestTaskUtils.hasStreamOnDesktopTask({ quest: isScreenReaderEnabled }), items);
   closure_129_8 = memo;
   const tmp2Result11 = isScreenReaderEnabled(9772);
-  const hasWatchVideoOnMobileTasks = isScreenReaderEnabled(17377).useHasWatchVideoOnMobileTasks(quest.config);
+  const hasWatchVideoOnMobileTasks = isScreenReaderEnabled(17388).useHasWatchVideoOnMobileTasks(quest.config);
   closure_129_9 = hasWatchVideoOnMobileTasks;
-  const tmp2Result12 = isScreenReaderEnabled(17377);
+  const tmp2Result12 = isScreenReaderEnabled(17388);
   const items1 = [UserStore];
   const stateFromStores = isScreenReaderEnabled(504).useStateFromStores(items1, () => currentUser.getCurrentUser());
   const tmp2Result13 = isScreenReaderEnabled(504);

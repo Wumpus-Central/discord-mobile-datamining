@@ -14,10 +14,10 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getStreamEndedSource(theme) {
   return _mod8880.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/19670__.js");
+      return require("../../../../../../../_runtime/metro/19683__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/19671__.js");
+      return require("../../../../../../../_runtime/metro/19684__.js");
     },
   });
 }
@@ -25,10 +25,10 @@ export function useStreamEndedSource() {
   const obj = shared;
   return _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/19670__.js");
+      return require("../../../../../../../_runtime/metro/19683__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/19671__.js");
+      return require("../../../../../../../_runtime/metro/19684__.js");
     },
   });
 }
@@ -36,19 +36,19 @@ export function StreamEnded(arg0) {
   const obj = shared;
   const illustrationSource = _mod8880.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/19670__.js");
+      return require("../../../../../../../_runtime/metro/19683__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/19671__.js");
+      return require("../../../../../../../_runtime/metro/19684__.js");
     },
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("../../../../../../../_runtime/metro/19670__.js");
+      return require("../../../../../../../_runtime/metro/19683__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/19671__.js");
+      return require("../../../../../../../_runtime/metro/19684__.js");
     },
   };
   const merged = Object.assign(arg0);

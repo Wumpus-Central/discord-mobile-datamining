@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
-import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton.tsx";
 import useAddableWidgetsDefault from "../hooks/useAddableWidgets.tsx";
+import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton.tsx";
 import useAddProfileWidgetDefault from "../hooks/native/useAddProfileWidget.tsx";
 import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -136,7 +136,7 @@ export default function UserProfileWidgetsEmptyState() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15191, dependencyMap.paths),
+      asyncRequireImpl(15201, dependencyMap.paths),
       "UserProfileWidgetAddActionSheet",
     );
   };

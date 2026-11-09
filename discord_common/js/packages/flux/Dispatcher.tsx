@@ -267,7 +267,7 @@ class Dispatcher {
       _currentDispatchActionType: null,
       _actionHandlers: null,
       _sentryUtils: "Array",
-      functionCache: 6878330,
+      functionCache: 6878399,
     });
     merged[0] = [];
     merged[1] = {};

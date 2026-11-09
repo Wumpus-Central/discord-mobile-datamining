@@ -34,7 +34,7 @@ let closure_13 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -61,13 +61,13 @@ let closure_13 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
             return obj6;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
       } else if (1 === tmp6) {
         c4 = 0;
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
@@ -168,7 +168,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-const isAllowedType = fn(13616).isAllowedType;
+const isAllowedType = fn(13617).isAllowedType;
 const Constants = fn(1072);
 ({ Permissions: closure_9, ChannelTypes: closure_10 } = Constants);
 const re11 = /^deleted_user_[0-9a-f]{12}$/;

@@ -91,7 +91,8 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: "useAnimatedReaction::OnSnapPointChange",
+              cutout:
+                "(function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;})",
             };
             let tmp3;
             if (index < first.length - 1) {
@@ -102,7 +103,8 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: "useAnimatedReaction::OnSnapPointChange",
+              cutout:
+                "(function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;})",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>
@@ -126,7 +128,8 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: "useAnimatedReaction::OnSnapPointChange",
+              cutout:
+                "(function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;})",
             };
             let tmp3;
             if (index < first.length - 1) {
@@ -137,7 +140,8 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: "useAnimatedReaction::OnSnapPointChange",
+              cutout:
+                "(function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;})",
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>

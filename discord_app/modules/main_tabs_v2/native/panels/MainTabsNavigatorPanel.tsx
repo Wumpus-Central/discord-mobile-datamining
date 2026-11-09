@@ -86,7 +86,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(18377);
+        obj = obj(18390);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
         obj(5323).dismissKeyboard();

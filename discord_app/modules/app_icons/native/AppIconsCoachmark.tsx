@@ -5,7 +5,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import _modDef10169 from "../../../../_runtime/metro/10169__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef19381 from "../../../../_runtime/metro/19381__.js";
+import _modDef19394 from "../../../../_runtime/metro/19394__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -53,7 +53,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   const obj4 = { style: tmp.info, children: null };
   const obj5 = { source: null, style: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  obj5.source = _modDef19381;
+  obj5.source = _modDef19394;
   obj5.style = tmp.image;
   const items2 = [closure_7(FastImageDefault, obj5), ,];
   const obj6 = { style: tmp.titleContainer, children: null };

@@ -37,7 +37,7 @@ let closure_12 = async function _fetchEffectiveNotifSettings() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -99,7 +99,7 @@ let closure_12 = async function _fetchEffectiveNotifSettings() {
               closure_129_3 = undefined;
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -146,14 +146,14 @@ let closure_12 = async function _fetchEffectiveNotifSettings() {
               closure_129_3 = undefined;
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             c3 = 0;
             if (closure_129_3 === closure_128_1) {
               closure_129_3 = undefined;
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
         c3 = 0;

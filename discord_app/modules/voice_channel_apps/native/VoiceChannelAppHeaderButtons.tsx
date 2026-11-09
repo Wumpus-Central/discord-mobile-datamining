@@ -14,16 +14,16 @@ const result = size.fileFinishedImporting("modules/voice_channel_apps/native/Voi
 export default function VoiceChannelAppHeaderButtons(arg0) {
   ({ channel, inCall } = arg0);
   let id;
-  const voiceChannelAppAvailable = id(19618).useVoiceChannelAppAvailable(channel, inCall);
-  const obj = id(19618);
-  const voiceChannelAppOpen = id(19618).useVoiceChannelAppOpen(channel, inCall);
-  const obj2 = id(19618);
-  const voiceChannelAppVisible = id(19618).useVoiceChannelAppVisible(channel);
+  const voiceChannelAppAvailable = id(19631).useVoiceChannelAppAvailable(channel, inCall);
+  const obj = id(19631);
+  const voiceChannelAppOpen = id(19631).useVoiceChannelAppOpen(channel, inCall);
+  const obj2 = id(19631);
+  const voiceChannelAppVisible = id(19631).useVoiceChannelAppVisible(channel);
   id = channel.id;
   let tmp7Result = null;
   if (voiceChannelAppAvailable) {
     const obj4 = {
-      icon: importDefault(voiceChannelAppVisible ? 18104 : 8679),
+      icon: importDefault(voiceChannelAppVisible ? 18117 : 8679),
       accessibilityLabel: null,
       onPress: null,
     };

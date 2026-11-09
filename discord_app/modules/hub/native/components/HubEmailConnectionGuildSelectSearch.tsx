@@ -11,7 +11,7 @@ import NavigatorHeader from "../../../../design/components/Navigator/native/Navi
 import _mod7357 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import SearchBarNavDefault from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 import HubActionCreatorsDefault from "../../../../actions/HubActionCreators.tsx";
-import _modDef14591 from "../../../../../_runtime/metro/14591__.js";
+import _modDef14592 from "../../../../../_runtime/metro/14592__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,7 +22,7 @@ require = fn;
 function EmptyState() {
   const tmp = closure_11();
   const obj = { style: tmp.emptyWrapper, children: null };
-  const obj2 = { style: tmp.emptyStateImage, source: _modDef14591 };
+  const obj2 = { style: tmp.emptyStateImage, source: _modDef14592 };
   items = [React5(FastImageDefault, obj2)];
   const obj3 = {
     style: tmp.emptyStateTitle,
@@ -37,7 +37,7 @@ function EmptyState() {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14564).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14565).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const createStyles = fn(5140);
@@ -116,7 +116,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {

@@ -139,7 +139,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -189,7 +189,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
             if ("Cancelled" === errorStr) {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else if (null != base64) {
               if ("image/png" === mimeType) {
                 closure_129_11(base64);
@@ -223,7 +223,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -248,17 +248,17 @@ export default function GuildSettingsStickerCreate(stickerId) {
                   c4 = 0;
                   closure_1_18.current = false;
                   closure_1_19(false);
-                  const result = closure_2_0(20141).showGuildSettingsStickerError();
+                  const result = closure_2_0(20154).showGuildSettingsStickerError();
                   c5 = 3;
-                  closure_2_0(20141);
+                  closure_2_0(20154);
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
                   v2();
-                  const result1 = closure_2_0(20141).showGuildSettingsStickerSuccess();
+                  const result1 = closure_2_0(20154).showGuildSettingsStickerSuccess();
                   c4 = 0;
-                  closure_2_0(20141);
+                  closure_2_0(20154);
                 }
                 return value;
               });
@@ -310,7 +310,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
                       const uri = first1;
                       if (null == first1) {
                         c0 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } else {
                         c1 = 2;
                         c0 = 1;
@@ -365,7 +365,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp8) {
         c0 = tmp;
         throw tmp8;
@@ -549,7 +549,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     obj18.style = tmp.stickerPreviewImage;
     tmp35Result = tmp35(first, obj18);
   } else {
-    tmp35Result = tmp35(tmp34(20142).StickerPlusIcon, { size: "lg" });
+    tmp35Result = tmp35(tmp34(20155).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp35Result;
   items4[1] = onPressEmoji(stickerId(7043).PressableHighlight, obj16);

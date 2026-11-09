@@ -92,14 +92,14 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp19Result = first2;
   if (first2) {
     const obj5 = { state: segmentedControlState, colors: items1 };
-    tmp19Result = closure_8(tmp(14607), obj5);
+    tmp19Result = closure_8(tmp(14608), obj5);
   }
   const obj6 = { children: null };
   const obj7 = { spacing: 24, children: null };
   items2[1] = tmp19Result;
   const items3 = [
     closure_7(closure_5, { children: items2 }),
-    closure_8(first(14435).SegmentedControlPages, { state: segmentedControlState }),
+    closure_8(first(14436).SegmentedControlPages, { state: segmentedControlState }),
     ,
   ];
   const obj8 = { spacing: 8, direction: "horizontal", children: null };

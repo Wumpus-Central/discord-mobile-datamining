@@ -57,7 +57,7 @@ let closure_13 = async function _sendGiftIntentGif(arg0) {
     obj12.location_stack = items;
     closure_130_1(closure_130_2[12]).track(closure_130_8.GIFT_INTENT_MESSAGE_SENT, obj12);
     c4 = 3;
-    return { value: "HermesInternal", done: "HermesInternal" };
+    return { value: "HermesInternal", done: null };
   }
   const id = closure_129_0.id;
   await closure_130_1(closure_130_2[10]).sendMessage(

@@ -127,7 +127,7 @@ const ChannelRecord = fn(4993);
   GUILD_WEBHOOK_CHANNEL_TYPES: closure_14,
 } = ChannelRecord);
 const isGuildNSFW = fn(5007).isGuildNSFW;
-let closure_25 = fn(19247).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(19260).ChannelSettingsAutoFocusElement;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_26,
@@ -418,7 +418,7 @@ class ChannelSettingsOverview extends PureComponent {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -532,7 +532,7 @@ class ChannelSettingsOverview extends PureComponent {
                 closure_128_6 = tmp2(7483).conjureChannelAppId(closure_128_1);
                 if (tmp65 != guild2) {
                   if (tmp65 != closure_128_6) {
-                    const conjureServerApp = tmp2(13510).loadConjureServerApp(guild2.id, closure_128_6);
+                    const conjureServerApp = tmp2(13511).loadConjureServerApp(guild2.id, closure_128_6);
                     tmp65 = closure_128_5;
                     conjureServerApp.then((app) => {
                       if (null == app) {
@@ -545,7 +545,7 @@ class ChannelSettingsOverview extends PureComponent {
                       }
                       return tmp6;
                     }, closure_128_5);
-                    const obj9 = tmp2(13510);
+                    const obj9 = tmp2(13511);
                   }
                 }
                 closure_128_5();
@@ -900,7 +900,7 @@ prototype["renderSlowmode"] = function renderSlowmode() {
       obj2.maxValue = length.length - 1;
       obj2.onChange = self.handleSlowmodeChange;
       obj2.formatValue = formatSlowmodeCooldown;
-      obj.children = closure_1_47(tmp8(16158).TableSliderRow, obj2);
+      obj.children = closure_1_47(tmp8(16168).TableSliderRow, obj2);
       items.push(closure_1_47(tmp8(7126).TableRowGroup, obj, "slowmode-section"));
       return items;
     } else {
@@ -941,7 +941,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(19252).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(19265).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1405,7 +1405,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(7038).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(4999).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(19260).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(19273).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1768,7 +1768,7 @@ prototype["renderCategory"] = function renderCategory() {
         const obj = self(5776);
       }
       const obj2 = {
-        icon: closure_47(tmp7(18533).FolderPlusIcon, {}),
+        icon: closure_47(tmp7(18546).FolderPlusIcon, {}),
         label: null,
         trailing: null,
         arrow: null,

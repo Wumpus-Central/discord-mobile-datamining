@@ -49,7 +49,7 @@ export default function CheckpointShareCardPowerBar(stats) {
   let obj2 = { style: null, children: null };
   items = [
     tmp.powerBar,
-    { backgroundColor: noop.useContext(stats(13679).CheckpointShareCardColorsContext).tertiaryBackgroundColor },
+    { backgroundColor: noop.useContext(stats(13680).CheckpointShareCardColorsContext).tertiaryBackgroundColor },
   ];
   obj2.style = items;
   const obj3 = { style: tmp.powerLevel, children: null };

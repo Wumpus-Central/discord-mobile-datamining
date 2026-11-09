@@ -31,14 +31,27 @@ function handleCategoryExpandAll(guildId) {
 function handleLogout() {
   React4(React3);
 }
-function handleThreadMembersUpdate(addedMembers) {
-  addedMembers = addedMembers.addedMembers;
-  const id = AuthenticationStore.getId();
-  if (tmp2) {
-    const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(addedMembers.id);
-    result.catch(NOOP);
+function handleThreadMembersUpdate(arg0) {
+  ({ id, addedMembers, removedMemberIds } = arg0);
+  const id1 = AuthenticationStore.getId();
+  if (null != id1) {
+    let hasItem;
+    if (removedMemberIds != null) {
+      hasItem = removedMemberIds.includes(id1);
+    }
+    if (true !== hasItem) {
+      let someResult;
+      if (addedMembers != null) {
+        someResult = addedMembers.some((userId) => userId.userId === id1);
+      }
+      if (true === someResult) {
+        const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(id);
+        result.catch(NOOP);
+      }
+    } else {
+      const result1 = FavoritesActionCreators.removeFavoriteChannel(id, { trackAnalytics: false });
+    }
   }
-  tmp2 = null != id && null != addedMembers && addedMembers.some((userId) => userId.userId === id);
 }
 function handleThreadCreate(channel) {
   channel = channel.channel;
@@ -84,7 +97,7 @@ function handleThreadMemberUpdate(joinTimestamp) {
     result.catch(NOOP);
   }
 }
-const FavoritesGuildSuggestionsStore = fn(18581);
+const FavoritesGuildSuggestionsStore = fn(18594);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1072).NOOP;
 const prototype = function FavoriteManager() {

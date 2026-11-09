@@ -53,14 +53,14 @@ export default function OrbsArcadeGameContextMenu(game) {
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      const result = game(17340).trackOrbsArcadeCtaClicked(
+      const result = game(17351).trackOrbsArcadeCtaClicked(
         id,
-        game(17340).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE,
-        game(17340).OrbsArcadeCtaLocation.GAME_TILE,
+        game(17351).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE,
+        game(17351).OrbsArcadeCtaLocation.GAME_TILE,
         surface,
       );
-      const obj = game(17340);
-      const result1 = game(17341).openOrbsArcadeInfoSheet(id.id, surface);
+      const obj = game(17351);
+      const result1 = game(17352).openOrbsArcadeInfoSheet(id.id, surface);
     };
     items = [obj];
     return items;

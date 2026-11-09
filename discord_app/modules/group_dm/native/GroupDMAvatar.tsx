@@ -66,7 +66,15 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: "barber", animate: "beauty" };
+    obj9 = {
+      style: tmp.firstFace,
+      size: pileSizeOverride,
+      guildId: "r",
+      cutout:
+        "(function hwbToRgb_Pnpm_ColorsTs3(h,w,b){let[hue2rgb]=this.__closure;if(w+b>=1){const gray=Math.round(w*255/(w+b));return gray<<24|gray<<16|gray<<8;}const red=hue2rgb(0,1,h+1/3)*(1-w-b)+w;const green=hue2rgb(0,1,h)*(1-w-b)+w;const blue=hue2rgb(0,1,h-1/3)*(1-w-b)+w;return Math.round(red*255)<<24|Math.round(green*255)<<16|Math.round(blue*255)<<8;})",
+      animate:
+        "(function hslToRgb_Pnpm_ColorsTs2(h,s,l){let[hue2rgb]=this.__closure;const q=l<0.5?l*(1+s):l+s-l*s;const p=2*l-q;const r=hue2rgb(p,q,h+1/3);const g=hue2rgb(p,q,h);const b=hue2rgb(p,q,h-1/3);return Math.round(r*255)<<24|Math.round(g*255)<<16|Math.round(b*255)<<8;})",
+    };
     obj9.cutout = memo1;
     obj9.animate = animate;
     if (null == users) {
@@ -87,7 +95,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "activity-panel-focused-view",
+      animate: 6,
     };
     obj12.animate = animate;
     if (null == users) {

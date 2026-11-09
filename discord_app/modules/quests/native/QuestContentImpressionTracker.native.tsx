@@ -157,7 +157,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
     obj7.adCreativeType = skipRemountKey.adCreativeType;
     tmp19 = obj7;
   }
-  return createElement(adContentIds2(14935).QuestContentImpressionTracker, tmp19);
+  return createElement(adContentIds2(14936).QuestContentImpressionTracker, tmp19);
 }
 let closure_6 = fn(9777).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const AppStates = fn(1072).AppStates;

@@ -20,11 +20,11 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guil
 
 export default noop.memo(
   function GuildsOnly() {
-    const trackTabPerformance = enabled(18395).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
-    let obj = enabled(18395);
+    const trackTabPerformance = enabled(18408).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
+    let obj = enabled(18408);
     const tmp5 = isChatBesideChannelList(5310)();
     const isEligibleForQuests = enabled(9764).getIsEligibleForQuests();
-    const GuildsRenderExperiment = enabled(18396).GuildsRenderExperiment;
+    const GuildsRenderExperiment = enabled(18409).GuildsRenderExperiment;
     enabled = GuildsRenderExperiment.useConfig({ location: "GuildsOnly" }).enabled;
     isChatBesideChannelList = undefined;
     dependencyMap = undefined;
@@ -104,16 +104,16 @@ export default noop.memo(
     }
     if (!enabled) {
       const obj3 = { gradient: tmp5, children: null };
-      const items1 = [closure_8(tmp4(18397), {}), closure_8(tmp4(18774), {}), ,];
+      const items1 = [closure_8(tmp4(18410), {}), closure_8(tmp4(18787), {}), ,];
       let tmp10Result = isEligibleForQuests;
       if (isEligibleForQuests) {
-        tmp10Result = closure_8(tmp4(17466), {});
+        tmp10Result = closure_8(tmp4(17477), {});
       }
       const obj4 = { children: null };
       items1[2] = tmp10Result;
-      items1[3] = closure_8(tmp(18379).BackgroundChatHost, {});
+      items1[3] = closure_8(tmp(18392).BackgroundChatHost, {});
       obj4.children = items1;
-      obj3.children = closure_9(tmp(17386).QuestDockExternalCoordinationContextProvider, obj4);
+      obj3.children = closure_9(tmp(17397).QuestDockExternalCoordinationContextProvider, obj4);
       let tmp10Result2 = closure_8(tmp(5199).ThemeContextProvider, obj3);
     } else {
       tmp10Result2 = null;

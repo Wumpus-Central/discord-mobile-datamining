@@ -50,7 +50,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -103,7 +103,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
               const obj17 = { emoji: closure_129_0 };
               const result = _location(10073).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp12) {
             c4 = tmp;

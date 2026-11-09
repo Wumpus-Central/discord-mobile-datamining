@@ -203,7 +203,7 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1113).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1113).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(16880).LeftBackIconWithBadge, {});
+    obj3.children = closure_7(tmp11(16891).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp11(7043).PressableOpacity, obj3), ,];
     const obj4 = {
       color: "mobile-text-heading-primary",

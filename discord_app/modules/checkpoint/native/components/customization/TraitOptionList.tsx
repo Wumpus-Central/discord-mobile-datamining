@@ -72,7 +72,7 @@ export default function TraitOptionList(size) {
   const obj3 = size(1652);
   const tmp7 = options(5739)(bound);
   [tmp9, c11] = disabled(noop.useState(options(1493)().width), 2);
-  const width = size(13923).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const width = size(13924).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + closure_10;
   c12 = sum;
   const items1 = [disabled, isScreenReaderEnabled];
@@ -183,7 +183,7 @@ export default function TraitOptionList(size) {
       disabled: null,
       onPress: null,
     };
-    const tmp2 = options(13923);
+    const tmp2 = options(13924);
     obj.accessibilityLabel = size(6566).getAssetAccessibilityLabel(traitOption, hideCornerFlag);
     obj.isSelected = traitOption.optionId === dependencyMap;
     let tmp5 = isScreenReaderEnabled;

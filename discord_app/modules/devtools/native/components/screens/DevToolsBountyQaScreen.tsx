@@ -40,7 +40,7 @@ export default function DevToolsBountyQaScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -60,12 +60,12 @@ export default function DevToolsBountyQaScreen() {
                 toast("No dock bounty in memory. Pick a lookback window.", "bounty-qa-missing-id");
                 dependencyMap = 0;
                 c3 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 c1 = 3;
                 c3 = 1;
                 const obj7 = {
-                  value: tmp3(14926).resetCreativePreviewDeliveryState(
+                  value: tmp3(14927).resetCreativePreviewDeliveryState(
                     tmp22,
                     tmp3(6839).AdPlacement.MOBILE_HOME_DOCK_AREA,
                   ),
@@ -78,7 +78,7 @@ export default function DevToolsBountyQaScreen() {
               const NumberResult = Number(tmp37);
               c1 = 2;
               c3 = 1;
-              const obj8 = { value: tmp3(14926).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+              const obj8 = { value: tmp3(14927).resetPreviewDeliveryStateLookback(NumberResult), done: false };
               return obj8;
             }
           }
@@ -240,7 +240,7 @@ export default function DevToolsBountyQaScreen() {
   items6[1] = closure_8(stateFromStores(7038).TableRow, {
     label: "Refresh Organic Serve",
     subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-    icon: closure_8(stateFromStores(17394).RedoIcon, {}),
+    icon: closure_8(stateFromStores(17405).RedoIcon, {}),
     onPress: function handleRefreshOrganicServe() {
       const questToDeliver = stateFromStores(9773).fetchQuestToDeliver(
         stateFromStores(6839).AdPlacement.MOBILE_HOME_DOCK_AREA,

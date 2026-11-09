@@ -259,7 +259,7 @@ export default function UserProfileApplicationWidgetCard(userId) {
     tmp31Result4 = null;
     if (null != tmp32Result2) {
       const obj20 = { style: cardStyle, children: null };
-      const items6 = [tmp32Result, , ,];
+      const items6 = [tmp32Result, , , ,];
       const obj21 = { style: tmp.divider };
       items6[1] = closure_8(closure_5, obj21);
       items6[2] = tmp32Result2;
@@ -292,6 +292,7 @@ export default function UserProfileApplicationWidgetCard(userId) {
         }
       }
       items6[3] = tmp31Result3;
+      items6[4] = userId.footer;
       obj20.children = items6;
       tmp31Result4 = closure_9(tmp9(7436), obj20);
       const tmp9Result2 = tmp9(7436);

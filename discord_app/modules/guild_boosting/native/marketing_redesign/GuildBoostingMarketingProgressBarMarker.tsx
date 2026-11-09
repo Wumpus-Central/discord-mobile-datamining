@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef15751 from "../../../../../_runtime/metro/15751__.js";
-import _modDef15752 from "../../../../../_runtime/metro/15752__.js";
-import _modDef15753 from "../../../../../_runtime/metro/15753__.js";
+import _modDef15761 from "../../../../../_runtime/metro/15761__.js";
+import _modDef15762 from "../../../../../_runtime/metro/15762__.js";
+import _modDef15763 from "../../../../../_runtime/metro/15763__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -85,7 +85,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     }
     return tmp18;
   } else if (isDisabled) {
-    BoostGemSlashIcon = BoostGemSlashIcon(14400).BoostGemSlashIcon;
+    BoostGemSlashIcon = BoostGemSlashIcon(14401).BoostGemSlashIcon;
     let tmp22Result = closure_6(BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
   } else {
     const obj4 = { source: obj2[tier], style: null };
@@ -111,7 +111,7 @@ const TierMarkerPositions = {
   [BoostedGuildTiers.TIER_2]: 0.6666666666666666,
   [BoostedGuildTiers.TIER_3]: 1,
 };
-let obj2 = { [TIER_1]: _modDef15751, [TIER_2]: _modDef15752, [TIER_3]: _modDef15753 };
+let obj2 = { [TIER_1]: _modDef15761, [TIER_2]: _modDef15762, [TIER_3]: _modDef15763 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
 let createStyles = fn(5140);
 let obj4 = {

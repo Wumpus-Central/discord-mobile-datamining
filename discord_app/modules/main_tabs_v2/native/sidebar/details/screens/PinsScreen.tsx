@@ -28,7 +28,7 @@ export default noop.memo(function PinsScreen() {
     return guild_id;
   });
   const obj2 = channelId(504);
-  const channelDetailsSearchContext = channelId(14080).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(14081).useChannelDetailsSearchContext(channelId, stateFromStores);
   const obj4 = {
     style: closure_7().container,
     children: jsx(messages_PinsScreenDefault, {

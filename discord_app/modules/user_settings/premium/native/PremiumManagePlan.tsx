@@ -424,7 +424,7 @@ function SubscriptionAndBillingInfo(subscription) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -462,7 +462,7 @@ function SubscriptionAndBillingInfo(subscription) {
               c3 = 0;
               closure_128_8(false);
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp24) {
             if (tmp4 === c3) {
@@ -871,8 +871,8 @@ export default function PremiumManagePlan() {
   const tmp = closure_31();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(15619).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(15619);
+  const youBarSettingsOutsideSafeAreaTop = navigation(15629).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(15629);
   navigation = navigation(1499).useNavigation();
   items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -918,7 +918,7 @@ export default function PremiumManagePlan() {
   const obj6 = navigation(504);
   let isInReverseTrial = navigation(8604).useIsInReverseTrial();
   const obj8 = navigation(8604);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15621).CountDownMessageTypes.SHORT_TIME);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15631).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString =
     navigation(2171).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
@@ -1068,9 +1068,9 @@ export default function PremiumManagePlan() {
       },
       subscription: tmp10,
     };
-    const items10 = [closure_28(tmp2(15510), obj17)];
+    const items10 = [closure_28(tmp2(15520), obj17)];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_28(tmp2(15551), obj18);
+    items10[1] = closure_28(tmp2(15561), obj18);
     obj16.children = items10;
     tmp27Result = closure_29(closure_7, obj16);
   }

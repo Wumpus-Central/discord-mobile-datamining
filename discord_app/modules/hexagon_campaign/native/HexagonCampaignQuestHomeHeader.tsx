@@ -126,7 +126,7 @@ export default function HexagonCampaignQuestHomeHeader() {
   if (isHexagonCampaignQuestHomeHeaderEnabled) {
     let obj4 = { style: tmp.container, children: null };
     const obj5 = { style: tmp.banner, children: null };
-    const obj6 = { source: tmp5(17323), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
+    const obj6 = { source: tmp5(17334), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
     const items2 = [closure_8(tmp5(5842), obj6), , ,];
     const obj7 = {
       colors: memo,
@@ -137,7 +137,7 @@ export default function HexagonCampaignQuestHomeHeader() {
     items2[1] = closure_8(tmp5(5715), obj7);
     const obj8 = { source: null, style: null, resizeMode: "contain", accessible: false };
     const tmp5Result = tmp5(5842);
-    obj8.source = tmp5(17324);
+    obj8.source = tmp5(17335);
     obj8.style = tmp.logo;
     items2[2] = closure_8(tmp5(5842), obj8);
     const obj9 = { style: tmp.sponsoredTag, children: null };
@@ -150,7 +150,7 @@ export default function HexagonCampaignQuestHomeHeader() {
     const items3 = [closure_9(closure_5, obj5)];
     const obj11 = { style: tmp.cardShadow, children: null };
     const obj12 = { style: tmp.card, children: null };
-    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(17325).BundleAbstractUI, { accessible: false }) };
+    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(17336).BundleAbstractUI, { accessible: false }) };
     const items4 = [closure_8(closure_5, obj13)];
     const obj14 = { direction: "vertical", spacing: tmp5(575).space.PX_12, style: tmp.cardContent, children: null };
     const obj15 = { direction: "vertical", spacing: tmp5(575).space.PX_8, children: null };
@@ -175,7 +175,7 @@ export default function HexagonCampaignQuestHomeHeader() {
             variant: "body-xs/medium",
             color: "text-link",
             accessibilityRole: "link",
-            onPress: isHexagonCampaignQuestHomeHeaderEnabled(16787).openHexagonCampaignLearnMore,
+            onPress: isHexagonCampaignQuestHomeHeaderEnabled(16798).openHexagonCampaignLearnMore,
             children,
           },
           arg1,

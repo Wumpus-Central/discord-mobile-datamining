@@ -20,10 +20,10 @@ export default function EffectiveNotifSettingsLayout(node) {
   let isDeclarativeNotificationSettingsRedesignEnabled;
   const tmp = closure_9();
   isDeclarativeNotificationSettingsRedesignEnabled =
-    isDeclarativeNotificationSettingsRedesignEnabled(15864).useIsDeclarativeNotificationSettingsRedesignEnabled(
+    isDeclarativeNotificationSettingsRedesignEnabled(15874).useIsDeclarativeNotificationSettingsRedesignEnabled(
       "EffectiveNotifSettingsLayout",
     );
-  const obj = isDeclarativeNotificationSettingsRedesignEnabled(15864);
+  const obj = isDeclarativeNotificationSettingsRedesignEnabled(15874);
   items = [NotifSettingsProtoStore, AuthenticationStore, UserSettingsProtoStore];
   const stateFromStores = isDeclarativeNotificationSettingsRedesignEnabled(504).useStateFromStores(
     items,
@@ -62,12 +62,12 @@ export default function EffectiveNotifSettingsLayout(node) {
       const intl2 = tmp2(1113).intl;
       obj6.text = intl2.string(tmp2(1113).t["5911Lb"]);
       obj6.disabled = stateFromStores1;
-      obj6.onPress = tmp2(18288).retryEffectiveNotifSettings;
+      obj6.onPress = tmp2(18301).retryEffectiveNotifSettings;
       items3[1] = closure_7(tmp2(5758).Button, obj6);
       let tmp9Result = null;
       if (null != unavailableNode) {
         const obj7 = { node: unavailableNode };
-        tmp9Result = closure_7(tmp12(16894), obj7);
+        tmp9Result = closure_7(tmp12(16905), obj7);
       }
       items3[2] = tmp9Result;
       obj4.children = items3;

@@ -25,7 +25,7 @@ function DeleteButton(onDelete) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(17506);
+const GuildRoleSubscriptionsConstants = fn(17517);
 ({
   GuildRoleSubscriptionBenefitTypes: closure_10,
   MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11,
@@ -70,7 +70,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -208,7 +208,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
           closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
         },
       };
-      obj2.children = closure_13(tmp3(20364), obj3);
+      obj2.children = closure_13(tmp3(20377), obj3);
       let tmp27 = closure_13(tmp21(7126).TableRowGroup, obj2);
       let tmp28 = closure_13;
     } else {
@@ -245,7 +245,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       },
       listingId: merged.listingId,
     };
-    items = [tmp28(tmp3(20366), obj5)];
+    items = [tmp28(tmp3(20379), obj5)];
     const obj6 = {
       keyboardShouldPersistTaps: "handled",
       showsVerticalScrollIndicator: false,
@@ -271,7 +271,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    obj8.children = tmp28(tmp3(20367), obj9);
+    obj8.children = tmp28(tmp3(20380), obj9);
     items2[1] = tmp28(tmp21(7126).TableRowGroup, obj8);
     const obj11 = { label: null, maxLength: null, value: null, onChange: null, placeholder: null };
     const intl9 = tmp21(1113).intl;
@@ -314,5 +314,5 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     }
     tmp16 = num3 > 0;
   }
-  tmp5 = value(20342)();
+  tmp5 = value(20355)();
 }

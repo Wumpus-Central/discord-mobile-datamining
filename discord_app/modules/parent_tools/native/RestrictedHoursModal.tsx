@@ -148,7 +148,7 @@ function RestrictedHoursScreen(visible) {
   const obj12 = { source: null, resizeMode: "cover", style: null };
   const obj10 = { style: tmp.backgroundFill, pointerEvents: "none" };
   const tmp6Result2 = require("../../../../_runtime/metro/01652__.js");
-  obj12.source = require("../../../../_runtime/metro/19769__.js");
+  obj12.source = require("../../../../_runtime/metro/19782__.js");
   obj12.style = tmp.sunbeamGradient;
   obj11.children = closure_7(require("FastImage"), obj12);
   items9[1] = closure_7(require("../../../../_runtime/metro/01652__.js").View, obj11);

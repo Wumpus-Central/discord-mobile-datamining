@@ -56,7 +56,7 @@ function markServerListStale(guildId) {
   }
 }
 const OverlayWidgets = fn(1072).OverlayWidgets;
-const OVERLAY_V3_LAYOUT_ID = fn(15872).OVERLAY_V3_LAYOUT_ID;
+const OVERLAY_V3_LAYOUT_ID = fn(15882).OVERLAY_V3_LAYOUT_ID;
 let items = [];
 let closure_7 = items;
 let closure_8 = items;

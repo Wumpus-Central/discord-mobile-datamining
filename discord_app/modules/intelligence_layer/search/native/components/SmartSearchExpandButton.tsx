@@ -40,11 +40,11 @@ let result = size.fileFinishedImporting(
 
 export default noop.memo(function SmartSearchExpandButton(arg0) {
   ({ isCollapsed, onPress } = arg0);
-  const tmp3 = closure_10(onPress(19111).useSearchHostSurfaceColor());
+  const tmp3 = closure_10(onPress(19124).useSearchHostSurfaceColor());
   if (isCollapsed) {
     let ChevronSmallUpIcon = onPress(11555).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = onPress(15740).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = onPress(15750).ChevronSmallUpIcon;
   }
   items = [onPress];
   const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
@@ -72,7 +72,7 @@ export default noop.memo(function SmartSearchExpandButton(arg0) {
   obj3.accessibilityLabel = intl.string(FKLBbW);
   obj3.onPress = callback;
   const items1 = [closure_7(closure_6, { style: tmp3.surface, pointerEvents: "none" })];
-  const obj = onPress(19111);
+  const obj = onPress(19124);
   const obj4 = { style: tmp3.surface, pointerEvents: "none" };
   items1[1] = closure_7(ChevronSmallUpIcon, { size: "sm", color: tmp11(575).colors.INTERACTIVE_ICON_DEFAULT });
   obj3.children = items1;

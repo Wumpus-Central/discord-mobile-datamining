@@ -16,8 +16,8 @@ export function useOrbCheckoutOrder(skuId) {
   c3 = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  isOrdersCheckout = isOrdersCheckout(15322).useConfig({ location: "orb_checkout_modal" }).enabled;
-  const obj = isOrdersCheckout(15322);
+  isOrdersCheckout = isOrdersCheckout(15332).useConfig({ location: "orb_checkout_modal" }).enabled;
+  const obj = isOrdersCheckout(15332);
   [tmp2, c2] = noop.useState(null);
   let tmp = _slicedToArray(noop.useState(null), 2);
   [tmp4, c3] = noop.useState(isOrdersCheckout);
@@ -47,7 +47,7 @@ export function useOrbCheckoutOrder(skuId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

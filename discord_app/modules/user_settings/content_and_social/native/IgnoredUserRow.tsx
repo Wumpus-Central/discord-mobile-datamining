@@ -44,7 +44,7 @@ function IgnoredUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(17014).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(17025).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -103,7 +103,7 @@ export default function ConnectedIgnoredUserRow(userId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -126,7 +126,7 @@ export default function ConnectedIgnoredUserRow(userId) {
           } else if (1 === tmp6) {
             c2 = 0;
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
@@ -138,7 +138,7 @@ export default function ConnectedIgnoredUserRow(userId) {
           } else {
             c2 = 0;
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           if (tmp3 === c2) {

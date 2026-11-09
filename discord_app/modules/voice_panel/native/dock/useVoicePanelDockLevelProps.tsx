@@ -14,8 +14,8 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVo
 
 export function useVoicePanelDockGlowLevelProps() {
   let tmp;
-  const shouldAnimateSpeakerLevels = num(13959).useShouldAnimateSpeakerLevels("VoicePanelDock");
-  let obj = num(13959);
+  const shouldAnimateSpeakerLevels = num(13960).useShouldAnimateSpeakerLevels("VoicePanelDock");
+  let obj = num(13960);
   items = [SelectedChannelStore, ChannelStore];
   const stateFromStores = num(504).useStateFromStores(items, () =>
     channel.getChannel(voiceChannelId.getVoiceChannelId()),
@@ -52,7 +52,7 @@ export function useVoicePanelDockGlowLevelProps() {
   }, items2);
 }
 export function useVoicePanelDockSpeakerLevelProps() {
-  shouldAnimateSpeakerLevels = shouldAnimateSpeakerLevels(13959).useShouldAnimateSpeakerLevels("VoicePanelDock");
+  shouldAnimateSpeakerLevels = shouldAnimateSpeakerLevels(13960).useShouldAnimateSpeakerLevels("VoicePanelDock");
   items = [shouldAnimateSpeakerLevels];
   return noop.useMemo(() => {
     const merged = Object.assign(closure_10);

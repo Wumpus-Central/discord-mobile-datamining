@@ -99,7 +99,7 @@ function PlanSelectCard(onLayout) {
     const obj8 = {
       style: tmp.wumpus,
       pointerEvents: "none",
-      children: closure_6(tmp4(15632).NitroWumpusFlightLeft3dIllustration, { accessible: false, width: 320 }),
+      children: closure_6(tmp4(15642).NitroWumpusFlightLeft3dIllustration, { accessible: false, width: 320 }),
     };
     items[1] = closure_6(View, obj8);
     obj6.children = items;

@@ -329,10 +329,10 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     const obj2 = {
       slayer_storefront_session_id: "Array",
       sku_id: skuId,
-      guild_id: "literal",
-      application_id: ".",
-      cta_type: false,
-      location_stack: true,
+      guild_id: true,
+      application_id: true,
+      cta_type: "literal",
+      location_stack: ".",
     };
     let applicationId;
     if (stateFromStores != null) {
@@ -967,7 +967,7 @@ obj.hero = {
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "channelId" };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "alignItems" };
 let obj20 = {
   marginHorizontal: nativeDefault.space.PX_16,
   height: fn(10792).MOBILE_HERO_HEIGHT_PX,

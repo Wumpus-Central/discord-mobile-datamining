@@ -126,9 +126,9 @@ function OrbWalletShopPrimaryCard() {
   const ORB_WALLET_SHOP_CTA = AnalyticsLocationDefault.ORB_WALLET_SHOP_CTA;
   closure_129_0 = ORB_WALLET_SHOP_CTA;
   closure_129_1 = callback;
-  const orbWalletAnalyticsPage = analyticsLocations(17210).useOrbWalletAnalyticsPage();
+  const orbWalletAnalyticsPage = analyticsLocations(17221).useOrbWalletAnalyticsPage();
   closure_129_2 = orbWalletAnalyticsPage;
-  const obj = analyticsLocations(17210);
+  const obj = analyticsLocations(17221);
   const items1 = [analyticsLocations(4973).DismissibleContent.ORB_WALLET_SHOP_CTA_CARD_MOBILE];
   const tmp7 = _slicedToArray(
     analyticsLocations(7641).useSelectedDismissibleContent(items1, {
@@ -308,8 +308,8 @@ obj4.primaryCardText = { flex: 1, gap: nativeDefault.space.PX_4 };
 let obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj4.primaryCardCloseButton = { position: "absolute", top: nativeDefault.space.PX_4, end: nativeDefault.space.PX_4 };
 let closure_15 = createStyles.createStyles(obj4);
-let size = { asset: fn(17222), width: 56, height: 37 };
-const size1 = { asset: fn(17223), width: 50, height: 37 };
+let size = { asset: fn(17233), width: 56, height: 37 };
+const size1 = { asset: fn(17234), width: 50, height: 37 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletCards.tsx");
 

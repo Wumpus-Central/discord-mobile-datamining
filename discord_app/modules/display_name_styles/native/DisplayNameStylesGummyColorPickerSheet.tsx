@@ -42,7 +42,7 @@ obj3.body = {
   gap: nativeDefault.space.PX_16,
   alignItems: "center",
 };
-obj3.sheetContentColumn = { width: "100%", maxWidth: fn(17646).SHEET_CONTENT_MAX_WIDTH };
+obj3.sheetContentColumn = { width: "100%", maxWidth: fn(17657).SHEET_CONTENT_MAX_WIDTH };
 let obj5 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingTop: nativeDefault.space.PX_4,
@@ -92,7 +92,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(arg0) {
   colors = tmp6[0];
   closure_5 = tmp6[1];
   const tmp5 = displayNameStylesEffectConfig;
-  const tmp8Result = onSelectColors(17647)(DisplayNameEffect.DisplayNameEffect.GUMMY);
+  const tmp8Result = onSelectColors(17658)(DisplayNameEffect.DisplayNameEffect.GUMMY);
   const findIndexResult = tmp8Result.findIndex((colors) =>
     discord_common_shallowEqual.areArraysShallowEqual(colors.colors, first),
   );
@@ -141,25 +141,25 @@ export default function DisplayNameStylesGummyColorPickerSheet(arg0) {
   }, items1);
   let obj3 = { backgroundStyles: tmp.sheetBackground, header: null, children: null };
   const obj4 = { title: displayNameStylesEffectConfig.name, trailing: null };
-  const tmp8 = onSelectColors(17647);
+  const tmp8 = onSelectColors(17658);
   const obj5 = { variant: "primary", size: "sm", text: null, onPress: null };
   const intl = util.intl;
   obj5.text = intl.string(util.t.XqMe3N);
   obj5.onPress = callback2;
   obj4.trailing = closure_9(components_Button_Button.Button, obj5);
-  obj3.header = closure_9(onSelectColors(17642), obj4);
+  obj3.header = closure_9(onSelectColors(17653), obj4);
   const obj6 = { style: tmp.body, children: null };
   const obj7 = { style: null, children: null };
   const items2 = [,];
   ({ sheetContentColumn: arr5[0], optionContainer: arr5[1] } = tmp);
   obj7.style = items2;
   let tmp21;
-  const tmp7Result = onSelectColors(17642);
+  const tmp7Result = onSelectColors(17653);
   if (colors.length > 0 && findIndexResult < 0) {
     tmp21 = colors;
   }
   const items3 = [
-    closure_9(onSelectColors(17651), {
+    closure_9(onSelectColors(17662), {
       activeColors: tmp21,
       isSelected: colors.length > 0 && findIndexResult < 0,
       onPress: callback,

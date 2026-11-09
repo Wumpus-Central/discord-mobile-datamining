@@ -103,7 +103,7 @@ export default noop.memo(function SmartSearchTip(children) {
       const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
       return hasOwnProperty(native.Avatar, obj, user.id);
     });
-    tmp4Result = closure_5(tmp5(15117).AvatarPile, obj6);
+    tmp4Result = closure_5(tmp5(15118).AvatarPile, obj6);
   }
   items2[1] = tmp4Result;
   obj2.children = items2;

@@ -79,13 +79,13 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   [USER_INTERACTION]: fn(8714).ChatIcon,
-  [USER_CALLED]: fn(13594).PhoneIcon,
+  [USER_CALLED]: fn(13595).PhoneIcon,
   [USER_ADD]: fn(5840).FriendsIcon,
-  [GUILD_ADD]: fn(15755).ServerGridIcon,
+  [GUILD_ADD]: fn(15765).ServerGridIcon,
   [GUILD_INTERACTION]: fn(8716).ThreadIcon,
   [PURCHASES]: fn(8085).CreditCardIcon,
   [TOTAL_VOICE_MINUTES]: fn(5864).ClockIcon,
-  [GIFTS]: fn(13596).GiftIcon,
+  [GIFTS]: fn(13597).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
   fn(7792).TeenActionDisplayType);

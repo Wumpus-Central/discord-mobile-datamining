@@ -11,12 +11,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const LaunchPadGestureRefContextDefault = tmp(18382);
+const LaunchPadGestureRefContextDefault = tmp(18395);
 require = fn;
 const LaunchPadTypes = fn(11681).LaunchPadTypes;
 let PlatformUtils = fn(1377);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(18381);
+const PanelsConfig = fn(18394);
 let closure_6 = PlatformUtils
   ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG
   : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;

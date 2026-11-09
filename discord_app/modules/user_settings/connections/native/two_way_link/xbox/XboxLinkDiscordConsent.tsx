@@ -28,7 +28,7 @@ export default function XboxLinkDiscordConsent(arg0) {
     platformType: PlatformTypes.XBOX,
     callbackCode,
     callbackState,
-    clientId: navigation(14417).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+    clientId: navigation(14418).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
     scopes: XBOX_CLIENT_SCOPES,
     onNext: callback,
     onError: callback1,

@@ -11,10 +11,10 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(14206).PermissionStateType;
+const PermissionStateType = fn(14207).PermissionStateType;
 const ME = fn(1072).ME;
 let closure_8 = fn(8009).NotificationAuthorizationStatus;
-const NewUserTypes = fn(14512).NewUserTypes;
+const NewUserTypes = fn(14513).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -39,7 +39,7 @@ class AuthManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -77,8 +77,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(18365).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(18365);
+          const result = applyArgumentsResult(18378).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(18378);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;
@@ -105,13 +105,13 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(14595).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(14595);
+        applyArgumentsResult(14596).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(14596);
       }
       obj = applyArgumentsResult(9198);
       const result = MobileOnboardingFrictionExperimentDefault.trackMobileOnboardingFrictionExposure("AuthManager");
-      applyArgumentsResult(14511).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(14511);
+      applyArgumentsResult(14512).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(14512);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {

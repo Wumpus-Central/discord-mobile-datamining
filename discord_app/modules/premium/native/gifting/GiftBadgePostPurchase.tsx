@@ -32,7 +32,7 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(13596).GiftIcon, {
+  obj2.icon = closure_10(onSendGift(13597).GiftIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
   });
@@ -137,7 +137,7 @@ function LevelUpScreen(newTier) {
   const items3 = [closure_10(View, obj6)];
   const obj8 = { style: tmp3.levelUpBody, children: null };
   const items4 = [
-    closure_10(isBadgeUnreadStateEnabled(14686), {
+    closure_10(isBadgeUnreadStateEnabled(14687), {
       progress: simulatedProgress,
       currentTier,
       newTier,
@@ -180,7 +180,7 @@ function LevelUpScreen(newTier) {
   return closure_11(View, obj4);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(14684);
+const GiftingBadgeConstants = fn(14685);
 ({
   getRemainingGiftsToNextTier: closure_6,
   getTierForProgress: metroImportDefault,

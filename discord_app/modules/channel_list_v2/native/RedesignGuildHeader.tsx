@@ -237,7 +237,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.children = items9;
     const items11 = [closure_14(closure_6, obj6)];
     if (tmp28Result) {
-      tmp28Result = closure_13(tmp(18556), {});
+      tmp28Result = closure_13(tmp(18569), {});
     }
     items11[1] = tmp28Result;
     obj5.children = items11;

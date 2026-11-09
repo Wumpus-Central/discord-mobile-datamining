@@ -94,7 +94,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         }
       };
       obj.showRedDot = null != visibleContent;
-      return closure_1_6(shopButtonRef(14948), obj);
+      return closure_1_6(shopButtonRef(14949), obj);
     }
     if (tmp4) {
       let type1;

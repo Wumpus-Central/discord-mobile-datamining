@@ -54,7 +54,7 @@ const NativePermissionTypes = fn(8009).NativePermissionTypes;
 let closure_22 = fn(11036).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(7792).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5872).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15974).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15984).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8503).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -216,7 +216,12 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj25 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "jsxs" };
+      const obj25 = {
+        guildId: guildId2,
+        channelId: channelId2,
+        messageId: "Array",
+        navigationSettings: "hoa qu\u1EA3",
+      };
       const obj30 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj25.navigationSettings = obj30;
       rootNavigationRef1(inviteCode[31])(obj25);
@@ -237,7 +242,7 @@ export default function handleSupportedURL(payload) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -266,7 +271,7 @@ export default function handleSupportedURL(payload) {
                   c2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp3(10789).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15981).default()),
+                    value: tmp3(10789).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15991).default()),
                     done: false,
                   };
                   return obj4;
@@ -386,7 +391,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15986, dependencyMap.paths),
+                    asyncRequireImpl(15996, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -455,7 +460,7 @@ export default function handleSupportedURL(payload) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -524,7 +529,7 @@ export default function handleSupportedURL(payload) {
                       const obj3 = payload(paths[54]);
                     }
                     c4 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp35) {
                   c4 = tmp;
@@ -558,7 +563,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -617,7 +622,7 @@ export default function handleSupportedURL(payload) {
                     const obj4 = tmp4(paths[57]);
                   }
                   c2 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp37) {
                   c2 = tmp;
                   throw tmp37;
@@ -698,7 +703,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -877,7 +882,7 @@ export default function handleSupportedURL(payload) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {

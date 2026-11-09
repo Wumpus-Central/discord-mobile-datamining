@@ -7,7 +7,7 @@ import IconButton from "../../../../design/components/Button/native/IconButton.n
 import _modDef9956 from "../../../../../_runtime/metro/09956__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
-import _modDef14345 from "../../../../../_runtime/metro/14345__.js";
+import _modDef14346 from "../../../../../_runtime/metro/14346__.js";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
 import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim.tsx";
@@ -104,7 +104,7 @@ function DockSoundboardButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef14345;
+  obj.icon = _modDef14346;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;

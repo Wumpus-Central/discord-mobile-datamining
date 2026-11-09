@@ -33,7 +33,7 @@ const pressable = SettingBuilders.createPressable({
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -65,7 +65,7 @@ const pressable = SettingBuilders.createPressable({
             obj7.text = intl.string(tmp4(1113).t["zaEQz+"]);
             v1(5837).open("web-browser-data-cleared", obj7);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp7) {
           dependencyMap = tmp;

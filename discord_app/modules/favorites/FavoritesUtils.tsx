@@ -31,8 +31,8 @@ export function isFavoritesGuildId(guildId) {
   }
   return tmp;
 }
-export function isFavoritesGuildCategoryNameValid(str) {
-  return "" !== str.trim();
+export function isFavoritesGuildCategoryNameValid(name) {
+  return "" !== name.trim();
 }
 export function isFavoritableChannel(record) {
   return !record.isCategory();

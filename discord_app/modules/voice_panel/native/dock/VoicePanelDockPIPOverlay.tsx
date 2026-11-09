@@ -36,7 +36,7 @@ function StreamVolumeSlider(arg0) {
   };
   const intl = handleVolumeChange(1113).intl;
   obj3.accessibilityLabel = intl.string(handleVolumeChange(1113).t.pEAl4b);
-  obj2.children = closure_7(handleVolumeChange(16159).Slider, obj3);
+  obj2.children = closure_7(handleVolumeChange(16169).Slider, obj3);
   const items1 = [closure_7(tmp5, obj2)];
   const obj5 = { icon: null, onPress: null, accessibilityLabel: null };
   const obj4 = handleVolumeChange(6055);
@@ -218,7 +218,7 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
     if ("video" === kind) {
       let ScreenXIcon = tmp12(7120).XSmallIcon;
     } else {
-      ScreenXIcon = tmp12(19677).ScreenXIcon;
+      ScreenXIcon = tmp12(19690).ScreenXIcon;
     }
     const obj8 = { icon: closure_7(ScreenXIcon, { size: "sm" }), onPress: onStopWatching, accessibilityLabel: null };
     const intl = tmp12(1113).intl;
@@ -230,12 +230,12 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
       stringResult = string(t.q3O3J8);
     }
     obj8.accessibilityLabel = stringResult;
-    items6[1] = closure_7(tmp2(19508), obj8);
+    items6[1] = closure_7(tmp2(19521), obj8);
     obj5.children = items6;
     const items7 = [closure_9(tmp2Result, obj5)];
     const items8 = [tmp.row];
     let rowEnd = null;
-    const tmp2Result7 = tmp2(19508);
+    const tmp2Result7 = tmp2(19521);
     if ("video" === kind) {
       rowEnd = tmp.rowEnd;
     }
@@ -256,14 +256,14 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
         return closure_9(tmp2(1652).View, obj4);
       }
       const obj11 = {
-        icon: closure_7(tmp12(17265).FullscreenEnterIcon, { size: "sm" }),
+        icon: closure_7(tmp12(17276).FullscreenEnterIcon, { size: "sm" }),
         onPress: onOpenCall,
         accessibilityLabel: null,
       };
       const intl3 = tmp12(1113).intl;
       obj11.accessibilityLabel = intl3.string(tmp2(3184).MPtef8);
-      tmp22Result3 = closure_7(tmp2(19508), obj11);
-      const tmp2Result9 = tmp2(19508);
+      tmp22Result3 = closure_7(tmp2(19521), obj11);
+      const tmp2Result9 = tmp2(19521);
     } else {
       const obj12 = {
         icon: closure_7(tmp12(8744).VoiceNormalIcon, { size: "sm" }),
@@ -278,8 +278,8 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
         string2Result = string2(tmp12(1113).t.pEAl4b);
       }
       obj12.accessibilityLabel = string2Result;
-      closure_7(tmp2(19508), obj12);
-      const tmp2Result10 = tmp2(19508);
+      closure_7(tmp2(19521), obj12);
+      const tmp2Result10 = tmp2(19521);
     }
     tmp2Result8 = tmp2(7023);
   }

@@ -64,7 +64,7 @@ const sum2 = fn(1187).BADGE_SIZE + 4;
 let closure_9 = sum2 / 2;
 let closure_10 = sum + fn(1187).BADGE_SIZE / 2;
 let closure_11 = sum1 + fn(1187).BADGE_SIZE / 2;
-const GuildsBarActivityIndicator = fn(18726);
+const GuildsBarActivityIndicator = fn(18739);
 const mediaIcon = GuildsBarActivityIndicator.getMediaIcon({
   audio: false,
   video: false,

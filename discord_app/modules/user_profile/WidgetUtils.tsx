@@ -138,7 +138,7 @@ export function getSavedWidgets() {
   return widgets;
 }
 export { replaceWidgetInList };
-export function addWidgetToPending(type) {
+export function addWidgetToPending(applicationWidget) {
   if (WidgetStore.hasPendingChanges()) {
     let pendingWidgets = WidgetStore.getPendingWidgets();
     if (pendingWidgets == null) {
@@ -163,10 +163,10 @@ export function addWidgetToPending(type) {
     null ==
     widgets.find((getUniqueKey) => {
       const uniqueKey = getUniqueKey.getUniqueKey();
-      return uniqueKey === type.getUniqueKey();
+      return uniqueKey === applicationWidget.getUniqueKey();
     })
   ) {
-    if (type.type === WidgetType.WidgetType.PERSONAL) {
+    if (applicationWidget.type === WidgetType.WidgetType.PERSONAL) {
       const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
       const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
         dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK,
@@ -180,7 +180,7 @@ export function addWidgetToPending(type) {
       );
       const tmp16Result2 = DismissibleContentUnsafeUtils;
     }
-    items = [type];
+    items = [applicationWidget];
     HermesBuiltin.arraySpread(tmp7, 1);
     WidgetActionCreatorsDefault.setPendingWidgets(items);
   }

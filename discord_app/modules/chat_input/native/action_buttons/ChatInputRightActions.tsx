@@ -121,7 +121,7 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "flexDirection",
-    shouldShowThread: "broken_chain",
+    shouldShowThread: "en-BB",
   });
   return metroImportDefault(_modDef1652.View, obj2);
 }

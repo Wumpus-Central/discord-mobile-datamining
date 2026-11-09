@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, Keyboard: metroImportDefault } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(14086);
+const GuildDirectoryConstants = fn(14087);
 ({ DirectoryEntryCategories: closure_9, getHubCategories: closure_10 } = GuildDirectoryConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -38,7 +38,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -145,7 +145,7 @@ export function MediaModalOverlayHeader(arg0) {
           obj.accessibilityLabel = intl.string(_undefined(1113).t.PdRCRg);
           const tmp4 = _undefined2(9018);
           if (obj2.isAndroid()) {
-            let tmp2Result = closure_1_6(_undefined(15011).MoreVerticalIcon, {
+            let tmp2Result = closure_1_6(_undefined(15012).MoreVerticalIcon, {
               size: "md",
               color: "interactive-text-active",
             });

@@ -26,7 +26,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp25) {
         c3 = tmp;
@@ -93,14 +93,14 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(14483);
+const ContactSyncModalStore = fn(14484);
 ({
   setAllowEmail: closure_4,
   setAllowSync: hasOwnProperty,
   setName: closure_6,
   useContactSyncModalStore: metroImportDefault,
 } = ContactSyncModalStore);
-let closure_10 = fn(14512).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(14513).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1072).PlatformTypes;
 let closure_12 = fn(7211).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);

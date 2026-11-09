@@ -4,7 +4,7 @@ import router_utils from "../../../routing/router_utils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import BaseChannelItemDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
-import _modDef14627 from "../../../../../_runtime/metro/14627__.js";
+import _modDef14628 from "../../../../../_runtime/metro/14628__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -35,14 +35,14 @@ export default function GuildRoleSubscriptionsRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   }, items);
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18585, dependencyMap.paths), c1, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18598, dependencyMap.paths), c1, {
       guildId: id,
       onClose() {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);
       },
     });
   }, items1);
-  const ChannelModes = id(14170).ChannelModes;
+  const ChannelModes = id(14171).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -70,8 +70,8 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1113).intl;
   obj2.name = intl2.string(tmp6(1113).t["KzCF/6"]);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp6(14170).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp6(14170).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef14627 });
+  obj.name = jsx(tmp6(14171).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp6(14171).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef14628 });
   return (
     <tmp8
       onPress={callback}

@@ -94,7 +94,7 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
     const intl11 = tmp2(1113).intl;
     obj2.buttonPrimaryText = intl11.string(tmp2(1113).t.RLch70);
     obj2.buttonPrimaryOnPress = callback2;
-    let tmp15Result = jsx(guildId(14259), {
+    let tmp15Result = jsx(guildId(14260), {
       type: "button-action",
       message: null,
       buttonSecondaryText: null,
@@ -102,7 +102,7 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       buttonPrimaryText: null,
       buttonPrimaryOnPress: null,
     });
-    const tmp14 = guildId(14259);
+    const tmp14 = guildId(14260);
   } else {
     if (null != pendingGameProfileReturn) {
       let obj3 = {
@@ -158,8 +158,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       obj9.buttonPrimaryText = intl2.string(tmp2(1113).t.RLch70);
       obj9.buttonPrimaryOnPress = callback2;
     }
-    tmp15Result = jsx(guildId(14259), obj9);
-    const tmp17 = guildId(14259);
+    tmp15Result = jsx(guildId(14260), obj9);
+    const tmp17 = guildId(14260);
   }
   return tmp15Result;
 });

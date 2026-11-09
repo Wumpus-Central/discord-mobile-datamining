@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(16117).BACKDROP_OPAQUE_MAX_OPACITY;
+let closure_4 = fn(16127).BACKDROP_OPAQUE_MAX_OPACITY;
 const VoicePanelConstants = fn(11363);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: closure_6 } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11361).VoicePanelControlsModes;

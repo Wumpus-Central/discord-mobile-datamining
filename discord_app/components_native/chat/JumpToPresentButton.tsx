@@ -92,15 +92,15 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(14059), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(14058), {
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(14060), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(14059), {
       accessibilityLabel: stringResult,
-      icon: screenIndex(14059),
+      icon: screenIndex(14060),
       onPress: channelId.onJumpToPresent,
     });
-    const tmp16 = screenIndex(14058);
+    const tmp16 = screenIndex(14059);
   } else {
-    tmp12Result = jsx(tmp3(14060).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(14061).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

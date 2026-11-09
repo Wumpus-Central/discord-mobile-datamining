@@ -212,7 +212,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(19719), obj4);
+    tmp32 = closure_9(tmp(19732), obj4);
   }
   const items9 = [tmp32, , ,];
   let tmp36 = !tmp6;

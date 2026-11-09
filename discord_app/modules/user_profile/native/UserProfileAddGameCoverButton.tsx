@@ -8,8 +8,8 @@ const jsx = fn(21).jsx;
 const createStyles = fn(5140);
 const obj2 = {
   button: {
-    aspectRatio: fn(15197).GAME_COVER_ASPECT_RATIO,
-    borderRadius: fn(15197).GAME_COVER_BORDER_RADIUS,
+    aspectRatio: fn(15207).GAME_COVER_ASPECT_RATIO,
+    borderRadius: fn(15207).GAME_COVER_BORDER_RADIUS,
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
     alignItems: "center",
     justifyContent: "center",

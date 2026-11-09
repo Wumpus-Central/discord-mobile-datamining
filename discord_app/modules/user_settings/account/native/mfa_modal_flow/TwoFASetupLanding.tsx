@@ -5,7 +5,7 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
 import TwoFASetupStyles from "TwoFASetupStyles.tsx";
-import _modDef16968 from "../../../../../../_runtime/metro/16968__.js";
+import _modDef16979 from "../../../../../../_runtime/metro/16979__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -27,7 +27,7 @@ export default function TwoFASetupLanding() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
   const obj5 = { source: null, style: null };
-  obj5.source = _modDef16968;
+  obj5.source = _modDef16979;
   obj5.style = tmp.authIcon;
   items = [React4(FastImageDefault, obj5), ,];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };

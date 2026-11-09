@@ -43,7 +43,7 @@ function EnrolledBodyWatchTask(quest) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -81,7 +81,7 @@ function EnrolledBodyWatchTask(quest) {
                 const obj4 = { questId: tmp2.id, sourceQuestContent: quest(6839).QuestContent.QUEST_BAR_MOBILE };
                 v1 = 1;
                 c2 = 1;
-                const obj5 = { value: setRestingQuestDockMode(17414)(obj4), done: false };
+                const obj5 = { value: setRestingQuestDockMode(17425)(obj4), done: false };
                 return obj5;
               } else {
                 c2 = 3;
@@ -217,7 +217,7 @@ function EnrolledBodyPlayStreamTask(quest) {
 const View = fn(17).View;
 const QuestConstants = fn(6836);
 ({ QuestDockMode: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const QuestDockConstants = fn(17382);
+const QuestDockConstants = fn(17393);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT: closure_10, QUEST_DOCK_EXPANDED_PADDING_BOTTOM } = QuestDockConstants);
 ({ QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP } = QuestDockConstants);
 const jsxProd = fn(21);
@@ -254,10 +254,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledBody.tsx");
 
 export default noop.memo(function QuestDockEnrolledBody() {
-  const questDockQuest = minExpandedContentHeight(17411).useQuestDockQuest();
-  const obj = minExpandedContentHeight(17411);
+  const questDockQuest = minExpandedContentHeight(17422).useQuestDockQuest();
+  const obj = minExpandedContentHeight(17422);
   minExpandedContentHeight = noop.useContext(
-    minExpandedContentHeight(17383).QuestDockGestureContext,
+    minExpandedContentHeight(17394).QuestDockGestureContext,
   ).minExpandedContentHeight;
   items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];

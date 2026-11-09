@@ -2,8 +2,13 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef4026 from "../../conjure/intl/ConjureUntranslated.messages.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import BottomSheetModal from "../../../../_runtime/05392_BottomSheetModal.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConjureMobileExperiment from "../../conjure/experiments/ConjureMobileExperiment.tsx";
+import useConjureServerWidgetOffersDefault from "../../conjure/server_widgets/useConjureServerWidgetOffers.tsx";
+import turnOnConjureServerWidgetDefault from "../../conjure/server_widgets/native/turnOnConjureServerWidget.tsx";
 import UserProfileWidgetOptionAddButtonDefault from "UserProfileWidgetOptionAddButton.tsx";
 import useAddProfileWidgetDefault from "../hooks/native/useAddProfileWidget.tsx";
 import ConjureCustomWidget from "../../conjure/custom_widget/ConjureCustomWidget.tsx";
@@ -25,13 +30,17 @@ function WidgetCategoryEmptyState(tabName) {
   obj.children = timestampProducer(Text_Text.Text, obj2);
   return timestampProducer(View, obj);
 }
-function WidgetOptionsList(widgets) {
-  widgets = widgets.widgets;
-  _require = useAddProfileWidgetDefault();
-  let obj = { contentContainerStyle: null, children: null };
+function WidgetOptionsScrollView(children) {
+  const obj = { contentContainerStyle: null, children: children.children };
   items = [closure_9().list, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj.contentContainerStyle = items;
-  const items1 = [
+  return timestampProducer(BottomSheetModal.BottomSheetScrollView, obj);
+}
+function WidgetOptionsList(widgets) {
+  widgets = widgets.widgets;
+  closure_0 = useAddProfileWidgetDefault();
+  let obj = { children: null };
+  items = [
     widgets.map((widget) => {
       const obj = {
         widget,
@@ -44,8 +53,8 @@ function WidgetOptionsList(widgets) {
     }),
     widgets.children,
   ];
-  obj.children = items1;
-  return closure_7(require("BottomSheetModal").BottomSheetScrollView, obj);
+  obj.children = items;
+  return closure_7(WidgetOptionsScrollView, obj);
 }
 function InterestsOptionsPage(widgets) {
   widgets = widgets.widgets;
@@ -79,6 +88,55 @@ function GameStatsOptionsPage(widgets) {
   }
   return tmp4;
 }
+function hideSheet() {
+  ActionSheetActionCreatorsDefault.hideActionSheet("UserProfileWidgetAddActionSheet");
+}
+function ServerWidgetOptionRow(widget) {
+  widget = widget.widget;
+  const getOrFetchApplication = widget(7391).useGetOrFetchApplication(widget.applicationId);
+  let str;
+  if (getOrFetchApplication != null) {
+    str = getOrFetchApplication.name;
+  }
+  if (str == null) {
+    str = "";
+  }
+  const obj2 = { icon: null, label: null, subLabel: null, onPress: null };
+  const obj = widget(7391);
+  obj2.icon = closure_6(widget(7038).TableRow.Icon, { IconComponent: widget(11634).CirclePlusIcon });
+  obj2.label = str;
+  const intl = tmp(1113).intl;
+  obj2.subLabel = intl.formatToPlainString(_modDef4026.ZZywee, { applicationName: str });
+  obj2.onPress = function onPress() {
+    return turnOnConjureServerWidgetDefault(widget.applicationId, hideSheet);
+  };
+  return closure_6(widget(7038).TableRow, obj2);
+}
+function ServerWidgetsOptionsPage(offers) {
+  offers = offers.offers;
+  if (0 === offers.length) {
+    const obj2 = { tabName: tmp };
+    let tmp4 = timestampProducer(WidgetCategoryEmptyState, obj2);
+  } else {
+    const obj = {
+      children: offers.map((widgets) => {
+        widgets = widgets.widgets;
+        ({ guildId, guildName } = widgets);
+        return closure_1_6(
+          require("TableRowGroup").TableRowGroup,
+          {
+            title: guildName,
+            hasIcons: true,
+            children: widgets.map((widget) => closure_1_6(closure_1_16, { widget }, widget.getUniqueKey())),
+          },
+          guildId,
+        );
+      }),
+    };
+    tmp4 = timestampProducer(WidgetOptionsScrollView, obj);
+  }
+  return tmp4;
+}
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -106,17 +164,29 @@ export default function UserProfileWidgetAddActionSheet() {
   const tmp = closure_9();
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   _require = tmp2[1];
-  const tmp3 = useStableAddableWidgetsDefault();
-  importDefault = tmp3;
-  items = [tmp3];
+  const tmp5 = useStableAddableWidgetsDefault();
+  importDefault = tmp5;
+  items = [tmp5];
   const memo = noop.useMemo(() => UserProfileAddableWidgetCategories.partitionAddableWidgets(closure_1), items);
   ({ interestsWidgets, applicationWidgets } = memo);
+  const arr2 = useConjureServerWidgetOffersDefault();
+  const tmp7 = _slicedToArray(noop.useState(false), 2);
+  const first = tmp7[0];
+  let tmp9 = arr2.length > 0;
+  if (tmp9) {
+    tmp9 = !first;
+  }
+  if (tmp9) {
+    tmp7[1](true);
+  }
   const intl = require("util").intl;
   const stringResult = intl.string(require("util").t.NpchGq);
   const intl2 = require("util").intl;
   const stringResult1 = intl2.string(require("util").t.EKR8Ps);
-  const obj2 = { pageWidth: tmp2[0], items: null };
-  const obj = require("SegmentedControlState");
+  const intl3 = require("util").intl;
+  const stringResult2 = intl3.string(_modDef4026.OUrOHL);
+  const obj3 = { pageWidth: tmp2[0], items: null };
+  const obj2 = require("SegmentedControlState");
   const items1 = [
     {
       id: "interests",
@@ -124,7 +194,7 @@ export default function UserProfileWidgetAddActionSheet() {
       page: closure_6(InterestsOptionsPage, { widgets: interestsWidgets, tabName: stringResult }),
     },
   ];
-  const obj3 = {
+  const obj4 = {
     id: "interests",
     label: stringResult,
     page: closure_6(InterestsOptionsPage, { widgets: interestsWidgets, tabName: stringResult }),
@@ -134,30 +204,40 @@ export default function UserProfileWidgetAddActionSheet() {
     label: stringResult1,
     page: closure_6(GameStatsOptionsPage, { widgets: applicationWidgets, tabName: stringResult1 }),
   };
-  obj2.items = items1;
-  const segmentedControlState = obj.useSegmentedControlState(obj2);
+  if (first) {
+    const obj6 = { id: "fromYourServers", label: stringResult2, page: null };
+    const obj7 = { offers: arr2, tabName: stringResult2 };
+    obj6.page = closure_6(ServerWidgetsOptionsPage, obj7);
+    const items2 = [obj6];
+    let items3 = items2;
+  } else {
+    items3 = [];
+  }
+  HermesBuiltin.arraySpread(items3, 2);
+  obj3.items = items1;
+  const segmentedControlState = obj2.useSegmentedControlState(obj3);
   const callback = noop.useCallback((nativeEvent) => {
     closure_0(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const obj5 = { header: null, scrollable: true, startExpanded: true, children: null };
-  const obj6 = { title: null };
-  const intl3 = require("util").intl;
-  obj6.title = intl3.string(require("util").t["grUgR+"]);
-  obj5.header = closure_6(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj6);
-  const obj7 = { style: tmp.container, onLayout: callback, children: null };
-  const obj4 = {
+  const obj8 = { header: null, scrollable: true, startExpanded: true, children: null };
+  const obj9 = { title: null };
+  const intl4 = tmp11(1113).intl;
+  obj9.title = intl4.string(require("util").t["grUgR+"]);
+  obj8.header = closure_6(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj9);
+  const obj10 = { style: tmp.container, onLayout: callback, children: null };
+  const obj5 = {
     id: "gameStats",
     label: stringResult1,
     page: closure_6(GameStatsOptionsPage, { widgets: applicationWidgets, tabName: stringResult1 }),
   };
-  const items2 = [
+  const items4 = [
     closure_6(View, {
       style: tmp.tabs,
       children: closure_6(require("Tabs/Tabs").Tabs, { state: segmentedControlState }),
     }),
     closure_6(require("SegmentedControlPages").SegmentedControlPages, { state: segmentedControlState }),
   ];
-  obj7.children = items2;
-  obj5.children = closure_7(View, obj7);
-  return closure_6(require("ActionSheet").ActionSheet, obj5);
+  obj10.children = items4;
+  obj8.children = closure_7(View, obj10);
+  return closure_6(require("ActionSheet").ActionSheet, obj8);
 }

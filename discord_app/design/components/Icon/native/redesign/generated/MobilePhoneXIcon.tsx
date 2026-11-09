@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/MobilePhoneXIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod19575 from "../../../../../../../_runtime/metro/19575__.js";
+import _mod19588 from "../../../../../../../_runtime/metro/19588__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function MobilePhoneXIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19575, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19588, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

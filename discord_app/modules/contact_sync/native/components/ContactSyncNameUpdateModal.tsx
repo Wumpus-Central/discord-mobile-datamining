@@ -23,7 +23,7 @@ function ContactSyncNameInputScreen() {
   }
   dependencyMap = async function _onNext(arg0) {
     _require(true);
-    await tmp3(14490).updateName(closure_0);
+    await tmp3(14491).updateName(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { text: null, variant: "critical" };
@@ -65,7 +65,7 @@ function ContactSyncNameInputScreen() {
     str = "";
   }
   obj3.initialName = str;
-  obj2.children = jsx(onNext(14504), {
+  obj2.children = jsx(onNext(14505), {
     onNext,
     onRemoveName() {
       return onNext(null);
@@ -76,7 +76,7 @@ function ContactSyncNameInputScreen() {
   return <View style={tmp.container}>{null}</View>;
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(14484).ContactSyncScenes;
+const ContactSyncScenes = fn(14485).ContactSyncScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5140);
 let obj2 = {
