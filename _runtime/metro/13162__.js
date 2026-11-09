@@ -4,7 +4,7 @@ import _mod13163 from "13163__.js";
 import includesScopePseudo from "../13164_includesScopePseudo.js";
 
 const self = this;
-let f61053 = require;
+let f61068 = require;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -88,7 +88,7 @@ if (self2) {
         if (0 < substr.length) {
           do {
             let push = substr.push;
-            let applyResult = push.apply(substr, f61053(13170).getNextSiblings(substr[num2], removeSubsets));
+            let applyResult = push.apply(substr, f61068(13170).getNextSiblings(substr[num2], removeSubsets));
             num2 = num2 + 1;
             tmp = substr;
           } while (num2 < length);
@@ -147,7 +147,7 @@ if (self2) {
         }
         tmp.equals = equals1;
       }
-      return f61053(arg0, tmp, arg2);
+      return f61068(arg0, tmp, arg2);
     };
     exports._compileUnsafe = function addAdapter(arg0, arg1, arg2) {
       let tmp = arg1;
@@ -180,7 +180,7 @@ if (self2) {
         }
         tmp.equals = equals1;
       }
-      return f61053(arg0, tmp, arg2);
+      return f61068(arg0, tmp, arg2);
     };
     exports._compileToken = function addAdapter(arg0, arg1, arg2) {
       let tmp = arg1;
@@ -213,10 +213,10 @@ if (self2) {
         }
         tmp.equals = equals1;
       }
-      return f61053(arg0, tmp, arg2);
+      return f61068(arg0, tmp, arg2);
     };
     exports.prepareContext = prepareContext;
-    f61053 = (arg0, arg1, adapter) => {
+    f61068 = (arg0, arg1, adapter) => {
       if (arg0 !== closure_5.default.falseFunc) {
         if (arg1) {
           if (0 !== arg1.length) {
@@ -291,9 +291,9 @@ if (self2) {
       } else {
         removeSubsetsResult = adapter3.getChildren(tmp7);
       }
-      return f61053(compileUnsafeResult, removeSubsetsResult, tmp);
+      return f61068(compileUnsafeResult, removeSubsetsResult, tmp);
     };
-    f61053 = (arg0, arg1, adapter) => {
+    f61068 = (arg0, arg1, adapter) => {
       let findOneResult = null;
       if (arg0 !== closure_5.default.falseFunc) {
         findOneResult = null;
@@ -371,7 +371,7 @@ if (self2) {
       } else {
         removeSubsetsResult = adapter3.getChildren(tmp7);
       }
-      return f61053(compileUnsafeResult, removeSubsetsResult, tmp);
+      return f61068(compileUnsafeResult, removeSubsetsResult, tmp);
     };
     exports.is = function is(arg0, fn, arg2) {
       let tmp = arg2;
@@ -406,7 +406,7 @@ if (self2) {
       }
       let compileResult = fn;
       if (typeof fn !== "function") {
-        compileResult = f61053(13164).compile(fn, tmp);
+        compileResult = f61068(13164).compile(fn, tmp);
       }
       return compileResult(arg0);
     };
@@ -415,7 +415,7 @@ if (self2) {
     const obj2 = {
       enumerable: true,
       get() {
-        return f61053(13173).filters;
+        return f61068(13173).filters;
       },
     };
     Object.defineProperty(exports, "filters", obj2);
@@ -423,7 +423,7 @@ if (self2) {
     const obj3 = {
       enumerable: true,
       get() {
-        return f61053(13173).pseudos;
+        return f61068(13173).pseudos;
       },
     };
     Object.defineProperty(exports, "pseudos", obj3);
@@ -431,7 +431,7 @@ if (self2) {
     const obj4 = {
       enumerable: true,
       get() {
-        return f61053(13173).aliases;
+        return f61068(13173).aliases;
       },
     };
     Object.defineProperty(exports, "aliases", obj4);

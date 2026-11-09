@@ -400,7 +400,7 @@ let obj2 = {
                           if (!someResult) {
                             children = children.children;
                             closure_0 = closure_1_0;
-                            someResult = children.some(/* F104856 */ function() { ... });
+                            someResult = children.some(/* F104897 */ function() { ... });
                           }
                           tmp = someResult;
                         }
@@ -586,7 +586,7 @@ function resolveElementVariables(item10064, map) {
                             str5 = closure_1(13040).generate(value);
                             const obj2 = closure_1(13040);
                           }
-                          str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104854 */ function() { ... });
+                          str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104895 */ function() { ... });
                         }
                         let str2 = str4;
                       } else {
@@ -600,7 +600,7 @@ function resolveElementVariables(item10064, map) {
                               str3 = closure_1(13040).generate(str);
                               obj = closure_1(13040);
                             }
-                            str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104854 */ function() { ... });
+                            str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104895 */ function() { ... });
                           }
                           str2 = str;
                         }
@@ -631,7 +631,7 @@ function resolveElementVariables(item10064, map) {
                               str5 = closure_1(13040).generate(value);
                               const obj2 = closure_1(13040);
                             }
-                            str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104854 */ function() { ... });
+                            str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104895 */ function() { ... });
                           }
                           let str2 = str4;
                         } else {
@@ -645,7 +645,7 @@ function resolveElementVariables(item10064, map) {
                                 str3 = closure_1(13040).generate(str);
                                 obj = closure_1(13040);
                               }
-                              str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104854 */ function() { ... });
+                              str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104895 */ function() { ... });
                             }
                             str2 = str;
                           }
@@ -693,7 +693,7 @@ function resolveElementVariables(item10064, map) {
                               str5 = closure_1(13040).generate(value);
                               const obj2 = closure_1(13040);
                             }
-                            str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104854 */ function() { ... });
+                            str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104895 */ function() { ... });
                           }
                           let str2 = str4;
                         } else {
@@ -707,7 +707,7 @@ function resolveElementVariables(item10064, map) {
                                 str3 = closure_1(13040).generate(str);
                                 obj = closure_1(13040);
                               }
-                              str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104854 */ function() { ... });
+                              str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104895 */ function() { ... });
                             }
                             str2 = str;
                           }
@@ -738,7 +738,7 @@ function resolveElementVariables(item10064, map) {
                                 str5 = closure_1(13040).generate(value);
                                 const obj2 = closure_1(13040);
                               }
-                              str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104854 */ function() { ... });
+                              str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104895 */ function() { ... });
                             }
                             let str2 = str4;
                           } else {
@@ -752,7 +752,7 @@ function resolveElementVariables(item10064, map) {
                                   str3 = closure_1(13040).generate(str);
                                   obj = closure_1(13040);
                                 }
-                                str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104854 */ function() { ... });
+                                str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F104895 */ function() { ... });
                               }
                               str2 = str;
                             }
@@ -1002,7 +1002,7 @@ closure_1 = asyncGeneratorStep(async function(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

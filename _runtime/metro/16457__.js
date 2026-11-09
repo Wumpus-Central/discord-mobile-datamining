@@ -1,19 +1,28 @@
 // _runtime/metro/16457__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
+import _mod16441 from "16441__.js";
+import _mod16442 from "16442__.js";
+import _mod16458 from "16458__.js";
+
+let prop = _mod16441["__core-js_shared__"];
+if (!prop) {
+  prop = _mod16442("__core-js_shared__", {});
 }
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
-  }
-  module.exports = fn;
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
 }
-fn = (fn) => typeof fn === "function";
+let str2 = "global";
+if (_mod16458) {
+  str2 = "pure";
+}
+versions.push({
+  version: "3.41.0",
+  mode: str2,
+  copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)",
+  license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE",
+  source: "https://github.com/zloirock/core-js",
+});
+
+export default prop;

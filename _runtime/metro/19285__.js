@@ -1,13 +1,16 @@
 // _runtime/metro/19285__.js
-import registerAsset from "01119__.js";
+import _mod8066 from "08066__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "c8f47b968e51eb4d5f2964cb9e696a2a",
-  name: "ChannelsFollowedIcon",
-  type: "png",
-});
+export default _mod8066(
+  (arg0, arg1, arg2) => {
+    let num = 1;
+    if (arg2) {
+      num = 0;
+    }
+    arg0[num].push(arg1);
+  },
+  () => {
+    items = [[], []];
+    return items;
+  },
+);

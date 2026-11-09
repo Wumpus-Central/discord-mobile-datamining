@@ -322,7 +322,7 @@ export function useRecyclerViewController(recyclerViewManager, arg1, arg2, arg3)
                     if (horizontal) {
                       num5 = 300;
                     }
-                    closure_2_7(/* F143096 */ function() { ... }, num5);
+                    closure_2_7(/* F143202 */ function() { ... }, num5);
                   } else {
                     throw new TypeError("Trying to call a non-function");
                   }
@@ -332,7 +332,7 @@ export function useRecyclerViewController(recyclerViewManager, arg1, arg2, arg3)
                   } else {
                     sum = bound + arg0 / 4 * (maxScrollOffset - bound);
                   }
-                  closure_2_11(sum, /* F143095 */ function() { ... });
+                  closure_2_11(sum, /* F143201 */ function() { ... });
                 }
               }
               function finishScrollToIndex() {

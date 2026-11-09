@@ -16,7 +16,7 @@ let closure_3 = async function _prefetch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -141,7 +141,7 @@ let closure_3 = async function _prefetch(arg0) {
         return obj;
       }
       c7 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp48) {
       c7 = tmp;
       throw tmp48;
@@ -159,7 +159,7 @@ let closure_5 = async function _prefetchOnAppStart(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -371,7 +371,7 @@ let closure_6 = async function _removeFromAutoPrefetch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -453,7 +453,7 @@ let closure_7 = async function _removeAllFromAutoprefetch() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

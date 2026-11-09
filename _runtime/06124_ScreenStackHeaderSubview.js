@@ -172,7 +172,7 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
   return jsx(_modDef6127, {});
 });
 forwardRefResult.displayName = "ScreenStackHeaderConfig";
-const styles = StyleSheet.create({ headerSubview: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, headerSubviewCenter: { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 1 }, headerConfig: { position: "absolute", width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "WireType" } });
+const styles = StyleSheet.create({ headerSubview: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, headerSubviewCenter: { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 1 }, headerConfig: { position: "absolute", width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "channel" } });
 
 export const ScreenStackHeaderSubview = _modDef6128;
 export const ScreenStackHeaderConfig = forwardRefResult;

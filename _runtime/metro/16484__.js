@@ -1,3 +1,11 @@
 // _runtime/metro/16484__.js
 
-export const f = Object.getOwnPropertySymbols;
+export default [
+  "constructor",
+  "hasOwnProperty",
+  "isPrototypeOf",
+  "propertyIsEnumerable",
+  "toLocaleString",
+  "toString",
+  "valueOf",
+];

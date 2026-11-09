@@ -97,7 +97,7 @@ export function sendXMLHttpRequest(request, arg1) {
     }
     obj = {};
   };
-  let f127699 = () => {
+  let f127770 = () => {
     items = [...arguments];
     if (!responseHeaders) {
       try {
@@ -131,7 +131,7 @@ export function sendXMLHttpRequest(request, arg1) {
     }
     c9 = arg0;
   };
-  f127699 = () => {
+  f127770 = () => {
     items = [...arguments];
     if (!responseHeaders) {
       try {
@@ -162,7 +162,7 @@ export function sendXMLHttpRequest(request, arg1) {
     const uint8Array = new Uint8Array(substr);
     closure_1.onChunk(uint8Array, closure_14);
   };
-  f127699 = () => {
+  f127770 = () => {
     items = [...arguments];
     if (!responseHeaders) {
       try {
@@ -176,7 +176,7 @@ export function sendXMLHttpRequest(request, arg1) {
     }
   };
   function onData(arg0) {
-    f127699(arg0);
+    f127770(arg0);
     return !c3;
   }
   closure_17 = request.method.toUpperCase();
@@ -191,7 +191,7 @@ export function sendXMLHttpRequest(request, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -284,21 +284,21 @@ export function sendXMLHttpRequest(request, arg1) {
               if (v0) {
                 v0 = 0;
                 c6 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 if (!c6) {
                   respond(closure_129_0.status, v0(closure_129_0.headers), closure_129_0.url);
                   if (v0) {
                     v0 = 0;
                     c6 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 }
                 if (closure_1_13) {
                   tmp73("");
                   v0 = 0;
                   c6 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else if (fail(Uint8Array.responseType)) {
                   flushProgress();
                   _Uint8Array = Uint8Array;
@@ -344,7 +344,7 @@ export function sendXMLHttpRequest(request, arg1) {
               if (v0) {
                 v0 = 0;
                 c6 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 if (65279 === closure_129_2.charCodeAt(0)) {
                   let substr = closure_129_2.slice(1);
@@ -355,7 +355,7 @@ export function sendXMLHttpRequest(request, arg1) {
                 if (v0) {
                   v0 = 0;
                   c6 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   flushProgress();
                 }
@@ -366,7 +366,7 @@ export function sendXMLHttpRequest(request, arg1) {
           }
           v0 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp73) {
         if (tmp4 === v0) {

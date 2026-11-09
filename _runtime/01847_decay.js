@@ -107,8 +107,8 @@ function pnpm_decayTs3(arg0, arg1) {
       initialVelocity: 0,
       current: "ip",
       lastTimestamp: null,
-      startTimestamp: "contentEncoding",
-      reduceMotion: "contentMediaType",
+      startTimestamp: "disjunction",
+      reduceMotion: "body-md/medium",
     };
     let num = obj.velocity;
     if (num == null) {

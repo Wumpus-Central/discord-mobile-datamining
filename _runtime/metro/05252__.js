@@ -17,7 +17,7 @@ export function useRiveFile(src, arg1) {
   let str2;
   let uri;
   let riveFile;
-  [tmp2, c1] = str2({ riveFile: "HermesInternal", isLoading: null, error: "heading-sm/semibold" });
+  [tmp2, c1] = str2({ riveFile: "HermesInternal", isLoading: null, error: "r" });
   items = [obj.referencedAssets];
   let tmp3 = riveFile(() => {
     const referencedAssets = obj.referencedAssets;
@@ -116,7 +116,7 @@ export function useRiveFile(src, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

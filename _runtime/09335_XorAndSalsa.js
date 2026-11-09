@@ -252,7 +252,7 @@ let closure_7 = async function _scryptAsync(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -302,7 +302,7 @@ let closure_7 = async function _scryptAsync(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -427,7 +427,7 @@ let closure_7 = async function _scryptAsync(arg0) {
                   return obj;
                 } else {
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;

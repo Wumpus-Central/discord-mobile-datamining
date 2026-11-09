@@ -80,7 +80,7 @@ closure_1 = asyncGeneratorStep(async function () {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -117,7 +117,7 @@ closure_1 = asyncGeneratorStep(async function () {
           }
           const listener = c5.addEventListener("url", closure_3.handleChange);
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c5 = tmp;

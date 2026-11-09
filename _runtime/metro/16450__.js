@@ -1,32 +1,7 @@
 // _runtime/metro/16450__.js
-import _mod16431 from "16431__.js";
-import _mod16435 from "16435__.js";
-import _mod16451 from "16451__.js";
+import _mod16448 from "16448__.js";
 
-let prop = Object.getOwnPropertySymbols;
-if (prop) {
-  prop = !_mod16435(() => {
-    const SymbolResult = Symbol("symbol detection");
-    const StringResult = _mod16431.String(SymbolResult);
-    let tmp5 = !StringResult;
-    if (StringResult) {
-      const _Object = Object;
-      const _Symbol = Symbol;
-      tmp5 = !(Object(SymbolResult) instanceof Symbol);
-    }
-    if (!tmp5) {
-      const _Symbol2 = Symbol;
-      let tmp2Result = !sham;
-      if (!sham) {
-        tmp2Result = _mod16451;
-      }
-      if (tmp2Result) {
-        tmp2Result = _mod16451 < 41;
-      }
-      tmp5 = tmp2Result;
-    }
-    return tmp5;
-  });
-}
+let closure_0 = _mod16448({}.toString);
+let closure_1 = _mod16448("".slice);
 
-export default prop;
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

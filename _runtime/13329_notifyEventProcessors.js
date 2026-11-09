@@ -46,13 +46,13 @@ export function notifyEventProcessors(arg0, arg1, arg2) {
                       let dependencyMap = result;
                       closure_2 = closure_2_2;
                       closure_3 = closure_2_3 + 1;
-                      return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105497 */ function() { ... }).then(dependencyMap);
+                      return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105538 */ function() { ... }).then(dependencyMap);
                     }).then(null, arg1);
                     let nextPromise = tmp3Result.then((result) => {
                       let dependencyMap = result;
                       closure_2 = closure_2_2;
                       closure_3 = closure_2_3 + 1;
-                      return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105497 */ function() { ... }).then(dependencyMap);
+                      return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105538 */ function() { ... }).then(dependencyMap);
                     });
                   } else {
                     dependencyMap = tmp3Result;
@@ -73,13 +73,13 @@ export function notifyEventProcessors(arg0, arg1, arg2) {
                           let tmp18 = closure_2;
                           tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                           if (tmp19Result.isThenable(tmp3Result)) {
-                            tmp3Result.then(/* F130328 */ function() { ... }).then(null, arg1);
-                            let nextPromise = tmp3Result.then(/* F130328 */ function() { ... });
+                            tmp3Result.then(/* F130399 */ function() { ... }).then(null, arg1);
+                            let nextPromise = tmp3Result.then(/* F130399 */ function() { ... });
                           } else {
                             dependencyMap = tmp3Result;
                             closure_2 = tmp18;
                             closure_3 = tmp2 + 1;
-                            let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105497 */ function() { ... });
+                            let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105538 */ function() { ... });
                             syncPromise.then(fn).then(null, arg1);
                             let nextPromise2 = syncPromise.then(fn);
                           }
@@ -120,13 +120,13 @@ export function notifyEventProcessors(arg0, arg1, arg2) {
                       let dependencyMap = result;
                       closure_2 = closure_2_2;
                       closure_3 = closure_2_3 + 1;
-                      return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105497 */ function() { ... }).then(dependencyMap);
+                      return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105538 */ function() { ... }).then(dependencyMap);
                     }).then(null, arg1);
                     let nextPromise = tmp3Result.then((result) => {
                       let dependencyMap = result;
                       closure_2 = closure_2_2;
                       closure_3 = closure_2_3 + 1;
-                      return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105497 */ function() { ... }).then(dependencyMap);
+                      return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105538 */ function() { ... }).then(dependencyMap);
                     });
                   } else {
                     dependencyMap = tmp3Result;
@@ -147,13 +147,13 @@ export function notifyEventProcessors(arg0, arg1, arg2) {
                           let tmp18 = closure_2;
                           tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                           if (tmp19Result.isThenable(tmp3Result)) {
-                            tmp3Result.then(/* F130328 */ function() { ... }).then(null, arg1);
-                            let nextPromise = tmp3Result.then(/* F130328 */ function() { ... });
+                            tmp3Result.then(/* F130399 */ function() { ... }).then(null, arg1);
+                            let nextPromise = tmp3Result.then(/* F130399 */ function() { ... });
                           } else {
                             dependencyMap = tmp3Result;
                             closure_2 = tmp18;
                             closure_3 = tmp2 + 1;
-                            let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105497 */ function() { ... });
+                            let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105538 */ function() { ... });
                             syncPromise.then(fn).then(null, arg1);
                             let nextPromise2 = syncPromise.then(fn);
                           }
@@ -209,13 +209,13 @@ export function notifyEventProcessors(arg0, arg1, arg2) {
                           let tmp18 = closure_2;
                           tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                           if (tmp19Result.isThenable(tmp3Result)) {
-                            tmp3Result.then(/* F130328 */ function() { ... }).then(null, arg1);
-                            let nextPromise = tmp3Result.then(/* F130328 */ function() { ... });
+                            tmp3Result.then(/* F130399 */ function() { ... }).then(null, arg1);
+                            let nextPromise = tmp3Result.then(/* F130399 */ function() { ... });
                           } else {
                             dependencyMap = tmp3Result;
                             closure_2 = tmp18;
                             closure_3 = tmp2 + 1;
-                            let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105497 */ function() { ... });
+                            let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105538 */ function() { ... });
                             syncPromise.then(fn).then(null, arg1);
                             let nextPromise2 = syncPromise.then(fn);
                           }
@@ -244,13 +244,13 @@ export function notifyEventProcessors(arg0, arg1, arg2) {
                           let tmp18 = closure_2;
                           tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                           if (tmp19Result.isThenable(tmp3Result)) {
-                            tmp3Result.then(/* F130328 */ function() { ... }).then(null, arg1);
-                            let nextPromise = tmp3Result.then(/* F130328 */ function() { ... });
+                            tmp3Result.then(/* F130399 */ function() { ... }).then(null, arg1);
+                            let nextPromise = tmp3Result.then(/* F130399 */ function() { ... });
                           } else {
                             dependencyMap = tmp3Result;
                             closure_2 = tmp18;
                             closure_3 = tmp2 + 1;
-                            let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105497 */ function() { ... });
+                            let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105538 */ function() { ... });
                             syncPromise.then(fn).then(null, arg1);
                             let nextPromise2 = syncPromise.then(fn);
                           }
@@ -283,13 +283,13 @@ export function notifyEventProcessors(arg0, arg1, arg2) {
                             let dependencyMap = result;
                             closure_2 = closure_2_2;
                             closure_3 = closure_2_3 + 1;
-                            return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105497 */ function() { ... }).then(dependencyMap);
+                            return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105538 */ function() { ... }).then(dependencyMap);
                           }).then(null, arg1);
                           let nextPromise = tmp3Result.then((result) => {
                             let dependencyMap = result;
                             closure_2 = closure_2_2;
                             closure_3 = closure_2_3 + 1;
-                            return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105497 */ function() { ... }).then(dependencyMap);
+                            return new closure_3_0(closure_3_1[0]).SyncPromise(/* F105538 */ function() { ... }).then(dependencyMap);
                           });
                         } else {
                           dependencyMap = tmp3Result;
@@ -310,13 +310,13 @@ export function notifyEventProcessors(arg0, arg1, arg2) {
                                 let tmp18 = closure_2;
                                 tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                                 if (tmp19Result.isThenable(tmp3Result)) {
-                                  tmp3Result.then(/* F130328 */ function() { ... }).then(null, arg1);
-                                  let nextPromise = tmp3Result.then(/* F130328 */ function() { ... });
+                                  tmp3Result.then(/* F130399 */ function() { ... }).then(null, arg1);
+                                  let nextPromise = tmp3Result.then(/* F130399 */ function() { ... });
                                 } else {
                                   dependencyMap = tmp3Result;
                                   closure_2 = tmp18;
                                   closure_3 = tmp2 + 1;
-                                  let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105497 */ function() { ... });
+                                  let syncPromise = new tmp19(tmp20[0]).SyncPromise(/* F105538 */ function() { ... });
                                   syncPromise.then(fn).then(null, arg1);
                                   let nextPromise2 = syncPromise.then(fn);
                                 }

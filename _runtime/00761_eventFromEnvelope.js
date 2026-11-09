@@ -67,7 +67,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -131,7 +131,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
             if (!length) {
               items = ["event"];
             }
-            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F80525 */ function() { ... });
+            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F80568 */ function() { ... });
             return dependencyMap2;
           }
         }).map((dsn) => {

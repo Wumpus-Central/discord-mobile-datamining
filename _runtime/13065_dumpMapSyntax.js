@@ -596,7 +596,7 @@ Lexer.prototype = {
                                               } else {
                                                 obj[name] = false;
                                                 if (null !== tmp4.syntax) {
-                                                  closure_1_0(closure_1_1[12])(tmp4.syntax, /* F130192 */ function() { ... }, globalThis);
+                                                  closure_1_0(closure_1_1[12])(tmp4.syntax, /* F130263 */ function() { ... }, globalThis);
                                                 }
                                               }
                                             }
@@ -722,7 +722,7 @@ Lexer.prototype = {
                                               } else {
                                                 obj[name] = false;
                                                 if (null !== tmp4.syntax) {
-                                                  closure_1_0(closure_1_1[12])(tmp4.syntax, /* F130192 */ function() { ... }, globalThis);
+                                                  closure_1_0(closure_1_1[12])(tmp4.syntax, /* F130263 */ function() { ... }, globalThis);
                                                 }
                                               }
                                             }

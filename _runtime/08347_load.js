@@ -109,7 +109,7 @@ function load(response) {
                     if (arg0) {
                       closure_1(arg0);
                     } else {
-                      obj.close(closure_0, /* F143602 */ function() { ... });
+                      obj.close(closure_0, /* F143709 */ function() { ... });
                     }
                   });
                 }
@@ -219,7 +219,7 @@ function load(response) {
 function loadView(byteLength) {
   let obj = response;
   if (response === undefined) {
-    obj = { expanded: false, async: false, includeUnknown: false, domParser: "channel_id" };
+    obj = { expanded: false, async: false, includeUnknown: false, domParser: "ix" };
   }
   let flag = obj.expanded;
   if (flag === undefined) {

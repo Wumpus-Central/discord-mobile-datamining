@@ -1,8 +1,6 @@
 // _runtime/metro/16496__.js
-import _mod16474 from "16474__.js";
-import _mod16475 from "16475__.js";
+import _mod16444 from "16444__.js";
+import _mod16445 from "16445__.js";
 
-export default Object.keys ||
-  function keys(arg0) {
-    return _mod16475(arg0, _mod16474);
-  };
+export default _mod16444 &&
+  _mod16445(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);

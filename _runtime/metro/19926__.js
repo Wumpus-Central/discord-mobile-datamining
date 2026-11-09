@@ -1,13 +1,24 @@
 // _runtime/metro/19926__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "71edbf43dc7b4d94780b9aa2b20aeca2",
-  name: "ArrowsLeftRightIcon",
-  type: "png",
-});
+export default (promise, arg1) => {
+  let fn = arg1;
+  if (!arg1) {
+    fn = () => {};
+  }
+  return promise.then(
+    (result) => {
+      closure_0 = result;
+      return new Promise((fn) => {
+        fn(closure_0());
+      }).then(() => closure_0);
+    },
+    (arg0) => {
+      closure_0 = arg0;
+      return new Promise((fn) => {
+        fn(closure_0());
+      }).then(() => {
+        throw closure_0;
+      });
+    },
+  );
+};

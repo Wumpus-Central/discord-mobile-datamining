@@ -555,12 +555,12 @@ export function startBrowserTracingNavigationSpan(client, name, arg2) {
   }
   return client[_sentry_idleSpan];
 }
-export function startBrowserTracingPageLoadSpan(f122702, tmp2Result, arg2) {
-  f122702.emit("startPageLoadSpan", tmp2Result, arg2);
+export function startBrowserTracingPageLoadSpan(f122773, tmp2Result, arg2) {
+  f122773.emit("startPageLoadSpan", tmp2Result, arg2);
   const currentScope = _mod681.getCurrentScope();
   currentScope.setTransactionName(tmp2Result.name);
-  if (f122702[_sentry_idleSpan]) {
-    f122702.emit("afterStartPageLoadSpan", tmp3);
+  if (f122773[_sentry_idleSpan]) {
+    f122773.emit("afterStartPageLoadSpan", tmp3);
   }
-  return f122702[_sentry_idleSpan];
+  return f122773[_sentry_idleSpan];
 }

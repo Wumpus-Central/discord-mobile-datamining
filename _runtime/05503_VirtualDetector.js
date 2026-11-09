@@ -82,9 +82,9 @@ export function VirtualDetector(children) {
             handlerTags,
             methods: tmp2.gesture.detectorCallbacks,
             viewRef: "a",
-            userSelect: "brosse",
-            touchAction: "brosse \u00E0 dents",
-            enableContextMenu: "brosser les dents",
+            userSelect: "geometrisk",
+            touchAction: "lille orange ruder",
+            enableContextMenu: "orange",
           };
           ({
             userSelect: obj.userSelect,
