@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
-import _modDef7698 from "../../../../../_runtime/metro/07698__.js";
-import _modDef10050 from "../../../../../_runtime/metro/10050__.js";
+import _modDef7701 from "../../../../../_runtime/metro/07701__.js";
+import _modDef10056 from "../../../../../_runtime/metro/10056__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,11 +13,11 @@ const result = size.fileFinishedImporting("modules/user_settings/premium/native/
 export default function PremiumFeaturesLogo(premiumType) {
   premiumType = premiumType.premiumType;
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp3 = _modDef10050;
+    let tmp3 = _modDef10056;
     let tmp = importDefault;
   } else {
     tmp = importDefault;
-    tmp3 = _modDef7698;
+    tmp3 = _modDef7701;
   }
   const obj = {
     accessible: true,
@@ -27,7 +27,7 @@ export default function PremiumFeaturesLogo(premiumType) {
     resizeMode: "contain",
     source: null,
   };
-  const tmpResult = tmp(5842);
+  const tmpResult = tmp(5844);
   obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   obj.style = premiumType.style;
   obj.source = tmp3;

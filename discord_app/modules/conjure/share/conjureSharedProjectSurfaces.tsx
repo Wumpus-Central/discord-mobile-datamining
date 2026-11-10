@@ -1,23 +1,23 @@
 // discord_app/modules/conjure/share/conjureSharedProjectSurfaces.tsx
-import _modDef4026 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const items = [ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL, _modDef4026.bHLrO8];
+const items = [ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL, _modDef4028.bHLrO8];
 const items1 = [items, , , , , , ,];
-const items2 = [ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY, _modDef4026["hp+8nc"]];
+const items2 = [ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY, _modDef4028["hp+8nc"]];
 items1[1] = items2;
-const items3 = [ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL, _modDef4026["4V2QWl"]];
+const items3 = [ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL, _modDef4028["4V2QWl"]];
 items1[2] = items3;
-const items4 = [ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET, _modDef4026.oJ06Po];
+const items4 = [ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET, _modDef4028.oJ06Po];
 items1[3] = items4;
-const items5 = [ConjureProjectTypes.ConjureSupportedSurface.OVERLAY, _modDef4026.Qbnej2];
+const items5 = [ConjureProjectTypes.ConjureSupportedSurface.OVERLAY, _modDef4028.Qbnej2];
 items1[4] = items5;
-const items6 = [ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS, _modDef4026.pEwndv];
+const items6 = [ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS, _modDef4028.pEwndv];
 items1[5] = items6;
-const items7 = [ConjureProjectTypes.ConjureSupportedSurface.BOT, _modDef4026.HWOzBW];
+const items7 = [ConjureProjectTypes.ConjureSupportedSurface.BOT, _modDef4028.HWOzBW];
 items1[6] = items7;
-const items8 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD, _modDef4026.gsIXM9];
+const items8 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD, _modDef4028.gsIXM9];
 items1[7] = items8;
 const result = size.fileFinishedImporting("modules/conjure/share/conjureSharedProjectSurfaces.tsx");
 

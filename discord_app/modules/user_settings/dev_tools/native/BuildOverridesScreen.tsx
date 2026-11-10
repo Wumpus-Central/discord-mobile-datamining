@@ -13,7 +13,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_11 = createStyles.createStyles((arg0) => {
   const obj = { content: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, container: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -209,13 +209,13 @@ export default noop.memo(function BuildOverridesScreen() {
       }
     }
   };
-  const tmp2 = closure_11(first(5735)({ includeKeyboardHeight: true }).insets.bottom);
+  const tmp2 = closure_11(first(5737)({ includeKeyboardHeight: true }).insets.bottom);
   items = [BuildOverrideStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let tmp;
     if (overrides != null) {
-      tmp = overrides[stateFromStores(undefined, 13430).DEVICE_FIELD];
+      tmp = overrides[stateFromStores(undefined, 13444).DEVICE_FIELD];
     }
     return tmp;
   });
@@ -224,17 +224,17 @@ export default noop.memo(function BuildOverridesScreen() {
   dependencyMap = tmp5[1];
   let obj = stateFromStores(504);
   let obj2 = noop;
-  [arr2, asyncGeneratorStep] = first1(noop.useState(stateFromStores(13433).getRecentDeviceBuildOverrides), 2);
+  [arr2, asyncGeneratorStep] = first1(noop.useState(stateFromStores(13447).getRecentDeviceBuildOverrides), 2);
   const tmp8 = first1(noop.useState(false), 2);
   first1 = tmp8[0];
   noop = tmp8[1];
-  const tmp7 = first1(noop.useState(stateFromStores(13433).getRecentDeviceBuildOverrides), 2);
+  const tmp7 = first1(noop.useState(stateFromStores(13447).getRecentDeviceBuildOverrides), 2);
   [tmp11, ScrollView] = first1(noop.useState(false), 2);
   const tmp10 = first1(noop.useState(false), 2);
   [tmp13, BuildOverrideStore] = first1(noop.useState(), 2);
   const trimmed = first.id.trim();
   let str2 = "Discord Android";
-  if ("discord_ios" === stateFromStores(13430).DEVICE_FIELD) {
+  if ("discord_ios" === stateFromStores(13444).DEVICE_FIELD) {
     str2 = "Discord iOS";
   }
   const items1 = [stateFromStores];
@@ -251,9 +251,9 @@ export default noop.memo(function BuildOverridesScreen() {
     children: null,
   };
   if (null != stateFromStores) {
-    let MobilePhoneIcon = tmp3(5855).CopyIcon;
+    let MobilePhoneIcon = tmp3(5857).CopyIcon;
   } else {
-    MobilePhoneIcon = tmp3(7198).MobilePhoneIcon;
+    MobilePhoneIcon = tmp3(7201).MobilePhoneIcon;
   }
   let obj4 = { icon: trimmed(MobilePhoneIcon, {}), label: null, subLabel: null, onPress: null };
   let str3;
@@ -278,19 +278,19 @@ export default noop.memo(function BuildOverridesScreen() {
     };
   }
   obj4.onPress = fn;
-  const items2 = [trimmed(stateFromStores(7038).TableRow, obj4)];
+  const items2 = [trimmed(stateFromStores(7041).TableRow, obj4)];
   let tmp18Result = null != stateFromStores;
   if (tmp18Result) {
     let obj5 = { children: null };
     let obj6 = {
-      icon: tmp16(tmp3(12391).RefreshIcon, {}),
+      icon: tmp16(tmp3(12400).RefreshIcon, {}),
       label: "Refresh override",
-      onPress: tmp3(13430).refreshBuildOverride,
+      onPress: tmp3(13444).refreshBuildOverride,
       arrow: true,
     };
-    const items3 = [tmp16(tmp3(7038).TableRow, obj6)];
+    const items3 = [tmp16(tmp3(7041).TableRow, obj6)];
     let obj7 = {
-      icon: tmp16(tmp3(5862).TrashIcon, { color: "text-feedback-critical" }),
+      icon: tmp16(tmp3(5864).TrashIcon, { color: "text-feedback-critical" }),
       label: "Clear override",
       subLabel: stateFromStores.id,
       variant: "danger",
@@ -300,13 +300,13 @@ export default noop.memo(function BuildOverridesScreen() {
       },
       arrow: true,
     };
-    items3[1] = tmp16(tmp3(7038).TableRow, obj7);
+    items3[1] = tmp16(tmp3(7041).TableRow, obj7);
     obj5.children = items3;
     tmp18Result = tmp18(run, obj5);
   }
   items2[1] = tmp18Result;
   const items4 = [
-    closure_10(stateFromStores(7126).TableRowGroup, { title: "Current build", hasIcons: true, children: items2 }),
+    closure_10(stateFromStores(7129).TableRowGroup, { title: "Current build", hasIcons: true, children: items2 }),
     ,
     ,
   ];
@@ -317,12 +317,12 @@ export default noop.memo(function BuildOverridesScreen() {
     children: null,
   };
   const tmp12 = first1(noop.useState(), 2);
-  obj8.children = trimmed(stateFromStores(7038).TableRow, {
-    icon: trimmed(stateFromStores(7198).MobilePhoneIcon, {}),
+  obj8.children = trimmed(stateFromStores(7041).TableRow, {
+    icon: trimmed(stateFromStores(7201).MobilePhoneIcon, {}),
     label: "Project",
     subLabel: str2,
   });
-  const items5 = [trimmed(stateFromStores(7126).TableRowGroup, obj8), , ,];
+  const items5 = [trimmed(stateFromStores(7129).TableRowGroup, obj8), , ,];
   let obj10 = {
     title: "Target type",
     value: first.type,
@@ -332,26 +332,26 @@ export default noop.memo(function BuildOverridesScreen() {
     hasIcons: true,
     children: null,
   };
-  let obj9 = { icon: trimmed(stateFromStores(7198).MobilePhoneIcon, {}), label: "Project", subLabel: str2 };
+  let obj9 = { icon: trimmed(stateFromStores(7201).MobilePhoneIcon, {}), label: "Project", subLabel: str2 };
   const items6 = [
-    trimmed(stateFromStores(7127).TableRadioRow, {
+    trimmed(stateFromStores(7130).TableRadioRow, {
       value: "branch",
       label: "Branch name",
-      icon: trimmed(stateFromStores(9653).TagIcon, {}),
+      icon: trimmed(stateFromStores(9659).TagIcon, {}),
     }),
   ];
-  const obj11 = { value: "branch", label: "Branch name", icon: trimmed(stateFromStores(9653).TagIcon, {}) };
-  items6[1] = trimmed(stateFromStores(7127).TableRadioRow, {
+  const obj11 = { value: "branch", label: "Branch name", icon: trimmed(stateFromStores(9659).TagIcon, {}) };
+  items6[1] = trimmed(stateFromStores(7130).TableRadioRow, {
     value: "id",
     label: "Commit SHA",
-    icon: trimmed(stateFromStores(18078).HashmarkIcon, {}),
+    icon: trimmed(stateFromStores(18105).HashmarkIcon, {}),
   });
   obj10.children = items6;
-  items5[1] = closure_10(stateFromStores(7124).TableRadioGroup, obj10);
+  items5[1] = closure_10(stateFromStores(7127).TableRadioGroup, obj10);
   if ("branch" === first.type) {
-    let HashmarkIcon = tmp3(9653).TagIcon;
+    let HashmarkIcon = tmp3(9659).TagIcon;
   } else {
-    HashmarkIcon = tmp3(18078).HashmarkIcon;
+    HashmarkIcon = tmp3(18105).HashmarkIcon;
   }
   const obj13 = {
     leadingIcon: HashmarkIcon,
@@ -380,13 +380,13 @@ export default noop.memo(function BuildOverridesScreen() {
     str8 = "team/feature-name";
   }
   obj13.placeholder = str8;
-  items5[2] = trimmed(stateFromStores(7148).TextInput, obj13);
+  items5[2] = trimmed(stateFromStores(7151).TextInput, obj13);
   let tmp22 = first1;
   if (!first1) {
     tmp22 = "" === trimmed;
   }
   const obj14 = { spacing: 16, children: null };
-  items5[3] = trimmed(stateFromStores(5758).Button, {
+  items5[3] = trimmed(stateFromStores(5760).Button, {
     text: "Apply override",
     disabled: tmp22,
     loading: first1,
@@ -400,14 +400,14 @@ export default noop.memo(function BuildOverridesScreen() {
     },
   });
   obj14.children = items5;
-  items4[1] = closure_10(stateFromStores(6159).Stack, obj14);
+  items4[1] = closure_10(stateFromStores(6161).Stack, obj14);
   if (0 === arr2.length) {
     const obj16 = {
-      icon: tmp16(tmp3(12391).RefreshIcon, {}),
+      icon: tmp16(tmp3(12400).RefreshIcon, {}),
       label: "No recent builds",
       subLabel: "Your recent builds will appear here after you apply an override.",
     };
-    let mapped = tmp16(tmp3(7038).TableRow, obj16);
+    let mapped = tmp16(tmp3(7041).TableRow, obj16);
   } else {
     mapped = arr2.map((id) => {
       closure_0 = id;
@@ -417,9 +417,9 @@ export default noop.memo(function BuildOverridesScreen() {
       }
       let tmp3 = id === id.id && tmp.type === id.type;
       if ("branch" === id.type) {
-        let tmp4Result = trimmed(stateFromStores(9653).TagIcon, {});
+        let tmp4Result = trimmed(stateFromStores(9659).TagIcon, {});
       } else {
-        tmp4Result = trimmed(stateFromStores(18078).HashmarkIcon, {});
+        tmp4Result = trimmed(stateFromStores(18105).HashmarkIcon, {});
       }
       const obj = { icon: tmp4Result, arrow: !tmp3, label: id.id, subLabel: null, disabled: null, onPress: null };
       let str = "Active";
@@ -438,16 +438,16 @@ export default noop.memo(function BuildOverridesScreen() {
       obj.onPress = function onPress() {
         return run(() => stateFromStores(closure_2[10]).setBuildOverride(id));
       };
-      return trimmed(stateFromStores(7038).TableRow, obj, "" + id.type + ":" + id.id);
+      return trimmed(stateFromStores(7041).TableRow, obj, "" + id.type + ":" + id.id);
     });
   }
-  items4[2] = trimmed(stateFromStores(7126).TableRowGroup, {
+  items4[2] = trimmed(stateFromStores(7129).TableRowGroup, {
     title: "Recent builds",
     description: "Return to a build you used on this device.",
     hasIcons: true,
     children: mapped,
   });
-  const obj17 = { icon: trimmed(stateFromStores(5851).LinkIcon, {}), label: null, subLabel: null };
+  const obj17 = { icon: trimmed(stateFromStores(5853).LinkIcon, {}), label: null, subLabel: null };
   let str10 = "Apply an override to create a link.";
   if (null != stateFromStores) {
     str10 = stateFromStores.id;
@@ -457,7 +457,7 @@ export default noop.memo(function BuildOverridesScreen() {
   if (null != stateFromStores) {
     tmp24 = str2;
   }
-  const obj12 = { value: "id", label: "Commit SHA", icon: trimmed(stateFromStores(18078).HashmarkIcon, {}) };
+  const obj12 = { value: "id", label: "Commit SHA", icon: trimmed(stateFromStores(18105).HashmarkIcon, {}) };
   const obj15 = {
     text: "Apply override",
     disabled: tmp22,
@@ -473,18 +473,18 @@ export default noop.memo(function BuildOverridesScreen() {
   };
   obj17.subLabel = tmp24;
   const items7 = [
-    trimmed(stateFromStores(7126).TableRowGroup, {
+    trimmed(stateFromStores(7129).TableRowGroup, {
       title: "Share an override",
       description: "Copy a public link to the current build. It expires in one hour and requires sign-in.",
       hasIcons: true,
-      children: trimmed(stateFromStores(7038).TableRow, obj17),
+      children: trimmed(stateFromStores(7041).TableRow, obj17),
     }),
     ,
   ];
   let tmp16Result2 = null != tmp13;
   if (tmp16Result2) {
     const obj19 = { variant: "body-sm/normal", color: "text-feedback-critical", children: tmp13 };
-    tmp16Result2 = tmp16(tmp3(5751).Text, obj19);
+    tmp16Result2 = tmp16(tmp3(5753).Text, obj19);
   }
   items7[1] = tmp16Result2;
   let tmp26 = null == stateFromStores;
@@ -493,7 +493,7 @@ export default noop.memo(function BuildOverridesScreen() {
   }
   const obj20 = { spacing: 32, children: null };
   const obj21 = { spacing: 12, children: null };
-  items7[2] = trimmed(stateFromStores(5758).Button, {
+  items7[2] = trimmed(stateFromStores(5760).Button, {
     text: "Copy public link",
     variant: "secondary",
     disabled: tmp26,
@@ -510,8 +510,8 @@ export default noop.memo(function BuildOverridesScreen() {
     },
   });
   obj21.children = items7;
-  items4[3] = closure_10(stateFromStores(6159).Stack, obj21);
+  items4[3] = closure_10(stateFromStores(6161).Stack, obj21);
   obj20.children = items4;
-  obj3.children = closure_10(stateFromStores(6159).Stack, obj20);
+  obj3.children = closure_10(stateFromStores(6161).Stack, obj20);
   return trimmed(ScrollView, obj3);
 });

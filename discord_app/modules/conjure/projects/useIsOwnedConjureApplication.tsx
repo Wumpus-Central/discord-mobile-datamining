@@ -9,7 +9,7 @@ import ConjureProjectStore from "ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6899).isProjectOwner;
+const isProjectOwner = fn(6902).isProjectOwner;
 let closure_6 = new BackoffDefault(30000, 300000);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/useIsOwnedConjureApplication.tsx");

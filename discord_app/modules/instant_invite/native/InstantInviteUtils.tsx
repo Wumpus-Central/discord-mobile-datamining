@@ -182,8 +182,8 @@ function trackOptionClicked(code, channel, COPY, _location) {
   obj2.track(constants.INSTANT_INVITE_OPTION_CLICKED, obj3);
   const tmpResult = InviteCodeUtils;
 }
-const ChannelRecordBase = fn(4993).ChannelRecordBase;
-const IOS_COPY_TO_PASTEBOARD = fn(9204).IOS_COPY_TO_PASTEBOARD;
+const ChannelRecordBase = fn(4995).ChannelRecordBase;
+const IOS_COPY_TO_PASTEBOARD = fn(9210).IOS_COPY_TO_PASTEBOARD;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, InviteOptionsType: closure_14, Permissions: closure_15 } = Constants);
 const size = fn(2);

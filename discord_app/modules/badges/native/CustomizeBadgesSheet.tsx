@@ -9,7 +9,7 @@ import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/desi
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05420_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05422_LegacyBaseButton.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
@@ -133,11 +133,11 @@ const Constants = fn(1072);
   AnalyticsPages: closure_10,
   AnalyticsSections: closure_11,
 } = Constants);
-const constants3 = fn(5389).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const constants3 = fn(5391).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5140);
+let createStyles = fn(5142);
 let obj = {
   gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   grid: null,
@@ -169,7 +169,7 @@ obj.message = {
 };
 obj.messageText = { textAlign: "center" };
 let closure_16 = createStyles.createStyles(obj);
-createStyles = fn(5140);
+createStyles = fn(5142);
 let obj10 = {
   position: { position: "absolute" },
   fill: { flex: 1 },
@@ -211,8 +211,8 @@ let items = [
   {
     code: "(function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){let[BADGE_GRID_COLUMNS,BADGE_GRID_GAP]=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};})",
   },
-  fn(16805).BADGE_GRID_COLUMNS,
-  fn(16805).BADGE_GRID_GAP,
+  fn(16832).BADGE_GRID_COLUMNS,
+  fn(16832).BADGE_GRID_GAP,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -429,8 +429,8 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
       closure_23,
       sharedValue,
       sharedValue2,
-      tmp2(5370).withTiming,
-      tmp2(5373).timingStandard,
+      tmp2(5372).withTiming,
+      tmp2(5375).timingStandard,
       sharedValue3,
     ];
     _require = undefined;
@@ -481,17 +481,17 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
       items15,
       orderShared,
       tileSize,
-      tmp2(16805).BADGE_GRID_GAP,
+      tmp2(16832).BADGE_GRID_GAP,
       tmp2(1652).clamp,
       sharedValue2,
-      tmp2(16805).BADGE_GRID_COLUMNS,
+      tmp2(16832).BADGE_GRID_COLUMNS,
       sharedValue3,
       slotOffset,
-      tmp2(15253).moveBadgeInDisplayOrder,
+      tmp2(15279).moveBadgeInDisplayOrder,
       badge_id,
       tmp2(1705).scheduleOnRN,
-      tmp2(5376).triggerHapticFeedback,
-      tmp2(5376).HapticFeedbackTypes,
+      tmp2(5378).triggerHapticFeedback,
+      tmp2(5378).HapticFeedbackTypes,
     ];
     _require = undefined;
     importDefault = undefined;
@@ -1111,10 +1111,10 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   }
   analyticsLocations = useAnalyticsLocationsDefault(
     analyticsLocations1,
-    tmp2(7412).BADGES_REORDER_ACTION_SHEET,
+    tmp2(7415).BADGES_REORDER_ACTION_SHEET,
   ).analyticsLocations;
   noop = analyticsLocations;
-  const context = noop.useContext(tmp2(5719));
+  const context = noop.useContext(tmp2(5721));
   c4 = context;
   const items2 = [context, analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -1215,7 +1215,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   memo2 = noop.useMemo(() => reorderableBadges.map((badge_id) => badge_id.badge_id), items13);
   const tmp5Result14 = require("initialize");
   sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(memo2);
-  onCommitOrder = tmp2(7202)((arr) => {
+  onCommitOrder = tmp2(7205)((arr) => {
     const result = tenureBadgeHideable(canReorder[28]).setPendingBadgeDisplayOrder(arr);
   });
   const tmp5Result15 = require("../../../../_runtime/metro/01652__.js");
@@ -1226,7 +1226,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const result = sharedValue.set(memo2);
     }
   }, items14);
-  closure_18 = tmp2(7202)((badgeId) => {
+  closure_18 = tmp2(7205)((badgeId) => {
     const obj = PendingBadgeSettings;
     const result = obj.setPendingBadgeVisibility({
       badgeId: badgeId.badge_id,
@@ -1239,7 +1239,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.mehuPg, { badgeName: badgeId.name }));
   });
-  onPress = tmp2(7202)((badge_id) => {
+  onPress = tmp2(7205)((badge_id) => {
     if (hiddenBadges.some((badge_id) => badge_id.badge_id === badge_id.badge_id)) {
       closure_18(badge_id);
     } else if (set.has(badge_id.badge_id)) {
@@ -1252,7 +1252,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       obj.open(combined, obj2);
     }
   });
-  closure_20 = tmp2(7202)((badgeId) => {
+  closure_20 = tmp2(7205)((badgeId) => {
     const obj = PendingBadgeSettings;
     const result = obj.setPendingBadgeVisibility({
       badgeId: badgeId.badge_id,
@@ -1265,7 +1265,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.q3t0Ht, { count: 1 }));
   });
-  onSetHidden = tmp2(7202)((arg0, arg1) => {
+  onSetHidden = tmp2(7205)((arg0, arg1) => {
     if (arg1) {
       closure_20(arg0);
     } else {
@@ -1277,12 +1277,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const tmp5Result17 = require("Sheet/BottomSheet");
   badgeTileSize = require("BadgeGrid").getBadgeTileSize(bottomSheetWidth);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
-  const rounded = Math.ceil(sum1 / tmp5(16805).BADGE_GRID_COLUMNS);
+  const rounded = Math.ceil(sum1 / tmp5(16832).BADGE_GRID_COLUMNS);
   let num = 0;
   if (rounded > 0) {
     let result = rounded * badgeTileSize;
     const diff = rounded - 1;
-    num = result + diff * tmp5(16805).BADGE_GRID_GAP;
+    num = result + diff * tmp5(16832).BADGE_GRID_GAP;
   }
   const tmp5Result18 = require("BadgeGrid");
   animatedRef = require("../../../../_runtime/metro/01652__.js").useAnimatedRef();
@@ -1421,9 +1421,9 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const obj7 = { variant: "body-sm/normal", style: tmp.upsellText, children: null };
       const intl3 = tmp5(1113).intl;
       obj7.children = intl3.string(tmp5(1113).t.JrOki0);
-      obj6.children = memo2(tmp5(5751).Text, obj7);
-      tmp56 = memo2(tmp2(16806), obj6);
-      const tmp2Result = tmp2(16806);
+      obj6.children = memo2(tmp5(5753).Text, obj7);
+      tmp56 = memo2(tmp2(16833), obj6);
+      const tmp2Result = tmp2(16833);
     }
     const items22 = [tmp56];
     const obj8 = { accessibilityRole: "list", style: null, children: null };
@@ -1497,10 +1497,10 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const obj11 = { variant: "body-md/normal", color: "text-muted", style: tmp.messageText, children: null };
       let intl = tmp5(1113).intl;
       obj11.children = intl.string(tmp5(1113).t["rTU7/z"]);
-      obj10.children = tmp51(tmp5(5751).Text, obj11);
+      obj10.children = tmp51(tmp5(5753).Text, obj11);
       let obj12 = obj10;
     } else {
-      obj12 = { style: tmp.message, children: tmp51(tmp5(7015).ActivityIndicator, { animating: true, size: "large" }) };
+      obj12 = { style: tmp.message, children: tmp51(tmp5(7018).ActivityIndicator, { animating: true, size: "large" }) };
     }
     tmp51Result = tmp51(c4, obj12);
   }

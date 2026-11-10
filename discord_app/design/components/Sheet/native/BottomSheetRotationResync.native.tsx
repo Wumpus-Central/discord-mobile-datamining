@@ -1,6 +1,6 @@
 // discord_app/design/components/Sheet/native/BottomSheetRotationResync.native.tsx
 import BottomSheetSnapPoints from "BottomSheetSnapPoints.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05420_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05422_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;

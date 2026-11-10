@@ -15,7 +15,7 @@ function closeCleanup() {
 }
 function CleanupScreen() {
   const tmp3 = closure_14(loading(1627)().bottom);
-  const tmp4 = loading(18534)(closeCleanup);
+  const tmp4 = loading(18563)(closeCleanup);
   _require = tmp4;
   loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };
@@ -123,7 +123,7 @@ function CleanupScreen() {
     };
     const intl13 = tmp6(1113).intl;
     obj14.children = intl13.string(tmp(3608).toOYQw);
-    tmp7Result = closure_12(tmp6(5751).Text, obj14);
+    tmp7Result = closure_12(tmp6(5753).Text, obj14);
   }
   items1[3] = tmp7Result;
   obj3.children = items1;
@@ -146,7 +146,7 @@ function CleanupScreen() {
   return closure_13(require("Stack/Stack").Stack, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const FavoritesConstants = fn(5002);
+const FavoritesConstants = fn(5004);
 ({
   FAVORITES_AUTO_ADD_THREADS_NEVER: hasOwnProperty,
   FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: closure_6,
@@ -158,7 +158,7 @@ const FavoritesConstants = fn(5002);
 } = FavoritesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },

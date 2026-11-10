@@ -20,8 +20,8 @@ import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategoryTypes = fn(6854).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(10064).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6857).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(10070).IMAGE_SIZE;
 const Constants = fn(1072);
 ({
   AnalyticsObjects: closure_6,

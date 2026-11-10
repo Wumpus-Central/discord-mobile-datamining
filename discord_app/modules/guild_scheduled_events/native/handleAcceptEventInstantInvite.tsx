@@ -35,13 +35,13 @@ export default function handleAcceptEventInstantInvite(code) {
               const result = code(dependencyMap[3]).transitionToEventDetailsFromInvite(guildScheduledEvent);
             },
           };
-          guildScheduledEvent(9025).acceptInvite(obj3);
-          const obj4 = guildScheduledEvent(9025);
+          guildScheduledEvent(9031).acceptInvite(obj3);
+          const obj4 = guildScheduledEvent(9031);
         }
-        tmpResult = tmp(10249);
+        tmpResult = tmp(10255);
       }
     }
   }
-  obj = code(7955);
+  obj = code(7959);
   tmp = code;
 }

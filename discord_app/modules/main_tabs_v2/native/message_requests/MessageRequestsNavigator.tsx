@@ -10,9 +10,9 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9976);
+const NativeStackNavigator = fn(9982);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj3 = {
   header: {
     borderBottomWidth: 0,
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_r
 export default function MessageRequestsNavigator() {
   _require = closure_7();
   importDefault = require("Navigator").useAccessibilityNativeStackOptions();
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7730).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7733).trackAppUIViewed(), []);
   const obj2 = { children: null };
   const obj3 = {
     screenOptions(navigation) {
@@ -56,7 +56,7 @@ export default function MessageRequestsNavigator() {
   let merged = Object.assign(getNavigationModalPresentationDefault());
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(19333).default;
+    return closure_0(19362).default;
   };
   items = [closure_4(Screen, obj4), ,];
   const obj6 = { name: "spam", options: null, getComponent: null };
@@ -66,7 +66,7 @@ export default function MessageRequestsNavigator() {
   let merged1 = Object.assign(getNavigationModalPresentationDefault());
   obj6.options = obj7;
   obj6.getComponent = function getComponent() {
-    return closure_0(19352).default;
+    return closure_0(19381).default;
   };
   items[1] = closure_4(closure_6.Screen, obj6);
   const obj8 = { name: "preview", options: null, getComponent: null };
@@ -76,7 +76,7 @@ export default function MessageRequestsNavigator() {
   const merged2 = Object.assign(getNavigationModalPresentationDefault());
   obj8.options = obj9;
   obj8.getComponent = function getComponent() {
-    return closure_0(19353).default;
+    return closure_0(19382).default;
   };
   items[2] = closure_4(closure_6.Screen, obj8);
   obj3.children = items;

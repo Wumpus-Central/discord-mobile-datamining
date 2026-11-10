@@ -4,8 +4,8 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05715_LinearGradient.js";
-import inlineStyles from "../../../../../_runtime/08101_inlineStyles.js";
+import LinearGradientDefault from "../../../../../_runtime/05717_LinearGradient.js";
+import inlineStyles from "../../../../../_runtime/08105_inlineStyles.js";
 import useStateFromSharedValueDefault from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoicePanelDockRimLight from "VoicePanelDockRimLight.tsx";
@@ -19,7 +19,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
-const getDockInset = fn(11381).getDockInset;
+const getDockInset = fn(11390).getDockInset;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let items = [

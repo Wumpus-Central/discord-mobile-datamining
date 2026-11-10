@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/native/components/OpenCriticRatingCircle.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import inlineStyles from "../../../../../_runtime/08101_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08105_inlineStyles.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const inlineStylesDefault = inlineStyles;

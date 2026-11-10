@@ -5,8 +5,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11363).VoicePanelModes;
-const VoicePanelControlsModes = fn(11361).VoicePanelControlsModes;
+const VoicePanelModes = fn(11372).VoicePanelModes;
+const VoicePanelControlsModes = fn(11370).VoicePanelControlsModes;
 const map = new Map();
 let items = [
   {

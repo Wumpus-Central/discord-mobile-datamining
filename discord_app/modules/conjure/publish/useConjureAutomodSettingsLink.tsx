@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/useConjureAutomodSettingsLink.tsx
-import _modDef4026 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import GuildSettingsActionCreatorsDefault from "../../guild_settings/GuildSettingsActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -64,7 +64,7 @@ export default function useConjureAutomodSettingsLink(arg0) {
 export function ConjureAutomodSettingsLink(guildId) {
   guildId = guildId.guildId;
   const intl = guildId(1113).intl;
-  const tmp3 = _modDef4026;
+  const tmp3 = _modDef4028;
   const obj = { children: null };
   items = [
     " ",

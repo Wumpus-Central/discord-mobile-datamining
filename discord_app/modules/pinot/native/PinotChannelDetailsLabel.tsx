@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 const jsx = fn(21).jsx;
 const hitSlop = { top: 8, bottom: 8, left: 4, right: 8 };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   label: {
     alignSelf: "flex-start",
@@ -58,13 +58,13 @@ export function PinotChannelDetailsLabel(channel) {
       children: null,
     };
     const obj3 = { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult };
-    obj2.children = jsx(tmp2(5751).Text, {
+    obj2.children = jsx(tmp2(5753).Text, {
       variant: "body-xs/medium",
       color: "none",
       style: tmp.text,
       children: stringResult,
     });
-    return jsx(tmp2(7043).PressableOpacity, {
+    return jsx(tmp2(7046).PressableOpacity, {
       onPress: function handlePress() {
         ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });
       },
@@ -78,5 +78,5 @@ export function PinotChannelDetailsLabel(channel) {
   } else {
     return null;
   }
-  obj = stringResult1(11460);
+  obj = stringResult1(11469);
 }

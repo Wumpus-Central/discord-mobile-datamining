@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_9 = createStyles.createStyles((borderRadius, paddingVertical) => {
   const obj = {
     scrollContentContainer: { flexGrow: 1 },
@@ -401,7 +401,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
       }),
     items13,
   );
-  const Gesture = tmp2(5420).Gesture;
+  const Gesture = tmp2(5422).Gesture;
   const tmp2Result8 = require("../../../../../_runtime/metro/01652__.js");
   const items16 = [closure_16, sharedValue, activeIndex];
   _require = undefined;
@@ -477,7 +477,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   });
   if ("experimental_Large" === str) {
     const obj10 = { gesture: onEndResult, children: tmp57 };
-    tmp56Result = tmp56(tmp2(5420).GestureDetector, obj10);
+    tmp56Result = tmp56(tmp2(5422).GestureDetector, obj10);
   }
   return tmp56Result;
 }

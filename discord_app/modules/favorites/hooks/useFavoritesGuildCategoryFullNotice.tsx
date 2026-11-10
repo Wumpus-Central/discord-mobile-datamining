@@ -7,7 +7,7 @@ import FavoritesHooks from "../FavoritesHooks.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
 
 require = fn;
-const FavoritesConstants = fn(5002);
+const FavoritesConstants = fn(5004);
 ({ FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: closure_4, FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: hasOwnProperty } =
   FavoritesConstants);
 const ChannelTypes = fn(1072).ChannelTypes;

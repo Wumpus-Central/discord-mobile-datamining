@@ -5,7 +5,7 @@ import _modDef2298 from "../../messages/OrbWallet.messages.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ChevronSmallRightIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef9797 from "../../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
+import _modDef9803 from "../../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
 import QuestDockRewardTileDefault from "../../../quests/native/QuestDockRewardTile.tsx";
 import OrbChallengeTypes from "../../OrbChallengeTypes.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -18,7 +18,7 @@ function OrbChallengeAsset(achievementStatus) {
   const tmp = closure_12();
   if (achievementStatus !== OrbChallengeTypes.UserAchievementStatus.COMPLETED) {
     if (achievementStatus !== OrbChallengeTypes.UserAchievementStatus.CLAIMED) {
-      const size = { assetUrl: _modDef9797, isAnimatedAsset, height: 40, width: 40 };
+      const size = { assetUrl: _modDef9803, isAnimatedAsset, height: 40, width: 40 };
       let tmp8 = React5(QuestDockRewardTileDefault, size);
     }
     return tmp8;
@@ -26,7 +26,7 @@ function OrbChallengeAsset(achievementStatus) {
   const obj = { style: tmp.completedRing, accessible: true, accessibilityLabel: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(_modDef2298.k6h2J3);
-  const size1 = { assetUrl: _modDef9797, isAnimatedAsset, height: 32, width: 32, style: tmp.completedTile };
+  const size1 = { assetUrl: _modDef9803, isAnimatedAsset, height: 32, width: 32, style: tmp.completedTile };
   obj.children = React5(QuestDockRewardTileDefault, size1);
   tmp8 = React5(metroImportDefault, obj);
 }
@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let c11 = false;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   item: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   pressableItem: null,

@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_13 = createStyles.createStyles(() => {
   const obj = {
     pressable: {
@@ -212,7 +212,14 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     onPress: callback2,
     onLongPress: callback3,
     accessibilityRole: "button",
-    accessibilityLabel: height(isPressed[19])({
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    underlayColor: null,
+    style: null,
+    children: null,
+  };
+  const items13 = [
+    height(isPressed[19])({
       channel,
       unread: hasUnreadMessages,
       mentionCount: stateFromStoresObject1.mentionCount,
@@ -221,47 +228,47 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       ignored,
       blocked,
     }),
-    accessibilityHint: null,
-    underlayColor: null,
-    style: null,
-    children: null,
-  };
+  ];
+  if (favorite) {
+    const intl = tmp(tmp2[20]).intl;
+    const items14 = [intl.string(tmp(tmp2[20]).t.cCPjSK)];
+    let items15 = items14;
+  } else {
+    items15 = [];
+  }
+  HermesBuiltin.arraySpread(items15, 1);
+  obj10.accessibilityLabel = items13.join(", ");
   const obj8 = channel(isPressed[13]);
-  obj10.accessibilityHint = channel(isPressed[19]).getChannelA11yHint({
-    channel,
-    muted,
-    userStatus: status,
-    isFavorite: favorite,
-  });
+  obj10.accessibilityHint = channel(isPressed[19]).getChannelA11yHint({ channel, muted, userStatus: status });
   obj10.underlayColor = tmp4.rowActive.backgroundColor;
   obj10.style = memo1;
-  let tmp26;
+  let tmp27;
   const tmpResult = channel(isPressed[19]);
   if (tmp15) {
-    tmp26 = nameplate;
+    tmp27 = nameplate;
   }
-  const obj11 = { nameplate: tmp26, isFocused: stateFromStores, isPressed, isMuted: null, fadeIn: null, style: null };
-  let tmp27 = muted;
+  const obj11 = { nameplate: tmp27, isFocused: stateFromStores, isPressed, isMuted: null, fadeIn: null, style: null };
+  let tmp28 = muted;
   if (!muted) {
-    tmp27 = ignored;
+    tmp28 = ignored;
   }
-  if (!tmp27) {
-    tmp27 = blocked;
+  if (!tmp28) {
+    tmp28 = blocked;
   }
-  obj11.isMuted = tmp27;
+  obj11.isMuted = tmp28;
   obj11.fadeIn = isPressed;
   obj11.style = tmp4.nameplate;
-  const items13 = [closure_11(height(isPressed[20]), obj11), , , ,];
+  const items16 = [closure_11(height(isPressed[21]), obj11), , , ,];
   let tmp22Result = stateFromStores;
   if (stateFromStores) {
     const obj12 = { style: tmp4.selectedBorder, pointerEvents: "none" };
     tmp22Result = closure_11(tmp23, obj12);
   }
-  items13[1] = tmp22Result;
+  items16[1] = tmp22Result;
   const obj13 = { unread: hasUnreadMessages, resolvedUnreadSetting, muted, layout: null, panelVariant: true };
-  const tmp9Result = height(isPressed[20]);
-  obj13.layout = channel(isPressed[22]).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-  items13[2] = closure_11(height(isPressed[21]), obj13);
+  const tmp9Result = height(isPressed[21]);
+  obj13.layout = channel(isPressed[23]).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+  items16[2] = closure_11(height(isPressed[22]), obj13);
   const obj14 = { backgroundColor: memo2, children: null };
   const obj15 = {
     channel,
@@ -273,11 +280,11 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     isStreaming: null,
     status: null,
   };
-  const tmp9Result4 = height(isPressed[21]);
-  obj15.isStreaming = height(isPressed[25])(activities);
+  const tmp9Result4 = height(isPressed[22]);
+  obj15.isStreaming = height(isPressed[26])(activities);
   obj15.status = status;
-  obj14.children = closure_11(height(isPressed[24]), obj15);
-  items13[3] = closure_11(channel(isPressed[23]).CutoutBackgroundProvider, obj14);
+  obj14.children = closure_11(height(isPressed[25]), obj15);
+  items16[3] = closure_11(channel(isPressed[24]).CutoutBackgroundProvider, obj14);
   const obj16 = {
     channel,
     channelSelected: stateFromStores,
@@ -291,16 +298,16 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     hasNameplate: null,
   };
   let someResult;
-  const tmp9Result5 = height(isPressed[24]);
+  const tmp9Result5 = height(isPressed[25]);
   if (activities != null) {
-    someResult = activities.some((type) => type.type !== channel(isPressed[27]).ActivityTypes.CUSTOM_STATUS);
+    someResult = activities.some((type) => type.type !== channel(isPressed[28]).ActivityTypes.CUSTOM_STATUS);
   }
   obj16.hasActivity = true === someResult;
   obj16.hasUnreadMessages = hasUnreadMessages;
   obj16.resolvedUnreadSetting = resolvedUnreadSetting;
   obj16.hasNameplate = tmp15;
-  items13[4] = closure_11(height(isPressed[26]), obj16);
-  obj10.children = items13;
+  items16[4] = closure_11(height(isPressed[27]), obj16);
+  obj10.children = items16;
   obj9.children = closure_12(channel(isPressed[18]).PressableHighlight, obj10);
   return closure_11(stateFromStores, obj9);
 });

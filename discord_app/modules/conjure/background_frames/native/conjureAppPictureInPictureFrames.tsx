@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/background_frames/native/conjureAppPictureInPictureFrames.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4026 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import conjurePreviewSurface from "../../preview/conjurePreviewSurface.tsx";
 import frameRunsInBackgroundDefault from "../../../frames/frameRunsInBackground.tsx";
@@ -88,12 +88,12 @@ function closeToMakeRoom(frameId) {
     const obj = { text: null };
     const intl = util.intl;
     const obj2 = { appName: tmp3 };
-    obj.text = intl.formatToPlainString(_modDef4026.jmMirO, obj2);
+    obj.text = intl.formatToPlainString(_modDef4028.jmMirO, obj2);
     ToastActionCreatorsDefault.open("CONJURE_APP_PIP_CLOSED_TO_MAKE_ROOM", obj);
     const tmp7Result = ToastActionCreatorsDefault;
   }
 }
-const FramesConstants = fn(6902);
+const FramesConstants = fn(6905);
 ({ asLaunched: closure_6, FrameLayoutModes: metroImportDefault } = FramesConstants);
 const items = [
   FramesStore,

@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   content: { flexGrow: 1, width: "100%" },
   upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" },

@@ -33,8 +33,8 @@ export default {
           }
         },
       };
-      obj2.pushLazy(self(2118)(9106, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
-      const tmp9 = self(2118)(9106, dependencyMap.paths);
+      obj2.pushLazy(self(2118)(9112, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      const tmp9 = self(2118)(9112, dependencyMap.paths);
     }
   },
   close() {

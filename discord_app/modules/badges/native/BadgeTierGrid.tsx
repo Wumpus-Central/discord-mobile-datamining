@@ -6,7 +6,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   section: { gap: nativeDefault.space.PX_16 },
   grid: null,
@@ -59,7 +59,7 @@ export default function BadgeTierGrid(badge) {
     let intl = badge(1113).intl;
     let obj3 = { username: targetUsername };
     obj2.children = intl.formatToPlainString(badge(1113).t.KyTwIh, obj3);
-    isViewingOtherUser = closure_4(badge(5751).Text, obj2);
+    isViewingOtherUser = closure_4(badge(5753).Text, obj2);
   }
   items = [isViewingOtherUser];
   let obj4 = { style: tmp.grid, accessibilityRole: "list", children: null };
@@ -67,8 +67,8 @@ export default function BadgeTierGrid(badge) {
   if (tiers == null) {
     tiers = [];
   }
-  const tmp9 = isViewingOtherUser(10190);
-  obj4.children = isViewingOtherUser(10190)(tiers, 3).map((arr) =>
+  const tmp9 = isViewingOtherUser(10196);
+  obj4.children = isViewingOtherUser(10196)(tiers, 3).map((arr) =>
     React4(
       View,
       {
@@ -84,7 +84,7 @@ export default function BadgeTierGrid(badge) {
           if (complex_icon_static_url == null) {
             complex_icon_static_url = owned.complex_icon_static_url;
           }
-          const tierRowSubtitle = badge(11602).getTierRowSubtitle({
+          const tierRowSubtitle = badge(11611).getTierRowSubtitle({
             tier: owned,
             isUnlocked: owned,
             isViewingOtherUser,
@@ -110,8 +110,8 @@ export default function BadgeTierGrid(badge) {
             }
             items1[1] = dimmedIcon;
             obj4.style = items1;
-            tmp9Result = closure_2_4(isViewingOtherUser(11592), obj4);
-            const tmp11 = isViewingOtherUser(11592);
+            tmp9Result = closure_2_4(isViewingOtherUser(11601), obj4);
+            const tmp11 = isViewingOtherUser(11601);
           }
           const items2 = [tmp9Result, ,];
           let tmp13Result = null != owned.name;
@@ -121,7 +121,7 @@ export default function BadgeTierGrid(badge) {
               str = "text-default";
             }
             const obj5 = { variant: "body-sm/semibold", color: str, style: item.centeredText, children: owned.name };
-            tmp13Result = closure_2_4(badge(5751).Text, obj5);
+            tmp13Result = closure_2_4(badge(5753).Text, obj5);
           }
           items2[1] = tmp13Result;
           let tmp5Result = "" !== tierRowSubtitle;
@@ -130,7 +130,7 @@ export default function BadgeTierGrid(badge) {
             let tmp15 = !owned;
             if (!owned) {
               const obj7 = { size: "xxs", color: isViewingOtherUser(575).colors.ICON_MUTED };
-              tmp15 = closure_2_4(badge(8738).LockIcon, obj7);
+              tmp15 = closure_2_4(badge(8744).LockIcon, obj7);
             }
             const items3 = [tmp15];
             let str2 = "text-muted";
@@ -143,7 +143,7 @@ export default function BadgeTierGrid(badge) {
               style: item.centeredText,
               children: tierRowSubtitle,
             };
-            items3[1] = closure_2_4(badge(5751).Text, obj8);
+            items3[1] = closure_2_4(badge(5753).Text, obj8);
             obj6.children = items3;
             tmp5Result = closure_2_5(closure_3, obj6);
           }

@@ -171,7 +171,7 @@ function CoverSection(section) {
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = React6(tmp14(5715), obj9);
+        tmp24Result4 = React6(tmp14(5717), obj9);
       } else {
         tmp24Result4 = null;
       }
@@ -181,7 +181,7 @@ function CoverSection(section) {
     let tmp24Result5 = null;
     if (showGifTag) {
       const obj10 = { style: tmp.gifTag };
-      tmp24Result5 = React6(tmp14(8644), obj10);
+      tmp24Result5 = React6(tmp14(8650), obj10);
     }
     items2[3] = tmp24Result5;
     obj5.children = items2;
@@ -273,13 +273,13 @@ function UserProfilePersonalWidgetCardContent(style) {
   };
   const tmp = closure_14();
   const tmp3 = disableInteraction;
-  obj.titleLeadingIcon = closure_9(userId(9612).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj.titleLeadingIcon = closure_9(userId(9618).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj.title = widget.header;
   obj.disableInteraction = disableInteraction;
   let tmp6;
   if (flag) {
     let obj2 = { widget };
-    items = [closure_9(tmp3(12546), obj2, "edit-options")];
+    items = [closure_9(tmp3(12559), obj2, "edit-options")];
     tmp6 = items;
   }
   obj.actionButtons = tmp6;
@@ -306,7 +306,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp2Result;
   obj3.children = items1;
   obj.children = closure_10(closure_7, obj3);
-  return closure_9(disableInteraction(15234), obj);
+  return closure_9(disableInteraction(15260), obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
@@ -316,7 +316,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
 const locations = [0, 0.4, 1];
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   coverContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" },
   coverContent: null,

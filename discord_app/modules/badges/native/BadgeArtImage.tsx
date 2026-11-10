@@ -3,7 +3,7 @@ import DurationsDefault from "../../../utils/Durations.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import inlineStyles from "../../../../_runtime/08101_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08105_inlineStyles.js";
 import APNGPlayer2 from "../../image/native/APNGPlayer.android.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -71,7 +71,7 @@ function SvgArt(url) {
                   closure_1 = tmp2;
                   closure_129_0 = undefined;
                   closure_129_1 = undefined;
-                  items = [closure_2_0(8101).fetchText(c0), closure_2_11()];
+                  items = [closure_2_0(8105).fetchText(c0), closure_2_11()];
                   c3 = 1;
                   c4 = 1;
                   const obj4 = { value: Promise.race(items), done: false };
@@ -90,7 +90,7 @@ function SvgArt(url) {
                 if (closure_129_0 == null) {
                   c0 = "";
                 }
-                closure_129_1 = closure_2_0(8101).parse(c0);
+                closure_129_1 = closure_2_0(8105).parse(c0);
                 if (null == closure_129_1) {
                   const _Error = Error;
                   const error = new Error("svg has no content");
@@ -100,7 +100,7 @@ function SvgArt(url) {
                   const obj = { value: closure_129_1, done: true };
                   return obj;
                 }
-                const obj6 = closure_2_0(8101);
+                const obj6 = closure_2_0(8105);
               }
             } catch (tmp15) {
               c4 = tmp;
@@ -166,7 +166,7 @@ function SvgArt(url) {
       let obj2 = { ast: tmp2, override: null };
       const size = { width, height };
       obj2.override = size;
-      tmp9 = jsx(url(8101).SvgAst, { ast: tmp2, override: null });
+      tmp9 = jsx(url(8105).SvgAst, { ast: tmp2, override: null });
     }
     fallback = tmp9;
   }
@@ -174,7 +174,7 @@ function SvgArt(url) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const promiseDeduper = new fn(5258).PromiseDeduper();
+const promiseDeduper = new fn(5260).PromiseDeduper();
 let closure_10 = 10 * DurationsDefault.Millis.SECOND;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeArtImage.tsx");
@@ -240,7 +240,7 @@ export default function BadgeArtImage(style) {
         let APNGPlayer = require;
         PlatformUtils;
       }
-      APNGPlayer = APNGPlayer(9588).APNGPlayer;
+      APNGPlayer = APNGPlayer(9594).APNGPlayer;
       const obj4 = { url: fallbackUrl, style: size, autoplay: true, onLoad };
       tmp12 = <APNGPlayer url={fallbackUrl} style={size} autoplay onLoad={onLoad} />;
     }

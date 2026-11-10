@@ -5,8 +5,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const top = "top";
-const module_5151 = fn(5151);
-let closure_5 = module_5151.create(() => {
+const module_5153 = fn(5153);
+let closure_5 = module_5153.create(() => {
   const obj = { containerIdsBySurface: new Map() };
   return obj;
 });
@@ -98,7 +98,14 @@ export function useToastContainer(app) {
   const effect1 = noop.useEffect(() => {
     if (null != entry) {
       const _setTimeout = setTimeout;
-      const timeout = setTimeout(() => closure_0(entry[3]).popToast(closure_0), bound);
+      const timeout = setTimeout(() => {
+        const useToastStore = closure_0(entry[3]).useToastStore;
+        const currentToastMap = useToastStore.getState().currentToastMap;
+        if (currentToastMap.get(closure_0) === closure_1_1) {
+          closure_0(entry[3]).popToast(closure_0);
+          const tmpResult = closure_0(entry[3]);
+        }
+      }, bound);
       return () => clearTimeout(closure_0);
     }
   }, items1);

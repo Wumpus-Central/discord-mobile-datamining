@@ -6,8 +6,8 @@ import _mod1152 from "../../../../_runtime/metro/01152__.js";
 import _modDef2166 from "../../../../_runtime/metro/02166__.js";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef17947 from "../messages/Test.messages.js";
-import _modDef17979 from "../messages/SecondTest.messages.js";
+import _modDef17974 from "../messages/Test.messages.js";
+import _modDef18006 from "../messages/SecondTest.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -156,7 +156,7 @@ get_ActivityIndicator = fn(17);
 const setAppLocale = fn(2187).setAppLocale;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -180,34 +180,34 @@ export default function IntlTestingSettingsPage() {
   items = [closure_10(LocaleInfo, {}), closure_10(TestLocaleSelector, {}), , , , , ,];
   const obj3 = { variant: "body-md/normal", children: null };
   const intl = require("util").intl;
-  obj3.children = intl.format(_modDef17947.HMvEC5, {});
+  obj3.children = intl.format(_modDef17974.HMvEC5, {});
   items[2] = closure_10(require("Text/Text").Text, obj3);
   const obj4 = { variant: "body-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj4.children = intl2.format(_modDef17979.swfLzV, {});
+  obj4.children = intl2.format(_modDef18006.swfLzV, {});
   items[3] = closure_10(require("Text/Text").Text, obj4);
   const obj5 = { variant: "body-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj5.children = intl3.format(_modDef17947.rmps8y, {});
+  obj5.children = intl3.format(_modDef17974.rmps8y, {});
   items[4] = closure_10(require("Text/Text").Text, obj5);
   const obj6 = { variant: "body-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj6.children = intl4.format(_modDef17947.uczI4g, {
+  obj6.children = intl4.format(_modDef17974.uczI4g, {
     linkTarget() {},
   });
   items[5] = closure_10(require("Text/Text").Text, obj6);
   const obj8 = { variant: "body-md/normal", children: null };
   const intl5 = require("util").intl;
-  obj8.children = intl5.format(_modDef17947.rdfRyh, {});
+  obj8.children = intl5.format(_modDef17974.rdfRyh, {});
   items[6] = closure_10(require("Text/Text").Text, obj8);
   const obj9 = { variant: "body-md/normal", children: null };
   const intl6 = require("util").intl;
-  obj9.children = intl6.format(_modDef17947.XOdbAy, {
+  obj9.children = intl6.format(_modDef17974.XOdbAy, {
     username: "some user",
     usernameHook(children) {
       const obj = {
         style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 },
-        children: closure_1_10(closure_0(5751).Text, {
+        children: closure_1_10(closure_0(5753).Text, {
           variant: "body-sm/normal",
           color: "text-overlay-light",
           children,

@@ -625,7 +625,7 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(6910);
+let GuildScheduledEventStore = fn(6913);
 ({
   eventScheduledToStartWithin: metroImportDefault,
   isGuildEventEnded: closure_8,
@@ -634,7 +634,7 @@ let GuildScheduledEventStore = fn(6910);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_24, GuildFeatures: closure_25, Permissions: closure_26 } = Constants);
-const ContentInventoryFeedKey = fn(8996).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(9002).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
 let closure_29 = 3 * DurationsDefault.Millis.DAY;
 let dehydratedItems = [];
@@ -999,7 +999,7 @@ obj = {
     items = items.items;
     let set1;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
-    set1 = new Set(set1(8993).SUPPORTED_ITEM_TYPES);
+    set1 = new Set(set1(8999).SUPPORTED_ITEM_TYPES);
     const found = items.filter((type) => set1.has(type.type));
     const found1 = found.filter(hydrateDiscoverItem);
     const found2 = found1.filter(filterStaffGuild);
@@ -1097,7 +1097,7 @@ obj = {
     });
     const items4 = [...items2];
     const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[21]).compareGravityUnreadIds(id.id, id2.id))];
-    set = new Set(set1(8993).SUPPORTED_ITEM_TYPES);
+    set = new Set(set1(8999).SUPPORTED_ITEM_TYPES);
     [arr10, arr11] = items5;
     let tmp6 = _slicedToArray(items5, 2);
     if (c44) {
@@ -1106,15 +1106,15 @@ obj = {
           if (c41 > 0) {
             c46 = null;
           }
-          const tmp8 = arr12.length > tmp(8993).MIN_ITEMS_FOR_NEW_PILL;
+          const tmp8 = arr12.length > tmp(8999).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
             hasNewContent = tmp8;
           }
           if (tmp8) {
-            const tmpResult = tmp(8997);
+            const tmpResult = tmp(9003);
             const items6 = [];
             HermesBuiltin.arraySpread(arr11, HermesBuiltin.arraySpread(arr10, 0));
-            tmpResult.hydrateItems(items6, 0, tmp(8993).ICYMI_PAGE_SIZE, closure_37);
+            tmpResult.hydrateItems(items6, 0, tmp(8999).ICYMI_PAGE_SIZE, closure_37);
             if (arr10.length + arr11.length === 0) {
               c57 = true;
             }
@@ -1131,8 +1131,8 @@ obj = {
             str = "foreground_load";
           }
           obj2.homeSessionId = str;
-          tmp(9008).trackFeedLoaded(obj2);
-          const tmpResult2 = tmp(9008);
+          tmp(9014).trackFeedLoaded(obj2);
+          const tmpResult2 = tmp(9014);
         }
       }
     }

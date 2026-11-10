@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   contentContainer: { flexGrow: 2, alignItems: "center" },
@@ -74,7 +74,7 @@ export default function RedesignAddAvatarModal(route) {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8290).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8294).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -90,23 +90,23 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16763);
-              obj11.description = tmp2(8811).generateAvatarDescription();
+              const obj = tmp2(16790);
+              obj11.description = tmp2(8817).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(8811);
+              const obj3 = tmp2(8817);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(8806).setPendingChanges(obj12);
-            const obj4 = tmp2(8806);
+            tmp2(8812).setPendingChanges(obj12);
+            const obj4 = tmp2(8812);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8808).announcePendingAvatarChange(str);
+            const result = tmp2(8814).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(8808);
+            const obj6 = tmp2(8814);
           }
           closure_129_1(true);
         }

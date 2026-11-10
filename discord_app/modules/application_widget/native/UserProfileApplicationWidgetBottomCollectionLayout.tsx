@@ -3,6 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +11,9 @@ require = fn;
 function CollectionItem(arg0) {
   ({ componentConfig, resolveFieldValue } = arg0);
   const tmp = closure_6();
+  const emojiOverflowStyle = UserProfileApplicationWidgetFieldUtils.useEmojiOverflowStyle("body-xs/medium");
   let image;
+  const emojiOverflowStyle1 = UserProfileApplicationWidgetFieldUtils.useEmojiOverflowStyle("footnote/medium");
   if (componentConfig != null) {
     image = componentConfig.fields.image;
   }
@@ -21,6 +24,7 @@ function CollectionItem(arg0) {
     "name",
     resolveFieldValue,
   );
+  const tmp2Result = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton1 = resolvedValuesFromUserApplicationIdentityProfile.resolveSingleStringOrSkeleton(
     componentConfig,
     "description",
@@ -32,40 +36,46 @@ function CollectionItem(arg0) {
     const obj5 = { uri: fieldValue.media.url };
     obj4.source = obj5;
     obj4.style = tmp.itemImage;
-    let tmp11 = React4(FastImageDefault, obj4);
-    let tmp12 = React4;
+    let tmp13 = React4(FastImageDefault, obj4);
+    let tmp14 = React4;
   } else {
     const obj6 = { style: tmp.itemImage };
-    tmp11 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj6);
-    tmp12 = React4;
+    tmp13 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj6);
+    tmp14 = React4;
   }
-  const items1 = [tmp11];
+  const items1 = [tmp13];
   const obj7 = { style: tmp.itemContent, children: null };
   if ("value" === singleStringOrSkeleton.status) {
-    const obj8 = { variant: "body-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
-    let tmp12Result = tmp12(Text_Text.Text, obj8);
+    const obj8 = {
+      variant: "body-xs/medium",
+      lineClamp: 2,
+      style: emojiOverflowStyle,
+      children: singleStringOrSkeleton.text,
+    };
+    let tmp14Result = tmp14(Text_Text.Text, obj8);
   } else {
-    tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
+    tmp14Result = tmp14(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
       variant: "body-xs/medium",
       widthChars: 6,
     });
   }
-  const items2 = [tmp12Result];
+  const items2 = [tmp14Result];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj9 = {
       variant: "footnote/medium",
       color: "text-subtle",
       lineClamp: 2,
+      style: emojiOverflowStyle1,
       children: singleStringOrSkeleton1.text,
     };
-    let tmp12Result2 = tmp12(Text_Text.Text, obj9);
+    let tmp14Result2 = tmp14(Text_Text.Text, obj9);
   } else {
-    tmp12Result2 = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
+    tmp14Result2 = tmp14(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
       variant: "footnote/medium",
       widthChars: 10,
     });
   }
-  items2[1] = tmp12Result2;
+  items2[1] = tmp14Result2;
   obj7.children = items2;
   items1[1] = hasOwnProperty(View, obj7);
   obj3.children = items1;
@@ -74,8 +84,8 @@ function CollectionItem(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5140);
-const obj2 = {
+const createStyles = fn(5142);
+let obj2 = {
   grid: {
     flexDirection: "row",
     flexWrap: "wrap",

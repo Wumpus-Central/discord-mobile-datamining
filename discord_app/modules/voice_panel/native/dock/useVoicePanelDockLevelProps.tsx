@@ -14,14 +14,14 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVo
 
 export function useVoicePanelDockGlowLevelProps() {
   let tmp;
-  const shouldAnimateSpeakerLevels = num(13960).useShouldAnimateSpeakerLevels("VoicePanelDock");
-  let obj = num(13960);
+  const shouldAnimateSpeakerLevels = num(13985).useShouldAnimateSpeakerLevels("VoicePanelDock");
+  let obj = num(13985);
   items = [SelectedChannelStore, ChannelStore];
   const stateFromStores = num(504).useStateFromStores(items, () =>
     channel.getChannel(voiceChannelId.getVoiceChannelId()),
   );
   const obj2 = num(504);
-  const obj3 = num(12136);
+  const obj3 = num(12145);
   const items1 = [MediaEngineStore, SpeakingStore];
   const stateFromStoresObject = num(504).useStateFromStoresObject(items1, () => {
     const mode = MediaEngineStore.getMode();
@@ -36,7 +36,7 @@ export function useVoicePanelDockGlowLevelProps() {
   const floorDb = stateFromStoresObject.floorDb;
   if (!shouldAnimateSpeakerLevels) {
     num = 0;
-    if (!obj3.createMuteHandler(floorDb(7598)(stateFromStores)).mute) {
+    if (!obj3.createMuteHandler(floorDb(7601)(stateFromStores)).mute) {
       num = 0;
       if (tmp8) {
         num = 1;
@@ -52,7 +52,7 @@ export function useVoicePanelDockGlowLevelProps() {
   }, items2);
 }
 export function useVoicePanelDockSpeakerLevelProps() {
-  shouldAnimateSpeakerLevels = shouldAnimateSpeakerLevels(13960).useShouldAnimateSpeakerLevels("VoicePanelDock");
+  shouldAnimateSpeakerLevels = shouldAnimateSpeakerLevels(13985).useShouldAnimateSpeakerLevels("VoicePanelDock");
   items = [shouldAnimateSpeakerLevels];
   return noop.useMemo(() => {
     const merged = Object.assign(closure_10);

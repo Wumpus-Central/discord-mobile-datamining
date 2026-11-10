@@ -21,12 +21,12 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const VoicePanelDockConstants = fn(11381);
+const VoicePanelDockConstants = fn(11390);
 ({ DOCK_FADE_TIMING: closure_11, DOCK_TILE_RADIUS, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const sum = DOCK_TILE_SIZE + 4;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = {
   face: null,
   avatar: null,
@@ -198,11 +198,11 @@ export function DockChannelIcon(streaming) {
   let channelId;
   let guildId;
   const tmp = closure_16();
-  const tmp4Result = guildId(19605)(channelId(575).Shadow.SHADOW_MEDIUM);
-  const context = noop.useContext(guildId(11362));
+  const tmp4Result = guildId(19634)(channelId(575).Shadow.SHADOW_MEDIUM);
+  const context = noop.useContext(guildId(11371));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp4 = guildId(19605);
+  const tmp4 = guildId(19634);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
@@ -240,13 +240,13 @@ export function DockChannelIcon(streaming) {
     obj3.style = items4;
     const obj5 = { streaming, children: null };
     const obj6 = { guild: stateFromStores, size: null, style: null };
-    const tmp2Result = tmp2(19606);
-    obj6.size = tmp5(7020).GuildIconSizes.SMALL_32;
+    const tmp2Result = tmp2(19635);
+    obj6.size = tmp5(7023).GuildIconSizes.SMALL_32;
     obj6.style = tmp.guildIconAsset;
-    obj5.children = closure_13(tmp2(7020), obj6);
+    obj5.children = closure_13(tmp2(7023), obj6);
     obj3.children = closure_13(tmp2Result, obj5);
     let tmp13 = closure_13(View, obj3);
-    const tmp2Result3 = tmp2(7020);
+    const tmp2Result3 = tmp2(7023);
   } else {
     tmp13 = null;
     if (null != stateFromStores1) {
@@ -258,9 +258,9 @@ export function DockChannelIcon(streaming) {
       const obj9 = { streaming, children: null };
       const obj10 = { user: stateFromStores1, guildId: "Array", size: tmp5(1187).AvatarSizes.REFRESH_MEDIUM_32 };
       obj9.children = closure_13(tmp5(1187).Avatar, obj10);
-      obj7.children = closure_13(tmp2(19606), obj9);
+      obj7.children = closure_13(tmp2(19635), obj9);
       tmp13 = closure_13(View, obj7);
-      const tmp2Result4 = tmp2(19606);
+      const tmp2Result4 = tmp2(19635);
     }
   }
   return tmp13;
@@ -294,14 +294,14 @@ export function DockChannelTitle() {
     items3,
   );
   if (stateFromStores) {
-    let VoiceNormalIcon = tmp4(8741).VoiceLockIcon;
+    let VoiceNormalIcon = tmp4(8747).VoiceLockIcon;
   } else {
-    VoiceNormalIcon = tmp4(8744).VoiceNormalIcon;
+    VoiceNormalIcon = tmp4(8750).VoiceNormalIcon;
   }
   const obj2 = channelId(504);
   const items4 = [
     closure_13(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }),
-    closure_13(channelId(5751).Text, {
+    closure_13(channelId(5753).Text, {
       variant: "body-md/medium",
       color: "text-default",
       lineClamp: 1,
@@ -322,12 +322,12 @@ export function DockUserTitle(userId) {
   const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId), items1);
   const obj = userId(504);
   const obj3 = { style: tmp.titleRow, children: null };
-  const name = userId(6173).useName(guildId, channelId, stateFromStores);
+  const name = userId(6175).useName(guildId, channelId, stateFromStores);
   let str = "text-default";
   if (userId.dimmed) {
     str = "text-subtle";
   }
-  obj3.children = closure_13(userId(5751).Text, {
+  obj3.children = closure_13(userId(5753).Text, {
     variant: "body-md/medium",
     color: str,
     lineClamp: 1,
@@ -417,7 +417,7 @@ export function DockFace(userId) {
   if (null != memo) {
     const obj8 = { style: tmp.avatar, children: null };
     const obj9 = { style: tmp.avatarImage, source: memo };
-    obj8.children = closure_13(tmp2(5842), obj9);
+    obj8.children = closure_13(tmp2(5844), obj9);
     tmp21 = closure_13(View, obj8);
   }
   items9[2] = tmp21;

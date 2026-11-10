@@ -202,6 +202,10 @@ prototype["getMLSSigningKey"] = function getMLSSigningKey() {
   const error = new Error("NOT_IMPLEMENTED");
   return Promise.reject(error);
 };
+prototype["generateDavePairwiseFingerprint"] = function generateDavePairwiseFingerprint() {
+  const error = new Error("NOT_IMPLEMENTED");
+  return Promise.reject(error);
+};
 prototype["setSidechainCompression"] = function setSidechainCompression() {};
 prototype["setSidechainCompressionStrength"] = function setSidechainCompressionStrength() {};
 prototype["setVoiceSampleRateCap"] = function setVoiceSampleRateCap() {};

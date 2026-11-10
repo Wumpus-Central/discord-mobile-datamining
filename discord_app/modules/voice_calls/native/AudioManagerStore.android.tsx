@@ -6,13 +6,25 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import NativeAudioManagerModule2 from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 const NativeAudioManagerModuleDefault = NativeAudioManagerModule2;
 
 require = fn;
+function syncCommunicationMode() {
+  let tmp = c12;
+  if (c12) {
+    tmp = null == SelectedChannelStore.getVoiceChannelId();
+  }
+  if (tmp) {
+    c12 = false;
+    setCommunicationModeOn(false);
+  }
+  return false;
+}
 function setCommunicationModeOn() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -20,7 +32,7 @@ function setCommunicationModeOn() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _setCommunicationModeOn(arg0) {
+let closure_15 = async function _setCommunicationModeOn(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   await NativeAudioManagerModuleDefault.setCommunicationModeOn(closure_0);
@@ -31,7 +43,7 @@ let closure_13 = async function _setCommunicationModeOn(arg0) {
     if (closure_129_0) {
       str = "on";
     }
-    closure_130_7.error("Failed to turn communication mode " + str, closure_129_1);
+    closure_130_8.error("Failed to turn communication mode " + str, closure_129_1);
     c6 = 3;
   } else if (arg0 === 1) {
     c6 = 3;
@@ -43,7 +55,7 @@ let closure_13 = async function _setCommunicationModeOn(arg0) {
 };
 function setActiveAudioDevice() {
   const self = this;
-  const apply = closure_15.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -51,7 +63,7 @@ function setActiveAudioDevice() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _setActiveAudioDevice() {
+let closure_17 = async function _setActiveAudioDevice() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -106,7 +118,7 @@ let closure_15 = async function _setActiveAudioDevice() {
             c4 = 0;
             closure_129_1 = closure_3;
             const _HermesInternal2 = HermesInternal;
-            closure_130_7.error(
+            closure_130_8.error(
               "Failed to set audio device " + closure_129_0.deviceId + " (" + closure_129_0.simpleDeviceType + ")",
               closure_129_1,
             );
@@ -116,7 +128,7 @@ let closure_15 = async function _setActiveAudioDevice() {
           } else if (arg0 !== 2) {
             if (!value) {
               const _HermesInternal = HermesInternal;
-              closure_130_7.warn(
+              closure_130_8.warn(
                 "Audio device " + closure_129_0.deviceId + " (" + closure_129_0.simpleDeviceType + ") was not applied",
               );
             }
@@ -141,20 +153,22 @@ let closure_15 = async function _setActiveAudioDevice() {
   })();
 };
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
-const MediaEngineContextTypes = fn(5897).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5899).MediaEngineContextTypes;
 const nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAudioManagerModuleDefault);
-let closure_7 = new LoggerDefault("AudioManagerStore");
+let closure_8 = new LoggerDefault("AudioManagerStore");
 let global = [];
-let NativeAudioManagerModule = fn(9303);
+let NativeAudioManagerModule = fn(9309);
 global = NativeAudioManagerModule.getInvalidAndroidDevice();
-NativeAudioManagerModule = fn(9303);
+NativeAudioManagerModule = fn(9309);
 let device = NativeAudioManagerModule.getInvalidAndroidDevice();
-let c11 = false;
+let c12 = false;
 const Store = initializeDefault.Store;
 class AudioManagerStore extends Store {}
 const prototype = AudioManagerStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
+  items = [SelectedChannelStore];
+  this.syncWith(items, syncCommunicationMode);
   const audioDevices = NativeAudioManagerModuleDefault.getAudioDevices();
   audioDevices.then((result) => {
     global = result;
@@ -186,32 +200,34 @@ prototype["getRequestedActiveAudioDevice"] = function getRequestedActiveAudioDev
 };
 AudioManagerStore.displayName = "AudioManagerStore";
 const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
+  VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
+    if (!tmp) {
+      c12 = true;
+      setCommunicationModeOn(true);
+    }
+    return false;
+  },
   RTC_CONNECTION_STATE: function handleRTCConnectionStateUpdate(context) {
     if (context.context !== MediaEngineContextTypes.DEFAULT) {
       return false;
     } else {
-      state = context.state;
-      if (RTCConnectionStates.CONNECTING === state) {
-        c11 = true;
+      if (context.state === RTCConnectionStates.CONNECTING) {
+        c12 = true;
         setCommunicationModeOn(true);
-        let tmp6 = global !== device;
-        if (tmp6) {
-          tmp6 = device.simpleDeviceType !== NativeAudioManagerModule2.AudioDeviceType.INVALID;
+        let tmp5 = global !== device;
+        if (tmp5) {
+          tmp5 = device.simpleDeviceType !== NativeAudioManagerModule2.AudioDeviceType.INVALID;
         }
-        if (tmp6) {
+        if (tmp5) {
           setActiveAudioDevice(device);
         }
-      } else if (tmp12.DISCONNECTED === state) {
-        if (!context.willReconnect) {
-          c11 = false;
-          setCommunicationModeOn(false);
-        }
       }
+      return false;
     }
   },
   NATIVE_AUDIO_SET_OUTPUT_DEVICE: function handleSetActiveAudioDevice(device) {
     device = device.device;
-    if (c11) {
+    if (c12) {
       setActiveAudioDevice(device);
     }
   },

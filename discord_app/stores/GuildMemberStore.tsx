@@ -91,8 +91,8 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
       colorString: null,
       colorStrings: null,
       colorRoleId: "channel",
-      hoistRoleId: "Path",
-      iconRoleId: "duration",
+      hoistRoleId: "delete",
+      iconRoleId: "children",
       highestRoleId: "add",
     };
   } else {
@@ -1119,6 +1119,7 @@ obj = {
         });
       }
     });
+    closure_18 = closure_18 + 1;
   },
   OVERLAY_INITIALIZE: function handleInitialize(guildMembers) {
     obj = {};

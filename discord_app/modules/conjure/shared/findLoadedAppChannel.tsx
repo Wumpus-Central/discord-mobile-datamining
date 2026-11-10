@@ -1,4 +1,4 @@
-// discord_app/modules/conjure/share/findLoadedAppChannel.tsx
+// discord_app/modules/conjure/shared/findLoadedAppChannel.tsx
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
@@ -18,17 +18,17 @@ function isViewableAppChannel(channel, arg1) {
 const Constants = fn(1072);
 ({ ChannelTypes: c2, Permissions: c3 } = Constants);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/share/findLoadedAppChannel.tsx");
+const result = size.fileFinishedImporting("modules/conjure/shared/findLoadedAppChannel.tsx");
 
-export default function findLoadedAppChannel(guildId, arg1, channelId) {
-  const channel = ChannelStore.getChannel(channelId);
+export default function findLoadedAppChannel(guildId, arg1, arg2) {
+  const channel = ChannelStore.getChannel(arg2);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
   if (guild_id === guildId) {
     if (isViewableAppChannel(channel, arg1)) {
-      const obj2 = { guildId, channelId };
+      const obj2 = { guildId, channelId: channel.id };
       return obj2;
     }
   }

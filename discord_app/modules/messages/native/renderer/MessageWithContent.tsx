@@ -5,7 +5,7 @@ import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
 import GuildAutomodMessageStore from "../../../guild_automod/GuildAutomodMessageStore.tsx";
 
 require = fn;
-const RowType = fn(8449).RowType;
+const RowType = fn(8453).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 
@@ -37,7 +37,8 @@ export function generateMessageRowData(canShowImages, options, theme) {
       isInlineReplyPreview: false,
       pushFeedbackType,
       renderContentOnly,
-      showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed,
+      showContentInventoryEntryFallbackEmbed,
+      unlinkedGamePlayerPlaceholders,
     }),
     canAddNewReactions,
     addNewReactionAccessibilityLabel: null,
@@ -55,6 +56,7 @@ export function generateMessageRowData(canShowImages, options, theme) {
     threadAccessibilityLabel: null,
     forcedTheme: null,
   };
+  ({ showContentInventoryEntryFallbackEmbed, unlinkedGamePlayerPlaceholders } = canShowImages);
   const intl = util.intl;
   obj.addNewReactionAccessibilityLabel = intl.string(util.t.lfIHs4);
   obj.reactionsTheme = reactionsTheme;

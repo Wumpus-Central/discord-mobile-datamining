@@ -29,4 +29,5 @@ const obj2 = {
 };
 obj.reflections = obj2;
 
+export const MIN_POSITIONING_SPATIAL_AUDIO_VERSION = 1;
 export const DEFAULT_SPATIAL_AUDIO_OPTIONS = obj;

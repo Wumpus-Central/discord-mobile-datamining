@@ -29,21 +29,21 @@ export default function MessagePreviewReactions(emoji) {
     items1,
   );
   const obj = channelId(504);
-  const obj2 = { value: messageId(7387)(messageId(7412).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
+  const obj2 = { value: messageId(7390)(messageId(7415).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     const obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(10215).MessageReactionsContent, {
+    let tmp4Result = jsx(channelId(10221).MessageReactionsContent, {
       channelId,
       messageId,
       emoji: emoji.emoji,
       reactions: stateFromStores,
     });
   } else {
-    tmp4Result = jsx(channelId(10215).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(10221).MessageReactionsEmpty, {});
   }
   obj2.children = tmp4Result;
-  return jsx(channelId(7387).AnalyticsLocationProvider, {
-    value: messageId(7387)(messageId(7412).MESSAGE_PREVIEW_REACTIONS).analyticsLocations,
+  return jsx(channelId(7390).AnalyticsLocationProvider, {
+    value: messageId(7390)(messageId(7415).MESSAGE_PREVIEW_REACTIONS).analyticsLocations,
     children: null,
   });
 }

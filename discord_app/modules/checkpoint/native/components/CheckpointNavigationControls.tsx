@@ -23,10 +23,11 @@ let obj = {
   control: null,
   controlIcon: null,
   iconButton: null,
+  labelButton: null,
   summaryActions: null,
   summaryControl: null,
   share: null,
-  shareLabel: null,
+  buttonLabel: null,
 };
 let rect = {
   position: "absolute",
@@ -47,17 +48,19 @@ obj.control = {
 obj.controlIcon = { width: CHECKPOINT_CONTROL_ICON_SIZE, height: CHECKPOINT_CONTROL_ICON_SIZE };
 obj.iconButton = { width: CHECKPOINT_CONTROL_SIZE, paddingHorizontal: 0 };
 let obj2 = { gap: nativeDefault.space.PX_24 };
+obj.labelButton = { paddingHorizontal: nativeDefault.space.PX_16 };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj.summaryActions = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
 obj.summaryControl = { borderWidth: 1, backgroundColor: "rgba(0, 0, 0, 0.05)" };
-let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
+let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
 obj.share = { paddingHorizontal: nativeDefault.space.PX_40 };
-obj.shareLabel = { fontSize: 18, lineHeight: 24 };
+obj.buttonLabel = { fontSize: 18, lineHeight: 24 };
 let closure_9 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointNavigationControls.tsx");
 
 export default function CheckpointNavigationControls(nextDisabled) {
-  ({ activeRoute, onBack, onNext: require, color } = nextDisabled);
-  ({ onReplay, onShare } = nextDisabled);
+  ({ activeRoute, onNext: require, color } = nextDisabled);
+  ({ onBack, onReplay, onShare } = nextDisabled);
   if (color === undefined) {
     color = closure_5;
   }
@@ -80,58 +83,66 @@ export default function CheckpointNavigationControls(nextDisabled) {
     const nitroLockedMessage = require("CheckpointCustomizationUtils").getNitroLockedMessage(nextBlockedTrait);
     let obj = require("CheckpointCustomizationUtils");
   }
-  const rect = flag(flag2[8])();
-  items = [tmp.container, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
-  let token = require("useToken").useToken("text-subtle");
-  const obj2 = require("useToken");
-  const token1 = require("useToken").useToken("text-overlay-dark");
-  const obj3 = require("useToken");
-  const token2 = require("useToken").useToken(flag(flag2[5]).colors.BLACK);
-  const intl = require("util").intl;
-  const obj4 = require("useToken");
   if (activeRoute === require("CheckpointNavigation").CheckpointRoute.FINALIZE_CHARACTER) {
-    const intl3 = require("util").intl;
-    let stringResult1 = intl3.string(require("util").t["R3BPH+"]);
+    let tmp5Result = tmp5(tmp6[9]);
   } else {
-    if (tmp7Result.isCheckpointCustomizationRoute(activeRoute)) {
-      const intl2 = require("util").intl;
-      stringResult1 = intl2.string(require("util").t.PDTjLN);
-    }
-    tmp7Result = require("CheckpointNavigation");
+    tmp5Result = tmp5(tmp6[10]);
   }
-  function handleNextPress() {
-    if (!flag2) {
-      if (flag) {
-        if (null != nextBlockedTrait) {
-          showNitroLockedToastDefault(tmp4);
+  let tmp10 = flag;
+  if (!flag) {
+    tmp10 = flag2;
+  }
+  const tmp7Result = flag(flag2[7])(
+    tmp5Result,
+    function handleNextPress() {
+      if (!flag2) {
+        if (flag) {
+          if (null != nextBlockedTrait) {
+            showNitroLockedToastDefault(tmp4);
+          }
+        } else {
+          require();
         }
-      } else {
-        require();
       }
-    }
+    },
+    tmp10,
+  );
+  const tmp7 = flag(flag2[7]);
+  const tmp5Result1Result = flag(flag2[7])(flag(flag2[12]), onBack);
+  const tmp5Result7 = flag(flag2[7]);
+  const tmp5Result2Result = flag(flag2[7])(flag(flag2[10]), onReplay);
+  const rect = tmp5(tmp6[13])();
+  items = [tmp.container, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
+  const tmp5Result8 = flag(flag2[7]);
+  let token = require("useToken").useToken("text-subtle");
+  const tmp8Result = require("useToken");
+  const token1 = require("useToken").useToken("text-overlay-dark");
+  const tmp8Result3 = require("useToken");
+  const token2 = require("useToken").useToken(tmp5(tmp6[5]).colors.BLACK);
+  const intl = require("util").intl;
+  const tmp8Result4 = require("useToken");
+  if (activeRoute === require("CheckpointNavigation").CheckpointRoute.FINALIZE_CHARACTER) {
+    const intl2 = require("util").intl;
+    const stringResult1 = intl2.string(require("util").t["R3BPH+"]);
   }
   if (activeRoute === require("CheckpointNavigation").CheckpointRoute.HOME) {
-    const obj5 = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items1 = [items, tmp.homeContainer];
-    obj5.style = items1;
-    const obj6 = {
-      Icon: require("PlayIcon").PlayIcon,
-      label: null,
-      onPress: null,
-      disabled: null,
-      accessibilityState: null,
-    };
+    obj2.style = items1;
+    const obj3 = { Icon: require("PlayIcon").PlayIcon, label: null, labelVariant: "mono-md/normal", labelStyle: null };
+    const intl6 = require("util").intl;
+    obj3.label = intl6.string(require("util").t.I0v0Qv);
+    obj3.labelStyle = tmp.buttonLabel;
+    const merged = Object.assign(tmp7Result);
+    obj3.disabled = flag2;
+    const obj4 = { disabled: flag2 };
+    obj3.accessibilityState = obj4;
+    obj3.style = tmp.labelButton;
+    const items2 = [closure_7(tmp5(tmp6[16]), obj3)];
+    const obj5 = { variant: "body-sm/medium", children: null };
+    const tmp5Result9 = tmp5(tmp6[16]);
     const intl7 = require("util").intl;
-    obj6.label = intl7.string(require("util").t.I0v0Qv);
-    obj6.onPress = handleNextPress;
-    obj6.disabled = flag2;
-    const obj7 = { disabled: flag2 };
-    obj6.accessibilityState = obj7;
-    const items2 = [closure_7(tmp5(tmp6[12]), obj6)];
-    const obj8 = { variant: "body-sm/medium", children: null };
-    const tmp5Result = tmp5(tmp6[12]);
-    const intl8 = require("util").intl;
-    const obj9 = {
+    const obj6 = {
       learnMoreHook(children, id) {
         return metroImportDefault(
           CheckpointTextDefault,
@@ -139,7 +150,7 @@ export default function CheckpointNavigationControls(nextDisabled) {
             variant: "body-sm/medium",
             style: link.link,
             onPress() {
-              const obj = flag(5834);
+              const obj = flag(5836);
               return obj.openURL(flag(2185).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
@@ -149,43 +160,45 @@ export default function CheckpointNavigationControls(nextDisabled) {
         );
       },
     };
-    obj8.children = intl8.format(tmp5(tmp6[15]).hcNhyq, obj9);
-    items2[1] = closure_7(tmp5(tmp6[14]), obj8);
-    obj5.children = items2;
-    let tmp29Result = closure_8(link, obj5);
-    const tmp5Result4 = tmp5(tmp6[14]);
+    obj5.children = intl7.format(tmp5(tmp6[19]).hcNhyq, obj6);
+    items2[1] = closure_7(tmp5(tmp6[18]), obj5);
+    obj2.children = items2;
+    let tmp48Result = closure_8(link, obj2);
+    const tmp5Result10 = tmp5(tmp6[18]);
   } else if (activeRoute === require("CheckpointNavigation").CheckpointRoute.SUMMARY) {
-    const obj10 = { style: null, children: null };
+    const obj7 = { style: null, children: null };
     const items3 = [items, tmp.routeControls];
-    obj10.style = items3;
-    const obj11 = { style: tmp.summaryActions, children: null };
-    const obj12 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    obj7.style = items3;
+    const obj8 = { style: tmp.summaryActions, children: null };
+    const obj9 = {};
+    const merged1 = Object.assign(tmp5Result1Result);
     const items4 = [, ,];
     ({ control: arr4[0], summaryControl: arr4[1] } = tmp);
-    const obj13 = { borderColor: color };
-    items4[2] = obj13;
-    obj12.style = items4;
-    obj12.onPress = onBack;
-    const intl4 = require("util").intl;
-    obj12.accessibilityLabel = intl4.string(require("util").t["13/7kX"]);
-    const obj14 = { size: "custom", color, style: tmp.controlIcon };
-    obj12.children = closure_7(require("ArrowSmallLeftIcon").ArrowSmallLeftIcon, obj14);
-    const items5 = [closure_7(nextBlockedTrait, obj12)];
-    const obj15 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    const obj10 = { borderColor: color };
+    items4[2] = obj10;
+    obj9.style = items4;
+    obj9.accessibilityRole = "button";
+    const intl3 = require("util").intl;
+    obj9.accessibilityLabel = intl3.string(require("util").t["13/7kX"]);
+    const obj11 = { size: "custom", color, style: tmp.controlIcon };
+    obj9.children = closure_7(require("ArrowSmallLeftIcon").ArrowSmallLeftIcon, obj11);
+    const items5 = [closure_7(nextBlockedTrait, obj9)];
+    const obj12 = {};
+    const merged2 = Object.assign(tmp5Result2Result);
     const items6 = [, ,];
     ({ control: arr6[0], summaryControl: arr6[1] } = tmp);
-    const obj16 = { borderColor: color };
-    items6[2] = obj16;
-    obj15.style = items6;
-    obj15.onPress = onReplay;
-    const intl5 = require("util").intl;
-    obj15.accessibilityLabel = intl5.string(tmp5(tmp6[15]).u40i9u);
-    const obj17 = { size: "custom", color, style: tmp.controlIcon };
-    obj15.children = closure_7(require("RetryIcon").RetryIcon, obj17);
-    items5[1] = closure_7(nextBlockedTrait, obj15);
-    obj11.children = items5;
-    const items7 = [closure_8(link, obj11)];
-    const obj18 = {
+    const obj13 = { borderColor: color };
+    items6[2] = obj13;
+    obj12.style = items6;
+    obj12.accessibilityRole = "button";
+    const intl4 = require("util").intl;
+    obj12.accessibilityLabel = intl4.string(tmp5(tmp6[19]).u40i9u);
+    const obj14 = { size: "custom", color, style: tmp.controlIcon };
+    obj12.children = closure_7(require("RetryIcon").RetryIcon, obj14);
+    items5[1] = closure_7(nextBlockedTrait, obj12);
+    obj8.children = items5;
+    const items7 = [closure_8(link, obj8)];
+    const obj15 = {
       Icon: require("ShareIcon").ShareIcon,
       iconPosition: "end",
       label: null,
@@ -197,88 +210,76 @@ export default function CheckpointNavigationControls(nextDisabled) {
       shadowColor: null,
       style: null,
     };
-    const intl6 = require("util").intl;
-    obj18.label = intl6.string(require("util").t.RDE0Sc);
-    obj18.labelStyle = tmp.shareLabel;
-    obj18.onPress = onShare;
-    obj18.color = token1;
-    obj18.borderColor = token2;
-    obj18.shadowColor = shadowColor;
+    const intl5 = require("util").intl;
+    obj15.label = intl5.string(require("util").t.RDE0Sc);
+    obj15.labelStyle = tmp.buttonLabel;
+    obj15.onPress = onShare;
+    obj15.color = token1;
+    obj15.borderColor = token2;
+    obj15.shadowColor = shadowColor;
     const items8 = [tmp.share];
-    const obj19 = { backgroundColor: color };
-    items8[1] = obj19;
-    obj18.style = items8;
-    items7[1] = closure_7(tmp5(tmp6[12]), obj18);
-    obj10.children = items7;
-    tmp29Result = closure_8(link, obj10);
-    const tmp5Result5 = tmp5(tmp6[12]);
+    const obj16 = { backgroundColor: color };
+    items8[1] = obj16;
+    obj15.style = items8;
+    items7[1] = closure_7(tmp5(tmp6[16]), obj15);
+    obj7.children = items7;
+    tmp48Result = closure_8(link, obj7);
+    const tmp5Result11 = tmp5(tmp6[16]);
   } else {
-    const obj20 = { style: null, children: null };
+    const obj17 = { style: null, children: null };
     const items9 = [items, tmp.routeControls];
-    obj20.style = items9;
-    const obj21 = {
-      style: tmp.control,
-      onPress: onBack,
-      disabled: backDisabled,
-      accessibilityRole: "button",
-      accessibilityLabel: null,
-      accessibilityState: null,
-      children: null,
-    };
-    const intl9 = require("util").intl;
-    obj21.accessibilityLabel = intl9.string(require("util").t["13/7kX"]);
-    const obj22 = { disabled: backDisabled };
-    obj21.accessibilityState = obj22;
+    obj17.style = items9;
+    const obj18 = {};
+    const merged3 = Object.assign(tmp5Result1Result);
+    obj18.style = tmp.control;
+    obj18.disabled = backDisabled;
+    obj18.accessibilityRole = "button";
+    const intl8 = require("util").intl;
+    obj18.accessibilityLabel = intl8.string(require("util").t["13/7kX"]);
+    const obj19 = { disabled: backDisabled };
+    obj18.accessibilityState = obj19;
     if (!backDisabled) {
       token = closure_5;
     }
-    const obj23 = { size: "custom", color: token, style: tmp.controlIcon };
-    obj21.children = closure_7(require("ArrowSmallLeftIcon").ArrowSmallLeftIcon, obj23);
-    const items10 = [closure_7(nextBlockedTrait, obj21)];
-    const obj24 = {
+    const obj20 = { size: "custom", color: token, style: tmp.controlIcon };
+    obj18.children = closure_7(require("ArrowSmallLeftIcon").ArrowSmallLeftIcon, obj20);
+    const items10 = [closure_7(nextBlockedTrait, obj18)];
+    const obj21 = {
       Icon: require("ArrowSmallRightIcon").ArrowSmallRightIcon,
       iconPosition: "end",
       label: stringResult1,
-      onPress: handleNextPress,
-      disabled: null,
-      loading: null,
-      accessibilityHint: null,
-      accessibilityLabel: null,
-      accessibilityState: null,
-      style: null,
+      labelVariant: "mono-md/normal",
+      labelStyle: tmp.buttonLabel,
     };
-    let tmp14 = flag;
+    const merged4 = Object.assign(tmp7Result);
+    let tmp25 = flag;
     if (!flag) {
-      tmp14 = flag2;
+      tmp25 = flag2;
     }
-    obj24.disabled = tmp14;
-    obj24.loading = flag2;
-    let tmp15;
+    obj21.disabled = tmp25;
+    obj21.loading = flag2;
+    let tmp26;
     if (flag) {
       if (!flag2) {
-        tmp15 = nitroLockedMessage;
+        tmp26 = nitroLockedMessage;
       }
     }
-    obj24.accessibilityHint = tmp15;
-    let tmp16 = stringResult1;
+    obj21.accessibilityHint = tmp26;
+    let tmp27 = stringResult1;
     if (stringResult1 == null) {
-      tmp16 = stringResult;
+      tmp27 = stringResult;
     }
-    obj24.accessibilityLabel = tmp16;
+    obj21.accessibilityLabel = tmp27;
     if (!flag) {
       flag = flag2;
     }
-    const obj25 = { disabled: flag };
-    obj24.accessibilityState = obj25;
-    let iconButton;
-    if (null == stringResult1) {
-      iconButton = tmp.iconButton;
-    }
-    obj24.style = iconButton;
-    items10[1] = closure_7(tmp5(tmp6[12]), obj24);
-    obj20.children = items10;
-    tmp29Result = closure_8(link, obj20);
-    const tmp5Result6 = tmp5(tmp6[12]);
+    const obj22 = { disabled: flag };
+    obj21.accessibilityState = obj22;
+    obj21.style = null == stringResult1 ? tmp.iconButton : tmp.labelButton;
+    items10[1] = closure_7(tmp5(tmp6[16]), obj21);
+    obj17.children = items10;
+    tmp48Result = closure_8(link, obj17);
+    const tmp5Result12 = tmp5(tmp6[16]);
   }
-  return tmp29Result;
+  return tmp48Result;
 }

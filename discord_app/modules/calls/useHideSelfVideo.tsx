@@ -5,7 +5,7 @@ import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
 const require = fn;
 const VideoToggleState = fn(1072).VideoToggleState;
-const Constants = fn(5897);
+const Constants = fn(5899);
 ({ MediaEngineContextTypes: closure_6, Features: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");

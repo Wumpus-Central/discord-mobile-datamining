@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { navigator: nativeDefault.colors.BACKGROUND_BASE_LOW, modal: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj3 = {
   container: { flex: 1, flexDirection: "column" },
   navigator: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },

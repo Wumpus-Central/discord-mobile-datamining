@@ -23,3 +23,6 @@ export function protectConstructors() {
 export function asIterable(items) {
   return items;
 }
+export function captureMessageData() {
+  return (data) => data.data;
+}

@@ -2,7 +2,7 @@
 import Storage6 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import util from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4026 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjureChatActionCreators from "../chat/ConjureChatActionCreators.tsx";
@@ -155,7 +155,7 @@ let closure_20 = async function _putInstallScope(arg0) {
     }
   })();
 };
-let ConjureConnectionStore = fn(10969);
+let ConjureConnectionStore = fn(10978);
 ({
   optimisticMessageId: metroImportDefault,
   sendUserMessage: closure_8,
@@ -308,7 +308,7 @@ export function serverQuestionFields(arr3, guild_id) {
     const found = arr3.find((id) => id.id === closure_0);
     const obj2 = { input: "server", note: null };
     const intl = util.intl;
-    obj2.note = intl.string(_modDef4026.SU9K9U);
+    obj2.note = intl.string(_modDef4028.SU9K9U);
     if (null != found) {
       const obj4 = { default_entities: null };
       ({ id: obj3.id, name: obj3.name } = found);
@@ -336,7 +336,7 @@ export function ownerOnlyClarification(memo) {
       note: null,
     };
     const intl = util.intl;
-    obj.note = intl.string(_modDef4026.ZKPaWY);
+    obj.note = intl.string(_modDef4028.ZKPaWY);
     return obj;
   });
   return obj;
@@ -537,9 +537,9 @@ export function switchConjureInstallScope(projectId, id, scope, arg3) {
           return obj;
         } else {
           if ("guild" === closure_129_1) {
-            let prop = tmp5(4026)["8+EcCu"];
+            let prop = tmp5(4028)["8+EcCu"];
           } else {
-            prop = tmp5(4026)["U7+Yeh"];
+            prop = tmp5(4028)["U7+Yeh"];
           }
           closure_128_0 = prop;
           const intl = tmp2(1113).intl;

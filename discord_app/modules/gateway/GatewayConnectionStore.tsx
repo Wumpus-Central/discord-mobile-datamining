@@ -183,7 +183,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1072);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
-fn(15814).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(15842).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -445,6 +445,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
             const guildMembers = socket.requestGuildMembers(userIds.guildIds, {
               userIds,
               presences: userIds.presences,
+              nonce: userIds.nonce,
             });
           });
         const chunkResult = applyDefault(userIds.userIds).chunk(100);
@@ -526,13 +527,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(6772).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6774).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(15814).socket;
+          const socket = closure_0(15842).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(15814).socket;
+            const socket2 = closure_0(15842).socket;
             socket2.streamDelete(item);
           }
         });
@@ -611,3 +612,4 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewayConnectionStore.tsx");
 
 export default gatewayConnectionStore;
+export const MAX_GUILD_MEMBER_REQUEST_SIZE = 100;

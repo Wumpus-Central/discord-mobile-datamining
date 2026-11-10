@@ -2,7 +2,7 @@
 import DurationsDefault from "../../../utils/Durations.tsx";
 import util from "../../../intl/index.native.tsx";
 import _modDef2166 from "../../../../_runtime/metro/02166__.js";
-import _modDef3896 from "../intl/SlayerStorefront.messages.js";
+import _modDef3898 from "../intl/SlayerStorefront.messages.js";
 import useIntervalDefault from "../../../hooks/useInterval.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -43,13 +43,13 @@ function formatLimitedOfferTimeLeft(arg0) {
     } else if (hours > 0) {
       const intl2 = util.intl;
       const obj3 = { hours };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3896.PPaJSw, obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3898.PPaJSw, obj3);
     } else {
       const intl = util.intl;
       const obj = { minutes: null };
       const _Math = Math;
       obj.minutes = Math.max(tmp12, 1);
-      formatToPlainStringResult = intl.formatToPlainString(_modDef3896["7Z+aIf"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef3898["7Z+aIf"], obj);
     }
     return formatToPlainStringResult;
   }

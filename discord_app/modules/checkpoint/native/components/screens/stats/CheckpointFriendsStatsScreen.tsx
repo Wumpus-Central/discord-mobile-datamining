@@ -314,7 +314,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp9(1113).intl;
     obj12.accessibilityLabel = intl2.string(tmp9(1113).t.Ve9Ge6);
     const obj13 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj12.children = closure_13(tmp9(13597).GiftIcon, obj13);
+    obj12.children = closure_13(tmp9(13610).GiftIcon, obj13);
     const items7 = [closure_13(sharedValue, obj12)];
     const obj14 = {
       onPress: function handleSend() {
@@ -344,7 +344,7 @@ function SidekickMessageInput(user) {
     const obj15 = { disabled: !tmp32 };
     obj14.accessibilityState = obj15;
     const obj16 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj14.children = closure_13(tmp9(5853).SendMessageIcon, obj16);
+    obj14.children = closure_13(tmp9(5855).SendMessageIcon, obj16);
     items7[1] = closure_13(sharedValue, obj14);
     obj11.children = items7;
     items6[1] = closure_14(closure_7, obj11);
@@ -356,13 +356,13 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const CheckpointConstants = fn(6199);
+const CheckpointConstants = fn(6201);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let obj = { duration: fn(5373).timingStandardDuration, easing: null };
+let obj = { duration: fn(5375).timingStandardDuration, easing: null };
 const Easing = fn(1652).Easing;
 obj.easing = Easing.bezier(0.2, 0, 0, 1);
 let closure_17 = {
@@ -387,7 +387,7 @@ if (PlatformUtils.isIOS()) {
   tmp5 = obj3;
 }
 obj3 = tmp5;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj6 = {
   container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 },
   animation: null,

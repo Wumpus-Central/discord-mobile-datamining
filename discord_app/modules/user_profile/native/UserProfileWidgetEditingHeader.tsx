@@ -10,10 +10,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(8825).TrackUserProfileEditActions;
+let closure_5 = fn(8831).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   heading: { flex: 1 },
@@ -43,7 +43,7 @@ export default function UserProfileWidgetEditingHeader() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15201, dependencyMap.paths),
+      asyncRequireImpl(15227, dependencyMap.paths),
       "UserProfileWidgetAddActionSheet",
     );
   };

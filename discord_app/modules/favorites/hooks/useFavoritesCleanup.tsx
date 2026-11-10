@@ -43,12 +43,12 @@ export default function useFavoritesCleanup(arg0) {
                 metroImportDefault(true);
                 React5(false);
                 c3 = 2;
-                const result = tmp4(10950).setFavoritesAutoAddJoinedThreads(autoAdd);
-                const obj2 = tmp4(10950);
+                const result = tmp4(10959).setFavoritesAutoAddJoinedThreads(autoAdd);
+                const obj2 = tmp4(10959);
                 dependencyMap = 3;
                 c4 = 1;
                 const obj6 = {
-                  value: tmp4(10950).setFavoritesPruneInactiveThreads(first1, first2, first3),
+                  value: tmp4(10959).setFavoritesPruneInactiveThreads(first1, first2, first3),
                   done: false,
                 };
                 return obj6;

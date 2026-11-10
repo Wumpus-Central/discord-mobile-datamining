@@ -834,7 +834,6 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
                 collectiblesShopNavigationEnabled: true === guildId.collectibles_shop_navigation_enabled,
                 excludedPlatforms: null,
                 disableMobileAccountLinking: null,
-                allowOrbsSpending: null,
               };
               let excluded_platforms = guildId.excluded_platforms;
               if (excluded_platforms == null) {
@@ -842,7 +841,6 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
               }
               obj.excludedPlatforms = excluded_platforms;
               obj.disableMobileAccountLinking = true === guildId.disable_mobile_account_linking;
-              obj.allowOrbsSpending = true === guildId.allow_orbs_spending;
               return obj;
             });
           }

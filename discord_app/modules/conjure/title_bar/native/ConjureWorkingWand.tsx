@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import inlineStyles from "../../../../../_runtime/08101_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08105_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -106,8 +106,8 @@ let obj4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PURPLE_30);
 let result4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PINK_40).set("oklch.l", "*0.95");
 let result5 = result4.set("oklch.c", "*0.8");
 const fill = result5.hex();
-let closure_15 = module_1652.createAnimatedComponent(fn(8101).Rect);
-const createStyles = fn(5140);
+let closure_15 = module_1652.createAnimatedComponent(fn(8105).Rect);
+const createStyles = fn(5142);
 let closure_16 = createStyles.createStyles((width) => ({
   root: { width, height: width },
   sparkleSmall: { transformOrigin: "33.6% 18.6%" },

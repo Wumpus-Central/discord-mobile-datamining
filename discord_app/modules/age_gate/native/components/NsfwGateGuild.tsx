@@ -8,12 +8,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7448).NsfwGateSource;
+const NsfwGateSource = fn(7451).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   container: {
     flex: 1,
@@ -74,25 +74,25 @@ export default function NsfwGateGuild(guildId) {
     AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
   let obj3 = { style: tmp.container, children: null };
-  const items1 = [closure_10(currentUser(7010), {}), , , , ,];
+  const items1 = [closure_10(currentUser(7013), {}), , , , ,];
   const obj4 = { source: null, style: null };
   const formatResult = intl3.format(guildId(1113).t.Z12LNW, obj);
-  obj4.source = currentUser(7451);
+  obj4.source = currentUser(7454);
   obj4.style = tmp.image;
-  items1[1] = closure_10(currentUser(5842), obj4);
-  items1[2] = closure_10(guildId(5751).Heading, {
+  items1[1] = closure_10(currentUser(5844), obj4);
+  items1[2] = closure_10(guildId(5753).Heading, {
     style: tmp.header,
     variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: stringResult,
   });
-  items1[3] = closure_10(guildId(5751).Text, {
+  items1[3] = closure_10(guildId(5753).Text, {
     style: tmp.description,
     variant: "body-md/normal",
     color: "text-default",
     children: stringResult1,
   });
-  items1[4] = closure_10(guildId(5751).Text, {
+  items1[4] = closure_10(guildId(5753).Text, {
     style: tmp.description,
     variant: "body-md/normal",
     color: "text-default",
@@ -101,7 +101,7 @@ export default function NsfwGateGuild(guildId) {
   const obj8 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1113).intl;
   obj8.text = intl4.string(guildId(1113).t.gRqiWV);
-  items1[5] = closure_10(guildId(5758).Button, obj8);
+  items1[5] = closure_10(guildId(5760).Button, obj8);
   obj3.children = items1;
   return closure_11(View, obj3);
 }

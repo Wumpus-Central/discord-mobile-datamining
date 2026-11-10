@@ -63,8 +63,8 @@ function GuildTemplatesJoinFooter(trigger) {
   const intl3 = tmp2(1113).intl;
   obj4.children = intl3.string(trigger(1113).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(5751).Text, obj4),
-    closure_14(trigger(5758).Button, {
+    closure_14(trigger(5753).Text, obj4),
+    closure_14(trigger(5760).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -100,9 +100,9 @@ function GuildTemplatesItem(guildTemplate) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-let CreateGuildConstants = fn(14515);
+let CreateGuildConstants = fn(14541);
 ({ getGuildTemplatesMap: metroImportDefault, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(7211);
+CreateGuildConstants = fn(7214);
 ({
   CreateGuildModalStates: closure_9,
   GuildTemplateTriggers: closure_10,
@@ -112,10 +112,10 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   flex: { flex: 1 },
-  contentContainer: { marginTop: fn(5714).NAV_BAR_HEIGHT },
+  contentContainer: { marginTop: fn(5716).NAV_BAR_HEIGHT },
   scrollContainer: null,
   sections: null,
   headerContainer: null,
@@ -125,7 +125,7 @@ let obj2 = {
   footerContainer: null,
   footerTitle: null,
 };
-let obj3 = { marginTop: fn(5714).NAV_BAR_HEIGHT };
+let obj3 = { marginTop: fn(5716).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };

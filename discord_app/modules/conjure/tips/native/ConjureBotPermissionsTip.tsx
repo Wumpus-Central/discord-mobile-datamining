@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/tips/native/ConjureBotPermissionsTip.tsx
-import _modDef4026 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureTipHintDefault from "ConjureTipHint.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 function BotPermissionsHint(projectId) {
   projectId = projectId.projectId;
-  dependencyMap = noop.useContext(projectId(12260).ConjurePublishActionContext);
-  let obj = { icon: projectId(11421).ShieldIcon, children: null };
+  dependencyMap = noop.useContext(projectId(12269).ConjurePublishActionContext);
+  let obj = { icon: projectId(11430).ShieldIcon, children: null };
   const intl = projectId(1113).intl;
   const obj2 = { onReview: null };
   importDefault = asyncGeneratorStep(async () => {
@@ -70,12 +70,12 @@ function BotPermissionsHint(projectId) {
     }
     return applyArgumentsResult;
   };
-  obj.children = intl.format(_modDef4026["0S9HY8"], obj2);
-  return jsx(ConjureTipHintDefault, { icon: projectId(11421).ShieldIcon, children: null });
+  obj.children = intl.format(_modDef4028["0S9HY8"], obj2);
+  return jsx(ConjureTipHintDefault, { icon: projectId(11430).ShieldIcon, children: null });
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(12829).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(12843).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj.render = function render(arg0, context) {
   return <BotPermissionsHint projectId={context.context.projectId} />;
 };

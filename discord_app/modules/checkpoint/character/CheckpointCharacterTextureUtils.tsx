@@ -59,7 +59,9 @@ let closure_10 = {
 };
 const items = [1, 1.25, 1.5, 1.75, 2];
 const items1 = [...items];
-let closure_12 = Math.max.apply(items1);
+let closure_12 = Math.min.apply(items1);
+const items2 = [...items];
+let closure_13 = Math.max.apply(items2);
 let result = size.fileFinishedImporting("modules/checkpoint/character/CheckpointCharacterTextureUtils.tsx");
 
 export { CheckpointCharacterTextureType };
@@ -95,14 +97,24 @@ export function getCheckpointCharacterTextureRole(name) {
     }
   }
 }
-export function getCheckpointCharacterTextureScale(c4, height) {
-  const result = Math.max(c4, height) / 1440;
-  closure_0 = result * getDevicePixelRatioDefault();
-  let found = items.find((item) => item >= closure_0);
-  if (found == null) {
-    found = closure_12;
+export function getCheckpointCharacterTextureScale(c4, height, arg2) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
   }
-  return found;
+  closure_0 = undefined;
+  if (flag) {
+    return closure_12;
+  } else {
+    const _Math = Math;
+    const result = Math.max(c4, height) / 1440;
+    closure_0 = result * getDevicePixelRatioDefault();
+    let found = items.find((item) => item >= closure_0);
+    if (found == null) {
+      found = closure_13;
+    }
+    return found;
+  }
 }
 export function getCheckpointCharacterTextureUrl(name, textureScale) {
   ({ url, width, widthAt1x } = CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name]);

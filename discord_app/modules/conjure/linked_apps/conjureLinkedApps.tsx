@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/linked_apps/conjureLinkedApps.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4026 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
 import conjureWorkerFetch from "../connection/conjureWorkerFetch.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -155,14 +155,14 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
   })();
 };
 let obj = {
-  auto: { label: _modDef4026["2TTprm"], description: _modDef4026["1ck6o0"] },
+  auto: { label: _modDef4028["2TTprm"], description: _modDef4028["1ck6o0"] },
   preview: null,
   published: null,
 };
-let obj2 = { label: _modDef4026["2TTprm"], description: _modDef4026["1ck6o0"] };
-obj.preview = { label: _modDef4026.bUZ6jT, description: _modDef4026.DP2NVW };
-let obj3 = { label: _modDef4026.bUZ6jT, description: _modDef4026.DP2NVW };
-obj.published = { label: _modDef4026.yXd0cc, description: _modDef4026["YY+UD8"] };
+let obj2 = { label: _modDef4028["2TTprm"], description: _modDef4028["1ck6o0"] };
+obj.preview = { label: _modDef4028.bUZ6jT, description: _modDef4028.DP2NVW };
+let obj3 = { label: _modDef4028.bUZ6jT, description: _modDef4028.DP2NVW };
+obj.published = { label: _modDef4028.yXd0cc, description: _modDef4028["YY+UD8"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/linked_apps/conjureLinkedApps.tsx");
 

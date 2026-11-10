@@ -1,5 +1,6 @@
 // discord_app/modules/messages/native/createChannelStream.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
+import UnlinkedGamePlayerPlaceholders from "../UnlinkedGamePlayerPlaceholders.tsx";
 import isNewMessageGroupDefault from "../isNewMessageGroup.tsx";
 import tryInjectMessage from "../tryInjectMessage.tsx";
 import PushFeedbackStore from "../../push_feedback/PushFeedbackStore.tsx";
@@ -9,7 +10,7 @@ import UploadStore from "../../../stores/UploadStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(8449);
+const RowGeneratorConstants = fn(8453);
 ({
   Changeset: closure_6,
   LoadingType: metroImportDefault,
@@ -20,8 +21,8 @@ const MessageFlags = fn(1072).MessageFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/createChannelStream.tsx");
 
-export default function createChannelStream(forceRender) {
-  ({ channel: require, messages } = forceRender);
+export default function createChannelStream(roleStyle) {
+  ({ channel: require, messages } = roleStyle);
   ({
     uploads,
     oldestUnreadMessageId: id,
@@ -30,16 +31,17 @@ export default function createChannelStream(forceRender) {
     canAddNewReactions: UploadStore,
     selectedSummary: closure_6,
     selectedConversation: closure_7,
-    chatManager: closure_8,
-    roleStyle,
-  } = forceRender);
-  forceRender = forceRender.forceRender;
+    chatManager,
+  } = roleStyle);
+  let intl = roleStyle.roleStyle;
+  const forceRender = roleStyle.forceRender;
   ({
     updateMessageIds: closure_11,
     isResourceChannel: closure_12,
     unloadableContentEntryMessageIds: closure_13,
-  } = forceRender);
+  } = roleStyle);
   let items1;
+  let length;
   function unreadFilter(id) {
     if (require.isForumPost()) {
       let tmp4 = tmp2;
@@ -52,25 +54,41 @@ export default function createChannelStream(forceRender) {
     }
     return tmp3;
   }
+  function isCollapsiblePlaceholder(id) {
+    let result = id.id !== messages.jumpTargetId;
+    if (result) {
+      result = UnlinkedGamePlayerPlaceholders.isUnlinkedGamePlayerPlaceholder(closure_1_0, id);
+    }
+    return result;
+  }
   function insertMessage(message) {
     const first = items1[0];
     if (null != first) {
-      if (require.isForumPost()) {
-        let tmp2 = tmp13;
-        if (tmp13) {
-          tmp2 = message.id !== SnowflakeUtilsDefault.castChannelIdAsMessageId(require.id);
+      if (closure_1_0.isForumPost()) {
+        let tmp2 = tmp21;
+        if (tmp21) {
+          tmp2 = message.id !== SnowflakeUtilsDefault.castChannelIdAsMessageId(closure_1_0.id);
         }
         let tmp = tmp2;
       } else {
-        tmp = tmp13;
+        tmp = tmp21;
       }
       if (!tmp) {
-        if (isNewMessageGroupDefault(require, first[first.length - 1], message)) {
-          items = [message];
-          arr.unshift(items);
-        } else {
-          first.unshift(message);
+        if (!isNewMessageGroupDefault(closure_1_0, first[first.length - 1], message)) {
+          let result = tmp6.id !== messages.jumpTargetId;
+          if (result) {
+            result = UnlinkedGamePlayerPlaceholders.isUnlinkedGamePlayerPlaceholder(closure_1_0, tmp6);
+          }
+          let result1 = message.id !== messages.jumpTargetId;
+          if (result1) {
+            result1 = UnlinkedGamePlayerPlaceholders.isUnlinkedGamePlayerPlaceholder(closure_1_0, message);
+          }
+          if (result === result1) {
+            first.unshift(message);
+          }
         }
+        items = [message];
+        arr.unshift(items);
       }
     }
     items1 = [message];
@@ -81,10 +99,10 @@ export default function createChannelStream(forceRender) {
     if (arg1 === undefined) {
       flag = false;
     }
-    return constants2.determineChangeType({ message, updateMessageIds, forceRender }, flag);
+    return chatManager.determineChangeType({ message, updateMessageIds, forceRender }, flag);
   }
   items = [];
-  const substr = uploads.slice();
+  let substr = uploads.slice();
   const reversed = substr.reverse();
   let iter = reversed[Symbol.iterator]();
   let nextResult = iter.next();
@@ -123,37 +141,51 @@ export default function createChannelStream(forceRender) {
       insertMessage(result.message);
     }
   });
-  const item1 = items1.forEach((item, index) => {
-    let message = item[item.length - 1];
+  let tmp11 = null;
+  if ("getPreviousMessages" in chatManager) {
+    const previousMessages = chatManager.getPreviousMessages();
+    length = undefined;
+    if (previousMessages != null) {
+      length = previousMessages.length;
+    }
+    if (length == null) {
+      length = null;
+    }
+    tmp11 = length;
+  }
+  length = tmp11;
+  const item1 = items1.forEach((arr, index) => {
+    closure_0 = arr;
+    let message = arr[arr.length - 1];
     let hasMoreAfter = 0 === index;
     const diff = items1.length - 1;
     if (hasMoreAfter) {
       hasMoreAfter = message.hasMoreAfter;
     }
     if (!hasMoreAfter) {
-      let tmp17 = message.hasMoreBefore && tmp15;
-      let tmp19 = unreadFilter(message);
+      let tmp16 = message.hasMoreBefore && tmp15;
+      let tmp18 = unreadFilter(message);
       let timestamp = null;
       if (index !== diff) {
         timestamp = items1[index + 1][0].timestamp;
       }
       if (index === diff) {
-        let tmp25 = item.isDM() && !tmp16.hasMoreBefore && tmp15;
-        if (!tmp25) {
+        let tmp24 = closure_0.isDM() && !arr.hasMoreBefore && tmp15;
+        if (!tmp24) {
           let isThreadResult = obj4.isThread();
           if (isThreadResult) {
             isThreadResult = !obj4.isForumPost();
           }
           if (isThreadResult) {
-            isThreadResult = !tmp16.hasMoreBefore;
+            isThreadResult = !arr.hasMoreBefore;
           }
           if (isThreadResult) {
             isThreadResult = tmp15;
           }
-          tmp25 = isThreadResult;
+          tmp24 = isThreadResult;
         }
         let flag = false;
-        if (tmp25) {
+        if (tmp24) {
           flag = true;
         }
       } else {
@@ -161,7 +193,7 @@ export default function createChannelStream(forceRender) {
         flag = true;
       }
       function processHiddenMessageRow(changeType) {
-        const iter = item[Symbol.iterator]();
+        const iter = closure_0[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           message = nextResult;
@@ -173,7 +205,7 @@ export default function createChannelStream(forceRender) {
           let obj2 = {
             rowType: constants2.MESSAGE,
             changeType: constants.NOOP,
-            roleStyle,
+            roleStyle: intl,
             message: null,
             isSystemDM: null,
             isFirst: null,
@@ -187,84 +219,144 @@ export default function createChannelStream(forceRender) {
           obj2.isSystemDM = isSystemDMResult;
           obj2.isFirst = message === message;
           obj2.canAddNewReactions = canAddNewReactions;
-          let arr = content.unshift(obj2);
+          arr = content.unshift(obj2);
           continue;
         }
         changeType.revealed = message.id === messages.revealedMessageId;
         changeType.context = message.id;
         return changeType;
       }
-      let obj2 = { roleStyle, message, isFirst: true, content: [], text: "", revealed: false };
-      let tmp32 = items[items.length - 1];
+      let obj2 = { roleStyle: intl, message, isFirst: true, content: [], text: "", revealed: false };
+      let tmp31 = items[items.length - 1];
       if (message.hasFlag(forceRender.HIDDEN_SUSPENDED_USER)) {
-        if (null == tmp32) {
+        if (null == tmp31) {
           const obj5 = {};
           const merged = Object.assign(obj2);
-          obj5.rowType = closure_1_8.SUSPENDED_USER_GROUP;
+          obj5.rowType = chatManager.SUSPENDED_USER_GROUP;
           obj5.changeType = determineChangeType(message);
           obj5.canUncollapse = false;
-          items.push(obj5);
-          tmp32 = obj5;
-          const tmp167 = determineChangeType(message);
+          arr2.push(obj5);
+          tmp31 = obj5;
+          const tmp197 = determineChangeType(message);
         }
-        const result = processHiddenMessageRow(tmp32);
+        const result = processHiddenMessageRow(tmp31);
         const intl4 = require("util").intl;
-        const obj10 = { count: tmp32.content.length };
-        tmp32.text = intl4.formatToPlainString(require("util").t.rHRovo, obj10);
+        const obj10 = { count: tmp31.content.length };
+        tmp31.text = intl4.formatToPlainString(require("util").t.rHRovo, obj10);
       } else if (message.blocked) {
-        if (null == tmp32) {
+        if (null == tmp31) {
           let INSERT2 = determineChangeType(message);
           let blocked = INSERT2 === constants.NOOP;
           if (blocked) {
-            blocked = closure_8.getBlocked(message);
+            blocked = chatManager.getBlocked(message);
           }
           if (blocked) {
             INSERT2 = constants.INSERT;
           }
           const obj11 = {};
           const merged1 = Object.assign(obj2);
-          obj11.rowType = closure_1_8.BLOCKED_GROUP;
+          obj11.rowType = chatManager.BLOCKED_GROUP;
           obj11.changeType = INSERT2;
-          items.push(obj11);
-          let tmp148 = obj11;
+          arr2.push(obj11);
+          let tmp176 = obj11;
         } else {
-          tmp148 = tmp32;
+          tmp176 = tmp31;
         }
-        const result1 = processHiddenMessageRow(tmp148);
+        const result1 = processHiddenMessageRow(tmp176);
         const intl3 = require("util").intl;
-        const obj12 = { count: tmp148.content.length };
-        tmp148.text = intl3.formatToPlainString(require("util").t["+FcYM/"], obj12);
+        const obj12 = { count: tmp176.content.length };
+        tmp176.text = intl3.formatToPlainString(require("util").t["+FcYM/"], obj12);
       } else if (message.ignored) {
-        if (null == tmp32) {
+        if (null == tmp31) {
           let INSERT = determineChangeType(message);
           let ignored = INSERT === constants.NOOP;
           if (ignored) {
-            ignored = closure_8.getIgnored(message);
+            ignored = chatManager.getIgnored(message);
           }
           if (ignored) {
             INSERT = constants.INSERT;
           }
           const obj14 = {};
           const merged2 = Object.assign(obj2);
-          obj14.rowType = closure_1_8.IGNORED_GROUP;
+          obj14.rowType = chatManager.IGNORED_GROUP;
           obj14.changeType = INSERT;
-          items.push(obj14);
-          let tmp130 = obj14;
+          arr2.push(obj14);
+          let tmp156 = obj14;
         } else {
-          tmp130 = tmp32;
+          tmp156 = tmp31;
         }
-        const result2 = processHiddenMessageRow(tmp130);
+        const result2 = processHiddenMessageRow(tmp156);
         const intl2 = require("util").intl;
-        const obj15 = { count: tmp130.content.length };
-        tmp130.text = intl2.formatToPlainString(require("util").t["VFWjc+"], obj15);
+        const obj15 = { count: tmp156.content.length };
+        tmp156.text = intl2.formatToPlainString(require("util").t["VFWjc+"], obj15);
+      } else if (isCollapsiblePlaceholder(message)) {
+        let tmp132 = !renderContentOnly;
+        if (!renderContentOnly) {
+          let tmp133 = flag;
+          if (!flag) {
+            tmp133 = tmp18;
+          }
+          if (!tmp133) {
+            tmp133 = tmp16;
+          }
+          tmp132 = tmp133;
+        }
+        let rowType;
+        if (tmp31 != null) {
+          rowType = tmp31.rowType;
+        }
+        if (rowType === chatManager.MESSAGE) {
+          if (null != tmp31.unlinkedGamePlayerPlaceholders) {
+            tmp31.message = message;
+            tmp31.separatorBefore = tmp132;
+            let obj16 = tmp31;
+          }
+          const substr = arr.slice();
+          items = [];
+          const arraySpreadResult = HermesBuiltin.arraySpread(substr.reverse(), 0);
+          let prop = obj16.unlinkedGamePlayerPlaceholders;
+          if (prop == null) {
+            prop = [];
+          }
+          HermesBuiltin.arraySpread(prop, arraySpreadResult);
+          obj16.unlinkedGamePlayerPlaceholders = items;
+          obj16.changeType = determineChangeType(message);
+          let tmp150 = obj16.changeType === constants.NOOP;
+          if (tmp150) {
+            tmp150 =
+              (null != length && tmp151 !== arr.length) ||
+              items.some(
+                (message) =>
+                  chatManager.determineChangeType({ message, updateMessageIds, forceRender }, false) !== constants.NOOP,
+              );
+            const tmp152 =
+              (null != length && tmp151 !== arr.length) ||
+              items.some(
+                (message) =>
+                  chatManager.determineChangeType({ message, updateMessageIds, forceRender }, false) !== constants.NOOP,
+              );
+          }
+          if (tmp150) {
+            obj16.changeType = constants.UPDATE;
+          }
+        }
+        obj16 = {
+          roleStyle: tmp29,
+          message,
+          isFirst: true,
+          separatorBefore: tmp132,
+          rowType: chatManager.MESSAGE,
+          changeType: constants.NOOP,
+        };
+        arr2.push(obj16);
       } else {
-        let iter = item[Symbol.iterator]();
+        let iter = arr[Symbol.iterator]();
         let nextResult = iter.next();
         while (iter !== undefined) {
           let obj6 = nextResult;
           let tmp38 = nextResult !== message;
-          let obj7 = item;
-          let isEditingResult = editing.isEditing(item.id, nextResult.id);
+          let obj7 = closure_0;
+          let isEditingResult = editing.isEditing(closure_0.id, nextResult.id);
           if (!isEditingResult) {
             isEditingResult = closure_3 === obj6.id;
           }
@@ -272,14 +364,14 @@ export default function createChannelStream(forceRender) {
           pushFeedback = pushFeedback.getPushFeedback(obj6.channel_id, obj6.id);
           let obj8 = require("canReplyToMessage");
           let canReplyToMessageResult = obj8.canReplyToMessage(obj7, obj6);
-          let tmp55 = messages(id[11])(obj6, closure_4);
+          let tmp55 = messages(id[12])(obj6, closure_4);
           if (tmp55) {
             let obj9 = require("ThreadHooks");
             tmp55 = !obj9.isNonModInLockedThread(obj7);
           }
           let tmp60 = message;
           if (message.hasOwnProperty(obj6.id)) {
-            let result3 = closure_8.determineChangeTypeForUploadProgress(tmp60[obj6.id]);
+            let result3 = chatManager.determineChangeTypeForUploadProgress(tmp60[obj6.id]);
           } else {
             result3 = determineChangeType(obj6, true);
           }
@@ -291,20 +383,16 @@ export default function createChannelStream(forceRender) {
             tmp68 = summary.count > 1;
           }
           if (tmp68) {
-            let obj16 = {
-              rowType: roleStyle.SUMMARY,
-              changeType: null,
-              roleStyle: null,
-              summary: null,
-              isBeforeContent: false,
-            };
-            obj16.changeType = determineChangeType(obj6);
-            obj16.roleStyle = roleStyle;
-            obj16.summary = summary;
-            let arr14 = items.push(obj16);
+            let obj17 = { rowType: null, changeType: null, roleStyle: null, summary: null, isBeforeContent: false };
+            obj17.rowType = intl.SUMMARY;
+            obj17.changeType = determineChangeType(obj6);
+            obj17.roleStyle = intl;
+            obj17.summary = summary;
+            let arr17 = items.push(obj17);
           }
-          let obj17 = {
-            roleStyle,
+          let arr3 = items;
+          let obj18 = {
+            roleStyle: null,
             message: null,
             isSystemDM: null,
             isFirst: null,
@@ -320,14 +408,16 @@ export default function createChannelStream(forceRender) {
             changeType: null,
             showContentInventoryEntryFallbackEmbed: null,
           };
-          obj17.message = obj6;
+          let tmp80 = intl;
+          obj18.roleStyle = intl;
+          obj18.message = obj6;
           let isSystemDMResult = obj7.isSystemDM();
           if (isSystemDMResult) {
             isSystemDMResult = obj6.isSystemDM();
           }
-          obj17.isSystemDM = isSystemDMResult;
-          obj17.isFirst = obj6 === message;
-          obj17.isEditing = tmp44;
+          obj18.isSystemDM = isSystemDMResult;
+          obj18.isFirst = obj6 === message;
+          obj18.isEditing = tmp44;
           let tmp88 = !tmp38;
           if (!tmp38) {
             tmp88 = !renderContentOnly;
@@ -335,83 +425,74 @@ export default function createChannelStream(forceRender) {
           if (tmp88) {
             let tmp91 = flag;
             if (!flag) {
-              tmp91 = tmp19;
+              tmp91 = tmp18;
             }
             if (!tmp91) {
-              tmp91 = tmp17;
+              tmp91 = tmp16;
             }
             tmp88 = tmp91;
           }
-          obj17.separatorBefore = tmp88;
-          obj17.canAddNewReactions = canAddNewReactions;
+          obj18.separatorBefore = tmp88;
+          obj18.canAddNewReactions = canAddNewReactions;
           let isForumPostResult = obj7.isForumPost();
           if (isForumPostResult) {
             let tmp52Result = messages(id[5]);
             isForumPostResult = obj6.id === tmp52Result.castChannelIdAsMessageId(obj7.id);
           }
-          obj17.alwaysShowAddReaction = isForumPostResult;
-          obj17.renderContentOnly = renderContentOnly;
+          obj18.alwaysShowAddReaction = isForumPostResult;
+          obj18.renderContentOnly = renderContentOnly;
           let pushType;
           if (pushFeedback != null) {
             pushType = pushFeedback.pushType;
           }
-          obj17.pushFeedbackType = pushType;
+          obj18.pushFeedbackType = pushType;
           let tmp103 = !renderContentOnly;
           if (!renderContentOnly) {
             tmp103 = canReplyToMessageResult;
           }
-          obj17.canReply = tmp103;
+          obj18.canReply = tmp103;
           let tmp105 = !renderContentOnly;
           if (!renderContentOnly) {
             tmp105 = tmp55;
           }
-          obj17.canEdit = tmp105;
-          obj17.rowType = closure_1_8.MESSAGE;
-          obj17.changeType = result3;
+          obj18.canEdit = tmp105;
+          obj18.rowType = chatManager.MESSAGE;
+          obj18.changeType = result3;
           let hasItem;
           if (set != null) {
             hasItem = set.has(obj6.id);
           }
-          obj17.showContentInventoryEntryFallbackEmbed = hasItem;
-          let arr15 = items.push(obj17);
-          let tmp112 = null != constants2;
-          if (tmp112) {
-            tmp112 = obj6.id === constants2.startMessageId;
+          obj18.showContentInventoryEntryFallbackEmbed = hasItem;
+          let arr18 = items.push(obj18);
+          let tmp113 = null != constants2;
+          if (tmp113) {
+            tmp113 = obj6.id === constants2.startMessageId;
           }
-          if (tmp112) {
-            tmp112 = constants2.messageCount > 1;
+          if (tmp113) {
+            tmp113 = constants2.messageCount > 1;
           }
-          if (tmp112) {
-            let obj18 = {
-              rowType: roleStyle.CONVERSATION,
-              changeType: null,
-              roleStyle: null,
-              conversationHeader: null,
-            };
-            obj18.changeType = determineChangeType(obj6);
-            obj18.roleStyle = roleStyle;
-            obj18.conversationHeader = messages(id[13])(constants2);
-            let arr16 = items.push(obj18);
-          }
-          let tmp121 = null != summary;
-          if (tmp121) {
-            tmp121 = summary.startId === obj6.id;
-          }
-          if (tmp121) {
-            tmp121 = summary.count > 1;
-          }
-          if (tmp121) {
-            let obj19 = {
-              rowType: roleStyle.SUMMARY,
-              changeType: null,
-              roleStyle: null,
-              summary: null,
-              isBeforeContent: true,
-            };
+          if (tmp113) {
+            let obj19 = { rowType: null, changeType: null, roleStyle: null, conversationHeader: null };
+            obj19.rowType = intl.CONVERSATION;
             obj19.changeType = determineChangeType(obj6);
-            obj19.roleStyle = roleStyle;
-            obj19.summary = summary;
-            let arr17 = items.push(obj19);
+            obj19.roleStyle = tmp80;
+            obj19.conversationHeader = messages(id[14])(constants2);
+            let arr19 = arr3.push(obj19);
+          }
+          let tmp122 = null != summary;
+          if (tmp122) {
+            tmp122 = summary.startId === obj6.id;
+          }
+          if (tmp122) {
+            tmp122 = summary.count > 1;
+          }
+          if (tmp122) {
+            let obj20 = { rowType: null, changeType: null, roleStyle: null, summary: null, isBeforeContent: true };
+            obj20.rowType = intl.SUMMARY;
+            obj20.changeType = determineChangeType(obj6);
+            obj20.roleStyle = tmp80;
+            obj20.summary = summary;
+            let arr20 = arr3.push(obj20);
           }
           continue;
         }
@@ -422,34 +503,34 @@ export default function createChannelStream(forceRender) {
           if (NOOP === constants.UPDATE) {
             NOOP = constants.NOOP;
           }
-          const obj20 = {
-            rowType: roleStyle.DAY,
+          const obj21 = {
+            rowType: intl.DAY,
             changeType: NOOP,
-            roleStyle,
+            roleStyle: intl,
             text: require("DateUtils").dateFormat(message.timestamp, "LL"),
           };
-          items.push(obj20);
-          const obj22 = require("DateUtils");
+          items.push(obj21);
+          const obj24 = require("DateUtils");
         }
       }
-      if (tmp19) {
-        tmp19 = !renderContentOnly;
+      if (tmp18) {
+        tmp18 = !renderContentOnly;
       }
-      if (tmp19) {
-        const obj21 = { rowType: roleStyle.UNREAD, changeType: determineChangeType(message), roleStyle, text: null };
+      if (tmp18) {
+        const obj22 = { rowType: intl.UNREAD, changeType: determineChangeType(message), roleStyle: intl, text: null };
         const intl5 = require("util").intl;
-        obj21.text = intl5.string(require("util").t.q7hm3m).toLocaleUpperCase(require("util").intl.currentLocale);
-        items.push(obj21);
+        obj22.text = intl5.string(require("util").t.q7hm3m).toLocaleUpperCase(require("util").intl.currentLocale);
+        items.push(obj22);
         const stringResult = intl5.string(require("util").t.q7hm3m);
       }
-      if (tmp17) {
-        tmp17 = !renderContentOnly;
+      if (tmp16) {
+        tmp16 = !renderContentOnly;
       }
-      if (tmp17) {
+      if (tmp16) {
         let obj23 = {
           rowType: constants2.LOAD_BEFORE,
           changeType: forceRender ? constants.UPDATE : constants.NOOP,
-          roleStyle,
+          roleStyle: intl,
           isLoading: message.loadingMore,
           text: null,
         };
@@ -457,34 +538,35 @@ export default function createChannelStream(forceRender) {
         obj23.text = intl6.string(require("util").t.XBlaiC);
         obj23 = items.push(obj23);
       }
+      tmp29 = intl;
     } else {
-      let obj24 = { rowType: constants2.LOAD_AFTER, changeType: null, roleStyle: null, isLoading: null, text: null };
-      let intl = constants;
-      obj24.changeType = forceRender ? intl.UPDATE : intl.NOOP;
-      obj24.roleStyle = roleStyle;
-      obj24.isLoading = message.loadingMore;
+      let obj25 = { rowType: constants2.LOAD_AFTER, changeType: null, roleStyle: null, isLoading: null, text: null };
+      intl = constants;
+      obj25.changeType = forceRender ? intl.UPDATE : intl.NOOP;
+      obj25.roleStyle = intl;
+      obj25.isLoading = message.loadingMore;
       intl = require("util").intl;
-      obj24.text = intl.string(require("util").t.XBlaiC);
-      obj24 = items.push(obj24);
+      obj25.text = intl.string(require("util").t.XBlaiC);
+      obj25 = items.push(obj25);
     }
   });
-  let tmp12 = 0 === items1.length && !messages.loadingMore;
-  if (tmp12) {
-    tmp12 = messages.hasMoreAfter || messages.hasMoreBefore;
-    let tmp13 = messages.hasMoreAfter || messages.hasMoreBefore;
+  let tmp14 = 0 === items1.length && !messages.loadingMore;
+  if (tmp14) {
+    tmp14 = messages.hasMoreAfter || messages.hasMoreBefore;
+    const tmp15 = messages.hasMoreAfter || messages.hasMoreBefore;
   }
-  if (!tmp12) {
+  if (!tmp14) {
     return items;
   } else {
     let obj2 = {
       rowType: messages.hasMoreBefore ? constants2.LOAD_BEFORE : constants2.LOAD_AFTER,
       changeType: forceRender ? constants.UPDATE : constants.NOOP,
-      roleStyle,
+      roleStyle: intl,
       isLoading: messages.loadingMore,
       text: null,
     };
-    roleStyle = require("util").intl;
-    messages = roleStyle.string;
+    intl = require("util").intl;
+    messages = intl.string;
     obj2.text = messages(require("util").t.XBlaiC);
     obj2 = items.push(obj2);
   }

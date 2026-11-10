@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
@@ -40,14 +40,14 @@ export default noop.memo(function MediaModalYoutubeEmbedError(videoId) {
   const obj2 = { style: tmp.text, variant: "body-md/semibold", color: "text-overlay-light", children: null };
   const intl = videoId(1113).intl;
   obj2.children = intl.string(videoId(1113).t.u7vKPs);
-  items = [closure_4(videoId(5751).Text, obj2)];
+  items = [closure_4(videoId(5753).Text, obj2)];
   const obj3 = { text: null, variant: "secondary", size: "md", shrink: true, grow: false, onPress: null };
   const intl2 = videoId(1113).intl;
   obj3.text = intl2.string(videoId(1113).t.LLpxJ5);
   obj3.onPress = function onPress() {
     LinkingDefault.openURL("https://youtube.com/watch?v=" + videoId);
   };
-  items[1] = closure_4(videoId(5758).Button, obj3);
+  items[1] = closure_4(videoId(5760).Button, obj3);
   obj.children = items;
   return closure_5(View, obj);
 });

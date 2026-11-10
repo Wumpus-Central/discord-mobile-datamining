@@ -6,7 +6,7 @@ import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05392_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05394_BottomSheetModal.js";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import isChannelFocused from "../../panels/isChannelFocused.native.tsx";
 import native from "../../../design/components/experimental/native.tsx";
@@ -49,7 +49,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PlatformUtils = fn(1377);
 let closure_9 = PlatformUtils.isIOS();
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj3 = {
   container: { position: "absolute", top: 0, left: 0 },
   background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" },
@@ -61,8 +61,8 @@ let size = {
   borderTopLeftRadius: nativeDefault.radii.none,
   borderTopRightRadius: nativeDefault.radii.none,
   width: "100%",
-  height: fn(9072).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
-  marginBottom: -fn(9072).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  height: fn(9078).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  marginBottom: -fn(9078).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
 };
 obj3.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
@@ -454,7 +454,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   obj7.activeOffsetY = [-10, 10];
   let num = 0;
   if (rendersHandle) {
-    num = tmp6(9072).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
+    num = tmp6(9078).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
   }
   obj7.handleHeight = num;
   let merged = Object.assign(tmp5);
@@ -484,7 +484,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   }
   if (tmp51Result) {
     const obj9 = { animatedSheetIndex: animatedIndex };
-    tmp51Result = tmp51(tmp3(10087), obj9);
+    tmp51Result = tmp51(tmp3(10093), obj9);
   }
   items19[1] = tmp51Result;
   items19[2] = closure_7(require("NavScrim").NavScrim, {});

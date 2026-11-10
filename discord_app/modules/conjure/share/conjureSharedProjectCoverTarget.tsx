@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/share/conjureSharedProjectCoverTarget.tsx
 import conjureSharedProjectHome from "conjureSharedProjectHome.tsx";
-import findLoadedAppChannelDefault from "findLoadedAppChannel.tsx";
+import findLoadedAppChannelDefault from "../shared/findLoadedAppChannel.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/share/conjureSharedProjectCoverTarget.tsx");

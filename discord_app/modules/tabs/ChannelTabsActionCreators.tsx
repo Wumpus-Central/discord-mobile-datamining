@@ -293,7 +293,7 @@ function selectChannelTab(id, quick_switcher) {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, Routes: closure_8 } = Constants);
-const ChannelConstants = fn(4996);
+const ChannelConstants = fn(4998);
 ({ isStaticChannelRoute: closure_9, StaticChannelRoute: closure_10 } = ChannelConstants);
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);

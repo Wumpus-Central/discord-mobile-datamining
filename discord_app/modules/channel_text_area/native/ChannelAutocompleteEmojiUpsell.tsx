@@ -11,7 +11,7 @@ const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   title: { lineHeight: 16, flex: 1 },

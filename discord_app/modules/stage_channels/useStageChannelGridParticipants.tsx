@@ -276,7 +276,7 @@ export function useThrottledStageAudience(id) {
       return items;
     },
     items1,
-    stageParticipantsCount(6821).isVersionEqual,
+    stageParticipantsCount(6824).isVersionEqual,
   );
   const items2 = [stateFromStores];
   const memo = noop.useMemo(() => {
@@ -290,10 +290,10 @@ export function useThrottledStageAudience(id) {
   }, items2);
   const obj = stageParticipantsCount(504);
   stageParticipantsCount = undefined;
-  const obj2 = stageParticipantsCount(12058);
-  stageParticipantsCount = stageParticipantsCount(6820).useStageParticipantsCount(
+  const obj2 = stageParticipantsCount(12067);
+  stageParticipantsCount = stageParticipantsCount(6823).useStageParticipantsCount(
     id,
-    stageParticipantsCount(6814).StageChannelParticipantNamedIndex.AUDIENCE,
+    stageParticipantsCount(6817).StageChannelParticipantNamedIndex.AUDIENCE,
   );
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp4[1];

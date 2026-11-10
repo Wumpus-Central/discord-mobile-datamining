@@ -11,10 +11,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
-let closure_6 = fn(5389).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_6 = fn(5391).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   container: {
     paddingTop: nativeDefault.space.PX_16,
@@ -105,7 +105,7 @@ export function AppStoreOverlayBody(arg0) {
   const items3 = [tmp13, , , ,];
   const obj8 = { style: tmp.textBlock, children: null };
   const items4 = [
-    closure_7(onOverlaySurfaceClick(5751).Text, {
+    closure_7(onOverlaySurfaceClick(5753).Text, {
       variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
@@ -118,7 +118,7 @@ export function AppStoreOverlayBody(arg0) {
   }
   if (tmp17Result) {
     const obj10 = { variant: "body-sm/medium", color: "text-subtle", children: metadata.subtitle };
-    tmp17Result = closure_7(onOverlaySurfaceClick(5751).Text, obj10);
+    tmp17Result = closure_7(onOverlaySurfaceClick(5753).Text, obj10);
   }
   items4[1] = tmp17Result;
   obj8.children = items4;
@@ -141,7 +141,7 @@ export function AppStoreOverlayBody(arg0) {
     const obj13 = { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = onOverlaySurfaceClick(1113).intl;
     obj13.children = intl.string(onOverlaySurfaceClick(1113).t["EV1W/L"]);
-    const items5 = [closure_7(onOverlaySurfaceClick(5751).Text, obj13)];
+    const items5 = [closure_7(onOverlaySurfaceClick(5753).Text, obj13)];
     const obj14 = { media: metadata.media, onGetGamePress: onMediaGetGamePress, onCarouselScroll };
     items5[1] = closure_7(AppStoreOverlayMediaCarouselDefault, obj14);
     obj12.children = items5;
@@ -168,7 +168,7 @@ export function AppStoreOverlayFooter(arg0) {
   ({ onInstallPress, onLayout } = arg0);
   const tmp = closure_10();
   const bottom = token(1627)().bottom;
-  token = bottom(5724).useToken(token(575).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  token = bottom(5726).useToken(token(575).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   items = [token];
   const items1 = [bottom];
   const memo = noop.useMemo(() => {
@@ -179,7 +179,7 @@ export function AppStoreOverlayFooter(arg0) {
   const obj2 = { style: tmp.footer, onLayout, children: null };
   const memo1 = noop.useMemo(() => ({ paddingBottom: Math.max(bottom, closure_6) }), items1);
   const items2 = [
-    closure_7(token(5715), {
+    closure_7(token(5717), {
       pointerEvents: "none",
       style: tmp.footerGradient,
       colors: memo,
@@ -192,7 +192,7 @@ export function AppStoreOverlayFooter(arg0) {
   const intl = bottom(1113).intl;
   obj5.text = intl.string(bottom(1113).t.lwQdjB);
   obj5.onPress = onInstallPress;
-  obj4.children = closure_7(bottom(5758).Button, obj5);
+  obj4.children = closure_7(bottom(5760).Button, obj5);
   items2[1] = closure_7(View, obj4);
   obj2.children = items2;
   return closure_8(View, obj2);

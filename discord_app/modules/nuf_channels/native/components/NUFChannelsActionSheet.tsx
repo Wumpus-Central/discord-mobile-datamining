@@ -4,7 +4,7 @@ import NUFTemplateV2Default from "NUFTemplateV2.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ContentDismissActionType = fn(4986).ContentDismissActionType;
+const ContentDismissActionType = fn(4988).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx");
@@ -30,7 +30,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     children: null,
   };
   const obj2 = {
-    illustration: jsx(markAsDismissed(15467).ServerChannelsAbstractUI, {}),
+    illustration: jsx(markAsDismissed(15492).ServerChannelsAbstractUI, {}),
     title: null,
     description: null,
     CTALabel: null,
@@ -44,13 +44,13 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
   obj2.CTALabel = intl3.string(markAsDismissed(1113).t.BddRzS);
   obj2.onCTAPress = callback;
   obj.children = jsx(NUFTemplateV2Default, {
-    illustration: jsx(markAsDismissed(15467).ServerChannelsAbstractUI, {}),
+    illustration: jsx(markAsDismissed(15492).ServerChannelsAbstractUI, {}),
     title: null,
     description: null,
     CTALabel: null,
     onCTAPress: null,
   });
-  return jsx(markAsDismissed(5388).BottomSheet, {
+  return jsx(markAsDismissed(5390).BottomSheet, {
     onDismiss() {
       let tmpResult;
       if (markAsDismissed != null) {

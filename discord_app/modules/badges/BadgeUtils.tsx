@@ -34,8 +34,8 @@ export function isPersonalizationGatedBadge(badge_id) {
   return set.has(badge_id);
 }
 export const BETA_BADGE_IDS = set1;
-export function isBetaBadgeId(badge_id) {
-  return set1.has(badge_id);
+export function isBetaBadgeId(arg0) {
+  return set1.has(arg0);
 }
 export function getDisplayTier(badge) {
   const tiers = badge.tiers;

@@ -6,14 +6,14 @@ import BugReportManagerDefault from "../../../bug_reporter/native/BugReportManag
 import DeveloperOptionsStore from "../../../../stores/DeveloperOptionsStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11685);
+const SettingBuilders = fn(11694);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.aIkGJD);
   },
   parent: null,
-  IconComponent: fn(17886).WrenchIcon,
+  IconComponent: fn(17913).WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
     const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
     if (arg0) {
@@ -31,7 +31,7 @@ const toggle = SettingBuilders.createToggle({
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";
   },
-  usePredicate: fn(18080).useBugReporterExperimentSettingPredicate,
+  usePredicate: fn(18107).useBugReporterExperimentSettingPredicate,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");

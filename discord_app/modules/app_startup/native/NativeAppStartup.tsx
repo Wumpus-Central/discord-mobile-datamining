@@ -700,11 +700,11 @@ let closure_40 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[45])(paths[55], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[56]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(16584).updateSaturation(closure_0(5141).default.saturation);
-            obj = closure_0(16584);
-            closure_0(19433).updateVisualRefresh(true);
-            const obj2 = closure_0(19433);
-            closure_0(19434).updateTheme(closure_0(1192).default.theme);
+            closure_0(16611).updateSaturation(closure_0(5143).default.saturation);
+            obj = closure_0(16611);
+            closure_0(19462).updateVisualRefresh(true);
+            const obj2 = closure_0(19462);
+            closure_0(19463).updateTheme(closure_0(1192).default.theme);
             closure_1_0();
           }));
         });
@@ -848,14 +848,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_19759 = fn(19759);
-const superagentPatch = fn(19761);
+const module_19788 = fn(19788);
+const superagentPatch = fn(19790);
 get_ActivityIndicator = fn(17);
 ({ AppState: closure_6, NativeEventEmitter: metroImportDefault, Linking: closure_8, LogBox: closure_9, NativeModules: closure_10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(19784);
+const logThirdPartyImportsDone = fn(19813);
 let closure_11 = fn(2187).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(7716);
-const ManagerRegistry = fn(19785);
+const AnalyticsTrackingStore = fn(7719);
+const ManagerRegistry = fn(19814);
 const Constants = fn(1072);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -878,7 +878,7 @@ let closure_25 = new DeepLinkProcessorDefault(function handleLinkingEventURL(url
     const mapDeepLinkEventResult = DeepLinkEventMapping.mapDeepLinkEvent(url, closure_1, tmp8);
   });
 });
-const future = new fn(9855).Future();
+const future = new fn(9861).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

@@ -1,151 +1,151 @@
 // discord_app/modules/react_asset/native/native_required_assets_icons.tsx
-import _modDef5852 from "../../../../_runtime/metro/05852__.js";
-import _modDef5858 from "../../../../_runtime/metro/05858__.js";
-import _modDef7048 from "../../../../_runtime/metro/07048__.js";
-import _modDef7060 from "../../../../_runtime/metro/07060__.js";
-import _modDef7069 from "../../../../_runtime/metro/07069__.js";
-import _modDef7121 from "../../../../_runtime/metro/07121__.js";
-import _modDef7163 from "../../../../_runtime/metro/07163__.js";
-import _modDef7165 from "../../../../_runtime/metro/07165__.js";
-import _modDef7367 from "../../../../_runtime/metro/07367__.js";
-import _modDef8097 from "../../../../_runtime/metro/08097__.js";
-import _modDef8495 from "../../../../_runtime/metro/08495__.js";
-import _modDef8613 from "../../../../_runtime/metro/08613__.js";
-import _modDef8621 from "../../../../_runtime/metro/08621__.js";
-import _modDef8629 from "../../../../_runtime/metro/08629__.js";
-import _modDef8676 from "../../../../_runtime/metro/08676__.js";
-import _modDef8679 from "../../../../_runtime/metro/08679__.js";
-import _modDef8680 from "../../../../_runtime/metro/08680__.js";
+import _modDef5854 from "../../../../_runtime/metro/05854__.js";
+import _modDef5860 from "../../../../_runtime/metro/05860__.js";
+import _modDef7051 from "../../../../_runtime/metro/07051__.js";
+import _modDef7063 from "../../../../_runtime/metro/07063__.js";
+import _modDef7072 from "../../../../_runtime/metro/07072__.js";
+import _modDef7124 from "../../../../_runtime/metro/07124__.js";
+import _modDef7166 from "../../../../_runtime/metro/07166__.js";
+import _modDef7168 from "../../../../_runtime/metro/07168__.js";
+import _modDef7370 from "../../../../_runtime/metro/07370__.js";
+import _modDef8101 from "../../../../_runtime/metro/08101__.js";
+import _modDef8499 from "../../../../_runtime/metro/08499__.js";
+import _modDef8619 from "../../../../_runtime/metro/08619__.js";
+import _modDef8627 from "../../../../_runtime/metro/08627__.js";
+import _modDef8635 from "../../../../_runtime/metro/08635__.js";
 import _modDef8682 from "../../../../_runtime/metro/08682__.js";
-import _modDef8683 from "../../../../_runtime/metro/08683__.js";
-import _modDef8684 from "../../../../_runtime/metro/08684__.js";
-import _modDef8698 from "../../../../_runtime/metro/08698__.js";
-import _modDef8699 from "../../../../_runtime/metro/08699__.js";
-import _modDef8711 from "../../../../_runtime/metro/08711__.js";
-import _modDef8791 from "../../../../_runtime/metro/08791__.js";
-import _modDef8923 from "../../../../_runtime/metro/08923__.js";
-import _modDef8925 from "../../../../_runtime/metro/08925__.js";
-import _modDef9287 from "../../../../_runtime/metro/09287__.js";
-import _modDef9323 from "../../../../_runtime/metro/09323__.js";
-import _modDef9444 from "../../../../_runtime/metro/09444__.js";
-import _modDef9534 from "../../../../_runtime/metro/09534__.js";
-import _modDef9676 from "../../../../_runtime/metro/09676__.js";
-import _modDef9678 from "../../../../_runtime/metro/09678__.js";
-import _modDef9954 from "../../../../_runtime/metro/09954__.js";
-import _modDef9956 from "../../../../_runtime/metro/09956__.js";
-import _modDef9974 from "../../../../_runtime/metro/09974__.js";
-import _modDef10041 from "../../../../_runtime/metro/10041__.js";
-import _modDef10043 from "../../../../_runtime/metro/10043__.js";
-import _modDef10653 from "../../../../_runtime/metro/10653__.js";
-import _modDef10655 from "../../../../_runtime/metro/10655__.js";
-import _modDef11110 from "../../../../_runtime/metro/11110__.js";
-import _modDef11175 from "../../../../_runtime/metro/11175__.js";
-import _modDef11268 from "../../../../_runtime/metro/11268__.js";
-import _modDef11305 from "../../../../_runtime/metro/11305__.js";
-import _modDef11329 from "../../../../_runtime/metro/11329__.js";
-import _modDef11556 from "../../../../_runtime/metro/11556__.js";
-import _modDef11645 from "../../../../_runtime/metro/11645__.js";
-import _modDef11829 from "../../../../_runtime/metro/11829__.js";
-import _modDef12053 from "../../../../_runtime/metro/12053__.js";
-import _modDef12117 from "../../../../_runtime/metro/12117__.js";
-import _modDef12139 from "../../../../_runtime/metro/12139__.js";
-import _modDef12392 from "../../../../_runtime/metro/12392__.js";
-import _modDef12950 from "../../../../_runtime/metro/12950__.js";
+import _modDef8685 from "../../../../_runtime/metro/08685__.js";
+import _modDef8686 from "../../../../_runtime/metro/08686__.js";
+import _modDef8688 from "../../../../_runtime/metro/08688__.js";
+import _modDef8689 from "../../../../_runtime/metro/08689__.js";
+import _modDef8690 from "../../../../_runtime/metro/08690__.js";
+import _modDef8704 from "../../../../_runtime/metro/08704__.js";
+import _modDef8705 from "../../../../_runtime/metro/08705__.js";
+import _modDef8717 from "../../../../_runtime/metro/08717__.js";
+import _modDef8797 from "../../../../_runtime/metro/08797__.js";
+import _modDef8929 from "../../../../_runtime/metro/08929__.js";
+import _modDef8931 from "../../../../_runtime/metro/08931__.js";
+import _modDef9293 from "../../../../_runtime/metro/09293__.js";
+import _modDef9329 from "../../../../_runtime/metro/09329__.js";
+import _modDef9450 from "../../../../_runtime/metro/09450__.js";
+import _modDef9540 from "../../../../_runtime/metro/09540__.js";
+import _modDef9682 from "../../../../_runtime/metro/09682__.js";
+import _modDef9684 from "../../../../_runtime/metro/09684__.js";
+import _modDef9960 from "../../../../_runtime/metro/09960__.js";
+import _modDef9962 from "../../../../_runtime/metro/09962__.js";
+import _modDef9980 from "../../../../_runtime/metro/09980__.js";
+import _modDef10047 from "../../../../_runtime/metro/10047__.js";
+import _modDef10049 from "../../../../_runtime/metro/10049__.js";
+import _modDef10662 from "../../../../_runtime/metro/10662__.js";
+import _modDef10664 from "../../../../_runtime/metro/10664__.js";
+import _modDef11119 from "../../../../_runtime/metro/11119__.js";
+import _modDef11184 from "../../../../_runtime/metro/11184__.js";
+import _modDef11277 from "../../../../_runtime/metro/11277__.js";
+import _modDef11314 from "../../../../_runtime/metro/11314__.js";
+import _modDef11338 from "../../../../_runtime/metro/11338__.js";
+import _modDef11565 from "../../../../_runtime/metro/11565__.js";
+import _modDef11654 from "../../../../_runtime/metro/11654__.js";
+import _modDef11838 from "../../../../_runtime/metro/11838__.js";
+import _modDef12062 from "../../../../_runtime/metro/12062__.js";
+import _modDef12126 from "../../../../_runtime/metro/12126__.js";
+import _modDef12148 from "../../../../_runtime/metro/12148__.js";
+import _modDef12401 from "../../../../_runtime/metro/12401__.js";
 import _modDef12964 from "../../../../_runtime/metro/12964__.js";
-import _modDef13517 from "../../../../_runtime/metro/13517__.js";
-import _modDef13625 from "../../../../_runtime/metro/13625__.js";
-import _modDef13685 from "../../../../_runtime/metro/13685__.js";
-import _modDef14278 from "../../../../_runtime/metro/14278__.js";
-import _modDef14825 from "../../../../_runtime/metro/14825__.js";
-import _modDef15974 from "../../../../_runtime/metro/15974__.js";
-import _modDef15976 from "../../../../_runtime/metro/15976__.js";
-import _modDef17193 from "../../../../_runtime/metro/17193__.js";
-import _modDef17383 from "../../../../_runtime/metro/17383__.js";
-import _modDef17520 from "../../../../_runtime/metro/17520__.js";
-import _modDef18478 from "../../../../_runtime/metro/18478__.js";
-import _modDef18824 from "../../../../_runtime/metro/18824__.js";
-import _modDef18826 from "../../../../_runtime/metro/18826__.js";
-import _modDef20125 from "../../../../_runtime/metro/20125__.js";
-import _modDef20537 from "../../../../_runtime/metro/20537__.js";
-import _modDef20538 from "../../../../_runtime/metro/20538__.js";
-import _modDef20539 from "../../../../_runtime/metro/20539__.js";
-import _modDef20540 from "../../../../_runtime/metro/20540__.js";
-import _modDef20541 from "../../../../_runtime/metro/20541__.js";
+import _modDef12978 from "../../../../_runtime/metro/12978__.js";
+import _modDef13530 from "../../../../_runtime/metro/13530__.js";
+import _modDef13638 from "../../../../_runtime/metro/13638__.js";
+import _modDef13699 from "../../../../_runtime/metro/13699__.js";
+import _modDef14304 from "../../../../_runtime/metro/14304__.js";
+import _modDef14851 from "../../../../_runtime/metro/14851__.js";
+import _modDef16001 from "../../../../_runtime/metro/16001__.js";
+import _modDef16003 from "../../../../_runtime/metro/16003__.js";
+import _modDef17220 from "../../../../_runtime/metro/17220__.js";
+import _modDef17410 from "../../../../_runtime/metro/17410__.js";
+import _modDef17547 from "../../../../_runtime/metro/17547__.js";
+import _modDef18507 from "../../../../_runtime/metro/18507__.js";
+import _modDef18853 from "../../../../_runtime/metro/18853__.js";
+import _modDef18855 from "../../../../_runtime/metro/18855__.js";
+import _modDef20153 from "../../../../_runtime/metro/20153__.js";
+import _modDef20565 from "../../../../_runtime/metro/20565__.js";
+import _modDef20566 from "../../../../_runtime/metro/20566__.js";
+import _modDef20567 from "../../../../_runtime/metro/20567__.js";
+import _modDef20568 from "../../../../_runtime/metro/20568__.js";
+import _modDef20569 from "../../../../_runtime/metro/20569__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_icons.tsx");
 
 export const NATIVE_REQUIRED_ASSETS_ICONS = {
-  AnnouncementsIcon: _modDef8682,
-  AppsIcon: _modDef8679,
-  ArrowAngleLeftUpIcon: _modDef12950,
-  ArrowAngleRightUpIcon: _modDef13625,
-  ArrowLargeLeftIcon: _modDef7069,
-  ArrowLargeRightIcon: _modDef13685,
-  AttachmentIcon: _modDef10655,
-  BellZIcon: _modDef11305,
-  BoostGemIcon: _modDef10043,
-  ChannelListMagnifyingGlassIcon: _modDef15976,
-  CheckmarkLargeIcon: _modDef7060,
-  ChatXIcon: _modDef14278,
-  CheckmarkSmallIcon: _modDef7367,
-  ChevronSmallDownIcon: _modDef11556,
-  ChevronSmallRightIcon: _modDef7048,
-  CircleErrorIcon: _modDef20537,
-  CircleInformationIcon: _modDef20538,
-  CircleQuestionIcon: _modDef17383,
-  ClipsIcon: _modDef17193,
-  ClockWarningIcon: _modDef13517,
-  ConnectionAverageIcon: _modDef20539,
-  ConnectionBadIcon: _modDef20540,
-  ConnectionFineIcon: _modDef18826,
-  ConnectionUnknownIcon: _modDef18824,
-  DownloadIcon: _modDef5858,
-  EyeIcon: _modDef7165,
-  EyeSlashIcon: _modDef7163,
-  GameControllerIcon: _modDef8791,
-  GifIcon: _modDef8621,
-  GroupIcon: _modDef8680,
-  HandRequestSpeakIcon: _modDef11329,
-  HomeIcon: _modDef20125,
-  ImageBrokenIcon: _modDef20541,
-  ImageIcon: _modDef8698,
-  ImageWarningIcon: _modDef8699,
-  LinkIcon: _modDef5852,
-  LockIcon: _modDef8711,
-  LockUnlockedIcon: _modDef11268,
-  MaximizeIcon: _modDef12964,
-  MicrophoneArrowRightIcon: _modDef12053,
-  MicrophoneIcon: _modDef12139,
-  MicrophoneSlashIcon: _modDef9323,
-  MoreHorizontalIcon: _modDef9287,
-  MusicIcon: _modDef8629,
-  PaperIcon: _modDef9974,
-  PauseIcon: _modDef8925,
-  PencilIcon: _modDef8495,
-  PhoneCallIcon: _modDef9954,
-  PhoneHangUpIcon: _modDef9956,
-  PinIcon: _modDef11110,
-  PlayIcon: _modDef8923,
-  PlaystationNeutralIcon: _modDef9678,
-  PollsIcon: _modDef10653,
-  ReactionIcon: _modDef9534,
-  RefreshIcon: _modDef12392,
-  ScreenIcon: _modDef9676,
-  SignPostIcon: _modDef15974,
-  SlashBoxIcon: _modDef11645,
-  SpotifyNeutralIcon: _modDef18478,
-  StageIcon: _modDef8683,
-  StickerIcon: _modDef11175,
-  SuperReactionIcon: _modDef10041,
-  ThreadIcon: _modDef8676,
-  TicketIcon: _modDef17520,
-  TopicsIcon: _modDef11829,
-  UserCheckIcon: _modDef8613,
-  VoiceNormalIcon: _modDef8684,
-  VoiceXIcon: _modDef12117,
-  WarningIcon: _modDef8097,
-  WindowLaunchIcon: _modDef14825,
-  XSmallIcon: _modDef7121,
-  XboxNeutralIcon: _modDef9444,
+  AnnouncementsIcon: _modDef8688,
+  AppsIcon: _modDef8685,
+  ArrowAngleLeftUpIcon: _modDef12964,
+  ArrowAngleRightUpIcon: _modDef13638,
+  ArrowLargeLeftIcon: _modDef7072,
+  ArrowLargeRightIcon: _modDef13699,
+  AttachmentIcon: _modDef10664,
+  BellZIcon: _modDef11314,
+  BoostGemIcon: _modDef10049,
+  ChannelListMagnifyingGlassIcon: _modDef16003,
+  CheckmarkLargeIcon: _modDef7063,
+  ChatXIcon: _modDef14304,
+  CheckmarkSmallIcon: _modDef7370,
+  ChevronSmallDownIcon: _modDef11565,
+  ChevronSmallRightIcon: _modDef7051,
+  CircleErrorIcon: _modDef20565,
+  CircleInformationIcon: _modDef20566,
+  CircleQuestionIcon: _modDef17410,
+  ClipsIcon: _modDef17220,
+  ClockWarningIcon: _modDef13530,
+  ConnectionAverageIcon: _modDef20567,
+  ConnectionBadIcon: _modDef20568,
+  ConnectionFineIcon: _modDef18855,
+  ConnectionUnknownIcon: _modDef18853,
+  DownloadIcon: _modDef5860,
+  EyeIcon: _modDef7168,
+  EyeSlashIcon: _modDef7166,
+  GameControllerIcon: _modDef8797,
+  GifIcon: _modDef8627,
+  GroupIcon: _modDef8686,
+  HandRequestSpeakIcon: _modDef11338,
+  HomeIcon: _modDef20153,
+  ImageBrokenIcon: _modDef20569,
+  ImageIcon: _modDef8704,
+  ImageWarningIcon: _modDef8705,
+  LinkIcon: _modDef5854,
+  LockIcon: _modDef8717,
+  LockUnlockedIcon: _modDef11277,
+  MaximizeIcon: _modDef12978,
+  MicrophoneArrowRightIcon: _modDef12062,
+  MicrophoneIcon: _modDef12148,
+  MicrophoneSlashIcon: _modDef9329,
+  MoreHorizontalIcon: _modDef9293,
+  MusicIcon: _modDef8635,
+  PaperIcon: _modDef9980,
+  PauseIcon: _modDef8931,
+  PencilIcon: _modDef8499,
+  PhoneCallIcon: _modDef9960,
+  PhoneHangUpIcon: _modDef9962,
+  PinIcon: _modDef11119,
+  PlayIcon: _modDef8929,
+  PlaystationNeutralIcon: _modDef9684,
+  PollsIcon: _modDef10662,
+  ReactionIcon: _modDef9540,
+  RefreshIcon: _modDef12401,
+  ScreenIcon: _modDef9682,
+  SignPostIcon: _modDef16001,
+  SlashBoxIcon: _modDef11654,
+  SpotifyNeutralIcon: _modDef18507,
+  StageIcon: _modDef8689,
+  StickerIcon: _modDef11184,
+  SuperReactionIcon: _modDef10047,
+  ThreadIcon: _modDef8682,
+  TicketIcon: _modDef17547,
+  TopicsIcon: _modDef11838,
+  UserCheckIcon: _modDef8619,
+  VoiceNormalIcon: _modDef8690,
+  VoiceXIcon: _modDef12126,
+  WarningIcon: _modDef8101,
+  WindowLaunchIcon: _modDef14851,
+  XSmallIcon: _modDef7124,
+  XboxNeutralIcon: _modDef9450,
 };

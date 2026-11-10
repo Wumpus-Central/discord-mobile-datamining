@@ -6,7 +6,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import Server from "../../flow/Server.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
-import fuzzysearchDefault from "../../../_runtime/06954_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06957_fuzzysearch.js";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
 import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators.tsx";
@@ -251,11 +251,11 @@ function handleFetchSuccess(arg0) {
           }
           let obj = {};
           let tmp19 = id;
-          let obj2 = id(7776);
+          let obj2 = id(7779);
           let merged = Object.assign(obj2.getApplicationCommandSection(toApplication(tmp6), false));
           let keyPermissionsResult;
           if (null != tmp6.permissions) {
-            let tmp19Result = tmp19(7779);
+            let tmp19Result = tmp19(7782);
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
           }
           let obj7 = { descriptor: null, commands: null };
@@ -277,7 +277,7 @@ function handleFetchSuccess(arg0) {
       const membersById = GuildActionCreatorsDefault.requestMembersById(target.guildId, items);
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(7776).buildApplicationCommands(
+    const applicationCommands = id(7779).buildApplicationCommands(
       application_commands.map((description_default) => {
         const obj = {};
         const merged = Object.assign(description_default);
@@ -339,7 +339,7 @@ function handleFetchSuccess(arg0) {
     obj8.result = obj9;
     obj8.fetchState = { fetching: false };
     updateIndex(target, obj8, flag);
-    const obj6 = id(7776);
+    const obj6 = id(7779);
     tmp32 = "guild" === target.type && set.size > 0;
     tmp64 = set;
   }
@@ -617,22 +617,23 @@ function useQueryState(type, commandTypes, allowFetch) {
       permissionContext(false);
     }
   }, items7);
-  const items8 = [permissionContext, , , , , , , , , , , , , ,];
+  const items8 = [permissionContext, , , , , , , , , , , , , , ,];
   ({ text: arr9[1], builtIns: arr9[2] } = commandTypes);
   items8[3] = false !== commandTypes.applicationCommands;
   ({
     scoreMethod: arr9[4],
     allowEmptySections: arr9[5],
-    sortOptions: arr9[6],
-    allowApplicationState: arr9[7],
-    applicationId: arr9[8],
-    installOnDemand: arr9[9],
+    allowFetch: arr9[6],
+    sortOptions: arr9[7],
+    allowApplicationState: arr9[8],
+    applicationId: arr9[9],
+    installOnDemand: arr9[10],
   } = allowFetch);
-  items8[10] = stateFromStoresObject;
-  items8[11] = stateFromStoresObject1;
-  items8[12] = type;
-  items8[13] = stateFromStores;
-  items8[14] = stateFromStores1;
+  items8[11] = stateFromStoresObject;
+  items8[12] = stateFromStoresObject1;
+  items8[13] = type;
+  items8[14] = stateFromStores;
+  items8[15] = stateFromStores1;
   return stateFromStoresObject1.useMemo(() => {
     const obj = {
       permissionContext,
@@ -641,6 +642,7 @@ function useQueryState(type, commandTypes, allowFetch) {
       builtIns: commandTypes.builtIns,
       scoreMethod: allowFetch.scoreMethod,
       allowEmptySections: allowFetch.allowEmptySections,
+      allowFetch: allowFetch.allowFetch,
       contextState: stateFromStoresObject,
       userState: stateFromStoresObject1,
       launcherContext: type,
@@ -667,7 +669,7 @@ function useQueryState(type, commandTypes, allowFetch) {
 function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(9858).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(9864).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -677,17 +679,21 @@ function queryIndex(allowApplicationCommands) {
   if (allowEmptySections === undefined) {
     allowEmptySections = false;
   }
+  let flag2 = allowApplicationCommands.allowFetch;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(9858).ScoreMethod.NONE;
+    NONE = NONE(9864).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
     sortOptions = closure_38;
   }
-  let flag2 = allowApplicationCommands.installOnDemand;
-  if (flag2 === undefined) {
-    flag2 = false;
+  let flag3 = allowApplicationCommands.installOnDemand;
+  if (flag3 === undefined) {
+    flag3 = false;
   }
   let obj2;
   let formatted;
@@ -698,10 +704,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(9858).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(9858).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = tmp9(9860).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = tmp9(9860);
+  if (builtIns !== NONE(9864).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(9864).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = tmp9(9866).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = tmp9(9866);
   } else {
     builtInCommands = [];
   }
@@ -712,7 +718,7 @@ function queryIndex(allowApplicationCommands) {
     splitQuery: parts,
     allowEmptySections,
     scoreMethod: NONE,
-    installOnDemand: flag2,
+    installOnDemand: flag3,
   };
   const result = contextState.result;
   let sections;
@@ -733,29 +739,29 @@ function queryIndex(allowApplicationCommands) {
   const set = new Set();
   if (flag) {
     if (permissionContext.hasBaseAccessPermissions) {
-      for (const key10082 in sections) {
+      for (const key10083 in sections) {
         let tmp15 = null != singleApplicationId;
         if (tmp15) {
-          tmp15 = sections[key10082].descriptor.id !== singleApplicationId;
+          tmp15 = sections[key10083].descriptor.id !== singleApplicationId;
         }
         if (tmp15) {
           continue;
         } else {
-          let addResult = set.add(key10082);
+          let addResult = set.add(key10083);
           continue;
         }
         continue;
       }
     }
-    for (const key10090 in sections1) {
+    for (const key10091 in sections1) {
       let tmp18 = null != singleApplicationId;
       if (tmp18) {
-        tmp18 = sections1[key10090].descriptor.id !== singleApplicationId;
+        tmp18 = sections1[key10091].descriptor.id !== singleApplicationId;
       }
       if (tmp18) {
         continue;
       } else {
-        let addResult1 = set.add(key10090);
+        let addResult1 = set.add(key10091);
         continue;
       }
       continue;
@@ -775,9 +781,9 @@ function queryIndex(allowApplicationCommands) {
       if (null != sections2) {
         let _Object = Object;
         let keys = Object.keys(tmp29);
-        for (const item10124 of keys) {
-          let addResult2 = set.add(item10124);
-          let result1 = map.set(item10124, tmp29[item10124]);
+        for (const item10125 of keys) {
+          let addResult2 = set.add(item10125);
+          let result1 = map.set(item10125, tmp29[item10125]);
           continue;
         }
       }
@@ -800,12 +806,12 @@ function queryIndex(allowApplicationCommands) {
       if (null != tmp42) {
         let descriptor = tmp42.descriptor;
         let items1 = [];
-        for (const key10170 in tmp42.commands) {
-          let arr2 = items1.push(tmp42.commands[key10170]);
+        for (const key10171 in tmp42.commands) {
+          let arr2 = items1.push(tmp42.commands[key10171]);
           continue;
         }
-        for (const key10174 in tmp40.commands) {
-          if (key10174 in tmp42.commands) {
+        for (const key10175 in tmp40.commands) {
+          if (key10175 in tmp42.commands) {
             continue;
           } else {
             let arr3 = items1.push(tmp40.commands[tmp114]);
@@ -836,8 +842,12 @@ function queryIndex(allowApplicationCommands) {
       items1 = Object.values(value.commands);
     }
   }
-  if (sortOptions.applications.useFrecency) {
-    const FrecencyUserSettingsActionCreators = NONE(4970).FrecencyUserSettingsActionCreators;
+  let useFrecency = flag2;
+  if (flag2) {
+    useFrecency = sortOptions.applications.useFrecency;
+  }
+  if (useFrecency) {
+    const FrecencyUserSettingsActionCreators = NONE(4972).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }
   const sorted = items.sort((section, section2) => {
@@ -877,7 +887,7 @@ function queryIndex(allowApplicationCommands) {
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
-    const tmp87 = queryIndexSection(NONE(9860).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
+    const tmp87 = queryIndexSection(NONE(9866).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -891,7 +901,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(9858).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(9864).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {
@@ -901,8 +911,14 @@ function queryIndex(allowApplicationCommands) {
       }
     }
     guild = GuildStore.getGuild(guild_id);
-    if (tmp96) {
-      const FrecencyUserSettingsActionCreators2 = NONE(4970).FrecencyUserSettingsActionCreators;
+    if (flag2) {
+      flag2 = sortOptions.commands.useFrecency;
+    }
+    if (flag2) {
+      flag2 = someResult;
+    }
+    if (flag2) {
+      const FrecencyUserSettingsActionCreators2 = NONE(4972).FrecencyUserSettingsActionCreators;
       const ifNecessary1 = FrecencyUserSettingsActionCreators2.loadIfNecessary();
     }
     let tmp98;
@@ -935,15 +951,13 @@ function queryIndex(allowApplicationCommands) {
       const collator = applicationCommandIndexStore.collator;
       return collator.compare(score.displayName, score2.displayName);
     });
-    tmp96 =
-      sortOptions.commands.useFrecency &&
-      items.some((section) => {
-        let tmp = section.section.id !== constants.BUILT_IN;
-        if (tmp) {
-          tmp = section.data.length > 0;
-        }
-        return tmp;
-      });
+    someResult = items.some((section) => {
+      let tmp = section.section.id !== constants.BUILT_IN;
+      if (tmp) {
+        tmp = section.data.length > 0;
+      }
+      return tmp;
+    });
   }
   const obj3 = {
     commands: flatMapResult,
@@ -1331,7 +1345,7 @@ function scoreCommand(untranslatedName, arg1, arg2, arg3) {
   }
   return constants4.COMMAND_NAME_STARTS_WITH;
 }
-const ApplicationCommandConstants = fn(6167);
+const ApplicationCommandConstants = fn(6169);
 ({ BuiltInSectionId: closure_15, DISCOVERY_COMMANDS_FRECENCY_LIMIT: closure_16 } = ApplicationCommandConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18 } = Constants);
@@ -1655,6 +1669,7 @@ prototype["query"] = function query(withAffinitySuggestions, commandTypes, appli
       builtIns: commandTypes.builtIns,
       scoreMethod: null,
       allowEmptySections: null,
+      allowFetch: null,
       contextState: null,
       userState: null,
       applicationStates: null,
@@ -1662,7 +1677,11 @@ prototype["query"] = function query(withAffinitySuggestions, commandTypes, appli
       singleApplicationId: null,
       installOnDemand: null,
     };
-    ({ scoreMethod: obj12.scoreMethod, allowEmptySections: obj12.allowEmptySections } = applicationId);
+    ({
+      scoreMethod: obj12.scoreMethod,
+      allowEmptySections: obj12.allowEmptySections,
+      allowFetch: obj12.allowFetch,
+    } = applicationId);
     obj8.contextState = contextState;
     obj8.userState = userState;
     if (!applicationId.allowApplicationState) {

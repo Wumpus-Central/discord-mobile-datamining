@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   attachmentPills: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 },
   attachmentPill: null,
@@ -46,15 +46,15 @@ export default function ConjureAttachmentPills(projectId) {
           };
           const intl = projectId(1113).intl;
           const obj2 = { name: id.name };
-          obj.accessibilityLabel = intl.formatToPlainString(closure_1(4026).GtNukg, obj2);
+          obj.accessibilityLabel = intl.formatToPlainString(closure_1(4028).GtNukg, obj2);
           const obj3 = { variant: "body-xs/medium", color: "text-default", children: id.name };
-          obj.children = jsx(projectId(5751).Text, {
+          obj.children = jsx(projectId(5753).Text, {
             variant: "body-xs/medium",
             color: "text-default",
             children: id.name,
           });
           let tmp12 = jsx(
-            projectId(7040).Card,
+            projectId(7043).Card,
             {
               style: closure_1.attachmentPill,
               onPress() {
@@ -70,8 +70,8 @@ export default function ConjureAttachmentPills(projectId) {
           const obj5 = { variant: "body-xs/medium", color: "text-muted", children: null };
           const intl2 = projectId(1113).intl;
           const obj6 = { name: id.name };
-          obj5.children = intl2.formatToPlainString(closure_1(4026).nd81jR, obj6);
-          obj4.children = jsx(projectId(5751).Text, { variant: "body-xs/medium", color: "text-muted", children: null });
+          obj5.children = intl2.formatToPlainString(closure_1(4028).nd81jR, obj6);
+          obj4.children = jsx(projectId(5753).Text, { variant: "body-xs/medium", color: "text-muted", children: null });
           const _HermesInternal = HermesInternal;
           tmp12 = (
             <View key={"" + id.name + "-" + index} style={closure_1.attachmentPill}>

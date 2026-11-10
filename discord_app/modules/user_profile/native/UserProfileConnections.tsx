@@ -14,8 +14,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import _modDef11768 from "../../../../_runtime/metro/11768__.js";
-import _modDef11769 from "../../../../_runtime/metro/11769__.js";
+import _modDef11777 from "../../../../_runtime/metro/11777__.js";
+import _modDef11778 from "../../../../_runtime/metro/11778__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -38,10 +38,10 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11768, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11777, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     items = [application_id(native2.Icon, obj4)];
-    const obj5 = { source: _modDef11769, color: WHITE };
+    const obj5 = { source: _modDef11778, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = application_id(native2.Icon, obj5);
     obj3.children = items;
@@ -51,17 +51,17 @@ function VerifiedIcon(arg0) {
   tmp2Result = shared;
 }
 const View = fn(17).View;
-let Constants = fn(7437);
+let Constants = fn(7440);
 ({ CARD_ROWS_ICON_SIZE: metroImportDefault, CARD_ROWS_ICON_SIZE_VARIANT: closure_8 } = Constants);
 Constants = fn(1072);
 ({ AnalyticEvents: closure_9, PlatformTypes: closure_10 } = Constants);
-const MetadataFields = fn(7410).MetadataFields;
+const MetadataFields = fn(7413).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1187).Icon.Sizes.REFRESH_SMALL_16;
 let native = fn(1187);
 const iconSize = native.getIconSize(REFRESH_SMALL_16);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = {
   refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 },
   connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -445,8 +445,8 @@ export const ApplicationRoleConnection = memoResult;
 export function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(5199).useThemeContext().theme;
-  const obj = userId(5199);
+  const theme = userId(5201).useThemeContext().theme;
+  const obj = userId(5201);
   items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
@@ -454,7 +454,7 @@ export function UserProfileAccountConnectionsCard(userId) {
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(15262)(userId));
+  ({ connections, appIdentities } = theme(15287)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(
@@ -481,8 +481,8 @@ export function UserProfileAccountConnectionsCard(userId) {
     obj4.style = userId.style;
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(7126).TableRowGroup, obj5);
-    return closure_12(tmp5(7436), obj4);
+    obj4.children = closure_12(tmp2(7129).TableRowGroup, obj5);
+    return closure_12(tmp5(7439), obj4);
   }
   return null;
 }

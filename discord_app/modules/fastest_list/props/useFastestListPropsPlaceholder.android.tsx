@@ -17,32 +17,32 @@ function createNativePlaceholderConfig(listFooter) {
     borderRadius: "Array",
     borderTopLeftRadius: "text",
     borderTopRightRadius: "add",
-    borderBottomLeftRadius: "category",
-    borderBottomRightRadius: "getGuild",
+    borderBottomLeftRadius: "Date",
+    borderBottomRightRadius: "e",
     divider: "r",
     dividerColor: "isArray",
     dividerPaddingLeft: "Array",
     dividerPaddingRight: "add",
-    placeholderShape: "IconComponent",
-    placeholderShapeColor: "warn",
+    placeholderShape: "add",
+    placeholderShapeColor: "mn",
     placeholderShapeCount: "Array",
     placeholderShapeGap: "isArray",
     placeholderShapePaddingHorizontal: "add",
-    placeholderShapePaddingVertical: "title",
-    placeholderFeedBackgroundColor: "string",
-    placeholderFeedColor: "r",
+    placeholderShapePaddingVertical: "nm",
+    placeholderFeedBackgroundColor: "Map",
+    placeholderFeedColor: "a",
     placeholderFeedLabelPadding: "isArray",
     placeholderFeedLabelPaddingInnerRatio: "Array",
-    placeholderFeedLabelSize: "add",
-    placeholderFeedLabelSecondarySize: "IconComponent",
-    placeholderFeedPadding: "hasDiversityParent",
-    placeholderFeedShape: "Array",
-    placeholderFeedShapeSize: "isArray",
+    placeholderFeedLabelSize: "channel",
+    placeholderFeedLabelSecondarySize: "indexOf",
+    placeholderFeedPadding: "w",
+    placeholderFeedShape: "add",
+    placeholderFeedShapeSize: "PX_16",
     placeholderType: NONE,
-    width: null,
-    height: "\u{1F308}",
-    verticalAlignment: 6,
-    horizontalAlignment: 438,
+    width: true,
+    height: true,
+    verticalAlignment: true,
+    horizontalAlignment: true,
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7294).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7297).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

@@ -2,13 +2,14 @@
 import util from "../../../intl/index.native.tsx";
 import OmnibuttonCoachmarkRive from "../../../../discord_common/js/packages/design/components/Rive/native/generated/OmnibuttonCoachmarkRive.tsx";
 import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
+import _modDef14010 from "../../../../_runtime/metro/14010__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(4986).ContentDismissActionType;
+const ContentDismissActionType = fn(4988).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
 
@@ -19,18 +20,20 @@ export default function RefreshChatInputCoachmark(buttonRef) {
 }
 export function useRefreshChatInputCoachmark(disabled) {
   _require = undefined;
-  dependencyMap = undefined;
+  let visible;
+  let reducedMotion;
   if (disabled.disabled) {
     items = [];
   } else {
-    items = [tmp(4973).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
+    items = [tmp(tmp2[4]).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
   const tmp3 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items), 2);
   _require = tmp4;
   const tmp5 =
     tmp3[0] === require("dismissible_content").DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
-  dependencyMap = tmp5;
-  const items1 = [tmp5, tmp3[1]];
+  visible = tmp5;
+  reducedMotion = noop.useContext(tmp(tmp2[5]).AccessibilityPreferencesContext).reducedMotion;
+  const items1 = [tmp5, tmp3[1], reducedMotion.enabled];
   let memo = null;
   if (tmp5) {
     memo = noop.useMemo(() => {
@@ -51,7 +54,13 @@ export function useRefreshChatInputCoachmark(disabled) {
       obj.onDismiss = function onDismiss() {
         closure_1_0(constants.USER_DISMISS);
       };
-      obj.graphic = { type: "rive", rive: OmnibuttonCoachmarkRive.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+      if (reducedMotion.enabled) {
+        const obj2 = { type: "image", src: _modDef14010, aspectRatio: "16/9" };
+        let obj3 = obj2;
+      } else {
+        obj3 = { type: "rive", rive: OmnibuttonCoachmarkRive.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+      }
+      obj.graphic = obj3;
       return obj;
     }, items1);
   }

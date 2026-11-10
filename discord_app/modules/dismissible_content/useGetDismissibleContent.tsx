@@ -128,8 +128,8 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     found2 = null;
   }
   if (null != found2) {
-    let dismissibleContentShowing = tmp(7644).getDismissibleContentShowing(found2);
-    const tmpResult = tmp(7644);
+    let dismissibleContentShowing = tmp(7647).getDismissibleContentShowing(found2);
+    const tmpResult = tmp(7647);
   } else {
     dismissibleContentShowing = closure_12;
   }
@@ -150,7 +150,7 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     if (tmpResult7.isGuildScopedDismissibleContent(found2)) {
       guildId = found2.scope.guildId;
     }
-    tmpResult7 = tmp(7644);
+    tmpResult7 = tmp(7647);
   }
   let content;
   if (found2 != null) {
@@ -178,8 +178,8 @@ function useScopedDismissibleContentSelection(items1, groupName) {
   closure_130_6 = tmp13;
   let result = null != content;
   if (result) {
-    result = tmp(4974).isDismissibleContentBlockedByOverlay(content, first, tmp13);
-    const tmpResult9 = tmp(4974);
+    result = tmp(4976).isDismissibleContentBlockedByOverlay(content, first, tmp13);
+    const tmpResult9 = tmp(4976);
   }
   const tmpResult8 = require("OverlayTrackingUtils");
   const items5 = [DismissibleContentFrameworkStore];
@@ -262,7 +262,7 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     }, items7),
   };
 }
-const removeCandidateContent = fn(4981).removeCandidateContent;
+const removeCandidateContent = fn(4983).removeCandidateContent;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let closure_12 = {};

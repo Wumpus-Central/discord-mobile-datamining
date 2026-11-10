@@ -37,8 +37,8 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6987).addPostConnectionCallback;
-let closure_9 = fn(7682).handleMobileWebCheckoutStatus;
+fn(6988).addPostConnectionCallback;
+let closure_9 = fn(7685).handleMobileWebCheckoutStatus;
 const Constants = fn(1072);
 ({
   AnalyticEvents: map1,
@@ -48,14 +48,14 @@ const Constants = fn(1072);
   PlatformTypes: closure_17,
   ME: closure_18,
 } = Constants);
-const StaticChannelRoute = fn(4996).StaticChannelRoute;
-const StreamTypes = fn(6770).StreamTypes;
-const NativePermissionTypes = fn(8009).NativePermissionTypes;
-let closure_22 = fn(11036).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_23 = fn(7792).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_24 = fn(5872).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15984).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8503).MobileUserSettings;
+const StaticChannelRoute = fn(4998).StaticChannelRoute;
+const StreamTypes = fn(6772).StreamTypes;
+const NativePermissionTypes = fn(8013).NativePermissionTypes;
+let closure_22 = fn(11045).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_23 = fn(7795).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_24 = fn(5874).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(16011).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8507).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -216,12 +216,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj25 = {
-        guildId: guildId2,
-        channelId: channelId2,
-        messageId: "Array",
-        navigationSettings: "hoa qu\u1EA3",
-      };
+      const obj25 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj30 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj25.navigationSettings = obj30;
       rootNavigationRef1(inviteCode[31])(obj25);
@@ -259,19 +254,19 @@ export default function handleSupportedURL(payload) {
                 closure_128_0 = undefined;
                 closure_128_1 = undefined;
                 closure_128_2 = undefined;
-                tmp2(6799).popAll();
-                const tmp42 = tmp3(10788);
+                tmp2(6801).popAll();
+                const tmp42 = tmp3(10797);
                 const openSocialLayerStorefrontUnsupportedOnMobileAlert =
                   tmp42.openSocialLayerStorefrontUnsupportedOnMobileAlert;
                 closure_128_0 = openSocialLayerStorefrontUnsupportedOnMobileAlert;
                 closure_128_1 = tmp42.openSocialLayerStorefrontProductDetailsModal;
                 if (null != payload.skuId) {
-                  closure_128_2 = tmp3(6951).default;
+                  closure_128_2 = tmp3(6954).default;
                   ({ guildId, skuId } = payload);
                   c2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp3(10789).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15991).default()),
+                    value: tmp3(10798).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(16018).default()),
                     done: false,
                   };
                   return obj4;
@@ -279,7 +274,7 @@ export default function handleSupportedURL(payload) {
                   const result = openSocialLayerStorefrontUnsupportedOnMobileAlert();
                   dependencyMap = 3;
                 }
-                const obj7 = tmp2(6799);
+                const obj7 = tmp2(6801);
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -291,7 +286,7 @@ export default function handleSupportedURL(payload) {
             } else if (null != closure_128_2.get(closure_129_0.skuId)) {
               if (!closure_128_2.didFetchingSkuFail(closure_129_0.skuId)) {
                 const obj = { skuId: closure_129_0.skuId, analyticsLocations: null };
-                items = [tmp2(7412).URI_SCHEME];
+                items = [tmp2(7415).URI_SCHEME];
                 obj.analyticsLocations = items;
                 closure_128_1(obj);
               }
@@ -391,7 +386,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15996, dependencyMap.paths),
+                    asyncRequireImpl(16023, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -762,15 +757,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(6799).popAll();
-                        const obj5 = closure_1(6799);
+                        closure_1(6801).popAll();
+                        const obj5 = closure_1(6801);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7635).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7635);
+                        dependencyMap(7638).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7638);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(7408).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(7411).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -788,8 +783,8 @@ export default function handleSupportedURL(payload) {
                     }
                     closure_133_1 = closure_1(1378).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(5834).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(5834);
+                      closure_1(5836).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(5836);
                     }
                     const obj12 = closure_1(1378);
                   }

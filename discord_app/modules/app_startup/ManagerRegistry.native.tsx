@@ -432,7 +432,7 @@ obj.FramesNativeManager = {
   },
 };
 obj.FrecencyUserSettingsManager = {
-  actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "CONNECTION_CLOSED", "APP_STATE_UPDATE"],
+  actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "CONNECTION_CLOSED", "APP_STATE_UPDATE", "LOGOUT"],
   inlineRequire() {
     return require("FrecencyUserSettingsManager").default;
   },

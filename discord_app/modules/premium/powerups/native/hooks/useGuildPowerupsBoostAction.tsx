@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotStore.tsx";
 
 const require = fn;
-const GuildPowerupsConstants = fn(5346);
+const GuildPowerupsConstants = fn(5348);
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: metroImportDefault } = GuildPowerupsConstants);
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_8, AnalyticsObjectTypes: closure_9 } = Constants);
@@ -64,9 +64,9 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
                 tmp15 = dependencyMap;
                 if (dependencyMap > 0) {
                   if (!handleMobileWebRedirectCheckout.hasFetched) {
-                    items = [tmp2(7680).init()];
-                    let obj2 = tmp2(7680);
-                    items[1] = tmp3(8536).fetchGuildBoostSlots();
+                    items = [tmp2(7683).init()];
+                    let obj2 = tmp2(7683);
+                    items[1] = tmp3(8542).fetchGuildBoostSlots();
                     dependencyMap = 1;
                     c3 = 1;
                     const obj8 = { value: Promise.all(items), done: false };
@@ -91,9 +91,9 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
             PERK = constants.PERK;
           }
           closure_128_0 = PERK;
-          availableGuildBoostSlots = tmp3(8534).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
+          availableGuildBoostSlots = tmp3(8540).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
           if (availableGuildBoostSlots.length >= closure_129_2) {
-            tmp15 = tmp3(6823);
+            tmp15 = tmp3(6826);
             const obj9 = {
               guildBoostSlots: availableGuildBoostSlots.slice(0, closure_129_2),
               guildId: closure_129_0,
@@ -120,10 +120,10 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               }
               const obj = guildId(dependencyMap[9]);
             };
-            const result = tmp3(7662).launchGuildBoostFlowOrAlert(obj10);
-            const obj6 = tmp3(7662);
+            const result = tmp3(7665).launchGuildBoostFlowOrAlert(obj10);
+            const obj6 = tmp3(7665);
           }
-          const obj5 = tmp3(8534);
+          const obj5 = tmp3(8540);
         } catch (tmp50) {
           c3 = tmp;
           throw tmp50;

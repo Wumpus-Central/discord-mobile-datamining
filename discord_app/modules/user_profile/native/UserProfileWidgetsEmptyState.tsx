@@ -16,15 +16,15 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_8 = fn(8825).TrackUserProfileEditActions;
-const PROFILE_SIDE_PADDING = fn(7437).PROFILE_SIDE_PADDING;
+let closure_8 = fn(8831).TrackUserProfileEditActions;
+const PROFILE_SIDE_PADDING = fn(7440).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 let closure_14 = [1.3, 1.6, 2.3, 3.3];
 const UserProfileWidgetsEmptyState = "UserProfileWidgetsEmptyState";
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" },
   textContainer: null,
@@ -136,7 +136,7 @@ export default function UserProfileWidgetsEmptyState() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15201, dependencyMap.paths),
+      asyncRequireImpl(15227, dependencyMap.paths),
       "UserProfileWidgetAddActionSheet",
     );
   };

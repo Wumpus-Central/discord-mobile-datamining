@@ -70,7 +70,7 @@ function readConjureProjectLinkCard(applicationId, ticket, memo2) {
   }
   return null;
 }
-const canRemixProject = fn(6899).canRemixProject;
+const canRemixProject = fn(6902).canRemixProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/native/conjureProjectLinkCard.tsx");
 

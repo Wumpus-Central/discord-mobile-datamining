@@ -29,9 +29,24 @@ function syncProjects() {
     }
     return set;
   })();
-  items = [
-    ...found,
-    ...closure_9.filter((application_id) => {
+  items = [...found];
+  const items1 = [];
+  let set = new Set(found.map((application_id) => application_id.application_id));
+  const arraySpreadResult = HermesBuiltin.arraySpread(closure_9, 0);
+  closure_129_0 = new Set(closure_9.map((application_id) => application_id.application_id));
+  const ownedProjects1 = ConjureProjectStore.getOwnedProjects();
+  HermesBuiltin.arraySpread(
+    ownedProjects1.filter((application_id) => {
+      let result = conjureOverlayApps.isConjureServerOverlayApp(application_id);
+      if (result) {
+        result = !set.has(application_id.application_id);
+      }
+      return result;
+    }),
+    arraySpreadResult,
+  );
+  HermesBuiltin.arraySpread(
+    items1.filter((application_id) => {
       const hasItem = set.has(application_id.application_id);
       let hasItem1 = !hasItem;
       if (!hasItem) {
@@ -39,24 +54,39 @@ function syncProjects() {
       }
       return hasItem1;
     }),
-  ];
+    tmp3,
+  );
   _require = items;
-  let set = new Set(found.map((application_id) => application_id.application_id));
+  items.length === items.length && items.every((item, index) => item === set[index]);
+  const set1 = new Set(closure_9.map((application_id) => application_id.application_id));
 }
 function handleLayoutChange() {
   syncProjects();
   return closure_7 !== closure_7;
 }
 function markServerListStale(guildId) {
-  guildId = guildId.guildId;
-  if (closure_9.some((guild_id) => guild_id.guild_id === guildId)) {
+  items = [];
+  const set = new Set(closure_9.map((application_id) => application_id.application_id));
+  const ownedProjects = ConjureProjectStore.getOwnedProjects();
+  HermesBuiltin.arraySpread(
+    ownedProjects.filter((application_id) => {
+      let result = conjureOverlayApps.isConjureServerOverlayApp(application_id);
+      if (result) {
+        result = !set.has(application_id.application_id);
+      }
+      return result;
+    }),
+    HermesBuiltin.arraySpread(closure_9, 0),
+  );
+  if (items.some((guild_id) => guild_id.guild_id === set)) {
     closure_12 = closure_12 + 1;
   } else {
     return false;
   }
+  const arraySpreadResult = HermesBuiltin.arraySpread(closure_9, 0);
 }
 const OverlayWidgets = fn(1072).OverlayWidgets;
-const OVERLAY_V3_LAYOUT_ID = fn(15882).OVERLAY_V3_LAYOUT_ID;
+const OVERLAY_V3_LAYOUT_ID = fn(15910).OVERLAY_V3_LAYOUT_ID;
 let items = [];
 let closure_7 = items;
 let closure_8 = items;
@@ -161,6 +191,6 @@ const conjureOverlayWidgetsStore = new ConjureOverlayWidgetsStore(DispatcherDefa
   },
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/overlay/ConjureOverlayWidgetsStore.tsx");
+let result = size.fileFinishedImporting("modules/conjure/overlay/ConjureOverlayWidgetsStore.tsx");
 
 export default conjureOverlayWidgetsStore;

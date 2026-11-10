@@ -20,11 +20,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 let closure_6 = fn(1623).InAppCameraUsedCameraPreviewTypes;
-let closure_7 = fn(5389).ACTION_SHEET_START_HEIGHT_RATIO;
-const NativePermissionStatus = fn(8009).NativePermissionStatus;
+let closure_7 = fn(5391).ACTION_SHEET_START_HEIGHT_RATIO;
+const NativePermissionStatus = fn(8013).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PhotoLibraryHelper);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = {
   listContainer: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -243,8 +243,8 @@ export default noop.memo(function MediaKeyboardList(channel) {
   );
   const tmp9Result5 = require("../../../../../_runtime/metro/01652__.js");
   if (flag) {
-    flag = tmp9(8292).isImageCaptureIntentSupported();
-    const tmp9Result6 = tmp9(8292);
+    flag = tmp9(8296).isImageCaptureIntentSupported();
+    const tmp9Result6 = tmp9(8296);
   }
   let num;
   if (assets != null) {
@@ -453,16 +453,16 @@ export default noop.memo(function MediaKeyboardList(channel) {
     obj8.onScroll = callback;
     const intl = tmp9(1113).intl;
     obj8.accessibilityLabel = intl.string(tmp9(1113).t.XONG6A);
-    obj8.footerSize = tmp9(10671).FOOTER_HEIGHT;
+    obj8.footerSize = tmp9(10680).FOOTER_HEIGHT;
     obj8.renderFooter = callback4;
     obj8.chunkBase = minimum;
     let prop;
     if (!tmp28) {
-      prop = tmp9(7304).MINIMUM_BATCHES_TO_RENDER;
+      prop = tmp9(7307).MINIMUM_BATCHES_TO_RENDER;
     }
     obj8.batchesToRender = prop;
-    mediaEmptyStateComponentOrNull = extensions(tmp6(7304), obj8);
-    let tmp6Result = tmp6(7304);
+    mediaEmptyStateComponentOrNull = extensions(tmp6(7307), obj8);
+    let tmp6Result = tmp6(7307);
   }
   return mediaEmptyStateComponentOrNull;
 });

@@ -18,11 +18,11 @@ function ConnectedAcceptGuildTemplate(code) {
   items = [GuildTemplateStore];
   const stateFromStores = code(504).useStateFromStores(items, () => GuildTemplateStore.getGuildTemplate(code));
   let obj = code(504);
-  [name, dependencyMap] = noop.useState(name(6956).getGuildNameSuggestion());
+  [name, dependencyMap] = noop.useState(name(6959).getGuildNameSuggestion());
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(13418)(stateFromStores);
+  stateFromStores(13432)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -36,7 +36,7 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null,
   };
-  const obj2 = name(6956);
+  const obj2 = name(6959);
   obj4.chooseIcon = first1(function* () {
     if (dependencyMap === 2) {
       dependencyMap = 3;
@@ -104,7 +104,7 @@ function ConnectedAcceptGuildTemplate(code) {
       );
     }
   };
-  obj3.children = jsx(stateFromStores(13419), {
+  obj3.children = jsx(stateFromStores(13433), {
     code,
     guildTemplate: stateFromStores,
     name,
@@ -116,12 +116,12 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null,
   });
-  return jsx(code(7355).SafeAreaPaddingView, { top: true, style: tmp.container, children: null });
+  return jsx(code(7358).SafeAreaPaddingView, { top: true, style: tmp.container, children: null });
 }
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
-let obj2 = { container: { flex: 1, marginTop: fn(5714).NAV_BAR_HEIGHT } };
+const createStyles = fn(5142);
+let obj2 = { container: { flex: 1, marginTop: fn(5716).NAV_BAR_HEIGHT } };
 let closure_10 = createStyles.createStyles(obj2);
 const ACCEPT_GUILD_TEMPLATE = "ACCEPT_GUILD_TEMPLATE";
 const size = fn(2);
@@ -146,5 +146,5 @@ export default function AcceptGuildTemplateModal(code) {
     obj2[ACCEPT_GUILD_TEMPLATE] = obj3;
     return obj2;
   }, items);
-  return jsx(code(7231).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
+  return jsx(code(7234).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
 }

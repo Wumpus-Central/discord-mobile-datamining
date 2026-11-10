@@ -29,14 +29,14 @@ export default noop.memo(function KeyboardAwareView(keyboardHeightOffset) {
   _require = num;
   let systemKeyboardHeight = require("useSystemKeyboardHeight").getSystemKeyboardHeight();
   if (0 === systemKeyboardHeight) {
-    let keyboardType = tmp(5325).getKeyboardType();
+    let keyboardType = tmp(5327).getKeyboardType();
     let num2 = 0;
     if (keyboardType !== tmp(1625).KeyboardTypes.SYSTEM) {
-      num2 = tmp(5736).getCustomKeyboardHeight();
-      const tmpResult3 = tmp(5736);
+      num2 = tmp(5738).getCustomKeyboardHeight();
+      const tmpResult3 = tmp(5738);
     }
     systemKeyboardHeight = num2;
-    const tmpResult = tmp(5325);
+    const tmpResult = tmp(5327);
   }
   const ref = noop.useRef(Math.max(0, systemKeyboardHeight + num));
   importDefault = ref;
@@ -48,14 +48,14 @@ export default noop.memo(function KeyboardAwareView(keyboardHeightOffset) {
       subscribeToKeyboardUIStore(function keyboardHeightUpdater() {
         let systemKeyboardHeight = c0(2020).getSystemKeyboardHeight();
         if (0 === systemKeyboardHeight) {
-          const keyboardType = c0(5325).getKeyboardType();
+          const keyboardType = c0(5327).getKeyboardType();
           let num = 0;
           if (keyboardType !== c0(1625).KeyboardTypes.SYSTEM) {
-            num = c0(5736).getCustomKeyboardHeight();
-            const tmp2Result2 = c0(5736);
+            num = c0(5738).getCustomKeyboardHeight();
+            const tmp2Result2 = c0(5738);
           }
           systemKeyboardHeight = num;
-          const tmp2Result = c0(5325);
+          const tmp2Result = c0(5327);
         }
         const bound = Math.max(0, systemKeyboardHeight + closure_1_0);
         if (ref.current !== bound) {

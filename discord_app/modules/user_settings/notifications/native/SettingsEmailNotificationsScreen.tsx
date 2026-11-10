@@ -11,7 +11,7 @@ function initializeEmailSettings() {
     const emailSettings = EmailSettingsActionCreators.fetchEmailSettings();
   }
 }
-const MobileUserSettings = fn(8503).MobileUserSettings;
+const MobileUserSettings = fn(8507).MobileUserSettings;
 const jsx = fn(21).jsx;
 let obj = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };
 let items = [, , , ,];
@@ -42,11 +42,11 @@ const result = size.fileFinishedImporting(
 );
 
 export default noop.memo(function SettingsEmailNotificationsScreen() {
-  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16596).useIsDeclarativeSettingsUIAvailable(
+  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16623).useIsDeclarativeSettingsUIAvailable(
     "SettingsEmailNotificationsScreen",
   );
-  obj = isDeclarativeSettingsUIAvailable(16596);
-  enabled = enabled(17814).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
+  obj = isDeclarativeSettingsUIAvailable(16623);
+  enabled = enabled(17841).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
   items = [isDeclarativeSettingsUIAvailable, enabled];
   const node = noop.useMemo(() => {
     const tmp = isDeclarativeSettingsUIAvailable ? obj2 : obj;
@@ -67,6 +67,6 @@ export default noop.memo(function SettingsEmailNotificationsScreen() {
     obj3.sections = items;
     return obj.createList(obj3);
   }, items);
-  enabled(5721)(initializeEmailSettings);
-  return jsx(enabled(16905), { node });
+  enabled(5723)(initializeEmailSettings);
+  return jsx(enabled(16932), { node });
 });

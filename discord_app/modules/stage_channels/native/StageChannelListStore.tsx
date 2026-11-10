@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/native/StageChannelListStore.tsx
-import _mod5055 from "../../../../_runtime/metro/05055__.js";
+import _mod5057 from "../../../../_runtime/metro/05057__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -27,7 +27,7 @@ export function useActiveSpeakerPillScrollHandler() {
       items = [,];
       ({ listRef: arr[0], setListRef: arr[1] } = arg0);
       return items;
-    }, _mod5055.shallow),
+    }, _mod5057.shallow),
     2,
   );
   const first = tmp[0];
@@ -51,5 +51,5 @@ export function useActiveSpeakerPillState() {
     items = [,];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, _mod5055.shallow);
+  }, _mod5057.shallow);
 }

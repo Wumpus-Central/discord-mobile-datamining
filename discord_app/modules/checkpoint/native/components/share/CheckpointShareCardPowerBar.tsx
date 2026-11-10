@@ -1,13 +1,13 @@
 // discord_app/modules/checkpoint/native/components/share/CheckpointShareCardPowerBar.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../../../_runtime/08101_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08105_inlineStyles.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_2026_POWER_BAR_UNITS = fn(6199).CHECKPOINT_2026_POWER_BAR_UNITS;
+const CHECKPOINT_2026_POWER_BAR_UNITS = fn(6201).CHECKPOINT_2026_POWER_BAR_UNITS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = ["M0 0H10L4.44 8H0V0Z"];
@@ -16,7 +16,7 @@ items[HermesBuiltin.arraySpread(Array(CHECKPOINT_2026_POWER_BAR_UNITS - 2).fill(
 const ArrayResult = Array(CHECKPOINT_2026_POWER_BAR_UNITS - 2);
 let items1 = [10];
 items1[HermesBuiltin.arraySpread(Array(CHECKPOINT_2026_POWER_BAR_UNITS - 2).fill(13), 1)] = 10;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { powerBar: null, powerLevel: null, powerText: null, powerUnits: null };
 const rect = {
   position: "absolute",
@@ -45,22 +45,22 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointShareCardPowerBar(stats) {
   stats = stats.stats;
   const tmp = closure_9();
-  importDefault = stats(5724).useToken(nativeDefault.colors.BLACK);
+  importDefault = stats(5726).useToken(nativeDefault.colors.BLACK);
   let obj2 = { style: null, children: null };
   items = [
     tmp.powerBar,
-    { backgroundColor: noop.useContext(stats(13680).CheckpointShareCardColorsContext).tertiaryBackgroundColor },
+    { backgroundColor: noop.useContext(stats(13694).CheckpointShareCardColorsContext).tertiaryBackgroundColor },
   ];
   obj2.style = items;
   const obj3 = { style: tmp.powerLevel, children: null };
   items1 = [
-    closure_5(stats(5751).Text, {
+    closure_5(stats(5753).Text, {
       variant: "mono-md/normal",
       style: tmp.powerText,
       allowFontScaling: false,
       children: "LVL",
     }),
-    closure_5(stats(5751).Text, {
+    closure_5(stats(5753).Text, {
       variant: "mono-md/bold",
       style: tmp.powerText,
       allowFontScaling: false,
@@ -69,7 +69,7 @@ export default function CheckpointShareCardPowerBar(stats) {
   ];
   obj3.children = items1;
   const items2 = [closure_6(View, obj3)];
-  let obj = stats(5724);
+  let obj = stats(5726);
   const obj4 = { variant: "mono-md/normal", style: tmp.powerText, allowFontScaling: false, children: "LVL" };
   const obj5 = { variant: "mono-md/bold", style: tmp.powerText, allowFontScaling: false, children: stats.powerLevel };
   items2[1] = closure_5(View, {

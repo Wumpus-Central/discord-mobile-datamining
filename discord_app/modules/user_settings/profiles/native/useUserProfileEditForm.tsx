@@ -11,7 +11,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 const FormStates = fn(1072).FormStates;
-const HexagonCampaignPerk = fn(5165).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5167).HexagonCampaignPerk;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
 
@@ -108,7 +108,7 @@ export default function useUserProfileEditForm() {
                 const obj5 = { avatarDecoration: pendingChanges.pendingAvatarDecoration };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj6 = { value: tmp5(7214).saveProfileAndAccountChanges(obj5), done: false };
+                const obj6 = { value: tmp5(7217).saveProfileAndAccountChanges(obj5), done: false };
                 return obj6;
               }
             }
@@ -122,8 +122,8 @@ export default function useUserProfileEditForm() {
               ok = closure_128_0.ok;
             }
             if (ok) {
-              const result = tmp5(7214).resetPendingAccountChanges();
-              const obj = tmp5(7214);
+              const result = tmp5(7217).resetPendingAccountChanges();
+              const obj = tmp5(7217);
             }
           }
           c3 = 3;

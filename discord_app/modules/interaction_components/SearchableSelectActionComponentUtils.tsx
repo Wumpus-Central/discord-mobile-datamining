@@ -19,8 +19,16 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/SearchableSelectActionComponentUtils.tsx");
 
 export const MIN_REREQUEST_TIME = 1000;
-export function queryMentionables(type, query, channelId) {
+export function queryMentionables(type, query, channelId, arg3) {
   _require = channelId;
+  let obj = arg3;
+  if (arg3 === undefined) {
+    obj = {};
+  }
+  let flag = obj.request;
+  if (flag === undefined) {
+    flag = true;
+  }
   const channel = ChannelStore.getChannel(channelId);
   if (null == channel) {
     return [];
@@ -31,7 +39,7 @@ export function queryMentionables(type, query, channelId) {
     const tmp3 =
       type === require("Server").ComponentType.ROLE_SELECT ||
       type === require("Server").ComponentType.MENTIONABLE_SELECT;
-    let obj2 = {
+    const obj3 = {
       query,
       channel,
       canMentionEveryone: false,
@@ -41,12 +49,13 @@ export function queryMentionables(type, query, channelId) {
       includeAllGuildUsers: true,
       includeNonMentionableRoles: true,
       checkRecentlyTalkedOnEmptyQuery: false,
+      request: flag,
       limit: 15,
     };
-    const obj = channel(6834);
-    ({ users, roles } = channel(6834).queryMentionResults(obj2));
+    let obj2 = channel(6837);
+    ({ users, roles } = channel(6837).queryMentionResults(obj3));
     items = [];
-    const queryMentionResultsResult = channel(6834).queryMentionResults(obj2);
+    const queryMentionResultsResult = channel(6837).queryMentionResults(obj3);
     HermesBuiltin.arraySpread(
       roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })),
       HermesBuiltin.arraySpread(

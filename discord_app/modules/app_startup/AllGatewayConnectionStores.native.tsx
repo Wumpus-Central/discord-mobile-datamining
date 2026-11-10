@@ -185,7 +185,6 @@ import MessageStore from "../../stores/MessageStore.tsx";
 import NowPlayingStore from "../../stores/NowPlayingStore.tsx";
 import PermissionSpeakStore from "../../stores/PermissionSpeakStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
-import PremiumPromoStore from "../../stores/PremiumPromoStore.tsx";
 import PresenceStore from "../../stores/PresenceStore.tsx";
 import PrivateChannelReadStateStore from "../../stores/PrivateChannelReadStateStore.tsx";
 import PrivateChannelRecipientsInviteStore from "../../stores/PrivateChannelRecipientsInviteStore.tsx";

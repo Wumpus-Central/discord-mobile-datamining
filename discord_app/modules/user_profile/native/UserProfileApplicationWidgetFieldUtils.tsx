@@ -1,25 +1,42 @@
 // discord_app/modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import useFontScale from "../../screen/native/useFontScale.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons.tsx";
-import ApplicationWidgetMarkupUtils from "../../application_widget/ApplicationWidgetMarkupUtils.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const UserProfileApplicationWidgetSkeletons = TextSkeleton(12548);
+const ApplicationWidgetMarkupUtils = TextSkeleton(12549);
 require = fn;
-const View = fn(17).View;
+get_ActivityIndicator = fn(17);
+({ PixelRatio: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5140);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+let createStyles = fn(5142);
 let obj2 = {
   fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   fieldIcon: { width: 16, height: 16 },
 };
-let closure_6 = createStyles.createStyles(obj2);
+let closure_7 = createStyles.createStyles(obj2);
+createStyles = fn(5142);
+let closure_8 = createStyles.createStyles((paddingTop) => ({ text: { paddingTop, marginTop: -paddingTop } }));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
 
+export function useEmojiOverflowStyle(arg0) {
+  const fontScale = useFontScale.useFontScale();
+  let num = 0;
+  if (obj2.isIOS()) {
+    num = React3.roundToNearestPixel(Text_Text.TextStyleSheet[arg0].fontSize * fontScale * 0.25);
+  }
+  let text;
+  if (num > 0) {
+    text = closure_8(num).text;
+  }
+  return text;
+}
 export function formatDurationNarrow(result1) {
   let num = 0;
   if (Number.isFinite(result1)) {
@@ -55,28 +72,41 @@ export function formatDurationNarrow(result1) {
 export function FieldText(arg0) {
   ({ field, variant } = arg0);
   ({ color, skeletonWidthChars } = arg0);
-  const tmp = closure_6();
+  const tmp = closure_7();
+  let TextSkeleton = require;
+  let obj = dependencyMap;
+  const fontScale = useFontScale.useFontScale();
+  let num = 0;
+  if (obj3.isIOS()) {
+    num = React3.roundToNearestPixel(Text_Text.TextStyleSheet[variant].fontSize * fontScale * 0.25);
+  }
+  if (num > 0) {
+    const text = closure_8(num).text;
+  }
   if ("hidden" === field.status) {
     return null;
   } else if ("skeleton" === field.status) {
-    const obj2 = { variant, widthChars: skeletonWidthChars };
-    let tmp9Result = React4(UserProfileApplicationWidgetSkeletons.TextSkeleton, obj2);
+    TextSkeleton = UserProfileApplicationWidgetSkeletons.TextSkeleton;
+    obj = { variant, widthChars: skeletonWidthChars };
+    let tmp9Result = hasOwnProperty(TextSkeleton, obj);
   } else {
-    const obj3 = { style: tmp.fieldTextRow, children: null };
-    const obj4 = { variant, color, lineClamp: 2, children: null };
-    const obj5 = { linkVariant: variant };
-    obj4.children = ApplicationWidgetMarkupUtils.parseApplicationWidgetText(field.text, obj5);
-    items = [React4(Text_Text.Text, obj4)];
+    const obj4 = { style: tmp.fieldTextRow, children: null };
+    const obj5 = { variant, color, lineClamp: 2, style: text, children: null };
+    const obj6 = { linkVariant: variant };
+    obj5.children = ApplicationWidgetMarkupUtils.parseApplicationWidgetText(field.text, obj6);
+    items = [hasOwnProperty(Text_Text.Text, obj5)];
     let tmp11Result = null != field.icon;
     if (tmp11Result) {
-      const obj = { source: null, style: null, resizeMode: "contain" };
-      const obj7 = { uri: field.icon.url };
-      obj.source = obj7;
-      obj.style = tmp.fieldIcon;
-      tmp11Result = React4(FastImageDefault, obj);
+      const obj7 = { source: null, style: null, resizeMode: "contain" };
+      const obj8 = { uri: field.icon.url };
+      obj7.source = obj8;
+      obj7.style = tmp.fieldIcon;
+      tmp11Result = hasOwnProperty(FastImageDefault, obj7);
     }
     items[1] = tmp11Result;
-    obj3.children = items;
-    tmp9Result = hasOwnProperty(View, obj3);
+    obj4.children = items;
+    tmp9Result = timestampProducer(React4, obj4);
+    const TextSkeletonResult = ApplicationWidgetMarkupUtils;
   }
+  obj3 = PlatformUtils;
 }

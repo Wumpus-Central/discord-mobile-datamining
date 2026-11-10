@@ -77,6 +77,7 @@ export const NativeFeatures = {
   SCREEN_SOUNDSHARE: "screen_soundshare",
   NATIVE_SCREENSHARE_PICKER: "native_screenshare_picker",
   MLS_PAIRWISE_FINGERPRINTS: "mls_pairwise_fingerprints",
+  DAVE_PAIRWISE_FINGERPRINT: "dave_pairwise_fingerprint",
   OFFLOAD_ADM_CONTROLS: "offload_adm_controls",
   AUDIO_CODEC_RED: "audio_codec_red",
   SIDECHAIN_COMPRESSION: "sidechain_compression",

@@ -22,11 +22,11 @@ export function getRunningGameAnalytics(streamApplication) {
     return {
       gameName: "Array",
       gameId: "channel",
-      exe: "Icon",
-      distributor: "user",
-      sku: "HermesInternal",
-      gameMetadata: "ip",
-      rawExePath: "Date",
+      exe: "surrogates",
+      distributor: "value",
+      sku: "ip",
+      gameMetadata: "o",
+      rawExePath: "isArray",
     };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;

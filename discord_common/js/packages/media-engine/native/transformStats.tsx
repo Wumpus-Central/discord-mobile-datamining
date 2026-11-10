@@ -817,7 +817,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         let obj5 = {
           type: "audio",
           ssrc: audio.ssrc,
-          sinkWant: id(5982).formatSinkWantStat(id, audio.ssrc, false),
+          sinkWant: id(5984).formatSinkWantStat(id, audio.ssrc, false),
           sinkWantAsInt: null,
           codec: null,
           bytesReceived: null,
@@ -864,8 +864,8 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           voiceQualityMos: null,
         };
         const arr = obj7[id];
-        const obj2 = id(5982);
-        obj5.sinkWantAsInt = id(5982).formatSinkWantAsInt(id, audio.ssrc);
+        const obj2 = id(5984);
+        obj5.sinkWantAsInt = id(5984).formatSinkWantAsInt(id, audio.ssrc);
         ({ codecPayloadType: obj4.id, codecName: obj4.name } = audio);
         obj5.codec = { id: null, name: null };
         ({
@@ -966,7 +966,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         }
         const merged = Object.assign(obj11);
         obj5 = arr.push(obj5);
-        const obj3 = id(5982);
+        const obj3 = id(5984);
         const obj9 = { id: null, name: null };
       }
     });

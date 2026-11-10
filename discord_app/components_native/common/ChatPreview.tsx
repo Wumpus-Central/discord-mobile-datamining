@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8449);
+const RowGeneratorConstants = fn(8453);
 ({ Changeset: closure_10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -322,12 +322,12 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9969).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9975).setSelectedConversation(closure_1_0, roleStyle, {
             cacheType: "preview",
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9969);
-          applyArgumentsResult(5885).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(9975);
+          applyArgumentsResult(5887).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -360,15 +360,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(5885).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(5885);
+            applyArgumentsResult(5887).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5887);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel:
-          "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.",
-        selectedChannelId: null,
-        tapLinkData: null,
+        messageChannel: "updateVoiceFidelityCaps",
+        selectedChannelId: "setNoiseCancellation",
+        tapLinkData: "getAutomaticGainControlConfig",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -646,18 +645,18 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = state(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(5199).ThemeContext;
+ChatPreviewBase.contextType = fn(5201).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
 
 export function ChatPreview(channelId) {
   channelId = channelId.channelId;
-  const InlineAttachmentMedia = channelId(4965).InlineAttachmentMedia;
+  const InlineAttachmentMedia = channelId(4967).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
-  const InlineEmbedMedia = channelId(4965).InlineEmbedMedia;
+  const InlineEmbedMedia = channelId(4967).InlineEmbedMedia;
   const setting1 = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = channelId(4965).RenderEmbeds;
+  const RenderEmbeds = channelId(4967).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
   items = [AccessibilityStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
@@ -665,10 +664,10 @@ export function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6808).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6808);
-  const isChannelContentGated = channelId(6789).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(6789);
+  const isChannelSpoilerGated = channelId(6811).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6811);
+  const isChannelContentGated = channelId(6791).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(6791);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

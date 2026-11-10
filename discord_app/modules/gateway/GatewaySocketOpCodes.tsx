@@ -76,13 +76,14 @@ prototype["voiceServerPing"] = function voiceServerPing() {
   this.send(GatewaySocketOpcode.Opcode.VOICE_SERVER_PING, null);
 };
 prototype["requestGuildMembers"] = function requestGuildMembers(guildIds, arg1) {
-  ({ query, limit, userIds, presences } = arg1);
+  ({ query, limit, userIds, presences, nonce } = arg1);
   this.send(GatewaySocketOpcode.Opcode.REQUEST_GUILD_MEMBERS, {
     guild_id: guildIds,
     query,
     limit,
     user_ids: userIds,
     presences,
+    nonce,
   });
 };
 prototype["searchRecentMembers"] = function searchRecentMembers(guild_id, arg1) {

@@ -22,35 +22,21 @@ function TeenNotice(noticeType) {
     const result = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(noticeType, constants.VIEWED);
   }, items);
   const items1 = [noticeType];
-  const items2 = [noticeType];
+  let obj = { style: closure_10().container, children: null };
   const callback = noop.useCallback(() => {
     const result = useAgeGroupPresentation.handleOpenAgeGatedContentArticle();
     const result1 = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(noticeType, constants.LEARN_MORE);
   }, items1);
-  let obj = { style: closure_10().container, children: null };
-  const callback1 = noop.useCallback(() => {
-    const obj = AgeVerificationActionCreatorsDefault;
-    const result = obj.showAgeVerificationGetStartedModal({
-      entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
-    });
-    const obj2 = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
-    const result1 = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(noticeType, constants.CONFIRM_AGE);
-  }, items2);
-  let obj2 = { type: "info", message: null, role: "status", action: null };
+  const obj2 = { type: "info", message: null, role: "status" };
   const intl = noticeType(1113).intl;
-  obj2.message = intl.format(noticeType.message, { handleOnConfirmAgeHook: callback1 });
-  const obj3 = { text: null, onPress: null };
-  const intl2 = noticeType(1113).intl;
-  obj3.text = intl2.string(noticeType(1113).t.hvVgAZ);
-  obj3.onPress = callback;
-  obj2.action = obj3;
-  obj.children = jsx(noticeType(8095).InlineNotice, { type: "info", message: null, role: "status", action: null });
+  obj2.message = intl.format(noticeType.message, { handleOnAgeGatedContentHook: callback });
+  obj.children = jsx(noticeType(8099).InlineNotice, { type: "info", message: null, role: "status" });
   return <View style={closure_10().container}>{null}</View>;
 }
 class MessageRequestsTeenNotice {
   constructor() {
     obj = {
-      message: closure_1(closure_2[14])["l+jt8J"],
+      message: closure_1(closure_2[12])["5KHq55"],
       noticeType: SafetySettingsNoticeType.CONTENT_AND_SOCIAL_NOTICE,
     };
     return jsx(TeenNotice, obj);
@@ -91,7 +77,7 @@ function UnconfirmedNotice(message) {
   obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1113).t.FDSSia);
   obj3.onPress = callback1;
   obj2.action = obj3;
-  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8095).InlineNotice, {
+  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8099).InlineNotice, {
     type: "info",
     message: null,
     role: "status",
@@ -101,23 +87,23 @@ function UnconfirmedNotice(message) {
 }
 class MessageRequestsUnconfirmedNotice {
   constructor() {
-    obj = { message: closure_1(closure_2[14]).tGsCdS };
+    obj = { message: closure_1(closure_2[12]).tGsCdS };
     return jsx(UnconfirmedNotice, obj);
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(6792).AGE_NOTICE_SETTINGS_LOCATION;
-const Constants = fn(7554);
+let closure_6 = fn(6794).AGE_NOTICE_SETTINGS_LOCATION;
+const Constants = fn(7557);
 ({ SafetySettingsNoticeAction: metroImportDefault, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/AgeNoticeSettingsNotices.tsx");
 
 export function ContentFiltersTeenNotice() {
-  return <TeenNotice message={_modDef3284.qbBkFI} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
+  return <TeenNotice message={_modDef3284.HBnyJM} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
 }
 export { MessageRequestsTeenNotice };
 export function ContentFiltersUnconfirmedNotice() {

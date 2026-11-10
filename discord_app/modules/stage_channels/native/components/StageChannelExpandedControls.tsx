@@ -6,14 +6,14 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const useChannelVideoLimitDefault = tmp2(9304);
+const useChannelVideoLimitDefault = tmp2(9310);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { container: null };
 let obj3 = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
-const ColorUtils = fn(5137);
+const ColorUtils = fn(5139);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.container = obj3;
@@ -26,8 +26,8 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
   importDefault = undefined;
   const tmp = closure_8();
   const tmp4 = useCanSpeakInChannelDefault(channel.id);
-  const isConnectedToVoiceChannel = channel(11134).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(11134);
+  const isConnectedToVoiceChannel = channel(11143).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(11143);
   items = [GuildStore];
   const items1 = [channel.guild_id];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);
@@ -50,9 +50,9 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
     num = 0;
   }
   const obj4 = channel(504);
-  const stageHasMedia = channel(6767).useStageHasMedia(channel.id);
+  const stageHasMedia = channel(6769).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(12165).StreamVolumeItem, {}));
+  items5.push(jsx(channel(12174).StreamVolumeItem, {}));
   if (tmp11) {
     const obj5 = { channel, disabled: null };
     let tmp12 = stateFromStoresArray.length > 0;
@@ -67,13 +67,13 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
       tmp12 = reachedLimit;
     }
     obj5.disabled = tmp12;
-    items5.push(jsx(tmp5(12165).ScreenshareButton, { channel, disabled: null }));
+    items5.push(jsx(tmp5(12174).ScreenshareButton, { channel, disabled: null }));
   }
-  items5.push(jsx(channel(12165).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(12165).DeafenButton, { channel }));
+  items5.push(jsx(channel(12174).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(12174).DeafenButton, { channel }));
   const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
   tmp11 = num > 0 && tmp4;
-  const tmp5Result = channel(6767);
+  const tmp5Result = channel(6769);
   return (
     <View style={tmp.container}>
       {items5.map((children, index) => (

@@ -116,23 +116,23 @@ function TraitPickerLandscape(selectedAsset) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const rarityOrder = fn(6199).CHECKPOINT_RARITY_ORDER_MOBILE;
+const rarityOrder = fn(6201).CHECKPOINT_RARITY_ORDER_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
-  container: { gap: fn(13923).TRAIT_OPTION_SPACING },
+  container: { gap: fn(13944).TRAIT_OPTION_SPACING },
   earnedRow: null,
   landscapeGap: null,
   details: null,
   landscapeScrollContent: null,
 };
-let obj3 = { gap: fn(13923).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(13923).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(13923).CONTENT_INSET };
+let obj3 = { gap: fn(13944).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13944).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13944).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(13923).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(13944).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

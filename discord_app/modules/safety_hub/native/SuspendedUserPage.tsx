@@ -7,18 +7,18 @@ import LinkingDefault from "../../../lib/native/Linking.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8429 from "../../../../_runtime/metro/08429__.js";
+import _modDef8433 from "../../../../_runtime/metro/08433__.js";
 import SafetyHubPageDefault from "SafetyHubPage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8039);
+const SafetyHubConstants = fn(8043);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: closure_6 } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -68,7 +68,7 @@ export default function SuspendedUserSafetyHubPage() {
     obj4.onPress = function onClose() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    obj4.icon = _modDef8429;
+    obj4.icon = _modDef8433;
     const items1 = [metroImportDefault(IconButton.IconButton, obj4)];
     const obj5 = {
       style: tmp.text,

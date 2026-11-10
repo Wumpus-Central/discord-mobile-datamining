@@ -2,7 +2,7 @@
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
-const FramesConstants = fn(6902);
+const FramesConstants = fn(6905);
 ({ isLaunched: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
 const set = new Set();
 const size = fn(2);
@@ -12,7 +12,7 @@ export default function useAppChannelClosed(shouldStartClosed) {
   ({ applicationId, surface } = shouldStartClosed);
   first = undefined;
   let tmp = closure_5(applicationId, surface);
-  const tmp2 = first(12376)(applicationId, surface);
+  const tmp2 = first(12385)(applicationId, surface);
   [first] = noop.useState(null);
   dependencyMap = tmp5;
   let frameId;

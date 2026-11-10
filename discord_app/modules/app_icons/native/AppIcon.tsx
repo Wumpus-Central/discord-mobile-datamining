@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const getIconById = fn(10101).getIconById;
+const getIconById = fn(10107).getIconById;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   container: { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   image: { resizeMode: "contain", height: "100%", width: "100%" },

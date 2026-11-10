@@ -4,7 +4,7 @@ import applyDefault from "../../../../_runtime/00012_apply.js";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const UserGuildSettingsStore = fn(6830);
+const UserGuildSettingsStore = fn(6833);
 ({ convertChannelOverridesToMap: c3, getGuildDefaults: closure_4 } = UserGuildSettingsStore);
 let closure_5 = new LoggerDefault("ReadStates");
 class UserGuildSettings {

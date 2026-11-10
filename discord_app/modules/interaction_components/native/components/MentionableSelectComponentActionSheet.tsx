@@ -2,6 +2,7 @@
 import SearchableSelectActionComponentUtils from "../../SearchableSelectActionComponentUtils.tsx";
 import MentionableSelectOptionParts from "MentionableSelectOptionParts.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
@@ -15,34 +16,59 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
   const channelId = selectionActionComponent.channelId;
   const guildId = selectionActionComponent.guildId;
+  let memberVersion;
   GuildStore = undefined;
+  let options;
   ({ labelComponent, containerId, onSubmit, allowEmpty } = selectionActionComponent);
   guild = GuildStore.getGuild(guildId);
   let id;
   if (guild != null) {
     id = guild.id;
   }
-  GuildStore = channelId(guildId[3])(id, selectionActionComponent(tmp3[4]).MIN_REREQUEST_TIME);
-  items = [selectionActionComponent, channelId];
-  const callback = guild.useCallback(
-    (query) => SearchableSelectActionComponentUtils.queryMentionables(selectionActionComponent.type, query, channelId),
-    items,
+  memberVersion = channelId(guildId[4])(id, selectionActionComponent(tmp3[5]).MIN_REREQUEST_TIME);
+  const tmp4 = channelId(guildId[4]);
+  items = [memberVersion];
+  const stateFromStores = selectionActionComponent(guildId[6]).useStateFromStores(items, () =>
+    memberVersion.getMemberVersion(),
   );
-  const tmp7 = channelId(guildId[5])({
+  const tmp7 = channelId(guildId[7])();
+  GuildStore = tmp7;
+  let items1 = [selectionActionComponent, channelId, stateFromStores, tmp7];
+  const callback = guild.useCallback((query) => {
+    const obj = SearchableSelectActionComponentUtils;
+    return obj.queryMentionables(selectionActionComponent.type, query, channelId, { request: closure_5(query) });
+  }, items1);
+  const tmp9 = channelId(guildId[8])({
     selectActionComponent: selectionActionComponent,
     containerId,
     guildId,
     queryOptions: callback,
     onSubmit,
   });
-  const selectedOptions = tmp7.selectedOptions;
-  const items1 = [guild, guildId];
-  ({ options, isSelected, onPressOptionItem, submitSelection, setQuery } = tmp7);
+  options = tmp9.options;
+  const selectedOptions = tmp9.selectedOptions;
+  const items2 = [options];
+  ({ isSelected, onPressOptionItem, submitSelection, setQuery } = tmp9);
+  const memo = guild.useMemo(
+    () =>
+      options.flatMap((type) => {
+        if (type.type === selectionActionComponent(guildId[9]).SelectOptionType.USER) {
+          items = [type.value];
+          let items1 = items;
+        } else {
+          items1 = [];
+        }
+        return items1;
+      }),
+    items2,
+  );
+  channelId(guildId[10])(guildId, memo);
+  const items3 = [guild, guildId];
   const callback1 = guild.useCallback(
     (type) => MentionableSelectOptionParts.renderMentionableOptionIcon(type, guild, guildId),
-    items1,
+    items3,
   );
-  const obj = {
+  const obj2 = {
     onPressOptionItem,
     renderIcon: callback1,
     renderDescription: null,
@@ -59,37 +85,21 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
     channelId: null,
     allowEmpty: null,
   };
-  const tmp4 = channelId(guildId[3]);
-  obj.renderDescription = selectionActionComponent(guildId[6]).renderMentionableOptionDescription;
-  obj.renderOptionSuffix = function renderOptionSuffix(type) {
+  let obj = selectionActionComponent(guildId[6]);
+  obj2.renderDescription = selectionActionComponent(guildId[11]).renderMentionableOptionDescription;
+  obj2.renderOptionSuffix = function renderOptionSuffix(type) {
     return MentionableSelectOptionParts.renderMentionableOptionSuffix(type, guild, closure_4);
   };
-  obj.selectionActionComponent = selectionActionComponent;
-  obj.labelComponent = labelComponent;
-  obj.options = options;
-  obj.selectedCount = selectedOptions.length;
-  obj.selectedOptions = selectedOptions;
-  obj.isSelected = isSelected;
-  obj.submitSelection = submitSelection;
-  obj.onQueryChange = setQuery;
-  obj.itemAccessibilityLabel = selectionActionComponent(guildId[6]).mentionableOptionAccessibilityLabel;
-  obj.channelId = channelId;
-  obj.allowEmpty = allowEmpty;
-  return jsx(channelId(guildId[7]), {
-    onPressOptionItem,
-    renderIcon: callback1,
-    renderDescription: null,
-    renderOptionSuffix: null,
-    selectionActionComponent: null,
-    labelComponent: null,
-    options: null,
-    selectedCount: null,
-    selectedOptions: null,
-    isSelected: null,
-    submitSelection: null,
-    onQueryChange: null,
-    itemAccessibilityLabel: null,
-    channelId: null,
-    allowEmpty: null,
-  });
+  obj2.selectionActionComponent = selectionActionComponent;
+  obj2.labelComponent = labelComponent;
+  obj2.options = options;
+  obj2.selectedCount = selectedOptions.length;
+  obj2.selectedOptions = selectedOptions;
+  obj2.isSelected = isSelected;
+  obj2.submitSelection = submitSelection;
+  obj2.onQueryChange = setQuery;
+  obj2.itemAccessibilityLabel = selectionActionComponent(guildId[11]).mentionableOptionAccessibilityLabel;
+  obj2.channelId = channelId;
+  obj2.allowEmpty = allowEmpty;
+  return options(channelId(guildId[12]), obj2);
 }

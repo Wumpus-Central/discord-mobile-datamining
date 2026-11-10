@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/age_assurance/age_notice/nati
 
 export default function openAgeNoticePromoSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(16937, dependencyMap.paths),
+    asyncRequireImpl(16964, dependencyMap.paths),
     AGE_NOTICE_PROMO_SHEET_KEY,
     arg0,
   );

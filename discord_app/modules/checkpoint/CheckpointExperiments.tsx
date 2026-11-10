@@ -20,8 +20,8 @@ let ApexExperiment = ApexExperiment_mod;
 let closure_2 = ApexExperiment.createApexExperiment({
   name: "2026-10-build-a-bear-qa",
   kind: "user",
-  defaultConfig: { enabled: false },
-  variations: { 0: { enabled: false }, 1: { enabled: true } },
+  defaultConfig: { mode: "off" },
+  variations: { 0: { mode: "off" }, 1: { mode: "all" }, 2: { mode: "reset_only" } },
 });
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointExperiments.tsx");
 
@@ -37,6 +37,6 @@ export function useIsCheckpointCardEnabled(Checkpoint2026ForwardPreview) {
 export function getIsCheckpointCardEnabled(transformCheckpointCardToRowGeneratedComponent) {
   return closure_1.getConfig({ location: transformCheckpointCardToRowGeneratedComponent }).enabled;
 }
-export function useIsCheckpointQAEnabled(CheckpointProfileEntrypoint) {
-  return closure_2.useConfig({ location: CheckpointProfileEntrypoint }).enabled;
+export function useCheckpointQAMode(CheckpointProfileEntrypoint) {
+  return closure_2.useConfig({ location: CheckpointProfileEntrypoint }).mode;
 }

@@ -34,7 +34,7 @@ function MemberPreviews(role) {
   return closure_1_10(View, obj5);
 }
 function Content() {
-  const tmp3 = role(20355)();
+  const tmp3 = role(20383)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -86,23 +86,23 @@ function Content() {
     return closure_0({ icon: icon.uri, unicodeEmoji: "r" });
   };
   obj9.disabled = roleSubscriptionSettingsDisabled;
-  items3[1] = closure_9(role(20356), obj9);
+  items3[1] = closure_9(role(20384), obj9);
   obj7.children = items3;
   items2[1] = closure_10(View, obj7);
   const obj10 = { title: null, hasIcons: true, children: null };
   const intl3 = tmp4(1113).intl;
   obj10.title = intl3.string(require("util").t["W7hH+z"]);
-  obj10.children = closure_9(role(20391), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  obj10.children = closure_9(role(20419), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   items2[2] = closure_9(require("TableRowGroup").TableRowGroup, obj10);
   obj6.children = items2;
   return closure_10(View, obj6);
 }
 const View = fn(17).View;
-const constants = fn(17517).GuildRoleSubscriptionsTierScenes;
+const constants = fn(17544).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_26 }, member: null, memberLight: null, memberDark: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_26 };
 obj2.member = {

@@ -4,10 +4,10 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CircleErrorIcon from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import CircleXIcon from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
-import _modDef7177 from "../../../../_runtime/metro/07177__.js";
+import _modDef7180 from "../../../../_runtime/metro/07180__.js";
 import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import SafetyHubModels from "../SafetyHubModels.tsx";
-import _modDef11943 from "../../../../_runtime/metro/11943__.js";
+import _modDef11952 from "../../../../_runtime/metro/11952__.js";
 import SafetyHubAccountStandingLabels from "../SafetyHubAccountStandingLabels.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -16,30 +16,30 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubLinks = fn(8039).SafetyHubLinks;
+const SafetyHubLinks = fn(8043).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-let obj = { [fn(8040).AccountStandingState.ALL_GOOD]: { left: "0%" } };
+let obj = { [fn(8044).AccountStandingState.ALL_GOOD]: { left: "0%" } };
 let obj2 = { left: "25%", transform: null };
-let items = [{ translateX: -0.5 * fn(16964).SUBWAY_MARKER_WIDTH }];
+let items = [{ translateX: -0.5 * fn(16991).SUBWAY_MARKER_WIDTH }];
 obj2.transform = items;
-obj[fn(8040).AccountStandingState.LIMITED] = obj2;
+obj[fn(8044).AccountStandingState.LIMITED] = obj2;
 let obj4 = { left: "50%", transform: null };
-let obj3 = { translateX: -0.5 * fn(16964).SUBWAY_MARKER_WIDTH };
-let items1 = [{ translateX: -0.5 * fn(16964).SUBWAY_MARKER_WIDTH }];
+let obj3 = { translateX: -0.5 * fn(16991).SUBWAY_MARKER_WIDTH };
+let items1 = [{ translateX: -0.5 * fn(16991).SUBWAY_MARKER_WIDTH }];
 obj4.transform = items1;
-obj[fn(8040).AccountStandingState.VERY_LIMITED] = obj4;
+obj[fn(8044).AccountStandingState.VERY_LIMITED] = obj4;
 let obj6 = { left: "75%", transform: null };
-let obj5 = { translateX: -0.5 * fn(16964).SUBWAY_MARKER_WIDTH };
-let items2 = [{ translateX: -0.5 * fn(16964).SUBWAY_MARKER_WIDTH }];
+let obj5 = { translateX: -0.5 * fn(16991).SUBWAY_MARKER_WIDTH };
+let items2 = [{ translateX: -0.5 * fn(16991).SUBWAY_MARKER_WIDTH }];
 obj6.transform = items2;
-obj[fn(8040).AccountStandingState.AT_RISK] = obj6;
+obj[fn(8044).AccountStandingState.AT_RISK] = obj6;
 let obj8 = { left: "100%", transform: null };
-let obj7 = { translateX: -0.5 * fn(16964).SUBWAY_MARKER_WIDTH };
-let items3 = [{ translateX: -fn(16964).SUBWAY_MARKER_WIDTH }];
+let obj7 = { translateX: -0.5 * fn(16991).SUBWAY_MARKER_WIDTH };
+let items3 = [{ translateX: -fn(16991).SUBWAY_MARKER_WIDTH }];
 obj8.transform = items3;
-obj[fn(8040).AccountStandingState.SUSPENDED] = obj8;
-const createStyles = fn(5140);
+obj[fn(8044).AccountStandingState.SUSPENDED] = obj8;
+const createStyles = fn(5142);
 const obj11 = {
   container: null,
   avatarBackground: null,
@@ -55,7 +55,7 @@ const obj11 = {
   subwayMarker: null,
   icon: null,
 };
-const obj9 = { translateX: -fn(16964).SUBWAY_MARKER_WIDTH };
+const obj9 = { translateX: -fn(16991).SUBWAY_MARKER_WIDTH };
 obj11.container = {
   display: "flex",
   flexDirection: "column",
@@ -152,7 +152,7 @@ export default function SafetyHubAccountStanding() {
       SafetyHubAccountStandingLabels.ACCOUNT_STANDING_SHORT_STATUS[SafetyHubModels.AccountStandingState.LIMITED];
     obj4.style = closure_3.limited;
     obj4.CustomIcon = CircleErrorIcon.CircleErrorIcon;
-    obj4.iconSource = _modDef11943;
+    obj4.iconSource = _modDef11952;
     obj[SafetyHubModels.AccountStandingState.LIMITED] = obj4;
     const obj5 = {
       title: util.t.crzE2X,
@@ -168,7 +168,7 @@ export default function SafetyHubAccountStanding() {
       SafetyHubAccountStandingLabels.ACCOUNT_STANDING_SHORT_STATUS[SafetyHubModels.AccountStandingState.VERY_LIMITED];
     obj5.style = closure_3.veryLimited;
     obj5.CustomIcon = CircleErrorIcon.CircleErrorIcon;
-    obj5.iconSource = _modDef11943;
+    obj5.iconSource = _modDef11952;
     obj[SafetyHubModels.AccountStandingState.VERY_LIMITED] = obj5;
     const obj6 = {
       title: util.t.XRNVzO,
@@ -184,7 +184,7 @@ export default function SafetyHubAccountStanding() {
       SafetyHubAccountStandingLabels.ACCOUNT_STANDING_SHORT_STATUS[SafetyHubModels.AccountStandingState.AT_RISK];
     obj6.style = closure_3.atRisk;
     obj6.CustomIcon = CircleErrorIcon.CircleErrorIcon;
-    obj6.iconSource = _modDef11943;
+    obj6.iconSource = _modDef11952;
     obj[SafetyHubModels.AccountStandingState.AT_RISK] = obj6;
     const obj7 = {
       title: util.t.MExFkz,
@@ -200,7 +200,7 @@ export default function SafetyHubAccountStanding() {
       SafetyHubAccountStandingLabels.ACCOUNT_STANDING_SHORT_STATUS[SafetyHubModels.AccountStandingState.SUSPENDED];
     obj7.style = closure_3.suspended;
     obj7.CustomIcon = CircleXIcon.CircleXIcon;
-    obj7.iconSource = _modDef7177;
+    obj7.iconSource = _modDef7180;
     obj[SafetyHubModels.AccountStandingState.SUSPENDED] = obj7;
     return obj;
   }, items);
@@ -250,7 +250,7 @@ export default function SafetyHubAccountStanding() {
     let userAvatarSource = height(1411).getUserAvatarSource(stateFromStores);
     let obj2 = height(1411);
   } else {
-    userAvatarSource = height(9591);
+    userAvatarSource = height(9597);
   }
   const style = tmp13.style;
   let obj3 = { style: tmp4.container, children: null };
@@ -277,8 +277,8 @@ export default function SafetyHubAccountStanding() {
     },
   });
   const items4 = [
-    closure_9(accountStanding(5751).Text, obj8),
-    closure_9(accountStanding(5751).Text, {
+    closure_9(accountStanding(5753).Text, obj8),
+    closure_9(accountStanding(5753).Text, {
       variant: "body-sm/medium",
       color: "text-muted",
       style: { textAlign: "center" },

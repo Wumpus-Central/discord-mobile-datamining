@@ -30,7 +30,7 @@ export default function useNameplateSections() {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(563);
-  return first(15344)(
+  return first(15369)(
     useMemo(() => {
       let obj = CollectiblesUtils;
       const nameplates = obj.getNameplates(stateFromStores, first);

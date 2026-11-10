@@ -6,7 +6,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/conjure/share/native/openConjureShareSheet.tsx");
 
 export default function openConjureShareSheet(projectId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12412, dependencyMap.paths), "ConjureShareSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12425, dependencyMap.paths), "ConjureShareSheet", {
     projectId,
   });
 }

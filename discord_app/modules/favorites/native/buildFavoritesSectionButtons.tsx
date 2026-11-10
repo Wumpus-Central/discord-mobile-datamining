@@ -117,7 +117,7 @@ export default function buildFavoritesSectionButtons(channelId) {
     const obj2 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
     const intl2 = channelId(1113).intl;
     obj2.label = intl2.string(_modDef3608.TN4nAX);
-    obj2.IconComponent = channelId(10184).StarIcon;
+    obj2.IconComponent = channelId(10190).StarIcon;
     obj2.onPress = function onPress() {
       return (function removeChannelFromFavorites() {
         const self = this;
@@ -134,7 +134,7 @@ export default function buildFavoritesSectionButtons(channelId) {
     const obj = { label: null, IconComponent: null, onPress: null };
     const intl = channelId(1113).intl;
     obj.label = intl.string(_modDef3608.G9fGlP);
-    obj.IconComponent = channelId(10182).StarOutlineIcon;
+    obj.IconComponent = channelId(10188).StarOutlineIcon;
     obj.onPress = function onPress() {
       return (function addChannelToFavorites() {
         const self = this;

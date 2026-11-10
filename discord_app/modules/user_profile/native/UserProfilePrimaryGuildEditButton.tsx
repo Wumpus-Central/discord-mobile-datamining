@@ -6,10 +6,19 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
-const GuildTagBadgeSize = fn(8464).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8468).GuildTagBadgeSize;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
-let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: nativeDefault.radii.sm } };
+const createStyles = fn(5142);
+let obj2 = {
+  tag: {
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    columnGap: 4,
+    borderRadius: nativeDefault.radii.sm,
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.BORDER_MUTED,
+  },
+};
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx");
@@ -125,7 +134,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj4.accessibilityValue = obj5;
     obj4.onPress = function handleOpenSelectPrimaryGuild() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(16829, dependencyMap.paths),
+        asyncRequireImpl(16856, dependencyMap.paths),
         "UserPrimaryGuildListBottomSheet",
         {
           availableGuilds: userAvailableGuildsWithTags,

@@ -2,11 +2,13 @@
 import Constants2 from "../../Constants.tsx";
 import PrivateChannelCallUtils from "../../utils/native/PrivateChannelCallUtils.tsx";
 import SharePreparingModalConstants from "../share/native/SharePreparingModalConstants.tsx";
+import CheckpointModalConstants from "../checkpoint/CheckpointModalConstants.tsx";
 import Constants from "../oauth2/native/Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 ({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } = Constants);
 const items = [
+  CheckpointModalConstants.CHECKPOINT_MODAL_KEY,
   Constants2.MEDIA_MODAL_KEY,
   OAUTH2_AUTHORIZE_MODAL_KEY,
   OAUTH2_SUCCESS_RESULT_MODAL_KEY,

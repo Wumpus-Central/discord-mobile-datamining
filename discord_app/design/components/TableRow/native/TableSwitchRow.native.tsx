@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_7 = createStyles.createStyles(() => ({
   labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 },
 }));
@@ -60,7 +60,7 @@ export function TableSwitchRow(value) {
         str = "text-feedback-critical";
       }
       const obj5 = { variant: "body-md/semibold", color: str, includeFontPadding: true, children: label };
-      tmp8Result = hasOwnProperty(tmp3(5751).Text, obj5);
+      tmp8Result = hasOwnProperty(tmp3(5753).Text, obj5);
     }
     const items1 = [tmp8Result, trailing];
     obj4.children = items1;

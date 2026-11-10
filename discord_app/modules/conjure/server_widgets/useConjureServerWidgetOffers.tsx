@@ -90,7 +90,7 @@ let closure_11 = async function _loadWidgetConfigs(arg0, arg1) {
                       closure_129_0 = undefined;
                       if (dependencyMap()) {
                         c6 = 3;
-                        const obj5 = { value: { v: "uri" }, done: true };
+                        const obj5 = { value: { v: "r" }, done: true };
                         return obj5;
                       } else {
                         c4 = 1;
@@ -143,7 +143,7 @@ let closure_11 = async function _loadWidgetConfigs(arg0, arg1) {
                         return obj10;
                       } else if (closure_130_0()) {
                         c6 = 3;
-                        const obj11 = { value: { v: "uri" }, done: true };
+                        const obj11 = { value: { v: "r" }, done: true };
                         return obj11;
                       } else {
                         c4 = 2;
@@ -398,7 +398,7 @@ export default function useConjureServerWidgetOffers() {
   );
   const items9 = [stateFromStoresArray, stateFromStores4, stateFromStores5, tmp11Result];
   return noop.useMemo(() => {
-    const found = closure_1.filter((item) => item instanceof stateFromStoresArray(7853).ApplicationWidget);
+    const found = closure_1.filter((item) => item instanceof stateFromStoresArray(7857).ApplicationWidget);
     const map = new Map();
     const iter = stateFromStoresArray[Symbol.iterator]();
     const nextResult = iter.next();
@@ -410,7 +410,7 @@ export default function useConjureServerWidgetOffers() {
       let found1;
       if (arr2 != null) {
         found1 = arr2.find(
-          (status) => status.status === stateFromStoresArray(15181).ApplicationWidgetConfigStatus.PUBLISHED,
+          (status) => status.status === stateFromStoresArray(15207).ApplicationWidgetConfigStatus.PUBLISHED,
         );
       }
       let tmp6 = found1;

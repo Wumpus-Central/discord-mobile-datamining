@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10344).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10350).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     applicationCommandItem: {
@@ -36,8 +36,8 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.highlightedApplicationCommandItem = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
   const size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, marginRight: 16 };
   obj.applicationCommandIcon = size;
-  obj.applicationCommandDescriptionWrapper = { flexDirection: "column", flexShrink: 1, alignSelf: "flex-end" };
-  obj.applicationCommandSectionName = { paddingLeft: 16, marginLeft: "auto" };
+  obj.applicationCommandDescriptionWrapper = { flexDirection: "column", flex: 1, alignSelf: "flex-end" };
+  obj.applicationCommandSectionName = { flexShrink: 1, maxWidth: "40%", paddingLeft: 16, marginLeft: "auto" };
   return obj;
 });
 let size = fn(2);
@@ -120,6 +120,7 @@ export default function ApplicationCommandItem(highlighted) {
   items2[1] = closure_8(View, obj7);
   items2[2] = closure_7(section(stateFromStores[13]).Text, {
     style: tmp3.applicationCommandSectionName,
+    lineClamp: 1,
     variant: "body-sm/medium",
     color: "text-muted",
     children: name,

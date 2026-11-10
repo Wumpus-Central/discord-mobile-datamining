@@ -6,6 +6,7 @@ import GuildActionCreatorsDefault from "../actions/GuildActionCreators.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 import priv from "../../_runtime/01453_priv.js";
+import Dispatcher from "../Dispatcher.tsx";
 
 require = fn;
 function getGuildNameSuggestion(truncateUsername) {
@@ -32,7 +33,10 @@ function getGuildNameSuggestion(truncateUsername) {
 }
 let obj = { maxAge: null };
 obj.maxAge = DurationsDefault.Millis.MINUTE;
-const importDefaultResult1 = new priv(obj);
+const importDefaultResult2 = new priv(obj);
+const subscription = Dispatcher.subscribe("CONNECTION_OPEN", () => {
+  importDefaultResult2.reset();
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/GuildUtils.tsx");
 
@@ -53,9 +57,9 @@ export default {
           str = "";
         }
         const combined = "" + str + ":" + closure_0;
-        value = importDefaultResult1.get(combined);
+        value = importDefaultResult2.get(combined);
         if (null == value) {
-          const result = importDefaultResult1.set(combined, true);
+          const result = importDefaultResult2.set(combined, true);
         }
         if (null == value) {
           items.push(item);
@@ -69,9 +73,9 @@ export default {
       }
       const _HermesInternal = HermesInternal;
       let combined = "" + str + ":" + arg1;
-      value = importDefaultResult1.get(combined);
+      value = importDefaultResult2.get(combined);
       if (null == value) {
-        let result = importDefaultResult1.set(combined, true);
+        let result = importDefaultResult2.set(combined, true);
       }
       flag2 = false;
       if (null == value) {

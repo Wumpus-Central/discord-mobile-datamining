@@ -4,7 +4,7 @@ import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayou
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(8503).MobileUserSettings;
+const MobileUserSettings = fn(8507).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -43,7 +43,7 @@ export default function SettingsDesignSystemsScreen() {
     obj4.settings = items2;
     items1[1] = obj4;
     const obj5 = { label: "In Progress", settings: null };
-    const items3 = [, , , , ,];
+    const items3 = [, , , , , ,];
     ({
       DESIGN_SYSTEM_BADGE: arr4[0],
       DESIGN_SYSTEM_SHEETS: arr4[1],
@@ -51,6 +51,7 @@ export default function SettingsDesignSystemsScreen() {
       DESIGN_SYSTEMS_CONTEXT_MENU: arr4[3],
       DESIGN_SYSTEMS_TOAST: arr4[4],
       DESIGN_SYSTEMS_MODAL: arr4[5],
+      DESIGN_SYSTEMS_NAVIGATOR: arr4[6],
     } = constants);
     obj5.settings = items3;
     items1[2] = obj5;

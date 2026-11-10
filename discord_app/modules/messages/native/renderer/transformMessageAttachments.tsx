@@ -5,7 +5,7 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import MediaFormatTesters from "../../MediaFormatTesters.tsx";
 import MediaFormatParamUtils from "../../../media/MediaFormatParamUtils.tsx";
-import noConflictDefault from "../../../../../_runtime/08287_noConflict.js";
+import noConflictDefault from "../../../../../_runtime/08291_noConflict.js";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import sanitizeMediaDimension from "sanitizeMediaDimension.tsx";
 import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";

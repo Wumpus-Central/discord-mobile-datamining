@@ -20,7 +20,7 @@ let closure_2 = [
 ];
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" },
   buttonTextPlaceholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },

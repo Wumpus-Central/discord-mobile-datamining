@@ -4,6 +4,7 @@ import size from "../../../../../../../_runtime/metro/00002__.js";
 
 const obj = {
   asIterable: passThrough.asIterable,
+  captureMessageData: passThrough.captureMessageData,
   Array: null,
   Map: null,
   Set: null,
@@ -29,6 +30,7 @@ const obj = {
   Element: null,
   Attr: null,
   NodeList: null,
+  Worker: null,
   Blob: null,
   String: null,
   HTMLMediaElement: null,
@@ -41,6 +43,7 @@ const obj = {
   AnalyserNode: null,
   Window: null,
   Object: null,
+  ObjectURL: null,
   Math: null,
   Reflect: null,
   Symbol: null,
@@ -48,15 +51,17 @@ const obj = {
   Constructor: null,
 };
 let passThrough = passThrough_mod;
-obj.Array = passThrough.protectPrototype("Array", ["every", "filter", "forEach", "includes", "map", "push", "some"], {
-  chainable: ["filter", "map"],
-});
+obj.Array = passThrough.protectPrototype(
+  "Array",
+  ["every", "filter", "forEach", "includes", "indexOf", "map", "push", "some"],
+  { chainable: ["filter", "map"] },
+);
 let passThrough = passThrough_mod;
 obj.Map = passThrough.protectPrototype("Map", ["delete", "forEach", "get", "has", "set", "size"]);
 let passThrough = passThrough_mod;
 obj.Set = passThrough.protectPrototype("Set", ["add", "delete", "forEach", "has", "size"]);
 let passThrough = passThrough_mod;
-obj.WeakMap = passThrough.protectPrototype("WeakMap", ["get", "set"]);
+obj.WeakMap = passThrough.protectPrototype("WeakMap", ["delete", "get", "set"]);
 let passThrough = passThrough_mod;
 obj.WeakSet = passThrough.protectPrototype("WeakSet", ["add", "has"]);
 let passThrough = passThrough_mod;
@@ -125,9 +130,12 @@ obj.Attr = passThrough.protectPrototype("Attr", ["localName", "ownerElement", "v
 let passThrough = passThrough_mod;
 obj.NodeList = passThrough.protectPrototype("NodeList", ["item", "length"]);
 let passThrough = passThrough_mod;
+obj.Worker = passThrough.protectPrototype("Worker", ["terminate"]);
+let passThrough = passThrough_mod;
 obj.Blob = passThrough.protectPrototype("Blob", ["type"]);
 let passThrough = passThrough_mod;
 obj.String = passThrough.protectPrototype("String", [
+  "concat",
   "indexOf",
   "slice",
   "startsWith",
@@ -180,9 +188,11 @@ obj.Object = passThrough.protectStatics("Object", [
   "setPrototypeOf",
 ]);
 let passThrough = passThrough_mod;
+obj.ObjectURL = passThrough.protectStatics("URL", ["createObjectURL", "revokeObjectURL"]);
+let passThrough = passThrough_mod;
 obj.Math = passThrough.protectStatics("Math", ["abs"]);
 let passThrough = passThrough_mod;
-obj.Reflect = passThrough.protectStatics("Reflect", ["construct", "defineProperty", "get"]);
+obj.Reflect = passThrough.protectStatics("Reflect", ["construct", "defineProperty", "deleteProperty", "get"]);
 let passThrough = passThrough_mod;
 obj.Symbol = passThrough.protectStatics("Symbol", ["asyncIterator", "iterator", "toStringTag"]);
 let passThrough = passThrough_mod;
@@ -200,6 +210,8 @@ obj.Constructor = passThrough.protectConstructors([
   "Set",
   "Uint32Array",
   "URL",
+  "String",
+  "Uint8Array",
   "WeakMap",
   "WeakSet",
 ]);

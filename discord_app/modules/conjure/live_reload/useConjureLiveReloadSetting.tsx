@@ -12,35 +12,42 @@ const result = size.fileFinishedImporting("modules/conjure/live_reload/useConjur
 
 export function useConjureLiveReloadSetting(arg0) {
   _require = arg0;
-  items = [closure_5];
+  items = [ConjureLiveReloadStore];
   const items1 = [arg0];
-  const stateFromStores = require("initialize").useStateFromStores(
+  stateFromStores = require("initialize").useStateFromStores(
     items,
     () => ConjureLiveReloadStore.getLiveReload(closure_0),
     items1,
   );
+  const tmp4 = flag(noop.useState(null), 2);
+  flag = tmp4[0];
+  noop = tmp5;
   let obj = require("initialize");
   let obj2 = noop;
   let tmp = _require;
-  const tmp2 = flag;
-  [flag] = noop.useState(null);
-  _slicedToArray = tmp6;
-  const tmp4 = stateFromStores(flag[4])(arg0);
-  [tmp8, tmp9] = noop.useState(null);
-  noop = tmp9;
-  if (tmp10) {
-    tmp9(null);
+  const tmp2 = stateFromStores;
+  [tmp7, tmp8] = flag(noop.useState(null), 2);
+  ConjureLiveReloadStore = tmp8;
+  if (tmp9) {
+    tmp8(null);
   }
-  if (null != tmp8) {
-    if (stateFromStores === tmp8.before) {
-      let enabled = tmp8.enabled;
+  if (null != tmp7) {
+    if (stateFromStores === tmp7.before) {
+      let enabled = tmp7.enabled;
     }
-    if (tmp12) {
-      tmp6(null);
+    if (tmp11) {
+      tmp5(null);
     }
-    closure_5 = tmp14;
+    closure_5 = tmp13;
     const items2 = [null != stateFromStores && null != flag && flag !== enabled, flag, stateFromStores, arg0];
-    let tmp16 = null != stateFromStores;
+    const obj3 = {
+      available: null != stateFromStores,
+      checked: null,
+      description: null,
+      changed: null,
+      setChecked: null,
+      save: null,
+    };
     const callback = obj2.useCallback(() => {
       let tmp = !closure_5;
       if (closure_5) {
@@ -50,7 +57,7 @@ export function useConjureLiveReloadSetting(arg0) {
         flag = conjureLiveReloadConnection.sendLiveReload(closure_0, flag);
         if (flag) {
           const obj2 = { enabled: tmp7, before: stateFromStores };
-          stateFromStores(obj2);
+          tmp8(obj2);
           closure_3(null);
           flag = true;
         }
@@ -59,10 +66,6 @@ export function useConjureLiveReloadSetting(arg0) {
       }
       return tmp;
     }, items2);
-    if (tmp16) {
-      tmp16 = tmp4;
-    }
-    const obj3 = { available: tmp16, checked: null, description: null, changed: null, setChecked: null, save: null };
     if (flag == null) {
       flag = enabled;
     }
@@ -72,12 +75,12 @@ export function useConjureLiveReloadSetting(arg0) {
     obj3.checked = flag;
     let str = "";
     if (null != stateFromStores) {
-      str = tmp(tmp2[6]).liveReloadDescription(stateFromStores);
-      const tmpResult = tmp(tmp2[6]);
+      str = tmp(tmp2[5]).liveReloadDescription(stateFromStores);
+      const tmpResult = tmp(tmp2[5]);
     }
     obj3.description = str;
     obj3.changed = null != stateFromStores && null != flag && flag !== enabled;
-    obj3.setChecked = tmp6;
+    obj3.setChecked = tmp5;
     obj3.save = callback;
     return obj3;
   }

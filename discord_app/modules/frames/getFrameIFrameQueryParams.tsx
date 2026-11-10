@@ -2,7 +2,7 @@
 import DiscordEnvironment from "../activities/DiscordEnvironment.tsx";
 import getFrameLaunchContextQueryParamsDefault from "utils/getFrameLaunchContextQueryParams.tsx";
 import getFrameSurfaceQueryParamsDefault from "utils/getFrameSurfaceQueryParams.tsx";
-import _mod19476 from "../../../_runtime/metro/19476__.js";
+import _mod19505 from "../../../_runtime/metro/19505__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/frames/getFrameIFrameQueryParams.tsx");
@@ -19,7 +19,7 @@ export default function getFrameIFrameQueryParams(data, platform) {
 }
 export function useFrameIFrameQueryParams(data, platform) {
   items = [data.data.url];
-  let memoOne = _mod19476.useMemoOne(() => DiscordEnvironment.getDiscordEnvQueryParams(), items);
+  let memoOne = _mod19505.useMemoOne(() => DiscordEnvironment.getDiscordEnvQueryParams(), items);
   if (memoOne === undefined) {
     memoOne = DiscordEnvironment.getDiscordEnvQueryParams();
     const tmpResult = DiscordEnvironment;

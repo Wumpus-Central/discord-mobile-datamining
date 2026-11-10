@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   content: { flex: 1 },
@@ -127,12 +127,12 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: num2(9180), accessibilityLabel: null, ref: null };
+        const obj = { source: num2(9186), accessibilityLabel: null, ref: null };
         const intl = guildId(1113).intl;
         obj.accessibilityLabel = intl.string(guildId(1113).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_8(guildId(7630).HeaderActionButton, obj);
+        return closure_1_8(guildId(7633).HeaderActionButton, obj);
       },
     });
   }, items5);

@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   button: {
     flexDirection: "row",
@@ -44,7 +44,7 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   let obj = user(504);
   const items1 = [AccessibilityStore];
   const stateFromStores = user(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  const GifAutoPlay = user(4965).GifAutoPlay;
+  const GifAutoPlay = user(4967).GifAutoPlay;
   const setting = GifAutoPlay.useSetting();
   const obj3 = {
     accessibilityRole: "button",
@@ -59,7 +59,7 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   obj3.accessibilityLabel = intl.string(user(1113).t.lsjENp);
   const obj4 = { text: null };
   const obj2 = user(504);
-  obj4.text = user(16862).getDisplayNameStyleAccessibleValue(displayNameStyles);
+  obj4.text = user(16889).getDisplayNameStyleAccessibleValue(displayNameStyles);
   obj3.accessibilityValue = obj4;
   const intl2 = user(1113).intl;
   obj3.accessibilityHint = intl2.string(user(1113).t["4lAcxv"]);
@@ -83,14 +83,14 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   };
   if (!stateFromStores) {
     if (setting) {
-      let STATIC = tmp2(10892).EffectDisplayType.ANIMATED;
+      let STATIC = tmp2(10901).EffectDisplayType.ANIMATED;
     }
     obj7.effectDisplayType = STATIC;
     obj6.children = closure_6(tmp10, obj7);
-    const items2 = [closure_6(View, obj6), closure_6(tmp2(7047).TableRowArrow, {})];
+    const items2 = [closure_6(View, obj6), closure_6(tmp2(7050).TableRowArrow, {})];
     obj3.children = items2;
-    return closure_7(user(7043).PressableHighlight, obj3);
+    return closure_7(user(7046).PressableHighlight, obj3);
   }
-  STATIC = tmp2(10892).EffectDisplayType.STATIC;
-  const obj5 = user(16862);
+  STATIC = tmp2(10901).EffectDisplayType.STATIC;
+  const obj5 = user(16889);
 }

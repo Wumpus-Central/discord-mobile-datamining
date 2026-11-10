@@ -12,7 +12,7 @@ const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   underlay: { backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND },
   bar: null,
@@ -73,7 +73,7 @@ export function PinotMemberNoticeBar(channel) {
       );
     },
   });
-  const items1 = [closure_6(channel(5751).Text, obj3)];
+  const items1 = [closure_6(channel(5753).Text, obj3)];
   const obj5 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
   const intl2 = channel(1113).intl;
   obj5.accessibilityLabel = intl2.string(channel(1113).t.WAI6xu);
@@ -82,8 +82,8 @@ export function PinotMemberNoticeBar(channel) {
     const result = PinotAnalytics.trackPinotNoticeAction({ noticeType: "member_channel", channel }, "dismiss");
     onDismiss();
   };
-  obj5.children = closure_6(channel(7120).XSmallIcon, { size: "sm", color: "icon-muted" });
-  items1[1] = closure_6(channel(7043).PressableOpacity, obj5);
+  obj5.children = closure_6(channel(7123).XSmallIcon, { size: "sm", color: "icon-muted" });
+  items1[1] = closure_6(channel(7046).PressableOpacity, obj5);
   obj2.children = items1;
   obj.children = closure_7(View, obj2);
   return closure_6(View, obj);

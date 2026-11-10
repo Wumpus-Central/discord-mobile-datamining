@@ -1,9 +1,9 @@
 // discord_app/modules/coded_links/codedLinkQueue.tsx
 import LoggerDefault from "../debug/Logger.tsx";
-import _modDef19924 from "../../../_runtime/metro/19924__.js";
+import _modDef19952 from "../../../_runtime/metro/19952__.js";
 
 const logger = new LoggerDefault("codedLinkQueue");
-const obj = new _modDef19924({ concurrency: 5, intervalCap: 10, interval: 2000 });
+const obj = new _modDef19952({ concurrency: 5, intervalCap: 10, interval: 2000 });
 obj.on("add", () => {
   if (obj.size > 0) {
     logger.warn("Message link fetch queue backlog:", tmp.size);

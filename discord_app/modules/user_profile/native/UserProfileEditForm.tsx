@@ -18,7 +18,7 @@ import useSafeAreaAvoidingInputsDefault from "../../safe_area/useSafeAreaAvoidin
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef16760 from "../../../../_runtime/metro/16760__.js";
+import _modDef16787 from "../../../../_runtime/metro/16787__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
@@ -44,16 +44,16 @@ import ProfileCustomizationNavigationStore from "../../profile_customization/Pro
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const useProfileThemeDefault = tmp(8873);
-const useUserProfileBannerHeightDefault = tmp(8876);
-const UserProfileFixedBackgroundDefault = tmp(8884);
-const useBadgesDefault = tmp(8889);
-const useMeasuredLayoutDefault = tmp(9069);
-const UserProfileCustomStatusBubbleDefault = tmp(11537);
-const useTryItOutUpsellScrollTrackingDefault = tmp(16783);
-const useScrollToUserProfileEditFormSectionDefault = tmp(16784);
-const EditUserProfileAvatarDefault = tmp(16867);
-const UserProfilePremiumTryItOutUpsellDefault = tmp(16877);
+const useProfileThemeDefault = tmp(8879);
+const useUserProfileBannerHeightDefault = tmp(8882);
+const UserProfileFixedBackgroundDefault = tmp(8890);
+const useBadgesDefault = tmp(8895);
+const useMeasuredLayoutDefault = tmp(9075);
+const UserProfileCustomStatusBubbleDefault = tmp(11546);
+const useTryItOutUpsellScrollTrackingDefault = tmp(16810);
+const useScrollToUserProfileEditFormSectionDefault = tmp(16811);
+const EditUserProfileAvatarDefault = tmp(16894);
+const UserProfilePremiumTryItOutUpsellDefault = tmp(16904);
 require = fn;
 function EditUserProfileBanner(arg0) {
   ({
@@ -616,7 +616,7 @@ function UserProfileEditFormContent(currentUser) {
         obj6.value = tmp16;
         obj6.onFocus = onFocus;
         obj6.onChange = function onChange(globalName) {
-          return _undefined(8806).setPendingChanges({ globalName });
+          return _undefined(8812).setPendingChanges({ globalName });
         };
         obj6.placeholder = _undefined.toString();
         obj6.maxLength = maxLength;
@@ -657,7 +657,7 @@ function UserProfileEditFormContent(currentUser) {
           obj8.value = tmp30;
           obj8.onFocus = onFocus;
           obj8.onChange = function onChange(pronouns) {
-            return _undefined(8806).setPendingChanges({ pronouns });
+            return _undefined(8812).setPendingChanges({ pronouns });
           };
           obj8.maxLength = maxLength2;
           obj8.disabled = isSubmitting;
@@ -691,7 +691,7 @@ function UserProfileEditFormContent(currentUser) {
           obj10.value = tmp41;
           obj10.onFocus = onFocus;
           obj10.onChange = function onChange(bio) {
-            return _undefined(8806).setPendingChanges({ bio });
+            return _undefined(8812).setPendingChanges({ bio });
           };
           obj10.autoFocus = c1 === isSubmitting.BIO;
           obj10.maxLength = maxLength;
@@ -708,7 +708,7 @@ function UserProfileEditFormContent(currentUser) {
           if (tmp25) {
             let fn = UserProfileActionCreators.setTryItOutThemeColors;
           } else {
-            fn = (themeColors) => _undefined(8806).setPendingChanges({ themeColors });
+            fn = (themeColors) => _undefined(8812).setPendingChanges({ themeColors });
           }
           obj11.onProfileThemeColorsChanged = fn;
           obj11.pendingAvatarSrc = pendingAvatarSrc;
@@ -769,7 +769,7 @@ function UserProfileEditFormContent(currentUser) {
               currentUser: _undefined,
               onLayout: closure_50.onTryItOutSectionLayout,
               onPreviewPremium() {
-                return _undefined(16863).openPremiumTryItOutModal();
+                return _undefined(16890).openPremiumTryItOutModal();
               },
             };
             tmp12Result9 = closure_2_15(UserProfilePremiumTryItOutSectionDefault, obj21);
@@ -836,7 +836,7 @@ function UserProfileEditFormContent(currentUser) {
     items9[2] = tmp25;
     obj16.children = items9;
     obj15.children = tmp51(tmp52, obj16);
-    return tmp50(tmp4(5199).ThemeContextProvider, obj15);
+    return tmp50(tmp4(5201).ThemeContextProvider, obj15);
   } else if (enabled) {
     tmp = UserProfilePremiumTryItOutUpsellDefault;
     obj = {
@@ -848,25 +848,25 @@ function UserProfileEditFormContent(currentUser) {
     let tmp50Result = tmp50(tmp, obj);
   } else {
     let obj25 = { isTryItOut };
-    tmp50Result = tmp50(tmp4(16878).UserProfilePremiumUpsellCard, obj25);
+    tmp50Result = tmp50(tmp4(16905).UserProfilePremiumUpsellCard, obj25);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7437).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7440).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1072);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: closure_10 } = Constants);
-const HexagonCampaignConstants = fn(5165);
+const HexagonCampaignConstants = fn(5167);
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-let closure_14 = fn(16759).UserProfileEditAutoFocusElement;
+let closure_14 = fn(16786).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = [1];
 let obj = {
-  assetOrigin: fn(7222).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef16760,
-  staticImageUri: _modDef16760,
+  assetOrigin: fn(7225).AssetOriginTypes.NEW_ASSET,
+  imageUri: _modDef16787,
+  staticImageUri: _modDef16787,
   description: "",
   originalAsset: "add",
 };

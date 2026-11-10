@@ -47,7 +47,6 @@ const items = [, , , , , ,];
   FINALIZE_CHARACTER: arr[6],
 } = obj);
 const set = new Set(items);
-const items1 = [obj.SIDEKICK_LEAVE];
 const obj2 = {
   IDLE: "idle",
   INTRODUCTION: "introduction",
@@ -118,10 +117,9 @@ const result = size.fileFinishedImporting("modules/checkpoint/CheckpointNavigati
 
 export const CheckpointFlow = { SHARED_DATA: "shared_data", NO_SHARED_DATA: "no_shared_data" };
 export const CheckpointRoute = obj;
-export function isCheckpointCustomizationRoute(activeRoute) {
-  return set.has(activeRoute);
+export function isCheckpointCustomizationRoute(route) {
+  return set.has(route);
 }
-export const SILENT_CHECKPOINT_ROUTES = new Set(items1);
 export const CheckpointCharacterStage = obj2;
 export const CheckpointStatsScreen = obj3;
 export function getCheckpointRoutePresentation(route) {

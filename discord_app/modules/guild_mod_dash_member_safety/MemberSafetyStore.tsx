@@ -43,7 +43,7 @@ function handleGuildRoleMemberUpdate(guildId) {
   items = [guildId.userId];
   return dependencyMap[guildId].updateMembersByMemberIds(items);
 }
-let closure_8 = fn(7750).GuildMemberSafetyPageStore;
+let closure_8 = fn(7753).GuildMemberSafetyPageStore;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let c10 = false;
 const dependencyMap = {};
@@ -325,6 +325,14 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       dependencyMap[guildId] = tmp6;
     }
     return dependencyMap[guildId].removeMember(guildId.user.id);
+  },
+  GUILD_MEMBER_REMOVE_LOCAL: function handleGuildMemberRemoveLocal(guildId) {
+    guildId = guildId.guildId;
+    if (null == dependencyMap[guildId]) {
+      const tmp6 = new closure_8(guildId);
+      dependencyMap[guildId] = tmp6;
+    }
+    return dependencyMap[guildId].removeMember(guildId.userId);
   },
   GUILD_ROLE_UPDATE: handleGuildRoleUpdateOrDelete,
   GUILD_ROLE_DELETE: handleGuildRoleUpdateOrDelete,

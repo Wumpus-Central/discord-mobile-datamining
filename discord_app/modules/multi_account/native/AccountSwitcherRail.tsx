@@ -15,8 +15,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 import MultiAccountStore from "../MultiAccountStore.tsx";
 import MultiAccountSwitchStore from "../MultiAccountSwitchStore.tsx";
 
-const CircleInformationIcon = CheckmarkSmallIcon(5859);
-const CheckmarkSmallIcon2 = CheckmarkSmallIcon(7366);
+const CircleInformationIcon = CheckmarkSmallIcon(5861);
+const CheckmarkSmallIcon2 = CheckmarkSmallIcon(7369);
 require = fn;
 function RailButton(arg0) {
   closure_0 = closure_22();
@@ -38,9 +38,9 @@ function AccountButton(user) {
   const selected = user.selected;
   ({ disabled, onSelect: importAll } = user);
   dependencyMap = closure_22();
-  const radioA11yNative = user(5200).useRadioA11yNative({ selected, disabled });
+  const radioA11yNative = user(5202).useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  let obj = user(5200);
+  let obj = user(5202);
   closure_4 = tmp5;
   let obj2 = {
     accessibilityRole,
@@ -56,7 +56,7 @@ function AccountButton(user) {
   if (user.hidePersonalInformation) {
     str = "never";
   }
-  obj2.accessibilityLabel = selected(5194).getUserTag(tmp4, { mode: "username", identifiable: str });
+  obj2.accessibilityLabel = selected(5196).getUserTag(tmp4, { mode: "username", identifiable: str });
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
     const intl2 = tmp(1113).intl;
     let stringResult = intl2.string(tmp(1113).t.tYX2ps);
@@ -267,22 +267,22 @@ function AccountSwitcherRailContent() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(14211).MultiAccountTokenStatus;
-let Constants = fn(14212);
+const MultiAccountTokenStatus = fn(14237).MultiAccountTokenStatus;
+let Constants = fn(14238);
 ({ MAX_ACCOUNTS: map1, MultiAccountSwitchLocation: closure_14 } = Constants);
 Constants = fn(1072);
 ({ AnalyticEvents: closure_15, AuthStates: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
 const diff = 41 - 2 * nativeDefault.space.PX_4;
-let createStyles = fn(5140);
+let createStyles = fn(5142);
 let closure_21 = createStyles.createStyles((width, bottom) => {
   const obj = { gutter: null };
   const rect = { position: "absolute", right: nativeDefault.space.PX_6, bottom, width, alignItems: "center" };
   obj.gutter = rect;
   return obj;
 });
-createStyles = fn(5140);
+createStyles = fn(5142);
 let obj = {
   accounts: { gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 },
   button: null,

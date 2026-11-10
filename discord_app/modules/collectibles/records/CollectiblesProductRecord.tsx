@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7800);
+const CollectiblesItemRecord = fn(7803);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } =
   CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -260,18 +260,18 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "to",
                 type: "Array",
-                premiumType: "channel",
-                items: "DM_INVITE",
-                categorySkuId: "$ZodObjectJIT",
-                categoryWillUnpublishAt: "Array",
-                isCategoryReward: "toIndex",
-                prices: null,
-                previewAssets: null,
-                googleSkuIds: "lib",
-                eligibleOffers: "android/build.gradle",
-                variants: "android/gradle.properties",
-                bundledProducts: "android/fix-prefab.gradle",
-                isFirstParty: "android/CMakeLists.txt",
+                premiumType: "channelId",
+                items: true,
+                categorySkuId: true,
+                categoryWillUnpublishAt: true,
+                isCategoryReward: true,
+                prices: true,
+                previewAssets: true,
+                googleSkuIds: true,
+                eligibleOffers: true,
+                variants: true,
+                bundledProducts: true,
+                isFirstParty: true,
               };
               let str;
               if (first != null) {

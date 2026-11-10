@@ -43,9 +43,9 @@ export function useGuildShopPreviewVisible(features) {
     CREATOR_MONETIZABLE_PROVISIONAL: arr2[1],
     ROLE_SUBSCRIPTIONS_ENABLED: arr2[2],
   } = constants2);
-  const guildEligibleForGuildProducts = tmp(7496).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp(7499).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
-  const tmpResult = tmp(7496);
+  const tmpResult = tmp(7499);
   if (tmp9) {
     tmp9 = stateFromStores;
   }

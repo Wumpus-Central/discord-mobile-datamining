@@ -3,6 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   root: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   image: null,
@@ -55,8 +56,10 @@ const result = size.fileFinishedImporting(
 export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   ({ bottomConfig, resolveFieldValue } = arg0);
   const tmp = closure_6();
+  const emojiOverflowStyle = UserProfileApplicationWidgetFieldUtils.useEmojiOverflowStyle("heading-xs/medium");
   const objective = bottomConfig.components.objective;
   let image;
+  const emojiOverflowStyle1 = UserProfileApplicationWidgetFieldUtils.useEmojiOverflowStyle("body-xs/medium");
   if (objective != null) {
     image = objective.fields.image;
   }
@@ -67,6 +70,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
     "name",
     resolveFieldValue,
   );
+  const tmp2Result = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton1 = resolvedValuesFromUserApplicationIdentityProfile.resolveSingleStringOrSkeleton(
     objective,
     "description",
@@ -85,6 +89,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   }
   const items2 = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.NUMBER];
   let iter2 = resolveFieldValue(max, items2);
+  const tmp2Result4 = resolvedValuesFromUserApplicationIdentityProfile;
   const obj3 = { style: tmp.root, children: null };
   const progressPercentage = resolvedValuesFromUserApplicationIdentityProfile.resolveProgressPercentage(iter, iter2);
   if (null != fieldValue) {
@@ -92,14 +97,14 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
     const obj5 = { uri: fieldValue.media.url };
     obj4.source = obj5;
     obj4.style = tmp.image;
-    let tmp14 = React4(FastImageDefault, obj4);
-    let tmp15 = React4;
+    let tmp16 = React4(FastImageDefault, obj4);
+    let tmp17 = React4;
   } else {
     const obj6 = { style: tmp.image };
-    tmp14 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj6);
-    tmp15 = React4;
+    tmp16 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj6);
+    tmp17 = React4;
   }
-  const items3 = [tmp14];
+  const items3 = [tmp16];
   const obj7 = { style: tmp.content, children: null };
   const obj8 = {
     style: tmp.progressContainer,
@@ -126,33 +131,39 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   obj8.accessibilityValue = range;
   const obj9 = { style: null };
   const items4 = [tmp.progress];
-  const tmp3Result = resolvedValuesFromUserApplicationIdentityProfile;
+  const tmp2Result5 = resolvedValuesFromUserApplicationIdentityProfile;
   let str = globalThis;
   items4[1] = { width: "" + progressPercentage + "%" };
   obj9.style = items4;
-  obj8.children = tmp15(View, obj9);
-  const items5 = [tmp15(View, obj8)];
+  obj8.children = tmp17(View, obj9);
+  const items5 = [tmp17(View, obj8)];
   const obj11 = { style: tmp.textContent, children: null };
   const obj12 = { style: tmp.textLeft, children: null };
   if ("value" === singleStringOrSkeleton.status) {
-    const obj13 = { variant: "heading-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
-    let tmp15Result = tmp15(Text_Text.Text, obj13);
+    const obj13 = {
+      variant: "heading-xs/medium",
+      lineClamp: 2,
+      style: emojiOverflowStyle,
+      children: singleStringOrSkeleton.text,
+    };
+    let tmp17Result = tmp17(Text_Text.Text, obj13);
   } else {
-    tmp15Result = tmp15(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "heading-xs/medium" });
+    tmp17Result = tmp17(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "heading-xs/medium" });
   }
-  const items6 = [tmp15Result];
+  const items6 = [tmp17Result];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj14 = {
       variant: "body-xs/medium",
       color: "text-subtle",
       lineClamp: 2,
+      style: emojiOverflowStyle1,
       children: singleStringOrSkeleton1.text,
     };
-    let tmp15Result3 = tmp15(Text_Text.Text, obj14);
+    let tmp17Result3 = tmp17(Text_Text.Text, obj14);
   } else {
-    tmp15Result3 = tmp15(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "body-xs/medium" });
+    tmp17Result3 = tmp17(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "body-xs/medium" });
   }
-  items6[1] = tmp15Result3;
+  items6[1] = tmp17Result3;
   obj12.children = items6;
   const items7 = [hasOwnProperty(View, obj12)];
   if (null != iter) {
@@ -165,12 +176,12 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
     } else {
       const _HermesInternal = HermesInternal;
       iter2Result = "" + resolvedValuesFromUserApplicationIdentityProfile.decimalToClampedPercentage(iter.value) + "%";
-      const tmp3Result2 = resolvedValuesFromUserApplicationIdentityProfile;
+      const tmp2Result6 = resolvedValuesFromUserApplicationIdentityProfile;
     }
     obj15.children = iter2Result;
-    tmp15(Text_Text.Text, obj15);
+    tmp17(Text_Text.Text, obj15);
   } else {
-    items7[1] = tmp15(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "body-sm/medium", widthChars: 4 });
+    items7[1] = tmp17(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "body-sm/medium", widthChars: 4 });
     obj11.children = items7;
     items5[1] = hasOwnProperty(View, obj11);
     obj7.children = items5;

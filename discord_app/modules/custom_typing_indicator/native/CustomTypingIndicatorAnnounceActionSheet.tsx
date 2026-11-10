@@ -9,8 +9,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-let closure_7 = fn(5389).ACTION_SHEET_BORDER_RADIUS;
-const ContentDismissActionType = fn(4986).ContentDismissActionType;
+let closure_7 = fn(5391).ACTION_SHEET_BORDER_RADIUS;
+const ContentDismissActionType = fn(4988).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let obj = { launch: null, new_presets: null };
@@ -26,7 +26,7 @@ let items1 = [
   fn(1398).TypingSuggestion.PURRING,
 ];
 obj.new_presets = items1;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_12 = createStyles.createStyles(() => {
   obj = {
     gradient: { borderTopLeftRadius: borderTopRightRadius, borderTopRightRadius, overflow: "hidden" },

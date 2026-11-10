@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_6 = createStyles.createStyles({ contentText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx");
@@ -42,7 +42,7 @@ export default function DeleteEventAlert(eventException) {
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(9046);
+            const obj8 = v1(9052);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -76,7 +76,7 @@ export default function DeleteEventAlert(eventException) {
             const obj = { value, done: true };
             return obj;
           }
-          v1(5374).hideActionSheet();
+          v1(5376).hideActionSheet();
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

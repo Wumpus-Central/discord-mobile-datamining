@@ -109,7 +109,7 @@ class GiftBackgroundSelect {
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = module_1652.createAnimatedComponent(fn(17).ScrollView);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = {
   scrollView: { flex: 1, marginTop: nativeDefault.space.PX_24 },
   contentContainer: { justifyContent: "center" },

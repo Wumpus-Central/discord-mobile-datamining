@@ -215,6 +215,7 @@ import DesignSystemsCoachmarkSettingDefault from "../../defs/native/DesignSystem
 import DesignSystemStackSettingDefault from "../../defs/native/DesignSystemStackSetting.tsx";
 import DesignSystemBackdropSettingDefault from "../../defs/native/DesignSystemBackdropSetting.tsx";
 import DesignSystemsModalSettingDefault from "../../defs/native/DesignSystemsModalSetting.tsx";
+import DesignSystemsNavigatorSettingDefault from "../../defs/native/DesignSystemsNavigatorSetting.tsx";
 import DesignSystemPileSettingDefault from "../../defs/native/DesignSystemPileSetting.tsx";
 import DesignSystemTagGroupSettingDefault from "../../defs/native/DesignSystemTagGroupSetting.tsx";
 import DesignSystemBadgeSettingDefault from "../../defs/native/DesignSystemBadgeSetting.tsx";
@@ -522,6 +523,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   DESIGN_SYSTEM_STACK,
   DESIGN_SYSTEM_BACKDROP,
   DESIGN_SYSTEMS_MODAL,
+  DESIGN_SYSTEMS_NAVIGATOR,
   DESIGN_SYSTEM_PILE,
   DESIGN_SYSTEM_TAG_GROUP,
   DESIGN_SYSTEM_BADGE,
@@ -563,7 +565,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   PARENTAL_CONTROLS_DIRECT_MESSAGES,
   PARENTAL_CONTROLS_MESSAGE_REQUESTS,
-  PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -806,6 +807,7 @@ const frozen = Object.freeze({
   [DESIGN_SYSTEM_STACK]: DesignSystemStackSettingDefault,
   [DESIGN_SYSTEM_BACKDROP]: DesignSystemBackdropSettingDefault,
   [DESIGN_SYSTEMS_MODAL]: DesignSystemsModalSettingDefault,
+  [DESIGN_SYSTEMS_NAVIGATOR]: DesignSystemsNavigatorSettingDefault,
   [DESIGN_SYSTEM_PILE]: DesignSystemPileSettingDefault,
   [DESIGN_SYSTEM_TAG_GROUP]: DesignSystemTagGroupSettingDefault,
   [DESIGN_SYSTEM_BADGE]: DesignSystemBadgeSettingDefault,
@@ -847,7 +849,7 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS]: ParentalControlsSensitiveContentFilterSettingDefault,
   [PARENTAL_CONTROLS_DIRECT_MESSAGES]: ParentalControlsDirectMessagesDefault,
   [PARENTAL_CONTROLS_MESSAGE_REQUESTS]: ParentalControlsMessageRequestsDefault,
-  [PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE]: ParentalControlsFriendRequestsEveryoneSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE]: ParentalControlsFriendRequestsEveryoneSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]:
     ParentalControlsFriendRequestsMutualFriendsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS]:

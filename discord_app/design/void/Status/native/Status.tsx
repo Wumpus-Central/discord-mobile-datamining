@@ -6,13 +6,13 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import EllipsisDefault from "../../Ellipsis/native/Ellipsis.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef16303 from "../../../../../_runtime/metro/16303__.js";
-import _modDef16304 from "../../../../../_runtime/metro/16304__.js";
-import _modDef16305 from "../../../../../_runtime/metro/16305__.js";
-import _modDef16306 from "../../../../../_runtime/metro/16306__.js";
-import _modDef16307 from "../../../../../_runtime/metro/16307__.js";
-import _modDef16308 from "../../../../../_runtime/metro/16308__.js";
-import _modDef16309 from "../../../../../_runtime/metro/16309__.js";
+import _modDef16330 from "../../../../../_runtime/metro/16330__.js";
+import _modDef16331 from "../../../../../_runtime/metro/16331__.js";
+import _modDef16332 from "../../../../../_runtime/metro/16332__.js";
+import _modDef16333 from "../../../../../_runtime/metro/16333__.js";
+import _modDef16334 from "../../../../../_runtime/metro/16334__.js";
+import _modDef16335 from "../../../../../_runtime/metro/16335__.js";
+import _modDef16336 from "../../../../../_runtime/metro/16336__.js";
 import useFlashListAnimationDisabler from "../../../../modules/main_tabs_v2/native/shared_components/guild_channels/useFlashListAnimationDisabler.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1188).STATUS_PADDING;
 const StatusTypes = fn(1072).StatusTypes;
-const ChannelAnimationConstants = fn(15120);
+const ChannelAnimationConstants = fn(15146);
 ({
   TYPING_ENTERING: metroImportDefault,
   TYPING_EXITING: closure_8,
@@ -31,9 +31,9 @@ const ChannelAnimationConstants = fn(15120);
 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(5140);
+let createStyles = fn(5142);
 let closure_12 = createStyles.createStyles({ statusIcon: { width: "100%", height: "100%" } });
-createStyles = fn(5140);
+createStyles = fn(5142);
 let closure_13 = createStyles.createStyles((items, arg1) => {
   const statusTypingDimensions = Status_StatusUtils.getStatusTypingDimensions(items);
   ({ height, dotSize } = statusTypingDimensions);
@@ -102,23 +102,23 @@ export default function Status(isMobileOnline) {
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef16303;
+    let tmp4Result = _modDef16330;
   } else if (flag2) {
-    tmp4Result = _modDef16304;
+    tmp4Result = _modDef16331;
   } else if (flag) {
-    tmp4Result = _modDef16305;
+    tmp4Result = _modDef16332;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef16306;
+    tmp4Result = _modDef16333;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef16307;
+    tmp4Result = _modDef16334;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef16309;
+        tmp4Result = _modDef16336;
       }
     }
-    tmp4Result = _modDef16308;
+    tmp4Result = _modDef16335;
   }
   obj2.source = tmp4Result;
   obj.children = closure_1_10(FastImageDefault, obj2);
@@ -234,23 +234,23 @@ export function StatusWithTyping(status) {
   const obj6 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
   const tmp5Result4 = _mod1652;
   if (streaming) {
-    let tmp3Result2 = _modDef16303;
+    let tmp3Result2 = _modDef16330;
   } else if (flag2) {
-    tmp3Result2 = _modDef16304;
+    tmp3Result2 = _modDef16331;
   } else if (flag) {
-    tmp3Result2 = _modDef16305;
+    tmp3Result2 = _modDef16332;
   } else if (StatusTypes.IDLE === status) {
-    tmp3Result2 = _modDef16306;
+    tmp3Result2 = _modDef16333;
   } else if (StatusTypes.DND === status) {
-    tmp3Result2 = _modDef16307;
+    tmp3Result2 = _modDef16334;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp3Result2 = _modDef16309;
+        tmp3Result2 = _modDef16336;
       }
     }
-    tmp3Result2 = _modDef16308;
+    tmp3Result2 = _modDef16335;
   }
   obj6.source = tmp3Result2;
   obj5.children = closure_1_10(FastImageDefault, obj6);

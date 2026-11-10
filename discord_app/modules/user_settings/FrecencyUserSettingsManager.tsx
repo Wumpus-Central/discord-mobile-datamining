@@ -23,6 +23,11 @@ function handleConnectionOpen() {
   }
   timeout = setTimeout(() => saveProtos(c0), closure_14);
 }
+function handleLogout() {
+  c17 = false;
+  clearTimeout(c16);
+  c16 = null;
+}
 function handleAppStateUpdate(state) {
   let tmp = c17;
   if (c17) {
@@ -45,7 +50,7 @@ function handleConnectionClosed() {
 }
 function saveProtos() {
   const self = this;
-  const apply = closure_22.apply;
+  const apply = closure_23.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -53,11 +58,11 @@ function saveProtos() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _saveProtos(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
+let closure_23 = async function _saveProtos(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  } else if (tmp6 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -68,70 +73,63 @@ let closure_22 = async function _saveProtos(arg0) {
     }
   } else {
     try {
-      c4 = 2;
-      if (0 === c3) {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          c4 = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 3;
+          c5 = 3;
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_2 = tmp2;
-          closure_1 = tmp2;
-          resetTimer(closure_2_15, false);
-          if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
-            let hasPendingUsageResult = StickersPersistedStore.hasPendingUsage();
-            if (!hasPendingUsageResult) {
-              hasPendingUsageResult = EmojiStore.hasPendingUsage();
-            }
-            if (!hasPendingUsageResult) {
-              hasPendingUsageResult = ApplicationCommandFrecencyStore.hasPendingUsage();
-            }
-            if (!hasPendingUsageResult) {
-              hasPendingUsageResult = ApplicationFrecencyStore.hasPendingUsage();
-            }
-            if (!hasPendingUsageResult) {
-              hasPendingUsageResult = SoundboardStore.hasPendingUsage();
-            }
-            if (!hasPendingUsageResult) {
-              let hasPendingUsageResult1 = FrecencyStore.hasPendingUsage();
-              if (hasPendingUsageResult1) {
-                hasPendingUsageResult1 = !closure_0;
-              }
-              hasPendingUsageResult = hasPendingUsageResult1;
-            }
-            if (hasPendingUsageResult) {
+          closure_2 = tmp3;
+          closure_1 = tmp3;
+          if (!closure_2_17) {
+            c5 = 3;
+            return { value: "HermesInternal", done: null };
+          } else {
+            resetTimer(closure_2_15, false);
+            if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
               let result = UserSettingsProtoActionCreators.markUserSettingsLoadOkayForDevelopment();
+              c3 = 1;
               const FrecencyUserSettingsActionCreators =
                 UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators;
-              c3 = 1;
-              c4 = 1;
+              c4 = 2;
+              c5 = 1;
               const obj5 = { value: FrecencyUserSettingsActionCreators.loadIfNecessary(), done: false };
               return obj5;
             }
+            const item = closure_130_1(closure_130_2[15]).forEach(
+              closure_130_0(closure_130_2[12]).UserSettingsActionCreatorsByType,
+              (markDirtyIfHasPendingChange) => {
+                const result = markDirtyIfHasPendingChange.markDirtyIfHasPendingChange();
+              },
+            );
+            const arr = closure_130_1(closure_130_2[15]);
           }
         }
+      } else if (1 === tmp7) {
+        c3 = 0;
+        c5 = 3;
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
-        c4 = 3;
+        c5 = 3;
         throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj = { value, done: true };
-        return obj;
+      } else if (arg0 !== 2) {
+        c3 = 0;
       }
-      const item = closure_130_1(closure_130_2[15]).forEach(
-        closure_130_0(closure_130_2[12]).UserSettingsActionCreatorsByType,
-        (markDirtyIfHasPendingChange) => {
-          const result = markDirtyIfHasPendingChange.markDirtyIfHasPendingChange();
-        },
-      );
-      c4 = 3;
-      return { value: "HermesInternal", done: null };
-    } catch (tmp25) {
-      c4 = tmp;
-      throw tmp25;
+      c3 = 0;
+      c5 = 3;
+      const obj = { value, done: true };
+      return obj;
+    } catch (tmp30) {
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp30;
+      } else {
+        c4 = tmp;
+      }
     }
   }
 };
@@ -143,7 +141,7 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6950).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(6953).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 const FREQUENCY_ITEM_LIMIT = fn(1362).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
@@ -161,6 +159,7 @@ class FrecencyUserSettingsManager extends tmp5 {
       CONNECTION_RESUMED: handleConnectionOpen,
       CONNECTION_CLOSED: handleConnectionClosed,
       APP_STATE_UPDATE: handleAppStateUpdate,
+      LOGOUT: handleLogout,
     };
     applyArgumentsResult.actions = obj;
     return applyArgumentsResult;

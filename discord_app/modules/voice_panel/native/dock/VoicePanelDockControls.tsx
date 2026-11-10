@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9956 from "../../../../../_runtime/metro/09956__.js";
+import _modDef9962 from "../../../../../_runtime/metro/09962__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
-import _modDef14346 from "../../../../../_runtime/metro/14346__.js";
+import _modDef14372 from "../../../../../_runtime/metro/14372__.js";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
 import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim.tsx";
@@ -87,9 +87,9 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1113).intl;
   obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef9956;
+  obj.icon = _modDef9962;
   obj.onPress = callback;
-  return closure_7(channelId(8098).IconButton, obj);
+  return closure_7(channelId(8102).IconButton, obj);
 }
 function DockSoundboardButton(arg0) {
   ({ onPress, disabled, disabledAccessibilityHint } = arg0);
@@ -104,7 +104,7 @@ function DockSoundboardButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef14346;
+  obj.icon = _modDef14372;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;
@@ -113,9 +113,9 @@ function DockSoundboardButton(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(11381).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(11390).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_9 = createStyles.createStyles(obj);

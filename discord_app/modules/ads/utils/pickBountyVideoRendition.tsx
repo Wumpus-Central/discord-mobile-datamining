@@ -59,16 +59,18 @@ export const BOUNTY_MOBILE_MODAL_RENDITION_PICK = obj;
 export const BOUNTY_DESKTOP_MODAL_RENDITION_PICK = obj2;
 export { pickBountyVideoRendition };
 export function pickBountyVideoRenditionWithFallback(videoRenditions, BOUNTY_MOBILE_MODAL_RENDITION_PICK) {
-  if (null == videoRenditions.videoRenditions) {
+  let tmp = null;
+  if (null != videoRenditions.videoRenditions) {
+    tmp = pickBountyVideoRendition(videoRenditions.videoRenditions, BOUNTY_MOBILE_MODAL_RENDITION_PICK);
+  }
+  if (null == tmp) {
     const supported = BOUNTY_MOBILE_MODAL_RENDITION_PICK.supported;
     let tmp5 = null;
     if (supported.includes(BountyAspectRatio.BountyAspectRatio.PORTRAIT)) {
       const obj = { url: videoRenditions.videoHls, aspectRatio: BountyAspectRatio.BountyAspectRatio.PORTRAIT };
       tmp5 = obj;
     }
-    let tmp2 = tmp5;
-  } else {
-    tmp2 = pickBountyVideoRendition(videoRenditions.videoRenditions, BOUNTY_MOBILE_MODAL_RENDITION_PICK);
+    tmp = tmp5;
   }
-  return tmp2;
+  return tmp;
 }

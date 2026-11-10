@@ -20,7 +20,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, useGu
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
   if (stateFromStores != null) {
-    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5349).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5351).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const obj = require("initialize");
   let tmp5 = null;
@@ -34,7 +34,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, useGu
       if (null != storeRemovalDate) {
         const tmp8 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
         const obj2 = {
-          dismissibleContent: tmp(4973).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
+          dismissibleContent: tmp(4975).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
           title: null,
           description: null,
         };

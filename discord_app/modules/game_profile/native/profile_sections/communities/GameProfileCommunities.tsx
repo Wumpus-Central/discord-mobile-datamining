@@ -20,15 +20,15 @@ const GameProfileCommunitiesLocaleFilterActionSheetDefault = GameProfileCommunit
 require = fn;
 const View = fn(17).View;
 const JoinGuildSources = fn(1072).JoinGuildSources;
-const isStaticChannelRoute = fn(4996).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4998).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
     padding: nativeDefault.space.PX_16,
-    maxWidth: fn(9451).MOBILE_GAME_PROFILE_MAX_WIDTH,
+    maxWidth: fn(9457).MOBILE_GAME_PROFILE_MAX_WIDTH,
     alignSelf: "center",
     width: "100%",
     gap: nativeDefault.space.PX_8,
@@ -40,7 +40,7 @@ let obj = {
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
   padding: nativeDefault.space.PX_16,
-  maxWidth: fn(9451).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9457).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
   gap: nativeDefault.space.PX_8,
@@ -286,19 +286,19 @@ export default function GameProfileCommunities(game) {
   };
   const intl = game(1113).intl;
   obj3.children = intl.string(game(1113).t.r6bvTh);
-  const items1 = [closure_11(game(5751).Heading, obj3)];
+  const items1 = [closure_11(game(5753).Heading, obj3)];
   if (showLocaleFilter) {
     const obj4 = {
       size: "sm",
       variant: "secondary",
-      icon: closure_11(tmp12(9708).LanguageIcon, { size: "sm" }),
+      icon: closure_11(tmp12(9714).LanguageIcon, { size: "sm" }),
       accessibilityLabel: null,
       onPress: null,
     };
     const intl2 = tmp12(1113).intl;
     obj4.accessibilityLabel = intl2.string(tmp12(1113).t.OlOHDH);
     obj4.onPress = callback;
-    showLocaleFilter = closure_11(tmp12(8098).IconButton, obj4);
+    showLocaleFilter = closure_11(tmp12(8102).IconButton, obj4);
   }
   items1[1] = showLocaleFilter;
   obj2.children = items1;

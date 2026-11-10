@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function useAllowFriendsFromMutualGuildsOnly() {
-  const FriendSourceFlagsSetting = setting(4965).FriendSourceFlagsSetting;
+  const FriendSourceFlagsSetting = setting(4967).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   items = [setting];
   const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);

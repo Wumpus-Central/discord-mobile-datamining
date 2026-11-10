@@ -6,11 +6,12 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import AuthenticationActionCreatorsDefault from "../../actions/AuthenticationActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import MultiAccountStore from "MultiAccountStore.tsx";
 
 const require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
+({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const logger = new LoggerDefault("MultiAccountActionCreators");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/MultiAccountActionCreators.tsx");
@@ -183,11 +184,12 @@ export function switchAccount(id, switchSynchronously, CHOOSE_ACCOUNT) {
     let resolved = Promise.resolve();
   } else {
     let tmp4 = CHOOSE_ACCOUNT;
-    const obj6 = { type: "MULTI_ACCOUNT_SWITCH_START", targetUserId: id, location: null };
+    const obj6 = { type: "MULTI_ACCOUNT_SWITCH_START", targetUserId: id, location: null, lastChannelId: null };
     if (CHOOSE_ACCOUNT == null) {
       tmp4 = null;
     }
     obj6.location = tmp4;
+    obj6.lastChannelId = SelectedChannelStore.getCurrentlySelectedChannelId();
     DispatcherDefault.dispatch(obj6);
     resolved = AuthenticationActionCreatorsDefault.switchAccountToken(token, switchSynchronously);
     const tmp5Result = AuthenticationActionCreatorsDefault;

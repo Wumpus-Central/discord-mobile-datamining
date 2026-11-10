@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/agent_activity/native/ConjureFloatingActivity.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import _modDef4026 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj2 = { root: null, pill: null, pillMain: null, checklistButton: null, panel: null, label: null };
 const rect = {
   position: "absolute",
@@ -119,7 +119,7 @@ export default function ConjureFloatingActivity(agents) {
     if (null != todos) {
       const obj5 = { style: tmp.panel, children: null };
       const obj6 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj5.children = closure_6(tmp13(12921), obj6);
+      obj5.children = closure_6(tmp13(12935), obj6);
       tmp14 = closure_6(View, obj5);
     }
   }
@@ -134,7 +134,7 @@ export default function ConjureFloatingActivity(agents) {
     children: null,
   };
   const intl = tmp2(1113).intl;
-  obj8.accessibilityLabel = intl.formatToPlainString(_modDef4026.xuQfOT, { activity: line });
+  obj8.accessibilityLabel = intl.formatToPlainString(_modDef4028.xuQfOT, { activity: line });
   obj8.onPress = onJumpToActivity;
   const tmp9 = _slicedToArray(noop.useState(false), 2);
   const items5 = [
@@ -158,15 +158,15 @@ export default function ConjureFloatingActivity(agents) {
     const obj12 = {
       variant: "default",
       size: "sm",
-      icon: tmp13(6969),
+      icon: tmp13(6972),
       pressed: tmp10,
       accessibilityLabel: null,
       onPress: null,
     };
     const intl2 = tmp2(1113).intl;
-    obj12.accessibilityLabel = intl2.string(tmp13(4026).Qp2isI);
+    obj12.accessibilityLabel = intl2.string(tmp13(4028).Qp2isI);
     obj12.onPress = callback;
-    obj11.children = closure_6(tmp2(12984).ToggleIconButton, obj12);
+    obj11.children = closure_6(tmp2(12998).ToggleIconButton, obj12);
     tmp18Result = closure_6(View, obj11);
   }
   items6[1] = tmp18Result;

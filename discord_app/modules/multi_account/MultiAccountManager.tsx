@@ -1,7 +1,10 @@
 // discord_app/modules/multi_account/MultiAccountManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import transitionToChannel from "../routing/transitionToChannel.tsx";
 import GatewaySocket from "../gateway/GatewaySocket.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+import MultiAccountStore from "MultiAccountStore.tsx";
 import MultiAccountSwitchStore from "MultiAccountSwitchStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
@@ -56,6 +59,18 @@ prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
 };
 prototype["handleMultiAccountSwitchStart"] = function handleMultiAccountSwitchStart(targetUserId) {
   const result = GatewaySocket.setAccountSwitchUserId(targetUserId.targetUserId);
+};
+prototype["transitionToLastChannel"] = function transitionToLastChannel(id) {
+  const lastChannelId = MultiAccountStore.getLastChannelId(id);
+  let flag = null != lastChannelId;
+  if (flag) {
+    flag = null != ChannelStore.getChannel(lastChannelId);
+  }
+  if (flag) {
+    transitionToChannel.transitionToChannel(lastChannelId, { navigationReplace: true });
+    flag = true;
+  }
+  return flag;
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");

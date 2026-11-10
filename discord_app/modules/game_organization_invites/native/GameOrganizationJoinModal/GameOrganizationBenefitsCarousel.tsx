@@ -47,7 +47,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   carouselContainer: { marginHorizontal: -PX_16 },
   carousel: { alignItems: "stretch" },

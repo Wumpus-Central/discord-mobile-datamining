@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandDetailsOverflowMenu.tsx
 import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../../../utils/ClipboardUtils.native.tsx";
-import _modDef9287 from "../../../../../../_runtime/metro/09287__.js";
+import _modDef9293 from "../../../../../../_runtime/metro/09293__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting(
 
 export default function CommandDetailsOverflowMenu(commandId) {
   commandId = commandId.commandId;
-  const DeveloperMode = commandId(4965).DeveloperMode;
+  const DeveloperMode = commandId(4967).DeveloperMode;
   if (null != commandId) {
     if (DeveloperMode.useSetting()) {
       let obj = { label: null, action: null, IconComponent: null };
@@ -23,39 +23,39 @@ export default function CommandDetailsOverflowMenu(commandId) {
         ClipboardUtils.copy(commandId);
         ToastUtils.presentIdCopied();
       };
-      obj.IconComponent = tmp(10643).IdIcon;
+      obj.IconComponent = tmp(10652).IdIcon;
       items = [obj];
       const obj2 = {
         items,
         children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-          const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9287 };
+          const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9293 };
           const merged1 = Object.assign(merged);
           const intl = commandId(1113).intl;
           obj.accessibilityLabel = intl.string(commandId(1113).t.PdRCRg);
           obj.maxFontSizeMultiplier = 1.5;
-          return jsx(commandId(8098).IconButton, {
+          return jsx(commandId(8102).IconButton, {
             ref: ref.ref,
             size: "sm",
             variant: "secondary-overlay",
-            icon: _modDef9287,
+            icon: _modDef9293,
           });
         },
       };
-      return jsx(tmp(9996).ContextMenu, {
+      return jsx(tmp(10002).ContextMenu, {
         items,
         children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-          const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9287 };
+          const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef9293 };
           const merged1 = Object.assign(merged);
           const intl = commandId(1113).intl;
           obj.accessibilityLabel = intl.string(commandId(1113).t.PdRCRg);
           obj.maxFontSizeMultiplier = 1.5;
-          return jsx(commandId(8098).IconButton, {
+          return jsx(commandId(8102).IconButton, {
             ref: ref.ref,
             size: "sm",
             variant: "secondary-overlay",
-            icon: _modDef9287,
+            icon: _modDef9293,
           });
         },
       });

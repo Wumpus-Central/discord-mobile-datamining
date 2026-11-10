@@ -5,10 +5,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileSections = fn(8825).UserProfileSections;
+const UserProfileSections = fn(8831).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", columnGap: 4, flexWrap: "wrap" },
   section: { flexDirection: "row", alignItems: "center", columnGap: 6 },
@@ -19,9 +19,9 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileMutualGuilds(user) {
   user = user.user;
   const tmp = closure_7();
-  const trackUserProfileAction = user(8832).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const mutualGuilds = trackUserProfileAction(14424)(user).mutualGuilds;
-  if (trackUserProfileAction(15073)(user)) {
+  const trackUserProfileAction = user(8838).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const mutualGuilds = trackUserProfileAction(14450)(user).mutualGuilds;
+  if (trackUserProfileAction(15099)(user)) {
     if (null != mutualGuilds) {
       if (0 !== mutualGuilds.length) {
         const substr = mutualGuilds.slice(0, 3);
@@ -33,15 +33,15 @@ export default function UserProfileMutualGuilds(user) {
           onPress() {
             trackUserProfileAction({ action: "PRESS_SECTION", section: UserProfileSections.MUTUAL_GUILDS });
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(14423, dependencyMap.paths),
+              asyncRequireImpl(14449, dependencyMap.paths),
               "UserProfileMutualGuildsActionSheet",
               {
                 user,
                 onPressMutualGuild(arg0) {
                   closure_1_1({ action: "PRESS_MUTUAL_GUILD" });
-                  user(7594).transitionToGuild(arg0);
-                  const obj = user(7594);
-                  trackUserProfileAction(5374).hideAllActionSheets();
+                  user(7597).transitionToGuild(arg0);
+                  const obj = user(7597);
+                  trackUserProfileAction(5376).hideAllActionSheets();
                 },
               },
               "stack",
@@ -50,23 +50,23 @@ export default function UserProfileMutualGuilds(user) {
           children: null,
         };
         const obj4 = {
-          size: tmp2(7020).GuildIconSizes.XXSMALL,
+          size: tmp2(7023).GuildIconSizes.XXSMALL,
           totalCount: mapped.length,
           names: mapped.map((name) => name.name),
           children: mapped.map((guild) => {
-            const obj = { guild, size: user(7020).GuildIconSizes.XXSMALL };
-            return closure_1_5(trackUserProfileAction(7020), obj, guild.id);
+            const obj = { guild, size: user(7023).GuildIconSizes.XXSMALL };
+            return closure_1_5(trackUserProfileAction(7023), obj, guild.id);
           }),
         };
-        items = [closure_5(tmp2(14438).GuildIconPile, obj4)];
+        items = [closure_5(tmp2(14464).GuildIconPile, obj4)];
         const obj5 = {
           variant: "body-sm/medium",
           color: "text-default",
-          children: trackUserProfileAction(14425)(mutualGuilds.length),
+          children: trackUserProfileAction(14451)(mutualGuilds.length),
         };
-        items[1] = closure_5(tmp2(5751).Text, obj5);
+        items[1] = closure_5(tmp2(5753).Text, obj5);
         obj3.children = items;
-        obj2.children = closure_6(tmp2(7043).PressableOpacity, obj3);
+        obj2.children = closure_6(tmp2(7046).PressableOpacity, obj3);
         return closure_5(View, obj2);
       }
     }

@@ -131,9 +131,9 @@ function CollectiblePreview(arg0) {
   }
 }
 const View = fn(17).View;
-let closure_4 = fn(8867).PROFILE_FRAME_ASPECT_RATIO;
+let closure_4 = fn(8873).PROFILE_FRAME_ASPECT_RATIO;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   purchasePlaceholder: null,
   avatarDecorationPreview: null,
@@ -142,8 +142,8 @@ let obj2 = {
   profileFrameContainer: null,
 };
 let size = {
-  width: fn(17124).PREVIEW_SIZE,
-  height: fn(17124).PREVIEW_SIZE,
+  width: fn(17151).PREVIEW_SIZE,
+  height: fn(17151).PREVIEW_SIZE,
   borderRadius: nativeDefault.radii.xs,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   display: "flex",
@@ -152,11 +152,11 @@ let size = {
   marginRight: 12,
 };
 obj2.purchasePlaceholder = size;
-const size1 = { width: fn(17124).PREVIEW_SIZE, height: fn(17124).PREVIEW_SIZE, marginRight: 12 };
+const size1 = { width: fn(17151).PREVIEW_SIZE, height: fn(17151).PREVIEW_SIZE, marginRight: 12 };
 obj2.avatarDecorationPreview = size1;
 const size2 = {
-  width: fn(17124).PREVIEW_SIZE,
-  height: fn(17124).PREVIEW_SIZE,
+  width: fn(17151).PREVIEW_SIZE,
+  height: fn(17151).PREVIEW_SIZE,
   marginRight: 12,
   borderRadius: nativeDefault.radii.xs,
   overflow: "hidden",
@@ -166,13 +166,13 @@ obj2.nameplateContainer = size2;
 const size3 = {
   position: "absolute",
   right: 0,
-  width: fn(17124).PREVIEW_SIZE * fn(17124).NAMEPLATE_ASPECT_RATIO,
-  height: fn(17124).PREVIEW_SIZE,
+  width: fn(17151).PREVIEW_SIZE * fn(17151).NAMEPLATE_ASPECT_RATIO,
+  height: fn(17151).PREVIEW_SIZE,
 };
 obj2.nameplatePreview = size3;
 const size4 = {
-  width: fn(17124).PREVIEW_SIZE,
-  height: fn(17124).PREVIEW_SIZE,
+  width: fn(17151).PREVIEW_SIZE,
+  height: fn(17151).PREVIEW_SIZE,
   marginRight: 12,
   alignItems: "center",
   justifyContent: "center",

@@ -10,6 +10,75 @@ import ConjurePublishStatusStore from "../publish/ConjurePublishStatusStore.tsx"
 const require = globalThis.__r;
 
 require = fn;
+function refreshUntilBotJoins(arg0, arg1) {
+  closure_0 = arg0;
+  c1 = 6;
+  const timerId = setTimeout(() => {
+    let integrationStatus = closure_2_7.getIntegrationStatus(closure_1_0);
+    let prop;
+    if (integrationStatus != null) {
+      prop = integrationStatus.integration_installed;
+    }
+    if (true !== prop) {
+      let result = closure_2_0(closure_2_2[12]).refreshConjureInstallState(closure_1_0);
+      if (1 < closure_1_1) {
+        closure_0 = closure_1_0;
+        closure_1 = tmp7 - 1;
+        let _setTimeout = setTimeout;
+        let timerId = setTimeout(() => {
+          let integrationStatus = closure_2_7.getIntegrationStatus(closure_1_0);
+          let prop;
+          if (integrationStatus != null) {
+            prop = integrationStatus.integration_installed;
+          }
+          if (true !== prop) {
+            let result = closure_2_0(closure_2_2[12]).refreshConjureInstallState(closure_1_0);
+            if (1 < closure_1_1) {
+              closure_0 = closure_1_0;
+              closure_1 = tmp7 - 1;
+              let _setTimeout = setTimeout;
+              let timerId = setTimeout(() => {
+                let integrationStatus = closure_2_7.getIntegrationStatus(closure_1_0);
+                let prop;
+                if (integrationStatus != null) {
+                  prop = integrationStatus.integration_installed;
+                }
+                if (true !== prop) {
+                  let result = closure_2_0(closure_2_2[12]).refreshConjureInstallState(closure_1_0);
+                  if (1 < closure_1_1) {
+                    closure_0 = closure_1_0;
+                    closure_1 = tmp7 - 1;
+                    let _setTimeout = setTimeout;
+                    let timerId = setTimeout(() => {
+                      let integrationStatus = closure_2_7.getIntegrationStatus(closure_1_0);
+                      let prop;
+                      if (integrationStatus != null) {
+                        prop = integrationStatus.integration_installed;
+                      }
+                      if (true !== prop) {
+                        let result = closure_2_0(closure_2_2[12]).refreshConjureInstallState(closure_1_0);
+                        if (1 < closure_1_1) {
+                          closure_0 = closure_1_0;
+                          closure_1 = tmp7 - 1;
+                          let _setTimeout = setTimeout;
+                          let timerId = setTimeout(/* F102622 */ function() { ... }, 1500);
+                        }
+                        let obj = closure_2_0(closure_2_2[12]);
+                      }
+                    }, 1500);
+                  }
+                  let obj = closure_2_0(closure_2_2[12]);
+                }
+              }, 1500);
+            }
+            let obj = closure_2_0(closure_2_2[12]);
+          }
+        }, 1500);
+      }
+      let obj = closure_2_0(closure_2_2[12]);
+    }
+  }, 1500);
+}
 let closure_12 = async function _waitForPublishStatus(arg0) {
   if (c4 === 2) {
     c4 = 3;
@@ -84,19 +153,20 @@ function isPublishable(id) {
   }
   return canPublishResult;
 }
-const isProjectOwner = fn(6899).isProjectOwner;
+const isProjectOwner = fn(6902).isProjectOwner;
 const Permissions = fn(1072).Permissions;
-let items = [fn(6900).ConjureSupportedSurface.PROFILE_WIDGET, fn(6900).ConjureSupportedSurface.OVERLAY];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/server_share/useConjureShareToServer.tsx");
 
 export default function useConjureShareToServer(arg0, arg1, arg2) {
   _require = arg0;
-  importDefault = arg2;
+  closure_1 = arg2;
   items = [ConjureProjectStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ConjureProjectStore.getProject(closure_0), items1);
   let obj = require("initialize");
+  const tmp = _require;
+  const tmp2 = conjureEligibleGuilds;
   const items2 = [ConjureProjectStore];
   const items3 = [arg0];
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
@@ -122,7 +192,7 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
   let obj3 = require("useConjureProjects");
   const items4 = [PermissionStore];
   const items5 = [conjureEligibleGuilds];
-  const guilds = require("initialize").useStateFromStoresArray(items4, () => conjureEligibleGuilds.filter((item) => closure_1_6.can(constants.MANAGE_GUILD, item)), items5);
+  const guilds = tmp(tmp2[7]).useStateFromStoresArray(items4, () => conjureEligibleGuilds.filter((item) => closure_1_6.can(constants.MANAGE_GUILD, item)), items5);
   const tmp9 = _slicedToArray(guild.useState(null), 2);
   _slicedToArray = tmp9[1];
   const items6 = [tmp9[0], , ];
@@ -143,34 +213,15 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
   if (guild == null) {
     guild = null;
   }
-  let blockedReason = null;
-  if (null != stateFromStores) {
-    let supported_surfaces = stateFromStores.supported_surfaces;
-    if (supported_surfaces == null) {
-      supported_surfaces = [];
-    }
-    const items7 = [];
-    const arraySpreadResult = HermesBuiltin.arraySpread(supported_surfaces, 0);
-    let prop = stateFromStores.preview_supported_surfaces;
-    if (prop == null) {
-      prop = [];
-    }
-    HermesBuiltin.arraySpread(prop, arraySpreadResult);
-    blockedReason = null;
-    if (items7.some((item) => items.includes(item))) {
-      let intl = tmp(tmp2[10]).intl;
-      blockedReason = intl.string(require("../intl/ConjureUntranslated.messages.js")["/Ow58q"]);
-    }
-  }
-  const tmpResult = require("initialize");
-  [tmp22, PermissionStore] = guild.useState(false);
+  const tmpResult = tmp(tmp2[7]);
+  [tmp13, PermissionStore] = guild.useState(false);
   const tmp8Result = _slicedToArray(guild.useState(false), 2);
-  [tmp24, ConjureProjectStore] = guild.useState(null);
+  [tmp15, ConjureProjectStore] = guild.useState(null);
   const pickGuild = obj5.useCallback((arg0) => {
     closure_4(arg0);
     ConjureProjectStore(null);
   }, []);
-  const items8 = [guild, arg0];
+  const items7 = [guild, arg0];
   const share = obj5.useCallback(guilds(function*() {
     if (c5 === 2) {
       c5 = 3;
@@ -200,9 +251,11 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
             closure_128_1 = undefined;
             closure_128_2 = undefined;
             closure_128_3 = undefined;
-            closure_128_4 = undefined;
-            const intl = tmp5(tmp41[10]).intl;
-            const stringResult = intl.string(tmp3(tmp41[11]).qDjkvv);
+            let project2;
+            closure_128_5 = undefined;
+            closure_128_6 = undefined;
+            const intl = tmp5(tmp53[9]).intl;
+            const stringResult = intl.string(tmp3(tmp53[10]).qDjkvv);
             closure_128_0 = stringResult;
             if (null == guild) {
               const obj4 = { shared: false, error: stringResult };
@@ -212,50 +265,91 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
             } else {
               PermissionStore(true);
               ConjureProjectStore(null);
-              closure_128_1 = tmp5(tmp41[12]).nextConjurePreviewAppPublished(tmp5, 30000);
+              closure_128_1 = tmp5(tmp53[11]).nextConjurePreviewAppPublished(tmp5, 30000);
               c3 = 1;
-              const tmp49Result = tmp5(tmp41[12]);
-              c4 = 3;
+              const obj16 = tmp5(tmp53[11]);
+              c4 = 2;
               c5 = 1;
-              const obj6 = { value: tmp5(tmp41[13]).shareConjureProject(tmp5, tmp53.id), done: false };
+              const obj6 = { value: tmp5(tmp53[12]).shareConjureProject(tmp5, tmp76.id), done: false };
               return obj6;
             }
           }
         } else if (1 === tmp8) {
           c3 = 0;
-          closure_128_5 = tmp41;
+          closure_128_7 = tmp53;
           closure_128_1.cancel();
           let message;
-          if (closure_128_5 != null) {
-            const body = closure_128_5.body;
+          if (closure_128_7 != null) {
+            const body = closure_128_7.body;
             if (body != null) {
               message = body.message;
             }
           }
           closure_128_2 = message;
           if (typeof closure_128_2 === "string") {
-            let tmp27 = closure_128_2;
+            let tmp45 = closure_128_2;
           } else {
-            tmp27 = closure_128_0;
+            tmp45 = closure_128_0;
           }
-          closure_128_3 = tmp27;
+          closure_128_3 = tmp45;
           closure_129_7(closure_128_3);
           closure_129_6(false);
           { shared: false, error: null }[1] = closure_128_3;
           c5 = 3;
+        } else if (2 === tmp8) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            c3 = 0;
+            project2 = project.getProject(closure_129_0);
+            if (null != project2) {
+              if (!obj15.usesPreviewApp(project2)) {
+                closure_128_1.cancel();
+                closure_129_6(false);
+                publishStatus = publishStatus.getPublishStatus(closure_129_0);
+                let publishState;
+                if (publishStatus != null) {
+                  publishState = publishStatus.publishState;
+                }
+                closure_128_5 = "not_live" === publishState;
+                if (!closure_128_5) {
+                  refreshUntilBotJoins(closure_129_0, 6);
+                }
+                let str2 = "added";
+                if (closure_128_5) {
+                  str2 = "publish";
+                }
+                const obj8 = { shared: true, next: str2 };
+                c5 = 3;
+                const obj9 = { value: obj8, done: true };
+                return obj9;
+              }
+              obj15 = tmp5(tmp53[13]);
+            }
+            c4 = 3;
+            c5 = 1;
+            const obj10 = { value: closure_128_1.published, done: false };
+            return obj10;
+          }
         } else {
-          if (2 === tmp8) {
+          if (3 === tmp8) {
             if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              const obj11 = { value, done: true };
+              return obj11;
             } else if (value) {
               c4 = 4;
               c5 = 1;
-              const obj8 = {
+              const obj12 = {
                 value: (function waitForPublishStatus() {
                             const self = this;
                             const apply = closure_1_12.apply;
@@ -268,23 +362,7 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
                           })(closure_129_0),
                 done: false
               };
-              return obj8;
-            }
-          } else if (3 === tmp8) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              c5 = 3;
-              const obj9 = { value, done: true };
-              return obj9;
-            } else {
-              c3 = 0;
-              c4 = 2;
-              c5 = 1;
-              const obj10 = { value: closure_128_1.published, done: false };
-              return obj10;
+              return obj12;
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -294,24 +372,28 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
             const obj = { value, done: true };
             return obj;
           }
-          closure_128_4 = value;
+          closure_128_6 = value;
           closure_129_6(false);
-          const obj11 = { shared: true, testAppReady: closure_128_4 };
+          let str = "await_test_app";
+          if (closure_128_6) {
+            str = "publish";
+          }
+          const obj13 = { shared: true, next: str };
           c5 = 3;
-          const obj12 = { value: obj11, done: true };
-          return obj12;
+          const obj14 = { value: obj13, done: true };
+          return obj14;
         }
-      } catch (tmp41) {
+      } catch (tmp53) {
         if (tmp4 === c3) {
           c5 = tmp2;
-          throw tmp41;
+          throw tmp53;
         } else {
           c4 = tmp;
         }
       }
     }
-  }), items8);
-  const items9 = [guild, arg0, arg2];
+  }), items7);
+  const items8 = [guild, arg0, arg2];
   const publish = obj5.useCallback(guilds(function*() {
     if (v3 === 2) {
       v3 = 3;
@@ -370,12 +452,12 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
         }
       }
     }
-  }), items9);
+  }), items8);
   if (available) {
     available = stateFromStores1;
   }
   if (available) {
     available = guilds.length > 0;
   }
-  return { available, guilds, guild, pickGuild, blockedReason, sharing, error, share, publish };
+  return { available, guilds, guild, pickGuild, sharing, error, share, publish };
 };

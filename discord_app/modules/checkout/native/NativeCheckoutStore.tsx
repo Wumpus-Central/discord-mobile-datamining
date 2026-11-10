@@ -1,6 +1,6 @@
 // discord_app/modules/checkout/native/NativeCheckoutStore.tsx
 import _mod1254 from "../../../../_runtime/metro/01254__.js";
-import _mod5055 from "../../../../_runtime/metro/05055__.js";
+import _mod5057 from "../../../../_runtime/metro/05057__.js";
 import OrderActionCreators from "../../payments/OrderActionCreators.tsx";
 import ContextUtilsDefault from "../../../utils/ContextUtils.tsx";
 import payments_OrderActionCreators from "../../payments/native/OrderActionCreators.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import OrderRecord from "../../payments/records/OrderRecord.tsx";
 
 require = fn;
-const OrderStatus = fn(5872).OrderStatus;
+const OrderStatus = fn(5874).OrderStatus;
 [exports.NativeCheckoutStoreContext, closure_7] = ContextUtilsDefault();
 let context = noop.createContext("unset_context");
 const size = fn(2);
@@ -19,14 +19,14 @@ let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutS
 export const NativeCheckoutStoreContextOrNull = context;
 export function useNativeCheckoutStore(arg0) {
   if (shallow === undefined) {
-    shallow = _mod5055.shallow;
+    shallow = _mod5057.shallow;
   }
   const tmp3 = closure_7();
   return _mod1254.useStoreWithEqualityFn(tmp3, arg0, shallow);
 }
 export function useNativeCheckoutStoreOrNull(arg0) {
   if (shallow === undefined) {
-    shallow = _mod5055.shallow;
+    shallow = _mod5057.shallow;
   }
   context = noop.useContext(context);
   let storeWithEqualityFn = null;
@@ -711,5 +711,5 @@ export function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = runRevertOrderToDraft;
     return obj;
-  }, _mod5055.shallow);
+  }, _mod5057.shallow);
 }

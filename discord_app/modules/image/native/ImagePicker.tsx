@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ImagePickerUtils from "ImagePickerUtils.tsx";
-import launchCameraAll from "../../../../_runtime/08293_launchCamera.js";
-import openPickerDefault from "../../../../_runtime/08295_openPicker.js";
+import launchCameraAll from "../../../../_runtime/08297_launchCamera.js";
+import openPickerDefault from "../../../../_runtime/08299_openPicker.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;

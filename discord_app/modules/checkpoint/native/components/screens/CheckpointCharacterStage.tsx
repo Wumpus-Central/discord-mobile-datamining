@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { flexGrow: 1 }, rive: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.rive = {};
@@ -24,18 +24,23 @@ export default function CheckpointCharacterStage(stage) {
   const characterBottomInset = stage.characterBottomInset;
   noop = undefined;
   height = undefined;
+  closure_6 = undefined;
+  let stateFromStores;
   let ref;
-  const tmp = ref();
+  const tmp = stateFromStores();
   const context = noop.useContext(layout(isHidden[6]));
   ({ width: c4, height } = layout(isHidden[7])());
-  const tmp5 = layout(isHidden[8])(() =>
-    CheckpointCharacterTextureUtils.getCheckpointCharacterTextureScale(c4, height),
-  );
-  const textureScale = tmp5;
   const tmp4 = layout(isHidden[7])();
-  items = [textureScale];
-  const stateFromStores = stage(isHidden[10]).useStateFromStores(items, () => textureScale.selectedCharacterTraits);
-  const items1 = [stage, isHidden, stateFromStores, layout, characterBottomInset, height, tmp5];
+  items = [closure_6];
+  closure_6 = stage(isHidden[8]).useStateFromStores(items, () => closure_6.compactAssets);
+  const tmp6 = layout(isHidden[9])(() =>
+    CheckpointCharacterTextureUtils.getCheckpointCharacterTextureScale(c4, height, closure_6),
+  );
+  const textureScale = tmp6;
+  let obj2 = stage(isHidden[8]);
+  const items1 = [closure_6];
+  stateFromStores = stage(isHidden[8]).useStateFromStores(items1, () => closure_6.selectedCharacterTraits);
+  const items2 = [stage, isHidden, stateFromStores, layout, characterBottomInset, height, tmp6];
   const memo = noop.useMemo(() => {
     const obj2 = { stage, isHidden, traits: stateFromStores, layout, mobileLift: null, textureScale: null };
     let num = 0;
@@ -50,27 +55,27 @@ export default function CheckpointCharacterStage(stage) {
     obj2.mobileLift = num;
     obj2.textureScale = textureScale;
     return CheckpointCharacterDataBinding.getCheckpointCharacterDataBinding(obj2);
-  }, items1);
-  let obj2 = stage(isHidden[10]);
+  }, items2);
+  const obj3 = stage(isHidden[8]);
   [tmp10, tmp11] = characterBottomInset(noop.useState(memo), 2);
   const tmp9 = characterBottomInset(noop.useState(memo), 2);
   const checkpointCharacterReferencedAssets = stage(isHidden[12]).useCheckpointCharacterReferencedAssets({
     visibleDataBinding: tmp10,
     requestedDataBinding: memo,
-    textureScale: tmp5,
+    textureScale: tmp6,
   });
-  const tmp13 = layout(isHidden[8])(checkpointCharacterReferencedAssets);
-  const obj3 = stage(isHidden[12]);
+  const tmp13 = layout(isHidden[9])(checkpointCharacterReferencedAssets);
+  const obj4 = stage(isHidden[12]);
   [tmp15, tmp16] = characterBottomInset(noop.useState(null), 2);
   const tmp14 = characterBottomInset(noop.useState(null), 2);
   const checkpointCharacterTextureManager = stage(isHidden[13]).useCheckpointCharacterTextureManager(tmp15);
-  const obj4 = stage(isHidden[13]);
+  const obj5 = stage(isHidden[13]);
   let isOutfitPreloaded = stage(isHidden[14]).useCheckpointCharacterTextureSwaps({
     textureManager: checkpointCharacterTextureManager,
     referencedAssets: checkpointCharacterReferencedAssets,
     initialReferencedAssets: tmp13,
   });
-  const obj5 = stage(isHidden[14]);
+  const obj6 = stage(isHidden[14]);
   const checkpointCharacterOutfitPreload = stage(isHidden[15]).useCheckpointCharacterOutfitPreload({
     visibleDataBinding: tmp10,
     requestedDataBinding: memo,
@@ -86,7 +91,7 @@ export default function CheckpointCharacterStage(stage) {
     tmp11(memo);
   }
   ref = obj.useRef(null);
-  const items2 = [isHidden];
+  const items3 = [isHidden];
   const effect = obj.useEffect(() => {
     const current = ref.current;
     if (isHidden) {
@@ -96,12 +101,12 @@ export default function CheckpointCharacterStage(stage) {
     } else if (current != null) {
       current.play();
     }
-  }, items2);
+  }, items3);
   let tmp24;
   if (stage.isActive) {
     tmp24 = context;
   }
-  const obj7 = {
+  const obj8 = {
     ref: tmp24,
     style: tmp.container,
     accessible: true,
@@ -109,10 +114,10 @@ export default function CheckpointCharacterStage(stage) {
     accessibilityLabel: null,
     children: null,
   };
-  const obj6 = stage(isHidden[15]);
+  const obj7 = stage(isHidden[15]);
   const tmp23 = height;
-  obj7.accessibilityLabel = stage(isHidden[16]).getCheckpointCharacterAccessibilityLabel(stateFromStores);
-  obj7.children = stateFromStores(stage(isHidden[17]).CheckpointCharacterRive, {
+  obj8.accessibilityLabel = stage(isHidden[16]).getCheckpointCharacterAccessibilityLabel(stateFromStores);
+  obj8.children = textureScale(stage(isHidden[17]).CheckpointCharacterRive, {
     ref,
     artboard: "AB_Master",
     stateMachine: "SM_Master",
@@ -124,5 +129,5 @@ export default function CheckpointCharacterStage(stage) {
     onDataBindingChange,
     style: tmp.rive,
   });
-  return stateFromStores(tmp23, obj7);
+  return textureScale(tmp23, obj8);
 }

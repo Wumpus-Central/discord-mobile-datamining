@@ -1,7 +1,10 @@
 // discord_app/actions/ContextMenuActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import Constants from "../Constants.tsx";
+import SpellcheckUtils from "../utils/SpellcheckUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
+
+const require = globalThis.__r;
 
 function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) {
   stopPropagation.stopPropagation();
@@ -97,11 +100,11 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     const _DOMRect = DOMRect;
     const dOMRect = new DOMRect(tmp3, sum1, 0, 0);
     contextMenu.rect = dOMRect;
-    let APP = contextMenu(6984).getCurrentlyInteractingAppContext();
+    let APP = contextMenu(settle[3]).getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
     }
-    const obj2 = { context: APP };
+    let obj2 = { context: APP };
     const merged = Object.assign(enableSpellCheck);
     contextMenu.config = obj2;
     let nativeEvent = stopPropagation;
@@ -115,28 +118,127 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     if (enableSpellCheck) {
       if (tmp16Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          importDefault = tmp16(6986).addResultListener(function handler() {
-            closure_1();
-            contextMenu = DispatcherDefault;
-            contextMenu.dispatch({ type: "CONTEXT_MENU_OPEN", contextMenu });
+          settle = function settle() {
+            let flag = !c1;
+            if (!c1) {
+              c1 = true;
+              const _clearTimeout = clearTimeout;
+              clearTimeout(closure_3);
+              settle();
+              flag = true;
+              if (c4 === settle) {
+                c4 = null;
+                flag = true;
+              }
+            }
+            return flag;
+          };
+          if (settle != null) {
+            if (typeof settle === "function") {
+              if (!closure_130_1) {
+                closure_130_1 = true;
+                const _clearTimeout2 = clearTimeout;
+                clearTimeout(closure_130_3);
+                closure_130_4();
+                if (c4 === closure_130_2) {
+                  c4 = null;
+                }
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          }
+          importDefault = false;
+          const _setTimeout = setTimeout;
+          AppContext = setTimeout(() => {
+            let flag = !c1;
+            if (!c1) {
+              c1 = true;
+              const _clearTimeout = clearTimeout;
+              clearTimeout(closure_3);
+              settle();
+              flag = true;
+              if (c4 === settle) {
+                c4 = null;
+                flag = true;
+              }
+            }
+            if (flag) {
+              contextMenu = SpellcheckUtils;
+              const result = contextMenu.clearCachedMisspelling();
+              const obj3 = { type: "CONTEXT_MENU_OPEN", contextMenu };
+              DispatcherDefault.dispatch(obj3);
+            }
+          }, 500);
+          settle = tmp16(tmp17[2]).addResultListener(() => {
+            let flag = !c1;
+            if (!c1) {
+              c1 = true;
+              const _clearTimeout = clearTimeout;
+              clearTimeout(closure_3);
+              settle();
+              flag = true;
+              if (c4 === settle) {
+                c4 = null;
+                flag = true;
+              }
+            }
+            if (flag) {
+              contextMenu = DispatcherDefault;
+              const obj2 = { type: "CONTEXT_MENU_OPEN", contextMenu };
+              contextMenu.dispatch(obj2);
+            }
           });
-          const tmp16Result2 = tmp16(6986);
+          const tmp16Result2 = tmp16(tmp17[2]);
         }
       }
-      tmp16Result = tmp16(1377);
+      tmp16Result = tmp16(tmp17[4]);
+    }
+    if (settle != null) {
+      if (typeof settle === "function") {
+        if (!importDefault) {
+          importDefault = true;
+          let _clearTimeout = clearTimeout;
+          clearTimeout(AppContext);
+          settle();
+          if (c4 === settle) {
+            c4 = null;
+          }
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
     }
     stopPropagation.preventDefault();
-    const obj3 = contextMenu(6984);
+    let obj3 = contextMenu(settle[3]);
     const obj4 = { type: "CONTEXT_MENU_OPEN", contextMenu };
-    DispatcherDefault.dispatch(obj4);
+    require("Dispatcher").dispatch(obj4);
+    const obj6 = require("Dispatcher");
   } else {
     const currentTarget = stopPropagation.currentTarget;
   }
 }
-const AppContext = Constants.AppContext;
-const result = size.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
+let AppContext = Constants.AppContext;
+let c4 = null;
+let result = size.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
 
-export function closeContextMenu() {}
+export function closeContextMenu() {
+  if (_null != null) {
+    if (typeof _null === "function") {
+      if (!c1) {
+        c1 = true;
+        const _clearTimeout = clearTimeout;
+        clearTimeout(AppContext);
+        _null();
+        if (_null === dependencyMap) {
+          _null = null;
+        }
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+}
 export { openContextMenu };
 export function openContextMenuLazy(stopPropagation, renderLazy, enableSpellCheck) {
   openContextMenu(stopPropagation, undefined, enableSpellCheck, renderLazy);

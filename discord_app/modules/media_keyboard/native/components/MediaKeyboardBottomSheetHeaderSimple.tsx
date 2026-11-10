@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj = {
   headerHandleOnlyWrap: { height: fn(1623).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 },
 };

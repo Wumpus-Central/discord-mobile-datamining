@@ -42,6 +42,15 @@ prototype["getUsers"] = function getUsers() {
 prototype["getValidUsers"] = function getValidUsers() {
   return users.filter((tokenStatus) => tokenStatus.tokenStatus !== constants.INVALID);
 };
+prototype["getLastChannelId"] = function getLastChannelId(id) {
+  closure_0 = id;
+  const found = users.find((id) => id.id === closure_0);
+  let lastChannelId;
+  if (found != null) {
+    lastChannelId = found.lastChannelId;
+  }
+  return lastChannelId;
+};
 prototype["getHasLoggedInAccounts"] = function getHasLoggedInAccounts() {
   return users.length > 0;
 };
@@ -112,6 +121,19 @@ const multiAccountStore = new MultiAccountStore(DispatcherDefault, {
       users = users.filter((id) => id.id !== closure_1_4);
     }
     c4 = null;
+  },
+  MULTI_ACCOUNT_SWITCH_START: function handleSwitchStart(lastChannelId) {
+    lastChannelId = lastChannelId.lastChannelId;
+    users = users.map((id) => {
+      let tmp = id;
+      if (id.id === c4) {
+        const obj = {};
+        const merged = Object.assign(id);
+        obj.lastChannelId = lastChannelId;
+        tmp = obj;
+      }
+      return tmp;
+    });
   },
   MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST(userId) {
     userId = userId.userId;

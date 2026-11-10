@@ -143,6 +143,7 @@ export const CollectiblesSearchBarCTAName = {
 };
 export const CollectiblesSearchBarTileType = { SEARCH: "SEARCH" };
 export const CollectiblesSearchInputMethod = { ENTER: "enter", SUGGESTION: "suggestion" };
+export const CollectiblesSearchErrorType = { HTTP: "http", NETWORK: "network" };
 export const BROWSE_CATEGORY_QUERY_PARAM = "category";
 export const GAME_SERVER_GAME_ID_QUERY_PARAM = "game_server_game_id";
 export { CollectibleShopTab };

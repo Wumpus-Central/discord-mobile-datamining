@@ -67,8 +67,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(6199).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(5140);
+const sum = fn(6201).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5142);
 let obj2 = {
   container: {
     width: "100%",

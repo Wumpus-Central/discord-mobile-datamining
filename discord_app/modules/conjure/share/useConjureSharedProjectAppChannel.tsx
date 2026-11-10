@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/share/useConjureSharedProjectAppChannel.tsx
-import findLoadedAppChannelDefault from "findLoadedAppChannel.tsx";
+import findLoadedAppChannelDefault from "../shared/findLoadedAppChannel.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
@@ -7,7 +7,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelLoader = fn(4989).ChannelLoader;
+const ChannelLoader = fn(4991).ChannelLoader;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/useConjureSharedProjectAppChannel.tsx");
 

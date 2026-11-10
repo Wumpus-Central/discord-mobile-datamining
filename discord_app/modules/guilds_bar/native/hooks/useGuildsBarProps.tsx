@@ -73,8 +73,8 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   }
   return tmp;
 }
-const GuildsNodeType = fn(6827).GuildsNodeType;
-const GuildsBarConstants = fn(18692);
+const GuildsNodeType = fn(6830).GuildsNodeType;
+const GuildsBarConstants = fn(18721);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = {
@@ -521,26 +521,26 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(18756), {}, item);
+              return closure_1_19(closure_1_1(18785), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(18757), {}, item);
+              return closure_1_19(closure_1_1(18786), {}, item);
             } else if ("waterwheels" === item) {
-              return closure_1_19(closure_1_1(18758), {}, item);
+              return closure_1_19(closure_1_1(18787), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(18776), {}, item);
+              return closure_1_19(closure_1_1(18805), {}, item);
             }
           }),
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(18756), {}, item);
+              return closure_1_19(closure_1_1(18785), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(18757), {}, item);
+              return closure_1_19(closure_1_1(18786), {}, item);
             } else if ("waterwheels" === item) {
-              return closure_1_19(closure_1_1(18758), {}, item);
+              return closure_1_19(closure_1_1(18787), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(18776), {}, item);
+              return closure_1_19(closure_1_1(18805), {}, item);
             }
           }),
         });

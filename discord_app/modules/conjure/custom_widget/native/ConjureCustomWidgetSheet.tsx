@@ -1,17 +1,17 @@
 // discord_app/modules/conjure/custom_widget/native/ConjureCustomWidgetSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4026 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10969);
+const ConjureConnectionStore = fn(10978);
 ({ ensureConnection: metroImportDefault, sendUserMessage: closure_8 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { body: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,7 +24,7 @@ export default function ConjureCustomWidgetSheet() {
   const tmp4 = _slicedToArray(memo.useState(null), 2);
   [tmp7, asyncGeneratorStep] = memo.useState(false);
   _slicedToArray = memo.useRef(false);
-  memo = memo.useMemo(() => first(7483).resolveConjureWorkspaceGuildId("ConjureCustomWidgetSheet"), []);
+  memo = memo.useMemo(() => first(7486).resolveConjureWorkspaceGuildId("ConjureCustomWidgetSheet"), []);
   const callback = memo.useCallback((arg0) => {
     closure_1(arg0);
     dependencyMap(null);
@@ -141,8 +141,8 @@ export default function ConjureCustomWidgetSheet() {
   let obj = { startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
   let obj2 = { title: null };
   let intl = value(1113).intl;
-  obj2.title = intl.string(_modDef4026.yI85oV);
-  obj.header = closure_9(value(7382).BottomSheetTitleHeader, obj2);
+  obj2.title = intl.string(_modDef4028.yI85oV);
+  obj.header = closure_9(value(7385).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.body, children: null };
   const obj4 = {
     label: null,
@@ -155,26 +155,26 @@ export default function ConjureCustomWidgetSheet() {
     disabled: null,
   };
   const intl2 = value(1113).intl;
-  obj4.label = intl2.string(_modDef4026["09BSx3"]);
+  obj4.label = intl2.string(_modDef4028["09BSx3"]);
   const intl3 = value(1113).intl;
-  obj4.placeholder = intl3.string(_modDef4026.K7zdCZ);
+  obj4.placeholder = intl3.string(_modDef4028.K7zdCZ);
   const intl4 = value(1113).intl;
-  obj4.description = intl4.string(_modDef4026.SKwzvJ);
+  obj4.description = intl4.string(_modDef4028.SKwzvJ);
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(15198).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(15224).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
-  const items1 = [closure_9(value(7316).TextArea, obj4)];
+  const items1 = [closure_9(value(7319).TextArea, obj4)];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
   const intl5 = tmp12(1113).intl;
-  obj5.text = intl5.string(_modDef4026.MDZXiK);
+  obj5.text = intl5.string(_modDef4028.MDZXiK);
   obj5.onPress = callback1;
   obj5.loading = tmp7;
   obj5.disabled = null == memo;
-  items1[1] = closure_9(value(5758).Button, obj5);
+  items1[1] = closure_9(value(5760).Button, obj5);
   obj3.children = items1;
   obj.children = closure_10(View, obj3);
-  return closure_9(value(7426).ActionSheet, obj);
+  return closure_9(value(7429).ActionSheet, obj);
 }
 export const CONJURE_CUSTOM_WIDGET_SHEET_KEY = "ConjureCustomWidgetSheet";

@@ -78,18 +78,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
-  [USER_INTERACTION]: fn(8714).ChatIcon,
-  [USER_CALLED]: fn(13595).PhoneIcon,
-  [USER_ADD]: fn(5840).FriendsIcon,
-  [GUILD_ADD]: fn(15765).ServerGridIcon,
-  [GUILD_INTERACTION]: fn(8716).ThreadIcon,
-  [PURCHASES]: fn(8085).CreditCardIcon,
-  [TOTAL_VOICE_MINUTES]: fn(5864).ClockIcon,
-  [GIFTS]: fn(13597).GiftIcon,
+  [USER_INTERACTION]: fn(8720).ChatIcon,
+  [USER_CALLED]: fn(13608).PhoneIcon,
+  [USER_ADD]: fn(5842).FriendsIcon,
+  [GUILD_ADD]: fn(15793).ServerGridIcon,
+  [GUILD_INTERACTION]: fn(8722).ThreadIcon,
+  [PURCHASES]: fn(8089).CreditCardIcon,
+  [TOTAL_VOICE_MINUTES]: fn(5866).ClockIcon,
+  [GIFTS]: fn(13610).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
-  fn(7792).TeenActionDisplayType);
-let createStyles = fn(5140);
+  fn(7795).TeenActionDisplayType);
+let createStyles = fn(5142);
 let obj3 = {
   row: {
     display: "flex",
@@ -134,7 +134,7 @@ obj3.header = { marginBottom: nativeDefault.space.PX_4 };
 let obj5 = { marginBottom: nativeDefault.space.PX_4 };
 obj3.icon = { tintColor: nativeDefault.colors.TEXT_BRAND };
 let closure_8 = createStyles.createStyles(obj3);
-createStyles = fn(5140);
+createStyles = fn(5142);
 let obj7 = { container: null, groupHeader: null };
 const obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };

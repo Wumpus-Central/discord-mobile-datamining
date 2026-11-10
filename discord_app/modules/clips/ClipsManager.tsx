@@ -146,8 +146,8 @@ let closure_26 = async function _probeHardware() {
     videoEncoders: closure_131_6,
   };
 };
-const getSystemAnalyticsInfo = fn(5912).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8284);
+const getSystemAnalyticsInfo = fn(5914).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8288);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15,
   CLIPS_DEFAULT_SETTINGS_VERSION: closure_16,
@@ -157,8 +157,8 @@ const ClipsConstants = fn(8284);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6770).StreamTypes;
-const Features = fn(5897).Features;
+const StreamTypes = fn(6772).StreamTypes;
+const Features = fn(5899).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -314,6 +314,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
       const clipsFromStorage = self.loadClipsFromStorage();
       self.maybeStartNtpClock();
       const result1 = self.updateHardwareClassification();
+    } else {
+      DispatcherDefault.dispatch({ type: "CLIPS_APPLY_DEFAULT_SETTINGS_COMPLETE" });
     }
     tmpResult = ClipsExperiment;
   }
@@ -379,7 +381,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(4965).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(4967).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -459,7 +461,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(4965).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(4967).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };
@@ -563,8 +565,8 @@ prototype["updateHardwareClassification"] = function updateHardwareClassificatio
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -577,20 +579,19 @@ prototype["updateHardwareClassification"] = function updateHardwareClassificatio
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            closure_1 = tmp3;
             closure_0 = tmp7;
             let hardwareClassification2;
-            let clipsDefaultSettingsDecision;
+            closure_128_1 = undefined;
             if (self.classifyHardwarePromise == null) {
-              tmp25.classifyHardwarePromise = self.classifyHardware();
+              tmp33.classifyHardwarePromise = self.classifyHardware();
             }
             c4 = 1;
             c5 = 1;
-            const obj4 = { value: self.classifyHardwarePromise, done: false };
-            return obj4;
+            const obj5 = { value: self.classifyHardwarePromise, done: false };
+            return obj5;
           }
         } else {
           if (1 === tmp7) {
@@ -599,50 +600,53 @@ prototype["updateHardwareClassification"] = function updateHardwareClassificatio
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               hardwareClassification2 = hardwareClassification.getHardwareClassification();
+              let clipsDefaultSettingsDecision = null;
               if (null != hardwareClassification2) {
                 clipsDefaultSettingsDecision = closure_129_0.getClipsDefaultSettingsDecision(hardwareClassification2);
-                if (null != clipsDefaultSettingsDecision) {
-                  c3 = 1;
+              }
+              closure_128_1 = clipsDefaultSettingsDecision;
+              if (null != hardwareClassification2) {
+                if (null != closure_128_1) {
+                  dependencyMap = 1;
                   c4 = 3;
                   c5 = 1;
-                  const obj6 = {
-                    value: closure_129_0.applyClipsDefaultSettings(
-                      hardwareClassification2,
-                      clipsDefaultSettingsDecision,
-                    ),
+                  const obj7 = {
+                    value: closure_129_0.applyClipsDefaultSettings(hardwareClassification2, closure_128_1),
                     done: false,
                   };
-                  return obj6;
+                  return obj7;
                 }
               }
             }
           } else {
             if (2 === tmp7) {
-              c3 = 0;
+              dependencyMap = 0;
               closure_128_2 = closure_2;
               logger.error("Failed to apply clips default settings", closure_128_2);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              c3 = 0;
+              dependencyMap = 0;
             }
-            c3 = 0;
+            dependencyMap = 0;
             c5 = 3;
             const obj = { value, done: true };
             return obj;
           }
+          tmp3(dependencyMap[22]).dispatch({ type: "CLIPS_APPLY_DEFAULT_SETTINGS_COMPLETE" });
           c5 = 3;
+          const obj2 = tmp3(dependencyMap[22]);
         }
-      } catch (tmp28) {
-        closure_2 = tmp28;
-        if (tmp4 === c3) {
+      } catch (tmp36) {
+        closure_2 = tmp36;
+        if (tmp4 === dependencyMap) {
           c5 = tmp2;
-          throw tmp28;
+          throw tmp36;
         } else {
           c4 = tmp;
         }

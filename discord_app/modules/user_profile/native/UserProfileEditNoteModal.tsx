@@ -48,16 +48,16 @@ export default function UserProfileEditNoteModal(arg0) {
     const obj = { variant: "heading-md/semibold", accessibilityRole: "header", children: null };
     const intl = navigation(1113).intl;
     obj.children = intl.string(navigation(1113).t.sHHsOM);
-    return jsx(navigation(5751).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
+    return jsx(navigation(5753).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
   };
   tmpResult = navigation(1357);
-  obj6.headerLeft = navigation(7064).getHeaderCloseButton(handleClose);
+  obj6.headerLeft = navigation(7067).getHeaderCloseButton(handleClose);
   obj6.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
   obj5.root = obj6;
   obj3.screens = obj5;
-  return jsx(navigation(7231).Navigator, {
+  return jsx(navigation(7234).Navigator, {
     initialRouteName: "root",
     headerStatusBarHeight: 12,
     headerStyle: null,

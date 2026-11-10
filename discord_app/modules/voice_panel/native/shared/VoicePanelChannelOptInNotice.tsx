@@ -20,10 +20,10 @@ export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   obj2.label = intl.string(channel(1113).t["9mysCh"]);
   const intl2 = channel(1113).intl;
   obj2.subLabel = intl2.string(channel(1113).t.PDUCIN);
-  const tmp2 = analyticsSection(7023);
-  obj2.icon = jsx(channel(7046).TableRowIcon, { IconComponent: channel(15975).ChannelListMagnifyingGlassIcon });
+  const tmp2 = analyticsSection(7026);
+  obj2.icon = jsx(channel(7049).TableRowIcon, { IconComponent: channel(16002).ChannelListMagnifyingGlassIcon });
   obj2.onPress = callback;
-  obj.children = jsx(channel(7038).TableRow, {
+  obj.children = jsx(channel(7041).TableRow, {
     label: null,
     subLabel: null,
     icon: null,

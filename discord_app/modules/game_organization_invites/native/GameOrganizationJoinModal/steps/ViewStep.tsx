@@ -5,11 +5,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const constants = fn(11504).GameOrganizationCharacterMode;
-let closure_6 = fn(13446).GameOrganizationJoinScenes;
+const constants = fn(11513).GameOrganizationCharacterMode;
+let closure_6 = fn(13460).GameOrganizationJoinScenes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_9 = createStyles.createStyles({ text: { textAlign: "center" }, inlineStack: { width: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -78,9 +78,7 @@ export function ViewStep(code) {
       style: tmp.inlineStack,
       children: null,
     };
-    const obj11 = { iconUrl: application.iconUrl, size: 16, borderRadius: null };
-    const tmp4Result = tmp4(tmp3[10]);
-    obj11.borderRadius = tmp4(tmp3[13]).radii.xs;
+    const obj11 = { iconUrl: application.iconUrl, size: 16, borderRadius: tmp4(tmp3[13]).radii.xs };
     const items2 = [closure_7(tmp4(tmp3[14]), obj11)];
     const obj12 = { variant: "heading-sm/medium", children: application.name };
     items2[1] = closure_7(tmp2(tmp3[15]).Text, obj12);
@@ -110,13 +108,13 @@ export function ViewStep(code) {
     items1[1] = closure_8(tmp2(tmp3[12]).Stack, obj9);
     obj4.children = items1;
     const items5 = [closure_8(tmp2(tmp3[12]).Stack, obj4)];
-    let tmp17Result = tmp7;
+    let tmp16Result = tmp7;
     if (tmp7) {
       const obj17 = { characters: data, selectedCharacterId, onSelect: tmp9[1], noun: tmp14 };
-      tmp17Result = closure_7(tmp4(tmp3[19]), obj17);
+      tmp16Result = closure_7(tmp4(tmp3[19]), obj17);
     }
     const obj18 = { children: null };
-    items5[1] = tmp17Result;
+    items5[1] = tmp16Result;
     obj3.children = items5;
     obj18.children = closure_8(tmp2(tmp3[12]).Stack, obj3);
     const items6 = [closure_7(tmp2(tmp3[11]).ModalContent, obj18)];
@@ -142,7 +140,7 @@ export function ViewStep(code) {
     obj21.children = closure_7(tmp2(tmp3[21]).Button, obj19);
     items6[1] = closure_7(tmp2(tmp3[20]).ModalFooter, obj21);
     obj20.children = items6;
-    return closure_8(tmp4Result, obj20);
+    return closure_8(tmp2(tmp3[10]).ModalScreen, obj20);
   }
   const tmp2Result = require("useGameOrganizationCharacterEligibilityFetch");
 }

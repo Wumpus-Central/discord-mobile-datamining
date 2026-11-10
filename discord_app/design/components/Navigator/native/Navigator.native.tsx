@@ -6,10 +6,10 @@ import Link from "../../../../../_runtime/01500_Link.js";
 import Text_Text from "../../Text/native/Text.tsx";
 import BackPressTracking from "../../../../modules/routing/native/BackPressTracking.android.tsx";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod7071 from "../../../../../_runtime/metro/07071__.js";
+import _mod7074 from "../../../../../_runtime/metro/07074__.js";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
 import NavigatorBackgroundContext from "NavigatorBackgroundContext.native.tsx";
-import StackNavigator from "../../../../../_runtime/07234_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07237_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -303,7 +303,7 @@ function WrappedNavigationStack(arg0) {
     }),
     1,
   )[0];
-  const tmp5 = navigationContainerRef(5369)();
+  const tmp5 = navigationContainerRef(5371)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = {
     ref: navigationContainerRef,
@@ -342,13 +342,13 @@ function WrappedNavigationStack(arg0) {
     onStateChange: null,
     children: null,
   });
-  obj5.children = jsx(_mod7071.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj5.children = jsx(_mod7074.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   container: null,
   navbar: null,

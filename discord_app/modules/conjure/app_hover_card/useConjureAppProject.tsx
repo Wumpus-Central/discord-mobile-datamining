@@ -6,7 +6,7 @@ import ConjureProjectStore_mod from "../projects/ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let ConjureProjectStore = fn(6899);
+let ConjureProjectStore = fn(6902);
 ({ canRemixProject: c3, isProjectOwner: closure_4 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const size = fn(2);

@@ -1,6 +1,6 @@
 // discord_app/design/mana/components/Toast/Toast.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod16175 from "../../../../../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx";
+import _mod16202 from "../../../../../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx";
 import ToastEntity from "ToastEntity.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,12 +10,12 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let wrapper = {
-  success: { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7401).CircleCheckIcon },
+  success: { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7404).CircleCheckIcon },
   critical: null,
 };
-let obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7401).CircleCheckIcon };
-wrapper.critical = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(7152).CircleErrorIcon };
-const createStyles = fn(5140);
+let obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7404).CircleCheckIcon };
+wrapper.critical = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(7155).CircleErrorIcon };
+const createStyles = fn(5142);
 let closure_9 = createStyles.createStyles((arg0) => {
   wrapper = {
     flexDirection: "row",
@@ -78,7 +78,7 @@ export function Toast(variant) {
   obj3.style = items1;
   const memo = secondaryIconColor.useMemo(() => {
     if (null == obj[str]) {
-      obj = _mod16175;
+      obj = _mod16202;
       if (obj.isToastEntity(icon)) {
         const obj3 = { entity: tmp4 };
         return timestampProducer(ToastEntity.ToastEntity, obj3);
@@ -95,7 +95,7 @@ export function Toast(variant) {
         tmp9 = tmp8;
       }
       icon = tmp9;
-      obj2 = _mod16175;
+      obj2 = _mod16202;
       tmp8 = icon;
     }
     if (null == icon) {

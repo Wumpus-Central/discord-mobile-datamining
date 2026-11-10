@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import _modDef14877 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef14903 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(14873).PlayStationLinkModalScenes;
+let closure_4 = fn(14899).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -25,7 +25,7 @@ export function PlayStationLinkPreConnect(arg0) {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef14877 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14903 }), []);
   const obj2 = {
     platformType,
     onError: callback1,
@@ -41,7 +41,7 @@ export function PlayStationLinkPreConnect(arg0) {
   const intl2 = navigation(1113).intl;
   obj2.body = intl2.string(navigation(1113).t.JaaqIf);
   obj2.autoStart = autoStart;
-  return jsx(navigation(9824).TwoWayLinkPreConnect, {
+  return jsx(navigation(9830).TwoWayLinkPreConnect, {
     platformType,
     onError: callback1,
     onNext: callback,

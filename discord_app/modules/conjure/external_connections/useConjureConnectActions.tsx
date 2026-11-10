@@ -52,7 +52,7 @@ export function useConjureConnectActions(projectId, presentError) {
                 closure_128_0 = undefined;
                 c2 = 1;
                 c3 = 1;
-                const obj6 = { value: type(12347).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
+                const obj6 = { value: type(12355).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
                 return obj6;
               }
             } else if (arg0 === 1) {
@@ -67,19 +67,19 @@ export function useConjureConnectActions(projectId, presentError) {
               callback(closure_129_0.type);
               if ("url" === closure_128_0.type) {
                 const obj8 = { href: closure_128_0.url, trusted: false };
-                type(9019).handleClick(obj8);
+                type(9025).handleClick(obj8);
                 c3 = 3;
-                const obj = type(9019);
+                const obj = type(9025);
               }
               if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
                 const intl2 = type(1113).intl;
-                let stringResult = intl2.string(presentError(4026)["jCQ/1B"]);
+                let stringResult = intl2.string(presentError(4028)["jCQ/1B"]);
               } else {
                 const intl = type(1113).intl;
-                stringResult = intl.string(presentError(4026).POxkSh);
+                stringResult = intl.string(presentError(4028).POxkSh);
               }
               closure_1(stringResult);
-              obj3 = type(12348);
+              obj3 = type(12356);
             }
           } catch (tmp34) {
             c3 = tmp;
@@ -88,7 +88,7 @@ export function useConjureConnectActions(projectId, presentError) {
         }
       };
       if (null != projectId) {
-        const result = projectId(12348).beginExternalAuthorization(ref.current, type.type);
+        const result = projectId(12356).beginExternalAuthorization(ref.current, type.type);
         if (null != result) {
           ref.current = result;
           dependencyMap(result);
@@ -113,7 +113,7 @@ export function useConjureConnectActions(projectId, presentError) {
             return applyArgumentsResult;
           })();
         }
-        let obj = projectId(12348);
+        let obj = projectId(12356);
       }
     }, items),
   };

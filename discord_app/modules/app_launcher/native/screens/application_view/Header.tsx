@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const xl = nativeDefault.radii.xl;
 let c10 = 105;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = {
   headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 },
   expandedHeaderBanner: { height: 105 },
@@ -105,8 +105,8 @@ export default function Header(application) {
   const tmp3 = closure_11();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(12582).getAppLauncherIconSource(application);
-    const tmpResult = tmp(12582);
+    appLauncherIconSource = tmp(12595).getAppLauncherIconSource(application);
+    const tmpResult = tmp(12595);
   }
   let obj = require("initialize");
   let str = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -125,7 +125,7 @@ export default function Header(application) {
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_7(tmp5(12587), obj2);
+    let tmp12 = closure_7(tmp5(12600), obj2);
     let tmp13 = closure_7;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
@@ -235,15 +235,15 @@ export default function Header(application) {
   let str2 = "";
   const animatedStyle3 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx4);
   if (null != application) {
-    str2 = tmp(9851).getSectionName(application);
-    const tmpResult14 = tmp(9851);
+    str2 = tmp(9857).getSectionName(application);
+    const tmpResult14 = tmp(9857);
   }
   let result = null != application;
   if (result) {
     result = "flags" in application;
   }
   if (result) {
-    result = tmp(2148).supportsEmbeddedSurface(application, tmp(5799).EmbeddedSurfaceType.MAIN);
+    result = tmp(2148).supportsEmbeddedSurface(application, tmp(5801).EmbeddedSurfaceType.MAIN);
     const tmpResult15 = tmp(2148);
   }
   dependencyMap = result;
@@ -285,7 +285,7 @@ export default function Header(application) {
       const obj11 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: tmp5(5852),
+        icon: tmp5(5854),
         onPress() {
           AnalyticsUtilsDefault.track(AnalyticEvents.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
             application_id: _undefined.id,
@@ -316,13 +316,13 @@ export default function Header(application) {
       };
       const intl = tmp(1113).intl;
       obj11.accessibilityLabel = intl.string(tmp(1113).t.XWDihq);
-      const items15 = [tmp13(tmp(8098).IconButton, obj11)];
+      const items15 = [tmp13(tmp(8102).IconButton, obj11)];
       const obj12 = { application, onAddAppMenuClick };
-      items15[1] = tmp13(tmp5(12666), obj12);
+      items15[1] = tmp13(tmp5(12679), obj12);
       obj10.children = items15;
       tmp38Result = closure_8(tmp39, obj10);
     }
-    tmpResult16 = tmp(9851);
+    tmpResult16 = tmp(9857);
   }
   items11[2] = tmp38Result;
   obj4.children = items11;

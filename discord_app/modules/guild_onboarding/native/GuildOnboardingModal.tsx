@@ -16,7 +16,7 @@ function headerTitle() {
 function headerRight() {
   return null;
 }
-let closure_9 = fn(7328).GuildOnboardingModalStates;
+let closure_9 = fn(7331).GuildOnboardingModalStates;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_10, Routes: closure_11 } = Constants);
 const jsx = fn(21).jsx;
