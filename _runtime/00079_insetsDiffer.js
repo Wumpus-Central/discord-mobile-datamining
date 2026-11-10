@@ -1,7 +1,7 @@
 // === Module 79: insetsDiffer ===
 
 // Module 79 (insetsDiffer)
-let closure_0 = { top: "disabled", left: "T", right: "isArray", bottom: "isArray" };
+let closure_0 = { top: "channel", left: "borderRadius", right: "opacity", bottom: "Array" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

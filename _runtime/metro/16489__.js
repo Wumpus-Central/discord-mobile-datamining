@@ -1,14 +1,13 @@
 // === Module 16489: ? ===
 
 // Module 16489
-import _mod16490 from "module_16490" /* 16490 */;
+import _mod16468 from "module_16468" /* 16468 */;
 
+const tmp = _mod16468.navigator && _mod16468.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
 
-export default (arg0) => {
-  const tmp = _mod16490(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
-  }
-  return num;
-};
+export default str;

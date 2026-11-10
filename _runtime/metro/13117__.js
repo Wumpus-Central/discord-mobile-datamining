@@ -1,32 +1,39 @@
 // === Module 13117: ? ===
 
 // Module 13117
-import _mod13050 from "module_13050" /* 13050 */;
+import _mod13064 from "module_13064" /* 13064 */;
 
-const LeftParenthesis = _mod13050.TYPE.LeftParenthesis;
-const RightParenthesis = _mod13050.TYPE.RightParenthesis;
-const obj = {
-  name: "Parentheses",
-  structure: null,
-  parse(call, arg1) {
+const Comment = _mod13064.TYPE.Comment;
+let obj = {
+  name: "Comment",
+  structure: { value: String },
+  parse() {
     const self = this;
-    this.eat(LeftParenthesis);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightParenthesis);
+    const tokenStart = this.scanner.tokenStart;
+    const tokenEnd = this.scanner.tokenEnd;
+    this.eat(Comment);
+    const sum = tokenEnd - tokenStart + 2;
+    let tmp3 = sum >= 2;
+    if (2 <= sum) {
+      const source = self.scanner.source;
+      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
     }
-    const element = { type: "Parentheses", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
-    return element;
+    if (tmp3) {
+      const source2 = self.scanner.source;
+      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
+    }
+    let diff = tokenEnd;
+    if (tmp3) {
+      diff = tokenEnd - 2;
+    }
+    const obj = { type: "Comment", loc: self.getLocation(tokenStart, self.scanner.tokenStart), value: self.scanner.source.substring(tokenStart + 2, diff) };
+    return obj;
   },
-  generate(arg0) {
-    this.chunk("(");
-    this.children(arg0);
-    this.chunk(")");
+  generate(value) {
+    this.chunk("/*");
+    this.chunk(value.value);
+    this.chunk("*/");
   }
 };
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

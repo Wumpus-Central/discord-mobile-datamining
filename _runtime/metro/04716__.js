@@ -1,8 +1,8 @@
 // === Module 4716: ? ===
 
 // Module 4716
-import _typeof_mod from "module_4420" /* 4420 */;
-import requiredArgs_mod from "requiredArgs" /* 4421 */;
+import _typeof_mod from "module_4422" /* 4422 */;
+import requiredArgs_mod from "requiredArgs" /* 4423 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,10 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isEqual(arg0, arg1) {
+export default function isAfter(arg0, arg1) {
   requiredArgs.default(2, arguments);
   const defaultResult1 = _typeof.default(arg0);
   const time = defaultResult1.getTime();
-  return time === _typeof.default(arg1).getTime();
+  return time > _typeof.default(arg1).getTime();
 };
 export default exports.default;

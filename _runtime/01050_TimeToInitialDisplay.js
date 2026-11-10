@@ -1916,7 +1916,7 @@ export function createTimeToFullDisplay(useFocusEffect) {
     constructor(arg0) {
       tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
-      tmp2 = useFocusEffect(/* F122857 */ function() { ... });
+      tmp2 = useFocusEffect(/* F123045 */ function() { ... });
       tmp3 = closure_3;
       tmp4 = closure_1;
       if (record) {
@@ -1935,7 +1935,7 @@ export function createTimeToInitialDisplay(useFocusEffect) {
     constructor(arg0) {
       tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
-      tmp2 = useFocusEffect(/* F122857 */ function() { ... });
+      tmp2 = useFocusEffect(/* F123045 */ function() { ... });
       tmp3 = closure_3;
       tmp4 = closure_1;
       if (record) {

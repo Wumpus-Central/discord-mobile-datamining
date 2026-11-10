@@ -1,9 +1,7 @@
 // === Module 5598: ? ===
 
 // Module 5598
-import BottomSheetFooter from "BottomSheetFooter" /* 5599 */;
-import BottomSheetFooterContainer from "BottomSheetFooterContainer" /* 5601 */;
+import _modDef5599 from "module_5599" /* 5599 */;
 
 
-export const BottomSheetFooter = BottomSheetFooter.BottomSheetFooter;
-export const BottomSheetFooterContainer = BottomSheetFooterContainer.BottomSheetFooterContainer;
+export default _modDef5599;

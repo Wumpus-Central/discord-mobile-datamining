@@ -1,106 +1,77 @@
 // === Module 13094: ? ===
 
 // Module 13094
-import _mod13050 from "module_13050" /* 13050 */;
+import _mod13066 from "module_13066" /* 13066 */;
 
-function getOffsetExcludeWS() {
-  let self = this;
-  if (this.scanner.tokenIndex > 0) {
-    const scanner = self.scanner;
-    if (scanner.lookupType(-1) === WhiteSpace) {
-      let num2 = 1;
-      if (self.scanner.tokenIndex > 1) {
-        const scanner2 = self.scanner;
-        self = self.scanner.tokenIndex;
-        num2 = self - num2;
-        let firstCharOffset = scanner2.getTokenStart(num2);
-      } else {
-        firstCharOffset = self.scanner.firstCharOffset;
-      }
-    }
+function getFirstMatchNode(node) {
+  if ("node" in node) {
+    node = node.node;
+  } else {
+    node = getFirstMatchNode(node.match[0]);
   }
-  return self.scanner.tokenStart;
+  return node;
 }
-function balanceEnd() {
-  return 0;
+function getLastMatchNode(node) {
+  if ("node" in node) {
+    node = node.node;
+  } else {
+    node = getLastMatchNode(node.match[node.match.length - 1]);
+  }
+  return node;
 }
-const WhiteSpace = _mod13050.TYPE.WhiteSpace;
-const Semicolon = _mod13050.TYPE.Semicolon;
-const LeftCurlyBracket = _mod13050.TYPE.LeftCurlyBracket;
-const Delim = _mod13050.TYPE.Delim;
-let obj = {
-  name: "Raw",
-  structure: { value: String },
-  parse(arg0, balanceEnd, arg2) {
-    const self = this;
-    let tmp = balanceEnd;
-    const scanner = this.scanner;
-    const tokenStart1 = scanner.getTokenStart(arg0);
-    ({ scanner: scanner2, scanner: scanner3 } = this);
-    if (!balanceEnd) {
-      tmp = balanceEnd;
-    }
-    scanner2.skip(scanner3.getRawLength(arg0, tmp));
-    if (arg2) {
-      if (self.scanner.tokenStart > tokenStart1) {
-        const call = getOffsetExcludeWS.call;
-        if (typeof call !== "unknown") {
-          call(self);
+
+export default {
+  matchFragments(arg0, value, matched, arg3, arg4) {
+    closure_0 = arg0;
+    closure_1 = value;
+    closure_2 = arg3;
+    closure_3 = arg4;
+    items = [];
+    if (null !== matched.matched) {
+      function findFragments(matched) {
+        if (null !== matched.syntax) {
+          if (matched.syntax.type === closure_2) {
+            if (matched.syntax.name === closure_3) {
+              if ("node" in matched) {
+                let node = matched.node;
+              } else if ("node" in matched.match[0]) {
+                node = str.node;
+              } else {
+                node = closure_2(str.match[0]);
+              }
+              if ("node" in matched) {
+                let node2 = matched.node;
+              } else if ("node" in matched.match[matched.match.length - 1]) {
+                node2 = str2.node;
+              } else {
+                node2 = closure_3(str2.match[str2.match.length - 1]);
+              }
+              const syntax = node.syntax;
+              syntax.walk(node2, (arg0, arg1, parent) => {
+                if (arg0 === node) {
+                  let iter = arg1;
+                  const obj2 = new _mod13066();
+                  obj2.appendData(iter.data);
+                  while (iter.data !== node2) {
+                    iter = iter.next;
+                    if (null === iter) {
+                      break;
+                    }
+                  }
+                  const obj = { parent, nodes: obj2 };
+                  items.push(obj);
+                }
+              });
+            }
+          }
         }
-        if (self.scanner.tokenIndex <= 0) {
-          const tokenStart2 = self.scanner.tokenStart;
-        } else {
-          const scanner4 = self.scanner;
-        }
-        let num3 = 1;
-        if (self.scanner.tokenIndex > 1) {
-          const scanner5 = self.scanner;
-          num3 = self.scanner.tokenIndex - num3;
-          let firstCharOffset = scanner5.getTokenStart(num3);
-        } else {
-          firstCharOffset = self.scanner.firstCharOffset;
+        if (Array.isArray(matched.match)) {
+          const match = matched.match;
+          const item = match.forEach(findFragments);
         }
       }
+      findFragments(matched.matched);
     }
-    const tokenStart = self.scanner.tokenStart;
-    const obj = { type: "Raw", loc: self.getLocation(tokenStart1, tokenStart), value: self.scanner.source.substring(tokenStart1, tokenStart) };
-    return obj;
-  },
-  generate(value) {
-    this.chunk(value.value);
-  },
-  mode: {
-    default: balanceEnd,
-    leftCurlyBracket(arg0) {
-      let num = 0;
-      if (arg0 === LeftCurlyBracket) {
-        num = 1;
-      }
-      return num;
-    },
-    leftCurlyBracketOrSemicolon(arg0) {
-      if (arg0 === LeftCurlyBracket) {
-        let num = 1;
-      } else {
-        num = 0;
-      }
-      return num;
-    },
-    exclamationMarkOrSemicolon(arg0, str, sum) {
-      if (arg0 !== Delim) {
-        let num2 = 0;
-        return num2;
-      }
-      num2 = 1;
-    },
-    semicolonIncluded(arg0) {
-      let num = 0;
-      if (arg0 === Semicolon) {
-        num = 2;
-      }
-      return num;
-    }
+    return items;
   }
 };
-
-export default obj;

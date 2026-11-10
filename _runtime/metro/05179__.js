@@ -4,4 +4,4 @@
 import _mod5180 from "module_5180" /* 5180 */;
 
 
-export default _mod5180();
+export default _mod5180;

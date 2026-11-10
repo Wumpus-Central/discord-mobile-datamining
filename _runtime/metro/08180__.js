@@ -1,7 +1,7 @@
 // === Module 8180: ? ===
 
 // Module 8180
-import _modDef8125 from "module_8125" /* 8125 */;
+import _modDef8129 from "module_8129" /* 8129 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -9,7 +9,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Marker = importDefault;
+const LinearGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
   }
 }
 const jsx = fn(21).jsx;
-class Marker {
+class LinearGradient {
   constructor() {
     self = this;
-    tmp = c2(this, Marker);
+    tmp = c2(this, LinearGradient);
     tmp2 = closure_4;
-    obj = closure_4(Marker);
+    obj = closure_4(LinearGradient);
     tmp3 = closure_3;
     if (closure_6()) {
       tmp7 = globalThis;
@@ -50,23 +50,15 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Marker, _modDef8125);
+_inherits(LinearGradient, _modDef8129);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-    const obj2 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(Marker(8114)({ viewBox, preserveAspectRatio }));
-    obj2.children = children;
-    return jsx(Marker(8181), {
+    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
+    const merged1 = Object.assign(LinearGradient(8182)(props, this));
+    return jsx(LinearGradient(8181), {
       ref(arg0) {
         return self.refMethod(arg0);
       }
@@ -74,8 +66,8 @@ const entry = {
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+const importDefaultResultResult = _createClass(LinearGradient, items);
+importDefaultResultResult.displayName = "LinearGradient";
+importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
 
 export default importDefaultResultResult;

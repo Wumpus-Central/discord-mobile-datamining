@@ -1,17 +1,44 @@
 // === Module 13365: ? ===
 
 // Module 13365
+import _mod13292 from "module_13292" /* 13292 */;
+import _mod13306 from "module_13306" /* 13306 */;
+import _mod13319 from "module_13319" /* 13319 */;
 
-export function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
+require = arg1;
+const dependencyMap = arg6;
+
+export function addBreadcrumb(arg0, arg1) {
+  closure_0 = arg1;
+  const client = _mod13319.getClient();
+  const isolationScope = _mod13319.getIsolationScope();
+  if (client) {
+    const options = client.getOptions();
+    let beforeBreadcrumb = options.beforeBreadcrumb;
+    let tmp5 = null;
+    if (undefined !== beforeBreadcrumb) {
+      tmp5 = beforeBreadcrumb;
     }
-    str = str2;
+    beforeBreadcrumb = tmp5;
+    const maxBreadcrumbs = options.maxBreadcrumbs;
+    let num = 100;
+    if (undefined !== maxBreadcrumbs) {
+      num = maxBreadcrumbs;
+    }
+    if (num > 0) {
+      let obj2 = { timestamp: _mod13306.dateTimestampInSeconds() };
+      const merged = Object.assign(arg0);
+      if (tmp5) {
+        obj2 = _mod13292.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = _mod13292;
+      }
+      if (null !== obj2) {
+        if (client.emit) {
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
+        }
+        isolationScope.addBreadcrumb(obj2, num);
+      }
+      const tmpResult = _mod13306;
+    }
   }
-  return str;
 }
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];

@@ -1,64 +1,92 @@
 // === Module 13111: ? ===
 
 // Module 13111
-import _mod13050 from "module_13050" /* 13050 */;
+import _mod13064 from "module_13064" /* 13064 */;
+import _mod13108 from "module_13108" /* 13108 */;
 
-const Ident = _mod13050.TYPE.Ident;
-const Number = _mod13050.TYPE.Number;
-const Dimension = _mod13050.TYPE.Dimension;
-const LeftParenthesis = _mod13050.TYPE.LeftParenthesis;
-const RightParenthesis = _mod13050.TYPE.RightParenthesis;
-const Colon = _mod13050.TYPE.Colon;
-const Delim = _mod13050.TYPE.Delim;
-let obj = {
-  name: "MediaFeature",
-  structure: { name: String, value: ["Identifier", "Number", "Dimension", "Ratio", null] },
-  parse() {
-    const self = this;
-    this.eat(LeftParenthesis);
-    const scanner = this.scanner;
-    scanner.skipSC();
-    const scanner2 = this.scanner;
-    scanner2.skipSC();
-    if (this.scanner.tokenType === RightParenthesis) {
-      self.eat(tmp6);
-      const obj = { type: "MediaFeature", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: consumeResult, value: null };
-      return obj;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, null, true);
+}
+function consumeRule() {
+  return this.parseWithFallback(this.Rule, consumeRaw);
+}
+function consumeRawDeclaration(arg0) {
+  return this.Raw(arg0, _mod13108.mode.semicolonIncluded, true);
+}
+function consumeDeclaration() {
+  const self = this;
+  if (this.scanner.tokenType === Semicolon) {
+    const call = consumeRawDeclaration.call;
+    const tokenIndex = self.scanner.tokenIndex;
+    if (typeof call === "unknown") {
+      let RawResult = self.Raw(tokenIndex, _mod13108.mode.semicolonIncluded, true);
     } else {
-      self.eat(Colon);
-      const scanner4 = self.scanner;
-      scanner4.skipSC();
+      RawResult = call(self, tokenIndex);
+    }
+    return RawResult;
+  } else {
+    if (self.scanner.tokenType === tmp) {
+      self.scanner.next();
+      const iter = self.scanner;
+    }
+    return self.parseWithFallback(self.Declaration, consumeRawDeclaration);
+  }
+}
+const WhiteSpace = _mod13064.TYPE.WhiteSpace;
+const Comment = _mod13064.TYPE.Comment;
+const Semicolon = _mod13064.TYPE.Semicolon;
+const AtKeyword = _mod13064.TYPE.AtKeyword;
+const LeftCurlyBracket = _mod13064.TYPE.LeftCurlyBracket;
+const RightCurlyBracket = _mod13064.TYPE.RightCurlyBracket;
+const obj = {
+  name: "Block",
+  structure: null,
+  parse(arg0) {
+    const tmp = arg0 ? consumeDeclaration : consumeRule;
+    const self = this;
+    const list = this.createList();
+    this.eat(LeftCurlyBracket);
+    if (!this.scanner.eof) {
       const tokenType = self.scanner.tokenType;
-      if (Number === tokenType) {
-        if (self.lookupNonWSType(1) === Delim) {
-          let RatioResult = self.Ratio();
-        } else {
-          RatioResult = self.Number();
+      while (RightCurlyBracket !== tokenType) {
+        if (WhiteSpace !== tokenType) {
+          if (Comment !== tokenType) {
+            if (AtKeyword === tokenType) {
+              let arr = list.push(self.parseWithFallback(self.Atrule, consumeRaw));
+            } else {
+              let call = tmp.call;
+              let arr3 = list.push(typeof call === "unknown" ? tmp() : call(self));
+            }
+          }
+          if (self.scanner.eof) {
+            break;
+          }
         }
-      } else {
-        if (Dimension === tokenType) {
-          let DimensionResult = self.Dimension();
-          const scanner3 = self.scanner;
-          scanner3.skipSC();
-        } else if (Ident !== tokenType) {
-          self.error("Number, dimension, ratio or identifier is expected");
-          DimensionResult = null;
-        }
-        DimensionResult = self.Identifier();
+        let iter = self.scanner;
+        let nextResult = iter.next();
       }
     }
-    consumeResult = this.consume(Ident);
-  },
-  generate(name) {
-    const self = this;
-    this.chunk("(");
-    this.chunk(name.name);
-    if (null !== name.value) {
-      self.chunk(":");
-      self.node(name.value);
+    if (!self.scanner.eof) {
+      self.eat(RightCurlyBracket);
     }
-    self.chunk(")");
-  }
+    const element = { type: "Block", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: list };
+    return element;
+  },
+  generate(arg0) {
+    this.chunk("{");
+    this.children(arg0, function(type) {
+      if ("Declaration" === type.type) {
+        const self = this;
+        this.chunk(";");
+      }
+    });
+    this.chunk("}");
+  },
+  walkContext: "block"
 };
+const obj2 = { children: null };
+const items = [["Atrule", "Rule", "Declaration"]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

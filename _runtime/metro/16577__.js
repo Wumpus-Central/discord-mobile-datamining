@@ -1,33 +1,10 @@
 // === Module 16577: ? ===
 
 // Module 16577
-import emptyPromise from "emptyPromise" /* 16560 */;
+import _mod16578 from "module_16578" /* 16578 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
-  return {
-    onConnect() {
-      log = console.log;
-      console.log = () => {
-        items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
-    }
-  };
+export default function getReactNativeVersion() {
+  return _mod16578.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
 };

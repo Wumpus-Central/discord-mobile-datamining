@@ -1,8 +1,7 @@
 // === Module 5622: ? ===
 
 // Module 5622
-import _mod17 from "module_17" /* 17 */;
+import BottomSheetRefreshControlAndroidDefault from "BottomSheetRefreshControlAndroid" /* 5623 */;
 
-const StyleSheet = _mod17.StyleSheet;
 
-export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });
+export default BottomSheetRefreshControlAndroidDefault;

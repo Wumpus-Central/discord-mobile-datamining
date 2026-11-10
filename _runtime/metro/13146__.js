@@ -1,16 +1,40 @@
 // === Module 13146: ? ===
 
 // Module 13146
+import _mod13105 from "module_13105" /* 13105 */;
 import _mod13147 from "module_13147" /* 13147 */;
-import _mod13148 from "module_13148" /* 13148 */;
-import _mod13149 from "module_13149" /* 13149 */;
-import _mod13150 from "module_13150" /* 13150 */;
-import _mod13152 from "module_13152" /* 13152 */;
-import _mod13153 from "module_13153" /* 13153 */;
-import _mod13155 from "module_13155" /* 13155 */;
-import _mod13156 from "module_13156" /* 13156 */;
-import _mod13158 from "module_13158" /* 13158 */;
-import _mod13159 from "module_13159" /* 13159 */;
+import _mod13154 from "module_13154" /* 13154 */;
+import _mod13160 from "module_13160" /* 13160 */;
 
+const obj = {
+  parseContext: {
+    default: "StyleSheet",
+    stylesheet: "StyleSheet",
+    atrule: "Atrule",
+    atrulePrelude(atrule) {
+      let StringResult = null;
+      if (atrule.atrule) {
+        const _String = String;
+        StringResult = String(atrule.atrule);
+      }
+      return this.AtrulePrelude(StringResult);
+    },
+    mediaQueryList: "MediaQueryList",
+    mediaQuery: "MediaQuery",
+    rule: "Rule",
+    selectorList: "SelectorList",
+    selector: "Selector",
+    block() {
+      return this.Block(true);
+    },
+    declarationList: "DeclarationList",
+    declaration: "Declaration",
+    value: "Value"
+  },
+  scope: _mod13147,
+  atrule: _mod13154,
+  pseudo: _mod13160,
+  node: _mod13105
+};
 
-export default { dir: _mod13147, has: _mod13148, lang: _mod13149, matches: _mod13150, not: _mod13152, "nth-child": _mod13153, "nth-last-child": _mod13155, "nth-last-of-type": _mod13156, "nth-of-type": _mod13158, slotted: _mod13159 };
+export default obj;

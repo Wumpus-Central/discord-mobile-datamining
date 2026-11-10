@@ -29,19 +29,27 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-let items = [{ code: "(function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;})" }];
+let items = [{ code: "(function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};})" }];
 [tmp4] = items;
-function changeEventCalculator(arg0, arg1) {
-  return arg0;
+function changeEventCalculator(force, force2) {
+  if (undefined === force2) {
+    const obj2 = { forceChange: force.force };
+    let obj = obj2;
+  } else {
+    obj = { forceChange: force.force - force2.force };
+  }
+  const merged = Object.assign(force);
+  const merged1 = Object.assign(obj);
+  return {};
 }
-changeEventCalculator.__workletHash = 8372703750542;
+changeEventCalculator.__workletHash = 14930773822007;
 changeEventCalculator.__initData = tmp4;
-class ManualGesture {
+class ForceTouchGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, ManualGesture);
+    tmp = closure_0(this, ForceTouchGesture);
     tmp2 = c2;
-    obj = c2(ManualGesture);
+    obj = c2(ForceTouchGesture);
     tmp3 = closure_1;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -51,25 +59,49 @@ class ManualGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "ManualGestureHandler";
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "ForceTouchGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = ManualGesture;
-_inherits(ManualGesture, fn(5440).ContinousBaseGesture);
+_classCallCheck = ForceTouchGesture;
+_inherits(ForceTouchGesture, fn(5442).ContinousBaseGesture);
 const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    items = [arg0];
-    return fn(items);
+  key: "minForce",
+  value: function minForce(minForce) {
+    this.config.minForce = minForce;
+    return this;
   }
 };
-const items1 = [entry];
+const items1 = [
+  entry,
+  {
+    key: "maxForce",
+    value: function maxForce(maxForce) {
+      this.config.maxForce = maxForce;
+      return this;
+    }
+  },
+  {
+    key: "feedbackOnActivation",
+    value: function feedbackOnActivation(feedbackOnActivation) {
+      this.config.feedbackOnActivation = feedbackOnActivation;
+      return this;
+    }
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      items = [arg0];
+      return fn(items);
+    }
+  }
+];
 
-export const ManualGesture = _createClass(ManualGesture, items1);
+export const ForceTouchGesture = _createClass(ForceTouchGesture, items1);

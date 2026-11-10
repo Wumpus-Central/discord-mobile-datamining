@@ -1,8 +1,9 @@
 // === Module 4683: ? ===
 
 // Module 4683
-import _typeof_mod from "module_4420" /* 4420 */;
-import requiredArgs_mod from "requiredArgs" /* 4421 */;
+import _typeof_mod from "module_4422" /* 4422 */;
+import module_4426_mod from "module_4426" /* 4426 */;
+import requiredArgs_mod from "requiredArgs" /* 4423 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -12,17 +13,25 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let module_4426 = module_4426_mod;
+if (!module_4426) {
+  const obj2 = { default: module_4426 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4426;
 }
-requiredArgs = tmp5;
+module_4426 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function getDay(arg0) {
+export default function fromUnixTime(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getDay();
+  return _typeof.default(1000 * module_4426.default(arg0));
 };
 export default exports.default;

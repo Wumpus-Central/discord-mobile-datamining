@@ -1,68 +1,44 @@
 // === Module 5680: ? ===
 
 // Module 5680
-import _mod5678 from "module_5678" /* 5678 */;
-import _slicedToArray from "module_5633" /* 5633 */;
+import _slicedToArray from "module_5635" /* 5635 */;
 
-require = fn;
 const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: closure_6 } = noop);
-function useOnLoad(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = hasOwnProperty(false);
-  React3(() => {
-    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-    if (isFirstLayoutComplete) {
-      isFirstLayoutComplete = !ref.current;
-    }
-    if (isFirstLayoutComplete) {
-      ref.current = true;
-      f89453();
-    }
-  });
-}
+({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
 
-export (recyclerViewManager, onLoad) => {
-  let isFirstLayoutComplete = recyclerViewManager;
-  let f89453 = onLoad;
-  hasOwnProperty(Date.now());
-  [tmp3, closure_3] = timestampProducer(false);
-  const dataLength = recyclerViewManager.getDataLength();
-  const tmp2 = _slicedToArray(timestampProducer(false), 2);
-  const requestAnimationFrame = _mod5678.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  items = [dataLength];
-  React4(() => {
-    closure_2.current = Date.now();
+export function useUnmountAwareTimeout() {
+  const first = _slicedToArray(closure_4(() => new Set()), 1)[0];
+  items = [first];
+  closure_3(() => () => {
+    const item = set.forEach((item) => closure_1_0.clearTimeout(item));
+    set.clear();
   }, items);
-  if (typeof useOnLoad === "function") {
-    isFirstLayoutComplete = recyclerViewManager;
-    f89453 = () => {
-      const elapsedTimeInMs = Date.now() - ref.current;
-      requestAnimationFrame(() => {
-        elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f89453 != null) {
-          const obj = { elapsedTimeInMs };
-          tmp(obj);
-        }
-        closure_2_3(true);
-      });
-    };
-    hasOwnProperty(false);
-    React3(() => {
-      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-      if (isFirstLayoutComplete) {
-        isFirstLayoutComplete = !ref.current;
-      }
-      if (isFirstLayoutComplete) {
-        ref.current = true;
-        f89453();
-      }
-    });
-    const obj2 = { isLoaded: tmp3 };
-    return obj2;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
+  const obj = { setTimeout: null };
+  const items1 = [first];
+  obj.setTimeout = closure_2((arg0, arg1) => {
+    const timerId = first.setTimeout(() => {
+      first.delete(timerId);
+      closure_0();
+    }, arg1);
+    arg0.add(timerId);
+  }, items1);
+  return obj;
 }
-export { useOnLoad };
+export function useUnmountAwareAnimationFrame() {
+  const first = _slicedToArray(closure_4(() => new Set()), 1)[0];
+  items = [first];
+  closure_3(() => () => {
+    const item = set.forEach((item) => cancelAnimationFrame(item));
+    set.clear();
+  }, items);
+  const obj = { requestAnimationFrame: null };
+  const items1 = [first];
+  obj.requestAnimationFrame = closure_2((arg0) => {
+    const animationFrame = first.requestAnimationFrame((arg0) => {
+      first.delete(animationFrame);
+      closure_0(arg0);
+    });
+    arg0.add(animationFrame);
+  }, items1);
+  return obj;
+}

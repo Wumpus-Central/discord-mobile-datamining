@@ -1,95 +1,207 @@
 // === Module 13316: ? ===
 
 // Module 13316
-import _mod13278 from "module_13278" /* 13278 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 13283 */;
-import _mod13306 from "module_13306" /* 13306 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function logSpanEnd(spanContext) {
-  if (_mod13306.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
+const SyncPromise = require;
+const obj = { PENDING: 0 };
+obj[0] = "PENDING";
+obj.RESOLVED = 1;
+obj[1] = "RESOLVED";
+obj.REJECTED = 2;
+obj[2] = "REJECTED";
+class SyncPromise {
+  constructor(arg0) {
+    self = this;
+    tmp = SyncPromise;
+    tmp2 = closure_3(this, SyncPromise);
+    __init = SyncPromise.prototype.__init;
+    call = __init.call;
+    if (typeof call === "unknown") {
+      __initResult = __init();
+    } else {
+      callResult = call(self);
     }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
+    __init2 = tmp.prototype.__init2;
+    call2 = __init2.call;
+    if (typeof call2 === "unknown") {
+      __init2Result = __init2();
+    } else {
+      call2Result = call2(self);
     }
-    const spanId = spanContext.spanContext().spanId;
-    const tmpResult = spanTimeInputToSeconds;
-    let str3 = "";
-    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
-      str3 = "root ";
+    __init3 = tmp.prototype.__init3;
+    call3 = __init3.call;
+    if (typeof call3 === "unknown") {
+      __init3Result = __init3();
+    } else {
+      call3Result = call3(self);
     }
-    const _HermesInternal = HermesInternal;
-    const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
-    const logger = _mod13278.logger;
-    logger.log(combined);
-    tmpResult2 = spanTimeInputToSeconds;
+    __init4 = tmp.prototype.__init4;
+    call4 = __init4.call;
+    if (typeof call4 === "unknown") {
+      __init4 = __init4();
+    } else {
+      call4Result = call4(self);
+    }
+    self._state = c2.PENDING;
+    self._handlers = [];
+    return;
   }
 }
-export function logSpanStart(spanContext) {
-  if (_mod13306.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
-    }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
-    }
-    const parent_span_id = spanToJSONResult.parent_span_id;
-    const tmpResult = spanTimeInputToSeconds;
-    const tmpResult4 = spanTimeInputToSeconds;
-    const spanIsSampledResult = spanTimeInputToSeconds.spanIsSampled(spanContext);
-    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
-    let str3 = "unsampled";
-    if (spanIsSampledResult) {
-      str3 = "sampled";
-    }
-    let str5 = "";
-    if (rootSpan === spanContext) {
-      str5 = "root ";
-    }
-    const _HermesInternal = HermesInternal;
-    const _HermesInternal2 = HermesInternal;
-    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
-    items = ["op: " + str2, , ];
-    const _HermesInternal3 = HermesInternal;
-    items[1] = "name: " + str;
-    const _HermesInternal4 = HermesInternal;
-    items[2] = "ID: " + spanContext.spanContext().spanId;
-    if (parent_span_id) {
-      const _HermesInternal5 = HermesInternal;
-      items.push("parent ID: " + parent_span_id);
-    }
-    if (rootSpan !== spanContext) {
-      const tmpResult6 = spanTimeInputToSeconds;
-      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
-      const _HermesInternal6 = HermesInternal;
-      items.push("root ID: " + rootSpan.spanContext().spanId);
-      if (op2) {
-        const _HermesInternal7 = HermesInternal;
-        items.push("root op: " + op2);
-      }
-      if (description2) {
-        const _HermesInternal8 = HermesInternal;
-        items.push("root description: " + description2);
-      }
-      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
-    }
-    const logger = _mod13278.logger;
-    const _HermesInternal9 = HermesInternal;
-    logger.log("" + combined + "\n  " + items.join("\n  "));
-    const tmpResult5 = spanTimeInputToSeconds;
+const entry = {
+  key: "then",
+  value: function then(arg0, arg1) {
+    const self = this;
+    closure_1 = arg0;
+    closure_0 = arg1;
+    SyncPromise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const _handlers = self._handlers;
+      items = [
+        false,
+        (arg0) => {
+          if (closure_1) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_0(arg0);
+          }
+        },
+        (arg0) => {
+          if (closure_0) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_1(arg0);
+          }
+        }
+      ];
+      _handlers.push(items);
+      self._executeHandlers();
+    });
+    return Object.create(SyncPromise.prototype);
   }
+};
+let items = [
+  entry,
+  {
+    key: "catch",
+    value: function _catch(arg0) {
+      return this.then((result) => result, arg0);
+    }
+  },
+  {
+    key: "finally",
+    value: function _finally(arg0) {
+      const self = this;
+      closure_0 = arg0;
+      SyncPromise((arg0, arg1) => {
+        closure_0 = arg0;
+        _self = arg1;
+        return _self.then((result) => {
+          c3 = false;
+          closure_2 = result;
+          if (closure_0) {
+            tmp();
+          }
+        }, (arg0) => {
+          c3 = true;
+          closure_2 = arg0;
+          if (closure_0) {
+            tmp();
+          }
+        }).then(() => {
+          if (c3) {
+            closure_1(closure_2);
+          } else {
+            closure_0(closure_2);
+          }
+        });
+      });
+      return Object.create(SyncPromise.prototype);
+    }
+  },
+  {
+    key: "__init",
+    value: function __init() {
+      const self = this;
+      this._resolve = (arg0) => {
+        self._setResult(obj.RESOLVED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init2",
+    value: function __init2() {
+      const self = this;
+      this._reject = (arg0) => {
+        self._setResult(obj.REJECTED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init3",
+    value: function __init3() {
+      const self = this;
+      this._setResult = (_state, _value) => {
+        if (self._state === self.PENDING) {
+          if (obj2.isThenable(_value)) {
+            _value.then(self._resolve, self._reject);
+          } else {
+            self._state = _state;
+            self._value = _value;
+            self._executeHandlers();
+          }
+          obj2 = SyncPromise(13299);
+        }
+      };
+    }
+  },
+  {
+    key: "__init4",
+    value: function __init4() {
+      const self = this;
+      this._executeHandlers = () => {
+        if (self._state !== obj.PENDING) {
+          const _handlers = self._handlers;
+          const substr = _handlers.slice();
+          self._handlers = [];
+          const item = substr.forEach((item) => {
+            if (!item[0]) {
+              if (_state._state === constants.RESOLVED) {
+                item[1](_state._value);
+              }
+              if (_state._state === constants.REJECTED) {
+                item[2](_state._value);
+              }
+              item[0] = true;
+            }
+          });
+        }
+      };
+    }
+  }
+];
+const _moduleResult = _createClass(SyncPromise, items);
+
+export const SyncPromise = _moduleResult;
+export function rejectedSyncPromise(arg0) {
+  closure_0 = arg0;
+  return new _moduleResult((arg0, fn) => {
+    fn(closure_0);
+  });
+}
+export function resolvedSyncPromise(item) {
+  closure_0 = item;
+  return new _moduleResult((fn) => {
+    fn(closure_0);
+  });
 }

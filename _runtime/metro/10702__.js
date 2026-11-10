@@ -1,7 +1,12 @@
 // === Module 10702: ? ===
 
 // Module 10702
-import registerAsset from "module_1119" /* 1119 */;
+import _slicedToArray from "module_32" /* 32 */;
 
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "44a779cd60ac7d5dac850e6fc886896f", name: "img_nitro_subheader_mobile", type: "png" });
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return duration(() => closure_0({}), []);
+};

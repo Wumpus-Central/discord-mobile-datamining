@@ -1,91 +1,262 @@
 // === Module 13397: ? ===
 
 // Module 13397
-import _readOnlyError from "_readOnlyError" /* 377 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import errorCallback from "errorCallback" /* 13288 */;
+import _mod13299 from "module_13299" /* 13299 */;
+import _mod13316 from "module_13316" /* 13316 */;
+import _mod13324 from "module_13324" /* 13324 */;
+import _mod13363 from "module_13363" /* 13363 */;
+import _toArray from "_toArray" /* 717 */;
+import "module_13291";
+import consoleSandbox from "module_13292" /* 13292 */;
+import dateTimestampInSeconds from "module_13306" /* 13306 */;
+import __SENTRY_DEBUG__ from "module_13320" /* 13320 */;
 
-let _classCallCheck = _classCallCheck_mod;
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
+function _addTracingHeadersToFetchRequest(headers, headers2, span) {
+  const traceData = _mod13363.getTraceData({ span });
+  ({ sentry-trace: tmp4, baggage } = traceData);
+  if (tmp4) {
+    headers = headers2.headers;
+    if (!headers) {
+      const _Request = Request;
+      let isInstanceOfResult = typeof Request !== "undefined";
+      if (typeof Request !== "undefined") {
+        const _Request2 = Request;
+        isInstanceOfResult = _mod13299.isInstanceOf(headers, Request);
+        const tmpResult = _mod13299;
+      }
+      let headers1;
+      if (isInstanceOfResult) {
+        headers1 = headers.headers;
+      }
+      headers = headers1;
+    }
+    if (headers) {
+      const _Headers = Headers;
+      let isInstanceOfResult1 = typeof Headers !== "undefined";
+      if (typeof Headers !== "undefined") {
+        const _Headers3 = Headers;
+        isInstanceOfResult1 = _mod13299.isInstanceOf(headers, Headers);
+        const tmpResult2 = _mod13299;
+      }
+      if (isInstanceOfResult1) {
+        const _Headers2 = Headers;
+        headers2 = new Headers(headers);
+        const result = headers2.set("sentry-trace", tmp4);
+        if (baggage) {
+          const str6 = headers2.get("baggage");
+          if (str6) {
+            let parts = str6.split(",");
+            let found = parts.filter((item) => {
+              const first = item.split("=")[0];
+              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+            });
+            let joined = found.join(",");
+            let combined = baggage;
+            if (joined) {
+              const _HermesInternal = HermesInternal;
+              combined = "" + joined + "," + baggage;
+            }
+            const result1 = headers2.set("baggage", combined);
+          } else {
+            const result2 = headers2.set("baggage", baggage);
+          }
+        }
+        return headers2;
+      } else {
+        const _Array = Array;
+        if (Array.isArray(headers)) {
+          const found1 = headers.filter((item) => {
+            let isArray = Array.isArray(item);
+            if (isArray) {
+              isArray = "sentry-trace" === item[0];
+            }
+            return !isArray;
+          });
+          items = [];
+          const items1 = ["sentry-trace", tmp4];
+          items[HermesBuiltin.arraySpread(found1.map((item) => {
+            if (Array.isArray(item)) {
+              if ("baggage" === item[0]) {
+                if (typeof item[1] === "string") {
+                  const arr = _toArray(item);
+                  items = [arr[0], ];
+                  const substr = arr.slice(2);
+                  const parts = arr[1].split(",");
+                  const found = parts.filter((item) => {
+                    const first = item.split("=")[0];
+                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+                  });
+                  items[1] = found.join(",");
+                  HermesBuiltin.arraySpread(substr, 2);
+                  return items;
+                }
+              }
+            }
+            return item;
+          }), 0)] = items1;
+          if (baggage) {
+            const items2 = ["baggage", baggage];
+            items.push(items2);
+          }
+          return items;
+        } else {
+          let baggage1;
+          if ("baggage" in headers) {
+            baggage1 = headers.baggage;
+          }
+          const _Array2 = Array;
+          if (Array.isArray(baggage1)) {
+            const mapped = baggage1.map((item) => {
+              let joined = item;
+              if (typeof item === "string") {
+                const parts = item.split(",");
+                const found = parts.filter((item) => {
+                  const first = item.split("=")[0];
+                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+                });
+                joined = found.join(",");
+              }
+              return joined;
+            });
+            let found2 = mapped.filter((item) => "" === item);
+          } else {
+            const items3 = [];
+            found2 = items3;
+            if (baggage1) {
+              const parts1 = baggage1.split(",");
+              const found3 = parts1.filter((item) => {
+                const first = item.split("=")[0];
+                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+              });
+              items3.push(found3.join(","));
+              found2 = items3;
+            }
+          }
+          if (baggage) {
+            found2.push(baggage);
+          }
+          const obj3 = {};
+          const merged = Object.assign(headers);
+          obj3["sentry-trace"] = tmp4;
+          let joined1;
+          if (found2.length > 0) {
+            joined1 = found2.join(",");
+          }
+          obj3.baggage = joined1;
+          return obj3;
+        }
+      }
+    } else {
+      const obj4 = {};
+      const merged1 = Object.assign(traceData);
+      return obj4;
+    }
+  }
+  const obj2 = { span };
+}
+errorCallback;
+_mod13316;
+
+export function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
+  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
+}
+export function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
+  let str = arg4;
+  if (arg4 === undefined) {
+    str = "auto.http.browser";
+  }
+  let endResult = fetchData;
+  if (fetchData.fetchData) {
+    let setHttpStatus = require;
+    let headers = dependencyMap;
+    let hasTracingEnabledResult = _mod13324.hasTracingEnabled();
+    if (hasTracingEnabledResult) {
+      hasTracingEnabledResult = fn(endResult.fetchData.url);
+    }
+    if (endResult.endTimestamp) {
+      if (hasTracingEnabledResult) {
+        const __span = endResult.fetchData.__span;
+        if (__span) {
+          if (arg3[__span]) {
+            if (endResult.response) {
+              setHttpStatus = setHttpStatus(13309).setHttpStatus;
+              setHttpStatus(obj10, endResult.response.status);
+              headers = endResult.response;
+              if (headers) {
+                headers = endResult.response.headers;
+              }
+              if (headers) {
+                const headers2 = endResult.response.headers;
+                headers = headers2.get("content-length");
+              }
+              if (headers) {
+                const _parseInt = parseInt;
+                setHttpStatus = parseInt(headers);
+                if (setHttpStatus > 0) {
+                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
+                }
+              }
+              const setHttpStatusResult = setHttpStatus(13309);
+            } else if (endResult.error) {
+              const obj2 = { code: setHttpStatus(13309).SPAN_STATUS_ERROR, message: "internal_error" };
+              obj10.setStatus(obj2);
+            }
+            endResult = obj10.end();
+            delete tmp2[tmp];
+          }
+        }
+      }
+    }
+    ({ method, url } = endResult.fetchData);
+    const tmp7 = (function getFullURL(url) {
+      try {
+        const _URL = URL;
+        const uRL = new URL(url);
+        return uRL.href;
+      } catch (err) {
+      }
+    })(url);
+    if (tmp7) {
+      const host = setHttpStatus(13374).parseUrl(tmp7).host;
+      const setHttpStatusResult2 = setHttpStatus(13374);
+    }
+    const activeSpan = setHttpStatus(13297).getActiveSpan();
+    if (hasTracingEnabledResult) {
+      if (activeSpan) {
+        const obj3 = { name: null, attributes: null };
+        const _HermesInternal = HermesInternal;
+        obj3.name = "" + method + " " + url;
+        const obj4 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
+        obj4[setHttpStatus(13307).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
+        obj4[setHttpStatus(13307).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
+        obj3.attributes = obj4;
+        let startInactiveSpanResult = setHttpStatus(13326).startInactiveSpan(obj3);
+        const setHttpStatusResult4 = setHttpStatus(13326);
+      }
+      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
+      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
+      if (fn2(endResult.fetchData.url)) {
+        let obj5 = endResult.args[1];
+        if (!obj5) {
+          obj5 = {};
+        }
+        let tmp14;
+        if (setHttpStatusResult5.hasTracingEnabled()) {
+          if (activeSpan) {
+            tmp14 = startInactiveSpanResult;
+          }
+        }
+        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj5, tmp14);
+        if (tmp13Result) {
+          endResult.args[1] = obj5;
+          obj5.headers = tmp13Result;
+        }
+        setHttpStatusResult5 = setHttpStatus(13324);
+      }
+      return startInactiveSpanResult;
+    }
+    startInactiveSpanResult = new setHttpStatus(13325).SentryNonRecordingSpan();
+    const setHttpStatusResult3 = setHttpStatus(13297);
   }
 }
-_classCallCheck = LRUMap;
-let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
-    }
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
-      }
-    }
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
-    }
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
-    }
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    }
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    }
-  },
-  {
-    key: "values",
-    value: function values() {
-      items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    }
-  }
-];
-
-export const LRUMap = _createClass(LRUMap, items);

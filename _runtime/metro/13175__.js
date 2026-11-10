@@ -1,17 +1,5 @@
 // === Module 13175: ? ===
 
 // Module 13175
-const require = globalThis.__r;
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export const parse = require("module_13176").parse;
-export const compile = require("compile").compile;
-export const generate = require("compile").generate;
-export default function nthCheck(arg0) {
-  return require("compile").compile(require("module_13176").parse(arg0));
-};
-export function sequence(arg0) {
-  return require("compile").generate(require("module_13176").parse(arg0));
-}
+export default { name: "css-tree", version: "1.1.3", description: "A tool set for CSS: fast detailed parser (CSS \u2192 AST), walker (AST traversal), generator (AST \u2192 CSS) and lexer (validation and matching) based on specs and browser implementations", author: "Roman Dvornov <rdvornov@gmail.com> (https://github.com/lahmatiy)", license: "MIT", repository: "csstree/csstree", keywords: ["css", "ast", "tokenizer", "parser", "walker", "lexer", "generator", "utils", "syntax", "validation"], main: "lib/index.js", unpkg: "dist/csstree.min.js", jsdelivr: "dist/csstree.min.js", scripts: { build: "rollup --config", lint: "eslint data lib scripts test && node scripts/review-syntax-patch --lint && node scripts/update-docs --lint", "lint-and-test": "npm run lint && npm test", "update:docs": "node scripts/update-docs", "review:syntax-patch": "node scripts/review-syntax-patch", test: "mocha --reporter progress", coverage: "nyc npm test", travis: "nyc npm run lint-and-test && npm run coveralls", coveralls: "nyc report --reporter=text-lcov | coveralls", prepublishOnly: "npm run build", hydrogen: "node --trace-hydrogen --trace-phase=Z --trace-deopt --code-comments --hydrogen-track-positions --redirect-code-traces --redirect-code-traces-to=code.asm --trace_hydrogen_file=code.cfg --print-opt-code bin/parse --stat -o /dev/null" }, dependencies: { "mdn-data": "2.0.14", "source-map": "^0.6.1" }, devDependencies: { "@rollup/plugin-commonjs": "^11.0.2", "@rollup/plugin-json": "^4.0.2", "@rollup/plugin-node-resolve": "^7.1.1", coveralls: "^3.0.9", eslint: "^6.8.0", "json-to-ast": "^2.1.0", mocha: "^6.2.3", nyc: "^14.1.1", rollup: "^1.32.1", "rollup-plugin-terser": "^5.3.0" }, engines: { node: ">=8.0.0" }, files: ["data", "dist", "lib"] };

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 240, height: 152, scales: [2, 3], hash: "99a0c83db7ec93ecc4f9138bd68cba05", name: "img_guild_cap_upsell_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/HexagonIcon", width: 102, height: 102, scales: [2, 3], hash: "6fc713ff4969740a35633ad9d71eaf93", name: "HexagonIcon", type: "png" });

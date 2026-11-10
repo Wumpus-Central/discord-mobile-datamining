@@ -1,17 +1,17 @@
 // === Module 4767: ? ===
 
 // Module 4767
-import module_4768_mod from "module_4768" /* 4768 */;
-import requiredArgs_mod from "requiredArgs" /* 4421 */;
+import startOfHour_mod from "startOfHour" /* 4768 */;
+import requiredArgs_mod from "requiredArgs" /* 4423 */;
 
-let module_4768 = module_4768_mod;
-if (!module_4768) {
-  const obj = { default: module_4768 };
+let startOfHour = startOfHour_mod;
+if (!startOfHour) {
+  const obj = { default: startOfHour };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4768;
+  tmp3 = startOfHour;
 }
-module_4768 = tmp3;
+startOfHour = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameISOWeek(arg0, arg1) {
+export default function isSameHour(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4768.default(arg0, arg1, { weekStartsOn: 1 });
+  const defaultResult1 = startOfHour.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfHour.default(arg1).getTime();
 };
 export default exports.default;

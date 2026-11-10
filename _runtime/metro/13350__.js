@@ -1,16 +1,25 @@
 // === Module 13350: ? ===
 
 // Module 13350
-import _mod13349 from "module_13349" /* 13349 */;
+import _mod13306 from "module_13306" /* 13306 */;
+import _mod13336 from "module_13336" /* 13336 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function getTraceMetaTags() {
-  const entries = Object.entries(_mod13349.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
-  });
-  return mapped.join("\n");
+export function createClientReportEnvelope(discarded_events, dsn, arg2) {
+  let result = arg2;
+  items = [{ type: "client_report" }, ];
+  if (!arg2) {
+    result = _mod13306.dateTimestampInSeconds();
+  }
+  items[1] = { timestamp: result, discarded_events };
+  if (dsn) {
+    const obj3 = { dsn };
+    let obj4 = obj3;
+  } else {
+    obj4 = {};
+  }
+  const items1 = [items];
+  return _mod13336.createEnvelope(obj4, items1);
 }

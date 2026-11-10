@@ -1,25 +1,18 @@
 // === Module 13123: ? ===
 
 // Module 13123
+import _mod13064 from "module_13064" /* 13064 */;
+
+const Ident = _mod13064.TYPE.Ident;
 const obj = {
-  name: "Selector",
-  structure: null,
+  name: "Identifier",
+  structure: { name: String },
   parse() {
-    const self = this;
-    const sequence = this.readSequence(this.scope.Selector);
-    if (null === this.getFirstListNode(sequence)) {
-      self.error("Selector is expected");
-    }
-    const element = { type: "Selector", loc: self.getLocationFromList(sequence), children: sequence };
-    return element;
+    return { type: "Identifier", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd), name: this.consume(Ident) };
   },
-  generate(arg0) {
-    this.children(arg0);
+  generate(name) {
+    this.chunk(name.name);
   }
 };
-const obj2 = { children: null };
-const items = [["TypeSelector", "IdSelector", "ClassSelector", "AttributeSelector", "PseudoClassSelector", "PseudoElementSelector", "Combinator", "WhiteSpace"]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

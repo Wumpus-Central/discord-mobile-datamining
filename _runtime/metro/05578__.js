@@ -1,27 +1,16 @@
 // === Module 5578: ? ===
 
 // Module 5578
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod5406 from "module_5406" /* 5406 */;
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
+const useContext = _mod19.useContext;
 
-export function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  duration(() => () => {
-    ref.current = undefined;
-  }, []);
-  return React(() => {
-    items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, ref);
-    }
-    return applyResult;
-  }, []);
+export () => {
+  const tmp = useContext(_mod5406.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
 }

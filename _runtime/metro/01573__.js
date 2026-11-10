@@ -343,7 +343,7 @@ function getRouteConfigsFromChildren(children) {
                                           }
                                           let Children = closure_2_6.Children;
                                           let items5 = [];
-                                          HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce(/* F82947 */ function() { ... }, []), 0);
+                                          HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce(/* F83063 */ function() { ... }, []), 0);
                                           HermesBuiltin.apply(items5, arr);
                                           return arr;
                                         } else {

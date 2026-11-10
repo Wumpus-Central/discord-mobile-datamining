@@ -1,7 +1,0 @@
-// === Module 8559: ? ===
-
-// Module 8559
-import registerAsset from "module_1119" /* 1119 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/auto_moderation", width: 12, height: 12, scales: [2, 3], hash: "78a34aca822219efd275dbb2e470061d", name: "ic_closed_lock", type: "png" });

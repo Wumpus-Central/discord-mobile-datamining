@@ -1,12 +1,7 @@
 // === Module 15833: ? ===
 
 // Module 15833
-import _mod15847 from "module_15847" /* 15847 */;
-import assign from "module_15834" /* 15834 */;
-import Deflate from "Deflate" /* 15835 */;
-import Inflate from "Inflate" /* 15843 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod15847);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 213.5, height: 19, scales: [2, 3], hash: "9fe6076328e716d8c76fe3781ba19232", name: "img_subscription_activated_dark", type: "png" });

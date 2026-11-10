@@ -1,23 +1,20 @@
 // === Module 13130: ? ===
 
 // Module 13130
-const obj = {
-  name: "Value",
-  structure: null,
+let obj = {
+  name: "Operator",
+  structure: { value: String },
   parse() {
-    const element = { type: "Value", loc: null, children: null };
-    const sequence = this.readSequence(this.scope.Value);
-    element.loc = this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart);
-    element.children = sequence;
-    return element;
+    const tokenStart = this.scanner.tokenStart;
+    this.scanner.next();
+    const obj = { type: "Operator", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
+    const scanner = this.scanner;
+    obj.value = scanner.substrToCursor(tokenStart);
+    return obj;
   },
-  generate(arg0) {
-    this.children(arg0);
+  generate(value) {
+    this.chunk(value.value);
   }
 };
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

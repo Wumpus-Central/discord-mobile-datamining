@@ -1,8 +1,24 @@
 // === Module 8961: ? ===
 
 // Module 8961
-import emptyFunction from "module_5179" /* 5179 */;
 
-const rect = { top: emptyFunction.number, left: emptyFunction.number, bottom: emptyFunction.number, right: emptyFunction.number };
-
-export default emptyFunction.shape(rect);
+export default (obj) => {
+  if (obj instanceof Object) {
+    const _Array = Array;
+    if (!Array.isArray(obj)) {
+      obj = {};
+      for (const key10010 in arg0) {
+        if (!arg0.hasOwnProperty(key10010)) {
+          continue;
+        } else {
+          obj[key10010] = key10010;
+          continue;
+        }
+        continue;
+      }
+      return obj;
+    }
+  }
+  const error = new Error("keyMirror(...): Argument must be an object.");
+  throw error;
+};

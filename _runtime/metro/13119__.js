@@ -1,53 +1,52 @@
 // === Module 13119: ? ===
 
 // Module 13119
-import _mod13050 from "module_13050" /* 13050 */;
+import _mod13064 from "module_13064" /* 13064 */;
+import _mod13108 from "module_13108" /* 13108 */;
 
-const Ident = _mod13050.TYPE.Ident;
-const Function = _mod13050.TYPE.Function;
-const Colon = _mod13050.TYPE.Colon;
-const RightParenthesis = _mod13050.TYPE.RightParenthesis;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod13108.mode.semicolonIncluded, true);
+}
+const WhiteSpace = _mod13064.TYPE.WhiteSpace;
+const Comment = _mod13064.TYPE.Comment;
+const Semicolon = _mod13064.TYPE.Semicolon;
 const obj = {
-  name: "PseudoClassSelector",
+  name: "DeclarationList",
   structure: null,
   parse() {
     const self = this;
-    this.eat(Colon);
-    if (this.scanner.tokenType === Function) {
-      const str = self.consumeFunctionName();
-      const formatted = str.toLowerCase();
-      const pseudo = self.pseudo;
-      if (!pseudo.hasOwnProperty(formatted)) {
-        const list = self.createList();
-        list.push(self.Raw(self.scanner.tokenIndex, null, false));
-        self.eat(RightParenthesis);
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      while (true) {
+        let tokenType = self.scanner.tokenType;
+        if (WhiteSpace !== tokenType) {
+          if (Comment !== tokenType) {
+            if (Semicolon !== tokenType) {
+              let arr = list.push(self.parseWithFallback(self.Declaration, consumeRaw));
+            }
+            if (self.scanner.eof) {
+              break;
+            }
+          }
+        }
+        let iter = self.scanner;
+        let nextResult = iter.next();
       }
-      const scanner = self.scanner;
-      scanner.skipSC();
-      let skipSCResult1 = self.pseudo[formatted];
-      const call = skipSCResult1.call;
-      const scanner2 = self.scanner;
-      skipSCResult1 = scanner2.skipSC();
-      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
-    } else {
-      const element = { type: "PseudoClassSelector", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: self.consume(Ident), children: null };
-      return element;
     }
+    const element = { type: "DeclarationList", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(name) {
-    const self = this;
-    this.chunk(":");
-    this.chunk(name.name);
-    if (null !== name.children) {
-      self.chunk("(");
-      self.children(name);
-      self.chunk(")");
-    }
-  },
-  walkContext: "function"
+  generate(arg0) {
+    this.children(arg0, function(type) {
+      if ("Declaration" === type.type) {
+        const self = this;
+        this.chunk(";");
+      }
+    });
+  }
 };
-const obj2 = { name: String, children: null };
-const items = [["Raw"], null];
+const obj2 = { children: null };
+const items = [["Declaration"]];
 obj2.children = items;
 obj.structure = obj2;
 

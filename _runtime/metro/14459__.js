@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "efd2f6e96d574d8c2d560cd22ba2302a", name: "ChevronSmallUpIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 240, height: 130, scales: [2, 3], hash: "c5a514a204d76328abe2ecbd82735ce3", name: "no_mutual_friends_dark", type: "png" });

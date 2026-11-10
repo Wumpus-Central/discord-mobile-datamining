@@ -1,14 +1,17 @@
 // === Module 16503: ? ===
 
 // Module 16503
-import _mod16441 from "module_16441" /* 16441 */;
-import all from "module_16467" /* 16467 */;
+import _mod16472 from "module_16472" /* 16472 */;
+import element from "element" /* 16504 */;
+import getOwnPropertyDescriptor from "module_16471" /* 16471 */;
 
-let _moduleResult = all(_mod16441.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod16441.WeakMap));
-  const obj = /native code/;
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod16472(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
+    }
+  }).a);
 }
 
-export default _moduleResult;
+export default tmp2;

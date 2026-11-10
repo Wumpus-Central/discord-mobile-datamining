@@ -1,234 +1,267 @@
 // === Module 13298: ? ===
 
 // Module 13298
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import _mod13291 from "module_13291" /* 13291 */;
+import _mod13292 from "module_13292" /* 13292 */;
+import _mod13299 from "module_13299" /* 13299 */;
+import _mod13300 from "module_13300" /* 13300 */;
+import _mod13301 from "module_13301" /* 13301 */;
 
-let AsyncContextStack = require;
-function withScope(arg0) {
-  const mainCarrier = AsyncContextStack(13296).getMainCarrier();
-  const obj = AsyncContextStack(13296);
-  const sentryCarrier = AsyncContextStack(13296).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = AsyncContextStack(13304).getDefaultCurrentScope();
-    const tmpResult = AsyncContextStack(13304);
-    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(13304).getDefaultIsolationScope());
-    const tmpResult2 = AsyncContextStack(13304);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(arg0);
-}
-function withSetScope(scope, arg1) {
-  closure_1 = arg1;
-  const mainCarrier = AsyncContextStack(13296).getMainCarrier();
-  const obj = AsyncContextStack(13296);
-  const sentryCarrier = AsyncContextStack(13296).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = AsyncContextStack(13304).getDefaultCurrentScope();
-    const tmpResult = AsyncContextStack(13304);
-    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(13304).getDefaultIsolationScope());
-    const tmpResult2 = AsyncContextStack(13304);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(() => {
-    stack.getStackTop().scope = scope;
-    return closure_1(scope);
-  });
-}
-function withIsolationScope(arg0) {
-  AsyncContextStack = arg0;
-  const mainCarrier = AsyncContextStack(13296).getMainCarrier();
-  const obj = AsyncContextStack(13296);
-  const sentryCarrier = AsyncContextStack(13296).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = tmp(13304).getDefaultCurrentScope();
-    const tmpResult = tmp(13304);
-    stack = new closure_3(defaultCurrentScope, tmp(13304).getDefaultIsolationScope());
-    const tmpResult2 = tmp(13304);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(() => {
-    const mainCarrier = AsyncContextStack(13296).getMainCarrier();
-    const obj = AsyncContextStack(13296);
-    const sentryCarrier = AsyncContextStack(13296).getSentryCarrier(mainCarrier);
-    let stack = sentryCarrier.stack;
-    if (!stack) {
-      const defaultCurrentScope = AsyncContextStack(13304).getDefaultCurrentScope();
-      const tmp2Result = AsyncContextStack(13304);
-      stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(13304).getDefaultIsolationScope());
-      const tmp2Result2 = AsyncContextStack(13304);
+require = arg1;
+const dependencyMap = arg6;
+function addNonEnumerableProperty(arg0, arg1, value) {
+  try {
+    const _Object = Object;
+    const obj = { value, writable: true, configurable: true };
+    Object.defineProperty(arg0, arg1, obj);
+  } catch (err) {
+    if (_mod13291.DEBUG_BUILD) {
+      const logger = _mod13292.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
     }
-    sentryCarrier.stack = stack;
-    return closure_0(stack.getIsolationScope());
-  });
-}
-class AsyncContextStack {
-  constructor(arg0, arg1) {
-    self = this;
-    scope = global;
-    tmp2 = c2(this, AsyncContextStack);
-    if (!global) {
-      tmp3 = closure_0;
-      tmp4 = closure_1;
-      tmp5 = new.target;
-      tmp6 = new.target;
-      scope = new closure_0(closure_1[2]).Scope();
-    }
-    scope1 = require;
-    if (!require) {
-      tmp8 = closure_0;
-      tmp9 = closure_1;
-      tmp10 = new.target;
-      tmp11 = new.target;
-      scope1 = new closure_0(closure_1[2]).Scope();
-    }
-    items = [];
-    items[0] = { scope };
-    self._stack = items;
-    self._isolationScope = scope1;
-    return;
   }
 }
-const entry = {
-  key: "withScope",
-  value: function withScope(fn) {
-    const self = this;
-    try {
-      const promise = fn(tmp);
-      if (obj2.isThenable(promise)) {
-        let nextPromise = promise.then((result) => {
-          self._popScope();
-          return result;
-        }, (arg0) => {
-          self._popScope();
-          throw arg0;
-        });
+function markFunctionWrapped(arg0, arg1) {
+  try {
+    let prototype = arg1.prototype;
+    if (!prototype) {
+      prototype = {};
+    }
+    arg1.prototype = prototype;
+    arg0.prototype = prototype;
+    addNonEnumerableProperty(arg0, "__sentry_original__", arg1);
+  } catch (err) {
+  }
+}
+function convertToPlainObject(type) {
+  if (obj.isError(type)) {
+    const error = { message: null, name: null, stack: null };
+    ({ message: obj6.message, name: obj6.name, stack: obj6.stack } = type);
+    if (typeof type === "object") {
+      if (null !== type) {
+        const obj2 = {};
+        let obj3 = obj2;
+        const keys = Object.keys();
+        if (keys !== undefined) {
+          obj3 = obj2;
+          while (keys[tmp] !== undefined) {
+            let _Object2 = Object;
+            let call2 = hasOwnProperty2.call;
+            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
+              continue;
+            } else {
+              obj2[tmp17] = type[tmp17];
+              continue;
+            }
+            continue;
+          }
+        }
+      }
+      const merged = Object.assign(obj3);
+      return error;
+    }
+    obj3 = {};
+  } else {
+    if (tmp2Result.isEvent(type)) {
+      const obj4 = { type: type.type, target: serializeEventTarget(type.target), currentTarget: serializeEventTarget(type.currentTarget) };
+      if (typeof type === "object") {
+        if (null !== type) {
+          const obj5 = {};
+          let obj7 = obj5;
+          const keys1 = Object.keys();
+          if (keys1 !== undefined) {
+            obj7 = obj5;
+            while (keys1[tmp] !== undefined) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
+                continue;
+              } else {
+                obj5[tmp8] = type[tmp8];
+                continue;
+              }
+              continue;
+            }
+          }
+        }
+        const merged1 = Object.assign(obj7);
+        let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
+        if (typeof globalThis.CustomEvent !== "undefined") {
+          isInstanceOfResult = _mod13299.isInstanceOf(type, globalThis.CustomEvent);
+          const tmp2Result2 = _mod13299;
+        }
+        if (isInstanceOfResult) {
+          obj4.detail = type.detail;
+        }
+        return obj4;
+      }
+      obj7 = {};
+    } else {
+      return type;
+    }
+    tmp2Result = _mod13299;
+  }
+  obj = _mod13299;
+}
+function serializeEventTarget(arg0) {
+  try {
+    if (obj.isElement(arg0)) {
+      let htmlTreeAsStringResult = _mod13300.htmlTreeAsString(arg0);
+      const tmp2Result = _mod13300;
+    } else {
+      const _Object = Object;
+      const call = toString.call;
+      if (typeof call === "unknown") {
+        htmlTreeAsStringResult = toString();
       } else {
-        self._popScope();
-        nextPromise = promise;
+        htmlTreeAsStringResult = call(arg0);
       }
-      return nextPromise;
-    } catch (tmp9) {
-      obj._popScope();
-      throw tmp9;
     }
+    return htmlTreeAsStringResult;
+  } catch (err) {
+    return "<unknown>";
   }
-};
-let items = [
-  entry,
-  {
-    key: "getClient",
-    value: function getClient() {
-      return this.getStackTop().client;
-    }
-  },
-  {
-    key: "getScope",
-    value: function getScope() {
-      return this.getStackTop().scope;
-    }
-  },
-  {
-    key: "getIsolationScope",
-    value: function getIsolationScope() {
-      return this._isolationScope;
-    }
-  },
-  {
-    key: "getStackTop",
-    value: function getStackTop() {
-      return this._stack[this._stack.length - 1];
-    }
-  },
-  {
-    key: "_pushScope",
-    value: function _pushScope() {
-      const scope = this.getScope();
-      const cloneResult = scope.clone();
-      const _stack = this._stack;
-      _stack.push({ client: this.getClient(), scope: cloneResult });
-      return cloneResult;
-    }
-  },
-  {
-    key: "_popScope",
-    value: function _popScope() {
-      let arr = this._stack.length > 1;
-      if (arr) {
-        const _stack = this._stack;
-        arr = _stack.pop();
+}
+function _dropUndefinedKeys(arr, map) {
+  if ((function isPojo(arr) {
+    if (obj.isPlainObject(arr)) {
+      try {
+        const _Object = Object;
+        const name = Object.getPrototypeOf(arr).constructor.name;
+        let tmp3 = !name;
+        if (name) {
+          tmp3 = "Object" === tmp2;
+        }
+        return tmp3;
+      } catch (err) {
+        return true;
       }
+    } else {
+      return false;
+    }
+  })(arr)) {
+    value = map.get(arr);
+    if (undefined !== value) {
+      return value;
+    } else {
+      const obj = {};
+      const result = map.set(arr, obj);
+      let _Object = Object;
+      const ownPropertyNames = Object.getOwnPropertyNames(arr);
+      for (const item10030 of ownPropertyNames) {
+        if (undefined !== arg0[item10030]) {
+          obj[item10030] = _dropUndefinedKeys(arg0[item10030], arg1);
+        }
+        continue;
+      }
+      return obj;
+    }
+  } else {
+    const _Array = Array;
+    if (Array.isArray(arr)) {
+      value2 = map.get(arr);
+      if (undefined !== value2) {
+        return value2;
+      } else {
+        items = [];
+        const result1 = map.set(arr, items);
+        const item = arr.forEach((item) => {
+          items.push(_dropUndefinedKeys(item, closure_0));
+        });
+        return items;
+      }
+    } else {
       return arr;
     }
   }
-];
-const _moduleResult = _createClass(AsyncContextStack, items);
-let c3 = _moduleResult;
+}
 
-export const AsyncContextStack = _moduleResult;
-export function getStackAsyncContextStrategy() {
-  return {
-    withIsolationScope,
-    withScope,
-    withSetScope,
-    withSetIsolationScope(arg0, arg1) {
-      closure_0 = arg1;
-      let mainCarrier = closure_0(13296).getMainCarrier();
-      let obj = closure_0(13296);
-      let sentryCarrier = closure_0(13296).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        let defaultCurrentScope = tmp(13304).getDefaultCurrentScope();
-        const tmpResult = tmp(13304);
-        stack = new closure_3(defaultCurrentScope, tmp(13304).getDefaultIsolationScope());
-        const tmpResult2 = tmp(13304);
-      }
-      sentryCarrier.stack = stack;
-      return stack.withScope(() => {
-        const mainCarrier = AsyncContextStack(13296).getMainCarrier();
-        const obj = AsyncContextStack(13296);
-        const sentryCarrier = AsyncContextStack(13296).getSentryCarrier(mainCarrier);
-        let stack = sentryCarrier.stack;
-        if (!stack) {
-          const defaultCurrentScope = AsyncContextStack(13304).getDefaultCurrentScope();
-          const tmp2Result = AsyncContextStack(13304);
-          stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(13304).getDefaultIsolationScope());
-          const tmp2Result2 = AsyncContextStack(13304);
+export { addNonEnumerableProperty };
+export { convertToPlainObject };
+export function dropUndefinedKeys(arr) {
+  return _dropUndefinedKeys(arr, new Map());
+}
+export function extractExceptionKeysForMessage(name) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 40;
+  }
+  const keys = Object.keys(convertToPlainObject(name));
+  const sorted = keys.sort();
+  const first = keys[0];
+  if (first) {
+    if (first.length >= num) {
+      return _mod13301.truncate(first, num);
+    } else {
+      let length = keys.length;
+      if (length > 0) {
+        const substr = keys.slice(0, length);
+        const joined = substr.join(", ");
+        while (joined.length > num) {
+          length = length - 1;
         }
-        sentryCarrier.stack = stack;
-        return closure_0(stack.getIsolationScope());
-      });
-    },
-    getCurrentScope() {
-      const mainCarrier = AsyncContextStack(13296).getMainCarrier();
-      const obj = AsyncContextStack(13296);
-      const sentryCarrier = AsyncContextStack(13296).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const defaultCurrentScope = AsyncContextStack(13304).getDefaultCurrentScope();
-        const tmpResult = AsyncContextStack(13304);
-        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(13304).getDefaultIsolationScope());
-        const tmpResult2 = AsyncContextStack(13304);
+        let truncateResult = joined;
+        if (length !== keys.length) {
+          truncateResult = _mod13301.truncate(joined, num);
+        }
+        return truncateResult;
       }
-      sentryCarrier.stack = stack;
-      return stack.getScope();
-    },
-    getIsolationScope() {
-      const mainCarrier = AsyncContextStack(13296).getMainCarrier();
-      const obj = AsyncContextStack(13296);
-      const sentryCarrier = AsyncContextStack(13296).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const defaultCurrentScope = AsyncContextStack(13304).getDefaultCurrentScope();
-        const tmpResult = AsyncContextStack(13304);
-        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(13304).getDefaultIsolationScope());
-        const tmpResult2 = AsyncContextStack(13304);
-      }
-      sentryCarrier.stack = stack;
-      return stack.getIsolationScope();
+      return "";
     }
-  };
+  } else {
+    return "[object has no keys]";
+  }
+}
+export function fill(GLOBAL_OBJ, fetch, fn) {
+  if (fetch in GLOBAL_OBJ) {
+    const tmp6 = fn(GLOBAL_OBJ[fetch]);
+    if (typeof tmp6 === "function") {
+      markFunctionWrapped(tmp6, tmp5);
+    }
+    try {
+      GLOBAL_OBJ[fetch] = tmp6;
+    } catch (err) {
+      if (_mod13291.DEBUG_BUILD) {
+        const logger = _mod13292.logger;
+        const _HermesInternal = HermesInternal;
+        logger.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
+      }
+    }
+  }
+}
+export function getOriginalFunction(__sentry_original__) {
+  return __sentry_original__.__sentry_original__;
+}
+export { markFunctionWrapped };
+export function objectify(arg0) {
+  if (null == arg0 === true) {
+    const _String = String;
+    let string = new String(arg0);
+  } else {
+    let tmp = typeof arg0 === "symbol";
+    if (typeof arg0 !== "symbol") {
+      tmp = typeof arg0 === "bigint";
+    }
+    if (tmp === true) {
+      const _Object = Object;
+      string = Object(arg0);
+    } else {
+      string = arg0;
+      if (obj.isPrimitive(arg0) === true) {
+        string = new arg0.constructor(arg0);
+      }
+      obj = _mod13299;
+    }
+  }
+  return string;
+}
+export function urlEncode(arg0) {
+  const entries = Object.entries(arg0);
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
+  });
+  return mapped.join("&");
 }

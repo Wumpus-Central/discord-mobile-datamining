@@ -1,325 +1,87 @@
 // === Module 13309: ? ===
 
 // Module 13309
-import _mod13278 from "module_13278" /* 13278 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 13283 */;
-import _mod13292 from "module_13292" /* 13292 */;
-import _mod13295 from "module_13295" /* 13295 */;
-import _mod13306 from "module_13306" /* 13306 */;
-import _toArray from "_toArray" /* 717 */;
 
-const require = globalThis.__r;
-
-const TRACING_DEFAULTS = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
-
-export { TRACING_DEFAULTS };
-export function startIdleSpan(arg0) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  _require = undefined;
-  let finalTimeout;
-  let childSpanTimeout;
-  let beforeSpanEnd;
-  let currentScope;
-  let activeSpan;
-  c12 = undefined;
-  function onIdleSpanEnded(arg0) {
-    closure_0 = arg0;
-    c2 = true;
-    map.clear();
-    const item = items.forEach((fn) => fn());
-    closure_0(map[6])._setSpanForScope(closure_10, closure_11);
-    let obj = closure_0(map[6]);
-    let spanToJSONResult = closure_0(map[4]).spanToJSON(c12);
-    if (spanToJSONResult.start_timestamp) {
-      if (!tmp7[tmp3(undefined, tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON]) {
-        const attr = c12.setAttribute(tmp3(tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, heartbeatFailed);
-      }
-      let logger = tmp3(tmp4[8]).logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Tracing] Idle span \"" + spanToJSONResult.op + "\" finished");
-      const spanDescendants = tmp3(tmp4[4]).getSpanDescendants(c12);
-      const found = spanDescendants.filter((item) => item !== _undefined);
-      const item1 = found.forEach((isRecording) => {
-        if (isRecording.isRecording()) {
-          const obj = { code: _mod13295.SPAN_STATUS_ERROR, message: "cancelled" };
-          isRecording.setStatus(obj);
-          isRecording.end(closure_0);
-          if (_mod13306.DEBUG_BUILD) {
-            const logger = _mod13278.logger;
-            const _JSON = JSON;
-            logger.log("[Tracing] Cancelling span since span ended early", JSON.stringify(isRecording, undefined, 2));
-          }
-        }
-        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(isRecording);
-        const timestamp = spanToJSONResult.timestamp;
-        let num2 = 0;
-        if (undefined !== timestamp) {
-          num2 = timestamp;
-        }
-        const start_timestamp = spanToJSONResult.start_timestamp;
-        let num3 = 0;
-        if (undefined !== start_timestamp) {
-          num3 = start_timestamp;
-        }
-        let tmp14 = num2 - num3 <= (finalTimeout + idleTimeout) / 1000;
-        if (_mod13306.DEBUG_BUILD) {
-          const _JSON2 = JSON;
-          const json = JSON.stringify(isRecording, undefined, 2);
-          if (tmp13) {
-            if (!tmp14) {
-              const logger3 = _mod13278.logger;
-              logger3.log("[Tracing] Discarding span since it finished after idle span final timeout", json);
-            }
-          } else {
-            const logger2 = _mod13278.logger;
-            logger2.log("[Tracing] Discarding span since it happened after idle span was finished", json);
-          }
-        }
-        if (tmp14) {
-          tmp14 = tmp13;
-        }
-        if (!tmp14) {
-          const result = spanTimeInputToSeconds.removeChildSpanFromSpan(c12, isRecording);
-          closure_1 = closure_1 + 1;
-        }
-      });
-      if (0 > 0) {
-        const attr1 = c12.setAttribute("sentry.idle_span_discarded_spans", map);
-      }
-      const tmp3Result = tmp3(tmp4[4]);
-      tmp7 = spanToJSONResult.data || {};
+export const SPAN_STATUS_ERROR = 2;
+export const SPAN_STATUS_OK = 1;
+export const SPAN_STATUS_UNSET = 0;
+export function getSpanStatusFromHttpCode(arg0) {
+  if (arg0 < 400) {
+    if (arg0 >= 100) {
+      return { code: 1 };
     }
-    let obj2 = closure_0(map[4]);
   }
-  const map = new Map();
-  c2 = false;
-  let heartbeatFailed = "externalFinish";
-  closure_4 = !obj.disableAutoFinish;
-  items = [];
-  let idleTimeout = obj.idleTimeout;
-  if (undefined === idleTimeout) {
-    idleTimeout = heartbeatFailed.idleTimeout;
-  }
-  finalTimeout = obj.finalTimeout;
-  if (undefined === finalTimeout) {
-    finalTimeout = heartbeatFailed.finalTimeout;
-  }
-  childSpanTimeout = obj.childSpanTimeout;
-  if (undefined === childSpanTimeout) {
-    childSpanTimeout = heartbeatFailed.childSpanTimeout;
-  }
-  beforeSpanEnd = obj.beforeSpanEnd;
-  const client = require("module_13305").getClient();
-  if (client) {
-    if (tmp5Result.hasTracingEnabled()) {
-      currentScope = tmp5(tmp6[1]).getCurrentScope();
-      const tmp5Result6 = tmp5(tmp6[1]);
-      activeSpan = tmp5(tmp6[4]).getActiveSpan();
-      const tmp5Result7 = tmp5(tmp6[4]);
-      const startInactiveSpanResult = tmp5(tmp6[11]).startInactiveSpan(arg0);
-      const tmp5Result8 = tmp5(tmp6[11]);
-      const tmp5Result9 = tmp5(tmp6[6]);
-      tmp5Result9._setSpanForScope(tmp5(tmp6[1]).getCurrentScope(), startInactiveSpanResult);
-      if (tmp5(tmp6[10]).DEBUG_BUILD) {
-        let logger = tmp5(tmp6[8]).logger;
-        logger.log("[Tracing] Started span is an idle span");
+  if (arg0 >= 400) {
+    if (arg0 < 500) {
+      if (401 === arg0) {
+        return { code: 2, message: "unauthenticated" };
+      } else if (403 === arg0) {
+        return { code: 2, message: "permission_denied" };
+      } else if (404 === arg0) {
+        return { code: 2, message: "not_found" };
+      } else if (409 === arg0) {
+        return { code: 2, message: "already_exists" };
+      } else if (413 === arg0) {
+        return { code: 2, message: "failed_precondition" };
+      } else if (429 === arg0) {
+        return { code: 2, message: "resource_exhausted" };
+      } else {
+        return 499 === arg0 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
       }
-      c12 = startInactiveSpanResult;
-      const _Proxy = Proxy;
-      let obj3 = {
-        apply(arg0, arg1, current) {
-              if (beforeSpanEnd) {
-                tmp(c12);
-              }
-              const arr = _toArray(current);
-              let first = arr[0];
-              const substr = arr.slice(1);
-              if (!first) {
-                first = _mod13292.timestampInSeconds();
-              }
-              const result = spanTimeInputToSeconds.spanTimeInputToSeconds(first);
-              const spanDescendants = spanTimeInputToSeconds.getSpanDescendants(c12);
-              const found = spanDescendants.filter((item) => item !== _undefined);
-              if (found.length) {
-                const mapped = found.map((item) => closure_1_0(map[4]).spanToJSON(item).timestamp);
-                const found1 = mapped.filter((item) => item);
-                let num2;
-                if (found1.length) {
-                  const _Math = Math;
-                  items = [];
-                  HermesBuiltin.arraySpread(found1, 0);
-                  const _Math2 = Math;
-                  num2 = HermesBuiltin.apply(items, Math);
-                }
-                let num4 = spanTimeInputToSeconds.spanToJSON(c12).start_timestamp;
-                let num6 = Infinity;
-                if (num4) {
-                  num6 = num4 + finalTimeout / 1000;
-                }
-                if (!num4) {
-                  num4 = -Infinity;
-                }
-                if (!num2) {
-                  num2 = Infinity;
-                }
-                const bound = Math.min(num6, Math.max(num4, Math.min(result, num2)));
-                onIdleSpanEnded(bound);
-                const _Reflect2 = Reflect;
-                const items1 = [bound];
-                HermesBuiltin.arraySpread(substr, 1);
-                return Reflect.apply(arg0, arg1, items1);
-              } else {
-                onIdleSpanEnded(result);
-                const _Reflect = Reflect;
-                const items2 = [result];
-                HermesBuiltin.arraySpread(substr, 1);
-                return Reflect.apply(arg0, arg1, items2);
-              }
-            }
-      };
-      const proxy = new Proxy(startInactiveSpanResult.end, obj3);
-      startInactiveSpanResult.end = proxy;
-      items.push(client.on("spanStart", (spanContext) => {
-        let timestamp = c2;
-        if (!c2) {
-          timestamp = spanContext === c12;
-        }
-        if (!timestamp) {
-          timestamp = timeout(map[4]).spanToJSON(spanContext).timestamp;
-          const obj = timeout(map[4]);
-        }
-        if (!timestamp) {
-          const spanDescendants = timeout(map[4]).getSpanDescendants(c12);
-          if (spanDescendants.includes(spanContext)) {
-            if (timeout) {
-              const _clearTimeout = clearTimeout;
-              clearTimeout(timeout);
-              timeout = undefined;
-            }
-            const result = map.set(spanContext.spanContext().spanId, true);
-            timeout(map[5]).timestampInSeconds() + childSpanTimeout / 1000;
-            const _setTimeout = setTimeout;
-            timeout = setTimeout(() => {
-              let tmp = !c2;
-              if (!c2) {
-                tmp = closure_4;
-              }
-              if (tmp) {
-                heartbeatFailed = "heartbeatFailed";
-                c12.end(closure_0);
-              }
-            }, childSpanTimeout);
-            const obj4 = timeout(map[5]);
-          }
-          const obj2 = timeout(map[4]);
-        }
-      }));
-      items.push(client.on("spanEnd", (spanContext) => {
-        if (!c2) {
-          const spanId = spanContext.spanContext().spanId;
-          if (map.has(spanId)) {
-            map.delete(spanId);
-          }
-          if (0 === map.size) {
-            timeout = timeout(map[5]).timestampInSeconds() + idleTimeout / 1000;
-            if (timeout) {
-              const _clearTimeout = clearTimeout;
-              clearTimeout(timeout);
-              timeout = undefined;
-            }
-            const _setTimeout = setTimeout;
-            timeout = setTimeout(() => {
-              let tmp = !c2;
-              if (!c2) {
-                tmp = 0 === map.size;
-              }
-              if (tmp) {
-                tmp = closure_4;
-              }
-              if (tmp) {
-                heartbeatFailed = "idleTimeout";
-                c12.end(closure_0);
-              }
-            }, idleTimeout);
-            const obj2 = timeout(map[5]);
-          }
-        }
-      }));
-      items.push(client.on("idleSpanEnableAutoFinish", (arg0) => {
-        if (arg0 === c12) {
-          c4 = true;
-          let timeout;
-          if (timeout) {
-            const _clearTimeout = clearTimeout;
-            clearTimeout(timeout);
-            timeout = undefined;
-          }
-          const _setTimeout = setTimeout;
-          timeout = setTimeout(() => {
-            let tmp = !c2;
-            if (!c2) {
-              tmp = 0 === map.size;
-            }
-            if (tmp) {
-              tmp = closure_4;
-            }
-            if (tmp) {
-              heartbeatFailed = "idleTimeout";
-              c12.end(closure_0);
-            }
-          }, idleTimeout);
-          if (map.size) {
-            const _setTimeout2 = setTimeout;
-            timeout = setTimeout(() => {
-              let tmp = !c2;
-              if (!c2) {
-                tmp = closure_4;
-              }
-              if (tmp) {
-                heartbeatFailed = "heartbeatFailed";
-                c12.end(closure_0);
-              }
-            }, childSpanTimeout);
-          }
-        }
-      }));
-      if (!obj.disableAutoFinish) {
-        if (_require) {
-          let _clearTimeout = clearTimeout;
-          clearTimeout(_require);
-          _require = undefined;
-        }
-        let _setTimeout = setTimeout;
-        _require = setTimeout(() => {
-          let tmp = !c2;
-          if (!c2) {
-            tmp = 0 === map.size;
-          }
-          if (tmp) {
-            tmp = closure_4;
-          }
-          if (tmp) {
-            heartbeatFailed = "idleTimeout";
-            c12.end(closure_0);
-          }
-        }, idleTimeout);
-      }
-      let _setTimeout2 = setTimeout;
-      const timerId = setTimeout(() => {
-        if (!c2) {
-          const obj = { code: _mod13295.SPAN_STATUS_ERROR, message: "deadline_exceeded" };
-          _undefined.setStatus(obj);
-          heartbeatFailed = "finalTimeout";
-          _undefined.end();
-        }
-      }, finalTimeout);
-      return startInactiveSpanResult;
     }
-    tmp5Result = tmp5(tmp6[2]);
   }
-  const sentryNonRecordingSpan = new tmp5(tmp6[3]).SentryNonRecordingSpan();
-  return sentryNonRecordingSpan;
+  if (arg0 >= 500) {
+    if (arg0 < 600) {
+      if (501 === arg0) {
+        return { code: 2, message: "unimplemented" };
+      } else if (503 === arg0) {
+        return { code: 2, message: "unavailable" };
+      } else {
+        return 504 === arg0 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
+      }
+    }
+  }
+  return { code: 2, message: "unknown_error" };
+}
+export function setHttpStatus(setAttribute, arg1) {
+  const attr = setAttribute.setAttribute("http.response.status_code", arg1);
+  if (arg1 < 400) {
+    if (arg1 >= 100) {
+      let obj = { code: 1 };
+    }
+    if ("unknown_error" !== obj.message) {
+      setAttribute.setStatus(obj);
+    }
+  }
+  if (arg1 >= 400) {
+    if (arg1 < 500) {
+      if (401 === arg1) {
+        obj = { code: 2, message: "unauthenticated" };
+      } else if (403 === arg1) {
+        obj = { code: 2, message: "permission_denied" };
+      } else if (404 === arg1) {
+        obj = { code: 2, message: "not_found" };
+      } else if (409 === arg1) {
+        obj = { code: 2, message: "already_exists" };
+      } else if (413 === arg1) {
+        obj = { code: 2, message: "failed_precondition" };
+      } else if (429 === arg1) {
+        obj = { code: 2, message: "resource_exhausted" };
+      } else {
+        obj = 499 === arg1 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
+      }
+    }
+  }
+  if (arg1 >= 500) {
+    if (arg1 < 600) {
+      if (501 === arg1) {
+        obj = { code: 2, message: "unimplemented" };
+      } else if (503 === arg1) {
+        obj = { code: 2, message: "unavailable" };
+      } else {
+        obj = 504 === arg1 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
+      }
+    }
+  }
+  obj = { code: 2, message: "unknown_error" };
 }

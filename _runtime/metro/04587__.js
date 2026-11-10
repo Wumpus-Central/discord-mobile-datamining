@@ -1,26 +1,26 @@
 // === Module 4587: ? ===
 
 // Module 4587
-import module_4424_mod from "module_4424" /* 4424 */;
-import module_4575_mod from "module_4575" /* 4575 */;
-import requiredArgs_mod from "requiredArgs" /* 4421 */;
+import module_4426_mod from "module_4426" /* 4426 */;
+import module_4577_mod from "module_4577" /* 4577 */;
+import requiredArgs_mod from "requiredArgs" /* 4423 */;
 
-let module_4424 = module_4424_mod;
-if (!module_4424) {
-  const obj = { default: module_4424 };
+let module_4426 = module_4426_mod;
+if (!module_4426) {
+  const obj = { default: module_4426 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4424;
+  tmp3 = module_4426;
 }
-module_4424 = tmp3;
-let module_4575 = module_4575_mod;
-if (!module_4575) {
-  const obj2 = { default: module_4575 };
+module_4426 = tmp3;
+let module_4577 = module_4577_mod;
+if (!module_4577) {
+  const obj2 = { default: module_4577 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4575;
+  tmp5 = module_4577;
 }
-module_4575 = tmp5;
+module_4577 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -29,9 +29,10 @@ if (!requiredArgs) {
   tmp7 = requiredArgs;
 }
 requiredArgs = tmp7;
+let c3 = 60000;
 
-export default function addSeconds(interval, arg1) {
+export default function addMinutes(interval, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4575.default(interval, 1000 * module_4424.default(arg1));
+  return module_4577.default(interval, module_4426.default(arg1) * c3);
 };
 export default exports.default;

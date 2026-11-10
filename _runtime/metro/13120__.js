@@ -1,55 +1,24 @@
 // === Module 13120: ? ===
 
 // Module 13120
-import _mod13050 from "module_13050" /* 13050 */;
+import keys2 from "keys2" /* 13060 */;
+import _mod13064 from "module_13064" /* 13064 */;
 
-const Ident = _mod13050.TYPE.Ident;
-const Function = _mod13050.TYPE.Function;
-const Colon = _mod13050.TYPE.Colon;
-const RightParenthesis = _mod13050.TYPE.RightParenthesis;
+const Dimension = _mod13064.TYPE.Dimension;
 const obj = {
-  name: "PseudoElementSelector",
-  structure: null,
+  name: "Dimension",
+  structure: { value: String, unit: String },
   parse() {
-    const self = this;
-    this.eat(Colon);
-    this.eat(Colon);
-    if (this.scanner.tokenType === Function) {
-      const str = self.consumeFunctionName();
-      const formatted = str.toLowerCase();
-      const pseudo = self.pseudo;
-      if (!pseudo.hasOwnProperty(formatted)) {
-        const list = self.createList();
-        list.push(self.Raw(self.scanner.tokenIndex, null, false));
-        self.eat(RightParenthesis);
-      }
-      const scanner = self.scanner;
-      scanner.skipSC();
-      let skipSCResult1 = self.pseudo[formatted];
-      const call = skipSCResult1.call;
-      const scanner2 = self.scanner;
-      skipSCResult1 = scanner2.skipSC();
-      const tmp11 = typeof call === "unknown" ? skipSCResult1() : call(self);
-    } else {
-      const element = { type: "PseudoElementSelector", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: self.consume(Ident), children: null };
-      return element;
-    }
+    const tokenStart = this.scanner.tokenStart;
+    const consumeNumberResult = keys2.consumeNumber(this.scanner.source, tokenStart);
+    this.eat(Dimension);
+    const obj2 = { type: "Dimension", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: this.scanner.source.substring(tokenStart, consumeNumberResult), unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart) };
+    return obj2;
   },
-  generate(name) {
-    const self = this;
-    this.chunk("::");
-    this.chunk(name.name);
-    if (null !== name.children) {
-      self.chunk("(");
-      self.children(name);
-      self.chunk(")");
-    }
-  },
-  walkContext: "function"
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk(value.unit);
+  }
 };
-const obj2 = { name: String, children: null };
-const items = [["Raw"], null];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

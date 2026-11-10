@@ -2,4 +2,4 @@
 
 // Module 8976
 
-export default { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+export default { DeprecatedAccessibilityRoles: ["none", "button", "togglebutton", "link", "search", "image", "keyboardkey", "text", "adjustable", "imagebutton", "header", "summary", "alert", "checkbox", "combobox", "menu", "menubar", "menuitem", "progressbar", "radio", "radiogroup", "scrollbar", "spinbutton", "switch", "tab", "tablist", "timer", "toolbar"] };

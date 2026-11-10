@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 108, scales: [2, 3], hash: "fdbdffcc03357c67352ab2f9dff83bf6", name: "img_what_you_lose_profile_tier1_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "a7a629f03005b09b581ccdee10e4a92d", name: "img_boost_subheader_resub_mobile", type: "png" });

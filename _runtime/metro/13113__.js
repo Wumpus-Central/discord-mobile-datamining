@@ -1,42 +1,18 @@
 // === Module 13113: ? ===
 
 // Module 13113
-import _mod13050 from "module_13050" /* 13050 */;
+import _mod13064 from "module_13064" /* 13064 */;
 
-const Comma = _mod13050.TYPE.Comma;
-const obj = {
-  name: "MediaQueryList",
-  structure: null,
-  parse(arg0) {
-    const self = this;
-    const list = this.createList();
-    const scanner = this.scanner;
-    scanner.skipSC();
-    if (!this.scanner.eof) {
-      list.push(self.MediaQuery(arg0));
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.MediaQuery(arg0));
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
-    }
-    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
-    return element;
+const CDC = _mod13064.TYPE.CDC;
+
+export default {
+  name: "CDC",
+  structure: [],
+  parse() {
+    this.eat(CDC);
+    return { type: "CDC", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
   },
-  generate(arg0) {
-    this.children(arg0, function() {
-      this.chunk(",");
-    });
+  generate() {
+    this.chunk("-->");
   }
 };
-const obj2 = { children: null };
-const items = [["MediaQuery"]];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;

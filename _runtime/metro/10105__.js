@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon", width: 60, height: 60, scales: [2, 3], hash: "44efb56cf36c8202533bcbc557ebf8e5", name: "MidnightPrismIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 16, height: 16, scales: [2, 3], hash: "f5a4357d7c0b7e1db64214ae6f5682c3", name: "ic_premium_channel_16px", type: "png" });

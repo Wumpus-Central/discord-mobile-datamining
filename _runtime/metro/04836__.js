@@ -1,18 +1,18 @@
 // === Module 4836: ? ===
 
 // Module 4836
-import module_4424_mod from "module_4424" /* 4424 */;
-import _typeof_mod from "module_4420" /* 4420 */;
-import requiredArgs_mod from "requiredArgs" /* 4421 */;
+import module_4426_mod from "module_4426" /* 4426 */;
+import _typeof_mod from "module_4422" /* 4422 */;
+import requiredArgs_mod from "requiredArgs" /* 4423 */;
 
-let module_4424 = module_4424_mod;
-if (!module_4424) {
-  const obj = { default: module_4424 };
+let module_4426 = module_4426_mod;
+if (!module_4426) {
+  const obj = { default: module_4426 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4424;
+  tmp3 = module_4426;
 }
-module_4424 = tmp3;
+module_4426 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -30,11 +30,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setDayOfYear(arg0, arg1) {
+export default function setDate(module_4426, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  defaultResult1.setMonth(0);
-  defaultResult1.setDate(module_4424.default(arg1));
+  const defaultResult1 = _typeof.default(module_4426);
+  defaultResult1.setDate(module_4426.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

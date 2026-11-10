@@ -1,14 +1,9 @@
 // === Module 16466: ? ===
 
 // Module 16466
-import _mod16467 from "module_16467" /* 16467 */;
+import _mod16532 from "module_16532" /* 16532 */;
+import module_16467 from "module_16467" /* 16467 */;
 
-
-export default (obj) => {
-  if (typeof obj === "object") {
-    let tmp2 = null !== obj;
-  } else {
-    tmp2 = _mod16467(obj);
-  }
-  return tmp2;
-};
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod16532;
+module_16467(obj, { assign: _mod16532 });

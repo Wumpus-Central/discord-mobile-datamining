@@ -1,61 +1,76 @@
 // === Module 13292: ? ===
 
 // Module 13292
-import _mod13279 from "module_13279" /* 13279 */;
+import GLOBAL_OBJ from "module_13293" /* 13293 */;
 
-function dateTimestampInSeconds() {
-  return Date.now() / 1000;
-}
-let timeOrigin;
-const _performance = _mod13279.GLOBAL_OBJ.performance;
-let fn = dateTimestampInSeconds;
-if (_performance) {
-  fn = dateTimestampInSeconds;
-  if (_performance.now) {
-    const _Date = Date;
-    const timestamp = Date.now();
-    timeOrigin = timestamp - _performance.now();
-    if (null != _performance.timeOrigin) {
-      timeOrigin = _performance.timeOrigin;
-    }
-    fn = () => (timeOrigin + _performance.now()) / 1000;
-  }
-}
-const _performance2 = _mod13279.GLOBAL_OBJ.performance;
-if (_performance2) {
-  if (_performance2.now) {
-    const nowResult = _performance2.now();
-    const _Date2 = Date;
-    const timestamp1 = Date.now();
-    let num2 = 3600000;
-    if (_performance2.timeOrigin) {
-      const _Math = Math;
-      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
-    }
-    let timeOrigin2 = _performance2.timing;
-    if (timeOrigin2) {
-      timeOrigin2 = _performance2.timing.navigationStart;
-    }
-    let num3 = 3600000;
-    if (typeof timeOrigin2 === "number") {
-      const _Math2 = Math;
-      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
-    }
-    if (!tmp6) {
-      if (num3 >= 3600000) {
-        exports._browserPerformanceTimeOriginMode = "dateNow";
-      }
-    }
-    if (num2 <= num3) {
-      exports._browserPerformanceTimeOriginMode = "timeOrigin";
-      timeOrigin2 = _performance2.timeOrigin;
-    } else {
-      exports._browserPerformanceTimeOriginMode = "navigationStart";
-    }
-    tmp6 = num2 < 3600000;
-  }
-}
+const require = globalThis.__r;
 
-export const _browserPerformanceTimeOriginMode = "none";
-export { dateTimestampInSeconds };
-export const timestampInSeconds = fn;
+function consoleSandbox(fn) {
+  if ("console" in console(13293).GLOBAL_OBJ) {
+    console = tmp(13293).GLOBAL_OBJ.console;
+    dependencyMap = {};
+    const _Object = Object;
+    const keys = Object.keys(obj);
+    const item = keys.forEach((item) => {
+      closure_1[item] = console[item];
+      console[item] = obj[item];
+    });
+    try {
+      const item1 = keys.forEach((item) => {
+        console[item] = closure_1[item];
+      });
+      return fn();
+    } catch (tmp8) {
+      const item2 = arr.forEach((item) => {
+        console[item] = closure_1[item];
+      });
+      throw tmp8;
+    }
+  } else {
+    return fn();
+  }
+  tmp = console;
+}
+let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
+const originalConsoleMethods = {};
+
+export const CONSOLE_LEVELS = items;
+export { consoleSandbox };
+export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
+  _require = false;
+  const obj = {
+    enable() {
+      c0 = true;
+    },
+    disable() {
+      c0 = false;
+    },
+    isEnabled() {
+      return c0;
+    }
+  };
+  const forEach = items.forEach;
+  if (require("module_13291").DEBUG_BUILD) {
+    const item = forEach((arg0) => {
+      closure_0 = arg0;
+      obj[arg0] = () => {
+        const args = [...arguments];
+        if (args) {
+          consoleSandbox(() => {
+            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
+            items = ["Sentry Logger [" + args + "]:", ...closure_0];
+            _console[args].apply(items);
+          });
+        }
+      };
+    });
+  } else {
+    const item1 = forEach((arg0) => {
+      obj[arg0] = () => {
+
+      };
+    });
+  }
+  return obj;
+});
+export { originalConsoleMethods };

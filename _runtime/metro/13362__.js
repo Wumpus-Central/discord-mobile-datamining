@@ -1,45 +1,29 @@
 // === Module 13362: ? ===
 
 // Module 13362
+import _mod13294 from "module_13294" /* 13294 */;
 
-export function parseCookie(arr) {
-  const obj = {};
-  let num = 0;
-  if (0 < arr.length) {
-    let index = arr.indexOf("=", num);
-    while (-1 !== index) {
-      let length = arr.indexOf(";", num);
-      if (-1 === length) {
-        length = arr.length;
-      } else if (length < index) {
-        let sum = arr.lastIndexOf(";", index - 1) + 1;
-        num = sum;
-        if (sum >= arr.length) {
-          break;
-        }
-      }
-      let str = arr.slice(num, index);
-      let trimmed = str.trim();
-      if (undefined === obj[trimmed]) {
-        let str2 = arr.slice(index + 1, length);
-        let trimmed1 = str2.trim();
-        index = trimmed1;
-        if (34 === trimmed1.charCodeAt(0)) {
-          index = trimmed1.slice(1, -1);
-        }
-        try {
-          let decodeURIComponentResult = index;
-          if (-1 !== index.indexOf("%")) {
-            let _decodeURIComponent = decodeURIComponent;
-            decodeURIComponentResult = decodeURIComponent(index);
-          }
-          obj[trimmed] = decodeURIComponentResult;
-        } catch (err) {
-          obj[trimmed] = index;
-        }
-      }
-      let sum1 = length + 1;
-    }
+require = arg1;
+const dependencyMap = arg6;
+
+export function applySdkMetadata(_metadata, arg1) {
+  let arr = arg2;
+  if (arg2 === undefined) {
+    items = [arg1];
+    arr = items;
   }
-  return obj;
+  let str = arg3;
+  if (arg3 === undefined) {
+    str = "npm";
+  }
+  const tmp = _metadata._metadata || {};
+  if (!tmp.sdk) {
+    const obj = { name: null, packages: null, version: null };
+    const _HermesInternal = HermesInternal;
+    obj.name = "sentry.javascript." + arg1;
+    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod13294.SDK_VERSION }));
+    obj.version = str(13294).SDK_VERSION;
+    tmp.sdk = obj;
+  }
+  _metadata._metadata = tmp;
 }

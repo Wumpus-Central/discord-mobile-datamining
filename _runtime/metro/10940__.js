@@ -1,8 +1,7 @@
 // === Module 10940: ? ===
 
 // Module 10940
-import baseRest from "baseRest" /* 9031 */;
-import baseDelay from "baseDelay" /* 10941 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1cda1329ef5dd669ec53160c74e5d945", name: "ArrowSmallRightIcon", type: "png" });

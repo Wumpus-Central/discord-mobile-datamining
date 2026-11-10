@@ -1,14 +1,16 @@
 // === Module 8161: ? ===
 
 // Module 8161
-import _modDef8140 from "module_8140" /* 8140 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8144 from "module_8144" /* 8144 */;
+import _modDef8162 from "module_8162" /* 8162 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeImage = arg1;
+const FeMerge = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeImage {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeMerge {
   constructor() {
     self = this;
-    tmp = c2(this, FeImage);
-    tmp2 = closure_4;
-    obj = closure_4(FeImage);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeMerge);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeMerge);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +52,28 @@ class FeImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeImage, _modDef8140);
+_inherits(FeMerge, _modDef8144);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeImage(8117).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeMerge(8143).extractFilter(this.props));
+    const obj2 = FeMerge(8143);
+    const merged1 = Object.assign(FeMerge(8143).extractFeMerge(this.props, this));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const importDefaultResultResult = _createClass(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

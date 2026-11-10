@@ -1,16 +1,18 @@
 // === Module 16490: ? ===
 
 // Module 16490
-import _mod16491 from "module_16491" /* 16491 */;
+import _mod16475 from "module_16475" /* 16475 */;
 
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod16475(1.toString);
 
 export default (arg0) => {
-  let num = 0;
-  {
-    num = 0;
-    if (0 !== tmp) {
-      num = _mod16491(tmp);
-    }
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
   }
-  return num;
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
 };

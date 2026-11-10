@@ -1,0 +1,7 @@
+// === Module 8058: ? ===
+
+// Module 8058
+import _mod17 from "module_17" /* 17 */;
+
+
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

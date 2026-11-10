@@ -1,9 +1,15 @@
 // === Module 13157: ? ===
 
 // Module 13157
-
-export default {
-  parse: function nth() {
-    return this.createSingleNodeList(this.Nth(false));
+const obj = {
+  parse: {
+    prelude() {
+      return this.createSingleNodeList(this.MediaQueryList());
+    },
+    block() {
+      return this.Block(false);
+    }
   }
 };
+
+export default obj;

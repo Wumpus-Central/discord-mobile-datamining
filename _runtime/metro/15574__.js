@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "337f717407aa04f32bdedf504de7310b", name: "emoji", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 108, scales: [2, 3], hash: "fdbdffcc03357c67352ab2f9dff83bf6", name: "img_what_you_lose_profile_tier1_light", type: "png" });

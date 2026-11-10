@@ -1,7 +1,15 @@
 // === Module 13158: ? ===
 
 // Module 13158
-import _mod13157 from "module_13157" /* 13157 */;
+const obj = {
+  parse: {
+    prelude() {
+      return this.createSingleNodeList(this.SelectorList());
+    },
+    block() {
+      return this.Block(true);
+    }
+  }
+};
 
-
-export default _mod13157;
+export default obj;
