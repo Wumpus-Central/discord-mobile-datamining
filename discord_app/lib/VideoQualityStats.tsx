@@ -1,9 +1,9 @@
-// === Module 6082: VideoQualityStats ===
+// === Module 6084: VideoQualityStats ===
 
-// Module 6082 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 5901 */;
-import Histogram from "Histogram" /* 6025 */;
-import SystemResourcesDefault from "SystemResources" /* 6033 */;
+// Module 6084 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 5903 */;
+import Histogram from "Histogram" /* 6027 */;
+import SystemResourcesDefault from "SystemResources" /* 6035 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

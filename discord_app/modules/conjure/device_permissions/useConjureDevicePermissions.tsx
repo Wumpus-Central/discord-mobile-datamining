@@ -1,10 +1,10 @@
-// === Module 14794: useConjureDevicePermissions ===
+// === Module 14820: useConjureDevicePermissions ===
 
-// Module 14794 (useConjureDevicePermissions)
-import conjureDevicePermissions from "conjureDevicePermissions" /* 11055 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10987 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 11057 */;
+// Module 14820 (useConjureDevicePermissions)
+import conjureDevicePermissions from "conjureDevicePermissions" /* 11064 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10996 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 11066 */;
 
 const require = globalThis.__r;
 

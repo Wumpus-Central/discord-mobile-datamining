@@ -1,23 +1,23 @@
-// === Module 19165: SearchAutocompleteStore ===
+// === Module 19194: SearchAutocompleteStore ===
 
-// Module 19165 (SearchAutocompleteStore)
+// Module 19194 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserUtilsDefault from "UserUtils" /* 5194 */;
-import _modDef5983 from "module_5983" /* 5983 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6834 */;
-import GuildUtilsDefault from "GuildUtils" /* 6956 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9218 */;
-import SearchUtils from "SearchUtils" /* 14127 */;
-import SearchTokens from "SearchTokens" /* 14128 */;
-import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 14131 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
-import StreamerModeStore from "StreamerModeStore" /* 5195 */;
+import UserUtilsDefault from "UserUtils" /* 5196 */;
+import _modDef5985 from "module_5985" /* 5985 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6837 */;
+import GuildUtilsDefault from "GuildUtils" /* 6959 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9224 */;
+import SearchUtils from "SearchUtils" /* 14153 */;
+import SearchTokens from "SearchTokens" /* 14154 */;
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 14157 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import StreamerModeStore from "StreamerModeStore" /* 5197 */;
 import UserStore from "UserStore" /* 1385 */;
-import SelectedSearchContextStore from "SelectedSearchContextStore" /* 14130 */;
+import SelectedSearchContextStore from "SelectedSearchContextStore" /* 14156 */;
 
 const SearchTokensDefault = SearchTokens;
 
@@ -221,7 +221,7 @@ function rebuildAutocompleteResults(c14) {
 const Constants = fn(1072);
 ({ SearchPopoutModes: closure_10, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(6952).AutocompleterResultTypes;
+fn(6955).AutocompleterResultTypes;
 let c14 = null;
 let closure_15 = [];
 const map = new Map();
@@ -253,7 +253,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef5983(c14, searchContext)) {
+    if (!_modDef5985(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -261,7 +261,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef5983(c14, searchContext)) {
+    if (!_modDef5985(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }

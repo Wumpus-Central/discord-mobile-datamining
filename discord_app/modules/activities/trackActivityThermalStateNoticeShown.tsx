@@ -1,11 +1,11 @@
-// === Module 19536: trackActivityThermalStateNoticeShown ===
+// === Module 19565: trackActivityThermalStateNoticeShown ===
 
-// Module 19536 (trackActivityThermalStateNoticeShown)
+// Module 19565 (trackActivityThermalStateNoticeShown)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5061 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5063 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;

@@ -1,7 +1,7 @@
-// === Module 7821: CollectiblesMarketingTabTooltipRecord ===
+// === Module 7824: CollectiblesMarketingTabTooltipRecord ===
 
-// Module 7821 (CollectiblesMarketingTabTooltipRecord)
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7818 */;
+// Module 7824 (CollectiblesMarketingTabTooltipRecord)
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7821 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function CollectiblesMarketingTabTooltipRecord(arg0) {

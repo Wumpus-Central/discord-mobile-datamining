@@ -1,18 +1,18 @@
-// === Module 19611: VoicePanelDockGlow ===
+// === Module 19640: VoicePanelDockGlow ===
 
-// Module 19611 (VoicePanelDockGlow)
+// Module 19640 (VoicePanelDockGlow)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import ColorUtils from "ColorUtils" /* 5137 */;
-import timing_timing from "timing/timing" /* 5370 */;
-import LinearGradientDefault from "LinearGradient" /* 5715 */;
-import inlineStyles from "inlineStyles" /* 8101 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8915 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
-import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 14235 */;
-import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 14236 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 14237 */;
+import ColorUtils from "ColorUtils" /* 5139 */;
+import timing_timing from "timing/timing" /* 5372 */;
+import LinearGradientDefault from "LinearGradient" /* 5717 */;
+import inlineStyles from "inlineStyles" /* 8105 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8921 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11371 */;
+import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 14261 */;
+import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 14262 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 14263 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
-const getDockInset = fn(11381).getDockInset;
+const getDockInset = fn(11390).getDockInset;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let items = [[0, 1], [0.18, 0.89], [0.36, 0.63], [0.52, 0.4], [0.66, 0.23], [0.78, 0.12], [0.88, 0.05], [0.95, 0.02], [1, 0]];

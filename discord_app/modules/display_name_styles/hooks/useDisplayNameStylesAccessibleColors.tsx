@@ -1,8 +1,8 @@
-// === Module 10893: useDisplayNameStylesAccessibleColors ===
+// === Module 10902: useDisplayNameStylesAccessibleColors ===
 
-// Module 10893 (useDisplayNameStylesAccessibleColors)
+// Module 10902 (useDisplayNameStylesAccessibleColors)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 const require = fn;
 const size = fn(2);

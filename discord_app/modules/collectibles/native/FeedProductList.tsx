@@ -1,7 +1,7 @@
-// === Module 18195: FeedProductList ===
+// === Module 18224: FeedProductList ===
 
-// Module 18195 (FeedProductList)
-import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 18197 */;
+// Module 18224 (FeedProductList)
+import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 18226 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,7 +9,7 @@ function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = closure_5();
-  const cardLayout = num(18196).useCardLayout();
+  const cardLayout = num(18225).useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   items = [];
   num = 0;
@@ -28,9 +28,9 @@ function SkeletonGrid(accessibilityLabel) {
       obj3.style = items1;
       obj3.children = arr.map((item, index) => {
         const obj = { width: require, style: null };
-        const obj2 = { marginBottom: num(9540).COLLECTIBLES_SHOP_CARD_GAP };
+        const obj2 = { marginBottom: num(9546).COLLECTIBLES_SHOP_CARD_GAP };
         obj.style = obj2;
-        return closure_4(closure_1(9665), obj, "" + num + "-" + index);
+        return closure_4(closure_1(9671), obj, "" + num + "-" + index);
       });
       let _HermesInternal = HermesInternal;
       let arr2 = items.push(<View key={"row-" + num} style={null}>{null}</View>);
@@ -41,8 +41,8 @@ function SkeletonGrid(accessibilityLabel) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
-let obj2 = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: { flexDirection: "row", gap: fn(9540).COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: fn(9540).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(5142);
+let obj2 = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: { flexDirection: "row", gap: fn(9546).COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: fn(9546).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");

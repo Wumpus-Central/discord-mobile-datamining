@@ -1,13 +1,13 @@
-// === Module 13455: GameOrganizationBenefitsCarousel ===
+// === Module 13468: GameOrganizationBenefitsCarousel ===
 
-// Module 13455 (GameOrganizationBenefitsCarousel)
+// Module 13468 (GameOrganizationBenefitsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import Stack_Stack from "Stack/Stack" /* 6159 */;
-import Card from "Card" /* 7040 */;
-import GameOrganizationBenefits from "GameOrganizationBenefits" /* 13456 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import Stack_Stack from "Stack/Stack" /* 6161 */;
+import Card from "Card" /* 7043 */;
+import GameOrganizationBenefits from "GameOrganizationBenefits" /* 13469 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { carouselContainer: { marginHorizontal: -PX_16 }, carousel: { alignItems: "stretch" }, carouselContent: { paddingHorizontal: PX_16 }, card: { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 }, cardSpacing: { marginRight: PX_12 }, benefitImage: null, pagination: null };
 let obj3 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 obj2.benefitImage = { width: "100%", aspectRatio: 1.7, borderRadius: nativeDefault.radii.lg, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

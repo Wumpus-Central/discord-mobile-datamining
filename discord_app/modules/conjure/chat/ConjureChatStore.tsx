@@ -1,18 +1,18 @@
-// === Module 10970: ConjureChatStore ===
+// === Module 10979: ConjureChatStore ===
 
-// Module 10970 (ConjureChatStore)
+// Module 10979 (ConjureChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import _modDef4026 from "module_4026" /* 4026 */;
-import conjureChatTurns from "conjureChatTurns" /* 10971 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 10972 */;
-import conjureChatHistory from "conjureChatHistory" /* 10973 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10974 */;
-import conjureAgentHiddenMessages from "conjureAgentHiddenMessages" /* 10975 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _modDef4028 from "module_4028" /* 4028 */;
+import conjureChatTurns from "conjureChatTurns" /* 10980 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 10981 */;
+import conjureChatHistory from "conjureChatHistory" /* 10982 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10983 */;
+import conjureAgentHiddenMessages from "conjureAgentHiddenMessages" /* 10984 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
 
 require = fn;
 function patchTurn(projectId, turnId, fn) {
@@ -62,11 +62,11 @@ function recordThinkingTransition(projectId) {
   const hasOpenTurnResult = conjureChatTurns.hasOpenTurn(map.get(projectId));
   if (flag !== hasOpenTurnResult) {
     const result = map2.set(projectId, hasOpenTurnResult);
-    const index = closure_11.indexOf(projectId);
+    const index = closure_12.indexOf(projectId);
     if (-1 !== index) {
-      closure_11.splice(index, 1);
+      closure_12.splice(index, 1);
     }
-    closure_11.unshift(projectId);
+    closure_12.unshift(projectId);
     if (hasOpenTurnResult) {
       map1.delete(projectId);
     } else {
@@ -146,9 +146,9 @@ function purgeProject(projectId) {
   const deleteResult5 = map3.delete(projectId);
   const deleteResult6 = map4.delete(projectId);
   const deleteResult7 = set.delete(projectId);
-  const index = closure_11.indexOf(projectId);
+  const index = closure_12.indexOf(projectId);
   if (-1 !== index) {
-    closure_11.splice(index, 1);
+    closure_12.splice(index, 1);
   }
   if (!deleteResult) {
     deleteResult = deleteResult1;
@@ -189,7 +189,7 @@ function applyAgentReactions(arr) {
       for (const item10022 of steps) {
         if ("reaction" === item10022.kind) {
           if (null != item10022.message_id) {
-            let obj2 = map(10974);
+            let obj2 = map(10983);
             let result = obj2.agentReactionFromStep(item10022);
             if (null != result) {
               let result1 = map.set(item10022.message_id, tmp10);
@@ -226,15 +226,16 @@ function applyAgentReactions(arr) {
 }
 let closure_3 = ["disposition"];
 let closure_4 = ["disposition"];
+let closure_5 = ["disposition"];
 let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
-let closure_11 = [];
+let closure_12 = [];
 const map3 = new Map();
 const map4 = new Map();
 let set = new Set();
 const set1 = new Set();
-let closure_16 = [];
+let closure_17 = [];
 const Store = initializeDefault.Store;
 class ConjureChatStore extends Store {
 }
@@ -245,7 +246,7 @@ prototype["initialize"] = function initialize() {
 prototype["getMessages"] = function getMessages(arg0) {
   value = map.get(arg0);
   if (value == null) {
-    value = closure_16;
+    value = closure_17;
   }
   return value;
 };
@@ -308,7 +309,7 @@ prototype["isSaving"] = function isSaving(arg0) {
   return set1.has(arg0);
 };
 prototype["getActivityOrderedProjectIds"] = function getActivityOrderedProjectIds() {
-  return closure_11.slice();
+  return closure_12.slice();
 };
 const map5 = new Map();
 const set2 = new Set();
@@ -324,7 +325,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                 if (0 === set1.size) {
                   if (0 === map5.size) {
                     if (0 === set2.size) {
-                      if (0 === closure_11.length) {
+                      if (0 === closure_12.length) {
                         return false;
                       }
                     }
@@ -345,7 +346,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     set1.clear();
     map5.clear();
     set2.clear();
-    closure_11.length = 0;
+    closure_12.length = 0;
   },
   CONJURE_CHAT_HISTORY_SET: function handleChatHistorySet(arg0) {
     ({ projectId, entries, cursor, degraded } = arg0);
@@ -483,13 +484,26 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
           let result = conjureAgentHiddenMessages.isConjureAgentHiddenMessage(content);
           if (!result) {
             result = conjureChatTurns.hasOpenTurn(mapped);
-            const tmp24Result = conjureChatTurns;
+            const tmp26Result = conjureChatTurns;
           }
+          let tmp16 = mapped;
           if (!result) {
-            mapped.push(conjureChatHistory.newMessage("assistant", ""));
-            const tmp24Result2 = conjureChatHistory;
+            let mapped1 = mapped;
+            if (mapped.some((disposition) => "queued" === disposition.disposition)) {
+              mapped1 = mapped.map((disposition) => {
+                if ("queued" !== disposition.disposition) {
+                  return disposition;
+                } else {
+                  disposition = disposition.disposition;
+                  return _objectWithoutProperties(disposition, closure_1_3);
+                }
+              });
+            }
+            mapped1.push(conjureChatHistory.newMessage("assistant", ""));
+            tmp16 = mapped1;
+            const tmp26Result2 = conjureChatHistory;
           }
-          const result1 = map.set(projectId, mapped);
+          const result1 = map.set(projectId, tmp16);
           recordThinkingTransition(projectId);
         }
       }
@@ -518,17 +532,30 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items1[HermesBuiltin.arraySpread(items2, 0)] = newMessageResult;
         if (!result3) {
           result3 = conjureAgentHiddenMessages.isConjureAgentHiddenMessage(content);
-          const tmp19Result = conjureAgentHiddenMessages;
+          const tmp21Result = conjureAgentHiddenMessages;
         }
         if (!result3) {
           result3 = conjureChatTurns.hasOpenTurn(items1);
-          const tmp19Result3 = conjureChatTurns;
+          const tmp21Result3 = conjureChatTurns;
         }
+        let tmp3 = items1;
         if (!result3) {
-          items1.push(conjureChatHistory.newMessage("assistant", ""));
-          const tmp19Result4 = conjureChatHistory;
+          let mapped2 = items1;
+          if (items1.some((disposition) => "queued" === disposition.disposition)) {
+            mapped2 = items1.map((disposition) => {
+              if ("queued" !== disposition.disposition) {
+                return disposition;
+              } else {
+                disposition = disposition.disposition;
+                return _objectWithoutProperties(disposition, closure_1_3);
+              }
+            });
+          }
+          mapped2.push(conjureChatHistory.newMessage("assistant", ""));
+          tmp3 = mapped2;
+          const tmp21Result4 = conjureChatHistory;
         }
-        const result4 = map.set(projectId, items1);
+        const result4 = map.set(projectId, tmp3);
         recordThinkingTransition(projectId);
       }
     }
@@ -745,7 +772,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id, attachments };
-      const newMessageResult = id(10973).newMessage("assistant", content, obj3);
+      const newMessageResult = id(10982).newMessage("assistant", content, obj3);
       newMessageResult.kind = "side_reply";
       newMessageResult.in_reply_to = inReplyTo;
       const findIndexResult = value.findIndex((id) => id.id === inReplyTo);
@@ -762,12 +789,12 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             everyResult = steps.every((kind) => "preview_ready" === kind.kind);
           }
           if (everyResult) {
-            everyResult = !id(10971).isOutsideTurn(tmp10);
-            const tmpResult = id(10971);
+            everyResult = !id(10980).isOutsideTurn(tmp10);
+            const tmpResult = id(10980);
           }
           if (everyResult) {
-            everyResult = !id(10971).turnSettled(tmp10);
-            const tmpResult3 = id(10971);
+            everyResult = !id(10980).turnSettled(tmp10);
+            const tmpResult3 = id(10980);
           }
           tmp9 = everyResult;
         }
@@ -795,7 +822,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
               if (!tmpResult4.turnSettled(items[findLastIndexResult])) {
                 items.splice(findIndexResult + 1, 0, _slicedToArray(items.splice(findLastIndexResult, 1), 1)[0]);
               }
-              tmpResult4 = id(10971);
+              tmpResult4 = id(10980);
             }
           }
         }
@@ -808,7 +835,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items1[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items1);
       }
-      const obj2 = id(10973);
+      const obj2 = id(10982);
     }
   },
   CONJURE_CHAT_PUBLISH_NOTICE: function handleChatPublishNotice(arg0) {
@@ -821,7 +848,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(10973).newMessage("assistant", content, obj3);
+      const newMessageResult = id(10982).newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
       newMessageResult.finished = true;
@@ -839,7 +866,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!tmpResult.turnSettled(value[findLastIndexResult])) {
           turn_id = value[findLastIndexResult];
         }
-        tmpResult = id(10971);
+        tmpResult = id(10980);
       }
       if (null != turn_id) {
         if (0 !== turn_id.steps.length) {
@@ -866,9 +893,9 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             obj6 = {};
           }
           arraySpreadResult4 = arraySpreadResult4 + 1;
-          items[arraySpreadResult4] = id(10973).newMessage("assistant", "", obj6);
+          items[arraySpreadResult4] = id(10982).newMessage("assistant", "", obj6);
           items = map.set(projectId, items);
-          const tmpResult2 = id(10973);
+          const tmpResult2 = id(10982);
         } else {
           const items1 = [, ];
           const arraySpreadResult6 = HermesBuiltin.arraySpread(value.slice(findLastIndexResult + 1), HermesBuiltin.arraySpread(value.slice(0, findLastIndexResult), 0));
@@ -882,7 +909,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items2);
       }
-      const obj2 = id(10973);
+      const obj2 = id(10982);
     }
   },
   CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
@@ -978,8 +1005,8 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     if (!tmp2) {
       let tmp5 = null != value;
       if (tmp5) {
-        tmp5 = -1 !== step(10971).resolveTurnIndex(value, undefined);
-        let obj2 = step(10971);
+        tmp5 = -1 !== step(10980).resolveTurnIndex(value, undefined);
+        let obj2 = step(10980);
       }
       tmp2 = tmp5;
     }
@@ -1016,7 +1043,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
           return disposition;
         } else {
           disposition = disposition.disposition;
-          return _objectWithoutProperties(disposition, closure_1_3);
+          return _objectWithoutProperties(disposition, closure_1_4);
         }
       }));
     }
@@ -1208,7 +1235,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         const result = map.set(projectId, value.map((disposition) => {
           if (null != disposition.disposition) {
             disposition = disposition.disposition;
-            return _objectWithoutProperties(disposition, closure_1_4);
+            return _objectWithoutProperties(disposition, closure_1_5);
           } else {
             let tmp7 = disposition;
             if ("assistant" === disposition.role) {
@@ -1220,7 +1247,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                 items = [];
                 const obj2 = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj2.message = intl.string(_modDef4026.lmiuFX);
+                obj2.message = intl.string(_modDef4028.lmiuFX);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                 obj.steps = items;
                 tmp7 = obj;

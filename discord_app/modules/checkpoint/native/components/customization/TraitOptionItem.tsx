@@ -1,27 +1,27 @@
-// === Module 13924: TraitOptionItem ===
+// === Module 13945: TraitOptionItem ===
 
-// Module 13924 (TraitOptionItem)
+// Module 13945 (TraitOptionItem)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5200 */;
-import LinearGradientDefault from "LinearGradient" /* 5715 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6200 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6245 */;
-import _modDef7104 from "module_7104" /* 7104 */;
-import inlineStyles from "inlineStyles" /* 8101 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9612 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5202 */;
+import LinearGradientDefault from "LinearGradient" /* 5717 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6202 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6247 */;
+import _modDef7107 from "module_7107" /* 7107 */;
+import inlineStyles from "inlineStyles" /* 8105 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9618 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6199 */;
+import CheckpointConstants from "CheckpointConstants" /* 6201 */;
 import jsxProd from "jsxProd" /* 21 */;
-import CheckpointCustomizationUtils_mod from "CheckpointCustomizationUtils" /* 6566 */;
-import createStyles from "createStyles" /* 5140 */;
+import CheckpointCustomizationUtils_mod from "CheckpointCustomizationUtils" /* 6568 */;
+import createStyles from "createStyles" /* 5142 */;
 import size from "module_2" /* 2 */;
 
 const inlineStylesDefault = inlineStyles;
 
 function RarityIndicator(rarity) {
   rarity = rarity.rarity;
-  const tmp = closure_17();
+  const tmp = closure_18();
   if (rarity === CheckpointTraitRarity.CheckpointTraitRarity.NITRO) {
     obj2 = { style: null, maskElement: null, pointerEvents: "none", children: null };
     items = [, ];
@@ -30,7 +30,7 @@ function RarityIndicator(rarity) {
     obj2.maskElement = React6(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
     const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
     obj2.children = React6(LinearGradientDefault, obj3);
-    let tmp4Result = React6(_modDef7104, obj2);
+    let tmp4Result = React6(_modDef7107, obj2);
   } else {
     const items1 = [, , ];
     ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);
@@ -48,7 +48,7 @@ function RarityIndicator(rarity) {
 }
 function TraitOptionImage(arg0) {
   ({ traitOption, size } = arg0);
-  const obj = CheckpointCustomizationUtils;
+  const tmp = closure_18();
   if (obj.isNoneOption(traitOption)) {
     const size1 = { width: PX_32, height: PX_32, pointerEvents: "none", children: null };
     obj2 = { x1: "0", y1: "0", x2: PX_32, y2: PX_32, stroke, strokeWidth: 1, strokeLinecap: "round" };
@@ -61,26 +61,26 @@ function TraitOptionImage(arg0) {
       const obj4 = { source: null, style: null, resizeMode: "contain" };
       const obj5 = { uri: asset };
       obj4.source = obj5;
-      obj4.style = obj[size];
+      obj4.style = dependencyMap[size];
       obj3.children = React6(FastImageDefault, obj4);
       let tmp7 = React6(React4, obj3);
     } else {
       const obj6 = { source: null, style: null, resizeMode: "contain" };
       const obj7 = { uri: asset };
       obj6.source = obj7;
-      obj6.style = obj[size];
+      obj6.style = dependencyMap[size];
       tmp7 = React6(FastImageDefault, obj6);
     }
     return tmp7;
   }
-  tmp = closure_17();
+  obj = CheckpointCustomizationUtils;
 }
 function AssetShape(arg0) {
   ({ size, isNoneOption, isSelected } = arg0);
   ({ width, height } = obj[size]);
-  const size1 = { width, height, style: closure_17().assetShape, pointerEvents: "none", children: null };
+  const size1 = { width, height, style: closure_18().assetShape, pointerEvents: "none", children: null };
   let tmp6 = !isNoneOption;
-  const tmp = closure_17();
+  const tmp = closure_18();
   if (!isNoneOption) {
     obj = { children: null };
     obj2 = { id: checkpointTraitGradient, x1: "0", y1: "1", x2: "0", y2: "0", children: null };
@@ -120,6 +120,7 @@ const PX_4 = nativeDefault.space.PX_4;
 const start = { x: 0.5, y: 0 };
 const end = { x: 0.5, y: 1 };
 const TRAIT_OPTION_SIZE_TO_DIMENSIONS = { sm: { width: 56, height: 64 }, md: { width: 72, height: 80 } };
+const dependencyMap = { sm: { width: 48, height: 56 }, md: { width: 64, height: 72 } };
 let obj2 = { sm: null, md: null };
 let CheckpointCustomizationUtils = CheckpointCustomizationUtils_mod;
 obj2.sm = CheckpointCustomizationUtils.getTraitOptionShapePoints(TRAIT_OPTION_SIZE_TO_DIMENSIONS.sm.width, TRAIT_OPTION_SIZE_TO_DIMENSIONS.sm.height);
@@ -130,7 +131,7 @@ let obj4 = { filter: null };
 let items = [{ grayscale: 1 }];
 obj4.filter = items;
 obj3.assetImageLocked = obj4;
-let closure_17 = createStyles.createStyles(obj3);
+let closure_18 = createStyles.createStyles(obj3);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitOptionItem.tsx");
 
 export default function TraitOptionItem(disabled) {
@@ -147,7 +148,7 @@ export default function TraitOptionItem(disabled) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = closure_17();
+  const tmp = closure_18();
   const obj = useA11yRolesNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected: isSelected, disabled: flag });
   obj2 = { onPress, disabled: flag, style: null, accessibilityRole: null, accessibilityLabel: null, accessibilityState: null, children: null };

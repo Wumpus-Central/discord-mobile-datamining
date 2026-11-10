@@ -1,21 +1,21 @@
-// === Module 14176: DiceRollBar ===
+// === Module 14202: DiceRollBar ===
 
-// Module 14176 (DiceRollBar)
+// Module 14202 (DiceRollBar)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5370 */;
+import timing_timing from "timing/timing" /* 5372 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(13956).useDiceRollState;
+const useDiceRollState = fn(13981).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { animatedContainer: { overflow: "hidden" }, container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, gap: 12, borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { code: "(function DiceRollBarTsx1(){let[useReducedMotion,height,opacity,withTiming,ANIMATION_DURATION_MS,DECELERATED_EASING]=this.__closure;if(useReducedMotion){return{height:height.get(),opacity:opacity.get()};}return{height:withTiming(height.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING}),opacity:withTiming(opacity.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING})};})" };
@@ -135,15 +135,15 @@ export default function DiceRollBar(channelId) {
   if (null == tmp2) {
     return null;
   } else {
-    const barText = tmp3(14177).getBarText(flag, tmp2.results);
+    const barText = tmp3(14203).getBarText(flag, tmp2.results);
     const obj5 = { style: null, children: null };
     const items7 = [animatedStyle, tmp.animatedContainer];
     obj5.style = items7;
     const obj6 = { style: tmp.container, children: null };
-    const obj7 = { style: tmp23, children: closure_7(tmp3(9613).DiceIcon, { size: "md" }) };
+    const obj7 = { style: tmp23, children: closure_7(tmp3(9619).DiceIcon, { size: "md" }) };
     const items8 = [closure_7(_modDef1652.View, obj7), ];
     const obj8 = { variant: "body-sm/normal", color: "text-default", children: barText };
-    items8[1] = closure_7(tmp3(5751).Text, obj8);
+    items8[1] = closure_7(tmp3(5753).Text, obj8);
     obj6.children = items8;
     obj5.children = closure_8(c4, obj6);
     return closure_7(_modDef1652.View, obj5);

@@ -1,22 +1,22 @@
-// === Module 7317: TextAreaField ===
+// === Module 7320: TextAreaField ===
 
-// Module 7317 (TextAreaField)
+// Module 7320 (TextAreaField)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5303 */;
-import useTextField from "useTextField" /* 7156 */;
-import InputFieldContainer from "InputFieldContainer" /* 7168 */;
+import native from "native" /* 5305 */;
+import useTextField from "useTextField" /* 7159 */;
+import InputFieldContainer from "InputFieldContainer" /* 7171 */;
 import noop from "module_19" /* 19 */;
 
 const util = prop(1113);
-const Text_Text = prop(5751);
-const NativeTextInput = prop(7171);
-const propsForNativeTextInput = prop(7174);
-const useCharacterLimitAnnouncement = prop(7318);
+const Text_Text = prop(5753);
+const NativeTextInput = prop(7174);
+const propsForNativeTextInput = prop(7177);
+const useCharacterLimitAnnouncement = prop(7321);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { area: { height: 128, textAlignVertical: "top" }, maxLengthIndicator: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
 obj2.maxLengthIndicator = rect;

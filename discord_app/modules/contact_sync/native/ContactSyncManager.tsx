@@ -1,12 +1,12 @@
-// === Module 14488: ContactSyncManager ===
+// === Module 14514: ContactSyncManager ===
 
-// Module 14488 (ContactSyncManager)
+// Module 14514 (ContactSyncManager)
 import Storage3 from "Storage" /* 510 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14487 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14513 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6627 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6629 */;
 import UserStore from "UserStore" /* 1385 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
 
 require = fn;
 let closure_11 = async function _requestAndSyncContacts() {
@@ -117,9 +117,9 @@ let closure_11 = async function _requestAndSyncContacts() {
     }
   }
 };
-const ContactSyncPersistedStore = fn(14486);
+const ContactSyncPersistedStore = fn(14512);
 ({ setStoredContacts: hasOwnProperty, deleteStoredContacts: closure_6, useContactSyncStore: metroImportDefault } = ContactSyncPersistedStore);
-const ContactPermissions = fn(14485).ContactPermissions;
+const ContactPermissions = fn(14511).ContactPermissions;
 const PlatformTypes = fn(1072).PlatformTypes;
 const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 const prototype = function ContactSyncLifecycleManager() {

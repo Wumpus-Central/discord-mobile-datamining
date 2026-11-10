@@ -1,6 +1,6 @@
-// === Module 5928: pollConnectionStats ===
+// === Module 5930: pollConnectionStats ===
 
-// Module 5928 (pollConnectionStats)
+// Module 5930 (pollConnectionStats)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

@@ -1,24 +1,24 @@
-// === Module 9383: GuildProfileHeader ===
+// === Module 9389: GuildProfileHeader ===
 
-// Module 9383 (GuildProfileHeader)
+// Module 9389 (GuildProfileHeader)
 import nativeDefault from "native" /* 575 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5003 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
-import transitionToGuild from "transitionToGuild" /* 7594 */;
-import GuildTraits from "GuildTraits" /* 9385 */;
-import BadgeCategory from "BadgeCategory" /* 9386 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5005 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5839 */;
+import transitionToGuild from "transitionToGuild" /* 7597 */;
+import GuildTraits from "GuildTraits" /* 9391 */;
+import BadgeCategory from "BadgeCategory" /* 9392 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9384).getBadgeTooltip;
+const getBadgeTooltip = fn(9390).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, members: null, memberCount: null, dot: null, dotOnline: null, established: null, nameRow: null, guildName: null, guildIcon: null };
 let size = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.avatarBackground = size;

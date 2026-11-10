@@ -1,8 +1,8 @@
-// === Module 5029: EntityDao ===
+// === Module 5031: EntityDao ===
 
-// Module 5029 (EntityDao)
-import Table from "Table" /* 5023 */;
-import TableId from "TableId" /* 5025 */;
+// Module 5031 (EntityDao)
+import Table from "Table" /* 5025 */;
+import TableId from "TableId" /* 5027 */;
 import size from "module_2" /* 2 */;
 
 let EntityDao;

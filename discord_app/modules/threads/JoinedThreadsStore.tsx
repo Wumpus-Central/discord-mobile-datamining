@@ -1,11 +1,11 @@
-// === Module 5074: JoinedThreadsStore ===
+// === Module 5076: JoinedThreadsStore ===
 
-// Module 5074 (JoinedThreadsStore)
+// Module 5076 (JoinedThreadsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4993 */;
-import MuteTimersDefault from "MuteTimers" /* 5075 */;
+import ChannelRecord from "ChannelRecord" /* 4995 */;
+import MuteTimersDefault from "MuteTimers" /* 5077 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 
@@ -270,7 +270,7 @@ obj = {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "uri" }, joinTimestamp: null };
+        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "r" }, joinTimestamp: null };
         const _Date = Date;
         const date = new Date();
         guildId = date;

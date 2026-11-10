@@ -1,11 +1,11 @@
-// === Module 16944: handleOpenUnconfirmedAgeGroupSupportArticle ===
+// === Module 16971: handleOpenUnconfirmedAgeGroupSupportArticle ===
 
-// Module 16944 (handleOpenUnconfirmedAgeGroupSupportArticle)
+// Module 16971 (handleOpenUnconfirmedAgeGroupSupportArticle)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 11067 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8028 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 11076 */;
 
-const AgeNoticeConstants = fn(6792);
+const AgeNoticeConstants = fn(6794);
 ({ AGE_NOTICE_AGE_GROUP_SUPPORT_ARTICLE_IDS_BY_COUNTRY: c3, AGE_NOTICE_DEFAULT_ARTICLE_ID: closure_4 } = AgeNoticeConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/handleOpenUnconfirmedAgeGroupSupportArticle.tsx");

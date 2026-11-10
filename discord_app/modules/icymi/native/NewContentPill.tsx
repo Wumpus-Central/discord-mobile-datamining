@@ -1,14 +1,14 @@
-// === Module 18950: NewContentPill ===
+// === Module 18979: NewContentPill ===
 
-// Module 18950 (NewContentPill)
+// Module 18979 (NewContentPill)
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5369 */;
-import GuildIcon from "GuildIcon" /* 7020 */;
-import ClipView from "ClipView" /* 9593 */;
+import useThemeDefault from "useTheme" /* 5371 */;
+import GuildIcon from "GuildIcon" /* 7023 */;
+import ClipView from "ClipView" /* 9599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import ICYMIStore from "ICYMIStore" /* 8980 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import ICYMIStore from "ICYMIStore" /* 8986 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, guildIconBG: null, refreshMorePillContainer: null };
 let obj3 = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.guildIconBG = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -189,13 +189,13 @@ export default function NewContentPill(onPress) {
     obj5.style = items11;
     obj5.animatedProps = animatedProps;
     const obj6 = { onPress: callback, style: tmp.container, children: null };
-    const items12 = [first2(tmp2(13268).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ];
+    const items12 = [first2(tmp2(13282).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ];
     const obj7 = { style: { marginLeft: 4 }, variant: "heading-sm/semibold", color: "interactive-text-active", children: null };
     const intl = tmp2(1113).intl;
     obj7.children = intl.string(tmp2(1113).t["4Nl0Rl"]);
-    items12[1] = first2(tmp2(5751).Text, obj7);
+    items12[1] = first2(tmp2(5753).Text, obj7);
     obj6.children = items12;
-    obj5.children = closure_10(tmp2(7043).PressableOpacity, obj6);
+    obj5.children = closure_10(tmp2(7046).PressableOpacity, obj6);
     let tmp36Result2 = first2(tmp9(1652).View, obj5);
   } else {
     const obj8 = { style: null, animatedProps: null, children: null };
@@ -205,15 +205,15 @@ export default function NewContentPill(onPress) {
     const obj9 = { onPress: callback, style: tmp.container, children: null };
     if (isRefreshing) {
       const tmp27 = closure_5;
-      const tmp2Result6 = tmp2(5147);
+      const tmp2Result6 = tmp2(5149);
       tmp9(575).unsafe_rawColors;
-      const isThemeDarkResult = tmp2(5147).isThemeDark(tmp10);
+      const isThemeDarkResult = tmp2(5149).isThemeDark(tmp10);
       const unsafe_rawColors = { color: null };
-      unsafe_rawColors.color = tmp2(5147).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+      unsafe_rawColors.color = tmp2(5149).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
       tmp36(tmp27, unsafe_rawColors);
-      const tmp29 = tmp2(5147).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+      const tmp29 = tmp2(5149).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
     } else {
-      const items14 = [tmp36(tmp2(13268).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
+      const items14 = [tmp36(tmp2(13282).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
       const substr = stateFromStoresArray1.slice(0, stateFromStoresArray1.length - 1);
       items14[1] = substr.map((guild, index) => {
         let num = 4;
@@ -230,13 +230,13 @@ export default function NewContentPill(onPress) {
       const obj10 = { style: null, children: null };
       const obj11 = { marginLeft: num2 };
       obj10.style = obj11;
-      const obj12 = { guild: stateFromStoresArray1[stateFromStoresArray1.length - 1], size: tmp2(7020).GuildIconSizes.XSMALL, style: tmp.guildIconBG };
-      obj10.children = tmp36(tmp9(7020), obj12);
+      const obj12 = { guild: stateFromStoresArray1[stateFromStoresArray1.length - 1], size: tmp2(7023).GuildIconSizes.XSMALL, style: tmp.guildIconBG };
+      obj10.children = tmp36(tmp9(7023), obj12);
       items14[2] = tmp36(closure_6, obj10);
       obj9.children = items14;
       obj8.children = tmp37(tmp38, obj9);
       tmp36Result2 = tmp36(tmp9(1652).View, obj8);
-      const tmp9Result = tmp9(7020);
+      const tmp9Result = tmp9(7023);
     }
     tmp37 = closure_10;
   }

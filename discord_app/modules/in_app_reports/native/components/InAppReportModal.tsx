@@ -1,18 +1,18 @@
-// === Module 8427: InAppReportModal ===
+// === Module 8431: InAppReportModal ===
 
-// Module 8427 (InAppReportModal)
+// Module 8431 (InAppReportModal)
 import util from "util" /* 1113 */;
-import Navigator from "Navigator" /* 7231 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 7630 */;
-import showReportModal from "showReportModal" /* 8424 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8426 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8443 */;
+import Navigator from "Navigator" /* 7234 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 7633 */;
+import showReportModal from "showReportModal" /* 8428 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8430 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8447 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8428).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8432).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -56,7 +56,7 @@ export default function InAppReportModal(arg0) {
   [c12, c13] = noop.useState([]);
   const tmp4 = _slicedToArray(noop.useState([]), 2);
   [c14, c15] = noop.useState([]);
-  menu(5721)(() => {
+  menu(5723)(() => {
     const orFetchLinkedUsers = FamilyCenterUtils.getOrFetchLinkedUsers();
   });
   items = [closeModal, first];
@@ -177,7 +177,7 @@ export default function InAppReportModal(arg0) {
       const obj6 = {};
       const obj7 = {
         headerRight() {
-            const obj = { source: menu(8429), onPress, accessibilityLabel: null };
+            const obj = { source: menu(8433), onPress, accessibilityLabel: null };
             const intl = util.intl;
             obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
             return addOnCloseCallback(HeaderActionButton2.HeaderActionButton, obj);

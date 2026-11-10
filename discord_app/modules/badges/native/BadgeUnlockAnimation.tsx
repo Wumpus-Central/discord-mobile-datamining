@@ -1,17 +1,17 @@
-// === Module 11621: BadgeUnlockAnimation ===
+// === Module 11630: BadgeUnlockAnimation ===
 
-// Module 11621 (BadgeUnlockAnimation)
+// Module 11630 (BadgeUnlockAnimation)
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import ColorUtils from "ColorUtils" /* 5137 */;
-import shared from "shared" /* 5147 */;
-import timing_timing from "timing/timing" /* 5370 */;
-import useTimeoutDefault from "useTimeout" /* 10745 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11597 */;
-import BadgeUtils from "BadgeUtils" /* 11602 */;
+import ColorUtils from "ColorUtils" /* 5139 */;
+import shared from "shared" /* 5149 */;
+import timing_timing from "timing/timing" /* 5372 */;
+import useTimeoutDefault from "useTimeout" /* 10754 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11606 */;
+import BadgeUtils from "BadgeUtils" /* 11611 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
@@ -220,7 +220,7 @@ let closure_13 = Easing5.bezier(0.67, 0, 0.28, 1);
 let c14 = 250;
 let c15 = 1000;
 let c16 = 200;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_17 = createStyles.createStyles({ pulse: { position: "absolute", top: -40, left: -54, width: 300, height: 200 }, pulseHidden: { opacity: 0 }, layer: { position: "absolute", top: 0, left: 0 }, artSize: { width: 192, height: 120 }, nitroAmbientArt: { position: "absolute", left: -6.857142857142847, top: -25.714285714285708 }, edgeGlow: { shadowOpacity: 1, shadowRadius: 4, shadowOffset: { width: 0, height: 0 } }, haloGlow: { shadowOpacity: 0.8, shadowRadius: 10, shadowOffset: { width: 0, height: 0 } }, glowArea: { margin: -30, padding: 30 } });
 let closure_18 = { code: "(function BadgeUnlockAnimationTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };
 let closure_19 = { code: "(function BadgeUnlockAnimationTsx2(){let[fillOpacity]=this.__closure;return{opacity:fillOpacity.get()};})" };
@@ -336,7 +336,7 @@ export default function BadgeUnlockAnimation(badge) {
   const tmp2Result14 = require("module_1652");
   FALLBACK_BADGE_COLOR = require("useBadgeColor").useBadgeColor(badgeUnlockArt.rasterUrl);
   if (FALLBACK_BADGE_COLOR == null) {
-    FALLBACK_BADGE_COLOR = tmp2(11622).FALLBACK_BADGE_COLOR;
+    FALLBACK_BADGE_COLOR = tmp2(11631).FALLBACK_BADGE_COLOR;
   }
   const items5 = [FALLBACK_BADGE_COLOR];
   const memo = noop.useMemo(() => ({ fill: FALLBACK_BADGE_COLOR }), items5);
@@ -543,7 +543,7 @@ export default function BadgeUnlockAnimation(badge) {
     items14[1] = pulseHidden;
     obj7.style = items14;
     let obj8 = { ref, artboard: "Mobile", dataBinding: memo };
-    obj7.children = stateFromStores(tmp2(5261).BadgeUnlockPulseRive, obj8);
+    obj7.children = stateFromStores(tmp2(5263).BadgeUnlockPulseRive, obj8);
     tmp55Result = tmp55(View, obj7);
   }
   const items15 = [tmp55Result, ];

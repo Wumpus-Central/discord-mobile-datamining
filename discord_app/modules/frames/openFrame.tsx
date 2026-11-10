@@ -1,13 +1,13 @@
-// === Module 11894: openFrame ===
+// === Module 11903: openFrame ===
 
-// Module 11894 (openFrame)
+// Module 11903 (openFrame)
 import router_utils from "router_utils" /* 1099 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5799 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11061 */;
-import FramesStore from "FramesStore" /* 6901 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5801 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11070 */;
+import FramesStore from "FramesStore" /* 6904 */;
 
 require = fn;
-const FramesConstants = fn(6902);
+const FramesConstants = fn(6905);
 ({ MAIN_SURFACE: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
 const Routes = fn(1072).Routes;
 const size = fn(2);
@@ -34,6 +34,6 @@ export default function openFrame(arg0) {
     return obj8;
   }
 };
-export function shouldOpenAppChannel(id) {
-  return null == FramesStore.getFrame(hasOwnProperty(id, surface));
+export function shouldOpenAppChannel(View) {
+  return null == FramesStore.getFrame(hasOwnProperty(View, surface));
 }

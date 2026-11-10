@@ -1,22 +1,22 @@
-// === Module 10855: ThemedGradient ===
+// === Module 10864: ThemedGradient ===
 
-// Module 10855 (ThemedGradient)
+// Module 10864 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import ColorUtils from "ColorUtils" /* 5137 */;
-import utils_ColorDefault from "utils/Color" /* 5138 */;
-import shared from "shared" /* 5147 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5308 */;
-import GuildThemePresets from "GuildThemePresets" /* 5311 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5313 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5368 */;
-import useThemeDefault from "useTheme" /* 5369 */;
-import LinearGradientDefault from "LinearGradient" /* 5715 */;
+import ColorUtils from "ColorUtils" /* 5139 */;
+import utils_ColorDefault from "utils/Color" /* 5140 */;
+import shared from "shared" /* 5149 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5310 */;
+import GuildThemePresets from "GuildThemePresets" /* 5313 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5315 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5370 */;
+import useThemeDefault from "useTheme" /* 5371 */;
+import LinearGradientDefault from "LinearGradient" /* 5717 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5164 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5166 */;
 
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
@@ -349,8 +349,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5715), obj);
-    const tmp2Result = reduced(5715);
+    tmp10Result = closure_6(reduced(5717), obj);
+    const tmp2Result = reduced(5717);
   }
   return tmp10Result;
 }
@@ -387,7 +387,7 @@ function ActiveGuildThemeGradient(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_8 = createStyles.createStyles({ softenGradient: { flex: 1 }, linearGradient: { flex: 1 }, absolute: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 } });
 let angleCenter = { x: 0.5, y: 0.5 };
 let c10 = 0.5;

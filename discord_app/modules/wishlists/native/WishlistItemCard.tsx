@@ -1,9 +1,9 @@
-// === Module 14688: WishlistItemCard ===
+// === Module 14714: WishlistItemCard ===
 
-// Module 14688 (WishlistItemCard)
-import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 14689 */;
-import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 14691 */;
-import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 14692 */;
+// Module 14714 (WishlistItemCard)
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 14715 */;
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 14717 */;
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 14718 */;
 import noop from "module_19" /* 19 */;
 
 const SKUProductLines = fn(1072).SKUProductLines;

@@ -1,10 +1,10 @@
-// === Module 9755: collection_page_marketing_block ===
+// === Module 9761: collection_page_marketing_block ===
 
-// Module 9755 (collection_page_marketing_block)
+// Module 9761 (collection_page_marketing_block)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9721 */;
-import cta_button from "cta_button" /* 9723 */;
-import theme_aware_asset from "theme_aware_asset" /* 9731 */;
+import localized_string from "localized_string" /* 9727 */;
+import cta_button from "cta_button" /* 9729 */;
+import theme_aware_asset from "theme_aware_asset" /* 9737 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

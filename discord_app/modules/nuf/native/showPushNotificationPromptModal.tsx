@@ -1,9 +1,9 @@
-// === Module 18378: showPushNotificationPromptModal ===
+// === Module 18407: showPushNotificationPromptModal ===
 
-// Module 18378 (showPushNotificationPromptModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14207 */;
-import NUFConstants from "NUFConstants" /* 14513 */;
+// Module 18407 (showPushNotificationPromptModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6801 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14233 */;
+import NUFConstants from "NUFConstants" /* 14539 */;
 import size from "module_2" /* 2 */;
 
 const PermissionStateType = PushNotificationPermissionStore.PermissionStateType;
@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/nuf/native/showPushNotification
 
 export function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
-  ModalActionCreatorsDefault.pushLazy(onComplete(2118)(18379, dependencyMap.paths), {
+  ModalActionCreatorsDefault.pushLazy(onComplete(2118)(18408, dependencyMap.paths), {
     onComplete: function closeModal() {
       ModalActionCreatorsDefault.popWithKey(closure_4);
       onComplete();
@@ -24,5 +24,5 @@ export function showPushNotificationPromptModal(onComplete) {
       onComplete();
     }
   };
-  const result = onComplete(14210).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+  const result = onComplete(14236).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
 }

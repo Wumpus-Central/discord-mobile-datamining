@@ -1,9 +1,9 @@
-// === Module 20065: WalletIcon ===
+// === Module 20093: WalletIcon ===
 
-// Module 20065 (WalletIcon)
+// Module 20093 (WalletIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod20066 from "module_20066" /* 20066 */;
+import BaseIconImage from "BaseIconImage" /* 5843 */;
+import _mod20094 from "module_20094" /* 20094 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function WalletIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod20066, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod20094, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,25 +1,25 @@
-// === Module 19006: GuildSettingsModalMembersWithTabs ===
+// === Module 19035: GuildSettingsModalMembersWithTabs ===
 
-// Module 19006 (GuildSettingsModalMembersWithTabs)
+// Module 19035 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5174 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7503 */;
-import ContextMenu from "ContextMenu" /* 9996 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 19007 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 19008 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 19010 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 19015 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5176 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7506 */;
+import ContextMenu from "ContextMenu" /* 10002 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 19036 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 19037 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 19039 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 19044 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import PermissionStore from "PermissionStore" /* 5072 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import PermissionStore from "PermissionStore" /* 5074 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { flex: 1 }, tabContainer: { marginTop: 12, minHeight: 32 } };
 let closure_10 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -117,12 +117,12 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: num2(9180), accessibilityLabel: null, ref: null };
+        const obj = { source: num2(9186), accessibilityLabel: null, ref: null };
         const intl = guildId(1113).intl;
         obj.accessibilityLabel = intl.string(guildId(1113).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_8(guildId(7630).HeaderActionButton, obj);
+        return closure_1_8(guildId(7633).HeaderActionButton, obj);
       }
     });
   }, items5);

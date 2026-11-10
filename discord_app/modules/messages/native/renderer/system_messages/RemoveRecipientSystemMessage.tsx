@@ -1,12 +1,12 @@
-// === Module 8506: RemoveRecipientSystemMessage ===
+// === Module 8512: RemoveRecipientSystemMessage ===
 
-// Module 8506 (RemoveRecipientSystemMessage)
+// Module 8512 (RemoveRecipientSystemMessage)
 import util from "util" /* 1113 */;
-import ChannelRecord from "ChannelRecord" /* 4993 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8489 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8491 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8493 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
+import ChannelRecord from "ChannelRecord" /* 4995 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8493 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8495 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8497 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
 import UserStore from "UserStore" /* 1385 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 19113: SmartSearchResults ===
+// === Module 19142: SmartSearchResults ===
 
-// Module 19113 (SmartSearchResults)
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14142 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14144 */;
-import SmartSearchCitation from "SmartSearchCitation" /* 19115 */;
+// Module 19142 (SmartSearchResults)
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14168 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14170 */;
+import SmartSearchCitation from "SmartSearchCitation" /* 19144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_PRESENTED_CITATIONS = fn(14122).MAX_PRESENTED_CITATIONS;
+const MAX_PRESENTED_CITATIONS = fn(14148).MAX_PRESENTED_CITATIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
@@ -45,7 +45,7 @@ export function SmartSearchResults(smartSearchQuery) {
   const effect = memo.useEffect(() => {
     SmartSearchAnalyticsManagerDefault.setAnswer({ smartSearchQuery, answerText: entry.answerText, presentedCitations: memo, hasKeywordResults }, SearchSessionAnalyticsManagerDefault);
     return () => {
-      hasKeywordResults(14144).setAnswer(null, hasKeywordResults(14142));
+      hasKeywordResults(14170).setAnswer(null, hasKeywordResults(14168));
     };
   }, items2);
   let obj = { children: null };

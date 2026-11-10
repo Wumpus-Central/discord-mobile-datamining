@@ -1,6 +1,6 @@
-// === Module 5871: MobileNativeUpdateConstants ===
+// === Module 5873: MobileNativeUpdateConstants ===
 
-// Module 5871 (MobileNativeUpdateConstants)
+// Module 5873 (MobileNativeUpdateConstants)
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import hooks from "module_2166" /* 2166 */;
 

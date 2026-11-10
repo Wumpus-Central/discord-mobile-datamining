@@ -1,11 +1,11 @@
-// === Module 13668: CheckpointStore ===
+// === Module 13681: CheckpointStore ===
 
-// Module 13668 (CheckpointStore)
+// Module 13681 (CheckpointStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6243 */;
-import CheckpointTrait from "CheckpointTrait" /* 6244 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6245 */;
+import CheckpointTrait from "CheckpointTrait" /* 6246 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -17,9 +17,10 @@ obj = {};
 let c7 = null;
 let c8 = null;
 let c9 = null;
+let c10 = false;
 let INIT = obj.INIT;
-let c11 = null;
-let c12 = false;
+let c12 = null;
+let c13 = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class CheckpointStore extends PersistedStore {
 }
@@ -65,6 +66,12 @@ Object.defineProperty(prototype, "character", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "compactAssets", {
+  get: function compactAssets() {
+    return c10;
+  },
+  set: undefined
+});
 Object.defineProperty(prototype, "fetchState", {
   get: function fetchState() {
     return INIT;
@@ -79,7 +86,7 @@ Object.defineProperty(prototype, "isFetching", {
 });
 Object.defineProperty(prototype, "isSaving", {
   get: function isSaving() {
-    return c12;
+    return c13;
   },
   set: undefined
 });
@@ -91,8 +98,8 @@ Object.defineProperty(prototype, "progress", {
 });
 Object.defineProperty(prototype, "selectedCharacterTraits", {
   get: function selectedCharacterTraits() {
-    let tmp = c11;
-    if (c11 == null) {
+    let tmp = c12;
+    if (c12 == null) {
       tmp = c9;
     }
     if (tmp == null) {
@@ -135,7 +142,7 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     INIT = obj.FETCHING;
   },
   CHECKPOINT_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    ({ stats: c7, globalStats: c8, character: c9 } = arg0);
+    ({ stats: c7, globalStats: c8, character: c9, compactAssets: c10 } = arg0);
     INIT = obj.SUCCESS;
     if (null == c9) {
       if (null != obj.progress) {
@@ -173,19 +180,19 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     INIT = obj.ERROR;
   },
   CHECKPOINT_COMPLETE_START: function handleCompleteStart() {
-    c12 = true;
+    c13 = true;
   },
   CHECKPOINT_COMPLETE_SUCCESS: function handleCompleteSuccess(character) {
     character = character.character;
-    c11 = null;
-    c12 = false;
+    c12 = null;
+    c13 = false;
   },
   CHECKPOINT_COMPLETE_FAILED: function handleCompleteFailed() {
-    c12 = false;
+    c13 = false;
   },
   CHECKPOINT_RESET_SUCCESS: function handleResetSuccess() {
     c9 = null;
-    c11 = null;
+    c12 = null;
     obj.progress = null;
   },
   CHECKPOINT_SELECT_CHARACTER_TRAIT: function handleSelectCharacterTrait(trait) {
@@ -209,8 +216,8 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
   },
   CHECKPOINT_SAVE_PROGRESS: function handleSaveProgress(stage) {
     stage = stage.stage;
-    let tmp = c11;
-    if (c11 == null) {
+    let tmp = c12;
+    if (c12 == null) {
       tmp = c9;
     }
     if (tmp == null) {
@@ -234,9 +241,10 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     c7 = null;
     c8 = null;
     c9 = null;
+    c10 = false;
     INIT = obj.INIT;
-    c11 = null;
-    c12 = false;
+    c12 = null;
+    c13 = false;
   }
 });
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 11717: conjureSharedProjectHome ===
+// === Module 11726: conjureSharedProjectHome ===
 
-// Module 11717 (conjureSharedProjectHome)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6900 */;
+// Module 11726 (conjureSharedProjectHome)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6903 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/share/conjureSharedProjectHome.tsx");

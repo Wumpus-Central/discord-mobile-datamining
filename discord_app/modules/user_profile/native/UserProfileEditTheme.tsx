@@ -1,10 +1,10 @@
-// === Module 16808: UserProfileEditTheme ===
+// === Module 16835: UserProfileEditTheme ===
 
-// Module 16808 (UserProfileEditTheme)
+// Module 16835 (UserProfileEditTheme)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import _modDef5983 from "module_5983" /* 5983 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import _modDef5985 from "module_5985" /* 5985 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, labelRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, overflowMenu: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.overflowMenu = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
@@ -57,7 +57,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       tmp4 = onChangeColors;
     }
     onProfileThemeColorsChanged(tmp4);
-    tmp = _modDef5983;
+    tmp = _modDef5985;
   }, items);
   require("useOpenThemeColorPickerActionSheet")({ primaryColor, secondaryColor, avatarColors, onChangeColors });
   let tmp15Result = null;
@@ -75,7 +75,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl2 = onProfileThemeColorsChanged(tmp3[11]).intl;
         obj5.accessibilityLabel = intl2.string(onProfileThemeColorsChanged(tmp3[11]).t["+1H47t"]);
         obj5.onPress = function handleOverflowMenuPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16810, dependencyMap.paths), "Profile Theme", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16837, dependencyMap.paths), "Profile Theme", {
             onResetTheme() {
               return onChangeColors([null, null]);
             }

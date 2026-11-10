@@ -1,6 +1,6 @@
-// === Module 13752: ? ===
+// === Module 13771: ? ===
 
-// Module 13752
+// Module 13771
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_04_piercings.webp.js");

@@ -1,6 +1,6 @@
-// === Module 6792: AgeNoticeConstants ===
+// === Module 6794: AgeNoticeConstants ===
 
-// Module 6792 (AgeNoticeConstants)
+// Module 6794 (AgeNoticeConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/AgeNoticeConstants.tsx");

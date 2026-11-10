@@ -1,8 +1,8 @@
-// === Module 17385: QuestHomeOpenTriggerPoint ===
+// === Module 17412: QuestHomeOpenTriggerPoint ===
 
-// Module 17385 (QuestHomeOpenTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 5355 */;
-import Helpers from "Helpers" /* 10797 */;
+// Module 17412 (QuestHomeOpenTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 5357 */;
+import Helpers from "Helpers" /* 10806 */;
 import size from "module_2" /* 2 */;
 
 const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.QUEST_HOME_OPEN, { location: "open quest home" });

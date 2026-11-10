@@ -1,12 +1,12 @@
-// === Module 12405: ConjureProjectHeaderTitle ===
+// === Module 12420: ConjureProjectHeaderTitle ===
 
-// Module 12405 (ConjureProjectHeaderTitle)
+// Module 12420 (ConjureProjectHeaderTitle)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4026 from "module_4026" /* 4026 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import Pressables from "Pressables" /* 7043 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12285 */;
+import _modDef4028 from "module_4028" /* 4028 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import Pressables from "Pressables" /* 7046 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12294 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { row: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, titles: { flex: 1, justifyContent: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function ConjureProjectHeaderTitle(project) {
   if (null != project) {
     const obj2 = { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = util.intl;
-    obj2.accessibilityLabel = intl.string(_modDef4026.FzfmQ8);
+    obj2.accessibilityLabel = intl.string(_modDef4028.FzfmQ8);
     const obj3 = { project, size: "list" };
     obj2.children = React4(ConjureProjectIconDefault, obj3);
     tmp4 = React4(Pressables.PressableOpacity, obj2);

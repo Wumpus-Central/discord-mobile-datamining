@@ -1,12 +1,12 @@
-// === Module 14651: useConjureAppChannelSheet ===
+// === Module 14677: useConjureAppChannelSheet ===
 
-// Module 14651 (useConjureAppChannelSheet)
+// Module 14677 (useConjureAppChannelSheet)
 import util from "util" /* 1113 */;
-import _modDef4026 from "module_4026" /* 4026 */;
-import UserUtils from "UserUtils" /* 5194 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 13005 */;
+import _modDef4028 from "module_4028" /* 4028 */;
+import UserUtils from "UserUtils" /* 5196 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 13019 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -69,7 +69,7 @@ export default function useConjureAppChannelSheet(guild_id, arg1) {
       if (null != creator) {
         const intl = util.intl;
         const obj3 = { name: UserUtils.getName(tmp6) };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef4026["6/x9LD"], obj3);
+        formatToPlainStringResult = intl.formatToPlainString(_modDef4028["6/x9LD"], obj3);
       }
       obj.subtitle = formatToPlainStringResult;
       tmp2 = obj;

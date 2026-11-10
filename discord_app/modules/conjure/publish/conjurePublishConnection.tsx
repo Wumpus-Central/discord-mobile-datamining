@@ -1,16 +1,16 @@
-// === Module 11083: conjurePublishConnection ===
+// === Module 11092: conjurePublishConnection ===
 
-// Module 11083 (conjurePublishConnection)
+// Module 11092 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10995 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 11055 */;
-import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 11056 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11075 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11088 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 11064 */;
+import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 11065 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11084 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11097 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10987 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10996 */;
 
 const require = globalThis.__r;
 
@@ -40,7 +40,7 @@ function rejectPendingPublishOptions(arg0, arg1) {
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
-let set = new Set(fn(10994).CONJURE_PUBLISH_PROGRESS_STAGES);
+let set = new Set(fn(11003).CONJURE_PUBLISH_PROGRESS_STAGES);
 const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map3 = new Map();
 const size = fn(2);
@@ -155,7 +155,7 @@ export function failPendingSafetyRecheck(projectId) {
                             closure_2_7.delete(closure_1_0);
                             if ("pending" === obj2.status) {
                               let _setTimeout = setTimeout;
-                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F100184 */ function() { ... }, 180000));
+                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F100319 */ function() { ... }, 180000));
                             }
                             let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
                             closure_2_1(closure_2_2[4]).dispatch(obj3);
@@ -270,7 +270,7 @@ export function requestConjureSafetyRecheck(projectId) {
                             closure_2_7.delete(closure_1_0);
                             if ("pending" === obj2.status) {
                               let _setTimeout = setTimeout;
-                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F100184 */ function() { ... }, 180000));
+                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F100319 */ function() { ... }, 180000));
                             }
                             let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
                             closure_2_1(closure_2_2[4]).dispatch(obj3);
@@ -399,7 +399,7 @@ export const publishStepHandlers = {
                                 closure_2_7.delete(closure_1_0);
                                 if ("pending" === obj2.status) {
                                   let _setTimeout = setTimeout;
-                                  let result = closure_2_7.set(closure_1_0, setTimeout(/* F100184 */ function() { ... }, 180000));
+                                  let result = closure_2_7.set(closure_1_0, setTimeout(/* F100319 */ function() { ... }, 180000));
                                 }
                                 let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
                                 closure_2_1(closure_2_2[4]).dispatch(obj3);

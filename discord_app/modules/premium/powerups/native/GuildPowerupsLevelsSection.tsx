@@ -1,10 +1,10 @@
-// === Module 14380: GuildPowerupsLevelsSection ===
+// === Module 14406: GuildPowerupsLevelsSection ===
 
-// Module 14380 (GuildPowerupsLevelsSection)
+// Module 14406 (GuildPowerupsLevelsSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import MarketingCardsScroller from "MarketingCardsScroller" /* 14381 */;
-import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 14382 */;
+import MarketingCardsScroller from "MarketingCardsScroller" /* 14407 */;
+import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 14408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj3 = { cardContainer: { width: 250, marginEnd: PX_16, flex: 1 }, scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 }, scrollerContent: null };
 const obj4 = { height: num, paddingBottom: nativeDefault.space.PX_8 };
 obj3.scrollerContent = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -45,8 +45,8 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj2.title = intl.string(listings(2696)["TXY/b0"]);
   const intl2 = util.intl;
   obj2.description = intl2.string(listings(2696).aJv4PB);
-  const items1 = [closure_5(listings(14369), obj2), ];
-  const tmp3 = listings(14369);
+  const items1 = [closure_5(listings(14395), obj2), ];
+  const tmp3 = listings(14395);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

@@ -1,6 +1,6 @@
-// === Module 9997: ContextMenuState ===
+// === Module 10003: ContextMenuState ===
 
-// Module 9997 (ContextMenuState)
+// Module 10003 (ContextMenuState)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const module_560 = fn(560);
 const obj3 = module_560.create(() => ({ menu: null }));
-let items = [{ code: "(function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){let[INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,scheduleOnRN,triggerHapticFeedback,HapticFeedbackTypes]=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);})" }, 2, 3, 1, 0, 4, fn(1705).scheduleOnRN, fn(5376).triggerHapticFeedback, fn(5376).HapticFeedbackTypes];
+let items = [{ code: "(function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){let[INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,scheduleOnRN,triggerHapticFeedback,HapticFeedbackTypes]=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);})" }, 2, 3, 1, 0, 4, fn(1705).scheduleOnRN, fn(5378).triggerHapticFeedback, fn(5378).HapticFeedbackTypes];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;

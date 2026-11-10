@@ -1,6 +1,6 @@
-// === Module 6428: ? ===
+// === Module 6430: ? ===
 
-// Module 6428
+// Module 6430
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/mech_ultraviolet.png.js");

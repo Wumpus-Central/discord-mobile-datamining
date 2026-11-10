@@ -1,9 +1,9 @@
-// === Module 16651: merged15 ===
+// === Module 16678: merged15 ===
 
-// Module 16651 (merged15)
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7657 */;
-import RPCErrorDefault from "RPCError" /* 9414 */;
-import validateTransportType from "validateTransportType" /* 16653 */;
+// Module 16678 (merged15)
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7660 */;
+import RPCErrorDefault from "RPCError" /* 9420 */;
+import validateTransportType from "validateTransportType" /* 16680 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -265,7 +265,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(6583);
+let Constants = fn(6585);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: closure_6, SKUTypes: metroImportDefault } = Constants);
@@ -276,7 +276,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(16616);
+let CONTEXT_MENU_ICON_NAMES = fn(16643);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -292,7 +292,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(16616);
+CONTEXT_MENU_ICON_NAMES = fn(16643);
 let obj7 = {
   scope: null,
   handler(arg0) {

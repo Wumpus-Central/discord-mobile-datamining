@@ -1,15 +1,15 @@
-// === Module 17052: ExplicitMediaFiltersGuildsSetting ===
+// === Module 17079: ExplicitMediaFiltersGuildsSetting ===
 
-// Module 17052 (ExplicitMediaFiltersGuildsSetting)
+// Module 17079 (ExplicitMediaFiltersGuildsSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7534 */;
-import useUserIsTeen from "useUserIsTeen" /* 8439 */;
-import SettingsConstants from "SettingsConstants" /* 8503 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8758 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 17047 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 17048 */;
-import SettingBuilders from "SettingBuilders" /* 11685 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7537 */;
+import useUserIsTeen from "useUserIsTeen" /* 8443 */;
+import SettingsConstants from "SettingsConstants" /* 8507 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8764 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 17074 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 17075 */;
+import SettingBuilders from "SettingBuilders" /* 11694 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

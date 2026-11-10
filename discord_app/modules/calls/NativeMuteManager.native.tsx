@@ -1,11 +1,11 @@
-// === Module 6046: NativeMuteManager ===
+// === Module 6048: NativeMuteManager ===
 
-// Module 6046 (NativeMuteManager)
+// Module 6048 (NativeMuteManager)
 import LoggerDefault from "Logger" /* 3 */;
 import inject from "inject" /* 2132 */;
-import Timers from "Timers" /* 4984 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6047 */;
-import AudioRouteStore from "AudioRouteStore" /* 5913 */;
+import Timers from "Timers" /* 4986 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6049 */;
+import AudioRouteStore from "AudioRouteStore" /* 5915 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
@@ -83,7 +83,7 @@ let closure_129_0 = obj;
 obj.ignoreForNativeUnmute = false;
 obj.needToUnmuteNative = false;
 obj.ignoreForAudioRouteChange = false;
-let timeout = new fn(4984).Timeout();
+let timeout = new fn(4986).Timeout();
 obj.audioRouteChangeIgnoreTimer = timeout;
 obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
 obj.handleAudioRouteChange = function handleAudioRouteChange() {

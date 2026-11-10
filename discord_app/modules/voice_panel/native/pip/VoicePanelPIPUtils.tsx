@@ -1,24 +1,24 @@
-// === Module 19485: VoicePanelPIPUtils ===
+// === Module 19514: VoicePanelPIPUtils ===
 
-// Module 19485 (VoicePanelPIPUtils)
+// Module 19514 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 575 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5800 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6772 */;
-import participantHasVideo from "participantHasVideo" /* 11368 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5802 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6774 */;
+import participantHasVideo from "participantHasVideo" /* 11377 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6901 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6771 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const VoicePanelConstants = fn(11363);
+const VoicePanelConstants = fn(11372);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(19486);
+const VoicePanelPIPConstants = fn(19515);
 ({ VoicePanelPIPModes: metroImportDefault, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
-const ParticipantTypes = fn(5805).ParticipantTypes;
-const MorphablePanelConstants = fn(11364);
+const ParticipantTypes = fn(5807).ParticipantTypes;
+const MorphablePanelConstants = fn(11373);
 ({ MIN_PIP_TOSS_VELOCITY, PIP_WINDOW_OFFSET } = MorphablePanelConstants);
 let set = new Set();
 let items = [{ code: "(function clamp_VoicePanelPIPUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);})" }];

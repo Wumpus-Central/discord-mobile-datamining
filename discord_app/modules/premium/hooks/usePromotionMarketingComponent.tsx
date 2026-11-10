@@ -1,11 +1,11 @@
-// === Module 15588: usePromotionMarketingComponent ===
+// === Module 15616: usePromotionMarketingComponent ===
 
-// Module 15588 (usePromotionMarketingComponent)
-import constants from "constants" /* 9756 */;
+// Module 15616 (usePromotionMarketingComponent)
+import constants from "constants" /* 9762 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserOfferStore from "UserOfferStore" /* 7706 */;
-import PromotionsStore from "PromotionsStore" /* 9714 */;
+import UserOfferStore from "UserOfferStore" /* 7709 */;
+import PromotionsStore from "PromotionsStore" /* 9720 */;
 
 require = fn;
 function usePromotionMarketingComponentData(arg0) {

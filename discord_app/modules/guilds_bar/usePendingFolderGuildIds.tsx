@@ -1,9 +1,9 @@
-// === Module 13463: usePendingFolderGuildIds ===
+// === Module 13476: usePendingFolderGuildIds ===
 
-// Module 13463 (usePendingFolderGuildIds)
+// Module 13476 (usePendingFolderGuildIds)
 import initialize from "initialize" /* 504 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5172 */;
-import GuildStore from "GuildStore" /* 5011 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5174 */;
+import GuildStore from "GuildStore" /* 5013 */;
 
 require = fn;
 const size = fn(2);

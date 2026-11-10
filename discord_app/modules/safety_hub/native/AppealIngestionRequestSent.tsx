@@ -1,20 +1,20 @@
-// === Module 13577: AppealIngestionRequestSent ===
+// === Module 13590: AppealIngestionRequestSent ===
 
-// Module 13577 (AppealIngestionRequestSent)
-import FastImageDefault from "FastImage" /* 5842 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13572 */;
-import _modDef13578 from "module_13578" /* 13578 */;
+// Module 13590 (AppealIngestionRequestSent)
+import FastImageDefault from "FastImage" /* 5844 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13585 */;
+import _modDef13591 from "module_13591" /* 13591 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8039);
+const SafetyHubConstants = fn(8043);
 ({ SafetyHubAnalyticsActions: closure_4, SafetyHubLinks: hasOwnProperty } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, padding: 8 }, actionsHeader: { marginTop: 31, marginBottom: 16 }, checkboxPng: { width: 86, height: 78.33, marginLeft: -2, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionRequestSent.tsx");
@@ -30,7 +30,7 @@ export default function AppealIngestionRequestSent() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  obj4.source = _modDef13578;
+  obj4.source = _modDef13591;
   obj4.style = tmp.checkboxPng;
   items = [closure_6(FastImageDefault, obj4), closure_6(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj5 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };

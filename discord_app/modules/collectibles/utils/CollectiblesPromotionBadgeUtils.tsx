@@ -1,8 +1,8 @@
-// === Module 15302: CollectiblesPromotionBadgeUtils ===
+// === Module 15327: CollectiblesPromotionBadgeUtils ===
 
-// Module 15302 (CollectiblesPromotionBadgeUtils)
-import StorefrontTypes from "StorefrontTypes" /* 7475 */;
-import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9568 */;
+// Module 15327 (CollectiblesPromotionBadgeUtils)
+import StorefrontTypes from "StorefrontTypes" /* 7478 */;
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9574 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromotionBadgeUtils.tsx");

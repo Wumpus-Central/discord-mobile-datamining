@@ -1,15 +1,15 @@
-// === Module 18389: MainTabsNavigatorPanel ===
+// === Module 18418: MainTabsNavigatorPanel ===
 
-// Module 18389 (MainTabsNavigatorPanel)
+// Module 18418 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
-import RootNavigationRef from "RootNavigationRef" /* 5315 */;
-import ChatInputUtils from "ChatInputUtils" /* 5323 */;
-import transitionToChannel from "transitionToChannel" /* 5885 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 18390 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18391 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 18396 */;
+import RootNavigationRef from "RootNavigationRef" /* 5317 */;
+import ChatInputUtils from "ChatInputUtils" /* 5325 */;
+import transitionToChannel from "transitionToChannel" /* 5887 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7552 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18419 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 18420 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 18425 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ const Constants = fn(1072);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -49,18 +49,16 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
   closure_7 = undefined;
   let first2;
   let handleExit;
-  first3 = undefined;
-  logger = undefined;
-  c13 = undefined;
-  c14 = undefined;
-  closure_16 = undefined;
+  c11 = undefined;
+  let logger;
+  closure_13 = undefined;
   let translateX;
   let movePanel;
   let maxWidth;
   let isDraggingRef;
   let obj5;
   let callback4;
-  let tmp = c13();
+  let tmp = closure_13();
   const navigation = require("Link").useNavigation();
   _require = navigation;
   let obj = require("Link");
@@ -86,11 +84,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(18390);
+        obj = obj(18420);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(5323).dismissKeyboard();
-        const objResult = obj(5323);
+        obj(5325).dismissKeyboard();
+        const objResult = obj(5325);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;
@@ -141,22 +139,49 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       _undefined.pop(num2);
     }
   }, items2);
-  [first3, logger] = noop.useState(() => useChannelScreensFromNavigation.isActiveTabsGuilds(_undefined.getState()));
+  closure_129_0 = navigation;
+  closure_129_2 = undefined;
+  closure_129_3 = undefined;
+  [first3, closure_129_2] = noop.useState(() => useChannelScreensFromNavigation.isActiveTabsGuilds(_undefined.getState()));
+  closure_129_1 = first3;
   const tmp8 = require("useChatWidth")();
-  [tmp24, c13] = noop.useState(() => first3);
+  [tmp24, closure_129_3] = noop.useState(() => c1);
   const items3 = [navigation];
   const effect1 = obj3.useEffect(() => {
-    function handleStateChange(data) {
-      logger(handleStateChange(drawerWidth[15]).isActiveTabsGuilds(data.data.state));
+    const rootNavigationRef = _undefined(drawerWidth[9]).getRootNavigationRef();
+    current = undefined;
+    if (rootNavigationRef != null) {
+      current = rootNavigationRef.current;
     }
-    handleStateChange.addListener("state", handleStateChange);
+    function handleStateChange() {
+      addListenerResult1(state(drawerWidth[8]).isActiveTabsGuilds(state.getState()));
+    }
+    _undefined = _undefined.addListener("state", handleStateChange);
+    let addListenerResult;
+    if (current != null) {
+      addListenerResult = current.addListener("state", handleStateChange);
+    }
+    c1 = addListenerResult;
+    let addListenerResult1;
+    if (current != null) {
+      addListenerResult1 = current.addListener("ready", handleStateChange);
+    }
+    const obj = _undefined(drawerWidth[9]);
+    const obj2 = _undefined;
+    addListenerResult1(_undefined(drawerWidth[8]).isActiveTabsGuilds(obj2.getState()));
     return () => {
-      handleStateChange.removeListener("state", handleStateChange);
+      state();
+      if (addListenerResult != null) {
+        addListenerResult();
+      }
+      if (addListenerResult1 != null) {
+        addListenerResult1();
+      }
     };
   }, items3);
   const items4 = [first3];
   const effect2 = obj3.useEffect(() => {
-    _undefined2(first3);
+    ref(c1);
   }, items4);
   require("MainTabsBackgroundChat");
   let tmp29 = isChatBesideChannelList;
@@ -167,13 +192,13 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
     }
     tmp29 = tmp30;
   }
-  c14 = tmp29;
-  noop.useRef(false);
+  c11 = tmp29;
+  logger = obj3.useRef(false);
   const items5 = [navigation, handleExit];
   const callback1 = obj3.useCallback((arg0) => {
     closure_6(arg0);
     closure_7(arg0);
-    closure_15.current = false;
+    closure_12.current = false;
     if (arg0) {
       if (null != ref2.current) {
         if ("channel" !== _undefined.getState().routes[_undefined.getState(_undefined).index].name) {
@@ -214,14 +239,14 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
   const callback3 = obj3.useCallback(() => {
     const ComponentDispatch = _undefined(drawerWidth[19]).ComponentDispatch;
     ComponentDispatch.dispatch(first2.BOTTOM_CHANNEL_SCREEN_DRAG_START);
-    _undefined(drawerWidth[14]).dismissKeyboard();
+    _undefined(drawerWidth[16]).dismissKeyboard();
   }, []);
   if (tmp34) {
-    tmp34 = first2.type !== tmp2(tmp3[15]).ChannelScreenType.FALLBACK_RENDERED;
+    tmp34 = first2.type !== tmp2(tmp3[8]).ChannelScreenType.FALLBACK_RENDERED;
   }
-  closure_16 = tmp34;
+  closure_13 = tmp34;
   let tmp36 = tmp29;
-  const tmp23 = _slicedToArray(noop.useState(() => first3), 2);
+  const tmp23 = _slicedToArray(noop.useState(() => c1), 2);
   if (tmp29) {
     tmp36 = isChatLockedOpen;
   }
@@ -255,7 +280,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
   obj5 = { handleExit, maxWidth, movePanel, screens: arr2, firstScreen: first2 };
   noop.useRef(obj5);
   const effect4 = obj3.useEffect(() => {
-    closure_22.current = obj5;
+    closure_19.current = obj5;
   });
   let type2;
   if (first2 != null) {
@@ -264,7 +289,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
   const items7 = [type2, translateX, isDraggingRef];
   const effect5 = obj3.useEffect(() => {
     if (!isDraggingRef.current) {
-      current = ref4.current;
+      current = ref3.current;
       ({ maxWidth, movePanel } = current);
       let type;
       ({ handleExit, screens } = current);
@@ -281,8 +306,8 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
         closure_6(tmp6);
         closure_7(tmp6);
       } else if (tmp6) {
-        if (ref3.current) {
-          ref3.current = false;
+        if (logger.current) {
+          logger.current = false;
           if (translateX.get() === maxWidth) {
             handleExit();
           }
@@ -301,7 +326,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
   }
   const items8 = [channelId];
   const effect6 = obj3.useEffect(() => {
-    const firstScreen = ref4.current.firstScreen;
+    const firstScreen = ref3.current.firstScreen;
     let type;
     if (firstScreen != null) {
       type = firstScreen.type;
@@ -316,7 +341,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
   }, items8);
   const items9 = [movePanel, tmp34];
   callback4 = obj3.useCallback(() => {
-    if (closure_16) {
+    if (closure_13) {
       movePanel(true, false, 0, false);
     }
   }, items9);
@@ -335,7 +360,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
     const items11 = [isChatLockedOpen, tmp29, maxWidth, translateX];
     const memo = obj3.useMemo(() => {
       let tmp = null;
-      if (c14) {
+      if (c11) {
         const obj = { translateX, maxWidth, isChatLockedOpen };
         tmp = closure_2_10(ChannelScreenAnimatedFrameDefault, obj);
       }
@@ -347,7 +372,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
     }
     const sharedValue = tmp2(tmp3[23]).useSharedValue(num3);
     const tmp2Result5 = tmp2(tmp3[23]);
-    const items12 = [c14, translateX, sharedValue];
+    const items12 = [translateX, translateX, sharedValue];
     _require = undefined;
     importDefault = undefined;
     [tmp56, tmp57, tmp58] = items12;
@@ -418,7 +443,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
     }
     items17[1] = tmp67Result;
     obj11.children = items17;
-    const items18 = [first3(tmp5(tmp3[23]).View, obj11), , ];
+    const items18 = [c11(tmp5(tmp3[23]).View, obj11), , ];
     let tmp67Result3 = null;
     if (flag) {
       tmp67Result3 = tmp67(tmp5(tmp3[33]), {});
@@ -457,17 +482,17 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
         tmp67Result4 = null;
         if (isChatLockedOpen) {
           const obj14 = { children: tmp67(tmp5(tmp3[35]), {}) };
-          tmp67Result4 = tmp67(tmp2(tmp3[16]).BackgroundChatPortal, obj14);
+          tmp67Result4 = tmp67(tmp2(tmp3[17]).BackgroundChatPortal, obj14);
         }
       }
     }
     items18[2] = tmp67Result4;
     obj10.children = items18;
-    obj9.children = first3(tmp2(tmp3[30]).SidebarCoachmarkOverlay, obj10);
+    obj9.children = c11(tmp2(tmp3[30]).SidebarCoachmarkOverlay, obj10);
     obj8.children = handleExit(first1, obj9);
     items14[1] = handleExit(tmp2(tmp3[29]).GestureDetector, obj8);
     obj6.children = items14;
-    return first3(tmp5(tmp3[26]).Provider, obj6);
+    return c11(tmp5(tmp3[26]).Provider, obj6);
   }
   tmp50 = !first1;
   const tmp5Result = require("useMainTabsPanelsGesture");

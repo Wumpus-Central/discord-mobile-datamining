@@ -1,18 +1,19 @@
-// === Module 14215: MultiAccountActionCreators ===
+// === Module 14241: MultiAccountActionCreators ===
 
-// Module 14215 (MultiAccountActionCreators)
+// Module 14241 (MultiAccountActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import TokenManagerAll from "TokenManager" /* 1098 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6795 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6797 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MultiAccountStore from "MultiAccountStore" /* 14211 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import MultiAccountStore from "MultiAccountStore" /* 14237 */;
 
 const require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
+({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const logger = new LoggerDefault("MultiAccountActionCreators");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/MultiAccountActionCreators.tsx");
@@ -185,11 +186,12 @@ export function switchAccount(id, switchSynchronously, CHOOSE_ACCOUNT) {
     let resolved = Promise.resolve();
   } else {
     let tmp4 = CHOOSE_ACCOUNT;
-    const obj6 = { type: "MULTI_ACCOUNT_SWITCH_START", targetUserId: id, location: null };
+    const obj6 = { type: "MULTI_ACCOUNT_SWITCH_START", targetUserId: id, location: null, lastChannelId: null };
     if (CHOOSE_ACCOUNT == null) {
       tmp4 = null;
     }
     obj6.location = tmp4;
+    obj6.lastChannelId = SelectedChannelStore.getCurrentlySelectedChannelId();
     DispatcherDefault.dispatch(obj6);
     resolved = AuthenticationActionCreatorsDefault.switchAccountToken(token, switchSynchronously);
     const tmp5Result = AuthenticationActionCreatorsDefault;

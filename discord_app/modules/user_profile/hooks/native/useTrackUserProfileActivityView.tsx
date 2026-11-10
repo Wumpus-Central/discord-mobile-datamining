@@ -1,8 +1,8 @@
-// === Module 15106: useTrackUserProfileActivityView ===
+// === Module 15132: useTrackUserProfileActivityView ===
 
-// Module 15106 (useTrackUserProfileActivityView)
+// Module 15132 (useTrackUserProfileActivityView)
 import _slicedToArray from "module_32" /* 32 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9571 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9577 */;
 
 const require = globalThis.__r;
 

@@ -1,6 +1,6 @@
-// === Module 16848: ? ===
+// === Module 16875: ? ===
 
-// Module 16848
+// Module 16875
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/user_profile/try_it_out/starlit_dream_banner.png.js");

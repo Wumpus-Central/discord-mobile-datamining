@@ -1,6 +1,6 @@
-// === Module 8045: ? ===
+// === Module 8049: ? ===
 
-// Module 8045
+// Module 8049
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ShieldSpotIllustration-1x.png.js");

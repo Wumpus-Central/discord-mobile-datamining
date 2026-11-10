@@ -1,6 +1,6 @@
-// === Module 8943: resolveSelectedIndex ===
+// === Module 8949: resolveSelectedIndex ===
 
-// Module 8943 (resolveSelectedIndex)
+// Module 8949 (resolveSelectedIndex)
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function resolveSelectedIndex_resolveSelectedIndexTsx1({offsetX:offsetX,pageSize:pageSize,maxIndex:maxIndex}){let[VIEWER_SETTLED_EPSILON_PX]=this.__closure;if(pageSize<=0||!Number.isFinite(offsetX)||maxIndex<0){return null;}const nearest=Math.max(0,Math.min(Math.round(offsetX/pageSize),maxIndex));if(Math.abs(offsetX-nearest*pageSize)>VIEWER_SETTLED_EPSILON_PX){return null;}return nearest;})" }, 1];

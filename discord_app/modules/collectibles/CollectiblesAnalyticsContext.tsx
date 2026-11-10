@@ -1,7 +1,7 @@
-// === Module 9543: CollectiblesAnalyticsContext ===
+// === Module 9549: CollectiblesAnalyticsContext ===
 
-// Module 9543 (CollectiblesAnalyticsContext)
-import useShallowObjectMemoDefault from "useShallowObjectMemo" /* 9544 */;
+// Module 9549 (CollectiblesAnalyticsContext)
+import useShallowObjectMemoDefault from "useShallowObjectMemo" /* 9550 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

@@ -1,6 +1,6 @@
-// === Module 10425: HorizontalAutocompleteWrapper ===
+// === Module 10431: HorizontalAutocompleteWrapper ===
 
-// Module 10425 (HorizontalAutocompleteWrapper)
+// Module 10431 (HorizontalAutocompleteWrapper)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -35,13 +35,14 @@ export default function HorizontalAutocompleteWrapper(channel) {
   _require = channel;
   const onPressAutocompleteItem = channel.onPressAutocompleteItem;
   importDefault = onPressAutocompleteItem;
-  autocompleteSelectionStart = undefined;
-  let callback;
+  let results;
+  keyExtractor = undefined;
   ({ style, text, selection } = channel);
   const horizontalAutocompleteResults = require("useHorizontalAutocompleteResults").useHorizontalAutocompleteResults({ channel, text, selection });
-  ({ results, autocompleteSelectionStart } = horizontalAutocompleteResults);
+  results = horizontalAutocompleteResults.results;
+  const autocompleteSelectionStart = horizontalAutocompleteResults.autocompleteSelectionStart;
   const query = horizontalAutocompleteResults.query;
-  const ref = query.useRef(null);
+  const ref = autocompleteSelectionStart.useRef(null);
   const first = results[0];
   let type;
   if (first != null) {
@@ -54,8 +55,19 @@ export default function HorizontalAutocompleteWrapper(channel) {
       current.scrollToOffset({ offset: 0, animated: false });
     }
   }, items);
-  const items1 = [onPressAutocompleteItem, autocompleteSelectionStart, query];
-  callback = obj2.useCallback((stopPropagation, arg1) => {
+  let items1 = [results];
+  const memo = obj2.useMemo(() => results.flatMap((type) => {
+    if (type.type === constants.USER) {
+      items = [type.user.id];
+      let items1 = items;
+    } else {
+      items1 = [];
+    }
+    return items1;
+  }), items1);
+  require("useVerifyMentionResults")(channel.guild_id, memo);
+  const items2 = [onPressAutocompleteItem, autocompleteSelectionStart, query];
+  keyExtractor = obj2.useCallback((stopPropagation, arg1) => {
     stopPropagation.stopPropagation();
     let num = autocompleteSelectionStart;
     if (autocompleteSelectionStart == null) {
@@ -66,72 +78,73 @@ export default function HorizontalAutocompleteWrapper(channel) {
       str = "";
     }
     _undefined2(arg1, num, str);
-  }, items1);
-  const items2 = [channel.guild_id, callback];
+  }, items2);
+  const items3 = [channel.guild_id, keyExtractor];
   let num = 0;
   const callback1 = obj2.useCallback((item) => {
     item = item.item;
     const type = item.type;
-    if (ref.USER === type) {
+    if (query.USER === type) {
       const obj2 = {};
       const merged = Object.assign(item);
       obj2.guildId = item.guild_id;
       obj2.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
-      return callback(_undefined2(autocompleteSelectionStart[4]).User, obj2);
-    } else if (ref.ROLE === type) {
+      return ref(_undefined2(results[5]).User, obj2);
+    } else if (query.ROLE === type) {
       const obj3 = {};
       const merged1 = Object.assign(item);
       obj3.guildId = item.guild_id;
       obj3.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
-      return callback(_undefined2(autocompleteSelectionStart[4]).Role, obj3);
-    } else if (ref.CHANNEL === type) {
+      return ref(_undefined2(results[5]).Role, obj3);
+    } else if (query.CHANNEL === type) {
       const obj4 = {};
       const merged2 = Object.assign(item);
       obj4.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
-      return callback(_undefined2(autocompleteSelectionStart[4]).Channel, obj4);
-    } else if (ref.EMOJI === type) {
+      return ref(_undefined2(results[5]).Channel, obj4);
+    } else if (query.EMOJI === type) {
       const obj = {};
       const merged3 = Object.assign(item);
       obj.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
-      return callback(_undefined2(autocompleteSelectionStart[4]).Emoji, obj);
+      return ref(_undefined2(results[5]).Emoji, obj);
     } else {
       return null;
     }
-  }, items2);
+  }, items3);
   if (results.length > 0) {
     num = 1;
   }
   let obj = require("useHorizontalAutocompleteResults");
-  const items3 = [closure_7, require("timing/timing").withTiming, num];
+  const tmp9 = importDefault;
+  const items4 = [closure_7, require("timing/timing").withTiming, num];
   _require = undefined;
   importDefault = undefined;
-  [tmp10, tmp11, tmp12] = items3;
+  [tmp13, tmp14, tmp15] = items4;
   class HorizontalAutocompleteWrapperTsx1 {
     constructor() {
       obj = { opacity: closure_0(closure_1) };
       return obj;
     }
   }
-  const items4 = [tmp11, tmp12];
-  HorizontalAutocompleteWrapperTsx1.__closure = items4;
+  const items5 = [tmp14, tmp15];
+  HorizontalAutocompleteWrapperTsx1.__closure = items5;
   HorizontalAutocompleteWrapperTsx1.__workletHash = 15765485703035;
-  HorizontalAutocompleteWrapperTsx1.__initData = tmp10;
+  HorizontalAutocompleteWrapperTsx1.__initData = tmp13;
   const animatedStyle = require("module_1652").useAnimatedStyle(HorizontalAutocompleteWrapperTsx1);
   let obj3 = {
     style: null,
-    children: callback(require("module_7357").FlashList, {
+    children: ref(require("module_7360").FlashList, {
       ref,
       keyboardShouldPersistTaps: "always",
       horizontal: true,
-      keyExtractor: getItemKey,
+      keyExtractor,
       getItemType(type) {
         return type.type;
       },
@@ -139,7 +152,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
       renderItem: callback1
     })
   };
-  const items5 = [style, animatedStyle];
-  obj3.style = items5;
-  return callback(require("module_1652").View, obj3);
+  const items6 = [style, animatedStyle];
+  obj3.style = items6;
+  return ref(tmp9(results[6]).View, obj3);
 };

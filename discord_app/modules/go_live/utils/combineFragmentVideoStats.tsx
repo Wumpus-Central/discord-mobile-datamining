@@ -1,6 +1,6 @@
-// === Module 7967: combineFragmentVideoStats ===
+// === Module 7971: combineFragmentVideoStats ===
 
-// Module 7967 (combineFragmentVideoStats)
+// Module 7971 (combineFragmentVideoStats)
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);

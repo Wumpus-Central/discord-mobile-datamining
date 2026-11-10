@@ -1,10 +1,10 @@
-// === Module 17100: shareGuardianConnectLink ===
+// === Module 17127: shareGuardianConnectLink ===
 
-// Module 17100 (shareGuardianConnectLink)
+// Module 17127 (shareGuardianConnectLink)
 import util from "util" /* 1113 */;
 import _modDef2664 from "module_2664" /* 2664 */;
-import FamilyCenterConstants from "FamilyCenterConstants" /* 7792 */;
-import showShareActionSheet from "showShareActionSheet" /* 9010 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7795 */;
+import showShareActionSheet from "showShareActionSheet" /* 9016 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = FamilyCenterConstants.FAMILY_CENTER_REQUEST_QR_CODE_URL;

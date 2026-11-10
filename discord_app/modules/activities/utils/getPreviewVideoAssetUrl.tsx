@@ -1,6 +1,6 @@
-// === Module 12589: getPreviewVideoAssetUrl ===
+// === Module 12602: getPreviewVideoAssetUrl ===
 
-// Module 12589 (getPreviewVideoAssetUrl)
+// Module 12602 (getPreviewVideoAssetUrl)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

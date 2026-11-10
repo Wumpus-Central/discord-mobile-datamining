@@ -1,9 +1,9 @@
-// === Module 19721: VoicePanelVideoButton ===
+// === Module 19750: VoicePanelVideoButton ===
 
-// Module 19721 (VoicePanelVideoButton)
-import CameraRive from "CameraRive" /* 5269 */;
-import VideoIcon from "VideoIcon" /* 11172 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 15137 */;
+// Module 19750 (VoicePanelVideoButton)
+import CameraRive from "CameraRive" /* 5271 */;
+import VideoIcon from "VideoIcon" /* 11181 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 15163 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,8 +34,8 @@ export default function VideoButton(arg0) {
   let isVideoEnabled;
   let color;
   ({ props, wrapperSpecs } = arg0);
-  const voicePanelButtonStyles = isVideoEnabled(19710).useVoicePanelButtonStyles(wrapperSpecs);
-  const tmp5 = color(19584)(noop.useContext(color(11362)).channelId, "VoicePanelVideoButton");
+  const voicePanelButtonStyles = isVideoEnabled(19739).useVoicePanelButtonStyles(wrapperSpecs);
+  const tmp5 = color(19613)(noop.useContext(color(11371)).channelId, "VoicePanelVideoButton");
   isVideoEnabled = tmp5.isVideoEnabled;
   ({ videoSupported, videoBlocked } = tmp5);
   if (videoSupported) {
@@ -67,11 +67,11 @@ export default function VideoButton(arg0) {
     element.style = isVideoEnabled ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     if (videoBlocked) {
       const obj3 = { color: voicePanelButtonStyles.iconFill.color };
-      memo = jsx(tmp3(14826).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
+      memo = jsx(tmp3(14852).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
     }
     element.children = memo;
-    return jsx(tmp(19711), { onPress: tmp6, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
+    return jsx(tmp(19740), { onPress: tmp6, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
   }
-  const obj2 = isVideoEnabled(19710);
+  const obj2 = isVideoEnabled(19739);
   tmp = color;
 };

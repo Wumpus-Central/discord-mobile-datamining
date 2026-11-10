@@ -1,6 +1,6 @@
-// === Module 8412: ThreadSummaryStore ===
+// === Module 8416: ThreadSummaryStore ===
 
-// Module 8412 (ThreadSummaryStore)
+// Module 8416 (ThreadSummaryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

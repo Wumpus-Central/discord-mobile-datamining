@@ -1,13 +1,13 @@
-// === Module 8485: transformReactions ===
+// === Module 8489: transformReactions ===
 
-// Module 8485 (transformReactions)
+// Module 8489 (transformReactions)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import ReactionUtils from "ReactionUtils" /* 5084 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 5090 */;
-import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 8472 */;
-import EmojiColorUtils from "EmojiColorUtils" /* 8486 */;
+import ReactionUtils from "ReactionUtils" /* 5086 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 5092 */;
+import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 8476 */;
+import EmojiColorUtils from "EmojiColorUtils" /* 8490 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");

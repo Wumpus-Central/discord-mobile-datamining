@@ -1,13 +1,13 @@
-// === Module 11340: ChannelPickerActionSheet ===
+// === Module 11349: ChannelPickerActionSheet ===
 
-// Module 11340 (ChannelPickerActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import useChannelName from "useChannelName" /* 5776 */;
-import TableRowIcon from "TableRowIcon" /* 7046 */;
-import TableRadioRow from "TableRadioRow" /* 7127 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8674 */;
+// Module 11349 (ChannelPickerActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import useChannelName from "useChannelName" /* 5778 */;
+import TableRowIcon from "TableRowIcon" /* 7049 */;
+import TableRadioRow from "TableRadioRow" /* 7130 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8680 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 5082 */;
+import RelationshipStore from "RelationshipStore" /* 5084 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -41,7 +41,7 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
   items = undefined;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
     let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
-    let obj4 = { source: require("module_11341") };
+    let obj4 = { source: require("module_11350") };
     obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
     items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }

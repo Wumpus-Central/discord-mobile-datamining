@@ -1,9 +1,9 @@
-// === Module 19243: useOwnsAnyBadge ===
+// === Module 19272: useOwnsAnyBadge ===
 
-// Module 19243 (useOwnsAnyBadge)
-import useBadgesDefault from "useBadges" /* 8889 */;
+// Module 19272 (useOwnsAnyBadge)
+import useBadgesDefault from "useBadges" /* 8895 */;
 import UserStore from "UserStore" /* 1385 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8834 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8840 */;
 
 const require = fn;
 const size = fn(2);

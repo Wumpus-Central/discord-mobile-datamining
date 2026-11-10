@@ -1,6 +1,6 @@
-// === Module 4975: DCFEventStore ===
+// === Module 4977: DCFEventStore ===
 
-// Module 4975 (DCFEventStore)
+// Module 4977 (DCFEventStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

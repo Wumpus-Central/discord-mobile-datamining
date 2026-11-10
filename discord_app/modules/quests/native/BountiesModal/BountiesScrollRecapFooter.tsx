@@ -1,20 +1,20 @@
-// === Module 17288: BountiesScrollRecapFooter ===
+// === Module 17315: BountiesScrollRecapFooter ===
 
-// Module 17288 (BountiesScrollRecapFooter)
+// Module 17315 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 5265 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import OrbsIcon from "OrbsIcon" /* 9616 */;
+import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 5267 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import OrbsIcon from "OrbsIcon" /* 9622 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 }, orbRow: null, rive: null, orbAmount: null };
   const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };

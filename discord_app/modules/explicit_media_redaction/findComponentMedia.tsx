@@ -1,6 +1,6 @@
-// === Module 7537: findComponentMedia ===
+// === Module 7540: findComponentMedia ===
 
-// Module 7537 (findComponentMedia)
+// Module 7540 (findComponentMedia)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/findComponentMedia.tsx");
@@ -74,7 +74,7 @@ function findComponentMedia(arg0) {
                 type = type.type;
                 if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
                   let items = type.items;
-                  return items.map(/* F125901 */ function() { ... });
+                  return items.map(/* F126093 */ function() { ... });
                 } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
                   return type.media;
                 } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
@@ -90,7 +90,7 @@ function findComponentMedia(arg0) {
                     let items2 = [accessory];
                     obj = items2;
                   }
-                  HermesBuiltin.arraySpread(obj.flatMap(/* F92249 */ function() { ... }).map(/* F92250 */ function() { ... }), arraySpreadResult);
+                  HermesBuiltin.arraySpread(obj.flatMap(/* F92368 */ function() { ... }).map(/* F92369 */ function() { ... }), arraySpreadResult);
                   return items1;
                 } else {
                   if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {

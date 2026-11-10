@@ -1,7 +1,7 @@
-// === Module 14252: ChatInputGuardMessageRequest ===
+// === Module 14278: ChatInputGuardMessageRequest ===
 
-// Module 14252 (ChatInputGuardMessageRequest)
-import ChatInputGuardDefault from "ChatInputGuard" /* 14260 */;
+// Module 14278 (ChatInputGuardMessageRequest)
+import ChatInputGuardDefault from "ChatInputGuard" /* 14286 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -115,12 +115,12 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   };
   importDefault = channel(1499).useNavigation();
   let obj = channel(1499);
-  const isMessageRequestRestrictedViewer = channel(14253).useIsMessageRequestRestrictedViewer();
-  let obj2 = channel(14253);
+  const isMessageRequestRestrictedViewer = channel(14279).useIsMessageRequestRestrictedViewer();
+  let obj2 = channel(14279);
   items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(14254).useMessageRequestActions({
+  const messageRequestActions = channel(14280).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
@@ -147,7 +147,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     tmp6 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  let obj4 = channel(14254);
+  let obj4 = channel(14280);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {

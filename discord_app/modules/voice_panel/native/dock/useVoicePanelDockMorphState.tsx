@@ -1,15 +1,15 @@
-// === Module 19563: useVoicePanelDockMorphState ===
+// === Module 19592: useVoicePanelDockMorphState ===
 
-// Module 19563 (useVoicePanelDockMorphState)
-import spring_spring from "spring/spring" /* 5761 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11389 */;
+// Module 19592 (useVoicePanelDockMorphState)
+import spring_spring from "spring/spring" /* 5763 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11398 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11363).VoicePanelModes;
-const VoicePanelDockConstants = fn(11381);
+const VoicePanelModes = fn(11372).VoicePanelModes;
+const VoicePanelDockConstants = fn(11390);
 ({ DOCK_PRESS_PHYSICS: closure_4, getVoicePanelDockHeight: hasOwnProperty } = VoicePanelDockConstants);
 let closure_6 = { code: "(function useVoicePanelDockMorphStateTsx1(){let[isDockEnabled,getVoicePanelDockHeight,safeArea]=this.__closure;return isDockEnabled?getVoicePanelDockHeight(safeArea.get().bottom):0;})" };
 let closure_7 = { code: "(function useVoicePanelDockMorphStateTsx2(){let[mode]=this.__closure;return mode.get();})" };

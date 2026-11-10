@@ -1,19 +1,19 @@
-// === Module 17412: WumpusCouchSpotIllustration ===
+// === Module 17439: WumpusCouchSpotIllustration ===
 
-// Module 17412 (WumpusCouchSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef17413 from "module_17413" /* 17413 */;
-import _modDef17414 from "module_17414" /* 17414 */;
-import _modDef17415 from "module_17415" /* 17415 */;
+// Module 17439 (WumpusCouchSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7138 */;
+import _modDef17440 from "module_17440" /* 17440 */;
+import _modDef17441 from "module_17441" /* 17441 */;
+import _modDef17442 from "module_17442" /* 17442 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17413 }, 3: null };
-let obj2 = { uri: _modDef17413 };
-obj[2] = { uri: _modDef17414 };
-const obj3 = { uri: _modDef17414 };
-obj[3] = { uri: _modDef17415 };
+let obj = { 1: null, 2: { uri: _modDef17440 }, 3: null };
+let obj2 = { uri: _modDef17440 };
+obj[2] = { uri: _modDef17441 };
+const obj3 = { uri: _modDef17441 };
+obj[3] = { uri: _modDef17442 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 7043: Pressables ===
+// === Module 7046: Pressables ===
 
-// Module 7043 (Pressables)
+// Module 7046 (Pressables)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import StyleSheetUtilsDefault from "StyleSheetUtils" /* 7044 */;
+import StyleSheetUtilsDefault from "StyleSheetUtils" /* 7047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -90,10 +90,10 @@ function PressableBase(androidRippleConfig) {
   }, items1)} style={memo} ref={innerRef} />;
 }
 const Pressable = fn(17).Pressable;
-const IOS_POINTER_STYLE = fn(5768).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5770).IOS_POINTER_STYLE;
 const getThemedRippleConfig = fn(1191).getThemedRippleConfig;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { pressedHighlight: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 19554: SoundPlayerContext ===
+// === Module 19583: SoundPlayerContext ===
 
-// Module 19554 (SoundPlayerContext)
+// Module 19583 (SoundPlayerContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext({ audioRef: noop.createRef() });

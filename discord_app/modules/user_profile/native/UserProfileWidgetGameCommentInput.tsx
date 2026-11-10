@@ -1,11 +1,11 @@
-// === Module 15227: UserProfileWidgetGameCommentInput ===
+// === Module 15253: UserProfileWidgetGameCommentInput ===
 
-// Module 15227 (UserProfileWidgetGameCommentInput)
+// Module 15253 (UserProfileWidgetGameCommentInput)
 import util from "util" /* 1113 */;
-import TextArea from "TextArea" /* 7316 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 7852 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8833 */;
-import WidgetUtils from "WidgetUtils" /* 12549 */;
+import TextArea from "TextArea" /* 7319 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 7856 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8839 */;
+import WidgetUtils from "WidgetUtils" /* 12562 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -13,7 +13,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(8825).TrackUserProfileEditActions;
+let closure_5 = fn(8831).TrackUserProfileEditActions;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetGameCommentInput.tsx");

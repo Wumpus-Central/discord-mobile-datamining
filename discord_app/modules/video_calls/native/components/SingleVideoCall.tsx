@@ -1,12 +1,12 @@
-// === Module 12177: SingleVideoCall ===
+// === Module 12186: SingleVideoCall ===
 
-// Module 12177 (SingleVideoCall)
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5888 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8821 */;
+// Module 12186 (SingleVideoCall)
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5890 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8827 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ChannelCallStore = fn(11130);
+const ChannelCallStore = fn(11139);
 ({ resetFocus: closure_4, toggleFocus: hasOwnProperty } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const size = fn(2);

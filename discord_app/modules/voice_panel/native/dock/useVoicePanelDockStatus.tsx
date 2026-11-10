@@ -1,20 +1,20 @@
-// === Module 19600: useVoicePanelDockStatus ===
+// === Module 19629: useVoicePanelDockStatus ===
 
-// Module 19600 (useVoicePanelDockStatus)
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11362 */;
+// Module 19629 (useVoicePanelDockStatus)
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11371 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6901 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
-import SpeakingStore from "SpeakingStore" /* 6811 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
+import SpeakingStore from "SpeakingStore" /* 6814 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5803 */;
+import VoiceStateStore from "VoiceStateStore" /* 5805 */;
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(19601);
+const VoicePanelDockStatusStore = fn(19630);
 ({ releaseDockStatus: closure_11, initDockStatus: closure_12, setDockHasStreamers: map1, setDockSpeakingIds: closure_14, showVoiceMoment: closure_15 } = VoicePanelDockStatusStore);
-const ParticipantTypes = fn(5805).ParticipantTypes;
+const ParticipantTypes = fn(5807).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockStatus.tsx");
 

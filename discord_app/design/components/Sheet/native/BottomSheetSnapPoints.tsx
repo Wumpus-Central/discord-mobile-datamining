@@ -1,6 +1,6 @@
-// === Module 5391: BottomSheetSnapPoints ===
+// === Module 5393: BottomSheetSnapPoints ===
 
-// Module 5391 (BottomSheetSnapPoints)
+// Module 5393 (BottomSheetSnapPoints)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetSnapPoints.tsx");

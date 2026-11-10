@@ -1,7 +1,7 @@
-// === Module 7903: getGuildOrPackEmojiByName ===
+// === Module 7907: getGuildOrPackEmojiByName ===
 
-// Module 7903 (getGuildOrPackEmojiByName)
-import EmojiTypes from "EmojiTypes" /* 5089 */;
+// Module 7907 (getGuildOrPackEmojiByName)
+import EmojiTypes from "EmojiTypes" /* 5091 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emojis/utils/getGuildOrPackEmojiByName.tsx");

@@ -1,8 +1,8 @@
-// === Module 5369: useTheme ===
+// === Module 5371: useTheme ===
 
-// Module 5369 (useTheme)
+// Module 5371 (useTheme)
 import Constants from "Constants" /* 1072 */;
-import shared from "shared" /* 5147 */;
+import shared from "shared" /* 5149 */;
 import size from "module_2" /* 2 */;
 
 function useTheme() {

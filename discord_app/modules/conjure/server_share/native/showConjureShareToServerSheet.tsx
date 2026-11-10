@@ -1,21 +1,21 @@
-// === Module 12407: showConjureShareToServerSheet ===
+// === Module 12422: showConjureShareToServerSheet ===
 
-// Module 12407 (showConjureShareToServerSheet)
+// Module 12422 (showConjureShareToServerSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5374 */;
-import TableRadioRow from "TableRadioRow" /* 7127 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5376 */;
+import TableRadioRow from "TableRadioRow" /* 7130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
 
 require = fn;
 function ShareToServerSheet(projectId) {
   projectId = projectId.projectId;
-  importDefault = undefined;
+  dependencyMap = undefined;
   guild = undefined;
-  sharing = undefined;
-  noop = undefined;
-  closure_5 = async function _confirm() {
+  let sharing;
+  closure_5 = undefined;
+  closure_6 = async function _confirm() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -23,8 +23,8 @@ function ShareToServerSheet(projectId) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -37,15 +37,15 @@ function ShareToServerSheet(projectId) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             dependencyMap = tmp5;
             closure_129_0 = undefined;
             c3 = 1;
             c4 = 1;
-            const obj6 = { value: importDefault.share(), done: false };
-            return obj6;
+            const obj5 = { value: dependencyMap.share(), done: false };
+            return obj5;
           }
         } else {
           if (1 === tmp5) {
@@ -54,38 +54,44 @@ function ShareToServerSheet(projectId) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               closure_129_0 = value;
               let shared = closure_129_0.shared;
               if (shared) {
-                shared = !closure_130_4.current;
+                shared = !closure_130_5.current;
               }
               if (shared) {
-                tmp2(5374).hideActionSheet(ConjureShareToServerSheet);
-                if (closure_129_0.testAppReady) {
+                tmp2(5376).hideActionSheet(ConjureShareToServerSheet);
+                if ("publish" === closure_129_0.next) {
                   c3 = 2;
                   c4 = 1;
-                  const obj8 = { value: closure_130_1.publish(), done: false };
-                  return obj8;
+                  const obj7 = { value: closure_130_2.publish(), done: false };
+                  return obj7;
                 } else {
                   const intl = server(1113).intl;
+                  if ("added" === closure_129_0.next) {
+                    let o2xHEb = tmp2(4028)["4WtS+v"];
+                  } else {
+                    o2xHEb = tmp2(4028).o2xHEb;
+                  }
+                  const obj8 = { app: closure_130_1, server: null };
                   let name;
-                  if (closure_130_2 != null) {
-                    name = closure_130_2.name;
+                  if (closure_130_3 != null) {
+                    name = closure_130_3.name;
                   }
                   server = name;
                   if (name == null) {
                     server = "";
                   }
                   const obj9 = { text: null, variant: "success" };
-                  const obj10 = { server };
-                  obj9.text = intl.formatToPlainString(tmp2(4026).o2xHEb, obj10);
-                  tmp2(5837).open(ConjureShareToServerSheet, obj9);
-                  const obj3 = tmp2(5837);
+                  obj8.server = server;
+                  obj9.text = intl.formatToPlainString(o2xHEb, obj8);
+                  tmp2(5839).open(ConjureShareToServerSheet, obj9);
+                  const obj10 = tmp2(5839);
                 }
-                const obj2 = tmp2(5374);
+                const obj2 = tmp2(5376);
               }
             }
           } else if (arg0 === 1) {
@@ -99,116 +105,74 @@ function ShareToServerSheet(projectId) {
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } catch (tmp29) {
+      } catch (tmp30) {
         c4 = tmp;
-        throw tmp29;
+        throw tmp30;
       }
     }
   };
   ({ guildId, publishOptions } = projectId);
   const tmp = closure_10();
-  items = [ConjureProjectStore];
+  items = [closure_6];
   const items1 = [projectId];
-  const stateFromStores = projectId(guild[7]).useStateFromStores(items, () => {
-    const project = ConjureProjectStore.getProject(projectId);
-    let str;
-    if (project != null) {
-      str = project.name;
-    }
-    if (str == null) {
-      str = "";
-    }
-    return str;
-  }, items1);
-  const tmp6 = require("useConjureShareToServer")(projectId, guildId, publishOptions);
-  importDefault = tmp6;
+  const stateFromStores = projectId(504).useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
+  let str;
+  if (stateFromStores != null) {
+    str = stateFromStores.name;
+  }
+  if (str == null) {
+    str = "";
+  }
+  const tmp6 = str(12297)(projectId, guildId, publishOptions);
+  dependencyMap = tmp6;
   ({ guilds, guild } = tmp6);
-  ({ blockedReason, sharing } = tmp6);
+  sharing = tmp6.sharing;
   const error = tmp6.error;
-  let intl = projectId(guild[9]).intl;
-  let obj = projectId(guild[7]);
-  noop = noop.useRef(false);
-  const effect = noop.useEffect(() => {
-    closure_4.current = false;
+  let intl = tmp2(1113).intl;
+  let obj = projectId(504);
+  closure_5 = sharing.useRef(false);
+  const effect = sharing.useEffect(() => {
+    closure_5.current = false;
     return () => {
-      closure_1_4.current = true;
+      closure_1_5.current = true;
     };
   }, []);
-  let obj2 = { header: closure_7(projectId(guild[14]).BottomSheetTitleHeader, { title: intl.formatToPlainString(require("module_4026").N3Ryqz, { app: stateFromStores }) }), children: null };
+  let obj2 = { header: closure_7(projectId(7385).BottomSheetTitleHeader, { title: intl.formatToPlainString(str(4028).N3Ryqz, { app: str }) }), children: null };
   let obj3 = { style: tmp.content, children: null };
   let tmp9Result = null;
   if (null != guild) {
     tmp9Result = null;
     if (guilds.length > 1) {
       let obj4 = { title: null, hasIcons: false, value: null, onChange: null, children: null };
-      const intl2 = tmp2(tmp3[9]).intl;
-      obj4.title = intl2.string(tmp5(tmp3[10]).Uq5hU9);
+      const intl2 = tmp2(1113).intl;
+      obj4.title = intl2.string(tmp5(4028).Uq5hU9);
       obj4.value = guild.id;
       obj4.onChange = tmp6.pickGuild;
       obj4.children = guilds.map((id) => metroImportDefault(TableRadioRow.TableRadioRow, { value: id.id, label: id.name, disabled: sharing }, id.id));
-      tmp9Result = closure_7(tmp2(tmp3[15]).TableRadioGroup, obj4);
+      tmp9Result = closure_7(tmp2(7127).TableRadioGroup, obj4);
     }
   }
-  const items2 = [tmp9Result, , , , , ];
-  let obj5 = { spacing: 8, children: null };
-  let obj6 = { variant: "body-md/semibold", color: "text-strong", children: null };
-  const intl3 = tmp2(tmp3[9]).intl;
-  obj6.children = intl3.string(require("module_4026")["kG/2e8"]);
-  const items3 = [closure_7(projectId(guild[18]).Text, obj6), ];
-  let obj7 = { style: tmp.box, children: null };
-  let obj8 = { spacing: 8, children: null };
-  let obj9 = { direction: "horizontal", spacing: 8, align: "flex-start", children: null };
-  const items4 = [closure_7(projectId(guild[19]).RobotIcon, { size: "sm", color: "text-subtle" }), ];
-  let obj10 = { variant: "body-sm/medium", color: "text-subtle", style: tmp.rowText, children: null };
-  const intl4 = tmp2(tmp3[9]).intl;
-  obj10.children = intl4.string(require("module_4026").eSpjGV);
-  items4[1] = closure_7(projectId(guild[18]).Text, obj10);
-  obj9.children = items4;
-  const items5 = [closure_8(projectId(guild[17]).Stack, obj9), , ];
-  const obj11 = { direction: "horizontal", spacing: 8, align: "flex-start", children: null };
-  const items6 = [closure_7(projectId(guild[20]).BeakerIcon, { size: "sm", color: "text-subtle" }), ];
-  const obj12 = { variant: "body-sm/medium", color: "text-subtle", style: tmp.rowText, children: null };
-  const intl5 = tmp2(tmp3[9]).intl;
-  obj12.children = intl5.string(require("module_4026")["+5f47F"]);
-  items6[1] = closure_7(projectId(guild[18]).Text, obj12);
-  obj11.children = items6;
-  items5[1] = closure_8(projectId(guild[17]).Stack, obj11);
-  const obj13 = { direction: "horizontal", spacing: 8, align: "flex-start", children: null };
-  const items7 = [closure_7(projectId(guild[21]).GroupIcon, { size: "sm", color: "text-subtle" }), ];
-  const obj14 = { variant: "body-sm/medium", color: "text-subtle", style: tmp.rowText, children: null };
-  const intl6 = tmp2(tmp3[9]).intl;
-  obj14.children = intl6.string(require("module_4026")["s3/5nF"]);
-  items7[1] = closure_7(projectId(guild[18]).Text, obj14);
-  obj13.children = items7;
-  items5[2] = closure_8(projectId(guild[17]).Stack, obj13);
-  obj8.children = items5;
-  obj7.children = closure_8(projectId(guild[17]).Stack, obj8);
-  items3[1] = closure_7(closure_5, obj7);
-  obj5.children = items3;
-  items2[1] = closure_8(projectId(guild[17]).Stack, obj5);
-  const obj15 = { variant: "body-sm/normal", color: "text-muted", children: null };
-  const intl7 = tmp2(tmp3[9]).intl;
-  obj15.children = intl7.string(require("module_4026")["6y2j3H"]);
-  items2[2] = closure_7(projectId(guild[18]).Text, obj15);
+  const items2 = [tmp9Result, , , , ];
+  let obj5 = { rows: null };
+  const formatToPlainStringResult = intl.formatToPlainString(str(4028).N3Ryqz, { app: str });
+  const tmp11 = closure_5;
+  const tmp5Result = str(12411);
+  obj5.rows = projectId(12409).conjureShareRows(stateFromStores);
+  items2[1] = closure_7(tmp5Result, obj5);
+  let tmp9Result2 = null;
   if (null != error) {
-    const obj16 = { variant: "body-sm/medium", color: "text-feedback-critical", accessibilityRole: "alert", children: error };
-    let tmp9Result2 = closure_7(tmp2(tmp3[18]).Text, obj16);
-  } else {
-    tmp9Result2 = null;
-    if (null != blockedReason) {
-      const obj17 = { variant: "body-sm/medium", color: "text-feedback-warning", children: blockedReason };
-      tmp9Result2 = closure_7(tmp2(tmp3[18]).Text, obj17);
-    }
+    let obj6 = { variant: "body-sm/medium", color: "text-feedback-critical", accessibilityRole: "alert", children: error };
+    tmp9Result2 = closure_7(tmp2(5753).Text, obj6);
   }
-  items2[3] = tmp9Result2;
-  const obj18 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
-  const intl8 = tmp2(tmp3[9]).intl;
-  obj18.text = intl8.string(require("module_4026")["+ysSG7"]);
-  obj18.loading = sharing;
-  obj18.disabled = null == guild || null != blockedReason;
-  obj18.onPress = function confirm() {
+  items2[2] = tmp9Result2;
+  let obj7 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
+  const intl3 = tmp2(1113).intl;
+  obj7.text = intl3.string(str(4028)["+ysSG7"]);
+  obj7.loading = sharing;
+  obj7.disabled = null == guild;
+  obj7.onPress = function confirm() {
     const self = this;
-    const apply = closure_5.apply;
+    const apply = closure_6.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -216,28 +180,25 @@ function ShareToServerSheet(projectId) {
     }
     return applyArgumentsResult;
   };
-  items2[4] = closure_7(projectId(guild[22]).Button, obj18);
-  const obj19 = { variant: "secondary", text: null, disabled: null, onPress: null };
-  const intl9 = tmp2(tmp3[9]).intl;
-  obj19.text = intl9.string(projectId(guild[9]).t["ETE/oC"]);
-  obj19.disabled = sharing;
-  obj19.onPress = function onPress() {
-    return closure_1(guild[11]).hideActionSheet(ConjureShareToServerSheet);
+  items2[3] = closure_7(projectId(5760).Button, obj7);
+  let obj8 = { variant: "secondary", text: null, disabled: null, onPress: null };
+  const intl4 = tmp2(1113).intl;
+  obj8.text = intl4.string(projectId(1113).t["ETE/oC"]);
+  obj8.disabled = sharing;
+  obj8.onPress = function onPress() {
+    return str(closure_2[11]).hideActionSheet(ConjureShareToServerSheet);
   };
-  items2[5] = closure_7(projectId(guild[22]).Button, obj19);
+  items2[4] = closure_7(projectId(5760).Button, obj8);
   obj3.children = items2;
-  obj2.children = closure_8(closure_5, obj3);
-  return closure_7(projectId(guild[13]).ActionSheet, obj2);
+  obj2.children = closure_8(tmp11, obj3);
+  return closure_7(projectId(7429).ActionSheet, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const ConjureShareToServerSheet = "ConjureShareToServerSheet";
-const createStyles = fn(5140);
-let obj2 = { content: { gap: nativeDefault.space.PX_16 }, box: null, rowText: null };
-let obj3 = { gap: nativeDefault.space.PX_16 };
-obj2.box = { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj2.rowText = { flex: 1 };
+const createStyles = fn(5142);
+let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/server_share/native/showConjureShareToServerSheet.tsx");

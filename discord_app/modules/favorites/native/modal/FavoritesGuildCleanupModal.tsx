@@ -1,12 +1,12 @@
-// === Module 18533: FavoritesGuildCleanupModal ===
+// === Module 18562: FavoritesGuildCleanupModal ===
 
-// Module 18533 (FavoritesGuildCleanupModal)
+// Module 18562 (FavoritesGuildCleanupModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3608 from "module_3608" /* 3608 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
-import TableRadioRow from "TableRadioRow" /* 7127 */;
-import Modal from "Modal" /* 11627 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6801 */;
+import TableRadioRow from "TableRadioRow" /* 7130 */;
+import Modal from "Modal" /* 11636 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ function closeCleanup() {
 }
 function CleanupScreen() {
   const tmp3 = closure_14(loading(1627)().bottom);
-  const tmp4 = loading(18534)(closeCleanup);
+  const tmp4 = loading(18563)(closeCleanup);
   _require = tmp4;
   loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };
@@ -116,7 +116,7 @@ function CleanupScreen() {
     const obj14 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: null };
     const intl13 = tmp6(1113).intl;
     obj14.children = intl13.string(tmp(3608).toOYQw);
-    tmp7Result = closure_12(tmp6(5751).Text, obj14);
+    tmp7Result = closure_12(tmp6(5753).Text, obj14);
   }
   items1[3] = tmp7Result;
   obj3.children = items1;
@@ -139,11 +139,11 @@ function CleanupScreen() {
   return closure_13(require("Stack/Stack").Stack, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const FavoritesConstants = fn(5002);
+const FavoritesConstants = fn(5004);
 ({ FAVORITES_AUTO_ADD_THREADS_NEVER: hasOwnProperty, FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: closure_6, FAVORITES_AUTO_ADD_THREADS_PER_GUILD: metroImportDefault, FAVORITES_PRUNE_INACTIVE_THREADS_DAY_OPTIONS: closure_8, FAVORITES_PRUNE_SCOPE_ALL: closure_9, FAVORITES_PRUNE_SCOPE_AUTO_ADDED: closure_10, FAVORITES_PRUNE_WHEN_ARCHIVED: closure_11 } = FavoritesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroller: { flex: 1 }, content: null, actions: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

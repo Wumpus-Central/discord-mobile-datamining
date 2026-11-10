@@ -1,7 +1,7 @@
-// === Module 4963: onTimezoneChange ===
+// === Module 4965: onTimezoneChange ===
 
-// Module 4963 (onTimezoneChange)
-import NativeTimezoneHermesFixModuleDefault from "NativeTimezoneHermesFixModule" /* 4964 */;
+// Module 4965 (onTimezoneChange)
+import NativeTimezoneHermesFixModuleDefault from "NativeTimezoneHermesFixModule" /* 4966 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/date/onTimezoneChange.android.tsx");

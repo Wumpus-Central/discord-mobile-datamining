@@ -1,19 +1,19 @@
-// === Module 13600: EnvelopeSpotIllustration ===
+// === Module 13613: EnvelopeSpotIllustration ===
 
-// Module 13600 (EnvelopeSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef13601 from "module_13601" /* 13601 */;
-import _modDef13602 from "module_13602" /* 13602 */;
-import _modDef13603 from "module_13603" /* 13603 */;
+// Module 13613 (EnvelopeSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7138 */;
+import _modDef13614 from "module_13614" /* 13614 */;
+import _modDef13615 from "module_13615" /* 13615 */;
+import _modDef13616 from "module_13616" /* 13616 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13601 }, 3: null };
-let obj2 = { uri: _modDef13601 };
-obj[2] = { uri: _modDef13602 };
-const obj3 = { uri: _modDef13602 };
-obj[3] = { uri: _modDef13603 };
+let obj = { 1: null, 2: { uri: _modDef13614 }, 3: null };
+let obj2 = { uri: _modDef13614 };
+obj[2] = { uri: _modDef13615 };
+const obj3 = { uri: _modDef13615 };
+obj[3] = { uri: _modDef13616 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/EnvelopeSpotIllustration.native.tsx");
 

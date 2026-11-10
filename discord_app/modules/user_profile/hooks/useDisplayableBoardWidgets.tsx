@@ -1,7 +1,7 @@
-// === Module 15176: useDisplayableBoardWidgets ===
+// === Module 15202: useDisplayableBoardWidgets ===
 
-// Module 15176 (useDisplayableBoardWidgets)
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 15177 */;
+// Module 15202 (useDisplayableBoardWidgets)
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 15203 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

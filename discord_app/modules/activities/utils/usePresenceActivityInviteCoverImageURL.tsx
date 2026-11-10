@@ -1,11 +1,11 @@
-// === Module 15425: usePresenceActivityInviteCoverImageURL ===
+// === Module 15450: usePresenceActivityInviteCoverImageURL ===
 
-// Module 15425 (usePresenceActivityInviteCoverImageURL)
+// Module 15450 (usePresenceActivityInviteCoverImageURL)
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8792 */;
-import MessageActivityInviteCoverImageActionCreatorsAll from "MessageActivityInviteCoverImageActionCreators" /* 15427 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8798 */;
+import MessageActivityInviteCoverImageActionCreatorsAll from "MessageActivityInviteCoverImageActionCreators" /* 15452 */;
 import noop from "module_19" /* 19 */;
-import MessageActivityInviteCoverImageStore from "MessageActivityInviteCoverImageStore" /* 15426 */;
+import MessageActivityInviteCoverImageStore from "MessageActivityInviteCoverImageStore" /* 15451 */;
 
 require = fn;
 function _getPresenceActivityInviteCoverImageURL(messageId) {

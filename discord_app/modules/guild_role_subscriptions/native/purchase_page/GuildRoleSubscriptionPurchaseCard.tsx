@@ -1,17 +1,17 @@
-// === Module 18984: GuildRoleSubscriptionPurchaseCard ===
+// === Module 19013: GuildRoleSubscriptionPurchaseCard ===
 
-// Module 18984 (GuildRoleSubscriptionPurchaseCard)
+// Module 19013 (GuildRoleSubscriptionPurchaseCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5388 */;
-import BottomSheetModal from "BottomSheetModal" /* 5392 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17537 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 17547 */;
-import Elements from "Elements" /* 18979 */;
-import SubscribeButtonDefault from "SubscribeButton" /* 18985 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5390 */;
+import BottomSheetModal from "BottomSheetModal" /* 5394 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17564 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 17574 */;
+import Elements from "Elements" /* 19008 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 19014 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { padding: 16, paddingBottom: 24 }, content: null, headerText: null, headerDot: null, seperator: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 obj2.content = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

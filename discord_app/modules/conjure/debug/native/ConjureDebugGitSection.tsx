@@ -1,11 +1,11 @@
-// === Module 13259: ConjureDebugGitSection ===
+// === Module 13273: ConjureDebugGitSection ===
 
-// Module 13259 (ConjureDebugGitSection)
+// Module 13273 (ConjureDebugGitSection)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import AlertModal from "AlertModal" /* 6096 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13254 */;
-import ConjureDebugGit from "ConjureDebugGit" /* 13272 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import AlertModal from "AlertModal" /* 6098 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13268 */;
+import ConjureDebugGit from "ConjureDebugGit" /* 13286 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,24 +16,24 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { controls: { gap: nativeDefault.space.PX_8 }, restartAgentRow: null, clearAlarm: null, disabled: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.restartAgentRow = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
 obj2.clearAlarm = { flexShrink: 1 };
 obj2.disabled = { opacity: 0.5 };
 let closure_9 = createStyles.createStyles(obj2);
-let obj5 = { checkout: fn(8717).FolderIcon, edit: fn(10351).PencilIcon, remote: fn(13260).CloudIcon, commits: fn(13262).ListNumberedIcon, calendar: fn(9195).CalendarIcon, save: fn(13264).SaveIcon, objects: fn(9848).ServerIcon, download: fn(13266).CloudDownloadIcon, size: fn(12093).SpeedometerIcon, file: fn(11194).FileIcon };
+let obj5 = { checkout: fn(8723).FolderIcon, edit: fn(10357).PencilIcon, remote: fn(13274).CloudIcon, commits: fn(13276).ListNumberedIcon, calendar: fn(9201).CalendarIcon, save: fn(13278).SaveIcon, objects: fn(9854).ServerIcon, download: fn(13280).CloudDownloadIcon, size: fn(12102).SpeedometerIcon, file: fn(11203).FileIcon };
 let obj6 = { ok: null, warning: null, error: null, ahead: null, behind: null };
-let items = [fn(7401).CircleCheckIcon, nativeDefault.colors.ICON_FEEDBACK_POSITIVE];
+let items = [fn(7404).CircleCheckIcon, nativeDefault.colors.ICON_FEEDBACK_POSITIVE];
 obj6.ok = items;
-let items1 = [fn(8096).WarningIcon, nativeDefault.colors.ICON_FEEDBACK_WARNING];
+let items1 = [fn(8100).WarningIcon, nativeDefault.colors.ICON_FEEDBACK_WARNING];
 obj6.warning = items1;
-let items2 = [fn(7158).CircleXIcon, nativeDefault.colors.ICON_FEEDBACK_CRITICAL];
+let items2 = [fn(7161).CircleXIcon, nativeDefault.colors.ICON_FEEDBACK_CRITICAL];
 obj6.error = items2;
-let items3 = [fn(13268).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
+let items3 = [fn(13282).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
 obj6.ahead = items3;
-let items4 = [fn(13270).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
+let items4 = [fn(13284).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
 obj6.behind = items4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/native/ConjureDebugGitSection.tsx");

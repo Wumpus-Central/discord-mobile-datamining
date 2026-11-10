@@ -1,12 +1,12 @@
-// === Module 10789: SocialLayerStorefrontActionCreators ===
+// === Module 10798: SocialLayerStorefrontActionCreators ===
 
-// Module 10789 (SocialLayerStorefrontActionCreators)
+// Module 10798 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9565 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7470 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9571 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7473 */;
 
 const require = globalThis.__r;
 
@@ -762,14 +762,13 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
           let mapped;
           if (storefronts != null) {
             mapped = storefronts.map((guildId) => {
-              const obj = { guildId: guildId.guild_id, applicationId: guildId.application_id, gameId: guildId.game_id, collectiblesShopNavigationEnabled: true === guildId.collectibles_shop_navigation_enabled, excludedPlatforms: null, disableMobileAccountLinking: null, allowOrbsSpending: null };
+              const obj = { guildId: guildId.guild_id, applicationId: guildId.application_id, gameId: guildId.game_id, collectiblesShopNavigationEnabled: true === guildId.collectibles_shop_navigation_enabled, excludedPlatforms: null, disableMobileAccountLinking: null };
               let excluded_platforms = guildId.excluded_platforms;
               if (excluded_platforms == null) {
                 excluded_platforms = [];
               }
               obj.excludedPlatforms = excluded_platforms;
               obj.disableMobileAccountLinking = true === guildId.disable_mobile_account_linking;
-              obj.allowOrbsSpending = true === guildId.allow_orbs_spending;
               return obj;
             });
           }

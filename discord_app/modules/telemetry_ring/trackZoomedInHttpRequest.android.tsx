@@ -1,6 +1,6 @@
-// === Module 19767: trackZoomedInHttpRequest ===
+// === Module 19796: trackZoomedInHttpRequest ===
 
-// Module 19767 (trackZoomedInHttpRequest)
+// Module 19796 (trackZoomedInHttpRequest)
 import Constants from "Constants" /* 1072 */;
 import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 2121 */;
 import size from "module_2" /* 2 */;

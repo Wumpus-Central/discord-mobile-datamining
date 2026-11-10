@@ -1,15 +1,15 @@
-// === Module 7715: NetStats ===
+// === Module 7718: NetStats ===
 
-// Module 7715 (NetStats)
+// Module 7718 (NetStats)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import configure from "configure" /* 1479 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5321 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 6080 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5323 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 6082 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6623 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7716 */;
-import GuildStore from "GuildStore" /* 5011 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6625 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7719 */;
+import GuildStore from "GuildStore" /* 5013 */;
 import NetworkUtils_mod from "utils/NetworkUtils" /* 1478 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 

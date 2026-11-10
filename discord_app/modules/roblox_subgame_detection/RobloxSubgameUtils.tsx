@@ -1,9 +1,9 @@
-// === Module 7969: RobloxSubgameUtils ===
+// === Module 7973: RobloxSubgameUtils ===
 
-// Module 7969 (RobloxSubgameUtils)
+// Module 7973 (RobloxSubgameUtils)
 import applyDefault from "apply" /* 12 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7970 */;
-import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 7971 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7974 */;
+import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 7975 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

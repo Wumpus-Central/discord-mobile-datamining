@@ -1,19 +1,19 @@
-// === Module 9626: NitroCoinSpotIllustration ===
+// === Module 9632: NitroCoinSpotIllustration ===
 
-// Module 9626 (NitroCoinSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef9627 from "module_9627" /* 9627 */;
-import _modDef9628 from "module_9628" /* 9628 */;
-import _modDef9629 from "module_9629" /* 9629 */;
+// Module 9632 (NitroCoinSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7138 */;
+import _modDef9633 from "module_9633" /* 9633 */;
+import _modDef9634 from "module_9634" /* 9634 */;
+import _modDef9635 from "module_9635" /* 9635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9627 }, 3: null };
-let obj2 = { uri: _modDef9627 };
-obj[2] = { uri: _modDef9628 };
-const obj3 = { uri: _modDef9628 };
-obj[3] = { uri: _modDef9629 };
+let obj = { 1: null, 2: { uri: _modDef9633 }, 3: null };
+let obj2 = { uri: _modDef9633 };
+obj[2] = { uri: _modDef9634 };
+const obj3 = { uri: _modDef9634 };
+obj[3] = { uri: _modDef9635 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroCoinSpotIllustration.native.tsx");
 

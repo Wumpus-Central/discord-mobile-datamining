@@ -1,7 +1,7 @@
-// === Module 15186: UserProfileAddableWidgetTypes ===
+// === Module 15212: UserProfileAddableWidgetTypes ===
 
-// Module 15186 (UserProfileAddableWidgetTypes)
-import WidgetType from "WidgetType" /* 7849 */;
+// Module 15212 (UserProfileAddableWidgetTypes)
+import WidgetType from "WidgetType" /* 7853 */;
 import size from "module_2" /* 2 */;
 
 const items = [WidgetType.WidgetType.FAVORITE_GAMES, WidgetType.WidgetType.PLAYED_GAMES, WidgetType.WidgetType.CURRENT_GAMES, WidgetType.WidgetType.WANT_TO_PLAY_GAMES];

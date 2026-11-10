@@ -1,16 +1,16 @@
-// === Module 14203: ChatInputAppCommandManager ===
+// === Module 14229: ChatInputAppCommandManager ===
 
-// Module 14203 (ChatInputAppCommandManager)
+// Module 14229 (ChatInputAppCommandManager)
 import nativeDefault from "native" /* 575 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 8753 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 13988 */;
-import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 14204 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 8759 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 14014 */;
+import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 14230 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8415 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8416 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8419 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8420 */;
 import GameStore from "GameStore" /* 2138 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8751 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8757 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -303,9 +303,9 @@ class ChatInputAppCommandManager {
     return null;
   }
 }
-const ChannelAutocompleteConstants = fn(6168);
+const ChannelAutocompleteConstants = fn(6170);
 ({ extractGameMentionIds: closure_11, GAME_MENTION_RAW_RE_GLOBAL: closure_12, GAME_MENTION_SENTINEL: map1 } = ChannelAutocompleteConstants);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { commandOption: { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 }, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };
 let obj3 = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
 obj.commandErrorOption = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.xs, fontSize: 14 };

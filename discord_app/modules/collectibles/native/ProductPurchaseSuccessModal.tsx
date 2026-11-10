@@ -1,22 +1,22 @@
-// === Module 14732: ProductPurchaseSuccessModal ===
+// === Module 14758: ProductPurchaseSuccessModal ===
 
-// Module 14732 (ProductPurchaseSuccessModal)
+// Module 14758 (ProductPurchaseSuccessModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
-import timing_timing from "timing/timing" /* 5370 */;
-import HapticUtils from "HapticUtils" /* 5376 */;
-import spring_spring from "spring/spring" /* 5761 */;
-import _mod7071 from "module_7071" /* 7071 */;
-import XSmallIcon from "XSmallIcon" /* 7120 */;
-import tinycolorDefault from "tinycolor" /* 7806 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14731 */;
-import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 14733 */;
+import timing_timing from "timing/timing" /* 5372 */;
+import HapticUtils from "HapticUtils" /* 5378 */;
+import spring_spring from "spring/spring" /* 5763 */;
+import _mod7074 from "module_7074" /* 7074 */;
+import XSmallIcon from "XSmallIcon" /* 7123 */;
+import tinycolorDefault from "tinycolor" /* 7809 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14757 */;
+import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 14759 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ function CancelButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-  return closure_11(_mod7071.HeaderBackButton, obj);
+  return closure_11(_mod7074.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
@@ -96,10 +96,10 @@ const Constants = fn(1072);
 ({ Orientation: closure_9, VerticalGradient: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let createStyles = fn(5140);
+let createStyles = fn(5142);
 let obj2 = { closeButtonIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY } };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5140);
+createStyles = fn(5142);
 let closure_15 = createStyles.createStyles((arg0) => {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -349,7 +349,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       let obj5 = { uri: mobileBgUrl };
       obj3.source = obj5;
       obj3.style = tmp6.imageBackground;
-      let tmp38 = closure_11(tmp4(5842), obj3);
+      let tmp38 = closure_11(tmp4(5844), obj3);
       let tmp39 = closure_11;
       let tmp40 = closure_11;
     }
@@ -367,7 +367,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj8 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
       const obj9 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp40(tmp2(14737).BalanceWidgetPill, obj9);
+      showOrbBalancePill = tmp40(tmp2(14763).BalanceWidgetPill, obj9);
     }
     obj8.children = showOrbBalancePill;
     const items11 = [tmp40(closure_7, obj8), ];
@@ -396,24 +396,24 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
         ({ firstAvatarDecoration: obj31.deco, firstProfileEffect: obj31.pfx, firstNameplate: obj31.nameplate } = shopProductItems);
         obj14.previewAssets = product.previewAssets;
         obj14.targetSize = tmp34;
-        tmp39Result = tmp39(tmp4(9577), obj14);
+        tmp39Result = tmp39(tmp4(9583), obj14);
       }
       obj13.children = tmp39Result;
       let tmp39Result2 = tmp39(closure_7, obj13);
     } else if (tmp2(2111).CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj15 = { item: _slicedToArray(product.items, 1)[0], size: avatarDecorationSize, avatarSource, animate: !stateFromStores };
-      tmp39Result2 = tmp39(tmp4(9590), obj15);
+      tmp39Result2 = tmp39(tmp4(9596), obj15);
     } else if (tmp2(2111).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj16 = { user: currentUser, profileEffect: product.items[0] };
-      tmp39Result2 = tmp39(tmp4(11533), obj16);
+      tmp39Result2 = tmp39(tmp4(11542), obj16);
     } else if (tmp2(2111).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj17 = { user: currentUser, profileFrame: product.items[0] };
-      tmp39Result2 = tmp39(tmp4(11651), obj17);
+      tmp39Result2 = tmp39(tmp4(11660), obj17);
     } else {
       tmp39Result2 = null;
       if (tmp2(2111).CollectiblesItemType.NAMEPLATE === type) {
         const obj18 = { user: currentUser, nameplate: product.items[0], animate: true };
-        tmp39Result2 = tmp39(tmp2(11652).NameplatePreview, obj18);
+        tmp39Result2 = tmp39(tmp2(11661).NameplatePreview, obj18);
       }
     }
     obj12.children = tmp39Result2;
@@ -428,9 +428,9 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl3 = tmp2(1113).intl;
       const obj21 = { itemName: product.name };
       obj20.children = intl3.format(tmp2(1113).t.YNaxMp, obj21);
-      const items16 = [tmp40(tmp2(5751).Text, obj20), ];
+      const items16 = [tmp40(tmp2(5753).Text, obj20), ];
       const obj22 = { variant: "body-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
-      let result = tmp2(7808).isPremiumCollectiblesProduct(product);
+      let result = tmp2(7811).isPremiumCollectiblesProduct(product);
       const intl4 = tmp2(1113).intl;
       const format = intl4.format;
       const t = tmp2(1113).t;
@@ -443,10 +443,10 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       }
       const obj25 = { children: null };
       obj22.children = formatResult;
-      items16[1] = tmp40(tmp2(5751).Text, obj22);
+      items16[1] = tmp40(tmp2(5753).Text, obj22);
       obj25.children = items16;
       renderMessagesResult = closure_12(closure_13, obj25);
-      const tmp2Result24 = tmp2(7808);
+      const tmp2Result24 = tmp2(7811);
     }
     obj19.children = renderMessagesResult;
     items14[1] = tmp40(tmp4(1652).View, obj19);
@@ -464,11 +464,11 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl = tmp2(1113).intl;
       obj29.text = intl.string(tmp2(1113).t["2p2aYz"]);
     }
-    obj27.children = tmp40(tmp2(5758).Button, obj29);
+    obj27.children = tmp40(tmp2(5760).Button, obj29);
     obj26.children = tmp40(closure_7, obj27);
     items12[2] = tmp40(closure_7, obj26);
     rect.children = items12;
-    items9[1] = closure_12(tmp2(7355).SafeAreaPaddingView, rect);
+    items9[1] = closure_12(tmp2(7358).SafeAreaPaddingView, rect);
     const obj30 = { style: null, pointerEvents: "none" };
     const items17 = [tmp6.curtain, animatedStyle2];
     obj30.style = items17;

@@ -1,18 +1,18 @@
-// === Module 19974: InterestGuildJoinButton ===
+// === Module 20002: InterestGuildJoinButton ===
 
-// Module 19974 (InterestGuildJoinButton)
+// Module 20002 (InterestGuildJoinButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef2534 from "module_2534" /* 2534 */;
-import useGetIsMountedDefault from "useGetIsMounted" /* 8896 */;
+import useGetIsMountedDefault from "useGetIsMounted" /* 8902 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 4991 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4993 */;
 
 const require = fn;
 const View = fn(17).View;
 let jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj2 = { button: { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -105,12 +105,12 @@ export default function InterestGuildJoinButton(guildId) {
   const items1 = [guildId];
   let stateFromStores = guildId(504).useStateFromStores(items, () => GuildMembershipStore.isMember(guildId), items1);
   let obj = guildId(504);
-  const currentUserGuildJoinRequest = guildId(6975).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(6978).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  const tmp7 = applicationStatus === guildId(5174).GuildJoinRequestApplicationStatuses.SUBMITTED;
+  const tmp7 = applicationStatus === guildId(5176).GuildJoinRequestApplicationStatuses.SUBMITTED;
   _slicedToArray = tmp7;
   [loading, closure_6] = loading.useState(false);
   closure_7 = useGetIsMountedDefault();
@@ -167,6 +167,6 @@ export default function InterestGuildJoinButton(guildId) {
     }
     return applyArgumentsResult;
   };
-  obj6.children = jsx(guildId(5758).Button, obj7);
+  obj6.children = jsx(guildId(5760).Button, obj7);
   return jsx(closure_6, obj6);
 };

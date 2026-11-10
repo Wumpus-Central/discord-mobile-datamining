@@ -1,18 +1,18 @@
-// === Module 6824: PremiumGuildSubscribeModal ===
+// === Module 6827: PremiumGuildSubscribeModal ===
 
-// Module 6824 (PremiumGuildSubscribeModal)
+// Module 6827 (PremiumGuildSubscribeModal)
 import util from "util" /* 1113 */;
-import useInitialValueDefault from "useInitialValue" /* 5739 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6154 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 6823 */;
-import NavigatorHeader from "NavigatorHeader" /* 7064 */;
-import Navigator from "Navigator" /* 7231 */;
+import useInitialValueDefault from "useInitialValue" /* 5741 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6156 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 6826 */;
+import NavigatorHeader from "NavigatorHeader" /* 7067 */;
+import Navigator from "Navigator" /* 7234 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
-let closure_6 = fn(6825).PremiumGuildSubscribeModalScenes;
+let closure_6 = fn(6828).PremiumGuildSubscribeModalScenes;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -38,7 +38,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
           headerShown: false,
           render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(6826), {});
+                return closure_1_8(guildBoostSlots(6829), {});
               }
         };
         obj5[constants.GUILD_SELECT] = obj6;
@@ -46,24 +46,24 @@ export default function PremiumGuildSubscribeModal(arg0) {
           headerLeft: NavigatorHeader.getHeaderCloseButton(BoostingActionCreators.closeApplyBoostModal),
           headerRight: function renderSettingsButton() {
                 if (obj.isThemeDark(theme.theme)) {
-                  let tmp4Result = guildBoostSlots(7631);
+                  let tmp4Result = guildBoostSlots(7634);
                 } else {
-                  tmp4Result = guildBoostSlots(7632);
+                  tmp4Result = guildBoostSlots(7635);
                 }
-                let obj2 = { source: tmp4Result, IconComponent: guildId(7633).SettingsIcon, accessibilityLabel: null, accessibilityHint: null, onPress: null };
+                let obj2 = { source: tmp4Result, IconComponent: guildId(7636).SettingsIcon, accessibilityLabel: null, accessibilityHint: null, onPress: null };
                 const intl = guildId(1113).intl;
                 obj2.accessibilityLabel = intl.string(guildId(1113).t["3D5yo/"]);
                 const intl2 = guildId(1113).intl;
                 obj2.accessibilityHint = intl2.string(guildId(1113).t["+CbP2v"]);
                 obj2.onPress = function onPress() {
-                  const result = closure_1_0(7227).trackUserSettingsPaneViewed({ destinationPane: constants.GUILD_BOOSTING });
-                  const obj = closure_1_0(7227);
+                  const result = closure_1_0(7230).trackUserSettingsPaneViewed({ destinationPane: constants.GUILD_BOOSTING });
+                  const obj = closure_1_0(7230);
                   const obj2 = { destinationPane: constants.GUILD_BOOSTING };
-                  closure_1_0(6823).closeApplyBoostModal();
-                  const obj3 = closure_1_0(6823);
-                  closure_1_0(7635).openUserSettings({ screen: constants.GUILD_BOOSTING });
+                  closure_1_0(6826).closeApplyBoostModal();
+                  const obj3 = closure_1_0(6826);
+                  closure_1_0(7638).openUserSettings({ screen: constants.GUILD_BOOSTING });
                 };
-                return closure_1_8(guildId(7630).HeaderActionButton, obj2);
+                return closure_1_8(guildId(7633).HeaderActionButton, obj2);
               },
           headerTitle(children) {
                 children = children.children;
@@ -76,11 +76,11 @@ export default function PremiumGuildSubscribeModal(arg0) {
                   tmpResult = closure_1_8(guildId(1187).LegacyText, obj2);
                 }
                 obj.subtitle = tmpResult;
-                return closure_1_8(guildId(7064).NavigatorHeader, obj);
+                return closure_1_8(guildId(7067).NavigatorHeader, obj);
               },
           render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(7637), {});
+                return closure_1_8(guildBoostSlots(7640), {});
               }
         };
         obj5[constants.OVERVIEW] = obj7;
@@ -90,7 +90,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
         obj8.headerTitle = intl.string(util.t.VJEVbu);
         obj8.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(guildBoostSlots(15785), {});
+          return closure_1_8(guildBoostSlots(15813), {});
         };
         obj5[constants.CONFIRMATION] = obj8;
         obj4.screens = obj5;

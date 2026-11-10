@@ -1,6 +1,6 @@
-// === Module 7976: VoiceEngineStreamingManager ===
+// === Module 7980: VoiceEngineStreamingManager ===
 
-// Module 7976 (VoiceEngineStreamingManager)
+// Module 7980 (VoiceEngineStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -9,16 +9,16 @@ import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useWindowDimensions from "useWindowDimensions" /* 1493 */;
 import inject from "inject" /* 2132 */;
-import UserSettings from "UserSettings" /* 4965 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6772 */;
-import AndroidStopAndPauseVideoExperimentDefault from "AndroidStopAndPauseVideoExperiment" /* 7977 */;
-import StreamActionCreators from "StreamActionCreators" /* 7978 */;
-import PushNotificationDefault from "PushNotification" /* 11040 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 12086 */;
+import UserSettings from "UserSettings" /* 4967 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6774 */;
+import AndroidStopAndPauseVideoExperimentDefault from "AndroidStopAndPauseVideoExperiment" /* 7981 */;
+import StreamActionCreators from "StreamActionCreators" /* 7982 */;
+import PushNotificationDefault from "PushNotification" /* 11049 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 12095 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6771 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
 import LifecycleManager from "LifecycleManager" /* 2120 */;
 
 require = fn;
@@ -120,8 +120,8 @@ const Constants = fn(1072);
 const getAppIntentScheme = fn(2142).getAppIntentScheme;
 let obj2 = new LoggerDefault("VoiceEngineStreamingManager");
 obj2.enableNativeLogger(true);
-const timeout = new fn(4984).Timeout();
-const timeout1 = new fn(4984).Timeout();
+const timeout = new fn(4986).Timeout();
+const timeout1 = new fn(4986).Timeout();
 let closure_16 = [];
 const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
 class VoiceEngineStreamingManager extends tmp6 {
@@ -161,11 +161,11 @@ prototype["_initialize"] = function _initialize() {
     const currentAppIntent = authStore.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(7978).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(7982).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = authStore.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = closure_1(5888);
-        const participant = tmp2Result.selectParticipant(channel.id, tmp9(6772).encodeStreamKey(currentUserActiveStream));
+        const tmp2Result = closure_1(5890);
+        const participant = tmp2Result.selectParticipant(channel.id, tmp9(6774).encodeStreamKey(currentUserActiveStream));
         if ("android" === closure_19.platform) {
           closure_15.start(15000, () => {
             _modDef38(null != voiceEngine, "Voice Engine should be initialized in callback");
@@ -180,9 +180,9 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(closure_12(currentAppIntent));
         }
-        const tmp9Result = tmp9(6772);
+        const tmp9Result = tmp9(6774);
       }
-      const obj3 = currentUserActiveStream(7978);
+      const obj3 = currentUserActiveStream(7982);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");

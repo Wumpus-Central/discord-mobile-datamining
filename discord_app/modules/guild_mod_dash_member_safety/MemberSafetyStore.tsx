@@ -1,16 +1,16 @@
-// === Module 7749: MemberSafetyStore ===
+// === Module 7752: MemberSafetyStore ===
 
-// Module 7749 (MemberSafetyStore)
+// Module 7752 (MemberSafetyStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7752 */;
-import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7756 */;
-import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 7757 */;
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7755 */;
+import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7759 */;
+import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 7760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
-import GuildStore from "GuildStore" /* 5011 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildStore from "GuildStore" /* 5013 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -45,7 +45,7 @@ function handleGuildRoleMemberUpdate(guildId) {
   items = [guildId.userId];
   return dependencyMap[guildId].updateMembersByMemberIds(items);
 }
-let closure_8 = fn(7750).GuildMemberSafetyPageStore;
+let closure_8 = fn(7753).GuildMemberSafetyPageStore;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let c10 = false;
 const dependencyMap = {};
@@ -328,6 +328,14 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       dependencyMap[guildId] = tmp6;
     }
     return dependencyMap[guildId].removeMember(guildId.user.id);
+  },
+  GUILD_MEMBER_REMOVE_LOCAL: function handleGuildMemberRemoveLocal(guildId) {
+    guildId = guildId.guildId;
+    if (null == dependencyMap[guildId]) {
+      const tmp6 = new closure_8(guildId);
+      dependencyMap[guildId] = tmp6;
+    }
+    return dependencyMap[guildId].removeMember(guildId.userId);
   },
   GUILD_ROLE_UPDATE: handleGuildRoleUpdateOrDelete,
   GUILD_ROLE_DELETE: handleGuildRoleUpdateOrDelete,

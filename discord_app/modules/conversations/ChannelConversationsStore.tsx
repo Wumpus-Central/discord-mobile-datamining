@@ -1,16 +1,16 @@
-// === Module 7843: ChannelConversationsStore ===
+// === Module 7847: ChannelConversationsStore ===
 
-// Module 7843 (ChannelConversationsStore)
+// Module 7847 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1453 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6196 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7844 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7848 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import RelationshipStore from "RelationshipStore" /* 5082 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import RelationshipStore from "RelationshipStore" /* 5084 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -162,7 +162,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(5779);
+const ConversationConstants = fn(5781);
 ({ CONVERSATION_COLORS: closure_8, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: closure_9, MAX_CONVERSATIONS_PER_CHANNEL: closure_10, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
@@ -461,7 +461,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7845).mapConversation);
+      const mapped = rawConversations.map(set(7849).mapConversation);
       const found = mapped.filter(set(1380).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

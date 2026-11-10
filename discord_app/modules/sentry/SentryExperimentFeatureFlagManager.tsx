@@ -1,11 +1,11 @@
-// === Module 20513: SentryExperimentFeatureFlagManager ===
+// === Module 20541: SentryExperimentFeatureFlagManager ===
 
-// Module 20513 (SentryExperimentFeatureFlagManager)
+// Module 20541 (SentryExperimentFeatureFlagManager)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import ExperimentStore from "ExperimentStore" /* 5354 */;
+import ExperimentStore from "ExperimentStore" /* 5356 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
 
 function isLikelyControl(registeredExperiments, variantId2) {
   if (null == registeredExperiments) {

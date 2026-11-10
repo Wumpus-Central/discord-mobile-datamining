@@ -1,11 +1,13 @@
-// === Module 5839: ? ===
+// === Module 5841: ? ===
 
-// Module 5839
-import module_5151 from "module_5151" /* 5151 */;
+// Module 5841
+import module_5153 from "module_5153" /* 5153 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 let c2 = 1;
-const useToastStore = module_5151.create(() => {
+const useToastStore = module_5153.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();
@@ -15,6 +17,7 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/design/co
 
 export { useToastStore };
 export function showToast(surface) {
+  _require = surface;
   let str;
   if (surface != null) {
     str = surface.surface;
@@ -23,33 +26,42 @@ export function showToast(surface) {
     str = "app";
   }
   let obj = { toast: surface, key: null };
-  closure_2 = tmp + 1;
-  obj.key = +closure_2;
-  str(obj[1]).batchUpdates(() => {
+  obj = tmp + 1;
+  obj.key = +obj;
+  require("ReactBatchUpdates").batchUpdates(() => {
     obj.setState((currentToastMap) => {
       currentToastMap = currentToastMap.currentToastMap;
-      const _Map = Map;
-      if (currentToastMap.has(str)) {
-        const _Map1 = new _Map(currentToastMap.queuedToastsMap);
-        let items1 = _Map1.get(str);
-        if (items1 == null) {
-          items1 = [];
+      value = currentToastMap.get(str);
+      if (null != value) {
+        const _Map = Map;
+        const map = new Map(currentToastMap.queuedToastsMap);
+        value2 = map.get(str);
+        if (value2 == null) {
+          value2 = [];
         }
         items = [];
-        items[HermesBuiltin.arraySpread(items1, 0)] = closure_1_1;
-        const result = _Map1.set(str, items);
+        HermesBuiltin.arraySpread(value2, 0);
+        let num3 = -1;
+        if (null != toastKey.toastKey) {
+          num3 = items.findIndex((toast) => toast.toast.toastKey === toastKey.toastKey);
+        }
+        if (-1 === num3) {
+          items.push(closure_1_2);
+        } else {
+          items[num3] = closure_1_2;
+        }
+        const result = map.set(str, items);
         obj = {};
         const merged = Object.assign(currentToastMap);
-        obj.queuedToastsMap = _Map1;
+        obj.queuedToastsMap = map;
         return obj;
-      } else {
-        const _Map2 = new _Map(currentToastMap.currentToastMap);
-        const result1 = _Map2.set(str, closure_1_1);
-        const obj2 = {};
-        const merged1 = Object.assign(currentToastMap);
-        obj2.currentToastMap = _Map2;
-        return obj2;
       }
+      const map1 = new Map(currentToastMap.currentToastMap);
+      const result1 = map1.set(str, closure_1_2);
+      const obj2 = {};
+      const merged1 = Object.assign(currentToastMap);
+      obj2.currentToastMap = map1;
+      return obj2;
     });
   });
 }

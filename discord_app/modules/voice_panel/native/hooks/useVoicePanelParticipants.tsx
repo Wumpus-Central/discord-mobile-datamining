@@ -1,15 +1,15 @@
-// === Module 19566: useVoicePanelParticipants ===
+// === Module 19595: useVoicePanelParticipants ===
 
-// Module 19566 (useVoicePanelParticipants)
+// Module 19595 (useVoicePanelParticipants)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6812 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6901 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6815 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
-import VoiceStateStore from "VoiceStateStore" /* 5803 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5896 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
+import VoiceStateStore from "VoiceStateStore" /* 5805 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5898 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ function getMemoizedParticipant(item10013, get) {
   }
   return value;
 }
-const VoicePanelConstants = fn(11363);
+const VoicePanelConstants = fn(11372);
 ({ VoicePanelCardItemType: closure_12, VoicePanelCTACard: map1 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
 let closure_15 = [];

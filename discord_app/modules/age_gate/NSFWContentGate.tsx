@@ -1,8 +1,8 @@
-// === Module 6807: NSFWContentGate ===
+// === Module 6810: NSFWContentGate ===
 
-// Module 6807 (NSFWContentGate)
-import GuildRecord from "GuildRecord" /* 5007 */;
-import GuildStore from "GuildStore" /* 5011 */;
+// Module 6810 (NSFWContentGate)
+import GuildRecord from "GuildRecord" /* 5009 */;
+import GuildStore from "GuildStore" /* 5013 */;
 import UserStore from "UserStore" /* 1385 */;
 import size from "module_2" /* 2 */;
 

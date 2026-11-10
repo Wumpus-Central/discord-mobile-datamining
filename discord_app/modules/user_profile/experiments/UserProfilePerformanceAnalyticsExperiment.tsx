@@ -1,6 +1,6 @@
-// === Module 8840: UserProfilePerformanceAnalyticsExperiment ===
+// === Module 8846: UserProfilePerformanceAnalyticsExperiment ===
 
-// Module 8840 (UserProfilePerformanceAnalyticsExperiment)
+// Module 8846 (UserProfilePerformanceAnalyticsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

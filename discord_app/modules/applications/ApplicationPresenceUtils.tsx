@@ -1,7 +1,7 @@
-// === Module 8877: ApplicationPresenceUtils ===
+// === Module 8883: ApplicationPresenceUtils ===
 
-// Module 8877 (ApplicationPresenceUtils)
-import ChannelStore from "ChannelStore" /* 4989 */;
+// Module 8883 (ApplicationPresenceUtils)
+import ChannelStore from "ChannelStore" /* 4991 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/ApplicationPresenceUtils.tsx");

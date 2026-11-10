@@ -1,9 +1,9 @@
-// === Module 18907: ICYMIPopularGuildsStore ===
+// === Module 18936: ICYMIPopularGuildsStore ===
 
-// Module 18907 (ICYMIPopularGuildsStore)
+// Module 18936 (ICYMIPopularGuildsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildStore from "GuildStore" /* 5011 */;
+import GuildStore from "GuildStore" /* 5013 */;
 
 const require = fn;
 let closure_3 = [];

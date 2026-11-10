@@ -1,6 +1,6 @@
-// === Module 7470: SocialLayerStorefrontStore ===
+// === Module 7473: SocialLayerStorefrontStore ===
 
-// Module 7470 (SocialLayerStorefrontStore)
+// Module 7473 (SocialLayerStorefrontStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import LocaleStore from "LocaleStore" /* 2186 */;

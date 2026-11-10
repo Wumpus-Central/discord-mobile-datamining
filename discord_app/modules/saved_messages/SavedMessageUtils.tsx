@@ -1,13 +1,13 @@
-// === Module 11295: SavedMessageUtils ===
+// === Module 11304: SavedMessageUtils ===
 
-// Module 11295 (SavedMessageUtils)
+// Module 11304 (SavedMessageUtils)
 import util from "util" /* 1113 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7552 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
 
 const require = globalThis.__r;
 
@@ -67,8 +67,8 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
           } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             closure_130_2 = value;
             if (null == closure_130_2.recipients) {
@@ -83,8 +83,8 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
               const recipients = closure_130_2.recipients;
               c6 = 3;
               c7 = 1;
-              const obj9 = { value: closure_131_1(closure_131_2[9]).ensurePrivateChannel(recipients.map((id) => id.id)), done: false };
-              return obj9;
+              const obj10 = { value: closure_131_1(closure_131_2[9]).ensurePrivateChannel(recipients.map((id) => id.id)), done: false };
+              return obj10;
             }
           }
         } else if (arg0 === 1) {
@@ -100,16 +100,21 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
         }
         let guildId;
         if (closure_130_1 != null) {
-          guildId = closure_130_1.getGuildId();
+          guildId = obj5.getGuildId();
         }
-        closure_131_1(closure_131_2[10])(closure_131_10.CHANNEL(guildId, closure_130_0.saveData.channelId, closure_130_0.saveData.messageId), { openChannel: true });
+        obj5 = closure_130_1;
+        const tmp20 = closure_131_1(closure_131_2[10]);
+        const CHANNELResult = closure_131_10.CHANNEL(guildId, closure_130_0.saveData.channelId, closure_130_0.saveData.messageId);
+        const obj6 = closure_131_0(closure_131_2[11]);
+        const obj11 = { openChannel: true, navigationReplace: closure_131_0(closure_131_2[11]).isGuildsOnTopOfTabs() };
+        tmp20(CHANNELResult, obj11);
         c7 = 3;
         return { value: "HermesInternal", done: null };
-      } catch (tmp29) {
-        closure_4 = tmp29;
+      } catch (tmp34) {
+        closure_4 = tmp34;
         if (tmp4 === c5) {
           c7 = tmp2;
-          throw tmp29;
+          throw tmp34;
         } else {
           c6 = tmp;
         }
@@ -117,7 +122,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const ChannelRecord = fn(4993);
+const ChannelRecord = fn(4995);
 ({ PrivateChannelRecord: hasOwnProperty, UnknownChannelRecord: closure_6 } = ChannelRecord);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, Routes: closure_10 } = Constants);

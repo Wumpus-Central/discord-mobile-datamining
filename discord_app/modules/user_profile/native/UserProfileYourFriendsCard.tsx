@@ -1,12 +1,12 @@
-// === Module 19255: UserProfileYourFriendsCard ===
+// === Module 19284: UserProfileYourFriendsCard ===
 
-// Module 19255 (UserProfileYourFriendsCard)
+// Module 19284 (UserProfileYourFriendsCard)
 import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7877 */;
-import RelationshipStore from "RelationshipStore" /* 5082 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7881 */;
+import RelationshipStore from "RelationshipStore" /* 5084 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1187).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_12 = createStyles.createStyles({ facepile: { flexDirection: "row", alignItems: "center" }, avatars: { flexDirection: "row" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
@@ -40,7 +40,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
   let obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9231).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9237).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -79,13 +79,13 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
         items = [{ translateX: 4 * (first.length - 1 - index) }];
         obj2.transform = items;
         obj.style = obj2;
-        const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "(function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;})" };
+        const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "minDist" };
         let tmp3;
         if (index < first.length - 1) {
           tmp3 = closure_2_11;
         }
         obj4.cutout = tmp3;
-        obj.children = jsx(closure_0(1187).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "(function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;})" });
+        obj.children = jsx(closure_0(1187).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "minDist" });
         return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
       })}</View>
     };
@@ -95,13 +95,13 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
       items = [{ translateX: 4 * (first.length - 1 - index) }];
       obj2.transform = items;
       obj.style = obj2;
-      const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "(function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;})" };
+      const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "minDist" };
       let tmp3;
       if (index < first.length - 1) {
         tmp3 = closure_2_11;
       }
       obj4.cutout = tmp3;
-      obj.children = jsx(closure_0(1187).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "(function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;})" });
+      obj.children = jsx(closure_0(1187).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: "minDist" });
       return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
     })}</View></View>;
   }, items3);

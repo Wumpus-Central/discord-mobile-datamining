@@ -1,13 +1,13 @@
-// === Module 17984: DevToolsProfilingScreen ===
+// === Module 18011: DevToolsProfilingScreen ===
 
-// Module 17984 (DevToolsProfilingScreen)
+// Module 18011 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import Stack_Stack from "Stack/Stack" /* 6159 */;
-import TableRow from "TableRow" /* 7038 */;
-import TableRowGroup from "TableRowGroup" /* 7126 */;
-import ComponentProfiler from "ComponentProfiler" /* 11228 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 17985 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import Stack_Stack from "Stack/Stack" /* 6161 */;
+import TableRow from "TableRow" /* 7041 */;
+import TableRowGroup from "TableRowGroup" /* 7129 */;
+import ComponentProfiler from "ComponentProfiler" /* 11237 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 18012 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: null, monospace: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

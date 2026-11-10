@@ -1,6 +1,6 @@
-// === Module 7754: threads/getTimestampString ===
+// === Module 7757: threads/getTimestampString ===
 
-// Module 7754 (threads/getTimestampString)
+// Module 7757 (threads/getTimestampString)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

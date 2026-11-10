@@ -1,10 +1,10 @@
-// === Module 18701: RoleColorPickerActionSheet ===
+// === Module 18730: RoleColorPickerActionSheet ===
 
-// Module 18701 (RoleColorPickerActionSheet)
+// Module 18730 (RoleColorPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16765 */;
-import ColorBlockDefault from "ColorBlock" /* 16767 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16792 */;
+import ColorBlockDefault from "ColorBlock" /* 16794 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const Constants = fn(1072);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let items = [...ROLE_COLORS.slice(0, 5), ...ROLE_COLORS.slice(10, 15), ...ROLE_COLORS.slice(5, 10), ...ROLE_COLORS.slice(15, 18)];
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj2 = { body: { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" }, colorWrap: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
 obj2.colorWrap = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: nativeDefault.space.PX_16 };

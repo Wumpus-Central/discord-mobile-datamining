@@ -1,12 +1,12 @@
-// === Module 16801: HexagonCampaignDaysLeftBadge ===
+// === Module 16828: HexagonCampaignDaysLeftBadge ===
 
-// Module 16801 (HexagonCampaignDaysLeftBadge)
+// Module 16828 (HexagonCampaignDaysLeftBadge)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import shared from "shared" /* 5147 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5167 */;
-import native from "native" /* 5199 */;
-import Text_Text from "Text/Text" /* 5751 */;
+import shared from "shared" /* 5149 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5169 */;
+import native from "native" /* 5201 */;
+import Text_Text from "Text/Text" /* 5753 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -58,8 +58,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = 60 * DurationsDefault.Millis.SECOND;
-let closure_9 = Object.values(fn(5165).HexagonCampaignPerk);
-const createStyles = fn(5140);
+let closure_9 = Object.values(fn(5167).HexagonCampaignPerk);
+const createStyles = fn(5142);
 let obj2 = { badge: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 3, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT }, badgeOverlay: null, badgeExpressiveDark: null, badgeExpressiveLight: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 3, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
 obj2.badgeOverlay = { backgroundColor: nativeDefault.unsafe_rawColors.OPACITY_BLACK_40 };
@@ -89,13 +89,13 @@ export default function HexagonCampaignDaysLeftBadge(perk) {
     } else {
       const _Math = Math;
       items = [];
-      HermesBuiltin.arraySpread(closure_9.map((item) => perk(5167).getHexagonCampaignPerkCutoffMs(item, stateFromStores)), 0);
+      HermesBuiltin.arraySpread(closure_9.map((item) => perk(5169).getHexagonCampaignPerkCutoffMs(item, stateFromStores)), 0);
       const _Math2 = Math;
       hexagonCampaignPerkCutoffMs = HermesBuiltin.apply(items, Math);
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp6 = stateFromStores(7700)(memo, closure_8);
+  const tmp6 = stateFromStores(7703)(memo, closure_8);
   let num = 0;
   if (tmp6.hours > 0) {
     num = 1;
@@ -103,13 +103,13 @@ export default function HexagonCampaignDaysLeftBadge(perk) {
   const obj2 = {
     variant: perk.variant,
     renderIcon(color) {
-      return closure_1_6(perk(5864).ClockIcon, { size: "xxs", color });
+      return closure_1_6(perk(5866).ClockIcon, { size: "xxs", color });
     },
     text: null
   };
   const bound = Math.max(tmp6.days + num, 1);
   const intl = perk(1113).intl;
-  obj2.text = intl.formatToPlainString(stateFromStores(4411)["noGK/D"], { days: bound });
+  obj2.text = intl.formatToPlainString(stateFromStores(4413)["noGK/D"], { days: bound });
   return closure_6(HexagonCampaignBadge, obj2);
 };
 export function useHexagonCampaignDaysLeft(arg0) {
@@ -130,13 +130,13 @@ export function useHexagonCampaignDaysLeft(arg0) {
     } else {
       const _Math = Math;
       items = [];
-      HermesBuiltin.arraySpread(closure_9.map((item) => perk(5167).getHexagonCampaignPerkCutoffMs(item, stateFromStores)), 0);
+      HermesBuiltin.arraySpread(closure_9.map((item) => perk(5169).getHexagonCampaignPerkCutoffMs(item, stateFromStores)), 0);
       const _Math2 = Math;
       hexagonCampaignPerkCutoffMs = HermesBuiltin.apply(items, Math);
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp3 = stateFromStores(7700)(memo, closure_8);
+  const tmp3 = stateFromStores(7703)(memo, closure_8);
   let num = 0;
   if (tmp3.hours > 0) {
     num = 1;

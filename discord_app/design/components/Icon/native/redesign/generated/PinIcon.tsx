@@ -1,9 +1,9 @@
-// === Module 11109: PinIcon ===
+// === Module 11118: PinIcon ===
 
-// Module 11109 (PinIcon)
+// Module 11118 (PinIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod11110 from "module_11110" /* 11110 */;
+import BaseIconImage from "BaseIconImage" /* 5843 */;
+import _mod11119 from "module_11119" /* 11119 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PinIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11110, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11119, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

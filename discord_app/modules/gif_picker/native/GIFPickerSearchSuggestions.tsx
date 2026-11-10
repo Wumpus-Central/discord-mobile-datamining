@@ -1,15 +1,15 @@
-// === Module 10371: GIFPickerSearchSuggestions ===
+// === Module 10377: GIFPickerSearchSuggestions ===
 
-// Module 10371 (GIFPickerSearchSuggestions)
+// Module 10377 (GIFPickerSearchSuggestions)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10362 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10368 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj = { suggestionsContainer: { justifyContent: "center", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, footerSuggestionsContainer: null, footerSuggestionsTitle: null };
 let obj3 = { justifyContent: "center", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
 obj.footerSuggestionsContainer = { justifyContent: "flex-start", paddingVertical: nativeDefault.space.PX_16 };
@@ -31,12 +31,12 @@ export default noop.memo(function GIFPickerSearchSuggestions(onClickSuggestion) 
     const obj3 = { style: tmp.footerSuggestionsTitle, variant: "body-md/medium", color: "text-default", children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t["3JGJo2"]);
-    const items1 = [closure_5(tmp2(5751).Text, obj3), ];
+    const items1 = [closure_5(tmp2(5753).Text, obj3), ];
     const obj4 = {
       style: tmp.suggestionsContainer,
       children: stateFromStoresArray.map((text) => {
           closure_0 = text;
-          return closure_1_5(onClickSuggestion(5758).Button, {
+          return closure_1_5(onClickSuggestion(5760).Button, {
             size: "sm",
             variant: "secondary",
             hitSlop: nativeDefault.space.PX_8,

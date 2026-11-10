@@ -1,15 +1,15 @@
-// === Module 6811: SpeakingStore ===
+// === Module 6814: SpeakingStore ===
 
-// Module 6811 (SpeakingStore)
+// Module 6814 (SpeakingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5077 */;
-import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 6013 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5079 */;
+import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 6015 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
 
 function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
   let flag = arg2;
@@ -43,7 +43,7 @@ function handleConnectionOpen(user) {
   c14 = null;
 }
 const Permissions = fn(1072).Permissions;
-const Constants = fn(5897);
+const Constants = fn(5899);
 ({ SpeakingFlags: closure_9, MediaEngineContextTypes: closure_10 } = Constants);
 let map = new Map();
 let id = null;

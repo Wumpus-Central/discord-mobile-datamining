@@ -1,19 +1,19 @@
-// === Module 8044: ShieldSpotIllustration ===
+// === Module 8048: ShieldSpotIllustration ===
 
-// Module 8044 (ShieldSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef8045 from "module_8045" /* 8045 */;
-import _modDef8046 from "module_8046" /* 8046 */;
-import _modDef8047 from "module_8047" /* 8047 */;
+// Module 8048 (ShieldSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7138 */;
+import _modDef8049 from "module_8049" /* 8049 */;
+import _modDef8050 from "module_8050" /* 8050 */;
+import _modDef8051 from "module_8051" /* 8051 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef8045 }, 3: null };
-let obj2 = { uri: _modDef8045 };
-obj[2] = { uri: _modDef8046 };
-const obj3 = { uri: _modDef8046 };
-obj[3] = { uri: _modDef8047 };
+let obj = { 1: null, 2: { uri: _modDef8049 }, 3: null };
+let obj2 = { uri: _modDef8049 };
+obj[2] = { uri: _modDef8050 };
+const obj3 = { uri: _modDef8050 };
+obj[3] = { uri: _modDef8051 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ShieldSpotIllustration.native.tsx");
 

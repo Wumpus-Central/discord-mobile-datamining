@@ -1,22 +1,22 @@
-// === Module 19039: SwipeForMemberListWrapper ===
+// === Module 19068: SwipeForMemberListWrapper ===
 
-// Module 19039 (SwipeForMemberListWrapper)
+// Module 19068 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5314 */;
-import RootNavigationRef from "RootNavigationRef" /* 5315 */;
-import useChatLayout from "useChatLayout" /* 5317 */;
-import ChatInputUtils from "ChatInputUtils" /* 5323 */;
-import useThemeDefault from "useTheme" /* 5369 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6154 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10855 */;
-import useChatWidthDefault from "useChatWidth" /* 11700 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18393 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 18404 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 19041 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5316 */;
+import RootNavigationRef from "RootNavigationRef" /* 5317 */;
+import useChatLayout from "useChatLayout" /* 5319 */;
+import ChatInputUtils from "ChatInputUtils" /* 5325 */;
+import useThemeDefault from "useTheme" /* 5371 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5891 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6156 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10864 */;
+import useChatWidthDefault from "useChatWidth" /* 11709 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18422 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 18433 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 19070 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,15 +27,15 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9915);
+const ChannelDetailsStore = fn(9921);
 ({ getIsChannelDetailsSearchActive: metroImportDefault, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9903).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9909).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 const tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj2.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -306,12 +306,12 @@ export default function _default(channelId) {
   gesture3 = undefined;
   disallowGesture2 = undefined;
   disallowGesture3 = undefined;
-  const context = obj.useContext(tmp2(11383));
+  const context = obj.useContext(tmp2(11392));
   const gesture2 = context.gesture;
   importDefault = gesture2;
   const disallowGesture = context.disallowGesture;
   dependencyMap = disallowGesture;
-  let context1 = obj.useContext(tmp12(11383).MainTabsChannelScreenStackContext);
+  let context1 = obj.useContext(tmp12(11392).MainTabsChannelScreenStackContext);
   if (context1 == null) {
     context1 = {};
   }
@@ -469,9 +469,9 @@ export default function _default(channelId) {
   const tmp12Result15 = require("module_1652");
   let tmp63 = null;
   if (tmp12Result16.isJankScreenReportingEnabled()) {
-    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(18399).getBaseScreenName, resolveClosedName: tmp12(18399).getBaseScreenName, onCoveringChange: callback2 };
-    tmp63 = navigation(tmp2(18402), obj4);
-    const tmp2Result = tmp2(18402);
+    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(18428).getBaseScreenName, resolveClosedName: tmp12(18428).getBaseScreenName, onCoveringChange: callback2 };
+    tmp63 = navigation(tmp2(18431), obj4);
+    const tmp2Result = tmp2(18431);
   }
   const items30 = [tmp63, ];
   let obj5 = { gesture: memo2, children: null };

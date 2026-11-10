@@ -1,8 +1,8 @@
-// === Module 12297: conjureLiveReloadStatus ===
+// === Module 12305: conjureLiveReloadStatus ===
 
-// Module 12297 (conjureLiveReloadStatus)
+// Module 12305 (conjureLiveReloadStatus)
 import util from "util" /* 1113 */;
-import _modDef4026 from "module_4026" /* 4026 */;
+import _modDef4028 from "module_4028" /* 4028 */;
 import size from "module_2" /* 2 */;
 
 function liveReloadProgress(phase, step) {
@@ -41,9 +41,9 @@ function liveReloadProgress(phase, step) {
     obj = { direction: tmp4, title: null, stepLabel: null, stepIndex: null, stepCount: null };
     const intl = util.intl;
     if ("enable" === tmp4) {
-      let NeoP8L = _modDef4026.NeoP8L;
+      let NeoP8L = _modDef4028.NeoP8L;
     } else {
-      NeoP8L = _modDef4026["3+DCLs"];
+      NeoP8L = _modDef4028["3+DCLs"];
     }
     obj.title = intl.string(NeoP8L);
     let stringResult = null;
@@ -63,7 +63,7 @@ function liveReloadProgress(phase, step) {
   }
 }
 let closure_3 = { enable: ["sandbox", "files", "packages", "prepare", "build", "server", "reload"], disable: ["snapshot", "stopping", "reload"] };
-let obj = { sandbox: _modDef4026.wYBwzU, files: _modDef4026["5hvVF1"], packages: _modDef4026.DKR23W, prepare: _modDef4026.qc4VkW, build: _modDef4026.ZcJIE6, server: _modDef4026.mAXkyS, stopping: _modDef4026.dI8HGD, snapshot: _modDef4026.E3ZRQo, reload: _modDef4026.ZWcCXh };
+let obj = { sandbox: _modDef4028.wYBwzU, files: _modDef4028["5hvVF1"], packages: _modDef4028.DKR23W, prepare: _modDef4028.qc4VkW, build: _modDef4028.ZcJIE6, server: _modDef4028.mAXkyS, stopping: _modDef4028.dI8HGD, snapshot: _modDef4028.E3ZRQo, reload: _modDef4028.ZWcCXh };
 const result = size.fileFinishedImporting("modules/conjure/live_reload/conjureLiveReloadStatus.tsx");
 
 export function liveReloadDirection(arg0) {
@@ -96,7 +96,7 @@ export function liveReloadSettledDirection(arg0, arg1) {
 export { liveReloadProgress };
 export function liveReloadDescription(stateFromStores) {
   const intl = util.intl;
-  const stringResult = intl.string(_modDef4026.xjblZt);
+  const stringResult = intl.string(_modDef4028.xjblZt);
   if ("error" !== stateFromStores.phase) {
     const tmp6 = liveReloadProgress(stateFromStores.phase, stateFromStores.step);
     if (null != tmp6) {
@@ -113,14 +113,14 @@ export function liveReloadDescription(stateFromStores) {
         if (stateFromStores.enabled) {
           const intl2 = util.intl;
           const _HermesInternal = HermesInternal;
-          combined = "" + intl2.string(_modDef4026.gCey7s) + " \u00B7 " + stringResult;
+          combined = "" + intl2.string(_modDef4028.gCey7s) + " \u00B7 " + stringResult;
         }
       }
       return combined;
     }
   }
   const intl3 = util.intl;
-  const tmp3Result = _modDef4026;
+  const tmp3Result = _modDef4028;
   let error = stateFromStores.error;
   if (error == null) {
     error = "";

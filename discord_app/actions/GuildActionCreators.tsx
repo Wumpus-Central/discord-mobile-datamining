@@ -1,28 +1,28 @@
-// === Module 6957: GuildActionCreators ===
+// === Module 6960: GuildActionCreators ===
 
-// Module 6957 (GuildActionCreators)
+// Module 6960 (GuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6090 */;
-import AgeGateUtils from "AgeGateUtils" /* 6789 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6802 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6808 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7570 */;
-import LurkerActionCreators from "LurkerActionCreators" /* 7581 */;
-import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 7582 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6092 */;
+import AgeGateUtils from "AgeGateUtils" /* 6791 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6804 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6811 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7573 */;
+import LurkerActionCreators from "LurkerActionCreators" /* 7584 */;
+import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 7585 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BulkBanStore from "BulkBanStore" /* 6958 */;
+import BulkBanStore from "BulkBanStore" /* 6961 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 6828 */;
-import GuildChannelStore from "GuildChannelStore" /* 5070 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 6831 */;
+import GuildChannelStore from "GuildChannelStore" /* 5072 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -209,7 +209,7 @@ let closure_26 = async function _joinGuild(arg0) {
                 obj2.title = intl.string(closure_1_0(1113).t.ZZlox4);
                 const intl2 = closure_1_0(1113).intl;
                 obj2.body = intl2.string(closure_1_0(1113).t.ZUEGFn);
-                closure_1_1(6090).show(obj2);
+                closure_1_1(6092).show(obj2);
               })();
               const obj17 = { cause: closure_131_12 };
               const joinGuildRefusedError3 = new closure_132_0(closure_132_3[16]).JoinGuildRefusedError(obj17);
@@ -686,7 +686,7 @@ export default {
                 obj6 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj5.colors = obj6;
-              obj5.permissions = primary_color(5077).NONE;
+              obj5.permissions = primary_color(5079).NONE;
               c6 = 1;
               const HTTP = color(1282).HTTP;
               const request = { url: closure_1_16.GUILD_ROLES(closure_0), oldFormErrors: true, body: obj5, rejectWithError: color(1282).rejectWithMigratedError() };
@@ -698,7 +698,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj6(4961)(closure_131_2);
+            const tmp30 = new obj6(4963)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -718,7 +718,7 @@ export default {
               obj6(572).dispatch(obj10);
               const obj = obj6(572);
             }
-            const result = obj6(7570).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(7573).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -757,7 +757,7 @@ export default {
       request.rejectWithError = tmp5(1282).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(7570).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(7573).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -783,7 +783,7 @@ export default {
       const request = { url: closure_1_16.GUILD_CHANNELS(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1282).rejectWithMigratedError() };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7570).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7573).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -796,7 +796,7 @@ export default {
       const request = { url: closure_1_16.GUILD_ROLES(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1282).rejectWithMigratedError() };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7570).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7573).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -846,6 +846,12 @@ export default {
     }
     obj2.userIds = tmp2;
     obj2.presences = flag;
+    return DispatcherDefault.dispatch(obj2);
+  },
+  requestMembersByIdWithNonce(guildId, userIds, nonce) {
+    const obj2 = { type: "GUILD_MEMBERS_REQUEST", guildIds: null, userIds, presences: false, nonce };
+    items = [guildId];
+    obj2.guildIds = items;
     return DispatcherDefault.dispatch(obj2);
   },
   move(fromIndex, toIndex, fromFolderIndex, toFolderIndex) {

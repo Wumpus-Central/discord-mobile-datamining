@@ -1,8 +1,8 @@
-// === Module 6986: SpellcheckUtils ===
+// === Module 6987: SpellcheckUtils ===
 
-// Module 6986 (SpellcheckUtils)
+// Module 6987 (SpellcheckUtils)
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
-import DiscordNativeDefault from "DiscordNative" /* 4951 */;
+import DiscordNativeDefault from "DiscordNative" /* 4953 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -356,8 +356,8 @@ let closure_11 = async function _getCachedMisspelling() {
   }
 };
 let closure_12 = async function _replaceWithCorrection(arg0) {
-  if (c3 === 2) {
-    c3 = 3;
+  if (c4 === 2) {
+    c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp4 === 3) {
     if (arg0 === 1) {
@@ -370,46 +370,47 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     }
   } else {
     try {
-      c3 = 2;
-      if (0 === c2) {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          c3 = 3;
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c3 = 3;
+          c4 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_1 = tmp2;
-          closure_129_0 = closure_0;
-          closure_129_1 = undefined;
-          c2 = 1;
+          closure_2 = tmp2;
+          closure_130_0 = closure_0;
+          closure_130_1 = closure_1;
+          closure_130_2 = undefined;
           c3 = 1;
+          c4 = 1;
           const obj4 = { value, done: false };
           return obj4;
         }
       } else if (arg0 === 1) {
-        c3 = 3;
+        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c3 = 3;
+        c4 = 3;
         const obj = { value, done: true };
         return obj;
       } else {
-        closure_129_1 = value;
-        if (null != closure_129_1) {
-          closure_129_1.replaceMisspelling(closure_129_0);
+        closure_130_2 = value;
+        if (null != closure_130_2) {
+          closure_130_2.replaceMisspelling(closure_130_0, closure_130_1);
         }
-        c3 = 3;
+        c4 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } catch (tmp14) {
-      c3 = tmp;
-      throw tmp14;
+    } catch (tmp16) {
+      c4 = tmp;
+      throw tmp16;
     }
   }
 };
-fn(6987).addPostConnectionCallback;
+fn(6988).addPostConnectionCallback;
 let PlatformUtils = fn(1377);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {
@@ -447,9 +448,30 @@ function isSupported() {
   return isDesktopResult;
 }
 const size = fn(2);
-const result = size.fileFinishedImporting("utils/SpellcheckUtils.tsx");
+let result = size.fileFinishedImporting("utils/SpellcheckUtils.tsx");
 
 export { isSupported };
+export function isSupportedInPopouts() {
+  let isDesktopResult = PlatformUtils2.isDesktop();
+  if (isDesktopResult) {
+    const tmp4 = DiscordNativeDefault;
+    let spellCheck;
+    if (tmp4 != null) {
+      spellCheck = tmp4.spellCheck;
+    }
+    isDesktopResult = null != spellCheck;
+  }
+  if (isDesktopResult) {
+    const tmp8 = DiscordNativeDefault;
+    let supportsResult;
+    if (tmp8 != null) {
+      const features = tmp8.features;
+      supportsResult = features.supports("spellcheck_popout_windows");
+    }
+    isDesktopResult = true === supportsResult;
+  }
+  return isDesktopResult;
+}
 export function setEnabled() {
   const self = this;
   const apply = closure_7.apply;
@@ -499,6 +521,11 @@ export function getCachedMisspelling() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
+}
+export function clearCachedMisspelling() {
+  if (global != null) {
+    const result = global.clearCachedMisspelling();
+  }
 }
 export function replaceWithCorrection() {
   const self = this;

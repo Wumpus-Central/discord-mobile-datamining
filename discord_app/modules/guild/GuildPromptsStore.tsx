@@ -1,6 +1,6 @@
-// === Module 14463: GuildPromptsStore ===
+// === Module 14489: GuildPromptsStore ===
 
-// Module 14463 (GuildPromptsStore)
+// Module 14489 (GuildPromptsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

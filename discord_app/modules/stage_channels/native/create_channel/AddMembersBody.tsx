@@ -1,19 +1,19 @@
-// === Module 9151: AddMembersBody ===
+// === Module 9157: AddMembersBody ===
 
-// Module 9151 (AddMembersBody)
+// Module 9157 (AddMembersBody)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5077 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import RegexUtilsDefault from "RegexUtils" /* 5780 */;
-import GuildUtilsDefault from "GuildUtils" /* 6956 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9111 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5079 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5151 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import RegexUtilsDefault from "RegexUtils" /* 5782 */;
+import GuildUtilsDefault from "GuildUtils" /* 6959 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9117 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
-import GuildRoleStore from "GuildRoleStore" /* 5046 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildRoleStore from "GuildRoleStore" /* 5048 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -50,12 +50,12 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(8016);
+const ChannelPermissionsConstants = fn(8020);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { inputContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 }, inputDescContainer: null, inputDescText: null, tagRoleColor: null, tagAvatar: null, emptyState: null, emptyStateText: null, sectionRowWrapper: null, adminWarning: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 };
 obj2.inputDescContainer = { flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 };
@@ -155,12 +155,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(5392).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(5394).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(5392).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(5394).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -189,13 +189,13 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(9142), obj10);
+  obj9.children = closure_16(pendingAdditions(9148), obj10);
   const items5 = [closure_16(closure_7, obj9), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
     const obj11 = { style: tmp3.inputDescContainer, children: null };
     const obj12 = { style: tmp3.inputDescText, variant: "body-xs/medium", color: "text-default", children: inputDesc };
-    obj11.children = closure_16(guild(5751).Text, obj12);
+    obj11.children = closure_16(guild(5753).Text, obj12);
     tmp27Result = closure_16(tmp28, obj11);
   }
   items5[1] = tmp27Result;
@@ -204,7 +204,7 @@ export default function AddMembersBody(pendingAdditions) {
     const obj14 = { type: "warning", message: null, role: "status" };
     const intl4 = guild(1113).intl;
     obj14.message = intl4.string(guild(1113).t["5f3HIC"]);
-    obj13.children = closure_16(guild(8095).InlineNotice, obj14);
+    obj13.children = closure_16(guild(8099).InlineNotice, obj14);
     canEveryoneRoleResult = closure_16(tmp28, obj13);
   }
   items5[2] = canEveryoneRoleResult;
@@ -212,7 +212,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(9147).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(9153).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1113).intl;
         const obj17 = { query: str };
@@ -227,8 +227,8 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }
   const obj19 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
-  const tmp4Result = pendingAdditions(9142);
-  obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(575).space.PX_16, paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5735)(obj).insets.bottom };
+  const tmp4Result = pendingAdditions(9148);
+  obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(575).space.PX_16, paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5737)(obj).insets.bottom };
   obj19.renderItem = function renderItem(item) {
     item = item.item;
     ({ index, section } = item);
@@ -308,5 +308,5 @@ export default function AddMembersBody(pendingAdditions) {
   };
   obj19.sections = items3;
   tmp27Result2 = closure_16(BottomSheetSectionList, obj19);
-  const obj20 = { paddingHorizontal: pendingAdditions(575).space.PX_16, paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5735)(obj).insets.bottom };
+  const obj20 = { paddingHorizontal: pendingAdditions(575).space.PX_16, paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5737)(obj).insets.bottom };
 };

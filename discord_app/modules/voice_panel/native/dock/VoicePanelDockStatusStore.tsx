@@ -1,7 +1,7 @@
-// === Module 19601: VoicePanelDockStatusStore ===
+// === Module 19630: VoicePanelDockStatusStore ===
 
-// Module 19601 (VoicePanelDockStatusStore)
-import _mod5055 from "module_5055" /* 5055 */;
+// Module 19630 (VoicePanelDockStatusStore)
+import _mod5057 from "module_5057" /* 5057 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -65,7 +65,7 @@ export function useDockSubject(arg0) {
         moment = obj;
       }
     }
-  }, _mod5055.shallow);
+  }, _mod5057.shallow);
 }
 export function useDockHasStreamers(arg0) {
   closure_0 = arg0;

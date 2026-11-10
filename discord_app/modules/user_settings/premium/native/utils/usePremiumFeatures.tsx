@@ -1,18 +1,18 @@
-// === Module 10037: usePremiumFeatures ===
+// === Module 10043: usePremiumFeatures ===
 
-// Module 10037 (usePremiumFeatures)
+// Module 10043 (usePremiumFeatures)
 import util from "util" /* 1113 */;
 import user from "user" /* 1398 */;
 import PremiumUtils from "PremiumUtils" /* 2171 */;
 import _modDef3444 from "module_3444" /* 3444 */;
-import FriendsIcon from "FriendsIcon" /* 5840 */;
-import ReactionIcon from "ReactionIcon" /* 9533 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9612 */;
-import ScreenStreamIcon from "ScreenStreamIcon" /* 9815 */;
-import UploadIcon from "UploadIcon" /* 10038 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 10040 */;
-import BoostGemIcon from "BoostGemIcon" /* 10042 */;
-import UserSquareIcon from "UserSquareIcon" /* 10044 */;
+import FriendsIcon from "FriendsIcon" /* 5842 */;
+import ReactionIcon from "ReactionIcon" /* 9539 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9618 */;
+import ScreenStreamIcon from "ScreenStreamIcon" /* 9821 */;
+import UploadIcon from "UploadIcon" /* 10044 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 10046 */;
+import BoostGemIcon from "BoostGemIcon" /* 10048 */;
+import UserSquareIcon from "UserSquareIcon" /* 10050 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

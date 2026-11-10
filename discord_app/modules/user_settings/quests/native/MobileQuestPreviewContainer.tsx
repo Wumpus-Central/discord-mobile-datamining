@@ -1,11 +1,11 @@
-// === Module 17470: MobileQuestPreviewContainer ===
+// === Module 17497: MobileQuestPreviewContainer ===
 
-// Module 17470 (MobileQuestPreviewContainer)
+// Module 17497 (MobileQuestPreviewContainer)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5751 */;
+import Text_Text from "Text/Text" /* 5753 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5140 */;
+import createStyles from "createStyles" /* 5142 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

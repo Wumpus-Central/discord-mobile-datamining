@@ -1,22 +1,22 @@
-// === Module 19178: FavoritesEmptyState ===
+// === Module 19207: FavoritesEmptyState ===
 
-// Module 19178 (FavoritesEmptyState)
+// Module 19207 (FavoritesEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3608 from "module_3608" /* 3608 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import components_Button_Button from "components/Button/Button" /* 5758 */;
-import Stack_Stack from "Stack/Stack" /* 6159 */;
-import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10957 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 11629 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14638 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import components_Button_Button from "components/Button/Button" /* 5760 */;
+import Stack_Stack from "Stack/Stack" /* 6161 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10966 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 11638 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14664 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_48 }, text: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

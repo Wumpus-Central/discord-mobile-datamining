@@ -1,12 +1,12 @@
-// === Module 6916: ActiveThreadsStore ===
+// === Module 6919: ActiveThreadsStore ===
 
-// Module 6916 (ActiveThreadsStore)
+// Module 6919 (ActiveThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4993 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
+import ChannelRecord from "ChannelRecord" /* 4995 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
 import size from "module_2" /* 2 */;
 
 function handleThreadCreateOrUpdate(channel) {

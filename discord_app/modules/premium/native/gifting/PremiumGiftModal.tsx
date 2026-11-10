@@ -1,10 +1,10 @@
-// === Module 10678: PremiumGiftModal ===
+// === Module 10687: PremiumGiftModal ===
 
-// Module 10678 (PremiumGiftModal)
+// Module 10687 (PremiumGiftModal)
 import nativeDefault from "native" /* 575 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10679 */;
-import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 10680 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6801 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10688 */;
+import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 10689 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -12,9 +12,9 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 const jsx = fn(21).jsx;
 const PremiumGiftScreens = { PLAN_SELECT: "PremiumGiftPlanSelect", REWARD_SELECT: "GiftingSKUSelect", CUSTOMIZATION: "PremiumGiftCustomization", SUCCESS: "PremiumGiftSuccess", GIFTING_BADGE: "GiftingBadgePostPurchase" };
-let obj2 = { [PLAN_SELECT]: fn(10679).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(10679).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(10679).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(10679).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(10679).PaymentFlowStep.CONFIRM };
+let obj2 = { [PLAN_SELECT]: fn(10688).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(10688).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(10688).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(10688).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(10688).PaymentFlowStep.CONFIRM };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createStyles.createStyles(obj4);
 const size = fn(2);
@@ -156,9 +156,9 @@ export default function PremiumGiftModal(analyticsLocations) {
         currentProgress: currentProgress.currentProgress,
         onSendGift() {
           obj2 = { analyticsLocations: null };
-          items = [analyticsLocations(7412).GIFTING_BADGE_POST_PURCHASE];
+          items = [analyticsLocations(7415).GIFTING_BADGE_POST_PURCHASE];
           obj2.analyticsLocations = items;
-          analyticsLocation(10677).openGiftModal(obj2);
+          analyticsLocation(10686).openGiftModal(obj2);
         }
       });
     };

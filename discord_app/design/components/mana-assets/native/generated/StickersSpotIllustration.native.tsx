@@ -1,19 +1,19 @@
-// === Module 9891: StickersSpotIllustration ===
+// === Module 9897: StickersSpotIllustration ===
 
-// Module 9891 (StickersSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef9892 from "module_9892" /* 9892 */;
-import _modDef9893 from "module_9893" /* 9893 */;
-import _modDef9894 from "module_9894" /* 9894 */;
+// Module 9897 (StickersSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7138 */;
+import _modDef9898 from "module_9898" /* 9898 */;
+import _modDef9899 from "module_9899" /* 9899 */;
+import _modDef9900 from "module_9900" /* 9900 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9892 }, 3: null };
-let obj2 = { uri: _modDef9892 };
-obj[2] = { uri: _modDef9893 };
-const obj3 = { uri: _modDef9893 };
-obj[3] = { uri: _modDef9894 };
+let obj = { 1: null, 2: { uri: _modDef9898 }, 3: null };
+let obj2 = { uri: _modDef9898 };
+obj[2] = { uri: _modDef9899 };
+const obj3 = { uri: _modDef9899 };
+obj[3] = { uri: _modDef9900 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StickersSpotIllustration.native.tsx");
 

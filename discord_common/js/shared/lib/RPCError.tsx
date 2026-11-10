@@ -1,6 +1,6 @@
-// === Module 9415: shared/RPCError ===
+// === Module 9421: shared/RPCError ===
 
-// Module 9415 (shared/RPCError)
+// Module 9421 (shared/RPCError)
 import size from "module_2" /* 2 */;
 
 const prototype = function RPCError(arg0, message) {

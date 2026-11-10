@@ -1,9 +1,9 @@
-// === Module 9322: MicrophoneSlashIcon ===
+// === Module 9328: MicrophoneSlashIcon ===
 
-// Module 9322 (MicrophoneSlashIcon)
+// Module 9328 (MicrophoneSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod9323 from "module_9323" /* 9323 */;
+import BaseIconImage from "BaseIconImage" /* 5843 */;
+import _mod9329 from "module_9329" /* 9329 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MicrophoneSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9323, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9329, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

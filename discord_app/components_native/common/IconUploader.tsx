@@ -1,12 +1,12 @@
-// === Module 10268: IconUploader ===
+// === Module 10274: IconUploader ===
 
-// Module 10268 (IconUploader)
+// Module 10274 (IconUploader)
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import GuildIcon from "GuildIcon" /* 7020 */;
-import Pressables from "Pressables" /* 7043 */;
-import _modDef10269 from "module_10269" /* 10269 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import GuildIcon from "GuildIcon" /* 7023 */;
+import Pressables from "Pressables" /* 7046 */;
+import _modDef10275 from "module_10275" /* 10275 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_10 = createStyles.createStyles({ uploadIcon: { position: "absolute", right: -7, top: -7 }, avatar: { height: 64, width: 64, borderRadius: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconUploader.tsx");
@@ -124,7 +124,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp8, ];
   let tmp17 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef10269 };
+    let obj5 = { style: tmp.uploadIcon, source: _modDef10275 };
     tmp17 = closure_7(FastImageDefault, obj5);
   }
   items1[1] = tmp17;

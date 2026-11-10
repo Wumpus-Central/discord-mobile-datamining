@@ -1,7 +1,7 @@
-// === Module 18246: DefultGuildsRestrictedSetting ===
+// === Module 18275: DefultGuildsRestrictedSetting ===
 
-// Module 18246 (DefultGuildsRestrictedSetting)
-import UserSettings from "UserSettings" /* 4965 */;
+// Module 18275 (DefultGuildsRestrictedSetting)
+import UserSettings from "UserSettings" /* 4967 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");

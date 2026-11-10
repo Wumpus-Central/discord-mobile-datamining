@@ -1,16 +1,16 @@
-// === Module 12767: PollAnswerInput ===
+// === Module 12781: PollAnswerInput ===
 
-// Module 12767 (PollAnswerInput)
+// Module 12781 (PollAnswerInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import PollsUtils from "PollsUtils" /* 8474 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9868 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10061 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import PollsUtils from "PollsUtils" /* 8478 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9874 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10067 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
 
 require = fn;
 function ImageInput(openImageInputActionSheet) {
@@ -88,13 +88,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const DraftType = fn(7777).DraftType;
-const PollsConstants = fn(8477);
+const DraftType = fn(7780).DraftType;
+const PollsConstants = fn(8481);
 ({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { defaultContainer: { flexDirection: "row", alignItems: "center" }, inputContainer: { flex: 1 }, cannotRemove: { marginRight: 36 }, defaultImageContainer: { width: 60, height: 48, justifyContent: "center", alignItems: "center" }, pollAnswerTextInput: { flex: 1, paddingStart: 0 }, defaultRemoveButtonContainer: { paddingLeft: nativeDefault.space.PX_12, height: 48, justifyContent: "center", color: nativeDefault.colors.TEXT_MUTED }, uploadContainer: { alignItems: "flex-start" } };
 let closure_16 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -152,7 +152,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12769, dependencyMap.paths), closure_2_11, { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker });
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12783, dependencyMap.paths), closure_2_11, { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker });
       },
       iconSrc: index(channelId[21]),
       containerStyle: tmp.defaultImageContainer,
@@ -161,7 +161,7 @@ export default function PollAnswerInput(answer) {
     }),
 
   ];
-  const obj5 = { ref: inputRef, textAlignVertical: "center", showTopContainer: false, showBorder: false, placeholder: null, onChange: null, onSubmitEditing: null, onFocus: null, onBlur: null, blurOnSubmit: false, style: null, selectionColor: "channel", textContentType: -0.0000000000000000000000000000000000000000015249876899124004, accessibilityLabel: -294791363278565000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, accessibilityHint: -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009496770200455553, maxLength: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002417264711808, returnKeyType: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003259385535302, required: NaN, autoCorrect: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000417201348502479, "aria-invalid": 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000019078091380041386 };
+  const obj5 = { ref: inputRef, textAlignVertical: "center", showTopContainer: false, showBorder: false, placeholder: null, onChange: null, onSubmitEditing: null, onFocus: null, onBlur: null, blurOnSubmit: false, style: null, selectionColor: "channel", textContentType: false, accessibilityLabel: false, accessibilityHint: false, maxLength: false, returnKeyType: false, required: false, autoCorrect: false, "aria-invalid": false };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);
   obj5.onChange = function onChange(text) {

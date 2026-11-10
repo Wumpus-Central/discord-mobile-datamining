@@ -1,6 +1,6 @@
-// === Module 14318: hasGuildAffinityForBoostUpsell ===
+// === Module 14344: hasGuildAffinityForBoostUpsell ===
 
-// Module 14318 (hasGuildAffinityForBoostUpsell)
+// Module 14344 (hasGuildAffinityForBoostUpsell)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/native/utils/hasGuildAffinityForBoostUpsell.tsx");

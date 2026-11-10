@@ -1,6 +1,6 @@
-// === Module 12319: conjureLinkifyBareDomains ===
+// === Module 12327: conjureLinkifyBareDomains ===
 
-// Module 12319 (conjureLinkifyBareDomains)
+// Module 12327 (conjureLinkifyBareDomains)
 import size from "module_2" /* 2 */;
 
 function linkifyToken(arg0) {

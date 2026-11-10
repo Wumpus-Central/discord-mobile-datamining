@@ -1,9 +1,9 @@
-// === Module 9470: GooglePlayNeutralIcon ===
+// === Module 9476: GooglePlayNeutralIcon ===
 
-// Module 9470 (GooglePlayNeutralIcon)
+// Module 9476 (GooglePlayNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod9471 from "module_9471" /* 9471 */;
+import BaseIconImage from "BaseIconImage" /* 5843 */;
+import _mod9477 from "module_9477" /* 9477 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function GooglePlayNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9471, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9477, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

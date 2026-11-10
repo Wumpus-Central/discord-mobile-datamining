@@ -1,22 +1,22 @@
-// === Module 14500: ContactSyncLandingOnboardingRedesign ===
+// === Module 14526: ContactSyncLandingOnboardingRedesign ===
 
-// Module 14500 (ContactSyncLandingOnboardingRedesign)
+// Module 14526 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14493 */;
-import _modDef14501 from "module_14501" /* 14501 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 14502 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14519 */;
+import _modDef14527 from "module_14527" /* 14527 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 14528 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const NativePermissionTypes = fn(8009).NativePermissionTypes;
+const NativePermissionTypes = fn(8013).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
-let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -nativeDefault.space.PX_32 - fn(5714).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -nativeDefault.space.PX_32 - fn(5716).NAV_BAR_HEIGHT };
 obj2.content = obj3;
 let size = { height: 135, width: 216, marginBottom: nativeDefault.space.PX_24 };
 obj2.headerImage = size;
@@ -90,23 +90,23 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef14501 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef14527 };
   const items1 = [closure_7(FastImageDefault, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/semibold", children: null };
   const intl = onNext(1113).intl;
   obj4.children = intl.string(onNext(1113).t["/G+nci"]);
-  items1[1] = closure_7(onNext(5751).Text, obj4);
+  items1[1] = closure_7(onNext(5753).Text, obj4);
   let obj5 = { style: tmp.subtitle, variant: "body-sm/medium", children: null };
   const intl2 = onNext(1113).intl;
   obj5.children = intl2.string(onNext(1113).t.G8zcHt);
-  items1[2] = closure_7(onNext(5751).Text, obj5);
+  items1[2] = closure_7(onNext(5753).Text, obj5);
   const obj6 = { style: tmp.buttonContainer, children: null };
   const obj7 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
   const intl3 = onNext(1113).intl;
   obj7.text = intl3.string(onNext(1113).t.LhlgY9);
   obj7.onPress = callback;
   obj7.loading = loading;
-  obj6.children = closure_7(onNext(5758).Button, obj7);
+  obj6.children = closure_7(onNext(5760).Button, obj7);
   items1[3] = closure_7(View, obj6);
   items1[4] = closure_7(ContactSyncErrorDefault, { error });
   obj2.children = items1;

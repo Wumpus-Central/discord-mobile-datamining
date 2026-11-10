@@ -1,20 +1,20 @@
-// === Module 8430: NodeView ===
+// === Module 8434: NodeView ===
 
-// Module 8430 (NodeView)
+// Module 8434 (NodeView)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5137 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5859 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
-import CustomMarkupAll from "CustomMarkup" /* 6163 */;
-import MenuTypes from "MenuTypes" /* 8423 */;
-import InAppReportsOptionRowDefault from "InAppReportsOptionRow" /* 8432 */;
-import ArrowDefault from "Arrow" /* 8433 */;
+import ColorUtils from "ColorUtils" /* 5139 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5861 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5891 */;
+import CustomMarkupAll from "CustomMarkup" /* 6165 */;
+import MenuTypes from "MenuTypes" /* 8427 */;
+import InAppReportsOptionRowDefault from "InAppReportsOptionRow" /* 8436 */;
+import ArrowDefault from "Arrow" /* 8437 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5754 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import PermissionStore from "PermissionStore" /* 5072 */;
+import DevSettingsStore from "DevSettingsStore" /* 5756 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import PermissionStore from "PermissionStore" /* 5074 */;
 
 require = fn;
 function HeaderView(node) {
@@ -93,7 +93,7 @@ function ChildItem(child) {
   }
   if (stateFromStores) {
     const obj3 = { style: tmp.debugText, variant: "body-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_16(tmp5(5751).Text, obj3);
+    stateFromStores = closure_16(tmp5(5753).Text, obj3);
   }
   obj2.children = stateFromStores;
   return closure_16(InAppReportsOptionRowDefault, obj2);
@@ -122,14 +122,14 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8431).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8428).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(8435).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8432).IN_APP_REPORTS_NODE;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 }, scrollView: { flex: 1, alignSelf: "stretch", marginTop: 24 }, childrenContainer: null, headerContainer: null, header: null, subheader: null, description: null, infoBox: null, infoBoxText: null, debugText: null };
 let obj3 = { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 };
 obj2.childrenContainer = { flex: 1, alignSelf: "stretch", paddingHorizontal: 16, gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 };

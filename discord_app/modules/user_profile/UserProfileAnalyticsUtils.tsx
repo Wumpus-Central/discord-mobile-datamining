@@ -1,21 +1,21 @@
-// === Module 8833: UserProfileAnalyticsUtils ===
+// === Module 8839: UserProfileAnalyticsUtils ===
 
-// Module 8833 (UserProfileAnalyticsUtils)
+// Module 8839 (UserProfileAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5889 */;
-import ActivityTypes from "ActivityTypes" /* 5891 */;
-import useDisplayProfile from "useDisplayProfile" /* 8828 */;
-import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8840 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8834 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7339 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7877 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
-import PresenceStore from "PresenceStore" /* 5890 */;
-import RelationshipStore from "RelationshipStore" /* 5082 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5891 */;
+import ActivityTypes from "ActivityTypes" /* 5893 */;
+import useDisplayProfile from "useDisplayProfile" /* 8834 */;
+import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8846 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8840 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7342 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7881 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6771 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import PresenceStore from "PresenceStore" /* 5892 */;
+import RelationshipStore from "RelationshipStore" /* 5084 */;
 import UserStore from "UserStore" /* 1385 */;
-import UserProfileStore from "UserProfileStore" /* 7848 */;
+import UserProfileStore from "UserProfileStore" /* 7852 */;
 
 require = fn;
 function getProfileProperties(guildMemberProfile) {
@@ -260,8 +260,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7339).FetchState;
-const constants = fn(8825).TrackUserProfileProperties;
+const FetchState = fn(7342).FetchState;
+const constants = fn(8831).TrackUserProfileProperties;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const StatusTypes = fn(1083).StatusTypes;
 const size = fn(2);

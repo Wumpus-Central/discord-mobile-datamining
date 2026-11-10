@@ -1,8 +1,8 @@
-// === Module 7646: markScopedDismissibleContentAsDismissed ===
+// === Module 7649: markScopedDismissibleContentAsDismissed ===
 
-// Module 7646 (markScopedDismissibleContentAsDismissed)
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4974 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5170 */;
+// Module 7649 (markScopedDismissibleContentAsDismissed)
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4976 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5172 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/dismissible_content/markScopedDismissibleContentAsDismissed.tsx");

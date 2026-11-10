@@ -1,6 +1,6 @@
-// === Module 11891: showCallBeforeFrameLaunch ===
+// === Module 11900: showCallBeforeFrameLaunch ===
 
-// Module 11891 (showCallBeforeFrameLaunch)
+// Module 11900 (showCallBeforeFrameLaunch)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/builder/showCallBeforeFrameLaunch.native.tsx");

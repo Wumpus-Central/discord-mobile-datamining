@@ -1,26 +1,26 @@
-// === Module 9101: EditGuildEventWhere ===
+// === Module 9107: EditGuildEventWhere ===
 
-// Module 9101 (EditGuildEventWhere)
+// Module 9107 (EditGuildEventWhere)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9047 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9154 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9053 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9160 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import PermissionStore from "PermissionStore" /* 5072 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import PermissionStore from "PermissionStore" /* 5074 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = fn(6910).isGuildScheduledEventActive;
-const GuildScheduledEventsConstants = fn(4995);
+let closure_8 = fn(6913).isGuildScheduledEventActive;
+const GuildScheduledEventsConstants = fn(4997);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: closure_10 } = GuildScheduledEventsConstants);
 const Constants = fn(1072);
 ({ Permissions: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_16 = createStyles.createStyles({ channelSelection: { marginTop: 16 }, error: { paddingVertical: 8 }, text: { marginTop: 24 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx");
@@ -113,7 +113,7 @@ export default function EditGuildEventWhere(guild) {
               const error1 = new Error(intl2.string(guild(1113).t.q91szp));
               throw error1;
             }
-            obj = guild(9051);
+            obj = guild(9057);
           }
           if (null == tmp) {
             if (entityType !== constants.EXTERNAL) {

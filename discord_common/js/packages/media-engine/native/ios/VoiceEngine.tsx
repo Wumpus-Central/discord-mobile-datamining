@@ -44,6 +44,15 @@ if (null != VoiceEngineModule.VoiceEngine.getMLSSigningKeyB64) {
     });
   };
 }
+if (null != VoiceEngineModule.VoiceEngine.generateDavePairwiseFingerprintB64) {
+  VoiceEngineModule.VoiceEngine.generateDavePairwiseFingerprint = (arg0, arg1, arg2, arg3, arg4, arg5) => {
+    closure_0 = arg5;
+    const VoiceEngine = require("VoiceEngineModule").VoiceEngine;
+    const str = Buffer.from(arg1);
+    const str1 = Buffer.from(arg1).toString("base64");
+    return VoiceEngine.generateDavePairwiseFingerprintB64(arg0, str1, arg2, Buffer.from(arg3).toString("base64"), arg4, (arg0) => closure_0(Buffer.from(arg0, "base64").buffer));
+  };
+}
 let VoiceConnection;
 class VoiceConnection {
   constructor() {

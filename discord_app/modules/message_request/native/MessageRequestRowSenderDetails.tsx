@@ -1,19 +1,19 @@
-// === Module 19335: MessageRequestRowSenderDetails ===
+// === Module 19364: MessageRequestRowSenderDetails ===
 
-// Module 19335 (MessageRequestRowSenderDetails)
+// Module 19364 (MessageRequestRowSenderDetails)
 import nativeDefault from "native" /* 575 */;
 import utils_AvatarUtilsDefault from "utils/AvatarUtils" /* 1414 */;
-import UserUtilsDefault from "UserUtils" /* 5194 */;
-import MessageRequestPreviewDefault from "MessageRequestPreview" /* 19337 */;
-import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 19338 */;
+import UserUtilsDefault from "UserUtils" /* 5196 */;
+import MessageRequestPreviewDefault from "MessageRequestPreview" /* 19366 */;
+import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 19367 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 5082 */;
+import RelationshipStore from "RelationshipStore" /* 5084 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj2 = { avatar: { borderRadius: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, avatarContainer: { marginRight: 16, alignItems: "flex-start", height: "100%" }, detailsContainer: { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 }, messageDetails: { flexDirection: "row", alignItems: "center" }, username: null, timestampSeparator: null, messagePreview: null, usernameTextContainer: null };
 let obj3 = { borderRadius: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.username = { flexShrink: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -44,7 +44,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(19336).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(19365).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };
@@ -78,18 +78,18 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     stringResult = intl.string(otherUser(1113).t["30mdIx"]);
   }
   obj9.children = stringResult;
-  const items2 = [closure_5(otherUser(5751).Text, obj9), ];
+  const items2 = [closure_5(otherUser(5753).Text, obj9), ];
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj10 = { variant: "body-md/medium", color: "text-muted", children: null };
-    const items3 = [" ", otherUser(5194).getUserTag(otherUser)];
+    const items3 = [" ", otherUser(5196).getUserTag(otherUser)];
     obj10.children = items3;
-    tmp9Result = closure_6(otherUser(5751).Text, obj10);
-    const tmp2Result = otherUser(5194);
+    tmp9Result = closure_6(otherUser(5753).Text, obj10);
+    const tmp2Result = otherUser(5196);
   }
   items2[1] = tmp9Result;
   obj8.children = items2;
-  const items4 = [closure_6(otherUser(5751).Text, obj8), closure_5(otherUser(5751).Text, { style: tmp.timestampSeparator, variant: "body-xs/medium", color: "text-muted", children: "\u00B7" }), closure_5(otherUser(5751).Text, { variant: "body-xs/semibold", color: "text-muted", children: messageRequestRelativeTimestampText })];
+  const items4 = [closure_6(otherUser(5753).Text, obj8), closure_5(otherUser(5753).Text, { style: tmp.timestampSeparator, variant: "body-xs/medium", color: "text-muted", children: "\u00B7" }), closure_5(otherUser(5753).Text, { variant: "body-xs/semibold", color: "text-muted", children: messageRequestRelativeTimestampText })];
   obj7.children = items4;
   const items5 = [closure_6(View, obj7), , ];
   let tmp11Result = !flag;

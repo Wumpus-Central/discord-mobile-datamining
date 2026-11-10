@@ -1,7 +1,7 @@
-// === Module 13965: useTypingText ===
+// === Module 13990: useTypingText ===
 
-// Module 13965 (useTypingText)
-import NicknameUtilsDefault from "NicknameUtils" /* 6173 */;
+// Module 13990 (useTypingText)
+import NicknameUtilsDefault from "NicknameUtils" /* 6175 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
 

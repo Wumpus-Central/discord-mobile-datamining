@@ -1,8 +1,8 @@
-// === Module 16691: unavailableCommand ===
+// === Module 16718: unavailableCommand ===
 
-// Module 16691 (unavailableCommand)
+// Module 16718 (unavailableCommand)
 import Constants from "Constants" /* 1072 */;
-import RPCErrorDefault from "RPCError" /* 9414 */;
+import RPCErrorDefault from "RPCError" /* 9420 */;
 import size from "module_2" /* 2 */;
 
 const RPCErrors = Constants.RPCErrors;

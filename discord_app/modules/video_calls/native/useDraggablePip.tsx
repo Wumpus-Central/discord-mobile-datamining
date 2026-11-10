@@ -1,13 +1,13 @@
-// === Module 11876: useDraggablePip ===
+// === Module 11885: useDraggablePip ===
 
-// Module 11876 (useDraggablePip)
+// Module 11885 (useDraggablePip)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let useChannelCallStore = fn(11130).useChannelCallStore;
-const Constants = fn(11863);
+let useChannelCallStore = fn(11139).useChannelCallStore;
+const Constants = fn(11872);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, damping: 20 };
 let closure_7 = { code: "(function useDraggablePipTsx1(){let[withTiming,pipFocus,PIP_FOCUS_SCALE,STANDARD_EASING]=this.__closure;return withTiming(pipFocus?PIP_FOCUS_SCALE:1,{easing:STANDARD_EASING,duration:250});})" };
@@ -217,7 +217,7 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx11.__workletHash = 14934070264554;
   useDraggablePipTsx11.__initData = tmp48;
   const animatedReaction1 = require("module_1652").useAnimatedReaction(useDraggablePipTsx10, useDraggablePipTsx11);
-  const Gesture = tmp2(5420).Gesture;
+  const Gesture = tmp2(5422).Gesture;
   const tmp2Result25 = require("module_1652");
   const items22 = [-c5, c5];
   const PanResult = Gesture.Pan();
@@ -329,7 +329,7 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx13.__workletHash = 12738554963651;
   useDraggablePipTsx13.__initData = tmp62;
   const onUpdateResult = Gesture.Pan().activeOffsetX(items22).activeOffsetY(items23).onUpdate(useDraggablePipTsx12);
-  const Gesture2 = tmp2(5420).Gesture;
+  const Gesture2 = tmp2(5422).Gesture;
   const onEndResult = Gesture.Pan().activeOffsetX(items22).activeOffsetY(items23).onUpdate(useDraggablePipTsx12).onEnd(useDraggablePipTsx13);
   const items28 = [closure_20, onPress, require("module_1705").scheduleOnRN];
   [tmp76, tmp77, tmp78] = items28;
@@ -343,7 +343,7 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx14.__workletHash = 16181399743221;
   useDraggablePipTsx14.__initData = tmp76;
   const TapResult = Gesture2.Tap();
-  const Gesture3 = tmp2(5420).Gesture;
+  const Gesture3 = tmp2(5422).Gesture;
   const onStartResult = Gesture2.Tap().onStart(useDraggablePipTsx14);
   const RaceResult = Gesture3.Race(onEndResult, Gesture2.Tap().onStart(useDraggablePipTsx14));
   const items30 = [closure_21, sharedValue1, derivedValue3, derivedValue1, sharedValue3, derivedValue4, derivedValue2, derivedValue];

@@ -1,10 +1,10 @@
-// === Module 16169: Slider ===
+// === Module 16196: Slider ===
 
-// Module 16169 (Slider)
+// Module 16196 (Slider)
 import nativeDefault from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5376 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5377 */;
-import _modDef8926 from "module_8926" /* 8926 */;
+import HapticUtils from "HapticUtils" /* 5378 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5379 */;
+import _modDef8932 from "module_8932" /* 8932 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { flexGrow: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
@@ -117,7 +117,7 @@ export function Slider(maxValue) {
   }
   obj4.accessibilityValue = tmp19;
   obj4.testID = testID;
-  const tmp18 = _modDef8926;
+  const tmp18 = _modDef8932;
   let fn;
   if (obj6.isAndroid()) {
     fn = () => true;

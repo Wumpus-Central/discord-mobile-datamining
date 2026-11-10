@@ -1,12 +1,12 @@
-// === Module 7379: Form/FormCheckbox ===
+// === Module 7382: Form/FormCheckbox ===
 
-// Module 7379 (Form/FormCheckbox)
+// Module 7382 (Form/FormCheckbox)
 import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_3 = createStyles.createStyles({ checkbox: { width: 22, height: 22 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormCheckbox.tsx");

@@ -1,14 +1,14 @@
-// === Module 18532: useFavoritesGuildResetAction ===
+// === Module 18561: useFavoritesGuildResetAction ===
 
-// Module 18532 (useFavoritesGuildResetAction)
+// Module 18561 (useFavoritesGuildResetAction)
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
 import _modDef3608 from "module_3608" /* 3608 */;
-import UserSettings from "UserSettings" /* 4965 */;
-import FavoritesUtils from "FavoritesUtils" /* 5014 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10950 */;
+import UserSettings from "UserSettings" /* 4967 */;
+import FavoritesUtils from "FavoritesUtils" /* 5016 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10959 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
 
 require = fn;
 const Routes = fn(1072).Routes;

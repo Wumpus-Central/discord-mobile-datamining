@@ -1,16 +1,16 @@
-// === Module 14820: ConjureAppChannelMembersSheet ===
+// === Module 14846: ConjureAppChannelMembersSheet ===
 
-// Module 14820 (ConjureAppChannelMembersSheet)
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14819 */;
+// Module 14846 (ConjureAppChannelMembersSheet)
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14845 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
 
 require = fn;
-const UsersFastListConstants = fn(10853);
+const UsersFastListConstants = fn(10862);
 ({ USERS_LIST_PADDING_BETWEEN_SECTIONS, USERS_LIST_SECTION_BOTTOM_PADDING } = UsersFastListConstants);
 const jsx = fn(21).jsx;
 const diff = USERS_LIST_PADDING_BETWEEN_SECTIONS - USERS_LIST_SECTION_BOTTOM_PADDING;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_6 = createStyles.createStyles({ body: { overflow: "hidden" }, list: { marginTop: -diff } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/app_channel/native/ConjureAppChannelMembersSheet.tsx");
@@ -35,8 +35,8 @@ export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
   if (null != guild_id) {
     const obj2 = { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null };
     const obj3 = { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list };
-    obj2.children = jsx(guild_id(11779), { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list });
-    tmp7 = jsx(channelId(5388).BottomSheet, { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null });
+    obj2.children = jsx(guild_id(11788), { channelId, guildId: guild_id, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true, listStyleOverride: tmp.list });
+    tmp7 = jsx(channelId(5390).BottomSheet, { startExpanded: true, scrollable: true, bodyStyles: tmp.body, children: null });
   }
   return tmp7;
 });

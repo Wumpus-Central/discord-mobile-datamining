@@ -1,19 +1,19 @@
-// === Module 15955: PrivateChannelRecipientsInviteStore ===
+// === Module 15982: PrivateChannelRecipientsInviteStore ===
 
-// Module 15955 (PrivateChannelRecipientsInviteStore)
+// Module 15982 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import StringUtils from "StringUtils" /* 2150 */;
-import UserUtilsDefault from "UserUtils" /* 5194 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9218 */;
-import ExperimentStore from "ExperimentStore" /* 5354 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7877 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import ConsentStore from "ConsentStore" /* 6797 */;
-import FrecencyStore from "FrecencyStore" /* 6950 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import RelationshipStore from "RelationshipStore" /* 5082 */;
+import UserUtilsDefault from "UserUtils" /* 5196 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9224 */;
+import ExperimentStore from "ExperimentStore" /* 5356 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7881 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import ConsentStore from "ConsentStore" /* 6799 */;
+import FrecencyStore from "FrecencyStore" /* 6953 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import RelationshipStore from "RelationshipStore" /* 5084 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -219,7 +219,7 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   return false;
 }
-const PrivateChannelRecord = fn(4993).PrivateChannelRecord;
+const PrivateChannelRecord = fn(4995).PrivateChannelRecord;
 const Constants = fn(1072);
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;

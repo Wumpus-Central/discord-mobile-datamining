@@ -1,17 +1,17 @@
-// === Module 15316: ShopNitroUpsellPromoSheet ===
+// === Module 15341: ShopNitroUpsellPromoSheet ===
 
-// Module 15316 (ShopNitroUpsellPromoSheet)
+// Module 15341 (ShopNitroUpsellPromoSheet)
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5758 */;
-import ButtonGroup from "ButtonGroup" /* 6822 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7387 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9875 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9886 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10094 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10152 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10409 */;
-import PromoSheet from "PromoSheet" /* 10956 */;
-import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 15317 */;
+import components_Button_Button from "components/Button/Button" /* 5760 */;
+import ButtonGroup from "ButtonGroup" /* 6825 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7390 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9881 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9892 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10100 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10158 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10415 */;
+import PromoSheet from "PromoSheet" /* 10965 */;
+import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 15342 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// === Module 19090: GuildTextChannelRow ===
+// === Module 19119: GuildTextChannelRow ===
 
-// Module 19090 (GuildTextChannelRow)
-import SearchUtils from "SearchUtils" /* 14127 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 19078 */;
+// Module 19119 (GuildTextChannelRow)
+import SearchUtils from "SearchUtils" /* 14153 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 19107 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(9917).CHANNEL_LIST_SEARCH_LAYOUT;
+let closure_4 = fn(9923).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");

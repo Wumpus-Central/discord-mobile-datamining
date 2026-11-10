@@ -1,27 +1,27 @@
-// === Module 11809: GameOrganizationInvitePickerRow ===
+// === Module 11818: GameOrganizationInvitePickerRow ===
 
-// Module 11809 (GameOrganizationInvitePickerRow)
+// Module 11818 (GameOrganizationInvitePickerRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2530 from "module_2530" /* 2530 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import Stack_Stack from "Stack/Stack" /* 6159 */;
-import TableRow from "TableRow" /* 7038 */;
-import _modDef7399 from "module_7399" /* 7399 */;
-import GroupIcon from "GroupIcon" /* 8732 */;
-import InviteButtonDefault from "InviteButton" /* 9284 */;
-import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11810 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import Stack_Stack from "Stack/Stack" /* 6161 */;
+import TableRow from "TableRow" /* 7041 */;
+import _modDef7402 from "module_7402" /* 7402 */;
+import GroupIcon from "GroupIcon" /* 8738 */;
+import InviteButtonDefault from "InviteButton" /* 9290 */;
+import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11819 */;
 import noop from "module_19" /* 19 */;
 
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
-let closure_4 = fn(9279).useInstantInviteSendStates;
-const InviteSendStates = fn(7956).InviteSendStates;
+let closure_4 = fn(9285).useInstantInviteSendStates;
+const InviteSendStates = fn(7960).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { icon: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.md };
 obj.icon = size;
@@ -52,7 +52,7 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
     const obj2 = { uri: organization.iconUrl };
     let tmp2Result = obj2;
   } else {
-    tmp2Result = _modDef7399;
+    tmp2Result = _modDef7402;
   }
   const obj3 = { icon: timestampProducer(FastImageDefault, { source: tmp2Result, style: tmp.icon }), label: organization.name, subLabel: null, trailing: null, onPress: null, disabled: null };
   let tmp11;

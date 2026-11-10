@@ -1,7 +1,7 @@
-// === Module 9717: MarketingSurfaceTypeUtils ===
+// === Module 9723: MarketingSurfaceTypeUtils ===
 
-// Module 9717 (MarketingSurfaceTypeUtils)
-import MarketingSurfaceType from "MarketingSurfaceType" /* 9718 */;
+// Module 9723 (MarketingSurfaceTypeUtils)
+import MarketingSurfaceType from "MarketingSurfaceType" /* 9724 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/promotions/MarketingSurfaceTypeUtils.tsx");

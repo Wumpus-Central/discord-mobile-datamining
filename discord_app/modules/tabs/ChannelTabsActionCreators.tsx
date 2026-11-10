@@ -1,18 +1,18 @@
-// === Module 13632: ChannelTabsActionCreators ===
+// === Module 13645: ChannelTabsActionCreators ===
 
-// Module 13632 (ChannelTabsActionCreators)
+// Module 13645 (ChannelTabsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
-import FavoritesUtils from "FavoritesUtils" /* 5014 */;
-import matchPathCompat from "matchPathCompat" /* 5176 */;
-import RouteUtils from "RouteUtils" /* 5189 */;
-import transitionToChannel from "transitionToChannel" /* 5885 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5888 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5171 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 13630 */;
+import FavoritesUtils from "FavoritesUtils" /* 5016 */;
+import matchPathCompat from "matchPathCompat" /* 5178 */;
+import RouteUtils from "RouteUtils" /* 5191 */;
+import transitionToChannel from "transitionToChannel" /* 5887 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5890 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5891 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 13643 */;
 
 require = fn;
 function navigateToTabLocation(activeTab) {
@@ -277,7 +277,7 @@ function selectChannelTab(id, quick_switcher) {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, Routes: closure_8 } = Constants);
-const ChannelConstants = fn(4996);
+const ChannelConstants = fn(4998);
 ({ isStaticChannelRoute: closure_9, StaticChannelRoute: closure_10 } = ChannelConstants);
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);

@@ -1,16 +1,16 @@
-// === Module 15308: NameplateProductPreview ===
+// === Module 15333: NameplateProductPreview ===
 
-// Module 15308 (NameplateProductPreview)
+// Module 15333 (NameplateProductPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import utils from "utils" /* 2108 */;
-import LinearGradientDefault from "LinearGradient" /* 5715 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import TableRow from "TableRow" /* 7038 */;
-import useShopProductItems from "useShopProductItems" /* 8813 */;
+import LinearGradientDefault from "LinearGradient" /* 5717 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import TableRow from "TableRow" /* 7041 */;
+import useShopProductItems from "useShopProductItems" /* 8819 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
 function NameplateUser(arg0) {
@@ -62,7 +62,7 @@ function PlaceholderUser(end) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 }, memberListTitle: null, memberListGradient: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.memberListTitle = { paddingVertical: nativeDefault.space.PX_8 };

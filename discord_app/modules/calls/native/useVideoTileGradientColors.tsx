@@ -1,8 +1,8 @@
-// === Module 8900: useVideoTileGradientColors ===
+// === Module 8906: useVideoTileGradientColors ===
 
-// Module 8900 (useVideoTileGradientColors)
+// Module 8906 (useVideoTileGradientColors)
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8875 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8881 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

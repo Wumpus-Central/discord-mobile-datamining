@@ -1,6 +1,6 @@
-// === Module 13876: CheckpointScreen ===
+// === Module 13895: CheckpointScreen ===
 
-// Module 13876 (CheckpointScreen)
+// Module 13895 (CheckpointScreen)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -8,11 +8,11 @@ import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6199);
+const CheckpointConstants = fn(6201);
 ({ CHECKPOINT_CONTENT_MAX_HEIGHT: hasOwnProperty, CHECKPOINT_CONTENT_MAX_WIDTH: closure_6, CHECKPOINT_NAV_HEIGHT: metroImportDefault } = CheckpointConstants);
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_11 = createStyles.createStyles({ container: { height: "100%", width: "100%" }, scroll: { width: "100%" }, scrollContent: { flexGrow: 1 }, centered: { justifyContent: "center" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointScreen.tsx");

@@ -1,13 +1,13 @@
-// === Module 7798: CollectiblesProductRecord ===
+// === Module 7801: CollectiblesProductRecord ===
 
-// Module 7798 (CollectiblesProductRecord)
+// Module 7801 (CollectiblesProductRecord)
 import getPricesFromServerDefault from "getPricesFromServer" /* 2167 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7799 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7805 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7802 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7808 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7800);
+const CollectiblesItemRecord = fn(7803);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } = CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1072);
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "channel", items: "DM_INVITE", categorySkuId: "$ZodObjectJIT", categoryWillUnpublishAt: "Array", isCategoryReward: "toIndex", prices: null, previewAssets: null, googleSkuIds: "lib", eligibleOffers: "android/build.gradle", variants: "android/gradle.properties", bundledProducts: "android/fix-prefab.gradle", isFirstParty: "android/CMakeLists.txt" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "channelId", items: true, categorySkuId: true, categoryWillUnpublishAt: true, isCategoryReward: true, prices: true, previewAssets: true, googleSkuIds: true, eligibleOffers: true, variants: true, bundledProducts: true, isFirstParty: true };
               let str;
               if (first != null) {
                 str = first.optionValue;

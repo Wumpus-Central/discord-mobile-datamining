@@ -1,6 +1,6 @@
-// === Module 16200: GoLiveHdrExperiment ===
+// === Module 16227: GoLiveHdrExperiment ===
 
-// Module 16200 (GoLiveHdrExperiment)
+// Module 16227 (GoLiveHdrExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 17908: openBuildOverridesSettings ===
+// === Module 17935: openBuildOverridesSettings ===
 
-// Module 17908 (openBuildOverridesSettings)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
-import openUserSettings from "openUserSettings" /* 7635 */;
-import SettingsConstants from "SettingsConstants" /* 8503 */;
+// Module 17935 (openBuildOverridesSettings)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6801 */;
+import openUserSettings from "openUserSettings" /* 7638 */;
+import SettingsConstants from "SettingsConstants" /* 8507 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

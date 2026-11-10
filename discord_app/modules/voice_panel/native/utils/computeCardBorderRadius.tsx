@@ -1,7 +1,7 @@
-// === Module 19640: computeCardBorderRadius ===
+// === Module 19669: computeCardBorderRadius ===
 
-// Module 19640 (computeCardBorderRadius)
-import VoicePanelConstants from "VoicePanelConstants" /* 11363 */;
+// Module 19669 (computeCardBorderRadius)
+import VoicePanelConstants from "VoicePanelConstants" /* 11372 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function computeCardBorderRadius_computeCardBorderRadiusTsx1({id:id,mode:mode,focused:focused,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}){let[VoicePanelModes,DEFAULT_BORDER_RADIUS_PIP]=this.__closure;if(mode===VoicePanelModes.PANEL){if(focused!=null){if(focused===id){return 0;}else if(isSelf){return DEFAULT_BORDER_RADIUS_PIP;}}return defaultBorderRadius;}if(mode===VoicePanelModes.PIP){return DEFAULT_BORDER_RADIUS_PIP;}return defaultBorderRadius;})" }, , ];

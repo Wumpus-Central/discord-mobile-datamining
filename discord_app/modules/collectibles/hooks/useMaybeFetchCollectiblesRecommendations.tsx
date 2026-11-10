@@ -1,10 +1,10 @@
-// === Module 16888: useMaybeFetchCollectiblesRecommendations ===
+// === Module 16915: useMaybeFetchCollectiblesRecommendations ===
 
-// Module 16888 (useMaybeFetchCollectiblesRecommendations)
+// Module 16915 (useMaybeFetchCollectiblesRecommendations)
 import _mod19 from "module_19" /* 19 */;
-import CollectiblesRecommendationActionCreators from "CollectiblesRecommendationActionCreators" /* 16889 */;
+import CollectiblesRecommendationActionCreators from "CollectiblesRecommendationActionCreators" /* 16916 */;
 import UserStore from "UserStore" /* 1385 */;
-import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15345 */;
+import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15370 */;
 import size from "module_2" /* 2 */;
 
 const useEffect = _mod19.useEffect;

@@ -1,20 +1,20 @@
-// === Module 10188: ExpressionGuildDetails ===
+// === Module 10194: ExpressionGuildDetails ===
 
-// Module 10188 (ExpressionGuildDetails)
+// Module 10194 (ExpressionGuildDetails)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import GuildIconDefault from "GuildIcon" /* 7020 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 10187 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import GuildIconDefault from "GuildIcon" /* 7023 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 10193 */;
 import noop from "module_19" /* 19 */;
 
-const GuildBadgeDefault = tmp10(7024);
+const GuildBadgeDefault = tmp10(7027);
 require = fn;
 const View = fn(17).View;
-const React4 = fn(7021).ExpressionSourceGuildRecord;
+const React4 = fn(7024).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { guildDetailsContainer: { flexDirection: "column" }, guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" }, guildIcon: null, guildNameAndOnlineMembers: null, guildNameWrapper: null, guildPartnerIcon: null, guildDescriptionSection: null, dotSeparator: null, joinGuildButton: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, marginRight: 12 };
 obj2.guildIcon = size;

@@ -1,6 +1,6 @@
-// === Module 6988: NewUserStore ===
+// === Module 6989: NewUserStore ===
 
-// Module 6988 (NewUserStore)
+// Module 6989 (NewUserStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

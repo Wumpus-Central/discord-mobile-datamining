@@ -1,7 +1,7 @@
-// === Module 12147: game_console/GameConsoleActionCreators ===
+// === Module 12156: game_console/GameConsoleActionCreators ===
 
-// Module 12147 (game_console/GameConsoleActionCreators)
-import transferToPlayStation from "transferToPlayStation" /* 12148 */;
+// Module 12156 (game_console/GameConsoleActionCreators)
+import transferToPlayStation from "transferToPlayStation" /* 12157 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

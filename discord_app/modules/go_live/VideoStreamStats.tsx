@@ -1,8 +1,8 @@
-// === Module 7966: VideoStreamStats ===
+// === Module 7970: VideoStreamStats ===
 
-// Module 7966 (VideoStreamStats)
-import TimeUtils from "TimeUtils" /* 5901 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6075 */;
+// Module 7970 (VideoStreamStats)
+import TimeUtils from "TimeUtils" /* 5903 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6077 */;
 
 require = fn;
 const StreamLayouts = fn(1072).StreamLayouts;

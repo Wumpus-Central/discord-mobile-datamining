@@ -1,26 +1,26 @@
-// === Module 13912: CheckpointFriendsStatsScreen ===
+// === Module 13933: CheckpointFriendsStatsScreen ===
 
-// Module 13912 (CheckpointFriendsStatsScreen)
+// Module 13933 (CheckpointFriendsStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _modDef3216 from "module_3216" /* 3216 */;
-import FriendsIcon from "FriendsIcon" /* 5840 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
-import ChatIcon from "ChatIcon" /* 8714 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10677 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12138 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12238 */;
-import Tracking from "Tracking" /* 13666 */;
-import CheckpointTextDefault from "CheckpointText" /* 13878 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13881 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13897 */;
+import FriendsIcon from "FriendsIcon" /* 5842 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
+import ChatIcon from "ChatIcon" /* 8720 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10686 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12147 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12247 */;
+import Tracking from "Tracking" /* 13679 */;
+import CheckpointTextDefault from "CheckpointText" /* 13897 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13900 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 13916 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 import UserStore from "UserStore" /* 1385 */;
-import CheckpointStore from "CheckpointStore" /* 13668 */;
+import CheckpointStore from "CheckpointStore" /* 13681 */;
 
 const require = globalThis.__r;
 
@@ -282,7 +282,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp9(1113).intl;
     obj12.accessibilityLabel = intl2.string(tmp9(1113).t.Ve9Ge6);
     const obj13 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj12.children = closure_13(tmp9(13597).GiftIcon, obj13);
+    obj12.children = closure_13(tmp9(13610).GiftIcon, obj13);
     const items7 = [closure_13(sharedValue, obj12), ];
     const obj14 = {
       onPress: function handleSend() {
@@ -312,7 +312,7 @@ function SidekickMessageInput(user) {
     const obj15 = { disabled: !tmp32 };
     obj14.accessibilityState = obj15;
     const obj16 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj14.children = closure_13(tmp9(5853).SendMessageIcon, obj16);
+    obj14.children = closure_13(tmp9(5855).SendMessageIcon, obj16);
     items7[1] = closure_13(sharedValue, obj14);
     obj11.children = items7;
     items6[1] = closure_14(closure_7, obj11);
@@ -324,13 +324,13 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const CheckpointConstants = fn(6199);
+const CheckpointConstants = fn(6201);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let obj = { duration: fn(5373).timingStandardDuration, easing: null };
+let obj = { duration: fn(5375).timingStandardDuration, easing: null };
 const Easing = fn(1652).Easing;
 obj.easing = Easing.bezier(0.2, 0, 0, 1);
 let closure_17 = { "Avatar01/Stroke": "#000000", "Avatar01/Fill": CHECKPOINT_PRIMARY, "Avatar02/Stroke": "#000000", "Avatar02/Fill": CHECKPOINT_PRIMARY, "Avatar03/Stroke": "#000000", "Avatar03/Fill": CHECKPOINT_PRIMARY, "Avatar04/Stroke": "#000000", "Avatar04/Fill": CHECKPOINT_PRIMARY, "Avatar05/Stroke": "#000000", "Avatar05/Fill": CHECKPOINT_PRIMARY, ConnectorColor: CHECKPOINT_PRIMARY };
@@ -343,7 +343,7 @@ if (PlatformUtils.isIOS()) {
   tmp5 = obj3;
 }
 obj3 = tmp5;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj6 = { container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 }, animation: null, transition: null, header: null, heading: null, title: null, titleText: null, sidekick: null, sidekickDetails: null, stats: null, stat: null, messageInputContainer: null, messageInputContainerLarge: null, messageInput: null, messageInputActions: null, disabled: null };
 const rect = { position: "absolute", left: -nativeDefault.space.PX_24, right: -nativeDefault.space.PX_24 };
 obj6.animation = rect;

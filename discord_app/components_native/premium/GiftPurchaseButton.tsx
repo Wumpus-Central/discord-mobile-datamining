@@ -1,10 +1,10 @@
-// === Module 15746: GiftPurchaseButton ===
+// === Module 15774: GiftPurchaseButton ===
 
-// Module 15746 (GiftPurchaseButton)
+// Module 15774 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
-import IAPStore from "IAPStore" /* 7673 */;
+import IAPStore from "IAPStore" /* 7676 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -57,14 +57,14 @@ export default function GiftPurchaseButton(style) {
     const premiumTypeFromPlanId = planId(2171).getPremiumTypeFromPlanId(closure_129_0);
     const premiumType = premiumTypeFromPlanId.premiumType;
     const planInterval = premiumTypeFromPlanId.planInterval;
-    planId(10677).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
+    planId(10686).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
     yield "HermesInternal";
     const obj7 = { title: null, body: null };
     const intl = planId(1113).intl;
     obj7.title = intl.string(planId(1113).t.R0RpRX);
     const intl2 = planId(1113).intl;
     obj7.body = intl2.string(planId(1113).t.CKsXk3);
-    tmp3(6091).show(obj7);
+    tmp3(6093).show(obj7);
   }), items3);
   const tmpResult = planId(recipientUserId[12]);
   obj3.children = jsx(planId(recipientUserId[17]).BaseTextButton, { textElement: analyticsLocation(recipientUserId[18])({ style: obj, basePlanId: planId, isCurrentPlan: tmp11, isGift: true, product: stateFromStores2 }), variant: str, size: "sm", onPress: callback, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true });

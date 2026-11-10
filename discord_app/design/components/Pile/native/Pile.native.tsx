@@ -1,10 +1,10 @@
-// === Module 13656: Pile ===
+// === Module 13669: Pile ===
 
-// Module 13656 (Pile)
+// Module 13669 (Pile)
 import apply from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ClipView from "ClipView" /* 9593 */;
-import PileOverflow from "PileOverflow" /* 13657 */;
+import ClipView from "ClipView" /* 9599 */;
+import PileOverflow from "PileOverflow" /* 13670 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -12,7 +12,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_6 = createStyles.createStyles({ pile: { flexDirection: "row" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");

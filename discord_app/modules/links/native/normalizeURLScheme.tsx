@@ -1,6 +1,6 @@
-// === Module 5869: normalizeURLScheme ===
+// === Module 5871: normalizeURLScheme ===
 
-// Module 5869 (normalizeURLScheme)
+// Module 5871 (normalizeURLScheme)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/links/native/normalizeURLScheme.tsx");

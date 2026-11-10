@@ -1,15 +1,15 @@
-// === Module 16942: SettingsAgeGroupScreen ===
+// === Module 16969: SettingsAgeGroupScreen ===
 
-// Module 16942 (SettingsAgeGroupScreen)
+// Module 16969 (SettingsAgeGroupScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import _modDef3252 from "module_3252" /* 3252 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
-import SettingBuilders from "SettingBuilders" /* 11685 */;
-import SettingLayoutDefault from "SettingLayout" /* 16905 */;
-import AgeNoticeAgeGroupHeader2 from "AgeNoticeAgeGroupHeader" /* 16943 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8028 */;
+import SettingBuilders from "SettingBuilders" /* 11694 */;
+import SettingLayoutDefault from "SettingLayout" /* 16932 */;
+import AgeNoticeAgeGroupHeader2 from "AgeNoticeAgeGroupHeader" /* 16970 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,18 +31,18 @@ function SettingsAgeGroupHeader() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8503).MobileUserSettings;
+const MobileUserSettings = fn(8507).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { headerContainer: { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(16901).useIsAgeNoticeSettingsEnabled();
+  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(16928).useIsAgeNoticeSettingsEnabled();
   items = [isAgeNoticeSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };

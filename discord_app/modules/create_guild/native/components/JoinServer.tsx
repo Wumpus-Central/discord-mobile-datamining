@@ -1,17 +1,17 @@
-// === Module 14561: components/JoinServer ===
+// === Module 14587: components/JoinServer ===
 
-// Module 14561 (components/JoinServer)
-import NavigatorHeader from "NavigatorHeader" /* 7064 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9025 */;
+// Module 14587 (components/JoinServer)
+import NavigatorHeader from "NavigatorHeader" /* 7067 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9031 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const CreateGuildConstants = fn(7211);
+const CreateGuildConstants = fn(7214);
 ({ CreateGuildModalStates: hasOwnProperty, NUXGuildTemplatesAnalytics: closure_6 } = CreateGuildConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5714).NAV_BAR_HEIGHT } };
+const createStyles = fn(5142);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5716).NAV_BAR_HEIGHT } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/JoinServer.tsx");

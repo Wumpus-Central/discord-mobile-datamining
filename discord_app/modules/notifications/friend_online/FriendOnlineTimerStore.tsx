@@ -1,6 +1,6 @@
-// === Module 20431: FriendOnlineTimerStore ===
+// === Module 20459: FriendOnlineTimerStore ===
 
-// Module 20431 (FriendOnlineTimerStore)
+// Module 20459 (FriendOnlineTimerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;

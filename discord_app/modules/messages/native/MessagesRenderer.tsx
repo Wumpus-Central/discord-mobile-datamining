@@ -1,35 +1,35 @@
-// === Module 11722: MessagesRenderer ===
+// === Module 11731: MessagesRenderer ===
 
-// Module 11722 (MessagesRenderer)
+// Module 11731 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
-import Client from "Client" /* 5365 */;
-import CodedLink from "CodedLink" /* 5877 */;
-import QuestTypes from "QuestTypes" /* 6839 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7712 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7955 */;
-import QuestActionCreators from "QuestActionCreators" /* 9773 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 10016 */;
-import computeScrollData from "computeScrollData" /* 10228 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 10229 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 10231 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 10233 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10306 */;
-import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11705 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11723 */;
-import MessagesHandlers from "MessagesHandlers" /* 11731 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13563 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13952 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 13953 */;
+import Client from "Client" /* 5367 */;
+import CodedLink from "CodedLink" /* 5879 */;
+import QuestTypes from "QuestTypes" /* 6842 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7715 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7959 */;
+import QuestActionCreators from "QuestActionCreators" /* 9779 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10022 */;
+import computeScrollData from "computeScrollData" /* 10234 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 10235 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 10237 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 10239 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10312 */;
+import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11714 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11732 */;
+import MessagesHandlers from "MessagesHandlers" /* 11740 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13576 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13977 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 13978 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 5072 */;
-import ReadStateStore from "ReadStateStore" /* 6897 */;
+import PermissionStore from "PermissionStore" /* 5074 */;
+import ReadStateStore from "ReadStateStore" /* 6900 */;
 
 require = fn;
 function handleTapShowAltText(description) {
@@ -54,9 +54,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(10017).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(5052).getUserCommunicationDisabledVersion;
-const Changeset = fn(8449).Changeset;
+let closure_6 = fn(10023).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(5054).getUserCommunicationDisabledVersion;
+const Changeset = fn(8453).Changeset;
 const Constants = fn(1072);
 ({ ActivityActionTypes: closure_11, MAX_MESSAGES_PER_CHANNEL: closure_12, MessageFlags: map1, MessageTypes: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);

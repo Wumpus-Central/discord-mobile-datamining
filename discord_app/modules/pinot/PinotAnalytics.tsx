@@ -1,9 +1,9 @@
-// === Module 11475: PinotAnalytics ===
+// === Module 11484: PinotAnalytics ===
 
-// Module 11475 (PinotAnalytics)
+// Module 11484 (PinotAnalytics)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PinotDraft from "PinotDraft" /* 11476 */;
+import PinotDraft from "PinotDraft" /* 11485 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

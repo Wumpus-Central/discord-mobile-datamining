@@ -1,11 +1,14 @@
-// === Module 19937: MultiAccountManager ===
+// === Module 19965: MultiAccountManager ===
 
-// Module 19937 (MultiAccountManager)
+// Module 19965 (MultiAccountManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GatewaySocket from "GatewaySocket" /* 15816 */;
+import transitionToChannel from "transitionToChannel" /* 5887 */;
+import GatewaySocket from "GatewaySocket" /* 15844 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
 import UserStore from "UserStore" /* 1385 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15815 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
+import MultiAccountStore from "MultiAccountStore" /* 14237 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15843 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
 
 require = fn;
 class MultiAccountManager extends tmp2 {
@@ -58,6 +61,18 @@ prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
 };
 prototype["handleMultiAccountSwitchStart"] = function handleMultiAccountSwitchStart(targetUserId) {
   const result = GatewaySocket.setAccountSwitchUserId(targetUserId.targetUserId);
+};
+prototype["transitionToLastChannel"] = function transitionToLastChannel(id) {
+  const lastChannelId = MultiAccountStore.getLastChannelId(id);
+  let flag = null != lastChannelId;
+  if (flag) {
+    flag = null != ChannelStore.getChannel(lastChannelId);
+  }
+  if (flag) {
+    transitionToChannel.transitionToChannel(lastChannelId, { navigationReplace: true });
+    flag = true;
+  }
+  return flag;
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");

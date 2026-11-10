@@ -1,7 +1,7 @@
-// === Module 9385: GuildTraits ===
+// === Module 9391: GuildTraits ===
 
-// Module 9385 (GuildTraits)
-import GuildRecordUtils from "GuildRecordUtils" /* 5003 */;
+// Module 9391 (GuildTraits)
+import GuildRecordUtils from "GuildRecordUtils" /* 5005 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

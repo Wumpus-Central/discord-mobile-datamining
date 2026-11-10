@@ -1,9 +1,9 @@
-// === Module 11608: useShowBadgeProgress ===
+// === Module 11617: useShowBadgeProgress ===
 
-// Module 11608 (useShowBadgeProgress)
+// Module 11617 (useShowBadgeProgress)
 import initialize from "initialize" /* 504 */;
-import BadgeUtils from "BadgeUtils" /* 11602 */;
-import ConsentStore from "ConsentStore" /* 6797 */;
+import BadgeUtils from "BadgeUtils" /* 11611 */;
+import ConsentStore from "ConsentStore" /* 6799 */;
 
 require = fn;
 const Consents = fn(1072).Consents;

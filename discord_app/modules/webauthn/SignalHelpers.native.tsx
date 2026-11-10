@@ -1,6 +1,6 @@
-// === Module 6804: SignalHelpers ===
+// === Module 6807: SignalHelpers ===
 
-// Module 6804 (SignalHelpers)
+// Module 6807 (SignalHelpers)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -37,13 +37,13 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const result = credentials(6805).encodeUserIdForWebAuthn(closure_1);
+            const result = credentials(6808).encodeUserIdForWebAuthn(closure_1);
             const mapped = credentials.map((cred_id) => cred_id.cred_id);
             const found = mapped.filter((item) => "" !== item);
             const obj4 = { rpId, encodedId: result, allAcceptedCredentialIds: found, credentials };
             logger.info("signalAllAcceptedCredentials", obj4);
-            const obj5 = credentials(6805);
-            const result1 = v1(6806).signalAllAcceptedCredentials(rpId, result, found);
+            const obj5 = credentials(6808);
+            const result1 = v1(6809).signalAllAcceptedCredentials(rpId, result, found);
             v1 = 1;
             credentials = 1;
             const obj6 = { value: result1.catch(logger.warn), done: false };

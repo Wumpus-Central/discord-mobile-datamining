@@ -1,16 +1,16 @@
-// === Module 16769: HSVColorPicker ===
+// === Module 16796: HSVColorPicker ===
 
-// Module 16769 (HSVColorPicker)
+// Module 16796 (HSVColorPicker)
 import _mod1652 from "module_1652" /* 1652 */;
-import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 16770 */;
-import HuePickerDefault from "HuePicker" /* 16771 */;
+import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 16797 */;
+import HuePickerDefault from "HuePicker" /* 16798 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_6 = createStyles.createStyles({ hsvColorPicker: { alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");

@@ -1,9 +1,9 @@
-// === Module 14745: BalanceCounter ===
+// === Module 14771: BalanceCounter ===
 
-// Module 14745 (BalanceCounter)
+// Module 14771 (BalanceCounter)
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import spring_spring from "spring/spring" /* 5761 */;
+import spring_spring from "spring/spring" /* 5763 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop_mod from "module_19" /* 19 */;
 

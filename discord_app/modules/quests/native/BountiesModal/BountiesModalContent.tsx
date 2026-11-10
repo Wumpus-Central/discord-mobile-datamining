@@ -1,23 +1,23 @@
-// === Module 17295: BountiesModalContent ===
+// === Module 17322: BountiesModalContent ===
 
-// Module 17295 (BountiesModalContent)
+// Module 17322 (BountiesModalContent)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import timing_timing from "timing/timing" /* 5370 */;
-import timingPresets from "timingPresets" /* 5373 */;
-import QuestContent from "QuestContent" /* 6841 */;
-import AdCreativeType from "AdCreativeType" /* 6843 */;
-import QuestDataUtils from "QuestDataUtils" /* 7918 */;
-import AnalyticsActions from "AnalyticsActions" /* 7939 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7948 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14897 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14920 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14935 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17239 */;
+import timing_timing from "timing/timing" /* 5372 */;
+import timingPresets from "timingPresets" /* 5375 */;
+import QuestContent from "QuestContent" /* 6844 */;
+import AdCreativeType from "AdCreativeType" /* 6846 */;
+import QuestDataUtils from "QuestDataUtils" /* 7922 */;
+import AnalyticsActions from "AnalyticsActions" /* 7943 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7952 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14923 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14946 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14961 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17266 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7921 */;
+import BountyStore from "BountyStore" /* 7925 */;
 
 require = fn;
 function BountiesModalContentInner(bounty) {
@@ -188,7 +188,7 @@ function BountiesModalContentInner(bounty) {
                 do {
                   let _Math = Math;
                   let result = arr[num3] / tmp4;
-                  let rounded = Math.round(result * (closure_1_0(14746).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
+                  let rounded = Math.round(result * (closure_1_0(14772).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
                   let obj2 = { time: num4, type: "continuous", duration: rounded, intensity: num + tmp5 * (num3 / 5), sharpness: 0.5 };
                   let arr4 = items.push(obj2);
                   sum = num4 + rounded;
@@ -198,8 +198,8 @@ function BountiesModalContentInner(bounty) {
                 items.push({ time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 });
                 arr = Array.from({ length: 6 }, (arg0, arg1) => 6 - arg1);
                 const obj3 = { time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 };
-                closure_1_0(5378).triggerPattern(items);
-                const tmp7Result = closure_1_0(5378);
+                closure_1_0(5380).triggerPattern(items);
+                const tmp7Result = closure_1_0(5380);
               })();
             }
           }
@@ -412,9 +412,9 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_17(height(sharedValue[42]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestConstants = fn(6836);
+const QuestConstants = fn(6839);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(17243);
+const BountiesModalConstants = fn(17270);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -423,7 +423,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let c18 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_20 = createStyles.createStyles(() => {
   const obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: { position: "absolute", bottom: nativeDefault.space.PX_24, justifyContent: "flex-end" }, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
   const rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };

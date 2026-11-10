@@ -1,11 +1,11 @@
-// === Module 5082: RelationshipStore ===
+// === Module 5084: RelationshipStore ===
 
-// Module 5082 (RelationshipStore)
+// Module 5084 (RelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5060 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5062 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 5083 */;
+import MessageRecord from "MessageRecord" /* 5085 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -96,7 +96,7 @@ let closure_15 = 0;
 const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
-let closure_20 = { friends: "disabled", blocked: "T", ignored: "isArray", blockedOrIgnored: "isArray" };
+let closure_20 = { friends: "channel", blocked: "borderRadius", ignored: "opacity", blockedOrIgnored: "Array" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

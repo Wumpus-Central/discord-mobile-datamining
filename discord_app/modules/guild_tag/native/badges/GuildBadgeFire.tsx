@@ -1,8 +1,8 @@
-// === Module 16063: GuildBadgeFire ===
+// === Module 16090: GuildBadgeFire ===
 
-// Module 16063 (GuildBadgeFire)
-import inlineStyles from "inlineStyles" /* 8101 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 16054 */;
+// Module 16090 (GuildBadgeFire)
+import inlineStyles from "inlineStyles" /* 8105 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 16081 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

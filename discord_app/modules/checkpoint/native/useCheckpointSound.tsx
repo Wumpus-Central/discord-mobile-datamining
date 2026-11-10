@@ -1,22 +1,22 @@
-// === Module 13692: useCheckpointSound ===
+// === Module 13922: useCheckpointSound ===
 
-// Module 13692 (useCheckpointSound)
-import SoundUtils from "SoundUtils" /* 11160 */;
+// Module 13922 (useCheckpointSound)
+import SoundUtils from "SoundUtils" /* 11169 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13668 */;
-import size from "module_2" /* 2 */;
+import CheckpointStore from "CheckpointStore" /* 13681 */;
 
 const require = globalThis.__r;
 
-({ useCallback: c2, useEffect: c3, useRef: closure_4 } = noop);
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointSound.tsx");
 
 export default function useCheckpointSound(arg0) {
   _require = arg0;
   items = [CheckpointStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => isMuted.isMuted);
-  let obj = require("initialize");
-  closure_3(() => () => {
+  noop = noop.useRef(null);
+  const effect = noop.useEffect(() => () => {
     const current = ref.current;
     let stopResult;
     if (current != null) {
@@ -24,8 +24,17 @@ export default function useCheckpointSound(arg0) {
     }
     return stopResult;
   }, []);
-  const items1 = [stateFromStores, arg0];
-  return closure_4(null)(() => {
+  const items1 = [stateFromStores];
+  const effect1 = noop.useEffect(() => {
+    if (stateFromStores) {
+      const current = ref.current;
+      if (current != null) {
+        current.stop();
+      }
+    }
+  }, items1);
+  const items2 = [stateFromStores, arg0];
+  return noop.useCallback(() => {
     if (!stateFromStores) {
       const current = ref.current;
       if (current != null) {
@@ -35,5 +44,5 @@ export default function useCheckpointSound(arg0) {
       const current2 = ref.current;
       current2.play();
     }
-  }, items1);
+  }, items2);
 };

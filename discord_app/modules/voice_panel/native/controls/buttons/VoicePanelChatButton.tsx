@@ -1,17 +1,17 @@
-// === Module 19718: VoicePanelChatButton ===
+// === Module 19747: VoicePanelChatButton ===
 
-// Module 19718 (VoicePanelChatButton)
+// Module 19747 (VoicePanelChatButton)
 import nativeDefault from "native" /* 575 */;
-import NativeViewDefault from "NativeView" /* 7023 */;
-import ChatIcon from "ChatIcon" /* 8714 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19586 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 19719 */;
+import NativeViewDefault from "NativeView" /* 7026 */;
+import ChatIcon from "ChatIcon" /* 8720 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19615 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 19748 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" }, badge: null, notificationBadge: null };
 let size = { position: "absolute", zIndex: 1, width: 10, height: 10, borderRadius: nativeDefault.radii.round, top: 0, right: 0 };
 obj2.badge = size;

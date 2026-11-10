@@ -1,14 +1,14 @@
-// === Module 15255: useProfileSectionTabs ===
+// === Module 15280: useProfileSectionTabs ===
 
-// Module 15255 (useProfileSectionTabs)
+// Module 15280 (useProfileSectionTabs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileSections = fn(8825).UserProfileSections;
+const UserProfileSections = fn(8831).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 
-export function useProfileTabIndices(isMobileWidgetEditingEnabled, isRecentActivityMobileEnabled, arg2) {
+export function useProfileTabIndices(isMobileWidgetEditingEnabled, arg1, arg2) {
   let num = -1;
   let num2 = 1;
   let num3 = -1;
@@ -19,7 +19,7 @@ export function useProfileTabIndices(isMobileWidgetEditingEnabled, isRecentActiv
   const obj = { boardTabIndex: num3, activityTabIndex: null, wishlistTabIndex: null };
   let sum = num2;
   let tmp2 = num;
-  if (isRecentActivityMobileEnabled) {
+  if (arg1) {
     sum = num2 + 1;
     tmp2 = num2;
   }

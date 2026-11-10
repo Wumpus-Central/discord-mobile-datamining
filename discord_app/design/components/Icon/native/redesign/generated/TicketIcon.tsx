@@ -1,9 +1,9 @@
-// === Module 17519: TicketIcon ===
+// === Module 17546: TicketIcon ===
 
-// Module 17519 (TicketIcon)
+// Module 17546 (TicketIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod17520 from "module_17520" /* 17520 */;
+import BaseIconImage from "BaseIconImage" /* 5843 */;
+import _mod17547 from "module_17547" /* 17547 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TicketIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17520, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17547, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,14 +1,14 @@
-// === Module 8019: StageChannelModalActionCreators ===
+// === Module 8023: StageChannelModalActionCreators ===
 
-// Module 8019 (StageChannelModalActionCreators)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6761 */;
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8010 */;
+// Module 8023 (StageChannelModalActionCreators)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6763 */;
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8014 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import PermissionStore from "PermissionStore" /* 5072 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6771 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import PermissionStore from "PermissionStore" /* 5074 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
 
 const require = fn;
 let closure_10 = async function _connectOrLurkStage(arg0) {
@@ -199,15 +199,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(8010).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8014).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8010);
+    const obj2 = flag2(8014);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8010).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8010);
+      flag2(8014).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8014);
     }
   }
 }

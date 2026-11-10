@@ -1,19 +1,19 @@
-// === Module 20306: AvatarRoseExample ===
+// === Module 20334: AvatarRoseExample ===
 
-// Module 20306 (AvatarRoseExample)
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef20307 from "module_20307" /* 20307 */;
-import _modDef20308 from "module_20308" /* 20308 */;
-import _modDef20309 from "module_20309" /* 20309 */;
+// Module 20334 (AvatarRoseExample)
+import assetHelpers from "assetHelpers" /* 7138 */;
+import _modDef20335 from "module_20335" /* 20335 */;
+import _modDef20336 from "module_20336" /* 20336 */;
+import _modDef20337 from "module_20337" /* 20337 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20307 }, 3: null };
-let obj2 = { uri: _modDef20307 };
-obj[2] = { uri: _modDef20308 };
-const obj3 = { uri: _modDef20308 };
-obj[3] = { uri: _modDef20309 };
+let obj = { 1: null, 2: { uri: _modDef20335 }, 3: null };
+let obj2 = { uri: _modDef20335 };
+obj[2] = { uri: _modDef20336 };
+const obj3 = { uri: _modDef20336 };
+obj[3] = { uri: _modDef20337 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarRoseExample.native.tsx");
 

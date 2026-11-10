@@ -1,27 +1,27 @@
-// === Module 14198: ApplicationCommandItem ===
+// === Module 14224: ApplicationCommandItem ===
 
-// Module 14198 (ApplicationCommandItem)
+// Module 14224 (ApplicationCommandItem)
 import nativeDefault from "native" /* 575 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14026 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14052 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10344).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10350).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { applicationCommandItem: { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) }, highlightedApplicationCommandItem: null, applicationCommandIcon: null, applicationCommandDescriptionWrapper: null, applicationCommandSectionName: null };
   const obj2 = { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };
   obj.highlightedApplicationCommandItem = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
   const size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, marginRight: 16 };
   obj.applicationCommandIcon = size;
-  obj.applicationCommandDescriptionWrapper = { flexDirection: "column", flexShrink: 1, alignSelf: "flex-end" };
-  obj.applicationCommandSectionName = { paddingLeft: 16, marginLeft: "auto" };
+  obj.applicationCommandDescriptionWrapper = { flexDirection: "column", flex: 1, alignSelf: "flex-end" };
+  obj.applicationCommandSectionName = { flexShrink: 1, maxWidth: "40%", paddingLeft: 16, marginLeft: "auto" };
   return obj;
 });
 let size = fn(2);
@@ -82,7 +82,7 @@ export default function ApplicationCommandItem(highlighted) {
   const items3 = [closure_7(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), closure_7(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "body-xs/medium", color: "text-default", children: command.displayDescription })];
   obj7.children = items3;
   items2[1] = closure_8(View, obj7);
-  items2[2] = closure_7(section(stateFromStores[13]).Text, { style: tmp3.applicationCommandSectionName, variant: "body-sm/medium", color: "text-muted", children: name });
+  items2[2] = closure_7(section(stateFromStores[13]).Text, { style: tmp3.applicationCommandSectionName, lineClamp: 1, variant: "body-sm/medium", color: "text-muted", children: name });
   obj3.children = items2;
   return closure_8(section(stateFromStores[10]).PressableOpacity, obj3);
 };

@@ -1,9 +1,9 @@
-// === Module 9000: WaterwheelsDiscoverExperiment ===
+// === Module 9006: WaterwheelsDiscoverExperiment ===
 
-// Module 9000 (WaterwheelsDiscoverExperiment)
-import ICYMILabFeature from "ICYMILabFeature" /* 9001 */;
+// Module 9006 (WaterwheelsDiscoverExperiment)
+import ICYMILabFeature from "ICYMILabFeature" /* 9007 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import LabFeatureStore from "LabFeatureStore" /* 8633 */;
+import LabFeatureStore from "LabFeatureStore" /* 8639 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 

@@ -1,11 +1,11 @@
-// === Module 16655: StoreListingStore ===
+// === Module 16682: StoreListingStore ===
 
-// Module 16655 (StoreListingStore)
+// Module 16682 (StoreListingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import StoreListingRecord from "StoreListingRecord" /* 16656 */;
+import StoreListingRecord from "StoreListingRecord" /* 16683 */;
 
 require = fn;
 function addRegularStoreListing(id) {

@@ -1,44 +1,44 @@
-// === Module 19235: YouScreenUserProfileContent ===
+// === Module 19264: YouScreenUserProfileContent ===
 
-// Module 19235 (YouScreenUserProfileContent)
+// Module 19264 (YouScreenUserProfileContent)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import dismissible_content from "dismissible_content" /* 4973 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7641 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8888 */;
-import UserProfileAvatarDefault from "UserProfileAvatar" /* 8902 */;
-import Tracking from "Tracking" /* 9768 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11541 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11554 */;
-import BadgeManagementExperiment from "BadgeManagementExperiment" /* 11593 */;
-import useCanOpenBadgeDirectoryFromProfile from "useCanOpenBadgeDirectoryFromProfile" /* 11594 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11637 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13964 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 15077 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 15142 */;
-import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 15154 */;
-import useBadgeDirectoryNuxPopoverVariant from "useBadgeDirectoryNuxPopoverVariant" /* 15155 */;
-import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 15157 */;
-import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 15158 */;
-import UserProfileWidgetsBoardTabDefault from "UserProfileWidgetsBoardTab" /* 15174 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 15241 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 15258 */;
-import UserProfileConnections from "UserProfileConnections" /* 15261 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 15266 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 15272 */;
-import BalanceWidgetMenu from "BalanceWidgetMenu" /* 18030 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 18795 */;
-import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 19243 */;
-import useIsNitroBadgeAutoUnhiddenDefault from "useIsNitroBadgeAutoUnhidden" /* 19244 */;
-import NitroBadgeUnhiddenCoachmarkDefault from "NitroBadgeUnhiddenCoachmark" /* 19245 */;
-import OrbWalletProfileIntroductionCoachmarkDefault from "OrbWalletProfileIntroductionCoachmark" /* 19246 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 19249 */;
-import CheckpointProfileEntrypointDefault from "CheckpointProfileEntrypoint" /* 19251 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 19255 */;
+import dismissible_content from "dismissible_content" /* 4975 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7644 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8894 */;
+import UserProfileAvatarDefault from "UserProfileAvatar" /* 8908 */;
+import Tracking from "Tracking" /* 9774 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11550 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11563 */;
+import BadgeManagementExperiment from "BadgeManagementExperiment" /* 11602 */;
+import useCanOpenBadgeDirectoryFromProfile from "useCanOpenBadgeDirectoryFromProfile" /* 11603 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11646 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13989 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 15103 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 15168 */;
+import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 15180 */;
+import useBadgeDirectoryNuxPopoverVariant from "useBadgeDirectoryNuxPopoverVariant" /* 15181 */;
+import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 15183 */;
+import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 15184 */;
+import UserProfileWidgetsBoardTabDefault from "UserProfileWidgetsBoardTab" /* 15200 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 15267 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 15283 */;
+import UserProfileConnections from "UserProfileConnections" /* 15286 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 15291 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 15297 */;
+import BalanceWidgetMenu from "BalanceWidgetMenu" /* 18057 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 18824 */;
+import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 19272 */;
+import useIsNitroBadgeAutoUnhiddenDefault from "useIsNitroBadgeAutoUnhidden" /* 19273 */;
+import NitroBadgeUnhiddenCoachmarkDefault from "NitroBadgeUnhiddenCoachmark" /* 19274 */;
+import OrbWalletProfileIntroductionCoachmarkDefault from "OrbWalletProfileIntroductionCoachmark" /* 19275 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 19278 */;
+import CheckpointProfileEntrypointDefault from "CheckpointProfileEntrypoint" /* 19280 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 19284 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6625 */;
-import UserProfileStore from "UserProfileStore" /* 7848 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6627 */;
+import UserProfileStore from "UserProfileStore" /* 7852 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 const BalanceWidgetMenuDefault = BalanceWidgetMenu;
@@ -259,11 +259,11 @@ function YouScreenPrimaryInfoSection(arg0) {
   return closure_1_15(View, obj6);
 }
 const View = fn(17).View;
-const useIsContentShown = fn(4981).useIsContentShown;
-const UserProfileSections = fn(8825).UserProfileSections;
-let UserProfileThemeTypes = fn(7437).UserProfileThemeTypes;
-const ContentDismissActionType = fn(4986).ContentDismissActionType;
-let closure_12 = fn(16759).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(4983).useIsContentShown;
+const UserProfileSections = fn(8831).UserProfileSections;
+let UserProfileThemeTypes = fn(7440).UserProfileThemeTypes;
+const ContentDismissActionType = fn(4988).ContentDismissActionType;
+let closure_12 = fn(16786).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const size = fn(2);
@@ -280,7 +280,6 @@ export default function YouScreenUserProfileContent(user) {
   if (flag === undefined) {
     flag = true;
   }
-  let isRecentActivityMobileEnabled;
   let MAIN;
   let num;
   let activeProfileTabSection;
@@ -312,7 +311,7 @@ export default function YouScreenUserProfileContent(user) {
   const userProfileColors = user(navigateToPremium[50]).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   const containerBorderColor = userProfileColors.containerBorderColor;
-  const statusBackground = userProfileColors.statusBackground;
+  ({ avatarBackground, statusBackground } = userProfileColors);
   let obj5 = user(navigateToPremium[50]);
   const ref2 = initialTab.useRef(null);
   let items2 = [trackUserProfileAction];
@@ -344,23 +343,21 @@ export default function YouScreenUserProfileContent(user) {
   }
   isMobileWidgetEditingEnabled = tmp20;
   const obj13 = user(navigateToPremium[55]);
-  isRecentActivityMobileEnabled = user(navigateToPremium[56]).useIsRecentActivityMobileEnabled("YouScreenUserProfileContent");
-  let tmp4Result = user(navigateToPremium[56]);
-  const profileTabIndices = user(navigateToPremium[57]).useProfileTabIndices(tmp20, isRecentActivityMobileEnabled, true);
+  const profileTabIndices = user(navigateToPremium[56]).useProfileTabIndices(tmp20, true, true);
   ({ boardTabIndex, activityTabIndex, wishlistTabIndex } = profileTabIndices);
   MAIN = initialTab;
   if (null != initialTab) {
     const obj14 = { wishlistTabIndex, boardTabIndex, activityTabIndex };
     MAIN = initialTab;
-    if (tmp4Result9.getProfileTabSectionIndex(initialTab, obj14) < 0) {
+    if (tmp4Result7.getProfileTabSectionIndex(initialTab, obj14) < 0) {
       MAIN = customStatusActivity.MAIN;
     }
-    tmp4Result9 = tmp4(tmp2[57]);
+    tmp4Result7 = tmp4(tmp2[56]);
   }
-  const tmp26 = navigateToFriends(navigateToPremium[58])();
-  const width = tmp26.width;
+  const tmp25 = navigateToFriends(navigateToPremium[57])();
+  const width = tmp25.width;
   num = 0;
-  ({ ref, onLayout } = tmp26);
+  ({ ref, onLayout } = tmp25);
   if (undefined !== width) {
     num = width;
   }
@@ -373,12 +370,12 @@ export default function YouScreenUserProfileContent(user) {
     }
     const obj = { action: "PRESS_SECTION", section };
   }, items4);
-  const tmp4Result8 = user(navigateToPremium[57]);
-  const profileSectionTabs = user(navigateToPremium[57]).useProfileSectionTabs({ initialUserProfileSection: MAIN, wishlistTabIndex, boardTabIndex, activityTabIndex, onTabChange: callback1 });
+  let tmp4Result = user(navigateToPremium[56]);
+  const profileSectionTabs = user(navigateToPremium[56]).useProfileSectionTabs({ initialUserProfileSection: MAIN, wishlistTabIndex, boardTabIndex, activityTabIndex, onTabChange: callback1 });
   activeProfileTabSection = profileSectionTabs.activeProfileTabSection;
   setActiveProfileTabSection = profileSectionTabs.setActiveProfileTabSection;
   restoreActiveIndex = profileSectionTabs.restoreActiveIndex;
-  isVisible = tmp29;
+  isVisible = tmp28;
   const items5 = [customStatusActivity, tmp17];
   ({ handleTabChange, activeProfileTabSectionIndex } = profileSectionTabs);
   callback2 = obj6.useCallback(() => {
@@ -456,7 +453,7 @@ export default function YouScreenUserProfileContent(user) {
     obj.children = items;
     return closure_2_15(View, obj);
   }, items8);
-  const items9 = [callback3, callback4, tmp20, isRecentActivityMobileEnabled, user, activeProfileTabSection, containerBackground, containerBorderColor];
+  const items9 = [callback3, callback4, tmp20, user, activeProfileTabSection, containerBackground, containerBorderColor];
   const memo = obj6.useMemo(() => {
     const obj = { id: "main", label: null, page: null };
     const intl = util.intl;
@@ -471,14 +468,11 @@ export default function YouScreenUserProfileContent(user) {
       obj2.page = state(YouScreenWidgetsBoardContainer, obj3);
       items.push(obj2);
     }
-    if (isRecentActivityMobileEnabled) {
-      const obj4 = { id: "activity", label: null, page: null };
-      const intl3 = util.intl;
-      obj4.label = intl3.string(util.t.chq59f);
-      const obj5 = { user, containerBackground, containerBorderColor };
-      obj4.page = state(YouScreenActivityTabContainer, obj5);
-      items.push(obj4);
-    }
+    const obj4 = { id: "activity", label: null, page: null };
+    const intl3 = util.intl;
+    obj4.label = intl3.string(util.t.chq59f);
+    obj4.page = state(YouScreenActivityTabContainer, { user, containerBackground, containerBorderColor });
+    items.push(obj4);
     const obj6 = { id: "wishlist", label: null, page: null };
     const intl4 = util.intl;
     obj6.label = intl4.string(util.t["7lZ31J"]);
@@ -486,12 +480,12 @@ export default function YouScreenUserProfileContent(user) {
     items.push(obj6);
     return items;
   }, items9);
-  const tmp4Result10 = user(navigateToPremium[57]);
-  const measuredTabItems = user(navigateToPremium[70]).useMeasuredTabItems(memo);
+  const tmp4Result8 = user(navigateToPremium[56]);
+  const measuredTabItems = user(navigateToPremium[69]).useMeasuredTabItems(memo);
   ({ items, pageHeights } = measuredTabItems);
-  const tmp4Result11 = user(navigateToPremium[70]);
-  const tmp4Result12 = user(navigateToPremium[71]);
-  segmentedControlState = tmp4Result12.useSegmentedControlState({ pageWidth: num, defaultIndex: activeProfileTabSectionIndex, itemSpacing: navigateToFriends(navigateToPremium[19]).space.PX_24, items, onPageChange: handleTabChange });
+  const tmp4Result9 = user(navigateToPremium[69]);
+  const tmp4Result10 = user(navigateToPremium[70]);
+  segmentedControlState = tmp4Result10.useSegmentedControlState({ pageWidth: num, defaultIndex: activeProfileTabSectionIndex, itemSpacing: navigateToFriends(navigateToPremium[19]).space.PX_24, items, onPageChange: handleTabChange });
   const items10 = [segmentedControlState, restoreActiveIndex];
   const layoutEffect = obj6.useLayoutEffect(() => {
     restoreActiveIndex(segmentedControlState);
@@ -531,18 +525,18 @@ export default function YouScreenUserProfileContent(user) {
   const obj17 = { style: null, children: null };
   const items12 = [tmp3.profileContentWrapper, { paddingTop: 0 }];
   obj17.style = items12;
-  const items13 = [ref2(shouldShowExpiringTrialOfferCard, { user, backgroundColor: userProfileColors.avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag }), , , ];
+  const items13 = [ref2(shouldShowExpiringTrialOfferCard, { user, backgroundColor: avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag }), , , ];
   const obj19 = { ref: ref1, customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: null, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true, placeholderText: labelResult, prompt: obj8 };
   const items14 = [, ];
   ({ customStatusBubble: arr14[0], customStatusBubbleInset: arr14[1] } = tmp3);
   obj19.style = items14;
-  items13[1] = ref2(navigateToFriends(navigateToPremium[74]), obj19);
+  items13[1] = ref2(navigateToFriends(navigateToPremium[73]), obj19);
   let isLoaded;
   if (tmp6 != null) {
     isLoaded = tmp6.isLoaded;
   }
   const obj20 = { isProfileLoaded: true === isLoaded, orbWalletEntryRowRef: ref2, isMainTabActive: activeProfileTabSection === customStatusActivity.MAIN, navigateToProfileCustomization, primaryInfoProps: null };
-  const obj21 = { user, pronouns: null, badges: null, badgeContainerBackground: null, profileBackgroundColor: null, onPressDisplayName: null, displayNameAccessibilityHint: null, themeType: null, showChevron: true, canOpenBadgeDirectory: true };
+  const obj21 = { user, pronouns: null, badges: null, badgeContainerBackground: null, onPressDisplayName: null, displayNameAccessibilityHint: null, themeType: null, showChevron: true, canOpenBadgeDirectory: true };
   let pronouns;
   if (tmp6 != null) {
     pronouns = tmp6.pronouns;
@@ -550,20 +544,19 @@ export default function YouScreenUserProfileContent(user) {
   obj21.pronouns = pronouns;
   obj21.badges = tmp8;
   obj21.badgeContainerBackground = containerBackground;
-  obj21.profileBackgroundColor = statusBackground;
   obj21.onPressDisplayName = callback;
   let intl = tmp4(tmp2[26]).intl;
   const obj22 = { status: null };
-  const obj18 = { user, backgroundColor: userProfileColors.avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag };
-  const tmp43 = MAIN;
-  const tmp4Result13 = user(navigateToPremium[44]);
-  obj22.status = user(navigateToPremium[75]).getStatusLabel(stateFromStores);
-  const tmp4Result14 = user(navigateToPremium[75]);
+  const obj18 = { user, backgroundColor: avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag };
+  const tmp42 = num;
+  const tmp4Result11 = user(navigateToPremium[44]);
+  obj22.status = user(navigateToPremium[74]).getStatusLabel(stateFromStores);
+  const tmp4Result12 = user(navigateToPremium[74]);
   let intl2 = tmp4(tmp2[26]).intl;
   obj21.displayNameAccessibilityHint = "" + intl.formatToPlainString(user(navigateToPremium[26]).t["er+FRD"], obj22) + ", " + intl2.string(user(navigateToPremium[26]).t.C6COaT);
   obj21.themeType = UserProfileThemeTypes.YOU_SCREEN;
   obj20.primaryInfoProps = obj21;
-  items13[2] = ref2(tmp43, obj20);
+  items13[2] = ref2(tmp42, obj20);
   const obj23 = { style: { flex: 1 }, ref, onLayout, children: null };
   const obj24 = { style: tmp3.profileTablist, children: null };
   const obj25 = { state: segmentedControlState, variant: null };
@@ -573,12 +566,12 @@ export default function YouScreenUserProfileContent(user) {
   }
   const obj26 = { zIndex: 1, children: null };
   obj25.variant = str;
-  obj24.children = ref2(user(navigateToPremium[76]).Tabs, obj25);
-  const items15 = [ref2(closure_5, obj24), ref2(navigateToFriends(navigateToPremium[70]), { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
+  obj24.children = ref2(user(navigateToPremium[75]).Tabs, obj25);
+  const items15 = [ref2(closure_5, obj24), ref2(navigateToFriends(navigateToPremium[69]), { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
   obj23.children = items15;
   items13[3] = c15(closure_5, obj23);
   obj17.children = items13;
   obj26.children = c15(closure_5, obj17);
-  obj16.children = ref2(user(navigateToPremium[73]).LayerScope, obj26);
-  return ref2(navigateToFriends(navigateToPremium[72]).View, obj16);
+  obj16.children = ref2(user(navigateToPremium[72]).LayerScope, obj26);
+  return ref2(navigateToFriends(navigateToPremium[71]).View, obj16);
 };

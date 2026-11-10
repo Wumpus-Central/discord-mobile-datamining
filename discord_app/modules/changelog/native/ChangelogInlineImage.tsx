@@ -1,13 +1,13 @@
-// === Module 8643: ChangelogInlineImage ===
+// === Module 8649: ChangelogInlineImage ===
 
-// Module 8643 (ChangelogInlineImage)
+// Module 8649 (ChangelogInlineImage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import UserSettings from "UserSettings" /* 4965 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import ChangelogImageUtils from "ChangelogImageUtils" /* 8641 */;
-import GifTagDefault from "GifTag" /* 8644 */;
+import UserSettings from "UserSettings" /* 4967 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import ChangelogImageUtils from "ChangelogImageUtils" /* 8647 */;
+import GifTagDefault from "GifTag" /* 8650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 }, image: null, gifTag: null };
 let obj3 = { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 };
 obj2.image = { borderRadius: nativeDefault.radii.xs };

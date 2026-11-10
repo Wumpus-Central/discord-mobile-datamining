@@ -1,13 +1,13 @@
-// === Module 11380: useVoicePanelDockHeight ===
+// === Module 11389: useVoicePanelDockHeight ===
 
-// Module 11380 (useVoicePanelDockHeight)
-import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
-import VoicePanelStore from "VoicePanelStore" /* 6930 */;
+// Module 11389 (useVoicePanelDockHeight)
+import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
+import VoicePanelStore from "VoicePanelStore" /* 6933 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const getVoicePanelDockHeight = fn(11381).getVoicePanelDockHeight;
+const getVoicePanelDockHeight = fn(11390).getVoicePanelDockHeight;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockHeight.tsx");
 

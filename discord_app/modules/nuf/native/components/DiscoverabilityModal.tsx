@@ -1,14 +1,14 @@
-// === Module 14597: DiscoverabilityModal ===
+// === Module 14623: DiscoverabilityModal ===
 
-// Module 14597 (DiscoverabilityModal)
+// Module 14623 (DiscoverabilityModal)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import Navigator from "Navigator" /* 7231 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14491 */;
-import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 14505 */;
-import NUFActionCreators from "NUFActionCreators" /* 14512 */;
+import Navigator from "Navigator" /* 7234 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14517 */;
+import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 14531 */;
+import NUFActionCreators from "NUFActionCreators" /* 14538 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -60,9 +60,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   const callback = noop.useCallback((arg0) => {
-    const result = allowPhone(14512).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(14512);
-    const result1 = allowPhone(14512).closeDiscoverabilityModal(false);
+    const result = allowPhone(14538).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(14538);
+    const result1 = allowPhone(14538).closeDiscoverabilityModal(false);
   }, []);
   const obj2 = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();
@@ -128,10 +128,10 @@ class DiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(14484).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14510).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(5714).NAV_BAR_HEIGHT + 32 } };
+const createStyles = fn(5142);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(5716).NAV_BAR_HEIGHT + 32 } };
 let closure_8 = createStyles.createStyles(obj2);
 DiscoverabilityModal.modalConfig = { animation: fn(1072).ModalAnimation.SLIDE_IN_OUT };
 const size = fn(2);

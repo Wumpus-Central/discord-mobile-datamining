@@ -1,17 +1,17 @@
-// === Module 15646: PremiumFeaturesCarouselSection ===
+// === Module 15674: PremiumFeaturesCarouselSection ===
 
-// Module 15646 (PremiumFeaturesCarouselSection)
+// Module 15674 (PremiumFeaturesCarouselSection)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import LinearGradientDefault from "LinearGradient" /* 5715 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import _modDef15647 from "module_15647" /* 15647 */;
-import _modDef15648 from "module_15648" /* 15648 */;
-import _modDef15649 from "module_15649" /* 15649 */;
-import _modDef15650 from "module_15650" /* 15650 */;
+import LinearGradientDefault from "LinearGradient" /* 5717 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import _modDef15675 from "module_15675" /* 15675 */;
+import _modDef15676 from "module_15676" /* 15676 */;
+import _modDef15677 from "module_15677" /* 15677 */;
+import _modDef15678 from "module_15678" /* 15678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -52,7 +52,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   noop = undefined;
   const tmp = closure_14();
-  const isScreenReaderEnabled = onEndReached(5390).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = onEndReached(5392).useIsScreenReaderEnabled();
   const tmp5 = mapped(noop.useState(0), 2);
   const currentIndex = tmp5[0];
   dependencyMap = tmp7;
@@ -64,7 +64,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef15647;
+    obj.imageSrc = _modDef15675;
     obj.imageStyle = first.emojiImage;
     items = [, ];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -73,7 +73,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef15648;
+    obj2.imageSrc = _modDef15676;
     const items2 = [, ];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
@@ -82,7 +82,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef15649;
+    obj3.imageSrc = _modDef15677;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -90,7 +90,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef15650;
+    obj4.imageSrc = _modDef15678;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);
@@ -138,7 +138,7 @@ function PremiumFeaturesCarousel(arg0) {
         modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
         onSnapToItem: tmp7
       };
-      let tmp19 = closure_10(currentIndex(10748), obj3);
+      let tmp19 = closure_10(currentIndex(10757), obj3);
     }
     let items3 = [tmp19, ];
     let obj4 = { containerStyle: tmp.indicators, numberOfItems: mapped.length, currentIndex };
@@ -146,7 +146,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj2.children = items3;
     return closure_11(closure_6, obj2);
   }
-  let obj = onEndReached(5390);
+  let obj = onEndReached(5392);
   tmp19 = closure_10(closure_5, { style: tmp.carousel, contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 }, horizontal: true, showsHorizontalScrollIndicator: false, decelerationRate: "fast", snapToOffsets: mapped.map((item, index) => index * c4), scrollEventThrottle: 100, onScroll: callback, children: mapped });
   tmp17 = closure_10;
   const obj5 = { style: tmp.carousel, contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 }, horizontal: true, showsHorizontalScrollIndicator: false, decelerationRate: "fast", snapToOffsets: mapped.map((item, index) => index * c4), scrollEventThrottle: 100, onScroll: callback, children: mapped };
@@ -154,18 +154,18 @@ function PremiumFeaturesCarousel(arg0) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Gradients = fn(7693).Gradients;
+const Gradients = fn(7696).Gradients;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let c12 = 0.85;
 const PX_12 = nativeDefault.space.PX_12;
-let createStyles = fn(5140);
+let createStyles = fn(5142);
 let obj2 = { container: { flex: 1 }, headerText: { textAlign: "center" }, carouselContainer: { flex: 1, marginTop: nativeDefault.space.PX_16 }, carousel: { flex: 1, minHeight: 262 }, indicators: null };
 let obj3 = { flex: 1, marginTop: nativeDefault.space.PX_16 };
 obj2.indicators = { marginBottom: -nativeDefault.space.PX_48 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5140);
+createStyles = fn(5142);
 const obj6 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
 let obj4 = { marginBottom: -nativeDefault.space.PX_48 };
 obj6.card = { flex: 1, alignSelf: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
@@ -173,7 +173,7 @@ obj6.image = { alignSelf: "center" };
 const obj7 = { flex: 1, alignSelf: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj6.cardTitle = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
 const value = createStyles.createStyles(obj6);
-createStyles = fn(5140);
+createStyles = fn(5142);
 let closure_16 = createStyles.createStyles({ emojiImage: { alignSelf: "flex-end" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx");
@@ -182,9 +182,9 @@ export default function PremiumFeaturesCarouselSection(style) {
   first = undefined;
   dependencyMap = undefined;
   const tmp = closure_14();
-  const analyticsLocations = first(7387)().analyticsLocations;
+  const analyticsLocations = first(7390)().analyticsLocations;
   [first, dependencyMap] = noop.useState(false);
-  ({ width, ref, onLayout } = first(9069)());
+  ({ width, ref, onLayout } = first(9075)());
   if (undefined === width) {
     width = analyticsLocations(1493).getWindowDimensions().width;
     let obj2 = analyticsLocations(1493);
@@ -203,7 +203,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   const obj4 = { style: tmp.headerText, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = analyticsLocations(1113).intl;
   obj4.children = intl.string(analyticsLocations(1113).t.RGadQR);
-  const items2 = [closure_10(analyticsLocations(5751).Text, obj4), closure_10(PremiumFeaturesCarousel, { width, onEndReached: callback })];
+  const items2 = [closure_10(analyticsLocations(5753).Text, obj4), closure_10(PremiumFeaturesCarousel, { width, onEndReached: callback })];
   obj3.children = items2;
   return closure_11(closure_6, obj3);
 };

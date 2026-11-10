@@ -1,16 +1,16 @@
-// === Module 14352: useGuildPowerupOnActivate ===
+// === Module 14378: useGuildPowerupOnActivate ===
 
-// Module 14352 (useGuildPowerupOnActivate)
-import BoostingActionCreators from "BoostingActionCreators" /* 6823 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8534 */;
+// Module 14378 (useGuildPowerupOnActivate)
+import BoostingActionCreators from "BoostingActionCreators" /* 6826 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8540 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7661 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7664 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5346);
+const GuildPowerupsConstants = fn(5348);
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: metroImportDefault } = GuildPowerupsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
@@ -68,7 +68,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                        return PERK(6799).popWithKey(diff(7671).PREMIUM_KEY);
+                        return PERK(6801).popWithKey(diff(7674).PREMIUM_KEY);
                       },
               onPaymentSuccess() {
                         const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(GuildBoostSlotStore.boostSlots);
@@ -88,7 +88,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                         }
                       },
               onPaymentDismiss() {
-                        return PERK(6799).popWithKey(diff(7671).PREMIUM_KEY);
+                        return PERK(6801).popWithKey(diff(7674).PREMIUM_KEY);
                       }
             };
             const result = tmp17(onToggle[13]).launchGuildBoostFlowOrAlert(obj3);

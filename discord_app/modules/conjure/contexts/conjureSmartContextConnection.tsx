@@ -1,9 +1,9 @@
-// === Module 11094: conjureSmartContextConnection ===
+// === Module 11103: conjureSmartContextConnection ===
 
-// Module 11094 (conjureSmartContextConnection)
+// Module 11103 (conjureSmartContextConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10995 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11075 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11084 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/contexts/conjureSmartContextConnection.tsx");

@@ -1,12 +1,12 @@
-// === Module 20443: ApiRequestConfigManager ===
+// === Module 20471: ApiRequestConfigManager ===
 
-// Module 20443 (ApiRequestConfigManager)
+// Module 20471 (ApiRequestConfigManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
 import size from "module_2" /* 2 */;
 
 function updateApiRequestConfig() {

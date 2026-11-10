@@ -1,6 +1,6 @@
-// === Module 14642: getFavoritesAddButtonLabel ===
+// === Module 14668: getFavoritesAddButtonLabel ===
 
-// Module 14642 (getFavoritesAddButtonLabel)
+// Module 14668 (getFavoritesAddButtonLabel)
 import util from "util" /* 1113 */;
 import _modDef3608 from "module_3608" /* 3608 */;
 import size from "module_2" /* 2 */;

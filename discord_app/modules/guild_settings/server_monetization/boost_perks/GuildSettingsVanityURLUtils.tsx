@@ -1,6 +1,6 @@
-// === Module 20060: GuildSettingsVanityURLUtils ===
+// === Module 20088: GuildSettingsVanityURLUtils ===
 
-// Module 20060 (GuildSettingsVanityURLUtils)
+// Module 20088 (GuildSettingsVanityURLUtils)
 import util from "util" /* 1113 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

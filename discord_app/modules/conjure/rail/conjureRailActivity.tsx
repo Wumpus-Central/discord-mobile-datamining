@@ -1,15 +1,15 @@
-// === Module 13235: conjureRailActivity ===
+// === Module 13249: conjureRailActivity ===
 
-// Module 13235 (conjureRailActivity)
-import conjureUnread from "conjureUnread" /* 10998 */;
-import conjureProjectMute from "conjureProjectMute" /* 10999 */;
+// Module 13249 (conjureRailActivity)
+import conjureUnread from "conjureUnread" /* 11007 */;
+import conjureProjectMute from "conjureProjectMute" /* 11008 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReadStateStore from "ReadStateStore" /* 6897 */;
-import ConjureChatStore from "ConjureChatStore" /* 10970 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10987 */;
+import ReadStateStore from "ReadStateStore" /* 6900 */;
+import ConjureChatStore from "ConjureChatStore" /* 10979 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10996 */;
 
 const require = globalThis.__r;
 
@@ -68,7 +68,7 @@ function readConjureRailActivity(id, arg1) {
   }
   return tmp;
 }
-const isProjectOwner = fn(6899).isProjectOwner;
+const isProjectOwner = fn(6902).isProjectOwner;
 let items = [ConjureProjectStore, ConjureChatStore, ConjurePublishStatusStore, ReadStateStore, UserSettingsProtoStore];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/rail/conjureRailActivity.tsx");

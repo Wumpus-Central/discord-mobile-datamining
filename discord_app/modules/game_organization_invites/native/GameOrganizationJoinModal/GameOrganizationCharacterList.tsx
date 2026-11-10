@@ -1,16 +1,16 @@
-// === Module 13451: GameOrganizationCharacterList ===
+// === Module 13464: GameOrganizationCharacterList ===
 
-// Module 13451 (GameOrganizationCharacterList)
+// Module 13464 (GameOrganizationCharacterList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2530 from "module_2530" /* 2530 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5200 */;
-import useToken from "useToken" /* 5724 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import Stack_Stack from "Stack/Stack" /* 6159 */;
-import Card from "Card" /* 7040 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7152 */;
-import GameOrganizationIconDefault from "GameOrganizationIcon" /* 13449 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5202 */;
+import useToken from "useToken" /* 5726 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import Stack_Stack from "Stack/Stack" /* 6161 */;
+import Card from "Card" /* 7043 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7155 */;
+import GameOrganizationIconDefault from "GameOrganizationIcon" /* 13462 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ function CharacterSubLabel(text) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { card: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 }, selectedCard: null, labels: null, cards: null, title: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 };
 obj.selectedCard = { borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
@@ -129,15 +129,15 @@ export default function GameOrganizationCharacterList(characters) {
   const obj2 = { style: tmp.title, title: null };
   const intl = characters(1113).intl;
   obj2.title = intl.formatToPlainString(_modDef2530["Xm+emB"], { noun });
-  const items1 = [closure_5(characters(7126).TableRowGroupTitle, obj2), closure_5(View, { accessibilityRole: "radiogroup", style: tmp.cards, children: memo.map((character) => hasOwnProperty(closure_9, { character, selected: character.id === importDefault, onSelect, noun }, character.id)) }), ];
+  const items1 = [closure_5(characters(7129).TableRowGroupTitle, obj2), closure_5(View, { accessibilityRole: "radiogroup", style: tmp.cards, children: memo.map((character) => hasOwnProperty(closure_9, { character, selected: character.id === importDefault, onSelect, noun }, character.id)) }), ];
   if (someResult) {
     const obj4 = { variant: "body-md/medium", color: "text-subtle", children: null };
     const intl2 = tmp4(1113).intl;
     const obj5 = { noun };
     obj4.children = intl2.formatToPlainString(_modDef2530.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5751).Text, obj4);
+    someResult = closure_5(tmp4(5753).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(6159).Stack, obj);
+  return closure_6(characters(6161).Stack, obj);
 };

@@ -1,16 +1,16 @@
-// === Module 18384: MobileOnboardingFrictionExperiment ===
+// === Module 18413: MobileOnboardingFrictionExperiment ===
 
-// Module 18384 (MobileOnboardingFrictionExperiment)
+// Module 18413 (MobileOnboardingFrictionExperiment)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import MobileOnboardingFrictionShared from "MobileOnboardingFrictionShared" /* 18385 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 18336 */;
+import MobileOnboardingFrictionShared from "MobileOnboardingFrictionShared" /* 18414 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 18365 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-let closure_5 = 30 * fn(5901).MS_PER_MINUTE;
+let closure_5 = 30 * fn(5903).MS_PER_MINUTE;
 const ApexExperiment = fn(1449);
-let obj2 = { name: "2026-10-android-mobile-onboarding-friction-negative-test", kind: "user", defaultConfig: fn(18385).CONTROL, variations: { 0: fn(18385).CONTROL, 1: fn(18385).LOW_FRICTION_V1 } };
+let obj2 = { name: "2026-10-android-mobile-onboarding-friction-negative-test", kind: "user", defaultConfig: fn(18414).CONTROL, variations: { 0: fn(18414).CONTROL, 1: fn(18414).LOW_FRICTION_V1 } };
 let closure_6 = ApexExperiment.createApexExperiment(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/MobileOnboardingFrictionExperiment.android.tsx");

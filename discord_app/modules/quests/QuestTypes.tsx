@@ -1,9 +1,9 @@
-// === Module 6839: QuestTypes ===
+// === Module 6842: QuestTypes ===
 
-// Module 6839 (QuestTypes)
-import QuestRewardCodePlatforms from "QuestRewardCodePlatforms" /* 6840 */;
-import QuestContent from "QuestContent" /* 6841 */;
-import AdPlacement from "AdPlacement" /* 6842 */;
+// Module 6842 (QuestTypes)
+import QuestRewardCodePlatforms from "QuestRewardCodePlatforms" /* 6843 */;
+import QuestContent from "QuestContent" /* 6844 */;
+import AdPlacement from "AdPlacement" /* 6845 */;
 import size from "module_2" /* 2 */;
 
 const values = Object.values(QuestRewardCodePlatforms.QuestRewardCodePlatforms);

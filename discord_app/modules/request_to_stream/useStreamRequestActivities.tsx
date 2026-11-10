@@ -1,11 +1,11 @@
-// === Module 15109: useStreamRequestActivities ===
+// === Module 15135: useStreamRequestActivities ===
 
-// Module 15109 (useStreamRequestActivities)
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9372 */;
+// Module 15135 (useStreamRequestActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9378 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5890 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6625 */;
+import PresenceStore from "PresenceStore" /* 5892 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6627 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ function isStreamRequestActivity(platform) {
   }
   return tmp;
 }
-let items = [fn(9828).ActivityGamePlatforms.XBOX, fn(9828).ActivityGamePlatforms.PLAYSTATION_4, fn(9828).ActivityGamePlatforms.PLAYSTATION_5];
+let items = [fn(9834).ActivityGamePlatforms.XBOX, fn(9834).ActivityGamePlatforms.PLAYSTATION_4, fn(9834).ActivityGamePlatforms.PLAYSTATION_5];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/request_to_stream/useStreamRequestActivities.tsx");

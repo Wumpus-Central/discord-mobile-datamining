@@ -1,8 +1,8 @@
-// === Module 18960: navigationTTIEnabled ===
+// === Module 18989: navigationTTIEnabled ===
 
-// Module 18960 (navigationTTIEnabled)
-import isTTITest from "isTTITest" /* 16534 */;
-import NavigationTTIExperiment2 from "NavigationTTIExperiment" /* 18961 */;
+// Module 18989 (navigationTTIEnabled)
+import isTTITest from "isTTITest" /* 16561 */;
+import NavigationTTIExperiment2 from "NavigationTTIExperiment" /* 18990 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/navigationTTIEnabled.tsx");

@@ -1,12 +1,12 @@
-// === Module 19322: ChannelSecondaryViewChatNavigator ===
+// === Module 19351: ChannelSecondaryViewChatNavigator ===
 
-// Module 19322 (ChannelSecondaryViewChatNavigator)
+// Module 19351 (ChannelSecondaryViewChatNavigator)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import HeaderShared from "HeaderShared" /* 9902 */;
-import ChannelContainer from "ChannelContainer" /* 11137 */;
-import ChatViewDefault from "ChatView" /* 11354 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12564 */;
+import HeaderShared from "HeaderShared" /* 9908 */;
+import ChannelContainer from "ChannelContainer" /* 11146 */;
+import ChatViewDefault from "ChatView" /* 11363 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12577 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,9 +28,9 @@ function ChannelSecondaryViewChatScreen(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9976);
+const NativeStackNavigator = fn(9982);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -41,8 +41,8 @@ export default function ChannelSecondaryViewChatNavigator(navigation) {
   const params = navigation.route.params;
   const tmp = closure_7();
   dependencyMap = tmp;
-  const tmp2 = params(5310)();
-  const accessibilityNativeStackOptions = navigation(7231).useAccessibilityNativeStackOptions();
+  const tmp2 = params(5312)();
+  const accessibilityNativeStackOptions = navigation(7234).useAccessibilityNativeStackOptions();
   const channelId = params.channelId;
   items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
   const memo = accessibilityNativeStackOptions.useMemo(() => {
@@ -70,5 +70,5 @@ export default function ChannelSecondaryViewChatNavigator(navigation) {
     })
   };
   obj2.children = channelId(closure_6.Navigator, obj3);
-  return channelId(navigation(5199).ThemeContextProvider, obj2);
+  return channelId(navigation(5201).ThemeContextProvider, obj2);
 };

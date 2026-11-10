@@ -1,13 +1,13 @@
-// === Module 13670: CheckpointActionCreators ===
+// === Module 13684: CheckpointActionCreators ===
 
-// Module 13670 (CheckpointActionCreators)
+// Module 13684 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7549 */;
-import Tracking from "Tracking" /* 13666 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7552 */;
+import Tracking from "Tracking" /* 13679 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import CheckpointStore from "CheckpointStore" /* 13668 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import CheckpointStore from "CheckpointStore" /* 13681 */;
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
@@ -39,6 +39,7 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
           closure_1 = tmp7;
           closure_129_0 = closure_0;
           let body;
+          let compact_assets;
           CheckpointStore.initializeIfNeeded();
           if (CheckpointStore.isFetching) {
             c5 = 3;
@@ -71,12 +72,14 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
         return obj14;
       } else {
         body = value.body;
+        compact_assets = body.compact_assets;
         if (null != closure_129_0) {
-          const obj15 = { type: "CHECKPOINT_FETCH_SUCCESS", stats: null, globalStats: null, character: null };
+          const obj15 = { type: "CHECKPOINT_FETCH_SUCCESS", stats: null, globalStats: null, character: null, compactAssets: null };
           const obj4 = closure_130_1(closure_130_2[4]);
           obj15.stats = closure_130_0(closure_130_2[7]).getMockCheckpointStats(closure_129_0);
           const obj6 = closure_130_0(closure_130_2[7]);
           obj15.globalStats = closure_130_0(closure_130_2[8]).globalStatsFromServer(body.global_stats);
+          obj15.compactAssets = compact_assets;
           obj4.dispatch(obj15);
           const SUCCESS2 = closure_130_6.SUCCESS;
           const obj7 = closure_130_0(closure_130_2[8]);
@@ -86,10 +89,11 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
             statsFromServerResult = closure_130_0(closure_130_2[8]).statsFromServer(body.stats);
             const obj = closure_130_0(closure_130_2[8]);
           }
-          const obj16 = { type: "CHECKPOINT_FETCH_SUCCESS", stats: statsFromServerResult, globalStats: null, character: null };
+          const obj16 = { type: "CHECKPOINT_FETCH_SUCCESS", stats: statsFromServerResult, globalStats: null, character: null, compactAssets: null };
           const obj17 = closure_130_1(closure_130_2[4]);
           obj16.globalStats = closure_130_0(closure_130_2[8]).globalStatsFromServer(body.global_stats);
           obj16.character = body.character;
+          obj16.compactAssets = compact_assets;
           obj17.dispatch(obj16);
           const SUCCESS = closure_130_6.SUCCESS;
           const obj3 = closure_130_0(closure_130_2[8]);
@@ -97,10 +101,10 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
         c3 = 0;
         c5 = 3;
       }
-    } catch (tmp46) {
+    } catch (tmp48) {
       if (tmp4 === c3) {
         c5 = tmp2;
-        throw tmp46;
+        throw tmp48;
       } else {
         c4 = tmp;
       }
@@ -319,10 +323,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             value: Promise.allSettled(closure_133_2.map((item) => {
                       channel = channel.getChannel(item);
                       if (null != channel) {
-                        const obj = checkpointCardType(7712);
+                        const obj = checkpointCardType(7715);
                         const id = channel.id;
                         const obj3 = { location: "checkpoint", checkpointCardType };
-                        return obj.sendMessage(id, checkpointCardType(7900).parse(channel, closure_1_0), false, obj3);
+                        return obj.sendMessage(id, checkpointCardType(7904).parse(channel, closure_1_0), false, obj3);
                       }
                     })),
             done: false
@@ -362,7 +366,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(13668).CheckpointFetchStates;
+const CheckpointFetchStates = fn(13681).CheckpointFetchStates;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

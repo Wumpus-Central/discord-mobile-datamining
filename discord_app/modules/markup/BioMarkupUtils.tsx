@@ -1,18 +1,18 @@
-// === Module 11639: BioMarkupUtils ===
+// === Module 11648: BioMarkupUtils ===
 
-// Module 11639 (BioMarkupUtils)
+// Module 11648 (BioMarkupUtils)
 import privDefault from "priv" /* 1453 */;
 import _modDef2067 from "module_2067" /* 2067 */;
-import MarkupReactRulesDefault from "MarkupReactRules" /* 5880 */;
-import MarkupRulesDefault from "MarkupRules" /* 6166 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 6165 */;
-import MarkupParser_mod from "MarkupParser" /* 8515 */;
-import MarkupUtils from "MarkupUtils" /* 5879 */;
+import MarkupReactRulesDefault from "MarkupReactRules" /* 5882 */;
+import MarkupRulesDefault from "MarkupRules" /* 6168 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 6167 */;
+import MarkupParser_mod from "MarkupParser" /* 8521 */;
+import MarkupUtils from "MarkupUtils" /* 5881 */;
 import apply from "apply" /* 12 */;
 
 let combineMarkupRules = combineMarkupRules_mod;
 const items = [MarkupRulesDefault.PROFILE_BIO_RULES, MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }), ];
-const MarkupReactRules = fn(5880);
+const MarkupReactRules = fn(5882);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;

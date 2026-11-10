@@ -1,6 +1,6 @@
-// === Module 7233: NavigatorBackgroundContext ===
+// === Module 7236: NavigatorBackgroundContext ===
 
-// Module 7233 (NavigatorBackgroundContext)
+// Module 7236 (NavigatorBackgroundContext)
 import _mod19 from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

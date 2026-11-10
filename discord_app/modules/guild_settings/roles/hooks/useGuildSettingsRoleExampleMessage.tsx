@@ -1,10 +1,10 @@
-// === Module 20204: useGuildSettingsRoleExampleMessage ===
+// === Module 20232: useGuildSettingsRoleExampleMessage ===
 
-// Module 20204 (useGuildSettingsRoleExampleMessage)
+// Module 20232 (useGuildSettingsRoleExampleMessage)
 import util from "util" /* 1113 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6196 */;
-import UserActionCreatorsAll from "UserActionCreators" /* 8823 */;
-import createMessageDefault from "createMessage" /* 10438 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
+import UserActionCreatorsAll from "UserActionCreators" /* 8829 */;
+import createMessageDefault from "createMessage" /* 10444 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1404 */;
 

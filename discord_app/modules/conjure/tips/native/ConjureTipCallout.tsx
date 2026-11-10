@@ -1,13 +1,13 @@
-// === Module 12833: ConjureTipCallout ===
+// === Module 12847: ConjureTipCallout ===
 
-// Module 12833 (ConjureTipCallout)
+// Module 12847 (ConjureTipCallout)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import XSmallIcon from "XSmallIcon" /* 7120 */;
-import IconButton from "IconButton" /* 8098 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12304 */;
-import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 12826 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import XSmallIcon from "XSmallIcon" /* 7123 */;
+import IconButton from "IconButton" /* 8102 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12312 */;
+import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 12840 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const firstLineInset = nativeDefault.space.PX_12 + 1;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { card: { gap: nativeDefault.space.PX_4 }, title: null, actions: null, dismiss: null };
 let obj3 = { gap: nativeDefault.space.PX_4 };
 obj2.title = { paddingRight: nativeDefault.space.PX_32 };

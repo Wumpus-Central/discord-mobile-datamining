@@ -1,9 +1,9 @@
-// === Module 9172: GuildScheduledEventUtils ===
+// === Module 9178: GuildScheduledEventUtils ===
 
-// Module 9172 (GuildScheduledEventUtils)
+// Module 9178 (GuildScheduledEventUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4995 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4997 */;
 import size from "module_2" /* 2 */;
 
 ({ UpcomingGuildEventNoticeTypes: c2, NEW_EVENT_WINDOW_MILLISECONDS: c3, EVENT_STARTING_SOON_WINDOW_MILLISECONDS: closure_4, ACKED_RECENTLY_WINDOW_DAYS: hasOwnProperty } = GuildScheduledEventsConstants);

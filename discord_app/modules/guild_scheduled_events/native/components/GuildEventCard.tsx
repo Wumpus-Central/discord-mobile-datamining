@@ -1,11 +1,11 @@
-// === Module 9175: GuildEventCard ===
+// === Module 9181: GuildEventCard ===
 
-// Module 9175 (GuildEventCard)
+// Module 9181 (GuildEventCard)
 import nativeDefault from "native" /* 575 */;
-import ButtonGroup from "ButtonGroup" /* 6822 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 9060 */;
+import ButtonGroup from "ButtonGroup" /* 6825 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 9066 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
 
 const require = globalThis.__r;
 
@@ -27,11 +27,11 @@ function GuildEventCardControls(onCloseAction) {
   return React5(ButtonGroup.ButtonGroup, obj2);
 }
 const View = fn(17).View;
-let closure_5 = fn(6910).isGuildScheduledEventActive;
-fn(4995).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
+let closure_5 = fn(6913).isGuildScheduledEventActive;
+fn(4997).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { actionContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 } };
 const styles = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 };

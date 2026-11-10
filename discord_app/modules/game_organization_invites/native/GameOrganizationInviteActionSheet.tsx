@@ -1,18 +1,18 @@
-// === Module 16099: GameOrganizationInviteActionSheet ===
+// === Module 16126: GameOrganizationInviteActionSheet ===
 
-// Module 16099 (GameOrganizationInviteActionSheet)
+// Module 16126 (GameOrganizationInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2530 from "module_2530" /* 2530 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import Stack_Stack from "Stack/Stack" /* 6159 */;
-import Search_SearchBar from "Search/SearchBar" /* 7282 */;
-import ActionSheet from "ActionSheet" /* 7426 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9208 */;
-import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 16100 */;
-import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 16101 */;
-import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 16102 */;
-import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 16103 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import Stack_Stack from "Stack/Stack" /* 6161 */;
+import Search_SearchBar from "Search/SearchBar" /* 7285 */;
+import ActionSheet from "ActionSheet" /* 7429 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9214 */;
+import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 16127 */;
+import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 16128 */;
+import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 16129 */;
+import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 16130 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ function Loading() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

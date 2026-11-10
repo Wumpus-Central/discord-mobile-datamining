@@ -1,6 +1,6 @@
-// === Module 5358: GuildMemberCountStore ===
+// === Module 5360: GuildMemberCountStore ===
 
-// Module 5358 (GuildMemberCountStore)
+// Module 5360 (GuildMemberCountStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

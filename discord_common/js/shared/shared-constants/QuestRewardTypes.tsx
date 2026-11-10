@@ -1,6 +1,6 @@
-// === Module 7927: QuestRewardTypes ===
+// === Module 7931: QuestRewardTypes ===
 
-// Module 7927 (QuestRewardTypes)
+// Module 7931 (QuestRewardTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx");

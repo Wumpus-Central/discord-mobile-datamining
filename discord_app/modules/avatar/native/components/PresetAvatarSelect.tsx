@@ -1,19 +1,19 @@
-// === Module 19946: PresetAvatarSelect ===
+// === Module 19974: PresetAvatarSelect ===
 
-// Module 19946 (PresetAvatarSelect)
+// Module 19974 (PresetAvatarSelect)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import Pressables from "Pressables" /* 7043 */;
-import defaultAvatar1Default from "defaultAvatar1" /* 19947 */;
-import defaultAvatar2Default from "defaultAvatar2" /* 19948 */;
-import defaultAvatar3Default from "defaultAvatar3" /* 19949 */;
-import defaultAvatar4Default from "defaultAvatar4" /* 19950 */;
-import defaultAvatar5Default from "defaultAvatar5" /* 19951 */;
-import defaultAvatar6Default from "defaultAvatar6" /* 19952 */;
-import defaultAvatar7Default from "defaultAvatar7" /* 19953 */;
-import defaultAvatar8Default from "defaultAvatar8" /* 19954 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import Pressables from "Pressables" /* 7046 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 19975 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 19976 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 19977 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 19978 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 19979 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 19980 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 19981 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 19982 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -154,7 +154,7 @@ items1[7] = {
     return intl.string(util.t.zpfUeg);
   }
 };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj10 = { container: { display: "flex", alignItems: "center", flex: 1 }, buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" }, defaultAvatarButton: null, defaultAvatarContainer: null, defaultAvatarSelected: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl };
 obj10.defaultAvatarButton = size;

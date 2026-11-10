@@ -1,17 +1,17 @@
-// === Module 12412: ConjureShareSheet ===
+// === Module 12425: ConjureShareSheet ===
 
-// Module 12412 (ConjureShareSheet)
+// Module 12425 (ConjureShareSheet)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import ToastUtils from "ToastUtils" /* 5836 */;
-import ClipboardUtils from "ClipboardUtils" /* 7418 */;
-import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 12416 */;
-import buildConjureProjectLinkDefault from "buildConjureProjectLink" /* 12420 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import ToastUtils from "ToastUtils" /* 5838 */;
+import ClipboardUtils from "ClipboardUtils" /* 7421 */;
+import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 12429 */;
+import buildConjureProjectLinkDefault from "buildConjureProjectLink" /* 12433 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
 
 const require = globalThis.__r;
 
@@ -33,10 +33,10 @@ function ShareLinkRow(project) {
   return closure_9(require("TableRow").TableRow, obj);
 }
 const View = fn(17).View;
-const isProjectOwner = fn(6899).isProjectOwner;
+const isProjectOwner = fn(6902).isProjectOwner;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { body: { gap: nativeDefault.space.PX_16 }, notice: null, noticeText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.notice = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -233,7 +233,7 @@ export default function ConjureShareSheet(projectId) {
   const items4 = [memo, tmp16];
   const callback1 = obj2.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12416, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(12429, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, {
       options: memo,
       value,
       onChange(AUTO_DISMISS) {

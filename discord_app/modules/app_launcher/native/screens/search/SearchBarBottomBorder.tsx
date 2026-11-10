@@ -1,17 +1,17 @@
-// === Module 12629: SearchBarBottomBorder ===
+// === Module 12642: SearchBarBottomBorder ===
 
-// Module 12629 (SearchBarBottomBorder)
+// Module 12642 (SearchBarBottomBorder)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5761 */;
-import springPresets from "springPresets" /* 5762 */;
+import spring_spring from "spring/spring" /* 5763 */;
+import springPresets from "springPresets" /* 5764 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 let closure_6 = { code: "(function SearchBarBottomBorderTsx1(){let[withSpring,scrollPosition,triggerScrollHeight,springStandard]=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};})" };

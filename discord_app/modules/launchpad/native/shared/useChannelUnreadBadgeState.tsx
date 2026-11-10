@@ -1,9 +1,9 @@
-// === Module 18750: useChannelUnreadBadgeState ===
+// === Module 18779: useChannelUnreadBadgeState ===
 
-// Module 18750 (useChannelUnreadBadgeState)
-import NewChannelsStore from "NewChannelsStore" /* 7787 */;
-import ReadStateStore from "ReadStateStore" /* 6897 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6830 */;
+// Module 18779 (useChannelUnreadBadgeState)
+import NewChannelsStore from "NewChannelsStore" /* 7790 */;
+import ReadStateStore from "ReadStateStore" /* 6900 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6833 */;
 
 const require = globalThis.__r;
 

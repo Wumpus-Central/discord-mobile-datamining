@@ -1,10 +1,10 @@
-// === Module 9995: lurkGuildFromRoute ===
+// === Module 10001: lurkGuildFromRoute ===
 
-// Module 9995 (lurkGuildFromRoute)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
+// Module 10001 (lurkGuildFromRoute)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5011 */;
+import GuildStore from "GuildStore" /* 5013 */;
 
 const require = fn;
 let closure_7 = async function _lurk(arg0) {

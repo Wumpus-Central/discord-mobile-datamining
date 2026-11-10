@@ -1,18 +1,18 @@
-// === Module 7473: StorefrontUtils ===
+// === Module 7476: StorefrontUtils ===
 
-// Module 7473 (StorefrontUtils)
+// Module 7476 (StorefrontUtils)
 import applyDefault from "apply" /* 12 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import StorefrontTypes from "StorefrontTypes" /* 7475 */;
-import SlayerStorefrontPriceUtils from "SlayerStorefrontPriceUtils" /* 7476 */;
-import PriceUtils from "PriceUtils" /* 7477 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7480 */;
+import StorefrontTypes from "StorefrontTypes" /* 7478 */;
+import SlayerStorefrontPriceUtils from "SlayerStorefrontPriceUtils" /* 7479 */;
+import PriceUtils from "PriceUtils" /* 7480 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7483 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 import UserStore from "UserStore" /* 1385 */;
-import SKUPricesStore from "SKUPricesStore" /* 7474 */;
+import SKUPricesStore from "SKUPricesStore" /* 7477 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ function useSKUPrice(sku) {
       if (null != stateFromStores1) {
         let tmp12 = stateFromStores1[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = stateFromStores1[tmp4(undefined, 7475).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores1[tmp4(undefined, 7478).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -77,7 +77,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    const obj2 = { userPrice: "r", pricesForPurchaseType: "Array", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj2;
   }, items1);
   userPrice = memo.userPrice;
@@ -116,24 +116,25 @@ function useSKUPrice(sku) {
       return { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     } else if (storeHasPrice) {
       const found = stateFromStoresArray.find((item) => {
-        if (null == item[purchaseType]) {
-          return false;
-        } else {
-          const type2 = tmp.type;
-          if (sku(userPrice[7]).StorefrontPromotionRewardType.DISCOUNT === type2) {
-            return true;
-          } else {
-            if (sku(userPrice[7]).StorefrontPromotionRewardType.FIXED_PRICE !== type2) {
-              if (sku(userPrice[7]).StorefrontPromotionRewardType.ACTION !== type2) {
-                if (sku(userPrice[7]).StorefrontPromotionRewardType.BENEFIT !== type2) {
-                  const type = tmp.type;
-                  return false;
+        if (null != item[purchaseType]) {
+          if (tmp.amount > 0) {
+            const type2 = tmp.type;
+            if (sku(userPrice[7]).StorefrontPromotionRewardType.DISCOUNT === type2) {
+              return true;
+            } else {
+              if (sku(userPrice[7]).StorefrontPromotionRewardType.FIXED_PRICE !== type2) {
+                if (sku(userPrice[7]).StorefrontPromotionRewardType.ACTION !== type2) {
+                  if (sku(userPrice[7]).StorefrontPromotionRewardType.BENEFIT !== type2) {
+                    const type = tmp.type;
+                    return false;
+                  }
                 }
               }
+              return false;
             }
-            return false;
           }
         }
+        return false;
       });
       let tmp9 = null;
       if (null != found) {
@@ -236,7 +237,7 @@ export function transformStorefrontPricesServer(storefront_pricing) {
     const obj = { userPrice: null, prices: null };
     user_price = user_price.user_price;
     obj.userPrice = user_price.map((currency) => ({ currency: currency.currency, amount: currency.amount }));
-    obj.prices = closure_1_1(dependencyMap[6]).mapValues(user_price.prices, (arg0) => closure_1_1(closure_1_2[6]).mapValues(arg0, (arr) => arr.map(/* F92019 */ function() { ... })));
+    obj.prices = closure_1_1(dependencyMap[6]).mapValues(user_price.prices, (arg0) => closure_1_1(closure_1_2[6]).mapValues(arg0, (arr) => arr.map(/* F92138 */ function() { ... })));
     return obj;
   }));
   obj.rewardResultIdMap = applyDefault.mapValues(storefront_pricing.reward_result_id_map, (arg0) => applyDefault.mapValues(arg0, (type) => ({ type: type.type, amount: type.amount })));
@@ -344,7 +345,7 @@ export function useSKUOrbPrice(sku) {
       if (null != stateFromStores1) {
         let tmp12 = stateFromStores1[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = stateFromStores1[tmp4(undefined, 7475).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores1[tmp4(undefined, 7478).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -361,7 +362,7 @@ export function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    const obj2 = { userPrice: "r", pricesForPurchaseType: "Array", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj2;
   }, items1);
   let userPrice = memo.userPrice;

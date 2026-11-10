@@ -1,14 +1,14 @@
-// === Module 18948: ICYMIForumThreadRow ===
+// === Module 18977: ICYMIForumThreadRow ===
 
-// Module 18948 (ICYMIForumThreadRow)
+// Module 18977 (ICYMIForumThreadRow)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8998 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10921 */;
-import ICYMIShared from "ICYMIShared" /* 18920 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9004 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10930 */;
+import ICYMIShared from "ICYMIShared" /* 18949 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import GuildStore from "GuildStore" /* 5011 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import GuildStore from "GuildStore" /* 5013 */;
 
 require = fn;
 class ICYMIForumThreadRow {
@@ -161,7 +161,7 @@ class ICYMIForumThreadRow {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createICYMIStyles = fn(18878);
+const createICYMIStyles = fn(18907);
 const React6 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { pressable: { flex: 1, paddingLeft: marginHorizontal.inset }, container: { marginHorizontal: marginHorizontal.margin }, subtitle: { marginTop: nativeDefault.space.PX_8, marginBottom: marginHorizontal.margin }, footer: { justifyContent: "flex-end", paddingLeft: marginHorizontal.inset, marginTop: marginHorizontal.margin, gap: marginHorizontal.margin }, threadAsComments: { marginHorizontal: marginHorizontal.margin }, ICYMICardInteractionRow: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin } };
   return obj;

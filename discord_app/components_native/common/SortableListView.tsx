@@ -1,7 +1,7 @@
-// === Module 18803: SortableListView ===
+// === Module 18832: SortableListView ===
 
-// Module 18803 (SortableListView)
-import _mod7357 from "module_7357" /* 7357 */;
+// Module 18832 (SortableListView)
+import _mod7360 from "module_7360" /* 7360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -530,7 +530,7 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [timestampProducer(_mod7357.FlashList, obj3), self.renderActive()];
+  const items1 = [timestampProducer(_mod7360.FlashList, obj3), self.renderActive()];
   obj.children = items1;
   return metroImportDefault(React3, obj);
 };

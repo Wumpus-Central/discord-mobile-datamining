@@ -1,11 +1,11 @@
-// === Module 6565: CheckpointCharacterAccessibilityUtils ===
+// === Module 6567: CheckpointCharacterAccessibilityUtils ===
 
-// Module 6565 (CheckpointCharacterAccessibilityUtils)
+// Module 6567 (CheckpointCharacterAccessibilityUtils)
 import util from "util" /* 1113 */;
 import _modDef3248 from "module_3248" /* 3248 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6243 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6566 */;
-import CheckpointTraitOptionNames from "CheckpointTraitOptionNames" /* 6568 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6245 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6568 */;
+import CheckpointTraitOptionNames from "CheckpointTraitOptionNames" /* 6570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

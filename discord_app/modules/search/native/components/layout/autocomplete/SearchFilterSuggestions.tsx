@@ -1,11 +1,11 @@
-// === Module 19047: SearchFilterSuggestions ===
+// === Module 19076: SearchFilterSuggestions ===
 
-// Module 19047 (SearchFilterSuggestions)
+// Module 19076 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import native from "native" /* 5199 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14120 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 19048 */;
+import native from "native" /* 5201 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14146 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 19077 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -126,9 +126,9 @@ function AnimatedEnterExitContainer(state) {
   return jsx(_modDef1652.View, { style, children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9916).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9922).SearchFilterAddLocations;
 let jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };

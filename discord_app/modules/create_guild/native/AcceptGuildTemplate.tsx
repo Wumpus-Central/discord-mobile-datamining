@@ -1,6 +1,6 @@
-// === Module 13419: AcceptGuildTemplate ===
+// === Module 13433: AcceptGuildTemplate ===
 
-// Module 13419 (AcceptGuildTemplate)
+// Module 13433 (AcceptGuildTemplate)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
@@ -8,17 +8,17 @@ import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 5048 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7015 */;
-import FormDividerDefault from "FormDivider" /* 8252 */;
-import _modDef9085 from "module_9085" /* 9085 */;
-import RolePillDefault from "RolePill" /* 10943 */;
-import InvalidLink from "InvalidLink" /* 13420 */;
-import GuildIconUploaderDefault from "GuildIconUploader" /* 13422 */;
-import _modDef13427 from "module_13427" /* 13427 */;
-import _modDef13428 from "module_13428" /* 13428 */;
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 5050 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7018 */;
+import FormDividerDefault from "FormDivider" /* 8256 */;
+import _modDef9091 from "module_9091" /* 9091 */;
+import RolePillDefault from "RolePill" /* 10952 */;
+import InvalidLink from "InvalidLink" /* 13434 */;
+import GuildIconUploaderDefault from "GuildIconUploader" /* 13436 */;
+import _modDef13441 from "module_13441" /* 13441 */;
+import _modDef13442 from "module_13442" /* 13442 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6778 */;
+import TextStyles_mod from "TextStyles" /* 6780 */;
 
 require = fn;
 function GuildTemplateResolving() {
@@ -40,7 +40,7 @@ function GuildTemplateResolved(guildTemplate) {
   const obj2 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = guildTemplate(1113).intl;
   obj2.children = intl.string(guildTemplate(1113).t.QzUORX);
-  const items1 = [closure_11(guildTemplate(5751).Text, obj2), closure_11(guildTemplate(5751).Text, { style: tmp.description, variant: "body-lg/medium", color: "text-default", children: guildTemplate.name }), closure_11(GuildIconUploaderDefault, { iconBackgroundColor: tmp.wrapper.backgroundColor, style: tmp.iconUploader, onPress: chooseIcon, icon }), , , , , , , , , ];
+  const items1 = [closure_11(guildTemplate(5753).Text, obj2), closure_11(guildTemplate(5753).Text, { style: tmp.description, variant: "body-lg/medium", color: "text-default", children: guildTemplate.name }), closure_11(GuildIconUploaderDefault, { iconBackgroundColor: tmp.wrapper.backgroundColor, style: tmp.iconUploader, onPress: chooseIcon, icon }), , , , , , , , , ];
   const obj5 = { label: null, errorMessage: null, value: null, onChange: null, autoFocus: true, autoCorrect: false, returnKeyType: "done", clearable: true };
   const intl2 = guildTemplate(1113).intl;
   obj5.label = intl2.string(guildTemplate(1113).t.dBih7e);
@@ -51,11 +51,11 @@ function GuildTemplateResolved(guildTemplate) {
   obj5.errorMessage = name1;
   obj5.value = name;
   obj5.onChange = setName;
-  items1[3] = closure_11(guildTemplate(7148).TextInput, obj5);
+  items1[3] = closure_11(guildTemplate(7151).TextInput, obj5);
   const obj6 = { style: tmp.hint, variant: "body-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp10(1113).intl;
   obj6.children = intl3.format(guildTemplate(1113).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
-  items1[4] = closure_11(guildTemplate(5751).Text, obj6);
+  items1[4] = closure_11(guildTemplate(5753).Text, obj6);
   const obj8 = { style: tmp.createButtonWrapper, children: null };
   const obj9 = { size: "md", text: null, onPress: null, loading: null, disabled: null, grow: true };
   const intl4 = tmp10(1113).intl;
@@ -63,17 +63,17 @@ function GuildTemplateResolved(guildTemplate) {
   obj9.onPress = createServer;
   obj9.loading = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj9.disabled = guildTemplate.state === GuildTemplateStates.ACCEPTING;
-  obj8.children = closure_11(guildTemplate(5758).Button, obj9);
+  obj8.children = closure_11(guildTemplate(5760).Button, obj9);
   items1[5] = closure_11(closure_4, obj8);
   items1[6] = closure_11(FormDividerDefault, { style: tmp.divider, outer: true });
   const obj11 = { style: tmp.sectionHeader, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl5 = tmp10(1113).intl;
   obj11.children = intl5.string(guildTemplate(1113).t.OGiMXJ);
-  items1[7] = closure_11(guildTemplate(5751).Text, obj11);
+  items1[7] = closure_11(guildTemplate(5753).Text, obj11);
   const obj12 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl6 = tmp10(1113).intl;
   obj12.children = intl6.string(guildTemplate(1113).t.Ztwyoz);
-  items1[8] = closure_11(guildTemplate(5751).Text, obj12);
+  items1[8] = closure_11(guildTemplate(5753).Text, obj12);
   items1[9] = closure_11(Channels, { channels: guildTemplate.serializedSourceGuild.channels });
   const obj14 = { style: tmp.sectionTip, variant: "body-xs/medium", color: "interactive-text-default", children: null };
   const obj15 = { style: tmp.protip, children: null };
@@ -84,18 +84,18 @@ function GuildTemplateResolved(guildTemplate) {
   const intl8 = tmp10(1113).intl;
   items3[1] = intl8.string(guildTemplate(1113).t.de7DpI);
   obj14.children = items3;
-  items1[10] = closure_12(guildTemplate(5751).Text, obj14);
+  items1[10] = closure_12(guildTemplate(5753).Text, obj14);
   let tmp7Result = null;
   if (found.length > 0) {
     const obj16 = { children: null };
     const obj17 = { style: tmp.sectionHeader, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl9 = tmp10(1113).intl;
     obj17.children = intl9.string(tmp10(1113).t.mQ0H1p);
-    const items4 = [closure_11(tmp10(5751).Text, obj17), , ];
+    const items4 = [closure_11(tmp10(5753).Text, obj17), , ];
     const obj18 = { variant: "body-xs/medium", color: "text-default", children: null };
     const intl10 = tmp10(1113).intl;
     obj18.children = intl10.string(tmp10(1113).t.jOPEYC);
-    items4[1] = closure_11(tmp10(5751).Text, obj18);
+    items4[1] = closure_11(tmp10(5753).Text, obj18);
     const obj19 = { roles: found };
     items4[2] = closure_11(Roles, obj19);
     obj16.children = items4;
@@ -141,11 +141,11 @@ function Channels(channels) {
       items[1] = channelCategoryIcon;
       const type = children.type;
       if (isGuildVocalChannelType(type)) {
-        let tmp10Result = _modDef9085;
+        let tmp10Result = _modDef9091;
       } else if (type === constants2.GUILD_CATEGORY) {
-        tmp10Result = _modDef13427;
+        tmp10Result = _modDef13441;
       } else {
-        tmp10Result = _modDef13428;
+        tmp10Result = _modDef13442;
       }
       obj2.source = tmp10Result;
       const items1 = [closure_2_11(native.Icon, obj2), ];
@@ -188,14 +188,14 @@ function Roles(roles) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const isGuildVocalChannelType = fn(4993).isGuildVocalChannelType;
-const isEveryoneRole = fn(5047).isEveryoneRole;
+const isGuildVocalChannelType = fn(4995).isGuildVocalChannelType;
+const isEveryoneRole = fn(5049).isEveryoneRole;
 const Constants = fn(1072);
 ({ MarketingURLs: closure_8, Fonts, ChannelTypes: closure_9 } = Constants);
-const GuildTemplateStates = fn(7573).GuildTemplateStates;
+const GuildTemplateStates = fn(7576).GuildTemplateStates;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 }, header: null, description: null, iconUploader: null, hint: null, createButtonWrapper: null, resolvingContainer: null, divider: null, sectionHeader: null, rolesChannelsWrapper: null, channelsWrapper: null, rolesWrapper: null, channelRow: null, channelIcon: null, channelCategoryIcon: null, channelName: null, channelCategoryName: null, sectionTip: null, protip: null };
 let TextStyles = TextStyles_mod;
 let merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));

@@ -1,9 +1,9 @@
-// === Module 12310: conjureMarkup ===
+// === Module 12318: conjureMarkup ===
 
-// Module 12310 (conjureMarkup)
-import MarkupUtilsDefault from "MarkupUtils" /* 5879 */;
-import conjureFileMentions from "conjureFileMentions" /* 12311 */;
-import ConjureFileMentionDefault from "ConjureFileMention" /* 12312 */;
+// Module 12318 (conjureMarkup)
+import MarkupUtilsDefault from "MarkupUtils" /* 5881 */;
+import conjureFileMentions from "conjureFileMentions" /* 12319 */;
+import ConjureFileMentionDefault from "ConjureFileMention" /* 12320 */;
 import noop from "module_19" /* 19 */;
 import apply from "apply" /* 12 */;
 

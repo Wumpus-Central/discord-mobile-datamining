@@ -1,8 +1,8 @@
-// === Module 19785: ManagerRegistry ===
+// === Module 19814: ManagerRegistry ===
 
-// Module 19785 (ManagerRegistry)
+// Module 19814 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20520 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20548 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -402,7 +402,7 @@ obj.FramesNativeManager = {
   }
 };
 obj.FrecencyUserSettingsManager = {
-  actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "CONNECTION_CLOSED", "APP_STATE_UPDATE"],
+  actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "CONNECTION_CLOSED", "APP_STATE_UPDATE", "LOGOUT"],
   inlineRequire() {
     return require("FrecencyUserSettingsManager").default;
   },

@@ -1,7 +1,7 @@
-// === Module 20480: NativeIntentsExperiment ===
+// === Module 20508: NativeIntentsExperiment ===
 
-// Module 20480 (NativeIntentsExperiment)
-import createExperiment from "module_5352" /* 5352 */;
+// Module 20508 (NativeIntentsExperiment)
+import createExperiment from "module_5354" /* 5354 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", id: "2025-06_native_intents", label: "Native Intents", defaultConfig: { searchEnabled: false, clearEnabled: false, activityEnabled: false }, treatments: null };

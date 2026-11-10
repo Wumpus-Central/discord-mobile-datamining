@@ -1,22 +1,22 @@
-// === Module 17331: DisplayNameStylesEditPreview ===
+// === Module 17358: DisplayNameStylesEditPreview ===
 
-// Module 17331 (DisplayNameStylesEditPreview)
+// Module 17358 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import _modDef3056 from "module_3056" /* 3056 */;
-import DateUtils from "DateUtils" /* 4962 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6908 */;
-import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8801 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8811 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8894 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10891 */;
-import types from "types" /* 10892 */;
+import DateUtils from "DateUtils" /* 4964 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6911 */;
+import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8807 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8817 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8900 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10900 */;
+import types from "types" /* 10901 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8802 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8808 */;
 
 require = fn;
 function ChatPreview(chatMessage) {
@@ -75,7 +75,7 @@ function ChatPreview(chatMessage) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5140);
+let createStyles = fn(5142);
 let obj2 = { previewSection: { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 }, previewSectionTilted: { marginBottom: 0 }, profilePreviewTilted: null, chatPreviewWrapper: null, chatPreviewWrapperTilted: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
 let obj4 = { transform: null };
 let items = [{ rotate: "-2.63deg" }];
@@ -96,7 +96,7 @@ obj2.chatUsername = { flexShrink: 1, minWidth: 0 };
 obj2.chatTimestamp = { marginTop: -8, flexShrink: 0 };
 obj2.chatMessageText = {};
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(5140);
+createStyles = fn(5142);
 let closure_10 = createStyles.createStyles((scale) => {
   const obj = { appIconTilted: null };
   const rect = { position: "absolute", top: 64, right: 0, borderRadius: nativeDefault.radii.xl, borderCurve: "continuous", borderWidth: 0, transform: null };

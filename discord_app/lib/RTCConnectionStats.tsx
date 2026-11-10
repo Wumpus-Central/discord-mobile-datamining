@@ -1,10 +1,10 @@
-// === Module 5997: RTCConnectionStats ===
+// === Module 5999: RTCConnectionStats ===
 
-// Module 5997 (RTCConnectionStats)
+// Module 5999 (RTCConnectionStats)
 import applyDefault from "apply" /* 12 */;
 import Constants from "Constants" /* 1072 */;
-import TimeUtils from "TimeUtils" /* 5901 */;
-import zipWithNextDefault from "zipWithNext" /* 5998 */;
+import TimeUtils from "TimeUtils" /* 5903 */;
+import zipWithNextDefault from "zipWithNext" /* 6000 */;
 import size from "module_2" /* 2 */;
 
 const RTCConnectionStates = Constants.RTCConnectionStates;

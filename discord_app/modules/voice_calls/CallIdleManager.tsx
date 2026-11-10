@@ -1,16 +1,16 @@
-// === Module 19812: CallIdleManager ===
+// === Module 19841: CallIdleManager ===
 
-// Module 19812 (CallIdleManager)
+// Module 19841 (CallIdleManager)
 import util from "util" /* 1113 */;
-import Timers from "Timers" /* 4984 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6761 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7712 */;
-import CampInDmExperiment from "CampInDmExperiment" /* 19813 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import VoiceStateStore from "VoiceStateStore" /* 5803 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5896 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7350 */;
+import Timers from "Timers" /* 4986 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6763 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7715 */;
+import CampInDmExperiment from "CampInDmExperiment" /* 19842 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import VoiceStateStore from "VoiceStateStore" /* 5805 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5898 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
 
 require = fn;
 function disconnect() {

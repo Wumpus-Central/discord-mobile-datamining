@@ -1,8 +1,8 @@
-// === Module 17265: pickBountyVideoRendition ===
+// === Module 17292: pickBountyVideoRendition ===
 
-// Module 17265 (pickBountyVideoRendition)
+// Module 17292 (pickBountyVideoRendition)
 import _modDef38 from "module_38" /* 38 */;
-import BountyAspectRatio from "BountyAspectRatio" /* 9784 */;
+import BountyAspectRatio from "BountyAspectRatio" /* 9790 */;
 import size from "module_2" /* 2 */;
 
 function getRendition(videoRenditions, preferred) {
@@ -58,16 +58,18 @@ export const BOUNTY_MOBILE_MODAL_RENDITION_PICK = obj;
 export const BOUNTY_DESKTOP_MODAL_RENDITION_PICK = obj2;
 export { pickBountyVideoRendition };
 export function pickBountyVideoRenditionWithFallback(videoRenditions, BOUNTY_MOBILE_MODAL_RENDITION_PICK) {
-  if (null == videoRenditions.videoRenditions) {
+  let tmp = null;
+  if (null != videoRenditions.videoRenditions) {
+    tmp = pickBountyVideoRendition(videoRenditions.videoRenditions, BOUNTY_MOBILE_MODAL_RENDITION_PICK);
+  }
+  if (null == tmp) {
     const supported = BOUNTY_MOBILE_MODAL_RENDITION_PICK.supported;
     let tmp5 = null;
     if (supported.includes(BountyAspectRatio.BountyAspectRatio.PORTRAIT)) {
       const obj = { url: videoRenditions.videoHls, aspectRatio: BountyAspectRatio.BountyAspectRatio.PORTRAIT };
       tmp5 = obj;
     }
-    let tmp2 = tmp5;
-  } else {
-    tmp2 = pickBountyVideoRendition(videoRenditions.videoRenditions, BOUNTY_MOBILE_MODAL_RENDITION_PICK);
+    tmp = tmp5;
   }
-  return tmp2;
+  return tmp;
 }

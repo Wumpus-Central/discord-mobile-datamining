@@ -1,9 +1,9 @@
-// === Module 11818: sendGameOrganizationInvite ===
+// === Module 11827: sendGameOrganizationInvite ===
 
-// Module 11818 (sendGameOrganizationInvite)
+// Module 11827 (sendGameOrganizationInvite)
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5147 */;
-import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 11819 */;
+import shared from "shared" /* 5149 */;
+import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 11828 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -116,8 +116,8 @@ let closure_7 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
     }
   })();
 };
-const setSendState = fn(9279).setSendState;
-const InviteSendStates = fn(7956).InviteSendStates;
+const setSendState = fn(9285).setSendState;
+const InviteSendStates = fn(7960).InviteSendStates;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_organization_invites/sendGameOrganizationInvite.tsx");

@@ -1,16 +1,16 @@
-// === Module 13453: AcceptStep ===
+// === Module 13466: AcceptStep ===
 
-// Module 13453 (AcceptStep)
+// Module 13466 (AcceptStep)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const GameOrganizationJoinModalConstants = fn(13446);
+const GameOrganizationJoinModalConstants = fn(13460);
 ({ closeGameOrganizationJoinModal: closure_6, GameOrganizationJoinScenes: metroImportDefault } = GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" }, buttonGroup: { paddingVertical: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/steps/AcceptStep.tsx");
@@ -18,15 +18,17 @@ const result = size.fileFinishedImporting("modules/game_organization_invites/nat
 export function AcceptStep(code) {
   code = code.code;
   let character = code.character;
-  c3 = undefined;
-  _slicedToArray = async function _handleAcceptInvite(noop) {
+  let navigation;
+  disabled = undefined;
+  _slicedToArray = undefined;
+  noop = async function _handleAcceptInvite() {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
-      if (noop === 1) {
+      if (arg0 === 1) {
         throw value;
-      } else if (noop === 2) {
+      } else if (arg0 === 2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
@@ -36,10 +38,10 @@ export function AcceptStep(code) {
       try {
         c6 = 2;
         if (0 === c5) {
-          if (noop === 1) {
+          if (arg0 === 1) {
             c6 = 3;
             throw value;
-          } else if (noop === 2) {
+          } else if (arg0 === 2) {
             c6 = 3;
             const obj4 = { value, done: true };
             return obj4;
@@ -49,7 +51,7 @@ export function AcceptStep(code) {
             closure_129_1 = undefined;
             closure_129_2 = undefined;
             let guild_join_status;
-            asyncGeneratorStep(true);
+            _slicedToArray(true);
             c4 = 2;
             let id;
             if (id != null) {
@@ -57,28 +59,28 @@ export function AcceptStep(code) {
             }
             c5 = 3;
             c6 = 1;
-            const obj5 = { value: character(tmp4[8]).acceptGameOrganizationInvite(code, id), done: false };
+            const obj5 = { value: character(tmp4[9]).acceptGameOrganizationInvite(code, id), done: false };
             return obj5;
           }
         } else if (1 === tmp8) {
           c4 = 0;
-          closure_130_3(false);
+          closure_130_4(false);
           throw closure_3;
         } else {
           if (2 === tmp8) {
             c4 = 1;
             const obj6 = { text: null };
-            const intl = characterName(tmp4[10]).intl;
-            obj6.text = intl.string(characterName(tmp4[10]).t.fEptJP);
-            character(tmp4[9]).open("GAME_ORGANIZATION_INVITE_ACCEPT_ERROR", obj6);
+            const intl = characterName(tmp4[11]).intl;
+            obj6.text = intl.string(characterName(tmp4[11]).t.fEptJP);
+            character(tmp4[10]).open("GAME_ORGANIZATION_INVITE_ACCEPT_ERROR", obj6);
             c4 = 0;
-            closure_130_3(false);
+            closure_130_4(false);
             c6 = 3;
-            const obj2 = character(tmp4[9]);
-          } else if (noop === 1) {
+            const obj2 = character(tmp4[10]);
+          } else if (arg0 === 1) {
             c6 = 3;
             throw value;
-          } else if (noop !== 2) {
+          } else if (arg0 !== 2) {
             closure_129_0 = value;
             closure_129_1 = closure_129_0.game_organization_join_status;
             closure_129_2 = closure_129_0.game_organization_join_failure_reason;
@@ -97,7 +99,7 @@ export function AcceptStep(code) {
             c4 = 1;
           }
           c4 = 0;
-          closure_130_3(false);
+          closure_130_4(false);
           c6 = 3;
           const obj = { value, done: true };
           return obj;
@@ -116,50 +118,62 @@ export function AcceptStep(code) {
     }
   };
   const tmp = closure_10();
-  const tmp4 = character(13443)(code);
-  dependencyMap = code(1499).useNavigation();
-  let obj = code(1499);
-  [tmp7, c3] = noop.useState(false);
+  const tmp4 = character(navigation[6])(code);
+  navigation = code(navigation[7]).useNavigation();
+  [disabled, _slicedToArray] = noop.useState(false);
+  items = [navigation, disabled];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    const headerBackButton = code(navigation[8]).getHeaderBackButton(undefined, first);
+    navigation.setOptions({
+      headerLeft(arg0) {
+        const obj = {};
+        const merged = Object.assign(arg0);
+        obj.disabled = disabled;
+        return closure_0(obj);
+      },
+      gestureEnabled: !first
+    });
+  }, items);
   if (null == tmp4) {
     return null;
   } else {
     let str = tmp4.displayNoun;
-    let obj2 = { spacing: tmp2(575).space.PX_48, children: null };
-    let obj3 = { spacing: tmp2(575).space.PX_24, children: null };
+    let obj2 = { spacing: tmp2(tmp3[15]).space.PX_48, children: null };
+    let obj3 = { spacing: tmp2(tmp3[15]).space.PX_24, children: null };
     let obj4 = { variant: "heading-xl/semibold", style: tmp.text, children: null };
-    const intl4 = tmp5(1113).intl;
+    const intl4 = tmp5(tmp3[11]).intl;
     if (str == null) {
       str = "other";
     }
     let obj5 = { children: null };
     let obj6 = { children: null };
     let obj7 = { displayNoun: str };
-    obj4.children = intl4.formatToPlainString(tmp2(2530).WmxMAI, obj7);
-    items = [closure_8(tmp5(5751).Text, obj4), ];
+    obj4.children = intl4.formatToPlainString(tmp2(tmp3[17]).WmxMAI, obj7);
+    const items1 = [closure_8(tmp5(tmp3[16]).Text, obj4), ];
     const obj8 = { linkedGuild: tmp4.linkedGuild };
-    items[1] = closure_8(tmp2(13454), obj8);
-    obj3.children = items;
-    const items1 = [closure_9(tmp5(6159).Stack, obj3), ];
-    const obj9 = { spacing: tmp2(575).space.PX_24, children: null };
+    items1[1] = closure_8(tmp2(tmp3[18]), obj8);
+    obj3.children = items1;
+    const items2 = [closure_9(tmp5(tmp3[14]).Stack, obj3), ];
+    const obj9 = { spacing: tmp2(tmp3[15]).space.PX_24, children: null };
     const obj10 = { variant: "heading-lg/semibold", children: null };
-    let intl = tmp5(1113).intl;
-    obj10.children = intl.string(tmp2(2530).yFqGy8);
-    const items2 = [closure_8(tmp5(5751).Text, obj10), closure_8(tmp2(13455), {})];
-    obj9.children = items2;
-    items1[1] = closure_9(tmp5(6159).Stack, obj9);
-    obj2.children = items1;
-    obj6.children = closure_9(tmp5(6159).Stack, obj2);
-    const items3 = [closure_8(tmp5(8043).ModalContent, obj6), ];
+    let intl = tmp5(tmp3[11]).intl;
+    obj10.children = intl.string(tmp2(tmp3[17]).yFqGy8);
+    const items3 = [closure_8(tmp5(tmp3[16]).Text, obj10), closure_8(tmp2(tmp3[19]), {})];
+    obj9.children = items3;
+    items2[1] = closure_9(tmp5(tmp3[14]).Stack, obj9);
+    obj2.children = items2;
+    obj6.children = closure_9(tmp5(tmp3[14]).Stack, obj2);
+    const items4 = [closure_8(tmp5(tmp3[13]).ModalContent, obj6), ];
     const obj11 = { children: null };
     const obj12 = { style: tmp.buttonGroup, children: null };
     const obj13 = { text: null, size: "lg", loading: null, disabled: null, onPress: null };
-    const intl2 = tmp5(1113).intl;
-    obj13.text = intl2.string(tmp2(2530).BaZ6nt);
-    obj13.loading = tmp7;
-    obj13.disabled = tmp7;
+    const intl2 = tmp5(tmp3[11]).intl;
+    obj13.text = intl2.string(tmp2(tmp3[17]).BaZ6nt);
+    obj13.loading = disabled;
+    obj13.disabled = disabled;
     obj13.onPress = function handleAcceptInvite() {
       const self = this;
-      const apply = closure_4.apply;
+      const apply = closure_5.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -167,18 +181,18 @@ export function AcceptStep(code) {
       }
       return applyArgumentsResult;
     };
-    const items4 = [closure_8(tmp5(5758).Button, obj13), ];
+    const items5 = [closure_8(tmp5(tmp3[22]).Button, obj13), ];
     const obj14 = { text: null, size: "lg", variant: "secondary", onPress: null, disabled: null };
-    const intl3 = tmp5(1113).intl;
-    obj14.text = intl3.string(tmp5(1113).t["ETE/oC"]);
+    const intl3 = tmp5(tmp3[11]).intl;
+    obj14.text = intl3.string(tmp5(tmp3[11]).t["ETE/oC"]);
     obj14.onPress = onPress;
-    obj14.disabled = tmp7;
-    items4[1] = closure_8(tmp5(5758).Button, obj14);
-    obj12.children = items4;
-    obj11.children = closure_9(tmp5(6822).ButtonGroup, obj12);
-    items3[1] = closure_8(tmp5(13452).ModalFooter, obj11);
-    obj5.children = items3;
-    return closure_9(tmp2(13448), obj5);
+    obj14.disabled = disabled;
+    items5[1] = closure_8(tmp5(tmp3[22]).Button, obj14);
+    obj12.children = items5;
+    obj11.children = closure_9(tmp5(tmp3[21]).ButtonGroup, obj12);
+    items4[1] = closure_8(tmp5(tmp3[20]).ModalFooter, obj11);
+    obj5.children = items4;
+    return closure_9(tmp5(tmp3[12]).ModalScreen, obj5);
   }
-  const tmp6 = _slicedToArray(noop.useState(false), 2);
+  let obj = code(navigation[7]);
 }

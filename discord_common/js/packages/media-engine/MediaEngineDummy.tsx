@@ -1,9 +1,9 @@
-// === Module 5991: MediaEngineDummy ===
+// === Module 5993: MediaEngineDummy ===
 
-// Module 5991 (MediaEngineDummy)
-import MediaEngineEvent from "MediaEngineEvent" /* 5927 */;
-import Constants from "Constants" /* 5897 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5921 */;
+// Module 5993 (MediaEngineDummy)
+import MediaEngineEvent from "MediaEngineEvent" /* 5929 */;
+import Constants from "Constants" /* 5899 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5923 */;
 import size from "module_2" /* 2 */;
 
 function Video() {
@@ -278,6 +278,10 @@ prototype["getSupportedBandwidthEstimationExperiments"] = function getSupportedB
   fn([]);
 };
 prototype["getMLSSigningKey"] = function getMLSSigningKey() {
+  const error = new Error("NOT_IMPLEMENTED");
+  return Promise.reject(error);
+};
+prototype["generateDavePairwiseFingerprint"] = function generateDavePairwiseFingerprint() {
   const error = new Error("NOT_IMPLEMENTED");
   return Promise.reject(error);
 };

@@ -1,14 +1,14 @@
-// === Module 10259: showChatGDMCustomizeActionSheet ===
+// === Module 10265: showChatGDMCustomizeActionSheet ===
 
-// Module 10259 (showChatGDMCustomizeActionSheet)
+// Module 10265 (showChatGDMCustomizeActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6799 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6801 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/group_dm/native/showChatGDMCustomizeActionSheet.tsx");
 
 export default function showChatGDMCustomizeActionSheet(merged) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10260, dependencyMap.paths), merged, "customize-group-dm", { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10266, dependencyMap.paths), merged, "customize-group-dm", { presentation: "modal" });
 };

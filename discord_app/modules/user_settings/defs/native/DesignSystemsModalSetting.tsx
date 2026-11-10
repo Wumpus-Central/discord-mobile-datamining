@@ -1,9 +1,9 @@
-// === Module 18132: DesignSystemsModalSetting ===
+// === Module 18159: DesignSystemsModalSetting ===
 
-// Module 18132 (DesignSystemsModalSetting)
+// Module 18159 (DesignSystemsModalSetting)
 import Constants from "Constants" /* 1072 */;
-import SettingsConstants from "SettingsConstants" /* 8503 */;
-import SettingBuilders from "SettingBuilders" /* 11685 */;
+import SettingsConstants from "SettingsConstants" /* 8507 */;
+import SettingBuilders from "SettingBuilders" /* 11694 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

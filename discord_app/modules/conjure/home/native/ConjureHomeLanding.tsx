@@ -1,11 +1,11 @@
-// === Module 13033: ConjureHomeLanding ===
+// === Module 13047: ConjureHomeLanding ===
 
-// Module 13033 (ConjureHomeLanding)
+// Module 13047 (ConjureHomeLanding)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10970 */;
+import ConjureChatStore from "ConjureChatStore" /* 10979 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const prototype = function ConjureHomeUploadError() {
 class prototype extends Error {
 }
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, content: null, hero: null, badgeRow: null, carousel: null, showcase: null, showcaseTitle: null, error: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_32, gap: PX_32 };
@@ -29,7 +29,7 @@ obj2.hero = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.sp
 obj2.badgeRow = { flexDirection: "row" };
 let obj6 = { marginBottom: null };
 const diff = nativeDefault.space.PX_48 - PX_32;
-obj6.marginBottom = diff - fn(13034).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
+obj6.marginBottom = diff - fn(13048).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
 obj2.carousel = obj6;
 let obj5 = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_32 };
 obj2.showcase = { gap: nativeDefault.space.PX_16 };
@@ -228,7 +228,7 @@ export default function ConjureHomeLanding(focusRequest) {
                     closure_0 = fn;
                     function check() {
                       const messages = ref.getMessages(closure_0);
-                      if (messages.some(/* F143723 */ function() { ... })) {
+                      if (messages.some(/* F143971 */ function() { ... })) {
                         ref.removeChangeListener(check);
                         const _clearTimeout = clearTimeout;
                         clearTimeout(timerId);

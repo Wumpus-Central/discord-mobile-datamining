@@ -1,11 +1,11 @@
-// === Module 14468: useWelcomeScreenEnabled ===
+// === Module 14494: useWelcomeScreenEnabled ===
 
-// Module 14468 (useWelcomeScreenEnabled)
+// Module 14494 (useWelcomeScreenEnabled)
 import Constants from "Constants" /* 1072 */;
-import ChannelRecord from "ChannelRecord" /* 4993 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import ChannelRecord from "ChannelRecord" /* 4995 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

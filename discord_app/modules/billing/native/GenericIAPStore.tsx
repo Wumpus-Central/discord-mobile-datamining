@@ -1,10 +1,10 @@
-// === Module 8863: GenericIAPStore ===
+// === Module 8869: GenericIAPStore ===
 
-// Module 8863 (GenericIAPStore)
+// Module 8869 (GenericIAPStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ProductIds from "ProductIds" /* 7669 */;
+import ProductIds from "ProductIds" /* 7672 */;
 
 require = fn;
 let c3 = null;

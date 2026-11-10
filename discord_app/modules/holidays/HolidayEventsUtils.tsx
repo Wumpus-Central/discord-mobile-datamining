@@ -1,7 +1,7 @@
-// === Module 19890: HolidayEventsUtils ===
+// === Module 19918: HolidayEventsUtils ===
 
-// Module 19890 (HolidayEventsUtils)
-import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 19886 */;
+// Module 19918 (HolidayEventsUtils)
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 19915 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");

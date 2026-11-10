@@ -1,9 +1,9 @@
-// === Module 12431: AILoader ===
+// === Module 12444: AILoader ===
 
-// Module 12431 (AILoader)
+// Module 12444 (AILoader)
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5370 */;
-import AIGlyphText from "AIGlyphText" /* 12433 */;
+import timing_timing from "timing/timing" /* 5372 */;
+import AIGlyphText from "AIGlyphText" /* 12446 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -55,7 +55,7 @@ function Slot(index) {
   return <stagger style={tmp.slot}>{null}</stagger>;
 }
 const View = fn(17).View;
-const AILoaderConstants = fn(12432);
+const AILoaderConstants = fn(12445);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_GAP_EM: closure_6, AI_LOADER_GLYPHS: metroImportDefault, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8, AI_LOADER_SLOT_COUNT: closure_9, AI_LOADER_SLOT_STAGGER_MS: closure_10, AI_LOADER_REST_FRACTION, AI_LOADER_STEP_FRACTION, AI_LOADER_TRACK_STEPS } = AILoaderConstants);
 const jsx = fn(21).jsx;
 let items = [{ code: "(function trackStepAt_AILoaderNativeTsx1(progress){let[AI_LOADER_REST_FRACTION,AI_LOADER_TRACK_STEPS,AI_LOADER_STEP_FRACTION]=this.__closure;if(progress<AI_LOADER_REST_FRACTION)return AI_LOADER_TRACK_STEPS[0];const step=Math.floor((progress-AI_LOADER_REST_FRACTION)/AI_LOADER_STEP_FRACTION)+1;return AI_LOADER_TRACK_STEPS[Math.min(step,AI_LOADER_TRACK_STEPS.length-1)];})" }, AI_LOADER_REST_FRACTION, AI_LOADER_TRACK_STEPS, AI_LOADER_STEP_FRACTION];
@@ -76,7 +76,7 @@ let items1 = [tmp4, tmp5, tmp6];
 trackStepAt.__closure = items1;
 trackStepAt.__workletHash = 8339432593103;
 trackStepAt.__initData = tmp3;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_13 = createStyles.createStyles((width) => {
   const obj = { loader: { flexDirection: "row", gap: width * timestampProducer }, slot: { width, height: width, overflow: "hidden" }, glyph: { height: width } };
   return obj;
@@ -96,7 +96,7 @@ export const AILoader = noop.memo(function AILoader(size) {
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const reducedMotion = num2.useContext(num(5199).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(5201).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {

@@ -1,19 +1,19 @@
-// === Module 17301: BountiesNuxPromoSheet ===
+// === Module 17328: BountiesNuxPromoSheet ===
 
-// Module 17301 (BountiesNuxPromoSheet)
+// Module 17328 (BountiesNuxPromoSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import components_Button_Button from "components/Button/Button" /* 5758 */;
-import PromoSheet from "PromoSheet" /* 10956 */;
-import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 17300 */;
-import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 17302 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import components_Button_Button from "components/Button/Button" /* 5760 */;
+import PromoSheet from "PromoSheet" /* 10965 */;
+import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 17327 */;
+import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 17329 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { illustrationContainer: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

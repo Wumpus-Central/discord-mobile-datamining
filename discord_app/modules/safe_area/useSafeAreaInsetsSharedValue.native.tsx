@@ -1,10 +1,10 @@
-// === Module 11384: useSafeAreaInsetsSharedValue ===
+// === Module 11393: useSafeAreaInsetsSharedValue ===
 
-// Module 11384 (useSafeAreaInsetsSharedValue)
+// Module 11393 (useSafeAreaInsetsSharedValue)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1496 */;
 import AppEntryKey from "AppEntryKey" /* 1640 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11367 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 11385 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11376 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 11394 */;
 import module_1652_mod from "module_1652" /* 1652 */;
 import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1627 */;
 import size from "module_2" /* 2 */;

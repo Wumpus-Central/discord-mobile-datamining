@@ -1,14 +1,14 @@
-// === Module 4981: DismissibleContentShownStateStore ===
+// === Module 4983: DismissibleContentShownStateStore ===
 
-// Module 4981 (DismissibleContentShownStateStore)
+// Module 4983 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import isActionRequiredDefault from "isActionRequired" /* 4985 */;
+import isActionRequiredDefault from "isActionRequired" /* 4987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4982 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4983 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4976 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4984 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4985 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4978 */;
 
 function withContent(currentlyShown, content) {
   let tmp = found;
@@ -573,7 +573,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4984).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4986).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -654,9 +654,9 @@ export function isStateInCooldown(shownFatigableCandidate) {
 }
 export function addCandidateContent(content) {
   closure_0 = content;
-  closure_1 = closure_0(4977).bypassesFatigue(content.content);
+  closure_1 = closure_0(4979).bypassesFatigue(content.content);
   dependencyMap = null;
-  let obj = closure_0(4977);
+  let obj = closure_0(4979);
   closure_0(1259).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};

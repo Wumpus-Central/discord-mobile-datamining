@@ -1,7 +1,7 @@
-// === Module 18435: MessagesItemPlaceholder ===
+// === Module 18464: MessagesItemPlaceholder ===
 
-// Module 18435 (MessagesItemPlaceholder)
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9208 */;
+// Module 18464 (MessagesItemPlaceholder)
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9214 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

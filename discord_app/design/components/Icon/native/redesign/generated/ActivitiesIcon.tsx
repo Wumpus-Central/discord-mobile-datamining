@@ -1,9 +1,9 @@
-// === Module 12270: ActivitiesIcon ===
+// === Module 12279: ActivitiesIcon ===
 
-// Module 12270 (ActivitiesIcon)
+// Module 12279 (ActivitiesIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod12271 from "module_12271" /* 12271 */;
+import BaseIconImage from "BaseIconImage" /* 5843 */;
+import _mod12280 from "module_12280" /* 12280 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ActivitiesIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12271, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12280, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

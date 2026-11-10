@@ -1,20 +1,20 @@
-// === Module 18597: GuildRoleSubscriptionsRow ===
+// === Module 18626: GuildRoleSubscriptionsRow ===
 
-// Module 18597 (GuildRoleSubscriptionsRow)
+// Module 18626 (GuildRoleSubscriptionsRow)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 14171 */;
-import _modDef14628 from "module_14628" /* 14628 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 14197 */;
+import _modDef14654 from "module_14654" /* 14654 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Routes = fn(1072).Routes;
-const StaticChannelRoute = fn(4996).StaticChannelRoute;
+const StaticChannelRoute = fn(4998).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
-let obj2 = { container: { marginVertical: fn(5882).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5142);
+let obj2 = { container: { marginVertical: fn(5884).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx");
@@ -29,14 +29,14 @@ export default function GuildRoleSubscriptionsRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   }, items);
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18598, dependencyMap.paths), c1, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18627, dependencyMap.paths), c1, {
       guildId: id,
       onClose() {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);
       }
     });
   }, items1);
-  const ChannelModes = id(14171).ChannelModes;
+  const ChannelModes = id(14197).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -54,7 +54,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1113).intl;
   obj2.name = intl2.string(tmp6(1113).t["KzCF/6"]);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp6(14171).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp6(14171).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef14628 });
+  obj.name = jsx(tmp6(14197).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp6(14197).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef14654 });
   return <tmp8 onPress={callback} onLongPress={callback1} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

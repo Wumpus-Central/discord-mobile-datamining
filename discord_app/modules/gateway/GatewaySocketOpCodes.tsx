@@ -1,9 +1,9 @@
-// === Module 15820: GatewaySocketOpCodes ===
+// === Module 15848: GatewaySocketOpCodes ===
 
-// Module 15820 (GatewaySocketOpCodes)
+// Module 15848 (GatewaySocketOpCodes)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2128 */;
-import RTCRegionStore from "RTCRegionStore" /* 5992 */;
+import RTCRegionStore from "RTCRegionStore" /* 5994 */;
 
 require = fn;
 const EventEmitter = fn(568).EventEmitter;
@@ -72,8 +72,8 @@ prototype["voiceServerPing"] = function voiceServerPing() {
   this.send(GatewaySocketOpcode.Opcode.VOICE_SERVER_PING, null);
 };
 prototype["requestGuildMembers"] = function requestGuildMembers(guildIds, arg1) {
-  ({ query, limit, userIds, presences } = arg1);
-  this.send(GatewaySocketOpcode.Opcode.REQUEST_GUILD_MEMBERS, { guild_id: guildIds, query, limit, user_ids: userIds, presences });
+  ({ query, limit, userIds, presences, nonce } = arg1);
+  this.send(GatewaySocketOpcode.Opcode.REQUEST_GUILD_MEMBERS, { guild_id: guildIds, query, limit, user_ids: userIds, presences, nonce });
 };
 prototype["searchRecentMembers"] = function searchRecentMembers(guild_id, arg1) {
   ({ query, continuationToken } = arg1);

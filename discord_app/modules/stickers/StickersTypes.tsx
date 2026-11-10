@@ -1,8 +1,8 @@
-// === Module 6616: StickersTypes ===
+// === Module 6618: StickersTypes ===
 
-// Module 6616 (StickersTypes)
-import js_shim_PlainRecord from "js_shim/PlainRecord" /* 5005 */;
-import shared from "shared" /* 5147 */;
+// Module 6618 (StickersTypes)
+import js_shim_PlainRecord from "js_shim/PlainRecord" /* 5007 */;
+import shared from "shared" /* 5149 */;
 import size from "module_2" /* 2 */;
 
 const TypeTag = js_shim_PlainRecord.TypeTag;

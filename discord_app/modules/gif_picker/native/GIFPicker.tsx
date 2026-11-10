@@ -1,14 +1,14 @@
-// === Module 10361: GIFPicker ===
+// === Module 10367: GIFPicker ===
 
-// Module 10361 (GIFPicker)
+// Module 10367 (GIFPicker)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 10363 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10366 */;
-import GifPickerUtils from "GifPickerUtils" /* 10369 */;
-import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 10371 */;
+import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 10369 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10372 */;
+import GifPickerUtils from "GifPickerUtils" /* 10375 */;
+import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 10377 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10362 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10368 */;
 
 require = fn;
 const View = fn(17).View;
@@ -16,7 +16,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9, GIF_FETCH_LIMIT_IOS: closure_10, GIFPickerResultTypes: closure_11, TooltipNames: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_15 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPicker.tsx");

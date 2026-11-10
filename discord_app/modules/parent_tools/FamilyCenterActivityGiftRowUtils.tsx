@@ -1,10 +1,10 @@
-// === Module 17126: FamilyCenterActivityGiftRowUtils ===
+// === Module 17153: FamilyCenterActivityGiftRowUtils ===
 
-// Module 17126 (FamilyCenterActivityGiftRowUtils)
+// Module 17153 (FamilyCenterActivityGiftRowUtils)
 import util from "util" /* 1113 */;
 import _modDef2664 from "module_2664" /* 2664 */;
-import _mod4566 from "module_4566" /* 4566 */;
-import PriceUtils from "PriceUtils" /* 7477 */;
+import _mod4568 from "module_4568" /* 4568 */;
+import PriceUtils from "PriceUtils" /* 7480 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
@@ -14,7 +14,7 @@ export function getGiftRowDisplayInfo(giftInfo) {
 }
 export function formatGiftDate(claimedAt) {
   const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-  return dateTimeFormat.format(_mod4566.parseISO(claimedAt));
+  return dateTimeFormat.format(_mod4568.parseISO(claimedAt));
 }
 export function getGiftSubtext(claimed) {
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
@@ -39,16 +39,16 @@ export function getGiftSubtext(claimed) {
       const obj3 = { date: null };
       const _Intl2 = Intl;
       const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-      obj3.date = dateTimeFormat.format(_mod4566.parseISO(claimedAt));
+      obj3.date = dateTimeFormat.format(_mod4568.parseISO(claimedAt));
       let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj3);
-      const tmp8Result = _mod4566;
+      const tmp8Result = _mod4568;
     } else {
       const obj4 = { date: null };
       const _Intl = Intl;
       const dateTimeFormat1 = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-      obj4.date = dateTimeFormat1.format(_mod4566.parseISO(offeredAt));
+      obj4.date = dateTimeFormat1.format(_mod4568.parseISO(offeredAt));
       formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj4);
-      const tmp8Result2 = _mod4566;
+      const tmp8Result2 = _mod4568;
     }
     items[1] = formatToPlainStringResult1;
     const _Boolean = Boolean;

@@ -1,19 +1,19 @@
-// === Module 20114: GuildSettingsModalAuditLog ===
+// === Module 20142: GuildSettingsModalAuditLog ===
 
-// Module 20114 (GuildSettingsModalAuditLog)
+// Module 20142 (GuildSettingsModalAuditLog)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7423 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 20117 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 20120 */;
-import AuditLogDefault from "AuditLog" /* 20129 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7426 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 20145 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 20148 */;
+import AuditLogDefault from "AuditLog" /* 20157 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20115 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20143 */;
 
 require = fn;
 const View = fn(17).View;
@@ -21,7 +21,7 @@ const Constants = fn(1072);
 ({ GuildSettingsSections: closure_12, AuditLogFilterTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { listView: { marginVertical: 12 }, spinner: { marginTop: 40 }, filterTextWrapper: { borderRadius: nativeDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT }, filtersWrapper: null, firstAuditRow: null, lastAuditRow: null, filterTrailing: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
 obj2.filtersWrapper = { paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8 };

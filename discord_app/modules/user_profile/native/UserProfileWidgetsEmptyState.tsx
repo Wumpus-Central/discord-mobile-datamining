@@ -1,14 +1,14 @@
-// === Module 15192: UserProfileWidgetsEmptyState ===
+// === Module 15218: UserProfileWidgetsEmptyState ===
 
-// Module 15192 (UserProfileWidgetsEmptyState)
+// Module 15218 (UserProfileWidgetsEmptyState)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8833 */;
-import useAddableWidgetsDefault from "useAddableWidgets" /* 15182 */;
-import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton" /* 15193 */;
-import useAddProfileWidgetDefault from "useAddProfileWidget" /* 15197 */;
-import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton" /* 15199 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8839 */;
+import useAddableWidgetsDefault from "useAddableWidgets" /* 15208 */;
+import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton" /* 15219 */;
+import useAddProfileWidgetDefault from "useAddProfileWidget" /* 15223 */;
+import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton" /* 15225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -18,15 +18,15 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_8 = fn(8825).TrackUserProfileEditActions;
-const PROFILE_SIDE_PADDING = fn(7437).PROFILE_SIDE_PADDING;
+let closure_8 = fn(8831).TrackUserProfileEditActions;
+const PROFILE_SIDE_PADDING = fn(7440).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 let closure_14 = [1.3, 1.6, 2.3, 3.3];
 const UserProfileWidgetsEmptyState = "UserProfileWidgetsEmptyState";
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" }, textContainer: null, centeredText: null, scroller: null, scrollerContent: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.textContainer = { alignSelf: "stretch", gap: nativeDefault.space.PX_8 };
@@ -115,7 +115,7 @@ export default function UserProfileWidgetsEmptyState() {
   obj10.onPress = function onPress() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15201, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15227, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
   };
   items2[2] = closure_10(require("components/Button/Button").Button, obj10);
   obj3.children = items2;

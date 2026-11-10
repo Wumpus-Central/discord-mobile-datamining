@@ -1,18 +1,18 @@
-// === Module 19844: Safe ===
+// === Module 19873: Safe ===
 
-// Module 19844 (Safe)
-import passThrough_mod from "passThrough" /* 19845 */;
+// Module 19873 (Safe)
+import passThrough_mod from "passThrough" /* 19874 */;
 import size from "module_2" /* 2 */;
 
-const obj = { asIterable: passThrough.asIterable, Array: null, Map: null, Set: null, WeakMap: null, WeakSet: null, Function: null, Event: null, KeyboardEvent: null, NavigateEvent: null, NavigationDestination: null, URL: null, EventTarget: null, MessageEvent: null, PageTransitionEvent: null, MessageChannel: null, MessagePort: null, Document: null, DocumentFragment: null, HTMLTemplateElement: null, DOMParser: null, Node: null, HTMLElement: null, Element: null, Attr: null, NodeList: null, Blob: null, String: null, HTMLMediaElement: null, MediaStream: null, AudioNode: null, BaseAudioContext: null, OfflineAudioContext: null, GainNode: null, AudioParam: null, AnalyserNode: null, Window: null, Object: null, Math: null, Reflect: null, Symbol: null, Crypto: null, Constructor: null };
+const obj = { asIterable: passThrough.asIterable, captureMessageData: passThrough.captureMessageData, Array: null, Map: null, Set: null, WeakMap: null, WeakSet: null, Function: null, Event: null, KeyboardEvent: null, NavigateEvent: null, NavigationDestination: null, URL: null, EventTarget: null, MessageEvent: null, PageTransitionEvent: null, MessageChannel: null, MessagePort: null, Document: null, DocumentFragment: null, HTMLTemplateElement: null, DOMParser: null, Node: null, HTMLElement: null, Element: null, Attr: null, NodeList: null, Worker: null, Blob: null, String: null, HTMLMediaElement: null, MediaStream: null, AudioNode: null, BaseAudioContext: null, OfflineAudioContext: null, GainNode: null, AudioParam: null, AnalyserNode: null, Window: null, Object: null, ObjectURL: null, Math: null, Reflect: null, Symbol: null, Crypto: null, Constructor: null };
 let passThrough = passThrough_mod;
-obj.Array = passThrough.protectPrototype("Array", ["every", "filter", "forEach", "includes", "map", "push", "some"], { chainable: ["filter", "map"] });
+obj.Array = passThrough.protectPrototype("Array", ["every", "filter", "forEach", "includes", "indexOf", "map", "push", "some"], { chainable: ["filter", "map"] });
 let passThrough = passThrough_mod;
 obj.Map = passThrough.protectPrototype("Map", ["delete", "forEach", "get", "has", "set", "size"]);
 let passThrough = passThrough_mod;
 obj.Set = passThrough.protectPrototype("Set", ["add", "delete", "forEach", "has", "size"]);
 let passThrough = passThrough_mod;
-obj.WeakMap = passThrough.protectPrototype("WeakMap", ["get", "set"]);
+obj.WeakMap = passThrough.protectPrototype("WeakMap", ["delete", "get", "set"]);
 let passThrough = passThrough_mod;
 obj.WeakSet = passThrough.protectPrototype("WeakSet", ["add", "has"]);
 let passThrough = passThrough_mod;
@@ -56,9 +56,11 @@ obj.Attr = passThrough.protectPrototype("Attr", ["localName", "ownerElement", "v
 let passThrough = passThrough_mod;
 obj.NodeList = passThrough.protectPrototype("NodeList", ["item", "length"]);
 let passThrough = passThrough_mod;
+obj.Worker = passThrough.protectPrototype("Worker", ["terminate"]);
+let passThrough = passThrough_mod;
 obj.Blob = passThrough.protectPrototype("Blob", ["type"]);
 let passThrough = passThrough_mod;
-obj.String = passThrough.protectPrototype("String", ["indexOf", "slice", "startsWith", "toLowerCase", "trim", "trimStart"]);
+obj.String = passThrough.protectPrototype("String", ["concat", "indexOf", "slice", "startsWith", "toLowerCase", "trim", "trimStart"]);
 let passThrough = passThrough_mod;
 obj.HTMLMediaElement = passThrough.protectPrototype("HTMLMediaElement", ["ended", "paused", "srcObject", "volume"]);
 let passThrough = passThrough_mod;
@@ -80,15 +82,17 @@ obj.Window = passThrough.protectWindow(["clearInterval", "closed", "length", "lo
 let passThrough = passThrough_mod;
 obj.Object = passThrough.protectStatics("Object", ["defineProperty", "getOwnPropertyDescriptor", "getOwnPropertyNames", "getPrototypeOf", "keys", "setPrototypeOf"]);
 let passThrough = passThrough_mod;
+obj.ObjectURL = passThrough.protectStatics("URL", ["createObjectURL", "revokeObjectURL"]);
+let passThrough = passThrough_mod;
 obj.Math = passThrough.protectStatics("Math", ["abs"]);
 let passThrough = passThrough_mod;
-obj.Reflect = passThrough.protectStatics("Reflect", ["construct", "defineProperty", "get"]);
+obj.Reflect = passThrough.protectStatics("Reflect", ["construct", "defineProperty", "deleteProperty", "get"]);
 let passThrough = passThrough_mod;
 obj.Symbol = passThrough.protectStatics("Symbol", ["asyncIterator", "iterator", "toStringTag"]);
 let passThrough = passThrough_mod;
 obj.Crypto = passThrough.protectStatics("crypto", ["getRandomValues"]);
 let passThrough = passThrough_mod;
-obj.Constructor = passThrough.protectConstructors(["Blob", "Boolean", "Error", "Proxy", "Float32Array", "Map", "MessageChannel", "MessageEvent", "Set", "Uint32Array", "URL", "WeakMap", "WeakSet"]);
+obj.Constructor = passThrough.protectConstructors(["Blob", "Boolean", "Error", "Proxy", "Float32Array", "Map", "MessageChannel", "MessageEvent", "Set", "Uint32Array", "URL", "String", "Uint8Array", "WeakMap", "WeakSet"]);
 const result = size.fileFinishedImporting("../discord_common/js/packages/embedded-app-shims/src/shared/safe/index.tsx");
 
 export const Safe = obj;

@@ -1,20 +1,20 @@
-// === Module 18177: HeroBlockOrbsArcadeHeader ===
+// === Module 18206: HeroBlockOrbsArcadeHeader ===
 
-// Module 18177 (HeroBlockOrbsArcadeHeader)
+// Module 18206 (HeroBlockOrbsArcadeHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import shared from "shared" /* 5147 */;
-import native from "native" /* 5199 */;
-import useThemeDefault from "useTheme" /* 5369 */;
-import useToken from "useToken" /* 5724 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import QuestContent from "QuestContent" /* 6841 */;
-import inlineStyles from "inlineStyles" /* 8101 */;
-import QuestUtils from "QuestUtils" /* 9769 */;
-import _modDef18178 from "module_18178" /* 18178 */;
+import shared from "shared" /* 5149 */;
+import native from "native" /* 5201 */;
+import useThemeDefault from "useTheme" /* 5371 */;
+import useToken from "useToken" /* 5726 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import QuestContent from "QuestContent" /* 6844 */;
+import inlineStyles from "inlineStyles" /* 8105 */;
+import QuestUtils from "QuestUtils" /* 9775 */;
+import _modDef18207 from "module_18207" /* 18207 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -219,7 +219,7 @@ function HeroBlockOrbsArcadeHeaderContent(bleedsOntoPage) {
   const obj22 = { source: null, style: null, accessible: false };
   const obj23 = { uri: null };
   const tmp2Result2 = require("useFontScale");
-  obj23.uri = require("module_18179");
+  obj23.uri = require("module_18208");
   obj22.source = obj23;
   obj22.style = tmp.image;
   tmp25Result = closure_9(require("FastImage"), obj22);
@@ -233,12 +233,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let c12 = 289;
 const PX_16 = nativeDefault.space.PX_16;
-const AssetUtils = fn(9785);
-const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18178);
+const AssetUtils = fn(9791);
+const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18207);
 const PX_48 = nativeDefault.space.PX_48;
 const ellipse = { cx: 85.5, cy: 267.5, rx: 329, ry: 217, rotation: 63 };
 const ellipse2 = { cx: 67, cy: 231, rx: 185, ry: 155 };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj4 = { header: { justifyContent: "flex-end" }, art: null, artFrame: null, image: null, video: null, gradient: null, glow: null, glowWithBleed: null, bleedFade: null, content: null, contentWithPadding: null, productsTitle: null };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

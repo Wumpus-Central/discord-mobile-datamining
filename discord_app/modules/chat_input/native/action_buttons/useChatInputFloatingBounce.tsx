@@ -1,17 +1,17 @@
-// === Module 13024: useChatInputFloatingBounce ===
+// === Module 13038: useChatInputFloatingBounce ===
 
-// Module 13024 (useChatInputFloatingBounce)
+// Module 13038 (useChatInputFloatingBounce)
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5370 */;
-import spring_spring from "spring/spring" /* 5761 */;
+import timing_timing from "timing/timing" /* 5372 */;
+import spring_spring from "spring/spring" /* 5763 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChatInputConstants = fn(13023);
+const ChatInputConstants = fn(13037);
 ({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: closure_6, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: metroImportDefault } = ChatInputConstants);
 let closure_8 = { code: "(function useChatInputFloatingBounceTsx1(finished){let[scheduleOnRN,setEnterFinished]=this.__closure;if(finished===true){scheduleOnRN(setEnterFinished,true);}})" };
 let closure_9 = { code: "(function useChatInputFloatingBounceTsx2(finished){let[scheduleOnRN,handleExitFinished]=this.__closure;if(finished===true){scheduleOnRN(handleExitFinished);}})" };

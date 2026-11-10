@@ -1,15 +1,15 @@
-// === Module 15220: UserProfileGameDetailsList ===
+// === Module 15246: UserProfileGameDetailsList ===
 
-// Module 15220 (UserProfileGameDetailsList)
+// Module 15246 (UserProfileGameDetailsList)
 import nativeDefault from "native" /* 575 */;
-import UserProfileWidgetExpandableItems from "UserProfileWidgetExpandableItems" /* 15221 */;
+import UserProfileWidgetExpandableItems from "UserProfileWidgetExpandableItems" /* 15247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { list: { gap: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

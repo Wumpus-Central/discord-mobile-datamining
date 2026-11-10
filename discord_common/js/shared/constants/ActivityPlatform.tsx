@@ -1,6 +1,6 @@
-// === Module 11972: ActivityPlatform ===
+// === Module 11981: ActivityPlatform ===
 
-// Module 11972 (ActivityPlatform)
+// Module 11981 (ActivityPlatform)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/constants/ActivityPlatform.tsx");

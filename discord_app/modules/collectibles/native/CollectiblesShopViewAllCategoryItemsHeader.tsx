@@ -1,19 +1,19 @@
-// === Module 18217: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 18246: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 18217 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 18246 (CollectiblesShopViewAllCategoryItemsHeader)
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1499 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import HeaderShared from "HeaderShared" /* 9902 */;
-import _modDef9906 from "module_9906" /* 9906 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 15629 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import HeaderShared from "HeaderShared" /* 9908 */;
+import _modDef9912 from "module_9912" /* 9912 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 15657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_6 = createStyles.createStyles({ headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 12, paddingLeft: 8 }, backButton: { flex: 1 }, logo: { flex: 2, height: 36 }, dummyRightButton: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx");
@@ -29,7 +29,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj4.paddingTop = youBarSettingsCustomHeaderPaddingTop;
   obj3.style = obj4;
   const obj5 = { style: tmp.backButton, children: null };
-  const obj6 = { source: _modDef9906, color: buttonColor, accessibilityLabel: null, onPress: null };
+  const obj6 = { source: _modDef9912, color: buttonColor, accessibilityLabel: null, onPress: null };
   const intl = util.intl;
   obj6.accessibilityLabel = intl.string(util.t["13/7kX"]);
   obj6.onPress = function onPress() {

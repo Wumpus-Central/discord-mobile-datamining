@@ -1,13 +1,13 @@
-// === Module 8453: MessageWithContent ===
+// === Module 8457: MessageWithContent ===
 
-// Module 8453 (MessageWithContent)
+// Module 8457 (MessageWithContent)
 import util from "util" /* 1113 */;
-import createMessageContentDefault from "createMessageContent" /* 8459 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8761 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8454 */;
+import createMessageContentDefault from "createMessageContent" /* 8463 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8767 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8458 */;
 
 require = fn;
-const RowType = fn(8449).RowType;
+const RowType = fn(8453).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 
@@ -26,7 +26,8 @@ export function generateMessageRowData(canShowImages, options, theme) {
     tmp3 = alwaysShowAddReaction;
   }
   let overrideBackgroundHighlight = canShowImages.overrideBackgroundHighlight;
-  const obj = { type: RowType.MESSAGE, message: createMessageContentDefault({ options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed }), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
+  const obj = { type: RowType.MESSAGE, message: createMessageContentDefault({ options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed, unlinkedGamePlayerPlaceholders }), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
+  ({ showContentInventoryEntryFallbackEmbed, unlinkedGamePlayerPlaceholders } = canShowImages);
   const intl = util.intl;
   obj.addNewReactionAccessibilityLabel = intl.string(util.t.lfIHs4);
   obj.reactionsTheme = reactionsTheme;

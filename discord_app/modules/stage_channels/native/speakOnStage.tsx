@@ -1,10 +1,10 @@
-// === Module 11330: speakOnStage ===
+// === Module 11339: speakOnStage ===
 
-// Module 11330 (speakOnStage)
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6784 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6813 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8014 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
+// Module 11339 (speakOnStage)
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6786 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6816 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8018 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8028 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/stage_channels/native/speakOnStage.tsx");

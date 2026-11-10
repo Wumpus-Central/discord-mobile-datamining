@@ -1,10 +1,10 @@
-// === Module 15361: formatSharedClientThemeData ===
+// === Module 15386: formatSharedClientThemeData ===
 
-// Module 15361 (formatSharedClientThemeData)
+// Module 15386 (formatSharedClientThemeData)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
 import _modDef2896 from "module_2896" /* 2896 */;
-import _modDef8590 from "module_8590" /* 8590 */;
+import _modDef8596 from "module_8596" /* 8596 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -21,7 +21,7 @@ export function formatSharedClientThemeData(message, ensureAvatarSourceResult, n
       str2 = ensureAvatarSourceResult.uri;
     }
     obj.createdByAvatarUrl = str2;
-    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8590).uri;
+    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8596).uri;
     const intl = util.intl;
     obj.previewLabel = intl.string(util.t.SKNnqq);
     const intl2 = util.intl;

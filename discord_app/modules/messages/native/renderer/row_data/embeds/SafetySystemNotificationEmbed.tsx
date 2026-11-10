@@ -1,12 +1,12 @@
-// === Module 15436: SafetySystemNotificationEmbed ===
+// === Module 15461: SafetySystemNotificationEmbed ===
 
-// Module 15436 (SafetySystemNotificationEmbed)
+// Module 15461 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8038 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8467 */;
-import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 15434 */;
-import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 15435 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8042 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8471 */;
+import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 15459 */;
+import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 15460 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -50,7 +50,7 @@ export function createSafetySystemNotificationEmbed(message) {
             if (str == null) {
               str = "";
             }
-            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8097 : 8682))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
+            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8101 : 8688))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
             const tmp6Result7 = renderer_EmbedUtils;
             const tmp6Result8 = SafetyWarningAgeUtils;
             let num = parseMessageForPropsResult.timestamp;

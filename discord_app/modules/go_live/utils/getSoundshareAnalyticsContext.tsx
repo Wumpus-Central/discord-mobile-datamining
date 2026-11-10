@@ -1,6 +1,6 @@
-// === Module 7974: getSoundshareAnalyticsContext ===
+// === Module 7978: getSoundshareAnalyticsContext ===
 
-// Module 7974 (getSoundshareAnalyticsContext)
+// Module 7978 (getSoundshareAnalyticsContext)
 import RunningGameStore from "RunningGameStore" /* 2137 */;
 
 const size = fn(2);

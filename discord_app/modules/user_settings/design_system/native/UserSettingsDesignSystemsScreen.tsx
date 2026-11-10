@@ -1,12 +1,12 @@
-// === Module 17938: UserSettingsDesignSystemsScreen ===
+// === Module 17965: UserSettingsDesignSystemsScreen ===
 
-// Module 17938 (UserSettingsDesignSystemsScreen)
-import SettingBuilders from "SettingBuilders" /* 11685 */;
-import SettingLayoutDefault from "SettingLayout" /* 16905 */;
+// Module 17965 (UserSettingsDesignSystemsScreen)
+import SettingBuilders from "SettingBuilders" /* 11694 */;
+import SettingLayoutDefault from "SettingLayout" /* 16932 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8503).MobileUserSettings;
+const MobileUserSettings = fn(8507).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx");
@@ -25,8 +25,8 @@ export default function SettingsDesignSystemsScreen() {
     obj4.settings = items2;
     items1[1] = obj4;
     const obj5 = { label: "In Progress", settings: null };
-    const items3 = [, , , , , ];
-    ({ DESIGN_SYSTEM_BADGE: arr4[0], DESIGN_SYSTEM_SHEETS: arr4[1], DESIGN_SYSTEM_STACK: arr4[2], DESIGN_SYSTEMS_CONTEXT_MENU: arr4[3], DESIGN_SYSTEMS_TOAST: arr4[4], DESIGN_SYSTEMS_MODAL: arr4[5] } = constants);
+    const items3 = [, , , , , , ];
+    ({ DESIGN_SYSTEM_BADGE: arr4[0], DESIGN_SYSTEM_SHEETS: arr4[1], DESIGN_SYSTEM_STACK: arr4[2], DESIGN_SYSTEMS_CONTEXT_MENU: arr4[3], DESIGN_SYSTEMS_TOAST: arr4[4], DESIGN_SYSTEMS_MODAL: arr4[5], DESIGN_SYSTEMS_NAVIGATOR: arr4[6] } = constants);
     obj5.settings = items3;
     items1[2] = obj5;
     const obj6 = { label: "Experimental", settings: null };

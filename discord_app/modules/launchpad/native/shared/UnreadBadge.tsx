@@ -1,19 +1,19 @@
-// === Module 19453: UnreadBadge ===
+// === Module 19482: UnreadBadge ===
 
-// Module 19453 (UnreadBadge)
-import useFontScale from "useFontScale" /* 5766 */;
-import shared_components_Badge from "shared_components/Badge" /* 9908 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 19085 */;
+// Module 19482 (UnreadBadge)
+import useFontScale from "useFontScale" /* 5768 */;
+import shared_components_Badge from "shared_components/Badge" /* 9914 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 19114 */;
 import noop from "module_19" /* 19 */;
 
 const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(5882).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6831).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(5884).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6834).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");

@@ -1,13 +1,14 @@
-// === Module 6956: GuildUtils ===
+// === Module 6959: GuildUtils ===
 
-// Module 6956 (GuildUtils)
+// Module 6959 (GuildUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import UserUtilsAll from "UserUtils" /* 5194 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
-import GuildStore from "GuildStore" /* 5011 */;
+import UserUtilsAll from "UserUtils" /* 5196 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
+import GuildStore from "GuildStore" /* 5013 */;
 import UserStore from "UserStore" /* 1385 */;
 import priv from "priv" /* 1453 */;
+import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
 function getGuildNameSuggestion(truncateUsername) {
@@ -34,7 +35,10 @@ function getGuildNameSuggestion(truncateUsername) {
 }
 let obj = { maxAge: null };
 obj.maxAge = DurationsDefault.Millis.MINUTE;
-const importDefaultResult1 = new priv(obj);
+const importDefaultResult2 = new priv(obj);
+const subscription = Dispatcher.subscribe("CONNECTION_OPEN", () => {
+  importDefaultResult2.reset();
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/GuildUtils.tsx");
 
@@ -55,9 +59,9 @@ export default {
           str = "";
         }
         const combined = "" + str + ":" + closure_0;
-        value = importDefaultResult1.get(combined);
+        value = importDefaultResult2.get(combined);
         if (null == value) {
-          const result = importDefaultResult1.set(combined, true);
+          const result = importDefaultResult2.set(combined, true);
         }
         if (null == value) {
           items.push(item);
@@ -71,9 +75,9 @@ export default {
       }
       const _HermesInternal = HermesInternal;
       let combined = "" + str + ":" + arg1;
-      value = importDefaultResult1.get(combined);
+      value = importDefaultResult2.get(combined);
       if (null == value) {
-        let result = importDefaultResult1.set(combined, true);
+        let result = importDefaultResult2.set(combined, true);
       }
       flag2 = false;
       if (null == value) {

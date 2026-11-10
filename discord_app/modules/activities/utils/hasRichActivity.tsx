@@ -1,7 +1,7 @@
-// === Module 5892: hasRichActivity ===
+// === Module 5894: hasRichActivity ===
 
-// Module 5892 (hasRichActivity)
-import ActivityTypes from "ActivityTypes" /* 5891 */;
+// Module 5894 (hasRichActivity)
+import ActivityTypes from "ActivityTypes" /* 5893 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");

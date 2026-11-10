@@ -1,12 +1,12 @@
-// === Module 11711: useFetchSocialLayerStorefrontEmbedWishlist ===
+// === Module 11720: useFetchSocialLayerStorefrontEmbedWishlist ===
 
-// Module 11711 (useFetchSocialLayerStorefrontEmbedWishlist)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8829 */;
-import WishlistFetchSource from "WishlistFetchSource" /* 9561 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9562 */;
+// Module 11720 (useFetchSocialLayerStorefrontEmbedWishlist)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8835 */;
+import WishlistFetchSource from "WishlistFetchSource" /* 9567 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9568 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7848 */;
-import WishlistStore from "WishlistStore" /* 9555 */;
+import UserProfileStore from "UserProfileStore" /* 7852 */;
+import WishlistStore from "WishlistStore" /* 9561 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 

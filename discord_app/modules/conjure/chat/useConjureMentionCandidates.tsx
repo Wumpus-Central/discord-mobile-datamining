@@ -1,15 +1,15 @@
-// === Module 13016: useConjureMentionCandidates ===
+// === Module 13030: useConjureMentionCandidates ===
 
-// Module 13016 (useConjureMentionCandidates)
-import PermissionUtilsAll from "PermissionUtils" /* 5077 */;
-import GuildUtilsDefault from "GuildUtils" /* 6956 */;
-import conjureMentions from "conjureMentions" /* 12838 */;
+// Module 13030 (useConjureMentionCandidates)
+import PermissionUtilsAll from "PermissionUtils" /* 5079 */;
+import GuildUtilsDefault from "GuildUtils" /* 6959 */;
+import conjureMentions from "conjureMentions" /* 12852 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
-import GuildStore from "GuildStore" /* 5011 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildStore from "GuildStore" /* 5013 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
 
 const require = globalThis.__r;
 

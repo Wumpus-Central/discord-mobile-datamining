@@ -1,43 +1,23 @@
-// === Module 7823: CollectiblesShopHomeRecord ===
+// === Module 7826: CollectiblesShopHomeRecord ===
 
-// Module 7823 (CollectiblesShopHomeRecord)
-import ShopBlockType from "ShopBlockType" /* 5813 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7797 */;
+// Module 7826 (CollectiblesShopHomeRecord)
+import ShopBlockType from "ShopBlockType" /* 5815 */;
+import ShopBlockRecordFactory from "ShopBlockRecordFactory" /* 7828 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7800 */;
 
 require = fn;
-const CountdownTimerBlockRecord = fn(7824).CountdownTimerBlockRecord;
-const FeaturedBlockRecord = fn(7825).FeaturedBlockRecord;
-const FeedBlockRecord = fn(7828).FeedBlockRecord;
-let closure_6 = fn(7829).GameServerHostingBannerBlockRecord;
-const HeroBlockRecord = fn(7830).HeroBlockRecord;
-let closure_8 = fn(7831).ImmersiveBannerBlockRecord;
-const ShelfBlockRecord = fn(7832).ShelfBlockRecord;
-let closure_10 = fn(7833).SocialLayerStorefrontPromotionalBannerBlockRecord;
-const WideBannerBlockRecord = fn(7834).WideBannerBlockRecord;
+const HeroBlockRecord = fn(7827).HeroBlockRecord;
 const prototype = function CollectiblesShopHomeRecord(shop_blocks) {
   const obj = Object.create(new.target.prototype);
   shop_blocks = shop_blocks.shop_blocks;
   const mapped = shop_blocks.map((type) => {
-    type = type.type;
-    if (ShopBlockType.ShopBlockType.HERO === type) {
-      return HeroBlockRecord.fromServer(type);
-    } else if (ShopBlockType.ShopBlockType.FEATURED === type) {
-      return FeaturedBlockRecord.fromServer(type);
-    } else if (ShopBlockType.ShopBlockType.FEED === type) {
-      return FeedBlockRecord.fromServer(type);
-    } else if (ShopBlockType.ShopBlockType.WIDE_BANNER === type) {
-      return WideBannerBlockRecord.fromServer(type);
-    } else if (ShopBlockType.ShopBlockType.SHELF === type) {
-      return ShelfBlockRecord.fromServer(type);
-    } else if (ShopBlockType.ShopBlockType.COUNTDOWN_TIMER === type) {
-      return CountdownTimerBlockRecord.fromServer(type);
-    } else if (ShopBlockType.ShopBlockType.IMMERSIVE_BANNER === type) {
-      return closure_1_8.fromServer(type);
-    } else if (ShopBlockType.ShopBlockType.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER === type) {
-      return closure_1_10.fromServer(type);
-    } else if (ShopBlockType.ShopBlockType.GAME_SERVER_HOSTING_BANNER === type) {
-      return closure_1_6.fromServer(type);
+    if (type.type === ShopBlockType.ShopBlockType.HERO) {
+      let fromServerResult = HeroBlockRecord.fromServer(type);
+    } else {
+      fromServerResult = ShopBlockRecordFactory.parseNonHeroShopBlock(type);
+      const tmpResult = ShopBlockRecordFactory;
     }
+    return fromServerResult;
   });
   obj.shopBlocks = mapped.filter((item) => undefined !== item);
   const categories = shop_blocks.categories;
@@ -49,26 +29,13 @@ prototype["fromServer"] = function fromServer(shop_blocks) {
     const obj = Object.create(tmp.prototype);
     shop_blocks = shop_blocks.shop_blocks;
     const mapped = shop_blocks.map((type) => {
-      type = type.type;
-      if (ShopBlockType.ShopBlockType.HERO === type) {
-        return HeroBlockRecord.fromServer(type);
-      } else if (ShopBlockType.ShopBlockType.FEATURED === type) {
-        return FeaturedBlockRecord.fromServer(type);
-      } else if (ShopBlockType.ShopBlockType.FEED === type) {
-        return FeedBlockRecord.fromServer(type);
-      } else if (ShopBlockType.ShopBlockType.WIDE_BANNER === type) {
-        return WideBannerBlockRecord.fromServer(type);
-      } else if (ShopBlockType.ShopBlockType.SHELF === type) {
-        return ShelfBlockRecord.fromServer(type);
-      } else if (ShopBlockType.ShopBlockType.COUNTDOWN_TIMER === type) {
-        return CountdownTimerBlockRecord.fromServer(type);
-      } else if (ShopBlockType.ShopBlockType.IMMERSIVE_BANNER === type) {
-        return closure_1_8.fromServer(type);
-      } else if (ShopBlockType.ShopBlockType.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER === type) {
-        return closure_1_10.fromServer(type);
-      } else if (ShopBlockType.ShopBlockType.GAME_SERVER_HOSTING_BANNER === type) {
-        return closure_1_6.fromServer(type);
+      if (type.type === ShopBlockType.ShopBlockType.HERO) {
+        let fromServerResult = HeroBlockRecord.fromServer(type);
+      } else {
+        fromServerResult = ShopBlockRecordFactory.parseNonHeroShopBlock(type);
+        const tmpResult = ShopBlockRecordFactory;
       }
+      return fromServerResult;
     });
     obj.shopBlocks = mapped.filter((item) => undefined !== item);
     const categories = shop_blocks.categories;

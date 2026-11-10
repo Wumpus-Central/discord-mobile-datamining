@@ -1,30 +1,30 @@
-// === Module 15206: UserProfileWidgetsBoard ===
+// === Module 15232: UserProfileWidgetsBoard ===
 
-// Module 15206 (UserProfileWidgetsBoard)
+// Module 15232 (UserProfileWidgetsBoard)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6153 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7853 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7854 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12445 */;
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15211 */;
-import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 15222 */;
-import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 15224 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15237 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6155 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7857 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7858 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12458 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15237 */;
+import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 15248 */;
+import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 15250 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15263 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function AddGameButton(ref) {
   ref = ref.ref;
   const widgetType = ref.widgetType;
-  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(ref(9659).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
+  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(ref(9665).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
   const intl = ref(1113).intl;
   obj.accessibilityLabel = intl.string(ref(1113).t.E3l3Zx);
   obj.disabled = ref.disabled;
   obj.onPress = function onPress() {
     return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });
   };
-  return closure_8(ref(8098).IconButton, obj);
+  return closure_8(ref(8102).IconButton, obj);
 }
 function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle, isEditing } = arg0);
@@ -41,17 +41,17 @@ function WidgetRenderer(arg0) {
   return tmp3Result;
 }
 const View = fn(17).View;
-const UserProfileSections = fn(8825).UserProfileSections;
-const UserProfileWidgetConstants = fn(7851);
+const UserProfileSections = fn(8831).UserProfileSections;
+const UserProfileWidgetConstants = fn(7855);
 ({ widgetSupportsComment: closure_6, widgetSupportsTags: metroImportDefault } = UserProfileWidgetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { board: { gap: nativeDefault.space.PX_16 }, emptyState: null, singleGameEmptyState: null, singleGameEmptyStateText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj.emptyState = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
-obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(15207).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
+obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(15233).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
 obj.singleGameEmptyStateText = { flex: 1 };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function WidgetSection(userId) {

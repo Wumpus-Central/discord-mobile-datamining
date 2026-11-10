@@ -1,6 +1,6 @@
-// === Module 8005: GuildRoomErrorUtils ===
+// === Module 8009: GuildRoomErrorUtils ===
 
-// Module 8005 (GuildRoomErrorUtils)
+// Module 8009 (GuildRoomErrorUtils)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

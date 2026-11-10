@@ -1,23 +1,24 @@
-// === Module 19008: GuildSettingsModalMembers ===
+// === Module 19037: GuildSettingsModalMembers ===
 
-// Module 19008 (GuildSettingsModalMembers)
+// Module 19037 (GuildSettingsModalMembers)
+import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5149 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6957 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7503 */;
-import sortByMatchScore from "sortByMatchScore" /* 9215 */;
-import RolePillDefault from "RolePill" /* 10943 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5151 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7506 */;
+import sortByMatchScore from "sortByMatchScore" /* 9221 */;
+import RolePillDefault from "RolePill" /* 10952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5358 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
-import GuildRoleStore from "GuildRoleStore" /* 5046 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import PermissionStore from "PermissionStore" /* 5072 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5360 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildRoleStore from "GuildRoleStore" /* 5048 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import PermissionStore from "PermissionStore" /* 5074 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9155 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9161 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
@@ -26,8 +27,8 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(9215).AutocompleterResultTypes.USER];
-const createStyles = fn(5140);
+let items = [fn(9221).AutocompleterResultTypes.USER];
+const createStyles = fn(5142);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchFieldContainer: null, roleList: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.searchFieldContainer = { paddingVertical: nativeDefault.space.PX_12 };
@@ -55,10 +56,10 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     let formatToPlainStringResult;
     if (found.length > 0) {
       const user = UserStore.getUser(guildMember.userId);
-      let str = guildMember(6173).getNickname(guild.id, undefined, user);
+      let str = guildMember(6175).getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(5194).getGlobalName(user);
-        const tmp9Result = tmp9(5194);
+        str = tmp9(5196).getGlobalName(user);
+        const tmp9Result = tmp9(5196);
       }
       if (str == null) {
         let username;
@@ -75,7 +76,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
       const intl = tmp2(1113).intl;
       const obj3 = { memberName: str, roleNames: joined };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1113).t["6eGpWx"], obj3);
-      const obj2 = guildMember(6173);
+      const obj2 = guildMember(6175);
       tmp9 = guildMember;
     }
     const obj4 = { userId: guildMember.userId, guildId: guild.id, accessibilityLabel: formatToPlainStringResult, subLabel: null, disabled: null, onPress: null, arrow: true, start: null, end: null };
@@ -91,7 +92,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(10938), obj4);
+    return closure_15(guildMember(10947), obj4);
   }
   const obj = guild(1499);
 });
@@ -263,12 +264,12 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(9180), accessibilityLabel: null, ref: null };
+            const obj = { source: closure_1_1(9186), accessibilityLabel: null, ref: null };
             const intl = closure_1_0(1113).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1113).t.ogxXGq);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_15(closure_1_0(7630).HeaderActionButton, obj);
+            return closure_1_15(closure_1_0(7633).HeaderActionButton, obj);
           }
         });
       }
@@ -340,32 +341,39 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
     const index = guildMember.index;
     return closure_2_15(closure_20, { guild, guildMember: guildMember.item, sortedGuildRoles, start: 0 === index, end: index === c17 });
   }, items14);
+  const items15 = [guildId];
+  const callback2 = sortedGuildRoles.useCallback((userId) => userId.userId, []);
+  const memo1 = sortedGuildRoles.useMemo(() => apply.debounce((viewableItems) => {
+    viewableItems = viewableItems.viewableItems;
+    guildId(guild[36]).verifyGuildMembers(closure_1_0, viewableItems.map((item) => item.item.userId));
+  }, 500), items15);
+  const items16 = [memo1];
+  const effect4 = sortedGuildRoles.useEffect(() => () => memo1.cancel(), items16);
   const obj8 = { style: tmp4.containerInner, children: null };
   const obj9 = { style: tmp4.searchFieldContainer, children: null };
-  const callback2 = sortedGuildRoles.useCallback((userId) => userId.userId, []);
   const obj10 = { size: "md", placeholder: null, onChange: null, round: true };
   let intl = guildId(guild[20]).intl;
   obj10.placeholder = intl.string(guildId(guild[20]).t.pYHobK);
   obj10.onChange = callback;
-  obj9.children = first3(guildId(guild[35]).SearchBar, obj10);
-  const items15 = [first3(stateFromStores, obj9), ];
+  obj9.children = first3(guildId(guild[37]).SearchBar, obj10);
+  const items17 = [first3(stateFromStores, obj9), ];
   if (0 !== memo.length) {
-    const obj11 = { keyExtractor: callback2, data: memo, renderItem: callback1, contentContainerStyle: null };
+    const obj11 = { keyExtractor: callback2, data: memo, renderItem: callback1, onViewableItemsChanged: memo1, contentContainerStyle: null };
     const obj12 = { paddingBottom: navigation(guild[22])().bottom + tmp5(tmp2[15]).space.PX_16 };
     obj11.contentContainerStyle = obj12;
-    let tmp33Result = tmp33(tmp(tmp2[36]).FlashList, obj11);
+    let tmp35Result = tmp35(tmp(tmp2[38]).FlashList, obj11);
   } else {
-    const obj13 = { Illustration: tmp(tmp2[38]).NoResults, title: null, body: null };
+    const obj13 = { Illustration: tmp(tmp2[40]).NoResults, title: null, body: null };
     let intl2 = tmp(tmp2[20]).intl;
     obj13.title = intl2.string(tmp(tmp2[20]).t.qVQ9ud);
     const intl3 = tmp(tmp2[20]).intl;
     obj13.body = intl3.string(tmp(tmp2[20]).t.oB9grQ);
-    tmp33Result = tmp33(tmp(tmp2[37]).EmptyState, obj13);
+    tmp35Result = tmp35(tmp(tmp2[39]).EmptyState, obj13);
   }
   const obj14 = { children: null };
-  items15[1] = tmp33Result;
-  obj8.children = items15;
-  const items16 = [memo(stateFromStores, obj8), first3(guildId(guild[39]).NavScrim, {})];
-  obj14.children = items16;
+  items17[1] = tmp35Result;
+  obj8.children = items17;
+  const items18 = [memo(stateFromStores, obj8), first3(guildId(guild[41]).NavScrim, {})];
+  obj14.children = items18;
   return memo(c17, obj14);
 });

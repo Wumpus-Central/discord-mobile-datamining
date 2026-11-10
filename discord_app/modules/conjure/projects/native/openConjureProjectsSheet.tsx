@@ -1,11 +1,11 @@
-// === Module 13220: openConjureProjectsSheet ===
+// === Module 13234: openConjureProjectsSheet ===
 
-// Module 13220 (openConjureProjectsSheet)
+// Module 13234 (openConjureProjectsSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5374 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11104 */;
-import useConjureProjectGroups from "useConjureProjectGroups" /* 13221 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6899 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11113 */;
+import useConjureProjectGroups from "useConjureProjectGroups" /* 13235 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
 
 require = fn;
 const size = fn(2);
@@ -18,8 +18,8 @@ export default function openConjureProjectsSheet() {
     }
     obj = useConjureProjectGroups;
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13224, dependencyMap.paths), "ConjureProjectsSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13238, dependencyMap.paths), "ConjureProjectsSheet");
 };
 export function showConjureProjectsSheet() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13224, dependencyMap.paths), "ConjureProjectsSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13238, dependencyMap.paths), "ConjureProjectsSheet");
 }

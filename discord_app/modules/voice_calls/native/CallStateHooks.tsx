@@ -1,17 +1,17 @@
-// === Module 15490: CallStateHooks ===
+// === Module 15515: CallStateHooks ===
 
-// Module 15490 (CallStateHooks)
-import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
+// Module 15515 (CallStateHooks)
+import ChannelRTCStore from "ChannelRTCStore" /* 6901 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6624 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
+import CallStore from "CallStore" /* 6626 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault, RTCConnectionStates: closure_8 } = Constants);
-const ParticipantTypes = fn(5805).ParticipantTypes;
+const ParticipantTypes = fn(5807).ParticipantTypes;
 let obj = {};
 const merged = Object.assign({ initialized: false, callId: "a" });
 let obj2 = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
@@ -60,7 +60,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(12022)();
+  const tmp3 = id(12031)();
   dependencyMap = tmp3;
   obj2 = require("initialize");
   const items2 = [RTCConnectionStore];

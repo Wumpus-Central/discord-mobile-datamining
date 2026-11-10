@@ -1,9 +1,9 @@
-// === Module 11267: LockUnlockedIcon ===
+// === Module 11276: LockUnlockedIcon ===
 
-// Module 11267 (LockUnlockedIcon)
+// Module 11276 (LockUnlockedIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5841 */;
-import _mod11268 from "module_11268" /* 11268 */;
+import BaseIconImage from "BaseIconImage" /* 5843 */;
+import _mod11277 from "module_11277" /* 11277 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function LockUnlockedIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11268, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11277, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,13 +1,13 @@
-// === Module 12057: useStageChannelGridParticipants ===
+// === Module 12066: useStageChannelGridParticipants ===
 
-// Module 12057 (useStageChannelGridParticipants)
+// Module 12066 (useStageChannelGridParticipants)
 import apply from "apply" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6814 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6820 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6817 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6823 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6898 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6768 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6901 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6770 */;
 
 const require = globalThis.__r;
 
@@ -232,7 +232,7 @@ export function useThrottledStageAudience(id) {
   const stateFromStores = stageParticipantsCount(504).useStateFromStores(items, () => {
     items = [stageParticipantsCount, StageChannelParticipantStore.getParticipantsVersion(stageParticipantsCount)];
     return items;
-  }, items1, stageParticipantsCount(6821).isVersionEqual);
+  }, items1, stageParticipantsCount(6824).isVersionEqual);
   const items2 = [stateFromStores];
   const memo = noop.useMemo(() => {
     items = [...StageChannelParticipantStore.getMutableParticipants(closure_1[0], StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE)];
@@ -240,8 +240,8 @@ export function useThrottledStageAudience(id) {
   }, items2);
   const obj = stageParticipantsCount(504);
   stageParticipantsCount = undefined;
-  const obj2 = stageParticipantsCount(12058);
-  stageParticipantsCount = stageParticipantsCount(6820).useStageParticipantsCount(id, stageParticipantsCount(6814).StageChannelParticipantNamedIndex.AUDIENCE);
+  const obj2 = stageParticipantsCount(12067);
+  stageParticipantsCount = stageParticipantsCount(6823).useStageParticipantsCount(id, stageParticipantsCount(6817).StageChannelParticipantNamedIndex.AUDIENCE);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp4[1];
   const items3 = [stageParticipantsCount];

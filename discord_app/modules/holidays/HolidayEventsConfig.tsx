@@ -1,26 +1,27 @@
-// === Module 19886: HolidayEventsConfig ===
+// === Module 19915: HolidayEventsConfig ===
 
-// Module 19886 (HolidayEventsConfig)
+// Module 19915 (HolidayEventsConfig)
 import util from "util" /* 1113 */;
-import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 19887 */;
-import _modDef19888 from "module_19888" /* 19888 */;
-import _modDef19889 from "module_19889" /* 19889 */;
+import dismissible_content from "dismissible_content" /* 4975 */;
+import Constants from "Constants" /* 11171 */;
+import _modDef19916 from "module_19916" /* 19916 */;
+import _modDef19917 from "module_19917" /* 19917 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 const obj = {
-  experiment: HalloweenHolidayExperimentDefault,
+  experiment: null,
   useIsExperimentEligible() {
-    return HalloweenHolidayExperimentDefault.useConfig({ location: "holiday_events_use_eligible" }).enabled;
+    return false;
   },
   getIsExperimentEligible() {
-    return HalloweenHolidayExperimentDefault.getConfig({ location: "holiday_events_is_eligible" }).enabled;
+    return false;
   },
   startTimeMs: 1791388800000,
   endTimeMs: 1793638800000,
   isDesktopOnly: true,
-  soundpack: fn(11162).Soundpacks.HALLOWEEN,
-  soundpackLabel: fn(1113).t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef19888, webmLight: _modDef19889 },
+  soundpack: Constants.Soundpacks.HALLOWEEN,
+  soundpackLabel: util.t["+LasFV"],
+  appSpinnerSources: { webmDark: _modDef19916, webmLight: _modDef19917 },
   getLoadingTips() {
     const intl = util.intl;
     items = [intl.string(util.t.ydMZ2o), , , , , , , , , , , , ];
@@ -50,9 +51,8 @@ const obj = {
     items[12] = intl13.string(util.t["1XGw3F"]);
     return items;
   },
-  coachmarkDismissibleContent: fn(4973).DismissibleContent.HOLIDAY_COACHMARK_HALLOWEEN_2026
+  coachmarkDismissibleContent: dismissible_content.DismissibleContent.HOLIDAY_COACHMARK_HALLOWEEN_2026
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");
 
 export default obj;

@@ -1,16 +1,16 @@
-// === Module 6081: VideoQuality ===
+// === Module 6083: VideoQuality ===
 
-// Module 6081 (VideoQuality)
+// Module 6083 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import TimeUtils from "TimeUtils" /* 5901 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5918 */;
-import Histogram from "Histogram" /* 6025 */;
-import NetworkQualityDefault from "NetworkQuality" /* 6031 */;
-import VideoQualityStats from "VideoQualityStats" /* 6082 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 6058 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5921 */;
+import TimeUtils from "TimeUtils" /* 5903 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5920 */;
+import Histogram from "Histogram" /* 6027 */;
+import NetworkQualityDefault from "NetworkQuality" /* 6033 */;
+import VideoQualityStats from "VideoQualityStats" /* 6084 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 6060 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5923 */;
 
 require = fn;
 function round(arg0) {
@@ -1413,12 +1413,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     const set1 = new Set();
     const obj2 = { receivers: 1 };
     self.updateSendState(obj2);
-    let tmp23 = self.connection.context === tmp(5918).MediaEngineContextTypes.DEFAULT;
+    let tmp23 = self.connection.context === tmp(5920).MediaEngineContextTypes.DEFAULT;
     if (tmp23) {
       tmp23 = null != transport.camera;
     }
     self.cameraDuration.value = tmp23;
-    let tmp25 = self.connection.context === tmp(5918).MediaEngineContextTypes.DEFAULT;
+    let tmp25 = self.connection.context === tmp(5920).MediaEngineContextTypes.DEFAULT;
     if (tmp25) {
       tmp25 = null != transport.camera;
     }
@@ -1426,7 +1426,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       tmp25 = self.callUserIdsCount > 1;
     }
     self.cameraOpportunityDuration.value = tmp25;
-    let tmp27 = self.connection.context === tmp(5918).MediaEngineContextTypes.DEFAULT;
+    let tmp27 = self.connection.context === tmp(5920).MediaEngineContextTypes.DEFAULT;
     if (tmp27) {
       tmp27 = null != transport.camera;
     }
@@ -1437,7 +1437,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     if (tmp29) {
       self.cameraToggles = self.cameraToggles + 1;
     }
-    let liveBackgroundEnabled = self.connection.context === tmp(5918).MediaEngineContextTypes.DEFAULT;
+    let liveBackgroundEnabled = self.connection.context === tmp(5920).MediaEngineContextTypes.DEFAULT;
     if (liveBackgroundEnabled) {
       liveBackgroundEnabled = null != transport.camera;
     }
@@ -1769,7 +1769,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       } else {
         self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;
       }
-      tmpResult = tmp(5006);
+      tmpResult = tmp(5008);
     }
   } else {
     const receiverReports2 = receiverReports.receiverReports;

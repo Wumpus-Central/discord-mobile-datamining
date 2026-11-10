@@ -1,8 +1,8 @@
-// === Module 11023: conjureManagedCopyConnection ===
+// === Module 11032: conjureManagedCopyConnection ===
 
-// Module 11023 (conjureManagedCopyConnection)
+// Module 11032 (conjureManagedCopyConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10995 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/managed_copy/conjureManagedCopyConnection.tsx");

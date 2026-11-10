@@ -1,7 +1,7 @@
-// === Module 12395: openConjureRemoveAppAlert ===
+// === Module 12404: openConjureRemoveAppAlert ===
 
-// Module 12395 (openConjureRemoveAppAlert)
-import useAlertStore from "useAlertStore" /* 6092 */;
+// Module 12404 (openConjureRemoveAppAlert)
+import useAlertStore from "useAlertStore" /* 6094 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -42,13 +42,13 @@ function ConjureRemoveAppAlert(action) {
             let tmp37 = tmp3;
             let deleteProject = dependencyMap;
             if (_slicedToArray) {
-              tmp37 = tmp37(10996);
+              tmp37 = tmp37(11005);
               deleteProject = tmp37.deleteProject;
               let deleteProjectResult = deleteProject(user.id);
             } else {
               const obj5 = { alsoRemovePreviewBot };
-              deleteProjectResult = tmp37(11075).unpublishProject(user.id, obj5);
-              const tmp37Result = tmp37(11075);
+              deleteProjectResult = tmp37(11084).unpublishProject(user.id, obj5);
+              const tmp37Result = tmp37(11084);
             }
             deleteProjectResult.catch(() => null);
             dependencyMap = 1;
@@ -69,7 +69,7 @@ function ConjureRemoveAppAlert(action) {
           }
           if (true !== ok) {
             const intl = tmp3(1113).intl;
-            const tmp23 = tmp2(4026);
+            const tmp23 = tmp2(4028);
             if (closure_129_4) {
               let PJ2Fkn = tmp23["0XDHob"];
             } else {
@@ -83,10 +83,10 @@ function ConjureRemoveAppAlert(action) {
           } else {
             if (!closure_129_4) {
               const obj7 = { text: null, variant: "success" };
-              const obj = tmp2(5837);
-              obj7.text = tmp3(12384).conjureRemoveAppSuccess(closure_129_1);
+              const obj = tmp2(5839);
+              obj7.text = tmp3(12393).conjureRemoveAppSuccess(closure_129_1);
               obj.open("CONJURE_APP_REMOVED", obj7);
-              const obj3 = tmp3(12384);
+              const obj3 = tmp3(12393);
             }
             c3 = 3;
             return { value: "HermesInternal", done: null };
@@ -200,7 +200,7 @@ function ConjureRemoveAppAlert(action) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_9 = createStyles.createStyles({ title: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/openConjureRemoveAppAlert.tsx");

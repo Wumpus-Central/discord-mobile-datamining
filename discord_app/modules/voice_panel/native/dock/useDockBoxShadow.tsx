@@ -1,7 +1,7 @@
-// === Module 19605: useDockBoxShadow ===
+// === Module 19634: useDockBoxShadow ===
 
-// Module 19605 (useDockBoxShadow)
-import ColorUtils from "ColorUtils" /* 5137 */;
+// Module 19634 (useDockBoxShadow)
+import ColorUtils from "ColorUtils" /* 5139 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

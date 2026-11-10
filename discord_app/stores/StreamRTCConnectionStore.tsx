@@ -1,20 +1,20 @@
-// === Module 7962: StreamRTCConnectionStore ===
+// === Module 7966: StreamRTCConnectionStore ===
 
-// Module 7962 (StreamRTCConnectionStore)
+// Module 7966 (StreamRTCConnectionStore)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5918 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6772 */;
-import canSpectateDefault from "canSpectate" /* 6810 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7959 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 7963 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5920 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6774 */;
+import canSpectateDefault from "canSpectate" /* 6813 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7963 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 7967 */;
 import RunningGameStore from "RunningGameStore" /* 2137 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import PresenceStore from "PresenceStore" /* 5890 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5893 */;
+import PresenceStore from "PresenceStore" /* 5892 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 const StreamRTCConnectionDefault = StreamRTCConnection;
@@ -22,7 +22,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1072);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6770).StreamTypes;
+const StreamTypes = fn(6772).StreamTypes;
 let dependencyMap = {};
 dependencyMap = {};
 let closure_13 = {};

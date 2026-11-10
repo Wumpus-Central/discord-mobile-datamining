@@ -1,20 +1,20 @@
-// === Module 19091: MediaGridItem ===
+// === Module 19120: MediaGridItem ===
 
-// Module 19091 (MediaGridItem)
+// Module 19120 (MediaGridItem)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty, useWindowDimensions: closure_6 } = get_ActivityIndicator);
-const SearchMediaTypes = fn(9917).SearchMediaTypes;
+const SearchMediaTypes = fn(9923).SearchMediaTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj = { container: { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, avatar: { position: "absolute", top: 8, right: 8 }, card: { padding: 0 } };
 let closure_11 = createStyles.createStyles(obj);
 let closure_12 = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
@@ -96,7 +96,7 @@ export default noop.memo(function MediaGridItem(media) {
     obj5.scale = scale;
     obj5.containerHeight = size;
     obj5.containerWidth = size;
-    tmp18Result = closure_9(tmp3(19092).SearchEmbedMediaImage, obj5);
+    tmp18Result = closure_9(tmp3(19121).SearchEmbedMediaImage, obj5);
   }
   const items8 = [tmp18Result, , , , ];
   let tmp18Result5 = media.type === SearchMediaTypes.ATTACHMENT;
@@ -107,13 +107,13 @@ export default noop.memo(function MediaGridItem(media) {
     obj6.scale = scale;
     obj6.containerHeight = size;
     obj6.containerWidth = size;
-    tmp18Result5 = closure_9(tmp3(19092).SearchAttachmentMediaImage, obj6);
+    tmp18Result5 = closure_9(tmp3(19121).SearchAttachmentMediaImage, obj6);
   }
   items8[1] = tmp18Result5;
   let tmp18Result6 = media.type === SearchMediaTypes.AUDIO;
   if (tmp18Result6) {
     const size1 = { height: size, width: size };
-    tmp18Result6 = closure_9(tmp3(19092).SearchSoundMediaImage, size1);
+    tmp18Result6 = closure_9(tmp3(19121).SearchSoundMediaImage, size1);
   }
   items8[2] = tmp18Result6;
   let tmp18Result7 = media.type === SearchMediaTypes.COMPONENT;
@@ -125,7 +125,7 @@ export default noop.memo(function MediaGridItem(media) {
     obj9.scale = scale;
     obj9.containerHeight = size;
     obj9.containerWidth = size;
-    tmp18Result7 = closure_9(tmp3(19092).SearchComponentMediaImage, obj9);
+    tmp18Result7 = closure_9(tmp3(19121).SearchComponentMediaImage, obj9);
   }
   items8[3] = tmp18Result7;
   let tmp18Result8 = null != memo;
@@ -134,7 +134,7 @@ export default noop.memo(function MediaGridItem(media) {
     const obj12 = { shadow: "low", style: tmp.card, children: null };
     const obj13 = { source: memo, size: tmp3(1187).AvatarSizes.XSMALL, avatarDecoration: media.author.avatarDecoration };
     obj12.children = closure_9(tmp3(1187).Avatar, obj13);
-    obj11.children = closure_9(tmp3(7040).Card, obj12);
+    obj11.children = closure_9(tmp3(7043).Card, obj12);
     tmp18Result8 = closure_9(stateFromStores, obj11);
   }
   items8[4] = tmp18Result8;

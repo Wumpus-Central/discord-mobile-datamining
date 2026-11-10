@@ -1,12 +1,12 @@
-// === Module 6822: ButtonGroup ===
+// === Module 6825: ButtonGroup ===
 
-// Module 6822 (ButtonGroup)
-import Stack_Stack from "Stack/Stack" /* 6159 */;
+// Module 6825 (ButtonGroup)
+import Stack_Stack from "Stack/Stack" /* 6161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_3 = createStyles.createStyles({ container: { paddingVertical: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/ButtonGroup/native/ButtonGroup.native.tsx");

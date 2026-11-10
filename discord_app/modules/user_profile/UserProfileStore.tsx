@@ -1,27 +1,27 @@
-// === Module 7848: UserProfileStore ===
+// === Module 7852: UserProfileStore ===
 
-// Module 7848 (UserProfileStore)
+// Module 7852 (UserProfileStore)
 import applyDefault from "apply" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
-import Timers from "Timers" /* 4984 */;
-import WidgetType from "WidgetType" /* 7849 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7850 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7853 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7854 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7856 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7857 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7858 */;
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7859 */;
+import Timers from "Timers" /* 4986 */;
+import WidgetType from "WidgetType" /* 7853 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7854 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7857 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7858 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7860 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7861 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7862 */;
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7863 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5011 */;
+import GuildStore from "GuildStore" /* 5013 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
-import PresenceStore from "PresenceStore" /* 5890 */;
-import SortedGuildStore from "SortedGuildStore" /* 6827 */;
+import PresenceStore from "PresenceStore" /* 5892 */;
+import SortedGuildStore from "SortedGuildStore" /* 6830 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {

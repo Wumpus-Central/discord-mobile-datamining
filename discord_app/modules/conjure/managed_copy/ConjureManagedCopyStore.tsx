@@ -1,6 +1,6 @@
-// === Module 10984: ConjureManagedCopyStore ===
+// === Module 10993: ConjureManagedCopyStore ===
 
-// Module 10984 (ConjureManagedCopyStore)
+// Module 10993 (ConjureManagedCopyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

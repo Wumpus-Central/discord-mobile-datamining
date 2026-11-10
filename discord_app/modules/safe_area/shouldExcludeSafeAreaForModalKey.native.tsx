@@ -1,14 +1,15 @@
-// === Module 19331: shouldExcludeSafeAreaForModalKey ===
+// === Module 19360: shouldExcludeSafeAreaForModalKey ===
 
-// Module 19331 (shouldExcludeSafeAreaForModalKey)
+// Module 19360 (shouldExcludeSafeAreaForModalKey)
 import Constants2 from "Constants" /* 1072 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8008 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 9013 */;
-import Constants from "Constants" /* 11036 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8012 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 9019 */;
+import CheckpointModalConstants from "CheckpointModalConstants" /* 13683 */;
+import Constants from "Constants" /* 11045 */;
 import size from "module_2" /* 2 */;
 
 ({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } = Constants);
-const items = [Constants2.MEDIA_MODAL_KEY, OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY];
+const items = [CheckpointModalConstants.CHECKPOINT_MODAL_KEY, Constants2.MEDIA_MODAL_KEY, OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY];
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx");
 

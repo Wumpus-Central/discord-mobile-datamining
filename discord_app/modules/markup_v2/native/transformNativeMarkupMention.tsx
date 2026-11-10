@@ -1,11 +1,11 @@
-// === Module 8672: transformNativeMarkupMention ===
+// === Module 8678: transformNativeMarkupMention ===
 
-// Module 8672 (transformNativeMarkupMention)
-import MarkupTypes from "MarkupTypes" /* 6164 */;
-import MarkupRules from "MarkupRules" /* 6166 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 6176 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 8673 */;
-import StaticMentionRoutes from "StaticMentionRoutes" /* 8754 */;
+// Module 8678 (transformNativeMarkupMention)
+import MarkupTypes from "MarkupTypes" /* 6166 */;
+import MarkupRules from "MarkupRules" /* 6168 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 6178 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 8679 */;
+import StaticMentionRoutes from "StaticMentionRoutes" /* 8760 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");

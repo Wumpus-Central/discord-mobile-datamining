@@ -1,9 +1,9 @@
-// === Module 15124: getActivityChannelId ===
+// === Module 15150: getActivityChannelId ===
 
-// Module 15124 (getActivityChannelId)
-import ChannelRecord from "ChannelRecord" /* 4993 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import VoiceStateStore from "VoiceStateStore" /* 5803 */;
+// Module 15150 (getActivityChannelId)
+import ChannelRecord from "ChannelRecord" /* 4995 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import VoiceStateStore from "VoiceStateStore" /* 5805 */;
 import size from "module_2" /* 2 */;
 
 const isTextChannel = ChannelRecord.isTextChannel;

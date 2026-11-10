@@ -1,23 +1,23 @@
-// === Module 16756: ProfileCustomizationSettingScreen ===
+// === Module 16783: ProfileCustomizationSettingScreen ===
 
-// Module 16756 (ProfileCustomizationSettingScreen)
+// Module 16783 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5889 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7214 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11548 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11665 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12552 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16757 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16879 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5891 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7217 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11557 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11674 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12565 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16784 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11601 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8802 */;
-import WidgetStore from "WidgetStore" /* 12550 */;
-import SortedGuildStore from "SortedGuildStore" /* 6827 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11610 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8808 */;
+import WidgetStore from "WidgetStore" /* 12563 */;
+import SortedGuildStore from "SortedGuildStore" /* 6830 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { container: { height: "100%" }, controls: { paddingTop: 4 }, page: { flex: 1 }, profileSelector: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_20 = createStyles.createStyles(obj);
 let items = [
@@ -76,7 +76,7 @@ let obj4 = {
   subSection: ProfileCustomizationSubsection.USER_PROFILE
 };
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx");
 
 export default noop.memo(function ProfileCustomizationSettingScreen() {
   let tmp = token;
@@ -114,7 +114,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
   if (params2 != null) {
     initialTab = params2.initialTab;
   }
-  const field = handleSubmit2.useField("subsection");
+  const field = hasUnsavedChanges.useField("subsection");
   _require = { autoFocusElement, initialTab };
   const mapped = items.map((renderLabel) => {
     ({ id, renderPage } = renderLabel);
@@ -123,7 +123,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
   const tmp4Result6 = require("useSettingNavigationRoute");
   const obj6 = { items: mapped, pageWidth: num, defaultIndex: null, onPageChange: null, onPageChangeStart: null };
   let num2 = 0;
-  if (field === onSave.GUILD) {
+  if (field === id.GUILD) {
     num2 = 1;
   }
   obj6.defaultIndex = num2;
@@ -132,7 +132,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
     if (first == null) {
       first = 5;
     }
-    handleSubmit2.setState({ subsection: first.subSection });
+    hasUnsavedChanges.setState({ subsection: first.subSection });
   };
   obj6.onPageChangeStart = function onPageChangeStart(arg0, onContinue) {
     return maybeShowUnsavedChangesAlertDefault({ location: "ProfileCustomizationSettingScreen", hasUnsavedChanges, onReset: resetAllPendingChanges, onContinue, onSave });
@@ -143,29 +143,28 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
   const tmp21 = field(tmp20, closure_3);
   noop = tmp21;
   const tmp22 = tmp(obj[29])();
-  guild = tmp22.guild;
-  handleSubmit2 = tmp22.handleSubmit;
+  ({ guild, handleSubmit: handleSubmit2 } = tmp22);
   const tmp4Result7 = require("SegmentedControlState");
   const tmp23 = field(tmp22, closure_4);
-  items = [hasUnsavedChanges, hasInvalidWidgetChanges];
+  items = [hasInvalidWidgetChanges, closure_12];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
-    let hasUnsavedChangesResult = hasInvalidWidgetChanges.hasUnsavedChanges();
+    let hasUnsavedChangesResult = closure_12.hasUnsavedChanges();
     let showNoticeResult = hasUnsavedChangesResult;
     if (!hasUnsavedChangesResult) {
-      showNoticeResult = hasUnsavedChanges.showNotice();
+      showNoticeResult = hasInvalidWidgetChanges.showNotice();
     }
     const obj2 = { hasUnsavedChanges: showNoticeResult, hasInvalidWidgetChanges: null };
     if (hasUnsavedChangesResult) {
-      hasUnsavedChangesResult = !hasInvalidWidgetChanges.canSaveChanges();
+      hasUnsavedChangesResult = !closure_12.canSaveChanges();
     }
     obj2.hasInvalidWidgetChanges = hasUnsavedChangesResult;
     return obj2;
   });
   hasUnsavedChanges = stateFromStoresObject.hasUnsavedChanges;
   hasInvalidWidgetChanges = stateFromStoresObject.hasInvalidWidgetChanges;
-  const flattenedGuildIds = tmp25;
+  closure_12 = tmp25;
   const items1 = [field, handleSubmit, handleSubmit2];
-  onSave = obj5.useCallback(() => {
+  const onSave = obj5.useCallback(() => {
     if (field === ProfileCustomizationSubsection.GUILD) {
       let tmp2 = handleSubmit2();
     } else {
@@ -178,29 +177,34 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, { settings_type: "user", subsection: field, destination_pane: constants2.SETTINGS_CUSTOMIZE_PROFILE });
   }, items2);
   const tmp4Result8 = require("initialize");
-  const items3 = [flattenedGuildIds];
+  const items3 = [onSave];
   const items4 = [hasUnsavedChanges, onSave];
-  const stateFromStores = require("initialize").useStateFromStores(items3, () => flattenedGuildIds.getFlattenedGuildIds().length > 0);
+  const stateFromStores = require("initialize").useStateFromStores(items3, () => callback.getFlattenedGuildIds().length > 0);
   const callback1 = obj5.useCallback((onContinue) => maybeShowUnsavedChangesAlertDefault({ location: "ProfileCustomizationSettingScreen", hasUnsavedChanges, onReset: resetAllPendingChanges, onContinue, onSave }), items4);
   const callback2 = obj5.useCallback(() => {
     closure_1_4(true);
     ProfileCustomizationNavigationStore.setState({ subsection: ProfileCustomizationSubsection.USER_PROFILE });
   }, []);
-  const items5 = [guild];
+  id = undefined;
   const callback3 = obj5.useCallback((id) => {
     closure_1_4(true);
     GuildIdentityActionCreators.setCurrentGuild(id.id);
     ProfileCustomizationNavigationStore.setState({ subsection: ProfileCustomizationSubsection.GUILD });
   }, []);
+  if (guild != null) {
+    id = guild.id;
+  }
+  const items5 = [id];
   const effect1 = obj5.useEffect(() => {
-    if (null != guild) {
-      const guildIdentitySettings = GuildIdentityActionCreators.initGuildIdentitySettings(tmp.id);
+    if (null != id) {
+      const guildIdentitySettings = GuildIdentityActionCreators.initGuildIdentitySettings(tmp);
     }
-    return UserSettingsAccountActionCreators.resetAndCloseUserProfileForm;
   }, items5);
   const effect2 = obj5.useEffect(() => () => {
-    handleSubmit2.resetState();
-    token(first[18]).clearPendingWidgets();
+    const result = closure_1_0(7217).resetAndCloseUserProfileForm();
+    hasUnsavedChanges.resetState();
+    const obj = closure_1_0(7217);
+    token(12565).clearPendingWidgets();
   }, []);
   const items6 = [token, nativeStackNavigation, isMobileWidgetEditingEnabled, hasUnsavedChanges, hasInvalidWidgetChanges, tmp21.isSubmitting || tmp23.isSubmitting, onSave];
   const layoutEffect = obj5.useLayoutEffect(() => {
@@ -217,7 +221,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
       obj4 = {};
     }
     const merged = Object.assign(obj4);
-    obj.headerRight = closure_13 ? (() => closure_1_17(closure_1_0(first[34]).HeaderSubmittingIndicator, {})) : (() => {
+    obj.headerRight = closure_12 ? (() => closure_1_17(closure_1_0(first[34]).HeaderSubmittingIndicator, {})) : (() => {
       let obj = { text: null, disabled: null, onPress: null };
       const intl = closure_0(first[14]).intl;
       obj.text = intl.string(closure_0(first[14]).t["R3BPH+"]);
@@ -314,58 +318,58 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
       nativeStackNavigation.goBack();
     }
   }, items7);
-  let tmp39Result = null;
+  let tmp40Result = null;
   if (stateFromStores) {
     const obj7 = { theme: obj4.useThemeContext().theme, children: null };
     const obj8 = { style: tmp3.profileSelector, children: null };
-    let tmp42 = null;
-    if (tmp35) {
-      tmp42 = guild;
+    let tmp43 = null;
+    if (tmp36) {
+      tmp43 = guild;
     }
     const obj9 = { children: null };
-    const obj10 = { guild: tmp42, onBeforeOpen: callback1, onSelectMainProfile: callback2, onSelectGuild: callback3 };
+    const obj10 = { guild: tmp43, onBeforeOpen: callback1, onSelectMainProfile: callback2, onSelectGuild: callback3 };
     obj8.children = closure_17(tmp(obj[38]), obj10);
-    obj9.children = closure_17(guild, obj8);
+    obj9.children = closure_17(handleSubmit2, obj8);
     obj7.children = closure_17(tmp4(obj[37]).DisableCustomTheme, obj9);
-    tmp39Result = closure_17(tmp4(obj[22]).ThemeContextProvider, obj7);
+    tmp40Result = closure_17(tmp4(obj[22]).ThemeContextProvider, obj7);
     const tmpResult = tmp(obj[38]);
   }
   const obj11 = { style: tmp3.container, ref, onLayout, children: null };
   const obj12 = { style: null, children: null };
   if (isMobileWidgetEditingEnabled) {
     obj12.style = tmp3.page;
-    if (tmp35) {
+    if (tmp36) {
       tmp = tmp(obj[16]);
-      obj = { header: tmp39Result, showGuildSelector: false };
-      let tmp43Result = closure_17(tmp, obj);
+      obj = { header: tmp40Result, showGuildSelector: false };
+      let tmp44Result = closure_17(tmp, obj);
     } else {
-      const obj13 = { header: tmp39Result, autoFocusElement: null, initialTab: null };
-      let tmp48;
-      if (!tmp11) {
-        tmp48 = autoFocusElement;
-      }
-      obj13.autoFocusElement = tmp48;
+      const obj13 = { header: tmp40Result, autoFocusElement: null, initialTab: null };
       let tmp49;
       if (!tmp11) {
-        tmp49 = initialTab;
+        tmp49 = autoFocusElement;
       }
-      obj13.initialTab = tmp49;
-      tmp43Result = closure_17(tmp(obj[15]), obj13);
+      obj13.autoFocusElement = tmp49;
+      let tmp50;
+      if (!tmp11) {
+        tmp50 = initialTab;
+      }
+      obj13.initialTab = tmp50;
+      tmp44Result = closure_17(tmp(obj[15]), obj13);
       const tmpResult2 = tmp(obj[15]);
     }
-    obj12.children = tmp43Result;
-    closure_17(tmp44, obj12);
+    obj12.children = tmp44Result;
+    closure_17(handleSubmit2, obj12);
   } else {
     const obj14 = { children: null };
     obj12.style = tmp3.controls;
     const obj15 = { state: segmentedControlState };
     obj12.children = closure_17(tmp4(obj[39]).Tabs, obj15);
-    const items8 = [closure_17(tmp44, obj12), ];
+    const items8 = [closure_17(handleSubmit2, obj12), ];
     const obj16 = { state: segmentedControlState };
     items8[1] = closure_17(tmp4(obj[40]).SegmentedControlPages, obj16);
     obj14.children = items8;
     obj11.children = closure_19(closure_18, obj14);
-    return closure_17(tmp44, obj11);
+    return closure_17(handleSubmit2, obj11);
   }
   const tmp4Result10 = require("Link");
 });

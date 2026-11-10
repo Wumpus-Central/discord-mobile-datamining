@@ -1,16 +1,16 @@
-// === Module 9376: GuildProfileActionSheet ===
+// === Module 9382: GuildProfileActionSheet ===
 
-// Module 9376 (GuildProfileActionSheet)
+// Module 9382 (GuildProfileActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import useThemeDefault from "useTheme" /* 5369 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5388 */;
-import BottomSheetModal from "BottomSheetModal" /* 5392 */;
-import LinearGradientDefault from "LinearGradient" /* 5715 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5723 */;
-import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 9377 */;
-import GuildProfileCreateTagUpsellDefault from "GuildProfileCreateTagUpsell" /* 14967 */;
-import GuildProfileCTADefault from "GuildProfileCTA" /* 14973 */;
+import useThemeDefault from "useTheme" /* 5371 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5390 */;
+import BottomSheetModal from "BottomSheetModal" /* 5394 */;
+import LinearGradientDefault from "LinearGradient" /* 5717 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5725 */;
+import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 9383 */;
+import GuildProfileCreateTagUpsellDefault from "GuildProfileCreateTagUpsell" /* 14993 */;
+import GuildProfileCTADefault from "GuildProfileCTA" /* 14999 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { footerContainer: { paddingHorizontal: 16, paddingVertical: 40 }, footerStack: { gap: 8 }, scrollView: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,12 +32,12 @@ export default function GuildProfileActionSheet(guildId) {
   let colors;
   noop = colors();
   const tmp = useThemeDefault();
-  const backgroundColor = guildId(5724).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp);
-  let obj = guildId(5724);
-  const bottomSheetRef = guildId(8812).useBottomSheetRef();
+  const backgroundColor = guildId(5726).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp);
+  let obj = guildId(5726);
+  const bottomSheetRef = guildId(8818).useBottomSheetRef();
   ({ bottomSheetRef: c5, bottomSheetClose } = bottomSheetRef);
-  const obj2 = guildId(8812);
-  const token = guildId(5724).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  const obj2 = guildId(8818);
+  const token = guildId(5726).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   items = [token];
   colors = noop.useMemo(() => {
     const obj = _modDef671(token);

@@ -1,22 +1,22 @@
-// === Module 17510: QuestDockPlayableHeader ===
+// === Module 17537: QuestDockPlayableHeader ===
 
-// Module 17510 (QuestDockPlayableHeader)
+// Module 17537 (QuestDockPlayableHeader)
 import nativeDefault from "native" /* 575 */;
-import QuestTypes from "QuestTypes" /* 6839 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7948 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17409 */;
+import QuestTypes from "QuestTypes" /* 6842 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7952 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17436 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const QuestDockMode = fn(6836).QuestDockMode;
-const QuestDockConstants = fn(17393);
+const QuestDockMode = fn(6839).QuestDockMode;
+const QuestDockConstants = fn(17420);
 ({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_6 } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { wrapper: { alignItems: "center", alignSelf: "stretch", display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_12, justifyContent: "flex-start", flex: 1, paddingLeft: nativeDefault.space.PX_12 - QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT }, productIcon: null, crossFadeWrapper: null, copy: null, promotedLabel: null, smokeArt: null, smokeArtFade: null, title: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm, flexGrow: 0, flexShrink: 0, height: PX_32, width: PX_32 };
 obj.productIcon = size;

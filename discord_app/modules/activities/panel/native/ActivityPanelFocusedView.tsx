@@ -1,17 +1,17 @@
-// === Module 19509: ActivityPanelFocusedView ===
+// === Module 19538: ActivityPanelFocusedView ===
 
-// Module 19509 (ActivityPanelFocusedView)
+// Module 19538 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11957 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12238 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19502 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11966 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12247 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19531 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5141 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4988 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
 
 const require = fn;
 class BaseActivityPanelFocusedView {
@@ -340,17 +340,17 @@ class BaseActivityPanelFocusedView {
     return tmp48(tmp(tmp2[19]).ThemeContextProvider, obj1);
   }
 }
-const ActivityPanelConstants = fn(5781);
+const ActivityPanelConstants = fn(5783);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: metroImportDefault, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8, ActivityPanelModes: closure_9 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(19370);
+const ActivityPanelNativeConstants = fn(19399);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_10, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: closure_12 } = ActivityPanelNativeConstants);
 let ThemeTypes = fn(1072).ThemeTypes;
-const IS_IOS = fn(11363).IS_IOS;
-const ActivityLayoutMode = fn(11855).ActivityLayoutMode;
+const IS_IOS = fn(11372).IS_IOS;
+const ActivityLayoutMode = fn(11864).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = { duration: 300 };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { wrapper: { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, shade: null };
 let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

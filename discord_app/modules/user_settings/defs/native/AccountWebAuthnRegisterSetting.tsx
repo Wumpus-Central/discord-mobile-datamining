@@ -1,10 +1,10 @@
-// === Module 17004: AccountWebAuthnRegisterSetting ===
+// === Module 17031: AccountWebAuthnRegisterSetting ===
 
-// Module 17004 (AccountWebAuthnRegisterSetting)
+// Module 17031 (AccountWebAuthnRegisterSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import SettingsConstants from "SettingsConstants" /* 8503 */;
-import SettingBuilders from "SettingBuilders" /* 11685 */;
+import SettingsConstants from "SettingsConstants" /* 8507 */;
+import SettingBuilders from "SettingBuilders" /* 11694 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

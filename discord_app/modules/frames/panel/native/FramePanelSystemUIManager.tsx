@@ -1,8 +1,8 @@
-// === Module 19532: FramePanelSystemUIManager ===
+// === Module 19561: FramePanelSystemUIManager ===
 
-// Module 19532 (FramePanelSystemUIManager)
-import ActivityPanelSystemUIManager from "ActivityPanelSystemUIManager" /* 19523 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19526 */;
+// Module 19561 (FramePanelSystemUIManager)
+import ActivityPanelSystemUIManager from "ActivityPanelSystemUIManager" /* 19552 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19555 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

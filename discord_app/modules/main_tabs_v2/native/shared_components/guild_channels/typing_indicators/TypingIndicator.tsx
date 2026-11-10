@@ -1,16 +1,16 @@
-// === Module 18480: typing_indicators/TypingIndicator ===
+// === Module 18509: typing_indicators/TypingIndicator ===
 
-// Module 18480 (typing_indicators/TypingIndicator)
+// Module 18509 (typing_indicators/TypingIndicator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import shared from "shared" /* 5147 */;
-import useThemeDefault from "useTheme" /* 5369 */;
+import shared from "shared" /* 5149 */;
+import useThemeDefault from "useTheme" /* 5371 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { ellipsisWrapper: { zIndex: 10, borderRadius: 17, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, ellipsis: null, ellipsisDot: null };
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;

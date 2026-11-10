@@ -1,9 +1,9 @@
-// === Module 10220: TabBar ===
+// === Module 10226: TabBar ===
 
-// Module 10220 (TabBar)
+// Module 10226 (TabBar)
 import nativeDefault from "native" /* 575 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5420 */;
-import _mod7357 from "module_7357" /* 7357 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5422 */;
+import _mod7360 from "module_7360" /* 7360 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ function Tab(index) {
   ({ children, tabKey, tabStyle, tabStyleActive, tabStyleSelected } = index);
   const tmp = closure_8();
   items = [tabKey];
-  [tmp3, tmp4] = _mod7357.useRecyclingState(false, items);
+  [tmp3, tmp4] = _mod7360.useRecyclingState(false, items);
   c2 = tmp4;
   const items1 = [tmp4];
   const items2 = [tmp4];
@@ -59,7 +59,7 @@ function TabBarScrollView(ref) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { tab: { flexBasis: "auto", flexShrink: 0, alignItems: "center", justifyContent: "center", marginBottom: 1, marginHorizontal: 1, padding: 10, borderBottomWidth: 2, borderBottomColor: "transparent" }, tabActive: { backgroundColor: "rgba(0,0,0,0.1)" }, tabSelected: { borderBottomColor: nativeDefault.unsafe_rawColors.BRAND_600 }, container: { flex: 0 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

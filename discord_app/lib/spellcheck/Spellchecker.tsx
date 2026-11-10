@@ -1,14 +1,14 @@
-// === Module 6989: Spellchecker ===
+// === Module 6990: Spellchecker ===
 
-// Module 6989 (Spellchecker)
+// Module 6990 (Spellchecker)
 import LoggerDefault from "Logger" /* 3 */;
 import DOMUtils from "DOMUtils" /* 2153 */;
-import fallbackLocalesDefault from "fallbackLocales" /* 6990 */;
-import _mod6991 from "module_6991" /* 6991 */;
+import fallbackLocalesDefault from "fallbackLocales" /* 6991 */;
+import _mod6992 from "module_6992" /* 6992 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import DiscordNative from "DiscordNative" /* 4951 */;
+import DiscordNative from "DiscordNative" /* 4953 */;
 import apply from "apply" /* 12 */;
 
 require = fn;
@@ -59,7 +59,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod6991;
+      obj = _mod6992;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -193,8 +193,12 @@ prototype["getCorrectionsForMisspelling"] = function getCorrectionsForMisspellin
 prototype["getCachedMisspelling"] = function getCachedMisspelling() {
   return { misspelledWord: this.misspelledWord, corrections: this.corrections };
 };
-prototype["replaceMisspelling"] = function replaceMisspelling(arg0) {
-  spellCheck.replaceMisspelling(arg0);
+prototype["clearCachedMisspelling"] = function clearCachedMisspelling() {
+  this.misspelledWord = "";
+  this.corrections = [];
+};
+prototype["replaceMisspelling"] = function replaceMisspelling(arg0, arg1) {
+  spellCheck.replaceMisspelling(arg0, arg1);
 };
 prototype["applyLocale"] = function applyLocale(mapped1) {
   closure_0 = mapped1;
@@ -222,7 +226,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod6991.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod6992.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {

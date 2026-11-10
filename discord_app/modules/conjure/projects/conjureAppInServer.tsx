@@ -1,13 +1,13 @@
-// === Module 11016: conjureAppInServer ===
+// === Module 11025: conjureAppInServer ===
 
-// Module 11016 (conjureAppInServer)
-import ConjureUtils from "ConjureUtils" /* 7483 */;
+// Module 11025 (conjureAppInServer)
+import ConjureUtils from "ConjureUtils" /* 7486 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
-import UserProfileStore from "UserProfileStore" /* 7848 */;
-import GuildChannelStore from "GuildChannelStore" /* 5070 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import PermissionStore from "PermissionStore" /* 5072 */;
+import UserProfileStore from "UserProfileStore" /* 7852 */;
+import GuildChannelStore from "GuildChannelStore" /* 5072 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import PermissionStore from "PermissionStore" /* 5074 */;
 
 require = fn;
 function conjureProductionBotUserId(project) {
@@ -143,7 +143,7 @@ let closure_12 = async function _fetchConjureAppInGuild() {
   }
   return hasItem;
 };
-let closure_6 = fn(5070).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_6 = fn(5072).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureAppInServer.tsx");
@@ -248,7 +248,7 @@ export function readConjureAppServerPresence(install_scope) {
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(6900);
+              obj2 = application_id(6903);
             }
             str2 = tmp7;
           }

@@ -1,22 +1,22 @@
-// === Module 18525: useChannelListSpecs ===
+// === Module 18554: useChannelListSpecs ===
 
-// Module 18525 (useChannelListSpecs)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12614 */;
+// Module 18554 (useChannelListSpecs)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12627 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const RedesignChannelListConstants = fn(5882);
+const RedesignChannelListConstants = fn(5884);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_4, BANNER_MAX_HEIGHT_PERCENTAGE: hasOwnProperty } = RedesignChannelListConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default function useChannelListSpecs(banner) {
-  redesignGuildHeaderHeight = redesignGuildHeaderHeight(18526).useRedesignGuildHeaderHeight(banner);
+  redesignGuildHeaderHeight = redesignGuildHeaderHeight(18555).useRedesignGuildHeaderHeight(banner);
   height = height(1493)({ ignoreKeyboard: true }).height;
-  const tmp2 = height(18414)();
+  const tmp2 = height(18443)();
   dependencyMap = tmp2;
-  const obj = redesignGuildHeaderHeight(18526);
-  const fontScale = redesignGuildHeaderHeight(5766).useFontScale();
+  const obj = redesignGuildHeaderHeight(18555);
+  const fontScale = redesignGuildHeaderHeight(5768).useFontScale();
   closure_4 = tmp4;
   const top = height(1627)().top;
   items = [null != banner.banner, tmp2, height, redesignGuildHeaderHeight, top, fontScale];

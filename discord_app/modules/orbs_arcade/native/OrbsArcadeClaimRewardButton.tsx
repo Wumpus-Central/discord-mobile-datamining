@@ -1,12 +1,12 @@
-// === Module 17356: OrbsArcadeClaimRewardButton ===
+// === Module 17383: OrbsArcadeClaimRewardButton ===
 
-// Module 17356 (OrbsArcadeClaimRewardButton)
+// Module 17383 (OrbsArcadeClaimRewardButton)
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5837 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17348 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5839 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17375 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17341 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17368 */;
 
 require = fn;
 function showOrbsArcadeClaimRewardsError() {
@@ -61,12 +61,12 @@ export default function OrbsArcadeClaimRewardButton(game) {
             let orbsArcadeClaimableRewards;
             let gameState;
             closure_128_3 = undefined;
-            orbsArcadeClaimableRewards = tmp5(17348).getOrbsArcadeClaimableRewards(game.rewards, gameStateForGame.getGameStateForGame(game.id));
+            orbsArcadeClaimableRewards = tmp5(17375).getOrbsArcadeClaimableRewards(game.rewards, gameStateForGame.getGameStateForGame(game.id));
             dependencyMap = 1;
-            const obj6 = tmp5(17348);
+            const obj6 = tmp5(17375);
             c3 = 2;
             c4 = 1;
-            const obj4 = { value: tmp5(17347).claimOrbsArcadeRewards(game.id), done: false };
+            const obj4 = { value: tmp5(17374).claimOrbsArcadeRewards(game.id), done: false };
             return obj4;
           }
         } else if (1 === tmp8) {
@@ -98,8 +98,8 @@ export default function OrbsArcadeClaimRewardButton(game) {
               showOrbsArcadeClaimRewardsError();
             }
             if (closure_128_3.length > 0) {
-              const result = tmp5(17357).openOrbsArcadeRewardsCollectedModal(closure_128_3, closure_128_0.entitlements);
-              const obj = tmp5(17357);
+              const result = tmp5(17384).openOrbsArcadeRewardsCollectedModal(closure_128_3, closure_128_0.entitlements);
+              const obj = tmp5(17384);
             }
           }
           c4 = 3;
@@ -125,5 +125,5 @@ export default function OrbsArcadeClaimRewardButton(game) {
   obj3.text = intl.string(WK589K);
   obj3.loading = stateFromStores;
   obj3.onPress = callback;
-  return jsx(game(5758).Button, { grow: true, size: game.size, variant: "primary", text: null, loading: null, onPress: null });
+  return jsx(game(5760).Button, { grow: true, size: game.size, variant: "primary", text: null, loading: null, onPress: null });
 };

@@ -1,25 +1,25 @@
-// === Module 5919: destroy ===
+// === Module 5921: destroy ===
 
-// Module 5919 (destroy)
+// Module 5921 (destroy)
 import formatDefault from "format" /* 1353 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import inject from "inject" /* 2132 */;
-import VideoDefault from "Video" /* 5922 */;
-import CameraDefault from "Camera" /* 5926 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 5927 */;
-import pollConnectionStatsDefault from "pollConnectionStats" /* 5928 */;
-import ConnectionDefault from "Connection" /* 5930 */;
-import Devices from "Devices" /* 5990 */;
+import VideoDefault from "Video" /* 5924 */;
+import CameraDefault from "Camera" /* 5928 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 5929 */;
+import pollConnectionStatsDefault from "pollConnectionStats" /* 5930 */;
+import ConnectionDefault from "Connection" /* 5932 */;
+import Devices from "Devices" /* 5992 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5921 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5923 */;
 
 require = fn;
 let closure_3 = ["id", "useGraphicsCapture", "useGraphicsCaptureApiLevel"];
-let Constants = fn(5897);
+let Constants = fn(5899);
 ({ QUEUE_METRICS_INTERVAL_MS: metroImportDefault, SIDECHAIN_COMPRESSION_MAX_RATIO: closure_8, SIDECHAIN_COMPRESSION_MAX_THRESHOLD: closure_9, SIDECHAIN_COMPRESSION_MIN_RATIO: closure_10, SIDECHAIN_COMPRESSION_MIN_THRESHOLD: closure_11, ProcessPriority: closure_12 } = Constants);
-Constants = fn(5920);
+Constants = fn(5922);
 ({ ClipsRecordingEvent: map1, DEFAULT_VOLUME: closure_14, DeviceTypes: closure_15, DISABLED_DEVICE_ID: closure_16, Features: closure_17, MediaEngineContextTypes: closure_18, NativeFeatures: closure_19, WATCHDOG_TIMEOUT_MS: closure_20 } = Constants);
 class MediaEngineNative extends tmp4 {
   constructor() {
@@ -298,7 +298,7 @@ class MediaEngineNative extends tmp4 {
           } else if (arg0 !== 2) {
             closure_128_1 = value;
             closure_128_1.periodMs = periodMs;
-            closure_129_0.emit(v0(5927).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
+            closure_129_0.emit(v0(5929).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
             const _setTimeout = setTimeout;
             const timerId = setTimeout(closure_129_2, periodMs);
           }
@@ -387,7 +387,7 @@ prototype["supports"] = function supports(arg0) {
           let supportsFeatureResult = inject.supportsFeature(constants5.SIMULCAST);
           if (supportsFeatureResult) {
             supportsFeatureResult = inject.supportsFeature(constants5.SIMULCAST_BUGFIX);
-            const tmp67Result = inject;
+            const tmp70Result = inject;
           }
           return supportsFeatureResult;
         } else if (constants3.RTC_REGION_RANKING === arg0) {
@@ -400,11 +400,11 @@ prototype["supports"] = function supports(arg0) {
           let isDesktopResult = utils_PlatformUtils.isDesktop();
           if (isDesktopResult) {
             isDesktopResult = inject.supportsFeature(constants5.MEDIAPIPE);
-            const tmp53Result = inject;
+            const tmp56Result = inject;
           }
           if (!isDesktopResult) {
             isDesktopResult = inject.supportsFeature(constants5.VIDEO_BACKGROUND_FILTER);
-            const tmp53Result2 = inject;
+            const tmp56Result2 = inject;
           }
           return isDesktopResult;
         } else if (constants3.FIXED_KEYFRAME_INTERVAL === arg0) {
@@ -423,6 +423,8 @@ prototype["supports"] = function supports(arg0) {
           return inject.supportsFeature(constants5.NATIVE_SCREENSHARE_PICKER);
         } else if (constants3.MLS_PAIRWISE_FINGERPRINTS === arg0) {
           return inject.supportsFeature(constants5.MLS_PAIRWISE_FINGERPRINTS);
+        } else if (constants3.DAVE_PAIRWISE_FINGERPRINT === arg0) {
+          return inject.supportsFeature(constants5.DAVE_PAIRWISE_FINGERPRINT);
         } else if (constants3.OFFLOAD_ADM_CONTROLS === arg0) {
           return inject.supportsFeature(constants5.OFFLOAD_ADM_CONTROLS);
         } else if (constants3.VAAPI === arg0) {
@@ -485,10 +487,10 @@ prototype["supports"] = function supports(arg0) {
         }
       }
     }
-    const tmp103 = formatDefault;
+    const tmp106 = formatDefault;
     let family;
-    if (tmp103 != null) {
-      const os = tmp103.os;
+    if (tmp106 != null) {
+      const os = tmp106.os;
       if (os != null) {
         family = os.family;
       }
@@ -496,7 +498,7 @@ prototype["supports"] = function supports(arg0) {
     let isMatch = null != family;
     if (isMatch) {
       isMatch = /^win/i.test(formatDefault.os.family);
-      const obj36 = /^win/i;
+      const obj37 = /^win/i;
     }
     return isMatch;
   }
@@ -514,8 +516,8 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   if (flag) {
     flag = self.supports(constants3.VIDEO);
   }
-  obj3 = self(5930).create(arg0, arg1, videoSupported, flag);
-  obj3.on(obj3(5935).BaseConnectionEvent.Destroy, (arg0) => {
+  obj3 = self(5932).create(arg0, arg1, videoSupported, flag);
+  obj3.on(obj3(5937).BaseConnectionEvent.Destroy, (arg0) => {
     const connections = self.connections;
     connections.delete(arg0);
     if (self.connectionsEmpty()) {
@@ -527,15 +529,15 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
       }
     }
   });
-  obj3.on(obj3(5935).BaseConnectionEvent.Connected, () => {
+  obj3.on(obj3(5937).BaseConnectionEvent.Connected, () => {
     obj3.setVideoBroadcast(self.shouldConnectionBroadcastVideo(obj3));
   });
-  obj3.on(obj3(5935).BaseConnectionEvent.Silence, (arg0) => {
+  obj3.on(obj3(5937).BaseConnectionEvent.Silence, (arg0) => {
     self.emit(MediaEngineEvent.MediaEngineEvent.Silence, arg0);
   });
   let connections = self.connections;
   connections.add(obj3);
-  let obj2 = self(5930);
+  let obj2 = self(5932);
   let HIGH = videoSupported.processPriority;
   if (HIGH == null) {
     HIGH = constants.HIGH;
@@ -549,7 +551,7 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
     }
     const tmpResult2 = tmp(2132);
   }
-  self.emit(obj3(5927).MediaEngineEvent.Connection, obj3);
+  self.emit(obj3(5929).MediaEngineEvent.Connection, obj3);
   return obj3;
 };
 prototype["shouldConnectionBroadcastVideo"] = function shouldConnectionBroadcastVideo(context) {
@@ -1880,7 +1882,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
   const replay = ConnectionDefault.createReplay(arg0, arg1);
   let tmp2 = null;
   if (null != replay) {
-    replay.on(self(5935).BaseConnectionEvent.Destroy, (arg0) => {
+    replay.on(self(5937).BaseConnectionEvent.Destroy, (arg0) => {
       const connections = self.connections;
       connections.delete(arg0);
       if (self.connectionsEmpty()) {
@@ -1890,7 +1892,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
     let connections = self.connections;
     connections.add(replay);
     self(2132).setProcessPriority(constants.HIGH);
-    self.emit(self(5927).MediaEngineEvent.Connection, replay);
+    self.emit(self(5929).MediaEngineEvent.Connection, replay);
     tmp2 = replay;
     const obj3 = self(2132);
   }
@@ -2003,6 +2005,37 @@ prototype["getMLSSigningKey"] = function getMLSSigningKey(arg0, arg1) {
     } else {
       const _Error = Error;
       const error = new Error("NOT_IMPLEMENTED");
+      fn(error);
+    }
+  });
+};
+prototype["generateDavePairwiseFingerprint"] = function generateDavePairwiseFingerprint(arg0, arg1, arg2, arg3, arg4) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  closure_3 = arg3;
+  closure_4 = arg4;
+  return new Promise((arg0, fn) => {
+    closure_0 = arg0;
+    closure_1 = fn;
+    const voiceEngine = inject.getVoiceEngine();
+    if (null != voiceEngine.generateDavePairwiseFingerprint) {
+      const _Uint8Array = Uint8Array;
+      const uint8Array = new Uint8Array(closure_1);
+      const _Uint8Array2 = Uint8Array;
+      const uint8Array1 = new Uint8Array(closure_3);
+      const davePairwiseFingerprint = voiceEngine.generateDavePairwiseFingerprint(closure_0, uint8Array, closure_2, uint8Array1, closure_4, (byteLength) => {
+        if (0 === byteLength.byteLength) {
+          const _Error = Error;
+          const error = new Error("Native pairwise fingerprint generation failed");
+          closure_1(error);
+        } else {
+          closure_0(byteLength);
+        }
+      });
+    } else {
+      let _Error = Error;
+      let error = new Error("NOT_IMPLEMENTED");
       fn(error);
     }
   });

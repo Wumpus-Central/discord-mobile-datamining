@@ -1,22 +1,22 @@
-// === Module 7510: ChannelMemberStore ===
+// === Module 7513: ChannelMemberStore ===
 
-// Module 7510 (ChannelMemberStore)
+// Module 7513 (ChannelMemberStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5077 */;
-import ExperimentStore from "ExperimentStore" /* 5354 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6769 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5079 */;
+import ExperimentStore from "ExperimentStore" /* 5356 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6771 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5358 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
-import GuildRoleStore from "GuildRoleStore" /* 5046 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import PresenceStore from "PresenceStore" /* 5890 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6625 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5360 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildRoleStore from "GuildRoleStore" /* 5048 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import PresenceStore from "PresenceStore" /* 5892 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6627 */;
 import UserStore from "UserStore" /* 1385 */;
 
 let require = fn;

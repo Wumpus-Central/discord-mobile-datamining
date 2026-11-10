@@ -1,6 +1,6 @@
-// === Module 19845: passThrough ===
+// === Module 19874: passThrough ===
 
-// Module 19845 (passThrough)
+// Module 19874 (passThrough)
 import size from "module_2" /* 2 */;
 
 function passThrough(arg0) {
@@ -22,4 +22,7 @@ export function protectConstructors() {
 }
 export function asIterable(items) {
   return items;
+}
+export function captureMessageData() {
+  return (data) => data.data;
 }

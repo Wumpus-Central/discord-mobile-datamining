@@ -1,12 +1,12 @@
-// === Module 18896: GuildDiscoveryCategoryStore ===
+// === Module 18925: GuildDiscoveryCategoryStore ===
 
-// Module 18896 (GuildDiscoveryCategoryStore)
+// Module 18925 (GuildDiscoveryCategoryStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9156 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9162 */;
 import size from "module_2" /* 2 */;
 
 ({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: closure_4, DISCOVERY_ALL_CATEGORIES_ID: hasOwnProperty, DISCOVERY_SIDEBAR_CATEGORIES: closure_6 } = GlobalDiscoveryServersConstants);

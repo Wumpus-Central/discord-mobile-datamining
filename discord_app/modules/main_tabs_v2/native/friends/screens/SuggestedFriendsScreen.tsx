@@ -1,9 +1,9 @@
-// === Module 19211: SuggestedFriendsScreen ===
+// === Module 19240: SuggestedFriendsScreen ===
 
-// Module 19211 (SuggestedFriendsScreen)
+// Module 19240 (SuggestedFriendsScreen)
 import nativeDefault from "native" /* 575 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8821 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 19204 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8827 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 19233 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 const obj2 = { emptyContainer: { flex: 1, paddingTop: nativeDefault.space.PX_32 }, container: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

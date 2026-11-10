@@ -1,12 +1,12 @@
-// === Module 15193: UserProfileWidgetOptionAddButton ===
+// === Module 15219: UserProfileWidgetOptionAddButton ===
 
-// Module 15193 (UserProfileWidgetOptionAddButton)
+// Module 15219 (UserProfileWidgetOptionAddButton)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11634 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15194 */;
-import AddWidgetButtonConfig from "AddWidgetButtonConfig" /* 15195 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11643 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15220 */;
+import AddWidgetButtonConfig from "AddWidgetButtonConfig" /* 15221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,7 +67,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const NUMBER_OF_COLUMNS_BY_VARIANT = { default: 4, compact: 3 };
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj3 = { button: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.md, overflow: "hidden", alignSelf: "stretch" }, coverRow: { flexDirection: "row", justifyContent: "space-between" }, cover: null, coverImage: null, detailsCard: null, textColumn: null, textBar: null, overlay: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.md, overflow: "hidden", alignSelf: "stretch" };
 obj3.cover = { aspectRatio: 0.75, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, overflow: "hidden" };

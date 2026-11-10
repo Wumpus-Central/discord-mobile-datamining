@@ -4,17 +4,17 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import DiscordNativeDefault from "DiscordNative" /* 4951 */;
-import ClipsDefaultSettingsUtils from "ClipsDefaultSettingsUtils" /* 16191 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 16193 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 16195 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 16196 */;
+import DiscordNativeDefault from "DiscordNative" /* 4953 */;
+import ClipsDefaultSettingsUtils from "ClipsDefaultSettingsUtils" /* 16218 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 16220 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 16222 */;
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 16223 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2137 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-let closure_38 = async function _migrateDefaultStorage() {
+let closure_39 = async function _migrateDefaultStorage() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -88,8 +88,8 @@ let closure_38 = async function _migrateDefaultStorage() {
           c3 = 0;
           obj = closure_129_0(closure_129_2[8]);
         }
-        closure_129_37.clipsSettings.storageLocation = closure_128_0;
-        closure_129_42.emitChange();
+        closure_129_38.clipsSettings.storageLocation = closure_128_0;
+        closure_129_43.emitChange();
       }
       c5 = 3;
       const obj7 = { value, done: true };
@@ -241,11 +241,11 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8284);
+const ClipsConstants = fn(8288);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6, ClipSaveTypes: metroImportDefault, ClipsUserEducationType: closure_8, ClipsLogger: closure_9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: closure_10, ClipsHardwareClassification: closure_11, ClipsSaveNoOpReason: closure_12, ClipsEnabledSettingsSource: map1, ClipsLengthSettings, DEFAULT_CLIPS_BITRATE_PERCENT } = ClipsConstants);
 const Constants = fn(1072);
 ({ MessageAttachmentFlags: closure_14, MessageReferenceTypes: closure_15, VoiceFlags: closure_16 } = Constants);
-const StreamSettingsConstants = fn(5993);
+const StreamSettingsConstants = fn(5995);
 const ApplicationStreamFPS = StreamSettingsConstants.ApplicationStreamFPS;
 let c18 = "default";
 let c19 = "Discord Clips";
@@ -260,13 +260,14 @@ const dependencyMap2 = {};
 let c28 = null;
 let set = new Set();
 let enabled = false;
+let c31 = false;
 const set1 = new Set();
 const map = new Map();
 map1 = new Map();
 const map2 = new Map();
-let closure_35 = [];
+let closure_36 = [];
 let obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: { resolution: StreamSettingsConstants.ApplicationStreamResolutions.RESOLUTION_1080, frameRate: ApplicationStreamFPS.FPS_60, bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT }, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, maxAutoClips: 20, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "flexDirection", showPovClipsInGallery: true };
-obj = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationVersion: 0, clipsDefaultSettingsState: fn(16191).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE, hasAutoEnabledClipsForHardware: false, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
+obj = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationVersion: 0, clipsDefaultSettingsState: fn(16218).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE, hasAutoEnabledClipsForHardware: false, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ClipsStoreClass extends DeviceSettingsStore {
 }
@@ -274,7 +275,7 @@ const prototype = ClipsStoreClass.prototype;
 prototype["initialize"] = function initialize(arg0) {
   (function migrateDefaultStorage() {
     const self = this;
-    const apply = closure_1_38.apply;
+    const apply = closure_1_39.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -354,6 +355,9 @@ prototype["getHardwareClassificationVersion"] = function getHardwareClassificati
 prototype["getClipsDefaultSettingsState"] = function getClipsDefaultSettingsState() {
   return obj.clipsDefaultSettingsState;
 };
+prototype["hasFinishedApplyingDefaultSettings"] = function hasFinishedApplyingDefaultSettings() {
+  return c31;
+};
 prototype["getIsAtMaxSaveClipOperations"] = function getIsAtMaxSaveClipOperations() {
   return closure_23 >= closure_1_10;
 };
@@ -407,7 +411,7 @@ prototype["hasRepliedWithClip"] = function hasRepliedWithClip(arg0) {
 prototype["getMatchingPOVReferences"] = function getMatchingPOVReferences(arg0) {
   value = map.get(arg0);
   if (value == null) {
-    value = closure_35;
+    value = closure_36;
   }
   return value;
 };
@@ -871,6 +875,13 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
       obj = obj3;
     }
   },
+  CLIPS_APPLY_DEFAULT_SETTINGS_COMPLETE: function handleApplyDefaultSettingsComplete() {
+    if (c31) {
+      return false;
+    } else {
+      c31 = true;
+    }
+  },
   CLIPS_INIT: function handleClipsInit() {
     c28 = null;
   },
@@ -965,6 +976,7 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
     c26 = null;
     c24 = null;
     closure_27 = {};
+    c31 = false;
   }
 });
 const size = fn(2);

@@ -1,16 +1,16 @@
-// === Module 12855: ConjureVoiceChannelPinCard ===
+// === Module 12869: ConjureVoiceChannelPinCard ===
 
-// Module 12855 (ConjureVoiceChannelPinCard)
+// Module 12869 (ConjureVoiceChannelPinCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4026 from "module_4026" /* 4026 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5374 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11340 */;
-import useConjureVoiceChannelPin from "useConjureVoiceChannelPin" /* 12856 */;
+import _modDef4028 from "module_4028" /* 4028 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5376 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11349 */;
+import useConjureVoiceChannelPin from "useConjureVoiceChannelPin" /* 12870 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import RelationshipStore from "RelationshipStore" /* 5082 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import RelationshipStore from "RelationshipStore" /* 5084 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function ConjureVoiceChannelPinForm(projectId) {
   channels = undefined;
   dependencyMap = undefined;
   const tmp = closure_10();
-  const conjureVoiceChannelPinForm = channels(12856).useConjureVoiceChannelPinForm(projectId.projectId);
+  const conjureVoiceChannelPinForm = channels(12870).useConjureVoiceChannelPinForm(projectId.projectId);
   ({ guildId, channels } = conjureVoiceChannelPinForm);
   const selected = conjureVoiceChannelPinForm.selected;
   ({ setPicked: c2, pinning } = conjureVoiceChannelPinForm);
@@ -29,27 +29,27 @@ function ConjureVoiceChannelPinForm(projectId) {
   }
   let channelIconWithGuild = null;
   if (null != selected) {
-    channelIconWithGuild = tmp2(8674).getChannelIconWithGuild(selected, guild);
-    const tmp2Result = tmp2(8674);
+    channelIconWithGuild = tmp2(8680).getChannelIconWithGuild(selected, guild);
+    const tmp2Result = tmp2(8680);
   }
   let obj2 = { variant: "body-sm/normal", color: "text-default", children: null };
   let intl = tmp2(1113).intl;
-  obj2.children = intl.string(selected(4026)["1vVBAw"]);
-  items = [closure_7(channels(5751).Text, obj2), , , ];
+  obj2.children = intl.string(selected(4028)["1vVBAw"]);
+  items = [closure_7(channels(5753).Text, obj2), , , ];
   if (channels.length > 0) {
     let obj3 = { hasIcons: null != channelIconWithGuild, children: null };
     if (null == selected) {
       const intl3 = tmp2(1113).intl;
-      let stringResult = intl3.string(tmp11(4026)["9+dfPT"]);
+      let stringResult = intl3.string(tmp11(4028)["9+dfPT"]);
     } else {
-      stringResult = tmp2(5776).computeChannelName(selected, UserStore, RelationshipStore);
-      const tmp2Result2 = tmp2(5776);
+      stringResult = tmp2(5778).computeChannelName(selected, UserStore, RelationshipStore);
+      const tmp2Result2 = tmp2(5778);
     }
     let obj4 = { label: stringResult, icon: null, arrow: true, disabled: null, onPress: null };
     let tmp10Result;
     if (null != channelIconWithGuild) {
       const obj5 = { source: channelIconWithGuild };
-      tmp10Result = closure_7(tmp2(7046).TableRowIcon, obj5);
+      tmp10Result = closure_7(tmp2(7049).TableRowIcon, obj5);
     }
     obj4.icon = tmp10Result;
     obj4.disabled = pinning;
@@ -59,7 +59,7 @@ function ConjureVoiceChannelPinForm(projectId) {
       const obj4 = { title: null };
       const obj = ActionSheetActionCreators;
       const intl = util.intl;
-      obj4.title = intl.string(_modDef4026.peOi1H);
+      obj4.title = intl.string(_modDef4028.peOi1H);
       obj3.header = obj4;
       obj3.guild = guild;
       obj3.channels = channels;
@@ -70,39 +70,39 @@ function ConjureVoiceChannelPinForm(projectId) {
       obj2.content = metroImportDefault(ChannelPickerActionSheetDefault, obj3);
       obj.showActionSheet(obj2);
     };
-    obj3.children = closure_7(tmp2(7038).TableRow, obj4);
-    let tmp10Result4 = closure_7(tmp2(7126).TableRowGroup, obj3);
+    obj3.children = closure_7(tmp2(7041).TableRow, obj4);
+    let tmp10Result4 = closure_7(tmp2(7129).TableRowGroup, obj3);
   } else {
     const obj6 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl2 = tmp2(1113).intl;
-    obj6.children = intl2.string(tmp11(4026).JVUsIY);
-    tmp10Result4 = closure_7(tmp2(5751).Text, obj6);
+    obj6.children = intl2.string(tmp11(4028).JVUsIY);
+    tmp10Result4 = closure_7(tmp2(5753).Text, obj6);
   }
   items[1] = tmp10Result4;
   let tmp10Result5 = null;
   if (failed) {
     const obj7 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
     const intl4 = tmp2(1113).intl;
-    obj7.children = intl4.string(tmp11(4026).d7EeAm);
-    tmp10Result5 = closure_7(tmp2(5751).Text, obj7);
+    obj7.children = intl4.string(tmp11(4028).d7EeAm);
+    tmp10Result5 = closure_7(tmp2(5753).Text, obj7);
   }
   items[2] = tmp10Result5;
   const obj8 = { style: tmp.actions, children: null };
   const obj9 = { variant: "secondary", size: "sm", text: null, disabled: null, onPress: null };
   const intl5 = tmp2(1113).intl;
-  obj9.text = intl5.string(selected(4026).Iw0l8o);
+  obj9.text = intl5.string(selected(4028).Iw0l8o);
   obj9.disabled = pinning;
   obj9.onPress = skip;
-  const items1 = [closure_7(channels(5758).Button, obj9), ];
+  const items1 = [closure_7(channels(5760).Button, obj9), ];
   let tmp10Result6 = null;
   if (channels.length > 0) {
     const obj10 = { variant: "primary", size: "sm", text: null, disabled: null, loading: null, onPress: null };
     const intl6 = tmp2(1113).intl;
-    obj10.text = intl6.string(tmp11(4026).FYI3qr);
+    obj10.text = intl6.string(tmp11(4028).FYI3qr);
     obj10.disabled = null == selected;
     obj10.loading = pinning;
     obj10.onPress = pin;
-    tmp10Result6 = closure_7(tmp2(5758).Button, obj10);
+    tmp10Result6 = closure_7(tmp2(5760).Button, obj10);
   }
   const obj11 = { children: null };
   items1[1] = tmp10Result6;
@@ -114,7 +114,7 @@ function ConjureVoiceChannelPinForm(projectId) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, actions: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.actions = { flexDirection: "row", justifyContent: "flex-end", gap: nativeDefault.space.PX_8 };
@@ -132,14 +132,14 @@ export default function ConjureVoiceChannelPinCard(projectId) {
   const obj2 = { variant: "body-xs/semibold", color: "text-muted", children: null };
   const intl2 = util.intl;
   let gKe6Lw = importDefault;
-  obj2.children = intl2.string(_modDef4026.UGAfl9);
+  obj2.children = intl2.string(_modDef4028.UGAfl9);
   const tmp5 = metroImportDefault(Text_Text.Text, obj2);
   if (null != outcome) {
     const obj3 = { style: tmp.card, children: null };
     items = [tmp5, ];
     if ("pinned" === outcome.status) {
       intl = util.intl;
-      gKe6Lw = _modDef4026.gKe6Lw;
+      gKe6Lw = _modDef4028.gKe6Lw;
       if (pinnedName == null) {
         pinnedName = "";
       }
@@ -147,7 +147,7 @@ export default function ConjureVoiceChannelPinCard(projectId) {
       let formatToPlainStringResult = intl.formatToPlainString(gKe6Lw, obj4);
     } else {
       const intl3 = util.intl;
-      formatToPlainStringResult = intl3.string(_modDef4026["+kpQ3v"]);
+      formatToPlainStringResult = intl3.string(_modDef4028["+kpQ3v"]);
     }
     const obj5 = { variant: "body-sm/normal", color: "text-default", children: formatToPlainStringResult };
     tmp4Result = metroImportDefault(Text_Text.Text, obj5);

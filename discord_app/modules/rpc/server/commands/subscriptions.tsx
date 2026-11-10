@@ -1,8 +1,8 @@
-// === Module 16658: subscriptions ===
+// === Module 16685: subscriptions ===
 
-// Module 16658 (subscriptions)
+// Module 16685 (subscriptions)
 import applyDefault from "apply" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 9414 */;
+import RPCErrorDefault from "RPCError" /* 9420 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

@@ -1,13 +1,13 @@
-// === Module 17850: AppIconRows ===
+// === Module 17877: AppIconRows ===
 
-// Module 17850 (AppIconRows)
+// Module 17877 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import AppIconTypes from "AppIconTypes" /* 10102 */;
-import AppIconUtils from "AppIconUtils" /* 15625 */;
-import AppIconRowDefault from "AppIconRow" /* 17851 */;
-import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 17852 */;
+import AppIconTypes from "AppIconTypes" /* 10108 */;
+import AppIconUtils from "AppIconUtils" /* 15653 */;
+import AppIconRowDefault from "AppIconRow" /* 17878 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 17879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -43,16 +43,16 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_9(merged(7126).TableRowGroup, obj2);
+    obj.children = closure_9(merged(7129).TableRowGroup, obj2);
     return closure_9(View, obj);
   }
 }
 const View = fn(17).View;
-const isHexagonCampaignAppIcon = fn(10101).isHexagonCampaignAppIcon;
+const isHexagonCampaignAppIcon = fn(10107).isHexagonCampaignAppIcon;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");

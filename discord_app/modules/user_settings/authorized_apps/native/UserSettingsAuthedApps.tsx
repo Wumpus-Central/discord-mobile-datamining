@@ -1,28 +1,28 @@
-// === Module 17174: UserSettingsAuthedApps ===
+// === Module 17201: UserSettingsAuthedApps ===
 
-// Module 17174 (UserSettingsAuthedApps)
+// Module 17201 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5859 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7223 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7227 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9121 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9130 */;
-import applications from "applications" /* 9836 */;
-import EmbedIcon from "EmbedIcon" /* 14858 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5861 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7226 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7230 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9127 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9136 */;
+import applications from "applications" /* 9842 */;
+import EmbedIcon from "EmbedIcon" /* 14884 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7339 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7342 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(7339).FetchState;
+const FetchState = fn(7342).FetchState;
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj2 = { spinner: { padding: nativeDefault.space.PX_16 }, emptyText: null, headerDescription: null, appListHeader: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.emptyText = { marginTop: nativeDefault.space.PX_16 };
@@ -118,5 +118,5 @@ export function AuthorizedAppRow(app) {
     start,
     end
   };
-  return closure_10(app(7038).TableRow, obj2);
+  return closure_10(app(7041).TableRow, obj2);
 }

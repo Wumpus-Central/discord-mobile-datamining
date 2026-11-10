@@ -1,9 +1,9 @@
-// === Module 12823: conjureTips ===
+// === Module 12837: conjureTips ===
 
-// Module 12823 (conjureTips)
-import ConjureBotPermissionsTip from "ConjureBotPermissionsTip" /* 12824 */;
-import ConjureLiveBehindTip from "ConjureLiveBehindTip" /* 12830 */;
-import ConjureIdeasIntroTip from "ConjureIdeasIntroTip" /* 12831 */;
+// Module 12837 (conjureTips)
+import ConjureBotPermissionsTip from "ConjureBotPermissionsTip" /* 12838 */;
+import ConjureLiveBehindTip from "ConjureLiveBehindTip" /* 12844 */;
+import ConjureIdeasIntroTip from "ConjureIdeasIntroTip" /* 12845 */;
 import size from "module_2" /* 2 */;
 
 const items = [ConjureBotPermissionsTip.CONJURE_BOT_PERMISSIONS_TIP, ConjureLiveBehindTip.CONJURE_LIVE_BEHIND_TIP, ConjureIdeasIntroTip.CONJURE_IDEAS_INTRO_TIP];

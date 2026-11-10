@@ -1,18 +1,18 @@
-// === Module 8775: SearchableSelectActionComponentUtils ===
+// === Module 8781: SearchableSelectActionComponentUtils ===
 
-// Module 8775 (SearchableSelectActionComponentUtils)
-import useChannelName from "useChannelName" /* 5776 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6173 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6206 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6834 */;
-import SnowflakeSelectDefaultValueTypes from "SnowflakeSelectDefaultValueTypes" /* 8776 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import GuildMemberStore from "GuildMemberStore" /* 5052 */;
-import GuildRoleStore from "GuildRoleStore" /* 5046 */;
-import GuildStore from "GuildStore" /* 5011 */;
-import RelationshipStore from "RelationshipStore" /* 5082 */;
+// Module 8781 (SearchableSelectActionComponentUtils)
+import useChannelName from "useChannelName" /* 5778 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6175 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6208 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6837 */;
+import SnowflakeSelectDefaultValueTypes from "SnowflakeSelectDefaultValueTypes" /* 8782 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildRoleStore from "GuildRoleStore" /* 5048 */;
+import GuildStore from "GuildStore" /* 5013 */;
+import RelationshipStore from "RelationshipStore" /* 5084 */;
 import UserStore from "UserStore" /* 1385 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8768 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8774 */;
 
 const require = globalThis.__r;
 
@@ -21,19 +21,27 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/SearchableSelectActionComponentUtils.tsx");
 
 export const MIN_REREQUEST_TIME = 1000;
-export function queryMentionables(type, query, channelId) {
+export function queryMentionables(type, query, channelId, arg3) {
   _require = channelId;
+  let obj = arg3;
+  if (arg3 === undefined) {
+    obj = {};
+  }
+  let flag = obj.request;
+  if (flag === undefined) {
+    flag = true;
+  }
   const channel = ChannelStore.getChannel(channelId);
   if (null == channel) {
     return [];
   } else {
     const tmp2 = type === require("Server").ComponentType.USER_SELECT || type === require("Server").ComponentType.MENTIONABLE_SELECT;
     const tmp3 = type === require("Server").ComponentType.ROLE_SELECT || type === require("Server").ComponentType.MENTIONABLE_SELECT;
-    let obj2 = { query, channel, canMentionEveryone: false, canMentionHere: false, canMentionUsers: tmp2, canMentionRoles: tmp3, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
-    const obj = channel(6834);
-    ({ users, roles } = channel(6834).queryMentionResults(obj2));
+    const obj3 = { query, channel, canMentionEveryone: false, canMentionHere: false, canMentionUsers: tmp2, canMentionRoles: tmp3, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, request: flag, limit: 15 };
+    let obj2 = channel(6837);
+    ({ users, roles } = channel(6837).queryMentionResults(obj3));
     items = [];
-    const queryMentionResultsResult = channel(6834).queryMentionResults(obj2);
+    const queryMentionResultsResult = channel(6837).queryMentionResults(obj3);
     HermesBuiltin.arraySpread(roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })), HermesBuiltin.arraySpread(users.map((user) => {
       let username = NicknameUtilsDefault.getNickname(channel.getGuildId(), closure_0, user.user);
       const obj2 = { type: InteractionComponentTypes.SelectOptionType.USER, value: user.user.id, label: null };

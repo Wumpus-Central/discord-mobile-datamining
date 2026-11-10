@@ -1,10 +1,10 @@
-// === Module 16193: clipPOVOverlap ===
+// === Module 16220: clipPOVOverlap ===
 
-// Module 16193 (clipPOVOverlap)
+// Module 16220 (clipPOVOverlap)
 import Constants from "Constants" /* 1072 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import ClipsConstants from "ClipsConstants" /* 8284 */;
-import getPOVExportTargetDefault from "getPOVExportTarget" /* 16194 */;
+import ClipsConstants from "ClipsConstants" /* 8288 */;
+import getPOVExportTargetDefault from "getPOVExportTarget" /* 16221 */;
 import size from "module_2" /* 2 */;
 
 const ClipType = ClipsConstants.ClipType;

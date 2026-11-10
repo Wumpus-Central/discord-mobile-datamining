@@ -1,13 +1,13 @@
-// === Module 18350: RegisterUsernameInput ===
+// === Module 18379: RegisterUsernameInput ===
 
-// Module 18350 (RegisterUsernameInput)
+// Module 18379 (RegisterUsernameInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5751 */;
-import Stack_Stack from "Stack/Stack" /* 6159 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7152 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16184 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16923 */;
+import Text_Text from "Text/Text" /* 5753 */;
+import Stack_Stack from "Stack/Stack" /* 6161 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7155 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16211 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16950 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -67,11 +67,11 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(18323);
+const RegistrationUIStore = fn(18352);
 ({ setRegistrationErrors: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_12 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 let obj2 = { entering: null, exiting: null };
 const FadeIn = fn(1652).FadeIn;
@@ -141,13 +141,13 @@ export function RegisterUsernameInput(setUsername) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(16923).NameValidationState.ERROR) {
+  if (type === tmp14(16950).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };
   obj3.status = str2;
   obj3.submitBehavior = submitBehavior;
-  const items3 = [closure_9(setUsername(7148).TextInput, obj3), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [closure_9(setUsername(7151).TextInput, obj3), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj6.children = items3;
   return closure_10(closure_11, obj6);
 }

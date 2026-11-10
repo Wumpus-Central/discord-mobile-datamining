@@ -1,10 +1,10 @@
-// === Module 8042: ExpressiveGradient ===
+// === Module 8046: ExpressiveGradient ===
 
-// Module 8042 (ExpressiveGradient)
+// Module 8046 (ExpressiveGradient)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import LinearGradientDefault from "LinearGradient" /* 5715 */;
-import useToken from "useToken" /* 5724 */;
+import LinearGradientDefault from "LinearGradient" /* 5717 */;
+import useToken from "useToken" /* 5726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

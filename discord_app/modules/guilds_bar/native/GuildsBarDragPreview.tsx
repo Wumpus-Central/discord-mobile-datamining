@@ -1,12 +1,12 @@
-// === Module 18784: GuildsBarDragPreview ===
+// === Module 18813: GuildsBarDragPreview ===
 
-// Module 18784 (GuildsBarDragPreview)
+// Module 18813 (GuildsBarDragPreview)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import _mod5055 from "module_5055" /* 5055 */;
-import native from "native" /* 5199 */;
+import _mod5057 from "module_5057" /* 5057 */;
+import native from "native" /* 5201 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18695 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18724 */;
 
 require = fn;
 function PreviewItem(overState) {
@@ -167,7 +167,7 @@ function PreviewItem(overState) {
   const memo = noop.useMemo(() => {
     if ("convert-after" === c1) {
       if (null != c0) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flexDirection", name: "Array", color: "add", expanded: null, children: null };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flexDirection", name: "Array", color: "add", expanded: "<string:16778542>", children: "soundboardSoundFromAPI" };
         items = [tmp2];
         element.children = items;
         return element;
@@ -359,26 +359,26 @@ function AnimatedItemPreview(cleanUp) {
     let obj5 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(18703), obj5);
+    let tmp22Result = tmp22(tmp4(18732), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
     if (isHomeDrawerEnabled) {
-      tmp25 = transitionState === tmp2(5199).TransitionStates.YEETED;
+      tmp25 = transitionState === tmp2(5201).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(18724), obj6);
-    const tmp4Result = tmp4(18724);
+    tmp22Result = tmp22(tmp4(18753), obj6);
+    const tmp4Result = tmp4(18753);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1652.View, obj4);
 }
-let GuildsNodeType = fn(6827).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(18692).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6830).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(18721).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
-let createStyles = fn(5140);
+let createStyles = fn(5142);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-createStyles = fn(5140);
+createStyles = fn(5142);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -422,7 +422,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "eventCounts", scrollPosition: null, dragRegion: "\u{1F970}", windowSize: 11, dropComplete: 18, listInsets: "memory" };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: true, scrollPosition: "meter", dragRegion: null, windowSize: null, dropComplete: 0, listInsets: 100 };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;
@@ -441,7 +441,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod5055.shallow);
+  }, _mod5057.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

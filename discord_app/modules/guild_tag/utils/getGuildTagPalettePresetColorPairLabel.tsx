@@ -1,9 +1,9 @@
-// === Module 20168: getGuildTagPalettePresetColorPairLabel ===
+// === Module 20196: getGuildTagPalettePresetColorPairLabel ===
 
-// Module 20168 (getGuildTagPalettePresetColorPairLabel)
+// Module 20196 (getGuildTagPalettePresetColorPairLabel)
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import GuildTagConstants from "GuildTagConstants" /* 8464 */;
+import GuildTagConstants from "GuildTagConstants" /* 8468 */;
 import size from "module_2" /* 2 */;
 
 function getGuildTagPalettePresetColorLabel(primary) {

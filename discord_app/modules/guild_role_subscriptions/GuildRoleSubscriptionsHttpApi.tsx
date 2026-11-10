@@ -1,6 +1,6 @@
-// === Module 7494: GuildRoleSubscriptionsHttpApi ===
+// === Module 7497: GuildRoleSubscriptionsHttpApi ===
 
-// Module 7494 (GuildRoleSubscriptionsHttpApi)
+// Module 7497 (GuildRoleSubscriptionsHttpApi)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

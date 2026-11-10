@@ -1,6 +1,6 @@
-// === Module 7669: ProductIds ===
+// === Module 7672: ProductIds ===
 
-// Module 7669 (ProductIds)
+// Module 7672 (ProductIds)
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
 import size from "module_2" /* 2 */;

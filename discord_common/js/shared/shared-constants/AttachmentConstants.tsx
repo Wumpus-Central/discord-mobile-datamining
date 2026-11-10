@@ -1,6 +1,6 @@
-// === Module 14760: AttachmentConstants ===
+// === Module 14786: AttachmentConstants ===
 
-// Module 14760 (AttachmentConstants)
+// Module 14786 (AttachmentConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AttachmentConstants.tsx");

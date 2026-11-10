@@ -1,6 +1,6 @@
-// === Module 9647: useRedeemVirtualCurrency ===
+// === Module 9653: useRedeemVirtualCurrency ===
 
-// Module 9647 (useRedeemVirtualCurrency)
+// Module 9653 (useRedeemVirtualCurrency)
 import util from "util" /* 1113 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

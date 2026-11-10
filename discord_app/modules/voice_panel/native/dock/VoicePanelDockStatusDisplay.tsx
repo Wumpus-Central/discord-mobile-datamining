@@ -1,10 +1,10 @@
-// === Module 19603: VoicePanelDockStatusDisplay ===
+// === Module 19632: VoicePanelDockStatusDisplay ===
 
-// Module 19603 (VoicePanelDockStatusDisplay)
+// Module 19632 (VoicePanelDockStatusDisplay)
 import _mod1652 from "module_1652" /* 1652 */;
 import _modDef3184 from "module_3184" /* 3184 */;
-import timing_timing from "timing/timing" /* 5370 */;
-import spring_spring from "spring/spring" /* 5761 */;
+import timing_timing from "timing/timing" /* 5372 */;
+import spring_spring from "spring/spring" /* 5763 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -123,10 +123,10 @@ function StatusText(status) {
   let obj3 = { style: animatedStyle, children: null };
   if (null != status.userId) {
     const obj4 = { userId: status.userId, dimmed: "left" === status.kind };
-    let tmp43 = closure_8(tmp26(19604).DockUserTitle, obj4);
+    let tmp43 = closure_8(tmp26(19633).DockUserTitle, obj4);
     let tmp44 = closure_8;
   } else {
-    tmp43 = closure_8(tmp26(19604).DockChannelTitle, {});
+    tmp43 = closure_8(tmp26(19633).DockChannelTitle, {});
     tmp44 = closure_8;
   }
   const items5 = [tmp43, ];
@@ -140,7 +140,7 @@ function StatusText(status) {
       str4 = "text-muted";
     }
     const obj6 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
-    obj5.children = tmp44(tmp26(5751).Text, obj6);
+    obj5.children = tmp44(tmp26(5753).Text, obj6);
     tmp44Result = tmp44(_modDef1652.View, obj5);
   }
   items5[1] = tmp44Result;
@@ -430,10 +430,10 @@ function StatusLayer(exit) {
   obj3.style = items5;
   if (null != status.userId) {
     let obj4 = { userId: status.userId, dimmed: "left" === status.kind, entered: tmp12[0] };
-    let tmp32Result = tmp32(tmp2(19604).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(19633).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(19604).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(19633).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue2(_modDef1652.View, obj3), ];
@@ -453,17 +453,17 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(19601);
+const VoicePanelDockStatusStore = fn(19630);
 ({ useDockHasStreamers: closure_6, useDockSubject: metroImportDefault } = VoicePanelDockStatusStore);
-const VoicePanelDockConstants = fn(11381);
+const VoicePanelDockConstants = fn(11390);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const spring = { mass: 0.6, stiffness: 560, damping: 24 };
-const lineHeight = fn(5751).TextStyleSheet["body-xs/medium"].lineHeight;
+const lineHeight = fn(5753).TextStyleSheet["body-xs/medium"].lineHeight;
 let closure_11 = (lineHeight + 1) / 2;
-const sum = fn(5751).TextStyleSheet["body-md/medium"].lineHeight + 1;
-const createStyles = fn(5140);
+const sum = fn(5753).TextStyleSheet["body-md/medium"].lineHeight + 1;
+const createStyles = fn(5142);
 let obj = { display: { flexGrow: 1, flexShrink: 1, height: DOCK_TILE_SIZE }, layer: null, tile: null, textSlot: null, subtext: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

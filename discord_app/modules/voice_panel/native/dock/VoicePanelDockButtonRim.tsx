@@ -1,11 +1,11 @@
-// === Module 19609: VoicePanelDockButtonRim ===
+// === Module 19638: VoicePanelDockButtonRim ===
 
-// Module 19609 (VoicePanelDockButtonRim)
+// Module 19638 (VoicePanelDockButtonRim)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5724 */;
-import inlineStyles from "inlineStyles" /* 8101 */;
-import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 14235 */;
+import useToken from "useToken" /* 5726 */;
+import inlineStyles from "inlineStyles" /* 8105 */;
+import VoicePanelDockRimLight from "VoicePanelDockRimLight" /* 14261 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 11578: ? ===
+// === Module 11587: ? ===
 
-// Module 11578
+// Module 11587
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_emerald_badge_large.png.js");

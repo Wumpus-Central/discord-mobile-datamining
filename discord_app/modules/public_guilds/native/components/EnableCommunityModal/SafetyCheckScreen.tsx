@@ -1,10 +1,10 @@
-// === Module 20242: SafetyCheckScreen ===
+// === Module 20270: SafetyCheckScreen ===
 
-// Module 20242 (SafetyCheckScreen)
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9154 */;
+// Module 20270 (SafetyCheckScreen)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9160 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9155 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9161 */;
 
 const require = fn;
 const View = fn(17).View;

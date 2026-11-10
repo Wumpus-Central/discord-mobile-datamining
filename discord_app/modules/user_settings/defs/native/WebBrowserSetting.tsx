@@ -1,11 +1,11 @@
-// === Module 17791: WebBrowserSetting ===
+// === Module 17818: WebBrowserSetting ===
 
-// Module 17791 (WebBrowserSetting)
+// Module 17818 (WebBrowserSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9130 */;
-import SelectWebBrowserSetting from "SelectWebBrowserSetting" /* 17792 */;
-import SettingBuilders from "SettingBuilders" /* 11685 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9136 */;
+import SelectWebBrowserSetting from "SelectWebBrowserSetting" /* 17819 */;
+import SettingBuilders from "SettingBuilders" /* 11694 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

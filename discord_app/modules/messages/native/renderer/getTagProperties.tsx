@@ -1,12 +1,12 @@
-// === Module 8572: getTagProperties ===
+// === Module 8578: getTagProperties ===
 
-// Module 8572 (getTagProperties)
+// Module 8578 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
-import MessageConstants from "MessageConstants" /* 5145 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8573 */;
-import isCrosspostDefault from "isCrosspost" /* 8575 */;
-import _modDef8577 from "module_8577" /* 8577 */;
+import MessageConstants from "MessageConstants" /* 5147 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8579 */;
+import isCrosspostDefault from "isCrosspost" /* 8581 */;
+import _modDef8583 from "module_8583" /* 8583 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8577).uri;
+            uri = Image.resolveAssetSource(_modDef8583).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "channel", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "useEffect", opTagBackgroundColor: "ip" };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "match", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "<string:843043831>", opTagBackgroundColor: "<string:3298534883>" };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

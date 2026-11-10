@@ -1,18 +1,18 @@
-// === Module 18236: ManageSponsoredContentScreen ===
+// === Module 18265: ManageSponsoredContentScreen ===
 
-// Module 18236 (ManageSponsoredContentScreen)
+// Module 18265 (ManageSponsoredContentScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import _modDef2231 from "module_2231" /* 2231 */;
-import UserSettings from "UserSettings" /* 4965 */;
-import TableRowGroup from "TableRowGroup" /* 7126 */;
+import UserSettings from "UserSettings" /* 4967 */;
+import TableRowGroup from "TableRowGroup" /* 7129 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
-  let AdTopicOptOuts = adTopic(4965).AdTopicOptOuts;
+  let AdTopicOptOuts = adTopic(4967).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   const hasItem = setting.includes(adTopic);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
@@ -34,7 +34,7 @@ function AdTopicRow(adTopic) {
     items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7429).TableSwitchRow, obj);
+  return closure_5(adTopic(7432).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
@@ -44,7 +44,7 @@ let obj = {};
 obj[fn(1196).AdTopic.REAL_MONEY_GAMING] = _modDef2231.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj3 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj3);
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 14371: getGuildPowerupsBoostInfoText ===
+// === Module 14397: getGuildPowerupsBoostInfoText ===
 
-// Module 14371 (getGuildPowerupsBoostInfoText)
+// Module 14397 (getGuildPowerupsBoostInfoText)
 import util from "util" /* 1113 */;
 import _modDef2696 from "module_2696" /* 2696 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5346 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5348 */;
 import size from "module_2" /* 2 */;
 
 const BoostInfoType = GuildPowerupsConstants.BoostInfoType;

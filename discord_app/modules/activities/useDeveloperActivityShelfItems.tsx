@@ -1,8 +1,8 @@
-// === Module 12573: useDeveloperActivityShelfItems ===
+// === Module 12586: useDeveloperActivityShelfItems ===
 
-// Module 12573 (useDeveloperActivityShelfItems)
+// Module 12586 (useDeveloperActivityShelfItems)
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5798 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5800 */;
 
 const require = fn;
 let closure_4 = fn(2142).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;

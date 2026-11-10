@@ -1,15 +1,15 @@
-// === Module 12361: TagGraphic ===
+// === Module 12369: TagGraphic ===
 
-// Module 12361 (TagGraphic)
+// Module 12369 (TagGraphic)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5842 */;
-import TagGroupTypes from "TagGroupTypes" /* 12358 */;
+import FastImageDefault from "FastImage" /* 5844 */;
+import TagGroupTypes from "TagGroupTypes" /* 12366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let closure_5 = createStyles.createStyles((width, backgroundColor) => {
   const obj = { image: { width, height: width }, avatar: null, roleDot: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.round, overflow: "hidden" };

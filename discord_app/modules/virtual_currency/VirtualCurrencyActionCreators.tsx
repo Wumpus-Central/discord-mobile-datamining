@@ -1,11 +1,11 @@
-// === Module 9644: VirtualCurrencyActionCreators ===
+// === Module 9650: VirtualCurrencyActionCreators ===
 
-// Module 9644 (VirtualCurrencyActionCreators)
+// Module 9650 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SKUStore from "SKUStore" /* 6951 */;
+import SKUStore from "SKUStore" /* 6954 */;
 
 require = fn;
 function fetchVirtualCurrencyBalance() {

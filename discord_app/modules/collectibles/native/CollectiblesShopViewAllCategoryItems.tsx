@@ -1,19 +1,19 @@
-// === Module 18215: CollectiblesShopViewAllCategoryItems ===
+// === Module 18244: CollectiblesShopViewAllCategoryItems ===
 
-// Module 18215 (CollectiblesShopViewAllCategoryItems)
+// Module 18244 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import spring_spring from "spring/spring" /* 5761 */;
-import springPresets from "springPresets" /* 5762 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7412 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7839 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9635 */;
+import spring_spring from "spring/spring" /* 5763 */;
+import springPresets from "springPresets" /* 5764 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7843 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9641 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5754 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9668 */;
-import IAPStore from "IAPStore" /* 7673 */;
+import DevSettingsStore from "DevSettingsStore" /* 5756 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9674 */;
+import IAPStore from "IAPStore" /* 7676 */;
 
 require = fn;
 function CategoryItemsBySku(categorySkuId) {
@@ -216,7 +216,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "a" };
+  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "png" };
   let name;
   if (category != null) {
     name = category.name;
@@ -361,7 +361,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5140);
+const createStyles = fn(5142);
 let obj = { rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, border: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.border = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

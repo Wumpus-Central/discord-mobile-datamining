@@ -1,12 +1,12 @@
-// === Module 12208: useFetchStreamPreview ===
+// === Module 12217: useFetchStreamPreview ===
 
-// Module 12208 (useFetchStreamPreview)
-import StreamActionCreators from "StreamActionCreators" /* 7978 */;
+// Module 12217 (useFetchStreamPreview)
+import StreamActionCreators from "StreamActionCreators" /* 7982 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7980 */;
-import ChannelStore from "ChannelStore" /* 4989 */;
-import PermissionStore from "PermissionStore" /* 5072 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5043 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7984 */;
+import ChannelStore from "ChannelStore" /* 4991 */;
+import PermissionStore from "PermissionStore" /* 5074 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
 
 const require = globalThis.__r;
 

@@ -1,10 +1,10 @@
-// === Module 18974: useTrackRoleSubscriptionUpsellAnalytics ===
+// === Module 19003: useTrackRoleSubscriptionUpsellAnalytics ===
 
-// Module 18974 (useTrackRoleSubscriptionUpsellAnalytics)
+// Module 19003 (useTrackRoleSubscriptionUpsellAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5889 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5891 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5065 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5067 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
