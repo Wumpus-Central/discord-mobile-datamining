@@ -1,12 +1,31 @@
 // _runtime/metro/05500__.js
-import RNGestureHandlerModuleDefault from "../05449_RNGestureHandlerModule.js";
+import traverseAndConfigureRelations from "../05499_traverseAndConfigureRelations.js";
+import noop from "00019__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
+({ useEffect: c2, useMemo: c3 } = noop);
 
-export function getModuleId() {
-  if (moduleId == null) {
-    moduleId = RNGestureHandlerModuleDefault.getModuleId();
-  }
-  return moduleId;
+export function useGestureRelationsUpdater(gesture) {
+  closure_0 = gesture;
+  items = [gesture];
+  const tmp = closure_3(() => {
+    let configureRelationsResult = null;
+    if (closure_0) {
+      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
+    }
+    return configureRelationsResult;
+  }, items);
+  closure_1 = tmp;
+  const items1 = [tmp];
+  closure_2(() => {
+    if (closure_1) {
+      const _requestAnimationFrame = requestAnimationFrame;
+      closure_0 = requestAnimationFrame(() => {
+        const item = closure_1_1.forEach((item, index) => {
+          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
+          NativeProxy.configureRelations(index, item);
+        });
+      });
+      return () => cancelAnimationFrame(closure_0);
+    }
+  }, items1);
 }

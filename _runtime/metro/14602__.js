@@ -6,8 +6,8 @@ export default registerAsset.registerAsset({
   httpServerLocation: "/assets/modules/hub/native/images",
   width: 48,
   height: 48,
-  scales: [2, 3],
-  hash: "c0ad0e7adefed3e2ebad52c7f4beb394",
-  name: "progress-setup",
+  scales: [1, 2, 3],
+  hash: "2d94b588ee7f10b120a153b69fc9d641",
+  name: "conversation",
   type: "png",
 });

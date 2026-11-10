@@ -1,4 +1,40 @@
 // _runtime/metro/13156__.js
-import _mod13157 from "13157__.js";
+import _mod13064 from "13064__.js";
 
-export default _mod13157;
+const String = _mod13064.TYPE.String;
+const Ident = _mod13064.TYPE.Ident;
+const Url = _mod13064.TYPE.Url;
+const Function = _mod13064.TYPE.Function;
+const LeftParenthesis = _mod13064.TYPE.LeftParenthesis;
+
+export default {
+  parse: {
+    prelude() {
+      const self = this;
+      const list = this.createList();
+      const scanner = this.scanner;
+      scanner.skipSC();
+      const tokenType = this.scanner.tokenType;
+      if (String === tokenType) {
+        list.push(self.String());
+      } else {
+        if (Url !== tokenType) {
+          if (Function !== tokenType) {
+            self.error("String or url() is expected");
+          }
+        }
+        list.push(self.Url());
+      }
+      let tmp7 = self.lookupNonWSType(0) !== Ident;
+      if (tmp7) {
+        tmp7 = self.lookupNonWSType(0) !== LeftParenthesis;
+      }
+      if (!tmp7) {
+        list.push(self.WhiteSpace());
+        list.push(self.MediaQueryList());
+      }
+      return list;
+    },
+    block: null,
+  },
+};

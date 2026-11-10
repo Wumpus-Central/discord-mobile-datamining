@@ -1,12 +1,19 @@
 // _runtime/metro/16503__.js
-import _mod16441 from "16441__.js";
-import all from "16467__.js";
+import _mod16472 from "16472__.js";
+import element from "../16504_element.js";
+import getOwnPropertyDescriptor from "16471__.js";
 
-let _moduleResult = all(_mod16441.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod16441.WeakMap));
-  const obj = /native code/;
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod16472(
+    () =>
+      7 !==
+      Object.defineProperty(element("div"), "a", {
+        get() {
+          return 7;
+        },
+      }).a,
+  );
 }
 
-export default _moduleResult;
+export default tmp2;

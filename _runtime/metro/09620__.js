@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9037a70d8faa972c462f54c8bc0bf00a",
-  name: "HeartOutlineIcon",
+  hash: "0272dced0f6c0fbc37cda949ecb8a378",
+  name: "DiceIcon",
   type: "png",
 });

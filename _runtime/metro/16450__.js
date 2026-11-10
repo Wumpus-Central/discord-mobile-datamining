@@ -1,7 +1,29 @@
 // _runtime/metro/16450__.js
-import _mod16448 from "16448__.js";
+const require = globalThis.__r;
 
-let closure_0 = _mod16448({}.toString);
-let closure_1 = _mod16448("".slice);
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export function getSupportedCalendars(locale) {
+  _require = locale;
+  const calendars = require("16451__.js").calendars;
+  return calendars.filter((item) =>
+    (function isSupportedCalendar(item, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-ca-");
+        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
+        if ("gregory" === item) {
+          if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(item, closure_0),
+  );
+}

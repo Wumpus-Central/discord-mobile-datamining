@@ -1,6 +1,34 @@
 // _runtime/metro/13137__.js
-import _mod13135 from "13135__.js";
-import _mod13138 from "13138__.js";
-import _mod13139 from "13139__.js";
+const obj = {
+  name: "Selector",
+  structure: null,
+  parse() {
+    const self = this;
+    const sequence = this.readSequence(this.scope.Selector);
+    if (null === this.getFirstListNode(sequence)) {
+      self.error("Selector is expected");
+    }
+    const element = { type: "Selector", loc: self.getLocationFromList(sequence), children: sequence };
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0);
+  },
+};
+const obj2 = { children: null };
+const items = [
+  [
+    "TypeSelector",
+    "IdSelector",
+    "ClassSelector",
+    "AttributeSelector",
+    "PseudoClassSelector",
+    "PseudoElementSelector",
+    "Combinator",
+    "WhiteSpace",
+  ],
+];
+obj2.children = items;
+obj.structure = obj2;
 
-export default { getNode: _mod13135, expression: _mod13138, var: _mod13139 };
+export default obj;

@@ -1,19 +1,13 @@
 // _runtime/metro/14720__.js
-const require = globalThis.__r;
+import registerAsset from "01119__.js";
 
-for (const key10013 in require("RNIapAmazonModule")) {
-  arg5[key10013] = require("RNIapAmazonModule")[key10013];
-  continue;
-}
-for (const key10017 in require("14713__.js")) {
-  arg5[key10017] = require("14713__.js")[key10017];
-  continue;
-}
-for (const key10021 in require("14714__.js")) {
-  arg5[key10021] = require("14714__.js")[key10021];
-  continue;
-}
-for (const key10025 in require("14721__.js")) {
-  arg5[key10025] = require("14721__.js")[key10025];
-  continue;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/premium/native/images",
+  width: 375,
+  height: 460,
+  scales: [1],
+  hash: "c8d53ba30e41e7296c825f2501df590c",
+  name: "premium_gift_plan_selection_header",
+  type: "png",
+});

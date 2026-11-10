@@ -1,6 +1,4 @@
 // _runtime/metro/05598__.js
-import BottomSheetFooter from "../05599_BottomSheetFooter.js";
-import BottomSheetFooterContainer from "../05601_BottomSheetFooterContainer.js";
+import _modDef5599 from "05599__.js";
 
-export const BottomSheetFooter = BottomSheetFooter.BottomSheetFooter;
-export const BottomSheetFooterContainer = BottomSheetFooterContainer.BottomSheetFooterContainer;
+export default _modDef5599;

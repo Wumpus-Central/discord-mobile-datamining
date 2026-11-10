@@ -1,125 +1,66 @@
 // _runtime/metro/04567__.js
-import module_4568_mod from "04568__.js";
-import module_4569_mod from "04569__.js";
-import _typeof_mod from "04420__.js";
-import requiredArgs_mod from "../04421_requiredArgs.js";
+import _mod4568 from "04568__.js";
 import module_4424_mod from "04424__.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let module_4568 = module_4568_mod;
-if (!module_4568) {
-  const obj = { default: module_4568 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4568;
-}
-module_4568 = tmp3;
-let module_4569 = module_4569_mod;
-if (!module_4569) {
-  const obj2 = { default: module_4569 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4569;
-}
-module_4569 = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
-} else {
-  tmp7 = _typeof;
-}
-_typeof = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
 let module_4424 = module_4424_mod;
 if (!module_4424) {
-  const obj5 = { default: module_4424 };
-  let tmp11 = obj5;
+  const obj = { default: module_4424 };
+  let tmp3 = obj;
 } else {
-  tmp11 = module_4424;
+  tmp3 = module_4424;
 }
-module_4424 = tmp11;
-
-export default function add(arg0, years) {
-  requiredArgs.default(2, arguments);
-  if (years) {
-    if ("object" === _typeof(years)) {
-      let num = 0;
-      if (years.years) {
-        num = module_4424.default(years.years);
+module_4424 = tmp3;
+const dependencyMap = ["\u043D\u0435\u0434\u0456\u043B\u044E", "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A", "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A", "\u0441\u0435\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440", "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E", "\u0441\u0443\u0431\u043E\u0442\u0443"];
+let closure_4 = {
+  lastWeek: function lastWeekFormat(arg0, arg1, arg2) {
+    const toDateResult = _mod4568.toDate(arg0);
+    const uTCDay = toDateResult.getUTCDay();
+    if (module_4424.default(toDateResult, arg1, arg2)) {
+      let text = `${"'\u0443 " + tmp2} о' p`;
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (5 !== uTCDay) {
+            if (6 !== uTCDay) {
+              text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0438\u0439 " + tmp2} о' p`;
+            }
+          }
+        }
       }
-      let num2 = 0;
-      if (years.months) {
-        num2 = module_4424.default(years.months);
-      }
-      let num3 = 0;
-      if (years.weeks) {
-        num3 = module_4424.default(years.weeks);
-      }
-      let num4 = 0;
-      if (years.days) {
-        num4 = module_4424.default(years.days);
-      }
-      let num5 = 0;
-      if (years.hours) {
-        num5 = module_4424.default(years.hours);
-      }
-      let num6 = 0;
-      if (years.minutes) {
-        num6 = module_4424.default(years.minutes);
-      }
-      let num7 = 0;
-      if (years.seconds) {
-        num7 = module_4424.default(years.seconds);
-      }
-      const defaultResult1 = _typeof.default(arg0);
-      if (num2) {
-        let defaultResult2 = module_4569.default(defaultResult1, num2 + 12 * num);
-      } else {
-        defaultResult2 = defaultResult1;
-      }
-      if (num4) {
-        let defaultResult3 = module_4568.default(defaultResult2, num4 + 7 * num3);
-      } else {
-        defaultResult3 = defaultResult2;
-      }
-      const _Date = Date;
-      const sum = num7 + 60 * (num6 + 60 * num5);
-      const date = new Date(defaultResult3.getTime() + 1000 * sum);
-      return date;
+      text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0443 " + tmp2} о' p`;
     }
+    return text;
+  },
+  yesterday: "'\u0432\u0447\u043E\u0440\u0430 \u043E' p",
+  today: "'\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u043E' p",
+  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u043E' p",
+  nextWeek: function nextWeekFormat(arg0, arg1, arg2) {
+    const toDateResult = _mod4568.toDate(arg0);
+    const uTCDay = toDateResult.getUTCDay();
+    if (module_4424.default(toDateResult, arg1, arg2)) {
+      let text = `${"'\u0443 " + tmp2} о' p`;
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (5 !== uTCDay) {
+            if (6 !== uTCDay) {
+              text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 " + tmp2} о' p`;
+            }
+          }
+        }
+      }
+      text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0443 " + tmp2} о' p`;
+    }
+    return text;
+  },
+  other: "P"
+};
+
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_4[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
   }
-  return new Date(NaN);
+  return tmpResult;
 };
 export default exports.default;

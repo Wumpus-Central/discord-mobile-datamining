@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f0c32854a135e6d60a3190ac067a0b08",
-  name: "ic_headset_deafened_dark_24px",
+  hash: "dcf38117e5a3cdcdf164b333d0b65b5d",
+  name: "LinkExternalMediumIcon",
   type: "png",
 });

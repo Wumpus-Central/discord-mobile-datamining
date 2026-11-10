@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a97ebd26f28acc69dba8dec170283378",
-  name: "ChatMarkUnreadIcon",
+  hash: "cc9053b1cd7f0215ee3d9ba69e2b389a",
+  name: "PinIcon",
   type: "png",
 });

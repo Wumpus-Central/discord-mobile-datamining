@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "fce86bae946901aed4dd9d012c5d05d2",
-  name: "BellSlashIcon",
+  hash: "abe3edaf4092c8b2f7e822b6a96655d7",
+  name: "InboxIcon",
   type: "png",
 });

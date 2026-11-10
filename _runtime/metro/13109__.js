@@ -1,20 +1,54 @@
 // _runtime/metro/13109__.js
-import _mod13050 from "13050__.js";
+import _mod13064 from "13064__.js";
 
-const Ident = _mod13050.TYPE.Ident;
+const Semicolon = _mod13064.TYPE.Semicolon;
+const LeftCurlyBracket = _mod13064.TYPE.LeftCurlyBracket;
 const obj = {
-  name: "Identifier",
-  structure: { name: String },
-  parse() {
-    return {
-      type: "Identifier",
-      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
-      name: this.consume(Ident),
-    };
+  name: "AtrulePrelude",
+  structure: null,
+  parse(key10009) {
+    let formatted = key10009;
+    if (null !== key10009) {
+      formatted = key10009.toLowerCase();
+    }
+    const self = this;
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const atrule = this.atrule;
+    if (atrule.hasOwnProperty(formatted)) {
+      if (typeof self.atrule[formatted].prelude === "function") {
+        const prelude = self.atrule[formatted].prelude;
+        const call = prelude.call;
+        typeof call === "unknown" ? prelude() : call(self);
+      }
+    }
+    let sequence = self.readSequence(self.scope.AtrulePrelude);
+    const scanner2 = self.scanner;
+    scanner2.skipSC();
+    let tmp6 = true !== self.scanner.eof;
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== LeftCurlyBracket;
+    }
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== Semicolon;
+    }
+    if (tmp6) {
+      self.error("Semicolon or block is expected");
+    }
+    if (null === sequence) {
+      sequence = self.createList();
+    }
+    const element = { type: "AtrulePrelude", loc: self.getLocationFromList(sequence), children: sequence };
+    return element;
   },
-  generate(name) {
-    this.chunk(name.name);
+  generate(arg0) {
+    this.children(arg0);
   },
+  walkContext: "atrulePrelude",
 };
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

@@ -1,150 +1,199 @@
 // _runtime/metro/08973__.js
-import colorPropType from "../08959_colorPropType.js";
-import _mod8963 from "08963__.js";
-import _mod8974 from "08974__.js";
-import emptyFunction_mod from "05179__.js";
-import "module_5179";
+import emptyFunction_mod from "05181__.js";
 
-const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"];
-const obj = {};
-const module_8963 = Object.assign(_mod8963);
+const size = {
+  display: null,
+  width: null,
+  height: null,
+  start: null,
+  end: null,
+  top: null,
+  left: null,
+  right: null,
+  bottom: null,
+  minWidth: null,
+  maxWidth: null,
+  minHeight: null,
+  maxHeight: null,
+  margin: null,
+  marginVertical: null,
+  marginHorizontal: null,
+  marginTop: null,
+  marginBottom: null,
+  marginLeft: null,
+  marginRight: null,
+  marginStart: null,
+  marginEnd: null,
+  padding: null,
+  paddingVertical: null,
+  paddingHorizontal: null,
+  paddingTop: null,
+  paddingBottom: null,
+  paddingLeft: null,
+  paddingRight: null,
+  paddingStart: null,
+  paddingEnd: null,
+  borderWidth: null,
+  borderTopWidth: null,
+  borderStartWidth: null,
+  borderEndWidth: null,
+  borderRightWidth: null,
+  borderBottomWidth: null,
+  borderLeftWidth: null,
+  position: null,
+  flexDirection: null,
+  flexWrap: null,
+  justifyContent: null,
+  alignItems: null,
+  alignSelf: null,
+  alignContent: null,
+  overflow: null,
+  flex: null,
+  flexGrow: null,
+  flexShrink: null,
+  flexBasis: null,
+  aspectRatio: null,
+  zIndex: null,
+  direction: null,
+};
 let emptyFunction = emptyFunction_mod;
-obj.autoCapitalize = emptyFunction.oneOf(["none", "sentences", "words", "characters"]);
+size.display = emptyFunction.oneOf(["none", "flex"]);
 let emptyFunction = emptyFunction_mod;
-obj.autoCompleteType = emptyFunction.oneOf([
-  "cc-csc",
-  "cc-exp",
-  "cc-exp-month",
-  "cc-exp-year",
-  "cc-number",
-  "email",
-  "name",
-  "password",
-  "postal-code",
-  "street-address",
-  "tel",
-  "username",
-  "off",
+const items = [emptyFunction.number, emptyFunction.string];
+size.width = emptyFunction.oneOfType(items);
+let emptyFunction = emptyFunction_mod;
+const items1 = [emptyFunction.number, emptyFunction.string];
+size.height = emptyFunction.oneOfType(items1);
+let emptyFunction = emptyFunction_mod;
+const items2 = [emptyFunction.number, emptyFunction.string];
+size.start = emptyFunction.oneOfType(items2);
+let emptyFunction = emptyFunction_mod;
+const items3 = [emptyFunction.number, emptyFunction.string];
+size.end = emptyFunction.oneOfType(items3);
+let emptyFunction = emptyFunction_mod;
+const items4 = [emptyFunction.number, emptyFunction.string];
+size.top = emptyFunction.oneOfType(items4);
+let emptyFunction = emptyFunction_mod;
+const items5 = [emptyFunction.number, emptyFunction.string];
+size.left = emptyFunction.oneOfType(items5);
+let emptyFunction = emptyFunction_mod;
+const items6 = [emptyFunction.number, emptyFunction.string];
+size.right = emptyFunction.oneOfType(items6);
+let emptyFunction = emptyFunction_mod;
+const items7 = [emptyFunction.number, emptyFunction.string];
+size.bottom = emptyFunction.oneOfType(items7);
+let emptyFunction = emptyFunction_mod;
+const items8 = [emptyFunction.number, emptyFunction.string];
+size.minWidth = emptyFunction.oneOfType(items8);
+let emptyFunction = emptyFunction_mod;
+const items9 = [emptyFunction.number, emptyFunction.string];
+size.maxWidth = emptyFunction.oneOfType(items9);
+let emptyFunction = emptyFunction_mod;
+const items10 = [emptyFunction.number, emptyFunction.string];
+size.minHeight = emptyFunction.oneOfType(items10);
+let emptyFunction = emptyFunction_mod;
+const items11 = [emptyFunction.number, emptyFunction.string];
+size.maxHeight = emptyFunction.oneOfType(items11);
+let emptyFunction = emptyFunction_mod;
+const items12 = [emptyFunction.number, emptyFunction.string];
+size.margin = emptyFunction.oneOfType(items12);
+let emptyFunction = emptyFunction_mod;
+const items13 = [emptyFunction.number, emptyFunction.string];
+size.marginVertical = emptyFunction.oneOfType(items13);
+let emptyFunction = emptyFunction_mod;
+const items14 = [emptyFunction.number, emptyFunction.string];
+size.marginHorizontal = emptyFunction.oneOfType(items14);
+let emptyFunction = emptyFunction_mod;
+const items15 = [emptyFunction.number, emptyFunction.string];
+size.marginTop = emptyFunction.oneOfType(items15);
+let emptyFunction = emptyFunction_mod;
+const items16 = [emptyFunction.number, emptyFunction.string];
+size.marginBottom = emptyFunction.oneOfType(items16);
+let emptyFunction = emptyFunction_mod;
+const items17 = [emptyFunction.number, emptyFunction.string];
+size.marginLeft = emptyFunction.oneOfType(items17);
+let emptyFunction = emptyFunction_mod;
+const items18 = [emptyFunction.number, emptyFunction.string];
+size.marginRight = emptyFunction.oneOfType(items18);
+let emptyFunction = emptyFunction_mod;
+const items19 = [emptyFunction.number, emptyFunction.string];
+size.marginStart = emptyFunction.oneOfType(items19);
+let emptyFunction = emptyFunction_mod;
+const items20 = [emptyFunction.number, emptyFunction.string];
+size.marginEnd = emptyFunction.oneOfType(items20);
+let emptyFunction = emptyFunction_mod;
+const items21 = [emptyFunction.number, emptyFunction.string];
+size.padding = emptyFunction.oneOfType(items21);
+let emptyFunction = emptyFunction_mod;
+const items22 = [emptyFunction.number, emptyFunction.string];
+size.paddingVertical = emptyFunction.oneOfType(items22);
+let emptyFunction = emptyFunction_mod;
+const items23 = [emptyFunction.number, emptyFunction.string];
+size.paddingHorizontal = emptyFunction.oneOfType(items23);
+let emptyFunction = emptyFunction_mod;
+const items24 = [emptyFunction.number, emptyFunction.string];
+size.paddingTop = emptyFunction.oneOfType(items24);
+let emptyFunction = emptyFunction_mod;
+const items25 = [emptyFunction.number, emptyFunction.string];
+size.paddingBottom = emptyFunction.oneOfType(items25);
+let emptyFunction = emptyFunction_mod;
+const items26 = [emptyFunction.number, emptyFunction.string];
+size.paddingLeft = emptyFunction.oneOfType(items26);
+let emptyFunction = emptyFunction_mod;
+const items27 = [emptyFunction.number, emptyFunction.string];
+size.paddingRight = emptyFunction.oneOfType(items27);
+let emptyFunction = emptyFunction_mod;
+const items28 = [emptyFunction.number, emptyFunction.string];
+size.paddingStart = emptyFunction.oneOfType(items28);
+let emptyFunction = emptyFunction_mod;
+const items29 = [emptyFunction.number, emptyFunction.string];
+size.paddingEnd = emptyFunction.oneOfType(items29);
+size.borderWidth = emptyFunction.number;
+size.borderTopWidth = emptyFunction.number;
+size.borderStartWidth = emptyFunction.number;
+size.borderEndWidth = emptyFunction.number;
+size.borderRightWidth = emptyFunction.number;
+size.borderBottomWidth = emptyFunction.number;
+size.borderLeftWidth = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+size.position = emptyFunction.oneOf(["absolute", "relative"]);
+let emptyFunction = emptyFunction_mod;
+size.flexDirection = emptyFunction.oneOf(["row", "row-reverse", "column", "column-reverse"]);
+let emptyFunction = emptyFunction_mod;
+size.flexWrap = emptyFunction.oneOf(["wrap", "nowrap", "wrap-reverse"]);
+let emptyFunction = emptyFunction_mod;
+size.justifyContent = emptyFunction.oneOf([
+  "flex-start",
+  "flex-end",
+  "center",
+  "space-between",
+  "space-around",
+  "space-evenly",
 ]);
-obj.autoCorrect = emptyFunction.bool;
-obj.spellCheck = emptyFunction.bool;
-obj.autoFocus = emptyFunction.bool;
-obj.allowFontScaling = emptyFunction.bool;
-obj.maxFontSizeMultiplier = emptyFunction.number;
-obj.editable = emptyFunction.bool;
 let emptyFunction = emptyFunction_mod;
-obj.keyboardType = emptyFunction.oneOf([
-  "default",
-  "email-address",
-  "numeric",
-  "phone-pad",
-  "number-pad",
-  "ascii-capable",
-  "numbers-and-punctuation",
-  "url",
-  "name-phone-pad",
-  "decimal-pad",
-  "twitter",
-  "web-search",
-  "ascii-capable-number-pad",
-  "visible-password",
+size.alignItems = emptyFunction.oneOf(["flex-start", "flex-end", "center", "stretch", "baseline"]);
+let emptyFunction = emptyFunction_mod;
+size.alignSelf = emptyFunction.oneOf(["auto", "flex-start", "flex-end", "center", "stretch", "baseline"]);
+let emptyFunction = emptyFunction_mod;
+size.alignContent = emptyFunction.oneOf([
+  "flex-start",
+  "flex-end",
+  "center",
+  "stretch",
+  "space-between",
+  "space-around",
 ]);
 let emptyFunction = emptyFunction_mod;
-obj.keyboardAppearance = emptyFunction.oneOf(["default", "light", "dark"]);
+size.overflow = emptyFunction.oneOf(["visible", "hidden", "scroll"]);
+size.flex = emptyFunction.number;
+size.flexGrow = emptyFunction.number;
+size.flexShrink = emptyFunction.number;
 let emptyFunction = emptyFunction_mod;
-obj.returnKeyType = emptyFunction.oneOf([
-  "done",
-  "go",
-  "next",
-  "search",
-  "send",
-  "none",
-  "previous",
-  "default",
-  "emergency-call",
-  "google",
-  "join",
-  "route",
-  "yahoo",
-]);
-obj.returnKeyLabel = emptyFunction.string;
-obj.maxLength = emptyFunction.number;
-obj.numberOfLines = emptyFunction.number;
-obj.disableFullscreenUI = emptyFunction.bool;
-obj.enablesReturnKeyAutomatically = emptyFunction.bool;
-obj.multiline = emptyFunction.bool;
+const items30 = [emptyFunction.number, emptyFunction.string];
+size.flexBasis = emptyFunction.oneOfType(items30);
+size.aspectRatio = emptyFunction.number;
+size.zIndex = emptyFunction.number;
 let emptyFunction = emptyFunction_mod;
-obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
-obj.onBlur = emptyFunction.func;
-obj.onFocus = emptyFunction.func;
-obj.onChange = emptyFunction.func;
-obj.onChangeText = emptyFunction.func;
-obj.onContentSizeChange = emptyFunction.func;
-obj.onTextInput = emptyFunction.func;
-obj.onEndEditing = emptyFunction.func;
-obj.onSelectionChange = emptyFunction.func;
-obj.onSubmitEditing = emptyFunction.func;
-obj.onKeyPress = emptyFunction.func;
-obj.onLayout = emptyFunction.func;
-obj.onScroll = emptyFunction.func;
-obj.placeholder = emptyFunction.string;
-obj.placeholderTextColor = colorPropType;
-obj.scrollEnabled = emptyFunction.bool;
-obj.secureTextEntry = emptyFunction.bool;
-obj.selectionColor = colorPropType;
-let emptyFunction = emptyFunction_mod;
-obj.selection = emptyFunction.shape({ start: emptyFunction.number.isRequired, end: emptyFunction.number });
-obj.value = emptyFunction.string;
-obj.defaultValue = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.clearButtonMode = emptyFunction.oneOf(["never", "while-editing", "unless-editing", "always"]);
-obj.clearTextOnFocus = emptyFunction.bool;
-obj.selectTextOnFocus = emptyFunction.bool;
-obj.blurOnSubmit = emptyFunction.bool;
-obj.style = _mod8974.style;
-obj.underlineColorAndroid = colorPropType;
-obj.inlineImageLeft = emptyFunction.string;
-obj.inlineImagePadding = emptyFunction.number;
-obj.rejectResponderTermination = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.oneOf(items)];
-let emptyFunction = emptyFunction_mod;
-items1[1] = emptyFunction.arrayOf(emptyFunction.oneOf(items));
-obj.dataDetectorTypes = emptyFunction.oneOfType(items1);
-obj.caretHidden = emptyFunction.bool;
-obj.contextMenuHidden = emptyFunction.bool;
-obj.inputAccessoryViewID = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.textContentType = emptyFunction.oneOf([
-  "none",
-  "URL",
-  "addressCity",
-  "addressCityAndState",
-  "addressState",
-  "countryName",
-  "creditCardNumber",
-  "emailAddress",
-  "familyName",
-  "fullStreetAddress",
-  "givenName",
-  "jobTitle",
-  "location",
-  "middleName",
-  "name",
-  "namePrefix",
-  "nameSuffix",
-  "nickname",
-  "organizationName",
-  "postalCode",
-  "streetAddressLine1",
-  "streetAddressLine2",
-  "sublocality",
-  "telephoneNumber",
-  "username",
-  "password",
-  "newPassword",
-  "oneTimeCode",
-]);
-obj.showSoftInputOnFocus = emptyFunction.bool;
+size.direction = emptyFunction.oneOf(["inherit", "ltr", "rtl"]);
 
-export default obj;
+export default size;

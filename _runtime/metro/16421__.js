@@ -1,5 +1,5 @@
 // _runtime/metro/16421__.js
 
-export function shouldPolyfill() {
-  return !("supportedValuesOf" in Intl);
+export function CanonicalizeLocaleList(items) {
+  return Intl.getCanonicalLocales(items);
 }

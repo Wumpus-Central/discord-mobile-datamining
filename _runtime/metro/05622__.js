@@ -1,6 +1,4 @@
 // _runtime/metro/05622__.js
-import _mod17 from "00017__.js";
+import BottomSheetRefreshControlAndroidDefault from "../05623_BottomSheetRefreshControlAndroid.js";
 
-const StyleSheet = _mod17.StyleSheet;
-
-export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });
+export default BottomSheetRefreshControlAndroidDefault;

@@ -3,11 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "aa6654f8bc64e9c09fd740f0157dd47b",
-  name: "ClipboardCheckIcon",
-  type: "png",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
+  scales: [1],
+  hash: "1240638c60c6143203e89b55bf3dd564",
+  name: "fi.messages.1240638c60c6143203e89b55bf3dd564.compiled.messages",
+  type: "jsona",
 });

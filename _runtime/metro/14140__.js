@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/create_guild/native/images",
+  width: 48,
+  height: 48,
   scales: [2, 3],
-  hash: "ae39bece93fb2e7db2a552f53a1d8fa1",
-  name: "TwitterNeutralIcon",
+  hash: "fcd5f78c5aaa2fef71964631510c3784",
+  name: "img_artists_creators",
   type: "png",
 });

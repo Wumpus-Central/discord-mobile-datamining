@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/clips",
   scales: [1],
-  hash: "b119fbd3e4aff361b7161dc55e3389ad",
+  hash: "a518c54465b2655e54811dbd82f5d834",
   name: "Clips.compiled.messages",
   type: "jsona",
 });

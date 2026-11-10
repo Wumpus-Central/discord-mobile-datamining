@@ -1,71 +1,54 @@
 // _runtime/metro/13136__.js
-import _mod13050 from "13050__.js";
+import _mod13064 from "13064__.js";
+import _mod13108 from "13108__.js";
 
-const Delim = _mod13050.TYPE.Delim;
-const Ident = _mod13050.TYPE.Ident;
-const Dimension = _mod13050.TYPE.Dimension;
-const Percentage = _mod13050.TYPE.Percentage;
-const Number = _mod13050.TYPE.Number;
-const Hash = _mod13050.TYPE.Hash;
-const Colon = _mod13050.TYPE.Colon;
-const LeftSquareBracket = _mod13050.TYPE.LeftSquareBracket;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod13108.mode.leftCurlyBracket, true);
+}
+function consumePrelude() {
+  const self = this;
+  const SelectorListResult = this.SelectorList();
+  let tmp2 = "Raw" !== SelectorListResult.type;
+  if (tmp2) {
+    tmp2 = false === self.scanner.eof;
+  }
+  if (tmp2) {
+    tmp2 = self.scanner.tokenType !== LeftCurlyBracket;
+  }
+  if (tmp2) {
+    self.error();
+  }
+  return SelectorListResult;
+}
+const LeftCurlyBracket = _mod13064.TYPE.LeftCurlyBracket;
 
 export default {
-  getNode(arg0) {
+  name: "Rule",
+  structure: { prelude: ["SelectorList", "Raw"], block: ["Block"] },
+  parse() {
     const self = this;
-    const tokenType = this.scanner.tokenType;
-    if (LeftSquareBracket === tokenType) {
-      return self.AttributeSelector();
-    } else if (Hash === tokenType) {
-      return self.IdSelector();
-    } else if (Colon === tokenType) {
-      const scanner = self.scanner;
-      if (scanner.lookupType(1) === tmp6) {
-        let result = self.PseudoElementSelector();
-      } else {
-        result = self.PseudoClassSelector();
-      }
-      return result;
-    } else if (Ident === tokenType) {
-      return self.TypeSelector();
+    const tokenIndex = this.scanner.tokenIndex;
+    if (this.parseRulePrelude) {
+      let parseWithFallbackResult = self.parseWithFallback(consumePrelude, consumeRaw);
     } else {
-      if (Number !== tokenType) {
-        if (Percentage !== tokenType) {
-          if (Dimension === tokenType) {
-            const source = self.scanner.source;
-            if (46 === source.charCodeAt(self.scanner.tokenStart)) {
-              self.error("Identifier is expected", self.scanner.tokenStart + 1);
-            }
-          } else if (Delim === tokenType) {
-            const source2 = self.scanner.source;
-            const charCodeAtResult = source2.charCodeAt(self.scanner.tokenStart);
-            if (43 !== charCodeAtResult) {
-              if (62 !== charCodeAtResult) {
-                if (126 !== charCodeAtResult) {
-                  if (47 === charCodeAtResult) {
-                    return self.Combinator();
-                  } else if (46 === charCodeAtResult) {
-                    return self.ClassSelector();
-                  } else {
-                    if (42 !== charCodeAtResult) {
-                      if (124 !== charCodeAtResult) {
-                        if (35 === charCodeAtResult) {
-                          return self.IdSelector();
-                        }
-                      }
-                    }
-                    return self.TypeSelector();
-                  }
-                }
-              }
-            }
-            arg0.space = null;
-            arg0.ignoreWSAfter = true;
-            return self.Combinator();
-          }
-        }
+      const call = consumeRaw.call;
+      if (typeof call === "unknown") {
+        parseWithFallbackResult = self.Raw(tokenIndex, _mod13108.mode.leftCurlyBracket, true);
+      } else {
+        parseWithFallbackResult = call(self, tokenIndex);
       }
-      return self.Percentage();
     }
+    const obj = {
+      type: "Rule",
+      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+      prelude: parseWithFallbackResult,
+      block: self.Block(true),
+    };
+    return obj;
   },
+  generate(prelude) {
+    this.node(prelude.prelude);
+    this.node(prelude.block);
+  },
+  walkContext: "rule",
 };

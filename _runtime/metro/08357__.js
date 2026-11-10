@@ -1,27 +1,27 @@
 // _runtime/metro/08357__.js
-import findOffsets from "../08358_findOffsets.js";
+import _modDef8356 from "08356__.js";
+import _modDef8358 from "08358__.js";
 
-require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  isHeicFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
-          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
-    } else {
-      return false;
+  isTiffFile(byteLength) {
+    let tmp = byteLength;
+    if (tmp) {
+      tmp = byteLength.byteLength >= 4;
     }
+    if (tmp) {
+      const uint16 = byteLength.getUint16(0);
+      tmp = byteLength.getUint16(2, uint16 === _modDef8358.LITTLE_ENDIAN) === 42;
+    }
+    return tmp;
   },
-  findHeicOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
+  findTiffOffsets() {
+    if (_modDef8356.USE_EXIF) {
+      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
+    } else {
+      return {};
+    }
   },
 };

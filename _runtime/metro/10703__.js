@@ -1,13 +1,19 @@
 // _runtime/metro/10703__.js
-import registerAsset from "01119__.js";
+import _mod19 from "00019__.js";
+import _modDef10704 from "10704__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 375,
-  height: 152,
-  scales: [2, 3],
-  hash: "bd0899bbe9025729a8e812d462104779",
-  name: "img_bundle_subheader_mobile",
-  type: "png",
-});
+const useRef = _mod19.useRef;
+let closure_3 = [];
+
+export default function useStableMemo(fn, items) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = fn();
+    tmp2.current = items;
+  } else if (!_modDef10704(items, tmp2.current)) {
+    tmp.current = fn();
+    tmp2.current = items;
+  }
+  return tmp.current;
+}

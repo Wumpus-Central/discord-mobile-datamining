@@ -1,68 +1,69 @@
 // _runtime/metro/13363__.js
-import _mod13305 from "13305__.js";
-import _mod13365 from "13365__.js";
-import setupIntegration from "13334__.js";
+import errorCallback from "../13288_errorCallback.js";
+import _mod13292 from "13292__.js";
+import spanTimeInputToSeconds from "../13297_spanTimeInputToSeconds.js";
+import _mod13304 from "13304__.js";
+import BAGGAGE_HEADER_NAME from "../13305_BAGGAGE_HEADER_NAME.js";
+import _mod13310 from "13310__.js";
+import _mod13311 from "13311__.js";
+import _mod13319 from "13319__.js";
+import _mod13328 from "13328__.js";
+import "module_13291";
+import __SENTRY_DEBUG__ from "13320__.js";
+import dateTimestampInSeconds from "13306__.js";
 
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
+errorCallback;
+
+export function getTraceData(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
-  }
-  handled = obj.handled;
-  return {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let hasItem = _mod13305.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
-          }
-          if (hasItem) {
-            closure_2 = handled;
-            let obj2 = { level: _mod13365.severityLevelFromString(level), extra: null };
-            const obj3 = { arguments: args };
-            obj2.extra = obj3;
-            const tmpResult = _mod13365;
-            _mod13305.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  args(13326).captureException(found, obj2);
-                  const tmp14Result = args(13326);
-                } else {
-                  const tmp14Result2 = args(13287);
-                  const safeJoinResult = args(13287).safeJoin(args, " ");
-                  args(13326).captureMessage(safeJoinResult, obj2);
-                  const obj4 = args(13326);
-                }
-              } else if (!args[0]) {
-                const obj = args(13287);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + args(13287).safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = args(13326);
-                obj2.captureMessage(combined, obj2);
-                const tmp4 = args(13287).safeJoin(args.slice(1), " ") || "console.assert";
-              }
-            });
-            const tmpResult2 = _mod13305;
-          }
-        });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
+  const client = _mod13319.getClient();
+  if (obj3.isEnabled()) {
+    if (client) {
+      const mainCarrier = _mod13310.getMainCarrier();
+      const tmpResult = _mod13310;
+      const asyncContextStrategy = _mod13311.getAsyncContextStrategy(mainCarrier);
+      if (asyncContextStrategy.getTraceData) {
+        return asyncContextStrategy.getTraceData(obj);
+      } else {
+        const currentScope = _mod13319.getCurrentScope();
+        let span = obj.span;
+        if (!span) {
+          span = spanTimeInputToSeconds.getActiveSpan();
+          const tmpResult10 = spanTimeInputToSeconds;
+        }
+        if (span) {
+          let spanToTraceHeaderResult = spanTimeInputToSeconds.spanToTraceHeader(span);
+          const tmpResult11 = spanTimeInputToSeconds;
+        } else {
+          const propagationContext = currentScope.getPropagationContext();
+          ({ traceId, sampled, spanId } = propagationContext);
+          spanToTraceHeaderResult = _mod13304.generateSentryTraceHeader(traceId, spanId, sampled);
+          const tmpResult12 = _mod13304;
+        }
+        const tmpResult13 = _mod13328;
+        if (span) {
+          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
+        } else {
+          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
+        }
+        const tmpResult9 = _mod13319;
+        const result = BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
+        const TRACEPARENT_REGEXP = _mod13304.TRACEPARENT_REGEXP;
+        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
+          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
+          let obj5 = obj4;
+        } else {
+          const logger = _mod13292.logger;
+          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
+          obj5 = {};
+        }
+        return obj5;
       }
-    },
-  };
-});
+      const tmpResult8 = _mod13311;
+    }
+  }
+  return {};
+}

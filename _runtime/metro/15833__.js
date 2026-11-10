@@ -1,10 +1,13 @@
 // _runtime/metro/15833__.js
-import _mod15847 from "15847__.js";
-import assign from "15834__.js";
-import Deflate from "../15835_Deflate.js";
-import Inflate from "../15843_Inflate.js";
+import registerAsset from "01119__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod15847);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 213.5,
+  height: 19,
+  scales: [2, 3],
+  hash: "9fe6076328e716d8c76fe3781ba19232",
+  name: "img_subscription_activated_dark",
+  type: "png",
+});

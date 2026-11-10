@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/checkpoint/testing",
   scales: [1],
-  hash: "9a1d74df3e4a0f5d1a2c1ec69074b587",
+  hash: "670665bf2bcaa88daee61184888ce73b",
   name: "CheckpointTesting.compiled.messages",
   type: "jsona",
 });

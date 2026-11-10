@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "bc64844a7a5a9a10abdcb24c54b2c7ef",
-  name: "ChatArrowRightIcon",
+  hash: "6deb5144fd1fa39d4c62b384e76c1144",
+  name: "BookmarkIcon",
   type: "png",
 });

@@ -1,94 +1,28 @@
 // _runtime/metro/13097__.js
-import _mod13050 from "13050__.js";
-import _mod13094 from "13094__.js";
+import _mod13066 from "13066__.js";
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, null, true);
-}
-function consumeRule() {
-  return this.parseWithFallback(this.Rule, consumeRaw);
-}
-function consumeRawDeclaration(arg0) {
-  return this.Raw(arg0, _mod13094.mode.semicolonIncluded, true);
-}
-function consumeDeclaration() {
-  const self = this;
-  if (this.scanner.tokenType === Semicolon) {
-    const call = consumeRawDeclaration.call;
-    const tokenIndex = self.scanner.tokenIndex;
-    if (typeof call === "unknown") {
-      let RawResult = self.Raw(tokenIndex, _mod13094.mode.semicolonIncluded, true);
+function clone(obj) {
+  obj = {};
+  for (const key10006 in arg0) {
+    let arr = arg0[key10006];
+    if (!arr) {
+      obj[key10006] = arr;
+      continue;
     } else {
-      RawResult = call(self, tokenIndex);
-    }
-    return RawResult;
-  } else {
-    if (self.scanner.tokenType === tmp) {
-      self.scanner.next();
-      const iter = self.scanner;
-    }
-    return self.parseWithFallback(self.Declaration, consumeRawDeclaration);
-  }
-}
-const WhiteSpace = _mod13050.TYPE.WhiteSpace;
-const Comment = _mod13050.TYPE.Comment;
-const Semicolon = _mod13050.TYPE.Semicolon;
-const AtKeyword = _mod13050.TYPE.AtKeyword;
-const LeftCurlyBracket = _mod13050.TYPE.LeftCurlyBracket;
-const RightCurlyBracket = _mod13050.TYPE.RightCurlyBracket;
-const obj = {
-  name: "Block",
-  structure: null,
-  parse(arg0) {
-    const tmp = arg0 ? consumeDeclaration : consumeRule;
-    const self = this;
-    const list = this.createList();
-    this.eat(LeftCurlyBracket);
-    if (!this.scanner.eof) {
-      const tokenType = self.scanner.tokenType;
-      while (RightCurlyBracket !== tokenType) {
-        if (WhiteSpace !== tokenType) {
-          if (Comment !== tokenType) {
-            if (AtKeyword === tokenType) {
-              let arr = list.push(self.parseWithFallback(self.Atrule, consumeRaw));
-            } else {
-              let call = tmp.call;
-              let arr3 = list.push(typeof call === "unknown" ? tmp() : call(self));
-            }
-          }
-          if (self.scanner.eof) {
-            break;
+      let _Array = Array;
+      if (!Array.isArray(arr)) {
+        if (!(arr instanceof _mod13066)) {
+          let _Object = Object;
+          let mapped = arr;
+          if (arr.constructor === Object) {
+            mapped = clone(arr);
           }
         }
-        let iter = self.scanner;
-        let nextResult = iter.next();
       }
+      mapped = arr.map(clone);
     }
-    if (!self.scanner.eof) {
-      self.eat(RightCurlyBracket);
-    }
-    const element = {
-      type: "Block",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      children: list,
-    };
-    return element;
-  },
-  generate(arg0) {
-    this.chunk("{");
-    this.children(arg0, function (type) {
-      if ("Declaration" === type.type) {
-        const self = this;
-        this.chunk(";");
-      }
-    });
-    this.chunk("}");
-  },
-  walkContext: "block",
-};
-const obj2 = { children: null };
-const items = [["Atrule", "Rule", "Declaration"]];
-obj2.children = items;
-obj.structure = obj2;
+  }
+  return obj;
+}
 
-export default obj;
+export default clone;

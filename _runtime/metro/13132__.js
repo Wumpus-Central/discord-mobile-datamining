@@ -1,38 +1,25 @@
 // _runtime/metro/13132__.js
-import _mod13091 from "13091__.js";
-import _mod13133 from "13133__.js";
-import _mod13140 from "13140__.js";
-import _mod13146 from "13146__.js";
+import keys2 from "../13060_keys2.js";
+import _mod13064 from "13064__.js";
 
-const obj = {
-  parseContext: {
-    default: "StyleSheet",
-    stylesheet: "StyleSheet",
-    atrule: "Atrule",
-    atrulePrelude(atrule) {
-      let StringResult = null;
-      if (atrule.atrule) {
-        const _String = String;
-        StringResult = String(atrule.atrule);
-      }
-      return this.AtrulePrelude(StringResult);
-    },
-    mediaQueryList: "MediaQueryList",
-    mediaQuery: "MediaQuery",
-    rule: "Rule",
-    selectorList: "SelectorList",
-    selector: "Selector",
-    block() {
-      return this.Block(true);
-    },
-    declarationList: "DeclarationList",
-    declaration: "Declaration",
-    value: "Value",
+const Percentage = _mod13064.TYPE.Percentage;
+let obj = {
+  name: "Percentage",
+  structure: { value: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Percentage);
+    const obj2 = {
+      type: "Percentage",
+      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
+      value: this.scanner.source.substring(tokenStart, keys2.consumeNumber(this.scanner.source, tokenStart)),
+    };
+    return obj2;
   },
-  scope: _mod13133,
-  atrule: _mod13140,
-  pseudo: _mod13146,
-  node: _mod13091,
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk("%");
+  },
 };
 
 export default obj;

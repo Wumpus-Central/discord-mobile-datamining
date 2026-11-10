@@ -1,11 +1,7 @@
 // _runtime/metro/16466__.js
-import _mod16467 from "16467__.js";
+import _mod16532 from "16532__.js";
+import 16467__ from "16467__.js";
 
-export default (obj) => {
-  if (typeof obj === "object") {
-    let tmp2 = null !== obj;
-  } else {
-    tmp2 = _mod16467(obj);
-  }
-  return tmp2;
-};
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod16532;
+module_16467(obj, { assign: _mod16532 });

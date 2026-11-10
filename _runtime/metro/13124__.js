@@ -1,39 +1,22 @@
 // _runtime/metro/13124__.js
-import _mod13050 from "13050__.js";
+import _mod13064 from "13064__.js";
 
-const Comma = _mod13050.TYPE.Comma;
-const obj = {
-  name: "SelectorList",
-  structure: null,
+const Hash = _mod13064.TYPE.Hash;
+let obj = {
+  name: "IdSelector",
+  structure: { name: String },
   parse() {
-    const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      list.push(self.Selector());
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.Selector());
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
-    }
-    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
-    return element;
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Hash);
+    const obj = { type: "IdSelector", loc: this.getLocation(tokenStart, this.scanner.tokenStart), name: null };
+    const scanner = this.scanner;
+    obj.name = scanner.substrToCursor(tokenStart + 1);
+    return obj;
   },
-  generate(arg0) {
-    this.children(arg0, function () {
-      this.chunk(",");
-    });
+  generate(name) {
+    this.chunk("#");
+    this.chunk(name.name);
   },
-  walkContext: "selector",
 };
-const obj2 = { children: null };
-const items = [["Selector", "Raw"]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "eb011b89d6ca95998a19fc9752810bf1",
-  name: "MinecraftNeutralIcon-tertiary",
+  hash: "0a2944e427275918c323a5aa7d658085",
+  name: "BattlenetNeutralIcon",
   type: "png",
 });

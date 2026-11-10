@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "88649cc905f8610641d77b5f0a1b135c",
-  name: "FlagIcon",
+  hash: "26998a89da8a094ca27d79afeba3b61f",
+  name: "FoodIcon",
   type: "png",
 });

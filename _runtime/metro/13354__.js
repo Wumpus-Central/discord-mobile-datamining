@@ -1,28 +1,32 @@
 // _runtime/metro/13354__.js
-import eventFromMessage from "../13338_eventFromMessage.js";
-import _mod13355 from "13355__.js";
-import setupIntegration from "13334__.js";
+import _mod13292 from "13292__.js";
+import _mod13319 from "13319__.js";
+import _mod13320 from "13320__.js";
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+require = arg1;
+const dependencyMap = arg6;
+
+export function initAndBind(arg0, debug) {
+  if (true === debug.debug) {
+    const obj = _mod13292;
+    if (_mod13320.DEBUG_BUILD) {
+      const logger = obj.logger;
+      logger.enable();
+    } else {
+      obj.consoleSandbox(() => {
+        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
+      });
+    }
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod13355.applyAggregateErrorsToEvent(
-        eventFromMessage.exceptionFromError,
-        options.stackParser,
-        options.maxValueLength,
-        closure_1,
-        closure_0,
-        exception,
-        originalException,
-      );
-    },
-  };
-});
+  const currentScope = _mod13319.getCurrentScope();
+  currentScope.update(debug.initialScope);
+  const obj4 = new arg0(debug);
+  const currentScope1 = _mod13319.getCurrentScope();
+  currentScope1.setClient(obj4);
+  obj4.init();
+  return obj4;
+}
+export function setCurrentClient(arg0) {
+  const currentScope = _mod13319.getCurrentScope();
+  currentScope.setClient(arg0);
+}

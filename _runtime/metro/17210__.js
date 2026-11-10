@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "648b6791176add4ac6a2018a27641a15",
-  name: "SubscriptionIcon",
+  hash: "c8ba289430cf44af74e8a6dfe840935f",
+  name: "LaptopPhoneIcon",
   type: "png",
 });

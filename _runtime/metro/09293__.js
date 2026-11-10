@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
-  width: 20,
-  height: 20,
-  scales: [1, 2, 3],
-  hash: "e955954d3b070442dffa061da0dc1d1a",
-  name: "ic_clock",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "3badf2b48a53beb45ce4acb0a2b90dbd",
+  name: "MoreHorizontalIcon",
   type: "png",
 });

@@ -1,14 +1,12 @@
 // _runtime/metro/05537__.js
-import ComposedGestureName from "../05482_ComposedGestureName.js";
-import _mod5536 from "05536__.js";
+import ComposedGestureName from "../05484_ComposedGestureName.js";
+import _mod5538 from "05538__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function useExclusiveGestures() {
+export function useCompetingGestures() {
   items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
-  const applyResult = _mod5536.useComposedGesture.apply(items1);
-  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
-  return applyResult;
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod5538.useComposedGesture.apply(items1);
 }

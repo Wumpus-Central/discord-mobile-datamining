@@ -1,43 +1,19 @@
 // _runtime/metro/13318__.js
-import _mod13278 from "13278__.js";
-import _mod13306 from "13306__.js";
+import _mod13293 from "13293__.js";
+import ScopeClass from "../13313_ScopeClass.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
-          }
-        }
-      }
-    }
-    if (_mod13306.DEBUG_BUILD) {
-      const logger = _mod13278.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn(
-        "[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " +
-          json +
-          " of type " +
-          JSON.stringify(typeof flag) +
-          ".",
-      );
-    }
-  }
+export function getDefaultCurrentScope() {
+  return _mod13293.getGlobalSingleton("defaultCurrentScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+}
+export function getDefaultIsolationScope() {
+  return _mod13293.getGlobalSingleton("defaultIsolationScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
 }

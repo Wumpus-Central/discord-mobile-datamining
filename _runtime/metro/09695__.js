@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1e2c63f1ee26f8c3880e4c0e137e58ab",
-  name: "FandomNeutralIcon",
+  hash: "dcae1df15663c479951183ad5f2fe3dd",
+  name: "RedditNeutralIcon",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 500,
   height: 500,
   scales: [1],
-  hash: "b5435b1c0c86072b1fe63c9093cc47a6",
-  name: "img_account_sync_letterboxd_white",
+  hash: "94e785783bdc5358633f0ac49f888e99",
+  name: "img_account_sync_letterboxd_light",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "651f23c3c753462d68eac15857d95d39",
-  name: "PollsIcon",
+  hash: "0f6346bda6a1fe957f683601cddba824",
+  name: "IdIcon",
   type: "png",
 });

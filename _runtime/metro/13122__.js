@@ -1,54 +1,22 @@
 // _runtime/metro/13122__.js
-import _mod13050 from "13050__.js";
-import _mod13094 from "13094__.js";
+import _mod13064 from "13064__.js";
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, _mod13094.mode.leftCurlyBracket, true);
-}
-function consumePrelude() {
-  const self = this;
-  const SelectorListResult = this.SelectorList();
-  let tmp2 = "Raw" !== SelectorListResult.type;
-  if (tmp2) {
-    tmp2 = false === self.scanner.eof;
-  }
-  if (tmp2) {
-    tmp2 = self.scanner.tokenType !== LeftCurlyBracket;
-  }
-  if (tmp2) {
-    self.error();
-  }
-  return SelectorListResult;
-}
-const LeftCurlyBracket = _mod13050.TYPE.LeftCurlyBracket;
-
-export default {
-  name: "Rule",
-  structure: { prelude: ["SelectorList", "Raw"], block: ["Block"] },
+const Hash = _mod13064.TYPE.Hash;
+let obj = {
+  name: "Hash",
+  structure: { value: String },
   parse() {
-    const self = this;
-    const tokenIndex = this.scanner.tokenIndex;
-    if (this.parseRulePrelude) {
-      let parseWithFallbackResult = self.parseWithFallback(consumePrelude, consumeRaw);
-    } else {
-      const call = consumeRaw.call;
-      if (typeof call === "unknown") {
-        parseWithFallbackResult = self.Raw(tokenIndex, _mod13094.mode.leftCurlyBracket, true);
-      } else {
-        parseWithFallbackResult = call(self, tokenIndex);
-      }
-    }
-    const obj = {
-      type: "Rule",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      prelude: parseWithFallbackResult,
-      block: self.Block(true),
-    };
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Hash);
+    const obj = { type: "Hash", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
+    const scanner = this.scanner;
+    obj.value = scanner.substrToCursor(tokenStart + 1);
     return obj;
   },
-  generate(prelude) {
-    this.node(prelude.prelude);
-    this.node(prelude.block);
+  generate(value) {
+    this.chunk("#");
+    this.chunk(value.value);
   },
-  walkContext: "rule",
 };
+
+export default obj;

@@ -1,152 +1,170 @@
 // _runtime/metro/13093__.js
-import _mod13050 from "13050__.js";
-import _mod13094 from "13094__.js";
+const dependencyMap = Object.create(null);
+const dependencyMap2 = Object.create(null);
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, _mod13094.mode.leftCurlyBracketOrSemicolon, true);
-}
-function isDeclarationBlockAtrule() {
-  const scanner = this.scanner;
-  let lookupTypeResult = scanner.lookupType(1);
-  let num = 1;
-  if (lookupTypeResult) {
-    while (lookupTypeResult !== RightCurlyBracket) {
-      if (lookupTypeResult !== LeftCurlyBracket) {
-        if (lookupTypeResult !== AtKeyword) {
-          let sum = num + 1;
-          let scanner2 = this.scanner;
-          lookupTypeResult = scanner2.lookupType(sum);
-          num = sum;
-        }
-      }
-      let flag = false;
-      return false;
-    }
-    return true;
-  }
-  return false;
-}
-const AtKeyword = _mod13050.TYPE.AtKeyword;
-const Semicolon = _mod13050.TYPE.Semicolon;
-const LeftCurlyBracket = _mod13050.TYPE.LeftCurlyBracket;
-const RightCurlyBracket = _mod13050.TYPE.RightCurlyBracket;
-let obj = {
-  name: "Atrule",
-  structure: { name: String, prelude: ["AtrulePrelude", "Raw", null], block: ["Block", null] },
-  parse() {
-    const self = this;
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(AtKeyword);
-    const scanner = this.scanner;
-    const str = scanner.substrToCursor(tokenStart + 1);
-    const formatted = str.toLowerCase();
-    const scanner2 = this.scanner;
-    scanner2.skipSC();
-    let tmp4 = false === this.scanner.eof;
-    if (tmp4) {
-      tmp4 = self.scanner.tokenType !== LeftCurlyBracket;
-    }
-    if (tmp4) {
-      tmp4 = self.scanner.tokenType !== Semicolon;
-    }
-    if (!tmp4) {
-      const tokenType = self.scanner.tokenType;
-      if (Semicolon === tokenType) {
-        self.scanner.next();
-        let BlockResult = null;
-        const iter = self.scanner;
+export default {
+  keyword: function getKeywordDescriptor(str) {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown" ? hasOwnProperty(str) : call(dependencyMap, str)) {
+      return dependencyMap[str];
+    } else {
+      const formatted = str.toLowerCase();
+      const call2 = hasOwnProperty.call;
+      if (typeof call2 === "unknown" ? hasOwnProperty(formatted) : call2(dependencyMap, formatted)) {
+        dependencyMap[str] = dependencyMap[formatted];
+        return dependencyMap[formatted];
       } else {
-        BlockResult = null;
-        if (LeftCurlyBracket === tokenType) {
-          const atrule = self.atrule;
-          if (atrule.hasOwnProperty(formatted)) {
-            if (typeof self.atrule[formatted].block === "function") {
-              const block = self.atrule[formatted].block;
-              const call3 = block.call;
-              typeof call3 === "unknown" ? block() : call3(self);
-            }
-          }
-          const call2 = isDeclarationBlockAtrule.call;
-          if (typeof call2 === "unknown") {
-            const scanner4 = self.scanner;
-            let lookupTypeResult = scanner4.lookupType(1);
-            let num = 1;
-            let flag2 = false;
-            if (lookupTypeResult) {
-              flag2 = true;
-              while (lookupTypeResult !== RightCurlyBracket) {
-                flag2 = false;
-                if (lookupTypeResult === LeftCurlyBracket) {
-                  break;
-                } else {
-                  flag2 = false;
-                  if (lookupTypeResult === AtKeyword) {
-                    break;
-                  } else {
-                    let sum = num + 1;
-                    let scanner5 = self.scanner;
-                    lookupTypeResult = scanner5.lookupType(sum);
-                    num = sum;
-                    flag2 = false;
-                    if (!lookupTypeResult) {
-                      break;
-                    }
-                  }
+        let tmp3 = length >= 2;
+        if (2 <= formatted.length) {
+          tmp3 = 45 === formatted.charCodeAt(0);
+        }
+        if (tmp3) {
+          tmp3 = 45 === formatted.charCodeAt(1);
+        }
+        let str2 = "";
+        if (!tmp3) {
+          let str3 = "";
+          if (3 <= formatted.length) {
+            str3 = "";
+            if (45 === formatted.charCodeAt(0)) {
+              str3 = "";
+              if (45 !== formatted.charCodeAt(1)) {
+                const index = formatted.indexOf("-", 2);
+                str3 = "";
+                if (-1 !== index) {
+                  str3 = formatted.substring(0, index + 1);
                 }
               }
             }
-            let call2Result = flag2;
-          } else {
-            call2Result = call2(self);
           }
-          BlockResult = self.Block(call2Result);
+          str2 = str3;
         }
+        const _Object = Object;
+        const obj = {
+          basename: formatted.substr(str2.length),
+          name: formatted,
+          vendor: str2,
+          prefix: str2,
+          custom: tmp3,
+        };
+        const frozen = Object.freeze(obj);
+        dependencyMap[""] = frozen;
+        return frozen;
       }
-      const obj = {
-        type: "Atrule",
-        loc: self.getLocation(tokenStart, self.scanner.tokenStart),
-        name: str,
-        prelude: null,
-        block: BlockResult,
-      };
-      return obj;
+    }
+  },
+  property: function getPropertyDescriptor(str) {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown" ? hasOwnProperty(str) : call(dependencyMap2, str)) {
+      return dependencyMap2[str];
     } else {
-      if (self.parseAtrulePrelude) {
-        ({ AtrulePrelude, parseWithFallback } = self);
-        const element = parseWithFallback(AtrulePrelude.bind(self, str), consumeRaw);
-        let RawResult = element;
-        if (tmp12) {
-          RawResult = null;
+      str = str[0];
+      let str2 = "/";
+      if ("/" === str) {
+        if (`/` === str[1]) {
+          str2 = "//";
         }
-        tmp12 = "AtrulePrelude" === element.type && null === element.children.head;
+        str = str2;
       } else {
-        const call = consumeRaw.call;
-        const tokenIndex = self.scanner.tokenIndex;
-        if (typeof call === "unknown") {
-          RawResult = self.Raw(tokenIndex, _mod13094.mode.leftCurlyBracketOrSemicolon, true);
-        } else {
-          RawResult = call(self, tokenIndex);
+        let tmp3 = "_" !== str;
+        if (tmp3) {
+          tmp3 = "*" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "$" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "#" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "+" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "&" !== str;
+        }
+        if (tmp3) {
+          str = "";
         }
       }
-      const scanner3 = self.scanner;
-      scanner3.skipSC();
+      let tmp5 = str.length - tmp4 >= 2;
+      if (tmp5) {
+        tmp5 = 45 === str.charCodeAt(tmp4);
+      }
+      if (tmp5) {
+        tmp5 = 45 === str.charCodeAt(tmp4 + 1);
+      }
+      let arr = str;
+      if (!tmp5) {
+        const formatted = str.toLowerCase();
+        const call2 = hasOwnProperty.call;
+        arr = formatted;
+        if (typeof call2 === "unknown" ? hasOwnProperty(formatted) : call2(dependencyMap2, formatted)) {
+          dependencyMap2[str] = dependencyMap2[formatted];
+          return dependencyMap2[formatted];
+        }
+      }
+      let str10 = "";
+      if (!tmp5) {
+        let str11 = "";
+        if (arr.length - (str.length || 0) >= 3) {
+          str11 = "";
+          if (45 === arr.charCodeAt(tmp8)) {
+            str11 = "";
+            if (45 !== arr.charCodeAt(tmp8 + 1)) {
+              const index = arr.indexOf("-", tmp8 + 2);
+              str11 = "";
+              if (-1 !== index) {
+                str11 = arr.substring(tmp8, index + 1);
+              }
+            }
+          }
+        }
+        str10 = str11;
+      }
+      const substr = arr.substr(0, str.length + str10.length);
+      const _Object = Object;
+      const obj = {
+        basename: arr.substr(substr.length),
+        name: arr.substr(str.length),
+        hack: str,
+        vendor: str10,
+        prefix: substr,
+        custom: tmp5,
+      };
+      const frozen = Object.freeze(obj);
+      dependencyMap2[str] = frozen;
+      return frozen;
     }
   },
-  generate(name) {
-    const self = this;
-    this.chunk("@");
-    this.chunk(name.name);
-    if (null !== name.prelude) {
-      self.chunk(" ");
-      self.node(name.prelude);
+  isCustomProperty(callResult, sum) {
+    let num = sum;
+    if (!sum) {
+      num = 0;
     }
-    if (name.block) {
-      self.node(name.block);
-    } else {
-      self.chunk(";");
+    let tmp = callResult.length - num >= 2;
+    if (tmp) {
+      tmp = 45 === callResult.charCodeAt(num);
     }
+    if (tmp) {
+      tmp = 45 === callResult.charCodeAt(num + 1);
+    }
+    return tmp;
   },
-  walkContext: "atrule",
+  vendorPrefix: function getVendorPrefix(str, sum) {
+    let num = sum;
+    if (!sum) {
+      num = 0;
+    }
+    if (str.length - num >= 3) {
+      if (45 === str.charCodeAt(num)) {
+        if (45 !== str.charCodeAt(num + 1)) {
+          const index = str.indexOf("-", num + 2);
+          if (-1 !== index) {
+            return str.substring(num, index + 1);
+          }
+        }
+      }
+    }
+    return "";
+  },
 };
-
-export default obj;

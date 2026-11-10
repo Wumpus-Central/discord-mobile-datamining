@@ -1,6 +1,20 @@
 // _runtime/metro/16496__.js
-import _mod16444 from "16444__.js";
-import _mod16445 from "16445__.js";
+import _mod16468 from "16468__.js";
+import _mod16494 from "16494__.js";
 
-export default _mod16444 &&
-  _mod16445(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);
+export default (arg0, arg1) => {
+  if (arguments.length < 2) {
+    const tmp7 = _mod16468[arg0];
+    let tmp8;
+    if (_mod16494(tmp7)) {
+      tmp8 = tmp7;
+    }
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod16468[arg0];
+    if (tmp3) {
+      tmp3 = _mod16468[arg0][arg1];
+    }
+  }
+  return tmp3;
+};

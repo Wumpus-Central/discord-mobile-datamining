@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/age_gate/native/images",
-  width: 274.5,
-  height: 110,
+  httpServerLocation: "/assets/images/channel_following/dark",
+  width: 280,
+  height: 120,
   scales: [2, 3],
-  hash: "43e5ff0d9ea5f04fe209ebfd15e2d439",
-  name: "nsfw_gate_unavailable",
+  hash: "9c2cfd53ed0ab3abd70ee33b26a982e5",
+  name: "channel_following_success_2",
   type: "png",
 });

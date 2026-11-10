@@ -1,16 +1,14 @@
 // _runtime/metro/07078__.js
-import Link from "../01500_Link.js";
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-require = fn;
-const Animated = fn(17).Animated;
-const jsx = fn(21).jsx;
-
-export function Background(style) {
-  const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj2 = {};
-  const merged1 = Object.assign(merged);
-  items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
-  obj2.style = items;
-  return <Animated.View />;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation:
+    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_shb2al3n4oohkkhnm35rfpv56i/node_modules/@react-navigation/elements/lib/module/assets",
+  width: 96,
+  height: 96,
+  scales: [1, 1, 2, 3, 4],
+  hash: "3162e8a244d8f6fbd259e79043e23ce4",
+  name: "close-icon",
+  type: "png",
+});

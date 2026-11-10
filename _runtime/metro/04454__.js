@@ -1,27 +1,28 @@
 // _runtime/metro/04454__.js
+import 02189__ from "02189__.js";
+import 02192__ from "02192__.js";
+import date_mod from "02193__.js";
+import date_mod from "02195__.js";
 import 04455__ from "04455__.js";
-import 04456__ from "04456__.js";
-import 04457__ from "04457__.js";
-import date_mod from "04458__.js";
-import date_mod from "04459__.js";
 
-if (!module_4455) {
-  const obj = { default: module_4455 };
+if (!module_2189) {
+  const obj = { default: module_2189 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4455;
+  tmp3 = module_2189;
 }
-if (!module_4456) {
-  const obj2 = { default: module_4456 };
+if (!module_2192) {
+  const obj2 = { default: module_2192 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4456;
+  tmp5 = module_2192;
 }
-if (!module_4457) {
-  const obj3 = { default: module_4457 };
+let date = date_mod;
+if (!date) {
+  const obj3 = { default: date };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4457;
+  tmp7 = date;
 }
 let date = date_mod;
 if (!date) {
@@ -30,13 +31,12 @@ if (!date) {
 } else {
   tmp9 = date;
 }
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
+if (!module_4455) {
+  const obj5 = { default: module_4455 };
   let tmp11 = obj5;
 } else {
-  tmp11 = date;
+  tmp11 = module_4455;
 }
 
-export default { code: "es", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "en-GB", formatDistance: tmp3.default, formatLong: tmp11.default, formatRelative: tmp5.default, localize: tmp7.default, match: tmp9.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

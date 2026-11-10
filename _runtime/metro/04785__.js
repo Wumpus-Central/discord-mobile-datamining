@@ -1,15 +1,15 @@
 // _runtime/metro/04785__.js
-import module_4601_mod from "04601__.js";
-import requiredArgs_mod from "../04421_requiredArgs.js";
+import module_4777_mod from "04777__.js";
+import requiredArgs_mod from "../04423_requiredArgs.js";
 
-let module_4601 = module_4601_mod;
-if (!module_4601) {
-  const obj = { default: module_4601 };
+let module_4777 = module_4777_mod;
+if (!module_4777) {
+  const obj = { default: module_4777 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4601;
+  tmp3 = module_4777;
 }
-module_4601 = tmp3;
+module_4777 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isToday(arg0) {
+export default function isThisYear(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4601.default(arg0, Date.now());
+  return module_4777.default(arg0, Date.now());
 };
 export default exports.default;

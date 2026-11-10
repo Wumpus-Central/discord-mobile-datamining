@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ee2c0e9df1cdb55262b28d0f27383b12",
-  name: "GooglePlayNeutralIcon",
+  hash: "4ff7b09e67486edcd0ad75a5131670be",
+  name: "CirclePlayIcon-primary",
   type: "png",
 });

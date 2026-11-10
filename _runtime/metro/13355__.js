@@ -1,126 +1,145 @@
 // _runtime/metro/13355__.js
-import _mod13285 from "13285__.js";
-import _mod13287 from "13287__.js";
+import _mod13292 from "13292__.js";
+import _mod13316 from "13316__.js";
+import _mod13320 from "13320__.js";
+import _mod13336 from "13336__.js";
+import _mod13349 from "13349__.js";
+import _mod13357 from "13357__.js";
+
+const require = globalThis.__r;
 
 require = arg1;
 let dependencyMap = arg6;
-function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mechanism, exception_id) {
-  _require = fn;
-  dependencyMap = value;
-  aggregateExceptionsFromError = arg2;
-  closure_3 = source;
-  if (arg5.length >= arg2 + 1) {
-    return arg5;
-  } else {
-    items = [];
-    HermesBuiltin.arraySpread(arg5, 0);
-    length = items;
-    const _Error = Error;
-    if (obj3.isInstanceOf(errors[source], Error)) {
-      mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-      let obj = {};
-      let merged = Object.assign(mechanism.mechanism);
-      const tmp3 = "AggregateError" === mechanism.type && { is_exception_group: true };
-      let merged1 = Object.assign(tmp3);
-      obj.exception_id = exception_id;
-      mechanism.mechanism = obj;
-      const tmp7 = fn(value, errors[source]);
-      length = length.length;
-      tmp7.mechanism = tmp7.mechanism || { type: "generic", handled: true };
-      let obj2 = {};
-      let merged2 = Object.assign(tmp7.mechanism);
-      obj2.type = "chained";
-      obj2.source = source;
-      obj2.exception_id = length;
-      obj2.parent_id = exception_id;
-      tmp7.mechanism = obj2;
-      const items1 = [tmp7];
-      HermesBuiltin.arraySpread(length, 1);
-      length = aggregateExceptionsFromError(fn, value, arg2, errors[source], source, items1, tmp7, length);
-    }
-    const _Array = Array;
-    if (Array.isArray(errors.errors)) {
-      errors = errors.errors;
-      const item = errors.forEach((item, index) => {
-        if (obj.isInstanceOf(item, Error)) {
-          mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-          const obj2 = {};
-          const merged = Object.assign(tmp.mechanism);
-          const tmp5 = "AggregateError" === mechanism.type && { is_exception_group: true };
-          const merged1 = Object.assign(tmp5);
-          obj2.exception_id = exception_id;
-          mechanism.mechanism = obj2;
-          const tmp12 = closure_0(closure_1, item);
-          length = length.length;
-          const _HermesInternal = HermesInternal;
-          mechanism = tmp12.mechanism;
-          const combined = "errors[" + index + "]";
-          if (!mechanism) {
-            mechanism = { type: "generic", handled: true };
-          }
-          tmp12.mechanism = mechanism;
-          const obj3 = {};
-          const merged2 = Object.assign(tmp12.mechanism);
-          obj3.type = "chained";
-          obj3.source = combined;
-          obj3.exception_id = length;
-          obj3.parent_id = exception_id;
-          tmp12.mechanism = obj3;
-          items = [tmp12];
-          HermesBuiltin.arraySpread(length, 1);
-          length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_3, items, tmp12, length);
-        }
-        obj = _mod13285;
-      });
-    }
-    return length;
-  }
-}
 
-export function applyAggregateErrorsToEvent(exceptionFromError, stackParser) {
-  let num = maxValueLength;
-  if (maxValueLength === undefined) {
-    num = 250;
-  }
-  if (exception.exception) {
-    if (exception.exception.values) {
-      if (originalException) {
-        const _Error = Error;
-        if (obj.isInstanceOf(originalException.originalException, Error)) {
-          let tmp5;
-          if (exception.exception.values.length > 0) {
-            tmp5 = exception.exception.values[exception.exception.values.length - 1];
-          }
-          if (tmp5) {
-            exception.exception.values = aggregateExceptionsFromError(
-              exceptionFromError,
-              stackParser,
-              arg4,
-              originalException.originalException,
-              arg3,
-              exception.exception.values,
-              tmp5,
-              0,
-            ).map((value) => {
-              if (value.value) {
-                value.value = _mod13287.truncate(value.value, num);
-              }
-              return value;
-            });
-            const arr = aggregateExceptionsFromError(
-              exceptionFromError,
-              stackParser,
-              arg4,
-              originalException.originalException,
-              arg3,
-              exception.exception.values,
-              tmp5,
-              0,
-            );
-          }
-        }
-        obj = num(13285);
-      }
+export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
+export function createTransport(bufferSize, arg1) {
+  _require = bufferSize;
+  dependencyMap = arg1;
+  let promiseBuffer = arg2;
+  if (arg2 === undefined) {
+    let num = bufferSize.bufferSize;
+    if (!num) {
+      num = 64;
     }
+    promiseBuffer = require("13356__.js").makePromiseBuffer(num);
+    let obj = require("13356__.js");
   }
+  closure_3 = {};
+  return {
+    send(arg0) {
+      items = [];
+      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        const result = _mod13336.envelopeItemTypeToDataCategory(arg1);
+        if (obj2.isRateLimited(closure_3, result)) {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp6;
+            if (Array.isArray(arg0)) {
+              tmp6 = arg0[1];
+            }
+            const tmp4 = tmp6;
+          }
+          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
+        } else {
+          items.push(arg0);
+        }
+        obj2 = _mod13357;
+      });
+      if (0 === items.length) {
+        return bufferSize(tmp2[3]).resolvedSyncPromise({});
+      } else {
+        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
+        function recordEnvelopeLoss(arg0) {}
+        const tmpResult2 = bufferSize(tmp2[1]);
+        return recordEnvelopeLoss
+          .add(() => {
+            const obj = { body: _mod13336.serializeEnvelope(dependencyMap) };
+            return dependencyMap(obj).then(
+              (statusCode) => {
+                let DEBUG_BUILD = undefined !== statusCode.statusCode;
+                if (DEBUG_BUILD) {
+                  let tmp = statusCode.statusCode < 200;
+                  if (!tmp) {
+                    tmp = statusCode.statusCode >= 300;
+                  }
+                  DEBUG_BUILD = tmp;
+                }
+                if (DEBUG_BUILD) {
+                  DEBUG_BUILD = items(13320).DEBUG_BUILD;
+                }
+                if (DEBUG_BUILD) {
+                  const logger = items(13292).logger;
+                  const _HermesInternal = HermesInternal;
+                  logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
+                }
+                closure_3 = items(13357).updateRateLimits(closure_3, statusCode);
+                return statusCode;
+              },
+              (arg0) => {
+                if (typeof recordEnvelopeLoss === "function") {
+                  const network_error = "network_error";
+                  closure_0(13336).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
+                    if ("event" === arg1) {
+                      const _Array = Array;
+                      let tmp4;
+                      if (Array.isArray(arg0)) {
+                        tmp4 = arg0[1];
+                      }
+                      const tmp = tmp4;
+                    }
+                    closure_2_0.recordDroppedEvent(
+                      network_error,
+                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
+                      tmp,
+                    );
+                  });
+                  throw arg0;
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              },
+            );
+          })
+          .then(
+            (result) => result,
+            (arg0) => {
+              if (arg0 instanceof _mod13349.SentryError) {
+                if (_mod13320.DEBUG_BUILD) {
+                  const logger = _mod13292.logger;
+                  logger.error("Skipped sending event because buffer is full.");
+                }
+                if (typeof recordEnvelopeLoss === "function") {
+                  const queue_overflow = "queue_overflow";
+                  _mod13336.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
+                    if ("event" === arg1) {
+                      const _Array = Array;
+                      let tmp4;
+                      if (Array.isArray(arg0)) {
+                        tmp4 = arg0[1];
+                      }
+                      const tmp = tmp4;
+                    }
+                    closure_2_0.recordDroppedEvent(
+                      network_error,
+                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
+                      tmp,
+                    );
+                  });
+                  const tmpResult = _mod13336;
+                  return _mod13316.resolvedSyncPromise({});
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw arg0;
+              }
+            },
+          );
+      }
+      let obj = bufferSize(dependencyMap[1]);
+    },
+    flush(arg0) {
+      return promiseBuffer.drain(arg0);
+    },
+  };
 }

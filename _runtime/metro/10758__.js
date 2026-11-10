@@ -1,54 +1,27 @@
 // _runtime/metro/10758__.js
-import _mod1652 from "01652__.js";
+import _mod10759 from "10759__.js";
+import useCommonVariables from "../10762_useCommonVariables.js";
+import _mod10766 from "10766__.js";
+import _mod10767 from "10767__.js";
+import CarouselLayout from "../10768_CarouselLayout.js";
 import noop from "00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let context = noop.createContext({});
-let closure_5 = { code: "(function pnpm_indexTsx1(index,dimensions){let[itemDimensions]=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};})" };
-let closure_6 = { code: "(function pnpm_indexTsx2(dimensions){let[containerSize]=this.__closure;containerSize.value=dimensions;})" };
 
-export const GlobalStateContext = context;
-export (value) => {
-  const sharedValue = _mod1652.useSharedValue({ width: 0, height: 0 });
-  const sharedValue1 = _mod1652.useSharedValue({});
-  items = [closure_5, sharedValue1];
-  [tmp3, tmp4] = items;
-  function pnpm_indexTsx1(arg0, arg1) {
-    const obj = {};
-    const merged = Object.assign(_undefined.value);
-    obj[arg0] = arg1;
-    _undefined.value = obj;
-  }
-  const items1 = [tmp4];
-  pnpm_indexTsx1.__closure = items1;
-  pnpm_indexTsx1.__workletHash = 6407231763087;
-  pnpm_indexTsx1.__initData = tmp3;
-  const items2 = [closure_6, sharedValue];
-  c0 = undefined;
-  [tmp5, tmp6] = items2;
-  function pnpm_indexTsx2(value) {
-    c0.value = value;
-  }
-  const items3 = [tmp6];
-  pnpm_indexTsx2.__closure = items3;
-  pnpm_indexTsx2.__workletHash = 15528502204235;
-  pnpm_indexTsx2.__initData = tmp5;
-  const obj3 = { value: null, children: null };
+export default noop.forwardRef((defaultIndex, ref) => {
+  const initProps = _mod10759.useInitProps(defaultIndex);
+  const commonVariables = useCommonVariables.useCommonVariables(initProps);
   const obj4 = {};
-  let merged = Object.assign(value.value);
-  obj4.layout = { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: pnpm_indexTsx1, updateContainerSize: pnpm_indexTsx2 };
-  obj3.value = obj4;
-  obj3.children = value.children;
-  return <context.Provider value={null}>{null}</context.Provider>;
-}
-export () => {
-  context = noop.useContext(context);
-  if (context) {
-    return context;
-  } else {
-    const _Error = Error;
-    const error = new Error("useGlobalState must be used within a GlobalStateProvider");
-    throw error;
-  }
-}
+  const merged = Object.assign(initProps);
+  obj4.dataLength = initProps.dataLength;
+  const propsErrorBoundary = _mod10766.usePropsErrorBoundary(obj4);
+  const obj5 = {
+    value: { props: initProps, common: commonVariables },
+    children: jsx(CarouselLayout.CarouselLayout, { ref }),
+  };
+  return jsx(_mod10767.GlobalStateProvider, {
+    value: { props: initProps, common: commonVariables },
+    children: jsx(CarouselLayout.CarouselLayout, { ref }),
+  });
+});

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/nuf/native/images",
+  width: 221,
+  height: 195,
   scales: [1, 2, 3],
-  hash: "9a553b5676f66b916dad899877998f41",
-  name: "ic_home",
+  hash: "3a31ec2d5aeb0eedce9411671227bdc1",
+  name: "discoverability-header",
   type: "png",
 });

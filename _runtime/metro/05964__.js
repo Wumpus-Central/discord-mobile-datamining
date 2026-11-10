@@ -1,9 +1,13 @@
 // _runtime/metro/05964__.js
-import baseGetAllKeys from "../00656_baseGetAllKeys.js";
-import _mod5947 from "05947__.js";
-import keysIn from "../05949_keysIn.js";
+import _process from "../00539__process.js";
+import baseUnary from "../00540_baseUnary.js";
+import baseIsMap from "../05965_baseIsMap.js";
 
-export default function getAllKeysIn(arg0) {
-  const tmp = baseGetAllKeys;
-  return tmp(arg0, keysIn, _mod5947);
+const tmp = _process && _process.isMap;
+if (tmp) {
+  let _module = baseUnary(tmp);
+} else {
+  _module = baseIsMap;
 }
+
+export default _module;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a568e12daf3f479ad26c9db6582fe1a2",
-  name: "CreditCardIcon",
+  hash: "f6beefc7c46ba35914164c9b6ddbe0f6",
+  name: "GoogleNeutralIcon",
   type: "png",
 });

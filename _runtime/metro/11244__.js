@@ -1,13 +1,10 @@
 // _runtime/metro/11244__.js
-import registerAsset from "01119__.js";
+import _mod11243 from "11243__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "7e58d4dc1cf5cf663768e2048a34f162",
-  name: "ic_file_small_archive",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod11243.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+}
