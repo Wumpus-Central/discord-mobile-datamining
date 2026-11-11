@@ -7,18 +7,18 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useKeyboardIsOpenDefault from "../../keyboard/native/useKeyboardIsOpen.tsx";
 import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
-import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
 import useDisplayProfileDefault from "../hooks/useDisplayProfile.tsx";
+import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import useUserProfileColors from "../hooks/native/useUserProfileColors.tsx";
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
 import useFetchCollectiblesCategoriesAndPurchasesDefault from "../../collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx";
 import useSafeAreaAvoidingInputsDefault from "../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef16787 from "../../../../_runtime/metro/16787__.js";
+import _modDef16948 from "../../../../_runtime/metro/16948__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
@@ -44,16 +44,16 @@ import ProfileCustomizationNavigationStore from "../../profile_customization/Pro
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const useProfileThemeDefault = tmp(8879);
-const useUserProfileBannerHeightDefault = tmp(8882);
-const UserProfileFixedBackgroundDefault = tmp(8890);
-const useBadgesDefault = tmp(8895);
-const useMeasuredLayoutDefault = tmp(9075);
-const UserProfileCustomStatusBubbleDefault = tmp(11546);
-const useTryItOutUpsellScrollTrackingDefault = tmp(16810);
-const useScrollToUserProfileEditFormSectionDefault = tmp(16811);
-const EditUserProfileAvatarDefault = tmp(16894);
-const UserProfilePremiumTryItOutUpsellDefault = tmp(16904);
+const useMeasuredLayoutDefault = tmp(7929);
+const useProfileThemeDefault = tmp(8524);
+const useUserProfileBannerHeightDefault = tmp(8527);
+const UserProfileFixedBackgroundDefault = tmp(8534);
+const useBadgesDefault = tmp(8541);
+const UserProfileCustomStatusBubbleDefault = tmp(9465);
+const useTryItOutUpsellScrollTrackingDefault = tmp(16971);
+const useScrollToUserProfileEditFormSectionDefault = tmp(16972);
+const EditUserProfileAvatarDefault = tmp(17057);
+const UserProfilePremiumTryItOutUpsellDefault = tmp(17067);
 require = fn;
 function EditUserProfileBanner(arg0) {
   ({
@@ -108,8 +108,8 @@ function EditUserProfileBanner(arg0) {
   const intl = util.intl;
   obj5.editButtonAccessibilityLabel = intl.string(util.t.VqsHy0);
   obj5.editDisabled = disabled;
-  obj4.children = closure_1_15(UserProfileEditBannerButtonDefault, obj5);
-  return closure_1_15(useAnalyticsLocations.AnalyticsLocationProvider, obj4);
+  obj4.children = colors(UserProfileEditBannerButtonDefault, obj5);
+  return colors(useAnalyticsLocations.AnalyticsLocationProvider, obj4);
 }
 function ProfileThemeContainerColors(arg0) {
   ({ profileTheme, children } = arg0);
@@ -120,7 +120,7 @@ function ProfileThemeContainerColors(arg0) {
       containerBorderColor: userProfileColors.containerBorderColor,
     }),
   };
-  return closure_1_15(value2, obj2);
+  return colors(closure_1_16, obj2);
 }
 function MainUserProfileEditForm(arg0) {
   const obj2 = {};
@@ -128,7 +128,7 @@ function MainUserProfileEditForm(arg0) {
     MobileWidgetEditingExperiment.useIsMobileWidgetEditingEnabled("UserProfileEditForm");
   const merged = Object.assign(arg0);
   obj2.isWidgetEditingEnabled = isMobileWidgetEditingEnabled;
-  return closure_1_15(UserProfileEditFormContent, obj2);
+  return colors(UserProfileEditFormContent, obj2);
 }
 function UserProfileEditFormContent(currentUser) {
   currentUser = currentUser.currentUser;
@@ -584,8 +584,8 @@ function UserProfileEditFormContent(currentUser) {
           if ("" !== children) {
             const obj4 = { style: formContainer.errorContainer, children: null };
             const obj5 = { variant: "body-sm/semibold", color: "text-feedback-critical", children };
-            obj4.children = closure_2_15(Text_Text.Text, obj5);
-            tmp9 = closure_2_15(hasOwnProperty, obj4);
+            obj4.children = colors(Text_Text.Text, obj5);
+            tmp9 = colors(hasOwnProperty, obj4);
           }
         }
         const items1 = [tmp9, , , , , , , , , , , , ,];
@@ -616,19 +616,19 @@ function UserProfileEditFormContent(currentUser) {
         obj6.value = tmp16;
         obj6.onFocus = onFocus;
         obj6.onChange = function onChange(globalName) {
-          return _undefined(8812).setPendingChanges({ globalName });
+          return _undefined(9332).setPendingChanges({ globalName });
         };
         obj6.placeholder = _undefined.toString();
         obj6.maxLength = maxLength;
         obj6.disabled = isSubmitting;
-        items1[1] = closure_2_15(UserProfileEditFormTextFieldDefault, obj6);
+        items1[1] = colors(UserProfileEditFormTextFieldDefault, obj6);
         let tmp19 = c42;
         if (!c42) {
           if (!isTryItOut) {
             let tmp12Result = null;
             if (closure_43 !== constants.HIDDEN) {
               const obj7 = { user: _undefined, availability: tmp21, disabled: isSubmitting };
-              tmp12Result = closure_2_15(UserProfileHexagonCampaignDisplayNameStyleEditButtonDefault, obj7);
+              tmp12Result = colors(UserProfileHexagonCampaignDisplayNameStyleEditButtonDefault, obj7);
             }
             let tmp24 = isTryItOut;
             let tmp25 = isTryItOut;
@@ -657,15 +657,15 @@ function UserProfileEditFormContent(currentUser) {
           obj8.value = tmp30;
           obj8.onFocus = onFocus;
           obj8.onChange = function onChange(pronouns) {
-            return _undefined(8812).setPendingChanges({ pronouns });
+            return _undefined(9332).setPendingChanges({ pronouns });
           };
           obj8.maxLength = maxLength2;
           obj8.disabled = isSubmitting;
-          items1[3] = closure_2_15(UserProfileEditFormTextFieldDefault, obj8);
+          items1[3] = colors(UserProfileEditFormTextFieldDefault, obj8);
           let tmp12Result6 = !tmp25;
           if (!tmp25) {
             const obj9 = { badges, catalogBadges, ownsAnyBadge, autoOpen: c1 === isSubmitting.BADGES };
-            tmp12Result6 = closure_2_15(UserProfileBadgesEditButtonDefault, obj9);
+            tmp12Result6 = colors(UserProfileBadgesEditButtonDefault, obj9);
           }
           items1[4] = tmp12Result6;
           const obj10 = {
@@ -691,12 +691,12 @@ function UserProfileEditFormContent(currentUser) {
           obj10.value = tmp41;
           obj10.onFocus = onFocus;
           obj10.onChange = function onChange(bio) {
-            return _undefined(8812).setPendingChanges({ bio });
+            return _undefined(9332).setPendingChanges({ bio });
           };
           obj10.autoFocus = c1 === isSubmitting.BIO;
           obj10.maxLength = maxLength;
           obj10.disabled = isSubmitting;
-          items1[5] = closure_2_15(UserProfileEditFormTextFieldDefault, obj10);
+          items1[5] = colors(UserProfileEditFormTextFieldDefault, obj10);
           const obj11 = {
             user: _undefined,
             onProfileThemeColorsChanged: null,
@@ -708,26 +708,26 @@ function UserProfileEditFormContent(currentUser) {
           if (tmp25) {
             let fn = UserProfileActionCreators.setTryItOutThemeColors;
           } else {
-            fn = (themeColors) => _undefined(8812).setPendingChanges({ themeColors });
+            fn = (themeColors) => _undefined(9332).setPendingChanges({ themeColors });
           }
           obj11.onProfileThemeColorsChanged = fn;
           obj11.pendingAvatarSrc = pendingAvatarSrc;
           obj11.pendingThemeColors = tmp25 ? tryItOutThemeColors : pendingThemeColors;
           obj11.isTryItOut = tmp25;
-          items1[6] = closure_2_15(UserProfileEditThemeDefault, obj11);
+          items1[6] = colors(UserProfileEditThemeDefault, obj11);
           const obj12 = { user: _undefined, pendingAvatarDecoration: tmp25 ? c20 : c15, isTryItOut: tmp25 };
-          items1[7] = closure_2_15(UserProfileAvatarDecorationEditButtonDefault, obj12);
+          items1[7] = colors(UserProfileAvatarDecorationEditButtonDefault, obj12);
           const obj13 = {
             user: _undefined,
             pendingProfileEffect: tmp25 ? c21 : c16,
             displayProfile,
             isTryItOut: tmp25,
           };
-          items1[8] = closure_2_15(UserProfileEffectEditButtonDefault, obj13);
+          items1[8] = colors(UserProfileEffectEditButtonDefault, obj13);
           const obj14 = { user: _undefined, pendingProfileFrame, displayProfile };
-          items1[9] = closure_2_15(UserProfileFrameEditButtonDefault, obj14);
+          items1[9] = colors(UserProfileFrameEditButtonDefault, obj14);
           const obj15 = { user: _undefined, pendingNameplate };
-          items1[10] = closure_2_15(UserProfileNameplateEditButtonDefault, obj15);
+          items1[10] = colors(UserProfileNameplateEditButtonDefault, obj15);
           let tmp12Result7 = closure_33;
           if (closure_33) {
             if (!tmp19) {
@@ -737,7 +737,7 @@ function UserProfileEditFormContent(currentUser) {
           }
           if (tmp12Result7) {
             const obj16 = { isTryItOut: tmp25 };
-            tmp12Result7 = closure_2_15(UserProfileTypingIndicatorEditButtonDefault, obj16);
+            tmp12Result7 = colors(UserProfileTypingIndicatorEditButtonDefault, obj16);
           }
           items1[11] = tmp12Result7;
           const obj17 = {
@@ -750,15 +750,15 @@ function UserProfileEditFormContent(currentUser) {
           const obj19 = { backgroundColor: containerBackground2 };
           obj18.tagStyle = obj19;
           obj18.pendingPrimaryGuildId = pendingPrimaryGuildId;
-          obj17.children = closure_2_15(UserProfilePrimaryGuildEditButtonDefault, obj18);
-          items1[12] = closure_2_15(hasOwnProperty, obj17);
+          obj17.children = colors(UserProfilePrimaryGuildEditButtonDefault, obj18);
+          items1[12] = colors(hasOwnProperty, obj17);
           let tmp12Result8 = null != legacyUsername;
           if (tmp12Result8) {
             tmp12Result8 = !isBadgeManagementEnabled;
           }
           if (tmp12Result8) {
             const obj20 = { legacyUsername, pendingLegacyUsernameDisabled };
-            tmp12Result8 = closure_2_15(UserProfileLegacyUsernameSwitchDefault, obj20);
+            tmp12Result8 = colors(UserProfileLegacyUsernameSwitchDefault, obj20);
           }
           items1[13] = tmp12Result8;
           obj2.children = items1;
@@ -769,15 +769,15 @@ function UserProfileEditFormContent(currentUser) {
               currentUser: _undefined,
               onLayout: closure_50.onTryItOutSectionLayout,
               onPreviewPremium() {
-                return _undefined(16890).openPremiumTryItOutModal();
+                return _undefined(17053).openPremiumTryItOutModal();
               },
             };
-            tmp12Result9 = closure_2_15(UserProfilePremiumTryItOutSectionDefault, obj21);
+            tmp12Result9 = colors(UserProfilePremiumTryItOutSectionDefault, obj21);
           }
           const obj22 = { children: null };
           items2[1] = tmp12Result9;
           obj22.children = items2;
-          const tmpResult = closure_2_17(value2, obj22);
+          const tmpResult = closure_2_17(closure_2_16, obj22);
           const obj23 = {
             user: _undefined,
             displayName,
@@ -797,7 +797,7 @@ function UserProfileEditFormContent(currentUser) {
           obj23.badgeContainerBackground = containerBackground;
           obj23.canOpenBadgeDirectory = !tmp24;
           obj23.pendingDisplayNameStyles = tmp24 ? c23 : c31;
-          const items3 = [closure_2_15(UserProfilePrimaryInfoDefault, obj23)];
+          const items3 = [colors(UserProfilePrimaryInfoDefault, obj23)];
           let tmp12Result10 = tmpResult;
           if (flag) {
             const obj24 = { value: tmpResult, children: null };
@@ -810,15 +810,15 @@ function UserProfileEditFormContent(currentUser) {
               scrollViewRef: ref1,
               isBoardTabOnScreen: sharedValue1,
             };
-            obj24.children = closure_2_15(UserProfileEditFormTabsDefault, obj25);
-            tmp12Result10 = closure_2_15(UserProfileEditFormMainPageContextDefault.Provider, obj24);
+            obj24.children = colors(UserProfileEditFormTabsDefault, obj25);
+            tmp12Result10 = colors(UserProfileEditFormMainPageContextDefault.Provider, obj24);
           }
           const obj26 = { children: null };
           items3[1] = tmp12Result10;
           obj26.children = items3;
-          return closure_2_17(value2, obj26);
+          return closure_2_17(closure_2_16, obj26);
         }
-        tmp12Result = closure_2_15(UserProfileDisplayNameStylesEditButtonDefault, { user: _undefined, isTryItOut });
+        tmp12Result = colors(UserProfileDisplayNameStylesEditButtonDefault, { user: _undefined, isTryItOut });
         tmp24 = isTryItOut;
         tmp25 = isTryItOut;
         const obj27 = { user: _undefined, isTryItOut };
@@ -836,7 +836,7 @@ function UserProfileEditFormContent(currentUser) {
     items9[2] = tmp25;
     obj16.children = items9;
     obj15.children = tmp51(tmp52, obj16);
-    return tmp50(tmp4(5201).ThemeContextProvider, obj15);
+    return tmp50(tmp4(5314).ThemeContextProvider, obj15);
   } else if (enabled) {
     tmp = UserProfilePremiumTryItOutUpsellDefault;
     obj = {
@@ -848,27 +848,27 @@ function UserProfileEditFormContent(currentUser) {
     let tmp50Result = tmp50(tmp, obj);
   } else {
     let obj25 = { isTryItOut };
-    tmp50Result = tmp50(tmp4(16905).UserProfilePremiumUpsellCard, obj25);
+    tmp50Result = tmp50(tmp4(17068).UserProfilePremiumUpsellCard, obj25);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7440).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7896).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1072);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: closure_10 } = Constants);
-const HexagonCampaignConstants = fn(5167);
+const HexagonCampaignConstants = fn(5268);
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-let closure_14 = fn(16786).UserProfileEditAutoFocusElement;
+let closure_14 = fn(16947).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = [1];
 let obj = {
-  assetOrigin: fn(7225).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef16787,
-  staticImageUri: _modDef16787,
+  assetOrigin: fn(7742).AssetOriginTypes.NEW_ASSET,
+  imageUri: _modDef16948,
+  staticImageUri: _modDef16948,
   description: "",
-  originalAsset: "add",
+  originalAsset: "paddingHorizontal",
 };
 let closure_23 = {
   code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})",
@@ -886,11 +886,11 @@ export default function UserProfileEditForm(isTryItOut) {
     const obj2 = {};
     const merged1 = Object.assign(merged);
     obj2.isTryItOut = true;
-    let tmp2Result = closure_1_15(UserProfileEditFormContent, obj2);
+    let tmp2Result = colors(UserProfileEditFormContent, obj2);
   } else {
     obj = {};
     const merged2 = Object.assign(merged);
-    tmp2Result = closure_1_15(MainUserProfileEditForm, obj);
+    tmp2Result = colors(MainUserProfileEditForm, obj);
   }
   return tmp2Result;
 }

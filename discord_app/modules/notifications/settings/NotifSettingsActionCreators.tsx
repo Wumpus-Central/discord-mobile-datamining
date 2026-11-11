@@ -3,6 +3,7 @@ import LoggerDefault from "../../debug/Logger.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import settings_NotifSettingsUtils from "NotifSettingsUtils.tsx";
 import notification_settings from "../../../../discord_common/js/packages/protos/discord_protos/discord_notifications/v1/notification_settings.tsx";
+import DeclarativeNotificationSettingsRedesignExperiment from "../DeclarativeNotificationSettingsRedesignExperiment.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import NotifSettingsProtoStore from "NotifSettingsProtoStore.tsx";
 
@@ -490,11 +491,32 @@ export function updateNotifSettingToggleValue(CALLS, toggle) {
     },
   };
 }
-export function updateNotifSettingRadioValue(updatedSettingId, radio) {
-  updateNotifSettingValue(updatedSettingId, {
-    update(radio) {
-      radio.radio = radio;
-      return radio.radio !== radio;
-    },
-  });
+export function updateNotifSettingRadioValue(REACTIONS_CHOICE, scrollLength) {
+  const radio = scrollLength;
+  if (Number.isFinite(scrollLength)) {
+    const result =
+      DeclarativeNotificationSettingsRedesignExperiment.isDeclarativeNotificationSettingsRedesignEnabled(
+        "updateNotifSettingRadioValue",
+      );
+    importDefault = result;
+    closure_2 = null != NotifSettingsProtoStore.getSetting(REACTIONS_CHOICE);
+    const obj2 = {
+      update(radio) {
+        radio.radio = radio;
+        let tmp2 = result;
+        if (result) {
+          tmp2 = !closure_2;
+        }
+        if (!tmp2) {
+          tmp2 = radio.radio !== radio;
+        }
+        return tmp2;
+      },
+    };
+    let effectiveDataVersion;
+    if (result) {
+      effectiveDataVersion = NotifSettingsProtoStore.effectiveDataVersion;
+    }
+    updateNotifSettingValue(REACTIONS_CHOICE, obj2, effectiveDataVersion);
+  }
 }

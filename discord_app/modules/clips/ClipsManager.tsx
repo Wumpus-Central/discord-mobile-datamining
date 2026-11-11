@@ -146,8 +146,8 @@ let closure_26 = async function _probeHardware() {
     videoEncoders: closure_131_6,
   };
 };
-const getSystemAnalyticsInfo = fn(5914).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8288);
+const getSystemAnalyticsInfo = fn(6027).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8779);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15,
   CLIPS_DEFAULT_SETTINGS_VERSION: closure_16,
@@ -157,8 +157,8 @@ const ClipsConstants = fn(8288);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6772).StreamTypes;
-const Features = fn(5899).Features;
+const StreamTypes = fn(6740).StreamTypes;
+const Features = fn(6012).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -285,19 +285,29 @@ prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
   const channelId = RTCConnectionStore.getChannelId();
   if (null != channelId) {
     if (!ClipsStore.getClipsWarningShown(channelId)) {
-      let setting = userId !== AuthenticationStore.getId() && ClipsStore.isClipsEnabledForUser(userId);
-      if (setting) {
-        const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
-        setting = ClipsAllowVoiceRecording.getSetting();
-      }
-      if (setting) {
-        const self = this;
-        const obj2 = { type: "CLIPS_SHOW_CALL_WARNING", channelId };
-        DispatcherDefault.dispatch(obj2);
-        this.showClipsToast();
+      if (userId !== AuthenticationStore.getId()) {
+        if (ClipsStore.isClipsEnabledForUser(userId)) {
+          const self = this;
+          const result = this.shouldUseClipsInUseNotice();
+          let setting = result;
+          if (!result) {
+            const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
+            setting = ClipsAllowVoiceRecording.getSetting();
+          }
+          if (setting) {
+            const obj2 = { type: "CLIPS_SHOW_CALL_WARNING", channelId };
+            DispatcherDefault.dispatch(obj2);
+            if (!result) {
+              self.showClipsToast();
+            }
+          }
+        }
       }
     }
   }
+};
+prototype["shouldUseClipsInUseNotice"] = function shouldUseClipsInUseNotice() {
+  return false;
 };
 prototype["handleClipsAllowVoiceRecordingUpdate"] = function handleClipsAllowVoiceRecordingUpdate() {
   const self = this;
@@ -381,7 +391,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(4967).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(5068).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -461,7 +471,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(4967).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(5068).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };
@@ -489,7 +499,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
 prototype["getClipsDefaultSettingsDecision"] = function getClipsDefaultSettingsDecision(classification) {
   if (classification === constants.UNKNOWN) {
     return null;
-  } else if (ClipsStore.getClipsDefaultSettingsState().version >= value2) {
+  } else if (ClipsStore.getClipsDefaultSettingsState().version >= closure_1_16) {
     return null;
   } else {
     const currentUser = UserStore.getCurrentUser();

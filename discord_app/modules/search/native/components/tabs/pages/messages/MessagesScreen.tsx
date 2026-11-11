@@ -5,7 +5,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(9923);
+const SearchConstants = fn(9000);
 ({
   SEARCH_FILTERS_BY_TAB: hasOwnProperty,
   SearchFilter: closure_6,
@@ -58,7 +58,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
   });
   placeholderCount = searchMessagesLoadingState.placeholderCount;
   const isFirstPageLoading = searchMessagesLoadingState.isFirstPageLoading;
-  let length;
+  length = undefined;
   if (searchMessages != null) {
     length = searchMessages.length;
   }

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/background_frames/native/conjureAppPictureInPictureActions.tsx
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
-import Sheet_showSimpleActionSheet from "../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import conjurePreviewSurface from "../../preview/conjurePreviewSurface.tsx";
+import Sheet_showSimpleActionSheet from "../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
 import EmbeddedAppShimExperiment from "../../../activities/experiments/EmbeddedAppShimExperiment.tsx";
 import openConjureProjectInBuilderDefault from "../../projects/openConjureProjectInBuilder.native.tsx";
 import getConjureAppSoundButtonDefault from "../../app_channel/native/getConjureAppSoundButton.tsx";
@@ -15,7 +15,7 @@ function getConjureAppPictureInPictureActions(id, c8, c9) {
   _require = id;
   let obj = { label: null, IconComponent: null, onPress: null };
   const intl = require("util").intl;
-  obj.label = intl.formatToPlainString(_modDef4028.dPf03z, { appName });
+  obj.label = intl.formatToPlainString(_modDef4079.dPf03z, { appName });
   obj.IconComponent = require("WindowLaunchIcon").WindowLaunchIcon;
   obj.onPress = function onPress() {
     if (obj.isConjurePreviewSurface(id.surface)) {
@@ -43,7 +43,7 @@ function getConjureAppPictureInPictureActions(id, c8, c9) {
   items.push(obj3);
   return items;
 }
-const asLaunched = fn(6905).asLaunched;
+const asLaunched = fn(6957).asLaunched;
 const ConjureAppPictureInPicture = "ConjureAppPictureInPicture";
 const size = fn(2);
 let result = size.fileFinishedImporting(

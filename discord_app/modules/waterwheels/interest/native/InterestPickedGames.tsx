@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_8 },
   icon: null,
@@ -49,7 +49,7 @@ export default function InterestPickedGames(gameIds) {
     let obj3 = { games: null };
     const mapped = arr.map((name) => name.name);
     obj3.games = mapped.join(", ");
-    obj2["aria-label"] = intl.formatToPlainString(tmp2(2534).z5uqej, obj3);
+    obj2["aria-label"] = intl.formatToPlainString(tmp2(2553).z5uqej, obj3);
     obj2.shape = require("ClipView").CutoutShape.RoundedRect;
     obj2.size = PX_24;
     obj2.gap = tmp2(575).space.PX_4 / 2;

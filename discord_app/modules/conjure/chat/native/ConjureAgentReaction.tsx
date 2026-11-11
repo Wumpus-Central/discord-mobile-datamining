@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
-import EmojiDefault from "../../../emojis/native/Emoji.tsx";
 import conjureAgentReaction from "../conjureAgentReaction.tsx";
+import EmojiDefault from "../../../emojis/native/Emoji.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   pill: {
     alignSelf: "flex-start",

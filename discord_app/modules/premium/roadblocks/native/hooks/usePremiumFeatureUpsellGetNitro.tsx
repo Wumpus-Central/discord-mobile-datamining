@@ -2,8 +2,8 @@
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import actions_BillingActionCreators from "../../../../billing/actions/BillingActionCreators.tsx";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
-import openPremiumPlanSelectionActionSheetDefault from "../../../native/openPremiumPlanSelectionActionSheet.tsx";
 import UserOfferActionCreators from "../../../UserOfferActionCreators.tsx";
+import openPremiumPlanSelectionActionSheetDefault from "../../../native/openPremiumPlanSelectionActionSheet.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import SubscriptionStore from "../../../../../stores/billing/SubscriptionStore.tsx";
@@ -78,7 +78,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
           })
           .catch(() => {
             const intl = closure_1_0(1113).intl;
-            page(5838).presentFailedToast(intl.string(closure_1_0(1113).t.R0RpRX));
+            page(5951).presentFailedToast(intl.string(closure_1_0(1113).t.R0RpRX));
           })
           .finally(() => closure_1_4(false));
         const catchPromise = Promise.all(items)
@@ -88,7 +88,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
           })
           .catch(() => {
             const intl = closure_1_0(1113).intl;
-            page(5838).presentFailedToast(intl.string(closure_1_0(1113).t.R0RpRX));
+            page(5951).presentFailedToast(intl.string(closure_1_0(1113).t.R0RpRX));
           });
       }
     }

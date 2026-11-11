@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/native/ConjureRemovedItems.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -96,7 +96,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   box: {
     padding: nativeDefault.space.PX_12,
@@ -111,32 +111,33 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureRemovedItems.tsx");
 
 export default function ConjureRemovedItems(items) {
-  const optionalItem = items.optionalItem;
-  const obj = { variant: "body-md/semibold", color: "text-strong", children: null };
-  const intl = util.intl;
-  obj.children = intl.string(_modDef4028["+E2PqP"]);
-  items = [timestampProducer(Text_Text.Text, obj)];
-  const obj2 = { items: items.items, children: null };
-  let tmp2Result = null;
-  if (null != optionalItem) {
-    const obj3 = {};
-    const merged = Object.assign(optionalItem);
-    tmp2Result = timestampProducer(OptionalItemRow, obj3);
+  let optionalItems = items.optionalItems;
+  if (optionalItems === undefined) {
+    optionalItems = [];
   }
-  const obj4 = { spacing: 8, children: null };
-  obj2.children = tmp2Result;
-  items[1] = timestampProducer(ItemsBox, obj2);
-  obj4.children = items;
-  return metroImportDefault(Stack_Stack.Stack, obj4);
+  const obj = { spacing: 8, children: null };
+  const obj2 = { variant: "body-md/semibold", color: "text-strong", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(_modDef4079["+E2PqP"]);
+  items = [timestampProducer(Text_Text.Text, obj2)];
+  items[1] = timestampProducer(ItemsBox, {
+    items: items.items,
+    children: optionalItems.map((item) => {
+      const merged = Object.assign(item);
+      return closure_1_6(OptionalItemRow, {}, item.item.key);
+    }),
+  });
+  obj.children = items;
+  return metroImportDefault(Stack_Stack.Stack, obj);
 }
-export function formatWithAppTag(HmNT_r, targetAppName) {
+export function formatWithAppTag(x6FvsZ, targetAppName) {
   const intl = util.intl;
   const obj = { app: null };
   const obj2 = { children: null };
   items = [targetAppName, " ", timestampProducer(BotTagDefault, {})];
   obj2.children = items;
   obj.app = metroImportDefault(noop.Fragment, obj2, "app");
-  return intl.format(HmNT_r, obj);
+  return intl.format(x6FvsZ, obj);
 }
 export function ConjureRemoveEverythingField(checked) {
   checked = checked.checked;
@@ -145,7 +146,7 @@ export function ConjureRemoveEverythingField(checked) {
   const obj2 = { hasIcons: false, children: null };
   const obj3 = { label: null, checked: null, onPress: null };
   const intl = util.intl;
-  obj3.label = intl.string(_modDef4028.gKA9tU);
+  obj3.label = intl.string(_modDef4079.gKA9tU);
   obj3.checked = checked;
   obj3.onPress = onChange;
   obj2.children = timestampProducer(TableCheckboxRow.TableCheckboxRow, obj3);

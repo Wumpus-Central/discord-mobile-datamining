@@ -3,9 +3,9 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
 import _modDef2166 from "../../../_runtime/metro/02166__.js";
-import _mod4568 from "../../../_runtime/metro/04568__.js";
-import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
+import _mod4668 from "../../../_runtime/metro/04668__.js";
 import ContentInventoryTraitType from "../../../discord_common/js/shared/shared-constants/ContentInventoryTraitType.tsx";
+import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function calculateTimestampDurations(end, now) {
@@ -390,7 +390,7 @@ export function getResurrectedEntryLastPlayTime(entry) {
 }
 export function getFullResurrectedBadgeText(start) {
   const obj2 = { start, end: null };
-  const obj = _mod4568;
+  const obj = _mod4668;
   obj2.end = new Date();
   const intervalToDurationResult = obj.intervalToDuration(obj2);
   const months = intervalToDurationResult.months;

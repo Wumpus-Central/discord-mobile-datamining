@@ -134,7 +134,7 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
         const result = closure_3.set(guildId, obj3);
         value = obj3;
       }
-      value2 = value;
+      let value2 = value;
     } else {
       const channelFilterKey = SmartSearchUtils.getChannelFilterKey(channelIds);
       value2 = closure_4.get(channelFilterKey);
@@ -157,7 +157,7 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
         const result = closure_3.set(guildId, obj3);
         value = obj3;
       }
-      value2 = value;
+      let value2 = value;
     } else {
       const channelFilterKey = SmartSearchUtils.getChannelFilterKey(channelIds);
       value2 = closure_4.get(channelFilterKey);

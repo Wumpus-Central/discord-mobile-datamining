@@ -62,7 +62,7 @@ export function useDominantRGBFromImage(arg0) {
     closure_0 = value;
     if (null != closure_0) {
       if (null == value) {
-        value2 = closure_1_7.get(str);
+        let value2 = closure_1_7.get(str);
         if (value2 == null) {
           let tmp6 = str;
           if (typeof str !== "number") {
@@ -146,7 +146,7 @@ export function useDominantColorFromImage(avatarURI) {
     closure_0 = value;
     if (null != closure_0) {
       if (null == value) {
-        value2 = closure_1_7.get(str);
+        let value2 = closure_1_7.get(str);
         if (value2 == null) {
           let tmp6 = str;
           if (typeof str !== "number") {

@@ -9,13 +9,13 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const obj2 = {
   skeletonContainer: {
     height: 16,
     flex: 1,
     borderRadius: nativeDefault.radii.xs,
-    backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
+    backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   },
 };
 let closure_5 = createStyles.createStyles(obj2);

@@ -7,9 +7,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../../../emojis/EmojiStore.tsx";
 
 require = fn;
-const LoadState = fn(6854).LoadState;
-const EmojiCategoryTypes = fn(6857).EmojiCategoryTypes;
-let closure_7 = fn(10070).EmojiPickerRenderingDataType;
+const LoadState = fn(6906).LoadState;
+const EmojiCategoryTypes = fn(6909).EmojiCategoryTypes;
+let closure_7 = fn(9480).EmojiPickerRenderingDataType;
 const EmojiPickerItemType = {
   PLACEHOLDER: 0,
   [0]: "PLACEHOLDER",

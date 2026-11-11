@@ -4,14 +4,14 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../../../components_native/common/Alert.tsx";
-import _modDef7325 from "../../../../../../_runtime/metro/07325__.js";
+import _modDef15948 from "../../../../../../_runtime/metro/15948__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const DownloadLinks = fn(1072).DownloadLinks;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_6 = createStyles.createStyles({
   headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 },
   header: { marginTop: 24, textAlign: "center" },
@@ -36,7 +36,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   obj.onCancel = onClose.onClose;
   const obj2 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj2.source = _modDef7325;
+  obj2.source = _modDef15948;
   obj2.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj2), ,];
   const obj3 = {

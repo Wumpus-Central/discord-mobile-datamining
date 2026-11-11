@@ -451,7 +451,7 @@ function cleanupRequestEntry(url, arg1) {
   if (tmp3) {
     logger.verbose("cleanupRequestEntry: rate limit for ", url.url, "expired");
     url = url.url;
-    value2 = map.get(url);
+    const value2 = map.get(url);
     if (null != value2) {
       const queue1 = value2.queue;
       let arr = queue1.shift();

@@ -4,7 +4,7 @@ import ShopBlockRecordFactory from "ShopBlockRecordFactory.tsx";
 import CollectiblesCategoryRecord from "CollectiblesCategoryRecord.tsx";
 
 require = fn;
-const HeroBlockRecord = fn(7827).HeroBlockRecord;
+const HeroBlockRecord = fn(8447).HeroBlockRecord;
 const prototype = function CollectiblesShopHomeRecord(shop_blocks) {
   const obj = Object.create(new.target.prototype);
   shop_blocks = shop_blocks.shop_blocks;

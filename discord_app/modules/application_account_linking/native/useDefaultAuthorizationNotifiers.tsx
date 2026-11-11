@@ -1,6 +1,6 @@
 // discord_app/modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3478 from "../AccountLinking.messages.js";
+import _modDef3499 from "../AccountLinking.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
@@ -59,7 +59,7 @@ export function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyL
             if (flag) {
               const obj2 = { text: null };
               const intl = util.intl;
-              obj2.text = intl.string(_modDef3478.uG6teD);
+              obj2.text = intl.string(_modDef3499.uG6teD);
               ToastActionCreatorsDefault.open("account-linked-toast", obj2);
             }
           }

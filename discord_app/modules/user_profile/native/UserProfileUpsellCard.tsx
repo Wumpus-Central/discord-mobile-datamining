@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileUpsellCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05830_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,10 +9,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7696).Gradients;
+const Gradients = fn(9368).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   upsellButton: { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG, gap: 4 },
   titleContainer: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 },
@@ -22,8 +22,8 @@ let obj2 = {
   inner: null,
 };
 let obj3 = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG, gap: 4 };
-obj2.outer = { marginHorizontal: fn(7440).PROFILE_SIDE_PADDING - 1 };
-let obj4 = { marginHorizontal: fn(7440).PROFILE_SIDE_PADDING - 1 };
+obj2.outer = { marginHorizontal: fn(7896).PROFILE_SIDE_PADDING - 1 };
+let obj4 = { marginHorizontal: fn(7896).PROFILE_SIDE_PADDING - 1 };
 obj2.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.inner = { paddingVertical: 12, paddingHorizontal: 14 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -54,9 +54,9 @@ export default function UserProfileUpsellCard(headerText) {
   if (null != headerText) {
     const obj3 = { style: tmp.titleContainer, children: null };
     const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const items3 = [closure_6(tmp3(9618).NitroWheelIcon, obj4)];
+    const items3 = [closure_6(tmp3(9369).NitroWheelIcon, obj4)];
     const obj5 = { variant: "heading-xs/semibold", children: headerText };
-    items3[1] = closure_6(tmp3(5753).Text, obj5);
+    items3[1] = closure_6(tmp3(5866).Text, obj5);
     obj3.children = items3;
     tmp6Result = closure_7(closure_3, obj3);
   }

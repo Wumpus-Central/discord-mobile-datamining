@@ -94,8 +94,8 @@ export function reset() {
       initiatedPurchaseFromNewFlow: false,
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "alignItems",
-      onPaymentDismiss: "guildId",
+      onPaymentSuccess: "paddingHorizontal",
+      onPaymentDismiss: "HTTP",
     });
   });
 }

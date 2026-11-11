@@ -1,6 +1,6 @@
 // discord_app/modules/home_drawer/native/HomeDrawerStore.tsx
 import Constants from "../../../Constants.tsx";
-import _mod5057 from "../../../../_runtime/metro/05057__.js";
+import _mod5158 from "../../../../_runtime/metro/05158__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
 import identity from "../../../../_runtime/metro/01254__.js";
@@ -67,7 +67,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     closure_1().lastInteractionAt.current = Date.now();
   };
   return obj;
-}, _mod5057.shallow);
+}, _mod5158.shallow);
 let result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;

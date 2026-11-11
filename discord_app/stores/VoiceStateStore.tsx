@@ -91,7 +91,7 @@ function updateVoiceState(arg0, arg1, fn) {
           if (tmp5 == null) {
             tmp5 = ME;
           }
-          value2 = map.get(tmp5);
+          const value2 = map.get(tmp5);
           let set1 = value2;
           if (value2 == null) {
             const _Set3 = Set;
@@ -172,7 +172,7 @@ function handleGuildCreateOrDelete(guild) {
   delete tmp2[tmp];
 }
 const ME = fn(1072).ME;
-const VoicePlatforms = fn(5807).VoicePlatforms;
+const VoicePlatforms = fn(5920).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};

@@ -3,28 +3,28 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import util from "../../../../../../intl/index.native.tsx";
 import _modDef2166 from "../../../../../../../_runtime/metro/02166__.js";
 import shared from "../../../../../../design/shared.tsx";
+import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import RowGeneratorStyleSheet from "../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "getEmbedThemeColors.tsx";
-import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef13480 from "../../../../../../../_runtime/metro/13480__.js";
-import _modDef13481 from "../../../../../../../_runtime/metro/13481__.js";
-import _modDef14704 from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import _modDef15395 from "../../../../../../../_runtime/metro/15395__.js";
-import _modDef15396 from "../../../../../../../_runtime/metro/15396__.js";
-import _modDef15397 from "../../../../../../../_runtime/metro/15397__.js";
-import _modDef15398 from "../../../../../../../_runtime/metro/15398__.js";
-import _modDef15399 from "../../../../../../../_runtime/metro/15399__.js";
-import _modDef15400 from "../../../../../../../_runtime/metro/15400__.js";
-import _modDef15401 from "../../../../../../../_runtime/metro/15401__.js";
-import _modDef15402 from "../../../../../../../_runtime/metro/15402__.js";
-import _modDef15403 from "../../../../../../../_runtime/metro/15403__.js";
-import _modDef15404 from "../../../../../../../_runtime/metro/15404__.js";
-import _modDef15405 from "../../../../../../../_runtime/metro/15405__.js";
-import _modDef15406 from "../../../../../../../_runtime/metro/15406__.js";
-import _modDef15407 from "../../../../../../../_runtime/metro/15407__.js";
-import _modDef15408 from "../../../../../../../_runtime/metro/15408__.js";
-import _modDef15409 from "../../../../../../../_runtime/metro/15409__.js";
-import _modDef15410 from "../../../../../../../_runtime/metro/15410__.js";
+import _modDef11749 from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef14002 from "../../../../../../../_runtime/metro/14002__.js";
+import _modDef14003 from "../../../../../../../_runtime/metro/14003__.js";
+import _modDef15329 from "../../../../../../../_runtime/metro/15329__.js";
+import _modDef15330 from "../../../../../../../_runtime/metro/15330__.js";
+import _modDef15331 from "../../../../../../../_runtime/metro/15331__.js";
+import _modDef15332 from "../../../../../../../_runtime/metro/15332__.js";
+import _modDef15333 from "../../../../../../../_runtime/metro/15333__.js";
+import _modDef15334 from "../../../../../../../_runtime/metro/15334__.js";
+import _modDef15335 from "../../../../../../../_runtime/metro/15335__.js";
+import _modDef15336 from "../../../../../../../_runtime/metro/15336__.js";
+import _modDef15337 from "../../../../../../../_runtime/metro/15337__.js";
+import _modDef15338 from "../../../../../../../_runtime/metro/15338__.js";
+import _modDef15339 from "../../../../../../../_runtime/metro/15339__.js";
+import _modDef15435 from "../../../../../../../_runtime/metro/15435__.js";
+import _modDef15436 from "../../../../../../../_runtime/metro/15436__.js";
+import _modDef15437 from "../../../../../../../_runtime/metro/15437__.js";
+import _modDef15438 from "../../../../../../../_runtime/metro/15438__.js";
+import _modDef15439 from "../../../../../../../_runtime/metro/15439__.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/metro/00017__.js";
 import AuthenticationStore from "../../../../../../stores/AuthenticationStore.tsx";
 import GiftCodeStore from "../../../../../../stores/GiftCodeStore.tsx";
@@ -38,32 +38,32 @@ const require = globalThis.__r;
 
 function getGiftStyleUrl(giftStyle) {
   if (constants3.BOX === giftStyle) {
-    return _modDef15395;
+    return _modDef15435;
   } else if (constants3.CUP === giftStyle) {
-    return _modDef15396;
+    return _modDef15436;
   } else if (constants3.SNOWGLOBE === giftStyle) {
-    return _modDef15397;
+    return _modDef15437;
   } else if (constants3.STANDARD_BOX === giftStyle) {
-    return _modDef15398;
+    return _modDef15329;
   } else if (constants3.COFFEE === giftStyle) {
-    return _modDef15399;
+    return _modDef15332;
   } else if (constants3.CAKE === giftStyle) {
-    return _modDef15400;
+    return _modDef15330;
   } else if (constants3.CHEST === giftStyle) {
-    return _modDef15401;
+    return _modDef15331;
   } else if (constants3.SEASONAL_STANDARD_BOX === giftStyle) {
-    return _modDef15402;
+    return _modDef15333;
   } else if (constants3.SEASONAL_CAKE === giftStyle) {
-    return _modDef15403;
+    return _modDef15334;
   } else if (constants3.SEASONAL_CHEST === giftStyle) {
-    return _modDef15404;
+    return _modDef15335;
   } else if (constants3.SEASONAL_COFFEE === giftStyle) {
-    return _modDef15405;
+    return _modDef15336;
   } else if (constants3.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef14704 };
+    const obj = { uri: _modDef11749 };
     return obj;
   } else {
-    return _modDef15398;
+    return _modDef15329;
   }
 }
 ({ Image: c3, processColor: closure_4 } = get_ActivityIndicator);
@@ -76,7 +76,7 @@ export function createGiftCodeEmbed(message, forcedTheme) {
   importDefault = forcedTheme;
   if (null != message.author) {
     if (0 !== message.giftCodes.length) {
-      const colors = getEmbedThemeColorsDefault(forcedTheme).colors;
+      colors = getEmbedThemeColorsDefault(forcedTheme).colors;
       ({
         headerColor: dependencyMap,
         titleColor: closure_3,
@@ -121,10 +121,10 @@ export function createGiftCodeEmbed(message, forcedTheme) {
                 code = error.code;
               }
               if (obj25.isThemeDark(closure_1)) {
-                let tmp119Result = _modDef13480;
+                let tmp119Result = _modDef14002;
                 let tmp121 = importDefault;
               } else {
-                tmp119Result = _modDef13481;
+                tmp119Result = _modDef14003;
                 tmp121 = importDefault;
               }
               const obj2 = {
@@ -173,7 +173,7 @@ export function createGiftCodeEmbed(message, forcedTheme) {
               const merged = Object.assign(GiftCodeStore);
               return obj2;
             } else {
-              value2 = SKUStore.get(value.skuId);
+              const value2 = SKUStore.get(value.skuId);
               const isAccepting = GiftCodeStore.getIsAccepting(giftCode);
               const currentUser = UserStore.getCurrentUser();
               let verified;
@@ -261,14 +261,14 @@ export function createGiftCodeEmbed(message, forcedTheme) {
                   if (tmp30) {
                     let tmp82 = getGiftStyleUrl(value.giftStyle);
                   } else {
-                    tmp82 = _modDef15406;
+                    tmp82 = _modDef15337;
                   }
                   const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(tmp82);
                   const tmp79Result = renderer_EmbedUtils;
                   if (tmp79Result2.isThemeDark(closure_1)) {
-                    let tmp86Result = _modDef15407;
+                    let tmp86Result = _modDef15438;
                   } else {
-                    tmp86Result = _modDef15408;
+                    tmp86Result = _modDef15439;
                   }
                   const assetUriForEmbed1 = tmp79Result.getAssetUriForEmbed(tmp86Result);
                   tmp79Result2 = shared;
@@ -277,15 +277,15 @@ export function createGiftCodeEmbed(message, forcedTheme) {
                     if (tmp30) {
                       let tmp72 = getGiftStyleUrl(value.giftStyle);
                     } else {
-                      tmp72 = _modDef15409;
+                      tmp72 = _modDef15338;
                     }
                     const assetUriForEmbed2 = renderer_EmbedUtils.getAssetUriForEmbed(tmp72);
                     const tmp69Result = renderer_EmbedUtils;
                     if (tmp69Result2.isThemeDark(closure_1)) {
-                      let tmp76Result = _modDef15407;
+                      let tmp76Result = _modDef15438;
                       let tmp78 = importDefault;
                     } else {
-                      tmp76Result = _modDef15408;
+                      tmp76Result = _modDef15439;
                       tmp78 = importDefault;
                     }
                     let assetUriForEmbed3 = tmp69Result.getAssetUriForEmbed(tmp76Result);
@@ -298,10 +298,10 @@ export function createGiftCodeEmbed(message, forcedTheme) {
                       if (TIER_0.LEGACY !== skuId) {
                         const obj28 = renderer_EmbedUtils;
                         if (obj29.isThemeDark(closure_1)) {
-                          let tmp137Result = _modDef15407;
+                          let tmp137Result = _modDef15438;
                           tmp52 = importDefault;
                         } else {
-                          tmp137Result = _modDef15408;
+                          tmp137Result = _modDef15439;
                           tmp52 = importDefault;
                         }
                         const assetUriForEmbed4 = obj28.getAssetUriForEmbed(tmp137Result);
@@ -315,15 +315,15 @@ export function createGiftCodeEmbed(message, forcedTheme) {
                     if (tmp30) {
                       let tmp61 = getGiftStyleUrl(value.giftStyle);
                     } else {
-                      tmp61 = _modDef15410;
+                      tmp61 = _modDef15339;
                     }
                     const assetUriForEmbed6 = renderer_EmbedUtils.getAssetUriForEmbed(tmp61);
                     const tmp58Result = renderer_EmbedUtils;
                     if (tmp58Result2.isThemeDark(closure_1)) {
-                      let tmp65Result = _modDef15407;
+                      let tmp65Result = _modDef15438;
                       let tmp67 = importDefault;
                     } else {
-                      tmp65Result = _modDef15408;
+                      tmp65Result = _modDef15439;
                       tmp67 = importDefault;
                     }
                     assetUriForEmbed3 = tmp58Result.getAssetUriForEmbed(tmp65Result);
@@ -334,7 +334,7 @@ export function createGiftCodeEmbed(message, forcedTheme) {
                   }
                   let tmp95 = assetUriForEmbed5;
                   if (tmp55Result.isGameItemSKU(value2)) {
-                    const str3 = tmp55(7471).getGameItemThumbnailUrl(value2);
+                    const str3 = tmp55(7181).getGameItemThumbnailUrl(value2);
                     let str1;
                     if (str3 != null) {
                       str1 = str3.toString();
@@ -343,19 +343,19 @@ export function createGiftCodeEmbed(message, forcedTheme) {
                       str1 = assetUriForEmbed5;
                     }
                     tmp95 = str1;
-                    const tmp55Result2 = tmp55(7471);
+                    const tmp55Result2 = tmp55(7181);
                   }
                   const obj6 = {};
                   const merged1 = Object.assign(GiftCodeStore);
                   if (message.type === constants2.CUSTOM_GIFT) {
                     if (!tmp13) {
                       const intl10 = tmp55(1113).intl;
-                      let str4 = tmp52(5196).getName(currentUser);
+                      let str4 = tmp52(5309).getName(currentUser);
                       if (str4 == null) {
                         str4 = "";
                       }
                       const obj8 = { recipientDisplayName: str4 };
-                      const tmp52Result = tmp52(5196);
+                      const tmp52Result = tmp52(5309);
                       obj6.headerText = intl10.formatToPlainString(tmp55(1113).t.t1SOId, obj8).toUpperCase();
                       let formatToPlainStringResult1;
                       if (null != value) {
@@ -368,13 +368,13 @@ export function createGiftCodeEmbed(message, forcedTheme) {
                         } else {
                           const user = UserStore.getUser(value.userId);
                           const intl12 = tmp55(1113).intl;
-                          let str7 = tmp52(5196).getName(user);
+                          let str7 = tmp52(5309).getName(user);
                           if (str7 == null) {
                             str7 = "";
                           }
                           const obj9 = { sender: str7 };
                           formatToPlainStringResult1 = intl12.formatToPlainString(tmp55(1113).t.DDO4Wz, obj9);
-                          const tmp52Result4 = tmp52(5196);
+                          const tmp52Result4 = tmp52(5309);
                         }
                       }
                       obj6.titleText = formatToPlainStringResult1;
@@ -424,7 +424,7 @@ export function createGiftCodeEmbed(message, forcedTheme) {
                   }
                   toUpperCase = str6.toUpperCase;
                   const formatted = toUpperCase();
-                  tmp55Result = tmp55(7471);
+                  tmp55Result = tmp55(7181);
                 }
               }
             }

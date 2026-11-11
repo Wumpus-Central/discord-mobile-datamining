@@ -20,7 +20,7 @@ export function usePressHorizontalAutocompleteItemHandler(draftContent) {
   return setSelection.useCallback((type, arg1, arg2) => {
     const substr = draftContent.substring(0, arg1);
     handleTextChange(`${tmp2}${tmp} ${draftContent.substring(arg1 + arg2.length + 1)}`);
-    const length = substr + autocompleter_AutocompleteUtils.getAutocompleteResultText(type, channel, set).length;
+    length = substr + autocompleter_AutocompleteUtils.getAutocompleteResultText(type, channel, set).length;
     setSelection({ start: length, end: length });
   }, items);
 }

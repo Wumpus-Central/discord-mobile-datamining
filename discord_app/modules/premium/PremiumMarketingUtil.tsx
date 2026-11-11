@@ -1,7 +1,7 @@
 // discord_app/modules/premium/PremiumMarketingUtil.tsx
 import router_utils from "../routing/router_utils.tsx";
-import openUserSettings from "../user_settings/core/native/openUserSettings.tsx";
 import LayerActionCreators from "../../actions/LayerActionCreators.tsx";
+import openUserSettings from "../user_settings/core/native/openUserSettings.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

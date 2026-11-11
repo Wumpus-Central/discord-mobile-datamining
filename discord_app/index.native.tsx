@@ -11,7 +11,7 @@ import SentryUtils from "utils/SentryUtils.native.tsx";
 import size from "../_runtime/metro/00002__.js";
 
 let GenerateInvite = require;
-let f20641 = dependencyMap;
+let f20836 = dependencyMap;
 const polyfillsEnd = TTITracker.default.imports.polyfillsEnd;
 polyfillsEnd.record();
 const sentryEnd = TTITracker.default.imports.sentryEnd;
@@ -20,87 +20,87 @@ if (isTTITest.isTTITest) {
   installSystrace.installSystrace();
 }
 const AppRegistry = _mod17.AppRegistry;
-AppRegistry.registerComponent("Discord", () => GenerateInvite(f20641[9]).default);
+AppRegistry.registerComponent("Discord", () => GenerateInvite(f20836[9]).default);
 const runnable = AppRegistry.getRunnable("Discord");
 AppRegistry.registerRunnable("Discord", () => {
   GenerateInvite = [...arguments];
-  return GenerateInvite(f20641[10]).default("Main", () => {
+  return GenerateInvite(f20836[10]).default("Main", () => {
     closure_2(...closure_0);
   });
 });
-AppRegistry.registerComponent("Share", () => GenerateInvite(f20641[11]).default);
+AppRegistry.registerComponent("Share", () => GenerateInvite(f20836[11]).default);
 const runnable2 = AppRegistry.getRunnable("Share");
 AppRegistry.registerRunnable("Share", () => {
   GenerateInvite = [...arguments];
-  return GenerateInvite(f20641[10]).default("Share", () => closure_3(...closure_0));
+  return GenerateInvite(f20836[10]).default("Share", () => closure_3(...closure_0));
 });
 GenerateInvite = "BackgroundSync";
-f20641 = () => GenerateInvite(f20641[13]);
+f20836 = () => GenerateInvite(f20836[13]);
 AppRegistry.registerHeadlessTask("BackgroundSync", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 if (isTTITest.isTTITest) {
   GenerateInvite = "TTITestAction";
-  f20641 = () => GenerateInvite(f20641[14]);
+  f20836 = () => GenerateInvite(f20836[14]);
   AppRegistry.registerHeadlessTask("TTITestAction", () => {
-    closure_0 = GenerateInvite(f20641[12]).default;
-    return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+    closure_0 = GenerateInvite(f20836[12]).default;
+    return (arg0) => closure_0(GenerateInvite, f20836, arg0);
   });
 }
 GenerateInvite = "Disconnect";
-f20641 = () => GenerateInvite(f20641[15]);
+f20836 = () => GenerateInvite(f20836[15]);
 AppRegistry.registerHeadlessTask("Disconnect", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 GenerateInvite = "MarkAsRead";
-f20641 = () => GenerateInvite(f20641[16]);
+f20836 = () => GenerateInvite(f20836[16]);
 AppRegistry.registerHeadlessTask("MarkAsRead", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 GenerateInvite = "MuteAction";
-f20641 = () => GenerateInvite(f20641[17]);
+f20836 = () => GenerateInvite(f20836[17]);
 AppRegistry.registerHeadlessTask("MuteAction", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 GenerateInvite = "ToggleDeafen";
-f20641 = () => GenerateInvite(f20641[18]);
+f20836 = () => GenerateInvite(f20836[18]);
 AppRegistry.registerHeadlessTask("ToggleDeafen", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 GenerateInvite = "ToggleSelfMute";
-f20641 = () => GenerateInvite(f20641[19]);
+f20836 = () => GenerateInvite(f20836[19]);
 AppRegistry.registerHeadlessTask("ToggleSelfMute", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 GenerateInvite = "DismissCallAction";
-f20641 = () => GenerateInvite(f20641[20]);
+f20836 = () => GenerateInvite(f20836[20]);
 AppRegistry.registerHeadlessTask("DismissCallAction", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 GenerateInvite = "DirectReply";
-f20641 = () => GenerateInvite(f20641[21]);
+f20836 = () => GenerateInvite(f20836[21]);
 AppRegistry.registerHeadlessTask("DirectReply", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 GenerateInvite = "SelectVoiceChannel";
-f20641 = () => GenerateInvite(f20641[22]);
+f20836 = () => GenerateInvite(f20836[22]);
 AppRegistry.registerHeadlessTask("SelectVoiceChannel", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 GenerateInvite = "GenerateInvite";
-f20641 = () => GenerateInvite(f20641[23]);
+f20836 = () => GenerateInvite(f20836[23]);
 AppRegistry.registerHeadlessTask("GenerateInvite", () => {
-  closure_0 = GenerateInvite(f20641[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f20641, arg0);
+  closure_0 = GenerateInvite(f20836[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f20836, arg0);
 });
 const result = size.fileFinishedImporting("index.native.tsx");
 
@@ -241,7 +241,7 @@ function global() {
       const error = new Error("Cannot find module");
       throw error;
     } else {
-      value2 = duration.get(prototype);
+      const value2 = duration.get(prototype);
       if (value2) {
         if (value2.isInitialized) {
           let _exports = value2.publicModule.exports;
@@ -337,7 +337,7 @@ function global() {
       const error = new Error("Cannot find module");
       throw error;
     } else {
-      value2 = duration.get(id);
+      let value2 = duration.get(id);
       if (value2) {
         if (value2.isInitialized) {
           let _exports = value2.publicModule.exports;
@@ -1161,7 +1161,6 @@ function global() {
       first = mapped.join(", ");
     };
     obj.table = function consoleTablePolyfill(arr, arg1) {
-      let length;
       if (Array.isArray(arr)) {
         let mapped = arr.map((item, index) => {
           const obj = { [closure_1_2]: String(index) };
@@ -1473,12 +1472,12 @@ function global() {
   };
   closure_131_2 = obj3;
   self.ErrorUtils = obj3;
-  // Metro registry: 20596 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
+  // Metro registry: 20791 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
   __r(119);
   return __r(0);
 }
 
-function f23813() {
+function f24008() {
   class CanvasManagerNoop {
     constructor() {
       tmp = closure_2_7(this, CanvasManagerNoop);
@@ -1545,7 +1544,7 @@ function f23813() {
   return closure_8(CanvasManagerNoop, items);
 }
 
-function f23814() {
+function f24009() {
   class StylesheetManager {
     constructor(arg0) {
       tmp = closure_2_7(this, StylesheetManager);
@@ -1641,7 +1640,7 @@ function f23814() {
   return closure_8(StylesheetManager, items);
 }
 
-function f23815() {
+function f24010() {
   class ProcessedNodeManager {
     constructor() {
       tmp = closure_2_7(this, ProcessedNodeManager);
@@ -1702,7 +1701,7 @@ function f23815() {
   return closure_8(ProcessedNodeManager, items);
 }
 
-function f23816(arg0) {
+function f24011(arg0) {
   return 2 * arg0;
 }
 
@@ -1720,7 +1719,7 @@ function takeFullSnapshot(arg0) {
   }
 }
 
-function f23819() {
+function f24014() {
   class ClickDetector {
     constructor(arg0, arg1) {
       tmp = arg2;
@@ -1747,10 +1746,10 @@ function f23819() {
       const fn = () => {
         self._lastMutation = Date.now() / 1000;
       };
-      let f81112 = fn;
+      let f81897 = fn;
       if (!closure_111) {
         closure_111 = [];
-        f81112(self[8]).fill(f81112(self[8]).GLOBAL_OBJ, "open", (arg0) => {
+        f81897(self[8]).fill(f81897(self[8]).GLOBAL_OBJ, "open", (arg0) => {
           closure_0 = arg0;
           return () => {
             const items = [...arguments];
@@ -1760,20 +1759,20 @@ function f23819() {
               } catch (err) {
               }
             }
-            return closure_0.apply(f81112(self[8]).GLOBAL_OBJ, items);
+            return closure_0.apply(f81897(self[8]).GLOBAL_OBJ, items);
           };
         });
-        const obj = f81112(self[8]);
+        const obj = f81897(self[8]);
       }
       closure_111.push(fn);
-      f81112 = () => {
+      f81897 = () => {
   
       };
       this._teardown = () => {
-        if (typeof f81112 === "function") {
+        if (typeof f81897 === "function") {
           let num2 = -1;
           if (closure_111) {
-            num2 = closure_111.indexOf(f81112);
+            num2 = closure_111.indexOf(f81897);
           }
           if (num2 > -1) {
             closure_111.splice(num2, 1);
@@ -2034,7 +2033,7 @@ function f23819() {
   return closure_8(ClickDetector, items);
 }
 
-function f23820(arg0) {
+function f24015(arg0) {
   arg0.Document = 0;
   arg0[0] = "Document";
   arg0.DocumentType = 1;
@@ -2079,7 +2078,7 @@ function createPaintEntry(arg0) {
   ({ duration, entryType, name, startTime } = arg0);
   const obj = closure_1_0(closure_1_1[8]);
   const result = ((closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + startTime) / 1000;
-  return { type: entryType, name, start: result, end: result + duration, data: "fileBytes" };
+  return { type: entryType, name, start: result, end: result + duration, data: "exports" };
 }
 
 function createNavigationEntry(arg0) {
@@ -2192,7 +2191,7 @@ function makeReplayDebugLogger() {
   return obj;
 }
 
-function f23826(arg0) {
+function f24021(arg0) {
   class EventBufferSizeExceededError {
     constructor() {
       self = this;
@@ -2215,7 +2214,7 @@ function f23826(arg0) {
   return closure_8(EventBufferSizeExceededError);
 }
 
-function f23827() {
+function f24022() {
   class EventBufferArray {
     constructor() {
       tmp = closure_2_7(this, EventBufferArray);
@@ -2345,7 +2344,7 @@ function f23827() {
   return closure_8(EventBufferArray, items);
 }
 
-function f23828() {
+function f24023() {
   class WorkerHandler {
     constructor(arg0) {
       tmp = closure_2_7(this, WorkerHandler);
@@ -2438,7 +2437,7 @@ function f23828() {
   return closure_8(WorkerHandler, items);
 }
 
-function f23829() {
+function f24024() {
   class EventBufferCompressionWorker {
     constructor(arg0) {
       tmp = closure_2_7(this, EventBufferCompressionWorker);
@@ -2571,7 +2570,7 @@ function f23829() {
   return closure_8(EventBufferCompressionWorker, items);
 }
 
-function f23830() {
+function f24025() {
   class EventBufferProxy {
     constructor(arg0) {
       tmp = closure_2_7(this, EventBufferProxy);
@@ -2809,7 +2808,7 @@ function f23830() {
   return closure_8(EventBufferProxy, items);
 }
 
-function f23831(arg0) {
+function f24026(arg0) {
   class TransportStatusCodeError {
     constructor(arg0) {
       self = this;
@@ -2832,7 +2831,7 @@ function f23831(arg0) {
   return closure_8(TransportStatusCodeError);
 }
 
-function f23832(arg0) {
+function f24027(arg0) {
   class RateLimitError {
     constructor(arg0) {
       self = this;
@@ -2857,7 +2856,7 @@ function f23832(arg0) {
   return closure_8(RateLimitError);
 }
 
-function f23833(arg0) {
+function f24028(arg0) {
   class ReplayDurationLimitError {
     constructor() {
       self = this;
@@ -2880,11 +2879,11 @@ function f23833(arg0) {
   return closure_8(ReplayDurationLimitError);
 }
 
-function f23834() {
+function f24029() {
   class ReplayContainer {
     constructor(arg0) {
       self = this;
-      f122837 = this;
+      f124084 = this;
       options = arg0.options;
       tmp = closure_2_7(this, ReplayContainer);
       this.eventBuffer = null;
@@ -2912,24 +2911,24 @@ function f23834() {
       obj7 = {};
       merged = Object.assign(obj1);
       obj7.setTimeoutImpl = closure_2_0(closure_2_1[9]).setTimeout;
-      this._debouncedFlush = obj3.debounce(() => f122837._flush(), this._options.flushMinDelay, obj7);
-      f122837 = (timestamp, arg1) => {
+      this._debouncedFlush = obj3.debounce(() => f124084._flush(), this._options.flushMinDelay, obj7);
+      f124084 = (timestamp, arg1) => {
         let flag = false;
-        if (f122837.eventBuffer) {
+        if (f124084.eventBuffer) {
           flag = false;
-          if (!f122837.isPaused()) {
+          if (!f124084.isPaused()) {
             flag = false;
-            if (f122837.isEnabled()) {
+            if (f124084.isEnabled()) {
               timestamp = timestamp.timestamp;
               let result = timestamp;
               if (timestamp <= 9999999999) {
                 result = 1000 * timestamp;
               }
               const _Date = Date;
-              const sum = result + f122837.timeouts.sessionIdlePause;
+              const sum = result + f124084.timeouts.sessionIdlePause;
               let tmp4 = sum >= Date.now();
               if (tmp4) {
-                let flag2 = result <= f122837.getContext().initialTimestamp + f122837.getOptions().maxReplayDuration;
+                let flag2 = result <= f124084.getContext().initialTimestamp + f124084.getOptions().maxReplayDuration;
                 if (!flag2) {
                   flag2 = false;
                   if (closure_2_130) {
@@ -2945,7 +2944,7 @@ function f23834() {
           }
         }
         if (flag) {
-          let resolved = closure_2_147(f122837, timestamp, arg1);
+          let resolved = closure_2_147(f124084, timestamp, arg1);
         } else {
           resolved = Promise.resolve(null);
         }
@@ -3018,22 +3017,22 @@ function f23834() {
       }
       self._handleVisibilityChange = () => {
         if ("visible" === closure_0(map[8]).GLOBAL_OBJ.document.visibilityState) {
-          const result = f122837._doChangeToForegroundTasks();
+          const result = f124084._doChangeToForegroundTasks();
         } else {
-          const result1 = f122837._doChangeToBackgroundTasks();
+          const result1 = f124084._doChangeToBackgroundTasks();
         }
       };
       self._handleWindowBlur = () => {
         const merged = Object.assign({ category: "ui.blur" });
-        const result = f122837._doChangeToBackgroundTasks({ timestamp: Date.now() / 1000, type: "default" });
+        const result = f124084._doChangeToBackgroundTasks({ timestamp: Date.now() / 1000, type: "default" });
       };
       self._handleWindowFocus = () => {
         const merged = Object.assign({ category: "ui.focus" });
-        const result = f122837._doChangeToForegroundTasks({ timestamp: Date.now() / 1000, type: "default" });
+        const result = f124084._doChangeToForegroundTasks({ timestamp: Date.now() / 1000, type: "default" });
       };
       self._handleKeyboardEvent = (arg0) => {
-        if (f122837.isEnabled()) {
-          f122837.updateUserActivity();
+        if (f124084.isEnabled()) {
+          f124084.updateUserActivity();
           ({ metaKey, ctrlKey, altKey, key, target } = arg0);
           let tmp4 = null;
           if (target) {
@@ -3083,11 +3082,11 @@ function f23834() {
             if ("sentry.transaction" !== tmp4.category) {
               const items = ["ui.click", "ui.input"];
               if (items.includes(tmp4.category)) {
-                f122837.triggerUserActivity();
+                f124084.triggerUserActivity();
               } else {
-                const result = f122837.checkAndHandleExpiredSession();
+                const result = f124084.checkAndHandleExpiredSession();
               }
-              f122837.addUpdate(() => {
+              f124084.addUpdate(() => {
                 obj = { type: Custom.Custom, timestamp: null, data: null };
                 let num = _null.timestamp;
                 if (!num) {
@@ -3095,7 +3094,7 @@ function f23834() {
                 }
                 obj.timestamp = 1000 * num;
                 const obj2 = { tag: "breadcrumb", payload: null };
-                const normalizer = f122837(map[8]);
+                const normalizer = f124084(map[8]);
                 obj2.payload = normalizer.normalize(_null, 10, 1000);
                 obj.data = obj2;
                 obj.throttledAddEvent(obj);
@@ -4046,7 +4045,7 @@ function f23834() {
                       }
                       obj.timestamp = 1000 * num;
                       const obj2 = { tag: "breadcrumb", payload: null };
-                      const normalizer = f122837(map[8]);
+                      const normalizer = f124084(map[8]);
                       obj2.payload = normalizer.normalize(_null, 10, 1000);
                       obj.data = obj2;
                       obj.throttledAddEvent(obj);
@@ -4217,7 +4216,7 @@ function f23834() {
                             }
                             obj.timestamp = 1000 * num;
                             const obj2 = { tag: "breadcrumb", payload: null };
-                            const normalizer = f122837(map[8]);
+                            const normalizer = f124084(map[8]);
                             obj2.payload = normalizer.normalize(_null, 10, 1000);
                             obj.data = obj2;
                             obj.throttledAddEvent(obj);
@@ -4406,7 +4405,7 @@ function f23834() {
                             }
                             obj.timestamp = 1000 * num;
                             const obj2 = { tag: "breadcrumb", payload: null };
-                            const normalizer = f122837(map[8]);
+                            const normalizer = f124084(map[8]);
                             obj2.payload = normalizer.normalize(_null, 10, 1000);
                             obj.data = obj2;
                             obj.throttledAddEvent(obj);
@@ -5329,7 +5328,7 @@ function f23834() {
   return closure_8(ReplayContainer, items);
 }
 
-function f23835() {
+function f24030() {
   class Replay {
     constructor() {
       obj = arg0;
@@ -5747,7 +5746,7 @@ function getReplay() {
   return integrationByName;
 }
 
-function f23837(arg0) {
+function f24032(arg0) {
   return new closure_1_184(arg0);
 }
 
@@ -5789,7 +5788,7 @@ function serializeArgs(arg0, arg1, arg2) {
 function isInstanceOfWebGLObject(arg0, arg1) {
 }
 
-function f23861() {
+function f24056() {
   class CanvasManager {
     constructor(arg0) {
       self = this;
@@ -5834,7 +5833,7 @@ function f23861() {
       }
       sampling = str;
       recordCanvas = arg0.recordCanvas;
-      f122865 = recordCanvas;
+      f124112 = recordCanvas;
       errorHandler = arg0.errorHandler;
       arg0.sampling = str;
       ({ mutationCb: self.mutationCb, mirror: self.mirror } = arg0);
@@ -5872,7 +5871,7 @@ function f23861() {
               const canvasFPSObserver = self.initCanvasFPSObserver();
             }
           };
-          f122865 = fn;
+          f124112 = fn;
           tmp8 = closure_2_18;
           if (closure_2_18) {
             fn = () => {
@@ -6136,7 +6135,7 @@ function f23861() {
                     const self = this;
                     items = [...arguments];
                     if (!closure_4_13(this.canvas, closure_2, closure_3, closure_4, true)) {
-                      closure_4_17(/* F143811 */ function() { ... }, 0);
+                      closure_4_17(/* F145195 */ function() { ... }, 0);
                     }
                     return property.apply(this, items);
                   };
@@ -6174,13 +6173,13 @@ function f23861() {
           HermesBuiltin.arraySpread(closure_28(WebGLRenderingContext.WebGL2RenderingContext.prototype, v2D.WebGL2, bindResult, arg1, arg2, arg3, 0, WebGLRenderingContext), 0);
           HermesBuiltin.apply(items2, items);
         }
-        const f137036 = () => {
+        const f138371 = () => {
   
         };
         this.restoreHandlers.push(() => {
           items();
           closure_1();
-          if (typeof f137036 === "function") {
+          if (typeof f138371 === "function") {
             const item = closure_130_0.forEach((fn) => fn());
           } else {
             throw new TypeError("Trying to call a non-function");
@@ -6397,7 +6396,7 @@ function f23861() {
   return closure_4(CanvasManager, items);
 }
 
-function f23862(arg0) {
+function f24057(arg0) {
   return 2 * arg0;
 }
 
@@ -6405,7 +6404,7 @@ function createMirror$2() {
   return new closure_1_8();
 }
 
-function f23864() {
+function f24059() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -7833,7 +7832,7 @@ function matchIdentifierAtIndex(arg0, arg1) {
   return closure_1_7.apply(undefined, items);
 }
 
-function f25175() {
+function f25370() {
   class Parser {
     constructor(arg0, arg1) {
       obj = {};
@@ -9377,7 +9376,7 @@ function crc32(arg0, arg1, arg2, arg3) {
   return ~tmp5;
 }
 
-function f66647(str) {
+function f67308(str) {
   let sum4;
   let num = 0;
   let num2 = 0;
@@ -9477,7 +9476,7 @@ function f66647(str) {
   return buf8;
 }
 
-function f66648(subarray) {
+function f67309(subarray) {
   if (subarray.length < 65534) {
     if (!subarray.subarray) {
       if (!subarray.subarray) {
@@ -9501,7 +9500,7 @@ function f66648(subarray) {
   }
 }
 
-function f66649(str) {
+function f67310(str) {
   const buf8 = new closure_1_0(closure_1_1[0]).Buf8(str.length);
   for (let num = 0; num < length; num = num + 1) {
     buf8[num] = str.charCodeAt(num);
@@ -9509,7 +9508,7 @@ function f66649(str) {
   return buf8;
 }
 
-function f66650(arg0, arg1) {
+function f67311(arg0, arg1) {
   let sum2;
   let length = arg1;
   if (!arg1) {
@@ -9619,7 +9618,7 @@ function f66650(arg0, arg1) {
   }
 }
 
-function f66651(arg0, arg1) {
+function f67312(arg0, arg1) {
   let length = arg1;
   if (!arg1) {
     length = arg0.length;
@@ -9849,7 +9848,7 @@ function fetch(arg0, arg1) {
   });
 }
 
-function f79245(message, name) {
+function f80030(message, name) {
   const error = { message, name, stack: Error(message).stack };
 }
 
@@ -10004,7 +10003,7 @@ function observe(doc) {
   }
 }
 
-function f81106(contentDocument) {
+function f81891(contentDocument) {
   try {
     closure_1_46.push(closure_1_47(contentDocument.contentDocument));
   } catch (tmp5) {
@@ -10018,7 +10017,7 @@ function init() {
   closure_1_46.push(closure_1_47(document));
 }
 
-function f81108() {
+function f81893() {
   closure_2_103({ type: closure_2_73.DomContentLoaded, data: {} });
   if ("DOMContentLoaded" === closure_1_22) {
     if (typeof closure_1_48 === "function") {
@@ -10032,7 +10031,7 @@ function f81108() {
   const obj = { type: closure_2_73.DomContentLoaded, data: {} };
 }
 
-function f81109() {
+function f81894() {
   closure_2_103({ type: closure_2_73.Load, data: {} });
   if ("load" === closure_1_22) {
     if (typeof closure_1_48 === "function") {
@@ -10046,14 +10045,14 @@ function f81109() {
   const obj = { type: closure_2_73.Load, data: {} };
 }
 
-function f81110() {
+function f81895() {
   const item = closure_1_46.forEach((fn) => fn());
   closure_1_42.destroy();
   closure_2_104 = undefined;
   closure_2_79 = undefined;
 }
 
-function f81978(arg0, arg1, str) {
+function f82763(arg0, arg1, str) {
   if (typeof str !== "string") {
     ({ length: closure_1_0.minimumSignificantDigits, length: closure_1_0.maximumSignificantDigits } = arg1);
   } else if ("+" === str) {
@@ -10071,7 +10070,7 @@ function f81978(arg0, arg1, str) {
   return "";
 }
 
-function f81980(arg0, arg1) {
+function f82765(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -10120,7 +10119,7 @@ function f81980(arg0, arg1) {
   }
 }
 
-function f81981(arg0, arg1) {
+function f82766(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -10169,7 +10168,7 @@ function f81981(arg0, arg1) {
   }
 }
 
-function f81982(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f82767(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg1) {
     closure_1_0.minimumIntegerDigits = arg2.length;
   } else {
@@ -10189,7 +10188,7 @@ function f81982(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f81983(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f82768(arg0, arg1, arg2, arg3, arg4, arg5) {
   if ("*" === arg2) {
     closure_1_0.minimumFractionDigits = arg1.length;
   } else {
@@ -10209,7 +10208,7 @@ function f81983(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f82066(arg0, arg1, str) {
+function f82851(arg0, arg1, str) {
   if (typeof str !== "string") {
     ({ length: closure_1_0.minimumSignificantDigits, length: closure_1_0.maximumSignificantDigits } = arg1);
   } else if ("+" === str) {
@@ -10227,7 +10226,7 @@ function f82066(arg0, arg1, str) {
   return "";
 }
 
-function f82068(arg0, arg1) {
+function f82853(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -10276,7 +10275,7 @@ function f82068(arg0, arg1) {
   }
 }
 
-function f82069(arg0, arg1) {
+function f82854(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -10325,7 +10324,7 @@ function f82069(arg0, arg1) {
   }
 }
 
-function f82070(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f82855(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg1) {
     closure_1_0.minimumIntegerDigits = arg2.length;
   } else {
@@ -10345,7 +10344,7 @@ function f82070(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f82071(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f82856(arg0, arg1, arg2, arg3, arg4, arg5) {
   if ("*" === arg2) {
     closure_1_0.minimumFractionDigits = arg1.length;
   } else {
@@ -10365,7 +10364,7 @@ function f82071(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f83048(key10009) {
+function f83833(key10009) {
   const call = hasOwnProperty.call;
   let tmp2 = typeof call === "unknown" ? hasOwnProperty(key10009) : call(closure_1_0, key10009);
   if (tmp2) {
@@ -10465,8 +10464,12 @@ function encodeLL(arg0, width, height, arg3, arg4, depth, arg6, arg7) {
   return closure_1_5(obj, width, height, arg6, arg7);
 }
 
-function f84689(arg0, arg1) {
+function f85473(arg0, arg1) {
   return arg1[1].lastUsedMs - arg0[1].lastUsedMs;
+}
+
+function f95879(timestamp_ms, timestamp_ms2) {
+  return timestamp_ms.timestamp_ms - timestamp_ms2.timestamp_ms;
 }
 
 function createListState(channelId, sortOrder, tagFilter, tagSetting) {
@@ -10493,10 +10496,6 @@ function touchList(arg0, arg1) {
       break;
     }
   }
-}
-
-function f94143(timestamp_ms, timestamp_ms2) {
-  return timestamp_ms.timestamp_ms - timestamp_ms2.timestamp_ms;
 }
 
 function bellReach(bound) {
@@ -10594,7 +10593,7 @@ function InsertUnicodeExtensionAndCanonicalize(arr, arg1, arg2) {
   tmp2 = arg1[Symbol.iterator]();
 }
 
-function f123453() {
+function f124700() {
   return {
     navigate(arg0, arg1) {
       const navigation = closure_1_0.navigation;
@@ -10611,11 +10610,11 @@ function f123453() {
   };
 }
 
-function f123454() {
+function f124701() {
   return { emit: closure_1_0.navigation.emit };
 }
 
-function f123565(offset) {
+function f124812(offset) {
   let tmp2 = closure_1_0;
   if (closure_1_0) {
     const obj2 = { timingFunction: tmp };
@@ -10623,13 +10622,6 @@ function f123565(offset) {
   }
   const merged = Object.assign(tmp2);
   return { offset, props: closure_1_1 };
-}
-
-function ot(str) {
-  const parts = str.split("\n");
-  const mapped = parts.map(closure_1_53);
-  const found = mapped.filter((item) => null !== item);
-  return closure_1_38(closure_1_38({}, found[0]), found[1]);
 }
 
 function _loop() {
@@ -10710,1961 +10702,37 @@ function _loop() {
   children1.push(closure_2_4(items, closure_1_1 + 1, closure_1_4, closure_1_3));
 }
 
-function f128713(arg0, count) {
+function f127193(arg0, count) {
   return arg0 + count.count + count.descendants;
 }
 
-function f133626(soft_deleted) {
+function ot(str) {
+  const parts = str.split("\n");
+  const mapped = parts.map(closure_1_53);
+  const found = mapped.filter((item) => null !== item);
+  return closure_1_38(closure_1_38({}, found[0]), found[1]);
+}
+
+function f134931(soft_deleted) {
   return !soft_deleted.soft_deleted;
 }
 
-function f133627(soft_deleted) {
+function f134932(soft_deleted) {
   return soft_deleted.soft_deleted;
 }
 
-function f137438(arg0) {
+function f138773(arg0) {
   closure_1_8.setRequestHeader(arg0, closure_1_6[arg0]);
 }
 
-function t(options) {
-  this.options = options;
-}
-
-function f138570(lastyear, lastmonth) {
-  let length;
-  const self = this;
-  const options = this.options;
-  if (lastyear !== this.lastyear) {
-    if (typeof closure_1_15 === "function") {
-      const _Date = Date;
-      const _Date2 = Date;
-      const _Date3 = Date;
-      const date = new Date(Date.UTC(lastyear, 0, 1, 0, 0, 0));
-      if (typeof closure_1_20 === "function") {
-        const result = lastyear % 4;
-        let tmp7 = result === 0;
-        if (result === 0) {
-          tmp7 = lastyear % 100 !== 0;
-        }
-        if (!tmp7) {
-          tmp7 = lastyear % 400 === 0;
-        }
-        let num11 = 365;
-        let num12 = 365;
-        if (tmp7) {
-          num12 = 366;
-        }
-        const sum = lastyear + 1;
-        if (typeof closure_1_20 === "function") {
-          const result1 = sum % 4;
-          let tmp10 = result1 === 0;
-          if (result1 === 0) {
-            tmp10 = sum % 100 !== 0;
-          }
-          if (!tmp10) {
-            tmp10 = sum % 400 === 0;
-          }
-          let num15 = num11;
-          if (tmp10) {
-            num15 = 366;
-          }
-          if (typeof closure_1_24 === "function") {
-            if (typeof closure_1_23 === "function") {
-              const diff = tmp14 - 60 * date.getTimezoneOffset() * 1000;
-              if (typeof tmp15 === "function") {
-                const _Math = Math;
-                if (typeof closure_1_27 === "function") {
-                  const tmp21 = closure_1_19[date.getUTCDay(date)];
-                  const obj = { yearlen: num12, nextyearlen: num15, yearordinal: tmp18, yearweekday: tmp21 };
-                  if (typeof closure_1_20 === "function") {
-                    const result2 = lastyear % 4;
-                    let tmp24 = result2 === 0;
-                    if (result2 === 0) {
-                      tmp24 = lastyear % 100 !== 0;
-                    }
-                    if (!tmp24) {
-                      tmp24 = lastyear % 400 === 0;
-                    }
-                    let num20 = num11;
-                    if (tmp24) {
-                      num20 = 366;
-                    }
-                    if (typeof tmp160 === "function") {
-                      const _Date4 = Date;
-                      const _Date5 = Date;
-                      const _Date6 = Date;
-                      const date1 = new Date(Date.UTC(lastyear, 0, 1, 0, 0, 0));
-                      if (typeof tmp19 === "function") {
-                        const tmp29 = closure_1_19[date1.getUTCDay(date1)];
-                        if (num11 === num20) {
-                          const obj2 = { mmask: closure_1_58, mdaymask: closure_1_61, nmdaymask: closure_1_63, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_65 };
-                          let obj3 = obj2;
-                        } else {
-                          obj3 = { mmask: closure_1_59, mdaymask: closure_1_60, nmdaymask: closure_1_62, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_64 };
-                        }
-                        const tmp22Result = closure_1_38(closure_1_38(obj, obj3), { wnomask: null });
-                        const byweekno = options.byweekno;
-                        if (typeof closure_1_12 === "function") {
-                          if (typeof closure_1_3 === "function") {
-                            let tmp45 = !tmp44;
-                            if (null != byweekno) {
-                              tmp45 = 0 === byweekno.length;
-                            }
-                            if (!tmp45) {
-                              if (typeof closure_1_8 === "function") {
-                                const sum1 = num12 + 7;
-                                const items = [];
-                                if (closure_1_6(0)) {
-                                  let num28 = 0;
-                                  if (0 < sum1) {
-                                    do {
-                                      let items1 = [];
-                                      items[num28] = items1.concat(0);
-                                      num28 = num28 + 1;
-                                    } while (num28 < sum1);
-                                  }
-                                } else {
-                                  let num27 = 0;
-                                  if (0 < sum1) {
-                                    do {
-                                      items[num27] = 0;
-                                      num27 = num27 + 1;
-                                    } while (num27 < sum1);
-                                  }
-                                }
-                                tmp22Result.wnomask = items;
-                                if (typeof closure_1_10 === "function") {
-                                  const result3 = (7 - tmp21 + options.wkst) % 7;
-                                  let sum2 = result3;
-                                  if (result3 * 7 < 0) {
-                                    sum2 = result3 + 7;
-                                  }
-                                  if (4 <= sum2) {
-                                    if (typeof closure_1_10 === "function") {
-                                      const result4 = (tmp21 - options.wkst) % 7;
-                                      let sum3 = result4;
-                                      if (result4 * 7 < 0) {
-                                        sum3 = result4 + 7;
-                                      }
-                                      let sum4 = tmp53 + sum3;
-                                      let num29 = 0;
-                                    } else {
-                                      throw new TypeError("Trying to call a non-function");
-                                    }
-                                  } else {
-                                    sum4 = num12 - sum2;
-                                    num29 = sum2;
-                                  }
-                                  const _Math2 = Math;
-                                  if (typeof closure_1_10 === "function") {
-                                    const result5 = sum4 % 7;
-                                    let sum5 = result5;
-                                    if (result5 * 7 < 0) {
-                                      sum5 = result5 + 7;
-                                    }
-                                    const _Math3 = Math;
-                                    const rounded = Math.floor(tmp56 + sum5 / 4);
-                                    const diff1 = 7 - sum2;
-                                    for (let num30 = 0; num30 < options.byweekno.length; num30 = num30 + 1) {
-                                      let tmp61 = options.byweekno[num30];
-                                      let sum6 = tmp61;
-                                      if (tmp61 < 0) {
-                                        sum6 = tmp61 + (rounded + 1);
-                                      }
-                                      if (sum6 > 0) {
-                                        if (sum6 <= rounded) {
-                                          let diff2 = num29;
-                                          if (sum6 > 1) {
-                                            let sum7 = num29 + 7 * (sum6 - 1);
-                                            diff2 = sum7;
-                                            if (num29 !== sum2) {
-                                              diff2 = sum7 - diff1;
-                                            }
-                                          }
-                                          tmp22Result.wnomask[diff2] = 1;
-                                          let sum8 = diff2 + 1;
-                                          let num31 = 0;
-                                          if (tmp22Result.wdaymask[sum8] !== options.wkst) {
-                                            let sum9 = num31 + 1;
-                                            while (sum9 < 7) {
-                                              tmp22Result.wnomask[sum8] = 1;
-                                              let sum10 = sum8 + 1;
-                                              num31 = sum9;
-                                              sum8 = sum10;
-                                              if (tmp22Result.wdaymask[sum10] === options.wkst) {
-                                                break;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                    const byweekno1 = options.byweekno;
-                                    if (typeof closure_1_14 === "function") {
-                                      if (typeof closure_1_13 === "function") {
-                                        if (typeof closure_1_12 === "function") {
-                                          if (typeof closure_1_3 === "function") {
-                                            let tmp75 = !tmp74;
-                                            if (null != byweekno1) {
-                                              tmp75 = 0 === byweekno1.length;
-                                            }
-                                            let tmp76 = !tmp75;
-                                            if (tmp76) {
-                                              tmp76 = -1 !== byweekno1.indexOf(1);
-                                            }
-                                            if (tmp76) {
-                                              const sum11 = num29 + 7 * rounded;
-                                              let diff3 = sum11;
-                                              if (num29 !== sum2) {
-                                                diff3 = sum11 - diff1;
-                                              }
-                                              if (diff3 < num12) {
-                                                tmp22Result.wnomask[diff3] = 1;
-                                                let sum12 = diff3 + 1;
-                                                let num33 = 0;
-                                                if (tmp22Result.wdaymask[sum12] !== options.wkst) {
-                                                  const sum13 = num33 + 1;
-                                                  while (sum13 < 7) {
-                                                    tmp22Result.wnomask[sum12] = 1;
-                                                    let sum14 = sum12 + 1;
-                                                    sum12 = sum14;
-                                                    num33 = sum13;
-                                                    if (tmp22Result.wdaymask[sum14] === options.wkst) {
-                                                      break;
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                            if (num29) {
-                                              const byweekno2 = options.byweekno;
-                                              if (typeof closure_1_14 === "function") {
-                                                if (typeof closure_1_13 === "function") {
-                                                  if (typeof closure_1_12 === "function") {
-                                                    if (typeof closure_1_3 === "function") {
-                                                      let tmp88 = !tmp87;
-                                                      if (null != byweekno2) {
-                                                        tmp88 = 0 === byweekno2.length;
-                                                      }
-                                                      let tmp89 = !tmp88;
-                                                      if (tmp89) {
-                                                        tmp89 = -1 !== byweekno2.indexOf(-1);
-                                                      }
-                                                      let num36 = -1;
-                                                      if (!tmp89) {
-                                                        const diff4 = lastyear - 1;
-                                                        if (typeof closure_1_15 === "function") {
-                                                          const _Date7 = Date;
-                                                          const _Date8 = Date;
-                                                          const _Date9 = Date;
-                                                          const date2 = new Date(Date.UTC(diff4, 0, 1, 0, 0, 0));
-                                                          if (typeof tmp90 === "function") {
-                                                            const obj7 = closure_1_19[date2.getUTCDay(date2)];
-                                                            if (typeof closure_1_10 === "function") {
-                                                              const result6 = (7 - obj7.valueOf() + options.wkst) % 7;
-                                                              let sum15 = result6;
-                                                              if (result6 * 7 < 0) {
-                                                                sum15 = result6 + 7;
-                                                              }
-                                                              const diff5 = lastyear - 1;
-                                                              if (typeof closure_1_20 === "function") {
-                                                                const result7 = diff5 % 4;
-                                                                let tmp104 = result7 === 0;
-                                                                if (result7 === 0) {
-                                                                  tmp104 = diff5 % 100 !== 0;
-                                                                }
-                                                                if (!tmp104) {
-                                                                  tmp104 = diff5 % 400 === 0;
-                                                                }
-                                                                if (tmp104) {
-                                                                  num11 = 366;
-                                                                }
-                                                                if (4 <= sum15) {
-                                                                  if (typeof closure_1_10 === "function") {
-                                                                    const result8 = (obj7 - options.wkst) % 7;
-                                                                    let sum16 = result8;
-                                                                    if (result8 * 7 < 0) {
-                                                                      sum16 = result8 + 7;
-                                                                    }
-                                                                    let sum17 = num11 + sum16;
-                                                                  } else {
-                                                                    throw new TypeError("Trying to call a non-function");
-                                                                  }
-                                                                } else {
-                                                                  sum17 = num12 - num29;
-                                                                }
-                                                                if (typeof closure_1_10 === "function") {
-                                                                  const result9 = sum17 % 7;
-                                                                  let sum18 = result9;
-                                                                  if (result9 * 7 < 0) {
-                                                                    sum18 = result9 + 7;
-                                                                  }
-                                                                  num36 = tmp109(52 + sum18 / 4);
-                                                                } else {
-                                                                  throw new TypeError("Trying to call a non-function");
-                                                                }
-                                                              } else {
-                                                                throw new TypeError("Trying to call a non-function");
-                                                              }
-                                                            } else {
-                                                              throw new TypeError("Trying to call a non-function");
-                                                            }
-                                                          } else {
-                                                            throw new TypeError("Trying to call a non-function");
-                                                          }
-                                                        } else {
-                                                          throw new TypeError("Trying to call a non-function");
-                                                        }
-                                                      }
-                                                      const byweekno3 = options.byweekno;
-                                                      if (typeof tmp83 === "function") {
-                                                        if (typeof tmp84 === "function") {
-                                                          if (typeof tmp85 === "function") {
-                                                            if (typeof tmp86 === "function") {
-                                                              let tmp113 = !tmp112;
-                                                              if (null != byweekno3) {
-                                                                tmp113 = 0 === byweekno3.length;
-                                                              }
-                                                              if (tmp114) {
-                                                                let num45 = 0;
-                                                                if (0 < num29) {
-                                                                  do {
-                                                                    tmp22Result.wnomask[num45] = 1;
-                                                                    num45 = num45 + 1;
-                                                                  } while (num45 < num29);
-                                                                }
-                                                              }
-                                                              tmp114 = !tmp113 && -1 !== byweekno3.indexOf(num36);
-                                                            } else {
-                                                              throw new TypeError("Trying to call a non-function");
-                                                            }
-                                                          } else {
-                                                            throw new TypeError("Trying to call a non-function");
-                                                          }
-                                                        } else {
-                                                          throw new TypeError("Trying to call a non-function");
-                                                        }
-                                                      } else {
-                                                        throw new TypeError("Trying to call a non-function");
-                                                      }
-                                                    } else {
-                                                      throw new TypeError("Trying to call a non-function");
-                                                    }
-                                                  } else {
-                                                    throw new TypeError("Trying to call a non-function");
-                                                  }
-                                                } else {
-                                                  throw new TypeError("Trying to call a non-function");
-                                                }
-                                              } else {
-                                                throw new TypeError("Trying to call a non-function");
-                                              }
-                                            }
-                                          } else {
-                                            throw new TypeError("Trying to call a non-function");
-                                          }
-                                        } else {
-                                          throw new TypeError("Trying to call a non-function");
-                                        }
-                                      } else {
-                                        throw new TypeError("Trying to call a non-function");
-                                      }
-                                    } else {
-                                      throw new TypeError("Trying to call a non-function");
-                                    }
-                                  } else {
-                                    throw new TypeError("Trying to call a non-function");
-                                  }
-                                } else {
-                                  throw new TypeError("Trying to call a non-function");
-                                }
-                              } else {
-                                throw new TypeError("Trying to call a non-function");
-                              }
-                            }
-                            self.yearinfo = tmp22Result;
-                          } else {
-                            throw new TypeError("Trying to call a non-function");
-                          }
-                        } else {
-                          throw new TypeError("Trying to call a non-function");
-                        }
-                      } else {
-                        throw new TypeError("Trying to call a non-function");
-                      }
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
-                    }
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  const bynweekday = options.bynweekday;
-  if (typeof closure_1_13 === "function") {
-    if (typeof closure_1_12 === "function") {
-      if (typeof closure_1_3 === "function") {
-        let tmp119 = !tmp118;
-        if (null != bynweekday) {
-          tmp119 = 0 === bynweekday.length;
-        }
-        if (!tmp119) {
-          if (lastmonth !== self.lastmonth) {
-            ({ yearlen, mrange, wdaymask } = self.yearinfo);
-            const obj4 = { lastyear, lastmonth, nwdaymask: [] };
-            const items2 = [];
-            if (options.freq === closure_1_72.YEARLY) {
-              const bymonth = options.bymonth;
-              if (typeof tmp115 === "function") {
-                if (typeof tmp116 === "function") {
-                  let tmp123 = !tmp122;
-                  if (null != bymonth) {
-                    tmp123 = 0 === bymonth.length;
-                  }
-                  if (tmp123) {
-                    const items3 = [0, yearlen];
-                    const items4 = [items3];
-                    let arr9 = items4;
-                  } else {
-                    let num48 = 0;
-                    arr9 = items2;
-                    if (0 < options.bymonth.length) {
-                      do {
-                        let tmp124 = options.bymonth[num48];
-                        let arr = items2.push(mrange.slice(tmp124 - 1, tmp124 + 1));
-                        num48 = num48 + 1;
-                        arr9 = items2;
-                        length = options.bymonth.length;
-                      } while (num48 < length);
-                    }
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else {
-              arr9 = items2;
-              if (options.freq === tmp121.MONTHLY) {
-                const items5 = [mrange.slice(lastmonth - 1, lastmonth + 1)];
-                arr9 = items5;
-              }
-            }
-            if (typeof closure_1_12 === "function") {
-              if (typeof closure_1_3 === "function") {
-                if (0 !== arr9.length) {
-                  if (typeof closure_1_8 === "function") {
-                    const items6 = [];
-                    if (closure_1_6(0)) {
-                      let num54 = 0;
-                      if (tmp129) {
-                        do {
-                          let items7 = [];
-                          items6[num54] = items7.concat(0);
-                          num54 = num54 + 1;
-                        } while (num54 < yearlen);
-                      }
-                    } else {
-                      let num52 = 0;
-                      if (tmp129) {
-                        do {
-                          items6[num52] = 0;
-                          num52 = num52 + 1;
-                        } while (num52 < yearlen);
-                      }
-                    }
-                    obj4.nwdaymask = items6;
-                    let num57 = 0;
-                    if (0 < arr9.length) {
-                      while (true) {
-                        let tmp130 = arr9[num57];
-                        let first = tmp130[0];
-                        let diff6 = tmp130[1] - 1;
-                        let num58 = 0;
-                        if (0 < options.bynweekday.length) {
-                          while (true) {
-                            [tmp134, tmp135] = options.bynweekday[num58];
-                            if (tmp135 < 0) {
-                              let sum19 = diff6 + 7 * (tmp135 + 1);
-                              if (typeof closure_1_10 === "function") {
-                                let result10 = (wdaymask[sum19] - tmp134) % 7;
-                                let sum20 = result10;
-                                if (result10 * 7 < 0) {
-                                  sum20 = result10 + 7;
-                                }
-                                let diff7 = sum19 - sum20;
-                              } else {
-                                let str44 = "Trying to call a non-function";
-                                throw new TypeError("Trying to call a non-function");
-                              }
-                            } else {
-                              let sum21 = first + 7 * (tmp135 - 1);
-                              if (typeof closure_1_10 !== "function") {
-                                break;
-                              } else {
-                                let result11 = tmp139 % 7;
-                                let sum22 = result11;
-                                if (result11 * 7 < 0) {
-                                  sum22 = result11 + 7;
-                                }
-                                diff7 = sum21 + sum22;
-                              }
-                            }
-                            let tmp147 = first <= diff7 && diff7 <= diff6;
-                            if (tmp147) {
-                              obj4.nwdaymask[diff7] = 1;
-                            }
-                            num58 = num58 + 1;
-                            continue;
-                          }
-                          let str43 = "Trying to call a non-function";
-                          throw new TypeError("Trying to call a non-function");
-                        }
-                        num57 = num57 + 1;
-                      }
-                    }
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                }
-                self.monthinfo = obj4;
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          }
-        }
-        if (typeof closure_1_3 === "function") {
-          if (null != options.byeaster) {
-            let num59 = options.byeaster;
-            if (undefined === num59) {
-              num59 = 0;
-            }
-            const result12 = lastyear % 19;
-            const _Math4 = Math;
-            const rounded1 = Math.floor(lastyear / 100);
-            const result13 = lastyear % 100;
-            const _Math5 = Math;
-            const _Math6 = Math;
-            const rounded2 = Math.floor(rounded1 / 4);
-            const result14 = rounded1 % 4;
-            const _Math7 = Math;
-            const _Math8 = Math;
-            const result15 = Math.floor(19 * result12 + rounded1 - rounded2 - Math.floor((rounded1 - Math.floor((rounded1 + 8) / 25) + 1) / 3) + 15) % 30;
-            const _Math9 = Math;
-            const _Math10 = Math;
-            const result16 = Math.floor(32 + 2 * result14 + 2 * Math.floor(result13 / 4) - result15 - result13 % 4) % 7;
-            const _Math11 = Math;
-            const rounded3 = Math.floor((result12 + 11 * result15 + 22 * result16) / 451);
-            const _Math12 = Math;
-            const sum23 = result15 + result16;
-            const _Date10 = Date;
-            const _Date11 = Date;
-            const _Math13 = Math;
-            const items8 = [Math.ceil((Date.UTC(lastyear, Math.floor((sum23 - 7 * rounded3 + 114) / 31) - 1, (sum23 - 7 * rounded3 + 114) % 31 + 1 + num59) - Date.UTC(lastyear, 0, 1)) / 86400000)];
-            self.eastermask = items8;
-            const UTCResult = Date.UTC(lastyear, Math.floor((sum23 - 7 * rounded3 + 114) / 31) - 1, (sum23 - 7 * rounded3 + 114) % 31 + 1 + num59);
-          }
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function get() {
-  let lastyear = null;
-  if (this.monthinfo) {
-    lastyear = this.monthinfo.lastyear;
-  }
-  return lastyear;
-}
-
-function get() {
-  let lastmonth = null;
-  if (this.monthinfo) {
-    lastmonth = this.monthinfo.lastmonth;
-  }
-  return lastmonth;
-}
-
-function get() {
-  return this.yearinfo.yearlen;
-}
-
-function get() {
-  return this.yearinfo.yearordinal;
-}
-
-function get() {
-  return this.yearinfo.mrange;
-}
-
-function get() {
-  return this.yearinfo.wdaymask;
-}
-
-function get() {
-  return this.yearinfo.mmask;
-}
-
-function get() {
-  return this.yearinfo.wnomask;
-}
-
-function get() {
-  if (this.monthinfo) {
-    let nwdaymask = this.monthinfo.nwdaymask;
-  } else {
-    nwdaymask = [];
-  }
-  return nwdaymask;
-}
-
-function get() {
-  return this.yearinfo.nextyearlen;
-}
-
-function get() {
-  return this.yearinfo.mdaymask;
-}
-
-function get() {
-  return this.yearinfo.nmdaymask;
-}
-
-function f138583() {
-  const items = [closure_1_7(this.yearlen), 0, this.yearlen];
-  return items;
-}
-
-function f138584(arg0, arg1) {
-  const yearlen = this.yearlen;
-  if (typeof closure_1_8 === "function") {
-    const items = [];
-    if (closure_1_6(null)) {
-      let num3 = 0;
-      if (tmp5) {
-        do {
-          let items1 = [];
-          items[num3] = items1.concat(null);
-          num3 = num3 + 1;
-        } while (num3 < yearlen);
-      }
-    } else {
-      let num2 = 0;
-      if (tmp5) {
-        do {
-          items[num2] = null;
-          num2 = num2 + 1;
-        } while (num2 < yearlen);
-      }
-    }
-    let sum = tmp;
-    if (tmp < tmp2) {
-      do {
-        items[sum] = sum;
-        sum = sum + 1;
-      } while (sum < tmp2);
-    }
-    const items2 = [items, tmp, tmp2];
-    return items2;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function f138585(arg0, arg1, arg2) {
-  const self = this;
-  const sum = this.yearlen + 7;
-  if (typeof closure_1_8 === "function") {
-    const items = [];
-    if (closure_1_6(null)) {
-      let num5 = 0;
-      if (0 < sum) {
-        do {
-          let items1 = [];
-          items[num5] = items1.concat(null);
-          num5 = num5 + 1;
-        } while (num5 < sum);
-      }
-    } else {
-      let num3 = 0;
-      if (0 < sum) {
-        do {
-          items[num3] = null;
-          num3 = num3 + 1;
-        } while (num3 < sum);
-      }
-    }
-    if (typeof closure_1_15 === "function") {
-      const _Date = Date;
-      const _Date2 = Date;
-      const _Date3 = Date;
-      const date = new Date(Date.UTC(arg0, arg1 - 1, arg2, 0, 0, 0));
-      if (typeof tmp4 === "function") {
-        if (typeof closure_1_23 === "function") {
-          const diff = tmp13 - 60 * date.getTimezoneOffset() * 1000;
-          if (typeof tmp14 === "function") {
-            const _Math = Math;
-            const diff1 = Math.round((diff - (tmp16 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) - self.yearordinal;
-            items[diff1] = diff1;
-            const sum1 = diff1 + 1;
-            let num12 = 0;
-            let tmp20 = sum1;
-            let tmp21 = sum1;
-            if (self.wdaymask[sum1] !== self.options.wkst) {
-              const sum2 = num12 + 1;
-              tmp21 = tmp20;
-              while (sum2 < 7) {
-                items[tmp20] = tmp20;
-                let sum3 = tmp20 + 1;
-                num12 = sum2;
-                tmp20 = sum3;
-                tmp21 = sum3;
-                if (self.wdaymask[sum3] === self.options.wkst) {
-                  break;
-                }
-              }
-            }
-            const items2 = [items, diff1, tmp21];
-            return items2;
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function f138586(arg0, arg1, arg2) {
-  const yearlen = this.yearlen;
-  if (typeof closure_1_8 === "function") {
-    const items = [];
-    if (closure_1_6(null)) {
-      let num5 = 0;
-      if (tmp4) {
-        do {
-          let items1 = [];
-          items[num5] = items1.concat(null);
-          num5 = num5 + 1;
-        } while (num5 < yearlen);
-      }
-    } else {
-      let num3 = 0;
-      if (tmp4) {
-        do {
-          items[num3] = null;
-          num3 = num3 + 1;
-        } while (num3 < yearlen);
-      }
-    }
-    if (typeof closure_1_15 === "function") {
-      const _Date = Date;
-      const _Date2 = Date;
-      const _Date3 = Date;
-      const date = new Date(Date.UTC(arg0, arg1 - 1, arg2, 0, 0, 0));
-      if (typeof tmp5 === "function") {
-        if (typeof closure_1_23 === "function") {
-          const diff = tmp14 - 60 * date.getTimezoneOffset() * 1000;
-          if (typeof tmp15 === "function") {
-            const _Math = Math;
-            const diff1 = Math.round((diff - (tmp17 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) - tmp.yearordinal;
-            items[diff1] = diff1;
-            const items2 = [items, diff1, diff1 + 1];
-            return items2;
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function f138587(arg0, arg1, arg2, arg3) {
-  closure_0 = arg0;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const self = this;
-  closure_4 = [];
-  const byminute = this.options.byminute;
-  const item = byminute.forEach((item) => {
-    closure_4 = closure_4.concat(self.mtimeset(closure_0, item, closure_1, closure_2));
-  });
-  if (typeof closure_1_32 === "function") {
-    const sorted = obj.sort((getTime, getTime2) => {
-      const time = getTime.getTime();
-      return time - getTime2.getTime();
-    });
-    return closure_4;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-  obj = closure_4;
-}
-
-function f138588(arg0, arg1, arg2, arg3) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = arg3;
-  const bysecond = this.options.bysecond;
-  const mapped = bysecond.map((item) => {
-    let num = closure_2;
-    if (typeof closure_2_49 === "function") {
-      const obj = { hour: tmp, minute: tmp2, second: item };
-      if (!num) {
-        num = 0;
-      }
-      obj.millisecond = num;
-      return obj;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  });
-  if (typeof closure_32 === "function") {
-    const sorted = mapped.sort((getTime, getTime2) => {
-      const time = getTime.getTime();
-      return time - getTime2.getTime();
-    });
-    return mapped;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function f138589(hour, minute, arg2, arg3) {
-  if (typeof closure_1_49 === "function") {
-    let num = arg3;
-    const obj = { hour, minute, second: arg2 };
-    if (!arg3) {
-      num = 0;
-    }
-    obj.millisecond = num;
-    const items = [obj];
-    return items;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function f138590(arg0) {
-  const self = this;
-  if (closure_1_39.YEARLY === arg0) {
-    const ydayset = self.ydayset;
-    return ydayset.bind(self);
-  } else if (closure_1_39.MONTHLY === arg0) {
-    const mdayset = self.mdayset;
-    return mdayset.bind(self);
-  } else if (closure_1_39.WEEKLY === arg0) {
-    const wdayset = self.wdayset;
-    return wdayset.bind(self);
-  } else {
-    const DAILY = closure_1_39.DAILY;
-    const ddayset = self.ddayset;
-    return ddayset.bind(self);
-  }
-}
-
-function f138591(arg0) {
-  const self = this;
-  if (closure_1_39.HOURLY === arg0) {
-    const htimeset = self.htimeset;
-    return htimeset.bind(self);
-  } else if (closure_1_39.MINUTELY === arg0) {
-    const mtimeset = self.mtimeset;
-    return mtimeset.bind(self);
-  } else if (closure_1_39.SECONDLY === arg0) {
-    const stimeset = self.stimeset;
-    return stimeset.bind(self);
-  }
-}
-
-function t(arg0, arg1) {
-  const obj = {};
-  let obj2 = arg0;
-  if (undefined === arg0) {
-    obj2 = {};
-  }
-  let flag = arg1;
-  if (undefined === arg1) {
-    flag = false;
-  }
-  let tmp = null;
-  if (!flag) {
-    if (typeof closure_1_57 === "function") {
-      const obj3 = { all: false, before: [], after: [], between: [] };
-      tmp = obj3;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  obj._cache = tmp;
-  obj.origOptions = closure_1_51(obj2);
-  const tmp5 = closure_1_38(closure_1_38({}, closure_1_70), closure_1_51(obj2));
-  if (typeof closure_1_3 === "function") {
-    if (null != tmp5.byeaster) {
-      tmp5.freq = closure_1_72.YEARLY;
-    }
-    if (typeof closure_1_3 === "function") {
-      if (null != tmp5.freq) {
-        if (closure_1_72.FREQUENCIES[tmp5.freq]) {
-          if (!tmp5.dtstart) {
-            const _Date = Date;
-            const _Date2 = Date;
-            const date = new Date();
-            const date1 = new Date(date.setMilliseconds(0));
-            tmp5.dtstart = date1;
-          }
-          if (typeof closure_1_3 === "function") {
-            if (null != tmp5.wkst) {
-              if (typeof closure_1_4 === "function") {
-                if (typeof tmp5.wkst !== "number") {
-                  tmp5.wkst = tmp5.wkst.weekday;
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else {
-              tmp5.wkst = tmp8.MO.weekday;
-            }
-            if (typeof closure_1_3 === "function") {
-              if (null != tmp5.bysetpos) {
-                if (typeof closure_1_4 === "function") {
-                  if (typeof tmp5.bysetpos === "number") {
-                    const items = [tmp5.bysetpos];
-                    tmp5.bysetpos = items;
-                  }
-                  let num4 = 0;
-                  if (0 < tmp5.bysetpos.length) {
-                    while (0 !== tmp5.bysetpos[num4]) {
-                      if (tmp23 < -366) {
-                        break;
-                      } else if (tmp23 > 366) {
-                        break;
-                      } else {
-                        num4 = num4 + 1;
-                      }
-                    }
-                    const _Error2 = Error;
-                    const error = new Error("bysetpos must be between 1 and 366, or between -366 and -1");
-                    throw error;
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              }
-              const _Boolean = Boolean;
-              if (!Boolean(tmp5.byweekno)) {
-                const byweekno = tmp5.byweekno;
-                if (typeof closure_1_13 === "function") {
-                  if (typeof closure_1_12 === "function") {
-                    if (typeof closure_1_3 === "function") {
-                      let tmp30 = !tmp29;
-                      if (null != byweekno) {
-                        tmp30 = 0 === byweekno.length;
-                      }
-                      if (tmp30) {
-                        const byyearday = tmp5.byyearday;
-                        if (typeof closure_1_13 === "function") {
-                          if (typeof closure_1_12 === "function") {
-                            if (typeof closure_1_3 === "function") {
-                              let tmp32 = !tmp31;
-                              if (null != byyearday) {
-                                tmp32 = 0 === byyearday.length;
-                              }
-                              if (tmp32) {
-                                const _Boolean2 = Boolean;
-                                if (!Boolean(tmp5.bymonthday)) {
-                                  const bymonthday = tmp5.bymonthday;
-                                  if (typeof closure_1_13 === "function") {
-                                    if (typeof closure_1_12 === "function") {
-                                      if (typeof closure_1_3 === "function") {
-                                        let tmp34 = !tmp33;
-                                        if (null != bymonthday) {
-                                          tmp34 = 0 === bymonthday.length;
-                                        }
-                                        if (tmp34) {
-                                          if (typeof closure_1_3 === "function") {
-                                            if (null == tmp5.byweekday) {
-                                              if (typeof closure_1_3 === "function") {
-                                                if (null == tmp5.byeaster) {
-                                                  const freq = tmp5.freq;
-                                                  if (closure_1_72.YEARLY === freq) {
-                                                    if (!tmp5.bymonth) {
-                                                      const dtstart2 = tmp5.dtstart;
-                                                      tmp5.bymonth = dtstart2.getUTCMonth() + 1;
-                                                    }
-                                                    const dtstart3 = tmp5.dtstart;
-                                                    tmp5.bymonthday = dtstart3.getUTCDate();
-                                                  } else if (closure_1_72.MONTHLY === freq) {
-                                                    const dtstart = tmp5.dtstart;
-                                                    tmp5.bymonthday = dtstart.getUTCDate();
-                                                  } else if (closure_1_72.WEEKLY === freq) {
-                                                    const dtstart7 = tmp5.dtstart;
-                                                    if (typeof closure_1_27 === "function") {
-                                                      const items1 = [closure_1_19[dtstart7.getUTCDay(dtstart7)]];
-                                                      tmp5.byweekday = items1;
-                                                    } else {
-                                                      throw new TypeError("Trying to call a non-function");
-                                                    }
-                                                  }
-                                                }
-                                              } else {
-                                                throw new TypeError("Trying to call a non-function");
-                                              }
-                                            }
-                                          } else {
-                                            throw new TypeError("Trying to call a non-function");
-                                          }
-                                        }
-                                      } else {
-                                        throw new TypeError("Trying to call a non-function");
-                                      }
-                                    } else {
-                                      throw new TypeError("Trying to call a non-function");
-                                    }
-                                  } else {
-                                    throw new TypeError("Trying to call a non-function");
-                                  }
-                                }
-                              }
-                            } else {
-                              throw new TypeError("Trying to call a non-function");
-                            }
-                          } else {
-                            throw new TypeError("Trying to call a non-function");
-                          }
-                        } else {
-                          throw new TypeError("Trying to call a non-function");
-                        }
-                      }
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
-                    }
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              }
-              if (typeof closure_1_3 === "function") {
-                let tmp37 = null != tmp5.bymonth;
-                if (tmp37) {
-                  tmp37 = !closure_1_6(tmp5.bymonth);
-                }
-                if (tmp37) {
-                  const items2 = [tmp5.bymonth];
-                  tmp5.bymonth = items2;
-                }
-                if (typeof closure_1_3 === "function") {
-                  let tmp39 = null != tmp5.byyearday;
-                  if (tmp39) {
-                    tmp39 = !closure_1_6(tmp5.byyearday);
-                  }
-                  if (tmp39) {
-                    if (typeof closure_1_4 === "function") {
-                      tmp39 = typeof tmp5.byyearday === "number";
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
-                    }
-                  }
-                  if (tmp39) {
-                    const items3 = [tmp5.byyearday];
-                    tmp5.byyearday = items3;
-                  }
-                  if (typeof closure_1_3 === "function") {
-                    if (null != tmp5.bymonthday) {
-                      const bymonthday1 = tmp5.bymonthday;
-                      if (closure_1_6(tmp5.bymonthday)) {
-                        const items4 = [];
-                        const items5 = [];
-                        let num7 = 0;
-                        if (0 < bymonthday1.length) {
-                          do {
-                            let tmp43 = tmp5.bymonthday[num7];
-                            if (tmp43 > 0) {
-                              let arr = items4.push(tmp43);
-                            } else if (tmp43 < 0) {
-                              let arr2 = items5.push(tmp43);
-                            }
-                            num7 = num7 + 1;
-                          } while (num7 < tmp5.bymonthday.length);
-                        }
-                        tmp5.bymonthday = items4;
-                        tmp5.bynmonthday = items5;
-                      } else if (bymonthday1 < 0) {
-                        const items6 = [tmp5.bymonthday];
-                        tmp5.bynmonthday = items6;
-                        tmp5.bymonthday = [];
-                      } else {
-                        tmp5.bynmonthday = [];
-                        const items7 = [tmp5.bymonthday];
-                        tmp5.bymonthday = items7;
-                      }
-                    } else {
-                      tmp5.bymonthday = [];
-                      tmp5.bynmonthday = [];
-                    }
-                    if (typeof closure_1_3 === "function") {
-                      let tmp48 = null != tmp5.byweekno;
-                      if (tmp48) {
-                        tmp48 = !closure_1_6(tmp5.byweekno);
-                      }
-                      if (tmp48) {
-                        const items8 = [tmp5.byweekno];
-                        tmp5.byweekno = items8;
-                      }
-                      if (typeof closure_1_3 === "function") {
-                        if (null != tmp5.byweekday) {
-                          if (typeof closure_1_4 === "function") {
-                            if (typeof tmp5.byweekday === "number") {
-                              const items9 = [tmp5.byweekday];
-                              tmp5.byweekday = items9;
-                              tmp5.bynweekday = null;
-                              let tmp50 = closure_1_3;
-                            } else {
-                              const byweekday = tmp5.byweekday;
-                              if (typeof closure_1_5 === "function") {
-                                let hasItem = typeof byweekday === "string";
-                                if (typeof byweekday === "string") {
-                                  hasItem = closure_1_1.includes(byweekday);
-                                }
-                                if (hasItem) {
-                                  const items10 = [closure_1_2.fromStr(tmp5.byweekday).weekday];
-                                  tmp5.byweekday = items10;
-                                  tmp5.bynweekday = null;
-                                  tmp50 = closure_1_3;
-                                } else {
-                                  const byweekday1 = tmp5.byweekday;
-                                  if (tmp5.byweekday instanceof closure_1_2) {
-                                    if (byweekday1.n) {
-                                      if (tmp5.freq <= closure_1_72.MONTHLY) {
-                                        const items11 = [tmp5.byweekday.weekday, tmp5.byweekday.n];
-                                        const items12 = [items11];
-                                        tmp5.bynweekday = items12;
-                                        tmp5.byweekday = null;
-                                        tmp50 = closure_1_3;
-                                      }
-                                    }
-                                    const items13 = [tmp5.byweekday.weekday];
-                                    tmp5.byweekday = items13;
-                                    tmp5.bynweekday = null;
-                                    tmp50 = closure_1_3;
-                                  } else {
-                                    const items14 = [];
-                                    const items15 = [];
-                                    let num9 = 0;
-                                    if (0 < byweekday1.length) {
-                                      while (typeof closure_1_4 === "function") {
-                                        if (typeof tmp54 === "number") {
-                                          let arr3 = items14.push(tmp54);
-                                        } else if (typeof closure_1_5 === "function") {
-                                          let hasItem1 = typeof tmp54 === "string";
-                                          if (typeof tmp54 === "string") {
-                                            hasItem1 = closure_1_1.includes(tmp54);
-                                          }
-                                          if (hasItem1) {
-                                            let arr4 = items14.push(closure_1_2.fromStr(tmp54).weekday);
-                                          } else {
-                                            if (tmp54.n) {
-                                              if (tmp5.freq <= closure_1_72.MONTHLY) {
-                                                let items16 = [, ];
-                                                ({ weekday: arr16[0], n: arr16[1] } = tmp54);
-                                                let arr5 = items15.push(items16);
-                                              }
-                                            }
-                                            let arr6 = items14.push(tmp54.weekday);
-                                          }
-                                        } else {
-                                          let str32 = "Trying to call a non-function";
-                                          throw new TypeError("Trying to call a non-function");
-                                        }
-                                        num9 = num9 + 1;
-                                      }
-                                      throw new TypeError("Trying to call a non-function");
-                                    }
-                                    if (typeof closure_1_13 === "function") {
-                                      if (typeof closure_1_12 === "function") {
-                                        if (typeof closure_1_3 === "function") {
-                                          let tmp67 = null;
-                                          if (0 !== items14.length) {
-                                            tmp67 = items14;
-                                          }
-                                          tmp5.byweekday = tmp67;
-                                          if (typeof tmp64 === "function") {
-                                            if (typeof tmp65 === "function") {
-                                              if (typeof closure_1_3 === "function") {
-                                                let tmp68 = null;
-                                                if (0 !== items15.length) {
-                                                  tmp68 = items15;
-                                                }
-                                                tmp5.bynweekday = tmp68;
-                                                tmp50 = closure_1_3;
-                                              } else {
-                                                throw new TypeError("Trying to call a non-function");
-                                              }
-                                            } else {
-                                              throw new TypeError("Trying to call a non-function");
-                                            }
-                                          } else {
-                                            throw new TypeError("Trying to call a non-function");
-                                          }
-                                        } else {
-                                          throw new TypeError("Trying to call a non-function");
-                                        }
-                                      } else {
-                                        throw new TypeError("Trying to call a non-function");
-                                      }
-                                    } else {
-                                      throw new TypeError("Trying to call a non-function");
-                                    }
-                                  }
-                                }
-                              } else {
-                                throw new TypeError("Trying to call a non-function");
-                              }
-                            }
-                          } else {
-                            throw new TypeError("Trying to call a non-function");
-                          }
-                        } else {
-                          tmp5.bynweekday = null;
-                          tmp50 = closure_1_3;
-                        }
-                        if (typeof tmp50 === "function") {
-                          if (null != tmp5.byhour) {
-                            if (typeof closure_1_4 === "function") {
-                              if (typeof tmp5.byhour === "number") {
-                                const items17 = [tmp5.byhour];
-                                tmp5.byhour = items17;
-                              }
-                            } else {
-                              throw new TypeError("Trying to call a non-function");
-                            }
-                          } else {
-                            let tmp72 = null;
-                            if (tmp5.freq < closure_1_72.HOURLY) {
-                              const dtstart4 = tmp5.dtstart;
-                              const items18 = [dtstart4.getUTCHours()];
-                              tmp72 = items18;
-                            }
-                            tmp5.byhour = tmp72;
-                          }
-                          if (typeof tmp50 === "function") {
-                            if (null != tmp5.byminute) {
-                              if (typeof closure_1_4 === "function") {
-                                if (typeof tmp5.byminute === "number") {
-                                  const items19 = [tmp5.byminute];
-                                  tmp5.byminute = items19;
-                                }
-                              } else {
-                                throw new TypeError("Trying to call a non-function");
-                              }
-                            } else {
-                              let tmp75 = null;
-                              if (tmp5.freq < closure_1_72.MINUTELY) {
-                                const dtstart5 = tmp5.dtstart;
-                                const items20 = [dtstart5.getUTCMinutes()];
-                                tmp75 = items20;
-                              }
-                              tmp5.byminute = tmp75;
-                            }
-                            if (typeof tmp50 === "function") {
-                              if (null != tmp5.bysecond) {
-                                if (typeof closure_1_4 === "function") {
-                                  if (typeof tmp5.bysecond === "number") {
-                                    const items21 = [tmp5.bysecond];
-                                    tmp5.bysecond = items21;
-                                  }
-                                } else {
-                                  throw new TypeError("Trying to call a non-function");
-                                }
-                              } else {
-                                let tmp78 = null;
-                                if (tmp5.freq < closure_1_72.SECONDLY) {
-                                  const dtstart6 = tmp5.dtstart;
-                                  const items22 = [dtstart6.getUTCSeconds()];
-                                  tmp78 = items22;
-                                }
-                                tmp5.bysecond = tmp78;
-                              }
-                              obj.options = tmp5;
-                            } else {
-                              throw new TypeError("Trying to call a non-function");
-                            }
-                          } else {
-                            throw new TypeError("Trying to call a non-function");
-                          }
-                        } else {
-                          throw new TypeError("Trying to call a non-function");
-                        }
-                      } else {
-                        throw new TypeError("Trying to call a non-function");
-                      }
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
-                    }
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-      }
-      const _Error = Error;
-      const concat = "Invalid frequency: ".concat;
-      const combined = "Invalid frequency: ".concat(tmp5.freq, " ");
-      const error1 = new Error(combined.concat(obj2.freq));
-      throw error1;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-  const tmp4 = closure_1_38({}, closure_1_70);
-}
-
-function f138593(arg0, arg1) {
-  return closure_1_47(arg0, arg1);
-}
-
-function f138594(arg0, arg1) {
-  let tmp = arg1;
-  if (undefined === arg1) {
-    tmp = closure_1_41;
-  }
-  new closure_1_72(closure_1_47(arg0, tmp) || undefined);
-  return new.target;
-}
-
-function f138595(arg0) {
-  const tmp2 = closure_1_0.parseString(arg0) || undefined;
-  new closure_1_0(tmp2);
-  return Object.create(closure_1_0.prototype);
-}
-
-function f138596(arg0) {
-  return closure_1_68(arg0, this.options);
-}
-
-function f138597(arg0, arg1) {
-  let _cacheGetResult = this._cache;
-  if (_cacheGetResult) {
-    const _cache = tmp._cache;
-    _cacheGetResult = _cache._cacheGet(arg0, arg1);
-  }
-  return _cacheGetResult;
-}
-
-function f138598(arg0, arg1, arg2) {
-  if (this._cache) {
-    const _cache = tmp._cache;
-    return _cache._cacheAdd(arg0, arg1, arg2);
-  }
-}
-
-function f138599(iterator) {
-  const self = this;
-  if (iterator) {
-    if (typeof closure_1_40 === "function") {
-      const obj = {};
-      const call = closure_168_0.call;
-      if (typeof call === "unknown") {
-        closure_168_0("all", obj);
-      } else {
-        let callResult = call(tmp10, "all", obj);
-      }
-      if (!callResult) {
-        callResult = tmp10;
-      }
-      callResult.iterator = iterator;
-      return tmp8(callResult);
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    let _cacheGetResult = self._cacheGet("all");
-    if (false === _cacheGetResult) {
-      new closure_1_36("all", {});
-      const _iterResult = self._iter(new.target);
-      self._cacheAdd("all", _iterResult);
-      _cacheGetResult = _iterResult;
-    }
-    return _cacheGetResult;
-  }
-}
-
-function f138600(getTime, getTime2, arg2, iterator) {
-  let flag = arg2;
-  if (undefined === arg2) {
-    flag = false;
-  }
-  if (typeof closure_1_22 === "function") {
-    if (typeof closure_1_21 === "function") {
-      const _Date = Date;
-      let tmp5 = getTime instanceof Date;
-      if (tmp5) {
-        const _isNaN = isNaN;
-        tmp5 = !isNaN(getTime.getTime());
-      }
-      if (tmp5) {
-        if (typeof tmp === "function") {
-          if (typeof tmp2 === "function") {
-            const _Date2 = Date;
-            let tmp7 = getTime2 instanceof Date;
-            if (tmp7) {
-              const _isNaN2 = isNaN;
-              tmp7 = !isNaN(getTime2.getTime());
-            }
-            if (tmp7) {
-              const self = this;
-              const obj = { before: getTime2, after: getTime, inc: flag };
-              if (iterator) {
-                if (typeof closure_1_40 === "function") {
-                  const call = closure_168_0.call;
-                  if (typeof call === "unknown") {
-                    closure_168_0("between", obj);
-                  } else {
-                    let callResult = call(tmp23, "between", obj);
-                  }
-                  if (!callResult) {
-                    callResult = tmp23;
-                  }
-                  callResult.iterator = iterator;
-                  return tmp21(callResult);
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                let _cacheGetResult = self._cacheGet("between", obj);
-                if (false === _cacheGetResult) {
-                  new closure_1_36("between", obj);
-                  const _iterResult = self._iter(new.target);
-                  self._cacheAdd("between", _iterResult, obj);
-                  _cacheGetResult = _iterResult;
-                }
-                return _cacheGetResult;
-              }
-            }
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      const _Error = Error;
-      const error = new Error("Invalid date passed in to RRule.between");
-      throw error;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function f138601(getTime, arg1) {
-  let flag = arg1;
-  if (undefined === arg1) {
-    flag = false;
-  }
-  if (typeof closure_1_22 === "function") {
-    if (typeof closure_1_21 === "function") {
-      const _Date = Date;
-      let tmp4 = getTime instanceof Date;
-      if (tmp4) {
-        const _isNaN = isNaN;
-        tmp4 = !isNaN(getTime.getTime());
-      }
-      if (tmp4) {
-        const self = this;
-        const obj = { dt: getTime, inc: flag };
-        let _cacheGetResult = this._cacheGet("before", obj);
-        if (false === _cacheGetResult) {
-          new closure_1_36("before", obj);
-          const _iterResult = self._iter(new.target);
-          self._cacheAdd("before", _iterResult, obj);
-          _cacheGetResult = _iterResult;
-        }
-        return _cacheGetResult;
-      } else {
-        const _Error = Error;
-        const error = new Error("Invalid date passed in to RRule.before");
-        throw error;
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function f138602(getTime, arg1) {
-  let flag = arg1;
-  if (undefined === arg1) {
-    flag = false;
-  }
-  if (typeof closure_1_22 === "function") {
-    if (typeof closure_1_21 === "function") {
-      const _Date = Date;
-      let tmp4 = getTime instanceof Date;
-      if (tmp4) {
-        const _isNaN = isNaN;
-        tmp4 = !isNaN(getTime.getTime());
-      }
-      if (tmp4) {
-        const self = this;
-        const obj = { dt: getTime, inc: flag };
-        let _cacheGetResult = this._cacheGet("after", obj);
-        if (false === _cacheGetResult) {
-          new closure_1_36("after", obj);
-          const _iterResult = self._iter(new.target);
-          self._cacheAdd("after", _iterResult, obj);
-          _cacheGetResult = _iterResult;
-        }
-        return _cacheGetResult;
-      } else {
-        const _Error = Error;
-        const error = new Error("Invalid date passed in to RRule.after");
-        throw error;
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-
-function f138603() {
-  return this.all().length;
-}
-
-function f138604() {
-  return closure_1_56(this.origOptions);
-}
-
-function f138605(arg0, arg1, arg2) {
-  new closure_1_45(this, arg0, arg1, arg2);
-  return new.target.toString();
-}
-
-function f138606() {
-  return closure_1_48(this);
-}
-
-function f138607() {
-  new closure_1_0(this.origOptions);
-  return Object.create(closure_1_0.prototype);
-}
-
-function e(arg0) {
-  let flag = arg0;
-  if (undefined === arg0) {
-    flag = false;
-  }
-  const self = this;
-  const call = closure_1_0.call;
-  const obj = {};
-  if (typeof call === "unknown") {
-    closure_1_0(obj, flag);
-  } else {
-    let callResult = call(self, obj, flag);
-  }
-  if (!callResult) {
-    callResult = self;
-  }
-  callResult.dtstart = closure_2_75.apply(callResult, ["dtstart"]);
-  callResult.tzid = closure_2_75.apply(callResult, ["tzid"]);
-  callResult._rrule = [];
-  callResult._rdate = [];
-  callResult._exrule = [];
-  callResult._exdate = [];
-  return callResult;
-}
-
-function f138609(accept) {
-  ({ _rrule, _exrule, _rdate, _exdate } = this);
-  let after = accept;
-  let before = _exrule;
-  accept = undefined;
-  const dependencyMap = {};
-  accept = accept.accept;
-  let item = _exdate.forEach((getTime) => {
-    if (typeof closure_2_55 === "function") {
-      const obj = {};
-      const _isNaN = isNaN;
-      if (isNaN(getTime.getTime())) {
-        const _RangeError = RangeError;
-        const rangeError = new RangeError("Invalid date passed to DateWithZone");
-        throw rangeError;
-      } else {
-        obj.date = getTime;
-        obj.tzid = tmp;
-        const _Number = Number;
-        closure_3[Number(obj.rezonedDate())] = true;
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  });
-  accept.accept = function(comma) {
-    const self = this;
-    const NumberResult = Number(comma);
-    if (isNaN(NumberResult)) {
-      const call2 = accept.call;
-      typeof call2 === "unknown" ? accept(comma) : call2(self, comma);
-    } else {
-      let tmp4 = !tmp3;
-      if (!dependencyMap[NumberResult]) {
-        const _Date = Date;
-        const _Date2 = Date;
-        const date1 = new Date(NumberResult + 1);
-        let item = date1.forEach((between) => {
-          const item = between.between(date, date1, true).forEach((item) => {
-            closure_1_3[Number(item)] = true;
-          });
-        });
-        tmp4 = !dependencyMap[NumberResult];
-        const date = new Date(NumberResult - 1);
-      }
-      if (!tmp4) {
-        return !tmp4;
-      } else {
-        dependencyMap[NumberResult] = true;
-        const call = accept.call;
-        typeof call === "unknown" ? accept(comma) : call(self, comma);
-      }
-    }
-  };
-  if ("between" === accept.method) {
-    after = accept.args.after;
-    before = accept.args.before;
-    const item1 = _exrule.forEach((between) => {
-      const item = between.between(date, date1, true).forEach((item) => {
-        closure_1_3[Number(item)] = true;
-      });
-    });
-    accept.accept = function(comma) {
-      const NumberResult = Number(comma);
-      if (dependencyMap[NumberResult]) {
-        return tmp3;
-      } else {
-        const self = this;
-        tmp2[NumberResult] = true;
-        const call = accept.call;
-        typeof call === "unknown" ? accept(comma) : call(self, comma);
-      }
-    };
-  }
-  let num = 0;
-  if (0 < _rdate.length) {
-    while (typeof closure_55 === "function") {
-      let obj2 = {};
-      let _isNaN = isNaN;
-      if (isNaN(obj.getTime())) {
-        let _RangeError = RangeError;
-        let tmp16 = new.target;
-        let str3 = "Invalid date passed to DateWithZone";
-        let tmp17 = new.target;
-        let rangeError = new RangeError("Invalid date passed to DateWithZone");
-        throw rangeError;
-      } else {
-        obj2.date = obj;
-        obj2.tzid = tzidResult;
-        let rezonedDateResult = obj2.rezonedDate();
-        let _Date = Date;
-        let tmp7 = new.target;
-        let tmp8 = new.target;
-        let date = new Date(rezonedDateResult.getTime());
-        if (accept.accept(date)) {
-          num = num + 1;
-        }
-      }
-    }
-    throw new TypeError("Trying to call a non-function");
-  }
-  const item2 = _rrule.forEach((options) => {
-    closure_2_68(after, options.options);
-  });
-  const _result = accept._result;
-  if (typeof closure_32 === "function") {
-    const sorted = _result.sort((getTime, getTime2) => {
-      const time = getTime.getTime();
-      return time - getTime2.getTime();
-    });
-    const method = accept.method;
-    let tmp13 = _result;
-    if ("all" !== method) {
-      tmp13 = _result;
-      if ("between" !== method) {
-        if ("before" === method) {
-          tmp13 = _result.length && _result[_result.length - 1] || null;
-          const tmp15 = _result.length && _result[_result.length - 1] || null;
-        } else {
-          tmp13 = _result.length && _result[0] || null;
-          const tmp14 = _result.length && _result[0] || null;
-        }
-      }
-    }
-    return tmp13;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-  tzidResult = this.tzid();
-}
-
-function f138610(arg0) {
-  closure_1_77(arg0, this._rrule);
-}
-
-function f138611(arg0) {
-  closure_1_77(arg0, this._exrule);
-}
-
-function f138612(arg0) {
-  closure_1_78(arg0, this._rdate);
-}
-
-function f138613(arg0) {
-  closure_1_78(arg0, this._exdate);
-}
-
-function f138614() {
-  const _rrule = this._rrule;
-  return _rrule.map((item) => closure_1_74(item.toString()));
-}
-
-function f138615() {
-  const _exrule = this._exrule;
-  return _exrule.map((item) => closure_1_74(item.toString()));
-}
-
-function f138616() {
-  const _rdate = this._rdate;
-  return _rdate.map((getTime) => new Date(getTime.getTime()));
-}
-
-function f138617() {
-  const _exdate = this._exdate;
-  return _exdate.map((getTime) => new Date(getTime.getTime()));
-}
-
-function f138618() {
-  const self = this;
-  closure_0 = [];
-  let _dtstart = !length;
-  if (!this._rrule.length) {
-    _dtstart = self._dtstart;
-  }
-  if (_dtstart) {
-    const obj = { dtstart: self._dtstart };
-    closure_0 = closure_0.concat(closure_56(obj));
-  }
-  const _rrule = self._rrule;
-  const item = _rrule.forEach((item) => {
-    closure_0 = closure_0.concat(item.toString().split("\n"));
-  });
-  const _exrule = self._exrule;
-  const item1 = _exrule.forEach((item) => {
-    const parts = item.toString().split("\n");
-    const mapped = parts.map((item) => item.replace(/^RRULE:/, "EXRULE:"));
-    closure_0 = closure_0.concat(mapped.filter((item) => !/^DTSTART/.test(item)));
-  });
-  if (!self._rdate.length) {
-    if (!self._exdate.length) {
-      return closure_0;
-    } else {
-      let _exdate = self._exdate;
-      const str8 = self.tzid();
-      closure_129_0 = undefined;
-      let tmp10 = !str8;
-      if (str8) {
-        tmp10 = "UTC" === str8.toUpperCase();
-      }
-      closure_129_0 = tmp10;
-      const concat3 = "".concat;
-      let str12 = ":";
-      if (tmp10) {
-        let concat3Result = concat3("EXDATE", `:`);
-      } else {
-        concat3Result = concat3("EXDATE", ";TZID=").concat(str8, `:`);
-        const concat3Result1 = concat3("EXDATE", ";TZID=");
-      }
-      _exdate = _exdate.map((item) => {
-        const valueOfResult = item.valueOf();
-        let flag = closure_0;
-        if (typeof closure_2_33 === "function") {
-          if (undefined === flag) {
-            flag = true;
-          }
-          const _Date = Date;
-          const date = new Date(valueOfResult);
-          const items = [closure_2_9(date.getUTCFullYear().toString(), 4, "0"), closure_2_9(date.getUTCMonth() + 1, 2, "0"), closure_2_9(date.getUTCDate(), 2, "0"), "T", closure_2_9(date.getUTCHours(), 2, "0"), closure_2_9(date.getUTCMinutes(), 2, "0"), closure_2_9(date.getUTCSeconds(), 2, "0"), ];
-          let str5 = "";
-          if (flag) {
-            str5 = "Z";
-          }
-          items[7] = str5;
-          return items.join("");
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      });
-      str12 = _exdate.join(",");
-      const concat4 = "".concat;
-      const combined = "".concat(concat3Result);
-      closure_0.push(combined.concat(str12));
-    }
-  } else {
-    let _rdate = self._rdate;
-    const str = self.tzid();
-    closure_0 = undefined;
-    let tmp6 = !str;
-    if (str) {
-      tmp6 = "UTC" === str.toUpperCase();
-    }
-    closure_0 = tmp6;
-    const concat = "".concat;
-    let str5 = ":";
-    if (tmp6) {
-      let combined1 = concat("RDATE", `:`);
-    } else {
-      const combined2 = concat("RDATE", ";TZID=");
-      combined1 = combined2.concat(str, `:`);
-    }
-    _rdate = _rdate.map((item) => {
-      const valueOfResult = item.valueOf();
-      let flag = closure_0;
-      if (typeof closure_2_33 === "function") {
-        if (undefined === flag) {
-          flag = true;
-        }
-        const _Date = Date;
-        const date = new Date(valueOfResult);
-        const items = [closure_2_9(date.getUTCFullYear().toString(), 4, "0"), closure_2_9(date.getUTCMonth() + 1, 2, "0"), closure_2_9(date.getUTCDate(), 2, "0"), "T", closure_2_9(date.getUTCHours(), 2, "0"), closure_2_9(date.getUTCMinutes(), 2, "0"), closure_2_9(date.getUTCSeconds(), 2, "0"), ];
-        let str5 = "";
-        if (flag) {
-          str5 = "Z";
-        }
-        items[7] = str5;
-        return items.join("");
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    });
-    str5 = _rdate.join(",");
-    const concat2 = "".concat;
-    const combined3 = "".concat(combined1);
-    closure_0.push(combined3.concat(str5));
-  }
-}
-
-function f138619() {
-  return this.valueOf().join("\n");
-}
-
-function f138620() {
-  const self = this;
-  const _cache = this._cache;
-  const obj2 = Object.create(closure_1_1.prototype);
-  const call = closure_1_0.call;
-  const obj = {};
-  if (typeof call === "unknown") {
-    closure_1_0(obj, _cache);
-  } else {
-    let callResult = call(obj2, obj, _cache);
-  }
-  if (!callResult) {
-    callResult = obj2;
-  }
-  callResult.dtstart = closure_2_75.apply(callResult, ["dtstart"]);
-  callResult.tzid = closure_2_75.apply(callResult, ["tzid"]);
-  callResult._rrule = [];
-  callResult._rdate = [];
-  callResult._exrule = [];
-  callResult._exdate = [];
-  const _rrule = self._rrule;
-  const item = _rrule.forEach((clone) => callResult.rrule(clone.clone()));
-  const _exrule = self._exrule;
-  const item1 = _exrule.forEach((clone) => callResult.exrule(clone.clone()));
-  const _rdate = self._rdate;
-  const item2 = _rdate.forEach((getTime) => callResult.rdate(new Date(getTime.getTime())));
-  const _exdate = self._exdate;
-  const item3 = _exdate.forEach((getTime) => callResult.exdate(new Date(getTime.getTime())));
-  return callResult;
-}
-
-function f138931(arr) {
+function f139665(arr) {
   return arr.every((item) => {
     const ipV6 = regex.regex.ipV6;
     return ipV6.test(item);
   });
 }
 
-function f138932(arg0, tldBlacklist) {
+function f139666(arg0, tldBlacklist) {
   const _Array = Array;
   if (tldBlacklist.tldBlacklist) {
     if (!isArray(tldBlacklist.tldBlacklist)) {
@@ -12690,7 +10758,7 @@ function f138932(arg0, tldBlacklist) {
   }
 }
 
-function f138933(arg0, arg1, arg2) {
+function f139667(arg0, arg1, arg2) {
   let tmp14;
   let obj = arg1;
   let tmp = arg2;
@@ -14297,14 +12365,1945 @@ function f138933(arg0, arg1, arg2) {
   return finish();
 }
 
-function f140563() {
+function t(options) {
+  this.options = options;
 }
 
-function f140564(gameId) {
+function f139994(lastyear, lastmonth) {
+  let length;
+  const self = this;
+  const options = this.options;
+  if (lastyear !== this.lastyear) {
+    if (typeof closure_1_15 === "function") {
+      const _Date = Date;
+      const _Date2 = Date;
+      const _Date3 = Date;
+      const date = new Date(Date.UTC(lastyear, 0, 1, 0, 0, 0));
+      if (typeof closure_1_20 === "function") {
+        const result = lastyear % 4;
+        let tmp7 = result === 0;
+        if (result === 0) {
+          tmp7 = lastyear % 100 !== 0;
+        }
+        if (!tmp7) {
+          tmp7 = lastyear % 400 === 0;
+        }
+        let num11 = 365;
+        let num12 = 365;
+        if (tmp7) {
+          num12 = 366;
+        }
+        const sum = lastyear + 1;
+        if (typeof closure_1_20 === "function") {
+          const result1 = sum % 4;
+          let tmp10 = result1 === 0;
+          if (result1 === 0) {
+            tmp10 = sum % 100 !== 0;
+          }
+          if (!tmp10) {
+            tmp10 = sum % 400 === 0;
+          }
+          let num15 = num11;
+          if (tmp10) {
+            num15 = 366;
+          }
+          if (typeof closure_1_24 === "function") {
+            if (typeof closure_1_23 === "function") {
+              const diff = tmp14 - 60 * date.getTimezoneOffset() * 1000;
+              if (typeof tmp15 === "function") {
+                const _Math = Math;
+                if (typeof closure_1_27 === "function") {
+                  const tmp21 = closure_1_19[date.getUTCDay(date)];
+                  const obj = { yearlen: num12, nextyearlen: num15, yearordinal: tmp18, yearweekday: tmp21 };
+                  if (typeof closure_1_20 === "function") {
+                    const result2 = lastyear % 4;
+                    let tmp24 = result2 === 0;
+                    if (result2 === 0) {
+                      tmp24 = lastyear % 100 !== 0;
+                    }
+                    if (!tmp24) {
+                      tmp24 = lastyear % 400 === 0;
+                    }
+                    let num20 = num11;
+                    if (tmp24) {
+                      num20 = 366;
+                    }
+                    if (typeof tmp160 === "function") {
+                      const _Date4 = Date;
+                      const _Date5 = Date;
+                      const _Date6 = Date;
+                      const date1 = new Date(Date.UTC(lastyear, 0, 1, 0, 0, 0));
+                      if (typeof tmp19 === "function") {
+                        const tmp29 = closure_1_19[date1.getUTCDay(date1)];
+                        if (num11 === num20) {
+                          const obj2 = { mmask: closure_1_58, mdaymask: closure_1_61, nmdaymask: closure_1_63, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_65 };
+                          let obj3 = obj2;
+                        } else {
+                          obj3 = { mmask: closure_1_59, mdaymask: closure_1_60, nmdaymask: closure_1_62, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_64 };
+                        }
+                        const tmp22Result = closure_1_38(closure_1_38(obj, obj3), { wnomask: null });
+                        const byweekno = options.byweekno;
+                        if (typeof closure_1_12 === "function") {
+                          if (typeof closure_1_3 === "function") {
+                            let tmp45 = !tmp44;
+                            if (null != byweekno) {
+                              tmp45 = 0 === byweekno.length;
+                            }
+                            if (!tmp45) {
+                              if (typeof closure_1_8 === "function") {
+                                const sum1 = num12 + 7;
+                                const items = [];
+                                if (closure_1_6(0)) {
+                                  let num28 = 0;
+                                  if (0 < sum1) {
+                                    do {
+                                      let items1 = [];
+                                      items[num28] = items1.concat(0);
+                                      num28 = num28 + 1;
+                                    } while (num28 < sum1);
+                                  }
+                                } else {
+                                  let num27 = 0;
+                                  if (0 < sum1) {
+                                    do {
+                                      items[num27] = 0;
+                                      num27 = num27 + 1;
+                                    } while (num27 < sum1);
+                                  }
+                                }
+                                tmp22Result.wnomask = items;
+                                if (typeof closure_1_10 === "function") {
+                                  const result3 = (7 - tmp21 + options.wkst) % 7;
+                                  let sum2 = result3;
+                                  if (result3 * 7 < 0) {
+                                    sum2 = result3 + 7;
+                                  }
+                                  if (4 <= sum2) {
+                                    if (typeof closure_1_10 === "function") {
+                                      const result4 = (tmp21 - options.wkst) % 7;
+                                      let sum3 = result4;
+                                      if (result4 * 7 < 0) {
+                                        sum3 = result4 + 7;
+                                      }
+                                      let sum4 = tmp53 + sum3;
+                                      let num29 = 0;
+                                    } else {
+                                      throw new TypeError("Trying to call a non-function");
+                                    }
+                                  } else {
+                                    sum4 = num12 - sum2;
+                                    num29 = sum2;
+                                  }
+                                  const _Math2 = Math;
+                                  if (typeof closure_1_10 === "function") {
+                                    const result5 = sum4 % 7;
+                                    let sum5 = result5;
+                                    if (result5 * 7 < 0) {
+                                      sum5 = result5 + 7;
+                                    }
+                                    const _Math3 = Math;
+                                    const rounded = Math.floor(tmp56 + sum5 / 4);
+                                    const diff1 = 7 - sum2;
+                                    for (let num30 = 0; num30 < options.byweekno.length; num30 = num30 + 1) {
+                                      let tmp61 = options.byweekno[num30];
+                                      let sum6 = tmp61;
+                                      if (tmp61 < 0) {
+                                        sum6 = tmp61 + (rounded + 1);
+                                      }
+                                      if (sum6 > 0) {
+                                        if (sum6 <= rounded) {
+                                          let diff2 = num29;
+                                          if (sum6 > 1) {
+                                            let sum7 = num29 + 7 * (sum6 - 1);
+                                            diff2 = sum7;
+                                            if (num29 !== sum2) {
+                                              diff2 = sum7 - diff1;
+                                            }
+                                          }
+                                          tmp22Result.wnomask[diff2] = 1;
+                                          let sum8 = diff2 + 1;
+                                          let num31 = 0;
+                                          if (tmp22Result.wdaymask[sum8] !== options.wkst) {
+                                            let sum9 = num31 + 1;
+                                            while (sum9 < 7) {
+                                              tmp22Result.wnomask[sum8] = 1;
+                                              let sum10 = sum8 + 1;
+                                              num31 = sum9;
+                                              sum8 = sum10;
+                                              if (tmp22Result.wdaymask[sum10] === options.wkst) {
+                                                break;
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                    const byweekno1 = options.byweekno;
+                                    if (typeof closure_1_14 === "function") {
+                                      if (typeof closure_1_13 === "function") {
+                                        if (typeof closure_1_12 === "function") {
+                                          if (typeof closure_1_3 === "function") {
+                                            let tmp75 = !tmp74;
+                                            if (null != byweekno1) {
+                                              tmp75 = 0 === byweekno1.length;
+                                            }
+                                            let tmp76 = !tmp75;
+                                            if (tmp76) {
+                                              tmp76 = -1 !== byweekno1.indexOf(1);
+                                            }
+                                            if (tmp76) {
+                                              const sum11 = num29 + 7 * rounded;
+                                              let diff3 = sum11;
+                                              if (num29 !== sum2) {
+                                                diff3 = sum11 - diff1;
+                                              }
+                                              if (diff3 < num12) {
+                                                tmp22Result.wnomask[diff3] = 1;
+                                                let sum12 = diff3 + 1;
+                                                let num33 = 0;
+                                                if (tmp22Result.wdaymask[sum12] !== options.wkst) {
+                                                  const sum13 = num33 + 1;
+                                                  while (sum13 < 7) {
+                                                    tmp22Result.wnomask[sum12] = 1;
+                                                    let sum14 = sum12 + 1;
+                                                    sum12 = sum14;
+                                                    num33 = sum13;
+                                                    if (tmp22Result.wdaymask[sum14] === options.wkst) {
+                                                      break;
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            if (num29) {
+                                              const byweekno2 = options.byweekno;
+                                              if (typeof closure_1_14 === "function") {
+                                                if (typeof closure_1_13 === "function") {
+                                                  if (typeof closure_1_12 === "function") {
+                                                    if (typeof closure_1_3 === "function") {
+                                                      let tmp88 = !tmp87;
+                                                      if (null != byweekno2) {
+                                                        tmp88 = 0 === byweekno2.length;
+                                                      }
+                                                      let tmp89 = !tmp88;
+                                                      if (tmp89) {
+                                                        tmp89 = -1 !== byweekno2.indexOf(-1);
+                                                      }
+                                                      let num36 = -1;
+                                                      if (!tmp89) {
+                                                        const diff4 = lastyear - 1;
+                                                        if (typeof closure_1_15 === "function") {
+                                                          const _Date7 = Date;
+                                                          const _Date8 = Date;
+                                                          const _Date9 = Date;
+                                                          const date2 = new Date(Date.UTC(diff4, 0, 1, 0, 0, 0));
+                                                          if (typeof tmp90 === "function") {
+                                                            const obj7 = closure_1_19[date2.getUTCDay(date2)];
+                                                            if (typeof closure_1_10 === "function") {
+                                                              const result6 = (7 - obj7.valueOf() + options.wkst) % 7;
+                                                              let sum15 = result6;
+                                                              if (result6 * 7 < 0) {
+                                                                sum15 = result6 + 7;
+                                                              }
+                                                              const diff5 = lastyear - 1;
+                                                              if (typeof closure_1_20 === "function") {
+                                                                const result7 = diff5 % 4;
+                                                                let tmp104 = result7 === 0;
+                                                                if (result7 === 0) {
+                                                                  tmp104 = diff5 % 100 !== 0;
+                                                                }
+                                                                if (!tmp104) {
+                                                                  tmp104 = diff5 % 400 === 0;
+                                                                }
+                                                                if (tmp104) {
+                                                                  num11 = 366;
+                                                                }
+                                                                if (4 <= sum15) {
+                                                                  if (typeof closure_1_10 === "function") {
+                                                                    const result8 = (obj7 - options.wkst) % 7;
+                                                                    let sum16 = result8;
+                                                                    if (result8 * 7 < 0) {
+                                                                      sum16 = result8 + 7;
+                                                                    }
+                                                                    let sum17 = num11 + sum16;
+                                                                  } else {
+                                                                    throw new TypeError("Trying to call a non-function");
+                                                                  }
+                                                                } else {
+                                                                  sum17 = num12 - num29;
+                                                                }
+                                                                if (typeof closure_1_10 === "function") {
+                                                                  const result9 = sum17 % 7;
+                                                                  let sum18 = result9;
+                                                                  if (result9 * 7 < 0) {
+                                                                    sum18 = result9 + 7;
+                                                                  }
+                                                                  num36 = tmp109(52 + sum18 / 4);
+                                                                } else {
+                                                                  throw new TypeError("Trying to call a non-function");
+                                                                }
+                                                              } else {
+                                                                throw new TypeError("Trying to call a non-function");
+                                                              }
+                                                            } else {
+                                                              throw new TypeError("Trying to call a non-function");
+                                                            }
+                                                          } else {
+                                                            throw new TypeError("Trying to call a non-function");
+                                                          }
+                                                        } else {
+                                                          throw new TypeError("Trying to call a non-function");
+                                                        }
+                                                      }
+                                                      const byweekno3 = options.byweekno;
+                                                      if (typeof tmp83 === "function") {
+                                                        if (typeof tmp84 === "function") {
+                                                          if (typeof tmp85 === "function") {
+                                                            if (typeof tmp86 === "function") {
+                                                              let tmp113 = !tmp112;
+                                                              if (null != byweekno3) {
+                                                                tmp113 = 0 === byweekno3.length;
+                                                              }
+                                                              if (tmp114) {
+                                                                let num45 = 0;
+                                                                if (0 < num29) {
+                                                                  do {
+                                                                    tmp22Result.wnomask[num45] = 1;
+                                                                    num45 = num45 + 1;
+                                                                  } while (num45 < num29);
+                                                                }
+                                                              }
+                                                              tmp114 = !tmp113 && -1 !== byweekno3.indexOf(num36);
+                                                            } else {
+                                                              throw new TypeError("Trying to call a non-function");
+                                                            }
+                                                          } else {
+                                                            throw new TypeError("Trying to call a non-function");
+                                                          }
+                                                        } else {
+                                                          throw new TypeError("Trying to call a non-function");
+                                                        }
+                                                      } else {
+                                                        throw new TypeError("Trying to call a non-function");
+                                                      }
+                                                    } else {
+                                                      throw new TypeError("Trying to call a non-function");
+                                                    }
+                                                  } else {
+                                                    throw new TypeError("Trying to call a non-function");
+                                                  }
+                                                } else {
+                                                  throw new TypeError("Trying to call a non-function");
+                                                }
+                                              } else {
+                                                throw new TypeError("Trying to call a non-function");
+                                              }
+                                            }
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      } else {
+                                        throw new TypeError("Trying to call a non-function");
+                                      }
+                                    } else {
+                                      throw new TypeError("Trying to call a non-function");
+                                    }
+                                  } else {
+                                    throw new TypeError("Trying to call a non-function");
+                                  }
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
+                                }
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }
+                            self.yearinfo = tmp22Result;
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+  const bynweekday = options.bynweekday;
+  if (typeof closure_1_13 === "function") {
+    if (typeof closure_1_12 === "function") {
+      if (typeof closure_1_3 === "function") {
+        let tmp119 = !tmp118;
+        if (null != bynweekday) {
+          tmp119 = 0 === bynweekday.length;
+        }
+        if (!tmp119) {
+          if (lastmonth !== self.lastmonth) {
+            ({ yearlen, mrange, wdaymask } = self.yearinfo);
+            const obj4 = { lastyear, lastmonth, nwdaymask: [] };
+            const items2 = [];
+            if (options.freq === closure_1_72.YEARLY) {
+              const bymonth = options.bymonth;
+              if (typeof tmp115 === "function") {
+                if (typeof tmp116 === "function") {
+                  let tmp123 = !tmp122;
+                  if (null != bymonth) {
+                    tmp123 = 0 === bymonth.length;
+                  }
+                  if (tmp123) {
+                    const items3 = [0, yearlen];
+                    const items4 = [items3];
+                    let arr9 = items4;
+                  } else {
+                    let num48 = 0;
+                    arr9 = items2;
+                    if (0 < options.bymonth.length) {
+                      do {
+                        let tmp124 = options.bymonth[num48];
+                        let arr = items2.push(mrange.slice(tmp124 - 1, tmp124 + 1));
+                        num48 = num48 + 1;
+                        arr9 = items2;
+                        length = options.bymonth.length;
+                      } while (num48 < length);
+                    }
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              arr9 = items2;
+              if (options.freq === tmp121.MONTHLY) {
+                const items5 = [mrange.slice(lastmonth - 1, lastmonth + 1)];
+                arr9 = items5;
+              }
+            }
+            if (typeof closure_1_12 === "function") {
+              if (typeof closure_1_3 === "function") {
+                if (0 !== arr9.length) {
+                  if (typeof closure_1_8 === "function") {
+                    const items6 = [];
+                    if (closure_1_6(0)) {
+                      let num54 = 0;
+                      if (tmp129) {
+                        do {
+                          let items7 = [];
+                          items6[num54] = items7.concat(0);
+                          num54 = num54 + 1;
+                        } while (num54 < yearlen);
+                      }
+                    } else {
+                      let num52 = 0;
+                      if (tmp129) {
+                        do {
+                          items6[num52] = 0;
+                          num52 = num52 + 1;
+                        } while (num52 < yearlen);
+                      }
+                    }
+                    obj4.nwdaymask = items6;
+                    let num57 = 0;
+                    if (0 < arr9.length) {
+                      while (true) {
+                        let tmp130 = arr9[num57];
+                        let first = tmp130[0];
+                        let diff6 = tmp130[1] - 1;
+                        let num58 = 0;
+                        if (0 < options.bynweekday.length) {
+                          while (true) {
+                            [tmp134, tmp135] = options.bynweekday[num58];
+                            if (tmp135 < 0) {
+                              let sum19 = diff6 + 7 * (tmp135 + 1);
+                              if (typeof closure_1_10 === "function") {
+                                let result10 = (wdaymask[sum19] - tmp134) % 7;
+                                let sum20 = result10;
+                                if (result10 * 7 < 0) {
+                                  sum20 = result10 + 7;
+                                }
+                                let diff7 = sum19 - sum20;
+                              } else {
+                                let str44 = "Trying to call a non-function";
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            } else {
+                              let sum21 = first + 7 * (tmp135 - 1);
+                              if (typeof closure_1_10 !== "function") {
+                                break;
+                              } else {
+                                let result11 = tmp139 % 7;
+                                let sum22 = result11;
+                                if (result11 * 7 < 0) {
+                                  sum22 = result11 + 7;
+                                }
+                                diff7 = sum21 + sum22;
+                              }
+                            }
+                            let tmp147 = first <= diff7 && diff7 <= diff6;
+                            if (tmp147) {
+                              obj4.nwdaymask[diff7] = 1;
+                            }
+                            num58 = num58 + 1;
+                            continue;
+                          }
+                          let str43 = "Trying to call a non-function";
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                        num57 = num57 + 1;
+                      }
+                    }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                }
+                self.monthinfo = obj4;
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          }
+        }
+        if (typeof closure_1_3 === "function") {
+          if (null != options.byeaster) {
+            let num59 = options.byeaster;
+            if (undefined === num59) {
+              num59 = 0;
+            }
+            const result12 = lastyear % 19;
+            const _Math4 = Math;
+            const rounded1 = Math.floor(lastyear / 100);
+            const result13 = lastyear % 100;
+            const _Math5 = Math;
+            const _Math6 = Math;
+            const rounded2 = Math.floor(rounded1 / 4);
+            const result14 = rounded1 % 4;
+            const _Math7 = Math;
+            const _Math8 = Math;
+            const result15 = Math.floor(19 * result12 + rounded1 - rounded2 - Math.floor((rounded1 - Math.floor((rounded1 + 8) / 25) + 1) / 3) + 15) % 30;
+            const _Math9 = Math;
+            const _Math10 = Math;
+            const result16 = Math.floor(32 + 2 * result14 + 2 * Math.floor(result13 / 4) - result15 - result13 % 4) % 7;
+            const _Math11 = Math;
+            const rounded3 = Math.floor((result12 + 11 * result15 + 22 * result16) / 451);
+            const _Math12 = Math;
+            const sum23 = result15 + result16;
+            const _Date10 = Date;
+            const _Date11 = Date;
+            const _Math13 = Math;
+            const items8 = [Math.ceil((Date.UTC(lastyear, Math.floor((sum23 - 7 * rounded3 + 114) / 31) - 1, (sum23 - 7 * rounded3 + 114) % 31 + 1 + num59) - Date.UTC(lastyear, 0, 1)) / 86400000)];
+            self.eastermask = items8;
+            const UTCResult = Date.UTC(lastyear, Math.floor((sum23 - 7 * rounded3 + 114) / 31) - 1, (sum23 - 7 * rounded3 + 114) % 31 + 1 + num59);
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+
+function get() {
+  let lastyear = null;
+  if (this.monthinfo) {
+    lastyear = this.monthinfo.lastyear;
+  }
+  return lastyear;
+}
+
+function get() {
+  let lastmonth = null;
+  if (this.monthinfo) {
+    lastmonth = this.monthinfo.lastmonth;
+  }
+  return lastmonth;
+}
+
+function get() {
+  return this.yearinfo.yearlen;
+}
+
+function get() {
+  return this.yearinfo.yearordinal;
+}
+
+function get() {
+  return this.yearinfo.mrange;
+}
+
+function get() {
+  return this.yearinfo.wdaymask;
+}
+
+function get() {
+  return this.yearinfo.mmask;
+}
+
+function get() {
+  return this.yearinfo.wnomask;
+}
+
+function get() {
+  if (this.monthinfo) {
+    let nwdaymask = this.monthinfo.nwdaymask;
+  } else {
+    nwdaymask = [];
+  }
+  return nwdaymask;
+}
+
+function get() {
+  return this.yearinfo.nextyearlen;
+}
+
+function get() {
+  return this.yearinfo.mdaymask;
+}
+
+function get() {
+  return this.yearinfo.nmdaymask;
+}
+
+function f140007() {
+  const items = [closure_1_7(this.yearlen), 0, this.yearlen];
+  return items;
+}
+
+function f140008(arg0, arg1) {
+  const yearlen = this.yearlen;
+  if (typeof closure_1_8 === "function") {
+    const items = [];
+    if (closure_1_6(null)) {
+      let num3 = 0;
+      if (tmp5) {
+        do {
+          let items1 = [];
+          items[num3] = items1.concat(null);
+          num3 = num3 + 1;
+        } while (num3 < yearlen);
+      }
+    } else {
+      let num2 = 0;
+      if (tmp5) {
+        do {
+          items[num2] = null;
+          num2 = num2 + 1;
+        } while (num2 < yearlen);
+      }
+    }
+    let sum = tmp;
+    if (tmp < tmp2) {
+      do {
+        items[sum] = sum;
+        sum = sum + 1;
+      } while (sum < tmp2);
+    }
+    const items2 = [items, tmp, tmp2];
+    return items2;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+
+function f140009(arg0, arg1, arg2) {
+  const self = this;
+  const sum = this.yearlen + 7;
+  if (typeof closure_1_8 === "function") {
+    const items = [];
+    if (closure_1_6(null)) {
+      let num5 = 0;
+      if (0 < sum) {
+        do {
+          let items1 = [];
+          items[num5] = items1.concat(null);
+          num5 = num5 + 1;
+        } while (num5 < sum);
+      }
+    } else {
+      let num3 = 0;
+      if (0 < sum) {
+        do {
+          items[num3] = null;
+          num3 = num3 + 1;
+        } while (num3 < sum);
+      }
+    }
+    if (typeof closure_1_15 === "function") {
+      const _Date = Date;
+      const _Date2 = Date;
+      const _Date3 = Date;
+      const date = new Date(Date.UTC(arg0, arg1 - 1, arg2, 0, 0, 0));
+      if (typeof tmp4 === "function") {
+        if (typeof closure_1_23 === "function") {
+          const diff = tmp13 - 60 * date.getTimezoneOffset() * 1000;
+          if (typeof tmp14 === "function") {
+            const _Math = Math;
+            const diff1 = Math.round((diff - (tmp16 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) - self.yearordinal;
+            items[diff1] = diff1;
+            const sum1 = diff1 + 1;
+            let num12 = 0;
+            let tmp20 = sum1;
+            let tmp21 = sum1;
+            if (self.wdaymask[sum1] !== self.options.wkst) {
+              const sum2 = num12 + 1;
+              tmp21 = tmp20;
+              while (sum2 < 7) {
+                items[tmp20] = tmp20;
+                let sum3 = tmp20 + 1;
+                num12 = sum2;
+                tmp20 = sum3;
+                tmp21 = sum3;
+                if (self.wdaymask[sum3] === self.options.wkst) {
+                  break;
+                }
+              }
+            }
+            const items2 = [items, diff1, tmp21];
+            return items2;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+
+function f140010(arg0, arg1, arg2) {
+  const yearlen = this.yearlen;
+  if (typeof closure_1_8 === "function") {
+    const items = [];
+    if (closure_1_6(null)) {
+      let num5 = 0;
+      if (tmp4) {
+        do {
+          let items1 = [];
+          items[num5] = items1.concat(null);
+          num5 = num5 + 1;
+        } while (num5 < yearlen);
+      }
+    } else {
+      let num3 = 0;
+      if (tmp4) {
+        do {
+          items[num3] = null;
+          num3 = num3 + 1;
+        } while (num3 < yearlen);
+      }
+    }
+    if (typeof closure_1_15 === "function") {
+      const _Date = Date;
+      const _Date2 = Date;
+      const _Date3 = Date;
+      const date = new Date(Date.UTC(arg0, arg1 - 1, arg2, 0, 0, 0));
+      if (typeof tmp5 === "function") {
+        if (typeof closure_1_23 === "function") {
+          const diff = tmp14 - 60 * date.getTimezoneOffset() * 1000;
+          if (typeof tmp15 === "function") {
+            const _Math = Math;
+            const diff1 = Math.round((diff - (tmp17 - 60 * closure_1_18.getTimezoneOffset() * 1000)) / closure_1_17) - tmp.yearordinal;
+            items[diff1] = diff1;
+            const items2 = [items, diff1, diff1 + 1];
+            return items2;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+
+function f140011(arg0, arg1, arg2, arg3) {
+  closure_0 = arg0;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  const self = this;
+  closure_4 = [];
+  const byminute = this.options.byminute;
+  const item = byminute.forEach((item) => {
+    closure_4 = closure_4.concat(self.mtimeset(closure_0, item, closure_1, closure_2));
+  });
+  if (typeof closure_1_32 === "function") {
+    const sorted = obj.sort((getTime, getTime2) => {
+      const time = getTime.getTime();
+      return time - getTime2.getTime();
+    });
+    return closure_4;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+  obj = closure_4;
+}
+
+function f140012(arg0, arg1, arg2, arg3) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg3;
+  const bysecond = this.options.bysecond;
+  const mapped = bysecond.map((item) => {
+    let num = closure_2;
+    if (typeof closure_2_49 === "function") {
+      const obj = { hour: tmp, minute: tmp2, second: item };
+      if (!num) {
+        num = 0;
+      }
+      obj.millisecond = num;
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  });
+  if (typeof closure_32 === "function") {
+    const sorted = mapped.sort((getTime, getTime2) => {
+      const time = getTime.getTime();
+      return time - getTime2.getTime();
+    });
+    return mapped;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+
+function f140013(hour, minute, arg2, arg3) {
+  if (typeof closure_1_49 === "function") {
+    let num = arg3;
+    const obj = { hour, minute, second: arg2 };
+    if (!arg3) {
+      num = 0;
+    }
+    obj.millisecond = num;
+    const items = [obj];
+    return items;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+
+function f140014(arg0) {
+  const self = this;
+  if (closure_1_39.YEARLY === arg0) {
+    const ydayset = self.ydayset;
+    return ydayset.bind(self);
+  } else if (closure_1_39.MONTHLY === arg0) {
+    const mdayset = self.mdayset;
+    return mdayset.bind(self);
+  } else if (closure_1_39.WEEKLY === arg0) {
+    const wdayset = self.wdayset;
+    return wdayset.bind(self);
+  } else {
+    const DAILY = closure_1_39.DAILY;
+    const ddayset = self.ddayset;
+    return ddayset.bind(self);
+  }
+}
+
+function f140015(arg0) {
+  const self = this;
+  if (closure_1_39.HOURLY === arg0) {
+    const htimeset = self.htimeset;
+    return htimeset.bind(self);
+  } else if (closure_1_39.MINUTELY === arg0) {
+    const mtimeset = self.mtimeset;
+    return mtimeset.bind(self);
+  } else if (closure_1_39.SECONDLY === arg0) {
+    const stimeset = self.stimeset;
+    return stimeset.bind(self);
+  }
+}
+
+function t(arg0, arg1) {
+  const obj = {};
+  let obj2 = arg0;
+  if (undefined === arg0) {
+    obj2 = {};
+  }
+  let flag = arg1;
+  if (undefined === arg1) {
+    flag = false;
+  }
+  let tmp = null;
+  if (!flag) {
+    if (typeof closure_1_57 === "function") {
+      const obj3 = { all: false, before: [], after: [], between: [] };
+      tmp = obj3;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+  obj._cache = tmp;
+  obj.origOptions = closure_1_51(obj2);
+  const tmp5 = closure_1_38(closure_1_38({}, closure_1_70), closure_1_51(obj2));
+  if (typeof closure_1_3 === "function") {
+    if (null != tmp5.byeaster) {
+      tmp5.freq = closure_1_72.YEARLY;
+    }
+    if (typeof closure_1_3 === "function") {
+      if (null != tmp5.freq) {
+        if (closure_1_72.FREQUENCIES[tmp5.freq]) {
+          if (!tmp5.dtstart) {
+            const _Date = Date;
+            const _Date2 = Date;
+            const date = new Date();
+            const date1 = new Date(date.setMilliseconds(0));
+            tmp5.dtstart = date1;
+          }
+          if (typeof closure_1_3 === "function") {
+            if (null != tmp5.wkst) {
+              if (typeof closure_1_4 === "function") {
+                if (typeof tmp5.wkst !== "number") {
+                  tmp5.wkst = tmp5.wkst.weekday;
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              tmp5.wkst = tmp8.MO.weekday;
+            }
+            if (typeof closure_1_3 === "function") {
+              if (null != tmp5.bysetpos) {
+                if (typeof closure_1_4 === "function") {
+                  if (typeof tmp5.bysetpos === "number") {
+                    const items = [tmp5.bysetpos];
+                    tmp5.bysetpos = items;
+                  }
+                  let num4 = 0;
+                  if (0 < tmp5.bysetpos.length) {
+                    while (0 !== tmp5.bysetpos[num4]) {
+                      if (tmp23 < -366) {
+                        break;
+                      } else if (tmp23 > 366) {
+                        break;
+                      } else {
+                        num4 = num4 + 1;
+                      }
+                    }
+                    const _Error2 = Error;
+                    const error = new Error("bysetpos must be between 1 and 366, or between -366 and -1");
+                    throw error;
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              }
+              const _Boolean = Boolean;
+              if (!Boolean(tmp5.byweekno)) {
+                const byweekno = tmp5.byweekno;
+                if (typeof closure_1_13 === "function") {
+                  if (typeof closure_1_12 === "function") {
+                    if (typeof closure_1_3 === "function") {
+                      let tmp30 = !tmp29;
+                      if (null != byweekno) {
+                        tmp30 = 0 === byweekno.length;
+                      }
+                      if (tmp30) {
+                        const byyearday = tmp5.byyearday;
+                        if (typeof closure_1_13 === "function") {
+                          if (typeof closure_1_12 === "function") {
+                            if (typeof closure_1_3 === "function") {
+                              let tmp32 = !tmp31;
+                              if (null != byyearday) {
+                                tmp32 = 0 === byyearday.length;
+                              }
+                              if (tmp32) {
+                                const _Boolean2 = Boolean;
+                                if (!Boolean(tmp5.bymonthday)) {
+                                  const bymonthday = tmp5.bymonthday;
+                                  if (typeof closure_1_13 === "function") {
+                                    if (typeof closure_1_12 === "function") {
+                                      if (typeof closure_1_3 === "function") {
+                                        let tmp34 = !tmp33;
+                                        if (null != bymonthday) {
+                                          tmp34 = 0 === bymonthday.length;
+                                        }
+                                        if (tmp34) {
+                                          if (typeof closure_1_3 === "function") {
+                                            if (null == tmp5.byweekday) {
+                                              if (typeof closure_1_3 === "function") {
+                                                if (null == tmp5.byeaster) {
+                                                  const freq = tmp5.freq;
+                                                  if (closure_1_72.YEARLY === freq) {
+                                                    if (!tmp5.bymonth) {
+                                                      const dtstart2 = tmp5.dtstart;
+                                                      tmp5.bymonth = dtstart2.getUTCMonth() + 1;
+                                                    }
+                                                    const dtstart3 = tmp5.dtstart;
+                                                    tmp5.bymonthday = dtstart3.getUTCDate();
+                                                  } else if (closure_1_72.MONTHLY === freq) {
+                                                    const dtstart = tmp5.dtstart;
+                                                    tmp5.bymonthday = dtstart.getUTCDate();
+                                                  } else if (closure_1_72.WEEKLY === freq) {
+                                                    const dtstart7 = tmp5.dtstart;
+                                                    if (typeof closure_1_27 === "function") {
+                                                      const items1 = [closure_1_19[dtstart7.getUTCDay(dtstart7)]];
+                                                      tmp5.byweekday = items1;
+                                                    } else {
+                                                      throw new TypeError("Trying to call a non-function");
+                                                    }
+                                                  }
+                                                }
+                                              } else {
+                                                throw new TypeError("Trying to call a non-function");
+                                              }
+                                            }
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        }
+                                      } else {
+                                        throw new TypeError("Trying to call a non-function");
+                                      }
+                                    } else {
+                                      throw new TypeError("Trying to call a non-function");
+                                    }
+                                  } else {
+                                    throw new TypeError("Trying to call a non-function");
+                                  }
+                                }
+                              }
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              }
+              if (typeof closure_1_3 === "function") {
+                let tmp37 = null != tmp5.bymonth;
+                if (tmp37) {
+                  tmp37 = !closure_1_6(tmp5.bymonth);
+                }
+                if (tmp37) {
+                  const items2 = [tmp5.bymonth];
+                  tmp5.bymonth = items2;
+                }
+                if (typeof closure_1_3 === "function") {
+                  let tmp39 = null != tmp5.byyearday;
+                  if (tmp39) {
+                    tmp39 = !closure_1_6(tmp5.byyearday);
+                  }
+                  if (tmp39) {
+                    if (typeof closure_1_4 === "function") {
+                      tmp39 = typeof tmp5.byyearday === "number";
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  }
+                  if (tmp39) {
+                    const items3 = [tmp5.byyearday];
+                    tmp5.byyearday = items3;
+                  }
+                  if (typeof closure_1_3 === "function") {
+                    if (null != tmp5.bymonthday) {
+                      const bymonthday1 = tmp5.bymonthday;
+                      if (closure_1_6(tmp5.bymonthday)) {
+                        const items4 = [];
+                        const items5 = [];
+                        let num7 = 0;
+                        if (0 < bymonthday1.length) {
+                          do {
+                            let tmp43 = tmp5.bymonthday[num7];
+                            if (tmp43 > 0) {
+                              let arr = items4.push(tmp43);
+                            } else if (tmp43 < 0) {
+                              let arr2 = items5.push(tmp43);
+                            }
+                            num7 = num7 + 1;
+                          } while (num7 < tmp5.bymonthday.length);
+                        }
+                        tmp5.bymonthday = items4;
+                        tmp5.bynmonthday = items5;
+                      } else if (bymonthday1 < 0) {
+                        const items6 = [tmp5.bymonthday];
+                        tmp5.bynmonthday = items6;
+                        tmp5.bymonthday = [];
+                      } else {
+                        tmp5.bynmonthday = [];
+                        const items7 = [tmp5.bymonthday];
+                        tmp5.bymonthday = items7;
+                      }
+                    } else {
+                      tmp5.bymonthday = [];
+                      tmp5.bynmonthday = [];
+                    }
+                    if (typeof closure_1_3 === "function") {
+                      let tmp48 = null != tmp5.byweekno;
+                      if (tmp48) {
+                        tmp48 = !closure_1_6(tmp5.byweekno);
+                      }
+                      if (tmp48) {
+                        const items8 = [tmp5.byweekno];
+                        tmp5.byweekno = items8;
+                      }
+                      if (typeof closure_1_3 === "function") {
+                        if (null != tmp5.byweekday) {
+                          if (typeof closure_1_4 === "function") {
+                            if (typeof tmp5.byweekday === "number") {
+                              const items9 = [tmp5.byweekday];
+                              tmp5.byweekday = items9;
+                              tmp5.bynweekday = null;
+                              let tmp50 = closure_1_3;
+                            } else {
+                              const byweekday = tmp5.byweekday;
+                              if (typeof closure_1_5 === "function") {
+                                let hasItem = typeof byweekday === "string";
+                                if (typeof byweekday === "string") {
+                                  hasItem = closure_1_1.includes(byweekday);
+                                }
+                                if (hasItem) {
+                                  const items10 = [closure_1_2.fromStr(tmp5.byweekday).weekday];
+                                  tmp5.byweekday = items10;
+                                  tmp5.bynweekday = null;
+                                  tmp50 = closure_1_3;
+                                } else {
+                                  const byweekday1 = tmp5.byweekday;
+                                  if (tmp5.byweekday instanceof closure_1_2) {
+                                    if (byweekday1.n) {
+                                      if (tmp5.freq <= closure_1_72.MONTHLY) {
+                                        const items11 = [tmp5.byweekday.weekday, tmp5.byweekday.n];
+                                        const items12 = [items11];
+                                        tmp5.bynweekday = items12;
+                                        tmp5.byweekday = null;
+                                        tmp50 = closure_1_3;
+                                      }
+                                    }
+                                    const items13 = [tmp5.byweekday.weekday];
+                                    tmp5.byweekday = items13;
+                                    tmp5.bynweekday = null;
+                                    tmp50 = closure_1_3;
+                                  } else {
+                                    const items14 = [];
+                                    const items15 = [];
+                                    let num9 = 0;
+                                    if (0 < byweekday1.length) {
+                                      while (typeof closure_1_4 === "function") {
+                                        if (typeof tmp54 === "number") {
+                                          let arr3 = items14.push(tmp54);
+                                        } else if (typeof closure_1_5 === "function") {
+                                          let hasItem1 = typeof tmp54 === "string";
+                                          if (typeof tmp54 === "string") {
+                                            hasItem1 = closure_1_1.includes(tmp54);
+                                          }
+                                          if (hasItem1) {
+                                            let arr4 = items14.push(closure_1_2.fromStr(tmp54).weekday);
+                                          } else {
+                                            if (tmp54.n) {
+                                              if (tmp5.freq <= closure_1_72.MONTHLY) {
+                                                let items16 = [, ];
+                                                ({ weekday: arr16[0], n: arr16[1] } = tmp54);
+                                                let arr5 = items15.push(items16);
+                                              }
+                                            }
+                                            let arr6 = items14.push(tmp54.weekday);
+                                          }
+                                        } else {
+                                          let str32 = "Trying to call a non-function";
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                        num9 = num9 + 1;
+                                      }
+                                      throw new TypeError("Trying to call a non-function");
+                                    }
+                                    if (typeof closure_1_13 === "function") {
+                                      if (typeof closure_1_12 === "function") {
+                                        if (typeof closure_1_3 === "function") {
+                                          let tmp67 = null;
+                                          if (0 !== items14.length) {
+                                            tmp67 = items14;
+                                          }
+                                          tmp5.byweekday = tmp67;
+                                          if (typeof tmp64 === "function") {
+                                            if (typeof tmp65 === "function") {
+                                              if (typeof closure_1_3 === "function") {
+                                                let tmp68 = null;
+                                                if (0 !== items15.length) {
+                                                  tmp68 = items15;
+                                                }
+                                                tmp5.bynweekday = tmp68;
+                                                tmp50 = closure_1_3;
+                                              } else {
+                                                throw new TypeError("Trying to call a non-function");
+                                              }
+                                            } else {
+                                              throw new TypeError("Trying to call a non-function");
+                                            }
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      } else {
+                                        throw new TypeError("Trying to call a non-function");
+                                      }
+                                    } else {
+                                      throw new TypeError("Trying to call a non-function");
+                                    }
+                                  }
+                                }
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        } else {
+                          tmp5.bynweekday = null;
+                          tmp50 = closure_1_3;
+                        }
+                        if (typeof tmp50 === "function") {
+                          if (null != tmp5.byhour) {
+                            if (typeof closure_1_4 === "function") {
+                              if (typeof tmp5.byhour === "number") {
+                                const items17 = [tmp5.byhour];
+                                tmp5.byhour = items17;
+                              }
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          } else {
+                            let tmp72 = null;
+                            if (tmp5.freq < closure_1_72.HOURLY) {
+                              const dtstart4 = tmp5.dtstart;
+                              const items18 = [dtstart4.getUTCHours()];
+                              tmp72 = items18;
+                            }
+                            tmp5.byhour = tmp72;
+                          }
+                          if (typeof tmp50 === "function") {
+                            if (null != tmp5.byminute) {
+                              if (typeof closure_1_4 === "function") {
+                                if (typeof tmp5.byminute === "number") {
+                                  const items19 = [tmp5.byminute];
+                                  tmp5.byminute = items19;
+                                }
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            } else {
+                              let tmp75 = null;
+                              if (tmp5.freq < closure_1_72.MINUTELY) {
+                                const dtstart5 = tmp5.dtstart;
+                                const items20 = [dtstart5.getUTCMinutes()];
+                                tmp75 = items20;
+                              }
+                              tmp5.byminute = tmp75;
+                            }
+                            if (typeof tmp50 === "function") {
+                              if (null != tmp5.bysecond) {
+                                if (typeof closure_1_4 === "function") {
+                                  if (typeof tmp5.bysecond === "number") {
+                                    const items21 = [tmp5.bysecond];
+                                    tmp5.bysecond = items21;
+                                  }
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
+                                }
+                              } else {
+                                let tmp78 = null;
+                                if (tmp5.freq < closure_1_72.SECONDLY) {
+                                  const dtstart6 = tmp5.dtstart;
+                                  const items22 = [dtstart6.getUTCSeconds()];
+                                  tmp78 = items22;
+                                }
+                                tmp5.bysecond = tmp78;
+                              }
+                              obj.options = tmp5;
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+      }
+      const _Error = Error;
+      const concat = "Invalid frequency: ".concat;
+      const combined = "Invalid frequency: ".concat(tmp5.freq, " ");
+      const error1 = new Error(combined.concat(obj2.freq));
+      throw error1;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+  const tmp4 = closure_1_38({}, closure_1_70);
+}
+
+function f140017(arg0, arg1) {
+  return closure_1_47(arg0, arg1);
+}
+
+function f140018(arg0, arg1) {
+  let tmp = arg1;
+  if (undefined === arg1) {
+    tmp = closure_1_41;
+  }
+  new closure_1_72(closure_1_47(arg0, tmp) || undefined);
+  return new.target;
+}
+
+function f140019(arg0) {
+  const tmp2 = closure_1_0.parseString(arg0) || undefined;
+  new closure_1_0(tmp2);
+  return Object.create(closure_1_0.prototype);
+}
+
+function f140020(arg0) {
+  return closure_1_68(arg0, this.options);
+}
+
+function f140021(arg0, arg1) {
+  let _cacheGetResult = this._cache;
+  if (_cacheGetResult) {
+    const _cache = tmp._cache;
+    _cacheGetResult = _cache._cacheGet(arg0, arg1);
+  }
+  return _cacheGetResult;
+}
+
+function f140022(arg0, arg1, arg2) {
+  if (this._cache) {
+    const _cache = tmp._cache;
+    return _cache._cacheAdd(arg0, arg1, arg2);
+  }
+}
+
+function f140023(iterator) {
+  const self = this;
+  if (iterator) {
+    if (typeof closure_1_40 === "function") {
+      const obj = {};
+      const call = closure_168_0.call;
+      if (typeof call === "unknown") {
+        closure_168_0("all", obj);
+      } else {
+        let callResult = call(tmp10, "all", obj);
+      }
+      if (!callResult) {
+        callResult = tmp10;
+      }
+      callResult.iterator = iterator;
+      return tmp8(callResult);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    let _cacheGetResult = self._cacheGet("all");
+    if (false === _cacheGetResult) {
+      new closure_1_36("all", {});
+      const _iterResult = self._iter(new.target);
+      self._cacheAdd("all", _iterResult);
+      _cacheGetResult = _iterResult;
+    }
+    return _cacheGetResult;
+  }
+}
+
+function f140024(getTime, getTime2, arg2, iterator) {
+  let flag = arg2;
+  if (undefined === arg2) {
+    flag = false;
+  }
+  if (typeof closure_1_22 === "function") {
+    if (typeof closure_1_21 === "function") {
+      const _Date = Date;
+      let tmp5 = getTime instanceof Date;
+      if (tmp5) {
+        const _isNaN = isNaN;
+        tmp5 = !isNaN(getTime.getTime());
+      }
+      if (tmp5) {
+        if (typeof tmp === "function") {
+          if (typeof tmp2 === "function") {
+            const _Date2 = Date;
+            let tmp7 = getTime2 instanceof Date;
+            if (tmp7) {
+              const _isNaN2 = isNaN;
+              tmp7 = !isNaN(getTime2.getTime());
+            }
+            if (tmp7) {
+              const self = this;
+              const obj = { before: getTime2, after: getTime, inc: flag };
+              if (iterator) {
+                if (typeof closure_1_40 === "function") {
+                  const call = closure_168_0.call;
+                  if (typeof call === "unknown") {
+                    closure_168_0("between", obj);
+                  } else {
+                    let callResult = call(tmp23, "between", obj);
+                  }
+                  if (!callResult) {
+                    callResult = tmp23;
+                  }
+                  callResult.iterator = iterator;
+                  return tmp21(callResult);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                let _cacheGetResult = self._cacheGet("between", obj);
+                if (false === _cacheGetResult) {
+                  new closure_1_36("between", obj);
+                  const _iterResult = self._iter(new.target);
+                  self._cacheAdd("between", _iterResult, obj);
+                  _cacheGetResult = _iterResult;
+                }
+                return _cacheGetResult;
+              }
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      }
+      const _Error = Error;
+      const error = new Error("Invalid date passed in to RRule.between");
+      throw error;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+
+function f140025(getTime, arg1) {
+  let flag = arg1;
+  if (undefined === arg1) {
+    flag = false;
+  }
+  if (typeof closure_1_22 === "function") {
+    if (typeof closure_1_21 === "function") {
+      const _Date = Date;
+      let tmp4 = getTime instanceof Date;
+      if (tmp4) {
+        const _isNaN = isNaN;
+        tmp4 = !isNaN(getTime.getTime());
+      }
+      if (tmp4) {
+        const self = this;
+        const obj = { dt: getTime, inc: flag };
+        let _cacheGetResult = this._cacheGet("before", obj);
+        if (false === _cacheGetResult) {
+          new closure_1_36("before", obj);
+          const _iterResult = self._iter(new.target);
+          self._cacheAdd("before", _iterResult, obj);
+          _cacheGetResult = _iterResult;
+        }
+        return _cacheGetResult;
+      } else {
+        const _Error = Error;
+        const error = new Error("Invalid date passed in to RRule.before");
+        throw error;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+
+function f140026(getTime, arg1) {
+  let flag = arg1;
+  if (undefined === arg1) {
+    flag = false;
+  }
+  if (typeof closure_1_22 === "function") {
+    if (typeof closure_1_21 === "function") {
+      const _Date = Date;
+      let tmp4 = getTime instanceof Date;
+      if (tmp4) {
+        const _isNaN = isNaN;
+        tmp4 = !isNaN(getTime.getTime());
+      }
+      if (tmp4) {
+        const self = this;
+        const obj = { dt: getTime, inc: flag };
+        let _cacheGetResult = this._cacheGet("after", obj);
+        if (false === _cacheGetResult) {
+          new closure_1_36("after", obj);
+          const _iterResult = self._iter(new.target);
+          self._cacheAdd("after", _iterResult, obj);
+          _cacheGetResult = _iterResult;
+        }
+        return _cacheGetResult;
+      } else {
+        const _Error = Error;
+        const error = new Error("Invalid date passed in to RRule.after");
+        throw error;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+
+function f140027() {
+  return this.all().length;
+}
+
+function f140028() {
+  return closure_1_56(this.origOptions);
+}
+
+function f140029(arg0, arg1, arg2) {
+  new closure_1_45(this, arg0, arg1, arg2);
+  return new.target.toString();
+}
+
+function f140030() {
+  return closure_1_48(this);
+}
+
+function f140031() {
+  new closure_1_0(this.origOptions);
+  return Object.create(closure_1_0.prototype);
+}
+
+function e(arg0) {
+  let flag = arg0;
+  if (undefined === arg0) {
+    flag = false;
+  }
+  const self = this;
+  const call = closure_1_0.call;
+  const obj = {};
+  if (typeof call === "unknown") {
+    closure_1_0(obj, flag);
+  } else {
+    let callResult = call(self, obj, flag);
+  }
+  if (!callResult) {
+    callResult = self;
+  }
+  callResult.dtstart = closure_2_75.apply(callResult, ["dtstart"]);
+  callResult.tzid = closure_2_75.apply(callResult, ["tzid"]);
+  callResult._rrule = [];
+  callResult._rdate = [];
+  callResult._exrule = [];
+  callResult._exdate = [];
+  return callResult;
+}
+
+function f140033(accept) {
+  ({ _rrule, _exrule, _rdate, _exdate } = this);
+  let after = accept;
+  let before = _exrule;
+  accept = undefined;
+  const dependencyMap = {};
+  accept = accept.accept;
+  let item = _exdate.forEach((getTime) => {
+    if (typeof closure_2_55 === "function") {
+      const obj = {};
+      const _isNaN = isNaN;
+      if (isNaN(getTime.getTime())) {
+        const _RangeError = RangeError;
+        const rangeError = new RangeError("Invalid date passed to DateWithZone");
+        throw rangeError;
+      } else {
+        obj.date = getTime;
+        obj.tzid = tmp;
+        const _Number = Number;
+        closure_3[Number(obj.rezonedDate())] = true;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  });
+  accept.accept = function(comma) {
+    const self = this;
+    const NumberResult = Number(comma);
+    if (isNaN(NumberResult)) {
+      const call2 = accept.call;
+      typeof call2 === "unknown" ? accept(comma) : call2(self, comma);
+    } else {
+      let tmp4 = !tmp3;
+      if (!dependencyMap[NumberResult]) {
+        const _Date = Date;
+        const _Date2 = Date;
+        const date1 = new Date(NumberResult + 1);
+        let item = date1.forEach((between) => {
+          const item = between.between(date, date1, true).forEach((item) => {
+            closure_1_3[Number(item)] = true;
+          });
+        });
+        tmp4 = !dependencyMap[NumberResult];
+        const date = new Date(NumberResult - 1);
+      }
+      if (!tmp4) {
+        return !tmp4;
+      } else {
+        dependencyMap[NumberResult] = true;
+        const call = accept.call;
+        typeof call === "unknown" ? accept(comma) : call(self, comma);
+      }
+    }
+  };
+  if ("between" === accept.method) {
+    after = accept.args.after;
+    before = accept.args.before;
+    const item1 = _exrule.forEach((between) => {
+      const item = between.between(date, date1, true).forEach((item) => {
+        closure_1_3[Number(item)] = true;
+      });
+    });
+    accept.accept = function(comma) {
+      const NumberResult = Number(comma);
+      if (dependencyMap[NumberResult]) {
+        return tmp3;
+      } else {
+        const self = this;
+        tmp2[NumberResult] = true;
+        const call = accept.call;
+        typeof call === "unknown" ? accept(comma) : call(self, comma);
+      }
+    };
+  }
+  let num = 0;
+  if (0 < _rdate.length) {
+    while (typeof closure_55 === "function") {
+      let obj2 = {};
+      let _isNaN = isNaN;
+      if (isNaN(obj.getTime())) {
+        let _RangeError = RangeError;
+        let tmp16 = new.target;
+        let str3 = "Invalid date passed to DateWithZone";
+        let tmp17 = new.target;
+        let rangeError = new RangeError("Invalid date passed to DateWithZone");
+        throw rangeError;
+      } else {
+        obj2.date = obj;
+        obj2.tzid = tzidResult;
+        let rezonedDateResult = obj2.rezonedDate();
+        let _Date = Date;
+        let tmp7 = new.target;
+        let tmp8 = new.target;
+        let date = new Date(rezonedDateResult.getTime());
+        if (accept.accept(date)) {
+          num = num + 1;
+        }
+      }
+    }
+    throw new TypeError("Trying to call a non-function");
+  }
+  const item2 = _rrule.forEach((options) => {
+    closure_2_68(after, options.options);
+  });
+  const _result = accept._result;
+  if (typeof closure_32 === "function") {
+    const sorted = _result.sort((getTime, getTime2) => {
+      const time = getTime.getTime();
+      return time - getTime2.getTime();
+    });
+    const method = accept.method;
+    let tmp13 = _result;
+    if ("all" !== method) {
+      tmp13 = _result;
+      if ("between" !== method) {
+        if ("before" === method) {
+          tmp13 = _result.length && _result[_result.length - 1] || null;
+          const tmp15 = _result.length && _result[_result.length - 1] || null;
+        } else {
+          tmp13 = _result.length && _result[0] || null;
+          const tmp14 = _result.length && _result[0] || null;
+        }
+      }
+    }
+    return tmp13;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+  tzidResult = this.tzid();
+}
+
+function f140034(arg0) {
+  closure_1_77(arg0, this._rrule);
+}
+
+function f140035(arg0) {
+  closure_1_77(arg0, this._exrule);
+}
+
+function f140036(arg0) {
+  closure_1_78(arg0, this._rdate);
+}
+
+function f140037(arg0) {
+  closure_1_78(arg0, this._exdate);
+}
+
+function f140038() {
+  const _rrule = this._rrule;
+  return _rrule.map((item) => closure_1_74(item.toString()));
+}
+
+function f140039() {
+  const _exrule = this._exrule;
+  return _exrule.map((item) => closure_1_74(item.toString()));
+}
+
+function f140040() {
+  const _rdate = this._rdate;
+  return _rdate.map((getTime) => new Date(getTime.getTime()));
+}
+
+function f140041() {
+  const _exdate = this._exdate;
+  return _exdate.map((getTime) => new Date(getTime.getTime()));
+}
+
+function f140042() {
+  const self = this;
+  closure_0 = [];
+  let _dtstart = !length;
+  if (!this._rrule.length) {
+    _dtstart = self._dtstart;
+  }
+  if (_dtstart) {
+    const obj = { dtstart: self._dtstart };
+    closure_0 = closure_0.concat(closure_56(obj));
+  }
+  const _rrule = self._rrule;
+  const item = _rrule.forEach((item) => {
+    closure_0 = closure_0.concat(item.toString().split("\n"));
+  });
+  const _exrule = self._exrule;
+  const item1 = _exrule.forEach((item) => {
+    const parts = item.toString().split("\n");
+    const mapped = parts.map((item) => item.replace(/^RRULE:/, "EXRULE:"));
+    closure_0 = closure_0.concat(mapped.filter((item) => !/^DTSTART/.test(item)));
+  });
+  if (!self._rdate.length) {
+    if (!self._exdate.length) {
+      return closure_0;
+    } else {
+      let _exdate = self._exdate;
+      const str8 = self.tzid();
+      closure_129_0 = undefined;
+      let tmp10 = !str8;
+      if (str8) {
+        tmp10 = "UTC" === str8.toUpperCase();
+      }
+      closure_129_0 = tmp10;
+      const concat3 = "".concat;
+      let str12 = ":";
+      if (tmp10) {
+        let concat3Result = concat3("EXDATE", `:`);
+      } else {
+        concat3Result = concat3("EXDATE", ";TZID=").concat(str8, `:`);
+        const concat3Result1 = concat3("EXDATE", ";TZID=");
+      }
+      _exdate = _exdate.map((item) => {
+        const valueOfResult = item.valueOf();
+        let flag = closure_0;
+        if (typeof closure_2_33 === "function") {
+          if (undefined === flag) {
+            flag = true;
+          }
+          const _Date = Date;
+          const date = new Date(valueOfResult);
+          const items = [closure_2_9(date.getUTCFullYear().toString(), 4, "0"), closure_2_9(date.getUTCMonth() + 1, 2, "0"), closure_2_9(date.getUTCDate(), 2, "0"), "T", closure_2_9(date.getUTCHours(), 2, "0"), closure_2_9(date.getUTCMinutes(), 2, "0"), closure_2_9(date.getUTCSeconds(), 2, "0"), ];
+          let str5 = "";
+          if (flag) {
+            str5 = "Z";
+          }
+          items[7] = str5;
+          return items.join("");
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      });
+      str12 = _exdate.join(",");
+      const concat4 = "".concat;
+      const combined = "".concat(concat3Result);
+      closure_0.push(combined.concat(str12));
+    }
+  } else {
+    let _rdate = self._rdate;
+    const str = self.tzid();
+    closure_0 = undefined;
+    let tmp6 = !str;
+    if (str) {
+      tmp6 = "UTC" === str.toUpperCase();
+    }
+    closure_0 = tmp6;
+    const concat = "".concat;
+    let str5 = ":";
+    if (tmp6) {
+      let combined1 = concat("RDATE", `:`);
+    } else {
+      const combined2 = concat("RDATE", ";TZID=");
+      combined1 = combined2.concat(str, `:`);
+    }
+    _rdate = _rdate.map((item) => {
+      const valueOfResult = item.valueOf();
+      let flag = closure_0;
+      if (typeof closure_2_33 === "function") {
+        if (undefined === flag) {
+          flag = true;
+        }
+        const _Date = Date;
+        const date = new Date(valueOfResult);
+        const items = [closure_2_9(date.getUTCFullYear().toString(), 4, "0"), closure_2_9(date.getUTCMonth() + 1, 2, "0"), closure_2_9(date.getUTCDate(), 2, "0"), "T", closure_2_9(date.getUTCHours(), 2, "0"), closure_2_9(date.getUTCMinutes(), 2, "0"), closure_2_9(date.getUTCSeconds(), 2, "0"), ];
+        let str5 = "";
+        if (flag) {
+          str5 = "Z";
+        }
+        items[7] = str5;
+        return items.join("");
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    });
+    str5 = _rdate.join(",");
+    const concat2 = "".concat;
+    const combined3 = "".concat(combined1);
+    closure_0.push(combined3.concat(str5));
+  }
+}
+
+function f140043() {
+  return this.valueOf().join("\n");
+}
+
+function f140044() {
+  const self = this;
+  const _cache = this._cache;
+  const obj2 = Object.create(closure_1_1.prototype);
+  const call = closure_1_0.call;
+  const obj = {};
+  if (typeof call === "unknown") {
+    closure_1_0(obj, _cache);
+  } else {
+    let callResult = call(obj2, obj, _cache);
+  }
+  if (!callResult) {
+    callResult = obj2;
+  }
+  callResult.dtstart = closure_2_75.apply(callResult, ["dtstart"]);
+  callResult.tzid = closure_2_75.apply(callResult, ["tzid"]);
+  callResult._rrule = [];
+  callResult._rdate = [];
+  callResult._exrule = [];
+  callResult._exdate = [];
+  const _rrule = self._rrule;
+  const item = _rrule.forEach((clone) => callResult.rrule(clone.clone()));
+  const _exrule = self._exrule;
+  const item1 = _exrule.forEach((clone) => callResult.exrule(clone.clone()));
+  const _rdate = self._rdate;
+  const item2 = _rdate.forEach((getTime) => callResult.rdate(new Date(getTime.getTime())));
+  const _exdate = self._exdate;
+  const item3 = _exdate.forEach((getTime) => callResult.exdate(new Date(getTime.getTime())));
+  return callResult;
+}
+
+function f141911() {
+}
+
+function f141912(gameId) {
   return gameId.gameId;
 }
 
-function f140565(tags) {
+function f141913(tags) {
   tags = tags.tags;
   if (tags == null) {
     tags = [];
@@ -14312,11 +14311,11 @@ function f140565(tags) {
   return tags;
 }
 
-function f140566(arg0) {
+function f141914(arg0) {
   return arg0.toString();
 }
 
-function f140567(arg0, comment) {
+function f141915(arg0, comment) {
   comment = comment.comment;
   let num;
   if (comment != null) {
@@ -14328,7 +14327,7 @@ function f140567(arg0, comment) {
   return arg0 + num;
 }
 
-function f140920(channelId) {
+function f142270(channelId) {
   let result = closure_3_22.canWithPartialContext(closure_3_31.CONNECT, { channelId: channelId.channel_id });
   if (result) {
     const channel_id = channelId.channel_id;
@@ -14360,7 +14359,7 @@ function f140920(channelId) {
   const obj = { channelId: channelId.channel_id };
 }
 
-function f140921(id) {
+function f142271(id) {
   const user = closure_3_26.getUser(id);
   if (null != user) {
     if (user.bot) {
@@ -14386,23 +14385,23 @@ function f140921(id) {
   }
 }
 
-function f140922(userId) {
+function f142272(userId) {
   userId = userId.userId;
   closure_1_10(userId, closure_3_23.getPrimaryActivity(userId, closure_2_1), userId);
 }
 
-function f140923(event) {
+function f142273(event) {
   return closure_1_13.push({ kind: "guild-event", event, isLive: true });
 }
 
-function f140924(event) {
+function f142274(event) {
   return closure_1_13.push({ kind: "guild-event", event, isLive: false });
 }
 
-function f141420(arg0) {
+function f142791(arg0) {
   return closure_2_0.deleteMessage(closure_1_1, closure_1_0, arg0);
 }
 
-function f142539(arg0) {
+function f143742(arg0) {
   return closure_1_0[arg0];
 }

@@ -61,7 +61,7 @@ prototype["refresh"] = function refresh() {
     if (keys !== undefined) {
       num2 = num;
       while (keys[tmp] !== undefined) {
-        let length = tmp2[tmp7].length;
+        length = tmp2[tmp7].length;
         let sum = num + length;
         num = sum;
         if (length <= 10000) {
@@ -152,7 +152,7 @@ prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1, a
       }
     });
   } else {
-    value2 = NativeCacheModuleDefault.getItem(ContactSyncDMListCTADismissed);
+    const value2 = NativeCacheModuleDefault.getItem(ContactSyncDMListCTADismissed);
     value2.then((result) => {
       if (null != result) {
         const _Date = Date;
@@ -209,7 +209,7 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
             if (secureKeys.has(tmp5)) {
               value = item.getItem(tmp5);
             } else {
-              value2 = tmp5(tmp2[2]).getItem(tmp5);
+              const value2 = tmp5(tmp2[2]).getItem(tmp5);
               const obj5 = tmp5(tmp2[2]);
             }
             c2 = 1;

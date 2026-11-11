@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/settings/native/ConjureSettingsSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -63,20 +63,20 @@ function SettingsTabStrip(tabs) {
   return closure_12(View, obj3);
 }
 const View = fn(17).View;
-let ConjureProjectStore = fn(6902);
+let ConjureProjectStore = fn(6954);
 ({ canPublishProject: closure_9, isProjectOwner: closure_10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = {
-  project: _modDef4028.W0eQfN,
-  app: _modDef4028.lFaJYF,
-  secrets: _modDef4028.vDpCPU,
-  model: _modDef4028.Rs3qc9,
-  linked: _modDef4028.fBEHdq,
-  experimental: _modDef4028["0Pe9uw"],
+  project: _modDef4079.W0eQfN,
+  app: _modDef4079.lFaJYF,
+  secrets: _modDef4079.vDpCPU,
+  model: _modDef4079.Rs3qc9,
+  linked: _modDef4079.fBEHdq,
+  experimental: _modDef4079["0Pe9uw"],
 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj3 = { container: { gap: nativeDefault.space.PX_16 } };
 let closure_15 = createStyles.createStyles(obj3);
 const size = fn(2);

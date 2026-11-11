@@ -282,11 +282,11 @@ class VoiceQuality extends tmp2 {
     tmp5.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
         const networkQuality = num.networkQuality;
-        const result = networkQuality.incrementNetworkStats(num(5903).now());
+        const result = networkQuality.incrementNetworkStats(num(6016).now());
         const systemResources = num.systemResources;
         systemResources.takeSample();
         num = 0;
-        let obj3 = num(5903);
+        let obj3 = num(6016);
         let item = applyDefault.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             num = type.bitrateTarget;
@@ -604,7 +604,7 @@ class VoiceQuality extends tmp2 {
                 prop = tmp67.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new closure_0(6027).Histogram();
+                prop = new closure_0(6140).Histogram();
               }
               obj7.audioJitterBufferHistogram = prop;
               obj7.audioJitterTarget = type.audioJitterTarget;
@@ -613,7 +613,7 @@ class VoiceQuality extends tmp2 {
                 prop1 = tmp67.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new closure_0(6027).Histogram();
+                prop1 = new closure_0(6140).Histogram();
               }
               obj7.audioJitterTargetHistogram = prop1;
               obj7.audioJitterDelay = type.audioJitterDelay;
@@ -622,7 +622,7 @@ class VoiceQuality extends tmp2 {
                 prop2 = tmp67.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new closure_0(6027).Histogram();
+                prop2 = new closure_0(6140).Histogram();
               }
               obj7.audioJitterDelayHistogram = prop2;
               ({

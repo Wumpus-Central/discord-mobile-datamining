@@ -32,7 +32,7 @@ function HeaderView(node) {
       accessibilityRole: "header",
       children: header,
     };
-    tmp6 = value2(Text_Text.Text, obj2);
+    tmp6 = closure_1_16(Text_Text.Text, obj2);
   }
   items = [tmp6, ,];
   let tmp9 = null;
@@ -45,7 +45,7 @@ function HeaderView(node) {
         color: "text-default",
         children: tmp3(subheader),
       };
-      tmp9 = value2(Text_Text.Text, obj3);
+      tmp9 = closure_1_16(Text_Text.Text, obj3);
     }
   }
   items[1] = tmp9;
@@ -54,7 +54,7 @@ function HeaderView(node) {
     tmp12 = null;
     if (description.length > 0) {
       const obj4 = { style: tmp.description, variant: "body-xs/medium", color: "text-default", children: description };
-      tmp12 = value2(Text_Text.Text, obj4);
+      tmp12 = closure_1_16(Text_Text.Text, obj4);
     }
   }
   items[2] = tmp12;
@@ -72,7 +72,7 @@ function InfoView(node) {
     items[1] = obj2;
     obj.style = items;
     const obj4 = { size: "md", color: tmp.infoBox.backgroundColor };
-    const items1 = [value2(CircleInformationIcon.CircleInformationIcon, obj4)];
+    const items1 = [closure_1_16(CircleInformationIcon.CircleInformationIcon, obj4)];
     const obj5 = { style: tmp.infoBoxText, children: null };
     const obj6 = {
       variant: "body-sm/normal",
@@ -80,8 +80,8 @@ function InfoView(node) {
       includeFontPadding: true,
       children: tmp3(info),
     };
-    obj5.children = value2(Text_Text.Text, obj6);
-    items1[1] = value2(timestampProducer, obj5);
+    obj5.children = closure_1_16(Text_Text.Text, obj6);
+    items1[1] = closure_1_16(timestampProducer, obj5);
     obj.children = items1;
     tmp4 = closure_1_17(timestampProducer, obj);
   }
@@ -113,7 +113,7 @@ function ChildItem(child) {
   }
   if (stateFromStores) {
     const obj3 = { style: tmp.debugText, variant: "body-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_16(tmp5(5753).Text, obj3);
+    stateFromStores = closure_16(tmp5(5866).Text, obj3);
   }
   obj2.children = stateFromStores;
   return closure_16(InAppReportsOptionRowDefault, obj2);
@@ -129,7 +129,7 @@ function ChildrenView(node) {
         style: tmp.childrenContainer,
         children: children.map((child) => {
           const tmp = _slicedToArray(child, 2);
-          return value2(ChildItem, { child, nodeMap, onPress }, "" + tmp[0] + "+" + tmp[1]);
+          return closure_2_16(ChildItem, { child, nodeMap, onPress }, "" + tmp[0] + "+" + tmp[1]);
         }),
       };
       tmp2 = closure_16(closure_6, obj);
@@ -142,14 +142,14 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8435).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8432).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(12010).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(12008).IN_APP_REPORTS_NODE;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: {
     flex: 1,

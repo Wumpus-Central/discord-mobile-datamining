@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import native from "../../../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import StageChannelAgeVerificationNoticeDefault from "../../../../stage_channels/native/StageChannelAgeVerificationNotice.tsx";
 import useGuildScheduledEventUserCountDefault from "../../../useGuildScheduledEventUserCount.tsx";
 import GuildScheduledEventManagerDefault from "../../../GuildScheduledEventManager.tsx";
+import StageChannelAgeVerificationNoticeDefault from "../../../../stage_channels/native/StageChannelAgeVerificationNotice.tsx";
 import GuildEventRecurrencesDefault from "../GuildEventRecurrences.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -17,12 +17,12 @@ import TextStyles_mod from "../../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const View = fn(17).View;
-fn(4997).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
-let closure_11 = fn(9048).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
+fn(5098).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
+let closure_11 = fn(7900).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   eventContainer: { paddingHorizontal: nativeDefault.space.PX_16 },
   eventHeader: { paddingTop: 19 },
@@ -83,7 +83,7 @@ export default function EventDetailInfoSheet(guildEvent) {
     items2,
   );
   let obj2 = guildEvent(504);
-  const result = guildEvent(9053).recurrenceRuleFromServer(guildEvent.recurrence_rule);
+  const result = guildEvent(7905).recurrenceRuleFromServer(guildEvent.recurrence_rule);
   const items3 = [,];
   ({ guild_id: arr4[0], id: arr4[1] } = guildEvent);
   const effect = noop.useEffect(() => {
@@ -96,7 +96,7 @@ export default function EventDetailInfoSheet(guildEvent) {
       guildEvent.guild_id,
     );
   }, items3);
-  let obj3 = guildEvent(9053);
+  let obj3 = guildEvent(7905);
   const tmp8 = useGuildScheduledEventUserCountDefault(guildEvent.guild_id, guildEvent.id, recurrenceId);
   const items4 = [GuildStore];
   const stateFromStores1 = guildEvent(504).useStateFromStores(
@@ -128,7 +128,7 @@ export default function EventDetailInfoSheet(guildEvent) {
   const items7 = [tmp.eventContainer, { paddingBottom: safeBottomPadding + 16 }];
   obj6.style = items7;
   const items8 = [
-    closure_12(guildEvent(9066).GuildEventCardHeader, {
+    closure_12(guildEvent(7918).GuildEventCardHeader, {
       event: guildEvent,
       style: tmp.eventHeader,
       showUserCount: false,
@@ -136,13 +136,13 @@ export default function EventDetailInfoSheet(guildEvent) {
       showCreator: false,
       recurrenceId,
     }),
-    closure_12(guildEvent(9066).GuildEventCardTitle, {
+    closure_12(guildEvent(7918).GuildEventCardTitle, {
       event: guildEvent,
       textStyle: tmp.eventTitle,
       style: tmp.eventTitleContainer,
     }),
-    closure_12(guildEvent(9066).GuildEventCardSimpleGuildInfo, { event: guildEvent, textStyle: tmp.guildTextStyle }),
-    closure_12(guildEvent(9066).GuildEventSimpleLocation, { event: guildEvent }),
+    closure_12(guildEvent(7918).GuildEventCardSimpleGuildInfo, { event: guildEvent, textStyle: tmp.guildTextStyle }),
+    closure_12(guildEvent(7918).GuildEventSimpleLocation, { event: guildEvent }),
     ,
     ,
     ,
@@ -150,11 +150,11 @@ export default function EventDetailInfoSheet(guildEvent) {
     ,
   ];
   const obj11 = { style: tmp.interestedContainer, children: null };
-  const items9 = [closure_12(guildEvent(9294).BellIcon, { size: "sm", style: tmp.interestedIcon })];
+  const items9 = [closure_12(guildEvent(10933).BellIcon, { size: "sm", style: tmp.interestedIcon })];
   const obj13 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = guildEvent(1113).intl;
   obj13.children = intl.format(guildEvent(1113).t["+DLsD8"], { count: tmp8 });
-  items9[1] = closure_12(guildEvent(5753).Text, obj13);
+  items9[1] = closure_12(guildEvent(5866).Text, obj13);
   obj11.children = items9;
   items8[4] = closure_13(creator, obj11);
   let tmp11Result = null != creator && stateFromStores1;
@@ -210,19 +210,19 @@ export default function EventDetailInfoSheet(guildEvent) {
       },
     };
     obj16.children = intl2.format(tmp2(1113).t["66DLFs"], obj17);
-    items10[1] = closure_12(tmp2(5753).Text, obj16);
+    items10[1] = closure_12(tmp2(5866).Text, obj16);
     obj14.children = items10;
     tmp11Result = closure_13(tmp12, obj14);
   }
   items8[5] = tmp11Result;
-  items8[6] = closure_12(guildEvent(9066).GuildEventCardDescription, {
+  items8[6] = closure_12(guildEvent(7918).GuildEventCardDescription, {
     event: guildEvent,
     style: tmp.eventDescriptionContainer,
   });
   let hasItem = set.has(guildEvent.entity_type);
   if (hasItem) {
     const obj19 = { noBackground: true, divider: null, onConfirmPress: null, channelId: null, style: null };
-    const items11 = [tmp2(8027).DividerPosition.TOP, tmp2(8027).DividerPosition.BOTTOM];
+    const items11 = [tmp2(8366).DividerPosition.TOP, tmp2(8366).DividerPosition.BOTTOM];
     obj19.divider = items11;
     obj19.onConfirmPress = function onConfirmPress() {
       return ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -235,7 +235,7 @@ export default function EventDetailInfoSheet(guildEvent) {
   items8[7] = hasItem;
   const obj20 = { direction: "horizontal", style: tmp.controlsContainer, children: null };
   const items12 = [
-    closure_12(guildEvent(9066).GuildEventCardPrimaryAction, {
+    closure_12(guildEvent(7918).GuildEventCardPrimaryAction, {
       event: guildEvent,
       onCloseAction: function handleCloseAction() {
         ActionSheetActionCreatorsDefault.hideActionSheet(closure_11);
@@ -251,12 +251,12 @@ export default function EventDetailInfoSheet(guildEvent) {
   let tmp13Result = null;
   if (stateFromStores1) {
     const obj22 = { event: guildEvent };
-    tmp13Result = closure_12(tmp2(9066).GuildEventShareAction, obj22);
+    tmp13Result = closure_12(tmp2(7918).GuildEventShareAction, obj22);
   }
   items12[1] = tmp13Result;
-  items12[2] = closure_12(guildEvent(9066).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
+  items12[2] = closure_12(guildEvent(7918).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
   obj20.children = items12;
-  items8[8] = closure_13(guildEvent(6825).ButtonGroup, obj20);
+  items8[8] = closure_13(guildEvent(6888).ButtonGroup, obj20);
   let tmp13Result2 = null != result;
   if (tmp13Result2) {
     const obj23 = {

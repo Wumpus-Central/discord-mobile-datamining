@@ -8,6 +8,7 @@ import LinkIcon from "../../../../design/components/Icon/native/redesign/generat
 import DownloadIcon from "../../../../design/components/Icon/native/redesign/generated/DownloadIcon.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import MediaFormatTesters from "../../../messages/MediaFormatTesters.tsx";
+import MaskedLinkUtils from "../../../../utils/MaskedLinkUtils.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
@@ -15,11 +16,10 @@ import ImageWarningIcon from "../../../../design/components/Icon/native/redesign
 import MediaViewerAnalyticsManager from "../../MediaViewerAnalyticsManager.tsx";
 import MediaSourceUtil from "../MediaSourceUtil.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
-import MaskedLinkUtils from "../../../../utils/MaskedLinkUtils.tsx";
-import ChatArrowRightIcon from "../../../../design/components/Icon/native/redesign/generated/ChatArrowRightIcon.tsx";
-import ShareIcon from "../../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx";
 import ForwardModalUtils from "../../../forwarding/native/ForwardModalUtils.tsx";
 import ForwardingIconDefault from "../../../forwarding/native/ForwardingIcon.tsx";
+import ChatArrowRightIcon from "../../../../design/components/Icon/native/redesign/generated/ChatArrowRightIcon.tsx";
+import ShareIcon from "../../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx";
 import WindowLaunchIcon from "../../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ICYMIStore from "../../../icymi/ICYMIStore.tsx";
@@ -143,7 +143,7 @@ function useMediaShareActions(source) {
             message: stateFromStores,
             source: "media-viewer",
             initialSelectedDestinations: "Array",
-            forwardOptions: "cuid2",
+            forwardOptions: "CATEGORY_EXPAND",
           };
           const obj4 = { onlyAttachmentIds: null };
           items = [attachmentId];
@@ -156,7 +156,7 @@ function useMediaShareActions(source) {
           message: stateFromStores,
           source: "media-viewer",
           initialSelectedDestinations: "Array",
-          forwardOptions: "cuid2",
+          forwardOptions: "CATEGORY_EXPAND",
         };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
@@ -187,7 +187,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13552, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12559, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;
@@ -290,7 +290,7 @@ function useMediaShareActions(source) {
 }
 const Constants = fn(1072);
 ({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: closure_10 } = Constants);
-let closure_11 = fn(7533).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_11 = fn(8570).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");

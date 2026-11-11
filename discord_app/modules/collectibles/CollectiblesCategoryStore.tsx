@@ -288,7 +288,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
             );
             const bundledProducts = product.bundledProducts;
             for (const item10012 of bundledProducts) {
-              value2 = map.get(item10012.skuId);
+              let value2 = map.get(item10012.skuId);
               let tmp6 = null != value2;
               let tmp5 = value2;
               if (tmp6) {

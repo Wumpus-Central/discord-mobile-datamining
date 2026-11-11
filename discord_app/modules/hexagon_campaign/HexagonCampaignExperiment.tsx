@@ -1,8 +1,10 @@
 // discord_app/modules/hexagon_campaign/HexagonCampaignExperiment.tsx
 import HexagonCampaignUtils from "HexagonCampaignUtils.tsx";
+import QuestConstants from "../quests/QuestConstants.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
   name: "2026-09-hexagon-campaign-client",
@@ -13,7 +15,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({
     2: { enabled: true, questHomeRedirect: false },
   },
 });
-const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignExperiment.tsx");
+let result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignExperiment.tsx");
 
 export const HexagonCampaignClientExperiment = apexExperiment;
 export function useIsHexagonCampaignEnabled(location) {
@@ -30,10 +32,28 @@ export function useIsHexagonCampaignQuestHomeRedirectEnabled(location) {
   }
   return tmp2;
 }
+export function getIsHexagonCampaignQuestHomeRedirectEnabled(location) {
+  if (obj.isHexagonCampaignTakeoverOver()) {
+    return false;
+  } else {
+    const obj2 = { location };
+    const config = apexExperiment.getConfig(obj2);
+    return config.enabled && config.questHomeRedirect;
+  }
+  obj = HexagonCampaignUtils;
+}
 export function useIsHexagonCampaignQuestHomeHeaderEnabled(HexagonCampaignQuestHomeHeader) {
   let enabled = apexExperiment.useConfig({ location: HexagonCampaignQuestHomeHeader }).enabled;
   if (enabled) {
     enabled = !HexagonCampaignUtils.isHexagonCampaignTakeoverOver();
   }
   return enabled;
+}
+export function useShouldShowHexagonCampaignIntroCard(stateFromStores) {
+  let result = HexagonCampaignUtils.isHexagonCampaignHero(stateFromStores);
+  if (result) {
+    result = !HexagonCampaignUtils.isHexagonCampaignTakeoverOver();
+    const tmpResult = HexagonCampaignUtils;
+  }
+  return result;
 }

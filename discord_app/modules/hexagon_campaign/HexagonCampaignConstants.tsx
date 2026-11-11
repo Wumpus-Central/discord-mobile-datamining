@@ -4,14 +4,15 @@ import PremiumConstants from "../premium/PremiumConstants.tsx";
 import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import AppIconTypes from "../app_icons/AppIconTypes.tsx";
 import HexagonCampaignDates from "../../../discord_common/js/shared/shared-constants/HexagonCampaignDates.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const PremiumTypes = PremiumConstants.PremiumTypes;
 const combined = "/quests/special-events/" + "1549285425984831508" + "/enroll";
 const HEXAGON = DisplayNameFont.DisplayNameFont.HEXAGON;
-const obj2 = { DISPLAY_NAME_STYLE: "display_name_style", CLIENT_THEME: "client_theme", APP_ICON: "app_icon" };
 const frozen = Object.freeze({ fontId: HEXAGON, effectId: DisplayNameEffect.DisplayNameEffect.SOLID, colors: [] });
+const obj2 = { DISPLAY_NAME_STYLE: "display_name_style", CLIENT_THEME: "client_theme", APP_ICON: "app_icon" };
 const obj3 = {};
 const frozen1 = Object.freeze({
   [obj2.CLIENT_THEME]: "client_theme",
@@ -40,7 +41,11 @@ export const HEXAGON_CAMPAIGN_ENROLL_ENDPOINT = combined;
 export const HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT = HEXAGON;
 export const HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES = frozen;
 export const HEXAGON_CAMPAIGN_LEARN_MORE_URL = "https://dis.gd/vice-city-theme-available-in-discord";
-export const HEXAGON_CAMPAIGN_AD_CONTENT_ID = "1549285425984831508";
+export const HEXAGON_CAMPAIGN_QUEST_HOME_HERO_ID = "1560067021281042513";
+export const HEXAGON_CAMPAIGN_AD_CONTENT_ID = "1560067021281042513";
+export const HEXAGON_CAMPAIGN_QUEST_HOME_REDIRECT_UTM_CONTENT = "app_open";
+export const DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = { theme: "system" };
+export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = AppIconTypes.FreemiumAppIconIds.DEFAULT;
 export const HexagonCampaignPerk = obj2;
 export const HexagonCampaignPerkAvailability = { HIDDEN: "hidden", LOCKED: "locked", SELECTABLE: "selectable" };
 export const HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION = frozen1;

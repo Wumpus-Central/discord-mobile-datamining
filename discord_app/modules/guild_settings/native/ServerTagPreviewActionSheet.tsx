@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(9132).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(8091).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   error: { paddingVertical: nativeDefault.space.PX_24, alignItems: "center", rowGap: nativeDefault.space.PX_12 },
 };
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/ServerT
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_8();
-  const guildProfile1 = guildId(9133).useGuildProfile(guildId);
+  const guildProfile1 = guildId(8092).useGuildProfile(guildId);
   let guildProfile = guildProfile1.guildProfile;
   items = [guildId];
   const effect = noop.useEffect(() => {
@@ -54,26 +54,26 @@ export default function ServerTagPreviewActionSheet(guildId) {
     const obj4 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1113).intl;
     obj4.children = intl.string(tmp2(1113).t.tmGHjc);
-    const items1 = [closure_6(tmp2(5753).Text, obj4)];
+    const items1 = [closure_6(tmp2(5866).Text, obj4)];
     const obj6 = { variant: "secondary", text: null, onPress: null };
     const intl2 = tmp2(1113).intl;
     obj6.text = intl2.string(tmp2(1113).t["5911Lb"]);
     obj6.onPress = function onPress() {
       return GuildProfileActionCreators.getGuildProfile(guildId, true);
     };
-    items1[1] = closure_6(tmp2(5760).Button, obj6);
+    items1[1] = closure_6(tmp2(5873).Button, obj6);
     obj3.children = items1;
     tmp7 = closure_7(View, obj3);
     tmp8 = closure_6;
   } else {
-    tmp7 = closure_6(tmp2(7274).SceneLoadingIndicator, {});
+    tmp7 = closure_6(tmp2(7522).SceneLoadingIndicator, {});
     tmp8 = closure_6;
   }
   const obj7 = { children: null };
   const obj13 = { title: null };
   const intl3 = tmp2(1113).intl;
   obj13.title = intl3.string(guildId(1113).t["2QmKZ2"]);
-  const items2 = [tmp8(guildId(7385).BottomSheetTitleHeader, obj13), tmp7];
+  const items2 = [tmp8(guildId(7847).BottomSheetTitleHeader, obj13), tmp7];
   obj7.children = items2;
-  return closure_7(guildId(7429).ActionSheet, obj7);
+  return closure_7(guildId(7885).ActionSheet, obj7);
 }

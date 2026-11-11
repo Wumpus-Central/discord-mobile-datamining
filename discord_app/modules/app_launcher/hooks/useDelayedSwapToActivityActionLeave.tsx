@@ -11,7 +11,7 @@ export function useDelayedSwapToActivityActionLeave(activityAction) {
   dependencyMap = tmp[1];
   items = [activityAction];
   const layoutEffect = noop.useLayoutEffect(() => {
-    if (activityAction === activityAction(12601).ActivityAction.LEAVE) {
+    if (activityAction === activityAction(13290).ActivityAction.LEAVE) {
       const _setTimeout = setTimeout;
       activityAction = setTimeout(() => dependencyMap(closure_0), 100);
       return () => clearTimeout(closure_0);

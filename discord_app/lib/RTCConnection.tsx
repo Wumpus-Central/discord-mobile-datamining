@@ -16,7 +16,7 @@ import RTCControlSocket from "RTCControlSocket.tsx";
 import DiscordNativeDefault from "DiscordNative.tsx";
 import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import flatRestDefault from "../../_runtime/05967_flatRest.js";
+import flatRestDefault from "../../_runtime/06080_flatRest.js";
 import DaveJoinTimerDefault from "../modules/rtc/DaveJoinTimer.tsx";
 import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager.tsx";
 import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager.tsx";
@@ -108,7 +108,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5914).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(6027).getSystemAnalyticsInfo;
 let Constants = fn(1072);
 ({
   AnalyticEvents: closure_17,
@@ -117,10 +117,10 @@ let Constants = fn(1072);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(5995);
+const StreamSettingsConstants = fn(6108);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(5996).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5899);
+let closure_24 = fn(6109).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(6012);
 ({
   ExperimentFlags: closure_25,
   Features: closure_26,
@@ -167,6 +167,9 @@ const regex = {
 };
 let c39 = 0;
 let closure_40 = [];
+function castUserId(arg0) {
+  return arg0;
+}
 class RTCConnection extends tmp5 {
   constructor(arg0) {
     ({ userId, sessionId, guildId, channelId, context } = global);
@@ -563,7 +566,6 @@ class RTCConnection extends tmp5 {
 }
 const prototype = RTCConnection.prototype;
 prototype["recordEvent"] = function recordEvent(arg0) {
-  let length;
   const obj = {};
   const merged = Object.assign(arg0);
   obj.t = TimeUtils.now();
@@ -742,6 +744,8 @@ prototype["connect"] = function connect(endpoint, token) {
       obj5.on(RTCControlSocket.SocketEvent.MLSPrepareCommitTransition, _handleMLSPrepareCommitTransition.bind(self));
       const _handleMLSWelcome = self._handleMLSWelcome;
       obj5.on(RTCControlSocket.SocketEvent.MLSWelcome, _handleMLSWelcome.bind(self));
+      const _handlWebTransportAck = self._handlWebTransportAck;
+      obj5.on(RTCControlSocket.SocketEvent.WebTransportAck, _handlWebTransportAck.bind(self));
       const _recordMessageEvent = self._recordMessageEvent;
       obj5.on(RTCControlSocket.SocketEvent.ReceiveMessage, _recordMessageEvent.bind(self, constants12.MESSAGE_RECEIVE));
       const _recordMessageEvent2 = self._recordMessageEvent;
@@ -3290,7 +3294,6 @@ prototype["_handleControlPing"] = function _handleControlPing(value) {
   }
 };
 prototype["_handlePing"] = function _handlePing(value) {
-  let length;
   if (undefined !== value) {
     const self = this;
     const _pings = this._pings;
@@ -4210,7 +4213,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5903).now();
+  const commitReceivedTime = _connection(6016).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -4250,7 +4253,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5903).now();
+  const welcomeReceivedTime = _connection(6016).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -4279,12 +4282,6 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
         }
       }
     });
-  }
-};
-prototype["getMLSPairwiseFingerprint"] = function getMLSPairwiseFingerprint(arg0, arg1, arg2) {
-  const _connection = this._connection;
-  if (_connection != null) {
-    const mLSPairwiseFingerprint = _connection.getMLSPairwiseFingerprint(arg0, arg1, arg2);
   }
 };
 prototype["_handleMLSSuccess"] = function _handleMLSSuccess() {
@@ -4420,6 +4417,9 @@ prototype["_alertMLSFailure"] = function _alertMLSFailure(arg0, arg1) {
     AlertActionCreatorsDefault.show(obj);
   }
 };
+prototype["_handlWebTransportAck"] = function _handlWebTransportAck(arg0, arg1) {
+  this.emit(RTCConnectionEvent.RTCConnectionEvent.WebTransportAck, arg0, arg1);
+};
 prototype["getExtraConnectionOptions"] = function getExtraConnectionOptions() {
   return {};
 };
@@ -4506,7 +4506,29 @@ prototype["getInputDeviceSampleRate"] = function getInputDeviceSampleRate() {
   }
   return prop;
 };
+prototype["startWebTransport"] = function startWebTransport() {
+  if (null != this._socket) {
+    const _socket = this._socket;
+    _socket.startWebTransport();
+  }
+};
+prototype["getVoiceAddress"] = function getVoiceAddress() {
+  const self = this;
+  let tmp = null;
+  if (null != this._connection) {
+    tmp = null;
+    if (null != self._sfuEndpoint) {
+      tmp = null;
+      if (null != self.port) {
+        const obj = { address: self._sfuEndpoint.address, port: self.port };
+        tmp = obj;
+      }
+    }
+  }
+  return tmp;
+};
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/RTCConnection.tsx");
 
 export default RTCConnection;
+export { castUserId };

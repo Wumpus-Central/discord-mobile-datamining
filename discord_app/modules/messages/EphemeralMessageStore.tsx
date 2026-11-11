@@ -81,7 +81,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(DispatcherDefault, {
         if (null == value) {
           return false;
         } else {
-          value2 = value.get(id);
+          const value2 = value.get(id);
           if (null == value2) {
             return false;
           } else {

@@ -1,6 +1,6 @@
 // discord_app/design/components/Sheet/native/BottomSheetRotationResync.native.tsx
 import BottomSheetSnapPoints from "BottomSheetSnapPoints.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05422_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -61,7 +61,7 @@ export function BottomSheetRotationResync(bottomSheetRef) {
     if (!_undefined2.current) {
       value = _undefined4.get();
       if (value !== LegacyBaseButton.State.ACTIVE) {
-        value2 = animatedHandleGestureState.get();
+        const value2 = animatedHandleGestureState.get();
         if (value2 !== LegacyBaseButton.State.ACTIVE) {
           const obj = {
             settledIndex: sharedValue.get(),

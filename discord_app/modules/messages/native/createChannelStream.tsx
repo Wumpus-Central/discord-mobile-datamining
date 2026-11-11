@@ -10,7 +10,7 @@ import UploadStore from "../../../stores/UploadStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(8453);
+const RowGeneratorConstants = fn(9094);
 ({
   Changeset: closure_6,
   LoadingType: metroImportDefault,
@@ -41,7 +41,7 @@ export default function createChannelStream(roleStyle) {
     unloadableContentEntryMessageIds: closure_13,
   } = roleStyle);
   let items1;
-  let length;
+  length = undefined;
   function unreadFilter(id) {
     if (require.isForumPost()) {
       let tmp4 = tmp2;

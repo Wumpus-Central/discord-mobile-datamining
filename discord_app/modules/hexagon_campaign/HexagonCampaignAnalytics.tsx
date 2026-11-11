@@ -4,15 +4,47 @@ import AdCreativeType from "../../../discord_common/js/shared/shared-constants/A
 import getDeviceMetadataDefault from "../device/getDeviceMetadata.native.tsx";
 import AnalyticsActions from "../quests/lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../quests/lib/analytics/AnalyticsTypes.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const HexagonCampaignConstants = fn(5167);
-({
-  HEXAGON_CAMPAIGN_AD_CONTENT_ID: closure_4,
-  HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: hasOwnProperty,
-  HEXAGON_SPECIAL_EVENT_ID: closure_6,
-} = HexagonCampaignConstants);
+let closure_8 = async function _trackHexagonCampaignContentClicked(arg0) {
+  let content = arg0;
+  c6 = 0;
+  c7 = 0;
+  let iter = (async (arg0) => {
+    const tmp22 = closure_131_0(closure_131_2[4]);
+    closure_5 = tmp22;
+    trackAdContentEvent = tmp22.trackAdContentEvent;
+    obj5 = {
+      adContentId: closure_131_5,
+      adCreativeType: closure_131_0(closure_131_2[5]).AdCreativeType.QUEST_HOME_HERO,
+      event: closure_131_7.QUEST_CONTENT_CLICKED,
+    };
+    await closure_131_0(closure_131_2[4]).getCommonClickEventProperties({
+      questContent: closure_132_0,
+      questContentCTA: closure_132_1,
+    });
+    obj5.properties = value;
+    obj5.sourceQuestContent = closure_132_2;
+    trackAdContentEvent(obj5);
+    await "HermesInternal";
+    closure_4 = tmp2;
+    content = content.content;
+    closure_132_0 = content;
+    ({ questContentCTA: closure_132_1, sourceQuestContent } = content);
+    if (sourceQuestContent === undefined) {
+      sourceQuestContent = content;
+    }
+    closure_132_2 = sourceQuestContent;
+    return "flexDirection";
+  })();
+  iter.next();
+  return iter;
+};
+const HexagonCampaignConstants = fn(5268);
+({ HEXAGON_CAMPAIGN_AD_CONTENT_ID: hasOwnProperty, HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: closure_6 } =
+  HexagonCampaignConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignAnalytics.tsx");
@@ -81,6 +113,16 @@ export function useTrackHexagonCampaignContentViewed(
     }
   }, items);
 }
+export function trackHexagonCampaignContentClicked() {
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
 export function trackHexagonCampaignPerkAction(contentSurface) {
   ({ perks, content, sourceQuestContent } = contentSurface);
   if (sourceQuestContent === undefined) {
@@ -91,7 +133,7 @@ export function trackHexagonCampaignPerkAction(contentSurface) {
   const merged = Object.assign(
     AnalyticsActions.getAdSessionProperties(sourceQuestContent, AdCreativeType.AdCreativeType.QUEST_HOME_HERO),
   );
-  obj2.actions = perks.map((item) => closure_1_5[item]);
+  obj2.actions = perks.map((item) => closure_1_6[item]);
   obj2.content_id = content;
   obj2.content_name = AnalyticsTypes.getQuestContentName(content);
   obj2.content_surface = contentSurface.contentSurface;

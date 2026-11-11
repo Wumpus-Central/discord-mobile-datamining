@@ -5,14 +5,14 @@ import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2696 from "../GuildPowerups.messages.js";
+import _modDef2717 from "../GuildPowerups.messages.js";
 import themes from "../../../../design/utils/shared/themes.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import useHasAllocateBoostPermissionDefault from "../hooks/useHasAllocateBoostPermission.tsx";
 import useGuildPowerupRollbackEnabledDefault from "../hooks/useGuildPowerupRollbackEnabled.tsx";
 import usePowerupActiveStatus from "../hooks/usePowerupActiveStatus.tsx";
-import useHasAllocateBoostPermissionDefault from "../hooks/useHasAllocateBoostPermission.tsx";
 import useCalculatePowerupCardStatus from "../utils/useCalculatePowerupCardStatus.tsx";
 import useGetGuildPowerupBannerImageDefault from "../hooks/useGetGuildPowerupBannerImage.tsx";
 import GuildPowerupsImageDefault from "GuildPowerupsImage.tsx";
@@ -123,7 +123,7 @@ function GuildPowerupsMultiPerkCard(arg0) {
     }
     obj13.variant = str2;
     const intl2 = util.intl;
-    const tmp3Result2 = _modDef2696;
+    const tmp3Result2 = _modDef2717;
     obj13.text = intl2.string(result ? tmp3Result2.TZsu1U : tmp3Result2.gSxlHf);
     obj13.onPress = function onPress() {
       if (c0) {
@@ -223,12 +223,12 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
     obj2.contentContainerStyle = obj3;
     ({ title: obj4.title, description: obj4.description } = tmp4);
-    items = [closure_4(tmp2(14395), { title: null, description: null }), ,];
+    items = [closure_4(tmp2(10696), { title: null, description: null }), ,];
     let tmp6Result = null != tmp4.disabledReason;
     if (tmp6Result) {
       const obj6 = { style: tmp.disabledReasonContainer, children: null };
       const obj7 = { text: tmp4.disabledReason };
-      obj6.children = closure_4(tmp2(14388), obj7);
+      obj6.children = closure_4(tmp2(10689), obj7);
       tmp6Result = closure_4(View, obj6);
     }
     items[1] = tmp6Result;
@@ -243,8 +243,8 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     );
     items[2] = closure_4(View, obj13);
     obj2.children = items;
-    obj.children = closure_5(guildId(5394).BottomSheetScrollView, obj2);
-    tmp6Result2 = closure_4(guildId(5390).BottomSheet, obj);
+    obj.children = closure_5(guildId(5507).BottomSheetScrollView, obj2);
+    tmp6Result2 = closure_4(guildId(5503).BottomSheet, obj);
     const obj5 = { title: null, description: null };
   }
   return tmp6Result2;

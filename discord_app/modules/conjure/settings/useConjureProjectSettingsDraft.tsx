@@ -266,23 +266,21 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
               if (null != stateFromStores) {
                 if (null != closure_1) {
                   if (null != stateFromStores.preview_application_id) {
-                    if (null == stateFromStores.install_scope_setup) {
-                      if (ref.current !== closure_1) {
-                        if (ref2.current) {
-                          c5 = 3;
-                          return { value: false, done: true };
-                        } else {
-                          ref2.current = true;
-                          dependencyMap2(true);
-                          c3 = 1;
-                          c4 = 2;
-                          c5 = 1;
-                          const obj5 = {
-                            value: closure_0(tmp62[12]).fetchConjureAppInGuild(stateFromStores, closure_1),
-                            done: false,
-                          };
-                          return obj5;
-                        }
+                    if (ref.current !== closure_1) {
+                      if (ref2.current) {
+                        c5 = 3;
+                        return { value: false, done: true };
+                      } else {
+                        ref2.current = true;
+                        dependencyMap2(true);
+                        c3 = 1;
+                        c4 = 2;
+                        c5 = 1;
+                        const obj5 = {
+                          value: closure_0(tmp62[12]).fetchConjureAppInGuild(stateFromStores, closure_1),
+                          done: false,
+                        };
+                        return obj5;
                       }
                     }
                   }

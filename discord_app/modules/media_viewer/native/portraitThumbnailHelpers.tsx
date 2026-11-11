@@ -11,7 +11,7 @@ function lerpVarWidthThumbnailScrollBounds(items, result1) {
   if (0 === items.length) {
     return 0;
   } else {
-    let length = result1;
+    length = result1;
     if (result1 < 0) {
       return 0;
     } else {

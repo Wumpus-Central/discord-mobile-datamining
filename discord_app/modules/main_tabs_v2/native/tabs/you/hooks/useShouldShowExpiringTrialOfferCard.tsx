@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx
 import useStateFromStores from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import DurationsDefault from "../../../../../../utils/Durations.tsx";
-import useCountdownDefault from "../../../../../../hooks/useCountdown.tsx";
 import usePremiumTrialOffer from "../../../../../premium/hooks/usePremiumTrialOffer.android.tsx";
+import useCountdownDefault from "../../../../../../hooks/useCountdown.tsx";
 import NoticeStore from "../../../../../premium/native/NoticeStore.tsx";
 
 require = fn;

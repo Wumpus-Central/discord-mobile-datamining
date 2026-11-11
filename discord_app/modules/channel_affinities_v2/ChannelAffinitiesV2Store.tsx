@@ -54,7 +54,7 @@ prototype["compare"] = function compare(arg0, arg1) {
   if (num == null) {
     num = 0;
   }
-  value2 = map.get(arg0);
+  const value2 = map.get(arg0);
   let num2;
   if (value2 != null) {
     num2 = value2.score;

@@ -9,9 +9,9 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
 import StarOutlineIcon from "../../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
 import StarIcon from "../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
 import guild_GuildUtils from "../../../guild/GuildUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SubscriptionRoleStore from "../../../guild_role_subscriptions/SubscriptionRoleStore.tsx";
@@ -21,7 +21,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(7024).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(7655).EmojiSourceDataTypes;
 const Constants = fn(1072);
 ({
   UserSettingsSections: closure_11,
@@ -31,7 +31,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   nitroWheel: { height: 32, width: 32 },
   nitroWheelPurple: { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW },
@@ -341,7 +341,7 @@ export default function CustomEmojiContent(emojiNode) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(10192, dependencyMap.paths),
+            asyncRequireImpl(11248, dependencyMap.paths),
             "EmojiOptionsActionSheet",
             { emojiSrc: emojiNode.src },
             "stack",

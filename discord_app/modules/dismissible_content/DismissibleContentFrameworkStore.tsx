@@ -234,7 +234,7 @@ const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(Di
             }
           } else {
             const seenForGuildId = obj.seenForGuildId;
-            value2 = seenForGuildId.get(guildId);
+            const value2 = seenForGuildId.get(guildId);
             null != value2 && value2.has(dismissibleContent);
           }
         } else {

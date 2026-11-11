@@ -17,7 +17,7 @@ export function getMediaTicket(projectId) {
       return Promise.resolve(value.ticket);
     }
   }
-  value2 = map1.get(projectId);
+  const value2 = map1.get(projectId);
   if (null != value2) {
     return value2;
   } else {

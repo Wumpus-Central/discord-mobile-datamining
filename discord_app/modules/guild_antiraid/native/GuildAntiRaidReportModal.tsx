@@ -90,7 +90,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(16135);
+const GuildReportRaidModalConstants = fn(16297);
 ({
   getReportRaidHelpArticleURL: metroImportDefault,
   getReportRaidTypeLabel: closure_8,
@@ -99,7 +99,7 @@ const GuildReportRaidModalConstants = fn(16135);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: {
     flex: 1,
@@ -167,9 +167,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
               dependencyMap = 3;
             } else {
               tmp21.current = true;
-              const result = tmp2(13503).trackReportRaidViewed(guildId, first);
-              const obj2 = tmp2(13503);
-              tmp2(13503).handleReportRaid(guildId);
+              const result = tmp2(14028).trackReportRaidViewed(guildId, first);
+              const obj2 = tmp2(14028);
+              tmp2(14028).handleReportRaid(guildId);
               const intl = tmp2(1113).intl;
               c1 = 1;
               dependencyMap = 1;

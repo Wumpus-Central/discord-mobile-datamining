@@ -18,7 +18,7 @@ function GroupDMInviteManagement(channelId) {
   [first, dependencyMap] = noop.useState([]);
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   closure_3 = tmp3[1];
-  first(5723)(() => {
+  first(5836)(() => {
     closure_0 = async function _fetchInvites() {
       if (v3 === 2) {
         v3 = 3;
@@ -118,22 +118,22 @@ function GroupDMInviteManagement(channelId) {
   );
   const callback = noop.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp12 = jsx(channelId(7274).SceneLoadingIndicator, {});
+    let tmp12 = jsx(channelId(7522).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(10954), darkSource: tmp4(10955), title: null, body: null };
+    let obj2 = { lightSource: tmp4(10874), darkSource: tmp4(10875), title: null, body: null };
     const intl = channelId(1113).intl;
     obj2.title = intl.string(channelId(1113).t["+nLJkZ"]);
     const intl2 = channelId(1113).intl;
     obj2.body = intl2.string(channelId(1113).t.F53CAc);
     tmp12 = jsx(channelId(1187).EmptyState, {
-      lightSource: tmp4(10954),
-      darkSource: tmp4(10955),
+      lightSource: tmp4(10874),
+      darkSource: tmp4(10875),
       title: null,
       body: null,
     });
   } else {
     let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
-    tmp12 = jsx(channelId(7360).FlashList, {
+    tmp12 = jsx(channelId(7822).FlashList, {
       contentContainerStyle: tmp.listContent,
       data: memo,
       keyExtractor: callback,
@@ -144,11 +144,11 @@ function GroupDMInviteManagement(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(8273);
+const ChannelSettingsStore = fn(10852);
 const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_8, Endpoints: closure_9 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { listContent: { paddingTop: nativeDefault.space.PX_8 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
@@ -172,5 +172,5 @@ export default noop.memo(function GroupDMInviteManagementScreen(channelId) {
     obj[constants.INSTANT_INVITES_MANAGEMENT] = obj2;
     return obj;
   }, items);
-  return jsx(channelId(7234).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(7424).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });

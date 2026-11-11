@@ -5,15 +5,15 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
-import GIFPickerActionCreators from "../../../actions/GIFPickerActionCreators.tsx";
 import GifIcon from "../../../design/components/Icon/native/redesign/generated/GifIcon.tsx";
+import GIFPickerActionCreators from "../../../actions/GIFPickerActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 },
   gifContainer: { flexDirection: "column", alignItems: "center" },

@@ -1,4 +1,5 @@
 // discord_app/stores/LocalActivityStore.tsx
+import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import _modDef1342 from "../../_runtime/metro/01342__.js";
@@ -52,7 +53,7 @@ function updateActivities() {
     const merged = Object.assign(stream);
     items.push(obj);
   }
-  const set = new Set();
+  set = new Set();
   const item = set(streamerActiveStreamMetadata[18]).forEach(closure_19, (arg0) => {
     [, tmp] = arg0;
     if (null != tmp.application_id) {
@@ -95,21 +96,21 @@ function updateActivities() {
     }
     if (null != tmp28) {
       let tmp25 = tmp28;
-      if (null == c20) {
+      if (null == c21) {
         let start = tmp28.start;
         if (start == null) {
           const _Date3 = Date;
           start = Date.now();
         }
-        c20 = start;
+        c21 = start;
         tmp25 = tmp28;
       }
     } else {
-      c20 = null;
+      c21 = null;
       tmp25 = visibleGame;
     }
   } else {
-    c20 = null;
+    c21 = null;
     tmp25 = visibleGame;
   }
   let sdkResolutionForPID;
@@ -174,8 +175,8 @@ function updateActivities() {
             id = id3;
           }
           obj2.application_id = id;
-          let start2 = c20;
-          if (c20 == null) {
+          let start2 = c21;
+          if (c21 == null) {
             start2 = tmp25.start;
           }
           const obj3 = { start: start2 };
@@ -200,10 +201,19 @@ function updateActivities() {
   }
   return flag;
 }
+function isNonContextlessEmbeddedActivity(platform) {
+  let tmp3 = platform.platform === ActivityGamePlatforms.ActivityGamePlatforms.EMBEDDED;
+  if (tmp3) {
+    tmp3 = !ActivityFlagUtils.isContextlessEmbeddedActivity(platform);
+    const tmpResult = ActivityFlagUtils;
+  }
+  return tmp3;
+}
 const ActivityFlags = fn(1072).ActivityFlags;
 let closure_18 = [];
 const dependencyMap = {};
-let c20 = null;
+let set = new Set();
+let c21 = null;
 const Store = initializeDefault.Store;
 class LocalActivityStore extends Store {}
 const prototype = LocalActivityStore.prototype;
@@ -268,17 +278,40 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
   },
   START_SESSION: function handleStartSession() {
     closure_19 = {};
+    set.clear();
     updateActivities();
   },
   LOCAL_ACTIVITY_UPDATE: function handleLocalActivityUpdate(arg0) {
     ({ socketId, pid, activity, partyPrivacy } = arg0);
+    if (activity != null) {
+      application_id = activity.application_id;
+    }
+    if (null != activity) {
+      if (null != application_id) {
+        let tmp3 = activity.platform === ActivityGamePlatforms.ActivityGamePlatforms.EMBEDDED;
+        if (tmp3) {
+          tmp3 = !ActivityFlagUtils.isContextlessEmbeddedActivity(activity);
+          const tmp14Result = ActivityFlagUtils;
+        }
+        if (tmp3) {
+          if (set.has(application_id)) {
+            const selfEmbeddedActivities = EmbeddedActivitiesStore.getSelfEmbeddedActivities();
+            if (selfEmbeddedActivities.has(application_id)) {
+              set.delete(application_id);
+            } else {
+              return false;
+            }
+          }
+        }
+      }
+    }
     if (null == activity) {
-      let tmp6 = null == dependencyMap[socketId];
+      let tmp9 = null == dependencyMap[socketId];
     } else {
       items = [pid, activity, partyPrivacy];
-      tmp6 = _modDef1342(dependencyMap[socketId], items);
+      tmp9 = _modDef1342(dependencyMap[socketId], items);
     }
-    if (!tmp6) {
+    if (!tmp9) {
       if (null != activity) {
         const items1 = [pid, activity, partyPrivacy];
         dependencyMap[socketId] = items1;
@@ -286,11 +319,11 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
         delete tmp[tmp2];
       }
     }
-    let tmp10 = !tmp6;
-    if (tmp6) {
-      tmp10 = updateActivities();
+    let tmp13 = !tmp9;
+    if (tmp9) {
+      tmp13 = updateActivities();
     }
-    return tmp10;
+    return tmp13;
   },
   RPC_APP_DISCONNECTED: function handleRPCAppDisconnected(arg0) {
     delete tmp[tmp2];
@@ -366,7 +399,21 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
     })();
     updateActivities();
   },
-  EMBEDDED_ACTIVITY_CLOSE: updateActivities,
+  EMBEDDED_ACTIVITY_CLOSE: function handleEmbeddedActivityClose(applicationId) {
+    applicationId = applicationId.applicationId;
+    set.add(applicationId);
+    omitByResult = applyDefault.omitBy(omitByResult, (arg0) => {
+      [, tmp] = arg0;
+      let tmp2 = tmp.application_id === applicationId;
+      if (tmp2) {
+        tmp2 = isNonContextlessEmbeddedActivity(tmp);
+      }
+      return tmp2;
+    });
+    const sizeResult = applyDefault.size(omitByResult);
+    const sizeResult1 = applyDefault.size(omitByResult);
+    return updateActivities() || sizeResult !== applyDefault.size(omitByResult);
+  },
   RUNNING_GAME_TOGGLE_DETECTION: updateActivities,
 });
 const size = fn(2);

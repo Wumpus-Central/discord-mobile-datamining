@@ -23,8 +23,8 @@ function DraftBadge() {
   const obj2 = { style: tmp.draftBadgeLabel, variant: "body-xs/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.vosPk5);
-  obj.children = closure_1_15(Text_Text.Text, obj2);
-  return closure_1_15(metroImportDefault, obj);
+  obj.children = colors(Text_Text.Text, obj2);
+  return colors(metroImportDefault, obj);
 }
 function ArchivedBadge() {
   const tmp = closure_17();
@@ -37,8 +37,8 @@ function ArchivedBadge() {
   };
   const intl = util.intl;
   obj2.children = intl.string(util.t.nhbtEl);
-  obj.children = closure_1_15(Text_Text.Text, obj2);
-  return closure_1_15(metroImportDefault, obj);
+  obj.children = colors(Text_Text.Text, obj2);
+  return colors(metroImportDefault, obj);
 }
 function UnsavedBadge() {
   const tmp = closure_17();
@@ -51,8 +51,8 @@ function UnsavedBadge() {
   };
   const intl = util.intl;
   obj2.children = intl.string(util.t.aiwXeq);
-  obj.children = closure_1_15(Text_Text.Text, obj2);
-  return closure_1_15(metroImportDefault, obj);
+  obj.children = colors(Text_Text.Text, obj2);
+  return colors(metroImportDefault, obj);
 }
 function EditListingButton(editStateId) {
   editStateId = editStateId.editStateId;
@@ -130,7 +130,7 @@ function EditListingButton(editStateId) {
     items2[1] = tierPriceWithoutBadge;
     obj7.style = items2;
     obj7.children = "";
-    items1[3] = closure_15(tmp2(5753).Text, obj7);
+    items1[3] = closure_15(tmp2(5866).Text, obj7);
     obj6.children = items1;
     obj5.subLabel = closure_16(closure_7, obj6);
     if (null != first1) {
@@ -139,29 +139,29 @@ function EditListingButton(editStateId) {
       obj8.source = obj9;
       let tmp11Result6 = closure_15(FastImageDefault, obj8);
     } else {
-      const obj10 = { IconComponent: tmp2(11278).TagsIcon };
-      tmp11Result6 = closure_15(tmp2(7041).TableRow.Icon, obj10);
+      const obj10 = { IconComponent: tmp2(11802).TagsIcon };
+      tmp11Result6 = closure_15(tmp2(7379).TableRow.Icon, obj10);
     }
     obj5.icon = tmp11Result6;
     obj5.onPress = editStateId.onPress;
     obj5.onLongPress = function onLongPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20388, dependencyMap.paths), "TierArchiveOrDelete", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20583, dependencyMap.paths), "TierArchiveOrDelete", {
         editStateId,
         guildId,
         groupListingId,
       });
     };
-    return closure_15(tmp2(7041).TableRow, obj5);
+    return closure_15(tmp2(7379).TableRow, obj5);
   } else if (null != first2) {
     const intl = tmp2(1113).intl;
-    const obj11 = { price: tmp2(7480).formatPrice(first, first2.currency), interval: null };
-    const tmp2Result = tmp2(7480);
-    obj11.interval = tmp2(17568).formatPlanInterval(first2);
+    const obj11 = { price: tmp2(7190).formatPrice(first, first2.currency), interval: null };
+    const tmp2Result = tmp2(7190);
+    obj11.interval = tmp2(17733).formatPlanInterval(first2);
     let formatToPlainStringResult = intl.formatToPlainString(tmp2(1113).t.CgmBaG, obj11);
-    const tmp2Result3 = tmp2(17568);
+    const tmp2Result3 = tmp2(17733);
   } else {
-    formatToPlainStringResult = tmp2(17568).formatMonthlyPriceLabel(first);
-    const tmp2Result4 = tmp2(17568);
+    formatToPlainStringResult = tmp2(17733).formatMonthlyPriceLabel(first);
+    const tmp2Result4 = tmp2(17733);
   }
 }
 function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
@@ -208,7 +208,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
         obj.title = intl.string(guildId(1113).t.pXbGYc);
         const intl2 = guildId(1113).intl;
         obj.subtitle = intl2.string(guildId(1113).t["KzCF/6"]);
-        return closure_1_15(guildId(7067).NavigatorHeader, obj);
+        return closure_1_15(guildId(7427).NavigatorHeader, obj);
       },
     });
   });
@@ -270,7 +270,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
               if (first != null) {
                 id = first.id;
               }
-              guildEligibleForTierTemplates(20390).pushTierEditScene(navigation, {
+              guildEligibleForTierTemplates(20585).pushTierEditScene(navigation, {
                 groupListingId: id,
                 initialEditStateId,
                 onBeforeDispatchNewListing(id) {
@@ -284,7 +284,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
                   });
                 },
               });
-              let obj = guildEligibleForTierTemplates(20390);
+              let obj = guildEligibleForTierTemplates(20585);
               const obj2 = {
                 groupListingId: id,
                 initialEditStateId,
@@ -338,12 +338,12 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const MAX_SUBSCRIPTION_TIERS = fn(17544).MAX_SUBSCRIPTION_TIERS;
+const MAX_SUBSCRIPTION_TIERS = fn(17709).MAX_SUBSCRIPTION_TIERS;
 const Constants = fn(1072);
 ({ GuildSettingsSections: map1, GuildSettingsSubsections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { height: "100%" },
   content: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, paddingTop: nativeDefault.space.PX_16 },
@@ -403,6 +403,6 @@ let result = size.fileFinishedImporting(
 
 export default function GuildSettingsRoleSubscriptionsTiers(guildId) {
   guildId = guildId.guildId;
-  const obj = { guildId, children: closure_1_15(GuildSettingsRoleSubscriptionsTiersInner, { guildId }) };
-  return closure_1_15(GuildSettingsRoleSubscriptionContainerDefault, obj);
+  const obj = { guildId, children: colors(GuildSettingsRoleSubscriptionsTiersInner, { guildId }) };
+  return colors(GuildSettingsRoleSubscriptionContainerDefault, obj);
 }

@@ -19,37 +19,37 @@ function NotificationCenterBannerImpl(onDismiss) {
   let obj = { style: tmp.container, children: null };
   const obj2 = {
     style: tmp.iconContainer,
-    children: closure_14(onDismiss(11131).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
+    children: closure_14(onDismiss(10931).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
   };
   items = [closure_14(View, obj2), ,];
   const obj4 = { style: tmp.contentContainer, children: null };
   const obj5 = { variant: "body-md/semibold", color: "text-default", children: null };
   const intl = onDismiss(1113).intl;
   obj5.children = intl.string(onDismiss(1113).t.G6YBna);
-  const items1 = [closure_14(onDismiss(5753).Text, obj5), ,];
+  const items1 = [closure_14(onDismiss(5866).Text, obj5), ,];
   const obj6 = { variant: "body-md/medium", color: "text-muted", style: null, children: null };
   const obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
   obj6.style = { marginTop: nativeDefault.space.PX_4 };
   const intl2 = onDismiss(1113).intl;
   obj6.children = intl2.string(onDismiss(1113).t["9CoPDE"]);
-  items1[1] = closure_14(onDismiss(5753).Text, obj6);
+  items1[1] = closure_14(onDismiss(5866).Text, obj6);
   const obj8 = { style: tmp.ctaButton, children: null };
   const obj9 = { variant: "primary", size: "md", text: null, onPress: null };
   const intl3 = onDismiss(1113).intl;
   obj9.text = intl3.string(onDismiss(1113).t.a4bgO0);
   obj9.onPress = function handlePress() {
-    const pushNotificationPermission = onDismiss(14235).requestPushNotificationPermission(
+    const pushNotificationPermission = onDismiss(14718).requestPushNotificationPermission(
       constants2.ALLOW_TO_REQUEST,
       constants3.NOTIFICATION_CENTER,
       closure_1_8,
     );
-    const obj = onDismiss(14235);
+    const obj = onDismiss(14718);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
       action: constants4.ACCEPT,
       prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
     });
   };
-  obj8.children = closure_14(onDismiss(5760).Button, obj9);
+  obj8.children = closure_14(onDismiss(5873).Button, obj9);
   items1[2] = closure_14(View, obj8);
   obj4.children = items1;
   items[1] = closure_15(View, obj4);
@@ -68,8 +68,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   };
   const intl4 = onDismiss(1113).intl;
   obj10.accessibilityLabel = intl4.string(onDismiss(1113).t.WAI6xu);
-  obj10.children = closure_14(onDismiss(7123).XSmallIcon, { size: "sm", color: "icon-strong" });
-  items[2] = closure_14(onDismiss(7046).PressableHighlight, obj10);
+  obj10.children = closure_14(onDismiss(7483).XSmallIcon, { size: "sm", color: "icon-strong" });
+  items[2] = closure_14(onDismiss(7364).PressableHighlight, obj10);
   obj.children = items;
   return closure_15(View, obj);
 }
@@ -78,8 +78,8 @@ const noop = fn(19);
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, NOOP: closure_8 } = Constants);
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
-const NotificationPermissionConstants = fn(14234);
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const NotificationPermissionConstants = fn(14717);
 ({
   EventActionType: closure_10,
   EventActionLocation: closure_11,
@@ -88,7 +88,7 @@ const NotificationPermissionConstants = fn(14234);
 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -138,7 +138,7 @@ export default function NotificationCenterPermissionNudge() {
   if (!obj.useConfig({ location: "NotificationCenterPermissionNudge" }).inHoldout) {
     prop = null;
     if (canSeePushNotificationNudge) {
-      prop = tmp2(4975).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
+      prop = tmp2(5076).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
     }
   }
   const tmp5 = _slicedToArray(

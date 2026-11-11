@@ -32,30 +32,18 @@ function readConjureRailActivity(id, arg1) {
           }
           str2 = "working";
           if (true !== publishing) {
-            let str4 = "unread";
+            let str3 = "unread";
             if (!tmp2Result.isConjureProjectUnread(id)) {
-              const project = ConjureProjectStore.getProject(id);
-              let install_scope_setup;
-              if (project != null) {
-                install_scope_setup = project.install_scope_setup;
-              }
-              let tmp10 = null != install_scope_setup;
-              if (tmp10) {
-                tmp10 = isProjectOwner(project);
-              }
-              str4 = "unread";
-              if (!tmp10) {
-                let str5 = null;
-                if (flag) {
-                  str5 = null;
-                  if (null != ConjureChatStore.getFinishedAt(id)) {
-                    str5 = "working";
-                  }
+              let str4 = null;
+              if (flag) {
+                str4 = null;
+                if (null != ConjureChatStore.getFinishedAt(id)) {
+                  str4 = "working";
                 }
-                str4 = str5;
               }
+              str3 = str4;
             }
-            str2 = str4;
+            str2 = str3;
             tmp2Result = conjureUnread;
           }
         }
@@ -66,7 +54,6 @@ function readConjureRailActivity(id, arg1) {
   }
   return tmp;
 }
-const isProjectOwner = fn(6902).isProjectOwner;
 let items = [ConjureProjectStore, ConjureChatStore, ConjurePublishStatusStore, ReadStateStore, UserSettingsProtoStore];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/rail/conjureRailActivity.tsx");

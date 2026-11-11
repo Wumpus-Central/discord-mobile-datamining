@@ -5,10 +5,10 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
 import MediaSourceUtil from "../MediaSourceUtil.tsx";
+import common_Video from "../../../../components_native/common/Video.tsx";
 import MediaModalPortal from "renderers/MediaModalPortal.tsx";
 import MediaModalTiktok from "renderers/MediaModalTiktok.tsx";
 import MediaModalWebVideoFile from "renderers/MediaModalWebVideoFile.tsx";
-import common_Video from "../../../../components_native/common/Video.tsx";
 import MediaModalOverlayDefault from "overlay/MediaModalOverlay.tsx";
 import MediaModalYoutubeDefault from "renderers/MediaModalYoutube.tsx";
 import MediaModalWebEmbedDefault from "renderers/MediaModalWebEmbed.tsx";
@@ -22,7 +22,7 @@ const MediaModalPortalDefault = MediaModalPortal;
 const MediaModalTiktokDefault = MediaModalTiktok;
 const MediaModalWebVideoFileDefault = MediaModalWebVideoFile;
 
-const useVideoControls = obj(8916);
+const useVideoControls = obj(8563);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
@@ -198,7 +198,7 @@ export default function MediaModal(originLayout) {
         const tmp2Result = HapticUtils;
         const obj2 = { source: selectedMediaSource, disableDownload, shareable: tmp };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(8985, dependencyMap.paths),
+          asyncRequireImpl(10136, dependencyMap.paths),
           "MediaShareActionSheet",
           obj2,
         );

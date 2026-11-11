@@ -44,7 +44,7 @@ export function groupConjureProjects(arg0, stateFromStoresArray, stateFromStores
     return { guildId, projects };
   });
   const sorted = arr5.sort((guildId, guildId2) => {
-    let length = map1.get(guildId.guildId);
+    length = map1.get(guildId.guildId);
     if (length == null) {
       length = stateFromStoresArray.length;
     }

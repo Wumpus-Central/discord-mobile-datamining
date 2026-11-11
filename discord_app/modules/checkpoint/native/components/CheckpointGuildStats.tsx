@@ -1,12 +1,11 @@
 // discord_app/modules/checkpoint/native/components/CheckpointGuildStats.tsx
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
-import _modDef3216 from "../../Checkpoint.messages.js";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
 import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import MicrophoneIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
 import CheckpointTextDefault from "CheckpointText.tsx";
+import CheckpointNumberUtils from "../CheckpointNumberUtils.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -23,41 +22,36 @@ let obj2 = { flexDirection: "row", flexWrap: "wrap", columnGap: nativeDefault.sp
 obj.stat = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj.text = { fontSize: 16, lineHeight: 20 };
 let closure_7 = createStyles.createStyles(obj);
-const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointGuildStats.tsx");
+let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointGuildStats.tsx");
 
 export default function CheckpointGuildStats(arg0) {
   ({ numVoiceMinutes, numMessagesSent } = arg0);
   const tmp = closure_7();
   const rounded = Math.round(numVoiceMinutes);
   const rounded1 = Math.round(numMessagesSent);
-  const intl = util.intl;
-  const intl2 = util.intl;
-  const formatToPlainStringResult = intl.formatToPlainString(_modDef3216.UZbUtl, { numMinutes: rounded });
-  const obj = { style: tmp.stats, children: null };
-  const obj2 = {
-    accessible: true,
-    accessibilityLabel: "" + rounded + " " + formatToPlainStringResult.toLocaleLowerCase(),
-    style: tmp.stat,
-    children: null,
-  };
+  const result = CheckpointNumberUtils.formatCheckpointStatNumber(rounded);
+  const obj3 = { style: tmp.stats, children: null };
+  const obj4 = { accessible: true, accessibilityLabel: null, style: null, children: null };
+  const result1 = CheckpointNumberUtils.formatCheckpointStatNumber(rounded1);
+  obj4.accessibilityLabel = CheckpointNumberUtils.formatCheckpointStatAccessibilityLabel("voice", rounded);
+  obj4.style = tmp.stat;
   items = [
     hasOwnProperty(MicrophoneIcon.MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }),
-    hasOwnProperty(CheckpointTextDefault, { variant: "mono-md/bold", style: tmp.text, children: rounded }),
+    hasOwnProperty(CheckpointTextDefault, { variant: "mono-md/bold", style: tmp.text, children: result }),
   ];
-  obj2.children = items;
-  const items1 = [timestampProducer(View, obj2)];
-  const obj5 = {
-    accessible: true,
-    accessibilityLabel: "" + rounded1 + " " + intl2.string(_modDef3216.wWKySP).toLocaleLowerCase(),
-    style: tmp.stat,
-    children: null,
-  };
+  obj4.children = items;
+  const items1 = [timestampProducer(View, obj4)];
+  const obj8 = { accessible: true, accessibilityLabel: null, style: null, children: null };
+  const obj6 = { size: "xs", color: CHECKPOINT_PRIMARY };
+  const obj7 = { variant: "mono-md/bold", style: tmp.text, children: result };
+  obj8.accessibilityLabel = CheckpointNumberUtils.formatCheckpointStatAccessibilityLabel("messages", rounded1);
+  obj8.style = tmp.stat;
   const items2 = [
     hasOwnProperty(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY }),
-    hasOwnProperty(CheckpointTextDefault, { variant: "mono-md/bold", style: tmp.text, children: rounded1 }),
+    hasOwnProperty(CheckpointTextDefault, { variant: "mono-md/bold", style: tmp.text, children: result1 }),
   ];
-  obj5.children = items2;
-  items1[1] = timestampProducer(View, obj5);
-  obj.children = items1;
-  return timestampProducer(View, obj);
+  obj8.children = items2;
+  items1[1] = timestampProducer(View, obj8);
+  obj3.children = items1;
+  return timestampProducer(View, obj3);
 }

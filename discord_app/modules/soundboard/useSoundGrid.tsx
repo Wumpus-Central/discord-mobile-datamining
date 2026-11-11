@@ -1,7 +1,7 @@
 // discord_app/modules/soundboard/useSoundGrid.tsx
 import SoundboardTypes from "SoundboardTypes.tsx";
-import GuildBoostingUtils from "../../utils/GuildBoostingUtils.tsx";
 import useManageResourcePermissions from "../permissions/useManageResourcePermissions.tsx";
+import GuildBoostingUtils from "../../utils/GuildBoostingUtils.tsx";
 import useSoundOrganizer from "useSoundOrganizer.tsx";
 import TopSoundboardSoundsActionCreators from "top_sounds/TopSoundboardSoundsActionCreators.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -23,7 +23,7 @@ function createSoundItems(value, fn) {
   }
   return arr.map((sound, index) => ({ type: categories(length[10]).SoundboardSoundItemType.SOUND, sound, index }));
 }
-const SoundboardConstants = fn(6195);
+const SoundboardConstants = fn(6308);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
 const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
@@ -225,11 +225,11 @@ export default function useSoundGrid(guild_id) {
           }
           if (0 !== items.length) {
             const obj2 = {
-              key: closure_0(7593).SoundboardSoundGridSectionType.TOP_SOUNDS,
+              key: closure_0(7164).SoundboardSoundGridSectionType.TOP_SOUNDS,
               categoryInfo: null,
               items: null,
             };
-            const obj3 = { type: closure_0(7593).SoundboardSoundGridSectionType.TOP_SOUNDS, guild: id };
+            const obj3 = { type: closure_0(7164).SoundboardSoundGridSectionType.TOP_SOUNDS, guild: id };
             obj2.categoryInfo = obj3;
             obj2.items = stateFromStores3(items);
             items.push(obj2);
@@ -383,7 +383,7 @@ export default function useSoundGrid(guild_id) {
             if (tmp9Result.length > 0) {
               let obj = { categoryInfo: null, key: null, items: null };
               let obj2 = {
-                type: closure_0(7593).SoundboardSoundGridSectionType.GUILD,
+                type: closure_0(7164).SoundboardSoundGridSectionType.GUILD,
                 guild: null,
                 isNitroLocked: null,
               };

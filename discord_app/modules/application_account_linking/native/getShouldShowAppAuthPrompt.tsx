@@ -1,10 +1,10 @@
 // discord_app/modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx
-import useAuthorizationApp from "../hooks/useAuthorizationApp.tsx";
 import AuthorizedAppsActionCreatorsDefault from "../../oauth2/AuthorizedAppsActionCreators.tsx";
+import useAuthorizationApp from "../hooks/useAuthorizationApp.tsx";
 import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 
 require = fn;
-const FetchState = fn(7342).FetchState;
+const FetchState = fn(7158).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
 

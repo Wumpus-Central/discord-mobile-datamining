@@ -38,42 +38,42 @@ export default {
   colors: mapValuesDefault(SemanticColors, (arg0, arg1) => ({ [closure_1_6]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: mapValuesDefault(Shadows, (arg0) => {
-    let f80271 = (shadowOffset, arg1) => {
+    let f81056 = (shadowOffset, arg1) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
       }
       return shadowOffset;
     };
-    f80271 = (shadowColorAndroid, arg1) =>
+    f81056 = (shadowColorAndroid, arg1) =>
       arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
-    f80271 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    f80271 = (shadowRadius) => shadowRadius.shadowRadius;
-    f80271 = (elevation) => elevation.elevation;
+    f81056 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f81056 = (shadowRadius) => shadowRadius.shadowRadius;
+    f81056 = (elevation) => elevation.elevation;
     return {
       shadowOffset: {
         resolve(isAndroid) {
-          return f80271(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81056(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowColor: {
         resolve(isAndroid) {
-          return f80271(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81056(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowOpacity: {
         resolve(isAndroid) {
-          return f80271(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81056(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowRadius: {
         resolve(isAndroid) {
-          return f80271(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81056(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       elevation: {
         resolve(isAndroid) {
-          return f80271(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81056(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
     };

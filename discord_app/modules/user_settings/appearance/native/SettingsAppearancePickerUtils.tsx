@@ -45,7 +45,7 @@ function convertBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     num2 = 0;
   }
   obj.angle = num2;
-  const colors = theme.colors;
+  colors = theme.colors;
   const mapped = colors.map((stop) => {
     const tmp6 = utils_ColorDefault;
     if ("light" !== theme.theme) {
@@ -128,7 +128,7 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     num = 0;
   }
   obj.angle = num;
-  const colors = theme.customThemeSettings.colors;
+  colors = theme.customThemeSettings.colors;
   const mapped = colors.map((item, index) => {
     const tmp7 = utils_ColorDefault;
     if ("light" !== theme.theme) {
@@ -146,8 +146,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(5140)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5140)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(5241)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5241)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -211,7 +211,7 @@ export function convertThemesToAnimatedThemes(c1) {
 }
 export function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(5726).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(5839).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

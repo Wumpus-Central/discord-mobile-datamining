@@ -8,7 +8,7 @@ import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const canPublishProject = fn(6902).canPublishProject;
+const canPublishProject = fn(6954).canPublishProject;
 const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePatchNotesLink.tsx");

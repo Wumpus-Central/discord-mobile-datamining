@@ -4,8 +4,8 @@ import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import GuildIcon from "../../../../guild/native/GuildIcon.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import GuildIcon from "../../../../guild/native/GuildIcon.tsx";
 import LockIcon from "../../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -16,12 +16,12 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const EmojiCategoryTypes = fn(6857).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6909).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: metroImportDefault, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   itemInner: null,
   fadedItem: { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT },

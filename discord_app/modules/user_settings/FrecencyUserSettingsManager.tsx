@@ -89,7 +89,7 @@ let closure_23 = async function _saveProtos(arg0) {
             c5 = 3;
             return { value: "HermesInternal", done: null };
           } else {
-            resetTimer(closure_2_15, false);
+            resetTimer(colors, false);
             if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
               let result = UserSettingsProtoActionCreators.markUserSettingsLoadOkayForDevelopment();
               c3 = 1;
@@ -141,7 +141,7 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6953).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(7006).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 const FREQUENCY_ITEM_LIMIT = fn(1362).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();

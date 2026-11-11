@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalContent.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
-import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import QuestDataUtils from "../../utils/QuestDataUtils.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
@@ -196,7 +196,7 @@ function BountiesModalContentInner(bounty) {
                     let _Math = Math;
                     let result = arr[num3] / tmp4;
                     let rounded = Math.round(
-                      result * (closure_1_0(14772).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
+                      result * (closure_1_0(9987).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
                     );
                     let obj2 = {
                       time: num4,
@@ -213,8 +213,8 @@ function BountiesModalContentInner(bounty) {
                   items.push({ time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 });
                   arr = Array.from({ length: 6 }, (arg0, arg1) => 6 - arg1);
                   const obj3 = { time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 };
-                  closure_1_0(5380).triggerPattern(items);
-                  const tmp7Result = closure_1_0(5380);
+                  closure_1_0(5493).triggerPattern(items);
+                  const tmp7Result = closure_1_0(5493);
                 })();
               }
             }
@@ -436,7 +436,7 @@ function BountiesModalContentInner(bounty) {
   size1.playerRef = ref;
   ({ width: obj9.width, height: obj9.height } = memo);
   size1.renderEndCard = function renderEndCard() {
-    return closure_2_15(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
+    return colors(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
       adContentId: bounty.id,
       adCreativeType: AdCreativeType.AdCreativeType.BOUNTY,
       questContent: QuestContent.QuestContent.VIDEO_MODAL_END_CARD,
@@ -601,9 +601,9 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_17(height(sharedValue[42]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestConstants = fn(6839);
+const QuestConstants = fn(5275);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(17270);
+const BountiesModalConstants = fn(17433);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } =
   BountiesModalConstants);
 const Constants = fn(1072);
@@ -613,7 +613,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let c18 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_20 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },
@@ -675,7 +675,7 @@ export default function BountiesModalContent(bountyId) {
       sourceQuestContent,
       overrideVisibility: true,
       children() {
-        return closure_2_15(BountiesModalContentWithAppStore, { bounty, sourceQuestContent });
+        return colors(BountiesModalContentWithAppStore, { bounty, sourceQuestContent });
       },
     };
     obj.children = closure_15(bountyId(bounty[32]).BillableAdPlacementImpressionTrackerNative, obj2);

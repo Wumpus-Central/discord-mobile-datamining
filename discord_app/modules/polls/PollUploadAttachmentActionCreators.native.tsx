@@ -179,8 +179,8 @@ let closure_8 = async function _removeAllPollUploadAttachments(arg0) {
   }
   return value;
 };
-const DraftType = fn(7780).DraftType;
-const POLL_ATTACHMENT_FOLDER = fn(8481).POLL_ATTACHMENT_FOLDER;
+const DraftType = fn(8658).DraftType;
+const POLL_ATTACHMENT_FOLDER = fn(8945).POLL_ATTACHMENT_FOLDER;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 

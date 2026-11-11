@@ -13,7 +13,7 @@ export default function useCheckpointBlockedTraits() {
   return initialize.useStateFromStoresArray(items, () => {
     ({ selectedCharacterTraits: closure_0, stats: closure_1, character: closure_2 } = hasNitro);
     hasNitro = closure_0(2107).isPremium(currentUser.getCurrentUser());
-    const values = Object.values(closure_0(6246).CheckpointTrait);
+    const values = Object.values(closure_0(6359).CheckpointTrait);
     return values.filter((item) => {
       let result = null != tmp;
       if (result) {

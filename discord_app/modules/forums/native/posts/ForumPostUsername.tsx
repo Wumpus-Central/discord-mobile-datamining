@@ -3,8 +3,8 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import native from "../../../../design/void/native.tsx";
 import ForumLayout from "../../../../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import enhanced_role_colors_EnhancedRoleColorUtils from "../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import ForumHooks from "../../ForumHooks.tsx";
+import enhanced_role_colors_EnhancedRoleColorUtils from "../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import useChatWidthDefault from "../../../chat/native/useChatWidth.tsx";
 import ForumPostGridBody from "grid/ForumPostGridBody.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -74,10 +74,10 @@ function ForumPostUsername(arg0) {
   const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(14022).useForumChannelStore;
+const useForumChannelStore = fn(14502).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_8 = createStyles.createStyles({
   authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 },
   roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 },

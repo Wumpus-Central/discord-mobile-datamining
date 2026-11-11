@@ -1,8 +1,8 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx
 import util from "../../../../intl/index.native.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import PollsIcon from "../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import PollsIcon from "../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
 import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple.tsx";
 import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

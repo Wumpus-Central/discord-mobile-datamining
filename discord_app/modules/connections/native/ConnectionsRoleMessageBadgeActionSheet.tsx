@@ -10,10 +10,10 @@ import useThemeDefault from "../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
-import PlatformsDefault from "../../../lib/Platforms.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
-import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
+import PlatformsDefault from "../../../lib/Platforms.tsx";
 import ConnectionsUtils from "../ConnectionsUtils.tsx";
+import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
 import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
@@ -59,9 +59,9 @@ function PopoutCheck(arg0) {
   if (null != formatResult) {
     const obj5 = { style: tmp.popoutCheck, children: null };
     const obj6 = { size: "sm", style: tmp.popoutCheckIcon };
-    items = [value2(CheckmarkLargeIcon.CheckmarkLargeIcon, obj6)];
+    items = [closure_1_16(CheckmarkLargeIcon.CheckmarkLargeIcon, obj6)];
     const obj7 = { variant: "body-xs/medium", color: "mobile-text-heading-primary", children: formatResult };
-    items[1] = value2(Text_Text.Text, obj7);
+    items[1] = closure_1_16(Text_Text.Text, obj7);
     obj5.children = items;
     tmp9 = closure_1_17(timestampProducer, obj5);
   }
@@ -118,10 +118,10 @@ class PopoutChecks {
         }
         if (officialApplicationIds.includes(str)) {
           const obj2 = { style: closure_1.botTag, guildId, roleColor, size: 16 };
-          let tmp12 = value2(OfficialConnectionIconDefault, obj2);
+          let tmp12 = closure_2_16(OfficialConnectionIconDefault, obj2);
         } else if (null != tmp7) {
           const obj3 = { style: closure_1.botTag, verified: false };
-          tmp12 = value2(BotTagDefault, obj3);
+          tmp12 = closure_2_16(BotTagDefault, obj3);
         }
         items = [closure_1.popoutChecksGroup];
         let prop = null;
@@ -139,9 +139,9 @@ class PopoutChecks {
               style: closure_1.popoutCheckGroupPlatformIcon,
               user: tmp7,
               size: native.AvatarSizes.XSMALL,
-              guildId: "a",
+              guildId: "Array",
             };
-            tmp26 = value2(native.Avatar, obj6);
+            tmp26 = closure_2_16(native.Avatar, obj6);
           }
           items1[1] = tmp26;
           let name;
@@ -156,7 +156,7 @@ class PopoutChecks {
             name = name1;
           }
           const obj7 = { variant: "body-sm/medium", color: "interactive-text-active", children: name };
-          items1[2] = value2(Text_Text.Text, obj7);
+          items1[2] = closure_2_16(Text_Text.Text, obj7);
           items1[3] = tmp12;
           obj5.children = items1;
           const items2 = [
@@ -181,7 +181,7 @@ class PopoutChecks {
           const icon = value.icon;
           obj8.source = tmp11Result.makeSource(shared.isThemeDark(dependencyMap) ? icon.darkPNG : icon.lightPNG);
           obj8.size = native.Icon.Sizes.MEDIUM;
-          value2(native.Icon, obj8);
+          closure_2_16(native.Icon, obj8);
           const tmp11Result2 = shared;
         }
       }),
@@ -191,12 +191,12 @@ class PopoutChecks {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const OperatorTypes = fn(7413).OperatorTypes;
+const OperatorTypes = fn(7359).OperatorTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", padding: 16 },
   header: {

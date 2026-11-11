@@ -5,8 +5,8 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import RelationshipActionCreatorsDefault from "../../../actions/RelationshipActionCreators.tsx";
-import navigateToLastChannelDefault from "../../main_tabs_v2/native/navigateToLastChannel.tsx";
 import UserProfileAlertUtils from "UserProfileAlertUtils.tsx";
+import navigateToLastChannelDefault from "../../main_tabs_v2/native/navigateToLastChannel.tsx";
 import ConfirmStartCall from "../../voice_calls/native/ConfirmStartCall.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
@@ -45,19 +45,19 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8838).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8479).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7390)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7852)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8838);
+  let obj = user(8479);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(15179).useGameFriendsForUser(user.id);
-  const tmp3Result = user(15179);
+  const gameFriendsForUser = user(15667).useGameFriendsForUser(user.id);
+  const tmp3Result = user(15667);
   items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(5196).useName(user);
+  userDisplayName = tmp(5309).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -66,9 +66,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(15313).UserClockIcon;
+          let UserPlusIcon = tmp3(15763).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(5847).UserPlusIcon;
+          UserPlusIcon = tmp3(5960).UserPlusIcon;
         }
         const intl = tmp3(1113).intl;
         const string = intl.string;
@@ -119,7 +119,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   flexGrow: { flex: 1 },
@@ -156,7 +156,7 @@ export default function UserProfileContactButtons(user) {
   if (hasCustomProfileTheme) {
     str = "primary";
   }
-  const colors = require("native").colors;
+  colors = require("native").colors;
   const tmp7 = hasCustomProfileTheme ? colors.WHITE : colors.CONTROL_SECONDARY_TEXT_DEFAULT;
   function handleMessage() {
     trackUserProfileAction({ action: "SEND_MESSAGE" });

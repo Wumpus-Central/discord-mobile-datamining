@@ -189,7 +189,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
         const result3 = map4.set(projectId, obj4);
       }
       map6.delete(projectId);
-      value2 = map5.get(projectId);
+      const value2 = map5.get(projectId);
       let phase;
       if (value2 != null) {
         phase = value2.phase;
@@ -296,7 +296,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
       obj3.observedAt = observedAt;
     }
     const result = map4.set(projectId, obj3);
-    value2 = map5.get(projectId);
+    const value2 = map5.get(projectId);
     let phase;
     if (value2 != null) {
       phase = value2.phase;

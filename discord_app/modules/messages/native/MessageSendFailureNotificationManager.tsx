@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/MessageSendFailureNotificationManager.tsx
 import util from "../../../intl/index.native.tsx";
-import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import InAppNotificationUtils from "../../in_app_notifications/native/InAppNotificationUtils.tsx";
 import InAppNotificationActionCreatorsDefault from "../../../actions/native/InAppNotificationActionCreators.tsx";
+import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -74,7 +74,7 @@ function handleMessageCreate(message) {
 }
 const Constants = fn(1072);
 ({ InAppNotificationTypes: metroImportDefault, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(11038).LocalNotificationTypes;
+const LocalNotificationTypes = fn(7333).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

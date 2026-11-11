@@ -5,8 +5,8 @@ import shared from "../../../design/shared.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
+import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -43,10 +43,10 @@ function FilterFooter(inline) {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6839).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(5275).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   content: { paddingHorizontal: nativeDefault.space.PX_16 },
   bodyContainer: { flex: 1, minHeight: 0 },
@@ -149,13 +149,13 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(9801).getFilterTypeText(item.filter),
+          label: onSortMethodChange(10088).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter),
         };
-        return ref(onSortMethodChange(7040).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(7667).TableCheckboxRow, obj, index);
       });
       return metroImportDefault(TableRowGroup.TableRowGroup, obj, index);
     }),

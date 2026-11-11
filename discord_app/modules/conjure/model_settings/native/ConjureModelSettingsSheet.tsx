@@ -1,10 +1,10 @@
 // discord_app/modules/conjure/model_settings/native/ConjureModelSettingsSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
+import conjureModelSettingsConnection from "../conjureModelSettingsConnection.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import conjureModelSettingsConnection from "../conjureModelSettingsConnection.tsx";
 import useConjureModelSettingsDraftDefault from "../useConjureModelSettingsDraft.tsx";
 import ConjureEffortPickerDefault from "ConjureEffortPicker.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -69,19 +69,19 @@ function ModelSettingsPicker(projectId) {
   ];
   const intl = projectId(1113).intl;
   const string = intl.string;
-  const tmp8 = _modDef4028;
+  const tmp8 = _modDef4079;
   if (tmp) {
     let stringResult = string(tmp8.GxpdUR);
   } else {
     stringResult = string(tmp8["/rJzr6"]);
   }
-  items3[1] = closure_8(projectId(5753).Text, {
+  items3[1] = closure_8(projectId(5866).Text, {
     variant: "body-xs/normal",
     color: "text-muted",
     children: stringResult,
   });
   obj2.children = items3;
-  return closure_9(projectId(6161).Stack, obj2);
+  return closure_9(projectId(6274).Stack, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -93,7 +93,7 @@ export default function ConjureModelSettingsSheet(projectId) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef4028["3E7Yc0"]);
+  obj2.title = intl.string(_modDef4079["3E7Yc0"]);
   obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React5(View, { children: React5(ConjureModelSettingsContent, { projectId: projectId.projectId }) });
   return React5(ActionSheet.ActionSheet, obj);

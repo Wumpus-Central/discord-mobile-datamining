@@ -7,7 +7,7 @@ import _modDef2067 from "../../../_runtime/metro/02067__.js";
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
 import MarkupTypes from "MarkupTypes.tsx";
 import UnicodeSanitizationUtils from "UnicodeSanitizationUtils.tsx";
-import errorDefault from "../../../_runtime/06173_error.js";
+import _modDef6286 from "../../../_runtime/metro/06286__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 const findCodedLinksDefault = findCodedLinks;
@@ -166,7 +166,7 @@ function punycodeLink(assetURL) {
           const error1 = new Error("no hostname");
           throw error1;
         }
-        tmp9.hostname = errorDefault.toASCII(tmp9.hostname.toLowerCase());
+        tmp9.hostname = _modDef6286.toASCII(tmp9.hostname.toLowerCase());
         tmp9.username = "";
         tmp9.password = "";
         const obj3 = { target: UnicodeSanitizationUtils.safelyMakeUrlHumanReadable(tmp9), displayTarget: null };
@@ -185,34 +185,34 @@ function punycodeLink(assetURL) {
 let closure_4 = new privDefault({ max: 50 });
 let items = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"];
 let items1 = [
-  fn(6166).AST_KEY.TEXT,
-  fn(6166).AST_KEY.UNDERLINE,
-  fn(6166).AST_KEY.STRONG,
-  fn(6166).AST_KEY.ITALICS,
-  fn(6166).AST_KEY.STRIKETHROUGH,
-  fn(6166).AST_KEY.INLINE_CODE,
-  fn(6166).AST_KEY.SPOILER,
-  fn(6166).AST_KEY.LINE_BREAK,
-  fn(6166).AST_KEY.TIMESTAMP,
+  fn(6279).AST_KEY.TEXT,
+  fn(6279).AST_KEY.UNDERLINE,
+  fn(6279).AST_KEY.STRONG,
+  fn(6279).AST_KEY.ITALICS,
+  fn(6279).AST_KEY.STRIKETHROUGH,
+  fn(6279).AST_KEY.INLINE_CODE,
+  fn(6279).AST_KEY.SPOILER,
+  fn(6279).AST_KEY.LINE_BREAK,
+  fn(6279).AST_KEY.TIMESTAMP,
 ];
-let items2 = [...items1, fn(6166).AST_KEY.EMOJI, fn(6166).AST_KEY.CUSTOM_EMOJI];
-let items3 = [fn(6166).AST_KEY.LIST, fn(6166).AST_KEY.HEADING, fn(6166).AST_KEY.BLOCK_QUOTE, fn(6166).AST_KEY.SUBTEXT];
-const items4 = [fn(6166).AST_KEY.TEXT];
+let items2 = [...items1, fn(6279).AST_KEY.EMOJI, fn(6279).AST_KEY.CUSTOM_EMOJI];
+let items3 = [fn(6279).AST_KEY.LIST, fn(6279).AST_KEY.HEADING, fn(6279).AST_KEY.BLOCK_QUOTE, fn(6279).AST_KEY.SUBTEXT];
+const items4 = [fn(6279).AST_KEY.TEXT];
 const items5 = [
-  fn(6166).AST_KEY.UNDERLINE,
-  fn(6166).AST_KEY.STRONG,
-  fn(6166).AST_KEY.ITALICS,
-  fn(6166).AST_KEY.STRIKETHROUGH,
-  fn(6166).AST_KEY.INLINE_CODE,
-  fn(6166).AST_KEY.SPOILER,
-  fn(6166).AST_KEY.LINE_BREAK,
-  fn(6166).AST_KEY.TIMESTAMP,
-  fn(6166).AST_KEY.EMOJI,
-  fn(6166).AST_KEY.CUSTOM_EMOJI,
-  fn(6166).AST_KEY.LIST,
-  fn(6166).AST_KEY.HEADING,
-  fn(6166).AST_KEY.BLOCK_QUOTE,
-  fn(6166).AST_KEY.SUBTEXT,
+  fn(6279).AST_KEY.UNDERLINE,
+  fn(6279).AST_KEY.STRONG,
+  fn(6279).AST_KEY.ITALICS,
+  fn(6279).AST_KEY.STRIKETHROUGH,
+  fn(6279).AST_KEY.INLINE_CODE,
+  fn(6279).AST_KEY.SPOILER,
+  fn(6279).AST_KEY.LINE_BREAK,
+  fn(6279).AST_KEY.TIMESTAMP,
+  fn(6279).AST_KEY.EMOJI,
+  fn(6279).AST_KEY.CUSTOM_EMOJI,
+  fn(6279).AST_KEY.LIST,
+  fn(6279).AST_KEY.HEADING,
+  fn(6279).AST_KEY.BLOCK_QUOTE,
+  fn(6279).AST_KEY.SUBTEXT,
 ];
 let obj = {};
 let merged = Object.assign(_modDef2067.defaultRules.link);

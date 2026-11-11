@@ -1,12 +1,12 @@
 // discord_app/modules/rpc/helpers/guildVoice.tsx
-import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
+import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6585).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6698).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1072);
 ({ ChannelTypes: metroImportDefault, Permissions: closure_8, RPCErrors: closure_9 } = Constants);
 const size = fn(2);

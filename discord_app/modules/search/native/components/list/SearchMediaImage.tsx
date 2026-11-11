@@ -1,11 +1,11 @@
 // discord_app/modules/search/native/components/list/SearchMediaImage.tsx
-import ObscureMediaModels from "../../../../explicit_media_redaction/ObscureMediaModels.tsx";
 import ImageWarningIcon from "../../../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import MediaSourceUtil from "../../../../media_viewer/native/MediaSourceUtil.tsx";
+import ObscureMediaModels from "../../../../explicit_media_redaction/ObscureMediaModels.tsx";
 import CirclePlayIcon from "../../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import AttachmentPreview from "../../../../media/native/AttachmentPreview.tsx";
-import MessageAttachmentUtils from "../../../../messages/MessageAttachmentUtils.tsx";
 import generated_SpoilerIcon from "../../../../../design/components/Icon/native/redesign/generated/SpoilerIcon.tsx";
+import MessageAttachmentUtils from "../../../../messages/MessageAttachmentUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -66,7 +66,7 @@ get_ActivityIndicator = fn(17);
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_13 = createStyles.createStyles({
   container: { justifyContent: "center", alignItems: "center" },
   sound: { justifyContent: "center", alignItems: "center" },
@@ -179,17 +179,17 @@ export function SearchAttachmentMediaImage(attachment) {
   const merged = Object.assign(attachment, Object.assign({ attachment: 0, channelId: 0, authorId: 0 }));
   dependencyMap = undefined;
   const enabledHarmTypesBitmaskForChannelAndAuthorId = attachment(
-    11222,
+    11029,
   ).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
-  const obj = attachment(11222);
+  const obj = attachment(11029);
   let num = attachment.flags;
   if (num == null) {
     num = 0;
   }
   let hasFlagResult = attachment(1403).hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
   if (!hasFlagResult) {
-    hasFlagResult = tmp2(6811).isChannelSpoilerGated(ChannelStore.getChannel(channelId));
-    const tmp2Result = tmp2(6811);
+    hasFlagResult = tmp2(6795).isChannelSpoilerGated(ChannelStore.getChannel(channelId));
+    const tmp2Result = tmp2(6795);
   }
   dependencyMap = hasFlagResult;
   items = [attachment, enabledHarmTypesBitmaskForChannelAndAuthorId, hasFlagResult];
@@ -204,7 +204,7 @@ export function SearchAttachmentMediaImage(attachment) {
   );
   const obj2 = attachment(1403);
   const obj3 = {};
-  const attachmentUrl = attachment(8919).getAttachmentUrl(attachment);
+  const attachmentUrl = attachment(8566).getAttachmentUrl(attachment);
   const merged1 = Object.assign(merged);
   obj3.channelId = channelId;
   obj3.obscureReason = memo;
@@ -216,11 +216,11 @@ export function SearchEmbedMediaImage(embed) {
   embed = embed.embed;
   ({ sources: importDefault, messageId: dependencyMap, channelId } = embed);
   const merged = Object.assign(embed, Object.assign({ embed: 0, sources: 0, messageId: 0, channelId: 0, authorId: 0 }));
-  closure_3 = embed(11222).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
-  const obj = embed(11222);
+  closure_3 = embed(11029).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
+  const obj = embed(11029);
   const tmp2 = embed;
-  closure_4 = embed(6811).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
-  const obj2 = embed(6811);
+  closure_4 = embed(6795).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
+  const obj2 = embed(6795);
   items = [SearchMessageStore];
   let video = embed.thumbnail;
   const stateFromStores = embed(504).useStateFromStores(items, () => {
@@ -252,9 +252,9 @@ export function SearchEmbedMediaImage(embed) {
   let embedUrl = null;
   if (null != video) {
     ({ proxyURL: obj5.proxyURL, url: obj5.url } = video);
-    embedUrl = tmp2(8919).getEmbedUrl({ proxyURL: null, url: null });
+    embedUrl = tmp2(8566).getEmbedUrl({ proxyURL: null, url: null });
     const obj4 = { proxyURL: null, url: null };
-    let tmp2Result = tmp2(8919);
+    let tmp2Result = tmp2(8566);
   }
   let height;
   if (video != null) {

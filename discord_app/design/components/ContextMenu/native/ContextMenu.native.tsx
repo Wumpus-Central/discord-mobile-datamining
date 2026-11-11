@@ -6,7 +6,7 @@ import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import shared from "../../../shared.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05422_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
 import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
@@ -158,10 +158,10 @@ export function ContextMenu(triggerOnLongPress) {
   const tmpResult8 = require("useFontScale");
   const isContextMenuActive = require("ContextMenuState").useIsContextMenuActive(contextMenuState);
   const tmpResult9 = require("ContextMenuState");
-  let result = (tmp(10004).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(10004).CONTEXT_MENU_ITEM_PADDING) * fontScale;
-  const result1 = 2 * tmp(10004).CONTEXT_MENU_ITEM_PADDING;
+  let result = (tmp(9084).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9084).CONTEXT_MENU_ITEM_PADDING) * fontScale;
+  const result1 = 2 * tmp(9084).CONTEXT_MENU_ITEM_PADDING;
   const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(
-    Math.max(result + result1, tmp(10004).CONTEXT_MENU_ITEM_BASE_HEIGHT),
+    Math.max(result + result1, tmp(9084).CONTEXT_MENU_ITEM_BASE_HEIGHT),
   );
   obj3.useRef(items3);
   let items4 = [items3];
@@ -794,7 +794,7 @@ export function ContextMenu(triggerOnLongPress) {
     let tmp47Result = tmp47(c4, obj5);
   } else {
     const obj6 = { gesture: memo1, children: children(obj4) };
-    tmp47Result = tmp47(tmp(5422).GestureDetector, obj6);
+    tmp47Result = tmp47(tmp(5535).GestureDetector, obj6);
   }
   return tmp47Result;
 }

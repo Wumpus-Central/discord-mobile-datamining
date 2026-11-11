@@ -8,9 +8,10 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import useIsSpeaking from "../../hooks/useIsSpeaking.tsx";
-import ApplicationAssetUtils from "../../utils/ApplicationAssetUtils.tsx";
 import SpotifyActionCreators from "SpotifyActionCreators.tsx";
 import stopSyncingUserActivityDefault from "../activities/utils/stopSyncingUserActivity.tsx";
+import ApplicationAssetUtils from "../../utils/ApplicationAssetUtils.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
@@ -75,10 +76,10 @@ function upsertAccount(accountId, accessToken) {
             context: null,
           });
         });
-    }, closure_29);
+    }, closure_30);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4986).Interval();
+    const interval = new obj(5087).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -116,12 +117,14 @@ function setActiveDevice(arg0, arg1) {
   }
 }
 function activitySync(userId, activity, arg2) {
+  closure_0 = userId;
+  importDefault = activity;
   let tmp2;
   const keys = Object.keys();
   if (keys !== undefined) {
     while (keys[tmp] !== undefined) {
-      let tmp28 = dependencyMap[tmp4];
-      if (!tmp28.connected) {
+      let tmp27 = dependencyMap[tmp4];
+      if (!tmp27.connected) {
         continue;
       } else {
         if (null == dependencyMap2[tmp4]) {
@@ -132,7 +135,7 @@ function activitySync(userId, activity, arg2) {
           if (null == found) {
             continue;
           } else {
-            let obj = { socket: tmp28, device: found };
+            let obj = { socket: tmp27, device: found };
             tmp2 = obj;
             break;
           }
@@ -146,26 +149,21 @@ function activitySync(userId, activity, arg2) {
   if (null == tmp2) {
     return false;
   } else {
-    ({ socket, device } = tmp2);
-    ({ sync_id, party, timestamps } = activity);
+    const socket = tmp2.socket;
+    const device = tmp2.device;
+    const sync_id = activity.sync_id;
+    ({ party, timestamps } = activity);
     if (null != sync_id) {
       if (null != party) {
         if (null != party.id) {
-          if (gesture(party.id)) {
+          if (closure_15(party.id)) {
             if (null != timestamps) {
               if (null != timestamps.start) {
                 let start = timestamps.start;
               }
-              const _Math = Math;
-              const _Date2 = Date;
-              let tmp12 = null != tmp11;
-              const bound = Math.max(0, Date.now() - start);
-              if (tmp12) {
-                tmp12 = false === tmp11.repeat;
-              }
-              let tmp13 = false;
-              if (tmp12) {
-                tmp13 = null;
+              asyncGeneratorStep = false;
+              if (tmp10) {
+                asyncGeneratorStep = null;
               }
               const metadata = activity.metadata;
               let type;
@@ -175,20 +173,176 @@ function activitySync(userId, activity, arg2) {
               if (type == null) {
                 type = constants2.TRACK;
               }
-              const tmp14Result = state(type);
-              if (null != tmp14Result) {
-                const obj4 = SpotifyActionCreators;
-                const obj3 = { position: +bound, deviceId: device.id, repeat: tmp13 };
-                obj4.play(socket.accountId, socket.accessToken, sync_id, tmp14Result, obj3);
-                const obj5 = { userId, partyId: party.id, trackId: sync_id, startTime: start };
-                c4 = obj5;
+              const tmp11Result = closure_14(type);
+              closure_7 = tmp11Result;
+              if (null != tmp11Result) {
+                let obj3 = { userId, partyId: party.id, trackId: sync_id, startTime: start };
+                closure_0 = asyncGeneratorStep(async () => {
+                  if (c7 === 2) {
+                    c7 = 3;
+                    throw new TypeError("Generator functions may not be called on executing generators");
+                  } else if (tmp9 === 3) {
+                    if (arg0 === 1) {
+                      throw value;
+                    } else if (arg0 === 2) {
+                      const obj2 = { value, done: true };
+                      return obj2;
+                    } else {
+                      return { value: "HermesInternal", done: null };
+                    }
+                  } else {
+                    try {
+                      c7 = 2;
+                      if (0 === repeat) {
+                        if (arg0 === 1) {
+                          c7 = 3;
+                          throw value;
+                        } else if (arg0 === 2) {
+                          c7 = 3;
+                          const obj4 = { value, done: true };
+                          return obj4;
+                        } else {
+                          closure_2 = tmp7;
+                          closure_130_1 = undefined;
+                          closure_130_2 = undefined;
+                          closure_130_3 = undefined;
+                          closure_130_4 = undefined;
+                          closure_130_0 = null;
+                          timeout = new closure_0(socket[13]).Timeout();
+                          closure_130_1 = timeout;
+                          c5 = 2;
+                          items = [closure_0(socket[18]).getMetadata(closure_1, closure_0)];
+                          const promise = new Promise((arg0) => {
+                            closure_0 = arg0;
+                            return closure_1_1.start(250, () => closure_0(null));
+                          });
+                          items[1] = promise;
+                          repeat = 3;
+                          c7 = 1;
+                          const obj5 = { value: Promise.race(items), done: false };
+                          return obj5;
+                        }
+                      } else if (1 === tmp10) {
+                        c5 = 0;
+                        closure_130_1.stop();
+                        throw closure_4;
+                      } else {
+                        if (2 === tmp10) {
+                          c5 = 1;
+                          c5 = 0;
+                          closure_130_1.stop();
+                          if (obj3 === closure_1_8) {
+                            let type;
+                            if (closure_130_0 != null) {
+                              type = closure_130_0.type;
+                            }
+                            closure_0 = type;
+                            if (type == null) {
+                              closure_0 = c7;
+                            }
+                            closure_130_2 = gesture(closure_0);
+                            let album_id;
+                            if (closure_130_0 != null) {
+                              album_id = closure_130_0.album_id;
+                            }
+                            closure_130_3 = album_id;
+                            let combined;
+                            if (closure_130_2 === constants.TRACK) {
+                              if (typeof closure_130_3 === "string") {
+                                if (closure_130_3.trim().length > 0) {
+                                  const _HermesInternal = HermesInternal;
+                                  combined = "spotify:album:" + closure_130_3;
+                                }
+                              }
+                            }
+                            closure_130_4 = combined;
+                            closure_1_8.albumContextUri = closure_130_4;
+                            c5 = 3;
+                            obj3 = closure_0(socket[16]);
+                            ({ accountId, accessToken } = closure_2);
+                            closure_1 = closure_130_2;
+                            if (closure_130_2 == null) {
+                              closure_1 = c7;
+                            }
+                            const obj6 = { contextUri: closure_130_4, position: null, deviceId: null, repeat: null };
+                            const _Math = Math;
+                            const _Date = Date;
+                            obj6.position = Math.max(0, Date.now() - c5);
+                            obj6.deviceId = tmp4.id;
+                            obj6.repeat = repeat;
+                            repeat = 5;
+                            c7 = 1;
+                            const obj7 = {
+                              value: obj3.play(accountId, accessToken, closure_4, closure_1, obj6),
+                              done: false,
+                            };
+                            return obj7;
+                          }
+                        } else if (3 === tmp10) {
+                          if (arg0 === 1) {
+                            c7 = 3;
+                            throw value;
+                          } else if (arg0 === 2) {
+                            c5 = 0;
+                            closure_130_1.stop();
+                            c7 = 3;
+                            const obj8 = { value, done: true };
+                            return obj8;
+                          } else {
+                            closure_130_0 = value;
+                            c5 = 1;
+                          }
+                        } else {
+                          if (4 === tmp10) {
+                            c5 = 0;
+                            closure_130_5 = closure_4;
+                            logger.warn("Listen along play command failed", closure_130_5);
+                          } else if (arg0 === 1) {
+                            c7 = 3;
+                            throw value;
+                          } else if (arg0 !== 2) {
+                            c5 = 0;
+                          }
+                          c5 = 0;
+                          c7 = 3;
+                          const obj = { value, done: true };
+                          return obj;
+                        }
+                        c7 = 3;
+                      }
+                    } catch (tmp75) {
+                      closure_4 = tmp75;
+                      if (tmp5 === c5) {
+                        c7 = tmp3;
+                        throw tmp75;
+                      } else if (tmp2 === tmp77) {
+                        repeat = tmp2;
+                      } else if (tmp === tmp77) {
+                        repeat = tmp;
+                      } else {
+                        repeat = tmp6;
+                      }
+                    }
+                  }
+                });
+                (function startPlayback() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })();
                 let str = "presence change";
                 if (arg2) {
-                  const obj6 = { party_id: party.id, other_user_id: userId };
-                  AnalyticsUtilsDefault.track(constants4.SPOTIFY_LISTEN_ALONG_STARTED, obj6);
+                  let obj4 = { party_id: party.id, other_user_id: userId };
+                  require("AnalyticsUtils").track(constants4.SPOTIFY_LISTEN_ALONG_STARTED, obj4);
                   str = "started";
+                  let obj2 = require("AnalyticsUtils");
                 }
-                const _HermesInternal = HermesInternal;
+                let _HermesInternal = HermesInternal;
                 logger.info(
                   "Listen along " +
                     str +
@@ -202,8 +356,9 @@ function activitySync(userId, activity, arg2) {
                     device.name,
                 );
               }
+              tmp10 = null != dependencyMap3[socket.accountId] && false === dependencyMap3[socket.accountId].repeat;
             }
-            const _Date = Date;
+            let _Date = Date;
             start = Date.now();
           }
         }
@@ -266,7 +421,7 @@ function handleUserActivitySyncStop() {
   }
 }
 function handleUserConnectionsUpdate() {
-  const keys = Object.keys(closure_40);
+  const keys = Object.keys(closure_41);
   const accounts = ConnectedAccountsStore.getAccounts();
   const found = accounts.filter((type) => type.type === constants.SPOTIFY);
   if (null == found) {
@@ -305,6 +460,69 @@ function handleUserConnectionsUpdate() {
     return flag;
   }
 }
+let closure_53 = async function _pauseAfterAlbumAdvance(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          if (null != dependencyMap4[closure_0]) {
+            c4 = 1;
+            c5 = 2;
+            c6 = 1;
+            const obj5 = { value: require("SpotifyActionCreators").pause(tmp15, tmp17.accessToken), done: false };
+            return obj5;
+          }
+        }
+      } else {
+        if (1 === tmp7) {
+          c4 = 0;
+          closure_129_0 = closure_3;
+          closure_130_35.warn("Unable to pause Spotify after album advance", closure_129_0);
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          c4 = 0;
+        }
+        c4 = 0;
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+      c6 = 3;
+    } catch (tmp20) {
+      closure_3 = tmp20;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp20;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
 function autoPause() {
   if (null != c3) {
     let tmp2;
@@ -336,7 +554,7 @@ function autoPause() {
     }
     if (null != tmp2) {
       const socket = tmp2.socket;
-      c43 = true;
+      c44 = true;
       SpotifyActionCreators.pause(socket.accountId, socket.accessToken);
       AnalyticsUtilsDefault.track(constants4.SPOTIFY_AUTO_PAUSED);
       logger.info("Playback auto paused");
@@ -396,10 +614,10 @@ function updatePlayerState(accountId, arg1, device) {
       if (Array.isArray(item.artists)) {
         const artists = item.artists;
         let found = artists.filter((id) => {
-          let isNotNullishResult = accountId(position[21]).isNotNullish(id.id);
+          let isNotNullishResult = accountId(position[23]).isNotNullish(id.id);
           if (isNotNullishResult) {
-            isNotNullishResult = accountId(position[21]).isNotNullish(id.name);
-            const tmpResult = accountId(position[21]);
+            isNotNullishResult = accountId(position[23]).isNotNullish(id.name);
+            const tmpResult = accountId(position[23]);
           }
           return isNotNullishResult;
         });
@@ -529,41 +747,41 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8991);
+const SpotifyConstants = fn(7227);
 ({
-  getSpotifyResourceType: map1,
-  isSpotifyParty: closure_14,
-  SPOTIFY_PARTY_PREFIX: closure_15,
-  SpotifyEndpoints: closure_16,
-  SpotifyResourceTypes: closure_17,
+  getSpotifyResourceType: closure_14,
+  isSpotifyParty: closure_15,
+  SPOTIFY_PARTY_PREFIX: closure_16,
+  SpotifyEndpoints: closure_17,
+  SpotifyResourceTypes: closure_18,
 } = SpotifyConstants);
 const Constants = fn(1072);
 const PlatformTypes = Constants.PlatformTypes;
-({ ActivityFlags: closure_19, AnalyticEvents: closure_20 } = Constants);
+({ ActivityFlags: closure_20, AnalyticEvents: closure_21 } = Constants);
 const user = Platforms.get(PlatformTypes.SPOTIFY);
-let c22 = "hm://pusher/v1/connections/";
-let closure_23 = 30 * DurationsDefault.Millis.SECOND;
+let c23 = "hm://pusher/v1/connections/";
 let closure_24 = 30 * DurationsDefault.Millis.SECOND;
-let closure_25 = 5 * DurationsDefault.Millis.MINUTE;
-let closure_26 = 5 * DurationsDefault.Millis.SECOND;
-let closure_27 = 1.5 * DurationsDefault.Millis.SECOND;
+let closure_25 = 30 * DurationsDefault.Millis.SECOND;
+let closure_26 = 5 * DurationsDefault.Millis.MINUTE;
+let closure_27 = 5 * DurationsDefault.Millis.SECOND;
+let closure_28 = 1.5 * DurationsDefault.Millis.SECOND;
 const MINUTE = DurationsDefault.Millis.MINUTE;
-let closure_29 = 3 * DurationsDefault.Millis.SECOND;
+let closure_30 = 3 * DurationsDefault.Millis.SECOND;
 const constants5 = { PLAYER_STATE_CHANGED: "PLAYER_STATE_CHANGED", DEVICE_STATE_CHANGED: "DEVICE_STATE_CHANGED" };
 const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-const timeout = new fn(4986).Timeout();
-const timeout1 = new fn(4986).Timeout();
-const timeout2 = new fn(4986).Timeout();
-const timeout3 = new fn(4986).Timeout();
-const timeout4 = new fn(4986).Timeout();
+let timeout = new fn(5087).Timeout();
+const timeout1 = new fn(5087).Timeout();
+const timeout2 = new fn(5087).Timeout();
+const timeout3 = new fn(5087).Timeout();
+const timeout4 = new fn(5087).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
-let c43 = false;
-let c44 = null;
+let c44 = false;
+let c45 = null;
 let items = [WebSocket.CONNECTING, WebSocket.OPEN];
 const set = new Set(items);
 class SpotifySocket {
@@ -572,7 +790,7 @@ class SpotifySocket {
     closure_0 = obj;
     obj._requestedDisconnect = false;
     obj._requestedConnect = false;
-    obj2 = closure_1(closure_2[16]);
+    obj2 = closure_1(closure_2[17]);
     obj.handleDeviceStateChange = obj2.throttle(() => {
       obj = SpotifyActionCreators;
       const devices = obj.getDevices(obj.accountId, obj.accessToken);
@@ -618,12 +836,12 @@ class SpotifySocket {
             context: null,
           });
         });
-    }, closure_29);
+    }, closure_30);
     obj.accountId = global;
     obj.accessToken = fn;
-    interval = new closure_0(closure_2[12]).Interval();
+    interval = new closure_0(closure_2[13]).Interval();
     obj.pingInterval = interval;
-    tmp2 = new closure_1(closure_2[14])(undefined, closure_28);
+    tmp2 = new closure_1(closure_2[15])(undefined, closure_29);
     obj.backoff = tmp2;
     connectResult = obj.connect();
     return obj;
@@ -649,7 +867,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11847).SpotifyAPI;
+    const SpotifyAPI = self(7228).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -836,7 +1054,7 @@ prototype["handleOpen"] = function handleOpen() {
   const backoff = this.backoff;
   backoff.succeed();
   const pingInterval = this.pingInterval;
-  pingInterval.start(closure_23, () => self.ping());
+  pingInterval.start(closure_24, () => self.ping());
   const profile = SpotifyActionCreators.getProfile(this.accountId, this.accessToken);
   const devices = SpotifyActionCreators.getDevices(this.accountId, this.accessToken);
 };
@@ -849,9 +1067,9 @@ prototype["handleMessage"] = function handleMessage(data) {
     if (parsed.type === message) {
       const self = this;
       if (typeof uri === "string") {
-        if (uri.startsWith(c22)) {
+        if (uri.startsWith(c23)) {
           const _decodeURIComponent = decodeURIComponent;
-          self.connectionId = decodeURIComponent(uri.split(c22)[1]);
+          self.connectionId = decodeURIComponent(uri.split(c23)[1]);
           const result = SpotifyActionCreators.subscribePlayerStateNotifications(
             self.accountId,
             self.accessToken,
@@ -932,11 +1150,11 @@ prototype2["initialize"] = function initialize() {
       const keys = Object.keys();
       if (keys !== undefined) {
         while (keys[tmp] !== undefined) {
-          let tmp23 = closure_40[tmp5];
+          let tmp23 = closure_41[tmp5];
           if (!tmp23.connected) {
             continue;
           } else {
-            if (null == closure_41[tmp5]) {
+            if (null == closure_42[tmp5]) {
               continue;
             } else {
               let arr = tmp6[tmp5];
@@ -958,15 +1176,15 @@ prototype2["initialize"] = function initialize() {
       flag = false;
       if (null != tmp3) {
         const userId = closure_4.userId;
-        const findActivityResult = closure_10.findActivity(userId, (party) => {
+        const findActivityResult = closure_11.findActivity(userId, (party) => {
           let tmp = null != party.party && null != party.party.id;
           if (tmp) {
-            tmp = closure_1_14(party.party.id);
+            tmp = closure_1_15(party.party.id);
           }
           return tmp;
         });
         if (null == findActivityResult) {
-          closure_37.start(closure_25, () => {
+          closure_38.start(closure_26, () => {
             let tmp = null != _null2;
             if (tmp) {
               tmp = _null2.userId === userId;
@@ -977,7 +1195,7 @@ prototype2["initialize"] = function initialize() {
           });
           flag = false;
         } else {
-          closure_37.stop();
+          closure_38.stop();
           ({ sync_id, timestamps, party } = findActivityResult);
           let tmp12 = null != sync_id;
           if (tmp12) {
@@ -1000,7 +1218,7 @@ prototype2["initialize"] = function initialize() {
             }
             flag = flag2;
           }
-          flag2 = closure_50(userId, findActivityResult, false);
+          flag2 = closure_51(userId, findActivityResult, false);
         }
       }
     }
@@ -1009,7 +1227,7 @@ prototype2["initialize"] = function initialize() {
   const isSpotifyProtocolRegistered = SpotifyActionCreators.fetchIsSpotifyProtocolRegistered();
 };
 prototype2["hasConnectedAccount"] = function hasConnectedAccount() {
-  return Object.keys(closure_40).length > 0;
+  return Object.keys(closure_41).length > 0;
 };
 prototype2["getActiveSocketAndDevice"] = function getActiveSocketAndDevice() {
   let tmp2;
@@ -1043,7 +1261,7 @@ prototype2["getActiveSocketAndDevice"] = function getActiveSocketAndDevice() {
 };
 prototype2["getPlayableComputerDevices"] = function getPlayableComputerDevices() {
   items = [];
-  for (const key10005 in closure_40) {
+  for (const key10005 in closure_41) {
     let tmp6 = dependencyMap[key10005];
     if (!tmp6.connected) {
       continue;
@@ -1106,7 +1324,7 @@ prototype2["canPlay"] = function canPlay(party) {
   }
   let tmp7 = null != tmp2 && null != party.sync_id && null != party && null != party.id;
   if (tmp7) {
-    tmp7 = gesture(party.id);
+    tmp7 = colors(party.id);
   }
   return tmp7;
 };
@@ -1114,7 +1332,7 @@ prototype2["getSyncingWith"] = function getSyncingWith() {
   return c4;
 };
 prototype2["wasAutoPaused"] = function wasAutoPaused() {
-  return c43;
+  return c44;
 };
 prototype2["getLastPlayedTrackId"] = function getLastPlayedTrackId() {
   return id;
@@ -1146,7 +1364,7 @@ prototype2["getActivity"] = function getActivity() {
       findActivityResult = PresenceStore.findActivity(_null2.userId, (party) => {
         let tmp = null != party.party && null != party.party.id;
         if (tmp) {
-          tmp = closure_1_14(party.party.id);
+          tmp = closure_1_15(party.party.id);
         }
         return tmp;
       });
@@ -1204,7 +1422,7 @@ prototype2["getActivity"] = function getActivity() {
       return obj4;
     }
     const _HermesInternal = HermesInternal;
-    partyId = "" + closure_1_15 + AuthenticationStore.getId();
+    partyId = "" + closure_1_16 + AuthenticationStore.getId();
     tmp6 = null != album.image && null != assetFromImageURL;
   }
 };
@@ -1246,11 +1464,11 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       logger.info("Profile updated for " + accountId + ": isPremium = " + isPremium);
     }
   },
-  SPOTIFY_PLAYER_STATE: function handleSpotifyPlayerState(arg0) {
-    ({ accountId, isPlaying, track, position, device } = arg0);
+  SPOTIFY_PLAYER_STATE: function handleSpotifyPlayerState(context) {
+    ({ accountId, isPlaying, track, position, device } = context);
+    context = context.context;
     let account;
     let flag = false;
-    ({ repeat, context } = arg0);
     if (null != device) {
       id = dependencyMap2;
       if (null != dependencyMap2[accountId]) {
@@ -1277,7 +1495,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
     if (isPlaying) {
       let tmp10 = track;
       if (_null != null) {
-        _null.start(closure_24, autoPause);
+        _null.start(closure_25, autoPause);
         tmp10 = track;
       }
     } else {
@@ -1293,34 +1511,135 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
     } else {
       let tmp21 = null;
       if (null != tmp10) {
-        const obj2 = { account, track: tmp10, startTime: null, context: null, repeat: null };
+        const obj2 = {
+          account,
+          track: tmp10,
+          startTime: null,
+          position: null,
+          positionUpdatedAt: null,
+          context: null,
+          repeat: null,
+        };
         const _Date = Date;
         let num2 = 0;
         const timestamp = Date.now();
-        if (null != tmp60) {
-          num2 = tmp60.startTime;
+        if (null != tmp85) {
+          num2 = tmp85.startTime;
         }
         const diff = timestamp - position;
         const _Math = Math;
-        if (Math.abs(diff - num2) > closure_27) {
+        if (Math.abs(diff - num2) > closure_28) {
           num2 = diff;
         }
         obj2.startTime = num2;
+        obj2.position = position;
+        const _Date2 = Date;
+        obj2.positionUpdatedAt = Date.now();
         obj2.context = context;
-        obj2.repeat = repeat;
+        obj2.repeat = context.repeat;
         tmp21 = obj2;
       }
-      let tmp22 = null != device;
-      if (tmp22) {
-        tmp22 = null != _null2;
+      let waitingForHost;
+      if (_null2 != null) {
+        waitingForHost = _null2.waitingForHost;
       }
-      if (tmp22) {
-        tmp22 = 0 === position;
+      let tmp23 = true === waitingForHost;
+      if (tmp23) {
+        let uri;
+        if (context != null) {
+          uri = context.uri;
+        }
+        tmp23 = uri !== _null2.albumContextUri;
       }
-      if (tmp22) {
-        tmp22 = !isPlaying;
+      if (tmp23) {
+        _null2.waitingForHost = undefined;
       }
-      if (!tmp22) {
+      let num4 = 0;
+      if (null != dependencyMap3[accountId]) {
+        const _Math2 = Math;
+        const _Date3 = Date;
+        num4 = tmp85.position + Math.max(0, Date.now() - tmp85.positionUpdatedAt);
+      }
+      let tmp28 = null != device;
+      if (tmp28) {
+        tmp28 = null != _null2;
+      }
+      if (tmp28) {
+        tmp28 = !_null2.waitingForHost;
+      }
+      if (tmp28) {
+        tmp28 = null != _null2.albumContextUri;
+      }
+      if (tmp28) {
+        let uri1;
+        if (context != null) {
+          uri1 = context.uri;
+        }
+        tmp28 = uri1 === _null2.albumContextUri;
+      }
+      if (tmp28) {
+        tmp28 = isPlaying;
+      }
+      if (tmp28) {
+        tmp28 = null != tmp10;
+      }
+      if (tmp28) {
+        tmp28 = tmp10.id !== _null2.trackId;
+      }
+      if (tmp28) {
+        tmp28 = null != tmp85;
+      }
+      if (tmp28) {
+        tmp28 = tmp85.track.id === _null2.trackId;
+      }
+      if (tmp28) {
+        tmp28 = tmp85.track.duration > 0;
+      }
+      if (tmp28) {
+        const _Math3 = Math;
+        tmp28 = Math.abs(tmp85.track.duration - num4) <= closure_27;
+      }
+      let tmp38 = tmp28;
+      if (tmp28) {
+        tmp38 = null != _null2;
+      }
+      if (tmp38) {
+        _null2.waitingForHost = true;
+        (function pauseAfterAlbumAdvance() {
+          const self = this;
+          const apply = closure_1_53.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        })(accountId);
+      }
+      let waitingForHost1;
+      if (_null2 != null) {
+        waitingForHost1 = _null2.waitingForHost;
+      }
+      let tmp43 = true === waitingForHost1;
+      if (tmp43) {
+        let uri2;
+        if (context != null) {
+          uri2 = context.uri;
+        }
+        tmp43 = uri2 === _null2.albumContextUri;
+      }
+      if (!tmp43) {
+        let tmp46 = null != device;
+        if (tmp46) {
+          tmp46 = null != _null2;
+        }
+        if (tmp46) {
+          tmp46 = (0 === position && !isPlaying) || tmp28;
+          const tmp48 = (0 === position && !isPlaying) || tmp28;
+        }
+        tmp43 = tmp46;
+      }
+      if (!tmp43) {
         dependencyMap3[accountId] = tmp21;
       }
       const values = account(12).values(dependencyMap3);
@@ -1332,17 +1651,17 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
         if (result) {
           if (obj9.getIsSpeaking(obj5)) {
             if (null != closure_3) {
-              timeout.start(closure_24, autoPause, false);
+              timeout.start(closure_25, autoPause, false);
               timeout1.stop();
             }
           }
         }
-        timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6910);
+        timeout1.start(100, () => closure_1_36.stop(), false);
+        obj9 = device(6963);
       }
       if (null != tmp10) {
-        if (!tmp22) {
-          timeout3.start(tmp10.duration - position + closure_26, () => {
+        if (!tmp43) {
+          timeout3.start(tmp10.duration - position + closure_27, () => {
             DispatcherDefault.dispatch({
               type: "SPOTIFY_PLAYER_STATE",
               accountId: account.id,
@@ -1355,71 +1674,74 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
             });
           });
         }
-        if (null == _null2) {
-          if (timeout4.isStarted()) {
-            logger.info("Listen along stop cancelled as playback of track resumed");
-            timeout4.stop();
+        if (null != _null2) {
+          if (!tmp43) {
+            const _HermesInternal = HermesInternal;
+            logger.info(
+              "Listen along active but playback stopped or track changed. Stopping listen along in " +
+                closure_27 +
+                "ms",
+            );
+            timeout4.start(closure_27, () => {
+              logger.info("Stopping listening along");
+              stopSyncingUserActivityDefault();
+              DispatcherDefault.dispatch({
+                type: "SPOTIFY_PLAYER_STATE",
+                accountId: account.id,
+                track: null,
+                volumePercent: 0,
+                isPlaying: false,
+                repeat: false,
+                position: 0,
+                context: null,
+              });
+            });
           }
-        } else {
-          const _HermesInternal = HermesInternal;
-          logger.info(
-            "Listen along active but playback stopped or track changed. Stopping listen along in " + closure_26 + "ms",
-          );
-          timeout4.start(closure_26, () => {
-            logger.info("Stopping listening along");
-            stopSyncingUserActivityDefault();
-            DispatcherDefault.dispatch({
-              type: "SPOTIFY_PLAYER_STATE",
-              accountId: account.id,
-              track: null,
-              volumePercent: 0,
-              isPlaying: false,
-              repeat: false,
-              position: 0,
-              context: null,
-            });
-          });
-        }
-        let tmp55 = flag;
-        if (tmp24 !== closure_3) {
-          if (null != tmp60) {
-            if (null != tmp60) {
-              if (null != tmp21) {
-                if (tmp60.track.id === tmp21.track.id) {
-                  tmp55 = flag;
+          let tmp80 = flag;
+          if (tmp49 !== closure_3) {
+            if (null != tmp85) {
+              if (null != tmp85) {
+                if (null != tmp21) {
+                  if (tmp85.track.id === tmp21.track.id) {
+                    tmp80 = flag;
+                  }
                 }
               }
+              if (null != tmp10) {
+                const obj6 = { type: "SPOTIFY_NEW_TRACK", track: tmp10, connectionId: accountId };
+                tmp50(572).dispatch(obj6);
+                const tmp50Result = tmp50(572);
+                const obj7 = {
+                  party_platform: PlatformTypes.SPOTIFY,
+                  track_id: tmp10.id,
+                  has_images: true,
+                  details: tmp10.album.name,
+                  state: tmp10.name,
+                  album_id: tmp10.album.id,
+                  author_ids: null,
+                  author_names: null,
+                };
+                const artists = tmp10.artists;
+                obj7.author_ids = artists.map((id) => id.id);
+                const artists1 = tmp10.artists;
+                obj7.author_names = artists1.map((name) => name.name);
+                tmp50(1252).track(constants4.ACTIVITY_UPDATED, obj7);
+                const tmp50Result2 = tmp50(1252);
+              }
+            } else {
+              tmp80 = flag;
             }
-            if (null != tmp10) {
-              const obj6 = { type: "SPOTIFY_NEW_TRACK", track: tmp10, connectionId: accountId };
-              tmp25(572).dispatch(obj6);
-              const tmp25Result = tmp25(572);
-              const obj7 = {
-                party_platform: PlatformTypes.SPOTIFY,
-                track_id: tmp10.id,
-                has_images: true,
-                details: tmp10.album.name,
-                state: tmp10.name,
-                album_id: tmp10.album.id,
-                author_ids: null,
-                author_names: null,
-              };
-              const artists = tmp10.artists;
-              obj7.author_ids = artists.map((id) => id.id);
-              const artists1 = tmp10.artists;
-              obj7.author_names = artists1.map((name) => name.name);
-              tmp25(1252).track(constants4.ACTIVITY_UPDATED, obj7);
-              const tmp25Result2 = tmp25(1252);
-            }
-          } else {
-            tmp55 = flag;
           }
+          return tmp80;
         }
-        return tmp55;
+        if (timeout4.isStarted()) {
+          logger.info("Listen along stop cancelled as playback of track resumed");
+          timeout4.stop();
+        }
       }
       timeout3.stop();
       const obj3 = account(12);
-      tmp24 = closure_3;
+      tmp49 = closure_3;
     }
   },
   SPOTIFY_PLAYER_PLAY: function handleSpotifyPlayerPlay(id) {
@@ -1461,7 +1783,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       ({ sync_id, party } = activity);
       let tmp7 = null == sync_id || null == party || null == party.id;
       if (!tmp7) {
-        tmp7 = !gesture(party.id);
+        tmp7 = !colors(party.id);
       }
       let tmp9 = !tmp7;
       if (!tmp7) {
@@ -1494,7 +1816,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
   ACTIVITY_SYNC_STOP: handleUserActivitySyncStop,
   SPOTIFY_SET_DEVICES: function handleSpotifySetDevices(arg0) {
     ({ accountId, devices } = arg0);
-    closure_41[accountId] = devices;
+    closure_42[accountId] = devices;
     logger.info("Devices updated for " + accountId + ":", devices);
   },
   SPOTIFY_SET_ACTIVE_DEVICE: function handleSetActiveDevice(accountId) {
@@ -1508,12 +1830,12 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       if (result) {
         if (obj.getIsSpeaking(obj2)) {
           if (null != c3) {
-            timeout.start(closure_24, autoPause, false);
+            timeout.start(closure_25, autoPause, false);
             timeout1.stop();
           }
         }
       }
-      timeout1.start(100, () => closure_1_35.stop(), false);
+      timeout1.start(100, () => closure_1_36.stop(), false);
       obj = useIsSpeaking;
     }
     return false;
@@ -1528,12 +1850,12 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
         if (result) {
           if (obj.getIsSpeaking(obj2)) {
             if (null != _null) {
-              timeout.start(closure_1_24, autoPause, false);
+              timeout.start(closure_1_25, autoPause, false);
               timeout1.stop();
             }
           }
         }
-        timeout1.start(100, () => closure_1_35.stop(), false);
+        timeout1.start(100, () => closure_1_36.stop(), false);
         obj = require("useIsSpeaking");
       }
       return acc;
@@ -1546,7 +1868,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       desktopSettings = settings.desktopSettings;
     }
     if (null != desktopSettings) {
-      if (c44 != null) {
+      if (c45 != null) {
         obj.stop();
       }
       let desktopSettings1;
@@ -1558,23 +1880,23 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
         if (RunningGameStore.getObservedAppNameForWindow(sourceId) === user.name) {
           if (tmp5) {
             const interval = new Timers.Interval();
-            c44 = interval;
-            interval.start(closure_24, autoPause);
+            c45 = interval;
+            interval.start(closure_25, autoPause);
           }
         }
       }
-      if (c44 != null) {
+      if (c45 != null) {
         obj2.stop();
       }
-      c44 = null;
-      obj = c44;
-      obj2 = c44;
+      c45 = null;
+      obj = c45;
+      obj2 = c45;
     } else if (null == settings) {
-      if (c44 != null) {
+      if (c45 != null) {
         obj4.stop();
       }
-      c44 = null;
-      obj4 = c44;
+      c45 = null;
+      obj4 = c45;
     }
   },
 });

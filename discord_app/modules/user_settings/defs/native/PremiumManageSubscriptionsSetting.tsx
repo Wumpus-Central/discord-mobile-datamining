@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import BlockedPaymentsCountryExperiment from "../../../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
-import MapleSyrupExperiments from "../../../premium/experiments/MapleSyrupExperiments.tsx";
 import openBlockedPaymentsCountryActionSheetDefault from "../../../billing/native/openBlockedPaymentsCountryActionSheet.tsx";
+import MapleSyrupExperiments from "../../../premium/experiments/MapleSyrupExperiments.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11694);
+const SettingBuilders = fn(12317);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const mapleSyrup2Treatment = MapleSyrupExperiments.useMapleSyrup2Treatment("useTitle");
@@ -23,7 +23,7 @@ const route = SettingBuilders.createRoute({
     return stringResult;
   },
   parent: null,
-  IconComponent: fn(17236).SubscriptionIcon,
+  IconComponent: fn(17399).SubscriptionIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

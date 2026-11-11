@@ -8,12 +8,13 @@ function OverrideOption(type) {
   type = type.type;
   const selected = type.selected;
   const styles = type.styles;
-  ({ permissionTitle, onPress } = type);
+  ({ permissionTitle, hitSlop, onPress } = type);
   const radioA11yNative = type(styles[10]).useRadioA11yNative({ selected });
   const obj2 = {
     accessibilityRole: radioA11yNative.accessibilityRole,
     accessibilityLabel: null,
     accessibilityState: null,
+    hitSlop: null,
     style: null,
     onPress: null,
     children: null,
@@ -33,6 +34,7 @@ function OverrideOption(type) {
   const found = items.filter(Boolean);
   obj2.accessibilityLabel = found.join(", ");
   obj2.accessibilityState = radioA11yNative.accessibilityState;
+  obj2.hitSlop = hitSlop;
   obj2.style = function style(pressed) {
     items = selected;
     if (!selected) {
@@ -61,7 +63,7 @@ function OverrideOption(type) {
   } else {
     if (tmp(tmp2[5]).ALLOW === type) {
       const obj4 = { size: "sm", style: styles.icon, color: null };
-      const colors = selected(tmp2[3]).colors;
+      colors = selected(tmp2[3]).colors;
       obj4.color = selected ? colors.WHITE : colors.ICON_FEEDBACK_POSITIVE;
       let tmp4Result2 = jsx(tmp(tmp2[8]).CheckmarkLargeBoldIcon, { size: "sm", style: styles.icon, color: null });
     } else {
@@ -83,7 +85,13 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const md = nativeDefault.radii.md;
-const createStyles = fn(5142);
+const rect = { top: PX_4, right: PX_4 / 2, bottom: PX_4, left: PX_4 };
+let closure_6 = Object.freeze(rect);
+const rect1 = { top: PX_4, right: PX_4 / 2, bottom: PX_4, left: PX_4 / 2 };
+let closure_7 = Object.freeze(rect1);
+const rect2 = { top: PX_4, right: PX_4, bottom: PX_4, left: PX_4 / 2 };
+let closure_8 = Object.freeze(rect2);
+const createStyles = fn(5243);
 let obj = {
   ternaryCheckBox: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -103,7 +111,7 @@ let obj = {
   passthroughActive: null,
   disabled: null,
 };
-let obj3 = {
+let obj2 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: md,
   height: nativeDefault.space.PX_32,
@@ -112,9 +120,9 @@ let obj3 = {
   flexDirection: "row",
 };
 obj.icon = { marginHorizontal: nativeDefault.space.PX_8 };
-let obj4 = { marginHorizontal: nativeDefault.space.PX_8 };
+let obj3 = { marginHorizontal: nativeDefault.space.PX_8 };
 obj.denyActive = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL };
-let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL };
 obj.denySelected = {
   backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
   borderRadius: nativeDefault.radii.sm - 2,
@@ -128,8 +136,8 @@ obj.passthroughSelected = { backgroundColor: nativeDefault.colors.INTERACTIVE_BA
 const obj9 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
 obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj.disabled = { opacity: 0.3 };
-let closure_6 = createStyles.createStyles(obj);
-let items = [fn(5079).DENY, fn(5079).PASSTHROUGH, fn(5079).ALLOW];
+let closure_9 = createStyles.createStyles(obj);
+let items = [fn(5180).DENY, fn(5180).PASSTHROUGH, fn(5180).ALLOW];
 const obj10 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -143,14 +151,14 @@ export default noop.memo(function ChannelSettingsPermissionsOverrideCheckbox(per
     disabled = false;
   }
   const onValueChange = permissionTitle.onValueChange;
-  const tmp = closure_6();
+  const tmp = closure_9();
   const styles = tmp;
   items = [tmp.ternaryCheckBox];
   let disabled2 = disabled;
   if (disabled) {
     disabled2 = tmp.disabled;
   }
-  const obj = {
+  let obj = {
     style: items,
     pointerEvents: null,
     accessibilityRole: "radiogroup",
@@ -166,6 +174,18 @@ export default noop.memo(function ChannelSettingsPermissionsOverrideCheckbox(per
   obj.accessibilityLabel = permissionTitle;
   obj.children = items.map((type, index) => {
     permissionTitle = type;
+    const obj = { permissionTitle, type, selected: closure_1 === type, styles, hitSlop: null, onPress: null };
+    if (0 === index) {
+      let tmp4 = closure_1_6;
+    } else {
+      tmp4 = index === length.length - 1 ? closure_1_8 : closure_1_7;
+    }
+    obj.hitSlop = tmp4;
+    obj.onPress = function onPress() {
+      if (onValueChange != null) {
+        tmp(closure_0);
+      }
+    };
     return (
       <OverrideOption
         key={"checkbox-" + index}
@@ -173,15 +193,8 @@ export default noop.memo(function ChannelSettingsPermissionsOverrideCheckbox(per
         type={type}
         selected={closure_1 === type}
         styles={styles}
-        onPress={function onPress() {
-          let tmp2 = null != onValueChange;
-          if (tmp2) {
-            tmp2 = importDefault !== closure_0;
-          }
-          if (tmp2) {
-            onValueChange(closure_0);
-          }
-        }}
+        hitSlop={null}
+        onPress={null}
       />
     );
   });

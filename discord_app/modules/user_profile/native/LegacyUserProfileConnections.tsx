@@ -6,8 +6,8 @@ import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import PlatformsDefault from "../../../lib/Platforms.tsx";
-import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
+import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import UserRecord from "../../../records/UserRecord.tsx";
@@ -211,13 +211,13 @@ class ConnectedUserAccount {
             href: tmp,
             trusted: account.type !== constants.DOMAIN,
             onConfirm() {
-              account(5891).trackWithMetadata(constants.CONNECTED_ACCOUNT_VIEWED, {
+              account(6004).trackWithMetadata(constants.CONNECTED_ACCOUNT_VIEWED, {
                 platform_type: type.type,
                 other_user_id,
               });
-              const obj = account(5891);
+              const obj = account(6004);
               const obj2 = { platform_type: type.type, other_user_id };
-              userId(5836).openURL(platformUserUrl);
+              userId(5949).openURL(platformUserUrl);
             },
           };
           MaskedLinkUtils.handleClick(obj2);
@@ -369,7 +369,7 @@ class ConnectedApplicationUserRoleAccount {
         const obj = { style: closure_1.connectedAccountPoweredByText, children: null };
         let tmp5 = null;
         if (null != applicationRoleConnection.application.bot) {
-          const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "a" };
+          const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "Array" };
           const tmp12 = new UserRecord(applicationRoleConnection.application.bot);
           obj2.user = tmp12;
           obj2.size = native.AvatarSizes.SIZE_16;
@@ -384,7 +384,7 @@ class ConnectedApplicationUserRoleAccount {
           }),
         ];
         obj.children = items;
-        return closure_2_15(hasOwnProperty, obj);
+        return colors(hasOwnProperty, obj);
       },
     };
     obj17.children = intl.format(tmp2(tmp3[26]).t.zIT9YA, obj18);
@@ -402,10 +402,10 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, PlatformTypes: closure_11, ThemeTypes: closure_12 } = Constants);
-const MetadataFields = fn(7413).MetadataFields;
+const MetadataFields = fn(7359).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   connectedAccountContainer: { paddingHorizontal: 10, paddingVertical: fn(1191).FORM_ROW_VERTICAL_PADDING / 2 },
   connectedAccount: { flexDirection: "row", alignItems: "center" },
@@ -507,8 +507,8 @@ export default function LegacyUserProfileConnections(user) {
   }, items3);
   closure_129_0 = undefined;
   const obj2 = user(504);
-  const theme = user(5201).useThemeContext().theme;
-  const tmpResult = user(5201);
+  const theme = user(5314).useThemeContext().theme;
+  const tmpResult = user(5314);
   const items4 = [LocaleStore];
   closure_129_2 = user(504).useStateFromStores(items4, () => LocaleStore.locale);
   const mapped = memo.map((applicationRoleConnection, index) => {
@@ -520,12 +520,12 @@ export default function LegacyUserProfileConnections(user) {
   const id = user.id;
   closure_130_1 = undefined;
   const tmpResult5 = user(504);
-  const theme2 = user(5201).useThemeContext().theme;
-  const tmpResult6 = user(5201);
+  const theme2 = user(5314).useThemeContext().theme;
+  const tmpResult6 = user(5314);
   const items5 = [LocaleStore];
   closure_130_3 = user(504).useStateFromStores(items5, () => LocaleStore.locale);
   const tmpResult7 = user(504);
-  closure_130_4 = user(7761).usePlatformAllowed({ forUserProfile: true });
+  closure_130_4 = user(8639).usePlatformAllowed({ forUserProfile: true });
   const found = memo1.filter((type) => {
     value = PlatformsDefault.get(type.type);
     let tmp2 = null != value;
@@ -547,8 +547,8 @@ export default function LegacyUserProfileConnections(user) {
         const intl = tmp(1113).intl;
         obj4.title = intl.string(tmp(1113).t.PHjkRE);
         obj4.children = mapped;
-        tmp10 = closure_14(stateFromStores(11779), obj4);
-        const tmp13 = stateFromStores(11779);
+        tmp10 = closure_14(stateFromStores(12412), obj4);
+        const tmp13 = stateFromStores(12412);
       }
       const obj5 = { children: null };
       const items6 = [tmp10];
@@ -556,10 +556,10 @@ export default function LegacyUserProfileConnections(user) {
       const intl2 = tmp(1113).intl;
       obj6.title = intl2.string(tmp(1113).t["3fe7U5"]);
       obj6.children = tmp8;
-      items6[1] = closure_14(stateFromStores(11779), obj6);
+      items6[1] = closure_14(stateFromStores(12412), obj6);
       obj5.children = items6;
       tmp17Result = closure_15(closure_16, obj5);
-      const tmp16 = stateFromStores(11779);
+      const tmp16 = stateFromStores(12412);
     }
   }
   return tmp17Result;

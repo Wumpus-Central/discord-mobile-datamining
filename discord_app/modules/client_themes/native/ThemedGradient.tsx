@@ -12,7 +12,7 @@ import GuildThemePresets from "../../guild_themes/GuildThemePresets.tsx";
 import useRoutedActiveGuildThemeDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05830_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../ClientThemesBackgroundStore.tsx";
 
@@ -184,7 +184,7 @@ function GuildThemePresetGradient(mixColorOverride) {
   const tmp = mixAmount(mixColorOverride[11])();
   const theme = tmp;
   const guildThemePresetAppearance = require("GuildThemePresets").getGuildThemePresetAppearance(preset, tmp);
-  const colors = guildThemePresetAppearance.colors;
+  colors = guildThemePresetAppearance.colors;
   const obj2 = {
     colors: colors.map((hex) => {
       if (require) {
@@ -357,8 +357,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5717), obj);
-    const tmp2Result = reduced(5717);
+    tmp10Result = closure_6(reduced(5830), obj);
+    const tmp2Result = reduced(5830);
   }
   return tmp10Result;
 }
@@ -398,7 +398,7 @@ function ActiveGuildThemeGradient(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_8 = createStyles.createStyles({
   softenGradient: { flex: 1 },
   linearGradient: { flex: 1 },

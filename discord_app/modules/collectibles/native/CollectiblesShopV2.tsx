@@ -4,13 +4,13 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import BillingPlatformUtils from "../../device/BillingPlatformUtils.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import CollectiblesPerfLogging from "../utils/CollectiblesPerfLogging.tsx";
 import maybeFetchUserProfileDefault from "../../user_profile/maybeFetchUserProfile.tsx";
+import CollectiblesPerfLogging from "../utils/CollectiblesPerfLogging.tsx";
+import NativePaymentHooksDefault from "../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import ImprovedMobileShopLoadingExperiment from "../experiments/ImprovedMobileShopLoadingExperiment.tsx";
 import CollectiblesShopManager2 from "../CollectiblesShopManager.tsx";
-import NativePaymentHooksDefault from "../../payments/native/hooks/NativePaymentHooks.android.tsx";
-import takeWhileDefault from "../../../../_runtime/18192_takeWhile.js";
+import takeWhileDefault from "../../../../_runtime/18363_takeWhile.js";
 import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment.tsx";
 import ShopCategory from "ShopCategory.tsx";
 import ShopNitroUpsellBanner from "ShopNitroUpsellBanner.tsx";
@@ -126,7 +126,7 @@ class CollectiblesShopV2 {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const FeedBlockRecord = fn(7833).FeedBlockRecord;
+const FeedBlockRecord = fn(8453).FeedBlockRecord;
 const CollectiblesShopConstants = fn(1074);
 ({
   COLLECTIBLES_SHOP_CACHE_DURATION_MS: map1,
@@ -136,10 +136,10 @@ const CollectiblesShopConstants = fn(1074);
 } = CollectiblesShopConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_17, COLLECTIBLES_APPLICATION_ID: closure_18, PaymentGateways: closure_19 } = Constants);
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const dependencyMap2 = createStyles.createStyles({
   rootContainer: { height: "100%", width: "100%" },
   spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 },

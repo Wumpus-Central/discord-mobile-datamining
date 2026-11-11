@@ -41,7 +41,7 @@ function handleConnectionOpen(user) {
   c14 = null;
 }
 const Permissions = fn(1072).Permissions;
-const Constants = fn(5899);
+const Constants = fn(6012);
 ({ SpeakingFlags: closure_9, MediaEngineContextTypes: closure_10 } = Constants);
 let map = new Map();
 let id = null;
@@ -69,7 +69,7 @@ prototype["getSpeakingDuration"] = function getSpeakingDuration(id, timestamp) {
   value = map.get(DEFAULT);
   let since;
   if (value != null) {
-    value2 = value.get(id);
+    const value2 = value.get(id);
     if (value2 != null) {
       since = value2.since;
     }
@@ -98,7 +98,7 @@ prototype["getSpeakers"] = function getSpeakers() {
     value = map.get(DEFAULT);
     let flags;
     if (value != null) {
-      value2 = value.get(item);
+      const value2 = value.get(item);
       if (value2 != null) {
         flags = value2.flags;
       }
@@ -117,7 +117,7 @@ prototype["isSpeaking"] = function isSpeaking(id) {
   value = map.get(DEFAULT);
   let flags;
   if (value != null) {
-    value2 = value.get(id);
+    const value2 = value.get(id);
     if (value2 != null) {
       flags = value2.flags;
     }
@@ -135,7 +135,7 @@ prototype["isPrioritySpeaker"] = function isPrioritySpeaker(id) {
   value = map.get(DEFAULT);
   let flags;
   if (value != null) {
-    value2 = value.get(id);
+    const value2 = value.get(id);
     if (value2 != null) {
       flags = value2.flags;
     }
@@ -154,7 +154,7 @@ prototype["isSoundSharing"] = function isSoundSharing(arg0) {
   value = map.get(DEFAULT);
   let flags;
   if (value != null) {
-    value2 = value.get(arg0);
+    const value2 = value.get(arg0);
     if (value2 != null) {
       flags = value2.flags;
     }
@@ -228,7 +228,7 @@ prototype["getVoiceVolume"] = function getVoiceVolume(arg0) {
       value = map.get(DEFAULT);
       let num2;
       if (value != null) {
-        value2 = value.get(arg0);
+        const value2 = value.get(arg0);
         if (value2 != null) {
           num2 = value2.voiceDb;
         }
@@ -278,7 +278,7 @@ const speakingStore = new SpeakingStore(DispatcherDefault, {
       const result = obj3.set(DEFAULT, map);
       value = map;
     }
-    value2 = value.get(userId);
+    const value2 = value.get(userId);
     let num2;
     if (value2 != null) {
       num2 = value2.flags;
@@ -378,7 +378,7 @@ const speakingStore = new SpeakingStore(DispatcherDefault, {
         tmp13 = flag;
         if (tmp11) {
           const DEFAULT = constants.DEFAULT;
-          value2 = map.get(DEFAULT);
+          const value2 = map.get(DEFAULT);
           let flag2 = false;
           if (null != value2) {
             const deleteResult2 = value2.delete(userId);

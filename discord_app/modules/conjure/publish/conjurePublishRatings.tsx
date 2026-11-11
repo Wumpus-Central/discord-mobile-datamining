@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/conjurePublishRatings.tsx
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../intl/ConjureUntranslated.messages.js";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -30,7 +30,7 @@ function markConjurePublishRatingViewed(turnId) {
   }
   if (null == tmp4) {
     const Storage3 = Storage4.Storage;
-    value2 = Storage3.get(conjurePublishRatingViews);
+    let value2 = Storage3.get(conjurePublishRatingViews);
     if (value2 == null) {
       value2 = {};
     }
@@ -108,7 +108,7 @@ function submitConjurePublishRating(rating) {
     obj3.rating = rating;
     const result = ConjureAnalytics.trackConjureRatingSubmitted(obj3);
     const Storage2 = Storage4.Storage;
-    value2 = Storage2.get(conjurePublishRatings);
+    let value2 = Storage2.get(conjurePublishRatings);
     if (value2 == null) {
       value2 = {};
     }
@@ -127,8 +127,8 @@ function submitConjurePublishRating(rating) {
 }
 const conjurePublishRatings = "conjurePublishRatings";
 const conjurePublishRatingViews = "conjurePublishRatingViews";
-let obj = { 1: null, 2: _modDef4028.GhbsGA, 3: _modDef4028.cm0nwU, 4: _modDef4028.kGvlh2, 5: _modDef4028.dVBSUg };
-obj[5] = _modDef4028.DKlgF7;
+let obj = { 1: null, 2: _modDef4079.GhbsGA, 3: _modDef4079.cm0nwU, 4: _modDef4079.kGvlh2, 5: _modDef4079.dVBSUg };
+obj[5] = _modDef4079.DKlgF7;
 const set = new Set();
 let closure_9 = 0;
 const size = fn(2);
@@ -144,18 +144,18 @@ export function conjurePublishRatingOptionLabel(rating) {
   obj = { rating, label: null };
   const intl2 = util.intl;
   obj.label = intl2.string(obj[rating]);
-  return intl.formatToPlainString(_modDef4028.NU7Dex, obj);
+  return intl.formatToPlainString(_modDef4079.NU7Dex, obj);
 }
 export function conjurePublishRatingThanks(rating) {
   if (rating <= 2) {
     const intl3 = util.intl;
-    let stringResult = intl3.string(_modDef4028["nIc9/M"]);
+    let stringResult = intl3.string(_modDef4079["nIc9/M"]);
   } else if (3 === rating) {
     const intl2 = util.intl;
-    stringResult = intl2.string(_modDef4028.ausj8U);
+    stringResult = intl2.string(_modDef4079.ausj8U);
   } else {
     const intl = util.intl;
-    stringResult = intl.string(_modDef4028.HilSjw);
+    stringResult = intl.string(_modDef4079.HilSjw);
   }
   return stringResult;
 }

@@ -27,7 +27,7 @@ function getDiscountInfo(active_discount_id) {
       } else {
         if (closure_1_11 !== active_discount_id) {
           if (gesture !== active_discount_id) {
-            if (closure_1_15 !== active_discount_id) {
+            if (colors !== active_discount_id) {
               if (state !== active_discount_id) {
                 if (dependencyMap !== active_discount_id) {
                   if (timestampProducer === active_discount_id) {
@@ -42,7 +42,7 @@ function getDiscountInfo(active_discount_id) {
                   } else if (React6 === active_discount_id) {
                     const obj7 = { duration: 12, percentage: 30, discountId: active_discount_id };
                     return obj7;
-                  } else if (value2 === active_discount_id) {
+                  } else if (closure_1_16 === active_discount_id) {
                     const obj8 = { duration: 1, percentage: 40, discountId: active_discount_id };
                     return obj8;
                   } else if (closure_1_17 === active_discount_id) {

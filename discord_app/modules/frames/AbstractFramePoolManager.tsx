@@ -82,7 +82,7 @@ prototype["updateFrameTargetState"] = function updateFrameTargetState(arg0, arg1
   const self = this;
   const targets = this.targets;
   value = targets.get(arg0);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(arg1);
   }

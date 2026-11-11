@@ -4,7 +4,7 @@ import wrappers from "../../../discord_common/js/packages/protos/google/protobuf
 import PinotMemberSettingStore from "PinotMemberSettingStore.tsx";
 
 require = fn;
-const UserSettingDefinitions = fn(4971);
+const UserSettingDefinitions = fn(5072);
 const defineProtoSettingResult = UserSettingDefinitions.defineProtoSetting(
   "privacy",
   "swpMessagePromotionOptedOut",

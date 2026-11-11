@@ -936,7 +936,6 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, 
   return obj;
 };
 prototype6["internalBinaryWrite"] = function internalBinaryWrite(suppressEveryone, tag, writeUnknownFields) {
-  let length;
   if (false !== suppressEveryone.suppressEveryone) {
     tag.tag(1, _mod1197.WireType.Varint).bool(suppressEveryone.suppressEveryone);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);

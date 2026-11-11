@@ -1,9 +1,9 @@
 // discord_app/modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
-import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
-import ProductIds from "../../native/ProductIds.android.tsx";
-import openPremiumPlanSelectionActionSheetDefault from "../../native/openPremiumPlanSelectionActionSheet.tsx";
 import CollectiblesActionCreators from "../../../collectibles/CollectiblesActionCreators.tsx";
+import ProductIds from "../../native/ProductIds.android.tsx";
+import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
+import openPremiumPlanSelectionActionSheetDefault from "../../native/openPremiumPlanSelectionActionSheet.tsx";
 import cta_button from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx";
 import navigateToSocialLayerStorefrontDefault from "../../../slayer_storefront/navigateToSocialLayerStorefront.tsx";
 import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen.tsx";

@@ -31,10 +31,10 @@ export default noop.memo(function GuildsBarFavorites() {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        closure_1_1(18748)(closure_1_5);
+        closure_1_1(18893)(closure_1_5);
       },
       onLongPress() {
-        closure_1_1(18558)();
+        closure_1_1(18730)();
       },
     }),
     [],
@@ -64,9 +64,9 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: 0,
-    externalChildren: null,
-    expandedChildren: null,
+    label: "black",
+    externalChildren: 289,
+    expandedChildren: true,
     children: null,
   };
   const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
@@ -74,7 +74,7 @@ export default noop.memo(function GuildsBarFavorites() {
   obj4.label = intl.string(util.t.wMWyci);
   obj4.externalChildren = badge2;
   obj4.expandedChildren = jsx(HomeDrawerFavoritesRow.HomeDrawerFavoritesRowExpandedChildren, {});
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   obj4.children = jsx(StarIcon.StarIcon, {
     color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
@@ -88,9 +88,9 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: 0,
-    externalChildren: null,
-    expandedChildren: null,
+    label: "black",
+    externalChildren: 289,
+    expandedChildren: true,
     children: null,
   });
 });

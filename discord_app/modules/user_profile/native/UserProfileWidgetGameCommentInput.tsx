@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetGameCommentInput.tsx
 import util from "../../../intl/index.native.tsx";
-import TextArea from "../../../design/components/TextInput/native/TextArea.native.tsx";
 import GameWidgetLimits from "../../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
+import TextArea from "../../../design/components/TextInput/native/TextArea.native.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import WidgetUtils from "../WidgetUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -11,7 +11,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(8831).TrackUserProfileEditActions;
+let closure_5 = fn(8413).TrackUserProfileEditActions;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetGameCommentInput.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/components/renderers/MediaModalVideo.tsx
-import MediaViewerVideoPerfExperiment from "../../MediaViewerVideoPerfExperiment.tsx";
 import common_Video from "../../../../../components_native/common/Video.tsx";
+import MediaViewerVideoPerfExperiment from "../../MediaViewerVideoPerfExperiment.tsx";
 import useMediaLoadingDefault from "../../useMediaLoading.tsx";
 import MediaModalLoadingOverlayDefault from "../MediaModalLoadingOverlay.tsx";
 import MediaModalSpoilerOverlayDefault from "../MediaModalSpoilerOverlay.tsx";

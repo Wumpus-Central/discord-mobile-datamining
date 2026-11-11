@@ -1,10 +1,10 @@
 // discord_app/modules/game_profile/native/utils/getGameProfileWebsiteData.tsx
 import util from "../../../../intl/index.native.tsx";
+import GlobeEarthIcon from "../../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
 import AppleNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/AppleNeutralIcon.tsx";
 import XNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XNeutralIcon.tsx";
 import FacebookNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/FacebookNeutralIcon.tsx";
 import InstagramNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/InstagramNeutralIcon.tsx";
-import GlobeEarthIcon from "../../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import ThirdPartyGameApplicationWebsiteCategory from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
 import RobloxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/RobloxNeutralIcon.tsx";

@@ -1,8 +1,8 @@
 // discord_app/modules/channel_text_area/ChatInputContentCallbacks.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
-import GuildChannelSubscriptions from "../../lib/guild/GuildChannelSubscriptions.tsx";
-import GuildSubscriptionsActionCreators from "../../actions/GuildSubscriptionsActionCreators.tsx";
 import useMessageMaxLengthDefault from "../messages/useMessageMaxLength.tsx";
+import GuildSubscriptionsActionCreators from "../../actions/GuildSubscriptionsActionCreators.tsx";
+import GuildChannelSubscriptions from "../../lib/guild/GuildChannelSubscriptions.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelMemberStore from "../../stores/ChannelMemberStore.tsx";
@@ -68,9 +68,9 @@ export function useHereMentionCallback(arg0, arg1, arg2) {
             if (!(arr.length < 5 || arr.length > closure_1_3)) {
               let flag = -1 !== arr.indexOf(memo);
               if (flag) {
-                closure_0(7518).subscribeChannel(closure_1_1, dependencyMap, closure_0(7516).DEFAULT_RANGES);
+                closure_0(12437).subscribeChannel(closure_1_1, dependencyMap, closure_0(12438).DEFAULT_RANGES);
                 flag = true;
-                const obj = closure_0(7518);
+                const obj = closure_0(12437);
               }
               tmp9 = flag;
             }

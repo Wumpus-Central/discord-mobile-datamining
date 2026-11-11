@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/voice_channel_pin/conjureVoiceChannelPin.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import ChannelSettingsActionCreators from "../../../actions/ChannelSettingsActionCreators.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
+import ChannelSettingsActionCreators from "../../../actions/ChannelSettingsActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";

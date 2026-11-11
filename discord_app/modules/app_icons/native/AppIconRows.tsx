@@ -3,6 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../intl/index.native.tsx";
 import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
 import AppIconTypes from "../AppIconTypes.tsx";
+import HexagonCampaignUtils from "../../hexagon_campaign/HexagonCampaignUtils.tsx";
 import AppIconUtils from "AppIconUtils.tsx";
 import AppIconRowDefault from "AppIconRow/AppIconRow.tsx";
 import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection.tsx";
@@ -25,7 +26,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       }
       return tmp;
     }
-    const tmp4 = closure_12();
+    const tmp4 = closure_11();
     [c1, c2] = onLongPress(noop.useState(false), 2);
     const icons = merged.icons;
     let obj = { style: tmp4.container, children: null };
@@ -47,33 +48,32 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_9(merged(7129).TableRowGroup, obj2);
-    return closure_9(View, obj);
+    obj.children = closure_8(merged(7680).TableRowGroup, obj2);
+    return closure_8(View, obj);
   }
 }
 const View = fn(17).View;
-const isHexagonCampaignAppIcon = fn(10107).isHexagonCampaignAppIcon;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
-let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
+({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5243);
+let closure_11 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
+let result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
 
 export default function AppIconRows(onSelect) {
   onSelect = onSelect.onSelect;
-  let tmp = closure_12();
+  const tmp = closure_11();
   const appIcons = AppIconUtils.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
   items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const isPremiumResult = PremiumTypeUtils.isPremium(stateFromStores);
-  const someResult = limitedTimeAppIcons.some((id) => isHexagonCampaignAppIcon(id.id));
+  const someResult = limitedTimeAppIcons.some((id) => HexagonCampaignUtils.isHexagonCampaignAppIcon(id.id));
   const found = limitedTimeAppIcons.filter((id) => {
-    const tmp = isHexagonCampaignAppIcon(id.id);
-    let tmp2 = !tmp;
-    if (!tmp) {
+    const result = HexagonCampaignUtils.isHexagonCampaignAppIcon(id.id);
+    let tmp2 = !result;
+    if (!result) {
       tmp2 = !id.isHidden;
     }
     return tmp2;
@@ -92,7 +92,7 @@ export default function AppIconRows(onSelect) {
       isPending: onSelect.pendingAppIconId === AppIconTypes.LimitedTimeAppIconIds.HEXAGON,
       onSelect,
     };
-    tmp12 = React6(HexagonCampaignAppIconSectionDefault, obj4);
+    tmp12 = React5(HexagonCampaignAppIconSectionDefault, obj4);
   }
   const items1 = [tmp12, ,];
   let tmp16 = null;
@@ -101,7 +101,7 @@ export default function AppIconRows(onSelect) {
     const intl3 = util.intl;
     obj5.title = intl3.string(util.t.anqaFd);
     obj5.onSelect = onSelect;
-    tmp16 = React6(BackwardsCompatibleAppIconRows, obj5);
+    tmp16 = React5(BackwardsCompatibleAppIconRows, obj5);
   }
   items1[1] = tmp16;
   let bottomUpsellPadding = !isPremiumResult;
@@ -109,9 +109,9 @@ export default function AppIconRows(onSelect) {
     bottomUpsellPadding = tmp.bottomUpsellPadding;
   }
   const obj6 = { children: null };
-  items1[2] = React6(View, {
+  items1[2] = React5(View, {
     style: bottomUpsellPadding,
-    children: React6(BackwardsCompatibleAppIconRows, {
+    children: React5(BackwardsCompatibleAppIconRows, {
       hasNitro: isPremiumResult,
       icons: officialAppIcons,
       currentAppIcon,
@@ -120,5 +120,5 @@ export default function AppIconRows(onSelect) {
     }),
   });
   obj6.children = items1;
-  return closure_1_11(closure_1_10, obj6);
+  return closure_1_10(React6, obj6);
 }

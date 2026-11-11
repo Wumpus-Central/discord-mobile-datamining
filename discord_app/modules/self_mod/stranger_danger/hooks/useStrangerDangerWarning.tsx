@@ -1,14 +1,14 @@
 // discord_app/modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import useUserIsTeen from "../../hooks/useUserIsTeen.tsx";
 import useIsSpamMessageRequest from "../../../message_request/hooks/useIsSpamMessageRequest.tsx";
 import useIsMessageRequest from "../../../message_request/hooks/useIsMessageRequest.tsx";
 import useChannelSafetyWarning from "../../hooks/useChannelSafetyWarning.tsx";
+import useUserIsTeen from "../../hooks/useUserIsTeen.tsx";
 import useInappropriateConversationWarningsForChannel from "../../inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(10932).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10833).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
 

@@ -4,9 +4,9 @@ import util from "../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "TwoWayLinkStyles.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ConnectedAccountsStore from "../../../../../stores/ConnectedAccountsStore.tsx";
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_8 = createStyles.createStyles({
   image: { marginBottom: 32 },
   valueProps: { marginTop: 24, maxWidth: "100%" },
@@ -49,7 +49,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   }
   items1[1] = imgStyle;
   obj5.style = items1;
-  const items2 = [closure_6(valueProps(5844), obj5), , ,];
+  const items2 = [closure_6(valueProps(5957), obj5), , ,];
   const obj6 = {
     variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
@@ -73,7 +73,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
     children: body,
   });
   const obj7 = { variant: "body-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-  const tmp10 = valueProps(5844);
+  const tmp10 = valueProps(5957);
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label, index) => {

@@ -107,7 +107,7 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
   const keys = SnowflakeUtilsDefault.keys(subscriptions);
   const item = keys.forEach((item) => {
     items = [item, subscriptions[item]];
-    const length = JSON.stringify(items).length;
+    length = JSON.stringify(items).length;
     if (closure_0 + length > 15360) {
       const obj = { subscriptions: subscriptions2 };
       self.send(GatewaySocketOpcode.Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);

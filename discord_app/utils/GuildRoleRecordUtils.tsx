@@ -45,7 +45,7 @@ function fromServer(guildId, id) {
     int2hexResult = utils_ColorUtils.int2hex(id.color);
   }
   obj.colorString = int2hexResult;
-  let colors = id.colors;
+  colors = id.colors;
   if (colors == null) {
     colors = null;
   }
@@ -110,7 +110,7 @@ function fromSerialized(guildId, id) {
     }
   }
   obj.colorString = int2hexResult;
-  let colors = id.colors;
+  colors = id.colors;
   if (colors == null) {
     colors = null;
   }

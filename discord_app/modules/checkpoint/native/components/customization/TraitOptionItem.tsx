@@ -1,12 +1,12 @@
 // discord_app/modules/checkpoint/native/components/customization/TraitOptionItem.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useA11yRolesNative from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05830_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import CheckpointTraitRarity from "../../../../../../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx";
 import CheckpointCharacterAssets from "../../../CheckpointCharacterAssets.tsx";
-import _modDef7107 from "../../../../../../_runtime/metro/07107__.js";
-import inlineStyles from "../../../../../../_runtime/08105_inlineStyles.js";
+import _modDef7467 from "../../../../../../_runtime/metro/07467__.js";
+import inlineStyles from "../../../../../../_runtime/08197_inlineStyles.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import get_ActivityIndicator from "../../../../../../_runtime/metro/00017__.js";
 import CheckpointConstants from "../../../CheckpointConstants.tsx";
@@ -28,7 +28,7 @@ function RarityIndicator(rarity) {
     obj2.maskElement = React6(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
     const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
     obj2.children = React6(LinearGradientDefault, obj3);
-    let tmp4Result = React6(_modDef7107, obj2);
+    let tmp4Result = React6(_modDef7467, obj2);
   } else {
     const items1 = [, ,];
     ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);

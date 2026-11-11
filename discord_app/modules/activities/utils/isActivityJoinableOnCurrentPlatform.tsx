@@ -3,8 +3,8 @@ import Constants from "../../../Constants.tsx";
 import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
-import hasFlagDefault from "hasFlag.tsx";
 import ActivityGamePlatforms2 from "../../../../discord_common/js/shared/shared-constants/ActivityGamePlatforms.tsx";
+import hasFlagDefault from "hasFlag.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const ActivityFlags = Constants.ActivityFlags;

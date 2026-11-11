@@ -10,19 +10,25 @@ import size from "../../../_runtime/metro/00002__.js";
 
 function handleFormOpen() {
   OPEN = FormStates.OPEN;
-  closure_13 = {};
+  closure_14 = {};
 }
 function handleReset() {
-  closure_9 = {};
-  closure_13 = {};
+  closure_10 = {};
+  closure_14 = {};
   OPEN = FormStates.CLOSED;
-  closure_13 = {};
+  closure_14 = {};
 }
 const FormStates = Constants.FormStates;
 ({ ME: c3, UserSettingsSections: closure_4 } = Constants);
 let closure_5 = {};
 let obj = {};
 let closure_7 = {};
+let closure_8 = {
+  pendingGlobalName: "global_name",
+  pendingNickname: "nick",
+  pendingPronouns: "pronouns",
+  pendingBio: "bio",
+};
 let items = [
   ...RouteConstants.PSEUDO_GUILD_IDS,
   FavoritesConstants.FAVORITES_RAW_GUILD_ID,
@@ -32,7 +38,7 @@ const set = new Set(items);
 const dependencyMap = {};
 let guildId;
 let OPEN = FormStates.CLOSED;
-let closure_13 = {};
+let closure_14 = {};
 const Store = initializeDefault.Store;
 class UserProfileSettingsStore extends Store {}
 const prototype = UserProfileSettingsStore.prototype;
@@ -50,7 +56,7 @@ prototype["getErrors"] = function getErrors(arg0) {
   if (arg0 == null) {
     tmp = React3;
   }
-  let tmp3 = closure_13[tmp];
+  let tmp3 = closure_14[tmp];
   if (tmp3 == null) {
     tmp3 = closure_7;
   }
@@ -75,7 +81,7 @@ prototype["hasTryItOutChanges"] = function hasTryItOutChanges() {
   return values.some((item) => undefined !== item);
 };
 prototype["hasUnsavedChanges"] = function hasUnsavedChanges() {
-  let values = Object.values(closure_9);
+  let values = Object.values(closure_10);
   return values.some((item) => {
     const values = Object.values(item);
     return values.some((item) => undefined !== item);
@@ -118,7 +124,7 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
       return false;
     } else {
       OPEN = FormStates.OPEN;
-      closure_13 = {};
+      closure_14 = {};
     }
   },
   USER_PROFILE_SETTINGS_INIT: function handleInit(guildId) {
@@ -131,7 +137,7 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
     }
     guildId = tmp;
     OPEN = FormStates.OPEN;
-    closure_13 = {};
+    closure_14 = {};
   },
   USER_PROFILE_SETTINGS_SET_GUILD: function handleSetGuild(guildId) {
     guildId = guildId.guildId;
@@ -142,16 +148,16 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
       }
     }
     guildId = tmp;
-    closure_13 = {};
+    closure_14 = {};
   },
   USER_PROFILE_SETTINGS_CLOSE: function handleFormClose() {
     OPEN = FormStates.CLOSED;
-    closure_13 = {};
+    closure_14 = {};
   },
   USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: handleReset,
   USER_PROFILE_SETTINGS_SUBMIT: function handleFormSubmit() {
     OPEN = FormStates.SUBMITTING;
-    closure_13 = {};
+    closure_14 = {};
   },
   USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function handleFormSubmitSuccess(guildId) {
     guildId = guildId.guildId;
@@ -162,7 +168,7 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
       if (guildId == null) {
         guildId = React3;
       }
-      closure_13[guildId] = closure_7;
+      closure_14[guildId] = closure_7;
     }
   },
   USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function handleFormSubmitFailure(arg0) {
@@ -177,23 +183,46 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
       if (errors == null) {
         errors = closure_7;
       }
-      closure_13[guildId] = errors;
+      closure_14[guildId] = errors;
     }
   },
   USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function handleSetPendingChanges(arg0) {
     ({ type, guildId } = arg0);
-    const merged = Object.assign(arg0, Object.assign({ type: 0, guildId: 0 }));
-    let tmp3 = guildId;
-    if (guildId == null) {
-      tmp3 = React3;
-    }
+    let merged = Object.assign(arg0, Object.assign({ type: 0, guildId: 0 }));
     if (guildId == null) {
       guildId = React3;
     }
     const merged1 = Object.assign(dependencyMap[guildId]);
     const merged2 = Object.assign(merged);
-    dependencyMap[tmp3] = {};
-    obj = {};
+    dependencyMap[guildId] = {};
+    (function clearStaleFieldErrors(guildId, merged) {
+      closure_0 = tmp3;
+      if (null != closure_14[guildId]) {
+        const _Object2 = Object;
+        const keys = Object.keys(merged);
+        const mapped = keys.map((item) => closure_1_8[item]);
+        const found = mapped.filter((item) => {
+          let tmp = null != item;
+          if (tmp) {
+            tmp = item in closure_0;
+          }
+          return tmp;
+        });
+        if (0 !== found.length) {
+          obj = {};
+          merged = Object.assign(tmp3);
+          for (const item10012 of found) {
+            delete tmp[tmp2];
+            continue;
+          }
+          const _Object = Object;
+          if (Object.keys(obj).length <= 0) {
+            obj = closure_7;
+          }
+          closure_14[guildId] = obj;
+        }
+      }
+    })(guildId, merged);
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function handleSetTryItOutAvatar(avatar) {
     obj = {};
@@ -251,11 +280,11 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
     obj.tryItOutDisplayNameStyles = displayNameStyles;
   },
   USER_PROFILE_SETTINGS_CLEAR_ERRORS: function handleResetErrors() {
-    closure_13 = {};
+    closure_14 = {};
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function handleResetPendingAccountChanges() {
-    const entries = Object.entries(closure_9);
-    closure_9 = Object.fromEntries(
+    const entries = Object.entries(closure_10);
+    closure_10 = Object.fromEntries(
       entries.map((item) => {
         [tmp, tmp2] = item;
         items = [tmp];
@@ -274,8 +303,8 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
     );
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function handleResetPendingProfileChanges() {
-    const entries = Object.entries(closure_9);
-    closure_9 = Object.fromEntries(
+    const entries = Object.entries(closure_10);
+    closure_10 = Object.fromEntries(
       entries.map((item) => {
         [tmp, tmp2] = item;
         items = [tmp];
@@ -294,8 +323,8 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
     );
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: function handleResetPendingChanges() {
-    closure_9 = {};
-    closure_13 = {};
+    closure_10 = {};
+    closure_14 = {};
   },
   USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: function handleResetTryItOutChanges() {},
   USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function handleResetPendingLegacyUsernameDisabled() {
@@ -343,7 +372,7 @@ const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault,
     if (errors == null) {
       errors = closure_7;
     }
-    closure_13[guildId] = errors;
+    closure_14[guildId] = errors;
   },
   LOGOUT: handleReset,
 });

@@ -497,18 +497,21 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4977).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4983);
+const DCFEventTypes = fn(5078).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(5084);
 ({
   addCandidateContent: closure_8,
   removeCandidateContent: closure_9,
   isContentShown: closure_10,
   getCurrentlyShownCounts: closure_11,
 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(4975).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS];
+let items = [
+  fn(5076).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
+  fn(5076).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION,
+];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
@@ -680,7 +683,7 @@ export function isTimeRecurringDismissibleContentDismissed(id, cooldownConfig) {
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "a" };
+      return { isDismissed: false, lastDismissedAtMs: "Array" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

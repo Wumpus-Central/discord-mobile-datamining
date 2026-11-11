@@ -1,9 +1,9 @@
 // discord_app/modules/activity_status/getActivityStatusText.tsx
 import util from "../../intl/index.native.tsx";
 import ActivityTypes from "../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
+import conjurePresenceActivity from "../conjure/presence/conjurePresenceActivity.tsx";
 import isEmbeddedActivityDefault from "../activities/utils/isEmbeddedActivity.tsx";
 import isCrunchyrollActivityDefault from "../activities/utils/isCrunchyrollActivity.tsx";
-import conjurePresenceActivity from "../conjure/presence/conjurePresenceActivity.tsx";
 import StatusDisplayTypes from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
 import getChannelCopyForEmbeddedActivityDefault from "../activities/utils/getChannelCopyForEmbeddedActivity.tsx";
 import isListeningOnSpotifyDefault from "../activities/utils/isListeningOnSpotify.tsx";

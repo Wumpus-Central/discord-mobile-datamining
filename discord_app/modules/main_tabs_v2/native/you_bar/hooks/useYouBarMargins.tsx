@@ -15,9 +15,11 @@ export function useYouBarHorizontalMargin() {
   if (useChatLayoutDefault().isChatBesideChannelList) {
     let tmp4 = React4;
   } else {
-    if (tmp2 > 0) {
+    if (useSafeAreaInsetsDefault().bottom > 0) {
       if (obj.isIOS()) {
-        tmp4 = React3;
+        if (!tmp2) {
+          tmp4 = React3;
+        }
       }
       obj = utils_PlatformUtils;
     }

@@ -8,7 +8,7 @@ export default function useFirstMessageOrEmbedContent(content) {
     return null;
   } else {
     content = content.content;
-    let length;
+    length = undefined;
     if (content != null) {
       length = content.length;
     }

@@ -78,7 +78,7 @@ export default function useGameOrganizationInviteSuggestions() {
               obj5.omitUserIds = set;
               c4 = 3;
               c5 = 1;
-              const obj6 = { value: closure_2_0(9236).loadInviteSuggestions(obj5), done: false };
+              const obj6 = { value: closure_2_0(14622).loadInviteSuggestions(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp8) {
@@ -118,8 +118,8 @@ export default function useGameOrganizationInviteSuggestions() {
             c3 = 0;
             tmp4(false);
             if ("" !== tmp31.current) {
-              const result = closure_2_0(9236).searchInviteSuggestions(tmp31.current);
-              const obj = closure_2_0(9236);
+              const result = closure_2_0(14622).searchInviteSuggestions(tmp31.current);
+              const obj = closure_2_0(14622);
             }
             c5 = 3;
             return { value: "HermesInternal", done: null };

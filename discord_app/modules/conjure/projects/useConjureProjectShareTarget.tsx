@@ -1,9 +1,55 @@
 // discord_app/modules/conjure/projects/useConjureProjectShareTarget.tsx
-import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../intl/ConjureUntranslated.messages.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 const require = fn;
-function useConjureProjectShareTargetDetails(project) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conjure/projects/useConjureProjectShareTarget.tsx");
+
+export default function useConjureProjectShareTarget(guild_id) {
+  guild_id = undefined;
+  if (guild_id != null) {
+    guild_id = guild_id.guild_id;
+  }
+  let intl = guild_id;
+  let stringResult = dependencyMap;
+  items = [GuildStore];
+  const items1 = [guild_id];
+  const stateFromStores = guild_id(504).useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null;
+      if (null != guild_id) {
+        guild = GuildStore.getGuild(tmp);
+        if (guild == null) {
+          guild = null;
+        }
+        tmp2 = guild;
+      }
+      return tmp2;
+    },
+    items1,
+  );
+  if (null == guild_id) {
+    let label;
+    if (null != null) {
+      label = null.label;
+    }
+    if (label == null) {
+      label = null;
+    }
+    return label;
+  } else if ("user" === guild_id.install_scope) {
+    const obj2 = { kind: "user", label: null };
+    intl = intl(1113).intl;
+    stringResult = intl.string(_modDef4079.KxFFKT);
+    obj2.label = stringResult;
+  } else if (null != stateFromStores) {
+    const obj3 = { kind: "guild", label: stateFromStores.name, guild: stateFromStores };
+  }
+  const obj = guild_id(504);
+}
+export function useConjureProjectShareTargetDetails(project) {
   let guild_id;
   if (project != null) {
     guild_id = project.guild_id;
@@ -27,46 +73,22 @@ function useConjureProjectShareTargetDetails(project) {
     },
     items1,
   );
-  let tmp4 = null;
-  if (null != project) {
-    tmp4 = null;
-    if (null == project.install_scope_setup) {
-      if ("user" === project.install_scope) {
-        const obj2 = { kind: "user", label: null };
-        intl = intl(1113).intl;
-        stringResult = intl.string(_modDef4028.KxFFKT);
-        obj2.label = stringResult;
-      } else if ("guild" === project.install_scope) {
-        if (null != stateFromStores) {
-          const obj3 = { kind: "guild", label: stateFromStores.name, guild: stateFromStores };
-        }
-      }
-    }
+  if (null == project) {
+    return null;
+  } else if ("user" === project.install_scope) {
+    const obj2 = { kind: "user", label: null };
+    intl = intl(1113).intl;
+    stringResult = intl.string(_modDef4079.KxFFKT);
+    obj2.label = stringResult;
+  } else if (null != stateFromStores) {
+    const obj3 = { kind: "guild", label: stateFromStores.name, guild: stateFromStores };
   }
-  return tmp4;
+  const obj = guild_id(504);
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/projects/useConjureProjectShareTarget.tsx");
-
-export default function useConjureProjectShareTarget(project) {
-  const tmp = useConjureProjectShareTargetDetails(project);
-  let label;
-  if (tmp != null) {
-    label = tmp.label;
-  }
-  if (label == null) {
-    label = null;
-  }
-  return label;
-}
-export { useConjureProjectShareTargetDetails };
 export function isConjureProjectWithoutServer(project) {
   let tmp = "guild" === project.install_scope;
   if (tmp) {
     tmp = null == project.guild_id;
-  }
-  if (tmp) {
-    tmp = null == project.install_scope_setup;
   }
   return tmp;
 }

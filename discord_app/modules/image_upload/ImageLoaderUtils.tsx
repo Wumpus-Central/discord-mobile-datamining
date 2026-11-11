@@ -39,17 +39,18 @@ function getSrcWithWidthAndHeight(quality) {
   }
   if (!src.startsWith("data:image")) {
     if (!obj.isDiscordCdnUrl(src)) {
-      items = [, ];
-      [arr[0], tmp6] = src.split("?");
-      let tmp5 = _slicedToArray(src.split("?"), 2);
-      items[1] = _modDef1487.parse(tmp6);
-      const tmp2Result = _modDef1487;
-      [tmp8, tmp9] = items;
+      [tmp8, tmp9] = src.split("?");
+      const tmp7 = _slicedToArray(src.split("?"), 2);
+      const parsed = _modDef1487.parse(tmp9);
+      delete tmp2[tmp];
+      items = [tmp8, parsed];
+      const tmp4Result = _modDef1487;
+      [tmp12, tmp13] = items;
       if (null != format) {
-        tmp9.format = format;
+        tmp13.format = format;
       }
       if (null != quality) {
-        tmp9.quality = quality;
+        tmp13.quality = quality;
       }
       if (flag) {
         flag = flag2;
@@ -62,16 +63,16 @@ function getSrcWithWidthAndHeight(quality) {
         flag = isMatch;
       }
       if (flag) {
-        tmp9.animated = true;
+        tmp13.animated = true;
       }
       if (re8.test(src)) {
-        tmp9.format = "webp";
+        tmp13.format = "webp";
       }
-      const tmp7 = _slicedToArray(items, 2);
+      const tmp11 = _slicedToArray(items, 2);
       const size1 = { width: targetWidth, height: targetHeight, maxWidth: maxHeight, maxHeight };
       ({ width, height } = ImageUtils.fit(size1));
       if (width !== sourceWidth) {
-        const tmp18 = (function getAttachmentLadderConfig(arg0) {
+        const tmp22 = (function getAttachmentLadderConfig(arg0) {
           try {
             const obj = { location: "ImageLoaderUtils.getSrcWithWidthAndHeight" };
             const attachmentImageLadderConfig = AttachmentImageLadderExperiment.getAttachmentImageLadderConfig(obj);
@@ -85,25 +86,25 @@ function getSrcWithWidthAndHeight(quality) {
           }
         })("ImageLoaderUtils.getSrcWithWidthAndHeight");
         let size = { width, height };
-        if (null != tmp18) {
+        if (null != tmp22) {
           const obj2 = { targetWidth: width, targetHeight: height, sourceWidth, sourceHeight, maxUpscale: null, ladder: null };
-          const tmp15Result = AttachmentImageLadder;
-          obj2.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp18, getDevicePixelRatioDefault());
-          obj2.ladder = tmp18.ladder;
-          size = tmp15Result.snapAttachmentDimensions(obj2);
-          const tmp15Result2 = AttachmentImageLadder;
+          const tmp19Result = AttachmentImageLadder;
+          obj2.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp22, getDevicePixelRatioDefault());
+          obj2.ladder = tmp22.ladder;
+          size = tmp19Result.snapAttachmentDimensions(obj2);
+          const tmp19Result2 = AttachmentImageLadder;
         }
-        if (!tmp19) {
-          tmp9.width = size.width | 0;
-          tmp9.height = size.height | 0;
+        if (!tmp23) {
+          tmp13.width = size.width | 0;
+          tmp13.height = size.height | 0;
         }
-        tmp19 = size.width === sourceWidth && size.height === sourceHeight;
+        tmp23 = size.width === sourceWidth && size.height === sourceHeight;
       }
       const fitResult = ImageUtils.fit(size1);
-      let text = tmp8;
-      if (!tmp2Result3.isEmpty(tmp9)) {
+      let text = tmp12;
+      if (!tmp4Result3.isEmpty(tmp13)) {
         _modDef1487;
-        text = `${tmp8}?${obj9.stringify(tmp9)}`;
+        text = `${tmp12}?${obj9.stringify(tmp13)}`;
       }
       return text;
     }
@@ -260,7 +261,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F123233 */ function() { ... });
+                            image.onerror = closure_2_4(/* F124480 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

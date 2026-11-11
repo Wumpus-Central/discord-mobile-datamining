@@ -5,8 +5,8 @@ import PlatformUtils from "../PlatformUtils.tsx";
 import NativeMediaManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeMediaManagerModule.tsx";
 import PremiumUtilsDefault from "../PremiumUtils.tsx";
 import NativePermissionUtilsDefault from "../../modules/native_permissions/NativePermissionUtils.tsx";
-import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import UploadUtils from "../UploadUtils.tsx";
+import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import FileUtils from "../FileUtils.tsx";
 import ImagePickerDefault from "../../modules/image/native/ImagePicker.tsx";
 import ImageConversionDecision from "../../modules/media_uploads/native/ImageConversionDecision.tsx";
@@ -1125,7 +1125,7 @@ function convertVideo(videoMetadata) {
                       }
                       tmp12 = closure_11;
                     }
-                    value2 = iter6.value;
+                    const value2 = iter6.value;
                     closure_137_0 = value2;
                     if (0 !== value2) {
                       if (closure_137_0) {
@@ -1267,7 +1267,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      obj8 = { uri, overrideType: "r" };
+                      obj8 = { uri, overrideType: "Array" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1286,7 +1286,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj9 = { uri, overrideType: "r" };
+                  const obj9 = { uri, overrideType: "Array" };
                   isVideo = UploadUtils.getFile(obj9).isVideo;
                   const tmp12Result12 = UploadUtils;
                 }
@@ -1945,7 +1945,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(8302);
+                      tmpResult = closure_1_0(8821);
                     }
                     const obj = closure_1_0(1377);
                   })(closure_130_0, closure_130_1)) {
@@ -2594,7 +2594,7 @@ let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1072);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(8013).NativePermissionTypes;
+const NativePermissionTypes = fn(6839).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2663,8 +2663,8 @@ export function getFileSize(uri) {
 }
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(8302).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(8302).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(8821).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(8821).shouldForceConvertToJPG;
 export function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

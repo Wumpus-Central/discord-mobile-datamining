@@ -87,7 +87,7 @@ export function getFullColumnIndex(arr, arr2, arg2, arg3) {
   if (null == found1[arg2]) {
     return found.length;
   } else {
-    let length = found.findIndex((id) => id.id === id.id);
+    length = found.findIndex((id) => id.id === id.id);
     if (-1 === length) {
       length = found.length;
     }

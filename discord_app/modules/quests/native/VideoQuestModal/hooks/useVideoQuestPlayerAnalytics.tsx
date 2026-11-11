@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoQuestPlayerAnalytics.tsx
-import MonitoringAgentDefault from "../../../../monitoring/MonitoringAgent.tsx";
-import MetricEvents from "../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import QuestTypes from "../../../QuestTypes.tsx";
 import QuestContent from "../../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import AdCreativeType from "../../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import MonitoringAgentDefault from "../../../../monitoring/MonitoringAgent.tsx";
+import MetricEvents from "../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import DiscordVideoPlayerTypes from "../../../../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx";
 import AnalyticsActions from "../../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../../lib/analytics/AnalyticsTypes.tsx";
@@ -78,14 +78,14 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               closure_131_1 = undefined;
               closure_131_2 = undefined;
               closure_131_3 = undefined;
-              const VIDEO_MODAL_MOBILE = closure_0(6844).QuestContent.VIDEO_MODAL_MOBILE;
+              const VIDEO_MODAL_MOBILE = closure_0(5280).QuestContent.VIDEO_MODAL_MOBILE;
               closure_131_1 = VIDEO_MODAL_MOBILE;
               c6 = 1;
               closure_131_2 = getQuestImpressionId();
               if (null == ref.current) {
-                const obj8 = closure_0(7953);
-                ref.current = obj8.getAdUser(closure_0(7952).getQuestContentName(VIDEO_MODAL_MOBILE));
-                const obj9 = closure_0(7952);
+                const obj8 = closure_0(8769);
+                ref.current = obj8.getAdUser(closure_0(8768).getQuestContentName(VIDEO_MODAL_MOBILE));
+                const obj9 = closure_0(8768);
               }
               c7 = 2;
               c8 = 1;
@@ -95,7 +95,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
           } else if (1 === tmp8) {
             c6 = 0;
             closure_131_4 = closure_5;
-            const questLogger = closure_0(7934).getQuestLogger();
+            const questLogger = closure_0(8750).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_131_4);
             throw closure_131_4;
           } else if (arg0 === 1) {
@@ -115,9 +115,9 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               sourceQuestContent: null,
             };
             const obj14 = {};
-            const obj13 = closure_0(7943);
-            const merged = Object.assign(closure_0(7952).getContentProperties(closure_131_1));
-            const merged1 = Object.assign(engagedViewEmitter(7899)());
+            const obj13 = closure_0(8759);
+            const merged = Object.assign(closure_0(8768).getContentProperties(closure_131_1));
+            const merged1 = Object.assign(engagedViewEmitter(8715)());
             obj14.impression_id = closure_131_2;
             obj14.video_watch_seconds = closure_131_0.video_watch_seconds;
             obj14.video_position_seconds = closure_131_0.video_position_seconds;
@@ -140,15 +140,15 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               obj2 = closure_0(1377);
             }
             obj14.android_advertising_id = advertisingId1;
-            const obj16 = closure_0(7952);
-            const adMetadataSealed = closure_0(7922).getAdMetadataSealed(sourceQuestContent, questId);
+            const obj16 = closure_0(8768);
+            const adMetadataSealed = closure_0(8738).getAdMetadataSealed(sourceQuestContent, questId);
             let metadata_sealed = adMetadataSealed;
             if (adMetadataSealed == null) {
               metadata_sealed = null;
             }
             obj14.metadata_sealed = metadata_sealed;
-            const obj3 = closure_0(7922);
-            const adTrafficMetadataSealed = closure_0(7922).getAdTrafficMetadataSealed(sourceQuestContent, questId);
+            const obj3 = closure_0(8738);
+            const adTrafficMetadataSealed = closure_0(8738).getAdTrafficMetadataSealed(sourceQuestContent, questId);
             let traffic_metadata_sealed = adTrafficMetadataSealed;
             if (adTrafficMetadataSealed == null) {
               traffic_metadata_sealed = null;

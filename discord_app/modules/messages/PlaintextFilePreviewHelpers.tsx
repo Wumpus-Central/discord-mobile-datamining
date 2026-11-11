@@ -396,3 +396,4 @@ export function isPlaintextPreviewableFile(filename) {
   const parts = filename.split(".");
   return set.has(parts.slice(-1)[0]);
 }
+export const MARKDOWN_LANGUAGES = new Set(["markdown", "md", "mkd", "mkdown"]);

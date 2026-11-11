@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import isRoleRequiredDefault from "../../../../channel/isRoleRequired.tsx";
-import WarningIcon from "../../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import LockIcon from "../../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import WarningIcon from "../../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import ChannelListLayout from "layouts/ChannelListLayout.tsx";
 import GuildRoleSubscriptionGatedChannelIconDefault from "../../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
 import guild_channels_ChannelTitleDefault from "ChannelTitle.tsx";
@@ -152,10 +152,10 @@ function ChannelContentComponent(arg0) {
   return timestampProducer(View, obj2);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6834).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let PlatformUtils = fn(1377);
 let num = -1;
 if (PlatformUtils.isIOS()) {
@@ -170,7 +170,7 @@ let obj3 = {
   channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" },
   channelTraitIcon: null,
 };
-let obj4 = { opacity: fn(5884).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj4 = { opacity: fn(5997).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1377);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

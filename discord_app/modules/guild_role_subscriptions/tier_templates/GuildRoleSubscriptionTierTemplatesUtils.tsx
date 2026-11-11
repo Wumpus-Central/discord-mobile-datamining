@@ -137,9 +137,9 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(17565).useEditStateStore;
+const useEditStateStore = fn(17730).useEditStateStore;
 const GuildFeatures = fn(1072).GuildFeatures;
-const ChannelFlags = fn(4998).ChannelFlags;
+const ChannelFlags = fn(5099).ChannelFlags;
 let closure_12 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -320,7 +320,7 @@ export function getTemplateTierCreationAnalyticsContext(arg0, arg1) {
                 roleColor = tmp.roleColor;
               }
               if (roleColor === first.role_color) {
-                let length;
+                length = undefined;
                 if (tmp != null) {
                   const channelBenefits = tmp.channelBenefits;
                   if (channelBenefits != null) {

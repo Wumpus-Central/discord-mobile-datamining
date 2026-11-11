@@ -7,7 +7,6 @@ import Dispatcher from "../../Dispatcher.tsx";
 
 require = fn;
 function chunk(arr) {
-  let length;
   let sum;
   items = [];
   let num = 0;

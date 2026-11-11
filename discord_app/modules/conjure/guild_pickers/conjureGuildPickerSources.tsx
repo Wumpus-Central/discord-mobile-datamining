@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/guild_pickers/conjureGuildPickerSources.tsx
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import UserUtils from "../../../utils/UserUtils.tsx";
-import GuildUtilsDefault from "../../../utils/GuildUtils.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
+import GuildUtilsDefault from "../../../utils/GuildUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";

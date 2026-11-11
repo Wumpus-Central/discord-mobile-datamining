@@ -2,16 +2,16 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import isChangelogUserDefault from "../../changelog/utils/isChangelogUser.tsx";
-import BottomSheetModal from "../../../../_runtime/05394_BottomSheetModal.js";
-import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
+import BottomSheetModal from "../../../../_runtime/05507_BottomSheetModal.js";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import maybeFetchUserProfileDefault from "../maybeFetchUserProfile.tsx";
 import ProfileFrameLayerOrder from "../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 import ProfileFrameDefault from "../../collectibles/profile_frames/native/ProfileFrame.tsx";
 import scaleProfileFrameDefault from "../../collectibles/profile_frames/scaleProfileFrame.tsx";
 import ApplicationPresenceUtils from "../../applications/ApplicationPresenceUtils.tsx";
+import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -80,17 +80,17 @@ function ActionSheetAlignedView(arg0) {
   const obj2 = { style: null, pointerEvents: "box-none", children };
   const items2 = [absoluteFill.absoluteFill, animatedStyle];
   obj2.style = items2;
-  return value2(_modDef1652.View, obj2);
+  return closure_1_16(_modDef1652.View, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7440).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7896).UserProfileThemeTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5391).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5504).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_18 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },
@@ -388,8 +388,8 @@ export default noop.memo(function UserProfileActionSheet(userId) {
           profileThemeType: UserProfileThemeTypes.ACTION_SHEET,
           containerWidth: first1,
         };
-        obj.children = value2(ProfileFrameDefault, obj2);
-        tmp2 = value2(ActionSheetAlignedView, obj);
+        obj.children = closure_2_16(ProfileFrameDefault, obj2);
+        tmp2 = closure_2_16(ActionSheetAlignedView, obj);
       }
       return tmp2;
     }, items9);

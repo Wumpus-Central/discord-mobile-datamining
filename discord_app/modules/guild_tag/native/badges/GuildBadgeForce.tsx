@@ -1,6 +1,6 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeForce.tsx
 import v1 from "../../../../../_runtime/01266_v1.js";
-import inlineStyles from "../../../../../_runtime/08105_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08197_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

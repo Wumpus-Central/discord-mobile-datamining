@@ -4,8 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import SkeletonCardDefault from "../../collectibles/native/SkeletonCard.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import SkeletonCardDefault from "../../collectibles/native/SkeletonCard.tsx";
 import useFetchOrbsArcadeGamesDefault from "../hooks/useFetchOrbsArcadeGames.tsx";
 import OrbsArcadeGameTileDefault from "OrbsArcadeGameTile.tsx";
 import OrbsArcadeAnalytics from "../OrbsArcadeAnalytics.tsx";
@@ -13,11 +13,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 
 require = fn;
-const OrbsArcadeNativeConstants = fn(17371);
+const OrbsArcadeNativeConstants = fn(17537);
 ({ ORBS_ARCADE_GAME_TILE_MAX_WIDTH, ORBS_ARCADE_GAME_TILE_MIN_HEIGHT } = OrbsArcadeNativeConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   section: { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 },
   sectionHeader: null,

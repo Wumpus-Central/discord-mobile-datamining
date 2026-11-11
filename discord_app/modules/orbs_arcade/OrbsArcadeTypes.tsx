@@ -45,6 +45,7 @@ function orbsArcadeGameFromServer(game) {
     enrollmentClosesAt: game.enrollment_closes_at,
     asset: game.asset,
     heroVideoAsset: null,
+    sheetVideoAsset: null,
     rewards: null,
   };
   let tmp = null;
@@ -60,6 +61,19 @@ function orbsArcadeGameFromServer(game) {
     tmp = size;
   }
   obj.heroVideoAsset = tmp;
+  let tmp2 = null;
+  if (null != game.sheet_video_asset) {
+    const size1 = { url: null, altText: null, mimeType: null, width: null, height: null };
+    ({
+      url: obj3.url,
+      alt_text: obj3.altText,
+      mime_type: obj3.mimeType,
+      width: obj3.width,
+      height: obj3.height,
+    } = game.sheet_video_asset);
+    tmp2 = size1;
+  }
+  obj.sheetVideoAsset = tmp2;
   const rewards = game.rewards;
   obj.rewards = rewards.map(_rewardFromServer);
   return obj;

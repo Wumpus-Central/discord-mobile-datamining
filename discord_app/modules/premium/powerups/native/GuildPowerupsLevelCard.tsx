@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsLevelCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
@@ -45,7 +45,7 @@ function GuildLevelPowerupHeader(arg0) {
     const obj5 = { style: null, children: null };
     items4[1] = boostContainerActive;
     obj5.style = items4;
-    const colors = nativeDefault.colors;
+    colors = nativeDefault.colors;
     const obj9 = { size: "xs", color: active ? colors.WHITE : colors.TEXT_MUTED };
     obj5.children = closure_1_10(BoostGemIcon.BoostGemIcon, obj9);
     items2[2] = closure_1_10(View, obj5);
@@ -121,14 +121,14 @@ class GuildPowerupLevelBody {
   }
 }
 const View = fn(17).View;
-const GuildPowerupsConstants = fn(5348);
+const GuildPowerupsConstants = fn(5461);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: closure_6 } = GuildPowerupsConstants);
 const Constants = fn(1072);
 ({ BoostedGuildTiers: metroImportDefault, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(14409).TIER_CARDS;
+const TIER_CARDS = fn(10714).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   cardContainer: { flex: 1 },
   card: { padding: 0, overflow: "hidden", flex: 1 },

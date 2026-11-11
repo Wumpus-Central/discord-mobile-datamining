@@ -1,8 +1,8 @@
 // discord_app/modules/launchpad/native/LaunchPadUnreadServers.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
-import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
+import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import isGuildSelectableDefault from "isGuildSelectable.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -26,7 +26,7 @@ get_ActivityIndicator = fn(17);
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   listWrapper: { marginTop: 8 },
   list: { marginBottom: 4, flexShrink: 0 },
@@ -59,7 +59,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(19474), {
+  obj.children = closure_10(onGuildSelect(19663), {
     size: 48,
     borderRadius: 16,
     guildId,
@@ -229,7 +229,7 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
       return null;
     }
   }, items2);
-  let length = unreadGuilds.useCallback((arg0) => {
+  length = unreadGuilds.useCallback((arg0) => {
     let num = 0;
     if (2 === arg0) {
       num = 0;

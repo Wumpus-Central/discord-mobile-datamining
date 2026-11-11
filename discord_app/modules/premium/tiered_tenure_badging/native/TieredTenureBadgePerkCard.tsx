@@ -3,8 +3,8 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
-import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet.tsx";
 import openBadgeDetailsSheet from "../../../badges/native/openBadgeDetailsSheet.tsx";
+import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_9 = createStyles.createStyles({
   badgeNameContainer: { flexDirection: "row" },
   tenureRequirements: { marginStart: 4 },

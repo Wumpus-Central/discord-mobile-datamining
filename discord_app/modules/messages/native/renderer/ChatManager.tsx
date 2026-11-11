@@ -83,7 +83,7 @@ prototype["setup"] = function setup(messages) {
   this.rows = [];
   this.rowIndex = 0;
   const _messages = this._messages;
-  let length;
+  length = undefined;
   if (_messages != null) {
     length = _messages.length;
   }
@@ -93,7 +93,7 @@ prototype["determineChangeTypeForUploadProgress"] = function determineChangeType
   let self = this;
   if (null != this.uploadProgressIds[compressionProgress.id]) {
     items = tmp.items;
-    let length;
+    length = undefined;
     if (items != null) {
       length = items.length;
     }

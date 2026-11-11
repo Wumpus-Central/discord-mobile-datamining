@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
 import DateUtils from "../../../utils/DateUtils.tsx";
-import useFractionalPremiumInfoDefault from "../../billing/hooks/useFractionalPremiumInfo.tsx";
 import ShopVariantsReturnStyle from "../../../../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx";
+import useFractionalPremiumInfoDefault from "../../billing/hooks/useFractionalPremiumInfo.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");

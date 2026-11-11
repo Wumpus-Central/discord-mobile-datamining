@@ -3,8 +3,8 @@ import util from "../../../../intl/index.native.tsx";
 import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
-import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import MaskedLinkUtils from "../../../../utils/MaskedLinkUtils.tsx";
+import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import SearchPlatformUtils from "../SearchPlatformUtils.tsx";
 import TrackingDefault from "../tracking/Tracking.tsx";
 import SearchPlatformActionCreatorsDefault from "../SearchPlatformActionCreators.tsx";
@@ -91,13 +91,13 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9923);
+const SearchConstants = fn(9000);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: closure_10 } = SearchConstants);
-const SearchNavigatorScreens = fn(19095).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9922).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(19282).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(8999).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(4998).StaticChannelRoute;
+const StaticChannelRoute = fn(5099).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useOnPressSearchItem.tsx");
 
@@ -165,7 +165,7 @@ export function useOnPressMessageItem(searchContext) {
         const obj2 = { channelId: guildId.id, guildId: null, searchContext: null };
         guildId = guildId.getGuildId();
         if (guildId == null) {
-          guildId = closure_3_15;
+          guildId = colors;
         }
         obj2.guildId = guildId;
         obj2.searchContext = searchContext;
@@ -318,7 +318,7 @@ export function useOnPressMediaItem(searchContext) {
           const obj2 = { channelId: channel.id, guildId: null, searchContext: null };
           let guildId = channel.getGuildId();
           if (guildId == null) {
-            guildId = closure_3_15;
+            guildId = colors;
           }
           obj2.guildId = guildId;
           obj2.searchContext = searchContext;
@@ -349,7 +349,7 @@ export function useOnPressMediaItem(searchContext) {
             const obj2 = { channelId: channel.id, guildId: null, searchContext: null };
             let guildId = channel.getGuildId();
             if (guildId == null) {
-              guildId = closure_3_15;
+              guildId = colors;
             }
             obj2.guildId = guildId;
             obj2.searchContext = searchContext;
@@ -410,7 +410,7 @@ export function useOnPressGroupDMItem(searchContext) {
     if (parent != null) {
       parent.goBack();
     }
-    ChannelActionCreatorsDefault.preload(closure_2_15, channelId);
+    ChannelActionCreatorsDefault.preload(colors, channelId);
     const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
       searchContext(dependencyMap[27]).transitionToChannel(closure_0);
     });
@@ -433,7 +433,7 @@ export function useOnPressDMItem(searchContext) {
     if (parent != null) {
       parent.goBack();
     }
-    ChannelActionCreatorsDefault.preload(closure_2_15, arg1);
+    ChannelActionCreatorsDefault.preload(colors, arg1);
     const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
       searchContext(dependencyMap[27]).transitionToChannel(closure_0);
     });
@@ -544,11 +544,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(14146).delayUntilNavigationComplete(() => {
+      const result = searchContext(14631).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(14146);
+      let obj2 = searchContext(14631);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

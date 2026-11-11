@@ -5,10 +5,10 @@ import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05830_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import APNGPlayer from "../../../../image/native/APNGPlayer.android.tsx";
 import openPremiumUpsellActionSheet from "../utils/openPremiumUpsellActionSheet.tsx";
+import APNGPlayer from "../../../../image/native/APNGPlayer.android.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../../../user_settings/ThemeStore.tsx";
@@ -80,11 +80,11 @@ const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_10, PremiumTypes: closure_11, PremiumUpsellTypes: closure_12 } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
-const ApplicationStreamFPS = fn(5995).ApplicationStreamFPS;
-const premiumMax = fn(9891).MAX_SCHEDULED_MESSAGES_PER_USER;
+const ApplicationStreamFPS = fn(6108).ApplicationStreamFPS;
+const premiumMax = fn(8965).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 },
   image: { width: 240, height: 144 },

@@ -10,7 +10,7 @@ import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_6 = createStyles.createStyles({ buttonGroup: { paddingVertical: 0 } });
 let obj2 = { PLAY: "PLAY", CLAIM: "CLAIM" };
 let obj3 = { CLOSE: "CLOSE", HOW_TO_PLAY: "HOW_TO_PLAY" };
@@ -45,7 +45,7 @@ export default function OrbsArcadeSheetActions(game) {
         const intl = game(1113).intl;
         obj.text = intl.string(game(1113).t["uz4M/z"]);
         obj.onPress = function onPress() {
-          return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id, dependencyMap);
+          return openOrbsArcadeSheets.openOrbsArcadeInfoSheet(game.id, dependencyMap);
         };
         tmp4 = obj;
       }
@@ -76,7 +76,7 @@ export default function OrbsArcadeSheetActions(game) {
       let tmp19 = null;
       if (null != tmp7) {
         ({ text: obj6.text, onPress: obj6.onPress } = tmp7);
-        tmp19 = closure_4(tmp10(5760).Button, {
+        tmp19 = closure_4(tmp10(5873).Button, {
           grow: true,
           size: "lg",
           variant: "secondary",

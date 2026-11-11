@@ -1,17 +1,17 @@
 // discord_app/modules/premium/promotions/MobileBottomSheetCopy.tsx
 import util from "../../../intl/index.native.tsx";
-import PromotionStringUtils from "PromotionStringUtils.tsx";
 import MarketingStringFormat from "MarketingStringFormat.tsx";
+import PromotionStringUtils from "PromotionStringUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/premium/promotions/MobileBottomSheetCopy.tsx");
 
-export function getMobileBottomSheetCopy(promotionMarketingComponent) {
-  if ("mobileBottomSheet" !== promotionMarketingComponent.properties.properties.oneofKind) {
+export function getMobileBottomSheetCopy(component) {
+  if ("mobileBottomSheet" !== component.properties.properties.oneofKind) {
     return null;
   } else {
-    const mobileBottomSheet = promotionMarketingComponent.properties.properties.mobileBottomSheet;
-    const formatVariableValues = promotionMarketingComponent.getFormatVariableValues(util.intl.currentLocale);
+    const mobileBottomSheet = component.properties.properties.mobileBottomSheet;
+    const formatVariableValues = component.getFormatVariableValues(util.intl.currentLocale);
     const result = MarketingStringFormat.formatMarketingPlainString(mobileBottomSheet.header, formatVariableValues);
     if (result.ok) {
       const result1 = MarketingStringFormat.formatMarketingPlainString(mobileBottomSheet.body, formatVariableValues);

@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import DisplayNameStylesUtils from "../../../display_name_styles/DisplayNameStylesUtils.tsx";
+import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
 import CollectiblesUtils from "../../../collectibles/CollectiblesUtils.tsx";
 import UserProfileActionCreators from "../../../user_profile/UserProfileActionCreators.tsx";
-import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -16,7 +16,7 @@ const Constants = fn(1072);
 const EFFECT_ORDER = fn(1394).EFFECT_ORDER;
 const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: null, activityIndicator: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

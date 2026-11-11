@@ -871,7 +871,7 @@ const guildSettingsRolesStore = new GuildSettingsRolesStore(DispatcherDefault, {
     );
     let result = map.set(role.id, role);
     let id = map;
-    let length;
+    length = undefined;
     const mapped = roles.map((item) => id.get(item));
     const found = mapped.filter(id(length[10]).isNotNullish);
     new Set(roles);

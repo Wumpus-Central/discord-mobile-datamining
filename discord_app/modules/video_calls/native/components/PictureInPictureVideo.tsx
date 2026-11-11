@@ -25,12 +25,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(11139);
+const ChannelCallStore = fn(10940);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5807).ParticipantTypes;
+const ParticipantTypes = fn(5920).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   elevationShadow: null,
   background: null,
@@ -433,15 +433,15 @@ export default noop.memo(function PipctureInPictureVideoContainer(arg0) {
   if (isViewingActivity) {
     const obj7 = { pointerEvents: "none", style: tmp.activityPipContainer, children: null };
     const obj8 = { channel, pipParticipant, selfParticipant };
-    obj7.children = value2(closure_22, obj8);
-    let tmp8Result = value2(hasOwnProperty, obj7);
+    obj7.children = closure_1_16(closure_22, obj8);
+    let tmp8Result = closure_1_16(hasOwnProperty, obj7);
   } else {
     const obj9 = { channel, pipParticipant, selfParticipant };
-    tmp8Result = value2(closure_20, obj9);
+    tmp8Result = closure_1_16(closure_20, obj9);
   }
   tmp2Result = PlatformUtils;
   obj6.children = tmp8Result;
-  obj5.children = value2(React4, { activeOpacity: 0.7, children: value2(hasOwnProperty, obj6) });
-  return value2(hasOwnProperty, obj5);
+  obj5.children = closure_1_16(React4, { activeOpacity: 0.7, children: closure_1_16(hasOwnProperty, obj6) });
+  return closure_1_16(hasOwnProperty, obj5);
 });
 export { areParticipantsEqual };

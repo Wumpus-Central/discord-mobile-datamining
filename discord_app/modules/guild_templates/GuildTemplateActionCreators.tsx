@@ -31,7 +31,7 @@ export default {
                     closure_0 = closure_1_0;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(/* F92471 */ function() { ... });
+                      let nextPromise = resolved.then(/* F94038 */ function() { ... });
                     } else {
                       nextPromise = closure_2_5.get(closure_1_0);
                       if (null == nextPromise) {
@@ -41,10 +41,10 @@ export default {
                         let obj4 = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
                         let value = HTTP.get(obj4);
                         let tmp2Result = closure_2_1(closure_2_2[1]);
-                        let cleanupPromise = value.then(/* F92472 */ function() { ... }, /* F92473 */ function() { ... }).finally(/* F92474 */ function() { ... });
+                        let cleanupPromise = value.then(/* F94039 */ function() { ... }, /* F94040 */ function() { ... }).finally(/* F94041 */ function() { ... });
                         let result = closure_2_5.set(closure_1_0, cleanupPromise);
                         nextPromise = cleanupPromise;
-                        let nextPromise1 = value.then(/* F92472 */ function() { ... }, /* F92473 */ function() { ... });
+                        let nextPromise1 = value.then(/* F94039 */ function() { ... }, /* F94040 */ function() { ... });
                       }
                     }
                     return nextPromise;
@@ -205,7 +205,7 @@ export default {
         DispatcherDefault.dispatch(obj3);
         const HTTP = require("HTTPUtils").HTTP;
         const obj4 = { url: closure_3.UNRESOLVED_GUILD_TEMPLATE(code), oldFormErrors: true, rejectWithError: true };
-        value2 = HTTP.get(obj4);
+        const value2 = HTTP.get(obj4);
         const tmpResult = DispatcherDefault;
         const cleanupPromise = value2.then((body) => {
           body = body.body;

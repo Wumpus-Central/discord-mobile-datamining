@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_9 = createStyles.createStyles({ container: { flexGrow: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
@@ -65,14 +65,14 @@ export default function AdvancedInstantInvite(maxAge) {
     if (tmp) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { assignableRoles, selectedRoleIds: roleIds, onSave: onChangeRoleIds };
-      obj.openLazy(asyncRequireImpl(20448, dependencyMap.paths), "SelectInviteRolesActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(20643, dependencyMap.paths), "SelectInviteRolesActionSheet", obj2, "stack");
     }
   }, items);
   const items2 = [maxUses, maxUsesOptions, onChangeMaxUses];
   const callback1 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxAge) {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp5 = asyncRequireImpl(12434, dependencyMap.paths);
+      const tmp5 = asyncRequireImpl(13240, dependencyMap.paths);
       const obj2 = { title: null, options: null, value: null, onChange: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t.gKmKP0);
@@ -86,7 +86,7 @@ export default function AdvancedInstantInvite(maxAge) {
   const callback2 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxUses) {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp5 = asyncRequireImpl(12434, dependencyMap.paths);
+      const tmp5 = asyncRequireImpl(13240, dependencyMap.paths);
       const obj2 = { title: null, options: null, value: null, onChange: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t["+3vH1h"]);
@@ -143,9 +143,20 @@ export default function AdvancedInstantInvite(maxAge) {
   const obj12 = { title: null, hasIcons: false, children: null };
   const intl3 = tmp11(tmp12[15]).intl;
   obj12.title = intl3.string(maxUses(onChangeMaxAge[15]).t["4QuV7G"]);
-  const obj13 = { label: null, trailing: null, arrow: true, onPress: null, disabled: null };
+  const obj13 = {
+    label: null,
+    accessibilityLabel: null,
+    accessibilityValue: null,
+    trailing: null,
+    arrow: true,
+    onPress: null,
+    disabled: null,
+  };
   const intl4 = tmp11(tmp12[15]).intl;
   obj13.label = intl4.string(maxUses(onChangeMaxAge[15]).t.gKmKP0);
+  const intl5 = tmp11(tmp12[15]).intl;
+  obj13.accessibilityLabel = intl5.string(maxUses(onChangeMaxAge[15]).t.gKmKP0);
+  obj13.accessibilityValue = { text: label };
   let tmp32Result;
   if (null != label) {
     const obj14 = { text: label };
@@ -155,9 +166,20 @@ export default function AdvancedInstantInvite(maxAge) {
   obj13.onPress = callback1;
   obj13.disabled = null == onChangeMaxAge;
   const items6 = [closure_7(maxUses(onChangeMaxAge[21]).TableRow, obj13)];
-  const obj15 = { label: null, trailing: null, arrow: true, onPress: null, disabled: null };
-  const intl5 = tmp11(tmp12[15]).intl;
-  obj15.label = intl5.string(maxUses(onChangeMaxAge[15]).t["+3vH1h"]);
+  const obj15 = {
+    label: null,
+    accessibilityLabel: null,
+    accessibilityValue: null,
+    trailing: null,
+    arrow: true,
+    onPress: null,
+    disabled: null,
+  };
+  const intl6 = tmp11(tmp12[15]).intl;
+  obj15.label = intl6.string(maxUses(onChangeMaxAge[15]).t["+3vH1h"]);
+  const intl7 = tmp11(tmp12[15]).intl;
+  obj15.accessibilityLabel = intl7.string(maxUses(onChangeMaxAge[15]).t["+3vH1h"]);
+  obj15.accessibilityValue = { text: label1 };
   let tmp32Result5;
   if (null != label1) {
     const obj16 = { text: label1 };
@@ -173,8 +195,8 @@ export default function AdvancedInstantInvite(maxAge) {
   if (tmp18) {
     const obj17 = { hasIcons: false, children: null };
     const obj18 = { label: null, arrow: true, subLabel: null, onPress: null };
-    const intl6 = tmp11(tmp12[15]).intl;
-    obj18.label = intl6.string(tmp11(tmp12[15]).t.rPYJxL);
+    const intl8 = tmp11(tmp12[15]).intl;
+    obj18.label = intl8.string(tmp11(tmp12[15]).t.rPYJxL);
     obj18.subLabel = formatToPlainStringResult;
     obj18.onPress = callback;
     obj17.children = closure_7(tmp11(tmp12[21]).TableRow, obj18);
@@ -187,11 +209,11 @@ export default function AdvancedInstantInvite(maxAge) {
   }
   if (tmp32Result7) {
     const obj19 = { hasIcons: false, helperText: null, children: null };
-    const intl7 = tmp11(tmp12[15]).intl;
-    obj19.helperText = intl7.string(tmp11(tmp12[15]).t.A53l87);
+    const intl9 = tmp11(tmp12[15]).intl;
+    obj19.helperText = intl9.string(tmp11(tmp12[15]).t.A53l87);
     const obj20 = { label: null, value: null, onValueChange: null };
-    const intl8 = tmp11(tmp12[15]).intl;
-    obj20.label = intl8.string(tmp11(tmp12[15]).t.dy1ico);
+    const intl10 = tmp11(tmp12[15]).intl;
+    obj20.label = intl10.string(tmp11(tmp12[15]).t.dy1ico);
     obj20.value = temporary;
     obj20.onValueChange = onChangeTemporary;
     obj19.children = closure_7(tmp11(tmp12[22]).TableSwitchRow, obj20);
@@ -201,11 +223,11 @@ export default function AdvancedInstantInvite(maxAge) {
   let tmp32Result8 = null;
   if (canCreateApplicationBypassInvites) {
     const obj21 = { hasIcons: false, helperText: null, children: null };
-    const intl9 = tmp11(tmp12[15]).intl;
-    obj21.helperText = intl9.string(tmp11(tmp12[15]).t["jvd/LF"]);
+    const intl11 = tmp11(tmp12[15]).intl;
+    obj21.helperText = intl11.string(tmp11(tmp12[15]).t["jvd/LF"]);
     const obj22 = { label: null, value: null, onValueChange: null };
-    const intl10 = tmp11(tmp12[15]).intl;
-    obj22.label = intl10.string(tmp11(tmp12[15]).t["1i1bUl"]);
+    const intl12 = tmp11(tmp12[15]).intl;
+    obj22.label = intl12.string(tmp11(tmp12[15]).t["1i1bUl"]);
     obj22.value = tmp11(tmp12[23]).hasFlag(flags, tmp11(tmp12[24]).GuildInviteFlags.IS_APPLICATION_BYPASS);
     obj22.onValueChange = function onValueChange(setting) {
       return closure_1_7(FlagUtils.setFlag(flags, GuildInviteFlags.GuildInviteFlags.IS_APPLICATION_BYPASS, setting));

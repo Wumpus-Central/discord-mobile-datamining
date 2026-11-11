@@ -6,14 +6,14 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef9850 from "../../../../_runtime/metro/09850__.js";
+import _modDef7353 from "../../../../_runtime/metro/07353__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: {
     flex: 1,
@@ -45,7 +45,7 @@ export default function ErrorResult(error) {
   const tmp = closure_6();
   const obj = { bottom: true, style: tmp.container, children: null };
   const obj2 = { style: tmp.inner, children: null };
-  const obj3 = { source: _modDef9850, style: tmp.image };
+  const obj3 = { source: _modDef7353, style: tmp.image };
   items = [React4(FastImageDefault, obj3)];
   const obj4 = { style: tmp.text, variant: "body-md/medium", children: null };
   if (error == null) {

@@ -1,14 +1,14 @@
 // discord_app/modules/conjure/projects/native/ConjureAppIconTile.tsx
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
-import useConjureDefaultAppIconDefault from "../useConjureDefaultAppIcon.native.tsx";
 import useConjureProjectIcon from "../useConjureProjectIcon.tsx";
+import useConjureDefaultAppIconDefault from "../useConjureDefaultAppIcon.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_5 = createStyles.createStyles((width, width2, backgroundColor, color) => {
   const obj = {
     tile: null,

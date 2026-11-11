@@ -177,7 +177,89 @@ const obj26 = {
 const obj27 = { 1: null };
 obj27[1] = { enabled: true };
 obj26.variations = obj27;
+const obj28 = {
+  newLayoutWithSearch: false,
+  iconOnlyCTA: false,
+  badge: { duration: false, new: false, countdown: false },
+  showGameLogo: true,
+  showQuestTitle: true,
+  compactReward: false,
+  shorterHeight: false,
+  gameIconReward: false,
+};
 const apexExperiment12 = ApexExperiment.createApexExperiment(obj26);
+let ApexExperiment = ApexExperiment_mod;
+const obj29 = { name: "2026-11-quest-home-tile-single-elements", kind: "user", defaultConfig: obj28, variations: null };
+const obj30 = {
+  0: obj28,
+  1: null,
+  2: null,
+  3: null,
+  4: null,
+  5: null,
+  6: null,
+  7: null,
+  8: null,
+  9: null,
+  10: null,
+  11: null,
+};
+const obj31 = {};
+const merged = Object.assign(obj28);
+obj31.newLayoutWithSearch = true;
+obj30[1] = obj31;
+const obj32 = {};
+const merged1 = Object.assign(obj28);
+obj32.newLayoutWithSearch = true;
+obj32.iconOnlyCTA = true;
+obj30[2] = obj32;
+const obj33 = {};
+const merged2 = Object.assign(obj28);
+obj33.newLayoutWithSearch = true;
+obj33.badge = { duration: true, new: false, countdown: false };
+obj30[3] = obj33;
+const obj34 = {};
+const merged3 = Object.assign(obj28);
+obj34.newLayoutWithSearch = true;
+obj34.badge = { duration: false, new: true, countdown: false };
+obj30[4] = obj34;
+const obj35 = {};
+const merged4 = Object.assign(obj28);
+obj35.newLayoutWithSearch = true;
+obj35.badge = { duration: false, new: false, countdown: true };
+obj30[5] = obj35;
+const obj36 = {};
+const merged5 = Object.assign(obj28);
+obj36.newLayoutWithSearch = true;
+obj36.showGameLogo = false;
+obj30[6] = obj36;
+const obj37 = {};
+const merged6 = Object.assign(obj28);
+obj37.newLayoutWithSearch = true;
+obj37.showQuestTitle = false;
+obj30[7] = obj37;
+const obj38 = {};
+const merged7 = Object.assign(obj28);
+obj38.newLayoutWithSearch = true;
+obj38.compactReward = true;
+obj30[8] = obj38;
+const obj39 = {};
+const merged8 = Object.assign(obj28);
+obj39.newLayoutWithSearch = true;
+obj39.shorterHeight = true;
+obj30[9] = obj39;
+const obj40 = {};
+const merged9 = Object.assign(obj28);
+obj40.newLayoutWithSearch = true;
+obj40.gameIconReward = true;
+obj30[10] = obj40;
+const obj41 = {};
+const merged10 = Object.assign(obj28);
+obj41.newLayoutWithSearch = true;
+obj41.badge = { duration: true, new: true, countdown: false };
+obj30[11] = obj41;
+obj29.variations = obj30;
+const apexExperiment13 = ApexExperiment.createApexExperiment(obj29);
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
@@ -211,3 +293,5 @@ export const QuestOrbTierVariant = obj21;
 export const QuestOrbTierExperiment = apexExperiment10;
 export const MobileQuestRewardButtonToSecondaryButtonExperiment = apexExperiment11;
 export const ClickableHeroBannerExperiment = apexExperiment12;
+export const QUEST_HOME_TILE_SINGLE_ELEMENTS_CONTROL = obj28;
+export const QuestHomeTileSingleElementsExperiment = apexExperiment13;

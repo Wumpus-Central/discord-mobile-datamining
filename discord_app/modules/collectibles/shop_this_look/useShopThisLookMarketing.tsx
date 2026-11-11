@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import useMaybeFetchEquippedCollectibleProducts from "../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
+import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;

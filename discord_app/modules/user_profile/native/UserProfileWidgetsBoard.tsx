@@ -4,11 +4,11 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
 import UserProfileApplicationWidgetTypes from "../UserProfileApplicationWidgetTypes.tsx";
 import UserProfilePersonalWidget from "../UserProfilePersonalWidget.tsx";
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard.tsx";
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard.tsx";
 import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet.tsx";
 import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow.tsx";
 import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover.tsx";
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard.tsx";
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -19,7 +19,7 @@ function AddGameButton(ref) {
     ref,
     size: "sm",
     variant: "secondary",
-    icon: closure_8(ref(9665).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
+    icon: closure_8(ref(10382).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
     accessibilityLabel: null,
     disabled: null,
     onPress: null,
@@ -30,7 +30,7 @@ function AddGameButton(ref) {
   obj.onPress = function onPress() {
     return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });
   };
-  return closure_8(ref(8102).IconButton, obj);
+  return closure_8(ref(7922).IconButton, obj);
 }
 function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle, isEditing } = arg0);
@@ -47,12 +47,12 @@ function WidgetRenderer(arg0) {
   return tmp3Result;
 }
 const View = fn(17).View;
-const UserProfileSections = fn(8831).UserProfileSections;
-const UserProfileWidgetConstants = fn(7855);
+const UserProfileSections = fn(8413).UserProfileSections;
+const UserProfileWidgetConstants = fn(7291);
 ({ widgetSupportsComment: closure_6, widgetSupportsTags: metroImportDefault } = UserProfileWidgetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   board: { gap: nativeDefault.space.PX_16 },
   emptyState: null,
@@ -65,7 +65,7 @@ let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 obj.singleGameEmptyState = {
   flexDirection: "row",
   alignItems: "center",
-  gap: fn(15233).GAME_COVER_DETAILS_GAP,
+  gap: fn(12048).GAME_COVER_DETAILS_GAP,
   paddingVertical: nativeDefault.space.PX_8,
 };
 obj.singleGameEmptyStateText = { flex: 1 };

@@ -10,8 +10,8 @@ import PermissionStore from "../stores/PermissionStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
 const PremiumTypeUtils = isPremiumResult(2107);
-const CreatorMonetizationRestrictionsUtils = isPremiumResult(5066);
-const RoleSubscriptionEmojiUtils = isPremiumResult(5096);
+const CreatorMonetizationRestrictionsUtils = isPremiumResult(5167);
+const RoleSubscriptionEmojiUtils = isPremiumResult(5197);
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   ({ emoji, channel, guildId } = forceIncludeExternalGuilds);
@@ -28,7 +28,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   if (emoji.type === EmojiTypes.EmojiTypes.PACK) {
     if (intention !== constants.GUILD_PROFILE) {
       if (intention !== constants.NO_CUSTOM_EMOJI) {
-        if (closure_1_15(intention)) {
+        if (colors(intention)) {
           if (EmojiPackStore.isPackEmojiUsable(emoji)) {
             isPremiumResult = PremiumTypeUtils.isPremium(UserStore.getCurrentUser(), PremiumTypes.TIER_2);
             PREMIUM_LOCKED = null;
@@ -93,7 +93,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
             }
             DISALLOW_EXTERNAL = EmojiDisabledReasons.DISALLOW_EXTERNAL;
           } else {
-            if (!closure_1_15(intention)) {
+            if (!colors(intention)) {
               let tmp17 = null != emoji && null != guildId;
               if (tmp17) {
                 const type2 = emoji.type;
@@ -178,7 +178,7 @@ let closure_21 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(4995);
+const ChannelRecord = fn(5096);
 ({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: closure_6 } = ChannelRecord);
 const Permissions = fn(1072).Permissions;
 const EmojiConstants = fn(1388);
@@ -212,7 +212,6 @@ const result = size.fileFinishedImporting("utils/EmojiUtils.tsx");
 
 export default {
   sanitizeEmojiName(str) {
-    let length;
     const replaced = str.replace(application_id, "");
     const substr = replaced.slice(0, closure_1_11);
     let tmp = substr;

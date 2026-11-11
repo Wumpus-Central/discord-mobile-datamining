@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/maybeFetchUserProfile.tsx
+import UserActionCreators from "../../actions/UserActionCreators.tsx";
 import ConnectionsUtils from "../connections/ConnectionsUtils.tsx";
 import CollectiblesActionCreators from "../collectibles/CollectiblesActionCreators.tsx";
 import useAvatarColor from "../avatar/useAvatarColor.tsx";
-import UserActionCreators from "../../actions/UserActionCreators.tsx";
 import preloadUserBannerImageDefault from "preloadUserBannerImage.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";

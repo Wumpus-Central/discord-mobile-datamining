@@ -606,7 +606,7 @@ export function getSaturatedColorHex(arg0) {
     return colorRGB;
   } else {
     value = colorRGB.get("rgb.r");
-    value2 = colorRGB.get("rgb.g");
+    const value2 = colorRGB.get("rgb.g");
     const tmp4 = rawRgbToHsl(value, value2, colorRGB.get("rgb.b"));
     return rawHslToRgb(tmp4.hue, tmp4.saturation * saturationFactor, tmp4.lightness).toHexString();
   }

@@ -6,7 +6,7 @@ const result = size.fileFinishedImporting("utils/SortedArrayUtils.tsx");
 export function insertionIndex(arg0, key, fn) {
   let sum;
   let tmp4;
-  let length = arg0.length;
+  length = arg0.length;
   let num = 0;
   let num2 = 0;
   if (0 < length) {
@@ -28,7 +28,7 @@ export function insertionIndex(arg0, key, fn) {
 export function insert(arr, item, fn) {
   let sum;
   let tmp4;
-  let length = arr.length;
+  length = arr.length;
   let num = 0;
   let num2 = 0;
   if (0 < length) {
@@ -50,7 +50,7 @@ export function insert(arr, item, fn) {
 export function remove(arr, key, fn) {
   let sum;
   let tmp4;
-  let length = arr.length;
+  length = arr.length;
   let num = 0;
   let num2 = 0;
   if (0 < length) {

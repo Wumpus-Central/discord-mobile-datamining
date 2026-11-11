@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/HashmarkIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod18106 from "../../../../../../../_runtime/metro/18106__.js";
+import _mod18277 from "../../../../../../../_runtime/metro/18277__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function HashmarkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18106, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18277, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

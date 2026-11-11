@@ -4,11 +4,11 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3316 from "../Pinot.messages.js";
+import _modDef3337 from "../Pinot.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import InlineNotice from "../../../design/mana/components/InlineNotice/InlineNotice.native.tsx";
-import SettingsConstants from "../../user_settings/core/native/SettingsConstants.tsx";
 import PinotExperiment from "../PinotExperiment.tsx";
+import SettingsConstants from "../../user_settings/core/native/SettingsConstants.tsx";
 import PinotMemberSettingState from "../PinotMemberSettingState.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -22,14 +22,14 @@ function PinotMemberSettingFooter() {
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj4.children = intl.format(_modDef3316.V0EPTo, { learnMoreURL: articleURL });
+  obj4.children = intl.format(_modDef3337.V0EPTo, { learnMoreURL: articleURL });
   items = [timestampProducer(Text_Text.Text, obj4)];
   let tmp8Result = null;
   if (obj.usePinotMemberSettingState().locked) {
     const obj5 = { type: "info", message: null, role: "none" };
     const intl2 = util.intl;
     const obj6 = { learnMoreURL: articleURL };
-    obj5.message = intl2.format(_modDef3316.Z9bKIJ, obj6);
+    obj5.message = intl2.format(_modDef3337.Z9bKIJ, obj6);
     tmp8Result = timestampProducer(InlineNotice.InlineNotice, obj5);
   }
   items[1] = tmp8Result;
@@ -46,7 +46,7 @@ let closure_9 = createStyles.createStyles(obj);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3316.M33rl6);
+    return intl.string(_modDef3337.M33rl6);
   },
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate() {

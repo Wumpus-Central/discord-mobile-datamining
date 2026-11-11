@@ -19,7 +19,7 @@ export default {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, guild_id: guildId });
     const obj3 = { type, guild_id: guildId };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7005, dependencyMap.paths),
+      asyncRequireImpl(7640, dependencyMap.paths),
       { guildId, onClose: connect },
       React4,
     );

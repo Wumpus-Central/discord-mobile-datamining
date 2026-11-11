@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../../image_upload/ImageLoaderUtils.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
-import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import MoreHorizontalIcon from "../../../design/components/Icon/native/redesign/generated/MoreHorizontalIcon.tsx";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -19,7 +19,7 @@ const Constants = fn(1072);
 ({ GuildFeatures: closure_10, JoinGuildSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED,

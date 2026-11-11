@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/search/native/components/tabs
 
 export default function SearchTabsGradient(state) {
   let token;
-  token = token(5726).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  token = token(5839).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   items = [token];
-  const colors = noop.useMemo(() => {
+  colors = noop.useMemo(() => {
     items = [token, ColorUtils.hexWithOpacity(token, 0)];
     return items;
   }, items);

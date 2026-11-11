@@ -5,11 +5,11 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import UrlDefault from "../../../_runtime/01381_Url.js";
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
-import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
-import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import transformUserDefault from "helpers/transformUser.tsx";
 import transformAvatarDecorationDefault from "helpers/transformAvatarDecoration.tsx";
 import RPCErrorDefault from "RPCError.tsx";
+import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import transformMessage from "helpers/transformMessage.tsx";
 import LeakyBucketDefault from "../../../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -245,8 +245,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4995).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6585);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(5096).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6698);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1072);
 ({
@@ -342,7 +342,7 @@ export function transformRole(id) {
     tags: null,
     flags: null,
   };
-  let colors = id.colors;
+  colors = id.colors;
   if (colors == null) {
     const obj2 = { primary_color: id.color, secondary_color: null, tertiary_color: null };
     colors = obj2;
@@ -489,7 +489,7 @@ export function transformChannel(channel, result, arg2) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(6175).getName(dependencyMap, id.id, user),
+            nick: closure_1(6288).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -498,7 +498,7 @@ export function transformChannel(channel, result, arg2) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9418)(user);
+          obj.user = closure_1(7237)(user);
           return obj;
         }
       });

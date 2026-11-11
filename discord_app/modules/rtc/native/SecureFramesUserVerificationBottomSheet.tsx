@@ -4,9 +4,9 @@ import util from "../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
+import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
 import SecureFramesUtils from "../SecureFramesUtils.tsx";
 import SecureFramesTracking from "../SecureFramesTracking.tsx";
-import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
 import XLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/XLargeBoldIcon.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9352);
+const SecureFramesConstants = fn(10561);
 ({
   AnalyticsSecureFramesUserVerification: closure_9,
   SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_10,
@@ -25,7 +25,7 @@ const SecureFramesConstants = fn(9352);
 const AnalyticsLocations = fn(1072).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
 let size = {
   height: 80,

@@ -1,6 +1,6 @@
 // discord_app/modules/waterwheels/interest/native/InterestGuildJoinButton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2534 from "../../WaterwheelsUntranslated.messages.js";
+import _modDef2553 from "../../WaterwheelsUntranslated.messages.js";
 import useGetIsMountedDefault from "../../../../hooks/useGetIsMounted.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -10,7 +10,7 @@ import GuildMembershipStore from "../../../../stores/GuildMembershipStore.tsx";
 const require = fn;
 const View = fn(17).View;
 let jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const obj2 = { button: { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -106,31 +106,31 @@ export default function InterestGuildJoinButton(guildId) {
   const items1 = [guildId];
   let stateFromStores = guildId(504).useStateFromStores(items, () => GuildMembershipStore.isMember(guildId), items1);
   let obj = guildId(504);
-  const currentUserGuildJoinRequest = guildId(6978).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(14777).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  const tmp7 = applicationStatus === guildId(5176).GuildJoinRequestApplicationStatuses.SUBMITTED;
+  const tmp7 = applicationStatus === guildId(5289).GuildJoinRequestApplicationStatuses.SUBMITTED;
   _slicedToArray = tmp7;
   [loading, closure_6] = loading.useState(false);
   closure_7 = useGetIsMountedDefault();
   const intl = tmp2(1113).intl;
   const string = intl.string;
   if (stateFromStores) {
-    let stringResult = string(_modDef2534.X4zfDg);
+    let stringResult = string(_modDef2553.X4zfDg);
     const intl4 = tmp2(1113).intl;
     let obj3 = { guild: guildName };
-    let formatToPlainStringResult = intl4.formatToPlainString(_modDef2534.t1du0D, obj3);
+    let formatToPlainStringResult = intl4.formatToPlainString(_modDef2553.t1du0D, obj3);
   } else if (tmp7) {
-    stringResult = string(_modDef2534.fVWYWS);
+    stringResult = string(_modDef2553.fVWYWS);
     const intl3 = tmp2(1113).intl;
     let obj4 = { guild: guildName };
-    formatToPlainStringResult = intl3.formatToPlainString(_modDef2534.nQnkb3, obj4);
+    formatToPlainStringResult = intl3.formatToPlainString(_modDef2553.nQnkb3, obj4);
   } else {
     const intl2 = tmp2(1113).intl;
     let obj5 = { guild: guildName };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef2534.NOfX8z, obj5);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef2553.NOfX8z, obj5);
     stringResult = string(tmp2(1113).t.VJlc0S);
     const stringResult1 = string(tmp2(1113).t.VJlc0S);
   }
@@ -176,6 +176,6 @@ export default function InterestGuildJoinButton(guildId) {
     }
     return applyArgumentsResult;
   };
-  obj6.children = jsx(guildId(5760).Button, obj7);
+  obj6.children = jsx(guildId(5873).Button, obj7);
   return jsx(closure_6, obj6);
 }

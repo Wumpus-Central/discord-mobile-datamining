@@ -9,10 +9,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContactPermissions = fn(14511).ContactPermissions;
+const ContactPermissions = fn(14885).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   headerText: { marginTop: 32, marginHorizontal: 16, textAlign: "center" },
   subheaderText: { marginVertical: 8, marginHorizontal: 16, textAlign: "center" },
@@ -32,10 +32,10 @@ export default function AddFriendScreen(navigation) {
   dependencyMap = undefined;
   let callback;
   const tmp = closure_13();
-  const contactSyncAccount = navigation(14513).useContactSyncAccount();
-  let obj = navigation(14513);
-  let obj2 = navigation(14513);
-  [tmp5, c2] = callback(noop.useState(!navigation(14513).isContactSyncEnabled(contactSyncAccount)), 2);
+  const contactSyncAccount = navigation(14887).useContactSyncAccount();
+  let obj = navigation(14887);
+  let obj2 = navigation(14887);
+  [tmp5, c2] = callback(noop.useState(!navigation(14887).isContactSyncEnabled(contactSyncAccount)), 2);
   callback = noop.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
     let userTag;
@@ -62,7 +62,7 @@ export default function AddFriendScreen(navigation) {
     navigation.setOptions({
       headerRight(arg0) {
         const intl = navigation(1113).intl;
-        const renderHeaderTextButton = navigation(9908).getRenderHeaderTextButton(
+        const renderHeaderTextButton = navigation(8985).getRenderHeaderTextButton(
           intl.string(navigation(1113).t.RDE0Sc),
           callback,
         );
@@ -76,14 +76,14 @@ export default function AddFriendScreen(navigation) {
       let tmp5 =
         result === constants2.NOT_DETERMINED || (navigation(1377).isAndroid() && result === constants2.UNAUTHORIZED);
       if (!tmp5) {
-        tmp5 = !navigation(14513).isContactSyncEnabled(contactSyncAccount);
-        const tmp2Result = navigation(14513);
+        tmp5 = !navigation(14887).isContactSyncEnabled(contactSyncAccount);
+        const tmp2Result = navigation(14887);
       }
       dependencyMap(tmp5);
       const tmp4 = navigation(1377).isAndroid() && result === constants2.UNAUTHORIZED;
     });
   }, items);
-  const items1 = [closure_10(contactSyncAccount(10864), { absolute: true })];
+  const items1 = [closure_10(contactSyncAccount(10204), { absolute: true })];
   let obj3 = { keyboardShouldPersistTaps: "handled", style: tmp.background, children: null };
   let obj4 = {
     style: tmp.headerText,
@@ -94,12 +94,12 @@ export default function AddFriendScreen(navigation) {
   };
   let intl = navigation(1113).intl;
   obj4.children = intl.string(navigation(1113).t.GWMTSE);
-  const items2 = [closure_10(navigation(5753).Text, obj4), , ,];
+  const items2 = [closure_10(navigation(5866).Text, obj4), , ,];
   const obj5 = { style: tmp.subheaderText, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1113).intl;
   obj5.children = intl2.string(navigation(1113).t["Rn/sLl"]);
-  items2[1] = closure_10(navigation(5753).Text, obj5);
-  items2[2] = closure_10(contactSyncAccount(16015), {
+  items2[1] = closure_10(navigation(5866).Text, obj5);
+  items2[2] = closure_10(contactSyncAccount(16174), {
     style: tmp.input,
     autoFocusInput: false,
     sourcePage: navigation.route.params.sourcePage,
@@ -108,11 +108,11 @@ export default function AddFriendScreen(navigation) {
   const obj8 = { accessibilityRole: "header", variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = navigation(1113).intl;
   obj8.children = intl3.string(navigation(1113).t.dukg0Z);
-  const items3 = [closure_10(navigation(5753).Text, obj8)];
+  const items3 = [closure_10(navigation(5866).Text, obj8)];
   let tmp10Result = null;
   if (tmp5) {
     const obj9 = { style: tmp.rowContainer, location: "Add Friend Modal" };
-    tmp10Result = closure_10(contactSyncAccount(16016), obj9);
+    tmp10Result = closure_10(contactSyncAccount(16175), obj9);
   }
   const obj10 = { children: null };
   items3[1] = tmp10Result;

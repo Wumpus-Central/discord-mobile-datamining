@@ -2,8 +2,8 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
-import StickersHooks from "../StickersHooks.tsx";
 import StickerDefault from "Sticker.tsx";
+import StickersHooks from "../StickersHooks.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StickersStore from "../StickersStore.tsx";
@@ -21,13 +21,13 @@ function EmptyStateSticker(sticker) {
   return closure_1_11(StickerDefault, { sticker, size: 60, animated }, id);
 }
 const View = fn(17).View;
-const EMPTY_STATE_STICKERS = fn(4970).EMPTY_STATE_STICKERS;
+const EMPTY_STATE_STICKERS = fn(5071).EMPTY_STATE_STICKERS;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_13 = createStyles.createStyles({
   header: { marginBottom: 8, textAlign: "center" },
   blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 },
@@ -44,8 +44,8 @@ export default function _default() {
   _require = tmp;
   const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  analyticsLocations = analyticsLocations(7390)(analyticsLocations(7415).EMPTY_STATE).analyticsLocations;
-  const tmp3 = analyticsLocations(7390);
+  analyticsLocations = analyticsLocations(7852)(analyticsLocations(7871).EMPTY_STATE).analyticsLocations;
+  const tmp3 = analyticsLocations(7852);
   items = [StickersStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
@@ -94,7 +94,7 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(7046).PressableOpacity, obj, id);
+      return closure_1_11(sticker(7364).PressableOpacity, obj, id);
     }),
   });
   const obj7 = { style: tmp.premiumButton, children: null };
@@ -116,16 +116,16 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(7046).PressableOpacity, obj, id);
+      return closure_1_11(sticker(7364).PressableOpacity, obj, id);
     }),
   };
-  obj9.source = analyticsLocations(10143);
+  obj9.source = analyticsLocations(11153);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(5844), obj9);
+  obj8.icon = closure_11(analyticsLocations(5957), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(10416)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(11317)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

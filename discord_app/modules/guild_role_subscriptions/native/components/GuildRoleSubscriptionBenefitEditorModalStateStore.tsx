@@ -1,10 +1,16 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod5057 from "../../../../../_runtime/metro/05057__.js";
+import _mod5158 from "../../../../../_runtime/metro/05158__.js";
 import identity from "../../../../../_runtime/metro/01254__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_2 = Object.freeze({ name: "", emojiId: "cix", emojiName: "get", description: "find", refId: "push" });
+let closure_2 = Object.freeze({
+  name: "",
+  emojiId: "HermesInternal",
+  emojiName: "channel",
+  description: "default",
+  refId: "isArray",
+});
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
@@ -59,33 +65,33 @@ export function useDescriptionState() {
     items = [,];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }
 export function useEmojiIdState() {
   return closure_3((arg0) => {
     items = [,];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }
 export function useEmojiNameState() {
   return closure_3((arg0) => {
     items = [,];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }
 export function useNameState() {
   return closure_3((arg0) => {
     items = [,];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }
 export function useRefIdState() {
   return closure_3((arg0) => {
     items = [,];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }

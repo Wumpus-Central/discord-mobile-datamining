@@ -97,7 +97,7 @@ export function useDownloadedFile(url, arg1) {
         }
         closure_132_3 = c0;
         const headers = closure_132_0.headers;
-        value2 = headers.get("content-length");
+        const value2 = headers.get("content-length");
         c1 = value2;
         if (value2 == null) {
           c1 = "1";

@@ -223,12 +223,12 @@ function buildReactionNotification(arg0) {
   }
 }
 const ScrollView = fn(17).ScrollView;
-const createChannelRecord = fn(4995).createChannelRecord;
+const createChannelRecord = fn(5096).createChannelRecord;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -602,22 +602,22 @@ export default function DevToolsInAppNotificationTestingScreen() {
       obj2.children = options.map((label) => {
         closure_0 = label;
         return closure_1_14(
-          closure_1_0(7041).TableRow,
+          closure_1_0(7379).TableRow,
           {
             label: label.label,
             subLabel: label.subLabel,
-            icon: closure_1_14(closure_1_0(12412).BeakerIcon, {}),
+            icon: closure_1_14(closure_1_0(13219).BeakerIcon, {}),
             onPress() {
               return closure_2_0(closure_0);
             },
-            trailing: closure_1_14(closure_1_0(7050).TableRowArrow, {}),
+            trailing: closure_1_14(closure_1_0(7388).TableRowArrow, {}),
           },
           label.label,
         );
       });
       items = [gesture(TableRowGroup.TableRowGroup, obj2), gesture(native.Spacer, { size: nativeDefault.space.PX_16 })];
       obj.children = items;
-      return closure_2_15(noop.Fragment, obj, title.title);
+      return colors(noop.Fragment, obj, title.title);
     }),
   ];
   let obj2 = { size: nativeDefault.space.PX_16 };
@@ -626,15 +626,15 @@ export default function DevToolsInAppNotificationTestingScreen() {
     hasIcons: true,
     children: items3.map((label) =>
       closure_1_14(
-        label(7041).TableRow,
+        label(7379).TableRow,
         {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(label(12412).BeakerIcon, {}),
+          icon: closure_1_14(label(13219).BeakerIcon, {}),
           onPress() {
             return label(label);
           },
-          trailing: closure_1_14(label(7050).TableRowArrow, {}),
+          trailing: closure_1_14(label(7388).TableRowArrow, {}),
         },
         label.label,
       ),

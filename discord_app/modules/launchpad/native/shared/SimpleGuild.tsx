@@ -6,10 +6,10 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getGuildIconSource = fn(5009).getGuildIconSource;
+const getGuildIconSource = fn(5110).getGuildIconSource;
 const ME = fn(1072).ME;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_10 = createStyles.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/SimpleGuild.tsx");
@@ -159,7 +159,7 @@ export default function SimpleGuild(guildId) {
       obj2.activityIndicatorState = activityIndicatorState;
       if (guildId === ME) {
         let obj3 = { style: tmp3.dmsWrapper, children: null };
-        let colors = tmp4(tmp5[16]).colors;
+        colors = tmp4(tmp5[16]).colors;
         const obj4 = { color: flag2 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
         colors = jsx(tmp7(tmp5[15]).ChatIcon, { color: flag2 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
         obj3.children = colors;

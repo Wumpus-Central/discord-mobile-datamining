@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { icon: { borderRadius: nativeDefault.radii.xs } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { borderRadius: nativeDefault.radii.xs };
@@ -39,7 +39,7 @@ export default noop.memo(function GameActivityIcon(style) {
       const items1 = [tmp.icon, size1];
       obj2.style = items1;
       const tmp2Result = shared;
-      const colors = nativeDefault.colors;
+      colors = nativeDefault.colors;
       obj2.color = shared.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
       jsx(UnknownGameIcon.UnknownGameIcon, { size: "custom", style: null, color: null });
       const isThemeDarkResult = shared.isThemeDark(obj.useThemeContext().theme);

@@ -5,9 +5,9 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import SafetyHubUtils from "../SafetyHubUtils.tsx";
 import SafetyHubModels from "../SafetyHubModels.tsx";
-import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import ChevronSmallDownIcon2 from "../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import useSafetyHubClassifications from "../hooks/useSafetyHubClassifications.tsx";
@@ -22,7 +22,7 @@ function SafetyHubViolationsHeader(count) {
   const tmp = closure_14();
   const obj = { onPress: onClick, style: tmp.header, children: null };
   const obj2 = { style: tmp.iconBackground, children: null };
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   obj2.children = closure_1_11(WarningIcon.WarningIcon, {
     color: "active" === status ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_MUTED,
     size: "xs",
@@ -165,7 +165,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13557, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14077, dependencyMap.paths), {
         classificationId: id,
         source: React5.StandingTab,
       });
@@ -330,12 +330,12 @@ class SafetyHubViolationsContainer {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8043);
+const SafetyHubConstants = fn(8140);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   connectedContainer: {
     display: "flex",

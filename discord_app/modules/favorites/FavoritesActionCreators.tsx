@@ -394,7 +394,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                       let tmp43 = closure_2_26(favoriteChannels.favoriteChannels);
                       let tmp46 = closure_2_27(favoriteChannels.favoriteChannels, tmp7);
                       flag = true;
-                      let obj3 = closure_0(10970);
+                      let obj3 = closure_0(10908);
                       let type;
                       if (tmp31 != null) {
                         type = tmp31.type;
@@ -418,7 +418,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                     if (flag) {
                       let BoolValue = closure_0(1227).BoolValue;
                       favoriteChannels.guildVisible = BoolValue.create({ value: true });
-                      let obj4 = closure_0(10970);
+                      let obj4 = closure_0(10908);
                       let str = "auto";
                       let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                     }
@@ -581,7 +581,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
           const obj4 = {
             update(favoriteChannels) {
               const favoritesCleanupCandidates =
-                favoriteChannels(10972).getFavoritesCleanupCandidates(favoriteChannels);
+                favoriteChannels(10910).getFavoritesCleanupCandidates(favoriteChannels);
               const found = favoritesCleanupCandidates.filter((id) => {
                 let hasItem = set.has(id.id);
                 if (hasItem) {
@@ -599,7 +599,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
                   favoriteChannels = arg0.favoriteChannels;
                   let id = item10015.id;
                   delete tmp2[tmp];
-                  let obj2 = favoriteChannels(10970);
+                  let obj2 = favoriteChannels(10908);
                   let result = obj2.trackFavoritesGuildRemoveFromFavorites(
                     item10015.type,
                     closure_1_28(arg0.favoriteChannels),
@@ -607,7 +607,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
                   continue;
                 }
               }
-              const obj = favoriteChannels(10972);
+              const obj = favoriteChannels(10910);
             },
           };
           c3 = 1;
@@ -676,7 +676,7 @@ let closure_44 = async function _pruneInactiveFavoriteThreads() {
                 autoAddedThreadsCategoryIds = require("FavoritesCleanup").getAutoAddedThreadsCategoryIds();
                 const obj4 = require("FavoritesCleanup");
               }
-              let length;
+              length = undefined;
               if (autoAddedThreadsCategoryIds != null) {
                 length = autoAddedThreadsCategoryIds.length;
               }
@@ -781,7 +781,7 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                   const obj2 = { limit: tmp5, canUpsell: false };
                   let tmp6 = obj2;
                 } else {
-                  const favoritesLimits = closure_0(10960).getFavoritesLimits();
+                  const favoritesLimits = closure_0(10882).getFavoritesLimits();
                   ({ favoriteLimit, canUpsellFavoriteLimit } = favoritesLimits);
                   tmp6 = null;
                   if (closure_0(1196).FavoriteChannelType.CATEGORY !== closure_0(1196).FavoriteChannelType.CATEGORY) {
@@ -797,12 +797,12 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                     }
                     tmp4Result = closure_1(12);
                   }
-                  const tmpResult = closure_0(10960);
+                  const tmpResult = closure_0(10882);
                 }
                 if (null != tmp6) {
                   const limit = tmp6.limit;
                   if (tmp6.canUpsell) {
-                    closure_1(10962)(limit);
+                    closure_1(10884)(limit);
                   } else {
                     const obj4 = { title: null, body: null };
                     const intl = closure_0(1113).intl;
@@ -810,8 +810,8 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                     const intl2 = closure_0(1113).intl;
                     const obj5 = { count: limit };
                     obj4.body = intl2.formatToPlainString(closure_0(1113).t.JaIyFi, obj5);
-                    closure_1(6092).show(obj4);
-                    const tmp4Result2 = closure_1(6092);
+                    closure_1(6205).show(obj4);
+                    const tmp4Result2 = closure_1(6205);
                   }
                   return false;
                 } else {
@@ -891,7 +891,7 @@ let closure_47 = async function _autoAddJoinedThreadToFavorites(arg0) {
               if (null != channel) {
                 if (channel.isThread()) {
                   let tmp10 = null;
-                  if (autoAddThreadsMode === closure_2_15) {
+                  if (autoAddThreadsMode === colors) {
                     tmp10 = (function getPerGuildCategoryName(guild_id) {
                       let tmp = null;
                       if (null != guild_id) {
@@ -915,7 +915,7 @@ let closure_47 = async function _autoAddJoinedThreadToFavorites(arg0) {
                   }
                   let categoryName = tmp10;
                   if (tmp10 == null) {
-                    categoryName = value2;
+                    categoryName = closure_2_16;
                   }
                   items = [closure_0];
                   const obj4 = { categoryName };
@@ -948,9 +948,9 @@ let closure_47 = async function _autoAddJoinedThreadToFavorites(arg0) {
     }
   }
 };
-const resetFatigueCooldown = fn(4983).resetFatigueCooldown;
-const THREAD_CHANNEL_TYPES = fn(4995).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(5004);
+const resetFatigueCooldown = fn(5084).resetFatigueCooldown;
+const THREAD_CHANNEL_TYPES = fn(5096).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(5105);
 ({
   FAVORITES_AUTO_ADD_THREADS_NEVER: map1,
   FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: closure_14,
@@ -1066,7 +1066,7 @@ export function setFavoritesAutoAddJoinedThreads(autoAdd) {
           tmp3 = tmp7;
         } else {
           const favoriteChannels = autoAddJoinedThreads.favoriteChannels;
-          let str = value2.trim();
+          let str = closure_2_16.trim();
           let tmp10 = favoriteChannels;
           let tmp11;
           const formatted = str.toLowerCase();
@@ -1117,7 +1117,7 @@ export function setFavoritesAutoAddJoinedThreads(autoAdd) {
             }
             if (null == tmp14) {
               str = createFavoriteCategory;
-              tmp11 = createFavoriteCategory(favoriteChannels, value2);
+              tmp11 = createFavoriteCategory(favoriteChannels, closure_2_16);
             } else if (!tmp14.canUpsell) {
               const obj = { title: null, body: null };
               const intl = util.intl;
@@ -1125,10 +1125,10 @@ export function setFavoritesAutoAddJoinedThreads(autoAdd) {
               const intl2 = util.intl;
               const obj2 = { count: tmp14.limit };
               obj.body = intl2.formatToPlainString(util.t.JaIyFi, obj2);
-              tmp10(6092).show(obj);
-              const tmp10Result2 = tmp10(6092);
+              tmp10(6205).show(obj);
+              const tmp10Result2 = tmp10(6205);
             }
-            str = tmp10(10962)(CATEGORY);
+            str = tmp10(10884)(CATEGORY);
             obj5 = applyDefault;
           }
         }
@@ -1407,8 +1407,8 @@ export function setFavoritesGuildVisibilityFromSettings(value) {
   );
   let isFavoritesGuildIdResult = !value;
   if (!value) {
-    isFavoritesGuildIdResult = tmp(5016).isFavoritesGuildId(SelectedGuildStore.getGuildId());
-    const tmpResult = tmp(5016);
+    isFavoritesGuildIdResult = tmp(5117).isFavoritesGuildId(SelectedGuildStore.getGuildId());
+    const tmpResult = tmp(5117);
   }
   if (isFavoritesGuildIdResult) {
     tmp(1099).transitionTo(closure_22.ME);

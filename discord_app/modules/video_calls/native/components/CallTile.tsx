@@ -5,14 +5,14 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
+import _modDef7414 from "../../../../../_runtime/metro/07414__.js";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
+import _modDef10775 from "../../../../../_runtime/metro/10775__.js";
 import RevealProvider from "RevealProvider.tsx";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef12218 from "../../../../../_runtime/metro/12218__.js";
-import _modDef12219 from "../../../../../_runtime/metro/12219__.js";
-import _modDef12220 from "../../../../../_runtime/metro/12220__.js";
-import _modDef12221 from "../../../../../_runtime/metro/12221__.js";
-import _modDef12222 from "../../../../../_runtime/metro/12222__.js";
+import _modDef13012 from "../../../../../_runtime/metro/13012__.js";
+import _modDef13013 from "../../../../../_runtime/metro/13013__.js";
+import _modDef13014 from "../../../../../_runtime/metro/13014__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -30,7 +30,7 @@ class StreamPreviewTile {
     obj1 = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "description", borderRadius: false },
+      style: { aspectRatio: "delete", borderRadius: false },
       disableTransition: true,
       onPress() {
         return closure_1_8();
@@ -43,17 +43,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef12218;
+    let tmp3 = _modDef13012;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef12219;
+      tmp3 = _modDef13013;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef12220;
+      tmp3 = _modDef7414;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef12221;
+      tmp3 = _modDef10775;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef12222;
+      tmp3 = _modDef13014;
     }
   }
   let tmp14 = null;
@@ -160,13 +160,13 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(11139);
+const ChannelCallStore = fn(10940);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5807);
+const CallConstants = fn(5920);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   liveContainer: { position: "absolute", top: 8, right: 8 },
   titleIcon: { marginRight: 6 },
@@ -185,7 +185,7 @@ let obj3 = {
   paddingHorizontal: 8,
   paddingVertical: 4,
 };
-const ColorUtils = fn(5139);
+const ColorUtils = fn(5240);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;
@@ -217,7 +217,7 @@ let obj6 = {
   backgroundColor: nativeDefault.colors.BLACK,
 };
 obj.stageStreamContainer = { backgroundColor: nativeDefault.colors.BLACK };
-const value2 = createStyles.createStyles(obj);
+const value = createStyles.createStyles(obj);
 let closure_19 = {
   code: "(function CallTileTsx1(){let[withTiming,reveal,STANDARD_EASING]=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};})",
 };

@@ -188,7 +188,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(headerLocalized, tag, writeUnknownFields) {
-  let length;
   if (headerLocalized.headerLocalized) {
     const LocalizedString = localized_string.LocalizedString;
     const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);

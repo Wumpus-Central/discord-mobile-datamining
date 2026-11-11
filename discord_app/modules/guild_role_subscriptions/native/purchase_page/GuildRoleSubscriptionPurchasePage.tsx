@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef12086 from "../../../../../_runtime/metro/12086__.js";
+import _modDef12883 from "../../../../../_runtime/metro/12883__.js";
 import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -41,12 +41,12 @@ function SocialBadge(onPress) {
     gesture(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: text }),
   ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef12086, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef12883, style: tmp.socialBadgeArrow };
     tmp5Result = gesture(native.Icon, obj3);
   }
   items[2] = tmp5Result;
   obj.children = items;
-  return closure_1_15(hasOwnProperty, obj);
+  return colors(hasOwnProperty, obj);
 }
 get_ActivityIndicator = fn(17);
 ({
@@ -59,7 +59,7 @@ const Constants = fn(1072);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   heroImage: { aspectRatio: 4, width: "100%" },
@@ -218,7 +218,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
                     gesture(Text_Text.Text, { variant: "body-xs/semibold", color: "text-default", children }),
                   ];
                   obj.children = items;
-                  return closure_2_15(timestampProducer, obj);
+                  return colors(timestampProducer, obj);
                 },
               };
               let formatResult = intl2.format(tmp5(tmp3[10]).t.A1L1hU, obj7);

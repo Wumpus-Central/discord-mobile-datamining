@@ -7,8 +7,8 @@ import client_themes_ClientThemesUtils from "../../client_themes/native/ClientTh
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
+import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ICYMITypes from "../ICYMITypes.tsx";
 import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
@@ -40,10 +40,10 @@ import ICYMIStore from "../ICYMIStore.tsx";
 const require = globalThis.__r;
 
 const util = LeftBackIconWithBadge(1113);
-const Pressables = LeftBackIconWithBadge(7046);
-const XSmallIcon = LeftBackIconWithBadge(7123);
-const BackIconWithBadge = LeftBackIconWithBadge(16918);
-const notifications_Notifications = LeftBackIconWithBadge(18856);
+const Pressables = LeftBackIconWithBadge(7364);
+const XSmallIcon = LeftBackIconWithBadge(7483);
+const BackIconWithBadge = LeftBackIconWithBadge(17081);
+const notifications_Notifications = LeftBackIconWithBadge(19046);
 require = fn;
 function SettingsButton() {
   return gesture(IconButton.IconButton, {
@@ -185,7 +185,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18930, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19120, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -231,7 +231,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-          isFocused(11291).showForLaterModal(isFocused(10317).SavedMessageSortTypes.BOOKMARK);
+          isFocused(11844).showForLaterModal(isFocused(11845).SavedMessageSortTypes.BOOKMARK);
         },
       };
       ref1.current = obj;
@@ -421,11 +421,11 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: closure_6 } = get_ActivityIndicator);
-let closure_12 = fn(18906).NUM_GUILDS_EXTENDED_ONBOARDING;
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+let closure_12 = fn(19096).NUM_GUILDS_EXTENDED_ONBOARDING;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_17 = createStyles.createStyles((paddingTop) => {
   const obj = {
     containerOuterTablet: {
@@ -438,7 +438,7 @@ let closure_17 = createStyles.createStyles((paddingTop) => {
   };
   return obj;
 });
-const createICYMIStyles = fn(18907);
+const createICYMIStyles = fn(19097);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: { flex: 1, flexShrink: 1, flexGrow: 1 },
@@ -550,17 +550,17 @@ let closure_22 = noop.memo(function Header(inNestedNavigator) {
     if (!inNestedNavigator) {
       const items1 = [null, gesture(ICYMIHeaderTextWrapper, {})];
       obj6.children = items1;
-      const items2 = [value2(hasOwnProperty, obj6)];
+      const items2 = [closure_1_16(hasOwnProperty, obj6)];
       const obj7 = { style: tmp.headerActions, children: null };
       const items3 = [gesture(InfoButton, {}), gesture(SettingsButton, {})];
       obj7.children = items3;
-      items2[1] = value2(hasOwnProperty, obj7);
+      items2[1] = closure_1_16(hasOwnProperty, obj7);
       obj5.children = items2;
-      items[1] = value2(hasOwnProperty, obj5);
+      items[1] = closure_1_16(hasOwnProperty, obj5);
       const obj8 = { style: tmp.headerBorder };
       items[2] = gesture(hasOwnProperty, obj8);
       obj2.children = items;
-      return value2(common_SafeAreaView.SafeAreaPaddingView, obj2);
+      return closure_1_16(common_SafeAreaView.SafeAreaPaddingView, obj2);
     }
   }
   const obj9 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };

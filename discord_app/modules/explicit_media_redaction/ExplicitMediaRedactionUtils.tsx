@@ -7,14 +7,14 @@ import MonitoringAgentDefault from "../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import SelfModUtils from "../self_mod/SelfModUtils.tsx";
 import ObscureMediaModels from "ObscureMediaModels.tsx";
+import SelfModUtils from "../self_mod/SelfModUtils.tsx";
 import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7533);
+const ExplicitMediaRedactionConstants = fn(8570);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: closure_6,
   EXPLICIT_MEDIA_MIN_WIDTH: metroImportDefault,

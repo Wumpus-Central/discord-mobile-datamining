@@ -10,7 +10,7 @@ export const ShopGiftModalKey = "Shop Gift Modal";
 export function openShopGiftModal(items1) {
   ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = items1);
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(14690, dependencyMap.paths),
+    asyncRequireImpl(11735, dependencyMap.paths),
     { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin },
     c3,
     navigationParams,

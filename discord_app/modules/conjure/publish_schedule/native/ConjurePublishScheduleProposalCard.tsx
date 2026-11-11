@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish_schedule/native/ConjurePublishScheduleProposalCard.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -21,7 +21,7 @@ export default function ConjurePublishScheduleProposalCard(arg0) {
   const tmp3 = useConjurePublishScheduleProposalDefault(projectId, proposal, current);
   const obj = { variant: "body-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.string(_modDef4028.ZtfX9V);
+  obj.children = intl.string(_modDef4079.ZtfX9V);
   items = [React3(Text_Text.Text, obj), ,];
   const items1 = [
     React3(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: tmp3.summary }),
@@ -37,13 +37,13 @@ export default function ConjurePublishScheduleProposalCard(arg0) {
   items1[1] = tmp4Result;
   const obj4 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef4028.cxNHma);
+  obj4.children = intl2.string(_modDef4079.cxNHma);
   items1[2] = React3(Text_Text.Text, obj4);
   let tmp4Result4 = null;
   if ("on" === tmp3.status) {
     const obj5 = { variant: "body-sm/normal", color: "text-default", accessibilityRole: "alert", children: null };
     const intl3 = util.intl;
-    obj5.children = intl3.string(_modDef4028.k4IRsm);
+    obj5.children = intl3.string(_modDef4079.k4IRsm);
     tmp4Result4 = React3(Text_Text.Text, obj5);
   }
   items1[3] = tmp4Result4;
@@ -63,7 +63,7 @@ export default function ConjurePublishScheduleProposalCard(arg0) {
   if (null != tmp3.onTurnOn) {
     const obj7 = { text: null, variant: "secondary", loading: null, disabled: null, onPress: null };
     const intl4 = util.intl;
-    obj7.text = intl4.string(_modDef4028.EuhBSG);
+    obj7.text = intl4.string(_modDef4079.EuhBSG);
     obj7.loading = "sending" === tmp3.status;
     obj7.disabled = "sending" === tmp3.status;
     obj7.onPress = tmp3.onTurnOn;

@@ -202,13 +202,13 @@ export function getBitrateLimit(guild, channel) {
   if (channel.isGuildStageVoice()) {
     let bound = closure_1_17;
   } else if (null == guild) {
-    bound = value2;
+    bound = closure_1_16;
   } else {
     const features = guild.features;
     if (features.has(constants2.VIP_REGIONS)) {
       let bitrate = BoostedGuildFeatures[TIER_3.TIER_3].limits.bitrate;
     } else {
-      bitrate = value2;
+      bitrate = closure_1_16;
     }
     bound = Math.max(bitrate, BoostedGuildFeatures[guild.premiumTier].limits.bitrate);
   }

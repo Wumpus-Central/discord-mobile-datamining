@@ -21,7 +21,7 @@ prototype["getUserIdentities"] = function getUserIdentities(arg0) {
 };
 prototype["getUserIdentityByApplication"] = function getUserIdentityByApplication(arg0, arg1) {
   value = map.get(arg0);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     const byApplication = value.byApplication;
     value2 = byApplication.get(arg1);

@@ -6,7 +6,6 @@ import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWitho
 import UserStore from "../../stores/UserStore.tsx";
 
 function prettyPrintTrace_(calls, arg1) {
-  let length;
   if (null == calls) {
     return "";
   } else {
@@ -30,7 +29,6 @@ function prettyPrintTrace_(calls, arg1) {
   }
 }
 function eachTraceCall(calls, fn) {
-  let length;
   if (null != calls) {
     if (calls.length > 0) {
       let num4 = 0;

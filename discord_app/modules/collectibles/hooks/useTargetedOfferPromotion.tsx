@@ -2,6 +2,7 @@
 import Constants from "../../../Constants.tsx";
 import StorefrontTypes from "../../storefront/StorefrontTypes.tsx";
 import usePromotionForApplicationDefault from "../../storefront/hooks/usePromotionForApplication.tsx";
+import CollectiblesPricingPromotionUtils from "../utils/CollectiblesPricingPromotionUtils.tsx";
 import CollectiblesTargetedOfferPromotionUtils from "../utils/CollectiblesTargetedOfferPromotionUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -38,7 +39,14 @@ export function useTargetedOfferPromotionForCollectiblesProduct(product) {
     }
     tmp4Result = CollectiblesTargetedOfferPromotionUtils;
   }
-  return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(product, tmp5);
+  const collectiblesPricingPromotionForProduct =
+    CollectiblesPricingPromotionUtils.useCollectiblesPricingPromotionForProduct(product);
+  const tmp4Result3 = CollectiblesPricingPromotionUtils;
+  return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(
+    product,
+    tmp5,
+    collectiblesPricingPromotionForProduct,
+  );
 }
 export function useTargetedOfferPromotionPurchaseCtaText(isFirstParty) {
   const tmp2 = usePromotionForApplicationDefault(closure_3);
@@ -54,9 +62,16 @@ export function useTargetedOfferPromotionPurchaseCtaText(isFirstParty) {
     }
     tmp4Result = CollectiblesTargetedOfferPromotionUtils;
   }
+  const collectiblesPricingPromotionForProduct =
+    CollectiblesPricingPromotionUtils.useCollectiblesPricingPromotionForProduct(isFirstParty);
+  const tmp4Result4 = CollectiblesPricingPromotionUtils;
   const targetedOfferPromotionForCollectiblesProduct =
-    CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(isFirstParty, tmp5);
-  const tmp4Result3 = CollectiblesTargetedOfferPromotionUtils;
+    CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(
+      isFirstParty,
+      tmp5,
+      collectiblesPricingPromotionForProduct,
+    );
+  const tmp4Result5 = CollectiblesTargetedOfferPromotionUtils;
   return CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionPurchaseCtaText(
     targetedOfferPromotionForCollectiblesProduct,
   );
@@ -75,9 +90,16 @@ export function useIsFiatExclusiveTargetedOfferPromotion(product) {
     }
     tmp4Result = CollectiblesTargetedOfferPromotionUtils;
   }
+  const collectiblesPricingPromotionForProduct =
+    CollectiblesPricingPromotionUtils.useCollectiblesPricingPromotionForProduct(product);
+  const tmp4Result4 = CollectiblesPricingPromotionUtils;
   const targetedOfferPromotionForCollectiblesProduct =
-    CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(product, tmp5);
-  const tmp4Result3 = CollectiblesTargetedOfferPromotionUtils;
+    CollectiblesTargetedOfferPromotionUtils.getTargetedOfferPromotionForCollectiblesProduct(
+      product,
+      tmp5,
+      collectiblesPricingPromotionForProduct,
+    );
+  const tmp4Result5 = CollectiblesTargetedOfferPromotionUtils;
   return CollectiblesTargetedOfferPromotionUtils.hasFiatExclusiveTargetedOfferPromotion(
     targetedOfferPromotionForCollectiblesProduct,
   );

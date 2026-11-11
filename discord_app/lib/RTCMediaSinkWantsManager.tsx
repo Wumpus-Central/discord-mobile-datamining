@@ -23,12 +23,12 @@ function getDefaultWants(wantsLevel) {
   return obj3;
 }
 const VideoToggleState = fn(1072).VideoToggleState;
-const SimulcastOverrideQuality = fn(5899).SimulcastOverrideQuality;
+const SimulcastOverrideQuality = fn(6012).SimulcastOverrideQuality;
 let c7 = 100;
 const DEFAULT_WANTS_DISABLED = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(6002);
+const BrowserUtils = fn(6115);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 let obj3 = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {
@@ -602,7 +602,7 @@ prototype["setSelectedParticipant"] = function setSelectedParticipant(selectedPa
     }
     return self.update(
       items.filter((item) => {
-        let length;
+        length = undefined;
         if (self.videoSsrcs[item] != null) {
           length = arr.length;
         }

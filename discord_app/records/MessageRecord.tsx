@@ -236,7 +236,7 @@ prototype["addReaction"] = function addReaction(emoji) {
   let NORMAL;
   closure_4 = undefined;
   closure_5 = undefined;
-  let colors = obj.colors;
+  colors = obj.colors;
   if (undefined === colors) {
     colors = [];
   }

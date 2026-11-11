@@ -1,9 +1,9 @@
 // discord_app/modules/quests/QuestBarRenderDelayTracker.tsx
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import MonitoringAgentDefault from "../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import DiscordAppStateDefault from "../app_state/DiscordAppState.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

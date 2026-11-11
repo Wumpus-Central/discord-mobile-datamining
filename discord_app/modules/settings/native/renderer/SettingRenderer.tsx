@@ -8,8 +8,8 @@ import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackT
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
-import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
@@ -79,7 +79,7 @@ function DisabledActionDescriptionWithLink(children) {
     const obj2 = { children: null };
     items = [tmp4, tmpResult];
     obj2.children = items;
-    return value2(View, obj2);
+    return closure_1_16(View, obj2);
   }
 }
 function ForceSwitchIcons(children) {
@@ -260,11 +260,11 @@ let closure_3 = [
 ];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11695);
+const SettingRendererConstants = fn(12318);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 },
   sliderTitle: { flexDirection: "row", justifyContent: "space-between" },
@@ -486,7 +486,7 @@ let closure_21 = noop.memo(function PressableSetting(arg0) {
     highlightSettingItem = gesture(SettingListItemHighlightDefault, obj6);
   }
   children[1] = highlightSettingItem;
-  return value2(closure_1_15, { children });
+  return closure_1_16(colors, { children });
 });
 let closure_23 = noop.memo(function ToggleSetting(arg0) {
   ({ useDescription, useIsDisabled, variant, start, end, IconComponent } = arg0);
@@ -547,10 +547,11 @@ let closure_23 = noop.memo(function ToggleSetting(arg0) {
     highlightSettingItem = tmp18(SettingListItemHighlightDefault, obj20);
   }
   children[1] = highlightSettingItem;
-  return value2(closure_1_15, { children });
+  return closure_1_16(colors, { children });
 });
-let closure_25 = noop.memo(function RadioSetting(arg0) {
-  ({ setting, useTitle, useValue, useOptions, onValueChange } = arg0);
+let closure_25 = noop.memo(function RadioSetting(hideTitle) {
+  hideTitle = hideTitle.hideTitle;
+  ({ setting, useTitle, useValue, useOptions, onValueChange } = hideTitle);
   const tmp = closure_17();
   let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   items = [LocaleStore];
@@ -563,51 +564,53 @@ let closure_25 = noop.memo(function RadioSetting(arg0) {
     let _HermesInternal = HermesInternal;
     combined = "" + value;
   }
-  const someResult = options.some((icon) => null != icon.icon);
-  const children = [
-    gesture(
-      TableRadioGroup.TableRadioGroup,
-      {
-        title,
-        defaultValue: combined,
-        onChange: onValueChange,
-        hasIcons: options.some((icon) => null != icon.icon),
-        children: options.map((label) => {
-          if (typeof label.value === "number") {
-            const _HermesInternal = HermesInternal;
-            let combined = "" + label.value;
-          } else {
-            combined = label.value;
-          }
-          return closure_1_14(
-            TableRadioRow.TableRadioRow,
-            {
-              value: combined,
-              label: label.label,
-              subLabel: label.subLabel,
-              disabled: label.disabled,
-              icon: label.icon,
-            },
-            label.value,
-          );
-        }),
-      },
-      combined,
-    ),
-  ];
+  let tmp13;
+  if (!hideTitle) {
+    tmp13 = title;
+  }
+  const obj3 = {
+    title: tmp13,
+    accessibilityLabel: null,
+    defaultValue: null,
+    onChange: null,
+    hasIcons: null,
+    children: null,
+  };
+  let tmp14;
+  if (hideTitle) {
+    tmp14 = title;
+  }
+  obj3.accessibilityLabel = tmp14;
+  obj3.defaultValue = combined;
+  obj3.onChange = onValueChange;
+  obj3.hasIcons = options.some((icon) => null != icon.icon);
+  obj3.children = options.map((label) => {
+    if (typeof label.value === "number") {
+      const _HermesInternal = HermesInternal;
+      let combined = "" + label.value;
+    } else {
+      combined = label.value;
+    }
+    return closure_1_14(
+      TableRadioRow.TableRadioRow,
+      { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled, icon: label.icon },
+      label.value,
+    );
+  });
+  const children = [gesture(TableRadioGroup.TableRadioGroup, obj3, combined)];
   if (highlightSettingItem) {
     const obj4 = { start: true, end: true, style: tmp.radioSettingHighlight };
     highlightSettingItem = gesture(SettingListItemHighlightDefault, obj4);
   }
   children[1] = highlightSettingItem;
-  return value2(closure_1_15, { children });
+  return closure_1_16(colors, { children });
 });
 let closure_26 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(16938).useHighlightSettingItem(setting);
-  let obj = trailing(16938);
+  let highlightSettingItem = trailing(17101).useHighlightSettingItem(setting);
+  let obj = trailing(17101);
   items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => callback.locale);
   trailing = undefined;
@@ -651,18 +654,18 @@ let closure_26 = noop.memo(function StaticSetting(arg0) {
   let tmp12Result = null;
   if (null != IconComponent) {
     const obj4 = { IconComponent, variant };
-    tmp12Result = closure_14(tmp(7041).TableRow.Icon, obj4);
+    tmp12Result = closure_14(tmp(7379).TableRow.Icon, obj4);
   }
   obj3.icon = tmp12Result;
   let tmp12Result2 = null;
   if (null != trailing) {
     const obj5 = { text: trailing };
-    tmp12Result2 = closure_14(tmp(7041).TableRow.TrailingText, obj5);
+    tmp12Result2 = closure_14(tmp(7379).TableRow.TrailingText, obj5);
   }
   obj3.trailing = tmp12Result2;
   obj3.start = start;
   obj3.end = end;
-  const children = [closure_14(trailing(7041).TableRow, obj3)];
+  const children = [closure_14(trailing(7379).TableRow, obj3)];
   if (highlightSettingItem) {
     const obj6 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj6);
@@ -693,7 +696,7 @@ let closure_27 = noop.memo(function VolumeSliderSetting(arg0) {
     highlightSettingItem = gesture(SettingListItemHighlightDefault, obj5);
   }
   children[1] = highlightSettingItem;
-  return value2(closure_1_15, { children });
+  return closure_1_16(colors, { children });
 });
 let closure_28 = noop.memo(function SliderSetting(useTrailing) {
   useTrailing = useTrailing.useTrailing;

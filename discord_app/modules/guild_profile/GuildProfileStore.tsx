@@ -193,7 +193,7 @@ const guildProfileStore = new GuildProfileStore(DispatcherDefault, {
       value.succeed();
     }
     map1.delete(guildId);
-    value2 = map.get(guildId);
+    const value2 = map.get(guildId);
     if (null == value2) {
       const obj2 = {};
       const merged = Object.assign(closure_7);
@@ -223,7 +223,7 @@ const guildProfileStore = new GuildProfileStore(DispatcherDefault, {
       value = tmp5;
     }
     const sum = Date.now() + value.fail();
-    value2 = map.get(guildId);
+    const value2 = map.get(guildId);
     if (null == value2) {
       const obj2 = {};
       const merged = Object.assign(closure_7);

@@ -319,7 +319,7 @@ invites = {
       if (tmp15) {
         c21 = true;
         const HTTP = HTTPUtils.HTTP;
-        const obj2 = { url: closure_1_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+        const obj2 = { url: colors.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
         value = HTTP.get(obj2);
         value.then(
           (body) => {
@@ -495,7 +495,7 @@ invites = {
     if (tmp) {
       c21 = true;
       const HTTP = HTTPUtils.HTTP;
-      const obj = { url: closure_1_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+      const obj = { url: colors.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
       value = HTTP.get(obj);
       value.then(
         (body) => {

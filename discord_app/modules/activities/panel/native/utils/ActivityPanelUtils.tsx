@@ -8,7 +8,7 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 import EmbeddedActivitiesStore from "../../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5783).ActivityPanelModes;
+const ActivityPanelModes = fn(5896).ActivityPanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 

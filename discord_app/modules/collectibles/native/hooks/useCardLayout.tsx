@@ -42,7 +42,7 @@ export function useCardLayout() {
     num = 2;
   }
   if (num < 2) {
-    const obj2 = { columns: num, cardWidth: "r", rowWidth: "isArray", ref: callback, onLayout: callback1 };
+    const obj2 = { columns: num, cardWidth: "r", rowWidth: "paddingHorizontal", ref: callback, onLayout: callback1 };
     return obj2;
   } else {
     let num2 = 2;
@@ -56,9 +56,9 @@ export function useCardLayout() {
       const _Math = Math;
       let bound = Math.max(4, diff1);
     } else {
-      bound = 2 * tmp6(9546).COLLECTIBLES_SHOP_CARD_GAP;
+      bound = 2 * tmp6(10349).COLLECTIBLES_SHOP_CARD_GAP;
     }
-    const result1 = (tmp3 - (bound + tmp6(9546).COLLECTIBLES_SHOP_CARD_GAP * diff)) / num;
+    const result1 = (tmp3 - (bound + tmp6(10349).COLLECTIBLES_SHOP_CARD_GAP * diff)) / num;
     let tmp15 = tmp6;
     let tmp16 = result1;
     let tmp17 = num;
@@ -91,20 +91,20 @@ export function useCardLayout() {
     }
     const _Math2 = Math;
     const _Math3 = Math;
-    const bound1 = Math.max(tmp16, tmp19(9546).COLLECTIBLES_SHOP_CARD_WIDTH);
-    const bound2 = Math.min(bound1, tmp19(9546).COLLECTIBLES_SHOP_CARD_MAX_WIDTH);
+    const bound1 = Math.max(tmp16, tmp19(10349).COLLECTIBLES_SHOP_CARD_WIDTH);
+    const bound2 = Math.min(bound1, tmp19(10349).COLLECTIBLES_SHOP_CARD_MAX_WIDTH);
     const result3 = bound2 * tmp17;
     const diff2 = tmp17 - 1;
-    if (result3 + (bound + tmp15(9546).COLLECTIBLES_SHOP_CARD_GAP * diff2) > tmp3) {
+    if (result3 + (bound + tmp15(10349).COLLECTIBLES_SHOP_CARD_GAP * diff2) > tmp3) {
       if (1 < tmp17) {
-        const obj3 = { columns: 1, cardWidth: "r", rowWidth: "channel", ref: callback, onLayout: callback1 };
+        const obj3 = { columns: 1, cardWidth: "r", rowWidth: "channelId", ref: callback, onLayout: callback1 };
         let obj = obj3;
       }
       return obj;
     }
     obj = { columns: tmp17, cardWidth: bound2, rowWidth: null, ref: null, onLayout: null };
     const result4 = bound2 * tmp17;
-    obj.rowWidth = result4 + tmp19(9546).COLLECTIBLES_SHOP_CARD_GAP * diff2;
+    obj.rowWidth = result4 + tmp19(10349).COLLECTIBLES_SHOP_CARD_GAP * diff2;
     obj.ref = callback;
     obj.onLayout = callback1;
   }

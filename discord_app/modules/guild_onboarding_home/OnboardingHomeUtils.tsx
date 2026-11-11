@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding_home/OnboardingHomeUtils.tsx
 import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
-import GuildOnboardingUtils from "../guild_onboarding/GuildOnboardingUtils.tsx";
 import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes.tsx";
 import useIsNewMemberDefault from "useIsNewMember.tsx";
 import guildHasOnboardingHomeDefault from "guildHasOnboardingHome.tsx";
+import GuildOnboardingUtils from "../guild_onboarding/GuildOnboardingUtils.tsx";
 import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1072);
 ({ GuildFeatures: metroImportDefault, ME: closure_8 } = Constants);
-const ChannelFlags = fn(4998).ChannelFlags;
+const ChannelFlags = fn(5099).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
 
@@ -41,7 +41,7 @@ export function useCanSeeOnboardingHome(guild_id) {
             return tmp7;
           } else if (ImpersonateStore.isFullServerPreview(closure_0)) {
             const id = has.id;
-            const isSettingsEmptyResult = enabled(7466).isSettingsEmpty(
+            const isSettingsEmptyResult = enabled(7018).isSettingsEmpty(
               GuildOnboardingHomeSettingsStore.getSettings(id),
             );
             hasItem1 = !isSettingsEmptyResult;
@@ -57,7 +57,7 @@ export function useCanSeeOnboardingHome(guild_id) {
               const tmp23 = has(constants.GUILD_ONBOARDING) && !enabled;
             }
             let tmp10 = hasItem1;
-            const enabledResult = enabled(7466);
+            const enabledResult = enabled(7018);
           } else {
             tmp10 = guildHasOnboardingHomeDefault(has);
             if (tmp10) {

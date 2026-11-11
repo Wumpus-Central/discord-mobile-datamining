@@ -373,25 +373,25 @@ class BaseActivityPanelFocusedView {
     return tmp48(tmp(tmp2[19]).ThemeContextProvider, obj1);
   }
 }
-const ActivityPanelConstants = fn(5783);
+const ActivityPanelConstants = fn(5896);
 ({
   ACTIVITY_LAYOUT_PHYSICS_GESTURE: metroImportDefault,
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8,
   ActivityPanelModes: closure_9,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(19399);
+const ActivityPanelNativeConstants = fn(19590);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_10,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11,
   DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: closure_12,
 } = ActivityPanelNativeConstants);
 let ThemeTypes = fn(1072).ThemeTypes;
-const IS_IOS = fn(11372).IS_IOS;
-const ActivityLayoutMode = fn(11864).ActivityLayoutMode;
+const IS_IOS = fn(11925).IS_IOS;
+const ActivityLayoutMode = fn(12616).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = { duration: 300 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   wrapper: {
     position: "absolute",
@@ -501,14 +501,14 @@ export default noop.memo(function ActivityPanelFocusedView(transitionState) {
       hasActivity,
       context: ActivityPanelStateContextDefault,
       header: memo1,
-      children: value2(EmbeddedActivityViewDefault, {
+      children: closure_2_16(EmbeddedActivityViewDefault, {
         channel,
         layoutMode: ActivityLayoutMode.FOCUSED,
         portraitSafeAreasConfig,
         landscapeSafeAreasConfig: memo,
       }),
     };
-    return value2(BaseActivityPanelFocusedView, obj);
+    return closure_2_16(BaseActivityPanelFocusedView, obj);
   }, items2);
 });
 export function useBaseActivityPanelFocusedView(context) {

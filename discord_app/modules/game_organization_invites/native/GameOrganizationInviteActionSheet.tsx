@@ -1,7 +1,7 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationInviteActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2530 from "../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2549 from "../GameOrganizationInvitesUntranslated.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Search_SearchBar from "../../../design/components/Search/native/SearchBar.native.tsx";
@@ -27,7 +27,7 @@ function Loading() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -41,7 +41,7 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   const tmp4 = useGameOrganizationInviteSuggestionsDefault();
   ({ getSendState, handleInvite } = useLinkedGameOrganizationInviteSenderDefault(guildId.guildId));
   const intl = util.intl;
-  const stringResult = intl.string(_modDef2530.nVMqjA);
+  const stringResult = intl.string(_modDef2549.nVMqjA);
   const obj = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   const intl2 = util.intl;
   obj.dismissAccessibilityLabel = intl2.string(util.t.cpT0Cq);
@@ -54,17 +54,17 @@ export default function GameOrganizationInviteActionSheet(guildId) {
     children: null,
   };
   const intl3 = util.intl;
-  obj4.children = intl3.formatToPlainString(_modDef2530.EnTIIr, { noun: stringResult });
+  obj4.children = intl3.formatToPlainString(_modDef2549.EnTIIr, { noun: stringResult });
   items = [React4(Text_Text.Heading, obj4)];
   const obj5 = { variant: "body-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
   const intl4 = util.intl;
-  obj5.children = intl4.formatToPlainString(_modDef2530.BBk7Qw, { noun: stringResult });
+  obj5.children = intl4.formatToPlainString(_modDef2549.BBk7Qw, { noun: stringResult });
   items[1] = React4(Text_Text.Text, obj5);
   obj3.children = items;
   const items1 = [hasOwnProperty(Stack_Stack.Stack, obj3)];
   const obj6 = { size: "md", round: true, onChange: search, placeholder: null };
   const intl5 = util.intl;
-  obj6.placeholder = intl5.formatToPlainString(_modDef2530.cRK6SQ, { noun: stringResult });
+  obj6.placeholder = intl5.formatToPlainString(_modDef2549.cRK6SQ, { noun: stringResult });
   items1[1] = React4(Search_SearchBar.SearchBar, obj6);
   obj2.children = items1;
   obj.header = hasOwnProperty(Stack_Stack.Stack, obj2);

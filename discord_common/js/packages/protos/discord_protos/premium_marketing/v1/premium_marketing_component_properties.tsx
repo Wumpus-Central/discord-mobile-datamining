@@ -31,13 +31,16 @@ import outbound_promotion_claim_modal_card from "outbound_promotion_claim_modal_
 import shop_coachmark from "shop_coachmark.tsx";
 import nitro_perk_card from "nitro_perk_card.tsx";
 import collection_page_marketing_block from "collection_page_marketing_block.tsx";
+import game_exit_panel from "game_exit_panel.tsx";
+import announcement_modal_video_led from "announcement_modal_video_led.tsx";
+import announcement_modal_panel from "announcement_modal_panel.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
 const MessageType = fn(1197).MessageType;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 };
     items[1] = {
       no: 2,
@@ -300,14 +303,15 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
         return require("shop_coachmark").ShopCoachmark;
       },
     };
-    obj = { no: 33, name: "nitro_perk_card", kind: "message", oneof: "properties", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[31]).NitroPerkCard;
-      }
-    }
-    obj.T = T;
-    items[30] = obj;
+    items[30] = {
+      no: 33,
+      name: "nitro_perk_card",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("nitro_perk_card").NitroPerkCard;
+      },
+    };
     items[31] = {
       no: 34,
       name: "collection_page_marketing_block",
@@ -317,15 +321,41 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
         return require("collection_page_marketing_block").CollectionPageMarketingBlock;
       },
     };
-    items[32] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
-    items[33] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
+    items[32] = {
+      no: 35,
+      name: "game_exit_panel",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("game_exit_panel").GameExitPanel;
+      },
+    };
+    obj = { no: 36, name: "announcement_modal_video_led", kind: "message", oneof: "properties", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[34]).AnnouncementModalVideoLed;
+      }
+    }
+    obj.T = T;
+    items[33] = obj;
+    items[34] = {
+      no: 37,
+      name: "announcement_modal_panel",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("announcement_modal_panel").AnnouncementModalPanel;
+      },
+    };
+    items[35] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
+    items[36] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", items, T);
     return tmp1;
   }
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
+  const obj = { properties: { oneofKind: "Array" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -786,13 +816,55 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
       writeUnknownFields,
     );
   }
+  if ("gameExitPanel" === properties.properties.oneofKind) {
+    const GameExitPanel = game_exit_panel.GameExitPanel;
+    const tagResult32 = tag.tag(35, _mod1197.WireType.LengthDelimited);
+    const joined31 = GameExitPanel.internalBinaryWrite(
+      properties.properties.gameExitPanel,
+      tag.tag(35, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult31 = GameExitPanel.internalBinaryWrite(
+      properties.properties.gameExitPanel,
+      tag.tag(35, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
+  if ("announcementModalVideoLed" === properties.properties.oneofKind) {
+    const AnnouncementModalVideoLed = announcement_modal_video_led.AnnouncementModalVideoLed;
+    const tagResult33 = tag.tag(36, _mod1197.WireType.LengthDelimited);
+    const joined32 = AnnouncementModalVideoLed.internalBinaryWrite(
+      properties.properties.announcementModalVideoLed,
+      tag.tag(36, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult32 = AnnouncementModalVideoLed.internalBinaryWrite(
+      properties.properties.announcementModalVideoLed,
+      tag.tag(36, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
+  if ("announcementModalPanel" === properties.properties.oneofKind) {
+    const AnnouncementModalPanel = announcement_modal_panel.AnnouncementModalPanel;
+    const tagResult34 = tag.tag(37, _mod1197.WireType.LengthDelimited);
+    const joined33 = AnnouncementModalPanel.internalBinaryWrite(
+      properties.properties.announcementModalPanel,
+      tag.tag(37, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult33 = AnnouncementModalPanel.internalBinaryWrite(
+      properties.properties.announcementModalPanel,
+      tag.tag(37, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   if ("" !== properties.contentIdentifier) {
     tag.tag(3, _mod1197.WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult32 = tag.tag(3, _mod1197.WireType.LengthDelimited);
+    const tagResult35 = tag.tag(3, _mod1197.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
     tag.tag(18, _mod1197.WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult33 = tag.tag(18, _mod1197.WireType.Varint);
+    const tagResult36 = tag.tag(18, _mod1197.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

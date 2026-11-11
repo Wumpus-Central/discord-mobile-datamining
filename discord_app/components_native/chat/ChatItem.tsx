@@ -3,10 +3,10 @@ import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import _modDef671 from "../../../_runtime/metro/00671__.js";
 import MessageTypes2 from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 import isSystemMessageDefault from "../../modules/messages/isSystemMessage.tsx";
-import RowGeneratorTypes from "../../modules/messages/native/renderer/RowGeneratorTypes.tsx";
 import AutoModerationSystemMessageViewNativeComponent from "../../../discord_common/js/packages/rtn-codegen/js/AutoModerationSystemMessageViewNativeComponent.tsx";
 import MessageViewNativeComponent from "../../../discord_common/js/packages/rtn-codegen/js/MessageViewNativeComponent.tsx";
 import SystemMessageViewNativeComponent from "../../../discord_common/js/packages/rtn-codegen/js/SystemMessageViewNativeComponent.tsx";
+import RowGeneratorTypes from "../../modules/messages/native/renderer/RowGeneratorTypes.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../modules/a11y/AccessibilityStore.tsx";
@@ -39,12 +39,12 @@ function DCDChatItem(message) {
 }
 const View = fn(17).View;
 const MessageTypes = fn(1072).MessageTypes;
-const RowGeneratorConstants = fn(8453);
+const RowGeneratorConstants = fn(9094);
 ({ RowType: closure_8, Changeset: closure_9 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_14 = createStyles.createStyles((marginLeft, marginTop, paddingTop) => {
   const obj = {
     container: { position: "relative", overflow: "hidden", paddingTop },
@@ -206,6 +206,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 }
-export const DCDMessageView = fn(10015).default;
-export const DCDSystemMessageView = fn(10016).default;
-export const DCDAutoModerationSystemMessageView = fn(10014).default;
+export const DCDMessageView = fn(11004).default;
+export const DCDSystemMessageView = fn(11005).default;
+export const DCDAutoModerationSystemMessageView = fn(11003).default;

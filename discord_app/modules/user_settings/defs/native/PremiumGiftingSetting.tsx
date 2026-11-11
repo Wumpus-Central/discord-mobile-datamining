@@ -3,20 +3,20 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import BillingPlatformUtils from "../../../device/BillingPlatformUtils.tsx";
 import BlockedPaymentsCountryExperiment from "../../../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
-import PromotionsHooks from "../../../premium/promotions/PromotionsHooks.tsx";
 import openBlockedPaymentsCountryActionSheetDefault from "../../../billing/native/openBlockedPaymentsCountryActionSheet.tsx";
+import PromotionsHooks from "../../../premium/promotions/PromotionsHooks.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11694);
+const SettingBuilders = fn(12317);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(13610).GiftIcon,
+  IconComponent: fn(11757).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },

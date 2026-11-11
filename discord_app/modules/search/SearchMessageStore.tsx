@@ -10,7 +10,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
 require = fn;
 function handleReaction(optimistic) {
-  let colors = optimistic;
+  colors = optimistic;
   ({ messageId, emoji } = optimistic);
   ({ type, userId, channelId } = optimistic);
   if (obj.shouldApplyReaction(optimistic)) {

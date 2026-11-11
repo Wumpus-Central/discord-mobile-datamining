@@ -23,7 +23,7 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
         clearTimeout(value);
         map1.delete(channelId);
       }
-      value2 = map.get(channelId);
+      const value2 = map.get(channelId);
       if (null != value2) {
         map.delete(channelId);
         if (set.has(channelId)) {
@@ -79,7 +79,7 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
                       clearTimeout(value);
                       map1.delete(channel_id);
                     }
-                    value2 = map.get(channel_id);
+                    const value2 = map.get(channel_id);
                     if (null != value2) {
                       map.delete(channel_id);
                       if (set.has(channel_id)) {

@@ -2,11 +2,11 @@
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import ChannelTypes from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import privDefault from "../../../../_runtime/01453_priv.js";
+import QuestTypes from "../QuestTypes.tsx";
+import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import useAlertStore2 from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import QuestTypes from "../QuestTypes.tsx";
-import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import getQuestLogger from "../lib/getQuestLogger.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import ContentImpressionTracker from "../lib/analytics/ContentImpressionTracker.tsx";
@@ -22,10 +22,10 @@ import QuestStore from "../QuestStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ChannelDetailsStore = fn(9921);
+const ChannelDetailsStore = fn(8998);
 ({ useChannelDetailsStore: metroImportDefault, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const isTextChannel = fn(4995).isTextChannel;
-let closure_16 = fn(9783).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+const isTextChannel = fn(5096).isTextChannel;
+let closure_16 = fn(10070).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1072).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -80,7 +80,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const set = new Set();
       codedLinks = codedLinks.codedLinks;
       const item = codedLinks.forEach((type, questContentPosition) => {
-        if (type.type === applyArgumentsResult(5879).CodedLinkType.QUESTS_EMBED) {
+        if (type.type === applyArgumentsResult(5992).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
           if (!set.has(code)) {
             const obj3 = { questId: code, questContentPosition, messageId: null, channelId: null };
@@ -215,8 +215,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(6931).isChannelFocused();
-      applyArgumentsResult(5316);
+      let isChannelFocusedResult = applyArgumentsResult(6985).isChannelFocused();
+      applyArgumentsResult(5429);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }
@@ -405,7 +405,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
             applyArgumentsResult.questStatuses[tmp7.questId] = tmp17;
             if (applyArgumentsResult.isChatViewable) {
               let impressionCache2 = applyArgumentsResult.impressionCache;
-              value2 = impressionCache2.get(tmp4);
+              let value2 = impressionCache2.get(tmp4);
               let obj4 = value2;
               let isRunning;
               if (value2 != null) {

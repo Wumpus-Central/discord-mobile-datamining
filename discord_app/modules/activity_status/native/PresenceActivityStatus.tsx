@@ -1,8 +1,8 @@
 // discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
 import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
-import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
-import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import GameControllerIcon2 from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import ActivityStatusIconDefault from "ActivityStatusIcon.tsx";
 import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
 import ActivityStatusTextDefault from "ActivityStatusText.tsx";

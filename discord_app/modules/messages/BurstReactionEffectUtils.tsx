@@ -31,7 +31,6 @@ export function replaceAnimationColors(str, arg1) {
   );
 }
 export const getBurstAnimationHash = apply.memoize((str) => {
-  let length;
   let num = 0;
   let num2 = 0;
   let num3 = 0;

@@ -6,8 +6,8 @@ import useNavigation from "../../../../design/components/Navigator/native/useNav
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
-import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import NewUserAnalyticsUtils from "../../../nuf/native/NewUserAnalyticsUtils.tsx";
 import ChairIllocon from "../../../../design/components/mana-assets/native/generated/ChairIllocon.native.tsx";
 import WorldIllocon from "../../../../design/components/mana-assets/native/generated/WorldIllocon.native.tsx";
@@ -16,7 +16,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(7214);
+const CreateGuildConstants = fn(7731);
 ({
   CreateGuildModalStates: closure_6,
   GuildTemplateTriggers: metroImportDefault,
@@ -26,9 +26,9 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsLocations: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
-  contentContainer: { flex: 1, marginTop: fn(5716).NAV_BAR_HEIGHT },
+  contentContainer: { flex: 1, marginTop: fn(5829).NAV_BAR_HEIGHT },
   scrollContainer: null,
   headerContainer: null,
   headerTitle: null,
@@ -36,7 +36,7 @@ let obj2 = {
   sections: null,
   skipDescription: null,
 };
-let obj3 = { flex: 1, marginTop: fn(5716).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, marginTop: fn(5829).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.headerContainer = { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 };
 obj2.headerTitle = { textAlign: "center", marginBottom: 8 };
@@ -133,7 +133,7 @@ export default function CreationIntent(arg0) {
   const items3 = [closure_12(ref, obj4), ,];
   let obj7 = { style: tmp.sections, children: null };
   const obj8 = { hasIcons: true, children: null };
-  const tmp13 = trigger(14132);
+  const tmp13 = trigger(14612);
   const obj9 = { Icon: null, message: null, onPress: null };
   if (closure_14) {
     obj9.Icon = ChairIllocon.ChairIllocon;
@@ -149,10 +149,10 @@ export default function CreationIntent(arg0) {
     obj10.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = closure_11(trigger(14132), obj10);
+    items4[1] = closure_11(trigger(14612), obj10);
     obj8.children = items4;
     let tmp15 = obj8;
-    const tmp12Result = trigger(14132);
+    const tmp12Result = trigger(14612);
   } else {
     obj9.Icon = WorldIllocon.WorldIllocon;
     const intl3 = util.intl;
@@ -167,10 +167,10 @@ export default function CreationIntent(arg0) {
     obj11.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = closure_11(trigger(14132), obj11);
+    items5[1] = closure_11(trigger(14612), obj11);
     obj8.children = items5;
     tmp15 = obj8;
-    const tmp12Result2 = trigger(14132);
+    const tmp12Result2 = trigger(14612);
   }
   obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp15);
   items3[1] = closure_11(ref, obj7);

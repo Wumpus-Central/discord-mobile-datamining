@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import RunAfterInteractionsUtils from "../../../utils/native/RunAfterInteractionsUtils.tsx";
 import UserSearchUtils from "../../main_tabs_v2/UserSearchUtils.tsx";
+import formatResults from "../formatResults.tsx";
 import sortByMatchScore from "../../autocompleter/index.tsx";
 import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
-import formatResults from "../formatResults.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -13,10 +13,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: closure_6 } = get_ActivityIndicator);
 const NOOP = fn(1072).NOOP;
-const UserRowModes = fn(10855).UserRowModes;
+const UserRowModes = fn(10177).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,

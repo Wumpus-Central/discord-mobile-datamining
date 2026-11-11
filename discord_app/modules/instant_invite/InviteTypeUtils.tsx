@@ -1,7 +1,7 @@
 // discord_app/modules/instant_invite/InviteTypeUtils.tsx
 import GuildScheduledEventStore from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
-import Constants from "Constants.tsx";
 import InviteTargetTypes from "../../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
+import Constants from "Constants.tsx";
 import GuildProfileUtils from "../guild_profile/GuildProfileUtils.tsx";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
 import size from "../../../_runtime/metro/00002__.js";

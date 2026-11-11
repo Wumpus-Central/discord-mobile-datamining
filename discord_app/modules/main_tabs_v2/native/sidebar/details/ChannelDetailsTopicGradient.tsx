@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 );
 
 export function useChannelTopicGradientBackground() {
-  token = token(5726).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  token = token(5839).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   items = [token];
   return noop.useMemo(() => {
     const obj = _modDef671(token);

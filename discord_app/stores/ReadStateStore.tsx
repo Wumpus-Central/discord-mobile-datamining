@@ -455,7 +455,7 @@ function mergeForGuild(guild) {
     });
   }
   const prop = guild.guild_scheduled_events;
-  let length;
+  length = undefined;
   if (prop != null) {
     length = prop.length;
   }
@@ -777,7 +777,7 @@ function handleChannelSectionStoreUpdate() {
     const obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SECTION_STORE_UPDATE, objectType: constants.ACK_AUTOMATIC };
     flag = false;
     if (null != currentSidebarChannelId) {
-      value2 = ReadState.get(currentSidebarChannelId);
+      const value2 = ReadState.get(currentSidebarChannelId);
       let ackResult = shouldAutomaticallyAck(value2, undefined);
       if (ackResult) {
         const obj2 = { trackAnalytics: true, location: obj };
@@ -819,18 +819,18 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6913).isEventUpcoming;
-const ChannelRecord = fn(4995);
+const isEventUpcoming = fn(6966).isEventUpcoming;
+const ChannelRecord = fn(5096);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_37, AnalyticsObjects: closure_38, AnalyticsSections: closure_39, Endpoints: closure_40, ChannelLayouts: closure_41, OverlayWidgets, CURRENT_APP_CONTEXT: closure_42, ChannelTypes: closure_43, BasicPermissions } = Constants);
 ({ Permissions: closure_45, MessageTypes: closure_46, RelationshipTypes: closure_47, ChannelTypesSets: closure_48, UserNotificationSettings: closure_49, MessageTypesSets: closure_50, AppStates: closure_51 } = Constants);
-const ActivityPanelConstants = fn(5783);
+const ActivityPanelConstants = fn(5896);
 ({ ActivityPanelModes: closure_52, FocusedActivityLayouts: closure_53 } = ActivityPanelConstants);
-const ChannelConstants = fn(4998);
+const ChannelConstants = fn(5099);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(4997).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6834).ReadStateTypes;
+const GuildScheduledEventStatus = fn(5098).GuildScheduledEventStatus;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -946,7 +946,7 @@ class ReadState {
       tmp = ReadStateTypes;
       CHANNEL = ReadStateTypes.CHANNEL;
     }
-    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
     merged[0] = ReadStateTypes.CHANNEL;
     merged.channelId = global;
     merged.type = CHANNEL;
@@ -1007,7 +1007,7 @@ ReadState["get"] = function get(channelId) {
       if (CHANNEL === undefined) {
         CHANNEL2 = ReadStateTypes.CHANNEL;
       }
-      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
       merged[0] = ReadStateTypes.CHANNEL;
       merged.channelId = channelId;
       merged.type = CHANNEL2;
@@ -1066,7 +1066,7 @@ ReadState["getIfExists"] = function getIfExists(id) {
   }
   const _readStates = ReadState._readStates;
   value = _readStates.get(CHANNEL);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(id);
   }
@@ -1784,7 +1784,7 @@ prototype2["ack"] = function ack(immediate) {
             if (channel.isForumPost()) {
               if (null != channel.parent_id) {
                 const parent_id = channel.parent_id;
-                value2 = ReadState.get(parent_id);
+                const value2 = ReadState.get(parent_id);
                 closure_129_0 = value2;
                 let hasLoadedResult = ActiveThreadsStore.hasLoaded(channel.guild_id);
                 if (hasLoadedResult) {
@@ -1924,14 +1924,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6948, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(7001, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6948, dependencyMap.paths);
+          const promise = asyncRequireImpl(7001, dependencyMap.paths);
         }
       }
     });
@@ -3255,7 +3255,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flexDirection", force: "1000000000000000000", isExplicitUserAction: null, trackAnalytics: "1000000000000000001" });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flexDirection", force: "CALL_CONNECT", isExplicitUserAction: null, trackAnalytics: "heading-md/semibold" });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3501,7 +3501,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       ReadState.get(channel.id)._persisted = true;
       const obj3 = { channelId: parent_id, messageId: channel.id, manual: false };
       ({ channelId, messageId, manual, newMentionCount } = obj3);
-      value2 = ReadState.get(channelId);
+      const value2 = ReadState.get(channelId);
       if (manual) {
         let tmp11 = channelId !== channelId;
         if (tmp11) {
@@ -3549,7 +3549,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
         value._isActiveThread = true;
         value._isJoinedThread = JoinedThreadsStore.hasJoined(type.id);
         if (type.isForumPost()) {
-          value2 = ReadState.get(type.parent_id);
+          const value2 = ReadState.get(type.parent_id);
           if (obj2.compare(value2.lastMessageId, type.id) < 0) {
             value2.lastMessageId = type.id;
           }
@@ -3592,7 +3592,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
           const obj2 = { section: constants3.CHANNEL, object: constants2.ACK_WINDOW_FOCUS, objectType: constants.ACK_AUTOMATIC };
           let flag3 = false;
           if (null != arg0) {
-            value2 = ReadState.get(arg0);
+            const value2 = ReadState.get(arg0);
             let ackResult = shouldAutomaticallyAck(value2, undefined);
             if (ackResult) {
               const obj3 = { trackAnalytics: true, location: obj2 };
@@ -3642,7 +3642,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flexDirection", isExplicitUserAction: "raw", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flexDirection", isExplicitUserAction: "full", trackAnalytics: null });
     });
     if (context === closure_1_42) {
       const push = navigation.push;
@@ -3783,7 +3783,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       value.lastMessageId = item.id;
       if (NotificationCenterItemsStore.tabFocused) {
         let lastMessageId = item.id;
-        value2 = ReadState.get(id, ReadStateTypes.NOTIFICATION_CENTER);
+        const value2 = ReadState.get(id, ReadStateTypes.NOTIFICATION_CENTER);
         if (tmp3) {
           let tmp4 = null != value2.lastMessageId;
           if (!tmp4) {
@@ -3837,7 +3837,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       if (num2 < time) {
         value.lastMessageId = require("SnowflakeUtils").fromTimestamp(time);
         if (NotificationCenterItemsStore.tabFocused) {
-          value2 = ReadState.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER);
+          const value2 = ReadState.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER);
           if (tmp15) {
             if (tmp16) {
               let lastMessageId = value2.lastMessageId;

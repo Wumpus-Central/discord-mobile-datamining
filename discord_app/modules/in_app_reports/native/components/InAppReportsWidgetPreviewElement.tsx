@@ -5,15 +5,15 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import UserProfileGameWidgetTypes from "../../../user_profile/UserProfileGameWidgetTypes.tsx";
 import UserProfilePersonalWidget from "../../../user_profile/UserProfilePersonalWidget.tsx";
 import UserProfileSharedStylesDefault from "../../../user_profile/native/UserProfileSharedStyles.tsx";
-import UserProfileWidgetsBoard from "../../../user_profile/native/UserProfileWidgetsBoard.tsx";
 import UserProfilePersonalWidgetCardDefault from "../../../user_profile/native/UserProfilePersonalWidgetCard.tsx";
+import UserProfileWidgetsBoard from "../../../user_profile/native/UserProfileWidgetsBoard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   title: { lineHeight: 16, marginBottom: 8 },

@@ -63,7 +63,7 @@ prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByP
   bountyId,
 ) {
   value = map.get(questPlacementFromQuestContent);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(bountyId);
   }

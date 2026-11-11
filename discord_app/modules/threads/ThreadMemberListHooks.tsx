@@ -1,7 +1,7 @@
 // discord_app/modules/threads/ThreadMemberListHooks.tsx
 import util from "../../intl/index.native.tsx";
-import GuildChannelSubscriptions from "../../lib/guild/GuildChannelSubscriptions.tsx";
 import GuildSubscriptionsActionCreators from "../../actions/GuildSubscriptionsActionCreators.tsx";
+import GuildChannelSubscriptions from "../../lib/guild/GuildChannelSubscriptions.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import ThreadMemberListStore from "ThreadMemberListStore.tsx";

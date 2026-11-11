@@ -10,8 +10,8 @@ import OrbsArcadeRewardUtils from "../utils/OrbsArcadeRewardUtils.tsx";
 import OrbsArcadeAnalytics from "../OrbsArcadeAnalytics.tsx";
 import openOrbsArcadeSheets from "openOrbsArcadeSheets.tsx";
 import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview.tsx";
-import OrbsArcadeWindowUtils from "../utils/OrbsArcadeWindowUtils.tsx";
 import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel.tsx";
+import OrbsArcadeWindowUtils from "../utils/OrbsArcadeWindowUtils.tsx";
 import ChestLogoSpotIllustration from "../../../design/components/mana-assets/native/generated/ChestLogoSpotIllustration.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -31,9 +31,9 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const obj2 = { children: null };
   const obj = rewards(504);
   const items2 = [
-    closure_9(rewards(13669).Pile, {
+    closure_9(rewards(14837).Pile, {
       "aria-label": memo,
-      shape: rewards(9599).CutoutShape.Circle,
+      shape: rewards(9437).CutoutShape.Circle,
       size: v50,
       gap: 2,
       depthX: 0.28,
@@ -45,8 +45,8 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const intl = rewards(1113).intl;
   obj5.children = intl.string(rewards(1113).t.DCCcdz);
   const items3 = [
-    closure_9(rewards(5753).Text, obj5),
-    closure_9(rewards(5753).Text, {
+    closure_9(rewards(5866).Text, obj5),
+    closure_9(rewards(5866).Text, {
       variant: "heading-xs/semibold",
       color: "text-subtle",
       lineClamp: 2,
@@ -136,7 +136,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let c12 = 50;
 let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, "rgba(16, 142, 77, 0.5)"];
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj2 = {
   rewardShelf: {
     flexDirection: "row",
@@ -160,8 +160,8 @@ let obj2 = {
 };
 let size = {
   marginLeft: "auto",
-  width: fn(5766).SMALL_BUTTON_HEIGHT,
-  height: fn(5766).SMALL_BUTTON_HEIGHT,
+  width: fn(5879).SMALL_BUTTON_HEIGHT,
+  height: fn(5879).SMALL_BUTTON_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
 };
@@ -178,7 +178,7 @@ let items2 = [{ scaleX: -1 }];
 obj5.transform = items2;
 obj2.chestLogoMirrored = obj5;
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_17 = createStyles.createStyles((width) => ({
   nitroCoin: { width, height: width, alignItems: "center", justifyContent: "center" },
 }));
@@ -349,7 +349,7 @@ export default function OrbsArcadeRewardShelf(game) {
     }
     items6[1] = tmp21Result;
     let obj15 = { style: tmp.chevronIconWrapper, children: null };
-    let colors = tmp9(tmp3[5]).colors;
+    colors = tmp9(tmp3[5]).colors;
     const obj16 = { size: "xs", color: tmp12 ? colors.CONTROL_ICON_ONLY_ICON_DEFAULT : colors.ICON_MUTED };
     colors = closure_9(tmp2(tmp3[26]).ChevronLargeRightIcon, obj16);
     obj15.children = colors;

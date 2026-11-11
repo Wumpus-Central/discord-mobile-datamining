@@ -11,7 +11,7 @@ require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   button: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
@@ -67,7 +67,7 @@ export default function UserProfileWidgetOptionConjureButton(arg0) {
   items = [closure_5(MagicWandIcon.MagicWandIcon, { size: "md", color: padding(575).colors.TEXT_DEFAULT })];
   const obj3 = { variant: "body-md/medium", color: "text-strong", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(padding(4028)["5WHmVU"]);
+  obj3.children = intl.string(padding(4079)["5WHmVU"]);
   items[1] = closure_5(Text_Text.Text, obj3);
   obj.children = items;
   return closure_6(Pressable, obj);

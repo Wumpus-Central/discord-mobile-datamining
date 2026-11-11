@@ -55,7 +55,7 @@ export default function useChatInputHeightWorklet(arg0) {
   [tmp13, tmp14, tmp15, tmp16] = items2;
   function useChatInputHeightWorkletNativeTsx2() {
     value = _undefined.get();
-    value2 = _undefined2.get();
+    const value2 = _undefined2.get();
     return _undefined3();
   }
   const items3 = [tmp14, tmp15, tmp16];

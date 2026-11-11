@@ -4,8 +4,8 @@ import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import UrlHostUtils from "../core/UrlHostUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-function getSizedImageProxyURL(value, size) {
-  const str = URLUtilsDefault.toURLSafe(value);
+function getSizedImageProxyURL(iconUrl, size) {
+  const str = URLUtilsDefault.toURLSafe(iconUrl);
   if (null != str) {
     let startsWithResult = set.has(str.hostname);
     if (startsWithResult) {
@@ -35,7 +35,7 @@ function getSizedImageProxyURL(value, size) {
       return str.toString();
     }
   }
-  return value;
+  return iconUrl;
 }
 let parts;
 if (window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS != null) {
@@ -59,10 +59,10 @@ let result = size.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx
 
 export { isImageProxyURL };
 export { getSizedImageProxyURL };
-export function getSizedImageAssetURL(value, size) {
-  const str = URLUtilsDefault.toURLSafe(value);
+export function getSizedImageAssetURL(iconUrl, size) {
+  const str = URLUtilsDefault.toURLSafe(iconUrl);
   if (null == str) {
-    return value;
+    return iconUrl;
   } else {
     let startsWithResult = set.has(str.hostname);
     if (startsWithResult) {
@@ -70,9 +70,9 @@ export function getSizedImageAssetURL(value, size) {
       startsWithResult = pathname.startsWith("/external/");
     }
     if (startsWithResult) {
-      return getSizedImageProxyURL(value, size);
+      return getSizedImageProxyURL(iconUrl, size);
     } else {
-      if (tmpResult.isDiscordCdnUrl(value)) {
+      if (tmpResult.isDiscordCdnUrl(iconUrl)) {
         if (null != size.size) {
           const _String = String;
           const obj3 = ImageLoaderUtils;
@@ -83,7 +83,7 @@ export function getSizedImageAssetURL(value, size) {
           if (NumberResult > 0) {
             const _Number = Number;
             if (Number(StringResult) > NumberResult) {
-              return value;
+              return iconUrl;
             }
           }
           const searchParams = str.searchParams;
@@ -91,7 +91,7 @@ export function getSizedImageAssetURL(value, size) {
         }
         return str.toString();
       } else {
-        return value;
+        return iconUrl;
       }
       tmpResult = URLUtilsDefault;
     }

@@ -5,10 +5,10 @@ import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
-import EntitlementActionCreators from "../../../../actions/EntitlementActionCreators.tsx";
-import BillingActionCreatorsDefault from "../../../../actions/native/BillingActionCreators.tsx";
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import EntitlementActionCreators from "../../../../actions/EntitlementActionCreators.tsx";
 import BadgeDirectoryActionCreators from "../../../badges/BadgeDirectoryActionCreators.tsx";
+import BillingActionCreatorsDefault from "../../../../actions/native/BillingActionCreators.tsx";
 import PremiumFeaturesCards from "PremiumFeaturesCards.tsx";
 import OutboundPromotionCardDefault from "../../../../components_native/premium/OutboundPromotionCard.tsx";
 import EntitlementGiftGroupCardDefault from "../../../../components_native/premium/EntitlementGiftGroupCard.tsx";
@@ -31,7 +31,7 @@ const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_11, SubscriptionPlans: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL },
   giftingSettingsContainer: { flex: 1 },

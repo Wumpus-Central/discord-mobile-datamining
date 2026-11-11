@@ -32,7 +32,7 @@ function handleReaction(messageId) {
     flag = false;
     if (null != peekResult) {
       const messageByMessageId = peekResult.messageByMessageId;
-      value2 = messageByMessageId.get(messageId);
+      const value2 = messageByMessageId.get(messageId);
       flag = false;
       if (null != value2) {
         const applyReactionResult = ConversationMessageCacheUtils.applyReaction(messageId, value2);
@@ -111,8 +111,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(5781).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(5781).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(5894).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(5894).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -159,7 +159,7 @@ prototype["getMessage"] = function getMessage(arg0) {
   let tmp2 = null;
   if (null != value) {
     const peekResult = navigation.peek(value);
-    value2 = undefined;
+    let value2;
     if (peekResult != null) {
       const messageByMessageId = peekResult.messageByMessageId;
       value2 = messageByMessageId.get(arg0);
@@ -329,7 +329,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
         flag = false;
         if (null != peekResult) {
           const messageByMessageId = peekResult.messageByMessageId;
-          value2 = messageByMessageId.get(id);
+          const value2 = messageByMessageId.get(id);
           flag = false;
           if (null != value2) {
             const updateMessageRecordResult = MessageRecordUtils.updateMessageRecord(value2, message);
@@ -364,7 +364,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
       flag = false;
       if (null != peekResult) {
         const messageByMessageId = peekResult.messageByMessageId;
-        value2 = messageByMessageId.get(messageId);
+        const value2 = messageByMessageId.get(messageId);
         flag = false;
         if (null != value2) {
           const addReactionBatchResult = value2.addReactionBatch(messageId.reactions, AuthenticationStore.getId());
@@ -394,7 +394,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
       flag = false;
       if (null != peekResult) {
         const messageByMessageId = peekResult.messageByMessageId;
-        value2 = messageByMessageId.get(messageId);
+        const value2 = messageByMessageId.get(messageId);
         flag = false;
         if (null != value2) {
           const result = value2.set("reactions", []);
@@ -420,7 +420,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
       flag = false;
       if (null != peekResult) {
         const messageByMessageId = peekResult.messageByMessageId;
-        value2 = messageByMessageId.get(messageId);
+        const value2 = messageByMessageId.get(messageId);
         flag = false;
         if (null != value2) {
           const result = value2.removeReactionsForEmoji(messageId.emoji);

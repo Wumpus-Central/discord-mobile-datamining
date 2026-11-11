@@ -3,9 +3,9 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
 import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper.tsx";
 import useGuildsBarBottomRightBadgeDefault from "hooks/useGuildsBarBottomRightBadge.tsx";
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
 import HomeDrawerDirectMessagesRowDefault from "../../home_drawer/native/HomeDrawerDirectMessagesRow.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ICYMIStore from "../../icymi/ICYMIStore.tsx";
@@ -39,7 +39,7 @@ export default noop.memo(function GuildsBarMessages() {
     return tmp2;
   });
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   const obj3 = {
     selected: stateFromStores,
     circle: false,
@@ -48,10 +48,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "active",
-    externalChildren: null,
-    expandedChildren: null,
-    children: null,
+    label: "Draft",
+    externalChildren: "Out for localization",
+    expandedChildren: "Localized",
+    children: "Localization",
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -68,9 +68,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "active",
-    externalChildren: null,
-    expandedChildren: null,
-    children: null,
+    label: "Draft",
+    externalChildren: "Out for localization",
+    expandedChildren: "Localized",
+    children: "Localization",
   });
 });

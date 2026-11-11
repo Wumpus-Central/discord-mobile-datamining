@@ -67,7 +67,7 @@ function toggleSection(c17, arg1) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp8 = null;
       if (null != guildId) {
-        tmp8 = closure_1_15(channelId, guildId);
+        tmp8 = colors(channelId, guildId);
       }
       tmp4 = tmp8;
     }
@@ -138,7 +138,7 @@ function handlePermissionsChange() {
 }
 const Constants = fn(1072);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(4998);
+const ChannelConstants = fn(5099);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1083).Permissions;
 let c17 = false;
@@ -223,7 +223,7 @@ prototype["getSection"] = function getSection(arg0, arg1) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = closure_1_15(arg0, guildId);
+          tmp7 = colors(arg0, guildId);
         }
         tmp3 = tmp7;
       }
@@ -266,7 +266,7 @@ prototype["getSidebarState"] = function getSidebarState(channelId) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = closure_1_15(channelId, guildId);
+        tmp5 = colors(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -295,7 +295,7 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = closure_1_15(channelId, guildId);
+        tmp5 = colors(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -325,7 +325,7 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = closure_1_15(channelId, guildId);
+        tmp5 = colors(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -465,7 +465,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = closure_1_15(baseChannelId, guildId);
+          tmp5 = colors(baseChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -496,7 +496,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         const guildId1 = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId1) {
-          tmp5 = closure_1_15(baseChannelId, guildId1);
+          tmp5 = colors(baseChannelId, guildId1);
         }
         tmp = tmp5;
       }
@@ -520,7 +520,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = closure_1_15(parentChannelId, guildId);
+          tmp5 = colors(parentChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -544,7 +544,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = closure_1_15(baseChannelId, guildId);
+          tmp7 = colors(baseChannelId, guildId);
         }
         tmp3 = tmp7;
       }

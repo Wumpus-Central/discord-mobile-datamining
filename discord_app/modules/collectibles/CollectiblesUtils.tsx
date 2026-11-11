@@ -659,7 +659,12 @@ export function getLogoSize(arg0) {
   return 3.8 * arg0;
 }
 export function getDaysRemaining(date) {
-  date = new Date();
+  let timestamp = arg1;
+  if (arg1 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  date = new Date(timestamp);
   const fullYear = date.getFullYear();
   const month = date.getMonth();
   const fullYear1 = date.getFullYear();
@@ -672,11 +677,12 @@ export function shouldShowLimitedTimeBadge(categoryWillUnpublishAt) {
   let tmp = null != categoryWillUnpublishAt;
   if (tmp) {
     const _Date = Date;
-    const date = new Date();
     const _Date2 = Date;
+    const date = new Date(Date.now());
+    const _Date3 = Date;
     const fullYear = date.getFullYear();
     const month = date.getMonth();
-    const _Date3 = Date;
+    const _Date4 = Date;
     const fullYear1 = categoryWillUnpublishAt.getFullYear();
     const month1 = categoryWillUnpublishAt.getMonth();
     const _Math = Math;

@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import NativeViewDefault from "../../../../core/native/NativeView.tsx";
-import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
 import SoundboardIcon from "../../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
+import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
 import useSoundboardConfig from "../../hooks/useSoundboardConfig.tsx";
 import VoicePanelStyles from "VoicePanelStyles.tsx";
 import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper.tsx";
@@ -14,7 +14,7 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;

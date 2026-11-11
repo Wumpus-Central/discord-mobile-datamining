@@ -210,12 +210,6 @@ class VoiceConnection {
       const result = obj.boundConnectionMethod("processMLSWelcomeB64");
       result(arg0, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
     };
-    obj.getMLSPairwiseFingerprint = function getMLSPairwiseFingerprint(arg0, arg1, arg2) {
-      closure_0 = arg2;
-      obj.boundConnectionMethod("getMLSPairwiseFingerprintB64")(arg0, arg1, (arg0) => {
-        closure_0(Buffer.from(arg0, "base64").buffer);
-      });
-    };
     obj.setOnMLSFailureCallback = obj.callbackSetter("mls-failure-callback", (arg0) => {
       items = [,];
       ({ source: arr[0], reason: arr[1] } = arg0);

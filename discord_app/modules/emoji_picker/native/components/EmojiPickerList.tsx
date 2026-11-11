@@ -6,9 +6,9 @@ import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
-import PremiumUpsellUtilsDefault from "../../../../utils/native/PremiumUpsellUtils.tsx";
 import EmojiPickerUtils from "../../EmojiPickerUtils.tsx";
 import TopEmojisActionCreators from "../../../emojis/top_emojis/TopEmojisActionCreators.tsx";
+import PremiumUpsellUtilsDefault from "../../../../utils/native/PremiumUpsellUtils.tsx";
 import RoleSubscriptionUpsellUtilsDefault from "../../../guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx";
 import trackEmojiSuggestionSelectedDefault from "../../../chat_input/native/trackEmojiSuggestionSelected.tsx";
 import useEmojiPickerData from "data/useEmojiPickerData.tsx";
@@ -20,8 +20,8 @@ import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategoryTypes = fn(6857).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(10070).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6909).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(9480).IMAGE_SIZE;
 const Constants = fn(1072);
 ({
   AnalyticsObjects: closure_6,
@@ -330,7 +330,7 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
             const obj6 = { children: null };
             items = [tmp16, tmp27Result];
             obj6.children = items;
-            return value2(closure_2_15, obj6);
+            return closure_2_16(colors, obj6);
           }
         }
       }

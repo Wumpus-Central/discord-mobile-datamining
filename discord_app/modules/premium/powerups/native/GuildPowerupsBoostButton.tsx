@@ -20,7 +20,7 @@ export function GuildPowerupsBoostButton(guildId) {
   const stateFromStores1 = guildId(504).useStateFromStores(items1, () => boostSlots.boostSlots);
   let obj2 = guildId(504);
   const tmp5 = stateFromStores1;
-  const tmp6 = stateFromStores1(7656)({ forceFetch: true });
+  const tmp6 = stateFromStores1(8463)({ forceFetch: true });
   const items2 = [UserStore];
   const stateFromStores2 = guildId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   if (null != stateFromStores2) {
@@ -43,7 +43,7 @@ export function GuildPowerupsBoostButton(guildId) {
       onAvailableSlotPress: tmp9,
       premiumGroupRole: UNSPECIFIED,
     };
-    tmp10 = jsx(tmp5(7663), {
+    tmp10 = jsx(tmp5(10736), {
       guild: stateFromStores,
       previousGuildSubscriptionSlot: memo,
       analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR,

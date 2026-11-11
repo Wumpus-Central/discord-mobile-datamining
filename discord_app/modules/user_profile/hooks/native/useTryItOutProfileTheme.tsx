@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/hooks/native/useTryItOutProfileTheme.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useAvatarColor from "../../../avatar/useAvatarColor.tsx";
-import RecentAvatarUtils from "../../../recent_avatars/RecentAvatarUtils.tsx";
 import useDisplayProfileDefault from "../useDisplayProfile.tsx";
+import useAvatarColor from "../../../avatar/useAvatarColor.tsx";
 import useProfileThemeDefault from "../useProfileTheme.tsx";
+import RecentAvatarUtils from "../../../recent_avatars/RecentAvatarUtils.tsx";
 import UserProfileSettingsStore from "../../UserProfileSettingsStore.tsx";
 
 require = fn;

@@ -22,7 +22,7 @@ prototype["getInteractionComponentState"] = function getInteractionComponentStat
   value = closure_0.get(customId);
   let tmp = null;
   if (null != value) {
-    value2 = value.get(id);
+    let value2 = value.get(id);
     if (value2 == null) {
       value2 = null;
     }
@@ -118,7 +118,7 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
         return false;
       } else {
         ({ componentId, messageId } = value);
-        value2 = closure_0.get(messageId);
+        const value2 = closure_0.get(messageId);
         if (null != value2) {
           if (value2.has(componentId)) {
             value2.delete(componentId);

@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx
 import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
-import useAvatarColorDefault from "../../../../../avatar/useAvatarColor.tsx";
 import useDisplayProfileDefault from "../../../../../user_profile/hooks/useDisplayProfile.tsx";
+import useAvatarColorDefault from "../../../../../avatar/useAvatarColor.tsx";
 import UserProfileBannerDefault from "../../../../../user_profile/native/UserProfileBanner.tsx";
 import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -13,15 +13,15 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_9 = createStyles.createStyles({
   imageContainer: { width: "100%", height: "100%" },
   image: { width: "100%", height: "100%" },
 });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11655);
-  heroMediaDimensions = heroMediaDimensions(12628).useHeroMediaDimensions({
+  let obj = heroMediaDimensions(12488);
+  heroMediaDimensions = heroMediaDimensions(13316).useHeroMediaDimensions({
     width: obj.useRequiredAppLauncherContext().width,
   });
   const tmp4 = useEmbeddedActivityBackgroundDefault({

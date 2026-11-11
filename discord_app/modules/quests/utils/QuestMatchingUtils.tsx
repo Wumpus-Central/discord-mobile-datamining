@@ -1,8 +1,8 @@
 // discord_app/modules/quests/utils/QuestMatchingUtils.tsx
+import ActivityGamePlatforms from "../../../../discord_common/js/shared/shared-constants/ActivityGamePlatforms.tsx";
 import QuestExpirationUtils from "QuestExpirationUtils.tsx";
 import utils_QuestUtils from "QuestUtils.tsx";
 import QuestTaskUtils from "QuestTaskUtils.tsx";
-import ActivityGamePlatforms from "../../../../discord_common/js/shared/shared-constants/ActivityGamePlatforms.tsx";
 import getApplicationIdsForGameDefault from "../../games/utils/getApplicationIdsForGame.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
@@ -79,7 +79,7 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(6839);
+const QuestConstants = fn(5275);
 ({
   DISCORD_APPLICATION_ID: closure_6,
   PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: metroImportDefault,

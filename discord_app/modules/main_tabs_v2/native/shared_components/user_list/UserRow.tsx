@@ -10,10 +10,10 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
 import CheckmarkLargeIcon from "../../../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
+import ChatIcon from "../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import ChannelActionCreatorsDefault from "../../../../../actions/ChannelActionCreators.tsx";
 import RelationshipActionCreatorsDefault from "../../../../../actions/RelationshipActionCreators.tsx";
 import FriendSuggestionActionCreatorsDefault from "../../../../friend_suggestions/FriendSuggestionActionCreators.tsx";
-import ChatIcon from "../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import PhoneCallIcon from "../../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
 import BoostGemIcon from "../../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import PeopleUtilsDefault from "../../../../people/PeopleUtils.tsx";
@@ -74,14 +74,14 @@ function UserRowSubLabel(arg0) {
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(10855).UserRowModes;
+const UserRowModes = fn(10177).UserRowModes;
 const Constants = fn(1072);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PlatformUtils = fn(1357);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "r" };
+  let obj = { lineHeight: "Array" };
 }
 let closure_18 = {
   CALL: "call",
@@ -93,7 +93,7 @@ let closure_18 = {
   IGNORE_SUGGESTION: "ignore-suggestion",
   TOGGLE: "toggle",
 };
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let closure_19 = createStyles.createStyles({
   avatar: { flexShrink: 0, flexGrow: 0 },
   actions: { flexDirection: "row" },
@@ -104,7 +104,7 @@ let closure_19 = createStyles.createStyles({
   usernameLabelContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 },
   usernameLabel: { display: "flex", flexShrink: 1 },
 });
-createStyles = fn(5142);
+createStyles = fn(5243);
 let obj3 = { activityText: { color: nativeDefault.colors.TEXT_SUBTLE }, gameContainer: null, gameIcon: null };
 let obj6 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj3.gameContainer = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
@@ -245,7 +245,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "r" };
+      let obj2 = { accessibilityActions: items, actions: "Array" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -306,11 +306,11 @@ export default noop.memo(function UserRow(type) {
             location: isMobileOnline,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(5838).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(5838);
+                const result = type(5951).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(5951);
               } else {
-                const result1 = type(5838).presentFriendRequestAcceptedToast();
-                obj = type(5838);
+                const result1 = type(5951).presentFriendRequestAcceptedToast();
+                obj = type(5951);
               }
             },
           });
@@ -322,7 +322,7 @@ export default noop.memo(function UserRow(type) {
         obj12.accessibilityLabel = intl9.formatToPlainString(util.t["6p0yBo"], obj14);
         items1[1] = gesture(tmp30, obj12);
         obj8.children = items1;
-        let tmp8 = closure_2_15(View, obj8);
+        let tmp8 = colors(View, obj8);
       } else if (constants.PENDING_OUTGOING === type) {
         const obj15 = { name: analyticsLocations.CANCEL, label: null };
         const intl4 = util.intl;
@@ -419,14 +419,14 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(10867)(channel, false);
+                const obj2 = user(10515)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
                 const tmp3 = user(38);
                 obj = { recipientIds: current.id };
-                user(7552).openPrivateChannel(obj);
-                const tmpResult = user(7552);
+                user(8069).openPrivateChannel(obj);
+                const tmpResult = user(8069);
               }
             });
         };
@@ -458,7 +458,7 @@ export default noop.memo(function UserRow(type) {
         obj37.accessibilityLabel = intl13.formatToPlainString(util.t.zFfSFQ, obj39);
         items2[1] = gesture(tmp44, obj37);
         obj33.children = items2;
-        tmp8 = closure_2_15(View, obj33);
+        tmp8 = colors(View, obj33);
       }
       const obj40 = { accessibilityActions: items, actions: tmp8 };
       return obj40;
@@ -475,14 +475,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10867)(channel, false);
+          const obj2 = user(10515)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
           obj = { recipientIds: current.id };
-          user(7552).openPrivateChannel(obj);
-          const tmpResult = user(7552);
+          user(8069).openPrivateChannel(obj);
+          const tmpResult = user(8069);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -500,11 +500,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
           if (null != closure_0) {
-            const result = type(5838).presentGameFriendRequestAcceptedToast();
-            const obj2 = type(5838);
+            const result = type(5951).presentGameFriendRequestAcceptedToast();
+            const obj2 = type(5951);
           } else {
-            const result1 = type(5838).presentFriendRequestAcceptedToast();
-            obj = type(5838);
+            const result1 = type(5951).presentFriendRequestAcceptedToast();
+            obj = type(5951);
           }
         },
       };
@@ -536,10 +536,10 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8827, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8410, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8827, dependencyMap.paths);
+      const promise = asyncRequireImpl(8410, dependencyMap.paths);
     } else {
       tmp(user);
     }
@@ -627,7 +627,7 @@ export default noop.memo(function UserRow(type) {
       const obj3 = { children: null };
       items[1] = tmp11;
       obj3.children = items;
-      return closure_2_15(value2, obj3);
+      return colors(closure_2_16, obj3);
     }
   }, items12);
   const items14 = [trailing, flag2, NONE, actions];

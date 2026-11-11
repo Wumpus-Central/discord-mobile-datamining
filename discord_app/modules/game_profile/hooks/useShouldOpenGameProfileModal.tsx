@@ -92,8 +92,8 @@ export function trackEntryPoint(game_profile_available, id) {
     source: CallTile,
   });
 }
-export function isGameDisabled(gameFlags) {
-  return FlagUtilsAll.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_DISABLED);
+export function isGameDisabled(game) {
+  return FlagUtilsAll.hasFlag(game.gameFlags, GameFlags.GameFlags.GAME_DISABLED);
 }
 export function gameIsAcceptable(gameFlags) {
   if (null == gameFlags) {

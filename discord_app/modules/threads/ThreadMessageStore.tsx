@@ -587,7 +587,7 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
     if (null == dependencyMap[channelId]) {
       return false;
     } else {
-      const length = ids.filter((item) => {
+      length = ids.filter((item) => {
         let tmp = SnowflakeUtilsDefault.castChannelIdAsMessageId(channelId) !== item;
         if (tmp) {
           tmp = !set.has(item);

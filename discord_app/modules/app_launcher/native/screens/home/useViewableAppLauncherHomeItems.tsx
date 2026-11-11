@@ -28,7 +28,7 @@ export function useViewableAppLauncherHomeItems() {
       if (!value) {
         const result = closure_1_0.set(true);
       }
-      value2 = item.type !== sharedValue(sharedValue1[3]).AppLauncherHomeListItemType.LEARN_MORE;
+      let value2 = item.type !== sharedValue(sharedValue1[3]).AppLauncherHomeListItemType.LEARN_MORE;
       if (!value2) {
         value2 = closure_1_1.get();
       }

@@ -72,10 +72,10 @@ let closure_9 = {
   useAlternateEmbedColors: false,
   restrictedPreview: true,
 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { flexDirection: "column" },
-  hiddenMedia: { marginLeft: fn(19387).RESTRICTED_CONTENT_INSET },
+  hiddenMedia: { marginLeft: fn(19578).RESTRICTED_CONTENT_INSET },
   messageRow: { position: "relative" },
   avatarHitbox: null,
   dateDivider: null,
@@ -87,11 +87,11 @@ let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(19387).RESTRICTED_CONTENT_INSET,
-  height: fn(19387).RESTRICTED_AVATAR_SIZE,
+  width: fn(19578).RESTRICTED_CONTENT_INSET,
+  height: fn(19578).RESTRICTED_AVATAR_SIZE,
 };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(19387).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(19578).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = {
   flexDirection: "row",
   alignItems: "center",

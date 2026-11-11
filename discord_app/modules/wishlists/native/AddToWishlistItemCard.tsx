@@ -1,7 +1,7 @@
 // discord_app/modules/wishlists/native/AddToWishlistItemCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import SKUPreviewDefault from "../../skus/native/SKUPreview.tsx";
 import HeartOutlineIcon from "../../../design/components/Icon/native/redesign/generated/HeartOutlineIcon.tsx";
+import SKUPreviewDefault from "../../skus/native/SKUPreview.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { heartOverlay: null };
 const rect = {
   position: "absolute",

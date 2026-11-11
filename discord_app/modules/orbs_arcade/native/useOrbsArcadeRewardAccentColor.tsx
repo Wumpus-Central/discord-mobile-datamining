@@ -1,7 +1,7 @@
 // discord_app/modules/orbs_arcade/native/useOrbsArcadeRewardAccentColor.tsx
 import _modDef671 from "../../../../_runtime/metro/00671__.js";
-import useFetchCollectiblesProduct from "../../collectibles/hooks/useFetchCollectiblesProduct.tsx";
 import useCollectiblesShopStylesDefault from "../../collectibles/useCollectiblesShopStyles.native.tsx";
+import useFetchCollectiblesProduct from "../../collectibles/hooks/useFetchCollectiblesProduct.tsx";
 import OrbsArcadeTypes from "../OrbsArcadeTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 

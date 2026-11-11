@@ -50,7 +50,7 @@ export function humanizeValue(newPostCount, stateFromStores) {
     const _HermesInternal2 = HermesInternal;
     const result1 = Math.floor(10 * newPostCount / tmp19) / 10;
     const combined1 = "" + stateFromStores + "|" + 1;
-    value2 = map.get(combined1);
+    let value2 = map.get(combined1);
     if (null == value2) {
       const _Intl = Intl;
       const numberFormat1 = new Intl.NumberFormat(stateFromStores, { maximumFractionDigits: 1 });
@@ -87,7 +87,7 @@ export (communicators, stateFromStores) => {
     }
     const _HermesInternal = HermesInternal;
     const combined1 = "" + stateFromStores + "|" + num;
-    value2 = map.get(combined1);
+    let value2 = map.get(combined1);
     if (null == value2) {
       const _Intl = Intl;
       const obj3 = { maximumFractionDigits: num };

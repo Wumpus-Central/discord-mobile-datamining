@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
-import TableRowDivider from "../../../../../design/components/TableRow/native/TableRowDivider.native.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroupContext from "../../../../../design/components/TableRow/native/TableRowGroupContext.native.tsx";
 import Card from "../../../../../design/components/Card/native/Card.native.tsx";
+import TableRowDivider from "../../../../../design/components/TableRow/native/TableRowDivider.native.tsx";
 import NameplateDefault from "../../../../collectibles/nameplates/native/Nameplate.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

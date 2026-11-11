@@ -57,10 +57,11 @@ const items2 = [
   fn(1398).Perk.INCREASED_FILE_UPLOAD_SIZE,
   fn(1398).Perk.APP_ICONS,
   fn(1398).Perk.PREMIUM_COLLECTIBLES,
+  fn(1398).Perk.PREMIUM_TENURE_BADGE,
 ];
 const set1 = new Set(items1);
 obj[PremiumTypes.TIER_2] = new Set(items2);
-const items3 = [fn(1398).Perk.BOOST_DISCOUNT, fn(1398).Perk.FREE_BOOSTS];
+const items3 = [fn(1398).Perk.BOOST_DISCOUNT, fn(1398).Perk.FREE_BOOSTS, fn(1398).Perk.PREMIUM_TENURE_BADGE];
 const set3 = new Set(items3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/ProductCatalog.tsx");

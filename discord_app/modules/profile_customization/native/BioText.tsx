@@ -25,10 +25,10 @@ function LinkButton(arg0) {
 }
 const Pressable = fn(17).Pressable;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const CHANGELOG_URL = fn(5044).CHANGELOG_URL;
+const CHANGELOG_URL = fn(5145).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_10 = createStyles.createStyles({
   text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 },
   span: {

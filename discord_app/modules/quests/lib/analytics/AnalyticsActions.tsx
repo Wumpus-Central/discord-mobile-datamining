@@ -1,8 +1,8 @@
 // discord_app/modules/quests/lib/analytics/AnalyticsActions.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import SessionHeartbeatScheduler from "../../../analytics_sessions/SessionHeartbeatScheduler.tsx";
 import QuestDataUtils from "../../utils/QuestDataUtils.tsx";
 import SessionAdGenerator from "../../../analytics_sessions/SessionAdGenerator.tsx";

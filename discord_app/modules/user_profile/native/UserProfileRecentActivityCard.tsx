@@ -13,8 +13,8 @@ import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx"
 import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import utils from "../../content_inventory/utils.tsx";
 import ContentInventoryTypes from "../../content_inventory/ContentInventoryTypes.tsx";
-import useOpenGameProfileModalDefault from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import GameProfileAnalyticUtils from "../../game_profile/GameProfileAnalyticUtils.tsx";
+import useOpenGameProfileModalDefault from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import ContentInventoryActivityImageUtils from "../../content_inventory/ContentInventoryActivityImageUtils.tsx";
 import BadgesAll from "../../icymi/native/content_inventory/Badges.tsx";
 import TrendingType from "../../../../discord_common/js/shared/shared-constants/TrendingType.tsx";
@@ -66,8 +66,8 @@ let obj = {
     return true;
   },
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8795).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8795).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8353).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8353).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -125,7 +125,7 @@ items[5] = {
     return tmp3;
   },
 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj7 = {
   body: null,
   content: null,
@@ -196,7 +196,7 @@ let closure_11 = noop.memo(function EntryImage(poster) {
     obj2.style = items;
     let obj3 = { size: "custom", style: tmp.largeImage, color: null };
     const tmp2Result = shared;
-    const colors = nativeDefault.colors;
+    colors = nativeDefault.colors;
     obj3.color = shared.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
     obj3 = timestampProducer(UnknownGameIcon.UnknownGameIcon, obj3);
     obj2.children = obj3;
@@ -346,7 +346,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj7 = { title: entry.extra.activity_name };
           obj8 = obj7;
         } else {
-          obj8 = { title: "r" };
+          obj8 = { title: "Array" };
         }
         tmpResult6 = ContentInventoryTypes;
       }

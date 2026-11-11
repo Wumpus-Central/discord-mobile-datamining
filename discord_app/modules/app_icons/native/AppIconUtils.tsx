@@ -2,9 +2,9 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
+import AppIconTypes from "../AppIconTypes.tsx";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import AppIconTypes from "../AppIconTypes.tsx";
 import NativeAppIconModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppIconModule.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -194,7 +194,7 @@ let closure_16 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(10107);
+const AppIconConstants = fn(11118);
 ({
   getDefaultIcon: closure_6,
   getIconById: metroImportDefault,

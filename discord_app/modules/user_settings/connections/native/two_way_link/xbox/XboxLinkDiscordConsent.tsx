@@ -2,9 +2,9 @@
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const XboxLinkModalScenes = fn(9819).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(7362).XboxLinkModalScenes;
 const PlatformTypes = fn(1072).PlatformTypes;
-const XBOX_CLIENT_SCOPES = fn(9833).XBOX_CLIENT_SCOPES;
+const XBOX_CLIENT_SCOPES = fn(7405).XBOX_CLIENT_SCOPES;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -24,11 +24,11 @@ export default function XboxLinkDiscordConsent(arg0) {
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
   const obj = navigation(1499);
-  return jsx(navigation(9835).TwoWayLinkDiscordConsent, {
+  return jsx(navigation(7407).TwoWayLinkDiscordConsent, {
     platformType: PlatformTypes.XBOX,
     callbackCode,
     callbackState,
-    clientId: navigation(14444).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+    clientId: navigation(7411).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
     scopes: XBOX_CLIENT_SCOPES,
     onNext: callback,
     onError: callback1,

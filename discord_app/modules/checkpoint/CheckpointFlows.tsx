@@ -1,10 +1,68 @@
 // discord_app/modules/checkpoint/CheckpointFlows.tsx
 import CheckpointNavigation from "CheckpointNavigation.tsx";
 import CheckpointStatsUtils from "CheckpointStatsUtils.tsx";
-import CheckpointSharedDataFlow from "flows/CheckpointSharedDataFlow.tsx";
-import CheckpointNoSharedDataFlow from "flows/CheckpointNoSharedDataFlow.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
+function getAdjacentCheckpointRoute(isCharacterCreatorEnabled) {
+  let flag;
+  ({ stats: require, flow, currentRoute, direction } = isCharacterCreatorEnabled);
+  if (flag === undefined) {
+    flag = true;
+  }
+  if (flow === require("CheckpointNavigation").CheckpointFlow.SHARED_DATA) {
+    let prop = require("CheckpointSharedDataFlow").CHECKPOINT_SHARED_DATA_FLOW;
+  } else {
+    prop = require("CheckpointNoSharedDataFlow").CHECKPOINT_NO_SHARED_DATA_FLOW;
+  }
+  const found = prop.filter((item) => {
+    if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
+      return false;
+    } else if (item === CheckpointNavigation.CheckpointRoute.CHARACTER_UNAVAILABLE) {
+      return !flag;
+    } else {
+      if (!flag) {
+        let result = item === CheckpointNavigation.CheckpointRoute.INTRODUCTION;
+        if (!result) {
+          result = CheckpointNavigation.isCheckpointCustomizationRoute(item);
+          const tmpResult = CheckpointNavigation;
+        }
+        if (result) {
+          return false;
+        }
+      }
+      if (!tmp15) {
+        if (item === CheckpointNavigation.CheckpointRoute.SUMMARY) {
+          if (null === closure_1_0) {
+            return false;
+          }
+        }
+      }
+      if (null != obj[item]) {
+        return null != closure_1_0 && tmp7(closure_1_0);
+      } else {
+        let tmp11 = null == tmp10;
+        if (!tmp11) {
+          tmp11 = undefined === closure_1_0 || tmp10(closure_1_0);
+          const tmp12 = undefined === closure_1_0 || tmp10(closure_1_0);
+        }
+        return tmp11;
+      }
+      tmp15 = flag;
+    }
+  });
+  const index = found.indexOf(currentRoute);
+  if (-1 === index) {
+    let INTRODUCTION = require("CheckpointNavigation").CheckpointRoute.INTRODUCTION;
+  } else {
+    INTRODUCTION = found[index + direction];
+    if (INTRODUCTION == null) {
+      INTRODUCTION = null;
+    }
+  }
+  return INTRODUCTION;
+}
 let obj = {
   [CheckpointNavigation.CheckpointRoute.VOICE_INTRO]: (voice) => !CheckpointStatsUtils.hasCheckpointVoiceMinutes(voice),
   [CheckpointNavigation.CheckpointRoute.MESSAGES_INTRO]: (messages) =>
@@ -19,101 +77,66 @@ obj2[CheckpointNavigation.CheckpointRoute.SQUAD_TRANSITION] = CheckpointStatsUti
 obj2[CheckpointNavigation.CheckpointRoute.SQUAD] = CheckpointStatsUtils.hasCheckpointSquad;
 obj2[CheckpointNavigation.CheckpointRoute.SIDEKICK] = CheckpointStatsUtils.hasCheckpointSidekick;
 obj2[CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE] = CheckpointStatsUtils.hasCheckpointSidekick;
-const result = size.fileFinishedImporting("modules/checkpoint/CheckpointFlows.tsx");
+let result = size.fileFinishedImporting("modules/checkpoint/CheckpointFlows.tsx");
 
 export function getCheckpointFlow(flag) {
   const CheckpointFlow = CheckpointNavigation.CheckpointFlow;
   return flag ? CheckpointFlow.SHARED_DATA : CheckpointFlow.NO_SHARED_DATA;
 }
-export function getCheckpointRoutes(stats) {
-  stats = stats.stats;
-  if (stats.flow === stats(6569).CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(13702).CHECKPOINT_SHARED_DATA_FLOW;
+export function getCheckpointRoutes(flow) {
+  ({ stats: require, isCharacterCreatorEnabled } = flow);
+  if (isCharacterCreatorEnabled === undefined) {
+    isCharacterCreatorEnabled = true;
+  }
+  if (flow.flow === require("CheckpointNavigation").CheckpointFlow.SHARED_DATA) {
+    let prop = require("CheckpointSharedDataFlow").CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(13703).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = require("CheckpointNoSharedDataFlow").CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   return prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
       return false;
-    } else if (null != obj[item]) {
-      return null != closure_1_0 && tmp2(closure_1_0);
+    } else if (item === CheckpointNavigation.CheckpointRoute.CHARACTER_UNAVAILABLE) {
+      return !flag;
     } else {
-      let tmp6 = null == tmp5;
-      if (!tmp6) {
-        tmp6 = undefined === closure_1_0 || tmp5(closure_1_0);
-        const tmp7 = undefined === closure_1_0 || tmp5(closure_1_0);
+      if (!flag) {
+        let result = item === CheckpointNavigation.CheckpointRoute.INTRODUCTION;
+        if (!result) {
+          result = CheckpointNavigation.isCheckpointCustomizationRoute(item);
+          const tmpResult = CheckpointNavigation;
+        }
+        if (result) {
+          return false;
+        }
       }
-      return tmp6;
+      if (!tmp15) {
+        if (item === CheckpointNavigation.CheckpointRoute.SUMMARY) {
+          if (null === closure_1_0) {
+            return false;
+          }
+        }
+      }
+      if (null != obj[item]) {
+        return null != closure_1_0 && tmp7(closure_1_0);
+      } else {
+        let tmp11 = null == tmp10;
+        if (!tmp11) {
+          tmp11 = undefined === closure_1_0 || tmp10(closure_1_0);
+          const tmp12 = undefined === closure_1_0 || tmp10(closure_1_0);
+        }
+        return tmp11;
+      }
+      tmp15 = flag;
     }
   });
 }
-export function getAdjacentCheckpointRoute(stats) {
-  stats = stats.stats;
-  ({ flow, currentRoute, direction } = stats);
-  if (flow === stats(6569).CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(13702).CHECKPOINT_SHARED_DATA_FLOW;
-  } else {
-    prop = tmp(13703).CHECKPOINT_NO_SHARED_DATA_FLOW;
-  }
-  const found = prop.filter((item) => {
-    if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
-      return false;
-    } else if (null != obj[item]) {
-      return null != closure_1_0 && tmp2(closure_1_0);
-    } else {
-      let tmp6 = null == tmp5;
-      if (!tmp6) {
-        tmp6 = undefined === closure_1_0 || tmp5(closure_1_0);
-        const tmp7 = undefined === closure_1_0 || tmp5(closure_1_0);
-      }
-      return tmp6;
-    }
-  });
-  const index = found.indexOf(currentRoute);
-  if (-1 === index) {
-    let INTRODUCTION = tmp(6569).CheckpointRoute.INTRODUCTION;
-  } else {
-    INTRODUCTION = found[index + direction];
-    if (INTRODUCTION == null) {
-      INTRODUCTION = null;
-    }
-  }
-  return INTRODUCTION;
-}
+export { getAdjacentCheckpointRoute };
 export function getCheckpointReplayRoute(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj.currentRoute = CheckpointNavigation.CheckpointRoute.INTRODUCTION;
   obj.direction = 1;
-  ({ stats: require, flow, currentRoute, direction } = obj);
-  if (flow === CheckpointNavigation.CheckpointFlow.SHARED_DATA) {
-    let prop = CheckpointSharedDataFlow.CHECKPOINT_SHARED_DATA_FLOW;
-  } else {
-    prop = CheckpointNoSharedDataFlow.CHECKPOINT_NO_SHARED_DATA_FLOW;
-  }
-  const found = prop.filter((item) => {
-    if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
-      return false;
-    } else if (null != obj[item]) {
-      return null != closure_1_0 && tmp2(closure_1_0);
-    } else {
-      let tmp6 = null == tmp5;
-      if (!tmp6) {
-        tmp6 = undefined === closure_1_0 || tmp5(closure_1_0);
-        const tmp7 = undefined === closure_1_0 || tmp5(closure_1_0);
-      }
-      return tmp6;
-    }
-  });
-  const index = found.indexOf(currentRoute);
-  if (-1 === index) {
-    let INTRODUCTION = CheckpointNavigation.CheckpointRoute.INTRODUCTION;
-  } else {
-    INTRODUCTION = found[index + direction];
-    if (INTRODUCTION == null) {
-      INTRODUCTION = null;
-    }
-  }
+  let INTRODUCTION = getAdjacentCheckpointRoute(obj);
   if (INTRODUCTION == null) {
     INTRODUCTION = CheckpointNavigation.CheckpointRoute.INTRODUCTION;
   }

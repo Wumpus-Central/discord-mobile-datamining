@@ -453,7 +453,7 @@ export function fetchBadgeSummary(GIFTING, id) {
     if (null != value) {
       return value;
     } else {
-      value2 = map1.get(combined);
+      const value2 = map1.get(combined);
       let num;
       if (value2 != null) {
         num = value2.gateUntil;

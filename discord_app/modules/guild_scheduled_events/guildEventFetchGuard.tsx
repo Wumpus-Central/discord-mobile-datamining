@@ -43,7 +43,7 @@ const navigation = {
     let value18;
     let cleanupPromise;
     const combined = "" + arg0 + "/" + arg1;
-    value2 = combined.get(combined);
+    let value2 = combined.get(combined);
     if (null != value2) {
       if ("foreground" === str) {
         const request2 = value2.request;
@@ -160,7 +160,7 @@ const navigation = {
         request = value.request;
       }
       if (request === cleanupPromise) {
-        value2 = map5.get(combined);
+        const value2 = map5.get(combined);
         if (value2 != null) {
           value2.succeed();
         }
@@ -178,7 +178,7 @@ const navigation = {
           request = value.request;
         }
         if (request === cleanupPromise) {
-          value2 = map5.get(combined);
+          const value2 = map5.get(combined);
           if (value2 != null) {
             value2.succeed();
           }
@@ -189,7 +189,7 @@ const navigation = {
       })
       .catch((error) => {
         if (!(error instanceof combined(dependencyMap[2]).GuildEventEmbedFetchQueueError)) {
-          value2 = map4.get(combined);
+          const value2 = map4.get(combined);
           let request;
           if (value2 != null) {
             request = value2.request;
@@ -385,7 +385,7 @@ let obj = {
     let value18;
     let cleanupPromise;
     const combined = "" + arg0 + "/" + arg1;
-    value2 = combined.get(combined);
+    let value2 = combined.get(combined);
     if (null != value2) {
       if ("foreground" === str) {
         const request2 = value2.request;
@@ -502,7 +502,7 @@ let obj = {
         request = value.request;
       }
       if (request === cleanupPromise) {
-        value2 = map5.get(combined);
+        const value2 = map5.get(combined);
         if (value2 != null) {
           value2.succeed();
         }
@@ -520,7 +520,7 @@ let obj = {
           request = value.request;
         }
         if (request === cleanupPromise) {
-          value2 = map5.get(combined);
+          const value2 = map5.get(combined);
           if (value2 != null) {
             value2.succeed();
           }
@@ -531,7 +531,7 @@ let obj = {
       })
       .catch((error) => {
         if (!(error instanceof combined(dependencyMap[2]).GuildEventEmbedFetchQueueError)) {
-          value2 = map4.get(combined);
+          const value2 = map4.get(combined);
           let request;
           if (value2 != null) {
             request = value2.request;

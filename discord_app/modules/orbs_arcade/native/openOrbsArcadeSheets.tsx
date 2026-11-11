@@ -5,20 +5,14 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/openOrbsArcadeSheets.tsx");
 
-export function openOrbsArcadeHowToPlaySheet(id, surface) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17380, dependencyMap.paths), "OrbsArcadeHowToPlaySheet", {
-    gameId: id,
-    surface,
-  });
-}
 export function openOrbsArcadeRewardsSheet(id, surface) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17392, dependencyMap.paths), "OrbsArcadeRewardsSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17546, dependencyMap.paths), "OrbsArcadeRewardsSheet", {
     gameId: id,
     surface,
   });
 }
 export function openOrbsArcadeInfoSheet(id, surface) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17399, dependencyMap.paths), "OrbsArcadeInfoSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17563, dependencyMap.paths), "OrbsArcadeInfoSheet", {
     gameId: id,
     surface,
   });
@@ -29,7 +23,7 @@ export function openOrbsArcadeRewardUnlockedSheet(id, surface) {
     set = new Set();
   }
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(17400, dependencyMap.paths),
+    asyncRequireImpl(17565, dependencyMap.paths),
     "OrbsArcadeRewardUnlockedSheet",
     { gameId: id, surface, unlockedRewardIds: set },
   );

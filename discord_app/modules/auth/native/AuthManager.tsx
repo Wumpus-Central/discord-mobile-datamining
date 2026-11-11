@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
-import PushNotificationActionCreators from "../../../actions/native/PushNotificationActionCreators.tsx";
 import SentMessageIntentsHandlerDefault from "../../messages/SentMessageIntentsHandler.android.tsx";
+import PushNotificationActionCreators from "../../../actions/native/PushNotificationActionCreators.tsx";
 import MobileOnboardingFrictionExperimentDefault from "../../nuf/native/MobileOnboardingFrictionExperiment.android.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
@@ -11,10 +11,10 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(14233).PermissionStateType;
+const PermissionStateType = fn(14716).PermissionStateType;
 const ME = fn(1072).ME;
-let closure_8 = fn(8013).NotificationAuthorizationStatus;
-const NewUserTypes = fn(14539).NewUserTypes;
+let closure_8 = fn(6839).NotificationAuthorizationStatus;
+const NewUserTypes = fn(14913).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -56,13 +56,13 @@ class AuthManager extends tmp3 {
               dependencyMap = 0;
               closure_129_0 = applyArgumentsResult;
               closure_1_5.dismiss();
-              if (tmp2(4987)()) {
+              if (tmp2(5088)()) {
                 applyArgumentsResult();
                 c4 = 3;
               } else {
                 c3 = 1;
                 c4 = 1;
-                const obj4 = { value: tmp2(8036).getNotificationAuthorizationStatus(), done: false };
+                const obj4 = { value: tmp2(8133).getNotificationAuthorizationStatus(), done: false };
                 return obj4;
               }
             }
@@ -77,8 +77,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(18407).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(18407);
+          const result = applyArgumentsResult(18579).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(18579);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;
@@ -105,18 +105,18 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(14622).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(14622);
+        applyArgumentsResult(15001).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(15001);
       }
-      obj = applyArgumentsResult(9204);
+      obj = applyArgumentsResult(8394);
       const result = MobileOnboardingFrictionExperimentDefault.trackMobileOnboardingFrictionExposure("AuthManager");
-      applyArgumentsResult(14538).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(14538);
+      applyArgumentsResult(14912).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(14912);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {
-        closure_1_0(7597).transitionToGuild(closure_1_7);
-        const obj = closure_1_0(7597);
+        closure_1_0(7168).transitionToGuild(closure_1_7);
+        const obj = closure_1_0(7168);
         closure_1_1(572).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };

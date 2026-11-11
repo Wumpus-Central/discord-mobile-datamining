@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
-import _mod5057 from "../../../_runtime/metro/05057__.js";
+import _mod5158 from "../../../_runtime/metro/05158__.js";
 import SystemRulesUtils from "SystemRulesUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,7 +8,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(13538).AutomodTriggerType;
+const AutomodTriggerType = fn(14063).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1254);
@@ -240,7 +240,7 @@ export function useSyncAutomodRules(arg0) {
       items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, _mod5057.shallow),
+    }, _mod5158.shallow),
     2,
   );
   const first = tmp2[0];
@@ -326,7 +326,7 @@ export function useSyncAutomodRulesEffect(arg0) {
       items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, require("../../../_runtime/metro/05057__.js").shallow),
+    }, require("../../../_runtime/metro/05158__.js").shallow),
     2,
   );
   first = tmp2[0];
@@ -468,5 +468,5 @@ export function useAutomodRulesList(arg0) {
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("../../../_runtime/metro/05057__.js").shallow);
+  }, require("../../../_runtime/metro/05158__.js").shallow);
 }

@@ -28,11 +28,11 @@ function Section(arg0) {
   const obj2 = { children: null };
   items = [title, ":"];
   obj2.children = items;
-  const items1 = [closure_1_15(Text, obj2)];
+  const items1 = [colors(Text, obj2)];
   const tmp = closure_18();
   items1[1] = gesture(hasOwnProperty, { style: closure_18().indent, children });
   obj.children = items1;
-  return closure_1_15(value2, obj);
+  return colors(closure_1_16, obj);
 }
 function ObjectKV(obj) {
   const row = closure_18();
@@ -42,7 +42,7 @@ function ObjectKV(obj) {
     value = obj;
     if (Array.isArray(obj)) {
       const iter = obj.at(-1);
-      value2 = undefined;
+      let value2;
       if (iter != null) {
         value2 = iter.value;
       }
@@ -98,9 +98,9 @@ function RTCDebugGeneral() {
   }
   const obj5 = { title: "general", children: null };
   const obj6 = { obj: null };
-  const tmp4 = channelId(5778)(stateFromStores1);
+  const tmp4 = channelId(5891)(stateFromStores1);
   obj4.name = name;
-  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5778)(stateFromStores1) } };
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5891)(stateFromStores1) } };
   obj5.children = closure_14(ObjectKV, obj6);
   return closure_14(Section, obj5);
 }
@@ -139,7 +139,7 @@ function RTCDebugContext(context) {
         }
         items[3] = tmp6Result;
         obj.children = items;
-        return closure_2_15(Section, obj, mediaEngineConnectionId.mediaEngineConnectionId);
+        return colors(Section, obj, mediaEngineConnectionId.mediaEngineConnectionId);
       });
     }
   }
@@ -147,15 +147,15 @@ function RTCDebugContext(context) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(5899).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6012).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {}
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(5139);
+const ColorUtils = fn(5240);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };
@@ -248,7 +248,7 @@ export default function RTCDebugOverlay(arg0) {
   const values = Object.values(MediaEngineContextTypes);
   items1[1] = values.map((context) => closure_1_14(RTCDebugContext, { context }, context));
   obj.children = items1;
-  const items2 = [closure_1_15(timestampProducer, obj)];
+  const items2 = [colors(timestampProducer, obj)];
   const obj2 = { style: tmp.buttonClose, children: null };
   const obj3 = { text: null, onPress: null };
   const intl = util.intl;
@@ -257,5 +257,5 @@ export default function RTCDebugOverlay(arg0) {
   obj2.children = gesture(components_Button_Button.Button, obj3);
   items2[1] = gesture(hasOwnProperty, obj2);
   rect.children = items2;
-  return closure_1_15(common_SafeAreaView.SafeAreaPaddingView, rect);
+  return colors(common_SafeAreaView.SafeAreaPaddingView, rect);
 }

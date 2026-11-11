@@ -45,7 +45,7 @@ function VariantOption(arg0) {
   return React4(Pressables.PressableOpacity, obj2);
 }
 function VariantCheckmark(variant) {
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   const tmp = useIsVariantColorLightDefault(variant.variant);
   return React4(CheckmarkSmallIcon.CheckmarkSmallIcon, {
     color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE,
@@ -55,7 +55,7 @@ function VariantCheckmark(variant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj2 = {
   container: {
     flex: 1,
@@ -88,7 +88,7 @@ obj2.variantsContainer = {
 };
 obj2.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_7 = createStyles.createStyles((arg0) => {
   const size = {
     width: 28,
@@ -99,7 +99,7 @@ let closure_7 = createStyles.createStyles((arg0) => {
     borderWidth: 1,
     borderColor: null,
   };
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   const obj = { variantOption: size, variantOptionInner: null };
   size.borderColor = arg0 ? colors.BUTTON_OUTLINE_PRIMARY_TEXT : colors.BORDER_STRONG;
   const size1 = {

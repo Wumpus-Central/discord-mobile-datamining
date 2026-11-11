@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/builder/native/ConjureStaffAccessNotice.tsx
 import router_utils from "../../../routing/router_utils.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -11,15 +11,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/builder/native/ConjureStaffAccessNotice.tsx");
 
 export default function ConjureStaffAccessNotice() {
-  conjureStaffAccessTarget = conjureStaffAccessTarget(13233).useConjureStaffAccessTarget();
+  conjureStaffAccessTarget = conjureStaffAccessTarget(13898).useConjureStaffAccessTarget();
   [][0] = conjureStaffAccessTarget;
   let tmp5 = null;
   if (null != conjureStaffAccessTarget) {
     let obj2 = { type: "info", role: "none", message: null };
     const intl = tmp(1113).intl;
-    const obj3 = { channel: tmp(13233).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
-    obj2.message = intl.format(_modDef4028["6anmu1"], obj3);
-    tmp5 = jsx(tmp(8099).InlineNotice, { type: "info", role: "none", message: null });
+    const obj3 = { channel: tmp(13898).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
+    obj2.message = intl.format(_modDef4079["6anmu1"], obj3);
+    tmp5 = jsx(tmp(8094).InlineNotice, { type: "info", role: "none", message: null });
   }
   return tmp5;
 }

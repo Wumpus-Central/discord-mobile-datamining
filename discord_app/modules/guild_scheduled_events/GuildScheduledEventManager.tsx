@@ -127,7 +127,7 @@ prototype["getGuildEventUserCountsForEmbed"] = function getGuildEventUserCountsF
   } else {
     const _HermesInternal = HermesInternal;
     const combined = "" + guild_id + "-" + id;
-    value2 = map.get(combined);
+    let value2 = map.get(combined);
     if (null == value2) {
       const obj = { startedAt: null, ids: null };
       const _Date2 = Date;

@@ -408,7 +408,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     }
   }
 };
-fn(6988).addPostConnectionCallback;
+fn(7595).addPostConnectionCallback;
 let PlatformUtils = fn(1377);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {

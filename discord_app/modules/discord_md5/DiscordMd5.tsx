@@ -1,5 +1,5 @@
 // discord_app/modules/discord_md5/DiscordMd5.tsx
-import _modDef7220 from "../../../_runtime/metro/07220__.js";
+import _modDef7737 from "../../../_runtime/metro/07737__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const prototype = function DiscordMd5() {
@@ -13,14 +13,13 @@ prototype["fromBlob"] = function fromBlob(arg0) {
   })();
 };
 prototype["fromArrayBuffer"] = function fromArrayBuffer(value) {
-  const _ArrayBuffer = _modDef7220.ArrayBuffer;
+  const _ArrayBuffer = _modDef7737.ArrayBuffer;
   return _ArrayBuffer.hash(value);
 };
 prototype["fromDataURI"] = function fromDataURI(arg0) {
   closure_0 = arg0;
   const resolved = Promise.resolve();
   return resolved.then(() => {
-    let length;
     const match = /^data:[^;]*;base64,(.*)$/.exec(closure_0);
     if (null == match) {
       const _Error = Error;
@@ -41,7 +40,7 @@ prototype["fromDataURI"] = function fromDataURI(arg0) {
           length = atobResult.length;
         } while (num < length);
       }
-      const _ArrayBuffer = _modDef7220.ArrayBuffer;
+      const _ArrayBuffer = _modDef7737.ArrayBuffer;
       return _ArrayBuffer.hash(arrayBuffer);
     }
     const obj = /^data:[^;]*;base64,(.*)$/;

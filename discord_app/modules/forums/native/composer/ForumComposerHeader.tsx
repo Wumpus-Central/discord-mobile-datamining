@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = {
     headerBar: { height, flexDirection: "row", alignItems: "center" },
@@ -85,7 +85,7 @@ export default function ForumComposerHeader(height) {
   items1[1] = timestampProducer(React4, obj4);
   obj3.children = items1;
   items[1] = timestampProducer(React4, obj3);
-  let length;
+  length = undefined;
   if (channel != null) {
     length = channel.topic.length;
   }

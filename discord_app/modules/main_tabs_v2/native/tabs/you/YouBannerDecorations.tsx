@@ -3,12 +3,12 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import _modDef671 from "../../../../../../_runtime/metro/00671__.js";
 import utils_PlatformUtils from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import DismissibleContentUnsafeUtils from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import QuestTypes from "../../../../quests/QuestTypes.tsx";
+import DismissibleContentUnsafeUtils from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useTrialOffer from "../../../../premium/useTrialOffer.tsx";
+import QuestUtils from "../../../../quests/native/QuestUtils.native.tsx";
 import PromotionsHooks from "../../../../premium/promotions/PromotionsHooks.tsx";
 import Tracking from "tracking/Tracking.tsx";
-import QuestUtils from "../../../../quests/native/QuestUtils.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
@@ -16,11 +16,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const useIntlLoaderStore = fn(2187).useIntlLoaderStore;
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 let closure_9 = fn(1387).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = {
     containerFloatingWrap: null,

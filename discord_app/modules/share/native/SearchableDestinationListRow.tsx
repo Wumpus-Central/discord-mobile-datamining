@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/SearchableDestinationListRow.tsx
-import sortByMatchScore from "../../autocompleter/index.tsx";
 import formatResults from "../formatResults.tsx";
+import sortByMatchScore from "../../autocompleter/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,23 +20,23 @@ export default function SearchableDestinationListRow(result) {
     if (null != onPressDestination) {
       const fn = () => onPressDestination(formatResults.getDestinationIdFromResult(result));
     }
-    if (tmp2(9221).AutocompleterResultTypes.USER === type) {
+    if (tmp2(10180).AutocompleterResultTypes.USER === type) {
       const obj = {};
       const merged1 = Object.assign(merged);
       obj.user = record;
-      const tmp18 = onPressDestination(10866);
-      obj.type = tmp2(7883).getRelationshipType(record.id);
+      const tmp18 = onPressDestination(10514);
+      obj.type = tmp2(8699).getRelationshipType(record.id);
       obj.onPress = fn;
       return <tmp18 />;
-    } else if (tmp2(9221).AutocompleterResultTypes.GROUP_DM === type) {
+    } else if (tmp2(10180).AutocompleterResultTypes.GROUP_DM === type) {
       const obj2 = {};
       const merged2 = Object.assign(merged);
       obj2.channel = record;
       obj2.onPress = fn;
-      return jsx(onPressDestination(10926), {});
+      return jsx(onPressDestination(10827), {});
     } else {
-      if (tmp2(9221).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-        if (tmp2(9221).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+      if (tmp2(10180).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+        if (tmp2(10180).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
           return tmp2(1380).assertNever(type);
         }
       }
@@ -44,7 +44,7 @@ export default function SearchableDestinationListRow(result) {
       const merged3 = Object.assign(merged);
       obj3.channel = record;
       obj3.onPress = fn;
-      return jsx(onPressDestination(10929), {});
+      return jsx(onPressDestination(10830), {});
     }
   }
 }

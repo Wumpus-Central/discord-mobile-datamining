@@ -4,7 +4,6 @@ import size from "../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("lib/zipWithNext.tsx");
 
 export default function zipWithNext(value, fn) {
-  let length;
   if (value.length < 2) {
     return [];
   } else {

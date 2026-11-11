@@ -254,9 +254,9 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
     }
   }
 };
-let closure_5 = fn(5167).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
+let closure_5 = fn(5268).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
 let closure_6 = new LoggerDefault("HexagonActionCreators");
-const result = 5 * DurationsDefault.Millis.SECOND;
+const result = 10 * DurationsDefault.Millis.SECOND;
 const metroImportDefault = result;
 let closure_10 = null;
 const size = fn(2);
@@ -310,6 +310,14 @@ export function saveHexagonCampaignPreviousDisplayNameStyles() {
   }
   if (!obj.hasHexagonCampaignDisplayNameFont(displayNameStyles)) {
     const obj2 = { displayNameStyles };
+    const obj4 = { type: "HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED", previousPerkValues: obj2 };
+    DispatcherDefault.dispatch(obj4);
+  }
+  obj = HexagonCampaignUtils;
+}
+export function saveHexagonCampaignPreviousAppIcon(appIconId) {
+  if (!obj.isHexagonCampaignAppIcon(appIconId)) {
+    const obj2 = { appIconId };
     const obj4 = { type: "HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED", previousPerkValues: obj2 };
     DispatcherDefault.dispatch(obj4);
   }

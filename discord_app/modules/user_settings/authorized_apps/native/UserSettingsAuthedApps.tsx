@@ -3,11 +3,11 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import applications from "../../../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
 import TableRowApplicationIconDefault from "../../../applications/native/TableRowApplicationIcon.tsx";
 import GlobeEarthIcon from "../../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
-import applications from "../../../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
 import EmbedIcon from "../../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
@@ -15,12 +15,12 @@ import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(7342).FetchState;
+const FetchState = fn(7158).FetchState;
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   spinner: { padding: nativeDefault.space.PX_16 },
   emptyText: null,
@@ -130,5 +130,5 @@ export function AuthorizedAppRow(app) {
     start,
     end,
   };
-  return closure_10(app(7041).TableRow, obj2);
+  return closure_10(app(7379).TableRow, obj2);
 }

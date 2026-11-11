@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingModal.tsx
-import MemberVerificationActionCreatorsDefault from "../../guild_member_verification/MemberVerificationActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import MemberVerificationActionCreatorsDefault from "../../guild_member_verification/MemberVerificationActionCreators.tsx";
 import GuildOnboardingActionCreatorsDefault from "../GuildOnboardingActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import MemberVerificationFormStore from "../../guild_member_verification/MemberVerificationFormStore.tsx";
@@ -16,7 +16,7 @@ function headerTitle() {
 function headerRight() {
   return null;
 }
-let closure_9 = fn(7331).GuildOnboardingModalStates;
+let closure_9 = fn(7800).GuildOnboardingModalStates;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_10, Routes: closure_11 } = Constants);
 const jsx = fn(21).jsx;

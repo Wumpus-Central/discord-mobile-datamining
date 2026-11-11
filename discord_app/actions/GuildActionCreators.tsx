@@ -9,8 +9,8 @@ import AlertActionCreatorsDefault from "AlertActionCreators.tsx";
 import AgeGateUtils from "../modules/age_gate/AgeGateUtils.tsx";
 import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
 import SpoilerChannelUtils from "../modules/spoiler_channels/SpoilerChannelUtils.tsx";
-import GuildTemplateTooltipActionCreatorsDefault from "../modules/guild_templates/GuildTemplateTooltipActionCreators.tsx";
 import LurkerActionCreators from "../modules/lurker_mode/LurkerActionCreators.tsx";
+import GuildTemplateTooltipActionCreatorsDefault from "../modules/guild_templates/GuildTemplateTooltipActionCreators.tsx";
 import getPreviousSafeRouteForNsfwReturnDefault from "../modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx";
 import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
@@ -220,7 +220,7 @@ let closure_26 = async function _joinGuild(arg0) {
                 obj2.title = intl.string(closure_1_0(1113).t.ZZlox4);
                 const intl2 = closure_1_0(1113).intl;
                 obj2.body = intl2.string(closure_1_0(1113).t.ZUEGFn);
-                closure_1_1(6092).show(obj2);
+                closure_1_1(6205).show(obj2);
               })();
               const obj17 = { cause: closure_131_12 };
               const joinGuildRefusedError3 = new closure_132_0(closure_132_3[16]).JoinGuildRefusedError(obj17);
@@ -514,7 +514,7 @@ export default {
   setServerMute(id, id2, mute) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: value2.GUILD_MEMBER(id, id2),
+      url: closure_1_16.GUILD_MEMBER(id, id2),
       body: { mute },
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -524,7 +524,7 @@ export default {
   setServerDeaf(id, id2, deaf) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: value2.GUILD_MEMBER(id, id2),
+      url: closure_1_16.GUILD_MEMBER(id, id2),
       body: { deaf },
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -534,7 +534,7 @@ export default {
   setChannel(guildId, userId, channel_id) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: value2.GUILD_MEMBER(guildId, userId),
+      url: closure_1_16.GUILD_MEMBER(guildId, userId),
       body: { channel_id },
       oldFormErrors: true,
       rejectWithError: true,
@@ -543,7 +543,12 @@ export default {
   },
   setMemberFlags(id, id2, flags) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: value2.GUILD_MEMBER(id, id2), body: { flags }, oldFormErrors: true, rejectWithError: true };
+    const request = {
+      url: closure_1_16.GUILD_MEMBER(id, id2),
+      body: { flags },
+      oldFormErrors: true,
+      rejectWithError: true,
+    };
     HTTP.patch(request);
   },
   kickUser(id, id1, c0, moderator_report_id) {
@@ -572,7 +577,7 @@ export default {
       location: _location,
     } = moderator_report_id);
     const request = {
-      url: value2.GUILD_MEMBER(guildId, userId),
+      url: closure_1_16.GUILD_MEMBER(guildId, userId),
       reason,
       body: {
         communication_disabled_until: communicationDisabledUntilTimestamp,
@@ -619,7 +624,7 @@ export default {
   banUser(id, id2, value, c1, moderator_report_id) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: value2.GUILD_BAN(id, id2),
+      url: closure_1_16.GUILD_BAN(id, id2),
       reason: importDefault,
       body: { delete_message_seconds: value, moderator_report_id },
       oldFormErrors: true,
@@ -630,7 +635,7 @@ export default {
   unbanUser(id, id2) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: value2.GUILD_BAN(id, id2),
+      url: closure_1_16.GUILD_BAN(id, id2),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -639,7 +644,7 @@ export default {
   banMultipleUsers(arg0, user_ids, delete_message_seconds, reason) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: value2.BULK_GUILD_BAN_V2(arg0),
+      url: closure_1_16.BULK_GUILD_BAN_V2(arg0),
       body: { user_ids, delete_message_seconds },
       reason,
       oldFormErrors: true,
@@ -784,7 +789,7 @@ export default {
                 obj6 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj5.colors = obj6;
-              obj5.permissions = primary_color(5079).NONE;
+              obj5.permissions = primary_color(5180).NONE;
               c6 = 1;
               const HTTP = color(1282).HTTP;
               const request = {
@@ -801,7 +806,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj6(4963)(closure_131_2);
+            const tmp30 = new obj6(5064)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -821,7 +826,7 @@ export default {
               obj6(572).dispatch(obj10);
               const obj = obj6(572);
             }
-            const result = obj6(7573).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(8062).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -865,14 +870,14 @@ export default {
       request.rejectWithError = tmp5(1282).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(7573).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(8062).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
   updateRolePermissions(id, id2, permissions) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: value2.GUILD_ROLE(id, id2),
+      url: closure_1_16.GUILD_ROLE(id, id2),
       body: { permissions },
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -901,7 +906,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7573).checkGuildTemplateDirty(closure_129_0);
+      const result = body(8062).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -919,7 +924,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7573).checkGuildTemplateDirty(closure_129_0);
+      const result = body(8062).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -1037,11 +1042,11 @@ export default {
         const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
-            if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
+            if (!tmp10Result.isChannelSpoilerGated(defaultChannel)) {
               router_utils.transitionTo(guild.CHANNEL(guildId, defaultChannel.id));
-              const tmp11Result2 = router_utils;
+              const tmp10Result2 = router_utils;
             }
-            tmp11Result = SpoilerChannelUtils;
+            tmp10Result = SpoilerChannelUtils;
           }
           obj3 = AgeGateUtils;
         }
@@ -1050,7 +1055,7 @@ export default {
         router_utils.transitionTo(guild.FRIENDS, { navigationReplace: false, openChannel: true });
       }
     } else {
-      router_utils.transitionTo(guild.CHANNEL(tmp2.guildId, tmp2.channelId));
+      router_utils.transitionTo(tmp2);
     }
   },
   spoilerAgree(channelId) {

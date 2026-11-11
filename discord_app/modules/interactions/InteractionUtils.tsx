@@ -300,7 +300,7 @@ export function getInteractionStatusViewState(state, state2) {
 }
 export function canRetryInteractionData(interactionData) {
   const options = interactionData.options;
-  let length;
+  length = undefined;
   if (options != null) {
     length = options.length;
   }
@@ -348,4 +348,4 @@ export function canRetryInteractionData(interactionData) {
   }
   return true;
 }
-export const interactionCallbackErrorReason = fn(6203).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(6316).interactionCallbackErrorReason;

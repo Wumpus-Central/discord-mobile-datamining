@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
+import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import Checkbox from "../../../../design/components/Checkbox/native/Checkbox.native.tsx";
 import TableSliderRow from "../../../../design/components/TableRow/native/TableSliderRow.native.tsx";
@@ -232,7 +232,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

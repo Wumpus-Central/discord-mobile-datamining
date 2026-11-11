@@ -15,9 +15,9 @@ const AppLauncherNativeConstants = fn(1498);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = fn(12677).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(13363).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 let closure_8 = sum - 56;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   headerContainer: {
     alignItems: "center",
@@ -39,7 +39,7 @@ let obj2 = {
   icon: null,
   headerBannerOverlay: null,
 };
-let size = { width: fn(12677).BACK_BUTTON_SIZE, height: fn(12677).BACK_BUTTON_SIZE };
+let size = { width: fn(13363).BACK_BUTTON_SIZE, height: fn(13363).BACK_BUTTON_SIZE };
 obj2.overflowMenuContainer = size;
 const rect = {
   position: "absolute",
@@ -215,7 +215,7 @@ export function AppLauncherCommandViewHeader(onPress) {
   }
   if (null != memo) {
     let obj2 = { style: tmp.appIcon, source: memo };
-    let tmp31 = closure_6(tmp24(5844), obj2);
+    let tmp31 = closure_6(tmp24(5957), obj2);
     let tmp32 = closure_6;
   } else {
     let obj3 = { style: null };

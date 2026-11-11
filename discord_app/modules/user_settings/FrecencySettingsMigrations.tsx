@@ -222,7 +222,7 @@ let items = [
           return sum;
         });
         const FavoriteGIFs4 = frecency_user_settings.FavoriteGIFs;
-        let length = FavoriteGIFs4.toBinary(favoriteGifs.favoriteGifs).length;
+        length = FavoriteGIFs4.toBinary(favoriteGifs.favoriteGifs).length;
         let num = 0;
         const iter = arr[Symbol.iterator]();
         const nextResult = iter.next();

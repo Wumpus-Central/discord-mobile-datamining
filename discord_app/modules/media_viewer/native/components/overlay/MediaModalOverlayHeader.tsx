@@ -7,10 +7,10 @@ import NavigationRouteUtils from "../../../../main_tabs_v2/helpers/NavigationRou
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import XSmallIcon from "../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import ContextMenu from "../../../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import MediaShareActions from "../MediaShareActions.tsx";
 import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper.tsx";
 import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton.tsx";
-import ContextMenu from "../../../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import useShouldHideMediaOptionsDefault from "../../../../media_channel/useShouldHideMediaOptions.tsx";
 import useOverlayLayoutDriver from "../../useOverlayLayoutDriver.tsx";
 import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF.tsx";
@@ -21,10 +21,10 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const SHARE_PREPARING_MODAL_KEY = fn(9019).SHARE_PREPARING_MODAL_KEY;
+const SHARE_PREPARING_MODAL_KEY = fn(10166).SHARE_PREPARING_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_8 = createStyles.createStyles({
   navbarInner: { flex: 1, justifyContent: "space-between" },
   navbarLeft: { flexShrink: 1, flexDirection: "row", marginRight: 8 },
@@ -143,14 +143,14 @@ export function MediaModalOverlayHeader(arg0) {
           const obj = { accessibilityLabel: null, icon: null, ref: null };
           const intl = _undefined(1113).intl;
           obj.accessibilityLabel = intl.string(_undefined(1113).t.PdRCRg);
-          const tmp4 = _undefined2(9024);
+          const tmp4 = _undefined2(10171);
           if (obj2.isAndroid()) {
-            let tmp2Result = closure_1_6(_undefined(15038).MoreVerticalIcon, {
+            let tmp2Result = closure_1_6(_undefined(15095).MoreVerticalIcon, {
               size: "md",
               color: "interactive-text-active",
             });
           } else {
-            tmp2Result = closure_1_6(_undefined(9852).MoreHorizontalIcon, {
+            tmp2Result = closure_1_6(_undefined(7356).MoreHorizontalIcon, {
               size: "md",
               color: "interactive-text-active",
             });

@@ -64,7 +64,7 @@ obj.clipTagBackgroundColor = nativeDefault.colors.BACKGROUND_BRAND;
 obj.clipTagTextColor = nativeDefault.unsafe_rawColors.WHITE;
 let createStyles = createStyles_mod;
 let closure_4 = createStyles.createNativeStyleProperties((arg0) => {
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   obj = { embedBackgroundColor: arg0 ? colors.EMBED_BACKGROUND_ALTERNATE : colors.EMBED_BACKGROUND };
   const merged = Object.assign(obj);
   return obj;

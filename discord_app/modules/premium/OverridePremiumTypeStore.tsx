@@ -78,16 +78,16 @@ prototype["initialize"] = function initialize(premiumTypeActual) {
 prototype["getPremiumTypeOverride"] = function getPremiumTypeOverride() {
   return closure_5.premiumTypeOverride;
 };
-prototype["hasPremiumTypeOverride"] = function hasPremiumTypeOverride(warnResult) {
+prototype["hasPremiumTypeOverride"] = function hasPremiumTypeOverride(currentUser) {
   let isStaffEnvResult = closure_5.premiumTypeOverride !== UNSELECTED_PREMIUM_TYPE_OVERRIDE;
   if (isStaffEnvResult) {
-    isStaffEnvResult = null != warnResult;
+    isStaffEnvResult = null != currentUser;
   }
   if (isStaffEnvResult) {
-    isStaffEnvResult = warnResult.id === AuthenticationStore.getId();
+    isStaffEnvResult = currentUser.id === AuthenticationStore.getId();
   }
   if (isStaffEnvResult) {
-    isStaffEnvResult = UserStoreUtils.isStaffEnv(warnResult);
+    isStaffEnvResult = UserStoreUtils.isStaffEnv(currentUser);
   }
   return isStaffEnvResult;
 };

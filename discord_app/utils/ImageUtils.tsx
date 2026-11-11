@@ -105,7 +105,6 @@ let closure_9 = async function _dataUrlToFile() {
   return file;
 };
 function dataUrlToBlob(arg0) {
-  let length;
   const first = arg0.split(",")[0];
   if (first.indexOf("base64") >= 0) {
     const _atob = atob;

@@ -5,9 +5,9 @@ import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import GuildOnboardingUtils from "../GuildOnboardingUtils.tsx";
 import MemberVerificationActionCreatorsDefault from "../../guild_member_verification/MemberVerificationActionCreators.tsx";
 import TermsFieldListDefault from "../../guild_member_verification/native/components/form_fields/TermsFieldList.tsx";
-import GuildOnboardingUtils from "../GuildOnboardingUtils.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -45,7 +45,7 @@ function PromptHeader(currentPrompt) {
     obj6.children = intl2.string(util.t.Ur8Vrt);
     items1[1] = state(Text_Text.Text, obj6);
     obj4.children = items1;
-    tmp2Result = gesture(closure_1_15, obj4);
+    tmp2Result = gesture(colors, obj4);
   }
   const obj7 = { children: null };
   items[1] = tmp2Result;
@@ -61,7 +61,7 @@ function PromptHeader(currentPrompt) {
     }),
   ];
   obj7.children = items2;
-  return gesture(closure_1_15, obj7);
+  return gesture(colors, obj7);
 }
 function PromptFooter(onPress) {
   ({ guildId: require, currentPrompt, selectedOptionIds } = onPress);
@@ -248,25 +248,25 @@ function DropdownOption(option) {
   obj3.children = closure_13(EmojiDefault, obj4);
   const items1 = [
     closure_13(closure_5, obj3),
-    closure_13(tmp2(5753).Text, { variant: "body-md/semibold", children: option.title }),
+    closure_13(tmp2(5866).Text, { variant: "body-md/semibold", children: option.title }),
   ];
   obj2.children = items1;
   return closure_14(closure_5, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-let closure_11 = fn(7331).GuildOnboardingModalStates;
+let closure_11 = fn(7800).GuildOnboardingModalStates;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5716).NAV_BAR_HEIGHT,
+    marginTop: fn(5829).NAV_BAR_HEIGHT,
     marginBottom: 16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -293,7 +293,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5716).NAV_BAR_HEIGHT,
+  marginTop: fn(5829).NAV_BAR_HEIGHT,
   marginBottom: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -645,7 +645,7 @@ export function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7371, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7833, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
       onSelect(id, flag) {

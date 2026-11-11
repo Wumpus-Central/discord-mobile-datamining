@@ -52,7 +52,7 @@ function handleUpdateActivity() {
                 channel.id,
                 StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
               );
-              const length = mutableParticipants.filter(
+              length = mutableParticipants.filter(
                 (type) => type.type === StageChannelParticipants.StageChannelParticipantTypes.STREAM,
               ).length;
               const diff = mutableParticipants.length - length;
@@ -128,7 +128,7 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6766).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6843).STAGE_APPLICATION_ID;
 const Constants = fn(1072);
 ({ GuildFeatures: map1, Permissions: closure_14, RTCConnectionStates: closure_15 } = Constants);
 let obj = null;

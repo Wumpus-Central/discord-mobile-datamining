@@ -1,9 +1,9 @@
 // discord_app/modules/mfa/native/screens/MfaOptionScreen.tsx
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import BackgroundImageDefault from "../../../auth/native/components/atoms/BackgroundImage.tsx";
 import useWideAuthViewDefault from "../../../auth/native/useWideAuthView.tsx";
-import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import MfaScreenUtilsDefault from "../MfaScreenUtils.tsx";
 import BackButtonDefault from "../components/BackButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

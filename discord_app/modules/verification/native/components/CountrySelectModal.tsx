@@ -1,8 +1,8 @@
 // discord_app/modules/verification/native/components/CountrySelectModal.tsx
 import util from "../../../../intl/index.native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,10 +20,10 @@ export default function CountrySelectModal() {
     obj2.render = function render() {
       return closure_1_4(closure_1_1(dependencyMap[5]), {
         onClose() {
-          return closure_1_1(6801).pop();
+          return closure_1_1(6785).pop();
         },
         onCountrySelected(countryCode) {
-          return closure_1_1(7280).setCountryCode(countryCode);
+          return closure_1_1(7754).setCountryCode(countryCode);
         },
       });
     };
@@ -32,7 +32,7 @@ export default function CountrySelectModal() {
   }, []);
   const effect = noop.useEffect(
     () => () => {
-      closure_1_1(7273).runAfterInteractions(closure_1_1(7310).setCountrySelectorClosed, 400);
+      closure_1_1(7521).runAfterInteractions(closure_1_1(7784).setCountrySelectorClosed, 400);
     },
     [],
   );

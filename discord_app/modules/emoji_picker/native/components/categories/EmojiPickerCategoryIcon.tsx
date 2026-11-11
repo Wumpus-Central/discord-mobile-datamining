@@ -1,11 +1,11 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx
 import ClockIcon from "../../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import GameControllerIcon from "../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import HeartIcon from "../../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
+import StarIcon from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import TrophyIcon from "../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
-import HeartIcon from "../../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
-import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import GameControllerIcon from "../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import StarIcon from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import LightbulbIcon from "../../../../../design/components/Icon/native/redesign/generated/LightbulbIcon.tsx";
 import NatureIcon from "../../../../../design/components/Icon/native/redesign/generated/NatureIcon.tsx";
 import FoodIcon from "../../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
@@ -15,7 +15,7 @@ import FlagIcon from "../../../../../design/components/Icon/native/redesign/gene
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategories = fn(6857).EmojiCategories;
+const EmojiCategories = fn(6909).EmojiCategories;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

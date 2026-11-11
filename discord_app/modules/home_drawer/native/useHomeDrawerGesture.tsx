@@ -7,7 +7,7 @@ import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtil
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05422_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05535_LegacyBaseButton.js";
 import useLaunchPadTypeDefault from "../../launchpad/native/useLaunchPadType.tsx";
 import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -18,9 +18,9 @@ import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18440).computeMaxX;
+let computeMaxX = fn(18612).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const GestureConstants = fn(11391);
+const GestureConstants = fn(11949);
 ({
   FLING_MIN_DISTANCE: closure_9,
   FLING_MIN_VELOCITY: closure_10,
@@ -28,7 +28,7 @@ const GestureConstants = fn(11391);
   PULL_GESTURE_RESISTANCE,
 } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(11690).LaunchPadTypes;
+const LaunchPadTypes = fn(12313).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let closure_18 = 48 + result;
@@ -102,17 +102,17 @@ let obj = {
   guildsBarDrawerStyle: null,
   guildsBarPullX: null,
 };
-let Gesture = fn(5422).Gesture;
+let Gesture = fn(5535).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7308);
+let ReanimatedHelperTypes = fn(7782);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7308);
+ReanimatedHelperTypes = fn(7782);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7308);
+ReanimatedHelperTypes = fn(7782);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7308);
+ReanimatedHelperTypes = fn(7782);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);
@@ -420,7 +420,7 @@ export function useHomeGesture() {
   function useHomeDrawerGestureTsx6() {
     value = _undefined.get();
     if (!value) {
-      value2 = panelX.get();
+      const value2 = panelX.get();
       let tmp4 = !value2;
       if (!value2) {
         tmp4 = _undefined2.get() <= 0;
@@ -611,7 +611,7 @@ export function useHomeGesture() {
     [tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35] = items4;
     function fireThrow() {
       value = _undefined.get();
-      value2 = !value;
+      let value2 = !value;
       if (!value) {
         value2 = _undefined2.get();
       }
@@ -773,7 +773,7 @@ export function useHomeGesture() {
         const result3 = _undefined3.set(Math.max(diff + _undefined.get().panelX, 0));
         let tmp15 = sum < c7;
         if (tmp15) {
-          value2 = _undefined3.get();
+          const value2 = _undefined3.get();
           tmp15 = value2 + _undefined4.get() >= tmp14;
         }
         if (tmp15) {
@@ -843,7 +843,7 @@ export function useHomeGesture() {
       value = _undefined.get();
       const sum = value + _undefined2.get();
       let tmp4 = velocityX.velocityX > c2;
-      value2 = _undefined5.get();
+      const value2 = _undefined5.get();
       if (tmp4) {
         tmp4 = sum > c3;
       }

@@ -5,7 +5,6 @@ let closure_0 = [];
 const result = size.fileFinishedImporting("../discord_common/js/packages/flux/LastFewActions.tsx");
 
 export function add(type) {
-  let length;
   closure_0.push(type);
   if (closure_0.length > 10) {
     do {

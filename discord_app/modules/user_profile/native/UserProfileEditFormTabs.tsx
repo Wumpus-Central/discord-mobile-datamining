@@ -3,10 +3,10 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState.tsx";
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard.tsx";
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState.tsx";
 import UserProfileTabPagesDefault from "UserProfileTabPages.tsx";
 import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext.tsx";
 import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader.tsx";
@@ -24,10 +24,10 @@ function MainPage() {
   });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7440).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7896).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING },
   page: null,
@@ -79,7 +79,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     num2 = 1;
   }
   [first, closure_5] = first.useState(num2);
-  arr = tmp2(15203)(userId);
+  arr = tmp2(12054)(userId);
   closure_7 = tmp8;
   let items1 = [arr];
   const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
@@ -168,7 +168,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   }
   obj6.variant = str;
   const items7 = [
-    arr(tmp10(12350).Tabs, obj6),
+    arr(tmp10(13159).Tabs, obj6),
     arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
   obj5.children = items7;

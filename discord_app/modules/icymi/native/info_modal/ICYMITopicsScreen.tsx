@@ -3,17 +3,17 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import GameControllerIcon from "../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import BookCheckIcon from "../../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import ForumIcon from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
-import GameControllerIcon from "../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import FoodIcon from "../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
-import BicycleIcon from "../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
 import TvIcon from "../../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
+import FoodIcon from "../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
+import BicycleIcon from "../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
+import PencilSparkleIcon from "../../../../design/components/Icon/native/redesign/generated/PencilSparkleIcon.tsx";
 import RobotIcon from "../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import MedalIcon from "../../../../design/components/Icon/native/redesign/generated/MedalIcon.tsx";
 import PiggyBankIcon from "../../../../design/components/Icon/native/redesign/generated/PiggyBankIcon.tsx";
-import PencilSparkleIcon from "../../../../design/components/Icon/native/redesign/generated/PencilSparkleIcon.tsx";
 import ICYMIAnalytics2 from "../../ICYMIAnalytics.tsx";
 import PaintPaletteIcon from "../../../../design/components/Icon/native/redesign/generated/PaintPaletteIcon.tsx";
 import ScienceIcon from "../../../../design/components/Icon/native/redesign/generated/ScienceIcon.tsx";
@@ -86,10 +86,10 @@ function WordTopic(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(18932).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(19122).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   footer: null,
@@ -255,11 +255,11 @@ export default function ICYMITopicsScreen() {
   let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1113).intl;
   obj3.children = intl.string(first(1113).t.Y5d99L);
-  const children = [closure_10(first(5753).Text, obj3), , , ,];
+  const children = [closure_10(first(5866).Text, obj3), , , ,];
   const obj4 = { variant: "body-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1113).intl;
   obj4.children = intl2.string(first(1113).t.MGZsfv);
-  children[1] = closure_10(first(5753).Text, obj4);
+  children[1] = closure_10(first(5866).Text, obj4);
   children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = {
     showsVerticalScrollIndicator: false,
@@ -297,7 +297,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1113).intl;
     obj11.text = intl3.string(tmp7(1113).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = closure_10(tmp7(5760).Button, obj11);
+    obj9.children = closure_10(tmp7(5873).Button, obj11);
     tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;

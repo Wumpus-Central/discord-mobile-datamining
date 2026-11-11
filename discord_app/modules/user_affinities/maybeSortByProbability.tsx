@@ -22,7 +22,7 @@ export function maybeSortByProbability(reduced, userAffinitiesMap, location) {
       if (num == null) {
         num = 0;
       }
-      value2 = userAffinitiesMap.get(id.id);
+      const value2 = userAffinitiesMap.get(id.id);
       let num2;
       if (value2 != null) {
         num2 = value2.vcProbability;
@@ -44,7 +44,7 @@ export function maybeSortByProbability(reduced, userAffinitiesMap, location) {
       if (num == null) {
         num = 0;
       }
-      value2 = userAffinitiesMap.get(id.id);
+      const value2 = userAffinitiesMap.get(id.id);
       let num2;
       if (value2 != null) {
         num2 = value2.communicationProbability;

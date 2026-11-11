@@ -8,23 +8,23 @@ import ChannelConstants from "../../../channel/ChannelConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import parseURLDefault from "../../../../utils/native/parseURL.tsx";
 import useMessageAuthor from "../../useMessageAuthor.tsx";
-import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import PushNotificationConstants from "../../../push_notifications/PushNotificationConstants.tsx";
+import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
+import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
+import MaskedLinkUtils from "../../../../utils/MaskedLinkUtils.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import MessageActionCreatorsDefault from "../../../../actions/MessageActionCreators.tsx";
 import InviteTypeUtils from "../../../instant_invite/InviteTypeUtils.tsx";
-import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
 import GuildRoleSubscriptionSystemMessageUtils from "../../../guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx";
-import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
-import MaskedLinkUtils from "../../../../utils/MaskedLinkUtils.tsx";
 import GameProfileActionCreators from "../../../game_profile/GameProfileActionCreators.native.tsx";
 import GameProfileAnalyticUtils from "../../../game_profile/GameProfileAnalyticUtils.tsx";
+import showChatGDMCustomizeActionSheetDefault from "../../../group_dm/native/showChatGDMCustomizeActionSheet.tsx";
 import ApplicationCommandIndexStore from "../../../application_commands/ApplicationCommandIndexStore.tsx";
+import isAlertOrActionSheetOpen from "../../../../components_native/chat/isAlertOrActionSheetOpen.tsx";
 import MarkupReactLinkUtils from "../../../markup/MarkupReactLinkUtils.tsx";
 import handleAcceptEventInstantInviteDefault from "../../../guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx";
-import isAlertOrActionSheetOpen from "../../../../components_native/chat/isAlertOrActionSheetOpen.tsx";
 import openPinnedMessagesDefault from "../openPinnedMessages.tsx";
-import showChatGDMCustomizeActionSheetDefault from "../../../group_dm/native/showChatGDMCustomizeActionSheet.tsx";
 import GuildAutomodMessageActionCreators from "../../../guild_automod/GuildAutomodMessageActionCreators.tsx";
 import ApplicationInteractionInfoUtils from "../../../applications/ApplicationInteractionInfoUtils.tsx";
 import showExecutedApplicationCommandPopoutDefault from "../../../application_commands/native/showExecutedApplicationCommandPopout.tsx";
@@ -152,11 +152,11 @@ export function handleMessagesTapLink(tapLinkData) {
                 const obj19 = ActionSheetActionCreatorsDefault;
                 const obj9 = { guildId: guild_id };
                 obj19.openLazy(
-                  asyncRequireImpl(9382, dependencyMap.paths),
+                  asyncRequireImpl(10588, dependencyMap.paths),
                   "GuildProfileActionSheet:" + guild_id,
                   obj9,
                 );
-                const tmp97 = asyncRequireImpl(9382, dependencyMap.paths);
+                const tmp97 = asyncRequireImpl(10588, dependencyMap.paths);
               }
             }
             break;
@@ -398,7 +398,7 @@ export function handleMessagesTapLink(tapLinkData) {
                   constants.MESSAGE_EMBED,
                 );
               } else {
-                const tmp106 = asyncRequireImpl(10305, dependencyMap.paths);
+                const tmp106 = asyncRequireImpl(12526, dependencyMap.paths);
                 const obj49 = { location: constants.MESSAGE_EMBED, messageId: data.message.id, notificationType: null };
                 let TOP_MESSAGE_PUSH = data.notificationType;
                 if (TOP_MESSAGE_PUSH == null) {

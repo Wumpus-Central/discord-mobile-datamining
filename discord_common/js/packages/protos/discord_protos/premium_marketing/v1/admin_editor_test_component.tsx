@@ -132,7 +132,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField, tag, writeUnknownFields) {
-  let length;
   if ("" !== deprecatedField.deprecatedField) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).string(deprecatedField.deprecatedField);
     const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);

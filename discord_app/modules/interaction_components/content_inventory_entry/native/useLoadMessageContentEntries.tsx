@@ -1,8 +1,8 @@
 // discord_app/modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import Server from "../../../../flow/Server.tsx";
-import transformContentInventoryEntryMessageComponent from "../../../messages/native/renderer/transformContentInventoryEntryMessageComponent.tsx";
 import useAvatarColor from "../../../avatar/useAvatarColor.tsx";
+import transformContentInventoryEntryMessageComponent from "../../../messages/native/renderer/transformContentInventoryEntryMessageComponent.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -705,9 +705,9 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(2142).ImageSizes;
-const promiseDeduper = new fn(5260).PromiseDeduper();
-const promiseDeduper3 = new fn(5260).PromiseDeduper();
-const promiseDeduper4 = new fn(5260).PromiseDeduper();
+const promiseDeduper = new fn(5373).PromiseDeduper();
+const promiseDeduper3 = new fn(5373).PromiseDeduper();
+const promiseDeduper4 = new fn(5373).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx",

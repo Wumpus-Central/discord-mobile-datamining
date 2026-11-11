@@ -27,7 +27,6 @@ let closure_7 = async function _fetchBatch(arg0) {
   return value;
 };
 function flush() {
-  let length;
   let sum;
   closure_5 = null;
   items = [...set];

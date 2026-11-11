@@ -3,12 +3,13 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import V6OrEarlierAPIError from "../../../errors/index.tsx";
+import BillingUtils from "../../../utils/BillingUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import PaymentSourceRecord from "../../../records/PaymentSourceRecord.tsx";
 
+const V6OrEarlierAPIError = obj3(6694);
 require = fn;
-let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
+let closure_7 = async function _validatePaymentSourceBillingAddress(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -73,10 +74,10 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        closure_129_0 = closure_130_0(closure_130_2[5]).parseV8BillingAddressSkemaErrorToBillingError(closure_129_1);
-        const obj3 = closure_130_0(closure_130_2[5]);
+        closure_129_0 = closure_130_0(closure_130_2[4]).parseV8BillingAddressSkemaErrorToBillingError(closure_129_1);
+        const obj3 = closure_130_0(closure_130_2[4]);
         const obj9 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: closure_129_0 };
-        closure_130_1(closure_130_2[6]).dispatch(obj9);
+        closure_130_1(closure_130_2[5]).dispatch(obj9);
         throw closure_129_0;
       } else if (arg0 === 1) {
         c6 = 3;
@@ -103,21 +104,21 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
     }
   }
 };
-let closure_10 = async function _popupBridgeState() {
+let closure_9 = async function _popupBridgeState() {
   closure_2 = tmp2;
   closure_1 = tmp5;
   closure_129_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
-  await HTTP.post({ url: closure_2_7.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true });
+  await HTTP.post({ url: closure_2_6.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true });
   state = value.body.state;
-  closure_130_1(closure_130_2[6]).dispatch({
+  closure_130_1(closure_130_2[5]).dispatch({
     type: "BILLING_POPUP_BRIDGE_STATE_UPDATE",
     state,
     paymentSourceType: closure_129_0,
   });
   return state;
 };
-let closure_11 = async function _createPaymentSource(arg0) {
+let closure_10 = async function _createPaymentSource(arg0) {
   if (c10 === 2) {
     c10 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -170,11 +171,11 @@ let closure_11 = async function _createPaymentSource(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_134_1(closure_134_2[6]).dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
+          closure_134_1(closure_134_2[5]).dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
           c8 = 1;
-          const HTTP = closure_134_0(closure_134_2[4]).HTTP;
+          const HTTP = closure_134_0(closure_134_2[3]).HTTP;
           const request = {
-            url: closure_134_7.BILLING_PAYMENT_SOURCES,
+            url: closure_134_6.BILLING_PAYMENT_SOURCES,
             query: null,
             body: null,
             rejectWithError: false,
@@ -221,15 +222,15 @@ let closure_11 = async function _createPaymentSource(arg0) {
       } else if (2 === tmp7) {
         c8 = 0;
         closure_133_8 = closure_7;
-        if (closure_133_8 instanceof closure_134_0(closure_134_2[11]).CaptchaCancelError) {
+        if (closure_133_8 instanceof closure_134_0(closure_134_2[10]).CaptchaCancelError) {
           const message = closure_133_8.message;
           let billingError = new closure_134_0(closure_134_2[9]).BillingError(
             message,
-            closure_134_0(closure_134_2[5]).ErrorCodes.INVALID_PAYMENT_SOURCE,
+            closure_134_0(closure_134_2[4]).ErrorCodes.INVALID_PAYMENT_SOURCE,
           );
         } else {
-          billingError = closure_134_0(closure_134_2[5]).parseV8BillingAddressSkemaErrorToBillingError(closure_133_8);
-          const tmp25Result = closure_134_0(closure_134_2[5]);
+          billingError = closure_134_0(closure_134_2[4]).parseV8BillingAddressSkemaErrorToBillingError(closure_133_8);
+          const tmp25Result = closure_134_0(closure_134_2[4]);
         }
         closure_133_7 = billingError;
         (function addFieldsToBillingError(fields, body) {
@@ -251,10 +252,10 @@ let closure_11 = async function _createPaymentSource(arg0) {
             fields.fields.adyen_redirect_url = adyen_redirect_url1;
           }
         })(closure_133_7, closure_133_8);
-        if (closure_133_7.code !== closure_134_0(closure_134_2[5]).ErrorCodes.CONFIRMATION_REQUIRED) {
+        if (closure_133_7.code !== closure_134_0(closure_134_2[4]).ErrorCodes.CONFIRMATION_REQUIRED) {
           const obj11 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: closure_133_7 };
-          closure_134_1(closure_134_2[6]).dispatch(obj11);
-          const obj6 = closure_134_1(closure_134_2[6]);
+          closure_134_1(closure_134_2[5]).dispatch(obj11);
+          const obj6 = closure_134_1(closure_134_2[5]);
         }
         throw closure_133_7;
       } else if (arg0 === 1) {
@@ -269,7 +270,7 @@ let closure_11 = async function _createPaymentSource(arg0) {
         closure_133_5 = value;
         closure_133_6 = closure_134_4.createFromServer(closure_133_5.body);
         const obj14 = { type: "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", paymentSource: closure_133_6 };
-        closure_134_1(closure_134_2[6]).dispatch(obj14);
+        closure_134_1(closure_134_2[5]).dispatch(obj14);
         c8 = 0;
         c10 = 3;
         const obj15 = { value: closure_133_6, done: true };
@@ -286,16 +287,15 @@ let closure_11 = async function _createPaymentSource(arg0) {
     }
   }
 };
-const StripeErrorTypes = fn(6593).StripeErrorTypes;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_6, Endpoints: metroImportDefault } = Constants);
+({ AnalyticEvents: hasOwnProperty, Endpoints: closure_6 } = Constants);
 const set = new Set(["setup_intent_authentication_failure", "payment_intent_authentication_failure"]);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/actions/BillingSharedActionCreators.tsx");
 
 export function validatePaymentSourceBillingAddress() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -303,7 +303,7 @@ export function validatePaymentSourceBillingAddress() {
   }
   return applyArgumentsResult;
 }
-export function dispatchConfirmationError(type, captureException) {
+export function dispatchConfirmationError(code, captureException) {
   let obj = captureException;
   if (captureException == null) {
     obj = {};
@@ -324,8 +324,9 @@ export function dispatchConfirmationError(type, captureException) {
   if (flag == null) {
     flag = true;
   }
-  code = type;
-  if (StripeErrorTypes.includes(type.type)) {
+  let obj3 = require;
+  let result = dependencyMap;
+  if (obj4.isOfTypeStripeError(code)) {
     let combined = defaultErrorMessage;
     if (null != code.message) {
       const _HermesInternal = HermesInternal;
@@ -339,37 +340,35 @@ export function dispatchConfirmationError(type, captureException) {
       payment_source_type: null,
     };
     ({ type: obj8.error_type, code: obj8.failure_code, decline_code: obj8.failure_sub_code, payment_method } = code);
-    type = undefined;
+    let type;
     if (payment_method != null) {
       type = payment_method.type;
     }
     obj2.payment_source_type = type;
-    let tmp20 = "card_error" === code.type;
-    if (!tmp20) {
-      tmp20 = "validation_error" === code.type;
+    let tmp18 = "card_error" === code.type;
+    if (!tmp18) {
+      tmp18 = "validation_error" === code.type;
     }
-    if (!tmp20) {
+    if (!tmp18) {
       let hasItem = "invalid_request_error" === code.type && null != code.code;
       if (hasItem) {
         hasItem = set.has(code.code);
       }
-      tmp20 = hasItem;
+      tmp18 = hasItem;
     }
-    if (tmp20) {
-      const obj4 = {};
+    if (tmp18) {
+      const obj5 = {};
       const merged = Object.assign(obj2);
       const _Error = Error;
       const error = new Error();
-      obj4.stacktrace = error.stack;
-      AnalyticsUtilsDefault.track(constants.PAYMENT_SOURCE_CREATION_FAILED, obj4);
+      obj5.stacktrace = error.stack;
+      AnalyticsUtilsDefault.track(constants.PAYMENT_SOURCE_CREATION_FAILED, obj5);
       flag = false;
     }
-    let obj6 = {};
+    let obj7 = {};
     let billingError = new V6OrEarlierAPIError.BillingError(combined);
     let flag2 = flag;
     let merged7 = obj2;
-    let result = dependencyMap;
-    let obj7 = require;
   } else {
     let str;
     if (code != null) {
@@ -410,30 +409,27 @@ export function dispatchConfirmationError(type, captureException) {
     obj10.raw_error_decline_code = String(str4);
     let billingError1 = code;
     if (!(code instanceof V6OrEarlierAPIError.BillingError)) {
-      let tmp7 = code;
+      let tmp6 = code;
       if (typeof code === "string") {
-        tmp7 = defaultErrorMessage;
+        tmp6 = defaultErrorMessage;
       }
-      billingError1 = new V6OrEarlierAPIError.BillingError(tmp7);
+      billingError1 = new V6OrEarlierAPIError.BillingError(tmp6);
     }
     const obj12 = { failure_message: null, status_code: null };
-    ({ message: obj5.failure_message, code: obj5.status_code } = billingError1);
+    ({ message: obj6.failure_message, code: obj6.status_code } = billingError1);
     const merged1 = Object.assign(obj10);
-    obj6 = obj10;
+    obj7 = obj10;
     flag2 = flag;
     merged7 = obj12;
     billingError = billingError1;
-    result = dependencyMap;
-    obj7 = require;
     if (429 === billingError1.status) {
       flag2 = false;
-      obj6 = obj10;
+      obj7 = obj10;
       merged7 = obj12;
       billingError = billingError1;
-      result = dependencyMap;
-      obj7 = require;
     }
   }
+  obj4 = BillingUtils;
   DispatcherDefault.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: billingError });
   let message = code;
   if (typeof code !== "string") {
@@ -446,7 +442,7 @@ export function dispatchConfirmationError(type, captureException) {
     const obj13 = {};
     const merged2 = Object.assign(prop);
     const obj14 = { fingerprint: null, tags: null };
-    if (StripeErrorTypes.includes(code.type)) {
+    if (obj3Result.isOfTypeStripeError(code)) {
       items = ["billing-confirmation-error"];
       ({ type: arr2[1], code: code2 } = code);
       if (code2 == null) {
@@ -454,40 +450,41 @@ export function dispatchConfirmationError(type, captureException) {
       }
       items[2] = code2;
       obj14.fingerprint = items;
-      const obj16 = {};
+      const obj15 = {};
       const merged3 = Object.assign(prop.tags);
-      ({ type: obj15.error_type, code } = code);
+      ({ type: obj16.error_type, code } = code);
       if (code == null) {
         code = "unknown";
       }
-      obj16.failure_code = code;
-      obj14.tags = obj16;
-      let tmp50 = obj14;
+      obj15.failure_code = code;
+      obj14.tags = obj15;
+      let tmp45 = obj14;
     } else {
       const items1 = [
         "billing-confirmation-error",
         "non_stripe",
-        "unknown" !== obj6.raw_error_type ? obj6.raw_error_type : obj6.raw_error_name,
+        "unknown" !== obj7.raw_error_type ? obj7.raw_error_type : obj7.raw_error_name,
       ];
       obj14.fingerprint = items1;
-      const obj26 = {};
+      const obj17 = {};
       const merged4 = Object.assign(prop.tags);
-      const merged5 = Object.assign(obj6);
-      obj14.tags = obj26;
-      tmp50 = obj14;
+      const merged5 = Object.assign(obj7);
+      obj14.tags = obj17;
+      tmp45 = obj14;
     }
-    const merged6 = Object.assign(tmp50);
+    const merged6 = Object.assign(tmp45);
     const obj27 = {};
     merged7 = Object.assign(merged7);
     prop = Object.assign(prop.extra);
     obj13.extra = obj27;
-    obj7 = obj7(4955);
-    result = obj7.captureBillingException(error1, obj13);
+    obj3 = BillingUtils;
+    result = obj3.captureBillingException(error1, obj13);
+    obj3Result = BillingUtils;
   }
 }
 export function popupBridgeState() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -497,7 +494,7 @@ export function popupBridgeState() {
 }
 export function createPaymentSource() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

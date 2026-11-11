@@ -6,7 +6,7 @@ import BillingErrorDefault from "../errors/BillingError.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _createGatewayCheckoutContext(arg0) {
+let closure_6 = async function _createGatewayCheckoutContext(arg0) {
   let paymentGateway = arg0;
   c2 = 0;
   c3 = 0;
@@ -68,7 +68,9 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
     }
   })();
 };
+const StripeErrorTypes = fn(5056).StripeErrorTypes;
 const PaymentGateways = fn(1083).PaymentGateways;
+const set = new Set(["card_error", "api_connection_error", "validation_error"]);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/BillingUtils.tsx");
 
@@ -79,7 +81,7 @@ export function getLocalizedDisplayMonth(arg0, arg1) {
 }
 export function createGatewayCheckoutContext() {
   const self = this;
-  const apply = closure_5.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -122,6 +124,52 @@ export function isExpectedHttpClientError(status) {
     tmp2 = tmp4;
   }
   return tmp2;
+}
+export function isOfTypeStripeError(code) {
+  let hasItem = null != code;
+  if (hasItem) {
+    hasItem = StripeErrorTypes.includes(code.type);
+  }
+  return hasItem;
+}
+export function shouldReportExpressCheckoutError(code) {
+  if (code instanceof BillingErrorDefault) {
+    let tmp8 = code.code !== BillingErrorDefault.ErrorCodes.INVALID_PAYMENT_SOURCE;
+    if (tmp8) {
+      let tmp10 = code instanceof HTTPUtils.HTTPResponseError;
+      if (tmp10) {
+        tmp10 = code.status >= 400;
+      }
+      if (tmp10) {
+        tmp10 = code.status < 500;
+      }
+      if (!tmp10) {
+        let tmp11 = code instanceof BillingErrorDefault;
+        if (tmp11) {
+          tmp11 = null != code.status;
+        }
+        if (tmp11) {
+          tmp11 = code.status >= 400;
+        }
+        if (tmp11) {
+          tmp11 = code.status < 500;
+        }
+        tmp10 = tmp11;
+      }
+      tmp8 = !tmp10;
+    }
+    let tmp6 = tmp8;
+  } else {
+    let hasItem = null != code;
+    if (hasItem) {
+      hasItem = StripeErrorTypes.includes(code.type);
+    }
+    tmp6 = !hasItem;
+    if (hasItem) {
+      tmp6 = !set.has(code.type);
+    }
+  }
+  return tmp6;
 }
 export function captureBillingMessage(arg0, tags) {
   const obj2 = {};

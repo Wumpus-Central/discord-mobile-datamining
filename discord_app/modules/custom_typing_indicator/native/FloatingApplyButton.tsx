@@ -124,7 +124,7 @@ export default function FloatingApplyButton(renderButton) {
   }
   if (renderButtonResult == null) {
     const obj6 = { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: renderButton.loading };
-    renderButtonResult = jsx(tmp(5760).Button, {
+    renderButtonResult = jsx(tmp(5873).Button, {
       variant: "primary",
       size: "lg",
       disabled,

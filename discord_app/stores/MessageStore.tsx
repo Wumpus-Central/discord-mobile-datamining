@@ -346,7 +346,7 @@ function handleMessageSendFailedAutomod(arg0) {
   if (orCreate.has(failedMessageId)) {
     const updateResult = orCreate.update(failedMessageId, (embeds) => {
       embeds = embeds.embeds;
-      let length;
+      length = undefined;
       if (embeds != null) {
         length = embeds.filter(GuildAutomodMessageStoreUtils.isNotAutomodEmbed).length;
       }
@@ -1038,7 +1038,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
               attachment_id = mediaMention.attachment_id;
             }
             if (null != attachment_id) {
-              value2 = ChannelMessagesDefault.get(attachment_id);
+              const value2 = ChannelMessagesDefault.get(attachment_id);
               if (null != value2) {
                 const mediaMention2 = value.mediaMention;
                 let message_id;
@@ -1075,7 +1075,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6620).getOrCreate(ids.channelId);
+    const orCreate = mutation(6732).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1088,7 +1088,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
             attachment_id = mediaMention.attachment_id;
           }
           if (null != attachment_id) {
-            value2 = ChannelMessagesDefault.get(attachment_id);
+            const value2 = ChannelMessagesDefault.get(attachment_id);
             if (null != value2) {
               const mediaMention2 = value.mediaMention;
               let message_id;
@@ -1124,14 +1124,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6620).commit(tmp3);
+        tmp(6732).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6620);
+        const tmpResult2 = tmp(6732);
       }
     }
-    let obj = mutation(6620);
+    let obj = mutation(6732);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

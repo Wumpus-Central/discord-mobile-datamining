@@ -5,9 +5,9 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import ChannelRTCParticipants from "../../../calls/ChannelRTCParticipants.tsx";
 import isChannelFocused from "../../../panels/isChannelFocused.native.tsx";
-import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import transitionToActivityDefault from "../../../activities/utils/transitionToActivity.native.tsx";
 import PictureInPictureDefault from "PictureInPicture.tsx";
 import getPIPBottomOffsetForPIPMode from "../../../panels/morphable/native/getPIPBottomOffsetForPIPMode.tsx";
@@ -23,12 +23,12 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, TouchableOpacity: metroImportDefault } = get_ActivityIndicator);
-let closure_10 = fn(10023).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(11805).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
-const ParticipantTypes = fn(5807).ParticipantTypes;
+const ParticipantTypes = fn(5920).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   container: { flex: 1, marginLeft: 12, marginRight: 12 },
   elevationShadow: null,
@@ -241,8 +241,8 @@ let closure_19 = noop.memo(function PIPContentContainer(channel) {
     noop.useState(() => constants.TOP_RIGHT),
     2,
   );
-  obj.children = closure_1_15(closure_18, { channel });
-  return closure_1_15(PictureInPictureDefault, obj);
+  obj.children = colors(closure_18, { channel });
+  return colors(PictureInPictureDefault, obj);
 });
 let closure_20 = {
   code: "(function PictureInPictureGlobalTsx1(){let[withTiming,drawerState,STANDARD_EASING]=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});})",
@@ -317,13 +317,9 @@ export default function PictureInPictureGlobal(channel) {
   const obj2 = { style: null, pointerEvents: "box-none", children: null };
   const items4 = [absoluteFill.absoluteFill, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj2.style = items4;
-  const obj3 = {
-    style: null,
-    pointerEvents: "box-none",
-    children: closure_1_15(closure_19, { channel: channel.channel }),
-  };
+  const obj3 = { style: null, pointerEvents: "box-none", children: colors(closure_19, { channel: channel.channel }) };
   const items5 = [tmp.container, animatedStyle];
   obj3.style = items5;
-  obj2.children = closure_1_15(_modDef1652.View, obj3);
-  return closure_1_15(hasOwnProperty, obj2);
+  obj2.children = colors(_modDef1652.View, obj3);
+  return colors(hasOwnProperty, obj2);
 }

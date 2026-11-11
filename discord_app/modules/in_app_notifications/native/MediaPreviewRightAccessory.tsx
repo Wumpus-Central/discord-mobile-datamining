@@ -7,19 +7,19 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import VisualEffectViewDefault from "../../visual_effect_view/native/VisualEffectView.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import PlayIcon from "../../../design/components/Icon/native/redesign/generated/PlayIcon.tsx";
 import EyeIcon from "../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
+import ImageWarningIcon from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
+import MediaSourceUtil from "../../media_viewer/native/MediaSourceUtil.tsx";
 import ObscuredMediaUtils from "../../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
-import ImageWarningIcon from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import ExplicitMediaRedactionUtils from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import ExplicitMediaUtils from "../../messages/native/renderer/ExplicitMediaUtils.tsx";
-import MediaSourceUtil from "../../media_viewer/native/MediaSourceUtil.tsx";
-import PlayIcon from "../../../design/components/Icon/native/redesign/generated/PlayIcon.tsx";
-import common_VideoDefault from "../../../components_native/common/Video.tsx";
 import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
-import StickerDefault from "../../stickers/native/Sticker.tsx";
+import common_VideoDefault from "../../../components_native/common/Video.tsx";
+import ExplicitMediaUtils from "../../messages/native/renderer/ExplicitMediaUtils.tsx";
 import usePreviewableMedia from "hooks/usePreviewableMedia.tsx";
 import useContentHarmTypes from "../../explicit_media_redaction/hooks/useContentHarmTypes.tsx";
+import StickerDefault from "../../stickers/native/Sticker.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -283,7 +283,7 @@ get_ActivityIndicator = fn(17);
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj2 = { badge: null, icon: null };
 let size = {
   alignItems: "center",
@@ -299,7 +299,7 @@ let size = {
 obj2.badge = size;
 obj2.icon = { width: 10, height: 10 };
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let obj3 = { badge: null };
 let size1 = {
   width: 20,
@@ -314,7 +314,7 @@ let size1 = {
 };
 obj3.badge = size1;
 let closure_12 = createStyles.createStyles(obj3);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let obj5 = {
   mediaThumbnailContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" },
   mediaThumbnail: { width: "100%", height: "100%" },
@@ -353,9 +353,9 @@ obj5.spoilerPill = {
   alignItems: "center",
 };
 let closure_13 = createStyles.createStyles(obj5);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
-createStyles = fn(5142);
+createStyles = fn(5243);
 let obj11 = {
   padding: nativeDefault.space.PX_4,
   borderRadius: nativeDefault.radii.xs,
@@ -364,7 +364,7 @@ let obj11 = {
   alignItems: "center",
 };
 let closure_15 = createStyles.createStyles({
-  rightAccessoryContainer: { marginLeft: fn(11162).RIGHT_ACCESSORY_LEFT_MARGIN },
+  rightAccessoryContainer: { marginLeft: fn(10963).RIGHT_ACCESSORY_LEFT_MARGIN },
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");

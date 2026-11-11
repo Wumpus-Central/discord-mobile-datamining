@@ -11,13 +11,13 @@ import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import canAddNewReactionsDefault from "../../reactions/canAddNewReactions.tsx";
-import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
-import messages_MessagesUtils from "../../messages/native/MessagesUtils.tsx";
 import openEmojiPickerActionSheet from "../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
-import PendingReplyActionCreators from "../../replies/PendingReplyActionCreators.tsx";
-import ArrowAngleLeftUpIcon from "../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx";
+import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
 import ForwardModalUtils from "../../forwarding/native/ForwardModalUtils.tsx";
 import ForwardingIconDefault from "../../forwarding/native/ForwardingIcon.tsx";
+import messages_MessagesUtils from "../../messages/native/MessagesUtils.tsx";
+import PendingReplyActionCreators from "../../replies/PendingReplyActionCreators.tsx";
+import ArrowAngleLeftUpIcon from "../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx";
 import ICYMIShared from "ICYMIShared.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -275,8 +275,8 @@ function ForwardButton(disabled) {
   obj.disabled = disabled;
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.xIUfJS);
-  obj.children = closure_1_15(ForwardingIconDefault, { size: "sm" });
-  return closure_1_15(Pressables.PressableOpacity, obj);
+  obj.children = colors(ForwardingIconDefault, { size: "sm" });
+  return colors(Pressables.PressableOpacity, obj);
 }
 function ReplyButton(disabled) {
   disabled = disabled.disabled;
@@ -300,8 +300,8 @@ function ReplyButton(disabled) {
   obj.disabled = disabled;
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5NwaNY"]);
-  obj.children = closure_1_15(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
-  return closure_1_15(Pressables.PressableOpacity, obj);
+  obj.children = colors(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
+  return colors(Pressables.PressableOpacity, obj);
 }
 function ThreadAsCommentsButton(parentMessage) {
   parentMessage = parentMessage.parentMessage;
@@ -371,7 +371,7 @@ const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let c18 = 20;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_19 = createStyles.createStyles(() => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" },
@@ -719,8 +719,8 @@ export default function ICYMICardInteractionRow(message) {
             isBurstReaction: reaction.type === MessageReactionsTypes.ReactionTypes.BURST,
             handleItemInteracted,
           };
-          const obj2 = { children: closure_2_15(EmojiReaction, obj) };
-          return closure_2_15(hasOwnProperty, obj2, "reaction-" + index);
+          const obj2 = { children: colors(EmojiReaction, obj) };
+          return colors(hasOwnProperty, obj2, "reaction-" + index);
         }),
       ];
       let tmp22Result = null;

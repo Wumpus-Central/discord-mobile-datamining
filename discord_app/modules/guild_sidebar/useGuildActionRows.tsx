@@ -1,8 +1,8 @@
 // discord_app/modules/guild_sidebar/useGuildActionRows.tsx
 import useIsNewMemberDefault from "../guild_onboarding_home/useIsNewMember.tsx";
 import useGuildOnboardingAvailableDefault from "../guild_onboarding/useGuildOnboardingAvailable.tsx";
-import useCanSeeEventsInChannelListDefault from "../guild_scheduled_events/useCanSeeEventsInChannelList.tsx";
 import useHasAllocateBoostPermissionDefault from "../premium/powerups/hooks/useHasAllocateBoostPermission.tsx";
+import useCanSeeEventsInChannelListDefault from "../guild_scheduled_events/useCanSeeEventsInChannelList.tsx";
 import useTotalPossibleBoostCountDefault from "../premium/powerups/hooks/useTotalPossibleBoostCount.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import GuildOnboardingHomeSettingsStore from "../guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx";
@@ -10,7 +10,7 @@ import GuildOnboardingHomeSettingsStore from "../guild_onboarding_home/GuildOnbo
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7792).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(8670).ChannelListGuildActionRow;
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
@@ -74,7 +74,7 @@ export default function useGuildActionRows(id) {
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
-        let items2 = [tmp3(4975).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items2 = [tmp3(5076).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
       if (hasItem) {

@@ -103,8 +103,8 @@ Object.defineProperty(prototype, "systemTheme", {
   },
   set: undefined,
 });
-prototype["themePreferenceForSystemTheme"] = function themePreferenceForSystemTheme(systemTheme) {
-  return obj2[systemTheme];
+prototype["themePreferenceForSystemTheme"] = function themePreferenceForSystemTheme(item10084) {
+  return obj2[item10084];
 };
 prototype["getSyncedClientTheme"] = function getSyncedClientTheme(systemTheme) {
   return syncedClientThemes[systemTheme];

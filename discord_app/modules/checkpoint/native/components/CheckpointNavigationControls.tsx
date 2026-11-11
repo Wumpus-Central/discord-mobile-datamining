@@ -150,7 +150,7 @@ export default function CheckpointNavigationControls(nextDisabled) {
             variant: "body-sm/medium",
             style: link.link,
             onPress() {
-              const obj = flag(5836);
+              const obj = flag(5949);
               return obj.openURL(flag(2185).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",

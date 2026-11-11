@@ -4,13 +4,13 @@ import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
-import _mod6604 from "../../../../_runtime/metro/06604__.js";
+import _mod6716 from "../../../../_runtime/metro/06716__.js";
 import StripeActionCreators from "StripeActionCreators.tsx";
 import StripeUtilsAll from "../../../utils/StripeUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-function dispatchPaymentElementsConfirmationError(type, arg1) {
+function dispatchPaymentElementsConfirmationError(code, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -20,7 +20,7 @@ function dispatchPaymentElementsConfirmationError(type, arg1) {
     const intl = util.intl;
     stringResult = intl.string(util.t.khEaRI);
   }
-  return BillingSharedActionCreators.dispatchConfirmationError(type, {
+  return BillingSharedActionCreators.dispatchConfirmationError(code, {
     captureException: flag,
     defaultErrorMessage: stringResult,
     captureExceptionOptions: { tags: { source: "payment_elements" } },
@@ -63,7 +63,7 @@ let closure_13 = async function _createCardToken(arg0, arg1) {
             let error;
             if (null != closure_0) {
               if (null != element) {
-                element = element.getElement(_mod6604.CardNumberElement);
+                element = element.getElement(_mod6716.CardNumberElement);
                 if (null == element) {
                   throw BillingSharedActionCreators.dispatchConfirmationError(
                     "Unable to load card elements from Stripe",
@@ -582,7 +582,7 @@ let closure_25 = async function _confirmPaymentElementSource() {
                       if (closure_136_11 == null) {
                         setupIntent = undefined;
                       }
-                      const obj8 = { setupIntent, error: "r" };
+                      const obj8 = { setupIntent, error: "Array" };
                       closure_136_10 = obj8;
                       if (
                         (function shouldRecreateSetupIntentForPaymentElement(error) {
@@ -610,10 +610,10 @@ let closure_25 = async function _confirmPaymentElementSource() {
                           return obj9;
                         }
                       }
-                      setupIntent2 = closure_137_16(closure_136_10.setupIntent, closure_136_10.error, (type) => {
+                      setupIntent2 = closure_137_16(closure_136_10.setupIntent, closure_136_10.error, (code) => {
                         const intl = dependencyMap(1113).intl;
                         const stringResult = intl.string(dependencyMap(1113).t.khEaRI);
-                        return dependencyMap(6592).dispatchConfirmationError(type, {
+                        return dependencyMap(6705).dispatchConfirmationError(code, {
                           captureException: true,
                           defaultErrorMessage: stringResult,
                           captureExceptionOptions: { tags: { source: "payment_elements" } },
@@ -884,8 +884,8 @@ let closure_26 = async function _confirmCardPaymentSource(arg0) {
         return obj19;
       } else {
         closure_132_7 = value;
-        setupIntent = closure_133_16(closure_132_7.setupIntent, closure_132_7.error, (type) =>
-          closure_1_0(closure_1_3[5]).dispatchConfirmationError(type),
+        setupIntent = closure_133_16(closure_132_7.setupIntent, closure_132_7.error, (code) =>
+          closure_1_0(closure_1_3[5]).dispatchConfirmationError(code),
         ).setupIntent;
         const obj15 = closure_133_0(closure_133_3[5]);
         const obj20 = { billingAddressToken: closure_132_5, analyticsLocation: closure_132_3 };

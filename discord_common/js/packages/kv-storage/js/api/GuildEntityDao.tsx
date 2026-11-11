@@ -204,7 +204,7 @@ prototype2["replaceAll"] = function replaceAll(arg0, arg1) {
   this.putAll(arg0, arg1);
 };
 prototype2["delete"] = function delete(arg0, arg1) {
-  const length = arguments.length;
+  length = arguments.length;
   const self = this;
   if (0 === length) {
     const transaction3 = self.transaction;

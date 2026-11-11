@@ -3,8 +3,8 @@ import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js"
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
-import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
 import openEmojiPickerActionSheet from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
+import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -13,9 +13,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7780).DraftType;
+const DraftType = fn(8658).DraftType;
 const EmojiIntention = fn(1388).EmojiIntention;
-const MessageSendLocation = fn(5147).MessageSendLocation;
+const MessageSendLocation = fn(5248).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -275,7 +275,7 @@ export function useReplyActions(content) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(18963, dependencyMap.paths),
+          asyncRequireImpl(19150, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

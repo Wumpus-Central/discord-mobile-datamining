@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9923);
+const SearchConstants = fn(9000);
 ({
   MEDIA_NUM_COLUMNS: hasOwnProperty,
   MEDIA_ITEM_GAP_WIDTH: closure_6,
@@ -22,7 +22,7 @@ const SearchConstants = fn(9923);
 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { zIndex: 1, position: "absolute", width: "100%" },
   recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING },

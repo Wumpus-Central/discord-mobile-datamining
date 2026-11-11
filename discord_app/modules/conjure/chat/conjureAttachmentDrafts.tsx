@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/chat/conjureAttachmentDrafts.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../intl/ConjureUntranslated.messages.js";
 import ConjureAttachmentTypes from "ConjureAttachmentTypes.tsx";
 import conjureAttachmentRequests from "conjureAttachmentRequests.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -49,15 +49,15 @@ function getConjureAttachmentDrafts(substr, chat) {
   }
   return tmp2;
 }
-function setDrafts(projectId, chat, items) {
+function setDrafts(substr, chat, items) {
   const draftsByProject = zustandStore.getState().draftsByProject;
   const obj = { draftsByProject: null };
   const obj2 = {};
   const merged = Object.assign(draftsByProject);
   const obj3 = {};
-  const merged1 = Object.assign(draftsByProject[projectId]);
+  const merged1 = Object.assign(draftsByProject[substr]);
   obj3[chat] = items;
-  obj2[projectId] = obj3;
+  obj2[substr] = obj3;
   obj.draftsByProject = obj2;
   zustandStore.setState(obj);
 }
@@ -125,10 +125,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10978).sendUserMessage;
+const sendUserMessage = fn(7301).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5329).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5442).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);
@@ -152,7 +152,7 @@ export function conjureAttachmentTooLargeText(contentType) {
   const obj = { size: null };
   const obj2 = ConjureAttachmentTypes;
   obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef4028.JZ59Bo, obj);
+  return intl.formatToPlainString(_modDef4079.JZ59Bo, obj);
 }
 export function uploadConjureAttachment(arg0, size, name, contentType) {
   if (obj.isConjureAttachmentWithinLimit(size.size, contentType)) {
@@ -164,7 +164,7 @@ export function uploadConjureAttachment(arg0, size, name, contentType) {
     const obj3 = { size: null };
     const tmpResult3 = ConjureAttachmentTypes;
     obj3.size = tmpResult3.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-    obj2.errorText = intl.formatToPlainString(_modDef4028.JZ59Bo, obj3);
+    obj2.errorText = intl.formatToPlainString(_modDef4079.JZ59Bo, obj3);
     result = Promise.resolve(obj2);
     const tmpResult4 = ConjureAttachmentTypes;
   }

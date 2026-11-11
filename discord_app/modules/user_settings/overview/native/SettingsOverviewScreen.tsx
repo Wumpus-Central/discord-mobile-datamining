@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../LocaleStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8507).MobileUserSettings;
+const MobileUserSettings = fn(9136).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");

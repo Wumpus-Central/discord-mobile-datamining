@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/usePendingAvatarSettings.tsx
 import _mod19 from "../../../../_runtime/metro/00019__.js";
-import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
+import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/user_profile/hooks/usePendingAv
 export default function usePendingAvatarSettings(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
   const guildId = isTryItOut.guildId;
-  const tmp2 = guildId(8811)(isTryItOut.analyticsLocations);
+  const tmp2 = guildId(9331)(isTryItOut.analyticsLocations);
   dependencyMap = tmp2;
   items = [UserProfileSettingsStore];
   const stateFromStoresObject = isTryItOut(563).useStateFromStoresObject(items, () => {
@@ -59,11 +59,11 @@ export default function usePendingAvatarSettings(isTryItOut) {
     setPendingAvatarDecoration: null,
   };
   if (isTryItOut) {
-    setTryItOutAvatar = tmp3(8815).setTryItOutAvatar;
+    setTryItOutAvatar = tmp3(9333).setTryItOutAvatar;
   }
   obj2.setPendingAvatar = setTryItOutAvatar;
   if (isTryItOut) {
-    setTryItOutAvatarDecoration = tmp3(8815).setTryItOutAvatarDecoration;
+    setTryItOutAvatarDecoration = tmp3(9333).setTryItOutAvatarDecoration;
   }
   obj2.setPendingAvatarDecoration = setTryItOutAvatarDecoration;
   return obj2;

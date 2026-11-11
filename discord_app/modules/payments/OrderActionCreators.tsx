@@ -417,7 +417,7 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
             };
             closure_2 = closure_136_10;
             closure_2 = closure_136_10;
-            const length = closure_136_10[Symbol.iterator]();
+            length = closure_136_10[Symbol.iterator]();
             if (length !== undefined) {
               c9 = 1;
               closure_135_3 = tmp35;

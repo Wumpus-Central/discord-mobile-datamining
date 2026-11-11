@@ -26,7 +26,7 @@ export default function trackBadgeDirectoryAction(arg0) {
       remainingToNextTier = BadgeDirectoryStore.getRemainingToNextTier(badge.badge_id, id);
     }
   }
-  let length;
+  length = undefined;
   if (null != displayedUserId) {
     const badges = BadgeDirectoryStore.getBadges(displayedUserId);
     length = badges.filter((owned) => owned.owned).length;

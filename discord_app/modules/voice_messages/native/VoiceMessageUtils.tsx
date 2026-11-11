@@ -267,7 +267,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(13982);
+const VoiceMessagesUIStore = fn(14462);
 ({
   addVoiceMessageWave: hasOwnProperty,
   resetVoiceMessageState: closure_6,
@@ -278,7 +278,7 @@ const VoiceMessagesUIStore = fn(13982);
   useVoiceMessagesUIStore: closure_11,
   VoiceMessageRecordingStatus: closure_12,
 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(13983);
+const VoiceMessageConstants = fn(14463);
 ({
   WAVEFORM_WAVE_MAX_VALUE: map1,
   VOICE_RECORDING_MIN_DB: closure_14,
@@ -292,7 +292,7 @@ let closure_20 = new LoggerDefault("VoiceMessages");
 let closure_21 = apply.throttle((arg0) => {
   state = closure_1_11.getState();
   if (null != state.startTimeMillis) {
-    hasOwnProperty(closure_1_13 * ((arg0 - gesture) / (closure_1_15 - gesture)));
+    hasOwnProperty(closure_1_13 * ((arg0 - gesture) / (colors - gesture)));
     let tmp8 = null == state.savedVoiceMessageUploadData;
     if (tmp8) {
       const _performance = performance;
@@ -308,7 +308,7 @@ let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMess
 
 export function generateBase64EncodedWaveform(arg0) {
   let arr = arg0;
-  if (arg0.length > value2) {
+  if (arg0.length > closure_1_16) {
     arr = downsampleWaveformDefault(arg0, tmp);
   }
   const mapped = arr.map((item) => Math.min(item, closure_1_13));

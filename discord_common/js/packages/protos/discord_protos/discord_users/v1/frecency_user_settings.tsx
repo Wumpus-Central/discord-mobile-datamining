@@ -742,7 +742,6 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype4["internalBinaryWrite"] = function internalBinaryWrite(stickerIds, tag, writeUnknownFields) {
-  let length;
   if (stickerIds.stickerIds.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -998,7 +997,6 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype6["internalBinaryWrite"] = function internalBinaryWrite(emojis, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < emojis.emojis.length) {
     do {
@@ -1102,7 +1100,6 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype7["internalBinaryWrite"] = function internalBinaryWrite(packIds, tag, writeUnknownFields) {
-  let length;
   if (packIds.packIds.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -1533,7 +1530,6 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype10["internalBinaryWrite"] = function internalBinaryWrite(totalUses, tag, writeUnknownFields) {
-  let length;
   if (0 !== totalUses.totalUses) {
     tag.tag(1, _mod1197.WireType.Varint).uint32(totalUses.totalUses);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -1675,7 +1671,6 @@ prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype11["internalBinaryWrite"] = function internalBinaryWrite(soundIds, tag, writeUnknownFields) {
-  let length;
   let length2;
   if (soundIds.soundIds.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();

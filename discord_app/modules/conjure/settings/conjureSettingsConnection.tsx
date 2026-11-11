@@ -97,7 +97,7 @@ let closure_8 = async function _fetchProjectSettings(arg0) {
         return obj7;
       } else {
         closure_133_3 = value;
-        value2 = closure_134_5.get(closure_133_0);
+        const value2 = closure_134_5.get(closure_133_0);
         c2 = value2;
         let tmp35 = null;
         if (value2 == null) {

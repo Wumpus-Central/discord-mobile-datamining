@@ -11,7 +11,7 @@ function getBundleDescription(bundledProducts) {
   if (flag) {
     const intl5 = util.intl;
     bundledProducts = bundledProducts.bundledProducts;
-    let length;
+    length = undefined;
     if (bundledProducts != null) {
       length = bundledProducts.length;
     }

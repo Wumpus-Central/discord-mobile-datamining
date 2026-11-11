@@ -26,7 +26,7 @@ function VariantOption(variant) {
   return React4(View, obj2);
 }
 function VariantCheckmark(variant) {
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   const tmp = useIsVariantColorLightDefault(variant.variant);
   return React4(CheckmarkSmallIcon.CheckmarkSmallIcon, {
     color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE,
@@ -51,7 +51,7 @@ function VariantOverflowOption(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj = {
   variantsContainer: {
     display: "flex",
@@ -61,7 +61,7 @@ let obj = {
   },
 };
 let closure_6 = createStyles.createStyles(obj);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
   const size = {
@@ -102,8 +102,8 @@ export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
   const tmp = closure_6();
-  defaultVariantIndex = defaultVariantIndex(9547).useDefaultVariantIndex(product);
-  const obj = defaultVariantIndex(9547);
+  defaultVariantIndex = defaultVariantIndex(10350).useDefaultVariantIndex(product);
+  const obj = defaultVariantIndex(10350);
   if (obj2.getIsVariantProduct(product)) {
     let num3 = 3;
     if (product.variants.length <= 4) {
@@ -137,5 +137,5 @@ export default noop.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7810);
+  obj2 = defaultVariantIndex(8430);
 });

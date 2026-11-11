@@ -15,18 +15,18 @@ import apply from "../../../../_runtime/00012_apply.js";
 require = fn;
 const Constants = fn(1072);
 ({ AutoCompleteResultTypes: closure_10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
-const ChannelAutocompleteConstants = fn(6170);
+const ChannelAutocompleteConstants = fn(6283);
 ({
   MENTION_SENTINEL: closure_12,
   EMOJI_SENTINEL: map1,
   CHANNEL_SENTINEL: closure_14,
   COMMAND_SENTINEL: closure_15,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10434).AutocompleteTypes;
+const AutocompleteTypes = fn(11335).AutocompleteTypes;
 const EmojiConstants = fn(1388);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
-const executeCommand = apply.debounce(executeCommandDefault, fn(6169).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+const executeCommand = apply.debounce(executeCommandDefault, fn(6282).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
   leading: true,
   trailing: true,
 });
@@ -306,7 +306,7 @@ export function getAutocompleteOptions(channel, arg1) {
                 const stickerPacks = StickersActionCreators.fetchStickerPacks();
               }
               const items2 = [query];
-              const items3 = [channel, (arg0, arg1) => arg1 === channel(7591).StickerSendability.SENDABLE];
+              const items3 = [channel, (arg0, arg1) => arg1 === channel(7162).StickerSendability.SENDABLE];
               items1 = AutocompleteUtilsDefault.queryStickers(items2, true, items3);
               const tmp2Result = AutocompleteUtilsDefault;
             }
@@ -373,7 +373,7 @@ export function getAutocompleteOptions(channel, arg1) {
       matches(arg0, arg1, arg2) {
         let tmp = 0 === arg2;
         if (tmp) {
-          tmp = arg0 === closure_2_15;
+          tmp = arg0 === colors;
         }
         if (tmp) {
           let tmp4 = flag;
@@ -395,7 +395,7 @@ export function getAutocompleteOptions(channel, arg1) {
           tmp = 0 === arg2;
         }
         if (tmp) {
-          tmp = arg0 === closure_2_15;
+          tmp = arg0 === colors;
         }
         if (tmp) {
           tmp = 0 === arg1.length;

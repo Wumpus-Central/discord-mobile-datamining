@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/home/conjureHomeProjectState.tsx
-import ConjurePublishTypes from "../publish/ConjurePublishTypes.tsx";
 import conjureUnread from "../chat/conjureUnread.tsx";
 import conjureProjectMute from "../projects/conjureProjectMute.tsx";
+import ConjurePublishTypes from "../publish/ConjurePublishTypes.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";

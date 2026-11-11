@@ -20,7 +20,7 @@ const Constants = fn(1072);
 ({ UpsellTypes: closure_9, AnalyticsSections: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" },
   dotSeparator: null,
@@ -107,7 +107,7 @@ export default function GuildActionSheetEmojiSection(guildId) {
     }
   }
   if (first) {
-    let length = stateFromStoresArray.length;
+    length = stateFromStoresArray.length;
     let num3 = 0;
   } else {
     length = 2 * rounded;

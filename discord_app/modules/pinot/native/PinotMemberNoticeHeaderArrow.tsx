@@ -1,90 +1,77 @@
 // discord_app/modules/pinot/native/PinotMemberNoticeHeaderArrow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import inlineStylesDefault from "../../../../_runtime/08197_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 const require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const result = 8 * Math.SQRT2;
-const createStyles = fn(5142);
-let obj2 = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
+const createStyles = fn(5243);
+let closure_8 = createStyles.createStyles({
   anchor: { position: "absolute", top: 0, right: 0, bottom: 0, left: 0, zIndex: 1, overflow: "visible" },
-  arrow: { position: "absolute", bottom: -1, width: 16, height: 9, overflow: "hidden" },
-  diamond: null,
-  diamondFill: null,
-};
-let size = {
-  position: "absolute",
-  top: 9 - result / 2,
-  left: (16 - result) / 2,
-  width: result,
-  height: result,
-  transform: null,
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_FEEDBACK_INFO,
-  backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND,
-};
-let items = [{ rotate: "45deg" }];
-size.transform = items;
-obj2.diamond = size;
-let obj3 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.backgroundColor = nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO;
-obj2.diamondFill = obj3;
-let closure_6 = createStyles.createStyles(obj2);
-size = fn(2);
-const result1 = size.fileFinishedImporting("modules/pinot/native/PinotMemberNoticeHeaderArrow.tsx");
+  arrow: { position: "absolute", bottom: -1, width: 16, height: 10, overflow: "hidden" },
+});
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/pinot/native/PinotMemberNoticeHeaderArrow.tsx");
 
 export function PinotMemberNoticeHeaderArrow(channelId) {
   channelId = channelId.channelId;
-  const tmp = closure_6();
+  const tmp = closure_8();
+  const token = channelId(5839).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
+  const obj = channelId(5839);
+  const token1 = channelId(5839).useToken(nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO);
+  const obj2 = channelId(5839);
+  const token2 = channelId(5839).useToken(nativeDefault.colors.BORDER_SUBTLE);
   const ref = noop.useRef(null);
+  const obj3 = channelId(5839);
   items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const obj = channelId(504);
-  const isForumChannelSearchActive = channelId(11496).useIsForumChannelSearchActive(channelId);
-  const obj2 = channelId(11496);
-  const obj3 = channelId(11471);
-  const pinotChannelLabelCenter = channelId(11480).usePinotChannelLabelCenter(channelId, ref);
+  const obj4 = channelId(504);
+  const isForumChannelSearchActive = channelId(12262).useIsForumChannelSearchActive(channelId);
+  const obj5 = channelId(12262);
+  const obj6 = channelId(12242);
+  const pinotChannelLabelCenter = channelId(12251).usePinotChannelLabelCenter(channelId, ref);
   const center = pinotChannelLabelCenter.center;
-  let tmp9Result2 = null;
-  if (obj3.usePinotMemberNotice(stateFromStores, "mobile_channel_header").visible) {
-    tmp9Result2 = null;
+  let tmp15Result2 = null;
+  if (obj6.usePinotMemberNotice(stateFromStores, "mobile_channel_header").visible) {
+    tmp15Result2 = null;
     if (!isForumChannelSearchActive) {
-      tmp9Result2 = null;
-      if (tmp6) {
-        const obj5 = {
+      tmp15Result2 = null;
+      if (tmp12) {
+        const obj8 = {
           ref,
           collapsable: false,
           style: tmp.anchor,
           pointerEvents: "none",
-          onLayout: tmp7,
+          onLayout: tmp13,
           children: null,
         };
-        let tmp9Result = null;
+        let tmp15Result = null;
         if (null != center) {
-          const obj6 = { style: null, children: null };
+          const obj9 = { style: null, children: null };
           const items2 = [tmp.arrow];
-          const obj7 = { left: center - 8 };
-          items2[1] = obj7;
-          obj6.style = items2;
-          const obj8 = { style: tmp.diamond, children: null };
-          const obj9 = { style: tmp.diamondFill };
-          obj8.children = <closure_3 style={tmp.diamondFill} />;
-          obj6.children = <closure_3 style={tmp.diamond}>{null}</closure_3>;
-          tmp9Result = <closure_3 style={null}>{null}</closure_3>;
+          const obj10 = { left: center - 8 };
+          items2[1] = obj10;
+          obj9.style = items2;
+          const size = { width: 16, height: 10, viewBox: "0 0 16 10", fill: "none", accessible: false, children: null };
+          const obj11 = { d: tmp2(12264).PINOT_MEMBER_NOTICE_CARET_FILL, fill: token };
+          const items3 = [closure_6(tmp2(8197).Path, obj11), ,];
+          const obj12 = { d: tmp2(12264).PINOT_MEMBER_NOTICE_CARET_FILL, fill: token1 };
+          items3[1] = closure_6(tmp2(8197).Path, obj12);
+          const obj13 = { d: tmp2(12264).PINOT_MEMBER_NOTICE_CARET_BORDER, fill: "none", stroke: token2 };
+          items3[2] = closure_6(tmp2(8197).Path, obj13);
+          size.children = items3;
+          obj9.children = closure_7(inlineStylesDefault, size);
+          tmp15Result = closure_6(View, obj9);
+          const tmp4Result = inlineStylesDefault;
         }
-        obj5.children = tmp9Result;
-        tmp9Result2 = (
-          <closure_3 ref={ref} collapsable={false} style={tmp.anchor} pointerEvents="none" onLayout={tmp7}>
-            {null}
-          </closure_3>
-        );
+        obj8.children = tmp15Result;
+        tmp15Result2 = closure_6(View, obj8);
       }
     }
   }
-  return tmp9Result2;
+  return tmp15Result2;
 }

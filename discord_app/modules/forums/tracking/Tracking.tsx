@@ -14,7 +14,7 @@ import ForumSearchStore from "../ForumSearchStore.tsx";
 const AppAnalyticsUtilsDefault = AppAnalyticsUtils;
 
 require = fn;
-const DraftType = fn(7780).DraftType;
+const DraftType = fn(8658).DraftType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 let size = fn(2);
@@ -125,7 +125,7 @@ export function maybeTrackForumNewPostDraftCreated(channelId) {
     }
     let tmp10 = null == name;
     if (!tmp10) {
-      let length;
+      length = undefined;
       if (threadSettings != null) {
         if (threadSettings.name != null) {
           const trimmed2 = str.trim();

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/ConjurePublishActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
+import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import ConjurePreviewActionCreators from "../preview/ConjurePreviewActionCreators.tsx";
 import ApplicationWidgetConfigActions from "../../application_widget/ApplicationWidgetConfigActions.tsx";
 import conjureLiveRelaunch from "../live_reload/conjureLiveRelaunch.tsx";
@@ -50,8 +50,9 @@ let closure_9 = async function _unpublishProject(arg0) {
           closure_2 = tmp5;
           closure_130_1 = undefined;
           closure_130_2 = undefined;
+          closure_130_3 = undefined;
           closure_130_0 = closure_0;
-          ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2 } = closure_1);
+          ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2, deleteChannels: closure_130_3 } = closure_1);
           c6 = 1;
           c7 = 1;
           return { value: "flexDirection", done: true };
@@ -72,7 +73,11 @@ let closure_9 = async function _unpublishProject(arg0) {
             body: null,
             rejectWithError: false,
           };
-          const obj7 = { guild_id: closure_130_1, also_remove_preview_bot: closure_130_2 };
+          const obj7 = {
+            guild_id: closure_130_1,
+            also_remove_preview_bot: closure_130_2,
+            delete_channels: closure_130_3,
+          };
           request.body = obj7;
           c6 = 3;
           c7 = 1;

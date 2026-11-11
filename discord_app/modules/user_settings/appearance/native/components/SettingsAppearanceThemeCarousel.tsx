@@ -5,10 +5,10 @@ import MobileThemesUtils from "../../../../client_themes/native/MobileThemesUtil
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
-import _modDef10143 from "../../../../../../_runtime/metro/10143__.js";
-import PaginationDefault from "../../../../../../_runtime/10757_Pagination.js";
+import _modDef11153 from "../../../../../../_runtime/metro/11153__.js";
+import PaginationDefault from "../../../../../../_runtime/11629_Pagination.js";
 import HexagonCampaignThemeLegalDefault from "../../../../hexagon_campaign/native/HexagonCampaignThemeLegal.tsx";
-import _modDef17617 from "../../../../../../_runtime/metro/17617__.js";
+import _modDef17782 from "../../../../../../_runtime/metro/17782__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import SettingsAppearanceConstants from "../SettingsAppearanceConstants.tsx";
@@ -19,13 +19,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const ThemeTypes = fn(1072).ThemeTypes;
-const HexagonCampaignConstants = fn(5167);
+let ThemeTypes = fn(1072).ThemeTypes;
+const HexagonCampaignConstants = fn(5268);
 ({ HexagonCampaignPerk: closure_9, HexagonCampaignPerkAvailability: closure_10 } = HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = module_1652.createAnimatedComponent(fn(1187).Icon);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, hintContainer: { alignSelf: "stretch" }, hintOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, hidden: { opacity: 0 }, labelGroup: null, swatchesGroup: null, badgeSlot: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj.labelGroup = { gap: nativeDefault.space.PX_4, alignItems: "center" };
@@ -71,8 +71,8 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   closure_18 = undefined;
   let tmp = isThumbstickScrollDevice();
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
-  deviceWidth.useRef(null);
-  const ref = deviceWidth.useRef(defaultIndex);
+  const ref = deviceWidth.useRef(null);
+  ThemeTypes = deviceWidth.useRef(defaultIndex);
   items = [themes];
   constants = deviceWidth.useMemo(() => {
     const findIndexResult = _undefined.findIndex((theme) => theme.theme === constants.ONYX);
@@ -127,7 +127,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     }
     tmp18 = isThumbstickScrollDevice;
   }
-  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(6842).QuestContent.CLIENT_THEME_SETTINGS, tmp2(16806).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
+  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(5278).QuestContent.CLIENT_THEME_SETTINGS, tmp2(16967).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
   const tmp2Result = require("HexagonCampaignAnalytics");
   const hexagonCampaignPerkAvailability = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
   const tmp20 = constants;
@@ -237,7 +237,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   const tmp2Result10 = require("../../../../../../_runtime/metro/01652__.js");
   let tmp36 = null;
   if (tmp2Result11.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
-    const obj7 = { source: _modDef10143, style: animatedStyles.iconHeaderSecondary, size: tmp2(1187).IconSizes.SMALL_20 };
+    const obj7 = { source: _modDef11153, style: animatedStyles.iconHeaderSecondary, size: tmp2(1187).IconSizes.SMALL_20 };
     tmp36 = sharedValue1(rounded, obj7);
   }
   const items11 = [tmp36, ];
@@ -357,43 +357,45 @@ export default function SettingsAppearanceThemeCarousel(themes) {
         tmp40Result6 = hexagonCampaignPerkAvailability !== sharedValue.LOCKED;
       }
       if (tmp40Result6) {
-        const obj21 = { variant: "overlay", perk: tmp20.CLIENT_THEME };
-        tmp40Result6 = tmp40(tmp53(16828), obj21);
+        const obj21 = { theme: ThemeTypes.DARK, children: null };
+        const obj22 = { perk: tmp20.CLIENT_THEME, variant: "expressive" };
+        obj21.children = tmp40(tmp53(16990), obj22);
+        tmp40Result6 = tmp40(tmp2(5314).ThemeContextProvider, obj21);
       }
-      const obj22 = { children: null };
+      const obj23 = { children: null };
       obj20.children = tmp40Result6;
       const items16 = [tmp40(module_1652.View, obj20), tmp40Result];
       obj19.children = items16;
       const items17 = [tmp34(closure_5, obj19), ];
-      const obj23 = { style: tmp.labelGroup, children: null };
+      const obj24 = { style: tmp.labelGroup, children: null };
       const items18 = [tmp41, tmp34Result3];
-      obj23.children = items18;
-      items17[1] = tmp34(closure_5, obj23);
-      obj22.children = items17;
-      const obj24 = { style: tmp.container, children: null };
-      const obj25 = { style: tmp.floatingNuxContainer, children: null };
-      tmp2Result12 = tmp2(5368);
-      const obj26 = { style: null, children: null };
+      obj24.children = items18;
+      items17[1] = tmp34(closure_5, obj24);
+      obj23.children = items17;
+      const obj25 = { style: tmp.container, children: null };
+      const obj26 = { style: tmp.floatingNuxContainer, children: null };
+      tmp2Result12 = tmp2(5481);
+      const obj27 = { style: null, children: null };
       const items19 = [tmp.floatingNux, animatedStyle1, , ];
       ({ bgSurfaceOverlay: arr21[2], borderFaint: arr21[3] } = animatedStyles);
-      obj26.style = items19;
-      const obj27 = { style: null, source: null, size: null };
+      obj27.style = items19;
+      const obj28 = { style: null, source: null, size: null };
       const items20 = [tmp.arrowLeft, animatedStyles.iconInteractive];
-      obj27.style = items20;
-      obj27.source = _modDef17617;
-      obj27.size = tmp2(1187).IconSizes.REFRESH_SMALL_16;
-      const items21 = [tmp40(rounded, obj27), ];
-      const obj28 = { animated: true, style: null, variant: "body-sm/medium", maxFontSizeMultiplier: 1.5, children: null };
+      obj28.style = items20;
+      obj28.source = _modDef17782;
+      obj28.size = tmp2(1187).IconSizes.REFRESH_SMALL_16;
+      const items21 = [tmp40(rounded, obj28), ];
+      const obj29 = { animated: true, style: null, variant: "body-sm/medium", maxFontSizeMultiplier: 1.5, children: null };
       const items22 = [animatedStyles.textNormal, tmp.uppercase];
-      obj28.style = items22;
+      obj29.style = items22;
       const intl3 = tmp2(1113).intl;
-      obj28.children = intl3.string(tmp2(1113).t.y2b7CA);
-      items21[1] = tmp40(tmp2(5753).Text, obj28);
-      obj26.children = items21;
-      obj25.children = tmp34(module_1652.View, obj26);
-      const items23 = [tmp40(closure_5, obj25), tmp34(memo1, obj22)];
-      obj24.children = items23;
-      return tmp34(closure_5, obj24);
+      obj29.children = intl3.string(tmp2(1113).t.y2b7CA);
+      items21[1] = tmp40(tmp2(5866).Text, obj29);
+      obj27.children = items21;
+      obj26.children = tmp34(module_1652.View, obj27);
+      const items23 = [tmp40(closure_5, obj26), tmp34(memo1, obj23)];
+      obj25.children = items23;
+      return tmp34(closure_5, obj25);
     }
     const intl = tmp2(1113).intl;
     const string = intl.string;
@@ -425,7 +427,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       return sharedValue1(closure_1_5, obj, "theme-" + index);
     })
   });
-  const obj29 = {
+  const obj30 = {
     horizontal: true,
     style: tmp.a11yThemeListScroll,
     contentContainerStyle: tmp.a11yThemeList,

@@ -467,7 +467,6 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype4["internalBinaryWrite"] = function internalBinaryWrite(bannedUntil, tag, writeUnknownFields) {
-  let length;
   if (bannedUntil.bannedUntil) {
     const Timestamp = timestamp.Timestamp;
     const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
@@ -671,7 +670,6 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype5["internalBinaryWrite"] = function internalBinaryWrite(classificationTypes, tag, writeUnknownFields) {
-  let length;
   if (classificationTypes.classificationTypes.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -842,7 +840,7 @@ class SafetyState$Type extends MessageType6 {
 }
 const prototype6 = SafetyState$Type.prototype;
 prototype6["create"] = function create(partialSettings) {
-  obj = { state: { oneofKind: "r" }, reason: 0, annotations: [] };
+  obj = { state: { oneofKind: "Array" }, reason: 0, annotations: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -939,7 +937,6 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj2;
 };
 prototype6["internalBinaryWrite"] = function internalBinaryWrite(state, tag, writeUnknownFields) {
-  let length;
   if ("normal" === state.state.oneofKind) {
     const tagResult = tag.tag(101, _mod1197.WireType.LengthDelimited);
     const joined = object

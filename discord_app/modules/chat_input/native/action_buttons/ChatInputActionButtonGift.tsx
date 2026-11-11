@@ -11,11 +11,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(13037).ChatInputActionType;
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+const ChatInputActionType = fn(13703).ChatInputActionType;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { gradientContainerRefresh: null, transparentBackground: null };
   const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
@@ -44,17 +44,14 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
   let obj2 = require("initialize");
   const items1 = [closure_7];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
-    const marketingComponentByType = closure_7.getMarketingComponentByType(
-      require("MarketingComponentType").MarketingComponentType.GIFT_ICON,
+    const marketingComponentBySurface = closure_7.getMarketingComponentBySurface(
+      require("MarketingSurfaceType").MarketingSurfaceType.GIFT_ICON,
     );
-    let giftIcon = null;
-    if (null != marketingComponentByType) {
-      giftIcon = null;
-      if ("giftIcon" === marketingComponentByType.properties.properties.oneofKind) {
-        giftIcon = marketingComponentByType.properties.properties.giftIcon;
-      }
+    let surface = null;
+    if (null != marketingComponentBySurface) {
+      surface = marketingComponentBySurface.surface;
     }
-    return giftIcon;
+    return surface;
   });
   const obj3 = require("initialize");
   const items2 = [closure_7];

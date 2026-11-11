@@ -23,7 +23,7 @@ function PreviewBody(event) {
     () => ChannelStore.getChannel(channel_id),
     items1,
   );
-  const tmp6 = channel_id(5778)(stateFromStores);
+  const tmp6 = channel_id(5891)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -57,7 +57,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1113).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(9171)(obj7);
+    obj6.channelName = tmp5(8352)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1113).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;
@@ -112,7 +112,7 @@ function PreviewBody(event) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: {
     flex: 1,

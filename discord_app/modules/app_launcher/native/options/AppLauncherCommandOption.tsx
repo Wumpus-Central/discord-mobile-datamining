@@ -18,7 +18,7 @@ const View = fn(17).View;
 let closure_4 = fn(1498).AppLauncherOptionAutoFocusType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" },
   optionViewContainer: { flex: 1 },
@@ -252,9 +252,9 @@ export default function AppLauncherCommandOption(option) {
             onPress() {
               return onDismiss(name);
             },
-            children: tmp13(tmp2(7161).CircleXIcon, { size: "md" }),
+            children: tmp13(tmp2(7563).CircleXIcon, { size: "md" }),
           };
-          items[1] = tmp13(tmp2(7046).PressableOpacity, obj9);
+          items[1] = tmp13(tmp2(7364).PressableOpacity, obj9);
           obj7.children = items;
           tmp62 = closure_6(View, obj7);
         }

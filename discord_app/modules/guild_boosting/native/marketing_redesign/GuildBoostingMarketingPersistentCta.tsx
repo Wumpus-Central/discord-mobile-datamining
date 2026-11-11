@@ -2,7 +2,7 @@
 import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
@@ -19,7 +19,7 @@ const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { stiffness: 70, damping: 10 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   wrapper: { display: "flex", alignItems: "center", position: "absolute", width: "100%", zIndex: 1, bottom: -76 },
   innerWraper: null,

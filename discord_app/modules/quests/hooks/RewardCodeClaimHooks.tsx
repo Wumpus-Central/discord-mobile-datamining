@@ -1,7 +1,7 @@
 // discord_app/modules/quests/hooks/RewardCodeClaimHooks.tsx
-import openURLDefault from "../../../lib/openURL.tsx";
 import QuestTypes from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import openURLDefault from "../../../lib/openURL.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";

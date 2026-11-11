@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import QuestTypes from "../../QuestTypes.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
-import QuestTypes from "../../QuestTypes.tsx";
 import hooks_QuestHooks from "../../hooks/QuestHooks.tsx";
 import QuestCopyHooks from "../../hooks/QuestCopyHooks.tsx";
 import QuestDockCreativeContext from "QuestDockCreativeContext.tsx";
@@ -17,8 +17,8 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 let c7 = "heading-sm/semibold";
 let c8 = "body-sm/medium";
-let closure_9 = fn(17420).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
-const createStyles = fn(5142);
+let closure_9 = fn(17585).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+const createStyles = fn(5243);
 let closure_10 = createStyles.createStyles({
   wrapper: {
     alignItems: "center",

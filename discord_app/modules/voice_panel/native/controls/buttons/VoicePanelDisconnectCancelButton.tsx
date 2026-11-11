@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelDisconnectCancelButton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../../actions/ChannelRTCActionCreators.tsx";
-import SelectedChannelActionCreatorsDefault from "../../../../../actions/SelectedChannelActionCreators.tsx";
-import ChannelRTCParticipants from "../../../../calls/ChannelRTCParticipants.tsx";
 import StreamActionCreators from "../../../../../actions/StreamActionCreators.tsx";
 import StageChannelActionCreatorExtras from "../../../../stage_channels/StageChannelActionCreatorExtras.native.tsx";
-import leaveEmbeddedActivity from "../../../../activities/leaveEmbeddedActivity.tsx";
+import SelectedChannelActionCreatorsDefault from "../../../../../actions/SelectedChannelActionCreators.tsx";
+import ChannelRTCParticipants from "../../../../calls/ChannelRTCParticipants.tsx";
 import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
+import leaveEmbeddedActivity from "../../../../activities/leaveEmbeddedActivity.tsx";
 import shouldShowEndStageModalDefault from "../../../../stage_channels/shouldShowEndStageModal.tsx";
 import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -19,10 +19,10 @@ import VoicePanelStore from "../../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11372).VoicePanelModes;
+const VoicePanelModes = fn(11925).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT },
   icon: null,
@@ -161,11 +161,11 @@ export default function DisconnectCancelButton(props) {
     }
   }, items4);
   if (first === constants.ACTIVITY) {
-    PhoneHangUpIcon = tmp8(12055).DoorExitIcon;
+    PhoneHangUpIcon = tmp8(12206).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(19719).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(19911).ScreenXIcon;
   } else {
-    PhoneHangUpIcon = tmp8(9961).PhoneHangUpIcon;
+    PhoneHangUpIcon = tmp8(9038).PhoneHangUpIcon;
   }
   const element = {
     onPress: callback1,

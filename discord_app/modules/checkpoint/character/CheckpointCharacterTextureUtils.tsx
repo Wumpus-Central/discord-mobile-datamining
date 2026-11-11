@@ -122,19 +122,21 @@ export function getCheckpointCharacterTextureUrl(name, textureScale) {
     return url;
   } else {
     const result = (textureScale * widthAt1x) / width;
-    if (result >= 1) {
-      return url;
-    } else {
-      let tmp2 = closure_10[name];
-      if (tmp2 == null) {
-        tmp2 = closure_9;
+    const _Math3 = Math;
+    if (result < 1) {
+      if (textureScale < Math.round(width / widthAt1x)) {
+        let tmp3 = closure_10[name];
+        if (tmp3 == null) {
+          tmp3 = closure_9;
+        }
+        ({ columns, rows } = tmp3);
+        const _Math = Math;
+        const _Math2 = Math;
+        const result1 = columns * Math.round((width / columns) * result);
+        const _HermesInternal = HermesInternal;
+        return "" + url + "?width=" + result1 + "&height=" + rows * Math.round((tmp / rows) * result);
       }
-      ({ columns, rows } = tmp2);
-      const _Math = Math;
-      const _Math2 = Math;
-      const result1 = columns * Math.round((width / columns) * result);
-      const _HermesInternal = HermesInternal;
-      return "" + url + "?width=" + result1 + "&height=" + rows * Math.round((tmp / rows) * result);
     }
+    return url;
   }
 }

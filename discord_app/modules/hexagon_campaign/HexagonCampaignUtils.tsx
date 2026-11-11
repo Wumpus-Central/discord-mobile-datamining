@@ -4,6 +4,8 @@ import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/
 import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
+import AppIconTypes from "../app_icons/AppIconTypes.tsx";
+import QuestHomeHeroFeatures from "../../../discord_common/js/shared/shared-constants/QuestHomeHeroFeatures.tsx";
 import HexagonCampaignConstants from "HexagonCampaignConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -15,7 +17,8 @@ import size from "../../../_runtime/metro/00002__.js";
   HEXAGON_CAMPAIGN_PERK_MINIMUM_PREMIUM_TYPE: closure_6,
   HEXAGON_CAMPAIGN_PERK_TO_PERK: metroImportDefault,
   HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: closure_8,
-  HexagonCampaignPerkAvailability: closure_9,
+  HEXAGON_CAMPAIGN_QUEST_HOME_HERO_ID: closure_9,
+  HexagonCampaignPerkAvailability: closure_10,
 } = HexagonCampaignConstants);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignUtils.tsx");
 
@@ -76,6 +79,9 @@ export function isHexagonCampaignPerkPremiumOnly(APP_ICON) {
     timestamp = Date.now();
   }
   return timestamp >= hasOwnProperty;
+}
+export function isHexagonCampaignAppIcon(id) {
+  return id === AppIconTypes.LimitedTimeAppIconIds.HEXAGON;
 }
 export function hasHexagonCampaignDisplayNameFont(displayNameStyles) {
   let fontId;
@@ -162,6 +168,17 @@ export function isEnrolledInHexagonCampaign(currentUser, CLIENT_THEME) {
   let hasItem = null != perkSource;
   if (hasItem) {
     hasItem = perkSource.includes(user.PerkSource.SOURCE_HEXAGON_CAMPAIGN);
+  }
+  return hasItem;
+}
+export function isHexagonCampaignHero(id) {
+  let hasItem = null != id;
+  if (hasItem) {
+    hasItem = id.id === React6;
+  }
+  if (hasItem) {
+    const features = id.features;
+    hasItem = features.includes(QuestHomeHeroFeatures.QuestHomeHeroFeatures.CUSTOM_INTRO_CARD);
   }
   return hasItem;
 }

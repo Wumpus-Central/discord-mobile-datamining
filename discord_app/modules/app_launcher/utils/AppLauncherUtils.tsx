@@ -65,14 +65,19 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1072).ApplicationFlags;
-const BuiltInSectionId = fn(6169).BuiltInSectionId;
-const MessageSendLocation = fn(5147).MessageSendLocation;
+const BuiltInSectionId = fn(6282).BuiltInSectionId;
+const MessageSendLocation = fn(5248).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
 export const FAKE_BUILT_IN_APP = { id: BuiltInSectionId.BUILT_IN };
 export function isRealApplication(application) {
   return application.id !== BuiltInSectionId.BUILT_IN;
+}
+export function getConjureProjectId(conjureProjectId) {
+  return conjureProjectId instanceof ApplicationRecord
+    ? conjureProjectId.conjureProjectId
+    : conjureProjectId.conjure_project_id;
 }
 export function isConjureAppWithoutIcon(icon, arg1) {
   let tmp = null == icon.icon;
@@ -369,6 +374,35 @@ export function getInstallAppPropsFromProfileApplication(application) {
     installParams: application.installParams,
     integrationTypesConfig: application.integrationTypesConfig,
   };
+}
+export function getInstallableApplication(application) {
+  const obj = {
+    applicationId: application.id,
+    customInstallUrl: null,
+    installParams: null,
+    integrationTypesConfig: null,
+  };
+  if (application instanceof ApplicationRecord) {
+    ({
+      customInstallUrl: obj.customInstallUrl,
+      installParams: obj.installParams,
+      integrationTypesConfig: obj.integrationTypesConfig,
+    } = application);
+    let tmp2 = obj;
+  } else {
+    ({
+      custom_install_url: obj.customInstallUrl,
+      install_params: obj.installParams,
+      integration_types_config: obj.integrationTypesConfig,
+    } = application);
+    tmp2 = obj;
+  }
+  const obj2 = {};
+  const merged = Object.assign(tmp2);
+  obj2.id = application.id;
+  obj2.conjureProjectId =
+    application instanceof ApplicationRecord ? application.conjureProjectId : application.conjure_project_id;
+  return obj2;
 }
 export function getInstallAppProps(application) {
   const obj = {

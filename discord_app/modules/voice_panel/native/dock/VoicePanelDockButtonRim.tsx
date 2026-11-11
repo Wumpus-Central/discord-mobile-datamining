@@ -1,21 +1,21 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockButtonRim.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../_runtime/08105_inlineStyles.js";
-import VoicePanelDockRimLight from "VoicePanelDockRimLight.tsx";
+import inlineStyles from "../../../../../_runtime/08197_inlineStyles.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const require = globalThis.__r;
 const inlineStylesDefault = inlineStyles;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const DOCK_FADE_TIMING = fn(11948).DOCK_FADE_TIMING;
 const jsxProd = fn(21);
-({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let closure_9 = noop.memo(function ButtonRimGradient(arg0) {
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let closure_10 = noop.memo(function ButtonRimGradient(arg0) {
   ({ width, height, strength } = arg0);
   ({ cx, cy } = arg0);
   const token = useToken.useToken(nativeDefault.colors.ICON_VOICE_SPEAKING);
@@ -31,13 +31,13 @@ let closure_9 = noop.memo(function ButtonRimGradient(arg0) {
     children: null,
   };
   items = [
-    metroImportDefault(inlineStyles.Stop, { offset: 0, stopColor: token, stopOpacity: strength }),
-    metroImportDefault(inlineStyles.Stop, { offset: 0.45, stopColor: token, stopOpacity: 0.4 * strength }),
-    metroImportDefault(inlineStyles.Stop, { offset: 1, stopColor: token, stopOpacity: 0 }),
+    React5(inlineStyles.Stop, { offset: 0, stopColor: token, stopOpacity: strength }),
+    React5(inlineStyles.Stop, { offset: 0.45, stopColor: token, stopOpacity: 0.4 * strength }),
+    React5(inlineStyles.Stop, { offset: 1, stopColor: token, stopOpacity: 0 }),
   ];
   obj4.children = items;
-  obj3.children = React5(inlineStyles.RadialGradient, obj4);
-  const items1 = [metroImportDefault(inlineStyles.Defs, obj3)];
+  obj3.children = React6(inlineStyles.RadialGradient, obj4);
+  const items1 = [React5(inlineStyles.Defs, obj3)];
   const size1 = {
     x: 0.5,
     y: 0.5,
@@ -49,26 +49,32 @@ let closure_9 = noop.memo(function ButtonRimGradient(arg0) {
     stroke: "url(#dockButtonRim)",
     strokeWidth: 1,
   };
-  items1[1] = metroImportDefault(inlineStyles.Rect, size1);
+  items1[1] = React5(inlineStyles.Rect, size1);
   size.children = items1;
-  return React5(inlineStylesDefault, size);
+  return React6(inlineStylesDefault, size);
 });
-let closure_10 = {
-  code: "(function VoicePanelDockButtonRimTsx1(){let[voicePanelDockRimOpacity]=this.__closure;return{opacity:voicePanelDockRimOpacity.get()*0.5};})",
+let closure_11 = {
+  code: "(function VoicePanelDockButtonRimTsx1(){let[voicePanelDockRimOpacity,pressOpacity]=this.__closure;return{opacity:voicePanelDockRimOpacity.get()*0.5*pressOpacity.get()};})",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockButtonRim.tsx");
 
 export default noop.memo(function VoicePanelDockButtonRim(measureGlowOffset) {
   measureGlowOffset = measureGlowOffset.measureGlowOffset;
+  _require = measureGlowOffset;
+  let flag = measureGlowOffset.hideWhilePressed;
+  if (flag === undefined) {
+    flag = false;
+  }
   first = undefined;
-  closure_3 = undefined;
+  _slicedToArray = undefined;
+  let callback;
   ({ style, children } = measureGlowOffset);
-  const ref = noop.useRef(null);
-  [first, closure_3] = noop.useState(null);
+  const ref = callback.useRef(null);
+  [first, _slicedToArray] = callback.useState(null);
   items = [measureGlowOffset];
-  const callback = noop.useCallback(() => {
-    const current = ref.current;
+  callback = callback.useCallback(() => {
+    const current = _undefined2.current;
     let tmp = null != current;
     if (tmp) {
       tmp = null != _undefined;
@@ -103,10 +109,10 @@ export default noop.memo(function VoicePanelDockButtonRim(measureGlowOffset) {
   }, items);
   const items1 = [callback];
   const items2 = [callback];
-  const callback1 = noop.useCallback(() => callback(), items1);
-  const effect = noop.useEffect(callback, items2);
+  const callback1 = callback.useCallback(() => callback(), items1);
+  const effect = callback.useEffect(callback, items2);
   const items3 = [first];
-  const memo = noop.useMemo(() => {
+  const memo = callback.useMemo(() => {
     if (null == first) {
       return null;
     } else {
@@ -122,39 +128,75 @@ export default noop.memo(function VoicePanelDockButtonRim(measureGlowOffset) {
       return obj;
     }
   }, items3);
-  const items4 = [closure_10, VoicePanelDockRimLight.voicePanelDockRimOpacity];
-  c0 = undefined;
-  [tmp10, tmp11] = items4;
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  const items4 = [sharedValue];
+  const items5 = [sharedValue];
+  const callback2 = callback.useCallback(() => {
+    const result = sharedValue.set(timing_timing.withTiming(0, DOCK_FADE_TIMING));
+  }, items4);
+  const callback3 = callback.useCallback(() => {
+    const result = sharedValue.set(timing_timing.withTiming(1, DOCK_FADE_TIMING));
+  }, items5);
+  let obj = require("../../../../../_runtime/metro/01652__.js");
+  const tmp8 = _require;
+  const items6 = [closure_11, require("VoicePanelDockRimLight").voicePanelDockRimOpacity, sharedValue];
+  _require = undefined;
+  importDefault = undefined;
+  [tmp13, tmp14, tmp15] = items6;
   class VoicePanelDockButtonRimTsx1 {
     constructor() {
-      obj = { opacity: 0.5 * closure_0.get() };
+      obj = { opacity: null };
+      result = 0.5 * closure_0.get();
+      obj.opacity = result * closure_1.get();
       return obj;
     }
   }
-  const items5 = [tmp11];
-  VoicePanelDockButtonRimTsx1.__closure = items5;
-  VoicePanelDockButtonRimTsx1.__workletHash = 5567599437478;
-  VoicePanelDockButtonRimTsx1.__initData = tmp10;
-  const obj2 = { ref, style, onLayout: callback1, children: null };
-  const items6 = [children];
-  let tmp15 = null != first;
-  const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelDockButtonRimTsx1);
-  if (tmp15) {
-    tmp15 = null != memo;
+  const items7 = [tmp14, tmp15];
+  VoicePanelDockButtonRimTsx1.__closure = items7;
+  VoicePanelDockButtonRimTsx1.__workletHash = 6494940764025;
+  VoicePanelDockButtonRimTsx1.__initData = tmp13;
+  const obj3 = {
+    ref,
+    style,
+    onLayout: callback1,
+    onTouchStart: null,
+    onTouchEnd: null,
+    onTouchCancel: null,
+    children: null,
+  };
+  let tmp19;
+  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+    VoicePanelDockButtonRimTsx1,
+  );
+  if (flag) {
+    tmp19 = callback2;
   }
-  if (tmp15) {
-    const obj3 = { style: null, pointerEvents: "none", children: null };
-    const items7 = [hasOwnProperty.absoluteFill, animatedStyle];
-    obj3.style = items7;
-    const obj4 = { style: hasOwnProperty.absoluteFill, children: null };
+  obj3.onTouchStart = tmp19;
+  let tmp20;
+  if (flag) {
+    tmp20 = callback3;
+  }
+  obj3.onTouchEnd = tmp20;
+  let tmp21;
+  if (flag) {
+    tmp21 = callback3;
+  }
+  obj3.onTouchCancel = tmp21;
+  const items8 = [children];
+  let tmp22 = null != first && null != memo;
+  if (tmp22) {
+    const obj4 = { style: null, pointerEvents: "none", children: null };
+    const items9 = [sharedValue.absoluteFill, animatedStyle];
+    obj4.style = items9;
+    const obj5 = { style: sharedValue.absoluteFill, children: null };
     const size = { width: null, height: null, cx: null, cy: null, strength: null };
-    ({ width: obj5.width, height: obj5.height } = first);
-    ({ cx: obj5.cx, cy: obj5.cy, strength: obj5.strength } = memo);
-    obj4.children = metroImportDefault(closure_9, size);
-    obj3.children = metroImportDefault(VoicePanelDockRimLight.VoicePanelDockRimLevel, obj4);
-    tmp15 = metroImportDefault(_modDef1652.View, obj3);
+    ({ width: obj6.width, height: obj6.height } = first);
+    ({ cx: obj6.cx, cy: obj6.cy, strength: obj6.strength } = memo);
+    obj5.children = closure_8(closure_10, size);
+    obj4.children = closure_8(tmp8(tmp9[10]).VoicePanelDockRimLevel, obj5);
+    tmp22 = closure_8(require("../../../../../_runtime/metro/01652__.js").View, obj4);
   }
-  items6[1] = tmp15;
-  obj2.children = items6;
-  return React5(timestampProducer, obj2);
+  items8[1] = tmp22;
+  obj3.children = items8;
+  return closure_9(closure_6, obj3);
 });

@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/EffectiveNotifSettings.tsx
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
-const z = fn(15892).z;
+const z = fn(16051).z;
 const obj = {
   value: null,
   source: null,
@@ -11,27 +11,34 @@ const obj = {
   source_setting_id: null,
   legacy_path: null,
 };
-const z2 = fn(15892).z;
+const z2 = fn(16051).z;
 obj.value = z2.boolean();
-const z3 = fn(15892).z;
-obj.source = z3.enum(["legacy_proto", "legacy_default", "declarative", "declarative_sibling", "declarative_retired"]);
-const z4 = fn(15892).z;
+const z3 = fn(16051).z;
+obj.source = z3.enum([
+  "legacy_proto",
+  "legacy_default",
+  "declarative",
+  "declarative_sibling",
+  "declarative_retired",
+  "declarative_predecessor",
+]);
+const z4 = fn(16051).z;
 obj.explicit = z4.boolean();
-const z5 = fn(15892).z;
+const z5 = fn(16051).z;
 obj.inherited = z5.boolean();
-const z6 = fn(15892).z;
+const z6 = fn(16051).z;
 const numberResult = z6.number();
 obj.setting_id = z6.number().int().positive();
-const z7 = fn(15892).z;
+const z7 = fn(16051).z;
 const intResult = z6.number().int();
 const numberResult1 = z7.number();
 const intResult1 = z7.number().int();
 obj.source_setting_id = z7.number().int().positive().nullable();
-const z8 = fn(15892).z;
+const z8 = fn(16051).z;
 const positiveResult = z7.number().int().positive();
 obj.legacy_path = z8.string().regex(/^[a-z][a-z_]*\.[a-z][a-z_]*$/);
 const objectResult = z.object(obj);
-const z9 = fn(15892).z;
+const z9 = fn(16051).z;
 const obj2 = {
   contract_version: null,
   account_id: null,
@@ -40,33 +47,41 @@ const obj2 = {
   declarative_data_version: null,
   preferences: null,
 };
-const z10 = fn(15892).z;
+const z10 = fn(16051).z;
 obj2.contract_version = z10.literal(1);
-const z11 = fn(15892).z;
+const z11 = fn(16051).z;
 obj2.account_id = z11.string();
-const z12 = fn(15892).z;
+const z12 = fn(16051).z;
 obj2.arm = z12.literal("treatment");
-const z13 = fn(15892).z;
+const z13 = fn(16051).z;
 const stringResult = z8.string();
 const numberResult2 = z13.number();
 obj2.legacy_data_version = z13.number().int().nonnegative();
-const z14 = fn(15892).z;
+const z14 = fn(16051).z;
 const intResult2 = z13.number().int();
 const numberResult3 = z14.number();
 obj2.declarative_data_version = z14.number().int().nonnegative();
-const z15 = fn(15892).z;
+const z15 = fn(16051).z;
+const obj3 = {
+  go_live: objectResult,
+  voice_channel_activity: objectResult,
+  friends_gaming: objectResult,
+  custom_status_update: objectResult,
+  friend_online: objectResult,
+  profile_updates: objectResult,
+  server_trending: objectResult,
+  reactions: null,
+};
+const obj4 = { value: null };
+const z16 = fn(16051).z;
 const intResult3 = z14.number().int();
-obj2.preferences = z15
-  .object({
-    go_live: objectResult,
-    voice_channel_activity: objectResult,
-    friends_gaming: objectResult,
-    custom_status_update: objectResult,
-    friend_online: objectResult,
-    profile_updates: objectResult,
-    server_trending: objectResult,
-  })
-  .strip();
+const numberResult4 = z16.number();
+const intResult4 = z16.number().int();
+obj4.value = z16.number().int().min(0).max(2);
+const minResult = z16.number().int().min(0);
+obj3.reactions = objectResult.extend(obj4).optional();
+const extendResult = objectResult.extend(obj4);
+obj2.preferences = z15.object(obj3).strip();
 let closure_1 = z9.object(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/EffectiveNotifSettings.tsx");

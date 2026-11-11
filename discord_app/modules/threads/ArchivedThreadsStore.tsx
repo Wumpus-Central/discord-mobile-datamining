@@ -5,8 +5,8 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ThreadSortOrder from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import ThreadSearchTagSetting from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
-import ForumUtils from "../forums/ForumUtils.tsx";
 import Tracking from "../forums/tracking/Tracking.tsx";
+import ForumUtils from "../forums/ForumUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
@@ -106,14 +106,14 @@ function resortListState(value) {
     const tmp7Result = applyDefault(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
     let iter = mapped.reverse();
-  } else if (sortOrder === sortOrder(5000).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(5101).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = ReadStateStore.lastMessageId(id);
   } else {
     id2 = id.id;
   }
 }
-const ALL_CHANNEL_TYPES = fn(4995).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(5096).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;

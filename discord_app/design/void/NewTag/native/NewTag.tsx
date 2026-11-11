@@ -1,7 +1,7 @@
 // discord_app/design/void/NewTag/native/NewTag.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
 import Text_Text from "../../../components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Platform } = get_ActivityIndicator);
 const HorizontalGradient = fn(1072).HorizontalGradient;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   tagContainer: {
     height: "auto",
@@ -44,7 +44,7 @@ export default function NewTag(color) {
   if (sm === undefined) {
     sm = nativeDefault.radii.sm;
   }
-  let colors = color.colors;
+  colors = color.colors;
   if (colors === undefined) {
     items = [nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK];
     colors = items;

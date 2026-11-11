@@ -367,8 +367,8 @@ let closure_13 = async function _updateGuildJoinRequest() {
       obj2.title = intl.string(closure_1_0(1113).t.DxJj4e);
       const intl2 = closure_1_0(1113).intl;
       obj2.body = intl2.string(closure_1_0(1113).t.rSAOk9);
-      closure_1_1(6092).show(obj2);
-      const obj = closure_1_1(6092);
+      closure_1_1(6205).show(obj2);
+      const obj = closure_1_1(6205);
     }
     return Promise.reject(error);
   });
@@ -620,8 +620,8 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
     }
   }
 };
-let closure_4 = fn(4995).createChannelRecordFromServer;
-const joinRequestFromServer = fn(5174).joinRequestFromServer;
+let closure_4 = fn(5096).createChannelRecordFromServer;
+const joinRequestFromServer = fn(5287).joinRequestFromServer;
 const Constants = fn(1072);
 ({ AbortCodes: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);

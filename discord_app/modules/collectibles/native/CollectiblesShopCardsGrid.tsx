@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardsGrid.tsx
 import applyDefault from "../../../../_runtime/00012_apply.js";
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2.tsx";
 import CollectiblesAnalyticsContext from "../CollectiblesAnalyticsContext.tsx";
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
@@ -27,8 +27,8 @@ function ShopCardGridItem(index) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9546).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(5243);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(10349).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
@@ -42,7 +42,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(18225).useCardLayout();
+  const cardLayout = products(18396).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   items = [products, columns];
@@ -59,9 +59,9 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     contentContainerStyle: null,
     children: null,
   };
-  let obj = products(18225);
+  let obj = products(18396);
   obj2.contentContainerStyle = {
-    gap: products(9546).COLLECTIBLES_SHOP_CARD_GAP,
+    gap: products(10349).COLLECTIBLES_SHOP_CARD_GAP,
     paddingTop,
     paddingBottom,
     width: rowWidth,

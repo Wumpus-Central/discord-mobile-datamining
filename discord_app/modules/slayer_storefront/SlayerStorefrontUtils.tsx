@@ -2,7 +2,7 @@
 import applyDefault from "../../../_runtime/00012_apply.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import StoreUtils from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/06851_keysSorter.js";
+import keysSorter from "../../../_runtime/06903_keysSorter.js";
 import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes.tsx";
 import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -23,7 +23,7 @@ function hasSocialLayerStorefront(guild) {
   } else {
     let applicationIdFromGuildId = SocialLayerStorefrontStore.getApplicationIdFromGuildId(guild.id);
     if (applicationIdFromGuildId == null) {
-      let length;
+      length = undefined;
       if (guild != null) {
         const gameApplicationIds = guild.gameApplicationIds;
         if (gameApplicationIds != null) {
@@ -181,8 +181,8 @@ function getSKUShareURL(guildId, applicationId) {
     window.GLOBAL_ENV.WEBAPP_ENDPOINT +
     gesture.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7472).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7474);
+let closure_4 = fn(7182).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7184);
 ({
   BLOONS_TD6_SPLIT_TENDER_PROMOTION_ID: closure_9,
   getChannelsGameShopPrefix: closure_10,
@@ -193,7 +193,7 @@ const Constants = fn(1072);
 ({ GuildFeatures: map1, Routes: closure_14, SKUProductLines: closure_15 } = Constants);
 const CollectibleShopTab = fn(1074).CollectibleShopTab;
 let str = "jpg";
-if (fn(6590).SUPPORTS_WEBP) {
+if (fn(6703).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getRequiredSubscriptionPlanIds(arr) {
@@ -738,7 +738,7 @@ export function getSocialLayerStorefrontApplicationId(guildId) {
   let applicationIdFromGuildId = SocialLayerStorefrontStore.getApplicationIdFromGuildId(guildId);
   guild = GuildStore.getGuild(guildId);
   if (applicationIdFromGuildId == null) {
-    let length;
+    length = undefined;
     if (guild != null) {
       const gameApplicationIds = guild.gameApplicationIds;
       if (gameApplicationIds != null) {
@@ -768,7 +768,7 @@ export function useGetSocialLayerStorefrontApplicationId(arg0) {
     items2,
   );
   if (stateFromStores == null) {
-    let length;
+    length = undefined;
     if (stateFromStores1 != null) {
       const gameApplicationIds = stateFromStores1.gameApplicationIds;
       if (gameApplicationIds != null) {

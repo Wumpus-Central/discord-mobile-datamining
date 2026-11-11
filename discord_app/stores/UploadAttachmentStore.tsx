@@ -23,7 +23,7 @@ prototype["getFirstUpload"] = function getFirstUpload(arg0, arg1) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(arg1);
   }
@@ -42,7 +42,7 @@ prototype["hasAdditionalUploads"] = function hasAdditionalUploads(arg0, arg1) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(arg1);
   }
@@ -61,7 +61,7 @@ prototype["getUploads"] = function getUploads(id, ChannelMessage) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(ChannelMessage);
   }
@@ -76,7 +76,7 @@ prototype["getUploadCount"] = function getUploadCount(c0, ChannelMessage) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(ChannelMessage);
   }
@@ -96,7 +96,7 @@ prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(ChannelMessage);
   }
@@ -111,7 +111,7 @@ prototype["findUpload"] = function findUpload(id, ChannelMessage, arg2) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(ChannelMessage);
   }

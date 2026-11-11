@@ -10,36 +10,33 @@ import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsS
 const require = globalThis.__r;
 
 require = fn;
-const isHexagonCampaignAppIcon = fn(10107).isHexagonCampaignAppIcon;
+let closure_6 = fn(5268).DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
 const ClientThemesConstants = fn(1240);
 ({ BACKGROUND_GRADIENT_PRESETS_MAP: metroImportDefault, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } =
   ClientThemesConstants);
 const SystemThemeState = fn(1195).SystemThemeState;
-const DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = { theme: "system" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignPreviousPerkValues.tsx");
 
-export { DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME };
-export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(10108).FreemiumAppIconIds.DEFAULT;
-export function getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME) {
-  _require = DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
-  if (null != DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME.backgroundGradientPresetId) {
-    if (null != closure_7[DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME.backgroundGradientPresetId]) {
+export function getHexagonCampaignClientThemeItem(clientTheme) {
+  _require = clientTheme;
+  if (null != clientTheme.backgroundGradientPresetId) {
+    if (null != closure_7[clientTheme.backgroundGradientPresetId]) {
       return tmp2;
     }
   }
-  if (null != DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME.customThemeSettings) {
+  if (null != clientTheme.customThemeSettings) {
     const obj = {
       type: require("ClientThemesTypes").ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
       theme: null,
       customThemeSettings: null,
     };
-    ({ theme: obj.theme, customThemeSettings: obj.customThemeSettings } = DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME);
+    ({ theme: obj.theme, customThemeSettings: obj.customThemeSettings } = clientTheme);
     let found = obj;
   } else {
-    found = closure_8.find((theme) => theme.theme === DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME.theme);
+    found = closure_8.find((theme) => theme.theme === theme.theme);
     if (found == null) {
-      found = closure_8.find((theme) => theme.theme === theme.theme);
+      found = closure_8.find((theme) => theme.theme === theme2.theme);
     }
     if (found == null) {
       found = closure_8[0];
@@ -81,10 +78,4 @@ export function saveHexagonCampaignPreviousClientTheme() {
     const tmpResult = HexagonActionCreators;
   }
   obj = HexagonCampaignUtils;
-}
-export function saveHexagonCampaignPreviousAppIcon(appIconId) {
-  if (!isHexagonCampaignAppIcon(appIconId)) {
-    const obj2 = { appIconId };
-    const result = HexagonActionCreators.saveHexagonCampaignPreviousPerkValues(obj2);
-  }
 }

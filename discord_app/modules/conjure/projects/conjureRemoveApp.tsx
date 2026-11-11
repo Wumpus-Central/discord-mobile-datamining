@@ -1,10 +1,10 @@
 // discord_app/modules/conjure/projects/conjureRemoveApp.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../intl/ConjureUntranslated.messages.js";
 import useChannelName from "../../channel/useChannelName.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
-import ConjurePublishTypes from "../publish/ConjurePublishTypes.tsx";
 import conjureAppInServer from "conjureAppInServer.tsx";
+import ConjurePublishTypes from "../publish/ConjurePublishTypes.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
@@ -27,7 +27,7 @@ function readConjureRemoveTarget(project) {
   }
   if (null != guild) {
     if ("in_server" === obj5.readConjureAppServerPresence(project)) {
-      const result = tmp10(11025).findConjureAppChannels(guild.id, project.application_id);
+      const result = tmp10(7287).findConjureAppChannels(guild.id, project.application_id);
       const found = result.filter((item) => PermissionStore.can(constants.MANAGE_CHANNELS, item));
       const obj = {
         projectName: project.name,
@@ -66,22 +66,22 @@ function readConjureRemoveTarget(project) {
       obj.channelNames = found.map(channelName);
       const found1 = result.filter((item) => !found.includes(item));
       obj.keptChannelNames = found1.map(channelName);
-      const tmp10Result = tmp10(11025);
-      const tmp10Result5 = tmp10(11025);
-      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(11025).conjureProductionBotUserId(project));
+      const tmp10Result = tmp10(7287);
+      const tmp10Result5 = tmp10(7287);
+      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(7287).conjureProductionBotUserId(project));
       let canRemoveConjureBotResult = null == project.preview_application_id;
       if (!canRemoveConjureBotResult) {
-        const tmp10Result7 = tmp10(11025);
+        const tmp10Result7 = tmp10(7287);
         canRemoveConjureBotResult = tmp10Result7.canRemoveConjureBot(
           guild,
-          tmp10(11025).conjurePreviewBotUserId(project),
+          tmp10(7287).conjurePreviewBotUserId(project),
         );
-        const tmp10Result8 = tmp10(11025);
+        const tmp10Result8 = tmp10(7287);
       }
       obj.canRemovePreviewBot = canRemoveConjureBotResult;
       return obj;
     }
-    obj5 = found(11025);
+    obj5 = found(7287);
   }
   return null;
 }
@@ -173,10 +173,6 @@ export function useConjureRemoveTarget(id) {
     require("apply").isEqual,
   );
 }
-export function conjureRemoveAppItems(target) {
-  const channelNames = target.channelNames;
-  return channelNames.map((item) => ({ key: "channel:" + item, kind: "channel", label: "#" + item }));
-}
 export function conjureDeleteProjectItems(target) {
   items = [{ key: "project", kind: "project", label: target.projectName }];
   const channelNames = target.channelNames;
@@ -193,15 +189,6 @@ export function conjureDeleteProjectItems(target) {
   }
   return items;
 }
-export function conjurePreviewAppItem(target) {
-  const previewAppName = target.previewAppName;
-  let tmp = null;
-  if (null != previewAppName) {
-    const obj = { key: "preview-app", kind: "app", label: previewAppName };
-    tmp = obj;
-  }
-  return tmp;
-}
 export function conjureRemoveAppKeptChannels(target) {
   const keptChannelNames = target.keptChannelNames;
   if (0 === keptChannelNames.length) {
@@ -211,21 +198,16 @@ export function conjureRemoveAppKeptChannels(target) {
     const listFormat = new Intl.ListFormat(util.intl.currentLocale, { type: "conjunction" });
     const intl = util.intl;
     const obj = { channels: listFormat.format(keptChannelNames.map((item) => "#" + item)) };
-    return intl.formatToPlainString(_modDef4028.pE4Cec, obj);
+    return intl.formatToPlainString(_modDef4079.pE4Cec, obj);
   }
 }
 export function conjureTitleWithAppTag(arg0) {
   return arg0;
 }
-export function conjureRemoveAppSuccess(arg0) {
-  ({ appName, guildName } = arg0);
-  const intl = util.intl;
-  return intl.formatToPlainString(_modDef4028.SNFGxP, { app, server });
-}
 export function conjureDeleteProjectBody(target) {
   ({ appName, guildName } = target);
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef4028["9CvVB9"], { app, server });
+  return intl.formatToPlainString(_modDef4079["9CvVB9"], { app, server });
 }
 export function isPublishedConjureUserApp(project, publishStatus) {
   let isConjureLiveResult = "user" === project.install_scope;

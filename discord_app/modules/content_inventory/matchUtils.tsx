@@ -1,6 +1,6 @@
 // discord_app/modules/content_inventory/matchUtils.tsx
-import CrunchyrollConnectionConstants from "../connections/CrunchyrollConnectionConstants.tsx";
 import SpotifyConstants from "../spotify/SpotifyConstants.tsx";
+import CrunchyrollConnectionConstants from "../connections/CrunchyrollConnectionConstants.tsx";
 import ContentInventoryTypes from "ContentInventoryTypes.tsx";
 import ContentInventoryListenedMediaProvider from "../../../discord_common/js/shared/shared-constants/ContentInventoryListenedMediaProvider.tsx";
 import isCrunchyrollActivityDefault from "../activities/utils/isCrunchyrollActivity.tsx";
@@ -112,7 +112,7 @@ export function findMatchingEntry(entries, activity) {
   _require = activity;
   const found = entries.filter(require("utils").isEntryActive);
   if (activity.type === require("ActivityTypes").ActivityTypes.PLAYING) {
-    const found1 = found.filter(tmp(8992).isGamingLikeEntry);
+    const found1 = found.filter(tmp(9410).isGamingLikeEntry);
     let found2 = found1.find((extra) => {
       let name = closure_0;
       let game_name = extra.extra;
@@ -130,11 +130,11 @@ export function findMatchingEntry(entries, activity) {
       }
       return tmp;
     });
-  } else if (activity.type === tmp(5893).ActivityTypes.LISTENING) {
-    const found3 = found.filter(tmp(8992).isListenedSessionEntry);
+  } else if (activity.type === tmp(6006).ActivityTypes.LISTENING) {
+    const found3 = found.filter(tmp(9410).isListenedSessionEntry);
     found2 = found3.find((item) => isMatchingListeningActivity(item, closure_0));
-  } else if (activity.type === tmp(5893).ActivityTypes.WATCHING) {
-    const found4 = entries.filter(tmp(8992).isWatchedMediaEntry);
+  } else if (activity.type === tmp(6006).ActivityTypes.WATCHING) {
+    const found4 = entries.filter(tmp(9410).isWatchedMediaEntry);
     found2 = found4.find((extra) => {
       const tmp3 = isCrunchyrollActivityDefault(activity);
       let tmp4 = !tmp3;

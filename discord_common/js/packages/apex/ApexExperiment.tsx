@@ -16,11 +16,11 @@ export default function createApexExperimentCommon(definition, registerExperimen
   closure_8 = null;
   return {
     definition,
-    useConfig(location) {
+    useConfig(location, arg1) {
       evaluationAndAssignment = location;
-      const tmp = closure_2(revision, location);
+      let tmp = closure_2(revision, location);
       dependencyMap = tmp;
-      let tmp2 = closure_2("user", location);
+      const tmp2 = closure_2("user", location);
       closure_2 = tmp2;
       items = [evaluationAndAssignment];
       const items1 = [tmp, tmp2];
@@ -89,7 +89,13 @@ export default function createApexExperimentCommon(definition, registerExperimen
         tmp12 = closure_8;
       }
       closure_9 = tmp14;
+      let autoTrackExposure;
+      if (arg1 != null) {
+        autoTrackExposure = arg1.autoTrackExposure;
+      }
+      closure_10 = tmp16;
       const items2 = [
+        false !== autoTrackExposure,
         tmp,
         first,
         trackedVariantId,
@@ -101,26 +107,29 @@ export default function createApexExperimentCommon(definition, registerExperimen
         null == tmp12,
       ];
       tmp8(() => {
-        let tmp2 = null == closure_3;
-        if (!tmp2) {
-          tmp2 = null == trackedVariantId;
+        let tmp = closure_10;
+        if (closure_10) {
+          tmp = null != closure_3;
         }
-        if (!tmp2) {
-          tmp2 = null == revision;
+        if (tmp) {
+          tmp = null != trackedVariantId;
         }
-        if (!tmp2) {
-          tmp2 = false !== isOverride;
+        if (tmp) {
+          tmp = null != revision;
         }
-        if (!tmp2) {
-          tmp2 = true !== prop;
+        if (tmp) {
+          tmp = false === isOverride;
         }
-        if (!tmp2) {
-          tmp2 = true === closure_8;
+        if (tmp) {
+          tmp = true === prop;
         }
-        if (!tmp2) {
-          tmp2 = closure_9;
+        if (tmp) {
+          tmp = true !== closure_8;
         }
-        if (!tmp2) {
+        if (tmp) {
+          tmp = !closure_9;
+        }
+        if (tmp) {
           const result = _location.trackExperimentExposure(
             closure_3,
             logger,

@@ -5,8 +5,8 @@ import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import UserSettingsAccountActionCreators from "../../../actions/UserSettingsAccountActionCreators.tsx";
-import UserProfileSettingsActionCreators from "../../user_profile/UserProfileSettingsActionCreators.tsx";
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
+import UserProfileSettingsActionCreators from "../../user_profile/UserProfileSettingsActionCreators.tsx";
 import NUFActionCreators from "../../nuf/native/NUFActionCreators.tsx";
 import AddAvatarModalConstants from "components/AddAvatarModalConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -65,5 +65,5 @@ export function showSkipAvatarModal(arg0) {
   AlertActionCreatorsDefault.show(obj3);
 }
 export function openAddAvatarModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19973, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20167, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 }

@@ -8,15 +8,15 @@ import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import ApplicationCommandTypes from "../../../application_commands/ApplicationCommandTypes.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ApplicationActionCreators from "../../ApplicationActionCreators.tsx";
+import ApplicationAssetUtils from "../../../../utils/ApplicationAssetUtils.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
 import activityBookmarkUtils from "../utils/activityBookmarkUtils.tsx";
 import getEmbedThemeColorsDefault from "../../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
-import ApplicationAssetUtils from "../../../../utils/ApplicationAssetUtils.tsx";
-import AppLauncherUtils from "../../../app_launcher/utils/AppLauncherUtils.tsx";
-import ApplicationUtils from "../../../../utils/native/ApplicationUtils.tsx";
 import getFrameSurfaces from "../../../frames/utils/getFrameSurfaces.tsx";
+import AppLauncherUtils from "../../../app_launcher/utils/AppLauncherUtils.tsx";
 import GamesActionCreatorsDefault from "../../../../actions/GamesActionCreators.native.tsx";
+import ApplicationUtils from "../../../../utils/native/ApplicationUtils.tsx";
 import ContentClassificationVisibility from "../../../content_classification/ContentClassificationVisibility.tsx";
 import CodedLinksTypes from "../../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksTypes.tsx";
 import getPlayInContext from "../utils/getPlayInContext.tsx";
@@ -27,9 +27,9 @@ import ApplicationAssetsStore from "../../ApplicationAssetsStore.tsx";
 import ApplicationStore from "../../ApplicationStore.tsx";
 
 require = fn;
-const FetchState = fn(8799).FetchState;
+const FetchState = fn(7250).FetchState;
 const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(10244).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11831).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);
@@ -228,7 +228,7 @@ export function handleTapAppMessageEmbed(appId) {
   if (id == null) {
     id = appId.message.author.id;
   }
-  value2 = undefined;
+  let value2;
   if (toURLSafeResult != null) {
     const searchParams2 = toURLSafeResult.searchParams;
     value2 = searchParams2.get("custom_id");

@@ -63,7 +63,7 @@ function Slot(index) {
   return <stagger style={tmp.slot}>{null}</stagger>;
 }
 const View = fn(17).View;
-const AILoaderConstants = fn(12445);
+const AILoaderConstants = fn(13251);
 ({
   AI_LOADER_CYCLE_MS: hasOwnProperty,
   AI_LOADER_GAP_EM: closure_6,
@@ -101,7 +101,7 @@ let items1 = [tmp4, tmp5, tmp6];
 trackStepAt.__closure = items1;
 trackStepAt.__workletHash = 8339432593103;
 trackStepAt.__initData = tmp3;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_13 = createStyles.createStyles((width) => {
   const obj = {
     loader: { flexDirection: "row", gap: width * timestampProducer },
@@ -127,7 +127,7 @@ export const AILoader = noop.memo(function AILoader(size) {
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const reducedMotion = num2.useContext(num(5201).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(5314).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {

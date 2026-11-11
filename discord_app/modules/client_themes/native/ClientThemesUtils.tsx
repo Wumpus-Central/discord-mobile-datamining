@@ -223,7 +223,7 @@ export function getClientThemesGradientHexColors(colors) {
 export function getGradientHexColors(gradientPreset) {
   if (gradientPreset.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     const colors1 = gradientPreset.colors;
-    let colors = colors1.map((item) => nativeDefault.unsafe_rawColors[item.token]);
+    colors = colors1.map((item) => nativeDefault.unsafe_rawColors[item.token]);
   } else {
     colors = gradientPreset.customThemeSettings.colors;
   }
@@ -256,7 +256,7 @@ export function getGradientThemeMetadata(gradientThemeFromFlags, gradient) {
         tmp3 = tmp16;
       }
       if (gradient.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-        const colors = gradient.colors;
+        colors = gradient.colors;
         let mapped = colors.map((item) => nativeDefault.unsafe_rawColors[item.token]);
       } else {
         mapped = gradient.customThemeSettings.colors;

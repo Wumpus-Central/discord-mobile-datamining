@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/CollectiblesShopGiftModal.tsx
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import Navigator from "../../../design/components/Navigator/native/Navigator.native.tsx";
-import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
+import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
 import openGiftModal from "openGiftModal.tsx";

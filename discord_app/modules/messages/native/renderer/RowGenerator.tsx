@@ -8,7 +8,7 @@ import Loading from "rows/Loading.tsx";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
 
 require = fn;
-const RowGeneratorConstants = fn(8453);
+const RowGeneratorConstants = fn(9094);
 ({ RowType: closure_4, SeparatorType: hasOwnProperty, LoadingType: closure_6 } = RowGeneratorConstants);
 let obj = {
   constrainedWidth: 0,
@@ -17,7 +17,7 @@ let obj = {
   shouldObscureSpoiler: true,
   shouldDisableInteractiveComponents: true,
 };
-let merged = Object.assign(fn(8454).DEFAULT_OPTIONS);
+let merged = Object.assign(fn(9095).DEFAULT_OPTIONS);
 class RowManager {
   constructor() {
     merged = Object.assign({ options: null });

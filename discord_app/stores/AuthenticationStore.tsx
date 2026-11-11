@@ -31,7 +31,7 @@ function fetchFingerprint(arg0) {
   value = Storage2.get(analytics_installation);
   if (null == value) {
     const Storage3 = Storage6.Storage;
-    value2 = Storage3.get("analytics_installation");
+    const value2 = Storage3.get("analytics_installation");
     let tmp4 = null;
     if (null != value2) {
       tmp4 = null;
@@ -193,7 +193,7 @@ function handleLogout(isSwitchingAccount) {
   if (isSwitchingAccount != null) {
     isSwitchingAccount1 = isSwitchingAccount.isSwitchingAccount;
   }
-  NONE = isSwitchingAccount1 ? LoginStates.LOGGING_IN : LoginStates.NONE;
+  LOGGING_IN = isSwitchingAccount1 ? LoginStates.LOGGING_IN : LoginStates.NONE;
   c28 = "";
   c30 = null;
   c29 = false;
@@ -228,7 +228,7 @@ let c21 = null;
 let closure_22 = null;
 let installation = null;
 let analyticsToken = null;
-let NONE = LoginStates.NONE;
+let LOGGING_IN = LoginStates.NONE;
 let c26 = false;
 let authenticator_types = [];
 let c28 = "";
@@ -251,7 +251,7 @@ prototype["initialize"] = function initialize() {
   value = Storage2.get(analytics_installation);
   if (null == value) {
     const Storage3 = Storage6.Storage;
-    value2 = Storage3.get("analytics_installation");
+    const value2 = Storage3.get("analytics_installation");
     let tmp4 = null;
     if (null != value2) {
       tmp4 = null;
@@ -283,7 +283,7 @@ prototype["initialize"] = function initialize() {
   obj = TokenManagerAll;
 };
 prototype["getLoginStatus"] = function getLoginStatus() {
-  return NONE;
+  return LOGGING_IN;
 };
 prototype["getId"] = function getId() {
   return id;
@@ -475,7 +475,7 @@ const authenticationStore = new AuthenticationStore(
       authSessionIdHash = authSessionIdHash.authSessionIdHash;
     },
     LOGIN: function handleLogin(arg0) {
-      NONE = LoginStates.LOGGING_IN;
+      LOGGING_IN = LoginStates.LOGGING_IN;
       let tmp2 = closure_36;
       if (!closure_36) {
         tmp2 = true === tmp;
@@ -483,7 +483,7 @@ const authenticationStore = new AuthenticationStore(
       closure_36 = tmp2;
     },
     LOGIN_SUCCESS: function handleLoginSuccess(token) {
-      NONE = LoginStates.NONE;
+      LOGGING_IN = LoginStates.NONE;
       const Storage = Storage6.Storage;
       const tmp = null != TokenManagerAll.getToken();
       closure_13.verbose("setAuthToken called.", {
@@ -533,10 +533,11 @@ const authenticationStore = new AuthenticationStore(
         items.push({ type: "sms" });
       }
       if (null != obj.getAuthenticationErrorsFromV6OrEarlierAPIError(error.error).date_of_birth) {
-        NONE = LoginStates.LOGIN_AGE_GATE;
+        let NONE = LoginStates.LOGIN_AGE_GATE;
       } else {
         NONE = LoginStates.NONE;
       }
+      LOGGING_IN = NONE;
       obj = getAuthenticationErrorsFromAPIError;
     },
     LOGIN_MFA_STEP: function handleLoginMFAStep(arg0) {
@@ -566,29 +567,29 @@ const authenticationStore = new AuthenticationStore(
           items.push({ type: "sms" });
         }
       }
-      NONE = LoginStates.MFA_STEP;
+      LOGGING_IN = LoginStates.MFA_STEP;
     },
     LOGIN_MFA: function handleLoginMFA() {
-      NONE = LoginStates.LOGGING_IN_MFA;
+      LOGGING_IN = LoginStates.LOGGING_IN_MFA;
     },
     LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION: function handleLoginAccountPendingDeletion(credentials) {
-      NONE = LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION;
+      LOGGING_IN = LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION;
       credentials = credentials.credentials;
     },
     LOGIN_ACCOUNT_DISABLED: function handleLoginAccountDisabled(credentials) {
-      NONE = LoginStates.ACCOUNT_DISABLED;
+      LOGGING_IN = LoginStates.ACCOUNT_DISABLED;
       credentials = credentials.credentials;
     },
     LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: function handleLoginPasswordRecoveryPhoneVerification(credentials) {
-      NONE = LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION;
+      LOGGING_IN = LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION;
       credentials = credentials.credentials;
     },
     LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: function handleLoginPhoneIPAuthorizationRequired(credentials) {
-      NONE = LoginStates.PHONE_IP_AUTHORIZATION;
+      LOGGING_IN = LoginStates.PHONE_IP_AUTHORIZATION;
       credentials = credentials.credentials;
     },
     LOGIN_RESET: function handleLoginReset(isMultiAccount) {
-      NONE = LoginStates.NONE;
+      LOGGING_IN = LoginStates.NONE;
       c28 = "";
       c29 = false;
       c30 = null;
@@ -618,7 +619,7 @@ const authenticationStore = new AuthenticationStore(
       }
     },
     LOGIN_STATUS_RESET: function handleLoginStatusReset() {
-      NONE = LoginStates.NONE;
+      LOGGING_IN = LoginStates.NONE;
     },
     LOGIN_SUSPENDED_USER: function handleSuspendedUserLogin(suspendedUserToken) {
       c35 = false;
@@ -691,10 +692,10 @@ const authenticationStore = new AuthenticationStore(
       Storage2.remove(fingerprint);
     },
     FORGOT_PASSWORD_REQUEST: function handleForgotPasswordRequest() {
-      NONE = LoginStates.FORGOT_PASSWORD;
+      LOGGING_IN = LoginStates.FORGOT_PASSWORD;
     },
     FORGOT_PASSWORD_SENT: function handleForgotPasswordSent() {
-      NONE = LoginStates.NONE;
+      LOGGING_IN = LoginStates.NONE;
     },
     UPDATE_TOKEN: function handleUpdateToken(userId) {
       userId = userId.userId;
@@ -801,7 +802,7 @@ const authenticationStore = new AuthenticationStore(
     },
     CLOSE_SUSPENDED_USER: function handleSuspendedUserClosed() {
       c34 = null;
-      NONE = LoginStates.NONE;
+      LOGGING_IN = LoginStates.NONE;
       handleLogout();
       setImmediate(() => router_utils.transitionTo(constants.DEFAULT_LOGGED_OUT));
     },
@@ -814,17 +815,19 @@ const authenticationStore = new AuthenticationStore(
       c5 = null;
       if (error instanceof APIErrorDefault) {
         if (null != obj.getAuthenticationErrorsFromAPIError(error).date_of_birth) {
-          NONE = LoginStates.LOGIN_AGE_GATE;
+          let NONE = LoginStates.LOGIN_AGE_GATE;
         } else {
           NONE = LoginStates.NONE;
         }
+        LOGGING_IN = NONE;
         obj = getAuthenticationErrorsFromAPIError;
       } else {
-        NONE = LoginStates.NONE;
+        LOGGING_IN = LoginStates.NONE;
       }
     },
     PASSWORDLESS_START: function handlePasswordlessStart() {
       c35 = true;
+      LOGGING_IN = LoginStates.LOGGING_IN;
     },
   },
   fn(572).DispatchBand.Early,

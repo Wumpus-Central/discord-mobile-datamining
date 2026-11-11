@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { stiffness: 150, overshootClamping: true };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const obj2 = {
   collapsible: { position: "relative", overflow: "hidden" },
   collapsibleContent: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },

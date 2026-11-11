@@ -62,6 +62,12 @@ const obj = {
   [33]: "NITRO_PERK_CARD",
   COLLECTION_PAGE_MARKETING_BLOCK: 34,
   [34]: "COLLECTION_PAGE_MARKETING_BLOCK",
+  GAME_EXIT_PANEL: 35,
+  [35]: "GAME_EXIT_PANEL",
+  ANNOUNCEMENT_MODAL_VIDEO_LED: 36,
+  [36]: "ANNOUNCEMENT_MODAL_VIDEO_LED",
+  ANNOUNCEMENT_MODAL_PANEL: 37,
+  [37]: "ANNOUNCEMENT_MODAL_PANEL",
 };
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx");
 
@@ -97,6 +103,9 @@ export const MarketingSurfaceTypeByKind = {
   shopCoachmark: obj.SHOP_COACHMARK,
   nitroPerkCard: obj.NITRO_PERK_CARD,
   collectionPageMarketingBlock: obj.COLLECTION_PAGE_MARKETING_BLOCK,
+  gameExitPanel: obj.GAME_EXIT_PANEL,
+  announcementModalVideoLed: obj.ANNOUNCEMENT_MODAL_VIDEO_LED,
+  announcementModalPanel: obj.ANNOUNCEMENT_MODAL_PANEL,
 };
 export const MarketingSurfaceKindByType = {
   [obj.ANNOUNCEMENT_MODAL_VARIANT_1]: "announcementModalVariant1",
@@ -129,4 +138,7 @@ export const MarketingSurfaceKindByType = {
   [obj.SHOP_COACHMARK]: "shopCoachmark",
   [obj.NITRO_PERK_CARD]: "nitroPerkCard",
   [obj.COLLECTION_PAGE_MARKETING_BLOCK]: "collectionPageMarketingBlock",
+  [obj.GAME_EXIT_PANEL]: "gameExitPanel",
+  [obj.ANNOUNCEMENT_MODAL_VIDEO_LED]: "announcementModalVideoLed",
+  [obj.ANNOUNCEMENT_MODAL_PANEL]: "announcementModalPanel",
 };

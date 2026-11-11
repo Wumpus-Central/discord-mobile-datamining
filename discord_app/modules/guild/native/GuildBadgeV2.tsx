@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import shared from "../../../design/shared.tsx";
-import GuildTraits from "../../guild_badge/GuildTraits.tsx";
 import BadgeCategory from "../../guild_badge/BadgeCategory.tsx";
+import GuildTraits from "../../guild_badge/GuildTraits.tsx";
 import ExperimentalWebBadgeIcon from "../../../design/components/Icon/native/redesign/generated/ExperimentalWebBadgeIcon.tsx";
 import GuildBadgeImageSource from "../../guild_badge/native/GuildBadgeImageSource.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_4 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");

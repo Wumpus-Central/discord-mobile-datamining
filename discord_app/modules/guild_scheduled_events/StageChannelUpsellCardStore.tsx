@@ -2,7 +2,7 @@
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
-import _mod5057 from "../../../_runtime/metro/05057__.js";
+import _mod5158 from "../../../_runtime/metro/05158__.js";
 import identity from "../../../_runtime/metro/01254__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -28,5 +28,5 @@ export function useStageChannelUpsellCardStore() {
     items = [,];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }

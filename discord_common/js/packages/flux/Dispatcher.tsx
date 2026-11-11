@@ -125,7 +125,7 @@ prototype["addDependencies"] = function addDependencies(arg0, arg1) {
         throw error1;
       } else {
         let _nodes2 = self._nodes;
-        value2 = _nodes2.get(tmp5);
+        let value2 = _nodes2.get(tmp5);
         if (null == value2) {
           let tmp11 = globalThis;
           let _Error2 = Error;
@@ -267,7 +267,7 @@ class Dispatcher {
       _currentDispatchActionType: null,
       _actionHandlers: null,
       _sentryUtils: "Array",
-      functionCache: 7026918,
+      functionCache: 6945754,
     });
     merged[0] = [];
     merged[1] = {};
@@ -481,7 +481,7 @@ prototype2["_dispatch"] = function _dispatch(type, fn) {
     }
   }
   c3 = 0;
-  const length = self._actionHandlers.getOrderedActionHandlers(type).length;
+  length = self._actionHandlers.getOrderedActionHandlers(type).length;
   let num = 0;
   if (0 < length) {
     do {

@@ -1,5 +1,5 @@
 // discord_app/components_native/common/SortableListView.tsx
-import _mod7360 from "../../../discord_common/js/packages/flash-list/index.js";
+import _mod7822 from "../../../discord_common/js/packages/flash-list/index.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -586,7 +586,7 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [timestampProducer(_mod7360.FlashList, obj3), self.renderActive()];
+  const items1 = [timestampProducer(_mod7822.FlashList, obj3), self.renderActive()];
   obj.children = items1;
   return metroImportDefault(React3, obj);
 };

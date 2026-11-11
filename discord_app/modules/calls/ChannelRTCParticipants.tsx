@@ -62,12 +62,12 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5807);
+const CallConstants = fn(5920);
 ({ isStreamParticipant: closure_15, ParticipantTypes: closure_16 } = CallConstants);
 const ChannelTypes = fn(1072).ChannelTypes;
-const FramesConstants = fn(6905);
+const FramesConstants = fn(6957);
 ({ asLaunched, getFrameLaunchChannelId } = FramesConstants);
-const Constants = fn(5899);
+const Constants = fn(6012);
 ({ MediaEngineContextTypes: closure_18, Features: closure_19 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = {
@@ -128,7 +128,7 @@ class ChannelRTCParticipants {
         }
         return items;
       }
-      if (closure_2_15(type)) {
+      if (colors(type)) {
         items.push(obj.STREAM);
         let isPoppedOut = type.type === constants.HIDDEN_STREAM;
         if (!isPoppedOut) {
@@ -256,11 +256,11 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f91096) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f92110) {
   const self = this;
-  const userId = f91096;
+  const userId = f92110;
   let flag;
-  if (this.participants[f91096] != null) {
+  if (this.participants[f92110] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -302,10 +302,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f910
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f91102, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f92116, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f91102] != null) {
+  if (this.participants[f92116] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {

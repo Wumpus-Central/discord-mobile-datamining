@@ -403,7 +403,6 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype3["internalBinaryWrite"] = function internalBinaryWrite(ackedDisclosures, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < ackedDisclosures.ackedDisclosures.length) {
     do {

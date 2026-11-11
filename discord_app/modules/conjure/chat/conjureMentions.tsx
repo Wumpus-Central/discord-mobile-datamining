@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/chat/conjureMentions.tsx
-import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../utils/UserUtils.tsx";
 import conjureMessageAuthors from "conjureMessageAuthors.tsx";
 import conjureFileMentions from "conjureFileMentions.tsx";
@@ -132,32 +132,32 @@ export function useRequestConjureMentionedUsers(text) {
   );
 }
 export function withConjureMentionNames(body) {
-  const f104604 = (arg0) => user.getUser(arg0);
-  const f104605 = (arg0) => attachment.getAttachment(arg0);
+  const f106736 = (arg0) => user.getUser(arg0);
+  const f106737 = (arg0) => attachment.getAttachment(arg0);
   return body.replace(closure_6, (arg0, arg1, arg2) => {
     if (null == arg1) {
       let str2 = arg2;
       if (arg2 == null) {
         str2 = "";
       }
-      const tmp7Result = f130279(str2);
+      const tmp7Result = f131888(str2);
       let name;
       if (tmp7Result != null) {
         name = tmp7Result.name;
       }
       if (name == null) {
         const intl = closure_0(1113).intl;
-        name = intl.string(_modDef4028.ff9Q4C);
+        name = intl.string(_modDef4079.ff9Q4C);
       }
       const _HermesInternal2 = HermesInternal;
       return "@" + name;
     } else {
       let combined = arg0;
-      const tmp3 = f130278(arg1);
+      const tmp3 = f131887(arg1);
       if (null != tmp3) {
         const _HermesInternal = HermesInternal;
-        combined = "@" + closure_0(5196).getName(tmp3);
-        const obj = closure_0(5196);
+        combined = "@" + closure_0(5309).getName(tmp3);
+        const obj = closure_0(5309);
       }
       return combined;
     }
@@ -170,32 +170,32 @@ export function useConjureMentionNames(trimmed) {
   return require("initialize").useStateFromStores(
     items,
     () => {
-      const f130278 = (arg0) => user.getUser(arg0);
-      const f130279 = (arg0) => attachment.getAttachment(arg0);
+      const f131887 = (arg0) => user.getUser(arg0);
+      const f131888 = (arg0) => attachment.getAttachment(arg0);
       return trimmed.replace(re6, (arg0, arg1, arg2) => {
         if (null == arg1) {
           let str2 = arg2;
           if (arg2 == null) {
             str2 = "";
           }
-          const tmp7Result = f130279(str2);
+          const tmp7Result = f131888(str2);
           let name;
           if (tmp7Result != null) {
             name = tmp7Result.name;
           }
           if (name == null) {
             const intl = closure_0(1113).intl;
-            name = intl.string(_modDef4028.ff9Q4C);
+            name = intl.string(_modDef4079.ff9Q4C);
           }
           const _HermesInternal2 = HermesInternal;
           return "@" + name;
         } else {
           let combined = arg0;
-          const tmp3 = f130278(arg1);
+          const tmp3 = f131887(arg1);
           if (null != tmp3) {
             const _HermesInternal = HermesInternal;
-            combined = "@" + closure_0(5196).getName(tmp3);
-            const obj = closure_0(5196);
+            combined = "@" + closure_0(5309).getName(tmp3);
+            const obj = closure_0(5309);
           }
           return combined;
         }

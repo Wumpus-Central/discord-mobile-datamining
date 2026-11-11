@@ -3,11 +3,11 @@ import MemberVerificationTypes from "../../../guild_member_verification/MemberVe
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import JoinGuildRefusedError from "../../../guild/JoinGuildRefusedError.tsx";
 import MemberVerificationAlertActionCreators from "../../../guild_member_verification/native/MemberVerificationAlertActionCreators.tsx";
-import GuildProfileTypes from "../../GuildProfileTypes.tsx";
-import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import GuildDiscoveryUtils from "../../../../utils/GuildDiscoveryUtils.tsx";
 import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../actions/InstantInviteActionCreators.tsx";
+import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
+import GuildProfileTypes from "../../GuildProfileTypes.tsx";
 import handleNSFWGuildInvite from "../../../age_gate/native/handleNSFWGuildInvite.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import InviteStore from "../../../../stores/InviteStore.tsx";

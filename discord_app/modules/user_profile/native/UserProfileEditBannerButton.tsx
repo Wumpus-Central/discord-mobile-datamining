@@ -1,14 +1,14 @@
 // discord_app/modules/user_profile/native/UserProfileEditBannerButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBannerHeight.tsx";
 import UserProfileBannerDefault from "UserProfileBanner.tsx";
-import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EditButtonDefault = tmp(16802);
+const EditButtonDefault = tmp(16963);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -58,7 +58,7 @@ function EditButton(disabled) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,

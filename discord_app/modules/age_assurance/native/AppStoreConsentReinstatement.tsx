@@ -409,12 +409,12 @@ export function beginAppStoreConsentReinstatement() {
                                         c2 = 1;
                                         c3 = 1;
                                         const obj4 = {
-                                          value: closure_2_0(8221).getAppStoreConsentReinstatementProof(),
+                                          value: closure_2_0(8313).getAppStoreConsentReinstatementProof(),
                                           done: false,
                                         };
                                         return obj4;
                                       }
-                                      obj9 = closure_2_0(8229);
+                                      obj9 = closure_2_0(8321);
                                     }
                                   }
                                 } else if (1 === tmp5) {
@@ -432,7 +432,7 @@ export function beginAppStoreConsentReinstatement() {
                                         c2 = 2;
                                         c3 = 1;
                                         const obj7 = {
-                                          value: closure_2_0(8222).reinstateAppStoreConsent(closure_128_0),
+                                          value: closure_2_0(8314).reinstateAppStoreConsent(closure_128_0),
                                           done: false,
                                         };
                                         return obj7;

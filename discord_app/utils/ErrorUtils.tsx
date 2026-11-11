@@ -1,5 +1,5 @@
 // discord_app/utils/ErrorUtils.tsx
-import _mod15539 from "../../_runtime/metro/15539__.js";
+import BAGGAGE_HEADER_NAME from "../../_runtime/09725_BAGGAGE_HEADER_NAME.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
@@ -36,5 +36,5 @@ export function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(_mod15539.normalizeToSize(error1));
+  return JSON.stringify(BAGGAGE_HEADER_NAME.normalizeToSize(error1));
 }

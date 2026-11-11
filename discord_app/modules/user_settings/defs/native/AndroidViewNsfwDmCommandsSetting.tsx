@@ -4,10 +4,10 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeGateUtils from "../../../age_gate/AgeGateUtils.tsx";
-import AgeRestrictedContentSettingsUtils from "../../content_and_social/AgeRestrictedContentSettingsUtils.tsx";
-import useNSFWAllowed from "../../content_and_social/useNSFWAllowed.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import AgeRestrictedContentSettingsUtils from "../../content_and_social/AgeRestrictedContentSettingsUtils.tsx";
+import useNSFWAllowed from "../../content_and_social/useNSFWAllowed.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

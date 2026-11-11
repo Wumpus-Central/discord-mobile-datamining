@@ -6,8 +6,8 @@ import ServerThemeApexShadowExperiment2 from "experiments/ServerThemeApexShadowE
 import GameServerExperiment2 from "../../game_server/GameServerExperiment.tsx";
 import shared_PlatformUtils from "../../../../discord_common/js/shared/lib/PlatformUtils.tsx";
 import actions_BoostingActionCreators from "../../../actions/BoostingActionCreators.tsx";
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators.tsx";
 import useHasAllocateBoostPermission from "hooks/useHasAllocateBoostPermission.tsx";
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators.tsx";
 import useIsCurrentUserEligibleForPowerupUpsells from "hooks/useIsCurrentUserEligibleForPowerupUpsells.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";

@@ -352,6 +352,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
     style: animatedStyle,
     children: jsx(require("SegmentedControlPages").SegmentedControlPages, {
       state,
+      bounces: false,
       onBeginDragWorklet: callback2,
       onEndDragWorklet: callback3,
     }),

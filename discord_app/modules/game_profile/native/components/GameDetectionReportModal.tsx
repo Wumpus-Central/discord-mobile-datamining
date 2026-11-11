@@ -1,8 +1,8 @@
 // discord_app/modules/game_profile/native/components/GameDetectionReportModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -132,7 +132,7 @@ function ReportContent(applicationId) {
         }, 100);
       },
       hasIcons: null,
-      children: true,
+      children: "35520200000000",
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[12]).intl;
@@ -239,7 +239,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   content: null,

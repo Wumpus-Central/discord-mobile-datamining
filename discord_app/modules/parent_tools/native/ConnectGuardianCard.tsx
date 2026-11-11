@@ -8,10 +8,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7795).FAMILY_CENTER_REQUEST_QR_CODE_URL;
+let closure_6 = fn(8674).FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16 },
   compactContainer: null,

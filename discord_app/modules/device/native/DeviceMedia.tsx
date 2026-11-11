@@ -90,7 +90,7 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(10670)(obj2);
+          lastAssetIndex(11584)(obj2);
         }
         obj = assets(1377);
       }
@@ -139,7 +139,7 @@ export default {
         }
         if (num > 0) {
           const obj2 = { num_broken_assets: num, num_assets: null, location: "DeviceMedia.applyStateUpdate" };
-          let length;
+          length = undefined;
           if (edges != null) {
             const edges1 = edges.edges;
             if (edges1 != null) {

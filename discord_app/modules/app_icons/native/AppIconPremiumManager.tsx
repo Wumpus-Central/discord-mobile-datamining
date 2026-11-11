@@ -6,14 +6,13 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const AppIconConstants = fn(10107);
-({ getIconById: hasOwnProperty, isHexagonCampaignAppIcon: closure_6 } = AppIconConstants);
+const getIconById = fn(11118).getIconById;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const HexagonCampaignPerk = fn(5167).HexagonCampaignPerk;
-let closure_9 = new LoggerDefault("AppIconPremiumManager");
-const DEFAULT = fn(10108).FreemiumAppIconIds.DEFAULT;
-let closure_11 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost", CAMPAIGN_EXPIRED: "campaign_expired" };
-class AppIconPremiumManager extends tmp4 {
+const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
+let closure_8 = new LoggerDefault("AppIconPremiumManager");
+const DEFAULT = fn(5269).FreemiumAppIconIds.DEFAULT;
+let closure_10 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost", CAMPAIGN_EXPIRED: "campaign_expired" };
+class AppIconPremiumManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
@@ -41,8 +40,8 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
   const self = this;
   return (async () => {
-    if (v3 === 2) {
-      v3 = 3;
+    if (c6 === 2) {
+      c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
@@ -55,13 +54,13 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
       }
     } else {
       try {
-        v3 = 2;
+        c6 = 2;
         if (0 === v1) {
           if (arg0 === 1) {
-            v3 = 3;
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            v3 = 3;
+            c6 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
@@ -71,21 +70,21 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
             closure_131_2 = undefined;
             currentUser = tmp5.getCurrentUser();
             v1 = 1;
-            v3 = 1;
+            c6 = 1;
             const obj4 = { value: _undefined(_undefined3[9]).fetchCurrentAppIcon(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
-          v3 = 3;
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          v3 = 3;
+          c6 = 3;
           const obj6 = { value, done: true };
           return obj6;
         } else {
           closure_131_1 = value;
           if (closure_131_1 !== DEFAULT) {
-            if (v3(closure_131_1)) {
+            if (obj9.isHexagonCampaignAppIcon(closure_131_1)) {
               if (obj.isHexagonCampaignPerkExpiredForCurrentUser(constants.APP_ICON)) {
                 const _HermesInternal3 = HermesInternal;
                 logger.info("Campaign icon " + closure_131_1 + " has expired for this user, resetting to default");
@@ -98,11 +97,11 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
                   _undefined = undefined;
                 }
                 closure_132_0.resetIcon(closure_131_1, _undefined, constants2.CAMPAIGN_EXPIRED);
-                v3 = 3;
+                c6 = 3;
                 const obj7 = { value: undefined, done: true };
                 return obj7;
               }
-              obj = _undefined(_undefined3[10]);
+              obj = _undefined(_undefined3[11]);
             }
             closure_131_2 = v1(closure_131_1);
             if (closure_131_1 !== closure_131_2.id) {
@@ -117,11 +116,11 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
                 _undefined2 = undefined;
               }
               closure_132_0.resetIcon(closure_131_1, _undefined2, constants2.ORPHANED);
-              v3 = 3;
+              c6 = 3;
               const obj8 = { value: undefined, done: true };
               return obj8;
             } else {
-              const result = _undefined2(_undefined3[11]).canUsePremiumAppIcons(currentUser);
+              const result = _undefined2(_undefined3[12]).canUsePremiumAppIcons(currentUser);
               let isPremium = !result;
               if (!result) {
                 isPremium = closure_131_2.isPremium;
@@ -139,14 +138,15 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
                 }
                 closure_132_0.resetIcon(closure_131_1, _undefined3, constants2.PREMIUM_LOST);
               }
-              const obj9 = _undefined2(_undefined3[11]);
+              const obj10 = _undefined2(_undefined3[12]);
             }
+            obj9 = _undefined(_undefined3[10]);
           }
-          v3 = 3;
+          c6 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp63) {
-        v3 = tmp;
+        c6 = tmp;
         throw tmp63;
       }
     }

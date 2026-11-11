@@ -39,10 +39,10 @@ export function getWaterwheelsDiscoverEnabled(fetchDehydrated) {
   }
   return enabled;
 }
-export function useWaterwheelsDiscoverEnabled(guilds_bar) {
-  _require = guilds_bar;
+export function useWaterwheelsDiscoverEnabled(WaterwheelsDiscoverPanel) {
+  _require = WaterwheelsDiscoverPanel;
   items = [ApexExperimentStore, AuthenticationStore, LabFeatureStore, UserStore];
-  const items1 = [guilds_bar];
+  const items1 = [WaterwheelsDiscoverPanel];
   return require("initialize").useStateFromStores(
     items,
     () => {

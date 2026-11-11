@@ -2,13 +2,13 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2760 from "../../premium/gifting/GiftingBadge.messages.js";
+import _modDef2781 from "../../premium/gifting/GiftingBadge.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
+import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import GiftBadgePostPurchaseDefault from "../../premium/native/gifting/GiftBadgePostPurchase.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = { header: null, closeButton: null, closeIcon: null };
   const rect = {
@@ -83,7 +83,7 @@ export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgre
     children: null,
   };
   const intl2 = util.intl;
-  obj5.children = intl2.string(_modDef2760.roVAey);
+  obj5.children = intl2.string(_modDef2781.roVAey);
   items[1] = timestampProducer(Text_Text.Text, obj5);
   obj2.children = items;
   const items1 = [

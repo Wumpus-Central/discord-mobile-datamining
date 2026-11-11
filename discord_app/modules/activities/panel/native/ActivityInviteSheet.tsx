@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import InviteTargetTypes from "../../../../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
-import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import UserPlaceholderRowDefault from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
+import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import InviteSuggestionsActionCreators from "../../../../actions/InviteSuggestionsActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -29,14 +29,14 @@ function Loading() {
   return gesture(state, obj2);
 }
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9285);
+const InstantInviteSendStateStore = fn(12475);
 ({ setSendState: closure_6, useInstantInviteSendStates: metroImportDefault } = InstantInviteSendStateStore);
 const ActivityActionTypes = fn(1072).ActivityActionTypes;
-const InviteSendStates = fn(7960).InviteSendStates;
+const InviteSendStates = fn(8776).InviteSendStates;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, emptyState: null, searchAndShareContainer: null };
 let size = {
   height: 16,
@@ -75,9 +75,9 @@ export default function ActivityInviteSheet(activity) {
   dependencyMap = undefined;
   noop = undefined;
   const tmp = closure_15();
-  analyticsLocations = analyticsLocations(7390)(analyticsLocations(7415).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  analyticsLocations = analyticsLocations(7852)(analyticsLocations(7871).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
-  const tmp4 = analyticsLocations(7390);
+  const tmp4 = analyticsLocations(7852);
   [tmp6, c2] = noop.useState(null);
   const tmp7 = closure_7((arg0) => arg0);
   _slicedToArray = tmp7;
@@ -190,19 +190,19 @@ export default function ActivityInviteSheet(activity) {
   let obj4 = { title: null };
   const intl = tmp11(1113).intl;
   obj4.title = intl.string(activity(1113).t["OzOM/q"]);
-  obj3.header = closure_12(activity(7385).BottomSheetTitleHeader, obj4);
+  obj3.header = closure_12(activity(7847).BottomSheetTitleHeader, obj4);
   if (null != tmp6) {
-    const obj5 = { style: tmp.emptyState, Illustration: tmp11(9239).AppCrash, title: tmp6 };
+    const obj5 = { style: tmp.emptyState, Illustration: tmp11(15771).AppCrash, title: tmp6 };
     let tmp19Result = closure_12(tmp11(1187).EmptyState, obj5);
   } else if (tmp15) {
     tmp19Result = closure_12(Loading, {});
   } else {
     const obj6 = { children: null };
     const obj7 = { style: tmp.searchAndShareContainer, children: null };
-    const obj8 = { size: "md", round: true, onChange: tmp11(9236).searchInviteSuggestions, placeholder: null };
+    const obj8 = { size: "md", round: true, onChange: tmp11(14622).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1113).intl;
     obj8.placeholder = intl2.string(tmp11(1113).t.iI1gMg);
-    obj7.children = closure_12(tmp11(7285).SearchBar, obj8);
+    obj7.children = closure_12(tmp11(7759).SearchBar, obj8);
     obj6.children = closure_12(View, obj7);
     const items4 = [closure_12(View, obj6)];
     if (tmp16) {
@@ -218,7 +218,7 @@ export default function ActivityInviteSheet(activity) {
         onInviteSent: callback2,
         onPressAvatar: callback1,
       };
-      tmp17Result2 = closure_12(tmp2(19543), obj10);
+      tmp17Result2 = closure_12(tmp2(19732), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;
@@ -226,6 +226,6 @@ export default function ActivityInviteSheet(activity) {
     tmp19Result = closure_14(closure_13, obj11);
   }
   obj3.children = tmp19Result;
-  obj2.children = closure_12(activity(5390).BottomSheet, obj3);
-  return closure_12(activity(7390).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_12(activity(5503).BottomSheet, obj3);
+  return closure_12(activity(7852).AnalyticsLocationProvider, obj2);
 }

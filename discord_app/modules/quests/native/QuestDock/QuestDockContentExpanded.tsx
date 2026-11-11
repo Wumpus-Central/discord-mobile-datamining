@@ -9,10 +9,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const _modDef1652 = _mod1652;
 
 require = fn;
-const QuestDockMode = fn(6839).QuestDockMode;
-let closure_5 = fn(17420).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5275).QuestDockMode;
+let closure_5 = fn(17585).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const obj = { wrapper: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

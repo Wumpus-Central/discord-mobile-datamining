@@ -1,10 +1,10 @@
 // discord_app/modules/checkpoint/native/components/CheckpointGlobalStatNumber.tsx
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
 import CheckpointStatNumberDefault from "CheckpointStatNumber.tsx";
 import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation.tsx";
 import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber.tsx";
+import CheckpointNumberUtils from "../CheckpointNumberUtils.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -52,21 +52,21 @@ let obj5 = {
 obj.value = { marginTop: -nativeDefault.space.PX_24 };
 obj.globe = { width: 75, height: 56 };
 let closure_6 = createStyles.createStyles(obj);
-const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointGlobalStatNumber.tsx");
+let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointGlobalStatNumber.tsx");
 
 export default function CheckpointGlobalStatNumber(arg0) {
   ({ value, accessibilityLabel } = arg0);
   const iter = closure_6();
+  let result = value;
+  if (typeof value === "number") {
+    result = CheckpointNumberUtils.formatCheckpointStatNumber(value);
+  }
   if (accessibilityLabel == null) {
-    let toLocaleStringResult = value;
-    if (typeof value === "number") {
-      toLocaleStringResult = value.toLocaleString(util.intl.currentLocale);
-    }
-    accessibilityLabel = toLocaleStringResult;
+    accessibilityLabel = result;
   }
   const obj2 = { accessible: true, accessibilityLabel, style: null, children: null };
   items = [iter.container];
-  if (obj.isCheckpointStatNumberShrunk(value)) {
+  if (obj.isCheckpointStatNumberShrunk(result)) {
     items[1] = iter.croppedContainer;
     obj2.style = items;
     const obj3 = { style: iter.clip, children: null };

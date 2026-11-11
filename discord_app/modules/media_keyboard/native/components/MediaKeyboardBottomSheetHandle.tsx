@@ -1,7 +1,7 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx
 import util from "../../../../intl/index.native.tsx";
-import useStateFromSharedValue from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import native from "../../../../design/components/experimental/native.tsx";
+import useStateFromSharedValue from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

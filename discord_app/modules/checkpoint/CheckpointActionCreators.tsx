@@ -9,8 +9,8 @@ import CheckpointStore from "CheckpointStore.tsx";
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
+  if (c6 === 2) {
+    c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp6 === 3) {
     if (arg0 === 1) {
@@ -23,75 +23,90 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
     }
   } else {
     try {
-      c5 = 2;
-      if (0 === c4) {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          c5 = 3;
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
+          c6 = 3;
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = closure_0;
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = closure_0;
           let body;
           let compact_assets;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
           CheckpointStore.initializeIfNeeded();
           if (CheckpointStore.isFetching) {
-            c5 = 3;
+            c6 = 3;
             const obj8 = { value: constants.FETCHING, done: true };
             return obj8;
           } else {
             DispatcherDefault.dispatch({ type: "CHECKPOINT_FETCH_START" });
-            c3 = 1;
+            c4 = 1;
             const HTTP = HTTPUtils.HTTP;
             const obj10 = { url: constants2.CHECKPOINT, rejectWithError: true };
-            c4 = 2;
-            c5 = 1;
+            c5 = 2;
+            c6 = 1;
             const obj12 = { value: HTTP.get(obj10), done: false };
             return obj12;
           }
         }
       } else if (1 === tmp7) {
-        c3 = 0;
-        closure_130_1(closure_130_2[4]).dispatch({ type: "CHECKPOINT_FETCH_FAILED" });
-        c5 = 3;
-        const obj13 = { value: closure_130_6.ERROR, done: true };
+        c4 = 0;
+        closure_131_1(closure_131_2[4]).dispatch({ type: "CHECKPOINT_FETCH_FAILED" });
+        c6 = 3;
+        const obj13 = { value: closure_131_6.ERROR, done: true };
         return obj13;
       } else if (arg0 === 1) {
-        c5 = 3;
+        c6 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c3 = 0;
-        c5 = 3;
+        c4 = 0;
+        c6 = 3;
         const obj14 = { value, done: true };
         return obj14;
       } else {
         body = value.body;
         compact_assets = body.compact_assets;
-        if (null != closure_129_0) {
+        const availability = body.availability;
+        let FULL = availability;
+        if (availability == null) {
+          FULL = closure_131_0(closure_131_2[7]).CheckpointAvailability.FULL;
+        }
+        closure_130_3 = FULL;
+        let character = null;
+        if (closure_130_3 === closure_131_0(closure_131_2[7]).CheckpointAvailability.FULL) {
+          character = body.character;
+        }
+        closure_130_4 = character;
+        if (null != closure_130_0) {
           const obj15 = {
             type: "CHECKPOINT_FETCH_SUCCESS",
             stats: null,
             globalStats: null,
             character: null,
             compactAssets: null,
+            availability: null,
           };
-          const obj4 = closure_130_1(closure_130_2[4]);
-          obj15.stats = closure_130_0(closure_130_2[7]).getMockCheckpointStats(closure_129_0);
-          const obj6 = closure_130_0(closure_130_2[7]);
-          obj15.globalStats = closure_130_0(closure_130_2[8]).globalStatsFromServer(body.global_stats);
+          const obj4 = closure_131_1(closure_131_2[4]);
+          obj15.stats = closure_131_0(closure_131_2[8]).getMockCheckpointStats(closure_130_0);
+          const obj6 = closure_131_0(closure_131_2[8]);
+          obj15.globalStats = closure_131_0(closure_131_2[9]).globalStatsFromServer(body.global_stats);
           obj15.compactAssets = compact_assets;
+          obj15.availability = closure_130_3;
           obj4.dispatch(obj15);
-          const SUCCESS2 = closure_130_6.SUCCESS;
-          const obj7 = closure_130_0(closure_130_2[8]);
+          const SUCCESS2 = closure_131_6.SUCCESS;
+          const obj7 = closure_131_0(closure_131_2[9]);
         } else {
           let statsFromServerResult = null;
           if (null != body.stats) {
-            statsFromServerResult = closure_130_0(closure_130_2[8]).statsFromServer(body.stats);
-            const obj = closure_130_0(closure_130_2[8]);
+            statsFromServerResult = closure_131_0(closure_131_2[9]).statsFromServer(body.stats);
+            const obj = closure_131_0(closure_131_2[9]);
           }
           const obj16 = {
             type: "CHECKPOINT_FETCH_SUCCESS",
@@ -99,24 +114,26 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
             globalStats: null,
             character: null,
             compactAssets: null,
+            availability: null,
           };
-          const obj17 = closure_130_1(closure_130_2[4]);
-          obj16.globalStats = closure_130_0(closure_130_2[8]).globalStatsFromServer(body.global_stats);
-          obj16.character = body.character;
+          const obj17 = closure_131_1(closure_131_2[4]);
+          obj16.globalStats = closure_131_0(closure_131_2[9]).globalStatsFromServer(body.global_stats);
+          obj16.character = closure_130_4;
           obj16.compactAssets = compact_assets;
+          obj16.availability = closure_130_3;
           obj17.dispatch(obj16);
-          const SUCCESS = closure_130_6.SUCCESS;
-          const obj3 = closure_130_0(closure_130_2[8]);
+          const SUCCESS = closure_131_6.SUCCESS;
+          const obj3 = closure_131_0(closure_131_2[9]);
         }
-        c3 = 0;
-        c5 = 3;
+        c4 = 0;
+        c6 = 3;
       }
-    } catch (tmp48) {
-      if (tmp4 === c3) {
-        c5 = tmp2;
-        throw tmp48;
+    } catch (tmp64) {
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp64;
       } else {
-        c4 = tmp;
+        c5 = tmp;
       }
     }
   }
@@ -271,8 +288,8 @@ let closure_11 = async function _sendSidekickMessage() {
     const error = new Error("Failed to open private channel");
     throw error;
   }
-  closure_130_4 = closure_131_1(closure_131_2[10]).parse(channel, closure_130_0);
-  await closure_131_1(closure_131_2[11]).sendMessage(channel.id, closure_130_4, false, {
+  closure_130_4 = closure_131_1(closure_131_2[11]).parse(channel, closure_130_0);
+  await closure_131_1(closure_131_2[12]).sendMessage(channel.id, closure_130_4, false, {
     location: "checkpoint-sidekick",
   });
   closure_130_5 = value;
@@ -330,7 +347,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
           let obj5 = { value, done: true };
           return obj5;
         } else {
-          closure_133_2 = value.filter(closure_134_0(closure_134_2[13]).isNotNullish);
+          closure_133_2 = value.filter(closure_134_0(closure_134_2[14]).isNotNullish);
           let _Promise = Promise;
           c9 = 2;
           c10 = 1;
@@ -339,10 +356,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
               closure_133_2.map((item) => {
                 channel = channel.getChannel(item);
                 if (null != channel) {
-                  const obj = checkpointCardType(7715);
+                  const obj = checkpointCardType(8593);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(7904).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(8720).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),
@@ -383,7 +400,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(13681).CheckpointFetchStates;
+const CheckpointFetchStates = fn(14150).CheckpointFetchStates;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

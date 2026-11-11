@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import _modDef2696 from "../GuildPowerups.messages.js";
+import _modDef2717 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import GuildPowerupsActionCreators from "../GuildPowerupsActionCreators.tsx";
 import useHasAllocateBoostPermissionDefault from "../hooks/useHasAllocateBoostPermission.tsx";
+import GuildPowerupsActionCreators from "../GuildPowerupsActionCreators.tsx";
 import useMarketablePowerupPerksDefault from "../hooks/useMarketablePowerupPerks.tsx";
 import orderMarketablePerksForDisplayDefault from "../utils/orderMarketablePerksForDisplay.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ function PerkText(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef671("#000000");
@@ -74,13 +74,13 @@ export default function GuildPowerupsMarketingHeader(guild) {
             obj4.perk1 = <PerkText powerup={first[0]} />;
             const obj6 = { powerup: first[1] };
             obj4.perk2 = <PerkText powerup={first[1]} />;
-            formatResult = intl2.format(_modDef2696.MNO3sG, obj4);
+            formatResult = intl2.format(_modDef2717.MNO3sG, obj4);
           }
         }
       }
       const obj7 = { perks: str2 };
-      obj2.children = intl.format(_modDef2696["7lwpzR"], obj7);
-      obj.children = jsx(guild(5753).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
+      obj2.children = intl.format(_modDef2717["7lwpzR"], obj7);
+      obj.children = jsx(guild(5866).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

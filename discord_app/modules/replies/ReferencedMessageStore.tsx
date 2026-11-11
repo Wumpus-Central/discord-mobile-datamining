@@ -184,7 +184,7 @@ prototype2["has"] = function has(arg0, arg1) {
 prototype2["get"] = function get(arg0, arg1) {
   const _channelCaches = this._channelCaches;
   value = _channelCaches.get(arg0);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(arg1);
   }

@@ -44,7 +44,7 @@ function PrimaryActionButton(onPressApply) {
     const intl = tmp2(1113).intl;
     obj4.text = intl.string(tmp2(1113).t["1Qm822"]);
     obj4.onPress = onPressApply.onPressApply;
-    tmp6 = closure_12(tmp2(5760).Button, obj4);
+    tmp6 = closure_12(tmp2(5873).Button, obj4);
   }
   return tmp6;
 }
@@ -55,7 +55,7 @@ const AnalyticEvents = fn(1072).AnalyticEvents;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   contentWrapper: { paddingHorizontal: 43.5, paddingVertical: 12 },
   centeredText: { textAlign: "center" },
@@ -75,7 +75,7 @@ export default function _default(message) {
   let tmp4;
   if (undefined !== sharedClientTheme) {
     let obj4 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-    let colors = sharedClientTheme.colors;
+    colors = sharedClientTheme.colors;
     obj4.colors = colors.map((item) => "#" + item);
     obj4.gradientColorStops = [];
     ({ gradient_angle: obj2.gradientAngle, base_mix: obj2.baseMix } = sharedClientTheme);
@@ -95,7 +95,7 @@ export default function _default(message) {
     let tmp4;
     if (undefined !== sharedClientTheme) {
       const obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-      const colors = sharedClientTheme.colors;
+      colors = sharedClientTheme.colors;
       obj.colors = colors.map((item) => "#" + item);
       obj.gradientColorStops = [];
       ({ gradient_angle: obj.gradientAngle, base_mix: obj.baseMix } = sharedClientTheme);

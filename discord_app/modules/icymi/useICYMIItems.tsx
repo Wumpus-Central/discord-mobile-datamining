@@ -10,7 +10,7 @@ function createItem(id, type, unread, arg3, fn) {
   if (ICYMITypes.ICYMIItemTypes.MESSAGE === type) {
     if (type.message.id === type.message.channel_id) {
       if (null != type.threadChannel) {
-        const obj2 = {
+        const obj3 = {
           id: id.id,
           timestamp: null,
           channelType: null,
@@ -20,58 +20,58 @@ function createItem(id, type, unread, arg3, fn) {
           unread: null,
         };
         const _Date6 = Date;
-        obj2.timestamp = Date.now();
-        obj2.channelType = id.data.channel_type;
+        obj3.timestamp = Date.now();
+        obj3.channelType = id.data.channel_type;
         ({ message: obj11.message, threadChannel: obj11.threadChannel } = type);
-        obj2.data = { kind: "forumThread", message: null, threadChannel: null };
-        obj2.score = id.score;
+        obj3.data = { kind: "forumThread", message: null, threadChannel: null };
+        obj3.score = id.score;
         const _JSON6 = JSON;
-        obj2.debugScore = JSON.stringify(id.score_components);
-        obj2.unread = unread;
-        let obj4 = obj2;
-        const obj3 = { kind: "forumThread", message: null, threadChannel: null };
+        obj3.debugScore = JSON.stringify(id.score_components);
+        obj3.unread = unread;
+        let obj5 = obj3;
+        const obj4 = { kind: "forumThread", message: null, threadChannel: null };
       }
-      return obj4;
+      return obj5;
     }
-    obj4 = { id: id.id, timestamp: null, channelType: null, data: null, score: null, debugScore: null, unread: null };
+    obj5 = { id: id.id, timestamp: null, channelType: null, data: null, score: null, debugScore: null, unread: null };
     const _Date5 = Date;
-    obj4.timestamp = Date.now();
-    obj4.channelType = id.data.channel_type;
-    const obj5 = {
+    obj5.timestamp = Date.now();
+    obj5.channelType = id.data.channel_type;
+    const obj6 = {
       kind: "message",
       message: type.message,
       mentioned: id.data.has_mention,
       messageContext: id.data.message_context,
     };
-    obj4.data = obj5;
-    obj4.score = id.score;
+    obj5.data = obj6;
+    obj5.score = id.score;
     const _JSON5 = JSON;
-    obj4.debugScore = JSON.stringify(id.score_components);
-    obj4.unread = unread;
+    obj5.debugScore = JSON.stringify(id.score_components);
+    obj5.unread = unread;
   } else {
     if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
       if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
         if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT === type) {
-          const obj6 = { id: id.id, timestamp: null, data: null, score: null, debugScore: null, unread: null };
+          const obj7 = { id: id.id, timestamp: null, data: null, score: null, debugScore: null, unread: null };
           const _Date3 = Date;
-          obj6.timestamp = Date.now();
-          const obj7 = { kind: "guildEvent", eventId: type.event_id };
-          obj6.data = obj7;
-          obj6.score = id.score;
+          obj7.timestamp = Date.now();
+          const obj8 = { kind: "guildEvent", eventId: type.event_id };
+          obj7.data = obj8;
+          obj7.score = id.score;
           const _JSON3 = JSON;
-          obj6.debugScore = JSON.stringify(id.score_components);
-          obj6.unread = unread;
-          return obj6;
+          obj7.debugScore = JSON.stringify(id.score_components);
+          obj7.unread = unread;
+          return obj7;
         } else if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
-          const obj8 = { id: id.id, timestamp: null, data: null, score: null, debugScore: null, unread: null };
+          const obj9 = { id: id.id, timestamp: null, data: null, score: null, debugScore: null, unread: null };
           const _Date2 = Date;
-          obj8.timestamp = Date.now();
-          obj8.data = { kind: "recommendedGuilds" };
-          obj8.score = id.score;
+          obj9.timestamp = Date.now();
+          obj9.data = { kind: "recommendedGuilds" };
+          obj9.score = id.score;
           const _JSON2 = JSON;
-          obj8.debugScore = JSON.stringify(id.score_components);
-          obj8.unread = unread;
-          return obj8;
+          obj9.debugScore = JSON.stringify(id.score_components);
+          obj9.unread = unread;
+          return obj9;
         } else if (ICYMITypes.ICYMIItemTypes.DISCOVER_ITEM === type) {
           let tmp6 = null;
           if (arg3) {
@@ -84,13 +84,14 @@ function createItem(id, type, unread, arg3, fn) {
               const obj = { id: id.id, timestamp: null, data: null, score: null, debugScore: null, unread: null };
               const _Date = Date;
               obj.timestamp = Date.now();
-              const obj9 = { kind: "waterwheelsItem", card: type.card };
-              obj.data = obj9;
+              ({ card: obj2.card, brokerPosition: obj2.brokerPosition } = type);
+              obj.data = { kind: "waterwheelsItem", card: null, brokerPosition: null };
               obj.score = id.score;
               const _JSON = JSON;
               obj.debugScore = JSON.stringify(id.score_components);
               obj.unread = unread;
               tmp6 = obj;
+              const obj10 = { kind: "waterwheelsItem", card: null, brokerPosition: null };
             }
           }
           return tmp6;
@@ -99,16 +100,16 @@ function createItem(id, type, unread, arg3, fn) {
         }
       }
     }
-    const obj10 = { id: id.id, timestamp: null, data: null, score: null, debugScore: null, unread: null };
+    const obj21 = { id: id.id, timestamp: null, data: null, score: null, debugScore: null, unread: null };
     const _Date4 = Date;
-    obj10.timestamp = Date.now();
-    const obj21 = { kind: "contentInventory", content: type.activity };
-    obj10.data = obj21;
-    obj10.score = id.score;
+    obj21.timestamp = Date.now();
+    const obj22 = { kind: "contentInventory", content: type.activity };
+    obj21.data = obj22;
+    obj21.score = id.score;
     const _JSON4 = JSON;
-    obj10.debugScore = JSON.stringify(id.score_components);
-    obj10.unread = unread;
-    return obj10;
+    obj21.debugScore = JSON.stringify(id.score_components);
+    obj21.unread = unread;
+    return obj21;
   }
 }
 const size = fn(2);
@@ -121,8 +122,8 @@ export default function useICYMIItems() {
   }
   const isWaterwheelsCardEligible = obj.isWaterwheelsCardEligible;
   let stateFromStores1;
-  const waterwheelsDiscoverEnabled = stateFromStores1(9006).useWaterwheelsDiscoverEnabled("icymi_items");
-  const obj2 = stateFromStores1(9006);
+  const waterwheelsDiscoverEnabled = stateFromStores1(10147).useWaterwheelsDiscoverEnabled("icymi_items");
+  const obj2 = stateFromStores1(10147);
   items = [ICYMIStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => ICYMIStore.getUnreadDisplayItems());
   const obj3 = stateFromStores1(504);
@@ -164,7 +165,7 @@ export default function useICYMIItems() {
           let tmp10 = stateFromStoresObject[tmp7.id];
           let tmp11 = null == tmp10;
           if (tmp11) {
-            tmp11 = tmp7.type === stateFromStores1(8999).ICYMIItemTypes.MESSAGE;
+            tmp11 = tmp7.type === stateFromStores1(10142).ICYMIItemTypes.MESSAGE;
           }
           if (tmp11) {
             let message_context = tmp7.data.message_context;
@@ -211,7 +212,7 @@ export default function useICYMIItems() {
           let tmp27 = stateFromStoresObject[tmp24.id];
           let tmp28 = null == tmp27;
           if (tmp28) {
-            tmp28 = tmp24.type === stateFromStores1(8999).ICYMIItemTypes.MESSAGE;
+            tmp28 = tmp24.type === stateFromStores1(10142).ICYMIItemTypes.MESSAGE;
           }
           if (tmp28) {
             let message_context2 = tmp24.data.message_context;

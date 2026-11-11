@@ -7,9 +7,9 @@ import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAre
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import FreeFormInputGroupDefault from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import GuildPromptsActionCreatorsDefault from "../../../guild/GuildPromptsActionCreators.tsx";
 import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -146,12 +146,12 @@ function GuildDirectoryNicknameUpsell(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const GuildPrompts = fn(14490).GuildPrompts;
+const GuildPrompts = fn(14864).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
-  container: { flex: 1, flexGrow: 2, marginTop: fn(5716).NAV_BAR_HEIGHT },
+  container: { flex: 1, flexGrow: 2, marginTop: fn(5829).NAV_BAR_HEIGHT },
   guildIcon: { alignSelf: "center", marginTop: 16 },
   title: { marginBottom: 8, textAlign: "center" },
   description: { textAlign: "center" },
@@ -161,7 +161,7 @@ let obj2 = {
   redesignGrowSpacing: null,
   redesignButtonContainer: null,
 };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5716).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5829).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };

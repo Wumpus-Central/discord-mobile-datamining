@@ -2,8 +2,8 @@
 import util from "../../../../../intl/index.native.tsx";
 import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
 import ActivityTypes from "../../../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
-import isStreamingDefault from "../../../../activities/utils/isStreaming.tsx";
 import getChannelA11yLabelDefault from "../../../../channel/getChannelA11yLabel.tsx";
+import isStreamingDefault from "../../../../activities/utils/isStreaming.tsx";
 import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
 import HappeningNowCard from "HappeningNowCard.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_6 = createStyles.createStyles({
   cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" },
 });
@@ -35,7 +35,7 @@ export function HappeningNowVoiceCardSubtitle(voiceState) {
     const obj3 = { channel: stateFromStores };
     tmp8 = getChannelA11yLabelDefault(obj3);
   }
-  obj2.children = jsx(voiceState(17636).HappeningNowCardSubtitle, {
+  obj2.children = jsx(voiceState(17801).HappeningNowCardSubtitle, {
     lineClamp: 1,
     accessibilityLabel: tmp8,
     children: useChannelNameDefault(stateFromStores),

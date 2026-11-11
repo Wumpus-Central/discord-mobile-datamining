@@ -3,12 +3,12 @@ import util from "../../intl/index.native.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import utils from "../content_classification/utils.tsx";
-import useGame2 from "../games/hooks/useGame.tsx";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes.tsx";
 import GameWidgetLimits from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import UserProfilePersonalWidget from "UserProfilePersonalWidget.tsx";
 import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes.tsx";
+import useGame2 from "../games/hooks/useGame.tsx";
 import WidgetActionCreatorsDefault from "WidgetActionCreators.tsx";
 import WidgetGameTag from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -83,9 +83,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7855).WIDGET_TITLES_BY_TYPE;
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
-let closure_9 = fn(12564).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(7291).WIDGET_TITLES_BY_TYPE;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
+let closure_9 = fn(12031).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

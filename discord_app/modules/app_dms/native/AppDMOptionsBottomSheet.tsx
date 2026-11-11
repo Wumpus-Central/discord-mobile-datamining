@@ -1,8 +1,8 @@
 // discord_app/modules/app_dms/native/AppDMOptionsBottomSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
+import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   content: { paddingLeft: 16, paddingRight: 16, paddingBottom: 24 },

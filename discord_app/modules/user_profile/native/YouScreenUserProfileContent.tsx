@@ -2,16 +2,16 @@
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import UserProfileAvatarDefault from "UserProfileAvatar.tsx";
-import Tracking from "../../main_tabs_v2/native/tabs/you/tracking/Tracking.tsx";
 import getRandomCustomStatusPromptDefault from "../../custom_status/utils/getRandomCustomStatusPrompt.tsx";
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
+import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import BadgeManagementExperiment from "../../badges/BadgeManagementExperiment.tsx";
+import Tracking from "../../main_tabs_v2/native/tabs/you/tracking/Tracking.tsx";
+import CustomTypingIndicatorExperiment from "../../custom_typing_indicator/CustomTypingIndicatorExperiment.tsx";
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import useCanOpenBadgeDirectoryFromProfile from "../../badges/native/useCanOpenBadgeDirectoryFromProfile.tsx";
 import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard.tsx";
-import CustomTypingIndicatorExperiment from "../../custom_typing_indicator/CustomTypingIndicatorExperiment.tsx";
 import UserProfileActivityDefault from "UserProfileActivity.tsx";
 import UserProfileNoteDefault from "UserProfileNote.tsx";
 import useBadgeDirectoryNuxCoachmarkVariant from "../../badges/native/useBadgeDirectoryNuxCoachmarkVariant.tsx";
@@ -320,14 +320,14 @@ function YouScreenPrimaryInfoSection(arg0) {
   obj10.onSeeChallenges = tmp4Result6.useOpenOrbWalletFromYouScreen().openOrbWallet;
   items2[4] = state(tmpResult4, obj10);
   obj6.children = items2;
-  return closure_1_15(View, obj6);
+  return colors(View, obj6);
 }
 const View = fn(17).View;
-const useIsContentShown = fn(4983).useIsContentShown;
-const UserProfileSections = fn(8831).UserProfileSections;
-let UserProfileThemeTypes = fn(7440).UserProfileThemeTypes;
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
-let closure_12 = fn(16786).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(5084).useIsContentShown;
+const UserProfileSections = fn(8413).UserProfileSections;
+let UserProfileThemeTypes = fn(7896).UserProfileThemeTypes;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
+let closure_12 = fn(16947).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const size = fn(2);
@@ -514,7 +514,7 @@ export default function YouScreenUserProfileContent(user) {
     items2[8] = state(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
     items2[9] = state(UserProfileNoteDefault, { userId: user.id });
     obj2.children = items2;
-    return closure_2_15(View, obj2);
+    return colors(View, obj2);
   }, items7);
   const items8 = [
     tmp3.profileContent,
@@ -548,7 +548,7 @@ export default function YouScreenUserProfileContent(user) {
     obj3.containerWidth = tmp15;
     items[1] = tmp4(UserProfileWishlistSuggestionsGridDefault, obj3);
     obj.children = items;
-    return closure_2_15(View, obj);
+    return colors(View, obj);
   }, items8);
   const items9 = [
     callback3,

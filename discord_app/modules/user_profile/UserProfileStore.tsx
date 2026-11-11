@@ -615,7 +615,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "channelId",
+      fetchError: "add",
     };
     value4 = obj;
   }
@@ -803,7 +803,7 @@ function resetProfileFetch(id) {
       value.fetchStartedAt = 0;
       value.fetchEndedAt = 0;
       value.fetchError = undefined;
-      value2 = map2.get(id);
+      const value2 = map2.get(id);
       if (null != value2) {
         const values = value2.values();
         for (const item10012 of values) {
@@ -926,7 +926,7 @@ prototype["getGuildMemberProfile"] = function getGuildMemberProfile(id, guildId)
   let tmp = null;
   if (null != guildId) {
     value = map2.get(id);
-    value2 = undefined;
+    let value2;
     if (value != null) {
       value2 = value.get(guildId);
     }

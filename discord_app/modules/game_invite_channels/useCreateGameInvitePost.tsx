@@ -1,6 +1,6 @@
 // discord_app/modules/game_invite_channels/useCreateGameInvitePost.tsx
-import GameInvitesChannelUtils from "GameInvitesChannelUtils.tsx";
 import getCurrentUserPresenceActivityDefault from "../activities/utils/getCurrentUserPresenceActivity.tsx";
+import GameInvitesChannelUtils from "GameInvitesChannelUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -9,9 +9,9 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import SlowmodeStore from "../../stores/SlowmodeStore.tsx";
 
 require = fn;
-const SlowmodeType = fn(7910).SlowmodeType;
+const SlowmodeType = fn(8726).SlowmodeType;
 const ActivityActionTypes = fn(1072).ActivityActionTypes;
-const ChannelFlags = fn(4998).ChannelFlags;
+const ChannelFlags = fn(5099).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");
 

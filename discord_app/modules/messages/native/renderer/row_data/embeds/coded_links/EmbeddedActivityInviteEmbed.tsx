@@ -2,10 +2,10 @@
 import DispatcherDefault from "../../../../../../../Dispatcher.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
 import useChannelName from "../../../../../../channel/useChannelName.tsx";
-import InviteTargetTypes from "../../../../../../../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
-import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
-import utils_ChannelUtils from "../../../../../../../utils/native/ChannelUtils.tsx";
 import ApplicationAssetUtils from "../../../../../../../utils/ApplicationAssetUtils.tsx";
+import InviteTargetTypes from "../../../../../../../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
+import utils_ChannelUtils from "../../../../../../../utils/native/ChannelUtils.tsx";
+import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris.tsx";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__.js";
 import EmbeddedActivitiesStore from "../../../../../../activities/EmbeddedActivitiesStore.tsx";
@@ -19,8 +19,8 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(8799).FetchState;
-const CodedLinkExtendedType = fn(10244).CodedLinkExtendedType;
+const FetchState = fn(7250).FetchState;
+const CodedLinkExtendedType = fn(11831).CodedLinkExtendedType;
 let closure_15 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting(

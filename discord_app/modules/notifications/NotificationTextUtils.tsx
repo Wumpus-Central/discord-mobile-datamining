@@ -15,10 +15,10 @@ import AgeGateUtils from "../age_gate/AgeGateUtils.tsx";
 import isChannelFocused from "../panels/isChannelFocused.native.tsx";
 import isSystemMessageDefault from "../messages/isSystemMessage.tsx";
 import ThreadNotificationSettings from "../threads/ThreadNotificationSettings.tsx";
+import getDisplayFilenameDefault from "../messages/getDisplayFilename.tsx";
 import MessageParserDefault from "../messages/MessageParser.tsx";
 import IsolateString from "../bidi/IsolateString.tsx";
 import SystemMessageUtilsDefault from "../../utils/SystemMessageUtils.tsx";
-import getDisplayFilenameDefault from "../messages/getDisplayFilename.tsx";
 import ChannelVisibilityUtils from "../channel/ChannelVisibilityUtils.tsx";
 import FocusModeUtils from "FocusModeUtils.tsx";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
@@ -161,7 +161,7 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
     return _TD0la;
   }
 }
-const ChannelRecord = fn(4995);
+const ChannelRecord = fn(5096);
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
 const Constants = fn(1072);
 ({
@@ -173,7 +173,7 @@ const Constants = fn(1072);
   StatusTypes: closure_26,
   UserFlags: closure_27,
 } = Constants);
-const ActivityPanelModes = fn(5783).ActivityPanelModes;
+const ActivityPanelModes = fn(5896).ActivityPanelModes;
 const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");

@@ -16,9 +16,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4997).GuildScheduledEventEntityTypes;
+let closure_8 = fn(5098).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -76,7 +76,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
           return { value: "HermesInternal", done: null };
         } else {
           if (!closure_128_5) {
-            const AccessibilityAnnouncer = tmp4(5151).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = tmp4(5252).AccessibilityAnnouncer;
             const intl = tmp4(1113).intl;
             AccessibilityAnnouncer.announce(intl.string(tmp4(1113).t["5HzXO5"]));
             closure_128_1();
@@ -86,7 +86,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
               id = closure_128_2.id;
             }
           }
-          const AccessibilityAnnouncer2 = tmp4(5151).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer2 = tmp4(5252).AccessibilityAnnouncer;
           const intl2 = tmp4(1113).intl;
           AccessibilityAnnouncer2.announce(intl2.string(tmp4(1113).t["F9On+q"]));
         }

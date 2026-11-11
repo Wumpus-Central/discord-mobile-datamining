@@ -493,7 +493,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUnknownFields) {
-  let length;
   let length2;
   let length3;
   let length4;
@@ -1457,7 +1456,6 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype5["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUnknownFields) {
-  let length;
   if (0 !== id.id) {
     tag.tag(1, _mod1197.WireType.Varint).int32(id.id);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -2242,7 +2240,6 @@ prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype11["internalBinaryWrite"] = function internalBinaryWrite(status, tag, writeUnknownFields) {
-  let length;
   if (0 !== status.status) {
     tag.tag(1, _mod1197.WireType.Varint).int32(status.status);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -2426,7 +2423,6 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype12["internalBinaryWrite"] = function internalBinaryWrite(status, tag, writeUnknownFields) {
-  let length;
   if (0 !== status.status) {
     tag.tag(1, _mod1197.WireType.Varint).int32(status.status);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -2638,7 +2634,6 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype13["internalBinaryWrite"] = function internalBinaryWrite(variationBuckets, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < variationBuckets.variationBuckets.length) {
     do {
@@ -2867,7 +2862,6 @@ prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype14["internalBinaryWrite"] = function internalBinaryWrite(variationId, tag, writeUnknownFields) {
-  let length;
   if (0 !== variationId.variationId) {
     tag.tag(1, _mod1197.WireType.Varint).int32(variationId.variationId);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);

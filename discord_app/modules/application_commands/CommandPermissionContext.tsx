@@ -57,8 +57,8 @@ function computePermissions(isPrivate, arg1) {
   obj2.computedPermissions = deserializer.deserialize(0);
   return obj2;
 }
-const ChannelRecordBase = fn(4995).ChannelRecordBase;
-const isGuildNSFW = fn(5009).isGuildNSFW;
+const ChannelRecordBase = fn(5096).ChannelRecordBase;
+const isGuildNSFW = fn(5110).isGuildNSFW;
 const Constants = fn(1072);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);

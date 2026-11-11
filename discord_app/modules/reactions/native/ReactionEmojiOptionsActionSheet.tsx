@@ -5,9 +5,9 @@ import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import ReactionActionCreatorsAll from "../ReactionActionCreators.tsx";
-import EmojiActionCreators from "../../../actions/EmojiActionCreators.tsx";
 import StarOutlineIcon from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
 import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import EmojiActionCreators from "../../../actions/EmojiActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
@@ -15,11 +15,11 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiSourceDataTypes = fn(7024).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(7655).EmojiSourceDataTypes;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 },
   reactionPill: null,

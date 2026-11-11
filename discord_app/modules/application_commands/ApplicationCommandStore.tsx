@@ -140,7 +140,7 @@ function handleUpdateOptionStates(channelId) {
           _location = arr2.location;
         }
         obj2.location = _location;
-        let length = arr.length;
+        length = arr.length;
         if (length == null) {
           length = arr2.length;
         }

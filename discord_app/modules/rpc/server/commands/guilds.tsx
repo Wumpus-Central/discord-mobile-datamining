@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/server/commands/guilds.tsx
 import GuildRecord from "../../../../records/GuildRecord.tsx";
 import Constants2 from "../../Constants.tsx";
-import OAuth2Scopes from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import botScopedAccess from "../../helpers/botScopedAccess.tsx";
+import OAuth2Scopes from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";

@@ -62,7 +62,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -122,6 +122,8 @@ let closure_9 = createStyles.createStyles(() => {
     leadingIcon: null,
     trailingIcon: null,
     splitBorder: null,
+    leadingDivider: null,
+    leadingDividerText: null,
   };
   obj8.flexGrow = num3;
   const obj7 = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 + 2 };
@@ -142,7 +144,7 @@ let closure_9 = createStyles.createStyles(() => {
   const obj12 = {};
   const merged = Object.assign(Text_Text.TextStyleSheet[str2]);
   obj12.lineHeight = undefined;
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   obj12.color = flag ? colors.TEXT_MUTED : colors.TEXT_DEFAULT;
   obj12.flexGrow = 1;
   obj9.text = obj12;
@@ -189,9 +191,20 @@ let closure_9 = createStyles.createStyles(() => {
   obj15.borderRightWidth = 1;
   obj15.borderRightColor = nativeDefault.colors.BORDER_STRONG;
   obj9.splitBorder = obj15;
+  const rect = {
+    top: 0,
+    bottom: 0,
+    justifyContent: "center",
+    paddingVertical: 0,
+    paddingEnd: tmp6.paddingHorizontal,
+    borderRightWidth: 1,
+    borderRightColor: nativeDefault.colors.BORDER_STRONG,
+  };
+  obj9.leadingDivider = rect;
+  obj9.leadingDividerText = { flexGrow: 0 };
   return obj9;
 });
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_10 = createStyles.createStyleProperties({
   error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT,
   default: "transparent",

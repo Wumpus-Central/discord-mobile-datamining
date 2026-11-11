@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(8946);
+const Constants = fn(10126);
 ({
   THUMBNAIL_MARGIN: hasOwnProperty,
   THUMBNAIL_HEIGHT: closure_6,
@@ -321,7 +321,7 @@ export function useMediaViewerSyncer(sources) {
             }
             let tmp11 = "thumbnails" === _undefined4.get() && tmp10;
             if (tmp11) {
-              value2 = _undefined6.get();
+              const value2 = _undefined6.get();
               tmp11 = value2 !== _undefined8.get();
             }
             if (tmp11) {
@@ -581,7 +581,7 @@ export function useMediaViewerSyncer(sources) {
               value = _undefined2.get();
             } else {
               const obj = {};
-              value2 = _undefined2.get();
+              const value2 = _undefined2.get();
               const merged = Object.assign(c3);
               obj.overshootClamping = true;
               value = _undefined3(value2, obj);

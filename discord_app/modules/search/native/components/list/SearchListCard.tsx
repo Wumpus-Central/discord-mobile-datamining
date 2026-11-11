@@ -103,7 +103,7 @@ class SearchListGuildChannel {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   channelName: { flexShrink: 1, marginStart: 4 },
   channelIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },

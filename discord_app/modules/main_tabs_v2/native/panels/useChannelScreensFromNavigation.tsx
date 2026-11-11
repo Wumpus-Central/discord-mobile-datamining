@@ -21,7 +21,7 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
       }
       if (index == null) {
         state2 = coerceTabsRouteResult.state;
-        let length;
+        length = undefined;
         if (state2 != null) {
           length = state2.routes.length;
         }
@@ -165,7 +165,7 @@ function resolveChannelScreens(state, isChatLockedOpen) {
   return tmp8;
 }
 const ME = fn(1072).ME;
-const isStaticChannelRoute = fn(4998).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5099).isStaticChannelRoute;
 const ChannelScreenType = {
   DEFAULT: 0,
   [0]: "DEFAULT",
@@ -255,7 +255,7 @@ export default function useChannelScreensFromNavigation(arg0) {
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(5319).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(5432).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {

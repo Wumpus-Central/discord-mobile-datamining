@@ -98,7 +98,7 @@ prototype["putWithGeneration"] = function putWithGeneration(arg0, arg1, data, ge
   return table.put(obj, Replace);
 };
 prototype["delete"] = function delete(arg0, arg1) {
-  const length = arguments.length;
+  length = arguments.length;
   const self = this;
   if (0 === length) {
     const table3 = self.table;
@@ -186,7 +186,7 @@ prototype2["putWithGeneration"] = function putWithGeneration(arg0, arg1, data, g
   return state.put(obj, Replace);
 };
 prototype2["delete"] = function delete(arg0, arg1) {
-  const length = arguments.length;
+  length = arguments.length;
   const self = this;
   if (0 === length) {
     const state3 = self.state;

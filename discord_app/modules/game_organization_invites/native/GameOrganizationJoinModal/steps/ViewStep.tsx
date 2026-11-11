@@ -5,11 +5,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const constants = fn(11513).GameOrganizationCharacterMode;
-let closure_6 = fn(13460).GameOrganizationJoinScenes;
+const constants = fn(12280).GameOrganizationCharacterMode;
+let closure_6 = fn(13974).GameOrganizationJoinScenes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_9 = createStyles.createStyles({ text: { textAlign: "center" }, inlineStack: { width: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -53,7 +53,7 @@ export function ViewStep(code) {
     const obj2 = { displayNoun: tmp5.displayNoun, lowercase: true };
     const tmp14 = tmp4(tmp3[9])(obj2);
     const obj3 = { spacing: tmp4(tmp3[13]).space.PX_48, children: null };
-    const obj4 = { spacing: tmp4(tmp3[13]).space.PX_24, children: null };
+    const obj4 = { spacing: tmp4(tmp3[13]).space.PX_8, children: null };
     const obj5 = { spacing: tmp4(tmp3[13]).space.PX_16, align: "center", children: null };
     const obj6 = { iconUrl: organization.iconUrl, size: 64 };
     items = [closure_7(tmp4(tmp3[14]), obj6)];

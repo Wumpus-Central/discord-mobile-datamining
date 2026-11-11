@@ -4,7 +4,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = fn;
 const DisplayNameStylesConstants = fn(1394);
 ({ FONT_ORDER: c3, HEXAGON_CAMPAIGN_FONTS: closure_4 } = DisplayNameStylesConstants);
-const HexagonCampaignConstants = fn(5167);
+const HexagonCampaignConstants = fn(5268);
 ({ HexagonCampaignPerk: hasOwnProperty, HexagonCampaignPerkAvailability: closure_6 } = HexagonCampaignConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFontOrder.tsx");
@@ -19,7 +19,7 @@ export function useVisibleFontOrder(arg0) {
     flag = false;
   }
   flag = undefined;
-  flag(5170);
+  flag(5273);
   if (flag) {
     flag = tmp2 !== constants.HIDDEN;
   }

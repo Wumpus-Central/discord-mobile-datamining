@@ -10,3 +10,6 @@ export function setInterestPickerPicks(gameIds) {
 export function markInterestPickerSeen() {
   DispatcherDefault.dispatch({ type: "WATERWHEELS_INTEREST_PICKER_SEEN" });
 }
+export function setInterestPickerOpen(open) {
+  DispatcherDefault.dispatch({ type: "WATERWHEELS_INTEREST_PICKER_OPEN_CHANGE", open });
+}

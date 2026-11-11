@@ -30,14 +30,14 @@ export default function useNameplateSections() {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(563);
-  return first(15369)(
+  return first(15409)(
     useMemo(() => {
       let obj = CollectiblesUtils;
       const nameplates = obj.getNameplates(stateFromStores, first);
       const reduced = nameplates.reduce(
         (premium_purchase, skuId) => {
           value = closure_1_0.get(skuId.skuId);
-          value2 = closure_1_2.get(skuId.skuId);
+          const value2 = closure_1_2.get(skuId.skuId);
           if (null != value) {
             let result = stateFromStores(closure_2[5]).isPremiumCollectiblesPurchase(value);
             obj2 = stateFromStores(closure_2[5]);

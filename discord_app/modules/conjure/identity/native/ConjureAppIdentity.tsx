@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/identity/native/ConjureAppIdentity.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import ImagePickerDefault from "../../../image/native/ImagePicker.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -288,7 +288,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { nameRow: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16 }, tileFrame: { alignSelf: "flex-start" }, tile: { padding: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" }, tileEmpty: { borderStyle: "dashed" }, tileImage: { width: "100%", height: "100%" }, editIcon: null, nameField: null };
 const rect = { position: "absolute", top: -nativeDefault.space.PX_4, right: -nativeDefault.space.PX_4, pointerEvents: "none" };
 obj2.editIcon = rect;
@@ -323,13 +323,13 @@ export function ConjureAppIdentitySection(nameError) {
   const obj3 = { style: tmp.nameField, onLayout: callback, children: null };
   const obj4 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
   const intl = nameError(1113).intl;
-  obj4.label = intl.string(_modDef4028.GWBCF9);
+  obj4.label = intl.string(_modDef4079.GWBCF9);
   obj4.value = name;
   obj4.onChange = onNameChange;
-  obj4.maxLength = nameError(6903).MAX_PROJECT_NAME_LENGTH;
+  obj4.maxLength = nameError(6955).MAX_PROJECT_NAME_LENGTH;
   obj4.disabled = flag;
   obj4.errorMessage = nameError;
-  obj3.children = closure_7(nameError(7151).TextInput, obj4);
+  obj3.children = closure_7(nameError(7553).TextInput, obj4);
   items1[1] = closure_7(View, obj3);
   obj2.children = items1;
   const items2 = [closure_8(View, obj2), ];
@@ -337,23 +337,23 @@ export function ConjureAppIdentitySection(nameError) {
   if (null != first) {
     const obj5 = { accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "body-xs/normal", color: "text-feedback-critical", children: first };
-    obj5.children = closure_7(tmp8(5753).Text, obj6);
+    obj5.children = closure_7(tmp8(5866).Text, obj6);
     tmp12Result = closure_7(View, obj5);
   }
   const obj7 = { children: null };
   items2[1] = tmp12Result;
   obj.children = items2;
-  const items3 = [closure_8(nameError(6161).Stack, obj), ];
+  const items3 = [closure_8(nameError(6274).Stack, obj), ];
   const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = tmp8(1113).intl;
-  obj8.label = intl2.string(_modDef4028.ynaGa1);
+  obj8.label = intl2.string(_modDef4079.ynaGa1);
   const intl3 = tmp8(1113).intl;
-  obj8.placeholder = intl3.string(_modDef4028["I+3UTL"]);
+  obj8.placeholder = intl3.string(_modDef4079["I+3UTL"]);
   obj8.value = description;
   obj8.onChange = onDescriptionChange;
-  obj8.maxLength = nameError(6903).MAX_APP_DESCRIPTION_LENGTH;
+  obj8.maxLength = nameError(6955).MAX_APP_DESCRIPTION_LENGTH;
   obj8.disabled = flag;
-  items3[1] = closure_7(nameError(7319).TextArea, obj8);
+  items3[1] = closure_7(nameError(7793).TextArea, obj8);
   obj7.children = items3;
   return closure_8(closure_9, obj7);
 }

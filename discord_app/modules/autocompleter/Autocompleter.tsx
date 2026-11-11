@@ -25,8 +25,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(5072).GUILD_VOCAL_CHANNELS_KEY;
-fn(6955).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(5173).GUILD_VOCAL_CHANNELS_KEY;
+fn(7008).AutocompleterResultTypes;
 const React6 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");

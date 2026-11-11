@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/share/native/openConjureSharedProjectRemixSheet.tsx
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import ConjureRemixSheet from "../../remix/native/ConjureRemixSheet.tsx";
 import openConjureHomeScreenDefault from "../../home/native/openConjureHomeScreen.tsx";
+import ConjureRemixSheet from "../../remix/native/ConjureRemixSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ConjureRemixSheetDefault = ConjureRemixSheet;

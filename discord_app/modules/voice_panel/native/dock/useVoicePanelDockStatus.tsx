@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(19630);
+const VoicePanelDockStatusStore = fn(19819);
 ({
   releaseDockStatus: closure_11,
   initDockStatus: closure_12,
@@ -18,7 +18,7 @@ const VoicePanelDockStatusStore = fn(19630);
   setDockSpeakingIds: closure_14,
   showVoiceMoment: closure_15,
 } = VoicePanelDockStatusStore);
-const ParticipantTypes = fn(5807).ParticipantTypes;
+const ParticipantTypes = fn(5920).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockStatus.tsx");
 
@@ -87,7 +87,7 @@ export default function useVoicePanelDockStatus() {
           while (iter2 !== undefined) {
             let tmp5 = nextResult;
             if (!set.has(nextResult)) {
-              let tmp10 = closure_3_15(channelId, tmp5, "joined");
+              let tmp10 = colors(channelId, tmp5, "joined");
             }
             continue;
           }
@@ -96,7 +96,7 @@ export default function useVoicePanelDockStatus() {
           while (iter !== undefined) {
             let tmp16 = nextResult1;
             if (!set.has(nextResult1)) {
-              let tmp20 = closure_3_15(channelId, tmp16, "left");
+              let tmp20 = colors(channelId, tmp16, "left");
             }
             continue;
           }
@@ -134,7 +134,7 @@ export default function useVoicePanelDockStatus() {
           while (iter !== undefined) {
             let tmp7 = nextResult;
             if (!set.has(nextResult)) {
-              let tmp12 = closure_3_15(channelId, tmp7, "streaming");
+              let tmp12 = colors(channelId, tmp7, "streaming");
             }
             continue;
           }

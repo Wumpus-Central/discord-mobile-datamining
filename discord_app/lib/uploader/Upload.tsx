@@ -2,8 +2,8 @@
 import applyDefault from "../../../_runtime/00012_apply.js";
 import _mod568 from "../../../_runtime/metro/00568__.js";
 import v1 from "../../../_runtime/01266_v1.js";
-import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import UploadUtils from "../../utils/UploadUtils.tsx";
+import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import FileUtilsAll from "../../utils/FileUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

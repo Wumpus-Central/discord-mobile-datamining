@@ -7,7 +7,7 @@ import ConjureSubagentMark from "ConjureSubagentMark.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ConjureNativeStepImagesDefault = tmp5(12933);
+const ConjureNativeStepImagesDefault = tmp5(13605);
 require = fn;
 function TurnStatusLine(epoch) {
   ({ projectId: require, tree, turnActive } = epoch);
@@ -224,7 +224,7 @@ function TimelineRow(inGutter) {
     trailing: null,
   };
   let tmp7 = ConjureNativeStatusLineDefault;
-  obj.line = node(12807).describeNode(node);
+  obj.line = node(13477).describeNode(node);
   obj.live = flag2;
   let tmp9 = !flag2;
   if (!flag2) {
@@ -245,10 +245,10 @@ function TimelineRow(inGutter) {
     let obj3 = {
       variant: "body-xs/normal",
       color: "text-subtle",
-      children: node(12273).describeDuration(node.durationMs),
+      children: node(13077).describeDuration(node.durationMs),
     };
-    tmp4Result = closure_6(node(5753).Text, obj3);
-    const tmp8Result = node(12273);
+    tmp4Result = closure_6(node(5866).Text, obj3);
+    const tmp8Result = node(13077);
   }
   obj.trailing = tmp4Result;
   const children = [closure_6(tmp7, obj), ,];
@@ -302,17 +302,17 @@ function TimelineRow(inGutter) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
-  activityBox: { marginLeft: -fn(12850).RAIL_INDENT },
+  activityBox: { marginLeft: -fn(13522).RAIL_INDENT },
   activityDetail: null,
   stepDetail: null,
   stepLine: null,
   stepCommand: null,
 };
-let obj3 = { marginLeft: -fn(12850).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(12850).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(12850).RAIL_INDENT };
+let obj3 = { marginLeft: -fn(13522).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(13522).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(13522).RAIL_INDENT };
 obj2.stepDetail = {
   marginTop: nativeDefault.space.PX_4,
   paddingLeft: nativeDefault.space.PX_12,
@@ -340,7 +340,7 @@ export default function ConjureActivityBox(projectId) {
   if (flag === undefined) {
     flag = false;
   }
-  let length;
+  length = undefined;
   closure_3 = undefined;
   if (0 === tree.steps.length) {
     if (0 === tree.tasks.length) {

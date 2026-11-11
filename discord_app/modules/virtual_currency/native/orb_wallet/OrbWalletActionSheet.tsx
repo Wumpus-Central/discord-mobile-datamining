@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import _modDef2298 from "../../messages/OrbWallet.messages.js";
+import _modDef2317 from "../../messages/OrbWallet.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import OrbChallengeActionCreators from "../../stores/OrbChallengeActionCreators.tsx";
@@ -44,7 +44,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
     if (null != orbChallengesDisplayError) {
       if (orbChallengesDisplayError.errorType === orbChallengesDisplayError.CLAIM_CHALLENGE) {
         const intl3 = util.intl;
-        let stringResult = intl3.string(_modDef2298.FYb5rH);
+        let stringResult = intl3.string(_modDef2317.FYb5rH);
       } else {
         const intl2 = util.intl;
         const obj2 = {
@@ -61,7 +61,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
             });
           },
         };
-        stringResult = intl2.format(_modDef2298.ggLzeg, obj2);
+        stringResult = intl2.format(_modDef2317.ggLzeg, obj2);
       }
       const obj3 = { type: "warning", message: stringResult, role: "status" };
     } else {
@@ -215,13 +215,13 @@ function OrbWalletContent(reopenWallet) {
   return closure_12(challengesForOrbWallet, obj4);
 }
 const View = fn(17).View;
-let closure_7 = fn(15967).OrbChallengesDisplayErrorType;
-let closure_8 = fn(17246).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_7 = fn(16126).OrbChallengesDisplayErrorType;
+let closure_8 = fn(17409).ORB_WALLET_ACTION_SHEET_KEY;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { width: "100%", paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 },
   section: null,

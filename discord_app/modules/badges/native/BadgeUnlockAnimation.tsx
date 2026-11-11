@@ -4,9 +4,9 @@ import _mod1705 from "../../../../_runtime/metro/01705__.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import shared from "../../../design/shared.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import BadgeUtils from "../BadgeUtils.tsx";
 import useTimeoutDefault from "../../../hooks/useTimeout.tsx";
 import trackBadgeDirectoryActionDefault from "../trackBadgeDirectoryAction.tsx";
-import BadgeUtils from "../BadgeUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -231,7 +231,7 @@ let closure_13 = Easing5.bezier(0.67, 0, 0.28, 1);
 let c14 = 250;
 let c15 = 1000;
 let c16 = 200;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_17 = createStyles.createStyles({
   pulse: { position: "absolute", top: -40, left: -54, width: 300, height: 200 },
   pulseHidden: { opacity: 0 },
@@ -377,7 +377,7 @@ export default function BadgeUnlockAnimation(badge) {
   const tmp2Result14 = require("../../../../_runtime/metro/01652__.js");
   FALLBACK_BADGE_COLOR = require("useBadgeColor").useBadgeColor(badgeUnlockArt.rasterUrl);
   if (FALLBACK_BADGE_COLOR == null) {
-    FALLBACK_BADGE_COLOR = tmp2(11631).FALLBACK_BADGE_COLOR;
+    FALLBACK_BADGE_COLOR = tmp2(15170).FALLBACK_BADGE_COLOR;
   }
   const items5 = [FALLBACK_BADGE_COLOR];
   const memo = noop.useMemo(() => ({ fill: FALLBACK_BADGE_COLOR }), items5);
@@ -655,7 +655,7 @@ export default function BadgeUnlockAnimation(badge) {
     items14[1] = pulseHidden;
     obj7.style = items14;
     let obj8 = { ref, artboard: "Mobile", dataBinding: memo };
-    obj7.children = stateFromStores(tmp2(5263).BadgeUnlockPulseRive, obj8);
+    obj7.children = stateFromStores(tmp2(5376).BadgeUnlockPulseRive, obj8);
     tmp55Result = tmp55(View, obj7);
   }
   const items15 = [tmp55Result];

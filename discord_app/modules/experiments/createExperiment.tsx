@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty } = noop);
-const ExperimentConstants = fn(5357);
+const ExperimentConstants = fn(5470);
 ({ ExperimentBuckets: closure_8, ExposureTypes: closure_9 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/createExperiment.tsx");
@@ -397,7 +397,7 @@ export default function createExperiment(config) {
       if (aaMode1) {
         let defaultConfig1 = user.defaultConfig;
       } else {
-        value2 = map.get(constants.NOT_ELIGIBLE);
+        const value2 = map.get(constants.NOT_ELIGIBLE);
         defaultConfig1 = undefined;
         if (value2 != null) {
           defaultConfig1 = value2.config;

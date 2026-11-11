@@ -6,8 +6,8 @@ import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackType
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import ChannelUtils from "../../../utils/ChannelUtils.tsx";
-import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import ForwardModalUtils from "ForwardModalUtils.tsx";
 import ForwardingAnalyticsUtils from "../ForwardingAnalyticsUtils.tsx";
 import formatResults from "../../share/formatResults.tsx";
@@ -26,11 +26,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(13628).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10855).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(10176).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10177).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -227,13 +227,13 @@ export default function ForwardModal(message) {
                 const intl2 = closure_0(source[23]).intl;
                 obj7.text = intl2.string(closure_0(source[23]).t.R0RpRX);
                 forwardOptions(source[22]).open("FORWARD_ERROR", obj7);
-                const obj27 = forwardOptions(source[22]);
+                const obj24 = forwardOptions(source[22]);
               }
             } else {
-              const obj8 = { withMessage: tmp116 };
+              const obj8 = { withMessage: tmp123 };
               c3 = 1;
               c4 = 1;
-              const obj10 = { value: tmp117(first1, obj8, _undefined), done: false };
+              const obj10 = { value: tmp124(first1, obj8, _undefined), done: false };
               return obj10;
             }
           }
@@ -261,9 +261,9 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(6094).openAlert(
+                    closure_1_0(6207).openAlert(
                       "staff-to-non-staff-forward",
-                      closure_1_15(forwardOptions(13634), {
+                      closure_1_15(forwardOptions(10198), {
                         onConfirm() {
                           return closure_0(true);
                         },
@@ -340,13 +340,13 @@ export default function ForwardModal(message) {
                   obj.numDestinations = closure_129_1.length;
                   obj.numDestinationChanges = ref.current;
                   obj.numQueryChanges = ref2.current;
-                  obj28.trackForwardSent(obj);
+                  obj29.trackForwardSent(obj);
                   closure_129_3 = first1.filter((item, index) => "rejected" === dependencyMap[index].status);
                   const obj21 = { message, failedDestinations: closure_129_3, forwardOptions };
                   const result = closure_0(source[19]).showForwardFailedAlertModal(obj21);
                   const obj2 = closure_0(source[19]);
                 }
-                obj28 = closure_0(source[18]);
+                obj29 = closure_0(source[18]);
               }
               c4 = 3;
               const obj22 = { value, done: true };
@@ -357,12 +357,12 @@ export default function ForwardModal(message) {
               const obj23 = { channelId: closure_129_1[0] };
               c3 = 4;
               c4 = 1;
-              const obj24 = { value: forwardOptions(source[28]).fetchMessages(obj23), done: false };
-              return obj24;
+              const obj25 = { value: forwardOptions(source[28]).fetchMessages(obj23), done: false };
+              return obj25;
             }
             const obj13 = closure_0(source[19]);
           }
-          const obj25 = {
+          const obj26 = {
             channelId,
             messageId,
             hasError: false,
@@ -376,25 +376,25 @@ export default function ForwardModal(message) {
           if (tmp31) {
             tmp31 = "" !== closure_129_0;
           }
-          obj25.hasContextMessage = tmp31;
-          obj25.numDestinations = closure_129_1.length;
-          obj25.numDestinationChanges = ref.current;
-          obj25.numQueryChanges = ref2.current;
-          obj25.source = source;
-          obj7(obj25);
-          const obj26 = { text: null, icon: null };
+          obj26.hasContextMessage = tmp31;
+          obj26.numDestinations = closure_129_1.length;
+          obj26.numDestinationChanges = ref.current;
+          obj26.numQueryChanges = ref2.current;
+          obj26.source = source;
+          obj7(obj26);
+          const obj27 = { text: null, icon: null };
           const intl = closure_0(source[23]).intl;
-          obj26.text = intl.string(closure_0(source[23]).t.kwmYkt);
-          obj26.icon = forwardOptions(source[31]);
-          forwardOptions(source[22]).open("FORWARD_SUCCESS", obj26);
+          obj27.text = intl.string(closure_0(source[23]).t.kwmYkt);
+          obj27.icon = forwardOptions(source[31]);
+          forwardOptions(source[22]).open("FORWARD_SUCCESS", obj27);
           c4 = 3;
-          const obj29 = { value: undefined, done: true };
-          return obj29;
+          const obj28 = { value: undefined, done: true };
+          return obj28;
         }
         c4 = 3;
-      } catch (tmp96) {
+      } catch (tmp103) {
         c4 = tmp;
-        throw tmp96;
+        throw tmp103;
       }
     }
   });
@@ -460,7 +460,7 @@ export default function ForwardModal(message) {
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.Xrt5Po);
       obj.IconComponent = LinkIcon.LinkIcon;
-      tmp = closure_2_15(HeaderActionButton.HeaderActionButton, obj);
+      tmp = colors(HeaderActionButton.HeaderActionButton, obj);
     }
     return tmp;
   };

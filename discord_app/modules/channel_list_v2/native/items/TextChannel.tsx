@@ -16,11 +16,11 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(5884);
+const RedesignChannelListConstants = fn(5997);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   const obj = {
     container: {
@@ -287,7 +287,7 @@ export default noop.memo(function TextChannel(channel) {
     return closure_14(tmp10Result4, obj9);
   } else {
     isSuggestedSection(tmp2[11]).colors;
-    const colors = { size: "xs", color: null, style: null };
+    colors = { size: "xs", color: null, style: null };
     colors.color = userMuted ? colors.ICON_MUTED : colors.STATUS_POSITIVE;
     appSoundIcon = appSoundIcon.appSoundIcon;
     colors.style = appSoundIcon;

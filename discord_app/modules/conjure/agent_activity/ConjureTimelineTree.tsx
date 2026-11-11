@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/agent_activity/ConjureTimelineTree.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -298,7 +298,7 @@ function buildTimelineTree(steps, arg1) {
             const result1 = map3.set(tmp13Result, items);
           }
           if (null != node.lines) {
-            value2 = map2.get(tmp13Result);
+            let value2 = map2.get(tmp13Result);
             if (value2 == null) {
               const _Map = Map;
               value2 = new Map();
@@ -390,7 +390,7 @@ function buildTimelineTree(steps, arg1) {
     }
     let items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(items5, 0);
-    value2 = map2.get(tmp10);
+    let value2 = map2.get(tmp10);
     let items6;
     if (value2 != null) {
       items6 = value2.values();
@@ -636,15 +636,15 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = {
-  healthcheck_failed: _modDef4028.iwOTgo,
-  preview_ready: _modDef4028.okkgSB,
-  working: _modDef4028.t8skVB,
-  error: _modDef4028.avt0ax,
-  error_service_unavailable: _modDef4028.yreXyD,
-  error_rate_limited: _modDef4028.d8lNBq,
-  error_timeout: _modDef4028.t1R7Rt,
-  error_usage_limit: _modDef4028["9zBM8L"],
-  error_internal_error: _modDef4028.ZnbiGS,
+  healthcheck_failed: _modDef4079.iwOTgo,
+  preview_ready: _modDef4079.okkgSB,
+  working: _modDef4079.t8skVB,
+  error: _modDef4079.avt0ax,
+  error_service_unavailable: _modDef4079.yreXyD,
+  error_rate_limited: _modDef4079.d8lNBq,
+  error_timeout: _modDef4079.t1R7Rt,
+  error_usage_limit: _modDef4079["9zBM8L"],
+  error_internal_error: _modDef4079.ZnbiGS,
 };
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
@@ -670,7 +670,7 @@ export function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef4028.t8skVB;
+    t8skVB = _modDef4079.t8skVB;
   }
   return intl.string(t8skVB);
 }

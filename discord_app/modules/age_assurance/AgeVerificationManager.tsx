@@ -3,8 +3,8 @@ import LoggerDefault from "../debug/Logger.tsx";
 import MessageEmbedTypes from "../../../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx";
 import ChannelMessagesDefault from "../../lib/ChannelMessages.tsx";
 import AgeVerificationUtils from "AgeVerificationUtils.tsx";
-import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import ManualReviewActionCreators from "ManualReviewActionCreators.tsx";
+import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils.tsx";
 import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -63,7 +63,6 @@ function handleLoadChannelMessages(channelId) {
 const transformUser = fn(1385).transformUser;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, MAX_MESSAGES_PER_CHANNEL: closure_10 } = Constants);
-const SafetyToastType = fn(7557).SafetyToastType;
 let closure_11 = new LoggerDefault("AgeVerificationManager");
 const prototype = function AgeVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -94,7 +93,7 @@ const prototype = function AgeVerificationManager() {
     }
     try {
       if (isAdultStatusResult) {
-        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6620).clear(channelId.channelId));
+        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6732).clear(channelId.channelId));
         const channelId = SelectedChannelStore.getChannelId();
         if (null != channelId) {
           handleLoadChannelMessages(tmp17);
@@ -113,8 +112,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              closure_1_0(7542).preloadForumThreads(channel);
-              const obj = closure_1_0(7542);
+              closure_1_0(11836).preloadForumThreads(channel);
+              const obj = closure_1_0(11836);
             }
           })(tmp17);
           const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(tmp17);

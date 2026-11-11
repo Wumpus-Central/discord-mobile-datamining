@@ -5,8 +5,8 @@ import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import MessageActionCreatorsDefault from "../../../../actions/MessageActionCreators.tsx";
 import ReactionActionCreators from "../../../reactions/ReactionActionCreators.tsx";
-import reactions_ReactionUtils from "../../../reactions/native/ReactionUtils.tsx";
 import DoubleTapReminderToast from "../../../double_tap_to_react/native/DoubleTapReminderToast.tsx";
+import reactions_ReactionUtils from "../../../reactions/native/ReactionUtils.tsx";
 import useEmojisForReactionRow from "../../../reactions/native/useEmojisForReactionRow.tsx";
 import EmojiReactionRowButton from "../../../reactions/native/EmojiReactionRowButton.tsx";
 import DoubleTapEmojiEditNudge from "../../../double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx";
@@ -16,10 +16,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5391).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5504).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_7 = createStyles.createStyles({
   emojiRowContainer: { flexDirection: "column", justifyContent: "center", alignItems: "center" },
   emojiRow: {
@@ -103,7 +103,7 @@ export default function EmojiRow(arg0) {
     },
   };
   items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, {
-    location: channel(7415).MESSAGE_LONG_PRESS_MENU,
+    location: channel(7871).MESSAGE_LONG_PRESS_MENU,
   });
   obj7.children = items1;
   return closure_6(emojiFontSize, obj7);

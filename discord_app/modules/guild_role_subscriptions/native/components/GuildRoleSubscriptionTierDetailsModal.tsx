@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx
 import util from "../../../../intl/index.native.tsx";
-import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
 import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
@@ -113,7 +113,7 @@ function Content() {
   return closure_1_11(View, obj7);
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(17544);
+const GuildRoleSubscriptionsConstants = fn(17709);
 ({
   GuildRoleSubscriptionsTierScenes: closure_6,
   MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault,

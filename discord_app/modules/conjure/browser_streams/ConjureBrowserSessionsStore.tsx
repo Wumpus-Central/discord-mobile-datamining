@@ -49,7 +49,7 @@ const conjureBrowserSessionsStore = new ConjureBrowserSessionsStore(DispatcherDe
       const sorted = items.sort((started_at, started_at2) => started_at.started_at - started_at2.started_at);
       const _Set = Set;
       set = new Set(sorted.map((id) => id.id));
-      value2 = map1.get(projectId);
+      let value2 = map1.get(projectId);
       if (value2 == null) {
         value2 = closure_1;
       }

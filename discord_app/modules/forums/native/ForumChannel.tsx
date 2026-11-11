@@ -8,13 +8,13 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
-import ForumPostDataLoader from "../ForumPostDataLoader.tsx";
 import Tracking from "../tracking/Tracking.tsx";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
+import ClientThemesOverrides from "../../client_themes/native/ClientThemesOverrides.tsx";
 import GameProfileActionCreatorsDefault from "../../game_profile/GameProfileActionCreators.native.tsx";
 import GameProfileAnalyticUtils from "../../game_profile/GameProfileAnalyticUtils.tsx";
-import ClientThemesOverrides from "../../client_themes/native/ClientThemesOverrides.tsx";
 import ForumComposerModalActionCreators from "composer/ForumComposerModalActionCreators.tsx";
+import ForumPostDataLoader from "../ForumPostDataLoader.tsx";
 import ForumPostDefault from "ForumPost.tsx";
 import ForumPostPlaceholderDefault from "ForumPostPlaceholder.tsx";
 import CreateGameInvitePostModalActionCreators from "../../game_invite_channels/native/CreateGameInvitePostModalActionCreators.tsx";
@@ -45,8 +45,8 @@ function ArchivedSection() {
   const obj3 = { style: tmp.divider, variant: "body-xs/semibold", color: "text-muted", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3+LO1w"]);
-  obj2.children = closure_1_15(Text_Text.Text, obj3);
-  return closure_1_15(View, obj2);
+  obj2.children = colors(Text_Text.Text, obj3);
+  return colors(View, obj2);
 }
 function SearchSection(numPosts) {
   numPosts = numPosts.numPosts;
@@ -62,8 +62,8 @@ function SearchSection(numPosts) {
     stringResult = intl.formatToPlainString(util.t["tBz/8b"], obj3);
   }
   obj2.children = stringResult;
-  obj.children = closure_1_15(Text_Text.Text, obj2);
-  return closure_1_15(View, obj);
+  obj.children = colors(Text_Text.Text, obj2);
+  return colors(View, obj);
 }
 function ArchivedMissingReadHistoryPermission(channelName) {
   const tmp = closure_25();
@@ -71,8 +71,8 @@ function ArchivedMissingReadHistoryPermission(channelName) {
   const obj2 = { style: tmp.missingPermissionText, variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.format(util.t.TycmzM, { channelName: channelName.channelName });
-  obj.children = closure_1_15(Text_Text.Text, obj2);
-  return closure_1_15(View, obj);
+  obj.children = colors(Text_Text.Text, obj2);
+  return colors(View, obj);
 }
 function SearchMissingReadHistoryPermission(channelName) {
   const tmp = closure_25();
@@ -80,8 +80,8 @@ function SearchMissingReadHistoryPermission(channelName) {
   const obj2 = { style: tmp.missingPermissionText, variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.format(util.t.OWZJdS, { channelName: channelName.channelName });
-  obj.children = closure_1_15(Text_Text.Text, obj2);
-  return closure_1_15(View, obj);
+  obj.children = colors(Text_Text.Text, obj2);
+  return colors(View, obj);
 }
 function GameInvitesChannelHeaderGameIcon(channel) {
   _require = undefined;
@@ -145,7 +145,7 @@ function SortAndViewOptions(channel) {
   items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14638, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15018, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -161,12 +161,12 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_15(id(5760).Button, {
+  return closure_15(id(5873).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_15(id(12698).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_15(id(13388).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -176,13 +176,13 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1113).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14639, dependencyMap.paths),
+      asyncRequireImpl(15019, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_15(channel(9659).TagIcon, { size: "xxs" });
-  return closure_15(channel(5760).Button, obj);
+  obj.icon = closure_15(channel(9455).TagIcon, { size: "xxs" });
+  return closure_15(channel(5873).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -365,7 +365,7 @@ function ForumChannelContent(channel) {
       loadMore();
     }
   }, items5);
-  let length;
+  length = undefined;
   const memo = obj.useMemo(() => {
     items = [];
     if (null != searchResults) {
@@ -471,10 +471,10 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(14022).useForumChannelStore;
+const useForumChannelStore = fn(14502).useForumChannelStore;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
-let closure_14 = fn(11390).getVoicePanelDockButtonsTop;
+let closure_14 = fn(11948).getVoicePanelDockButtonsTop;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
@@ -491,7 +491,7 @@ let items = [
   "loading_section",
 ];
 const set = new Set(items);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerRow: {
@@ -505,7 +505,6 @@ let obj2 = {
   headerDivider: null,
   container: null,
   noHeight: null,
-  fabScrim: null,
   list: null,
   section: null,
   divider: null,
@@ -516,7 +515,6 @@ let size = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, width: "100%",
 obj2.headerDivider = size;
 obj2.container = { flex: 1, alignSelf: "stretch", alignItems: "center", position: "relative" };
 obj2.noHeight = { height: 0 };
-obj2.fabScrim = { position: "absolute", left: 0, right: 0, bottom: 0 };
 obj2.list = { flex: 1, paddingTop: 8, paddingHorizontal: 12, alignSelf: "stretch", marginBottom: 0 };
 obj2.section = { alignItems: "flex-start", justifyContent: "flex-end" };
 let TextStyles = TextStyles_mod;
@@ -604,7 +602,7 @@ export default function ForumChannel(channel) {
       }
       let tmp8 = null != name;
       if (tmp8) {
-        let length;
+        length = undefined;
         if (stateFromStores1 != null) {
           if (stateFromStores1.name != null) {
             const trimmed = str.trim();
@@ -691,9 +689,9 @@ export default function ForumChannel(channel) {
   const insets = tmp7(tmp3[63])({ includeKeyboardHeight: true }).insets;
   const tmp2Result9 = channel(analyticsLocations[53]);
   const clientThemesOverride = channel(analyticsLocations[15]).useClientThemesOverride(tmp.noHeight);
-  const tmp20 = require("useVoicePanelDockHeight")();
-  const tmp22 = closure_14(tmp20);
-  if (tmp20 > 0) {
+  const tmp2Result10 = channel(analyticsLocations[15]);
+  const tmp21 = require("useVoicePanelDockHeight")() > 0;
+  if (tmp21) {
     const _Math = Math;
     let bottom = Math.max(tmp22, insets.bottom);
   } else {
@@ -741,7 +739,7 @@ export default function ForumChannel(channel) {
   items6[3] = closure_15(showMemberVerificationGate, obj11);
   const obj12 = { style: tmp.container, children: null };
   const obj13 = { channel, paddingBottom: null, searchQuery: null };
-  if (tmp20 > 0) {
+  if (tmp21) {
     let bottom2 = sum + tmp2(tmp3[66]).FAB_BUTTON_SIZE;
   } else {
     bottom2 = insets.bottom;
@@ -750,19 +748,8 @@ export default function ForumChannel(channel) {
   obj13.searchQuery = searchQuery;
   obj12.children = closure_15(ForumChannelContent, obj13);
   items6[4] = closure_15(showMemberVerificationGate, obj12);
-  let tmp34Result3 = null;
-  if (tmp20 > 0) {
-    const obj14 = { style: null, pointerEvents: "none", children: null };
-    const items10 = [tmp.fabScrim];
-    const obj15 = { height: tmp22 };
-    items10[1] = obj15;
-    obj14.style = items10;
-    const obj16 = { inline: true, gradientHeight: tmp7(tmp3[13]).space.PX_64 };
-    obj14.children = closure_15(tmp2(tmp3[67]).ChatInputScrimGradient, obj16);
-    tmp34Result3 = closure_15(tmp26, obj14);
-  }
-  items6[5] = tmp34Result3;
-  const obj17 = {
+  items6[5] = closure_15(require("VoicePanelDockScrim"), {});
+  const obj14 = {
     accessibilityLabel: null,
     icon: null,
     disabled: null,
@@ -772,25 +759,25 @@ export default function ForumChannel(channel) {
     accessibilityHint: null,
   };
   const intl = tmp2(tmp3[17]).intl;
-  obj17.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-  obj17.icon = require("../../../../_runtime/metro/14648__.js");
-  obj17.disabled = tmp17;
-  obj17.positionBottom = sum;
-  obj17.onPress = callback1;
-  obj17.onPressDisabled = onCreatePostWithoutPermission;
+  obj14.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
+  obj14.icon = require("../../../../_runtime/metro/15028__.js");
+  obj14.disabled = tmp17;
+  obj14.positionBottom = sum;
+  obj14.onPress = callback1;
+  obj14.onPressDisabled = onCreatePostWithoutPermission;
   let stringResult;
   if (tmp17) {
     const intl2 = tmp2(tmp3[17]).intl;
     stringResult = intl2.string(tmp2(tmp3[17]).t.iyzwnD);
   }
-  obj17.accessibilityHint = stringResult;
-  items6[6] = closure_15(channel(analyticsLocations[68]).FloatingActionButton, obj17);
-  let tmp34Result4 = null;
+  obj14.accessibilityHint = stringResult;
+  items6[6] = closure_15(channel(analyticsLocations[68]).FloatingActionButton, obj14);
+  let tmp34Result2 = null;
   if (null != channel.guild_id) {
-    const obj18 = { channel };
-    tmp34Result4 = closure_15(tmp2(tmp3[70]).MemberActionChatInputBannerGuarded, obj18);
+    const obj15 = { channel };
+    tmp34Result2 = closure_15(tmp2(tmp3[70]).MemberActionChatInputBannerGuarded, obj15);
   }
-  items6[7] = tmp34Result4;
+  items6[7] = tmp34Result2;
   obj4.children = items6;
   return closure_17(showMemberVerificationGate, obj4);
 }

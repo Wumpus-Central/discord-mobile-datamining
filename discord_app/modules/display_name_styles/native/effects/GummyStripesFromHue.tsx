@@ -38,7 +38,7 @@ function AnimatedStripe(overlap) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_6 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 let closure_7 = {
   code: '(function GummyStripesFromHueTsx1(){let[hue,shift,hslToRgbWorklet,saturation,lightness]=this.__closure;const h=((hue.get()+shift)%360+360)%360;const[r,g,b]=hslToRgbWorklet({h:h,s:saturation,l:lightness});return{backgroundColor:"rgb("+r+", "+g+", "+b+")"};})',

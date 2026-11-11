@@ -24,7 +24,7 @@ function resolveSavedActiveGuildTheme(stateFromStores) {
     let tmp5 = null;
     if (null != themeSettings) {
       const customUserThemeSettings = themeSettings.customUserThemeSettings;
-      let colors;
+      colors = undefined;
       if (customUserThemeSettings != null) {
         colors = customUserThemeSettings.colors;
       }
@@ -121,7 +121,7 @@ function useActiveGuildThemeForGuildId(context) {
       let tmp7 = null;
       if (null != stateFromStores) {
         const customUserThemeSettings = stateFromStores.customUserThemeSettings;
-        let colors;
+        colors = undefined;
         if (customUserThemeSettings != null) {
           colors = customUserThemeSettings.colors;
         }
@@ -167,7 +167,7 @@ export function resolveRenderableGuildThemeSettings(customUserThemeSettings) {
     return null;
   } else {
     customUserThemeSettings = customUserThemeSettings.customUserThemeSettings;
-    let colors;
+    colors = undefined;
     if (customUserThemeSettings != null) {
       colors = customUserThemeSettings.colors;
     }
@@ -200,7 +200,7 @@ export function isRenderableGuildThemeSettings(customUserThemeSettings) {
   let tmp = null;
   if (null != customUserThemeSettings) {
     customUserThemeSettings = customUserThemeSettings.customUserThemeSettings;
-    let colors;
+    colors = undefined;
     if (customUserThemeSettings != null) {
       colors = customUserThemeSettings.colors;
     }

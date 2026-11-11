@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetsBoardTab.tsx
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
-import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard.tsx";
 import useDisplayableBoardWidgets from "../hooks/useDisplayableBoardWidgets.tsx";
+import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import ConjureServerWidgetUpsellDefault from "../../conjure/server_widgets/native/ConjureServerWidgetUpsell.tsx";
 import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState.tsx";
 import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice.tsx";
 import ConjureCustomWidgetAddOptionDefault from "../../conjure/custom_widget/native/ConjureCustomWidgetAddOption.tsx";
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

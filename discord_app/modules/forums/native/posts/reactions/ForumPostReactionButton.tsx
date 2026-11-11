@@ -9,9 +9,9 @@ import MessageReactionsTypes from "../../../../messages/MessageReactionsTypes.ts
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiDefault from "../../../../emojis/native/Emoji.tsx";
+import useNativeForumPostHandlersDefault from "../hooks/useNativeForumPostHandlers.tsx";
 import reactions_ReactionUtils from "../../../../reactions/native/ReactionUtils.tsx";
 import useEmojiColorPalette from "../../../../emojis/hooks/useEmojiColorPalette.tsx";
-import useNativeForumPostHandlersDefault from "../hooks/useNativeForumPostHandlers.tsx";
 import useReactionPermissionsDefault from "../../../../messages/useReactionPermissions.tsx";
 import AnimatedCounterDefault from "../AnimatedCounter.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -177,7 +177,7 @@ class ReactionButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: {
     display: "flex",

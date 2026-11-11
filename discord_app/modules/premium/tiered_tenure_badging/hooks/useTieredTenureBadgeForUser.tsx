@@ -1,5 +1,6 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx
 import TieredTenureBadgeUtils from "../../../user_profile/TieredTenureBadgeUtils.tsx";
+import PremiumPerkGates from "../../perks_state/PremiumPerkGates.tsx";
 import UserProfileStore from "../../../user_profile/UserProfileStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -7,7 +8,9 @@ const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
+const result = size.fileFinishedImporting(
+  "modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx",
+);
 
 export function useTieredTenureBadgeForUser(id) {
   _require = id;
@@ -40,14 +43,12 @@ export function useTieredTenureBadgeForUser(id) {
           }
           let earnedTenureBadge = null;
           if (tieredTenureBadge === id) {
-            let result;
-            if (currentUser != null) {
-              result = currentUser.hasPaidTier2Subscription();
-            }
             earnedTenureBadge = null;
-            if (result) {
+            if (obj.canUseTenureBadge(currentUser)) {
               earnedTenureBadge = TieredTenureBadgeUtils.getEarnedTenureBadge(premiumSince);
+              const tmp10Result = TieredTenureBadgeUtils;
             }
+            obj = PremiumPerkGates;
           }
           return earnedTenureBadge;
         }

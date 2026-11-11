@@ -3,7 +3,7 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import _mod1652 from "../../../_runtime/metro/01652__.js";
-import BottomSheetModal from "../../../_runtime/05394_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/05507_BottomSheetModal.js";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -220,7 +220,6 @@ prototype["fill"] = function fill(arg0) {
   });
 };
 prototype["_fill"] = function _fill(arg0, arg1, arg2) {
-  let length;
   let sum1;
   closure_0 = arg1;
   closure_1 = 0;

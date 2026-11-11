@@ -8,10 +8,10 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import conjureDMAppChannel from "../../conjure/app_channel/conjureDMAppChannel.tsx";
 import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat.tsx";
 import ConjurePreviewActionCreators from "../../conjure/preview/ConjurePreviewActionCreators.tsx";
-import useChannelContentGate from "../../chat/native/useChannelContentGate.tsx";
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat.tsx";
 import ConjureAppIconTileDefault from "../../conjure/projects/native/ConjureAppIconTile.tsx";
+import useChannelContentGate from "../../chat/native/useChannelContentGate.tsx";
 import getInlineFramePresentationDefault from "../../frames/native/getInlineFramePresentation.tsx";
 import FrameSurfaceState from "../../frames/native/FrameSurfaceState.tsx";
 import useChannelAppFrameTeardownDefault from "../../frames/useChannelAppFrameTeardown.tsx";
@@ -176,15 +176,15 @@ function AppChannel(arg0) {
   return tmp4Result;
 }
 const View = fn(17).View;
-let closure_5 = fn(19057).useConjureFrameUpdateAvailable;
+let closure_5 = fn(19243).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj2 = { icon: null };
 let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_9 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom } };
   return obj;

@@ -88,7 +88,7 @@ function GuildRowWrapper(guild) {
       obj2.children = guild.name;
       items = [
         collapsedCategories(Text_Text.Text, obj2),
-        collapsedCategories(value2, { size: "xs", color: "icon-muted" }),
+        collapsedCategories(closure_2_16, { size: "xs", color: "icon-muted" }),
       ];
       obj.children = items;
       return expandedHeight(View, obj);
@@ -170,7 +170,7 @@ function GuildRowWrapper(guild) {
       const tmp = unreadChannel.getMutableGuildStates()[guild.id];
       guild = tmp;
       if (null == tmp) {
-        return { mentionChannel: "description", mentionChannelName: "isArray", mentionChannelCount: null };
+        return { mentionChannel: "delete", mentionChannelName: "isArray", mentionChannelCount: null };
       } else {
         const keys = disableSubtitle(onActiveHookChange[25]).keys(tmp.mentionCounts);
         const found = keys.filter((item) => {
@@ -361,10 +361,10 @@ function GuildRowWrapper(guild) {
   return typingChannelName(guild(onActiveHookChange[34]).HomeDrawerSharedItem, obj12);
 }
 const View = fn(17).View;
-const isThread = fn(4995).isThread;
+const isThread = fn(5096).isThread;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(6834).UnreadSetting;
+const UnreadSetting = fn(6896).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = {
@@ -375,7 +375,7 @@ const HomeDrawerActiveHook = {
   UNREAD: "unread",
   NONE: "none",
 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_21 = createStyles.createStyles({
   guildName: { flexDirection: "row", alignItems: "center", gap: 4 },
   guildNameText: { flexShrink: 1 },
@@ -388,7 +388,7 @@ export default function HomeDrawerGuildRow(guildId) {
   ({ disableSubtitle, onActiveHookChange } = guildId);
   items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(5322).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(5435).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

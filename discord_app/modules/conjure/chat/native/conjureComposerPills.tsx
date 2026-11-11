@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/chat/native/conjureComposerPills.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../../utils/UserUtils.tsx";
-import _modDef11204 from "../../../../../_runtime/metro/11204__.js";
+import _modDef11011 from "../../../../../_runtime/metro/11011__.js";
 import ChatInputParser from "../../../chat_input/native/ChatInputParser.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
 export function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef11204).uri;
+  return Image.resolveAssetSource(_modDef11011).uri;
 }
 export function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
@@ -32,7 +32,7 @@ export function conjurePillText(current, name, combined) {
       const combined1 = "\u2060" + tmp7;
       tmp2 = combined1;
       while (current.has(combined1)) {
-        value2 = current.get(combined1);
+        let value2 = current.get(combined1);
         let raw1;
         if (value2 != null) {
           raw1 = value2.raw;
@@ -58,7 +58,7 @@ export function conjureUserPillLabel(id) {
 export function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12852).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(13524).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -75,7 +75,7 @@ export function decodeConjurePills(draft) {
         }
         if (combined == null) {
           const intl = util.intl;
-          combined = intl.string(_modDef4028.ff9Q4C);
+          combined = intl.string(_modDef4079.ff9Q4C);
         }
       }
       const combined1 = "\u2060" + combined;
@@ -93,7 +93,7 @@ export function decodeConjurePills(draft) {
           const combined2 = "\u2060" + tmp19;
           tmp16 = combined2;
           while (map.has(combined2)) {
-            value2 = map.get(combined2);
+            let value2 = map.get(combined2);
             let raw1;
             if (value2 != null) {
               raw1 = value2.raw;
@@ -109,7 +109,7 @@ export function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef11204).uri;
+        uri = Image.resolveAssetSource(_modDef11011).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);

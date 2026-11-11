@@ -309,7 +309,7 @@ export function ensureRestrictedScheduleRecord(restrictedSchedule) {
     if (restrictedSchedule instanceof RestrictedScheduleRecord) {
       tmp2 = tmp3;
     } else {
-      let length = restrictedSchedule.rules.length;
+      length = restrictedSchedule.rules.length;
       if (0 === length) {
         if (typeof RestrictedScheduleRecord === "function") {
           items = [];

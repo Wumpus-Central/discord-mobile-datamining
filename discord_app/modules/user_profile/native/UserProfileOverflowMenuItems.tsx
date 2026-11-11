@@ -5,10 +5,10 @@ import discord_common_AnalyticsUtils from "../../../../discord_common/js/package
 import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import SafetyToastsActionCreatorsDefault from "../../safety_common/SafetyToastsActionCreators.native.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import Sheet_showSimpleActionSheet from "../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
 import RelationshipActionCreatorsDefault from "../../../actions/RelationshipActionCreators.tsx";
-import SafetyToastsActionCreatorsDefault from "../../safety_common/SafetyToastsActionCreators.native.tsx";
 import ReportModals from "../../in_app_reports/ReportModals.tsx";
 import UserProfileAlertUtils from "UserProfileAlertUtils.tsx";
 import BotReportChooser from "../../in_app_reports/native/BotReportChooser.tsx";
@@ -49,7 +49,7 @@ export function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11438, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11995, dependencyMap.paths);
         obj.openLazy(
           tmp,
           metroImportDefault,
@@ -99,7 +99,7 @@ export function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(11437, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11994, dependencyMap.paths);
       obj.openLazy(
         tmp,
         timestampProducer,
@@ -134,7 +134,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(15091, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(15581, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {
@@ -179,8 +179,8 @@ export function getDeveloperCopyMenuItem(arg0, isTidaRegion) {
         dependencyMap({ action: "COPY_USERNAME", analyticsLocations });
         const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = ClipboardUtils;
-        obj2.copy(analyticsLocations(5196).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
-        const obj3 = analyticsLocations(5196);
+        obj2.copy(analyticsLocations(5309).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
+        const obj3 = analyticsLocations(5309);
         const result = ToastUtils.presentUsernameCopied();
       };
       items.push(obj);

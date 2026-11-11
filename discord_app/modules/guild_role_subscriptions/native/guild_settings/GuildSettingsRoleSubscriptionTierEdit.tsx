@@ -7,9 +7,9 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import TrashIcon from "../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
-import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import CreatorMonetizationRestrictionsHooks from "../../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
+import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import DismissibleActionSheet from "../../../dismissible_content/native/DismissibleActionSheet.tsx";
 import ErrorBlockDefault from "../components/ErrorBlock.tsx";
 import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
@@ -39,7 +39,7 @@ function ArchiveOrDeleteTierSection() {
   const obj5 = { children: null };
   items = [gesture(TableRowGroup.TableRowGroupTitle, { title: buttonText }), gesture(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: descriptionText })];
   obj5.children = items;
-  const items1 = [closure_1_15(timestampProducer, obj5), ];
+  const items1 = [colors(timestampProducer, obj5), ];
   const obj6 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   obj6.icon = gesture(TrashIcon.TrashIcon, { size: "xs", color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT });
   obj6.onPress = handleArchiveOrDelete;
@@ -54,7 +54,7 @@ function ArchiveOrDeleteTierSection() {
   obj6.text = buttonText;
   items1[1] = gesture(components_Button_Button.Button, obj6);
   obj4.children = items1;
-  return closure_1_15(timestampProducer, obj4);
+  return colors(timestampProducer, obj4);
 }
 function TabContent(selectedTab) {
   selectedTab = selectedTab.selectedTab;
@@ -64,7 +64,7 @@ function TabContent(selectedTab) {
     const obj3 = { bottom: true, children: null };
     items = [gesture(GuildRoleSubscriptionTierDetailsModal.GuildRoleSubscriptionTierDetailsTab, {}), gesture(ArchiveOrDeleteTierSection, {})];
     obj3.children = items;
-    obj2.children = closure_1_15(common_SafeAreaView.SafeAreaPaddingView, obj3);
+    obj2.children = colors(common_SafeAreaView.SafeAreaPaddingView, obj3);
     return gesture(metroImportDefault, obj2);
   } else if (GuildRoleSubscriptionsTierScenes.DESIGN === selectedTab) {
     const obj = { style: tmp.tabContent, children: null };
@@ -134,13 +134,13 @@ function DraftPublishPrompt(ref) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const FetchState = fn(5067).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(17544).GuildRoleSubscriptionsTierScenes;
+const FetchState = fn(5168).FetchState;
+const GuildRoleSubscriptionsTierScenes = fn(17709).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { flex: 1 }, tabsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 }, tabsContainerWithDraft: { paddingBottom: 0 }, tabContent: null, publishError: null, actionSection: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 };
 obj2.tabContent = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

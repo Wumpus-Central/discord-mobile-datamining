@@ -6,8 +6,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import GuildBadgeV2Default from "../../../guild/native/GuildBadgeV2.tsx";
 import GameProfileSkeleton from "GameProfileSkeleton.tsx";
+import GuildBadgeV2Default from "../../../guild/native/GuildBadgeV2.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const GuildIconDefault = GuildIcon;
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const sum = nativeDefault.space.PX_48 + nativeDefault.space.PX_8;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   card: {
     borderRadius: nativeDefault.radii.lg,

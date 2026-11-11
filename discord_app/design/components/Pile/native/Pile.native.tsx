@@ -10,7 +10,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_6 = createStyles.createStyles({ pile: { flexDirection: "row" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");
@@ -20,7 +20,7 @@ export function Pile(aria_label) {
   ({ gap: dependencyMap, depthX: noop, depthY: View, children } = aria_label);
   const Children = noop.Children;
   const tmp = closure_6();
-  const length = Children.toArray(children).filter(GlobalUtils.isNotNullish).length;
+  length = Children.toArray(children).filter(GlobalUtils.isNotNullish).length;
   const toArrayResult = Children.toArray(children);
   if (obj.isArray(size)) {
     if (size.length !== length) {

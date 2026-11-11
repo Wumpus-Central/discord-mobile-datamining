@@ -18,7 +18,7 @@ function getNamedExperiment(experiment) {
     return tmp;
   }
 }
-const NotificationSettingsConstants = fn(16619);
+const NotificationSettingsConstants = fn(16780);
 ({
   NOTIF_CATEGORIES: closure_4,
   NOTIF_SETTING_MAPPING: hasOwnProperty,
@@ -72,9 +72,9 @@ export function useNotifCategoryVisibility(CATEGORY_CALLS_MESSAGES) {
     "useIsDeclarativeSettingsUIAvailable:" + CATEGORY_CALLS_MESSAGES,
   );
 }
-export function useNotifSettingVisibility(CALLS) {
-  _require = CALLS;
-  items = [CALLS];
+export function useNotifSettingVisibility(REACTIONS_CHOICE) {
+  _require = REACTIONS_CHOICE;
+  items = [REACTIONS_CHOICE];
   const memo = noop.useMemo(
     () =>
       (function getExperimentAndConfigBySettingId(arg0) {

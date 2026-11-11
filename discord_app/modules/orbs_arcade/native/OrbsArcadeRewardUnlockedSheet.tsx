@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { chain: { marginHorizontal: nativeDefault.space.PX_8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -65,7 +65,7 @@ export default function OrbsArcadeRewardUnlockedSheet(gameId) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const length = tmp2(tmp3[7]).getOrbsArcadeClaimableRewards(stateFromStores.rewards, stateFromStores1).length;
+    length = tmp2(tmp3[7]).getOrbsArcadeClaimableRewards(stateFromStores.rewards, stateFromStores1).length;
     let str = stateFromStores.name;
     if (str == null) {
       str = "";

@@ -926,7 +926,6 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, 
   return obj;
 };
 prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, writeUnknownFields) {
-  let length;
   let length2;
   if ("" !== header.header) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).string(header.header);

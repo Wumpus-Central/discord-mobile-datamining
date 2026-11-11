@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
-import _modDef5748 from "../../../../../_runtime/metro/05748__.js";
+import _modDef5861 from "../../../../../_runtime/metro/05861__.js";
 import IconSize from "../../Icon/IconSize.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -137,7 +137,7 @@ export function LottieIcon(color) {
   obj3.onAnimationLoaded = callback1;
   const items4 = [size1, { opacity: num }];
   obj3.style = items4;
-  obj2.children = jsx(_modDef5748, {
+  obj2.children = jsx(_modDef5861, {
     ref: ref1,
     source: color.dotLottie,
     colorFilters: null,

@@ -72,11 +72,11 @@ export function useGuildMemberAndUserPendingNameplate(user, guildId) {
   obj3.pendingErrors = pendingErrors;
   return obj3;
 }
-export function useGuildMemberOrUserPendingDisplayNameStyles(user, guildId) {
-  _require = user;
+export function useGuildMemberOrUserPendingDisplayNameStyles(stateFromStores, guildId) {
+  _require = stateFromStores;
   dependencyMap = guildId;
   items = [GuildMemberStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (undefined !== closure_1) {
       member = null;
@@ -95,8 +95,8 @@ export function useGuildMemberOrUserPendingDisplayNameStyles(user, guildId) {
   }));
   let displayNameStyles;
   ({ pendingDisplayNameStyles, tryItOutDisplayNameStyles, pendingErrors } = stateFromStoresObject);
-  if (user != null) {
-    displayNameStyles = user.displayNameStyles;
+  if (stateFromStores != null) {
+    displayNameStyles = stateFromStores.displayNameStyles;
   }
   const obj3 = {
     userDisplayNameStyles: displayNameStyles,

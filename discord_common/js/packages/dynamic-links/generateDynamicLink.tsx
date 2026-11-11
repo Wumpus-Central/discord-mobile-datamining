@@ -106,7 +106,7 @@ export function parseDynamicLink(str) {
         const _URL2 = URL;
         const uRL1 = new URL(decodeURIComponent(value));
         const searchParams2 = uRL1.searchParams;
-        value2 = obj.get("pid");
+        const value2 = obj.get("pid");
         const obj2 = { utmSource: value2 };
         const entries = searchParams2.entries();
         const tmp16 = entries[Symbol.iterator]();

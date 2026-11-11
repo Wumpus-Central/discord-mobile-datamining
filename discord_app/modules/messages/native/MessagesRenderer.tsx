@@ -5,9 +5,9 @@ import discord_common_shallowEqualDefault from "../../../../discord_common/js/pa
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
+import QuestTypes from "../../quests/QuestTypes.tsx";
 import Client from "../../../flow/Client.tsx";
 import CodedLink from "../../coded_links/CodedLink.tsx";
-import QuestTypes from "../../quests/QuestTypes.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
 import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
@@ -16,10 +16,10 @@ import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../chat/native/ChatChangesetUpdateTracker.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
-import MessageDataSnowflakeUtils from "snowflake/MessageDataSnowflakeUtils.tsx";
 import useSocialLayerStorefrontEmbedData from "../../slayer_storefront/native/useSocialLayerStorefrontEmbedData.tsx";
 import openMediaModalOverlayAltTextSheetDefault from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
 import MessagesHandlers from "MessagesHandlers.tsx";
+import MessageDataSnowflakeUtils from "snowflake/MessageDataSnowflakeUtils.tsx";
 import NavigationSpanTrackerDefault from "../../tti_analytics/native/navigation/NavigationSpanTracker.tsx";
 import NavigationTTIDefinition from "../../tti_analytics/native/navigation/NavigationTTIDefinition.tsx";
 import MessagesUtilsDefault from "../../../utils/native/MessagesUtils.tsx";
@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(10023).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(5054).getUserCommunicationDisabledVersion;
-const Changeset = fn(8453).Changeset;
+let closure_6 = fn(11805).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(5155).getUserCommunicationDisabledVersion;
+const Changeset = fn(9094).Changeset;
 const Constants = fn(1072);
 ({
   ActivityActionTypes: closure_11,
@@ -1229,7 +1229,7 @@ class MessagesRenderer {
                 if (closure_5) {
                   const interactionComponentStates = props.interactionComponentStates;
                   const interactionComponentStates2 = merged.interactionComponentStates;
-                  value2 = interactionComponentStates.get(author.id);
+                  const value2 = interactionComponentStates.get(author.id);
                   if (value2 !== interactionComponentStates2.get(author.id)) {
                     set.add(author.id);
                   }

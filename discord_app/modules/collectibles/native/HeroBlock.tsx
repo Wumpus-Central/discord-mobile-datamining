@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/HeroBlock.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import CollectiblesShopCardV2 from "CollectiblesShopCardV2.tsx";
 import CollectiblesAnalyticsContext from "../CollectiblesAnalyticsContext.tsx";
+import CollectiblesShopCardV2 from "CollectiblesShopCardV2.tsx";
 import SkeletonCardDefault from "SkeletonCard.tsx";
 import OrbsArcadeExperiment2 from "../../orbs_arcade/experiments/OrbsArcadeExperiment.tsx";
 import HeroBlockHeaderDefault from "HeroBlockHeader.tsx";
@@ -41,7 +41,7 @@ const View = fn(17).View;
 const constants = fn(1074).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   heroContainer: { width: "100%" },
   productCardsContainer: { zIndex: 1 },

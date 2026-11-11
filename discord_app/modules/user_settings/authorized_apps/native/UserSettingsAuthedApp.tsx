@@ -6,12 +6,12 @@ import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.ts
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import AuthorizedAppsActionCreatorsDefault from "../../../oauth2/AuthorizedAppsActionCreators.tsx";
+import MaskedLinkUtils from "../../../../utils/MaskedLinkUtils.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
 import NotificationSettingsUtils from "../../../../utils/NotificationSettingsUtils.tsx";
 import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
-import AuthorizedAppsActionCreatorsDefault from "../../../oauth2/AuthorizedAppsActionCreators.tsx";
-import MaskedLinkUtils from "../../../../utils/MaskedLinkUtils.tsx";
 import leaveEmbeddedActivity from "../../../activities/leaveEmbeddedActivity.tsx";
 import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -63,11 +63,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10264).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11436).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10834).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(11993).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   section: { marginBottom: 24 },

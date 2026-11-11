@@ -5,7 +5,7 @@ import FramesStore from "../../frames/FramesStore.tsx";
 import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
 const require = fn;
-const FrameLayoutModes = fn(6905).FrameLayoutModes;
+const FrameLayoutModes = fn(6957).FrameLayoutModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
 

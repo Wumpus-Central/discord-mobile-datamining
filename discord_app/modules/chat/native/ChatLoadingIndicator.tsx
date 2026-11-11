@@ -56,7 +56,7 @@ const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = {
   height: 8,
@@ -105,7 +105,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
     tmp4Result = gesture(Text_Text.Text, obj3);
   }
   items1[4] = tmp4Result;
-  const items3 = [gesture(closure_1_15, { children: items1 }), "\n", , , , ,];
+  const items3 = [gesture(colors, { children: items1 }), "\n", , , , ,];
   const items4 = ["messages.ready", ":", " ", ,];
   let str6 = str;
   if (messagesReady) {
@@ -126,7 +126,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
     tmp4Result3 = gesture(Text_Text.Text, obj5);
   }
   items4[4] = tmp4Result3;
-  items3[2] = gesture(closure_1_15, { children: items4 });
+  items3[2] = gesture(colors, { children: items4 });
   items3[3] = "\n";
   const items6 = ["connected", ":", " ", ,];
   let str10 = str;
@@ -148,7 +148,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
     tmp4Result4 = gesture(Text_Text.Text, obj7);
   }
   items6[4] = tmp4Result4;
-  items3[4] = gesture(closure_1_15, { children: items6 });
+  items3[4] = gesture(colors, { children: items6 });
   items3[5] = "\n";
   if (!messagesCached) {
     messagesCached = !messagesReady;
@@ -168,7 +168,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
   items8[3] = state(Text_Text.Text, obj8);
   const obj9 = { variant: "body-md/normal", color: "text-default", children: null };
   items8[4] = null;
-  items3[6] = gesture(closure_1_15, { children: items8 });
+  items3[6] = gesture(colors, { children: items8 });
   obj9.children = items3;
   return gesture(Text_Text.Text, obj9);
 });

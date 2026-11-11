@@ -25,8 +25,8 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(9221).AutocompleterResultTypes.USER];
-const createStyles = fn(5142);
+let items = [fn(10180).AutocompleterResultTypes.USER];
+const createStyles = fn(5243);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
   searchFieldContainer: null,
@@ -54,14 +54,14 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
       const roles = guildMember.roles;
       return roles.includes(id.id);
     });
-    const mapped = found.map((role) => closure_2_15(RolePillDefault, { role, guildId: guild.id }, role.id));
+    const mapped = found.map((role) => colors(RolePillDefault, { role, guildId: guild.id }, role.id));
     let formatToPlainStringResult;
     if (found.length > 0) {
       const user = UserStore.getUser(guildMember.userId);
-      let str = guildMember(6175).getNickname(guild.id, undefined, user);
+      let str = guildMember(6288).getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(5196).getGlobalName(user);
-        const tmp9Result = tmp9(5196);
+        str = tmp9(5309).getGlobalName(user);
+        const tmp9Result = tmp9(5309);
       }
       if (str == null) {
         let username;
@@ -78,7 +78,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
       const intl = tmp2(1113).intl;
       const obj3 = { memberName: str, roleNames: joined };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1113).t["6eGpWx"], obj3);
-      const obj2 = guildMember(6175);
+      const obj2 = guildMember(6288);
       tmp9 = guildMember;
     }
     const obj4 = {
@@ -104,7 +104,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(10947), obj4);
+    return closure_15(guildMember(10866), obj4);
   }
   const obj = guild(1499);
 });
@@ -306,12 +306,12 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(9186), accessibilityLabel: null, ref: null };
+            const obj = { source: closure_1_1(8371), accessibilityLabel: null, ref: null };
             const intl = closure_1_0(1113).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1113).t.ogxXGq);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_15(closure_1_0(7633).HeaderActionButton, obj);
+            return closure_1_15(closure_1_0(7363).HeaderActionButton, obj);
           },
         });
       },
@@ -381,7 +381,7 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
   const items14 = [guild, diff, sortedGuildRoles];
   const callback1 = sortedGuildRoles.useCallback((guildMember) => {
     const index = guildMember.index;
-    return closure_2_15(closure_20, {
+    return colors(closure_20, {
       guild,
       guildMember: guildMember.item,
       sortedGuildRoles,

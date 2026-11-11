@@ -1,8 +1,8 @@
 // discord_app/modules/checkpoint/native/components/CheckpointRecapCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import CheckpointCharacterAccessibilityUtils from "../../CheckpointCharacterAccessibilityUtils.tsx";
-import CheckpointCardFrameDefault from "card/CheckpointCardFrame.tsx";
 import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext.tsx";
+import CheckpointCardFrameDefault from "card/CheckpointCardFrame.tsx";
 import CheckpointStatNumberDefault from "CheckpointStatNumber.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,9 +10,9 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const rect = { size: 240, top: nativeDefault.space.PX_16, left: -20 };
-const CheckpointStatNumber = fn(13900);
+const CheckpointStatNumber = fn(14377);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { year: null };
 const rect1 = { position: "absolute", left: 178 - checkpointStatNumberWidth / 2, top: 22.5, transform: null };
 let items = [{ rotate: "90deg" }];
@@ -36,8 +36,8 @@ export default function CheckpointRecapCard(character) {
     num = Math.min(Math.max(maxHeight / 268, 0.75), 1);
   }
   const tmp = closure_7();
-  const characterCardColorPalette = character(6225).getCharacterCardColorPalette(character);
-  const obj2 = character(6225);
+  const characterCardColorPalette = character(6338).getCharacterCardColorPalette(character);
+  const obj2 = character(6338);
   items = [character];
   const memo = noop.useMemo(() => {
     let checkpointCharacterAccessibilityLabel = null;
@@ -58,7 +58,7 @@ export default function CheckpointRecapCard(character) {
     children: null,
   };
   const obj5 = { style: tmp.year, children: null };
-  const obj3 = character(6225);
+  const obj3 = character(6338);
   obj5.children = jsx(CheckpointStatNumberDefault, {
     value: 2026,
     color: obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor,

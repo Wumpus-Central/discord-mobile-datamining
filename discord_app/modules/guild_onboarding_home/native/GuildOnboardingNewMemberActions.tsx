@@ -115,10 +115,10 @@ function MemberActionRow(channelId) {
 const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
-const GuildMemberFlags = fn(5060).GuildMemberFlags;
+const GuildMemberFlags = fn(5161).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   actionsContainer: { paddingHorizontal: 12 },
   actionsHeader: { display: "flex", marginBottom: 16 },
@@ -236,7 +236,7 @@ export default function GuildOnboardingNewMemberActions(guildId) {
               flag = false;
             }
             obj.completed = flag;
-            return closure_2_15(MemberActionRow, obj, "member-action-" + channelId.channelId);
+            return colors(MemberActionRow, obj, "member-action-" + channelId.channelId);
           }),
         ];
         let rulesChannelId;

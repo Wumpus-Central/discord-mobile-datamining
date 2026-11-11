@@ -1,8 +1,8 @@
 // discord_app/design/components/Icon/native/redesign/generated/ExperimentalWebBadgeIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9395 from "../../../../../../../_runtime/metro/09395__.js";
-import _mod9396 from "../../../../../../../_runtime/metro/09396__.js";
+import _mod10327 from "../../../../../../../_runtime/metro/10327__.js";
+import _mod10328 from "../../../../../../../_runtime/metro/10328__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -26,8 +26,8 @@ export function ExperimentalWebBadgeIcon(secondaryColor) {
   const merged = Object.assign(secondaryColor, Object.assign({ style: 0, color: 0, secondaryColor: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  items = [React4(BaseIconImage.BaseIconImage, { source: _mod9395, color, style })];
-  const obj3 = { source: _mod9396, color: str, style: null };
+  items = [React4(BaseIconImage.BaseIconImage, { source: _mod10327, color, style })];
+  const obj3 = { source: _mod10328, color: str, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

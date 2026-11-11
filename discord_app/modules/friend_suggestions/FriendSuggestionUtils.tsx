@@ -10,7 +10,7 @@ export function getSuggestedContactNameForSuggestion(friendSuggestionName, sugge
   }
   let tmp2;
   if (null != contactNames) {
-    let length;
+    length = undefined;
     if (suggestedFriend != null) {
       length = suggestedFriend.contactNames.length;
     }

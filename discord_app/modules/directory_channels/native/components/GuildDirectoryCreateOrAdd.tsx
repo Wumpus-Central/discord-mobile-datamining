@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import SegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -73,10 +73,10 @@ function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6 } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(14118).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(14598).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
   container: { flex: 1 },
@@ -117,12 +117,12 @@ let closure_12 = noop.memo(function GuildDirectoryEntryEditRow(guild) {
   );
   const obj2 = {
     label: guild.name,
-    icon: closure_9(directoryChannelId(7023), { style: tmp.guildIcon, guild }),
-    trailing: closure_9(directoryChannelId(14121), { entry: stateFromStores }),
+    icon: closure_9(directoryChannelId(7654), { style: tmp.guildIcon, guild }),
+    trailing: closure_9(directoryChannelId(14601), { entry: stateFromStores }),
     start,
     end,
   };
-  return closure_9(guild(7041).TableRow, obj2);
+  return closure_9(guild(7379).TableRow, obj2);
 });
 let closure_13 = noop.memo(function GuildDirectoryEntryAddRow(guild) {
   guild = guild.guild;

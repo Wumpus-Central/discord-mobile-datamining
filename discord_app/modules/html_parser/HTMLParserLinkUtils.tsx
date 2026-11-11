@@ -50,8 +50,8 @@ function getLink(arr3) {
   }
   return tmp;
 }
-function normalizeLabelForComparison(assetURL) {
-  const str = UnicodeSanitizationUtils.sanitizeWhitespace(assetURL);
+function normalizeLabelForComparison(text) {
+  const str = UnicodeSanitizationUtils.sanitizeWhitespace(text);
   const normalizer = str.replace(gesture, "");
   return UnicodeSanitizationUtils.sanitizeUnicodeConfusables(normalizer.normalize("NFKC"));
 }
@@ -148,10 +148,10 @@ function hasMisleadingURLLabel(str, href) {
         } else if (href.startsWith("mailto:")) {
           const _URL = URL;
           const uRL = new URL(href);
-          const str9 = tmp15(tmp16[4]).safeDecodeURIComponent(uRL.pathname);
+          const str10 = tmp15(tmp16[4]).safeDecodeURIComponent(uRL.pathname);
           let formatted;
-          if (str9 != null) {
-            formatted = str9.toLowerCase();
+          if (str10 != null) {
+            formatted = str10.toLowerCase();
           }
           const tmp15Result = tmp15(tmp16[4]);
           return null == formatted || arr2.some((item) => item.toLowerCase() !== formatted);
@@ -398,7 +398,7 @@ function validateSplitURLs(items) {
   }
 }
 let closure_3 = ["rawURL"];
-const HTMLParserConstants = fn(9492);
+const HTMLParserConstants = fn(10284);
 ({
   ALLOWED_MAILTO_HEADERS: hasOwnProperty,
   BIDI_CONTROL_CHARACTERS: closure_6,
@@ -499,7 +499,7 @@ obj.url = {
     }
   },
   parse(arg0) {
-    const searchResult = arg0[1].search(value2);
+    const searchResult = arg0[1].search(closure_1_16);
     let str = arr;
     if (-1 !== searchResult) {
       str = arr.slice(0, searchResult);

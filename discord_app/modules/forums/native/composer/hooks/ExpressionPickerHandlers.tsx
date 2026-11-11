@@ -27,7 +27,7 @@ export function usePressEmojiHandler(selection) {
     if (null == id.id) {
       if (null != id.surrogates) {
         handleTextChange(substr + id.surrogates + substr1);
-        let length = substr + id.surrogates.length;
+        length = substr + id.surrogates.length;
       }
       const obj = { start: length, end: length };
       setSelection(obj);
@@ -64,7 +64,7 @@ export function usePressGIFHandler(selection) {
     const substr1 = draftContent.substring(start);
     if (substr.endsWith(" ")) {
       handleTextChange(substr + url + substr1);
-      let length = substr + url.length;
+      length = substr + url.length;
     } else {
       const _HermesInternal = HermesInternal;
       handleTextChange(substr + " " + url + substr1);

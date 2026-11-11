@@ -3,11 +3,11 @@ import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtil
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import MemberSafetyPermissionsUtils from "../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx";
 import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled.tsx";
-import ReportUtils from "../../utils/ReportUtils.tsx";
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId.tsx";
-import SelfModUtils from "../self_mod/SelfModUtils.tsx";
 import ObscuredMediaUtils from "../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import HarmTypeConfiguration from "../explicit_media_redaction/HarmTypeConfiguration.tsx";
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId.tsx";
+import SelfModUtils from "../self_mod/SelfModUtils.tsx";
+import ReportUtils from "../../utils/ReportUtils.tsx";
 import ForumChannelTypes from "../forums/ForumChannelTypes.tsx";
 import ForumPostMessagesStore from "../forums/ForumPostMessagesStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -16,7 +16,7 @@ import MessageStore from "../../stores/MessageStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReportToModPermissions = fn(7526).ReportToModPermissions;
+const ReportToModPermissions = fn(11099).ReportToModPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 

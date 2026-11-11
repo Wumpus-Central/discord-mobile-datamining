@@ -229,7 +229,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "png" };
+  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "Array" };
   let name;
   if (category != null) {
     name = category.name;
@@ -418,7 +418,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   border: null,
@@ -451,12 +451,12 @@ let result = size.fileFinishedImporting("modules/collectibles/native/Collectible
 export default noop.memo(function CollectiblesShopViewAllCategoryItems(category) {
   if (null != category.category) {
     ({ category: obj2.category, analyticsContext: obj2.analyticsContext } = category);
-    let tmp6 = closure_1_15(CategoryItemsContent, { category: null, analyticsContext: null });
+    let tmp6 = colors(CategoryItemsContent, { category: null, analyticsContext: null });
     const obj3 = { category: null, analyticsContext: null };
   } else {
     const obj = {};
     const merged = Object.assign(category);
-    tmp6 = closure_1_15(CategoryItemsBySku, obj);
+    tmp6 = colors(CategoryItemsBySku, obj);
   }
   return tmp6;
 });

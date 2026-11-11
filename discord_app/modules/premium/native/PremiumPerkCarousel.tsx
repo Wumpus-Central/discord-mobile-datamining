@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_8 = createStyles.createStyles({
   title: { marginLeft: 24 },
   indicators: { marginBottom: -36 },
@@ -25,7 +25,7 @@ export default function PremiumPerkCarousel(arg0) {
   ({ perks, onItemChange } = arg0);
   currentIndex = undefined;
   _slicedToArray = undefined;
-  let length;
+  length = undefined;
   ({ title, style } = arg0);
   const tmp = closure_8();
   importDefault = tmp;

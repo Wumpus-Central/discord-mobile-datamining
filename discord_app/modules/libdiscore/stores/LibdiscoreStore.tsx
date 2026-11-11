@@ -477,7 +477,7 @@ prototype3["setPartition"] = function setPartition(id, filterRoleDeletesResult, 
     nextVersionResult = self.nextVersion();
   }
   self.removePartition(id, nextVersionResult);
-  const length = Object.keys(filterRoleDeletesResult).length;
+  length = Object.keys(filterRoleDeletesResult).length;
   if (0 === length) {
     return true;
   } else {

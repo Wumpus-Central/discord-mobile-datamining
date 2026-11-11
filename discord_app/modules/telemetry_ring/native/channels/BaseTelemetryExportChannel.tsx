@@ -330,7 +330,7 @@ prototype["_exportPages"] = function _exportPages(arg0, flush) {
               closure_128_2 = closure_129_0[closure_128_1];
               if (null != exportBatchSize) {
                 if (exportBatchSize > 0) {
-                  let length = exportBatchSize;
+                  length = exportBatchSize;
                   closure_128_3 = length;
                   closure_128_4 = 0;
                   if (closure_128_4 >= closure_128_2.entries.length) {

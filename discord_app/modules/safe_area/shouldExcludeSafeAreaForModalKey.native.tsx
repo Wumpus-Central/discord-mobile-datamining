@@ -6,9 +6,11 @@ import CheckpointModalConstants from "../checkpoint/CheckpointModalConstants.tsx
 import Constants from "../oauth2/native/Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+({ CHECKPOINT_MODAL_KEY, CHECKPOINT_UNAVAILABLE_MODAL_KEY } = CheckpointModalConstants);
 ({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } = Constants);
 const items = [
-  CheckpointModalConstants.CHECKPOINT_MODAL_KEY,
+  CHECKPOINT_MODAL_KEY,
+  CHECKPOINT_UNAVAILABLE_MODAL_KEY,
   Constants2.MEDIA_MODAL_KEY,
   OAUTH2_AUTHORIZE_MODAL_KEY,
   OAUTH2_SUCCESS_RESULT_MODAL_KEY,

@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
+import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const GuildIconDefault = GuildIcon;
@@ -14,8 +14,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const XLARGE = fn(7023).GuildIconSizes.XLARGE;
-const createStyles = fn(5142);
+const XLARGE = fn(7654).GuildIconSizes.XLARGE;
+const createStyles = fn(5243);
 const obj2 = {
   card: { padding: nativeDefault.space.PX_16 },
   icon: null,

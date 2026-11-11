@@ -174,7 +174,7 @@ const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   carousel: { marginHorizontal: -nativeDefault.space.PX_16 },
   carouselContent: null,
@@ -300,7 +300,7 @@ export default function AppStoreOverlayMediaCarousel(media) {
   let tmp7 = sizes(recordMediaSize.useState(0), 2);
   const first = tmp7[0];
   closure_9 = tmp7[1];
-  const length = media.length;
+  length = media.length;
   const items3 = [length];
   const effect = recordMediaSize.useEffect(() => {
     closure_7.current = 0;

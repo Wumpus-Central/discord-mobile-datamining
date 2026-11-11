@@ -149,8 +149,8 @@ function getForumPostMedia(attachments) {
     return [];
   }
 }
-function useForumPostEmbeds(embeds, hasSpoilerEmbeds) {
-  _require = hasSpoilerEmbeds;
+function useForumPostEmbeds(embeds, flag) {
+  _require = flag;
   const InlineEmbedMedia = require("UserSettings").InlineEmbedMedia;
   const setting = InlineEmbedMedia.useSetting();
   const RenderEmbeds = require("UserSettings").RenderEmbeds;

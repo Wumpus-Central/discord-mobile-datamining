@@ -3,14 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import _mod1652 from "../../../../_runtime/metro/01652__.js";
-import _modDef3898 from "../intl/SlayerStorefront.messages.js";
+import _modDef3949 from "../intl/SlayerStorefront.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _toArray from "../../../../_runtime/00717__toArray.js";
@@ -303,7 +303,7 @@ function PurchaseSuccessModalBase(sku) {
   };
   const intl2 = tmp4(tmp3[21]).intl;
   obj16.accessibilityLabel = intl2.string(require("util").t.cpT0Cq);
-  obj15.children = closure_14(require("../../../../_runtime/metro/07074__.js").HeaderBackButton, obj16);
+  obj15.children = closure_14(require("../../../../_runtime/metro/07434__.js").HeaderBackButton, obj16);
   const items23 = [closure_14(closure_7, obj15), ,];
   const obj17 = {
     style: tmp.scroll,
@@ -361,12 +361,12 @@ function PurchaseSuccessModalBase(sku) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-let numDays = fn(7474).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(7184).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj2 = {
   root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK },
   backdropImage: { position: "absolute", inset: 0, opacity: 0.45 },
@@ -451,7 +451,7 @@ obj2.finePrint = {
   marginBottom: nativeDefault.space.PX_12,
 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let obj17 = { linkAccountIcon: null };
 let obj15 = {
   textAlign: "center",
@@ -657,7 +657,7 @@ export function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
           str = "";
         }
         const obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3898.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef3949.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;

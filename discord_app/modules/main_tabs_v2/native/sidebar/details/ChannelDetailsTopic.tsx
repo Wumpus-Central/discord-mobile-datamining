@@ -189,7 +189,7 @@ function GuildChannelDetailsTopic(channel) {
   if (null == memo) {
     let PressableOpacity = c5;
   } else {
-    PressableOpacity = tmp2(7046).PressableOpacity;
+    PressableOpacity = tmp2(7364).PressableOpacity;
   }
   const obj7 = {
     style: tmp.hidden,
@@ -252,7 +252,7 @@ function GuildChannelDetailsTopic(channel) {
     const obj16 = { children: null };
     const obj17 = { children: null };
     obj14.children = memo1;
-    obj17.children = closure_11(tmp2(5753).Text, obj14);
+    obj17.children = closure_11(tmp2(5866).Text, obj14);
     obj13.children = closure_11(tmp43, obj17);
     obj12.children = closure_11(PressableOpacity, obj13);
     const items16 = [closure_11(tmp45, obj12)];
@@ -262,7 +262,7 @@ function GuildChannelDetailsTopic(channel) {
     const obj19 = { style: tmp.gradient, start: null, end: null, colors: null };
     ({ START: obj23.start, END: obj23.end } = VerticalGradient);
     obj19.colors = channelTopicGradientBackground;
-    obj18.children = closure_11(tmp44(5717), obj19);
+    obj18.children = closure_11(tmp44(5830), obj19);
     items16[1] = closure_11(tmp44(1652).View, obj18);
     obj11.children = items16;
     items13[2] = closure_12(_modDef1652.View, obj11);
@@ -317,7 +317,7 @@ function PrivateChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5753).Text, obj2);
+    tmp4 = closure_11(channel(5866).Text, obj2);
   }
   return tmp4;
 }
@@ -333,18 +333,18 @@ function GroupDMChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5753).Text, obj2);
+    tmp4 = closure_11(channel(5866).Text, obj2);
   }
   return tmp4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10264);
+const ChannelDetailsConstants = fn(10834);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 },
   topic: { overflow: "hidden" },
@@ -355,7 +355,7 @@ let obj = {
 const PlatformUtils = fn(1377);
 let obj3 = null;
 if (!PlatformUtils.isAndroid()) {
-  obj3 = { lineHeight: "r" };
+  obj3 = { lineHeight: "Array" };
 }
 let merged = Object.assign(obj3);
 obj.topicText = { paddingVertical: 5 };

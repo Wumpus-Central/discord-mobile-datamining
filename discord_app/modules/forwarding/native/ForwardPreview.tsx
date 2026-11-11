@@ -8,12 +8,12 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import checkpoint_CheckpointMessageComponentUtils from "../../checkpoint/CheckpointMessageComponentUtils.tsx";
 import ImageIcon from "../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import RowGeneratorTypes from "../../messages/native/renderer/RowGeneratorTypes.tsx";
-import CirclePlayIcon from "../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
-import ChatItemDefault from "../../../components_native/chat/ChatItem.tsx";
-import AttachmentIcon2 from "../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import CirclePlayIcon from "../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import ImagesIcon2 from "../../../design/components/Icon/native/redesign/generated/ImagesIcon.tsx";
+import AttachmentIcon2 from "../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import ChatItemDefault from "../../../components_native/chat/ChatItem.tsx";
+import RowGeneratorTypes from "../../messages/native/renderer/RowGeneratorTypes.tsx";
 import ForwardPreviewUtils from "../ForwardPreviewUtils.tsx";
 import MosaicMediaType from "../../messages/MosaicMediaType.tsx";
 import CheckpointForwardPreviewDefault from "../../checkpoint/native/components/CheckpointForwardPreview.tsx";
@@ -31,7 +31,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(575).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(5142).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(5243).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -80,7 +80,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(5142);
+  let obj = attachmentCount(5243);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -90,7 +90,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 56;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   quote: null,

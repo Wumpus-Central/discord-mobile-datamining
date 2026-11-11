@@ -31,7 +31,7 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "flexDirection";
 };
-const GlobalDiscoveryServersConstants = fn(9162);
+const GlobalDiscoveryServersConstants = fn(8340);
 ({
   GlobalDiscoveryServerTab: closure_6,
   FEATURED_GUILDS_CACHE_DURATION: metroImportDefault,
@@ -216,16 +216,15 @@ export function fromDiscoverableGuildSearchResult(id) {
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "isArray",
-    discoverySplash: 5.857,
-    emojis: -35.735,
+    preferredLocale: "Icon",
+    discoverySplash: null,
+    emojis: [],
   };
   ({
     approximate_presence_count: obj.presenceCount,
     approximate_member_count: obj.memberCount,
     discovery_splash: obj.discoverySplash,
   } = id);
-  obj.emojis = [];
   return obj;
 }
 export function getLanguageCodeFallback() {

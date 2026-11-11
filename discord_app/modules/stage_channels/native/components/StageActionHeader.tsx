@@ -1,23 +1,30 @@
 // discord_app/modules/stage_channels/native/components/StageActionHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05717_LinearGradient.js";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef4209 from "../../StageChannel.messages.js";
+import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
-import _modDef8247 from "../../../../../_runtime/metro/08247__.js";
-import _modDef8269 from "../../../../../_runtime/metro/08269__.js";
+import StageChannelParticipants from "../../StageChannelParticipants.tsx";
+import StageChannelParticipantStoreHooks from "../../StageChannelParticipantStoreHooks.tsx";
+import _modDef7951 from "../../../../../_runtime/metro/07951__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef12188 from "../../../../../_runtime/metro/12188__.js";
-import _modDef12189 from "../../../../../_runtime/metro/12189__.js";
-import _modDef12190 from "../../../../../_runtime/metro/12190__.js";
+import _modDef12981 from "../../../../../_runtime/metro/12981__.js";
+import _modDef12982 from "../../../../../_runtime/metro/12982__.js";
+import _modDef12983 from "../../../../../_runtime/metro/12983__.js";
+import _modDef12984 from "../../../../../_runtime/metro/12984__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -29,52 +36,90 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 import StageMusicStore from "../../StageMusicStore.tsx";
 
 require = fn;
-class HideStageChannelCallIcon {
-  constructor(arg0) {
-    channel = global.channel;
-    tmp = closure_14();
-    obj = channel(closure_2[19]);
-    items = [];
-    items[0] = closure_6;
-    stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
-    obj1 = {
-      source: null,
-      accessibilityLabel: null,
-      onPress: null,
-      containerStyle: null,
-      disableBackground: true,
-      children: null,
-    };
-    tmp3 = closure_1(closure_2[20]);
-    obj1.source = closure_1(closure_2[21]);
-    intl = channel(closure_2[22]).intl;
-    obj1.accessibilityLabel = intl.string(channel(closure_2[22]).t.cpT0Cq);
-    obj1.onPress = function handleClose() {
-      const obj = AnalyticsUtilsDefault;
-      const obj2 = { video_layout: "pop out" };
-      const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channel.id));
-      obj.track(constants.VIDEO_LAYOUT_TOGGLED, obj2);
-      StatusBarDefault.setHidden(false);
-      const obj5 = ModalActionCreatorsDefault;
-      obj5.popWithKey(PrivateChannelCallUtils.getVoiceChannelKey(channel.id));
-      const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
-    };
-    obj1.containerStyle = tmp.iconContainer;
-    obj1.children = jsx(channel(closure_2[24]).MaskedBadge, { value: stateFromStores, maskStyle: {} });
-    return jsx(tmp3, obj1);
-  }
+function HideStageChannelCallIcon(channel) {
+  channel = channel.channel;
+  const tmp = closure_16();
+  items = [GuildReadStateStore];
+  const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
+  let obj2 = {
+    source: null,
+    accessibilityLabel: null,
+    onPress: null,
+    containerStyle: null,
+    disableBackground: true,
+    children: null,
+  };
+  let obj = channel(504);
+  obj2.source = _modDef12981;
+  const intl = channel(1113).intl;
+  obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
+  obj2.onPress = function handleClose() {
+    const obj = AnalyticsUtilsDefault;
+    const obj2 = { video_layout: "pop out" };
+    const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channel.id));
+    obj.track(constants.VIDEO_LAYOUT_TOGGLED, obj2);
+    StatusBarDefault.setHidden(false);
+    const obj5 = ModalActionCreatorsDefault;
+    obj5.popWithKey(PrivateChannelCallUtils.getVoiceChannelKey(channel.id));
+    const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
+  };
+  obj2.containerStyle = tmp.iconBackground;
+  obj2.children = closure_13(channel(1187).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+  return closure_13(ChannelCallNavigatorIconDefault, obj2);
+}
+function StageParticipantCounts(channelId) {
+  channelId = channelId.channelId;
+  const tmp = closure_16();
+  const actualStageSpeakerCount = StageChannelParticipantStoreHooks.useActualStageSpeakerCount(channelId);
+  const stageParticipantsCount = StageChannelParticipantStoreHooks.useStageParticipantsCount(
+    channelId,
+    StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE,
+  );
+  const intl = util.intl;
+  const obj3 = {
+    style: tmp.counts,
+    pointerEvents: "none",
+    accessible: true,
+    accessibilityLabel: intl.formatToPlainString(_modDef4209.TdMGe4, {
+      speakerCount: actualStageSpeakerCount,
+      audienceCount: stageParticipantsCount,
+    }),
+    children: null,
+  };
+  items = [
+    state(native.Icon, { source: _modDef12982, size: native.Icon.Sizes.SMALL, style: tmp.icon }),
+    state(Text_Text.Text, { variant: "body-xs/normal", children: actualStageSpeakerCount }),
+    ,
+  ];
+  const obj4 = { source: _modDef12982, size: native.Icon.Sizes.SMALL, style: tmp.icon };
+  items[2] = state(native.Icon, { source: _modDef12983, size: native.Icon.Sizes.SMALL, style: tmp.icon });
+  items[3] = state(Text_Text.Text, { variant: "body-xs/normal", children: stageParticipantsCount });
+  obj3.children = items;
+  return gesture(React4, obj3);
 }
 class StageChannelCallHeader {
   constructor(arg0) {
     channel = global.channel;
-    tmp = closure_14();
+    flag = global.isStarting;
+    if (flag === undefined) {
+      flag = false;
+    }
+    tmp = closure_16();
     tmp2 = closure_1;
     tmp3 = closure_2;
-    tmp4 = closure_1(closure_2[25])(channel);
-    tmp5 = channel;
-    obj = channel(closure_2[19]);
+    rect = closure_1(closure_2[31])();
+    left = rect.right;
+    tmp5 = I18nManager;
+    tmp4 = closure_17;
+    if (I18nManager.isRTL) {
+      left = rect.left;
+    }
+    tmp4Result = tmp4(flag, left);
+    tmp7 = tmp2(tmp3[32])(channel);
+    tmp8 = channel;
+    obj = channel(tmp3[19]);
     items = [];
-    items[0] = closure_8;
+    items[0] = closure_9;
     items1 = [];
     items1[0] = channel.id;
     stateFromStores = obj.useStateFromStores(
@@ -82,89 +127,95 @@ class StageChannelCallHeader {
       () => StageInstanceStore.getStageInstanceByChannel(channel.id),
       items1,
     );
-    obj2 = channel(closure_2[26]);
-    stageParticipantsCount = obj2.useStageParticipantsCount(
-      channel.id,
-      channel(closure_2[27]).StageChannelParticipantNamedIndex.AUDIENCE,
-    );
-    obj3 = channel(closure_2[26]);
-    actualStageSpeakerCount = obj3.useActualStageSpeakerCount(channel.id);
-    obj4 = channel(closure_2[19]);
+    obj2 = channel(tmp3[19]);
     items2 = [];
-    items2[0] = closure_4;
-    tmp9 = jsxs;
-    tmp10 = View;
-    obj1 = { pointerEvents: "none", style: tmp.leftTitleContainer, children: null };
-    obj15 = { style: tmp.titleWrapper, children: null };
-    tmp11 = null == obj4.useStateFromStores(items2, () => ChannelRTCStore.getSelectedParticipant(channel.id));
-    if (tmp11) {
-      tmp12 = jsx;
-      obj16 = { style: null, colors: null, start: null, end: null };
-      obj16.style = tmp.linearGradient;
-      obj16.colors = ["#00000000", "#000000"];
-      obj16.start = { x: 0.85, y: 0 };
-      obj16.end = { x: 1, y: 0 };
-      tmp11 = jsx(tmp2(tmp3[28]), obj16);
-    }
-    items3 = [,];
-    items3[0] = tmp11;
+    items2[0] = closure_5;
+    tmp11 = jsxs;
+    tmp12 = View;
+    obj1 = { style: tmp4Result.header, pointerEvents: "box-none", children: null };
     tmp13 = jsx;
+    stateFromStores1 = obj2.useStateFromStores(items2, () => ChannelRTCStore.getSelectedParticipant(channel.id));
+    items3 = [,];
+    items3[0] = jsx(HideStageChannelCallIcon, { channel });
+    obj13 = { style: tmp.content, pointerEvents: "box-none", children: null };
+    tmp13Result = null == stateFromStores1;
+    if (tmp13Result) {
+      obj14 = { pointerEvents: "none", style: null, colors: null, start: null, end: null };
+      obj14.style = tmp4Result.linearGradient;
+      tmp16 = closure_15;
+      obj14.colors = closure_15;
+      num = 0.7;
+      tmp2Result = tmp2(tmp3[33]);
+      if (tmp5.isRTL) {
+        num = 0.3;
+      }
+      point = { x: null, y: 0 };
+      point.x = num;
+      obj14.start = point;
+      num2 = 1;
+      if (tmp5.isRTL) {
+        num2 = 0;
+      }
+      point1 = { x: null, y: 0 };
+      point1.x = num2;
+      obj14.end = point1;
+      tmp13Result = tmp13(tmp2Result, obj14);
+    }
+    items4 = [, , ,];
+    items4[0] = tmp13Result;
+    obj15 = { pointerEvents: "none", style: tmp.leftTitleContainer, children: null };
     topic = undefined;
     if (stateFromStores != null) {
       topic = stateFromStores.topic;
     }
     if (topic == null) {
-      topic = tmp4;
+      topic = tmp7;
     }
-    items3[1] = tmp13(tmp5(tmp3[29]).Text, {
+    items5 = [,];
+    items5[0] = tmp13(tmp8(tmp3[29]).Text, {
       color: "text-overlay-light",
       variant: "body-md/semibold",
+      lineClamp: 1,
       children: topic,
     });
-    obj15.children = items3;
-    items4 = [,];
-    items4[0] = tmp9(tmp10, obj15);
-    tmp9Result = null != stateFromStores;
-    if (tmp9Result) {
-      obj17 = { style: null, children: null };
-      obj17.style = tmp.stageInfo;
-      obj18 = { source: null, size: null, disableColor: true };
-      obj18.source = tmp2(tmp3[30]);
-      obj18.size = tmp5(tmp3[24]).Icon.Sizes.SMALL;
-      items5 = [, , , , ,];
-      items5[0] = tmp13(tmp5(tmp3[24]).Icon, obj18);
-      obj19 = { variant: "body-xs/normal", style: null, children: null };
-      obj19.style = tmp.stageInfoTopic;
-      obj19.children = tmp4;
-      items5[1] = tmp13(tmp5(tmp3[29]).Text, obj19);
-      obj20 = { source: null, size: null, style: null };
-      obj20.source = tmp2(tmp3[31]);
-      obj20.size = tmp5(tmp3[24]).Icon.Sizes.SMALL;
-      obj20.style = tmp.icon;
-      items5[2] = tmp13(tmp5(tmp3[24]).Icon, obj20);
-      obj21 = { variant: "body-xs/normal", children: null };
-      obj21.children = actualStageSpeakerCount;
-      items5[3] = tmp13(tmp5(tmp3[29]).Text, obj21);
-      obj22 = { source: null, size: null, style: null };
-      obj22.source = tmp2(tmp3[32]);
-      obj22.size = tmp5(tmp3[24]).Icon.Sizes.SMALL;
-      obj22.style = tmp.icon;
-      items5[4] = tmp13(tmp5(tmp3[24]).Icon, obj22);
-      obj23 = { variant: "body-xs/normal", children: null };
-      obj23.children = stageParticipantsCount;
-      items5[5] = tmp13(tmp5(tmp3[29]).Text, obj23);
-      obj17.children = items5;
-      tmp9Result = tmp9(tmp10, obj17);
+    tmp11Result = null != stateFromStores;
+    if (tmp11Result) {
+      obj16 = { style: null, children: null };
+      obj16.style = tmp.stageInfo;
+      obj17 = { source: null, size: null, disableColor: true };
+      obj17.source = tmp2(tmp3[34]);
+      obj17.size = tmp8(tmp3[24]).Icon.Sizes.SMALL;
+      items6 = [,];
+      items6[0] = tmp13(tmp8(tmp3[24]).Icon, obj17);
+      obj18 = { variant: "body-xs/normal", style: null, lineClamp: 1, children: null };
+      obj18.style = tmp.stageInfoTopic;
+      obj18.children = tmp7;
+      items6[1] = tmp13(tmp8(tmp3[29]).Text, obj18);
+      obj16.children = items6;
+      tmp11Result = tmp11(tmp12, obj16);
     }
-    items4[1] = tmp9Result;
-    obj1.children = items4;
-    return tmp9(tmp10, obj1);
+    items5[1] = tmp11Result;
+    obj15.children = items5;
+    items4[1] = tmp11(tmp12, obj15);
+    tmp13Result1 = null != stateFromStores;
+    if (tmp13Result1) {
+      tmp20 = StageParticipantCounts;
+      obj19 = { channelId: null };
+      obj19.channelId = channel.id;
+      tmp13Result1 = tmp13(StageParticipantCounts, obj19);
+    }
+    items4[2] = tmp13Result1;
+    items4[3] = global.children;
+    obj13.children = items4;
+    items3[1] = tmp11(tmp12, obj13);
+    obj1.children = items3;
+    return tmp11(tmp12, obj1);
   }
 }
 class StageSettingsButton {
   constructor(arg0) {
     ({ channelId, onOpenRTCDebugOverlay } = global);
-    tmp = closure_14();
+    tmp = closure_16();
     obj = { accessibilityLabel: null, containerStyle: null, source: null, onPress: null, disableBackground: true };
     tmp2 = onOpenRTCDebugOverlay(closure_2[20]);
     intl = channelId(closure_2[22]).intl;
@@ -172,7 +223,7 @@ class StageSettingsButton {
     items = [,];
     ({ iconBackground: arr[0], settingsButton: arr[1] } = tmp);
     obj.containerStyle = items;
-    obj.source = onOpenRTCDebugOverlay(closure_2[33]);
+    obj.source = onOpenRTCDebugOverlay(closure_2[35]);
     obj.onPress = function onPress() {
       return StageChannelActionCreatorExtras.openStageSettingsSheet(closure_1_0, importDefault);
     };
@@ -187,17 +238,17 @@ class StageInviteButton {
     closure_3 = undefined;
     tmp2 = channelId;
     tmp3 = closure_2;
-    tmp = closure_14();
+    tmp = closure_16();
     obj = channelId(closure_2[19]);
     items = [];
-    items[0] = closure_5;
+    items[0] = closure_6;
     items1 = [];
     items1[0] = channelId;
     stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
     closure_1 = stateFromStores;
     obj2 = channelId(closure_2[19]);
     items2 = [];
-    items2[0] = closure_7;
+    items2[0] = closure_8;
     items3 = [];
     items3[0] = stateFromStores;
     stateFromStores1 = obj2.useStateFromStores(
@@ -215,7 +266,7 @@ class StageInviteButton {
       items3,
     );
     closure_2 = stateFromStores1;
-    obj3 = channelId(closure_2[35]);
+    obj3 = channelId(closure_2[37]);
     closure_3 = obj3.useActiveEvent(channelId);
     tmp6 = null;
     if (null != stateFromStores) {
@@ -235,8 +286,8 @@ class StageInviteButton {
         intl = tmp2(tmp3[22]).intl;
         obj1.accessibilityLabel = intl.string(tmp2(tmp3[22]).t.VINpSK);
         obj1.containerStyle = tmp.iconBackground;
-        obj1.source = closure_1(tmp3[36]);
-        obj1.IconComponent = tmp2(tmp3[37]).GroupPlusIcon;
+        obj1.source = closure_1(tmp3[38]);
+        obj1.IconComponent = tmp2(tmp3[39]).GroupPlusIcon;
         obj1.onPress = function onPress() {
           if (null != stateFromStores1.vanityURLCode) {
             const result = instant_invite_InstantInviteUtils.showVanityUrlInviteActionSheet(
@@ -265,13 +316,13 @@ class MusicMuteButton {
     closure_0 = undefined;
     tmp2 = closure_0;
     tmp3 = closure_2;
-    tmp = closure_14();
+    tmp = closure_16();
     obj = closure_0(closure_2[19]);
     items = [];
-    items[0] = closure_9;
+    items[0] = closure_10;
     stateFromStores = obj.useStateFromStores(items, () => muted.isMuted());
     closure_0 = stateFromStores;
-    obj2 = closure_0(closure_2[39]);
+    obj2 = closure_0(closure_2[41]);
     if (!obj2.useShowStageMusicMuteButton(global.channelId)) {
       return null;
     } else {
@@ -289,7 +340,7 @@ class MusicMuteButton {
       obj1 = { accessibilityLabel: null, containerStyle: null, source: null, onPress: null, disableBackground: true };
       obj1.accessibilityLabel = stringResult;
       obj1.containerStyle = tmp.iconBackground;
-      obj1.source = tmp6(stateFromStores ? tmp3[40] : tmp3[41]);
+      obj1.source = tmp6(stateFromStores ? tmp3[42] : tmp3[43]);
       obj1.onPress = function onPress() {
         return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
       };
@@ -298,89 +349,112 @@ class MusicMuteButton {
     return;
   }
 }
-const View = fn(17).View;
+get_ActivityIndicator = fn(17);
+({ I18nManager: c3, View: closure_4 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: closure_10, InstantInviteSources: closure_11 } = Constants);
+({ AnalyticEvents: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5142);
+({ jsx: map1, jsxs: closure_14 } = jsxProd);
+let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, nativeDefault.unsafe_rawColors.BLACK];
+let createStyles = fn(5243);
 let obj = {
-  header: {
-    height: fn(5716).NAV_BAR_HEIGHT,
+  content: {
+    marginStart: nativeDefault.space.PX_12,
+    flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 12,
-    overflow: "visible",
+    alignSelf: "stretch",
   },
-  leftTitleContainer: { marginLeft: 12, flex: 1 },
-  titleWrapper: { position: "relative", flex: 1, justifyContent: "center" },
-  linearGradient: { position: "absolute", zIndex: 1, left: 0, right: 0, top: 0, bottom: 0 },
+  leftTitleContainer: { flex: 1, minWidth: 0, alignSelf: "stretch", justifyContent: "center", overflow: "hidden" },
   iconBackground: null,
-  iconContainer: null,
   settingsButton: null,
   stageInfo: null,
   stageInfoTopic: null,
+  counts: null,
   icon: null,
 };
 let obj4 = { backgroundColor: null };
-let ColorUtils = fn(5139);
+const ColorUtils = fn(5240);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconBackground = obj4;
-let obj5 = { backgroundColor: null };
-ColorUtils = fn(5139);
-obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
-obj.iconContainer = obj5;
-obj.settingsButton = { marginRight: 4 };
 let obj3 = {
-  height: fn(5716).NAV_BAR_HEIGHT,
+  marginStart: nativeDefault.space.PX_12,
+  flex: 1,
   flexDirection: "row",
   alignItems: "center",
-  paddingHorizontal: 12,
-  overflow: "visible",
+  alignSelf: "stretch",
 };
-obj.stageInfo = { flex: 1, flexDirection: "row", alignItems: "center", color: nativeDefault.colors.TEXT_SUBTLE };
-obj.stageInfoTopic = { marginLeft: 4 };
-let obj7 = { flex: 1, flexDirection: "row", alignItems: "center", color: nativeDefault.colors.TEXT_SUBTLE };
-obj.icon = { marginLeft: 8, marginRight: 4, tintColor: nativeDefault.colors.TEXT_SUBTLE };
-const gesture = createStyles.createStyles(obj);
-let obj9 = { marginLeft: 8, marginRight: 4, tintColor: nativeDefault.colors.TEXT_SUBTLE };
+obj.settingsButton = { marginEnd: nativeDefault.space.PX_4 };
+obj.stageInfo = { flexDirection: "row", alignItems: "center" };
+let obj5 = { marginEnd: nativeDefault.space.PX_4 };
+obj.stageInfoTopic = { marginStart: nativeDefault.space.PX_4, flex: 1, minWidth: 0 };
+let obj7 = { marginStart: nativeDefault.space.PX_4, flex: 1, minWidth: 0 };
+obj.counts = { flexDirection: "row", alignItems: "center", flexShrink: 0, marginEnd: nativeDefault.space.PX_8 };
+let obj8 = { flexDirection: "row", alignItems: "center", flexShrink: 0, marginEnd: nativeDefault.space.PX_8 };
+obj.icon = {
+  marginStart: nativeDefault.space.PX_8,
+  marginEnd: nativeDefault.space.PX_4,
+  tintColor: nativeDefault.colors.TEXT_SUBTLE,
+};
+const value = createStyles.createStyles(obj);
+createStyles = fn(5243);
+let closure_17 = createStyles.createStyles((arg0, arg1) => {
+  const space = nativeDefault.space;
+  if (arg0) {
+    let PX_12 = space.PX_8;
+    let tmp4 = importDefault;
+  } else {
+    PX_12 = space.PX_12;
+    tmp4 = importDefault;
+  }
+  const obj = {
+    height: NavigatorConstants.NAV_BAR_HEIGHT,
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: PX_12,
+    marginTop: null,
+  };
+  let num = 0;
+  if (arg0) {
+    num = tmp4(575).space.PX_4;
+  }
+  obj.marginTop = num;
+  return { header: obj, linearGradient: { position: "absolute", start: 0, end: -PX_12 + arg1, top: 0, bottom: 0 } };
+});
+let obj9 = {
+  marginStart: nativeDefault.space.PX_8,
+  marginEnd: nativeDefault.space.PX_4,
+  tintColor: nativeDefault.colors.TEXT_SUBTLE,
+};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/components/StageActionHeader.tsx");
 
 export default noop.memo(function StageActionHeader(onOpenRTCDebugOverlay) {
   ({ channel, fullscreenStream } = onOpenRTCDebugOverlay);
-  const tmp3 = useMyCurrentStageChannelRoleDefault(channel.id);
+  const tmp2 = useMyCurrentStageChannelRoleDefault(channel.id);
   let speaker;
-  if (tmp3 != null) {
-    speaker = tmp3.speaker;
+  if (tmp2 != null) {
+    speaker = tmp2.speaker;
   }
-  const obj = { style: closure_14().header, pointerEvents: "box-none", children: null };
-  items = [
-    application_id(HideStageChannelCallIcon, { channel, fullscreenStream }),
-    application_id(StageChannelCallHeader, { channel }),
-    ,
-    ,
-    ,
-    ,
-  ];
+  const obj = { channel, children: null };
   if (speaker) {
     const obj2 = { channelId: channel.id };
-    speaker = application_id(MusicMuteButton, obj2);
+    speaker = state(MusicMuteButton, obj2);
   }
-  items[2] = speaker;
+  items = [speaker, , , ,];
   if (fullscreenStream) {
     const obj3 = { channel };
-    fullscreenStream = application_id(ChannelCallHeaderButtons.GridButton, obj3);
+    fullscreenStream = state(ChannelCallHeaderButtons.GridButton, obj3);
   }
-  items[3] = fullscreenStream;
-  items[4] = application_id(ChannelCallHeaderButtons.CameraButton, {});
-  items[5] = application_id(StageInviteButton, { channelId: channel.id });
-  items[6] = application_id(StageSettingsButton, {
+  items[1] = fullscreenStream;
+  items[2] = state(ChannelCallHeaderButtons.CameraButton, {});
+  items[3] = state(StageInviteButton, { channelId: channel.id });
+  items[4] = state(StageSettingsButton, {
     channelId: channel.id,
     onOpenRTCDebugOverlay: onOpenRTCDebugOverlay.onOpenRTCDebugOverlay,
   });
   obj.children = items;
-  return state(View, obj);
+  return gesture(StageChannelCallHeader, obj);
 });
 export function closeStageModal(id) {
   const obj = AnalyticsUtilsDefault;
@@ -391,39 +465,7 @@ export function closeStageModal(id) {
   const obj5 = ModalActionCreatorsDefault;
   obj5.popWithKey(PrivateChannelCallUtils.getVoiceChannelKey(id.id));
 }
-export { HideStageChannelCallIcon };
 export { StageChannelCallHeader };
-export function HideChannelCallButton(channel) {
-  channel = channel.channel;
-  const tmp = closure_14();
-  items = [GuildReadStateStore];
-  const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
-  let obj2 = {
-    source: null,
-    accessibilityLabel: null,
-    onPress: null,
-    containerStyle: null,
-    disableBackground: true,
-    children: null,
-  };
-  let obj = channel(504);
-  obj2.source = _modDef12188;
-  const intl = channel(1113).intl;
-  obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
-  obj2.onPress = function handleClose() {
-    const obj = AnalyticsUtilsDefault;
-    const obj2 = { video_layout: "pop out" };
-    const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channel.id));
-    obj.track(constants.VIDEO_LAYOUT_TOGGLED, obj2);
-    StatusBarDefault.setHidden(false);
-    const obj5 = ModalActionCreatorsDefault;
-    obj5.popWithKey(PrivateChannelCallUtils.getVoiceChannelKey(channel.id));
-    const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
-  };
-  obj2.containerStyle = tmp.iconContainer;
-  obj2.children = closure_12(channel(1187).MaskedBadge, { value: stateFromStores, maskStyle: {} });
-  return closure_12(ChannelCallNavigatorIconDefault, obj2);
-}
 export { StageSettingsButton };
 export { StageInviteButton };
 export { MusicMuteButton };

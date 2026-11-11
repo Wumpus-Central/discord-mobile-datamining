@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/conjureServerAppRemoval.tsx
-import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
+import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import conjureAppInServer from "conjureAppInServer.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -50,9 +50,32 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           items = [];
         } else {
-          items = guild(11025).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(11025);
+          items = guild(conjureProjectId[10]).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(conjureProjectId[10]);
         }
+        closure_129_0 = conjureProjectId;
+        const memberIds = GuildMemberStore.getMemberIds(guild.id);
+        const found = memberIds.filter((item) => {
+          const user = UserStore.getUser(item);
+          let bot;
+          if (user != null) {
+            bot = user.bot;
+          }
+          let tmp3 = true === bot;
+          if (tmp3) {
+            let appIdForBotUserId = ApplicationStore.getAppIdForBotUserId(item);
+            if (appIdForBotUserId == null) {
+              appIdForBotUserId = item;
+            }
+            application = ApplicationStore.getApplication(appIdForBotUserId);
+            conjureProjectId = undefined;
+            if (application != null) {
+              conjureProjectId = application.conjureProjectId;
+            }
+            tmp3 = conjureProjectId === guild;
+          }
+          return tmp3;
+        });
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
           let bot = application.bot;
@@ -60,8 +83,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(11025).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(11025);
+          canRemoveConjureBotResult = guild(conjureProjectId[10]).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(conjureProjectId[10]);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -69,76 +92,111 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(11025).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(11025);
+          canRemoveConjureBotResult = guild(conjureProjectId[10]).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(conjureProjectId[10]);
         }
         if (canRemoveConjureBotResult) {
-          closure_129_0 = conjureProjectId;
-          const memberIds = GuildMemberStore.getMemberIds(guild.id);
-          const found = memberIds.filter((item) => {
-            const user = UserStore.getUser(item);
-            let bot;
-            if (user != null) {
-              bot = user.bot;
-            }
-            let tmp3 = true === bot;
-            if (tmp3) {
-              let appIdForBotUserId = ApplicationStore.getAppIdForBotUserId(item);
-              if (appIdForBotUserId == null) {
-                appIdForBotUserId = item;
-              }
-              application = ApplicationStore.getApplication(appIdForBotUserId);
-              conjureProjectId = undefined;
-              if (application != null) {
-                conjureProjectId = application.conjureProjectId;
-              }
-              tmp3 = conjureProjectId === guild;
-            }
-            return tmp3;
-          });
           canRemoveConjureBotResult = found.every((item) => conjureAppInServer.canRemoveConjureBot(guild, item));
         }
         if (canRemoveConjureBotResult) {
           canRemoveConjureBotResult = items.every((item) => PermissionStore.can(constants.MANAGE_CHANNELS, item));
         }
-        const obj4 = { projectId: conjureProjectId, guildId: null, guildName: null, targetAppName: null, rest: null };
-        ({ id: obj5.guildId, name: obj5.guildName } = guild);
-        obj4.targetAppName = application.name;
-        let tmp16 = null;
         if (null != id) {
-          tmp16 = null;
+          let endsWithResult = id.id !== application.id;
+        } else {
+          const name = application.name;
+          endsWithResult = name.endsWith(c14);
+        }
+        let found1;
+        if (!endsWithResult) {
+          found1 = found.find((item) => {
+            let appIdForBotUserId = ApplicationStore.getAppIdForBotUserId(item);
+            if (appIdForBotUserId == null) {
+              appIdForBotUserId = item;
+            }
+            return appIdForBotUserId !== application.id;
+          });
+        }
+        const obj5 = {
+          projectId: conjureProjectId,
+          guildId: null,
+          guildName: null,
+          targetAppName: null,
+          targetIsPreview: null,
+          deletableChannelNames: null,
+          keptChannelNames: null,
+          previewApp: null,
+          rest: null,
+        };
+        ({ id: obj4.guildId, name: obj4.guildName } = guild);
+        obj5.targetAppName = application.name;
+        obj5.targetIsPreview = endsWithResult;
+        const found2 = items.filter(canDeleteChannel);
+        obj5.deletableChannelNames = found2.map((item) =>
+          guild(conjureProjectId[11]).computeChannelName(item, UserStore, RelationshipStore),
+        );
+        const found3 = items.filter((item) => !PermissionStore.can(constants.MANAGE_CHANNELS, item));
+        obj5.keptChannelNames = found3.map((item) =>
+          guild(conjureProjectId[11]).computeChannelName(item, UserStore, RelationshipStore),
+        );
+        let tmp20 = null;
+        if (null != found1) {
+          let appIdForBotUserId = ApplicationStore.getAppIdForBotUserId(found1);
+          if (appIdForBotUserId == null) {
+            appIdForBotUserId = found1;
+          }
+          const application1 = ApplicationStore.getApplication(appIdForBotUserId);
+          let name1;
+          if (application1 != null) {
+            name1 = application1.name;
+          }
+          if (name1 == null) {
+            const _HermesInternal = HermesInternal;
+            name1 = "" + application.name + c14;
+          }
+          const obj7 = { name: name1, canRemove: guild(conjureProjectId[10]).canRemoveConjureBot(guild, found1) };
+          tmp20 = obj7;
+          const obj6 = guild(conjureProjectId[10]);
+        }
+        obj5.previewApp = tmp20;
+        let tmp29 = null;
+        if (null != id) {
+          tmp29 = null;
           if (0 !== items.length) {
-            tmp16 = null;
+            tmp29 = null;
             if (canRemoveConjureBotResult) {
-              const obj6 = { appName: id.name, previewAppName: null, channels: null, targetIsPreview: null };
+              const obj10 = { appName: id.name, previewAppName: null, channels: null, targetIsPreview: null };
               if (id.id === application.id) {
-                const _HermesInternal = HermesInternal;
-                let name = "" + id.name + c14;
+                const _HermesInternal2 = HermesInternal;
+                let name2 = "" + id.name + c14;
               } else {
-                name = application.name;
+                name2 = application.name;
               }
-              obj6.previewAppName = name;
-              obj6.channels = items.map((id) => {
+              obj10.previewAppName = name2;
+              obj10.channels = items.map((id) => {
                 const obj = {
                   id: id.id,
-                  name: guild(dependencyMap[11]).computeChannelName(id, UserStore, RelationshipStore),
+                  name: guild(conjureProjectId[11]).computeChannelName(id, UserStore, RelationshipStore),
                 };
                 return obj;
               });
               id = id.id;
               application = application.id;
-              obj6.targetIsPreview = id !== application;
+              obj10.targetIsPreview = id !== application;
             }
           }
         }
-        obj4.rest = tmp16;
-        return obj4;
+        obj5.rest = tmp29;
+        return obj5;
       }
     }
   }
   return null;
 }
-let closure_17 = async function _loadConjureServerApp(arg0) {
+function canDeleteChannel(arg0) {
+  return PermissionStore.can(Permissions.MANAGE_CHANNELS, arg0);
+}
+let closure_18 = async function _loadConjureServerApp(arg0) {
   closure_2 = tmp2;
   closure_130_0 = closure_0;
   closure_130_1 = closure_1;
@@ -161,7 +219,7 @@ let closure_17 = async function _loadConjureServerApp(arg0) {
       } else {
         c4 = 2;
         c5 = 1;
-        return { value: Promise.all(closure_131_18(closure_130_0).map(closure_131_20)), done: false };
+        return { value: Promise.all(closure_131_19(closure_130_0).map(closure_131_21)), done: false };
       }
     }
   } else if (arg0 === 1) {
@@ -195,7 +253,7 @@ function fetchMissingApplication(item10010) {
 }
 function loadMissingApplication() {
   const self = this;
-  const apply = closure_21.apply;
+  const apply = closure_22.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -203,7 +261,7 @@ function loadMissingApplication() {
   }
   return applyArgumentsResult;
 }
-let closure_21 = async function _loadMissingApplication(arg0) {
+let closure_22 = async function _loadMissingApplication(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -247,13 +305,13 @@ let closure_21 = async function _loadMissingApplication(arg0) {
       }
       c1 = 3;
       return { value: "HermesInternal", done: null };
-    } catch (tmp7) {
+    } catch (tmp10) {
       c1 = tmp;
-      throw tmp7;
+      throw tmp10;
     }
   }
 };
-let closure_7 = fn(5072).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(5173).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);
@@ -412,25 +470,13 @@ export function useConjureServerApp(guildId, applicationId) {
 }
 export function loadConjureServerApp() {
   const self = this;
-  const apply = closure_17.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-}
-export function conjureKickAppItems(rest) {
-  const channels = rest.channels;
-  items = [...channels.map((id) => ({ key: "channel:" + id.id, kind: "channel", label: "#" + id.name }))];
-  if (rest.targetIsPreview) {
-    const obj2 = { key: "main-app", kind: "app", label: rest.appName };
-    let obj = obj2;
-  } else {
-    obj = { key: "preview-app", kind: "app", label: rest.previewAppName };
-  }
-  items[tmp] = obj;
-  return items;
 }
 export function conjureDeleteAppChannelItems(rest, channelId) {
   closure_0 = channelId;

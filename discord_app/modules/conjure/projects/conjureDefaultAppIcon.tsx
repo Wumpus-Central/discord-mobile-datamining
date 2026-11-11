@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/projects/conjureDefaultAppIcon.tsx
 import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
+import rawDefault from "../../../../_runtime/10005_raw.js";
 import GuildProfileConstants from "../../guild_profile/GuildProfileConstants.tsx";
-import rawDefault from "../../../../_runtime/10906_raw.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const BANNER_PALETTE_PRESETS = GuildProfileConstants.BANNER_PALETTE_PRESETS;
@@ -10,7 +10,6 @@ let c4 = 0.12156862745098039;
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureDefaultAppIcon.tsx");
 
 export function getConjureDefaultAppIcon(str, str2) {
-  let length;
   let num = 0;
   let num2 = 0;
   if (0 < str.length) {

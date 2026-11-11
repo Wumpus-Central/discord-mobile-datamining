@@ -1,14 +1,14 @@
 // discord_app/modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
-import _mod7360 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7822 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod7360;
+  const tmp3 = _mod7822;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
@@ -83,7 +83,7 @@ export default function AppLauncherChoicesActionSheet(option) {
   let tmp11 = null != option.choices;
   if (tmp11) {
     let choices = option.choices;
-    let length;
+    length = undefined;
     if (choices != null) {
       length = choices.length;
     }

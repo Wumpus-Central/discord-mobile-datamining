@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/history/native/ConjurePublishHistoryPanel.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -18,11 +18,11 @@ function ReleaseNotes(arg0) {
     const obj2 = { spacing: 8, children: null };
     const obj3 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl4 = util.intl;
-    obj3.children = intl4.string(_modDef4028.cBIaeW);
+    obj3.children = intl4.string(_modDef4079.cBIaeW);
     items = [timestampProducer(Text_Text.Text, obj3)];
     const obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl5 = util.intl;
-    obj4.text = intl5.string(_modDef4028.HOuQ9H);
+    obj4.text = intl5.string(_modDef4079.HOuQ9H);
     obj4.onPress = tmp4;
     items[1] = timestampProducer(components_Button_Button.Button, obj4);
     obj2.children = items;
@@ -41,13 +41,13 @@ function ReleaseNotes(arg0) {
     }
     if ("loading" === state.status) {
       const intl3 = util.intl;
-      let stringResult = intl3.string(_modDef4028["LmWLc+"]);
+      let stringResult = intl3.string(_modDef4079["LmWLc+"]);
     } else if (null == data) {
       const intl2 = util.intl;
-      stringResult = intl2.string(_modDef4028.hcrQOo);
+      stringResult = intl2.string(_modDef4079.hcrQOo);
     } else {
       const intl = util.intl;
-      stringResult = intl.string(_modDef4028["0bDcBs"]);
+      stringResult = intl.string(_modDef4079["0bDcBs"]);
     }
     const obj6 = { accessibilityLiveRegion: "polite", children: null };
     const obj7 = { variant: "body-sm/normal", children: stringResult };
@@ -70,7 +70,7 @@ let closure_9 = noop.memo(function PublishRow(entry) {
     ,
   ];
   const intl = util.intl;
-  const tmp9 = _modDef4028;
+  const tmp9 = _modDef4079;
   if (tmp2) {
     let ufHcsq = tmp9["Qro2x/"];
     let tmp10 = importDefault;
@@ -87,7 +87,7 @@ let closure_9 = noop.memo(function PublishRow(entry) {
     onPress: null,
   };
   const intl2 = util.intl;
-  obj2.accessibilityLabel = intl2.formatToPlainString(tmp10(4028)["M9L+3I"], { title: publishHistoryTitleResult });
+  obj2.accessibilityLabel = intl2.formatToPlainString(tmp10(4079)["M9L+3I"], { title: publishHistoryTitleResult });
   obj2.accessibilityState = { expanded: tmp2 };
   obj2.onPress = function onPress() {
     return _undefined((arg0) => !arg0);
@@ -106,37 +106,37 @@ const result = size.fileFinishedImporting("modules/conjure/history/native/Conjur
 
 export default function ConjurePublishHistoryPanel(projectId) {
   projectId = projectId.projectId;
-  const iter = projectId(12376).useConjurePublishHistory(projectId);
+  const iter = projectId(13185).useConjurePublishHistory(projectId);
   state = iter.state;
   if ("loading" === state.status) {
     const obj2 = { variant: "body-sm/normal", children: null };
     const intl4 = tmp(1113).intl;
-    obj2.children = intl4.string(iter(4028)["d/Wf8N"]);
-    let tmp5 = closure_6(tmp(5753).Text, obj2);
+    obj2.children = intl4.string(iter(4079)["d/Wf8N"]);
+    let tmp5 = closure_6(tmp(5866).Text, obj2);
   } else if ("failed" === state.status) {
     const obj3 = { spacing: 12, children: null };
     const obj4 = { variant: "body-sm/normal", children: null };
     const intl2 = tmp(1113).intl;
-    obj4.children = intl2.string(iter(4028).TzCJWI);
-    items = [closure_6(tmp(5753).Text, obj4)];
+    obj4.children = intl2.string(iter(4079).TzCJWI);
+    items = [closure_6(tmp(5866).Text, obj4)];
     const obj5 = { variant: "secondary", text: null, onPress: null };
     const intl3 = tmp(1113).intl;
-    obj5.text = intl3.string(iter(4028).HOuQ9H);
+    obj5.text = intl3.string(iter(4079).HOuQ9H);
     obj5.onPress = iter.retry;
-    items[1] = closure_6(tmp(5760).Button, obj5);
+    items[1] = closure_6(tmp(5873).Button, obj5);
     obj3.children = items;
-    tmp5 = closure_7(tmp(6161).Stack, obj3);
+    tmp5 = closure_7(tmp(6274).Stack, obj3);
   } else if (0 === state.data.entries.length) {
     const obj6 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl = tmp(1113).intl;
-    obj6.children = intl.string(iter(4028)["19L92G"]);
-    tmp5 = closure_6(tmp(5753).Text, obj6);
+    obj6.children = intl.string(iter(4079)["19L92G"]);
+    tmp5 = closure_6(tmp(5866).Text, obj6);
   } else {
     const obj7 = { spacing: 24, children: null };
     const obj8 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl5 = tmp(1113).intl;
-    obj8.children = intl5.string(iter(4028).Kzt1rI);
-    const items1 = [closure_6(tmp(5753).Text, obj8), ,];
+    obj8.children = intl5.string(iter(4079).Kzt1rI);
+    const items1 = [closure_6(tmp(5866).Text, obj8), ,];
     const entries = state.data.entries;
     items1[1] = entries.map((entry) =>
       timestampProducer(closure_9, { projectId, entry, notesCache: iter.notesCache }, entry.id),
@@ -144,25 +144,25 @@ export default function ConjurePublishHistoryPanel(projectId) {
     const obj9 = { direction: "horizontal", spacing: 8, align: "center", justify: "space-between", children: null };
     const obj10 = { variant: "secondary", size: "sm", shrink: true, text: null, disabled: null, onPress: null };
     const intl6 = tmp(1113).intl;
-    obj10.text = intl6.string(iter(4028)["4un98A"]);
+    obj10.text = intl6.string(iter(4079)["4un98A"]);
     obj10.disabled = !iter.hasPrevious;
     obj10.onPress = iter.previous;
-    const items2 = [closure_6(tmp(5760).Button, obj10), ,];
+    const items2 = [closure_6(tmp(5873).Button, obj10), ,];
     const obj11 = { variant: "body-sm/normal", children: null };
     const intl7 = tmp(1113).intl;
     const obj12 = { page: iter.page };
-    obj11.children = intl7.formatToPlainString(iter(4028)["54samz"], obj12);
-    items2[1] = closure_6(tmp(5753).Text, obj11);
+    obj11.children = intl7.formatToPlainString(iter(4079)["54samz"], obj12);
+    items2[1] = closure_6(tmp(5866).Text, obj11);
     const obj13 = { variant: "secondary", size: "sm", shrink: true, text: null, disabled: null, onPress: null };
     const intl8 = tmp(1113).intl;
-    obj13.text = intl8.string(iter(4028).HqheLL);
+    obj13.text = intl8.string(iter(4079).HqheLL);
     obj13.disabled = !iter.hasNext;
     obj13.onPress = iter.next;
-    items2[2] = closure_6(tmp(5760).Button, obj13);
+    items2[2] = closure_6(tmp(5873).Button, obj13);
     obj9.children = items2;
-    items1[2] = closure_7(tmp(6161).Stack, obj9);
+    items1[2] = closure_7(tmp(6274).Stack, obj9);
     obj7.children = items1;
-    tmp5 = closure_7(tmp(6161).Stack, obj7);
+    tmp5 = closure_7(tmp(6274).Stack, obj7);
   }
   return tmp5;
 }

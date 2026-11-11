@@ -61,7 +61,7 @@ function refreshUntilBotJoins(arg0, arg1) {
                           closure_0 = closure_1_0;
                           closure_1 = tmp7 - 1;
                           let _setTimeout = setTimeout;
-                          let timerId = setTimeout(/* F102622 */ function() { ... }, 1500);
+                          let timerId = setTimeout(/* F105453 */ function() { ... }, 1500);
                         }
                         let obj = closure_2_0(closure_2_2[12]);
                       }
@@ -153,7 +153,7 @@ function isPublishable(id) {
   }
   return canPublishResult;
 }
-const isProjectOwner = fn(6902).isProjectOwner;
+const isProjectOwner = fn(6954).isProjectOwner;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/server_share/useConjureShareToServer.tsx");
@@ -182,9 +182,6 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
   let available = null != stateFromStores;
   if (available) {
     available = "user" === stateFromStores.install_scope;
-  }
-  if (available) {
-    available = null == stateFromStores.install_scope_setup;
   }
   if (available) {
     available = isProjectOwner(stateFromStores);

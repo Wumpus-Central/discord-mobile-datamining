@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_7 = createStyles.createStyles({
   header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 },
   headerWithBackButton: { paddingLeft: 0 },

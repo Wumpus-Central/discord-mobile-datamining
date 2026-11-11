@@ -59,7 +59,7 @@ let items = [
         value = Storage.get("recentsButtonTab2");
         if (null == value) {
           const Storage2 = Storage4.Storage;
-          value2 = Storage2.get("unread-messages-collapsed-channels");
+          let value2 = Storage2.get("unread-messages-collapsed-channels");
           if (value2 == null) {
             value2 = {};
           }
@@ -420,7 +420,7 @@ let items = [
         flag2 = true;
       }
       const Storage2 = Storage4.Storage;
-      value2 = Storage2.get("hideConnectSpotify");
+      let value2 = Storage2.get("hideConnectSpotify");
       if (value2) {
         const NAGBAR_NOTICE_CONNECT_SPOTIFY = dismissible_content.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY;
         if (null == userContent.userContent) {

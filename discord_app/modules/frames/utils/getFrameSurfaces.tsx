@@ -49,8 +49,8 @@ export { getFrameSurfaces };
 export function isFrameApp(application) {
   return getFrameSurfaces(application).size > 0;
 }
-export function canOpenFrame(app) {
-  const obj = getFrameSurfaces(app);
+export function canOpenFrame(application) {
+  const obj = getFrameSurfaces(application);
   let hasItem = obj.has(EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
   if (!hasItem) {
     hasItem = obj.has(EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL);

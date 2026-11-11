@@ -134,7 +134,7 @@ const Constants = fn(1072);
   DEVICE_TOKEN: closure_6,
   DEVICE_VOIP_TOKEN: metroImportDefault,
 } = Constants);
-const PushNotificationConstants = fn(6800);
+const PushNotificationConstants = fn(6784);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -240,7 +240,7 @@ export function saveProfileAndAccountChanges(avatar) {
     user.push_token = value;
   }
   const Storage2 = tmp10(510).Storage;
-  value2 = Storage2.get(closure_7);
+  const value2 = Storage2.get(closure_7);
   let tmp16 = null != push_voip_provider;
   if (tmp16) {
     tmp16 = null != value2;
@@ -252,10 +252,10 @@ export function saveProfileAndAccountChanges(avatar) {
   const obj4 = { headers: null };
   const obj = avatarId(572);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(7218).buildHeadersForMd5({
-    [avatar(7222).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+  obj4.headers = avatarId(7735).buildHeadersForMd5({
+    [avatar(7739).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
   });
-  let tmpResult = avatarId(7218);
+  let tmpResult = avatarId(7735);
   return saveProfileAndAccountRequest(user, obj4).then(
     (result) => {
       DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
@@ -352,7 +352,7 @@ export function saveAccountChanges(user, close) {
     user.push_token = value;
   }
   const Storage2 = tmp4(tmp[8]).Storage;
-  value2 = Storage2.get(closure_7);
+  const value2 = Storage2.get(closure_7);
   let tmp10 = null != push_voip_provider;
   if (tmp10) {
     tmp10 = null != value2;

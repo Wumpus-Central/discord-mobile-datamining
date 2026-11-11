@@ -127,9 +127,9 @@ let closure_10 = async function _fetchAuthorizedApps() {
     }
   })();
 };
-const FetchState = fn(7342).FetchState;
+const FetchState = fn(7158).FetchState;
 const Endpoints = fn(1072).Endpoints;
-const batchInvocationManager = new fn(4986).BatchInvocationManager(fetchAuthorizedApps, {
+const batchInvocationManager = new fn(5087).BatchInvocationManager(fetchAuthorizedApps, {
   predicate(arg0) {
     return AuthorizedAppsStore.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },

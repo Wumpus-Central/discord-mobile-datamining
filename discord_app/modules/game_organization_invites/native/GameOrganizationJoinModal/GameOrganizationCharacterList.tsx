@@ -1,7 +1,7 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationCharacterList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2530 from "../../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2549 from "../../GameOrganizationInvitesUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -31,7 +31,7 @@ function CharacterSubLabel(text) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   card: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 },
   selectedCard: null,
@@ -62,7 +62,7 @@ let closure_9 = noop.memo(function CharacterCard(character) {
     if (description == null) {
       const intl = util.intl;
       const obj3 = { noun: character.noun };
-      formatToPlainStringResult = intl.formatToPlainString(_modDef2530.VNY3C1, obj3);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef2549.VNY3C1, obj3);
     }
   }
   const obj4 = {
@@ -134,9 +134,9 @@ export default function GameOrganizationCharacterList(characters) {
   const obj = { spacing: nativeDefault.space.PX_12, children: null };
   const obj2 = { style: tmp.title, title: null };
   const intl = characters(1113).intl;
-  obj2.title = intl.formatToPlainString(_modDef2530["Xm+emB"], { noun });
+  obj2.title = intl.formatToPlainString(_modDef2549["Xm+emB"], { noun });
   const items1 = [
-    closure_5(characters(7129).TableRowGroupTitle, obj2),
+    closure_5(characters(7680).TableRowGroupTitle, obj2),
     closure_5(View, {
       accessibilityRole: "radiogroup",
       style: tmp.cards,
@@ -153,10 +153,10 @@ export default function GameOrganizationCharacterList(characters) {
     const obj4 = { variant: "body-md/medium", color: "text-subtle", children: null };
     const intl2 = tmp4(1113).intl;
     const obj5 = { noun };
-    obj4.children = intl2.formatToPlainString(_modDef2530.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5753).Text, obj4);
+    obj4.children = intl2.formatToPlainString(_modDef2549.ybJIQJ, obj5);
+    someResult = closure_5(tmp4(5866).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(6161).Stack, obj);
+  return closure_6(characters(6274).Stack, obj);
 }

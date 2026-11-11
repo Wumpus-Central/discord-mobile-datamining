@@ -4,8 +4,8 @@ import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
-import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import MobileVisualRefreshExperiment from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import VoicePanelFloatingCTAUtils from "utils/VoicePanelFloatingCTAUtils.tsx";
 import useChannelFloatingCTAContentDefault from "../../../video_calls/native/useChannelFloatingCTAContent.tsx";
@@ -187,11 +187,11 @@ class VoicePanelFloatingCTAContainer {
     return tmp27(tmp2(tmp3[19]).View, obj1);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(11372).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11375).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(11925).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11928).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1083).ThemeTypes;
 let jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: null };
 const rect = {
   zIndex: 1,

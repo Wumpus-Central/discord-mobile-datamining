@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/managed_copy/native/ConjureManagedCopyBanner.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import useConjureManagedCopyDefault from "../useConjureManagedCopy.tsx";
 import openConjureProjectAboutSheetDefault from "../../share/native/openConjureProjectAboutSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -25,9 +25,9 @@ export default function ConjureManagedCopyBanner(projectId) {
   if (null != tmp3) {
     let obj = { type: "info", role: "none", message: null, action: null };
     let intl = sourceApplicationId(1113).intl;
-    obj.message = intl.string(_modDef4028.PTo2Qf);
+    obj.message = intl.string(_modDef4079.PTo2Qf);
     obj.action = tmp5;
-    tmp6 = jsx(sourceApplicationId(8099).InlineNotice, { type: "info", role: "none", message: null, action: null });
+    tmp6 = jsx(sourceApplicationId(8094).InlineNotice, { type: "info", role: "none", message: null, action: null });
   }
   return tmp6;
 }

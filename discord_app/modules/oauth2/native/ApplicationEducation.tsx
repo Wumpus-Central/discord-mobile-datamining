@@ -3,10 +3,10 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FriendsIcon from "../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
-import SettingsIcon from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import useIsSocialLayerParentApplicationDefault from "../../applications/useIsSocialLayerParentApplication.tsx";
+import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import SettingsIcon from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import ChatSmileIcon from "../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import AuthorizeFormSeparator from "AuthorizeFormSeparator.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -32,7 +32,7 @@ const View = fn(17).View;
 const MAX_FRIENDS = fn(1072).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   applicationEducation: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 12 },

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_profile/hooks/useGuildProfileCTA.tsx
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import GuildTagUtils from "../../guild_tag/GuildTagUtils.tsx";
 import GuildInviteFlags from "../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
+import GuildTagUtils from "../../guild_tag/GuildTagUtils.tsx";
 import usePendingFolderGuildIds from "../../guilds_bar/usePendingFolderGuildIds.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";

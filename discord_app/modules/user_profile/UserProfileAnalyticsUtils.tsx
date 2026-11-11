@@ -246,7 +246,7 @@ function trackUserProfileAction(dependencyMap) {
       communication_rank: null,
     };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
@@ -281,8 +281,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7342).FetchState;
-const constants = fn(8831).TrackUserProfileProperties;
+const FetchState = fn(7158).FetchState;
+const constants = fn(8413).TrackUserProfileProperties;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const StatusTypes = fn(1083).StatusTypes;
 const size = fn(2);
@@ -335,7 +335,7 @@ export function getTrackUserRelationshipProperties(userId) {
       communication_rank: null,
     };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
@@ -399,7 +399,7 @@ export function maybeTrackUserProfileUiViewed(userId) {
           communication_rank: null,
         };
         const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-        let length;
+        length = undefined;
         if (mutualGuilds != null) {
           length = mutualGuilds.length;
         }
@@ -453,7 +453,7 @@ export function trackUserProfileActivityJoined(userId) {
       communication_rank: null,
     };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
@@ -518,7 +518,7 @@ export function trackUserProfileActivityAction(userId) {
       communication_rank: null,
     };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
@@ -635,7 +635,7 @@ export function trackUserProfileBadgeAction(userId) {
       communication_rank: null,
     };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId2);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }

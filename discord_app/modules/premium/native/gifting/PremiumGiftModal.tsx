@@ -17,14 +17,14 @@ const PremiumGiftScreens = {
   GIFTING_BADGE: "GiftingBadgePostPurchase",
 };
 let obj2 = {
-  [PLAN_SELECT]: fn(10688).PaymentFlowStep.SKU_SELECT,
-  [REWARD_SELECT]: fn(10688).PaymentFlowStep.REWARD_SKU_SELECT,
-  [CUSTOMIZATION]: fn(10688).PaymentFlowStep.PLAN_SELECT,
-  [SUCCESS]: fn(10688).PaymentFlowStep.CONFIRM,
-  [GIFTING_BADGE]: fn(10688).PaymentFlowStep.CONFIRM,
+  [PLAN_SELECT]: fn(9618).PaymentFlowStep.SKU_SELECT,
+  [REWARD_SELECT]: fn(9618).PaymentFlowStep.REWARD_SKU_SELECT,
+  [CUSTOMIZATION]: fn(9618).PaymentFlowStep.PLAN_SELECT,
+  [SUCCESS]: fn(9618).PaymentFlowStep.CONFIRM,
+  [GIFTING_BADGE]: fn(9618).PaymentFlowStep.CONFIRM,
 };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createStyles.createStyles(obj4);
 const size = fn(2);
@@ -179,9 +179,9 @@ export default function PremiumGiftModal(analyticsLocations) {
         currentProgress: currentProgress.currentProgress,
         onSendGift() {
           obj2 = { analyticsLocations: null };
-          items = [analyticsLocations(7415).GIFTING_BADGE_POST_PURCHASE];
+          items = [analyticsLocations(7871).GIFTING_BADGE_POST_PURCHASE];
           obj2.analyticsLocations = items;
-          analyticsLocation(10686).openGiftModal(obj2);
+          analyticsLocation(11600).openGiftModal(obj2);
         },
       });
     };

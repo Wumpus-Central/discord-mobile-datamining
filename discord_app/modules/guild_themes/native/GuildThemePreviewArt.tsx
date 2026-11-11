@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildThemePresets from "../GuildThemePresets.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05830_LinearGradient.js";
 import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ function PreviewOverlay() {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   previewArt: {
     position: "relative",
@@ -61,7 +61,7 @@ export default function GuildThemePreviewArt(themeSettings) {
       if (null != guildThemePreset) {
         const guildThemePresetAppearance = GuildThemePresets.getGuildThemePresetAppearance(guildThemePreset, closure_1);
         const obj4 = { colors: null, locations: null, angle: null };
-        const colors = guildThemePresetAppearance.colors;
+        colors = guildThemePresetAppearance.colors;
         obj4.colors = colors.map((hex) => hex.hex);
         const colors1 = guildThemePresetAppearance.colors;
         obj4.locations = colors1.map((stop) => stop.stop / 100);

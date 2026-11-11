@@ -27,9 +27,9 @@ prototype["getFetchedAt"] = function getFetchedAt(arg0) {
   }
   return obj[arg0].fetchedAt;
 };
-prototype["getPromotionsForApplication"] = function getPromotionsForApplication(arg0) {
+prototype["getPromotionsForApplication"] = function getPromotionsForApplication(timestampProducer) {
   state = undefined;
-  if (obj[arg0] != null) {
+  if (obj[timestampProducer] != null) {
     state = tmp.state;
   }
   if ("success" === state) {

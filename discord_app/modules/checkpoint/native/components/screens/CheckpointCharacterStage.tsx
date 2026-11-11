@@ -6,18 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import CheckpointStore from "../../../CheckpointStore.tsx";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(5142);
-let obj2 = { container: { flexGrow: 1 }, rive: null };
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.rive = {};
-let closure_8 = createStyles.createStyles(obj2);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/CheckpointCharacterStage.tsx");
-
-export default function CheckpointCharacterStage(stage) {
+function CheckpointCharacterStage(stage) {
   stage = stage.stage;
   const layout = stage.layout;
   const isHidden = stage.isHidden;
@@ -130,4 +119,25 @@ export default function CheckpointCharacterStage(stage) {
     style: tmp.rive,
   });
   return textureScale(tmp23, obj8);
+}
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(5243);
+let obj2 = { container: { flexGrow: 1 }, rive: null };
+let merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.rive = {};
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/CheckpointCharacterStage.tsx");
+
+export default function CheckpointCharacterStageGate(arg0) {
+  items = [CheckpointStore];
+  let tmp = null;
+  if (obj.useStateFromStores(items, () => CheckpointStore.isCharacterCreatorEnabled)) {
+    const obj2 = {};
+    const merged = Object.assign(arg0);
+    tmp = <CheckpointCharacterStage />;
+  }
+  return tmp;
 }

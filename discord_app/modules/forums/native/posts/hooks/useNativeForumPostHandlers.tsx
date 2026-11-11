@@ -7,12 +7,12 @@ import haptics_HapticFeedbackTypesDefault from "../../../../haptics/HapticFeedba
 import MessageReactionsTypes from "../../../../messages/MessageReactionsTypes.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
 import transitionToChannel from "../../../../routing/transitionToChannel.tsx";
-import Tracking from "../../../tracking/Tracking.tsx";
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import openMediaModal from "../../../../media_viewer/native/components/openMediaModal.tsx";
+import Tracking from "../../../tracking/Tracking.tsx";
+import showLongPressForumPostActionSheetDefault from "../../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import messages_MessagesUtils from "../../../../messages/native/MessagesUtils.tsx";
 import reactions_ReactionUtils from "../../../../reactions/native/ReactionUtils.tsx";
-import showLongPressForumPostActionSheetDefault from "../../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../../action_sheet/native/ActionSheetStore.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -37,7 +37,7 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(5744).ReactionTypes.NORMAL;
+    NORMAL = threadId(5857).ReactionTypes.NORMAL;
   }
   items = [threadId];
   const items1 = [threadId];
@@ -65,16 +65,16 @@ export default function useNativeForumPostHandlers(threadId) {
           tmp = endsWithResult;
         }
         if (tmp) {
-          let isAttachmentPathUrlResult = src.type === threadId(9011).ForumPostMediaTypes.ATTACHMENT;
+          let isAttachmentPathUrlResult = src.type === threadId(9045).ForumPostMediaTypes.ATTACHMENT;
           if (isAttachmentPathUrlResult) {
-            isAttachmentPathUrlResult = callback1(9957).isAttachmentPathUrl(str);
-            const obj5 = callback1(9957);
+            isAttachmentPathUrlResult = callback1(9034).isAttachmentPathUrl(str);
+            const obj5 = callback1(9034);
           }
           if (!isAttachmentPathUrlResult) {
-            let result = src.type === threadId(9011).ForumPostMediaTypes.EMBED;
+            let result = src.type === threadId(9045).ForumPostMediaTypes.EMBED;
             if (result) {
-              result = callback1(9957).isExternalProxiedAttachmentUrl(str);
-              const obj6 = callback1(9957);
+              result = callback1(9034).isExternalProxiedAttachmentUrl(str);
+              const obj6 = callback1(9034);
             }
             isAttachmentPathUrlResult = result;
           }

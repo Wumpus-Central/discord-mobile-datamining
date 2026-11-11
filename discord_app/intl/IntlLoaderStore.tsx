@@ -271,7 +271,6 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
   }
 };
 let closure_9 = async function _setMomentLocale(arg0) {
-  let length;
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -347,14 +346,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "channel",
+    error: "channelId",
     localeData: _modDef2188,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "channel" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "channelId" });
       }
     },
     setLoadingFailed(error, arg1) {

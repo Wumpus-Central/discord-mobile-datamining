@@ -51,7 +51,7 @@ export default function usePersonalizedVoiceChannelUsers(arg0) {
           if (num == null) {
             num = 0;
           }
-          value2 = stateFromStores.get(arg0);
+          const value2 = stateFromStores.get(arg0);
           let num2;
           if (value2 != null) {
             num2 = value2.vcProbability;

@@ -17,7 +17,7 @@ function StreamVolumeSlider(arg0) {
   let handleVolumeChange;
   ({ ownerId, onSubmit } = arg0);
   const tmp = closure_12();
-  const tmp2Result = useMuteAwareLocalVolumeDefault(ownerId, handleVolumeChange(5920).MediaEngineContextTypes.STREAM);
+  const tmp2Result = useMuteAwareLocalVolumeDefault(ownerId, handleVolumeChange(6033).MediaEngineContextTypes.STREAM);
   handleVolumeChange = tmp2Result.handleVolumeChange;
   items = [handleVolumeChange];
   const obj = { children: null };
@@ -28,7 +28,7 @@ function StreamVolumeSlider(arg0) {
   const obj2 = { style: tmp.slider, children: null };
   const obj3 = { value: null, maxValue: null, onChange: null, formatValue: null, accessibilityLabel: null };
   const tmp5 = NativeViewDefault;
-  obj3.value = handleVolumeChange(6057).amplitudeToPerceptual(tmp2Result.effectiveVolume);
+  obj3.value = handleVolumeChange(6170).amplitudeToPerceptual(tmp2Result.effectiveVolume);
   obj3.maxValue = maxValue;
   obj3.onChange = callback;
   obj3.formatValue = function formatValue(arg0) {
@@ -36,11 +36,11 @@ function StreamVolumeSlider(arg0) {
   };
   const intl = handleVolumeChange(1113).intl;
   obj3.accessibilityLabel = intl.string(handleVolumeChange(1113).t.pEAl4b);
-  obj2.children = closure_7(handleVolumeChange(16196).Slider, obj3);
+  obj2.children = closure_7(handleVolumeChange(16358).Slider, obj3);
   const items1 = [closure_7(tmp5, obj2)];
   const obj5 = { icon: null, onPress: null, accessibilityLabel: null };
-  const obj4 = handleVolumeChange(6057);
-  obj5.icon = closure_7(handleVolumeChange(9371).CheckmarkLargeBoldIcon, { size: "sm" });
+  const obj4 = handleVolumeChange(6170);
+  obj5.icon = closure_7(handleVolumeChange(9417).CheckmarkLargeBoldIcon, { size: "sm" });
   obj5.onPress = onSubmit;
   const intl2 = handleVolumeChange(1113).intl;
   obj5.accessibilityLabel = intl2.string(handleVolumeChange(1113).t["cY+Oob"]);
@@ -48,12 +48,12 @@ function StreamVolumeSlider(arg0) {
   obj.children = items1;
   return closure_9(closure_8, obj);
 }
-const maxValue = fn(5899).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+const maxValue = fn(6012).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const VoicePanelDockPIPOverlayModes = { HIDDEN: "HIDDEN", CONTROLS: "CONTROLS", VOLUME: "VOLUME" };
 let closure_11 = { duration: 150 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { overlay: null, row: null, rowEnd: null, slider: null };
 let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -93,7 +93,7 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
   let sharedValue;
   ({ kind, onStopWatching, onOpenCall } = ownerId);
   let tmp = closure_12();
-  guildId = sharedValue.useContext(guildId(11371)).guildId;
+  guildId = sharedValue.useContext(guildId(11924)).guildId;
   dependencyMap = tmp5;
   let tmp6 = null;
   if (mode !== sharedValue.HIDDEN) {
@@ -206,19 +206,19 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
     obj4.importantForAccessibility = str2;
     const obj5 = { style: tmp.row, pointerEvents: "box-none", children: null };
     let tmp22Result = null;
-    const tmp2Result = tmp2(7026);
+    const tmp2Result = tmp2(7656);
     if (null != stateFromStores) {
-      const obj6 = { source: tmp12(9612).getCachedSourceFromURI(stateFromStores), size: tmp12(1187).AvatarSizes.SMALL };
+      const obj6 = { source: tmp12(9450).getCachedSourceFromURI(stateFromStores), size: tmp12(1187).AvatarSizes.SMALL };
       tmp22Result = closure_7(tmp12(1187).Avatar, obj6);
-      const tmp12Result2 = tmp12(9612);
+      const tmp12Result2 = tmp12(9450);
     }
     const obj7 = { pointerEvents: "none", children: tmp22Result };
-    const items6 = [closure_7(tmp2(7026), obj7)];
-    const tmp2Result6 = tmp2(7026);
+    const items6 = [closure_7(tmp2(7656), obj7)];
+    const tmp2Result6 = tmp2(7656);
     if ("video" === kind) {
-      let ScreenXIcon = tmp12(7123).XSmallIcon;
+      let ScreenXIcon = tmp12(7483).XSmallIcon;
     } else {
-      ScreenXIcon = tmp12(19719).ScreenXIcon;
+      ScreenXIcon = tmp12(19911).ScreenXIcon;
     }
     const obj8 = { icon: closure_7(ScreenXIcon, { size: "sm" }), onPress: onStopWatching, accessibilityLabel: null };
     const intl = tmp12(1113).intl;
@@ -230,12 +230,12 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
       stringResult = string(t.q3O3J8);
     }
     obj8.accessibilityLabel = stringResult;
-    items6[1] = closure_7(tmp2(19550), obj8);
+    items6[1] = closure_7(tmp2(19739), obj8);
     obj5.children = items6;
     const items7 = [closure_9(tmp2Result, obj5)];
     const items8 = [tmp.row];
     let rowEnd = null;
-    const tmp2Result7 = tmp2(19550);
+    const tmp2Result7 = tmp2(19739);
     if ("video" === kind) {
       rowEnd = tmp.rowEnd;
     }
@@ -256,32 +256,32 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
         return closure_9(tmp2(1652).View, obj4);
       }
       const obj11 = {
-        icon: closure_7(tmp12(17303).FullscreenEnterIcon, { size: "sm" }),
+        icon: closure_7(tmp12(17466).FullscreenEnterIcon, { size: "sm" }),
         onPress: onOpenCall,
         accessibilityLabel: null,
       };
       const intl3 = tmp12(1113).intl;
-      obj11.accessibilityLabel = intl3.string(tmp2(3184).MPtef8);
-      tmp22Result3 = closure_7(tmp2(19550), obj11);
-      const tmp2Result9 = tmp2(19550);
+      obj11.accessibilityLabel = intl3.string(tmp2(3205).MPtef8);
+      tmp22Result3 = closure_7(tmp2(19739), obj11);
+      const tmp2Result9 = tmp2(19739);
     } else {
       const obj12 = {
-        icon: closure_7(tmp12(8750).VoiceNormalIcon, { size: "sm" }),
+        icon: closure_7(tmp12(7368).VoiceNormalIcon, { size: "sm" }),
         onPress: onToggleVolume,
         accessibilityLabel: null,
       };
       const intl2 = tmp12(1113).intl;
       const string2 = intl2.string;
       if (tmp19) {
-        let string2Result = string2(tmp2(3184)["5fzIJz"]);
+        let string2Result = string2(tmp2(3205)["5fzIJz"]);
       } else {
         string2Result = string2(tmp12(1113).t.pEAl4b);
       }
       obj12.accessibilityLabel = string2Result;
-      closure_7(tmp2(19550), obj12);
-      const tmp2Result10 = tmp2(19550);
+      closure_7(tmp2(19739), obj12);
+      const tmp2Result10 = tmp2(19739);
     }
-    tmp2Result8 = tmp2(7026);
+    tmp2Result8 = tmp2(7656);
   }
   const tmp12Result = require("initialize");
 });

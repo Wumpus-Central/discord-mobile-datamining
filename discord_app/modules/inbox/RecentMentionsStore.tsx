@@ -487,7 +487,6 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
     closure_19 = {};
   },
   TRUNCATE_MENTIONS: function handleTruncateMentions(size) {
-    let length;
     size = size.size;
     ({ addedMessages, deletedMessages } = { deletedMessages: substr.slice(size) });
     if (null != addedMessages) {

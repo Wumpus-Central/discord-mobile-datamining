@@ -6,8 +6,8 @@ import Sheet_BottomSheet from "../../../../../design/components/Sheet/native/Bot
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../../guild_settings/GuildSettingsActionCreators.tsx";
+import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -16,11 +16,11 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ GuildSettingsSections: metroImportDefault, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const obj2 = {
   container: { padding: nativeDefault.space.PX_16, justifyContent: "center" },
   videoContainer: null,
@@ -82,7 +82,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
     paused: stateFromStores,
     ariaHidden: true,
   };
-  obj5.children = closure_10(markAsDismissed(8953), size);
+  obj5.children = closure_10(markAsDismissed(9664), size);
   const items2 = [closure_10(View, obj5), ,];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = {

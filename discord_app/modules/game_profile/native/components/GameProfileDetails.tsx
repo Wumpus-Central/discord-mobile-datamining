@@ -9,14 +9,14 @@ import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function GameProfileWebsiteButton(action) {
+function GameProfileWebsiteLink(action) {
   action = action.action;
   const trackAction = action.trackAction;
   const url = action.url;
   items = [trackAction, action, url];
   ({ icon, title } = action);
   return closure_8(closure_6, {
-    accessibilityRole: "button",
+    accessibilityRole: "link",
     accessibilityLabel: title,
     onPress: noop.useCallback(() => {
       LinkingDefault.openURL(url);
@@ -28,17 +28,17 @@ function GameProfileWebsiteButton(action) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(9002).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(10145).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(8993).PlatformType.DESKTOP] = fn(9681).ScreenIcon;
-obj.mobile = fn(7201).MobilePhoneIcon;
-obj[fn(8993).PlatformType.XBOX] = fn(9449).XboxNeutralIcon;
-obj[fn(8993).PlatformType.PLAYSTATION] = fn(9683).PlaystationNeutralIcon;
-obj[fn(8993).PlatformType.NINTENDO] = fn(9685).NintendoSwitchNeutralIcon;
-obj[fn(8993).PlatformType.ROBLOX] = fn(9439).RobloxNeutralIcon;
-const createStyles = fn(5142);
+obj[fn(9411).PlatformType.DESKTOP] = fn(10400).ScreenIcon;
+obj.mobile = fn(7720).MobilePhoneIcon;
+obj[fn(9411).PlatformType.XBOX] = fn(10241).XboxNeutralIcon;
+obj[fn(9411).PlatformType.PLAYSTATION] = fn(10402).PlaystationNeutralIcon;
+obj[fn(9411).PlatformType.NINTENDO] = fn(10404).NintendoSwitchNeutralIcon;
+obj[fn(9411).PlatformType.ROBLOX] = fn(10231).RobloxNeutralIcon;
+const createStyles = fn(5243);
 let obj3 = {
   container: { gap: nativeDefault.space.PX_8 },
   headerText: null,
@@ -161,7 +161,7 @@ export default function GameProfileDetails(game) {
             }
             if (length.length <= 0) {
               const mapped3 = gameProfileLinks.map((item) =>
-                trackAction(9689)(item, trackAction(575).colors.ICON_SUBTLE),
+                trackAction(10408)(item, trackAction(575).colors.ICON_SUBTLE),
               );
               const found = mapped3.filter((item) => null != item);
               if (found.length > 0) {
@@ -173,7 +173,7 @@ export default function GameProfileDetails(game) {
                   children: found.map((icon) => {
                     const url = icon.url;
                     return closure_2_8(
-                      GameProfileWebsiteButton,
+                      GameProfileWebsiteLink,
                       { icon: icon.icon, action: icon.action, title: icon.title, url, trackAction },
                       url,
                     );
@@ -207,7 +207,7 @@ export default function GameProfileDetails(game) {
                   obj = {
                     size: "md",
                     color: trackAction(575).colors.ICON_SUBTLE,
-                    accessibilityLabel: game(9688).getGameProfilePlatformText(item),
+                    accessibilityLabel: game(10407).getGameProfilePlatformText(item),
                   };
                   return closure_1_8(closure_1_10[item], obj, item);
                 }),

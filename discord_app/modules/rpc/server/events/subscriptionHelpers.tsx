@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/server/events/subscriptionHelpers.tsx
-import QuestTaskUtils from "../../../quests/utils/QuestTaskUtils.tsx";
-import useIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
 import getSocketFrameDefault from "../../helpers/getSocketFrame.tsx";
+import useIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
+import QuestTaskUtils from "../../../quests/utils/QuestTaskUtils.tsx";
 import useThermalState from "../../../device/useThermalState.tsx";
 import ThermalStates from "../../../../../discord_common/js/shared/constants/ThermalStates.tsx";
 import activityInstanceConnectedParticipants from "../../helpers/activityInstanceConnectedParticipants.tsx";
@@ -12,8 +12,8 @@ import QuestStore from "../../../quests/QuestStore.tsx";
 require = fn;
 const RPCEvents = fn(1072).RPCEvents;
 const ActivityScreenOrientation = fn(2142).ActivityScreenOrientation;
-const FrameLayoutModes = fn(6905).FrameLayoutModes;
-const ActivityLayoutMode = fn(11864).ActivityLayoutMode;
+const FrameLayoutModes = fn(6957).FrameLayoutModes;
+const ActivityLayoutMode = fn(12616).ActivityLayoutMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/server/commands/certifiedDevices.tsx
 import Constants2 from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
-import OAuth2Scopes from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
+import OAuth2Scopes from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import CertifiedDeviceActionCreators from "../../../../actions/CertifiedDeviceActionCreators.tsx";
 import Constants_mod from "../../Constants.tsx";

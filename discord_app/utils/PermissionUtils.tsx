@@ -368,11 +368,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4995);
+const ChannelRecord = fn(5096);
 ({ THREAD_CHANNEL_TYPES: metroImportDefault, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(5009);
+const GuildRecord = fn(5110);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: closure_10 } = GuildRecord);
-const hasPermission = fn(5049).hasPermission;
+const hasPermission = fn(5150).hasPermission;
 const Constants = fn(1072);
 const Permissions = Constants.Permissions;
 ({

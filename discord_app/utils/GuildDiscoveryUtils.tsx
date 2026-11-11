@@ -470,7 +470,7 @@ export function trackSearchResultsViewed(guildResults) {
     location: null,
     category_id: null,
   };
-  let length = null;
+  length = null;
   if (undefined !== guildResults.guildResults) {
     length = guildResults.length;
   }

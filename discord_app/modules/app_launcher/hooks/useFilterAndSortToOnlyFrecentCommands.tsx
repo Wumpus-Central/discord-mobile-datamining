@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/hooks/useFilterA
 
 export default function useFilterAndSortToOnlyFrecentCommands(commands) {
   commands = commands.commands;
-  let length = commands.limit;
+  length = commands.limit;
   if (length === undefined) {
     length = commands.length;
   }

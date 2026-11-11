@@ -3,6 +3,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   HOME: "home",
+  CHARACTER_UNAVAILABLE: "character_unavailable",
   INTRODUCTION: "introduction",
   VOICE_INTRO: "voice_intro",
   VOICE_STATS: "voice_stats",
@@ -61,6 +62,7 @@ const obj2 = {
   SUMMARY: "summary",
 };
 const obj3 = {
+  CHARACTER_UNAVAILABLE: "character_unavailable",
   VOICE_INTRO: "voice_intro",
   VOICE: "voice",
   MESSAGES_INTRO: "messages_intro",
@@ -80,6 +82,7 @@ const obj3 = {
 };
 let closure_1 = {
   [obj.HOME]: { characterStage: obj2.IDLE },
+  [obj.CHARACTER_UNAVAILABLE]: { characterStage: obj2.IDLE, statsScreen: obj3.CHARACTER_UNAVAILABLE },
   [obj.INTRODUCTION]: { characterStage: obj2.INTRODUCTION },
   [obj.VOICE_INTRO]: { characterStage: obj2.FACE, statsScreen: obj3.VOICE_INTRO },
   [obj.VOICE_STATS]: { characterStage: obj2.FACE, statsScreen: obj3.VOICE },

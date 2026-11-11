@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/native/components/JoinStageView.tsx
 import util from "../../../../intl/index.native.tsx";
+import StageChannelUtils from "../../StageChannelUtils.tsx";
 import StageChannelParticipants from "../../StageChannelParticipants.tsx";
 import StageChannelParticipantStoreHooks from "../../StageChannelParticipantStoreHooks.tsx";
-import StageChannelUtils from "../../StageChannelUtils.tsx";
 import StageViewWithPromptsDefault from "StageViewWithPrompts.tsx";
 import StageActionBarButtons from "StageActionBarButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

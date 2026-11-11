@@ -6,8 +6,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11372).VoicePanelModes;
-const VoicePanelDockConstants = fn(11390);
+const VoicePanelModes = fn(11925).VoicePanelModes;
+const VoicePanelDockConstants = fn(11948);
 ({ DOCK_PRESS_PHYSICS: closure_4, getVoicePanelDockHeight: hasOwnProperty } = VoicePanelDockConstants);
 let closure_6 = {
   code: "(function useVoicePanelDockMorphStateTsx1(){let[isDockEnabled,getVoicePanelDockHeight,safeArea]=this.__closure;return isDockEnabled?getVoicePanelDockHeight(safeArea.get().bottom):0;})",
@@ -393,7 +393,7 @@ export default function useVoicePanelDockMorphState(arg0) {
           return num3;
         }
       }
-      value2 = _undefined8.get();
+      const value2 = _undefined8.get();
       let tmp8 = value2;
       if (!_undefined9.get()) {
         tmp8 = _undefined10(value2, c10);
@@ -416,7 +416,7 @@ export default function useVoicePanelDockMorphState(arg0) {
   function useVoicePanelDockMorphStateTsx15() {
     value = _undefined.get();
     if (value) {
-      value2 = _undefined2.get();
+      const value2 = _undefined2.get();
       value = value2 === _undefined3.get();
     }
     return value;

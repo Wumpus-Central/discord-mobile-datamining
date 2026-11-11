@@ -108,7 +108,7 @@ const Constants = fn(1072);
 } = Constants);
 const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
@@ -149,13 +149,13 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     overState: "y",
     config: memo,
     label: null,
-    expandedChildren: false,
-    children: false,
+    expandedChildren: "body-sm/normal",
+    children: "text-default",
   };
   const intl = util.intl;
   obj4.label = intl.string(util.t.l5WIbf);
   obj4.expandedChildren = jsx(HomeDrawerAddServerRow.HomeDrawerAddServerRowExpandedChildren, {});
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   obj4.children = jsx(CirclePlusIcon.CirclePlusIcon, {
     size: "md",
     color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
@@ -168,8 +168,8 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     overState: "y",
     config: memo,
     label: null,
-    expandedChildren: false,
-    children: false,
+    expandedChildren: "body-sm/normal",
+    children: "text-default",
   });
   return <View style={tmp.stretch}>{null}</View>;
 });

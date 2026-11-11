@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2992 from "../../NotificationSettings.messages.js";
+import _modDef3013 from "../../NotificationSettings.messages.js";
 import MobileNotifSettings from "../../../user_settings/notifications/native/codegen/MobileNotifSettings.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/notifications/settings/native
 export function buildOverviewCategoriesSection() {
   const obj = { label: null, settings: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef2992["/UdAvP"]);
+  obj.label = intl.string(_modDef3013["/UdAvP"]);
   items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
@@ -26,6 +26,7 @@ export function buildCategoryCallsMessagesSettingsSection() {
     MobileNotifSettings.MobileNotifSettings.NOTIF_CALLS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_LOW,
     MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_DEFAULT,
+    MobileNotifSettings.MobileNotifSettings.NOTIF_REACTIONS_CHOICE_ROUTE,
   ];
   obj.settings = items;
   return obj;
@@ -79,6 +80,12 @@ export function buildCategoryServersSettingsSection() {
     MobileNotifSettings.MobileNotifSettings.NOTIF_SAFETY_ALERTS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_STAGE_NOTIFICATIONS,
   ];
+  obj.settings = items;
+  return obj;
+}
+export function buildReactionsChoiceSettingsSection() {
+  const obj = { settings: null };
+  items = [MobileNotifSettings.MobileNotifSettings.NOTIF_REACTIONS_CHOICE];
   obj.settings = items;
   return obj;
 }

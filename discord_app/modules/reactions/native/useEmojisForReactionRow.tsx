@@ -15,7 +15,6 @@ export function useEmojisForReactionRow(channel, emojiLineHeight, arg2) {
   rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[3])().width, emojiLineHeight) / arg2);
   items = [frequentlyUsedReactionEmojis, channel, rounded];
   const memo = noop.useMemo(() => {
-    let length;
     const found = frequentlyUsedReactionEmojis.filter(
       (emoji) =>
         !frequentlyUsedReactionEmojis(rounded[4]).isEmojiFilteredOrLocked({

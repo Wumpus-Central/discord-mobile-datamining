@@ -32,7 +32,7 @@ function unpackStageChannelParty(party) {
     }
   }
 }
-const STAGE_APPLICATION_ID = fn(6766).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6843).STAGE_APPLICATION_ID;
 const GuildFeatures = fn(1072).GuildFeatures;
 let c7 = "stage:";
 const size = fn(2);

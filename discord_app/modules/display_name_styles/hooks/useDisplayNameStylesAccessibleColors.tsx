@@ -39,7 +39,7 @@ export function useDisplayNameStylesAccessibleColors(displayNameStyles) {
     if (null == displayNameStyles) {
       items = [];
     } else {
-      const colors = tmp.colors;
+      colors = tmp.colors;
       items = colors.map((item) => {
         const obj2 = {
           foreground: backgroundColor(stateFromStores[6])(item),

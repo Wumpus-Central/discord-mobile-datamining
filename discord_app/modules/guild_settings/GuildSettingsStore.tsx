@@ -233,6 +233,7 @@ let obj = {
   partnerActionedTimestamp: null,
   partnerApplicationTimestamp: null,
   isPublished: false,
+  automaticPages: false,
   reasonsToJoin: [],
   socialLinks: [],
   about: "",
@@ -985,6 +986,7 @@ obj2 = {
         partnerActionedTimestamp: null,
         partnerApplicationTimestamp: null,
         isPublished: null,
+        automaticPages: null,
         reasonsToJoin: null,
         socialLinks: null,
         about: null,
@@ -1019,6 +1021,11 @@ obj2 = {
         flag3 = false;
       }
       obj.isPublished = flag3;
+      let flag4 = metadata.automaticPages;
+      if (flag4 == null) {
+        flag4 = false;
+      }
+      obj.automaticPages = flag4;
       let reasonsToJoin = metadata.reasonsToJoin;
       if (reasonsToJoin == null) {
         reasonsToJoin = [];

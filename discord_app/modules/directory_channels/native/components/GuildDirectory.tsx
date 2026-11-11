@@ -17,7 +17,7 @@ import GuildDirectoryActionCreatorsAll from "../../GuildDirectoryActionCreators.
 import GuildDirectoryRowDefault from "GuildDirectoryRow.tsx";
 import GuildDirectoryPlaceholderRowDefault from "GuildDirectoryPlaceholderRow.tsx";
 import GuildDirectoryRowGenerator from "../GuildDirectoryRowGenerator.tsx";
-import _mod14504 from "../../../../../_runtime/metro/14504__.js";
+import _mod14878 from "../../../../../_runtime/metro/14878__.js";
 import HubProgressHeaderDefault from "../../../hub/native/components/progress_bar/HubProgressHeader.tsx";
 import GuildDirectoryCategorySelectorDefault from "GuildDirectoryCategorySelector.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -74,7 +74,7 @@ function GuildDirectoryHeader(guild) {
   const features = guild.features;
   const obj = { style: tmp.headerWrapper, children: null };
   const hasItem = features.has(constants3.HUB);
-  const obj2 = { source: _mod14504, style: tmp.backgroundImage };
+  const obj2 = { source: _mod14878, style: tmp.backgroundImage };
   items = [collapsedCategories(FastImageDefault, obj2)];
   const obj3 = { style: tmp.textWrapper, children: null };
   const obj4 = { style: tmp.headerTitle, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
@@ -141,8 +141,8 @@ function GuildDirectoryFooter(hideFooter) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, SectionList: closure_6, StyleSheet } = get_ActivityIndicator);
-const DirectoryEntryCategories = fn(14113).DirectoryEntryCategories;
-const GuildDirectoryConstants = fn(14118);
+const DirectoryEntryCategories = fn(14593).DirectoryEntryCategories;
+const GuildDirectoryConstants = fn(14598);
 const GUILD_DIRECTORY_BASE_HEADER_HEIGHT = GuildDirectoryConstants.GUILD_DIRECTORY_BASE_HEADER_HEIGHT;
 ({ GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT: closure_12, DirectoryChannelScrollBehavior: map1 } = GuildDirectoryConstants);
 const Constants = fn(1072);
@@ -155,9 +155,10 @@ const Constants = fn(1072);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let closure_21 = Array(20).fill(null);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   border: null,
+  container: null,
   list: null,
   headerWrapper: null,
   backgroundImage: null,
@@ -170,6 +171,7 @@ let obj = {
 };
 const ArrayResult = Array(20);
 obj.border = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj.container = { flex: 1 };
 let obj3 = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj.list = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.headerWrapper = { overflow: "hidden", height: GUILD_DIRECTORY_BASE_HEADER_HEIGHT };
@@ -196,6 +198,7 @@ const result = size.fileFinishedImporting("modules/directory_channels/native/com
 export default function GuildDirectory(channel) {
   channel = channel.channel;
   const guildId = channel.guildId;
+  dependencyMap = undefined;
   noop = undefined;
   let currentCategoryId;
   let directoryEntries;
@@ -212,21 +215,22 @@ export default function GuildDirectory(channel) {
     }
   }
   let tmp = closure_22();
+  let tmp3 = dependencyMap;
   items = [directoryIsFetching];
   let handleTapSearch = channel(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   dependencyMap = noop.useRef(null);
-  let bottom = guildId(1627)().bottom;
+  let tmp4 = guildId;
+  let bound = Math.max(guildId(1627)().bottom, guildId(11947)());
   let obj = channel(504);
-  const tmp4 = guildId;
-  const hubProgressBarCompletedSteps = channel(14502).useHubProgressBarCompletedSteps(handleTapSearch);
-  let obj3 = channel(14502);
+  const hubProgressBarCompletedSteps = channel(14876).useHubProgressBarCompletedSteps(handleTapSearch);
+  let obj3 = channel(14876);
   if (null == obj4.getNextHubProgressStep(hubProgressBarCompletedSteps)) {
     let sum = ref2;
   } else {
     sum = _location + ref2;
   }
   noop = sum;
-  obj4 = channel(14502);
+  obj4 = channel(14876);
   const items1 = [categoryCounts];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items1, () => {
     currentCategoryId = GuildDirectoryStore.getCurrentCategoryId(channel.id);
@@ -273,7 +277,7 @@ export default function GuildDirectory(channel) {
     () => () => {
       const lastMessageIdResult = allEntriesCount.lastMessageId(id.id);
       if (null != lastMessageIdResult) {
-        const obj = channel(closure_3[31]);
+        const obj = channel(closure_3[32]);
         const obj2 = {
           object: constants.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
           objectType: handleTapCategory.ACK_AUTOMATIC,
@@ -298,9 +302,9 @@ export default function GuildDirectory(channel) {
   ref = obj2.useRef(null);
   ref2 = obj2.useRef(0);
   const tmp2Result = channel(504);
-  _location = channel(5184).useLocation();
-  const tmp2Result3 = channel(5184);
-  history = channel(5184).useHistory();
+  _location = channel(5297).useLocation();
+  const tmp2Result3 = channel(5297);
+  history = channel(5297).useHistory();
   const items5 = [_location, history];
   const effect2 = obj2.useEffect(() => {
     state = _location.state;
@@ -352,20 +356,23 @@ export default function GuildDirectory(channel) {
   } else {
     if (!directoryIsFetching) {
       if (0 === allEntriesCount) {
-        const obj5 = { style: null, children: null };
-        const obj6 = { paddingBottom: bottom };
-        obj5.style = obj6;
-        const obj7 = { style: tmp.border };
-        const items9 = [closure_18(currentCategoryId, obj7), ,];
-        const obj8 = { guild: handleTapSearch, channel };
-        items9[1] = closure_18(tmp4(14629), obj8);
-        items9[2] = closure_18(tmp2(13581).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
-        obj5.children = items9;
-        let tmp23 = closure_19(currentCategoryId, obj5);
+        let obj5 = { style: tmp.container, children: null };
+        const obj6 = { style: null, children: null };
+        const obj7 = { paddingBottom: bound };
+        obj6.style = obj7;
+        const obj8 = { style: tmp.border };
+        const items9 = [closure_18(tmp21, obj8), ,];
+        const obj9 = { guild: handleTapSearch, channel };
+        items9[1] = closure_18(tmp4(15008), obj9);
+        items9[2] = closure_18(tmp2(14101).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+        obj6.children = items9;
+        const items10 = [closure_19(tmp21, obj6), closure_18(tmp4(15012), {})];
+        obj5.children = items10;
       }
+      closure_19(tmp21, obj5);
     }
-    const obj9 = { children: null };
-    const obj10 = {
+    const obj10 = { style: tmp.container, children: null };
+    const obj11 = {
       ref,
       onScroll: function handleScroll(nativeEvent) {
         closure_11.current = nativeEvent.nativeEvent.contentOffset.y;
@@ -383,24 +390,24 @@ export default function GuildDirectory(channel) {
       renderSectionHeader: null,
       ListFooterComponent: null,
     };
-    const obj11 = { paddingBottom: bottom };
-    obj10.contentContainerStyle = obj11;
-    bottom = GuildDirectoryHeader;
-    const obj12 = { guild: handleTapSearch, onPressSearch: null };
+    const obj12 = { paddingBottom: bound };
+    obj11.contentContainerStyle = obj12;
+    bound = GuildDirectoryHeader;
+    const obj13 = { guild: handleTapSearch, onPressSearch: null };
     handleTapSearch = function handleTapSearch() {
       GuildDirectorySearchModalActionCreatorsDefault.open({ channel });
     };
-    obj12.onPressSearch = handleTapSearch;
-    obj10.ListHeaderComponent = closure_18(GuildDirectoryHeader, obj12);
+    obj13.onPressSearch = handleTapSearch;
+    obj11.ListHeaderComponent = closure_18(GuildDirectoryHeader, obj13);
     ref = { data: memo };
     memo = [ref];
-    obj10.sections = memo;
-    obj10.style = tmp.list;
-    obj10.scrollIndicatorInsets = { right: 1 };
+    obj11.sections = memo;
+    obj11.style = tmp.list;
+    obj11.scrollIndicatorInsets = { right: 1 };
     tmp = keyExtractor;
-    obj10.keyExtractor = keyExtractor;
-    obj10.renderItem = renderItem;
-    obj10.renderSectionHeader = function renderSectionHeader() {
+    obj11.keyExtractor = keyExtractor;
+    obj11.renderItem = renderItem;
+    obj11.renderSectionHeader = function renderSectionHeader() {
       return collapsedCategories(GuildDirectoryCategorySelectorDefault, {
         onCategorySelected: handleTapCategory,
         channel,
@@ -408,11 +415,15 @@ export default function GuildDirectory(channel) {
         allEntriesCount,
       });
     };
-    obj10.ListFooterComponent = function ListFooterComponent() {
+    obj11.ListFooterComponent = function ListFooterComponent() {
       return collapsedCategories(GuildDirectoryFooter, { guild: handleTapSearch, channel, hideFooter: false });
     };
-    obj9.children = closure_18(directoryEntries, obj10);
-    tmp23 = closure_18(currentCategoryId, obj9);
+    const items11 = [closure_18(directoryEntries, obj11)];
+    tmp4 = tmp4(15012);
+    tmp3 = closure_18(tmp4, {});
+    items11[1] = tmp3;
+    obj10.children = items11;
+    obj5 = obj10;
   }
-  const tmp2Result4 = channel(5184);
+  const tmp2Result4 = channel(5297);
 }

@@ -7,8 +7,8 @@ import InteractionComponentTypes from "../../InteractionComponentTypes.tsx";
 import RoleIconUtils from "../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../roles/native/RoleIcon.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import DiscordTagDefault from "../../../user_profile/native/DiscordTag.tsx";
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
+import DiscordTagDefault from "../../../user_profile/native/DiscordTag.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import PresenceStore from "../../../../stores/PresenceStore.tsx";
@@ -44,7 +44,7 @@ const Constants = fn(1072);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   name: {
     color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,

@@ -51,10 +51,10 @@ prototype["getFetchStateForApplicationId"] = function getFetchStateForApplicatio
     return obj4[combined];
   }
 };
-prototype["getPromotionIdsForSkuId"] = function getPromotionIdsForSkuId(arg0) {
-  if (null != arg0) {
+prototype["getPromotionIdsForSkuId"] = function getPromotionIdsForSkuId(skuId) {
+  if (null != skuId) {
     let prop;
-    if (obj5[arg0] != null) {
+    if (obj5[skuId] != null) {
       prop = tmp2.storefrontPromotionIds;
     }
     return prop;

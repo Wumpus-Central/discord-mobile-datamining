@@ -27,7 +27,7 @@ function ChatToast(message) {
       onPress: callback,
       children: null,
     };
-    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
     const items1 = [hasOwnProperty(native.Avatar, obj4)];
     const obj5 = { style: tmp.body, children: null };
     const obj6 = { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, children: name };
@@ -51,7 +51,7 @@ function ChatToast(message) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = {
   position: "absolute",

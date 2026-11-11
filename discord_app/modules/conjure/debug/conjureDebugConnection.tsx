@@ -1,14 +1,14 @@
 // discord_app/modules/conjure/debug/conjureDebugConnection.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
+import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import ConjurePerfTraceLayout from "perf_trace/ConjurePerfTraceLayout.tsx";
 import ConjureDebugStore from "ConjureDebugStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
-let obj3 = { web: { location: "runtime_frame", code: fn(11002).ConjureErrorCodes.RUNTIME_FRAME_ERROR }, preview: null };
+let obj3 = { web: { location: "runtime_frame", code: fn(7319).ConjureErrorCodes.RUNTIME_FRAME_ERROR }, preview: null };
 let obj = {
   log(log, projectId) {
     projectId = projectId.projectId;
@@ -255,8 +255,8 @@ let obj2 = {
     }
   },
 };
-let obj4 = { location: "runtime_frame", code: fn(11002).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
-obj3.preview = { location: "runtime_worker", code: fn(11002).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
+let obj4 = { location: "runtime_frame", code: fn(7319).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
+obj3.preview = { location: "runtime_worker", code: fn(7319).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
 let c5 = 10;
 const map = new Map();
 let set = new Set();

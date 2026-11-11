@@ -97,7 +97,7 @@ export default function useProfileNewContent(id) {
             } else {
               items1 = [];
             }
-            const length = items1.filter((addedAt) => {
+            length = items1.filter((addedAt) => {
               let flag;
               if (isItemShown != null) {
                 flag = isItemShown(addedAt);

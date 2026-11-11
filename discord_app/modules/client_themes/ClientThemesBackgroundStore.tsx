@@ -55,36 +55,38 @@ function reset() {
 }
 function handleUserStoreChange() {
   if (null != user) {
-    const result = require("HexagonCampaignUtils").isHexagonCampaignClientThemePreset(user.id);
-    let tmp5 = !result;
-    if (result) {
-      tmp5 = null == UserStore.getCurrentUser();
-    }
-    if (!tmp5) {
-      tmp5 = !require("HexagonCampaignPerkAvailability").isHexagonCampaignPerkExpiredForCurrentUser(
-        HexagonCampaignPerk.CLIENT_THEME,
-      );
-      const tmp2Result = require("HexagonCampaignPerkAvailability");
-    }
-    if (!tmp5) {
-      user = undefined;
-      let flag = true;
-    }
-    const obj = require("HexagonCampaignUtils");
-    const tmp13 = !PremiumUtilsDefault.canUseClientThemes(UserStore.getCurrentUser());
-    if (tmp13 === closure_15) {
-      return flag;
-    } else {
-      closure_15 = tmp13;
-      c17 = false;
+    if (!c17) {
+      const result = require("HexagonCampaignUtils").isHexagonCampaignClientThemePreset(user.id);
+      let tmp6 = !result;
+      if (result) {
+        tmp6 = null == UserStore.getCurrentUser();
+      }
+      if (!tmp6) {
+        tmp6 = !require("HexagonCampaignPerkAvailability").isHexagonCampaignPerkExpiredForCurrentUser(
+          HexagonCampaignPerk.CLIENT_THEME,
+        );
+        const tmp3Result = require("HexagonCampaignPerkAvailability");
+      }
+      if (!tmp6) {
+        user = undefined;
+        let flag = true;
+      }
+      const obj = require("HexagonCampaignUtils");
+      const tmp14 = !PremiumUtilsDefault.canUseClientThemes(UserStore.getCurrentUser());
+      if (tmp14 === closure_15) {
+        return flag;
+      } else {
+        closure_15 = tmp14;
+        c17 = false;
+      }
     }
   }
   flag = false;
   if (null == user) {
-    const tmp9 = getAppliedHexagonCampaignPreset();
+    const tmp10 = getAppliedHexagonCampaignPreset();
     flag = false;
-    if (null != tmp9) {
-      user = tmp9;
+    if (null != tmp10) {
+      user = tmp10;
       flag = true;
     }
   }
@@ -179,9 +181,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4995).isGuildTextChannelType;
+const isGuildTextChannelType = fn(5096).isGuildTextChannelType;
 const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5167).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
 const SystemThemeState = fn(1195).SystemThemeState;
 let closure_15 = true;
 let c16 = false;
@@ -276,52 +278,53 @@ Object.defineProperty(prototype, "gradientPreset", {
       if (syncedClientTheme != null) {
         prop = syncedClientTheme.backgroundGradientPresetId;
       }
-      let tmp15;
+      let tmp16;
       if (null != prop) {
-        let tmp18;
+        let tmp19;
         if (null != dependencyMap[prop]) {
-          const result = require("HexagonCampaignUtils").isHexagonCampaignClientThemePreset(tmp17.id);
-          let tmp20 = !result;
+          const result = require("HexagonCampaignUtils").isHexagonCampaignClientThemePreset(tmp18.id);
+          let tmp21 = !result;
           if (result) {
-            tmp20 = null == UserStore.getCurrentUser();
+            tmp21 = null == UserStore.getCurrentUser();
           }
-          if (!tmp20) {
-            tmp20 = !require("HexagonCampaignPerkAvailability").isHexagonCampaignPerkExpiredForCurrentUser(
+          if (!tmp21) {
+            tmp21 = !require("HexagonCampaignPerkAvailability").isHexagonCampaignPerkExpiredForCurrentUser(
               HexagonCampaignPerk.CLIENT_THEME,
             );
             const tmpResult5 = require("HexagonCampaignPerkAvailability");
           }
-          if (tmp20) {
-            tmp18 = tmp17;
+          if (tmp21) {
+            tmp19 = tmp18;
           }
           const tmpResult = require("HexagonCampaignUtils");
         }
-        tmp15 = tmp18;
+        tmp16 = tmp19;
       }
       if (!closure_15) {
-        return tmp15;
+        return tmp16;
       } else if (c17) {
-      } else if (null != tmp15) {
+      } else if (null != tmp16) {
         tmpResult6 = require("HexagonCampaignUtils");
       }
     } else {
       let tmp5;
       if (null != user) {
-        const result1 = require("HexagonCampaignUtils").isHexagonCampaignClientThemePreset(user.id);
-        let tmp8 = !result1;
-        if (result1) {
-          tmp8 = null == UserStore.getCurrentUser();
-        }
-        if (!tmp8) {
-          tmp8 = !require("HexagonCampaignPerkAvailability").isHexagonCampaignPerkExpiredForCurrentUser(
-            HexagonCampaignPerk.CLIENT_THEME,
-          );
-          const tmpResult8 = require("HexagonCampaignPerkAvailability");
-        }
-        if (tmp8) {
+        if (c17) {
           tmp5 = user;
+        } else {
+          const result1 = require("HexagonCampaignUtils").isHexagonCampaignClientThemePreset(user.id);
+          let tmp9 = !result1;
+          if (result1) {
+            tmp9 = null == UserStore.getCurrentUser();
+          }
+          if (!tmp9) {
+            tmp9 = !require("HexagonCampaignPerkAvailability").isHexagonCampaignPerkExpiredForCurrentUser(
+              HexagonCampaignPerk.CLIENT_THEME,
+            );
+            const tmpResult8 = require("HexagonCampaignPerkAvailability");
+          }
+          const tmpResult7 = require("HexagonCampaignUtils");
         }
-        const tmpResult7 = require("HexagonCampaignUtils");
       }
       return tmp5;
     }
@@ -378,15 +381,22 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(DispatcherDe
       tmp = null != presetId;
     }
     if (tmp) {
-      tmp = !require("HexagonCampaignUtils").isHexagonCampaignClientThemePreset(presetId);
+      let result = require("HexagonCampaignUtils").isHexagonCampaignClientThemePreset(presetId);
+      if (result) {
+        result = !require("HexagonCampaignPerkAvailability").isHexagonCampaignPerkExpiredForCurrentUser(
+          HexagonCampaignPerk.CLIENT_THEME,
+        );
+        const tmp3Result = require("HexagonCampaignPerkAvailability");
+      }
+      tmp = !result;
       const obj = require("HexagonCampaignUtils");
     }
     c17 = tmp;
-    let tmp5;
+    let tmp7;
     if (null != presetId) {
-      tmp5 = dependencyMap[presetId];
+      tmp7 = dependencyMap[presetId];
     }
-    closure_3 = tmp5;
+    closure_3 = tmp7;
   },
   UPDATE_MOBILE_PENDING_THEME_INDEX: function handleUpdateMobilePendingThemeIndex(mobileThemesIndex) {
     mobileThemesIndex = mobileThemesIndex.mobileThemesIndex;

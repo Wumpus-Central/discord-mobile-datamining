@@ -11,6 +11,7 @@ import Server from "../../../flow/Server.tsx";
 import CommunicationDisabledUtils from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import GuildLeaderboardTypes from "../../guild_space/gaming_leaderboard/GuildLeaderboardTypes.tsx";
 import ReactionUtils from "../../reactions/ReactionUtils.tsx";
+import QuestTypes from "../../quests/QuestTypes.tsx";
 import Client from "../../../flow/Client.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
@@ -23,17 +24,16 @@ import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import MediaFormatTesters from "../MediaFormatTesters.tsx";
 import InteractionComponentUtils from "../../interaction_components/InteractionComponentUtils.tsx";
 import InteractionTypes from "../../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
-import QuestTypes from "../../quests/QuestTypes.tsx";
+import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
+import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import Tracking from "../../forums/tracking/Tracking.tsx";
-import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import PopularMusicSystemMessageTypes from "../../guild_space/popular_music/PopularMusicSystemMessageTypes.tsx";
-import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
@@ -188,9 +188,9 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       c3 = 3;
       const obj = { value, done: true };
       return obj;
-    } catch (tmp17) {
+    } catch (tmp18) {
       c3 = tmp;
-      throw tmp17;
+      throw tmp18;
     }
   }
 };
@@ -217,8 +217,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(10023).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8453);
+let closure_5 = fn(11805).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(9094);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1072);
 ({

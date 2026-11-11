@@ -1,14 +1,14 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import PremiumGiftModal from "PremiumGiftModal.tsx";
 import ProductPurchaseSuccessActionCreatorsDefault from "../../../collectibles/native/ProductPurchaseSuccessActionCreators.tsx";
+import PremiumGiftModal from "PremiumGiftModal.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 },
   promoDetails: null,

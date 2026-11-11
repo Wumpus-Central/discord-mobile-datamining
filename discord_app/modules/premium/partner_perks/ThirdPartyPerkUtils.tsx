@@ -3,6 +3,8 @@ import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import themes from "../../../design/utils/shared/themes.tsx";
+import MarketingSurfaceTypeUtils from "../promotions/MarketingSurfaceTypeUtils.tsx";
+import MarketingSurfaceType from "../../../../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx";
 import getPartnerMarketingComponentDefault from "../promotions/third_party/getPartnerMarketingComponent.tsx";
 import PremiumConstants from "../PremiumConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -22,6 +24,12 @@ import size from "../../../../_runtime/metro/00002__.js";
 } = PremiumConstants);
 const SubscriptionStatusTypes = Constants.SubscriptionStatusTypes;
 const items = [
+  MarketingSurfaceType.MarketingSurfaceType.PREMIUM_HOME_REWARDS_PERK_CARD,
+  MarketingSurfaceType.MarketingSurfaceType.MARKETING_PAGE_REWARDS_BENTO_BOX,
+  MarketingSurfaceType.MarketingSurfaceType.OUTBOUND_PROMOTION_POPOVER,
+  MarketingSurfaceType.MarketingSurfaceType.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD,
+];
+const items1 = [
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_REFERRAL_TRIAL_ID,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID,
@@ -32,7 +40,7 @@ const items = [
   PREMIUM_TIER_2_GOOGLE_PLAY_SIX_MONTH_TRIAL_ID,
   PREMIUM_TIER_2_REVERSE_FOLLOWUP_TRIAL_ID,
 ];
-const set = new Set(items);
+const set = new Set(items1);
 const ThirdPartyPerkIneligibilityReason = {
   NO_SUBSCRIPTION: "no_subscription",
   NOT_TIER_2_SUBSCRIPTION: "not_tier_2_subscription",
@@ -122,41 +130,24 @@ export function formatThirdPartyPromotionEndDateForPerkCard(arg0) {
     return dateTimeFormat.format(arg0);
   }
 }
-export function getMarketingComponentAsset(properties) {
-  properties = properties.properties.properties;
-  const oneofKind = properties.oneofKind;
-  if ("premiumHomeRewardsPerkCard" === oneofKind) {
-    return properties.premiumHomeRewardsPerkCard.asset;
-  } else if ("marketingPageRewardsBentoBox" === oneofKind) {
-    return properties.marketingPageRewardsBentoBox.asset;
-  } else if ("outboundPromotionPopover" === oneofKind) {
-    return properties.outboundPromotionPopover.asset;
-  } else {
-    return "outboundPromotionClaimModalCard" === oneofKind
-      ? properties.outboundPromotionClaimModalCard.asset
-      : undefined;
+export function getMarketingComponentAsset(surface) {
+  if (obj.isMarketingSurface(surface, items)) {
+    return surface.surface.asset;
   }
+  obj = MarketingSurfaceTypeUtils;
 }
 export function getPartnerMarketingComponentAssetUrl(arg0, arg1, theme) {
   const tmp2 = getPartnerMarketingComponentDefault(arg0, arg1);
-  if (null == tmp2) {
-    if (null != undefined) {
-      return themes.isThemeDark(theme) ? undefined.darkUrl : undefined.lightUrl;
+  let tmp3;
+  if (null != tmp2) {
+    let asset;
+    if (obj.isMarketingSurface(tmp2, items)) {
+      asset = tmp2.surface.asset;
     }
-  } else {
-    premiumHomeRewardsPerkCard = tmp2.properties.properties;
-    const oneofKind = premiumHomeRewardsPerkCard.oneofKind;
-    if ("premiumHomeRewardsPerkCard" === oneofKind) {
-      ({ premiumHomeRewardsPerkCard, asset } = premiumHomeRewardsPerkCard);
-    } else {
-      if ("marketingPageRewardsBentoBox" === oneofKind) {
-        asset = premiumHomeRewardsPerkCard.marketingPageRewardsBentoBox.asset;
-      } else if ("outboundPromotionPopover" !== oneofKind) {
-        if ("outboundPromotionClaimModalCard" === oneofKind) {
-          asset = premiumHomeRewardsPerkCard.outboundPromotionClaimModalCard.asset;
-        }
-      }
-      asset = premiumHomeRewardsPerkCard.outboundPromotionPopover.asset;
-    }
+    tmp3 = asset;
+    obj = MarketingSurfaceTypeUtils;
+  }
+  if (null != tmp3) {
+    return themes.isThemeDark(theme) ? tmp3.darkUrl : tmp3.lightUrl;
   }
 }

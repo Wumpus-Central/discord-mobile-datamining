@@ -54,7 +54,7 @@ function MediaMosaicVideo(source) {
     isGIFV = source.isGIFV;
   }
   size.disableFocus = isGIFV;
-  return closure_1_15(common_VideoDefault, size);
+  return colors(common_VideoDefault, size);
 }
 function MediaMosaicImage(source) {
   source = source.source;
@@ -262,8 +262,8 @@ function OneImageRow(widthOverride) {
   const obj2 = { handlePressMedia, initialIndex: 0, source, dimensions: null };
   const size = { width: widthOverride, height: widthOverride / 1.5 };
   obj2.dimensions = size;
-  obj.children = closure_1_15(Media, obj2);
-  return closure_1_15(timestampProducer, obj);
+  obj.children = colors(Media, obj2);
+  return colors(timestampProducer, obj);
 }
 function ThreeImagesRow(arg0) {
   ({ sources, start, end, offset: require, handlePressMedia: importDefault, widthOverride } = arg0);
@@ -292,7 +292,7 @@ function ThreeImagesRow(arg0) {
       const obj = { handlePressMedia, initialIndex: _require + index, source, dimensions: null };
       const size = { width: (widthOverride - 8) / 3, height: (widthOverride - 8) / 3 };
       obj.dimensions = size;
-      return closure_2_15(Media, obj, _require + index);
+      return colors(Media, obj, _require + index);
     }),
   });
 }
@@ -318,7 +318,7 @@ function TwoImagesRow(arg0) {
   return closure_15(closure_6, {
     style: items,
     children: sources.map((source, initialIndex) =>
-      closure_2_15(Media, { handlePressMedia, initialIndex, source, dimensions: size }, initialIndex),
+      colors(Media, { handlePressMedia, initialIndex, source, dimensions: size }, initialIndex),
     ),
   });
 }
@@ -341,17 +341,17 @@ function ThreeImages(arg0) {
   const obj3 = { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: null };
   const size = { width: (2 * widthOverride) / 3 - 4, height: (2 * widthOverride) / 3 };
   obj3.dimensions = size;
-  obj2.children = closure_1_15(Media, obj3);
-  const items1 = [closure_1_15(timestampProducer, obj2)];
+  obj2.children = colors(Media, obj3);
+  const items1 = [colors(timestampProducer, obj2)];
   const obj4 = { style: tmp.rightColumn, children: null };
   const items2 = [
-    closure_1_15(Media, {
+    colors(Media, {
       handlePressMedia,
       initialIndex: 1,
       source: sources[1],
       dimensions: { width: widthOverride / 3, height: widthOverride / 3 },
     }),
-    closure_1_15(Media, {
+    colors(Media, {
       handlePressMedia,
       initialIndex: 2,
       source: sources[2],
@@ -381,8 +381,8 @@ function FourImages(arg0) {
   ({ imageRow: arr[0], topRow: arr[1] } = tmp);
   obj2.style = items;
   const items1 = [
-    closure_1_15(Media, { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: size }),
-    closure_1_15(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: size }),
+    colors(Media, { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: size }),
+    colors(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: size }),
   ];
   obj2.children = items1;
   const items2 = [closure_1_17(timestampProducer, obj2)];
@@ -391,8 +391,8 @@ function FourImages(arg0) {
   ({ imageRow: arr4[0], bottomRow: arr4[1] } = tmp);
   obj5.style = items3;
   const items4 = [
-    closure_1_15(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: size }),
-    closure_1_15(Media, { handlePressMedia, initialIndex: 3, source: sources[3], dimensions: size }),
+    colors(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: size }),
+    colors(Media, { handlePressMedia, initialIndex: 3, source: sources[3], dimensions: size }),
   ];
   obj5.children = items4;
   items2[1] = closure_1_17(timestampProducer, obj5);
@@ -417,7 +417,7 @@ function SingleImage(source) {
   items[2] = widthOverride;
   const obj2 = {
     style: tmp.imagesContainer,
-    children: closure_1_15(Media, {
+    children: colors(Media, {
       handlePressMedia,
       initialIndex,
       source,
@@ -446,7 +446,7 @@ function SingleImage(source) {
       visible,
     }),
   };
-  return closure_1_15(timestampProducer, obj2);
+  return colors(timestampProducer, obj2);
 }
 class GravityAttachmentMediaMosaic {
   constructor(arg0) {
@@ -521,10 +521,10 @@ class GravityAttachmentMediaMosaic {
             obj.children = memo.map((sources, index) => {
               if (1 === sources.length) {
                 const obj2 = { handlePressMedia, source: sources[0] };
-                return closure_2_15(OneImageRow, obj2, index);
+                return colors(OneImageRow, obj2, index);
               } else if (2 === sources.length) {
                 const obj3 = { widthOverride, sources, handlePressMedia, end: index === memo.length - 1 };
-                return closure_2_15(TwoImagesRow, obj3, index);
+                return colors(TwoImagesRow, obj3, index);
               } else {
                 let num = 0;
                 if (0 !== index) {
@@ -538,7 +538,7 @@ class GravityAttachmentMediaMosaic {
                   start: 0 === index,
                   end: index === memo.length - 1,
                 };
-                return closure_2_15(ThreeImagesRow, obj, index);
+                return colors(ThreeImagesRow, obj, index);
               }
             });
             tmp4 = jsx(View, obj);
@@ -556,7 +556,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const collapsedCategories = createStyles.createStyles(() => {
   const obj = {
     media: { borderRadius: nativeDefault.radii.xs },
@@ -788,7 +788,7 @@ export default function ICYMIMediaMosaic(message) {
     let mapped;
     if (embedSources != null) {
       mapped = embedSources.map((source, index) =>
-        closure_2_15(
+        colors(
           SingleImage,
           { widthOverride, handlePressMedia, initialIndex: index + nonEmbedSources.length, source, visible },
           "gif-" + index,

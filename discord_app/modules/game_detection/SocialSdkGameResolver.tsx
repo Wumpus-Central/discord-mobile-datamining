@@ -68,7 +68,7 @@ prototype["resolve"] = function resolve(arr) {
     } else if (null != value) {
       const result1 = map.set(tmp.pid, value);
     }
-    value2 = map.get(tmp.pid);
+    const value2 = map.get(tmp.pid);
     let type;
     if (value2 != null) {
       type = value2.type;

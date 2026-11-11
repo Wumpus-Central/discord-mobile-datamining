@@ -16,7 +16,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const EmojiPickerConstants = fn(6857);
+const EmojiPickerConstants = fn(6909);
 ({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: closure_10 } = EmojiPickerConstants);
 const Constants = fn(1072);
 ({
@@ -483,7 +483,7 @@ export function trackEmojiSearchSelect(tmp2Result2) {
       let obj4 = obj3;
     }
     const merged = Object.assign(obj4);
-    let length;
+    length = undefined;
     if (emojiSuggestions != null) {
       const results = emojiSuggestions.results;
       if (results != null) {

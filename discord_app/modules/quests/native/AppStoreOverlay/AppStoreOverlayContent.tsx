@@ -90,11 +90,11 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
               if (null != rating.category_id) {
                 appStoreOverlayCategoryLabel = null;
                 if ("" !== rating.category_id) {
-                  appStoreOverlayCategoryLabel = closure_1_0(14925).getAppStoreOverlayCategoryLabel(
+                  appStoreOverlayCategoryLabel = closure_1_0(10105).getAppStoreOverlayCategoryLabel(
                     os.os,
                     rating.category_id,
                   );
-                  const obj3 = closure_1_0(14925);
+                  const obj3 = closure_1_0(10105);
                 }
               }
               const obj4 = { type: "chart", label: null, rank: null, category: null };

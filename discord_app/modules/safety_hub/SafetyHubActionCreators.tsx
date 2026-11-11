@@ -331,7 +331,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = classificationId(8042);
+                      obj3 = classificationId(8139);
                     }
                   }
                   const obj2 = {
@@ -392,7 +392,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(8042);
+                    obj3 = classificationId(8139);
                   }
                 }
                 const obj2 = {
@@ -829,7 +829,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
     }
   })();
 };
-const SafetyHubConstants = fn(8043);
+const SafetyHubConstants = fn(8140);
 ({
   AGE_CHECK_POLL_INTERVAL_MS: closure_6,
   AGE_CHECK_MAX_POLL_ATTEMPTS: metroImportDefault,

@@ -39,7 +39,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
     obj4.onValueChange = function onValueChange(arg0) {
       return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
     };
-    obj.communication = COMMUNICATION(11694).createToggle(obj4);
+    obj.communication = COMMUNICATION(12317).createToggle(obj4);
     const SOCIAL = constants.SOCIAL;
     closure_129_0 = SOCIAL;
     const found1 = closure_4.find((category) => category.category === COMMUNICATION);
@@ -60,7 +60,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
       obj6.onValueChange = function onValueChange(arg0) {
         return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
       };
-      obj.social = tmp29(11694).createToggle(obj6);
+      obj.social = tmp29(12317).createToggle(obj6);
       const UPDATES_AND_ANNOUNCEMENTS = constants.UPDATES_AND_ANNOUNCEMENTS;
       closure_130_0 = UPDATES_AND_ANNOUNCEMENTS;
       const found2 = closure_4.find((category) => category.category === COMMUNICATION);
@@ -83,7 +83,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
         obj8.onValueChange = function onValueChange(arg0) {
           return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
         };
-        obj.updatesAndAnnouncements = tmp29(11694).createToggle(obj8);
+        obj.updatesAndAnnouncements = tmp29(12317).createToggle(obj8);
         const TIPS = constants.TIPS;
         closure_131_0 = TIPS;
         const found3 = closure_4.find((category) => category.category === COMMUNICATION);
@@ -104,7 +104,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
           obj10.onValueChange = function onValueChange(arg0) {
             return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
           };
-          obj.tips = tmp29(11694).createToggle(obj10);
+          obj.tips = tmp29(12317).createToggle(obj10);
           const RECOMMENDATIONS_AND_EVENTS = constants.RECOMMENDATIONS_AND_EVENTS;
           closure_132_0 = RECOMMENDATIONS_AND_EVENTS;
           const found4 = closure_4.find((category) => category.category === COMMUNICATION);
@@ -127,8 +127,8 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
             obj12.onValueChange = function onValueChange(arg0) {
               return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
             };
-            obj.recommendationsAndEvents = tmp29(11694).createToggle(obj12);
-            const tmp29Result7 = tmp29(11694);
+            obj.recommendationsAndEvents = tmp29(12317).createToggle(obj12);
+            const tmp29Result7 = tmp29(12317);
             const obj13 = {
               useTitle() {
                 const intl = COMMUNICATION(1113).intl;
@@ -137,22 +137,22 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
               parent: EMAIL_NOTIFICATIONS,
               variant: "danger",
               useIsDisabled: useMarketingEmailsDisabled,
-              onPress: tmp29(17838).updateMarketingEmailSettings,
+              onPress: tmp29(18004).updateMarketingEmailSettings,
             };
-            obj.unsubscribeFromAllMarketing = tmp29(11694).createPressable(obj13);
+            obj.unsubscribeFromAllMarketing = tmp29(12317).createPressable(obj13);
             return obj;
           }
-          const tmp29Result6 = tmp29(11694);
+          const tmp29Result6 = tmp29(12317);
         }
-        const tmp29Result5 = tmp29(11694);
+        const tmp29Result5 = tmp29(12317);
       }
-      const tmp29Result = tmp29(11694);
+      const tmp29Result = tmp29(12317);
     }
-    const obj2 = COMMUNICATION(11694);
+    const obj2 = COMMUNICATION(12317);
   }
 }
-const MobileUserSettings = fn(8507).MobileUserSettings;
-const EmailSettingsConstants = fn(17839);
+const MobileUserSettings = fn(9136).MobileUserSettings;
+const EmailSettingsConstants = fn(18005);
 ({
   EmailCategories: c3,
   EmailCategoriesList: closure_4,

@@ -111,6 +111,9 @@ export function canUseCustomBackgrounds(currentUser) {
 export function canUseCollectibles(user) {
   return ProductCatalog.canUserUse(user2.Perk.PREMIUM_COLLECTIBLES, user);
 }
+export function canUseTenureBadge(currentUser) {
+  return ProductCatalog.canUserUse(user2.Perk.PREMIUM_TENURE_BADGE, currentUser);
+}
 export function canUseMonthlyOrbs(stateFromStores) {
   let perks;
   if (stateFromStores != null) {

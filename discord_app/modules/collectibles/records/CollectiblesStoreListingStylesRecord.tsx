@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07809_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/08429_tinycolor.js";
 import Record from "../../../lib/Record.tsx";
 
 require = fn;

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/app_hover_card/native/useConjureAppChannelSheet.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../../utils/UserUtils.tsx";
 import ConjureAppSheetIconDefault from "ConjureAppSheetIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -71,7 +71,7 @@ export default function useConjureAppChannelSheet(guild_id, arg1) {
       if (null != creator) {
         const intl = util.intl;
         const obj3 = { name: UserUtils.getName(tmp6) };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef4028["6/x9LD"], obj3);
+        formatToPlainStringResult = intl.formatToPlainString(_modDef4079["6/x9LD"], obj3);
       }
       obj.subtitle = formatToPlainStringResult;
       tmp2 = obj;

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/GoreMediaFiltersFriendsDMsSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import SensitiveMediaGoreRedactionSettingsUtils from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useExplicitContentSettingsOrDefault from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
 import ExplicitMediaRedactionNativeUtils from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
 import useSensitiveMediaSettingDisabled from "../../../explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx";

@@ -47,6 +47,7 @@ function useWebBrowserSettingOptions() {
   tmpResult = PlatformUtils;
 }
 const radio = SettingBuilders.createRadio({
+  hideTitle: true,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["C+DkPu"]);

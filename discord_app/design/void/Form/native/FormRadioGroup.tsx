@@ -1,6 +1,6 @@
 // discord_app/design/void/Form/native/FormRadioGroup.tsx
-import TableRadioGroup from "../../../components/TableRow/native/TableRadioGroup.native.tsx";
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import TableRadioGroup from "../../../components/TableRow/native/TableRadioGroup.native.tsx";
 import FormSectionDefault from "FormSection.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

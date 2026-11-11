@@ -3,7 +3,7 @@ import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../AgeVerificationActionCreators.native.tsx";
 import LocationMetadataStore from "../../location_metadata/stores/LocationMetadataStore.tsx";
 
-const AgeNoticeConstants = fn(6794);
+const AgeNoticeConstants = fn(6778);
 ({ AGE_NOTICE_AGE_GROUP_SUPPORT_ARTICLE_IDS_BY_COUNTRY: c3, AGE_NOTICE_DEFAULT_ARTICLE_ID: closure_4 } =
   AgeNoticeConstants);
 const size = fn(2);

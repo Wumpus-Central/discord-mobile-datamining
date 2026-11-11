@@ -198,7 +198,7 @@ export function showCheckoutOrderErrorModal(arg0, c6) {
     ({ key, onCloseCallback } = obj);
     const merged = Object.assign(obj, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
     const merged1 = Object.assign(merged);
-    closure_0(6094).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
+    closure_0(6207).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
       dismissable: obj.dismissable,
     });
   });

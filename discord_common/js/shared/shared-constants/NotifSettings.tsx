@@ -76,4 +76,6 @@ export const NotifSettings = {
   [33]: "NUDGE_NEW_FRIEND_DM",
   PROFILE_UPDATES: 34,
   [34]: "PROFILE_UPDATES",
+  REACTIONS_CHOICE: 37,
+  [37]: "REACTIONS_CHOICE",
 };

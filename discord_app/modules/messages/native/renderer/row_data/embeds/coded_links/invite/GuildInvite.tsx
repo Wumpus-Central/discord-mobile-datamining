@@ -9,21 +9,21 @@ import HelpdeskUtilsDefault from "../../../../../../../../utils/HelpdeskUtils.ts
 import GuildRecordUtils from "../../../../../../../../utils/GuildRecordUtils.tsx";
 import UserUtilsDefault from "../../../../../../../../utils/UserUtils.tsx";
 import useChannelName from "../../../../../../../channel/useChannelName.tsx";
-import Constants2 from "../../../../../../../instant_invite/Constants.tsx";
 import InviteTargetTypes from "../../../../../../../../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
+import GuildInviteFlags from "../../../../../../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
+import utils_ChannelUtils from "../../../../../../../../utils/native/ChannelUtils.tsx";
+import renderer_EmbedUtils from "../../../../EmbedUtils.tsx";
+import Constants2 from "../../../../../../../instant_invite/Constants.tsx";
 import RowGeneratorStyleSheet from "../../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../../getEmbedThemeColors.tsx";
-import renderer_EmbedUtils from "../../../../EmbedUtils.tsx";
-import utils_ChannelUtils from "../../../../../../../../utils/native/ChannelUtils.tsx";
-import GuildInviteFlags from "../../../../../../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
 import GuildBadgeImageSource from "../../../../../../../guild_badge/native/GuildBadgeImageSource.tsx";
 import CodedLinksConstants from "../CodedLinksConstants.tsx";
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite.tsx";
 import GuestUtilsDefault from "../../../../../../../guests/GuestUtils.tsx";
-import _modDef13480 from "../../../../../../../../../_runtime/metro/13480__.js";
-import _modDef13481 from "../../../../../../../../../_runtime/metro/13481__.js";
+import _modDef14002 from "../../../../../../../../../_runtime/metro/14002__.js";
+import _modDef14003 from "../../../../../../../../../_runtime/metro/14003__.js";
 import InviteErrorUtils from "../../../../../../../../utils/InviteErrorUtils.tsx";
-import _modDef14597 from "../../../../../../../../../_runtime/metro/14597__.js";
+import _modDef14976 from "../../../../../../../../../_runtime/metro/14976__.js";
 import getHeaderTextForInvite from "../../../../../../getHeaderTextForInvite.tsx";
 import GuildRecord from "../../../../../../../../records/GuildRecord.tsx";
 import ApplicationStreamingStore from "../../../../../../../../stores/ApplicationStreamingStore.tsx";
@@ -70,7 +70,7 @@ export function createExpiredGuildInvite(author, arg1, theme) {
     tmp6 = require;
   }
   obj.headerText = str.toUpperCase();
-  obj.titleColor = tmp6(8456).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6(9097).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
   if (arg1) {
     const intl4 = tmp6(1113).intl;
     let stringResult = intl4.string(tmp6(1113).t["F/OLvL"]);
@@ -93,11 +93,11 @@ export function createExpiredGuildInvite(author, arg1, theme) {
   obj.subtitle = stringResult;
   const intl5 = tmp6(1113).intl;
   obj.titleText = intl5.string(tmp6(1113).t["Jhx/ud"]);
-  const tmp6Result = tmp6(8456);
+  const tmp6Result = tmp6(9097);
   if (tmp6Result2.isThemeDark(theme)) {
-    let tmpResult2 = _modDef13480;
+    let tmpResult2 = _modDef14002;
   } else {
-    tmpResult2 = _modDef13481;
+    tmpResult2 = _modDef14003;
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
   ({ thumbnailBackgroundColor: obj.thumbnailBackgroundColor, subtitleColor: obj.subtitleColor } = tmp3.colors);
@@ -150,7 +150,7 @@ export function createDisabledGuildInvite(invite, theme) {
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14597);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14976);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -208,9 +208,9 @@ export function createErroredGuildInvite(code, arg1, theme) {
   obj3.titleText = title;
   const tmp5Result = RowGeneratorStyleSheet;
   if (tmp5Result2.isThemeDark(theme)) {
-    let tmpResult = _modDef13480;
+    let tmpResult = _modDef14002;
   } else {
-    tmpResult = _modDef13481;
+    tmpResult = _modDef14003;
   }
   obj3.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj2.thumbnailBackgroundColor, subtitleColor: obj2.subtitleColor } = colors);

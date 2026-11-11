@@ -8,8 +8,8 @@ import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import MarkupTextRuleDefault from "MarkupTextRule.tsx";
 import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule.tsx";
 import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule.tsx";
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode.tsx";
 import utils_ChannelUtils from "../../utils/native/ChannelUtils.tsx";
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode.tsx";
 import useGameMentionData from "../game_mentions/hooks/useGameMentionData.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

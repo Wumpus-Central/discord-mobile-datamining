@@ -1,13 +1,14 @@
 // discord_app/modules/applications/utils/ApplicationInstallUtils.tsx
 import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import isConjureApplicationDefault from "../../conjure/shared/isConjureApplication.tsx";
 import ApplicationCommandIndexStore from "../../application_commands/ApplicationCommandIndexStore.tsx";
 
 require = fn;
-const BuiltInSectionId = fn(6169).BuiltInSectionId;
+const BuiltInSectionId = fn(6282).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 
-export function canInstallApplication(application) {
+export function hasInstallConfiguration(application) {
   const integrationTypesConfig = application.integrationTypesConfig;
   let tmp = null != application.customInstallUrl || null != application.installParams;
   if (!tmp) {
@@ -32,6 +33,58 @@ export function canInstallApplication(application) {
       });
     }
     tmp = someResult;
+  }
+  return tmp;
+}
+export function isKnownConjureApplication(id) {
+  id = id.id;
+  let tmp = null != id.conjureProjectId;
+  if (!tmp) {
+    let tmp2 = null != id;
+    if (tmp2) {
+      tmp2 = isConjureApplicationDefault(id);
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+}
+export function canInstallApplication(integrationTypesConfig) {
+  integrationTypesConfig = integrationTypesConfig.integrationTypesConfig;
+  let tmp = null != integrationTypesConfig.customInstallUrl || null != integrationTypesConfig.installParams;
+  if (!tmp) {
+    let someResult = null != integrationTypesConfig;
+    if (someResult) {
+      const _Object = Object;
+      const values = Object.values(integrationTypesConfig);
+      someResult = values.some((oauth2_install_params) => {
+        let prop;
+        if (oauth2_install_params != null) {
+          prop = oauth2_install_params.oauth2_install_params;
+        }
+        let tmp2 = null != prop;
+        if (!tmp2) {
+          let oauth2InstallParams;
+          if (oauth2_install_params != null) {
+            oauth2InstallParams = oauth2_install_params.oauth2InstallParams;
+          }
+          tmp2 = null != oauth2InstallParams;
+        }
+        return tmp2;
+      });
+    }
+    tmp = someResult;
+  }
+  if (tmp) {
+    const id = integrationTypesConfig.id;
+    let tmp4 = null != integrationTypesConfig.conjureProjectId;
+    if (!tmp4) {
+      let tmp5 = null != id;
+      if (tmp5) {
+        tmp5 = isConjureApplicationDefault(id);
+      }
+      tmp4 = tmp5;
+    }
+    tmp = !tmp4;
   }
   return tmp;
 }

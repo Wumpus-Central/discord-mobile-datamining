@@ -2,16 +2,16 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
-import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
+import conjurePresenceActivity from "../../conjure/presence/conjurePresenceActivity.tsx";
 import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
+import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import utils from "../../content_inventory/utils.tsx";
-import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
-import conjurePresenceActivity from "../../conjure/presence/conjurePresenceActivity.tsx";
 import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
-import TopicsIcon from "../../../design/components/Icon/native/redesign/generated/TopicsIcon.tsx";
 import HourglassIcon from "../../../design/components/Icon/native/redesign/generated/HourglassIcon.tsx";
+import TopicsIcon from "../../../design/components/Icon/native/redesign/generated/TopicsIcon.tsx";
 import shouldShowActivityTimeBarDefault from "../utils/shouldShowActivityTimeBar.tsx";
 import Badges from "../../icymi/native/content_inventory/Badges.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_6 = createStyles.createStyles({
   container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 },
   bold: { fontWeight: "bold" },

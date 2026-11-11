@@ -17,4 +17,5 @@ export const RTCConnectionEvent = {
   SecureFramesUpdate: "secure-frames-update",
   RosterMapUpdate: "roster-map-update",
   UsersMerged: "users-merged",
+  WebTransportAck: "web-transport-ack",
 };

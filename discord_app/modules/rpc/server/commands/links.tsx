@@ -3,8 +3,8 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import embeddedActivityLocationUtils from "../../../activities/utils/embeddedActivityLocationUtils.tsx";
 import CrossPlatformNativeUtilsDefault from "../../../../utils/CrossPlatformNativeUtils.native.tsx";
-import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
+import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
 import validateEmbeddedAppFrame from "../../helpers/validateEmbeddedAppFrame.tsx";
@@ -161,7 +161,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5832)(href);
+                  closure_1(5945)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -237,7 +237,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6585);
+let Constants = fn(6698);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1072);
 ({
@@ -252,7 +252,7 @@ const items = [,];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16643);
+let CONTEXT_MENU_ICON_NAMES = fn(16804);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -384,16 +384,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(16643);
+CONTEXT_MENU_ICON_NAMES = fn(16804);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(11985).validatePostMessageTransport(socket.transport);
-    let obj = socket(11985);
+    let result = socket(12779).validatePostMessageTransport(socket.transport);
+    let obj = socket(12779);
     let tmp = socket;
-    const validateApplicationResult = socket(11985).validateApplication(socket.application);
+    const validateApplicationResult = socket(12779).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -426,7 +426,7 @@ let obj6 = {
       }
       tmpResult = tmp(2148);
     }
-    let obj2 = socket(11985);
+    let obj2 = socket(12779);
   },
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

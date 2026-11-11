@@ -1,128 +1,148 @@
 // discord_app/modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx
+import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 const require = fn;
-let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
-  if (c3 === 2) {
-    c3 = 3;
+function memoizedPairwiseFingerprint(id, secureFramesRosterMapEntry1, arg2, secureFramesRosterMapEntry) {
+  items = [closure_7, id, , ,];
+  let uint8Array = new Uint8Array(secureFramesRosterMapEntry1);
+  items[2] = byteLengthDefault.fromByteArray(uint8Array);
+  items[3] = arg2;
+  const uint8Array1 = new Uint8Array(secureFramesRosterMapEntry);
+  items[4] = byteLengthDefault.fromByteArray(uint8Array1);
+  const joined = items.join(":");
+  const value2 = map.get(joined);
+  if (null != value2) {
+    return value2;
+  } else {
+    if (MediaEngineStore.supports(Features.DAVE_PAIRWISE_FINGERPRINT)) {
+      const mediaEngine = MediaEngineStore.getMediaEngine();
+      const davePairwiseFingerprint = mediaEngine.generateDavePairwiseFingerprint(
+        closure_7,
+        secureFramesRosterMapEntry1,
+        id,
+        secureFramesRosterMapEntry,
+        arg2,
+      );
+      let nextPromise = davePairwiseFingerprint.then((result) => {
+        const uint8Array = new Uint8Array(result);
+        return uint8Array;
+      });
+    } else {
+      const obj4 = joined(10545);
+      const _Uint8Array = Uint8Array;
+      const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
+      const _Uint8Array2 = Uint8Array;
+      const uint8Array3 = new Uint8Array(secureFramesRosterMapEntry);
+      nextPromise = obj4.generatePairwiseFingerprint(closure_7, uint8Array2, id, uint8Array3, arg2);
+    }
+    const nextPromise1 = nextPromise.then((result) => byteLengthDefault.fromByteArray(result));
+    if (map.size >= 16) {
+      value = map.keys().next().value;
+      if (null != value) {
+        map.delete(value);
+      }
+      const iter = map.keys();
+    }
+    const result = map.set(joined, nextPromise1);
+    nextPromise1.catch(() => map.delete(joined));
+    return nextPromise1;
+  }
+}
+let closure_11 = async function _computeBoundPairwiseFingerprint(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  } else if (tmp5 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj2 = { value, done: true };
+      const obj2 = { value, done: true };
       return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
   } else {
     try {
-      c3 = 2;
-      if (0 === c2) {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          c3 = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c3 = 3;
+          c5 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
+          closure_2 = tmp6;
+          closure_130_0 = undefined;
           id = id.getId();
           const secureFramesRosterMapEntry = RTCConnectionStore.getSecureFramesRosterMapEntry(closure_0);
-          closure_129_0 = secureFramesRosterMapEntry;
+          closure_130_0 = secureFramesRosterMapEntry;
           const secureFramesRosterMapEntry1 = RTCConnectionStore.getSecureFramesRosterMapEntry(id);
           if (null != secureFramesRosterMapEntry) {
             if (null != secureFramesRosterMapEntry1) {
-              c2 = 1;
               c3 = 1;
-              let obj4 = {
-                value: (function memoizedPairwiseFingerprint(
+              value = {};
+              c4 = 2;
+              c5 = 1;
+              const obj4 = {
+                value: memoizedPairwiseFingerprint(
                   id,
                   secureFramesRosterMapEntry1,
-                  arg2,
+                  closure_0,
                   secureFramesRosterMapEntry,
-                ) {
-                  items = [closure_6, id, , ,];
-                  const uint8Array = new Uint8Array(secureFramesRosterMapEntry1);
-                  items[2] = closure_1(206).fromByteArray(uint8Array);
-                  items[3] = arg2;
-                  const obj = closure_1(206);
-                  const uint8Array1 = new Uint8Array(secureFramesRosterMapEntry);
-                  items[4] = closure_1(206).fromByteArray(uint8Array1);
-                  const joined = items.join(":");
-                  value2 = map.get(joined);
-                  if (null != value2) {
-                    return value2;
-                  } else {
-                    const obj4 = joined(9336);
-                    const _Uint8Array = Uint8Array;
-                    const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
-                    const _Uint8Array2 = Uint8Array;
-                    const uint8Array3 = new Uint8Array(secureFramesRosterMapEntry);
-                    const pairwiseFingerprint = obj4.generatePairwiseFingerprint(
-                      closure_6,
-                      uint8Array2,
-                      id,
-                      uint8Array3,
-                      arg2,
-                    );
-                    const nextPromise = pairwiseFingerprint.then((result) =>
-                      closure_1_1(dependencyMap[4]).fromByteArray(result),
-                    );
-                    if (map.size >= 16) {
-                      value = map.keys().next().value;
-                      if (null != value) {
-                        map.delete(value);
-                      }
-                      const iter = map.keys();
-                    }
-                    const result = map.set(joined, nextPromise);
-                    nextPromise.catch(() => map.delete(joined));
-                    return nextPromise;
-                  }
-                  const obj2 = closure_1(206);
-                })(id, secureFramesRosterMapEntry1, closure_0, secureFramesRosterMapEntry),
+                ),
                 done: false,
               };
               return obj4;
             }
           }
-          c3 = 3;
+          c5 = 3;
           return { value: null, done: true };
         }
+      } else if (1 === tmp6) {
+        c3 = 0;
+        c5 = 3;
+        return { value: null, done: true };
       } else if (arg0 === 1) {
-        c3 = 3;
+        c5 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c3 = 3;
+        c3 = 0;
+        c5 = 3;
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        closure_129_1 = value;
-        let obj = { fingerprint: closure_129_1, fingerprintUserKey: closure_129_0 };
-        c3 = 3;
-        const obj6 = { value: obj, done: true };
-        return obj6;
+        value.fingerprint = value;
+        value.fingerprintUserKey = closure_130_0;
+        c3 = 0;
+        c5 = 3;
+        const obj = { value, done: true };
+        return obj;
       }
-    } catch (tmp13) {
-      c3 = tmp;
-      throw tmp13;
+    } catch (tmp16) {
+      if (tmp3 === c3) {
+        c5 = tmp2;
+        throw tmp16;
+      } else {
+        c4 = tmp;
+      }
     }
   }
 };
-let closure_6 = fn(9352).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let closure_7 = fn(10561).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+const Features = fn(6012).Features;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx");
 
 export function computeBoundPairwiseFingerprint() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -3,8 +3,8 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 
 const require = fn;
 let closure_5 = async function _createConjureProject(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
+  if (c5 === 2) {
+    c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp4 === 3) {
     if (arg0 === 1) {
@@ -17,87 +17,75 @@ let closure_5 = async function _createConjureProject(arg0) {
     }
   } else {
     try {
-      c6 = 2;
-      if (0 === c5) {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          c6 = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          c5 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_0 = undefined;
-          closure_131_1 = undefined;
-          closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          closure_131_4 = undefined;
-          ({
-            guildId: closure_131_0,
-            installScope: closure_131_1,
-            prompt: closure_131_2,
-            modelSettings: closure_131_3,
-            templateId: closure_131_4,
-          } = closure_0);
-          closure_131_5 = undefined;
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          ({ guildId: closure_130_0, installScope } = closure_0);
+          if (installScope === undefined) {
+            installScope = "user";
+          }
+          closure_130_1 = installScope;
+          ({ modelSettings: closure_130_2, templateId: closure_130_3 } = closure_0);
+          closure_130_4 = undefined;
+          c4 = 1;
           c5 = 1;
-          c6 = 1;
           return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
-          c6 = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          c5 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          if (null != closure_131_1) {
-            const obj5 = { guild_id: closure_131_0, install_scope: closure_131_1 };
-            let obj6 = obj5;
-          } else {
-            obj6 = { guild_id: closure_131_0, auto_install_scope: true, prompt: null };
-            dependencyMap = closure_131_2;
-            if (closure_131_2 == null) {
-              dependencyMap = "";
-            }
-            obj6.prompt = dependencyMap.slice(0, 4000);
-          }
-          const project = closure_132_0(closure_132_1[2]).createProject(obj6);
-          c5 = 2;
-          c6 = 1;
-          const obj9 = closure_132_0(closure_132_1[2]);
+          const obj6 = { guild_id: closure_130_0, install_scope: closure_130_1 };
+          c4 = 2;
+          c5 = 1;
+          const obj7 = { value: closure_131_0(closure_131_1[2]).createProject(obj6), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
-        c6 = 3;
+        c5 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c6 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        c5 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
-        closure_131_5 = value;
-        const obj8 = { templateId: closure_131_4 };
-        closure_132_3(closure_131_5, obj8);
-        closure_2 = closure_131_3;
-        if (closure_131_3 == null) {
-          closure_2 = closure_132_0(closure_132_1[3]).CONJURE_DEFAULT_TIER_SETTINGS;
+        closure_130_4 = value;
+        const obj9 = { templateId: closure_130_3 };
+        closure_131_3(closure_130_4, obj9);
+        closure_1 = closure_130_2;
+        if (closure_130_2 == null) {
+          closure_1 = closure_131_0(closure_131_1[3]).CONJURE_DEFAULT_TIER_SETTINGS;
         }
-        closure_132_4(closure_131_5, closure_2);
-        c6 = 3;
-        const obj = { value: closure_131_5, done: true };
+        closure_131_4(closure_130_4, closure_1);
+        c5 = 3;
+        const obj = { value: closure_130_4, done: true };
         return obj;
       }
-    } catch (tmp21) {
-      c6 = tmp;
-      throw tmp21;
+    } catch (tmp19) {
+      c5 = tmp;
+      throw tmp19;
     }
   }
 };
-const ConjureConnectionStore = fn(10978);
+const ConjureConnectionStore = fn(7301);
 ({ ensureConnection: c3, stageModelSettings: closure_4 } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/create/createConjureProject.tsx");

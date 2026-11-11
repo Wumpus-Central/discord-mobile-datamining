@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/utils/calculateContentCenterOffset.tsx
-import VoicePanelCardConstants from "../card/VoicePanelCardConstants.tsx";
 import roundToNearestPixelDefault from "roundToNearestPixel.tsx";
+import VoicePanelCardConstants from "../card/VoicePanelCardConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const items = [

@@ -71,7 +71,7 @@ function optimisticDispatch(type, channelId, messageId, emoji, userId) {
   }
   obj2.userId = userId;
   obj2.emoji = emoji;
-  let colors = userId.colors;
+  colors = userId.colors;
   if (colors == null) {
     colors = [];
   }
@@ -433,7 +433,7 @@ let closure_17 = async function _addReaction(arg0) {
             }
             obj4.userId = userId;
             obj4.emoji = emoji;
-            let colors = obj2.colors;
+            colors = obj2.colors;
             if (colors == null) {
               colors = [];
             }
@@ -867,7 +867,7 @@ let closure_23 = async function _removeReaction(arg0) {
                     if (burst != null) {
                       burst = burst.burst;
                     }
-                    const AccessibilityAnnouncer = channelId(5149).AccessibilityAnnouncer;
+                    const AccessibilityAnnouncer = channelId(5250).AccessibilityAnnouncer;
                     intl = channelId(1113).intl;
                     if (!burst) {
                       const obj6 = { name: tmp2.name };

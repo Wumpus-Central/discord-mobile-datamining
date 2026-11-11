@@ -21,7 +21,7 @@ let closure_3 = createStyles.createStyles((arg0) => {
     borderColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED,
     backgroundColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED,
   };
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   obj.iconFill = { color: arg0 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_STRONG };
   const obj3 = {
     borderWidth: 1,

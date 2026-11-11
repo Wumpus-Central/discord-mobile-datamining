@@ -114,8 +114,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1072);
 ({ DEVICE_TOKEN: metroImportDefault, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(14238).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(6800);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(14721).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6784);
 ({
   BUNDLE_ID: closure_11,
   DEVICE_PUSH_VOIP_PROVIDER: closure_12,
@@ -240,8 +240,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(14241).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(14241);
+          const result = v2(14724).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(14724);
         }
       }
       return value;

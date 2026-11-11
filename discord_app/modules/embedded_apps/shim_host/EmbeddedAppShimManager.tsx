@@ -67,11 +67,11 @@ function handleShimPipeOpen(iframeId) {
         }
       },
     };
-    const embeddedAppShimHost = iframeId(19876).createEmbeddedAppShimHost(obj2);
+    const embeddedAppShimHost = iframeId(20068).createEmbeddedAppShimHost(obj2);
     let result = map.set(iframeId, embeddedAppShimHost);
     let frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
     if (null == frameByIframeId) {
-      value2 = map1.get(iframeId);
+      let value2 = map1.get(iframeId);
       if (value2 == null) {
         value2 = closure_6;
       }
@@ -80,7 +80,7 @@ function handleShimPipeOpen(iframeId) {
       obj3 = { muted: frameByIframeId.data.muted };
     }
     const result1 = map1.set(iframeId, obj3);
-    let obj4 = iframeId(19876);
+    let obj4 = iframeId(20068);
   }
 }
 function handleIFrameUnmount(id) {

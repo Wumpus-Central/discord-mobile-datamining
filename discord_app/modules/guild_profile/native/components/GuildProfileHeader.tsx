@@ -4,8 +4,8 @@ import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
-import GuildTraits from "../../../guild_badge/GuildTraits.tsx";
 import BadgeCategory from "../../../guild_badge/BadgeCategory.tsx";
+import GuildTraits from "../../../guild_badge/GuildTraits.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
@@ -13,10 +13,10 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9390).getBadgeTooltip;
+const getBadgeTooltip = fn(10595).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 },
   avatarBackground: null,

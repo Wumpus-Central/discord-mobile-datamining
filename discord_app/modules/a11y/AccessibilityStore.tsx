@@ -27,7 +27,7 @@ function maybeApplyNoTextColorForLightCustomTheme() {
         const customUserThemeSettings = setting.customUserThemeSettings;
         let num;
         if (customUserThemeSettings != null) {
-          const colors = customUserThemeSettings.colors;
+          colors = customUserThemeSettings.colors;
           if (colors != null) {
             num = colors.length;
           }
@@ -92,7 +92,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1072);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(5147);
+const MessageConstants = fn(5248);
 ({
   MESSAGE_GROUP_SPACING: closure_11,
   DEFAULT_COMPACT_SPACING: closure_12,

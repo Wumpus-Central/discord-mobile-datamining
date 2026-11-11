@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import BadgeShared from "../../../../../discord_common/js/packages/design/components/Badge/shared/BadgeShared.tsx";
@@ -106,7 +106,7 @@ function getBadgeColors(variant) {
   }
 }
 function PremiumGradient(style) {
-  const colors = [useToken.useToken(nativeDefault.colors.BADGE_PREMIUM_BACKGROUND_GRADIENT_START), ,];
+  colors = [useToken.useToken(nativeDefault.colors.BADGE_PREMIUM_BACKGROUND_GRADIENT_START), ,];
   colors[1] = useToken.useToken(nativeDefault.colors.BADGE_PREMIUM_BACKGROUND_GRADIENT_MID);
   colors[2] = useToken.useToken(nativeDefault.colors.BADGE_PREMIUM_BACKGROUND_GRADIENT_END);
   return React4(LinearGradientDefault, { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors, style: style.style });

@@ -1,36 +1,11 @@
 // discord_app/modules/hexagon_campaign/native/applyHexagonCampaignPerks.tsx
-import UserSettingsAccountActionCreators from "../../../actions/UserSettingsAccountActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgroundStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import HexagonCampaignPersistedStore from "../HexagonCampaignPersistedStore.tsx";
 
-require = fn;
-function saveDisplayNameStyles() {
-  const self = this;
-  const apply = closure_11.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_11 = async function _saveDisplayNameStyles() {
-  c2 = 0;
-  c3 = 0;
-  return (async (arg0) => {
-    closure_1 = tmp2;
-    await UserSettingsAccountActionCreators.saveProfileAndAccountChanges({ displayNameStyles });
-    closure_129_0 = value;
-    if (closure_129_0 != null) {
-      const ok = closure_129_0.ok;
-    }
-    return true === ok;
-  })();
-};
-let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
-  await closure_131_0(closure_131_2[8]).fetchCurrentAppIcon();
+const require = fn;
+let closure_7 = async function _applyHexagonCampaignPerks(arg0) {
+  await closure_131_0(closure_131_1[5]).fetchCurrentAppIcon();
   if (2 === tmp5) {
     if (arg0 === 1) {
       c5 = 3;
@@ -40,33 +15,29 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
       return { value, done: true };
     } else {
       closure_130_5 = value;
-      const gradientPreset = closure_131_4.gradientPreset;
-      let id;
-      if (gradientPreset != null) {
-        id = gradientPreset.id;
-      }
-      const obj11 = {};
-      obj11[closure_131_7.CLIENT_THEME] = closure_131_0(closure_131_2[9]).isHexagonCampaignClientThemePreset(id);
-      obj11[closure_131_7.APP_ICON] = closure_131_8(closure_130_5);
-      closure_131_0(closure_131_2[9]);
-      let currentUser = closure_131_5.getCurrentUser();
+      const obj10 = {};
+      obj10[closure_131_5.CLIENT_THEME] = closure_131_0(closure_131_1[6]).isHexagonCampaignClientThemeApplied();
+      closure_131_0(closure_131_1[6]);
+      obj10[closure_131_5.APP_ICON] = closure_131_0(closure_131_1[7]).isHexagonCampaignAppIcon(closure_130_5);
+      closure_131_0(closure_131_1[7]);
+      const currentUser = closure_131_3.getCurrentUser();
       let displayNameStyles;
       if (currentUser != null) {
         displayNameStyles = currentUser.displayNameStyles;
       }
-      obj11[closure_131_7.DISPLAY_NAME_STYLE] = closure_131_0(closure_131_2[9]).hasHexagonCampaignDisplayNameFont(
+      obj10[closure_131_5.DISPLAY_NAME_STYLE] = closure_131_0(closure_131_1[7]).hasHexagonCampaignDisplayNameFont(
         displayNameStyles,
       );
-      closure_130_6 = obj11;
-      const previousPerkValues = closure_131_6.previousPerkValues;
-      closure_131_0(closure_131_2[9]);
-      let result = closure_131_0(closure_131_2[10]).saveHexagonCampaignPreviousClientTheme();
-      closure_131_0(closure_131_2[10]);
-      const result1 = closure_131_0(closure_131_2[10]).saveHexagonCampaignPreviousAppIcon(closure_130_5);
-      closure_131_0(closure_131_2[10]);
-      const result2 = closure_131_0(closure_131_2[11]).saveHexagonCampaignPreviousDisplayNameStyles();
+      closure_130_6 = obj10;
+      const previousPerkValues = closure_131_4.previousPerkValues;
+      closure_131_0(closure_131_1[7]);
+      let result = closure_131_0(closure_131_1[8]).saveHexagonCampaignPreviousClientTheme();
+      closure_131_0(closure_131_1[8]);
+      const result1 = closure_131_0(closure_131_1[9]).saveHexagonCampaignPreviousAppIcon(closure_130_5);
+      closure_131_0(closure_131_1[9]);
+      const result2 = closure_131_0(closure_131_1[9]).saveHexagonCampaignPreviousDisplayNameStyles();
       const _Object = Object;
-      const values = Object.values(closure_131_7);
+      const values = Object.values(closure_131_5);
       closure_130_8 = values.filter((item) => {
         let tmp = dependencyMap[item];
         if (tmp) {
@@ -75,7 +46,7 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
         return tmp;
       });
       const _Object2 = Object;
-      const values2 = Object.values(closure_131_7);
+      const values2 = Object.values(closure_131_5);
       closure_130_9 = values2.filter((item) => {
         let tmp2 = !tmp;
         if (!dependencyMap[item]) {
@@ -87,11 +58,11 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
         c4 = 4;
         c5 = 1;
         return {
-          value: closure_131_0(closure_131_2[11]).ensureHexagonCampaignEnrollment(closure_130_8[0]),
+          value: closure_131_0(closure_131_1[9]).ensureHexagonCampaignEnrollment(closure_130_8[0]),
           done: false,
         };
       }
-      closure_131_0(closure_131_2[11]);
+      closure_131_0(closure_131_1[9]);
     }
   } else if (3 === tmp5) {
     if (arg0 === 1) {
@@ -101,10 +72,15 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
       c5 = 3;
       return { value, done: true };
     } else {
-      closure_130_11 = value;
       const _Boolean = Boolean;
+      value.didApply = value.every(Boolean);
+      let fn = null;
+      if (closure_130_14.includes(closure_131_5.APP_ICON)) {
+        fn = () => closure_1_12(constants.APP_ICON);
+      }
+      value.updateAppIcon = fn;
       c5 = 3;
-      return { value: closure_130_11.every(Boolean), done: true };
+      return { value, done: true };
     }
   } else if (arg0 === 1) {
     c5 = 3;
@@ -114,102 +90,33 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
     return { value, done: true };
   } else if (!value) {
     c5 = 3;
-    return { value: false, done: true };
+    return { value: { didApply: false, updateAppIcon: null }, done: true };
   }
-  const obj16 = {};
-  obj16[closure_131_7.CLIENT_THEME] = {
-    apply() {
-      dependencyMap(17354).handleSaveTheme(closure_2_9, closure_1_4, closure_1_3);
-      return Promise.resolve(true);
-    },
-    restore() {
-      const obj = dependencyMap(17354);
-      let DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = closure_1_7.clientTheme;
-      if (DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME == null) {
-        DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = dependencyMap(17353).DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
-      }
-      obj.handleSaveTheme(
-        dependencyMap(17353).getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME),
-        closure_1_4,
-        closure_1_3,
-      );
-      return Promise.resolve(true);
-    },
+  const obj17 = {};
+  obj17[closure_131_5.CLIENT_THEME] = () => {
+    dependencyMap(17518).handleSaveTheme(closure_2_6, closure_1_4, closure_1_3);
+    return Promise.resolve(true);
   };
-  obj16[closure_131_7.APP_ICON] = {
-    apply() {
-      return dependencyMap(15653).setAppIcon(dependencyMap(10108).LimitedTimeAppIconIds.HEXAGON, dependencyMap2, {
-        showErrorToast: false,
-      });
-    },
-    restore() {
-      let DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = closure_1_7.appIconId;
-      if (DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID == null) {
-        DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = dependencyMap(17353).DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID;
-      }
-      return dependencyMap(15653).setAppIcon(DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID, dependencyMap2, {
-        showErrorToast: false,
-      });
-    },
+  obj17[closure_131_5.APP_ICON] = () =>
+    dependencyMap(15203).setAppIcon(dependencyMap(5269).LimitedTimeAppIconIds.HEXAGON, closure_1_2, {
+      showErrorToast: false,
+    });
+  obj17[closure_131_5.DISPLAY_NAME_STYLE] = () =>
+    dependencyMap(17521).saveHexagonCampaignDisplayNameStyles(dependencyMap2);
+  closure_130_10 = obj17;
+  closure_130_11 = {
+    previousPerkValues,
+    premiumType: closure_130_2,
+    isThemeSynced: closure_130_3,
+    analyticsLocations: closure_130_4,
   };
-  obj16[closure_131_7.DISPLAY_NAME_STYLE] = {
-    apply() {
-      return closure_2_10(closure_1_1);
-    },
-    restore() {
-      currentUser = currentUser.getCurrentUser();
-      let displayNameStyles;
-      if (currentUser != null) {
-        displayNameStyles = currentUser.displayNameStyles;
-      }
-      const obj2 = {
-        currentDisplayNameStyles: displayNameStyles,
-        previousDisplayNameStyles: closure_1_7.displayNameStyles,
-        canUsePremiumProfileCustomization: null,
-      };
-      const obj = dependencyMap(5169);
-      obj2.canUsePremiumProfileCustomization = closure_1(2171).canUsePremiumProfileCustomization(currentUser);
-      return closure_2_10(obj.getHexagonCampaignRestoredDisplayNameStyles(obj2));
-    },
-  };
-  closure_130_10 = obj16;
-  closure_1 = 0;
   items = [];
-  closure_1 = HermesBuiltin.arraySpread(
-    closure_130_8.map(
-      (() => {
-        closure_0 = closure_1_3(function* (arg0) {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = closure_0;
-          yield closure_1_10[closure_0].apply();
-          closure_129_1 = value;
-          if (closure_129_1) {
-            const result = closure_0(dependencyMap2[11]).markHexagonCampaignPerkApplied(closure_129_0);
-            closure_0(dependencyMap2[11]);
-          }
-          return closure_129_1;
-        });
-        return function () {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        };
-      })(),
-    ),
-    closure_1,
-  );
-  closure_1 = HermesBuiltin.arraySpread(
-    closure_130_9.map((item) => closure_1_10[item].restore()),
-    closure_1,
-  );
-  await Promise.all(items);
-  dependencyMap2 = tmp2;
+  HermesBuiltin.arraySpread(closure_130_9, HermesBuiltin.arraySpread(closure_130_8, 0));
+  closure_130_14 = items;
+  value = {};
+  const found = closure_130_14.filter((item) => item !== constants.APP_ICON);
+  await Promise.all(found.map(closure_130_12));
+  closure_2 = tmp2;
   ({
     selection: closure_130_0,
     displayNameStyles: closure_130_1,
@@ -217,17 +124,50 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
     isThemeSynced: closure_130_3,
     analyticsLocations: closure_130_4,
   } = dependencyMap);
+  closure_130_12 = function updatePerk() {
+    const self = this;
+    const apply = closure_13.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+  closure_130_13 = function _updatePerk() {
+    const self = this;
+    const tmp = closure_2(function* (arg0) {
+      closure_129_0 = closure_0;
+      if (closure_2_9.includes(closure_0)) {
+        return closure_0(tmp2[13]).restoreHexagonCampaignPerk(closure_0, closure_2_11);
+      }
+      yield dependencyMap[closure_0]();
+      closure_129_1 = value;
+      if (closure_129_1) {
+        const result = closure_0(tmp2[9]).markHexagonCampaignPerkApplied(closure_129_0);
+        closure_0(tmp2[9]);
+      }
+      return closure_129_1;
+    });
+    closure_13 = tmp;
+    const apply = tmp.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
   return "flexDirection";
 };
-const HexagonCampaignPerk = fn(5167).HexagonCampaignPerk;
-const isHexagonCampaignAppIcon = fn(10107).isHexagonCampaignAppIcon;
+const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
 const HEXAGON_GRADIENT_PRESET = fn(1240).HEXAGON_GRADIENT_PRESET;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/applyHexagonCampaignPerks.tsx");
 
 export function applyHexagonCampaignPerks() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

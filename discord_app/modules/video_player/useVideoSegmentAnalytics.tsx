@@ -144,15 +144,18 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
     }
   }, items4);
   const items5 = [first, tmp9, getCurrentVideoTime];
-  const tmp14 = closure_5(() => {
-    const tmp = getCurrentVideoTime();
+  const tmp14 = closure_5((arg0) => {
+    let tmp = arg0;
+    if (arg0 == null) {
+      tmp = getCurrentVideoTime();
+    }
     if (null != first) {
       if (null != tmp) {
         const _Date = Date;
         if (tmp - first.segmentStartSec > 0.2) {
           const obj = {};
           const merged = Object.assign(first);
-          obj.endTimeMs = tmp4;
+          obj.endTimeMs = tmp5;
           obj.segmentEndSec = tmp;
           closure_15(obj);
         }
@@ -178,8 +181,8 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
     handleFirstFrame: closure_5(() => {
       closure_11(true);
     }, []),
-    handleSeek: closure_5(() => {
-      ref4.current();
+    handleSeek: closure_5((AUTO_DISMISS) => {
+      ref4.current(AUTO_DISMISS);
     }, []),
   };
 }

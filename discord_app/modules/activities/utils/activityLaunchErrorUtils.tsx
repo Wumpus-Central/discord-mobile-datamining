@@ -2,8 +2,8 @@
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import InteractionCallbackErrorDefault from "../../errors/InteractionCallbackError.tsx";
-import InteractionUtils from "../../interactions/InteractionUtils.tsx";
 import EmbeddedActivityClientErrorDefault from "../../errors/EmbeddedActivityClientError.tsx";
+import InteractionUtils from "../../interactions/InteractionUtils.tsx";
 import fetchDeveloperApplications from "../fetchDeveloperApplications.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -165,7 +165,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(5800).DevShelfFetchState;
+const DevShelfFetchState = fn(5913).DevShelfFetchState;
 const AbortCodes = fn(1072).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = {

@@ -1131,7 +1131,7 @@ prototype5["recordMessageRender"] = function recordMessageRender(channelId, mapp
                 (_default.extractTimestamp(sorted1.reverse()[0]) - _default.extractTimestamp(sorted.reverse()[0])) /
                   1000,
               );
-              const length = mapped.filter((item) => {
+              length = mapped.filter((item) => {
                 const cachedMessageIds = self.cachedMessageIds;
                 let hasItem;
                 if (cachedMessageIds != null) {

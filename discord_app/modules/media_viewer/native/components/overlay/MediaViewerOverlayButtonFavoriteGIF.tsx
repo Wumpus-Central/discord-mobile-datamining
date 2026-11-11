@@ -2,9 +2,9 @@
 import util from "../../../../../intl/index.native.tsx";
 import frecency_user_settings from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 import ToastActionCreatorsDefault from "../../../../toast/native/ToastActionCreators.tsx";
+import GifIcon from "../../../../../design/components/Icon/native/redesign/generated/GifIcon.tsx";
 import GIFPickerActionCreators from "../../../../../actions/GIFPickerActionCreators.tsx";
 import GIFPickerUtils from "../../../../../utils/GIFPickerUtils.tsx";
-import GifIcon from "../../../../../design/components/Icon/native/redesign/generated/GifIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;

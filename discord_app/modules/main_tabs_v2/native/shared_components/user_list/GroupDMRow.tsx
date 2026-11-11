@@ -2,14 +2,14 @@
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
-import TableCheckboxRow from "../../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableCheckboxRow from "../../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
 import useRecipientsLabel from "../../../useRecipientsLabel.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UserRowModes = fn(10855).UserRowModes;
+const UserRowModes = fn(10177).UserRowModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");

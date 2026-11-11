@@ -2,8 +2,8 @@
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import VirtualCurrencyUtils from "../../VirtualCurrencyUtils.tsx";
 import PaymentFlowStartedTriggerPoint from "../../../experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx";
+import VirtualCurrencyUtils from "../../VirtualCurrencyUtils.tsx";
 import OrbCheckoutModalContext from "../OrbCheckoutModalContext.tsx";
 import OrbCheckoutModalComponents from "OrbCheckoutModalComponents.tsx";
 import "module_19";

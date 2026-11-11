@@ -173,7 +173,7 @@ function fetchMessages(arg0) {
                   }
                 }
                 if (null != nitroMessagePrefetchKey) {
-                  let messageLimit = closure_1_15;
+                  let messageLimit = colors;
                 } else {
                   messageLimit = getAdaptiveMessageLimit.getMessageLimit("MessageManager.initialFetch");
                 }
@@ -387,7 +387,7 @@ function handleChannelSectionStoreChange() {
 }
 function handleChannelPreload(context) {
   ({ guildId, channelId } = context);
-  if (context.context === value2) {
+  if (context.context === closure_1_16) {
     const obj = { guildId, channelId };
     fetchMessages(obj);
     const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(channelId);
@@ -493,7 +493,7 @@ function handleAppWillBecomeActive() {
     const newLocalMessages = MessageActionCreatorsDefault.fetchNewLocalMessages(channelId, gesture);
   }
 }
-const isTextChannel = fn(4995).isTextChannel;
+const isTextChannel = fn(5096).isTextChannel;
 const Constants = fn(1072);
 ({
   MAX_MESSAGES_PER_CHANNEL: closure_14,
@@ -504,7 +504,7 @@ const Constants = fn(1072);
   Routes: closure_19,
   ChannelTypesSets: closure_20,
 } = Constants);
-const isStaticChannelRoute = fn(4998).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5099).isStaticChannelRoute;
 let closure_22 = 10 * DurationsDefault.Millis.SECOND;
 const logger = new LoggerDefault("MessageManager");
 let closure_26 = 90 * DurationsDefault.Millis.DAY;

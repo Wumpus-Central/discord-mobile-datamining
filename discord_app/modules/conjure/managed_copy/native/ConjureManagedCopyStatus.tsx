@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/managed_copy/native/ConjureManagedCopyStatus.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import useConjureManagedCopy from "../useConjureManagedCopy.tsx";
@@ -27,7 +27,7 @@ export default function ConjureManagedCopyStatus(projectId) {
     const obj2 = { spacing: nativeDefault.space.PX_4, children: null };
     const obj3 = { variant: "body-md/medium", color: "text-default", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef4028["+QBNDE"]);
+    obj3.children = intl.string(_modDef4079["+QBNDE"]);
     items = [React3(Text_Text.Text, obj3), ,];
     const obj4 = {
       variant: "body-sm/normal",

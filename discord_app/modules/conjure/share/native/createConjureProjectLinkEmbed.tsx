@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/share/native/createConjureProjectLinkEmbed.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import getEmbedThemeColorsDefault from "../../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
 import CodedLinksConstants from "../../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksConstants.tsx";
 import conjureProjectLinkCard2 from "conjureProjectLinkCard.tsx";
@@ -42,9 +42,9 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
     if (tmp4) {
       const intl8 = util.intl;
       if ("expired" === conjureProjectLinkCard.type) {
-        let mQma36 = _modDef4028.wahvH2;
+        let mQma36 = _modDef4079.wahvH2;
       } else {
-        mQma36 = _modDef4028.mQma36;
+        mQma36 = _modDef4079.mQma36;
       }
       const stringResult = intl8.string(mQma36);
       const obj3 = {};
@@ -98,14 +98,14 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
         if (null != conjureProjectLinkCard.creatorName) {
           const intl = util.intl;
           const obj5 = { name: conjureProjectLinkCard.creatorName };
-          formatToPlainStringResult = intl.formatToPlainString(_modDef4028["6/x9LD"], obj5);
+          formatToPlainStringResult = intl.formatToPlainString(_modDef4079["6/x9LD"], obj5);
         }
       }
       obj4.creatorText = formatToPlainStringResult;
       let stringResult1 = null;
       if ("ready" !== conjureProjectLinkCard.type) {
         const intl2 = util.intl;
-        stringResult1 = intl2.string(_modDef4028["2DSRxV"]);
+        stringResult1 = intl2.string(_modDef4079["2DSRxV"]);
       }
       obj4.noticeText = stringResult1;
       let iconURL = application.getIconURL(80);
@@ -121,19 +121,19 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       let stringResult2 = null;
       if (canRemix) {
         const intl3 = util.intl;
-        stringResult2 = intl3.string(_modDef4028["UsUa/c"]);
+        stringResult2 = intl3.string(_modDef4079["UsUa/c"]);
       }
       obj4.installLabel = stringResult2;
       let stringResult3 = null;
       if (canRemix) {
         const intl4 = util.intl;
-        stringResult3 = intl4.string(_modDef4028["6RGR3m"]);
+        stringResult3 = intl4.string(_modDef4079["6RGR3m"]);
       }
       obj4.remixLabel = stringResult3;
       obj4.coverAction = coverAction;
       if ("launch" === coverAction) {
         const intl6 = util.intl;
-        let stringResult4 = intl6.string(_modDef4028["1cF7L4"]);
+        let stringResult4 = intl6.string(_modDef4079["1cF7L4"]);
       } else {
         stringResult4 = null;
         if ("open" === coverAction) {
@@ -144,7 +144,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       obj4.coverActionLabel = stringResult4;
       const intl7 = util.intl;
       const obj6 = { name: application.name };
-      obj4.accessibilityLabel = intl7.formatToPlainString(_modDef4028.c8DqSD, obj6);
+      obj4.accessibilityLabel = intl7.formatToPlainString(_modDef4079.c8DqSD, obj6);
       return obj4;
     }
   }

@@ -39,7 +39,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
           closure_131_0 = phone;
           const email = closure_0.email;
           closure_131_1 = email;
-          const FriendDiscoverySettings2 = React(4967).FriendDiscoverySettings;
+          const FriendDiscoverySettings2 = React(5068).FriendDiscoverySettings;
           const setting = FriendDiscoverySettings2.getSetting();
           closure_131_2 = setting;
           localAccount = localAccount.getLocalAccount(constants2.CONTACTS);
@@ -58,7 +58,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
             setFlagResult1 = React(1403).setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
             const obj6 = React(1403);
           }
-          const FriendDiscoverySettings = React(4967).FriendDiscoverySettings;
+          const FriendDiscoverySettings = React(5068).FriendDiscoverySettings;
           c5 = 1;
           c6 = 1;
           const obj8 = { value: FriendDiscoverySettings.updateSetting(setFlagResult1), done: false };
@@ -275,7 +275,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
             constants = 3;
             throw value;
           } else if (arg0 !== 2) {
-            let length = num7;
+            length = num7;
             if (null != closure_130_1) {
               length = closure_130_1.split(" ").length;
             }

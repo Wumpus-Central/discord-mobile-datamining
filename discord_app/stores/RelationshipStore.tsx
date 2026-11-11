@@ -59,7 +59,7 @@ function removeRelationship(arg0) {
   value = map.get(arg0);
   if (null != value) {
     map.delete(arg0);
-    value2 = map1.get(value);
+    const value2 = map1.get(value);
     if (value2 != null) {
       value2.delete(arg0);
     }
@@ -94,7 +94,7 @@ let closure_15 = 0;
 const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
-let closure_20 = { friends: "channel", blocked: "borderRadius", ignored: "opacity", blockedOrIgnored: "Array" };
+let closure_20 = { friends: "Array", blocked: "Path", ignored: "channel", blockedOrIgnored: "ip" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -494,7 +494,7 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     }
     flushStaleUserIdLists();
     size = set2.size;
-    value2 = map1.get(RelationshipTypes.PENDING_INCOMING);
+    const value2 = map1.get(RelationshipTypes.PENDING_INCOMING);
     let num;
     if (value2 != null) {
       num = value2.size;

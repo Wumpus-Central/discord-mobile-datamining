@@ -4,18 +4,18 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import StringUtils from "../../../../utils/StringUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05717_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import TextStylesDefault from "../../../rebrand/native/TextStyles.tsx";
 import PremiumFeaturesBackgroundDefault from "../../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
+import MarketingSurfaceType from "../../../../../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx";
 import usePremiumFeaturesDefault from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
 import PremiumFeaturesLogoDefault from "../../../user_settings/premium/native/PremiumFeaturesLogo.tsx";
 import PremiumFeaturesWumpusDefault from "../../../user_settings/premium/native/PremiumFeaturesWumpus.tsx";
 import PremiumFeatureListDefault from "../../../../components_native/premium/PremiumFeatureList.tsx";
 import GiftPromotionReminderExperiment2 from "../../gifting/experiments/GiftPromotionReminderExperiment.tsx";
-import MarketingComponentType from "../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePremiumProductPricingStringDefault from "../hooks/usePremiumProductPricingString.tsx";
 import useShouldShowGiftingPromotionDecoDefault from "../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx";
 import MarketingComponentHooks from "../../promotions/MarketingComponentHooks.tsx";
@@ -126,7 +126,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_15 = createStyles.createStyles(() => {
   obj = {
     card: null,
@@ -205,17 +205,17 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   obj = initialize;
   items = [PromotionsStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    marketingComponentByType = marketingComponentByType.getMarketingComponentByType(
-      MarketingComponentType.MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER,
+    marketingComponentBySurface = marketingComponentBySurface.getMarketingComponentBySurface(
+      MarketingSurfaceType.MarketingSurfaceType.GIFT_PLAN_SELECTION_CARD_BANNER,
     );
-    let prop = null;
-    if (null != marketingComponentByType) {
-      prop = null;
-      if ("giftPlanSelectionCardBanner" === marketingComponentByType.properties.properties.oneofKind) {
-        prop = marketingComponentByType.properties.properties.giftPlanSelectionCardBanner;
-      }
+    let surface;
+    if (marketingComponentBySurface != null) {
+      surface = marketingComponentBySurface.surface;
     }
-    return prop;
+    if (surface == null) {
+      surface = null;
+    }
+    return surface;
   });
   let tmp5 = null != claimableRewards;
   if (tmp5) {

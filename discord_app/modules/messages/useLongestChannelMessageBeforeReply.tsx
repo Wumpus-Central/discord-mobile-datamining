@@ -26,7 +26,7 @@ export function useLongestChannelMessageBeforeReply(id, recipientId) {
               obj2.return();
               break;
             } else {
-              let length;
+              length = undefined;
               if (tmp4 != null) {
                 length = tmp4.content.length;
               }

@@ -4,12 +4,12 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import QuestTypes from "../QuestTypes.tsx";
+import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
-import QuestTypes from "../QuestTypes.tsx";
-import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import QuestDataUtils from "../utils/QuestDataUtils.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
@@ -95,12 +95,12 @@ function QuestsSectionHeader(onLayout) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6, StyleSheet } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6839).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5275).QuestsExperimentLocations;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, UserSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   container: { flex: 1 },
   loadingContainer: null,
@@ -153,7 +153,7 @@ let closure_22 = noop.memo(function MeasuredHeader(onLayout) {
   items[3] = tmp3Result2;
   items[4] = gesture(QuestsSectionHeader, { onLayout: onQuestsSectionHeaderLayout });
   obj.children = items;
-  return closure_1_15(hasOwnProperty, obj);
+  return colors(hasOwnProperty, obj);
 });
 let obj6 = { gap: nativeDefault.space.PX_4 };
 const size = fn(2);

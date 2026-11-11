@@ -1,5 +1,5 @@
 // discord_app/modules/html_parser/index.tsx
-import _mod9493 from "../../../_runtime/metro/09493__.js";
+import _mod10285 from "../../../_runtime/metro/10285__.js";
 import HTMLParserRunUtils from "HTMLParserRunUtils.tsx";
 import HTMLParserLinkUtils from "HTMLParserLinkUtils.tsx";
 import HTMLParserConstants from "HTMLParserConstants.tsx";
@@ -150,7 +150,7 @@ function trimTrailingLineIndentation(runs) {
   if (runs.length > 0) {
     while (true) {
       let tmp = runs[runs.length - 1];
-      let length = tmp.text.length;
+      length = tmp.text.length;
       let tmp2 = length;
       if (length > 0) {
         let text2 = tmp.text;
@@ -378,7 +378,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
   obj.links = [];
   obj.lists = [];
   obj.held = [];
-  const Parser = obj(9493).Parser;
+  const Parser = obj(10285).Parser;
   const fn = () => HermesBuiltin.applyArguments(new.target, new.target);
   class fn extends Parser {
     onclosetag(arg0, arg1) {
@@ -562,7 +562,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
                           const str = markup.slice(startIndex, startIndex + arg0.length + 2);
                         },
                       };
-                      const parser = new _mod9493.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
+                      const parser = new _mod10285.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
                       parser.end(markup);
                       let map1 = map;
                     } else {
@@ -666,7 +666,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
         appendText(obj, substr);
       },
     };
-    let parser = new obj(9493).Parser(obj3, { decodeEntities: true });
+    let parser = new obj(10285).Parser(obj3, { decodeEntities: true });
     parser.end(str.replace(/</g, "&lt;"));
   }
   const runs = obj.runs;
@@ -700,7 +700,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
 let result = size.fileFinishedImporting("modules/html_parser/index.tsx");
 
 export const DEFAULT_MAX_HTML_LENGTH = HTMLParserConstants.DEFAULT_MAX_HTML_LENGTH;
-export function parseHTMLFromText(arr, arg1) {
+export function parseHTMLFromText(description, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -713,19 +713,19 @@ export function parseHTMLFromText(arr, arg1) {
   if (flag === undefined) {
     flag = false;
   }
-  let hasItem = arr.includes("<");
+  let hasItem = description.includes("<");
   if (!hasItem) {
-    hasItem = arr.includes("&");
+    hasItem = description.includes("&");
   }
   if (flag) {
     const _Math3 = Math;
     const _Math4 = Math;
     const bound = Math.max(0, Math.floor(maxLength));
     let diff = bound;
-    if (regex2.test(arr.charAt(bound - 1))) {
+    if (regex2.test(description.charAt(bound - 1))) {
       diff = bound - 1;
     }
-    const str7 = arr.slice(0, diff);
+    const str7 = description.slice(0, diff);
     let str9 = str7;
     if (str7.includes("\r")) {
       str9 = str7.replace(/\r\n?/g, "\n");
@@ -756,19 +756,19 @@ export function parseHTMLFromText(arr, arg1) {
       const _Math2 = Math;
       const bound1 = Math.max(0, Math.floor(maxLength));
       let diff1 = bound1;
-      if (regex2.test(arr.charAt(bound1 - 1))) {
+      if (regex2.test(description.charAt(bound1 - 1))) {
         diff1 = bound1 - 1;
       }
-      const str4 = arr.slice(0, diff1);
+      const str4 = description.slice(0, diff1);
       let replaced1 = str4;
       if (str4.includes("\r")) {
         replaced1 = str4.replace(/\r\n?/g, "\n");
       }
       let addTextLinksResult = HTMLParserLinkUtils.addTextLinks(parseMarkupRuns(replaced1), false);
     } else {
-      let replaced2 = arr;
-      if (arr.includes("\r")) {
-        replaced2 = arr.replace(/\r\n?/g, "\n");
+      let replaced2 = description;
+      if (description.includes("\r")) {
+        replaced2 = description.replace(/\r\n?/g, "\n");
       }
       const tmp2Result = collapseBlankLines(replaced2, 0);
       const tmp5 = findTextStart(tmp2Result);

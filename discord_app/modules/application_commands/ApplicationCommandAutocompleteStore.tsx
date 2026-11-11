@@ -70,7 +70,7 @@ prototype["getLastErrored"] = function getLastErrored(id) {
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "ao",
+      lastResponseNonce: "channelId",
     };
     const _Map = Map;
     map = new Map();
@@ -107,7 +107,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "ao",
+      lastResponseNonce: "channelId",
     };
     const _Map = Map;
     map = new Map();
@@ -128,7 +128,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
   }
   const optionNameToAutocompleteQueries = obj.get(id).optionNameToAutocompleteQueries;
   value = optionNameToAutocompleteQueries.get(name);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(query);
   }
@@ -150,7 +150,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "ao",
+      lastResponseNonce: "channelId",
     };
     const _Map = Map;
     map = new Map();
@@ -187,7 +187,7 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "ao",
+      lastResponseNonce: "channelId",
     };
     const _Map = Map;
     map = new Map();
@@ -230,7 +230,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
         optionNameToLastQuery: null,
         optionNameToContextKey: null,
         lastErrored: false,
-        lastResponseNonce: "ao",
+        lastResponseNonce: "channelId",
       };
       const _Map = Map;
       map = new Map();
@@ -323,7 +323,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
           optionNameToLastQuery: null,
           optionNameToContextKey: null,
           lastErrored: false,
-          lastResponseNonce: "ao",
+          lastResponseNonce: "channelId",
         };
         const _Map = Map;
         map = new Map();
@@ -420,7 +420,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
         return false;
       } else {
         obj7.delete(nonce);
-        value2 = map2.get(nonce);
+        const value2 = map2.get(nonce);
         let num = 0;
         if (null != value2) {
           const _Date = Date;
@@ -450,7 +450,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
             optionNameToLastQuery: null,
             optionNameToContextKey: null,
             lastErrored: false,
-            lastResponseNonce: "ao",
+            lastResponseNonce: "channelId",
           };
           const _Map = Map;
           map = new Map();

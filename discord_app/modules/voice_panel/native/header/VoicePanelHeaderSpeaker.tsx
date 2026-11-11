@@ -19,7 +19,7 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(19651).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(19843).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -253,7 +253,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "r" };
+        const obj = { onPress, ref: "Array" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };
@@ -291,7 +291,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
       obj3.children = gesture(VoicePanelIconButtonDefault, obj4);
       items[1] = gesture(tmp11, obj3);
       obj5.children = items;
-      return value2(closure_2_15, obj5);
+      return closure_2_16(colors, obj5);
     }
     if (!tmp4Result2.isAndroid()) {
       if (tmp10) {

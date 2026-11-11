@@ -1,10 +1,10 @@
 // discord_app/modules/forums/native/posts/list/ForumPostListFooter.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import GameInvitesChannelUtils from "../../../../game_invite_channels/GameInvitesChannelUtils.tsx";
 import ForumPostReactions from "../reactions/ForumPostReactions.tsx";
 import useTypingUsersIds from "../../../../chat/useTypingUsersIds.tsx";
 import ForumPostMessageCountDefault from "../ForumPostMessageCount.tsx";
 import ForumPostTypingUsersDefault from "../ForumPostTypingUsers.tsx";
+import GameInvitesChannelUtils from "../../../../game_invite_channels/GameInvitesChannelUtils.tsx";
 import GameInviteVoiceCountDefault from "../../../../game_invite_channels/native/GameInviteVoiceCount.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const obj2 = {
   footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" },
   dot: null,

@@ -5,9 +5,9 @@ import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
-import AppLauncherUtils from "../../../utils/AppLauncherUtils.tsx";
 import ChevronSmallDownIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
+import AppLauncherUtils from "../../../utils/AppLauncherUtils.tsx";
 import usePlaceholderSize from "../../hooks/usePlaceholderSize.tsx";
 import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -117,7 +117,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12595).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(13284).getAppLauncherIconSource(app.section.application);
     let obj = {
       style: disabled ? tmp.appContainerDisabled : tmp.appContainer,
       disabled,
@@ -149,22 +149,22 @@ function FrecentApp(app) {
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_11(onAppSelected(5844), obj2);
+      tmp3 = closure_11(onAppSelected(5957), obj2);
     }
     items = [tmp3];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12604).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(13293).SubmittingOverlay, obj3);
     obj.children = items;
-    return closure_12(app(7046).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(7364).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(12597).FrecencySectionSelection;
+let FrecencySectionSelection = fn(13286).FrecencySectionSelection;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   container: { marginBottom: nativeDefault.space.PX_16 },
   headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
@@ -313,7 +313,7 @@ export default function FrecencySection(loading) {
       if (!tmp) {
         let HOME = dependencyMap;
         if (first === obj11.APPS) {
-          let length = apps.length;
+          length = apps.length;
         } else {
           length = commands.length;
         }

@@ -1,5 +1,6 @@
 // discord_app/modules/icymi/trackFeedLoaded.tsx
 import ICYMITypes from "ICYMITypes.tsx";
+import ICYMIAnalyticsItemId from "ICYMIAnalyticsItemId.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -12,62 +13,72 @@ export function trackFeedLoaded(unreadFeedItems) {
   const items2 = [];
   const items3 = [];
   unreadFeedItems = unreadFeedItems.unreadFeedItems;
-  const item = unreadFeedItems.forEach((id) => {
-    items.push(id.id);
-    const type = id.type;
-    if (ICYMITypes.ICYMIItemTypes.MESSAGE === type) {
-      let str2 = "message";
-      if (id.data.channel_type === constants.GUILD_ANNOUNCEMENT) {
-        str2 = "announcement";
-      }
-      let str = str2;
-    } else {
-      str = "hotwheels_gaming_activity";
-      if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
-        str = "hotwheels_custom_status";
-        if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
-          str = "guild_event";
-          if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
-            str = "recommended_guilds";
-            if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS !== type) {
-              if (ICYMITypes.ICYMIItemTypes.DISCOVER_ITEM === type) {
-                str = "discover_item";
+  const item = unreadFeedItems.forEach((item) => {
+    let GUILD_ANNOUNCEMENT = item;
+    const dehydratedAnalyticsItemId = ICYMIAnalyticsItemId.getDehydratedAnalyticsItemId(item);
+    if (null != dehydratedAnalyticsItemId) {
+      items.push(dehydratedAnalyticsItemId);
+      const type = GUILD_ANNOUNCEMENT.type;
+      if (ICYMITypes.ICYMIItemTypes.MESSAGE === type) {
+        GUILD_ANNOUNCEMENT = constants.GUILD_ANNOUNCEMENT;
+        let str2 = "message";
+        if (GUILD_ANNOUNCEMENT.data.channel_type === GUILD_ANNOUNCEMENT) {
+          str2 = "announcement";
+        }
+        let str = str2;
+      } else {
+        str = "hotwheels_gaming_activity";
+        if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
+          str = "hotwheels_custom_status";
+          if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
+            str = "guild_event";
+            if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
+              str = "recommended_guilds";
+              if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS !== type) {
+                if (ICYMITypes.ICYMIItemTypes.DISCOVER_ITEM === type) {
+                  str = "discover_item";
+                }
               }
             }
           }
         }
       }
+      items2.push(str);
     }
-    items2.push(str);
   });
   const readFeedItems = unreadFeedItems.readFeedItems;
-  const item1 = readFeedItems.forEach((id) => {
-    items1.push(id.id);
-    const type = id.type;
-    if (ICYMITypes.ICYMIItemTypes.MESSAGE === type) {
-      let str2 = "message";
-      if (id.data.channel_type === constants.GUILD_ANNOUNCEMENT) {
-        str2 = "announcement";
-      }
-      let str = str2;
-    } else {
-      str = "hotwheels_gaming_activity";
-      if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
-        str = "hotwheels_custom_status";
-        if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
-          str = "guild_event";
-          if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
-            str = "recommended_guilds";
-            if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS !== type) {
-              if (ICYMITypes.ICYMIItemTypes.DISCOVER_ITEM === type) {
-                str = "discover_item";
+  const item1 = readFeedItems.forEach((item) => {
+    let GUILD_ANNOUNCEMENT = item;
+    const dehydratedAnalyticsItemId = ICYMIAnalyticsItemId.getDehydratedAnalyticsItemId(item);
+    if (null != dehydratedAnalyticsItemId) {
+      items1.push(dehydratedAnalyticsItemId);
+      const type = GUILD_ANNOUNCEMENT.type;
+      if (ICYMITypes.ICYMIItemTypes.MESSAGE === type) {
+        GUILD_ANNOUNCEMENT = constants.GUILD_ANNOUNCEMENT;
+        let str2 = "message";
+        if (GUILD_ANNOUNCEMENT.data.channel_type === GUILD_ANNOUNCEMENT) {
+          str2 = "announcement";
+        }
+        let str = str2;
+      } else {
+        str = "hotwheels_gaming_activity";
+        if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
+          str = "hotwheels_custom_status";
+          if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
+            str = "guild_event";
+            if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
+              str = "recommended_guilds";
+              if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS !== type) {
+                if (ICYMITypes.ICYMIItemTypes.DISCOVER_ITEM === type) {
+                  str = "discover_item";
+                }
               }
             }
           }
         }
       }
+      items3.push(str);
     }
-    items3.push(str);
   });
   const obj3 = {};
   const merged = Object.assign(unreadFeedItems.newTrackingProps);
@@ -76,5 +87,5 @@ export function trackFeedLoaded(unreadFeedItems) {
   obj3.read_feed_item_ids = items1;
   obj3.unread_feed_item_types = items2;
   obj3.read_feed_item_types = items3;
-  items1(items2[1]).track(items3.FEED_LOADED, obj3);
+  items1(items2[2]).track(items3.FEED_LOADED, obj3);
 }

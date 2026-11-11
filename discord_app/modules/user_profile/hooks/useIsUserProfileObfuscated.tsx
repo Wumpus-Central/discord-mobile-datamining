@@ -47,7 +47,7 @@ export default function useIsUserProfileObfuscated(flags) {
     }
     let tmp8 = null == badges;
     if (!tmp8) {
-      let length;
+      length = undefined;
       if (stateFromStores != null) {
         const badges1 = stateFromStores.badges;
         if (badges1 != null) {

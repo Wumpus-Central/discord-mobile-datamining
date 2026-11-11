@@ -93,7 +93,7 @@ prototype["getLogs"] = function getLogs(projectId) {
 };
 prototype["getHistoryState"] = function getHistoryState(arg0, arg1) {
   value = map1.get(arg0);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(arg1);
   }

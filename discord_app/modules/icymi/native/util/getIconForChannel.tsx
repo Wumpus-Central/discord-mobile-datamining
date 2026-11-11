@@ -1,11 +1,11 @@
 // discord_app/modules/icymi/native/util/getIconForChannel.tsx
 import Constants from "../../../../Constants.tsx";
+import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
+import StageIcon from "../../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import ForumIcon from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
 import AnnouncementsIcon from "../../../../design/components/Icon/native/redesign/generated/AnnouncementsIcon.tsx";
-import StageIcon from "../../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
-import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const ChannelTypes = Constants.ChannelTypes;

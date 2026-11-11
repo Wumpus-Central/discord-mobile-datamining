@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/server_share/conjureChangeRows.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4028 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4079 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/conjure/server_share/conjureC
 export function conjureShareRows(stateFromStores) {
   const obj = { key: "bots", text: null };
   const intl = util.intl;
-  obj.text = intl.string(_modDef4028.eSpjGV);
+  obj.text = intl.string(_modDef4079.eSpjGV);
   items = [obj];
   let prop;
   if (stateFromStores != null) {
@@ -30,7 +30,7 @@ export function conjureShareRows(stateFromStores) {
   if (!usesPreviewAppResult) {
     const obj2 = { key: "test_app", text: null };
     const intl2 = util.intl;
-    obj2.text = intl2.string(_modDef4028["+5f47F"]);
+    obj2.text = intl2.string(_modDef4079["+5f47F"]);
     items.push(obj2);
   }
   let supported_surfaces;
@@ -52,18 +52,18 @@ export function conjureShareRows(stateFromStores) {
   if (items1.includes(ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET)) {
     const obj3 = { key: "profile_widget", text: null };
     const intl3 = util.intl;
-    obj3.text = intl3.string(_modDef4028.u6ckHo);
+    obj3.text = intl3.string(_modDef4079.u6ckHo);
     items.push(obj3);
   }
   if (items1.includes(ConjureProjectTypes.ConjureSupportedSurface.OVERLAY)) {
     const obj4 = { key: "overlay", text: null };
     const intl4 = util.intl;
-    obj4.text = intl4.string(_modDef4028.UZHlmt);
+    obj4.text = intl4.string(_modDef4079.UZHlmt);
     items.push(obj4);
   }
   const obj5 = { key: "collaboration", text: null };
   const intl5 = util.intl;
-  obj5.text = intl5.string(_modDef4028["s3/5nF"]);
+  obj5.text = intl5.string(_modDef4079["s3/5nF"]);
   items.push(obj5);
   return items;
 }
@@ -71,7 +71,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   items = [];
   if (null != target) {
     const intl6 = util.intl;
-    const tmp20 = _modDef4028;
+    const tmp20 = _modDef4079;
     if (target.canRemoveBot) {
       let PDLHwR = tmp20["cU/7df"];
       let tmp = importDefault;
@@ -90,7 +90,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
       const obj4 = { key: "channels", text: null };
       const intl7 = util.intl;
       const obj5 = { channels: listFormat.format(channelNames.map((item) => "#" + item)) };
-      obj4.text = intl7.formatToPlainString(tmp(4028).DbZ8af, obj5);
+      obj4.text = intl7.formatToPlainString(tmp(4079).DbZ8af, obj5);
       items.push(obj4);
       const formatResult = listFormat.format(channelNames.map((item) => "#" + item));
     }
@@ -102,7 +102,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   if (usesPreviewAppResult) {
     const obj6 = { key: "test_app", text: null };
     const intl = util.intl;
-    obj6.text = intl.string(_modDef4028.jKXaUH);
+    obj6.text = intl.string(_modDef4079.jKXaUH);
     items.push(obj6);
   }
   const supported_surfaces = preview_app_chosen.supported_surfaces;
@@ -113,7 +113,7 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   if (true === hasItem) {
     const obj7 = { key: "profile_widget", text: null };
     const intl2 = util.intl;
-    obj7.text = intl2.string(_modDef4028.HHZxrL);
+    obj7.text = intl2.string(_modDef4079.HHZxrL);
     items.push(obj7);
   }
   const supported_surfaces2 = preview_app_chosen.supported_surfaces;
@@ -124,18 +124,18 @@ export function conjureMakePersonalRows(preview_app_chosen, target) {
   if (true === hasItem1) {
     const obj8 = { key: "overlay", text: null };
     const intl3 = util.intl;
-    obj8.text = intl3.string(_modDef4028.rVTFDs);
+    obj8.text = intl3.string(_modDef4079.rVTFDs);
     items.push(obj8);
   }
   if (tmp3Result.isProjectGuildCollaborationEnabled(preview_app_chosen)) {
     const obj9 = { key: "collaboration", text: null };
     const intl4 = util.intl;
-    obj9.text = intl4.string(_modDef4028["+a1lOS"]);
+    obj9.text = intl4.string(_modDef4079["+a1lOS"]);
     items.push(obj9);
   }
   const obj10 = { key: "only_you", text: null };
   const intl5 = util.intl;
-  obj10.text = intl5.string(_modDef4028.TrTx1Z);
+  obj10.text = intl5.string(_modDef4079.TrTx1Z);
   items.push(obj10);
   return items;
 }

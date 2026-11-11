@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
+import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ClipViewDefault = ClipView;
@@ -122,7 +122,7 @@ function AvatarDefaultLarge() {
   return application_id(View, obj2);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17423);
+const YouBarConstants = fn(17588);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,
@@ -135,7 +135,7 @@ const YouBarConstants = fn(17423);
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   placeholderAvatar: {
     borderRadius: nativeDefault.radii.round,

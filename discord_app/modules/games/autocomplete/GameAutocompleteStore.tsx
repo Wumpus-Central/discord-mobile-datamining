@@ -31,7 +31,7 @@ prototype["getResults"] = function getResults(name, arg1) {
 prototype["getClosestResults"] = function getClosestResults(result, DEFAULT) {
   result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(result);
   if (null != result) {
-    let length = result.length;
+    length = result.length;
     if (length >= 1) {
       const substr = result.slice(0, length);
       const _HermesInternal = HermesInternal;
@@ -58,10 +58,10 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(result, filter_g
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp(8758).shouldSuppressAutocompleteFetch(result, (arg0) =>
+      result1 = tmp(9313).shouldSuppressAutocompleteFetch(result, (arg0) =>
         closure_3.peek("" + closure_0 + ":" + arg0),
       );
-      const tmpResult = tmp(8758);
+      const tmpResult = tmp(9313);
     }
     return result1;
   }

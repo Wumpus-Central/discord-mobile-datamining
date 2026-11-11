@@ -1,12 +1,12 @@
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
-import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
 import getFrameSurfaces from "../../frames/utils/getFrameSurfaces.tsx";
+import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
 import openFrameInAppChannelDefault from "../../frames/openFrameInAppChannel.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(6905).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6957).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

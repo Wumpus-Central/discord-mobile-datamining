@@ -4,7 +4,7 @@ import useWindowDimensions from "../../../screen/useWindowDimensions.native.tsx"
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import EmbeddedActivityOrientationLockState from "../../../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05422_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import isOrientationLockSupportedDefault from "../../../device/native/isOrientationLockSupported.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
@@ -68,7 +68,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
     const shelf = fetchShelf.fetchShelf({ guildId });
   }, items2);
   const items3 = [applicationId];
-  const first = tmp2(tmp4(7394)(items3), 1)[0];
+  const first = tmp2(tmp4(7196)(items3), 1)[0];
   c8 = first;
   const tmp8Result = require("useActivityShelfItemData");
   const items4 = [c5];
@@ -194,12 +194,12 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   let embeddedActivityParticipantId = null;
   if (null != stateFromStores1) {
     ({ applicationId: obj9.applicationId, compositeInstanceId: obj9.instanceId } = stateFromStores1);
-    embeddedActivityParticipantId = tmp8(6909).getEmbeddedActivityParticipantId({
+    embeddedActivityParticipantId = tmp8(6962).getEmbeddedActivityParticipantId({
       applicationId: null,
       instanceId: null,
     });
     const obj3 = { applicationId: null, instanceId: null };
-    const tmp8Result14 = tmp8(6909);
+    const tmp8Result14 = tmp8(6962);
   }
   const tmp28 = gridOrientationLockState;
   const tmp8Result13 = require("../../../../../_runtime/metro/01652__.js");
@@ -468,21 +468,21 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj6.activityName = name;
       obj6.isActivityFocused = first1;
       const obj7 = { channel: stateFromStores, layoutMode: tmp75 };
-      obj6.children = closure_14(tmp4(11966), obj7, tmp3[0]);
-      const items27 = [closure_14(tmp4(19680), obj6)];
+      obj6.children = closure_14(tmp4(12758), obj7, tmp3[0]);
+      const items27 = [closure_14(tmp4(19872), obj6)];
       let tmp79Result = null;
       if (stateFromStores2) {
-        tmp79Result = closure_14(tmp4(19681), {});
+        tmp79Result = closure_14(tmp4(19873), {});
       }
       items27[1] = tmp79Result;
       obj5.children = items27;
       obj4.children = closure_15(tmp4(1652).View, obj5);
-      let tmp79Result2 = closure_14(tmp8(5422).GestureDetector, obj4);
+      let tmp79Result2 = closure_14(tmp8(5535).GestureDetector, obj4);
       let tmp76 = closure_14;
-      const tmp4Result2 = tmp4(19680);
+      const tmp4Result2 = tmp4(19872);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: stateFromStores1, application: first };
-      tmp79Result2 = closure_14(tmp4(19682), obj8);
+      tmp79Result2 = closure_14(tmp4(19874), obj8);
       tmp76 = closure_14;
     } else {
       tmp76 = closure_14;
@@ -495,23 +495,23 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
         itemDimensions: tmp2Result2[0],
         disableBadges: true,
       };
-      obj10.children = closure_14(tmp4(19686), obj11);
-      tmp79Result2 = closure_14(tmp8(5422).GestureDetector, obj10);
+      obj10.children = closure_14(tmp4(19878), obj11);
+      tmp79Result2 = closure_14(tmp8(5535).GestureDetector, obj10);
     }
-    const obj12 = { value: tmp4Result(tmp4(7415).ACTIVITY_TILE).analyticsLocations, children: tmp79Result2 };
-    return tmp76(tmp8(7390).AnalyticsLocationProvider, obj12);
+    const obj12 = { value: tmp4Result(tmp4(7871).ACTIVITY_TILE).analyticsLocations, children: tmp79Result2 };
+    return tmp76(tmp8(7852).AnalyticsLocationProvider, obj12);
   }
   const tmp8Result18 = require("initialize");
 }
-const VoicePanelConstants = fn(11372);
+const VoicePanelConstants = fn(11925);
 ({ IS_IOS: closure_8, VoicePanelModes: closure_9 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11370).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11923).VoicePanelControlsModes;
 const ThemeTypes = fn(1072).ThemeTypes;
 let closure_12 = fn(2142).ACTIVITY_LOCKED_ASPECT_RATIO;
-const ActivityLayoutMode = fn(11864).ActivityLayoutMode;
+const ActivityLayoutMode = fn(12616).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { activityContainerBackground: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_16 = createStyles.createStyles(obj);
 let closure_17 = {

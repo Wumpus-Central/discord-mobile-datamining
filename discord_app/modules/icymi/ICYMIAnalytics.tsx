@@ -1,6 +1,7 @@
 // discord_app/modules/icymi/ICYMIAnalytics.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
+import ICYMIAnalyticsItemId from "ICYMIAnalyticsItemId.tsx";
 import ICYMIStore from "ICYMIStore.tsx";
 
 require = fn;
@@ -31,7 +32,7 @@ export const ICYMIAnalytics = {
     obj.track(hasOwnProperty.FEED_ITEM_SEEN_BATCH, {
       load_id: ICYMIStore.getLoadId(),
       home_session_id: "gravity",
-      feed_item_ids: viewableItems.map((item) => item.item.id),
+      feed_item_ids: viewableItems.map((item) => ICYMIAnalyticsItemId.getListAnalyticsItemId(item.item)),
       feed_item_types: viewableItems.map((item) => {
         item = item.item;
         const kind = item.data.kind;
@@ -83,7 +84,7 @@ export const ICYMIAnalytics = {
     obj.track(hasOwnProperty.FEED_ITEM_SEEN_LONG, {
       load_id: ICYMIStore.getLoadId(),
       home_session_id: "gravity",
-      feed_item_ids: viewableItems.map((item) => item.item.id),
+      feed_item_ids: viewableItems.map((item) => ICYMIAnalyticsItemId.getListAnalyticsItemId(item.item)),
       feed_item_types: viewableItems.map((item) => {
         item = item.item;
         const kind = item.data.kind;

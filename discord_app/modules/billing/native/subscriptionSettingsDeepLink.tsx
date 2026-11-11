@@ -79,7 +79,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       }
       closure_129_0 = null != closure_130_4.getPremiumTypeSubscription();
       const activeGuildSubscriptions = closure_130_4.getActiveGuildSubscriptions();
-      let length = activeGuildSubscriptions;
+      length = activeGuildSubscriptions;
       if (activeGuildSubscriptions == null) {
         length = [];
       }
@@ -89,7 +89,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       if (closure_129_0) {
         if (closure_129_1) {
           (function showSubscriptionPicker() {
-            closure_0 = closure_0(5376).default;
+            closure_0 = closure_0(5489).default;
             const obj = { key, hasIcons: false, header: null, options: null };
             const obj2 = { title: null, onClose: null };
             const intl = closure_0(1113).intl;
@@ -109,7 +109,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(16153).showSimpleActionSheet(obj);
+            const result = closure_0(16315).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;

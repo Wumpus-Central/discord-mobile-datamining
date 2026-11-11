@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx
-import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
@@ -9,21 +9,21 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const _modDef1652 = tmp(1652);
-const isVoiceEmbeddedActivityDefault = tmp(5804);
-const EmbeddedActivityViewDefault = tmp(11966);
-const FrameRenderTargetDefault = tmp(12450);
-const getActivityContainerPIPStylesSpecDefault = tmp(19535);
+const isVoiceEmbeddedActivityDefault = tmp(5917);
+const EmbeddedActivityViewDefault = tmp(12758);
+const FrameRenderTargetDefault = tmp(13256);
+const getActivityContainerPIPStylesSpecDefault = tmp(19724);
 const require = fn;
-const ActivityPanelModes = fn(5783).ActivityPanelModes;
-const FramesConstants = fn(6905);
+const ActivityPanelModes = fn(5896).ActivityPanelModes;
+const FramesConstants = fn(6957);
 ({
   asLaunched: closure_8,
   FrameLayoutModes: closure_9,
   getPipOrientationLockStateForFrame: closure_10,
 } = FramesConstants);
-const ActivityLayoutMode = fn(11864).ActivityLayoutMode;
+const ActivityLayoutMode = fn(12616).ActivityLayoutMode;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_13 = createStyles.createStyles({
   activityContainer: { flex: 1 },
   wrapper: { position: "absolute", left: "50%", top: "50%" },

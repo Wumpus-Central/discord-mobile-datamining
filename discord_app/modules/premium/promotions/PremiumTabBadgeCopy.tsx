@@ -5,12 +5,12 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/premium/promotions/PremiumTabBadgeCopy.tsx");
 
-export function getPremiumTabBadgeCopy(promotionMarketingComponent) {
-  if ("premiumTab" !== promotionMarketingComponent.properties.properties.oneofKind) {
+export function getPremiumTabBadgeCopy(promotionMarketingSurface) {
+  if ("premiumTab" !== promotionMarketingSurface.properties.properties.oneofKind) {
     return null;
   } else {
-    const premiumTab = promotionMarketingComponent.properties.properties.premiumTab;
-    const formatVariableValues = promotionMarketingComponent.getFormatVariableValues(util.intl.currentLocale);
+    const premiumTab = promotionMarketingSurface.properties.properties.premiumTab;
+    const formatVariableValues = promotionMarketingSurface.getFormatVariableValues(util.intl.currentLocale);
     const result = MarketingStringFormat.formatMarketingPlainString(premiumTab.badgeLabel, formatVariableValues);
     if (result.ok) {
       const result1 = MarketingStringFormat.formatMarketingPlainString(

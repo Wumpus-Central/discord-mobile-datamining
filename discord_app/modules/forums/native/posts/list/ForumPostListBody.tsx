@@ -1,19 +1,19 @@
 // discord_app/modules/forums/native/posts/list/ForumPostListBody.tsx
-import GameInvitesChannelUtils from "../../../../game_invite_channels/GameInvitesChannelUtils.tsx";
 import ForumPostUsername from "../ForumPostUsername.tsx";
 import ForumPostMedia from "../ForumPostMedia.tsx";
 import ForumPostTimestampDefault from "../ForumPostTimestamp.tsx";
 import ForumPostNewTagDefault from "../ForumPostNewTag.tsx";
 import ForumPostTitleDefault from "../ForumPostTitle.tsx";
+import GameInvitesChannelUtils from "../../../../game_invite_channels/GameInvitesChannelUtils.tsx";
 import ForumPostMessageContentDefault from "../ForumPostMessageContent.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(7521).ForumTimestampFormats;
+const ForumTimestampFormats = fn(8930).ForumTimestampFormats;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_7 = createStyles.createStyles({
   body: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   contentContainer: { flex: 1 },

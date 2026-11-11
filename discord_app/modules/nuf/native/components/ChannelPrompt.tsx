@@ -12,10 +12,10 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   flex: { flex: 1 },
-  safePadding: { marginTop: fn(5716).NAV_BAR_HEIGHT, flex: 1 },
+  safePadding: { marginTop: fn(5829).NAV_BAR_HEIGHT, flex: 1 },
   contentContainer: { paddingHorizontal: 16 },
   guildIcon: { alignSelf: "center" },
   guildName: { marginTop: 8, textAlign: "center" },

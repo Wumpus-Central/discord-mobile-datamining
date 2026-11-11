@@ -23,7 +23,7 @@ export default function getNativeDiscordCustomTheme() {
     if (tmp16) {
       let gradientColorStops = gradientPreset.customThemeSettings.gradientColorStops;
     } else {
-      const colors = gradientPreset.colors;
+      colors = gradientPreset.colors;
       gradientColorStops = colors.map((stop) => stop.stop);
     }
     const mapped = gradientHexColors.map((item, index) => {

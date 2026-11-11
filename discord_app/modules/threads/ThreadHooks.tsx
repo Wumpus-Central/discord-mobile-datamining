@@ -3,8 +3,8 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import isSystemMessageDefault from "../messages/isSystemMessage.tsx";
-import GuildChannelSubscriptions from "../../lib/guild/GuildChannelSubscriptions.tsx";
 import GuildSubscriptionsActionCreators from "../../actions/GuildSubscriptionsActionCreators.tsx";
+import GuildChannelSubscriptions from "../../lib/guild/GuildChannelSubscriptions.tsx";
 import useIsRemoteDefault from "../game_console/hooks/useIsRemote.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -144,7 +144,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(4995).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(5096).THREADED_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ Permissions: closure_12, MessageFlags: map1, ChannelTypes: closure_14 } = Constants);
 let obj = {
@@ -626,8 +626,8 @@ export function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("shouldAgeVerifyForAgeGate").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(6791).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(6791);
+    shouldAgeVerifyForAgeGate = tmp3(6775).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(6775);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

@@ -7,11 +7,11 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
-import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
+import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
+import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfilePremiumTryItOutMobileRefreshExperiment from "../experiments/UserProfilePremiumTryItOutMobileRefreshExperiment.tsx";
 import UserProfileUpsellCardDefault from "UserProfileUpsellCard.tsx";
@@ -57,7 +57,7 @@ function EditGuildProfileBanner(user) {
         onGifBannerSelect: null,
       };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(16789, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(16950, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -101,7 +101,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1113).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_16(UserProfileEditBannerButtonDefault, obj3);
-  return closure_16(user(7390).AnalyticsLocationProvider, obj2);
+  return closure_16(user(7852).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;
@@ -120,7 +120,7 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     obj2.buttonText = intl4.string(util.t.pj0XBN);
     obj2.onButtonPress = onButtonPress;
     obj2.onLayout = onButtonPress.onLayout;
-    let tmp6Result = value2(UserProfileFloatingUpsellDefault, obj2);
+    let tmp6Result = closure_1_16(UserProfileFloatingUpsellDefault, obj2);
     const tmp3Result = UserProfileFloatingUpsellDefault;
   } else {
     const obj3 = { style: null, ctaText: null, onPress: null, children: null };
@@ -134,8 +134,8 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     const obj5 = { variant: "body-sm/normal", children: null };
     const intl2 = util.intl;
     obj5.children = intl2.string(util.t.YIZS5B);
-    obj3.children = value2(Text_Text.Text, obj5);
-    tmp6Result = value2(UserProfileUpsellCardDefault, obj3);
+    obj3.children = closure_1_16(Text_Text.Text, obj5);
+    tmp6Result = closure_1_16(UserProfileUpsellCardDefault, obj3);
     const tmp3Result2 = UserProfileUpsellCardDefault;
   }
   return tmp6Result;

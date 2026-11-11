@@ -870,7 +870,7 @@ function applyProjectChange(projectId, project) {
   obj2.started = obj2.started + 1;
   const result = map1.set(projectId, obj2);
   const started = obj2.started;
-  value2 = map1.get(projectId);
+  const value2 = map1.get(projectId);
   if (!tmp3) {
     value2.applied = started;
     const obj4 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: project.project };
@@ -1579,7 +1579,7 @@ function refreshConjureInstallState(id) {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1072).Endpoints;
-const ReadStateTypes = fn(6834).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const logger = new fn(4).Logger("ConjureActionCreators");
 let c14 = null;
 let c15 = null;

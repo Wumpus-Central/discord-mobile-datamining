@@ -65,7 +65,7 @@ function handleConnectionOpen() {
                 continue;
               }
               let _Object2 = Object;
-              let length = Object.keys(tmp57).length;
+              length = Object.keys(tmp57).length;
               let _Object3 = Object;
               let entries3 = Object.entries(obj2);
               let entries4 = entries3.entries();
@@ -124,7 +124,7 @@ function handleSetLocalMute(arg0) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(16295).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(16456).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
@@ -200,7 +200,7 @@ function handleSetLocalSoundboardMute(userId) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(16295).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(16456).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
@@ -279,7 +279,7 @@ function handleResetMediaEngineSettings(arg0) {
     );
   }
 }
-const MediaEngineContextTypes = fn(5899).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6012).MediaEngineContextTypes;
 function SETTINGS_MIGRATION_KEY(id) {
   return "AudioContextSettingsMigrated:" + id;
 }
@@ -298,7 +298,7 @@ let closure_12 = apply.debounce(() => {
     "audioContextSettings",
     async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(16295).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(16456).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
         flag = false;
@@ -362,7 +362,7 @@ let closure_12 = apply.debounce(() => {
   );
 }, 2000);
 let apply = apply_mod;
-let closure_13 = apply.debounce(fn(12154).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
+let closure_13 = apply.debounce(fn(10758).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
 const prototype = function AudioSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

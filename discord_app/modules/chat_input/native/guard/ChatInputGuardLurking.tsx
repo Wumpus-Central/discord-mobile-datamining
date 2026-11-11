@@ -4,14 +4,14 @@ import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.t
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import JoinGuildRefusedError from "../../../guild/JoinGuildRefusedError.tsx";
 import GuildDiscoveryUtilsAll from "../../../../utils/GuildDiscoveryUtils.tsx";
-import HubProgressActionCreators from "../../../hub/HubProgressActionCreators.tsx";
 import showChannelFollowingActionSheet from "../../../channel_following/native/showChannelFollowingActionSheet.tsx";
+import HubProgressActionCreators from "../../../hub/HubProgressActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LurkingStore from "../../../lurker_mode/LurkingStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const TextAreaCta = fn(13037).TextAreaCta;
+const TextAreaCta = fn(13703).TextAreaCta;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -94,7 +94,7 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
     const intl11 = tmp2(1113).intl;
     obj2.buttonPrimaryText = intl11.string(tmp2(1113).t.RLch70);
     obj2.buttonPrimaryOnPress = callback2;
-    let tmp15Result = jsx(guildId(14286), {
+    let tmp15Result = jsx(guildId(14768), {
       type: "button-action",
       message: null,
       buttonSecondaryText: null,
@@ -102,7 +102,7 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       buttonPrimaryText: null,
       buttonPrimaryOnPress: null,
     });
-    const tmp14 = guildId(14286);
+    const tmp14 = guildId(14768);
   } else {
     if (null != pendingGameProfileReturn) {
       let obj3 = {
@@ -158,8 +158,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       obj9.buttonPrimaryText = intl2.string(tmp2(1113).t.RLch70);
       obj9.buttonPrimaryOnPress = callback2;
     }
-    tmp15Result = jsx(guildId(14286), obj9);
-    const tmp17 = guildId(14286);
+    tmp15Result = jsx(guildId(14768), obj9);
+    const tmp17 = guildId(14768);
   }
   return tmp15Result;
 });

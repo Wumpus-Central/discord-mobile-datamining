@@ -6,7 +6,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useMeasuredLayoutDefault from "../../../screen/native/useMeasuredLayout.tsx";
 import conjureHomeCarouselFan from "../conjureHomeCarouselFan.tsx";
-import SvgCss from "../../../../../_runtime/13052_SvgCss.js";
+import SvgCss from "../../../../../_runtime/13718_SvgCss.js";
 import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt.tsx";
 import conjureHomeInspirationEntries from "../conjureHomeInspirationEntries.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
 
-const _modDef4028 = tmp7(4028);
+const _modDef4079 = tmp7(4079);
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
@@ -27,14 +27,14 @@ const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
 let obj = {
-  games: fn(9823).GameControllerIcon,
-  apps: fn(8755).AppsIcon,
-  profile_widget: fn(13049).WidgetsIcon,
-  overlay_widget: fn(9681).ScreenIcon,
-  automod: fn(11430).ShieldIcon,
-  chat_bot: fn(12277).RobotIcon,
+  games: fn(7374).GameControllerIcon,
+  apps: fn(8036).AppsIcon,
+  profile_widget: fn(13715).WidgetsIcon,
+  overlay_widget: fn(10400).ScreenIcon,
+  automod: fn(11163).ShieldIcon,
+  chat_bot: fn(12592).RobotIcon,
 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" },
   item: null,
@@ -309,7 +309,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     children: null,
   };
   const intl = tmp2(1113).intl;
-  obj5.accessibilityLabel = intl.string(_modDef4028.Qc4S39);
+  obj5.accessibilityLabel = intl.string(_modDef4079.Qc4S39);
   obj5.ref = ref;
   obj5.onLayout = onLayout;
   let mapped = null;

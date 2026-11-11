@@ -5,7 +5,6 @@ import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
-import AndroidTwoWeekTrialsExperiment from "../experiments/AndroidTwoWeekTrialsExperiment.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_2 = PremiumConstants.PremiumSubscriptionSKUToPremiumType;
@@ -40,7 +39,7 @@ export function usePremiumTrialOfferPremiumType() {
   }
   return closure_2[skuId];
 }
-export function useNitroTrialCtaOverride(user_profile_premium_upsell_card) {
+export function useNitroTrialCtaOverride() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let subscriptionTrial;
   if (premiumTrialOffer != null) {
@@ -49,16 +48,10 @@ export function useNitroTrialCtaOverride(user_profile_premium_upsell_card) {
   if (null == subscriptionTrial) {
     return null;
   } else {
-    const obj2 = { location: user_profile_premium_upsell_card };
-    if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj2)) {
-      ({ interval: obj3.intervalType, intervalCount: obj3.intervalCount } = subscriptionTrial);
-      const result = PremiumUtils.formatIntervalDuration({ intervalType: null, intervalCount: null });
-      const intl = util.intl;
-      const obj5 = { duration: result };
-      return intl.formatToPlainString(util.t["6xpY54"], obj5);
-    } else {
-      return null;
-    }
-    tmpResult = AndroidTwoWeekTrialsExperiment;
+    ({ interval: obj3.intervalType, intervalCount: obj3.intervalCount } = subscriptionTrial);
+    const result = PremiumUtils.formatIntervalDuration({ intervalType: null, intervalCount: null });
+    const intl = util.intl;
+    const obj4 = { duration: result };
+    return intl.formatToPlainString(util.t["6xpY54"], obj4);
   }
 }

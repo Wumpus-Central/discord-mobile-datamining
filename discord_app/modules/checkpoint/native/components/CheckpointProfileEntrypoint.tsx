@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
-import _modDef3248 from "../../Checkpoint2026.messages.js";
+import _modDef3269 from "../../Checkpoint2026.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openCheckpoint from "../../openCheckpoint.native.tsx";
 import CheckpointStore from "../../CheckpointStore.tsx";
@@ -12,8 +12,8 @@ function handlePress() {
   openCheckpoint.openCheckpoint("user_profile");
 }
 function CheckpointProfileEntrypointRow() {
-  checkpointQAMode = checkpointQAMode(6572).useCheckpointQAMode("CheckpointProfileEntrypoint");
-  const obj = checkpointQAMode(6572);
+  checkpointQAMode = checkpointQAMode(6685).useCheckpointQAMode("CheckpointProfileEntrypoint");
+  const obj = checkpointQAMode(6685);
   items = [CheckpointStore];
   const stateFromStores = checkpointQAMode(504).useStateFromStores(items, () => isFetching.isFetching);
   const obj3 = {
@@ -27,14 +27,14 @@ function CheckpointProfileEntrypointRow() {
     end: true,
   };
   const intl = checkpointQAMode(1113).intl;
-  obj3.label = intl.string(_modDef3248["8hclXY"]);
+  obj3.label = intl.string(_modDef3269["8hclXY"]);
   const intl2 = checkpointQAMode(1113).intl;
-  obj3.subLabel = intl2.string(_modDef3248.BFc4lY);
+  obj3.subLabel = intl2.string(_modDef3269.BFc4lY);
   if (stateFromStores) {
     let tmp5Result = <ActivityIndicator />;
   } else {
-    const obj4 = { IconComponent: tmp(13661).ExperimentalCheckpointIcon };
-    tmp5Result = jsx(tmp(7041).TableRow.Icon, { IconComponent: tmp(13661).ExperimentalCheckpointIcon });
+    const obj4 = { IconComponent: tmp(15079).ExperimentalCheckpointIcon };
+    tmp5Result = jsx(tmp(7379).TableRow.Icon, { IconComponent: tmp(15079).ExperimentalCheckpointIcon });
   }
   obj3.icon = tmp5Result;
   obj3.onPress = handlePress;
@@ -42,14 +42,14 @@ function CheckpointProfileEntrypointRow() {
   if ("off" !== checkpointQAMode) {
     fn = () => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(19281, dependencyMap.paths),
+        asyncRequireImpl(19468, dependencyMap.paths),
         "CheckpointTestingActionSheet",
         { mode: checkpointQAMode },
       );
     };
   }
   obj3.onLongPress = fn;
-  return jsx(checkpointQAMode(7041).TableRow, {
+  return jsx(checkpointQAMode(7379).TableRow, {
     label: null,
     subLabel: null,
     icon: null,

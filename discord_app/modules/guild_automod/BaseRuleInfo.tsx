@@ -21,7 +21,7 @@ export function getBaseRuleInfo(triggerType, rule) {
               }
               tmp = null;
               if (flag) {
-                let length = rule;
+                length = rule;
                 let str;
                 if (rule != null) {
                   str = length.name;

@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/DisconnectRemoteButton.tsx
 import CallsUtils from "../../../voice_calls/native/CallsUtils.tsx";
-import CallBarActionAll from "CallBarAction.tsx";
 import GameConsoleActionCreators from "../../../game_console/GameConsoleActionCreators.tsx";
+import CallBarActionAll from "CallBarAction.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
 
@@ -19,7 +19,7 @@ export function DisconnectRemoteButton(channel) {
   }));
   const remoteSessionId = stateFromStoresObject.remoteSessionId;
   let obj2 = {
-    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8433 : 12110),
+    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12905),
     accessibilityLabel: null,
     isSmallSize: null,
     onPress: null,
@@ -36,7 +36,7 @@ export function DisconnectRemoteButton(channel) {
     }
   };
   return jsx(CallBarActionAll.PrimaryActionButton, {
-    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8433 : 12110),
+    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12905),
     accessibilityLabel: null,
     isSmallSize: null,
     onPress: null,

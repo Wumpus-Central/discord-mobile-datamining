@@ -10,7 +10,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 require = fn;
-const SecureFramesConstants = fn(9352);
+const SecureFramesConstants = fn(10561);
 ({
   SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: hasOwnProperty,
   SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: closure_6,
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils
 
 export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9366, dependencyMap.paths), timestampProducer, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10575, dependencyMap.paths), timestampProducer, {
       streamKey,
       channelId,
     });
@@ -31,7 +31,7 @@ export default {
   openSecureFramesUserVerificationModal(id, id2, fn) {
     if (fn()) {
       const obj2 = { userId: id, channelId: id2 };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9356, dependencyMap.paths), obj2, metroImportDefault);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10565, dependencyMap.paths), obj2, metroImportDefault);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -68,7 +68,7 @@ export default {
       if (null != channel) {
         safeTransitionToDefault(React6.CHANNEL(guildId, channelId));
         const obj = { userId, channelId, guildId, fingerprint };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9369, dependencyMap.paths), hasOwnProperty, obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10578, dependencyMap.paths), hasOwnProperty, obj);
       }
     }
     const obj3 = { title: null, body: null };

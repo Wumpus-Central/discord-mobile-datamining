@@ -7,7 +7,7 @@ import AutomodPermissionUtils from "../AutomodPermissionUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import _modDef13546 from "../../../../_runtime/metro/13546__.js";
+import _modDef14071 from "../../../../_runtime/metro/14071__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -35,15 +35,15 @@ function ChatBlockedAlert(arg0) {
   const obj2 = { style: tmp2.body, children: null };
   const tmp6 = common_AlertDefault;
   items = [
-    value2(native.Icon, { source: _modDef13546, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }),
-    value2(Text_Text.Text, {
+    closure_1_16(native.Icon, { source: _modDef14071, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }),
+    closure_1_16(Text_Text.Text, {
       style: tmp2.title,
       accessibilityRole: "header",
       variant: "heading-sm/medium",
       color: "mobile-text-heading-primary",
       children: title,
     }),
-    value2(Text_Text.Text, {
+    closure_1_16(Text_Text.Text, {
       style: tmp2.description,
       variant: "body-sm/medium",
       color: "text-default",
@@ -52,7 +52,7 @@ function ChatBlockedAlert(arg0) {
   ];
   obj2.children = items;
   obj.children = closure_1_17(View, obj2);
-  return value2(tmp6, obj);
+  return closure_1_16(tmp6, obj);
 }
 function PerServerProfileAlert(arg0) {
   ({ guildId, guildName, automodReason } = arg0);
@@ -66,8 +66,8 @@ function PerServerProfileAlert(arg0) {
     stringResult = intl.string(util.t.TBeZmG);
   }
   const tmp = _objectWithoutProperties(arg0, closure_4);
-  const tmp2Result = tmp2(13547);
-  [require, tmp8] = tmp2(13547).useOpenFixQuarantinedProfileModal({ guildId });
+  const tmp2Result = tmp2(14072);
+  [require, tmp8] = tmp2(14072).useOpenFixQuarantinedProfileModal({ guildId });
   if (!tmp8) {
     const intl3 = tmp2(1113).intl;
     stringResult = intl3.string(tmp2(1113).t.FFj5Dt);
@@ -89,7 +89,7 @@ function PerServerProfileAlert(arg0) {
   obj.onConfirm = function handleConfirm() {
     require();
   };
-  return value2(ChatBlockedAlert, obj);
+  return closure_1_16(ChatBlockedAlert, obj);
 }
 function ServerTagAlert(guildName) {
   const obj = {};
@@ -103,19 +103,19 @@ function ServerTagAlert(guildName) {
   obj.onConfirm = function handleConfirm() {
     openUserSettings.openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION });
   };
-  return value2(ChatBlockedAlert, obj);
+  return closure_1_16(ChatBlockedAlert, obj);
 }
 let closure_3 = ["title", "description", "buttonCta", "onConfirm"];
 let closure_4 = ["guildId", "guildName", "automodReason"];
 let closure_5 = ["guildName"];
 const View = fn(17).View;
-const QUARANTINE_USER_ALERT_KEY = fn(13538).QUARANTINE_USER_ALERT_KEY;
+const QUARANTINE_USER_ALERT_KEY = fn(14063).QUARANTINE_USER_ALERT_KEY;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);
-const GuildMemberFlags = fn(5060).GuildMemberFlags;
+const GuildMemberFlags = fn(5161).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   wrapper: { padding: 16 },
   body: { flexDirection: "column", alignItems: "center" },
@@ -164,7 +164,7 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
     },
     items4,
   );
-  stateFromStores(5723)(() => {
+  stateFromStores(5836)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, {
       type: QUARANTINE_USER_ALERT_KEY,
       guild_id: guildId,

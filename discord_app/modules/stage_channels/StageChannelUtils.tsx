@@ -7,9 +7,9 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
 
 require = fn;
-const constants = fn(6766).RequestToSpeakPermissionStates;
+const constants = fn(6843).RequestToSpeakPermissionStates;
 const Permissions = fn(1072).Permissions;
-const RowType = fn(8020).RowType;
+const RowType = fn(6849).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 
@@ -36,7 +36,7 @@ export function fillChunk(arg0, arg1, arg2) {
   }, []);
 }
 export function summarizeUsernamesParticipating(arg0, arg1, arg2, arg3) {
-  let length = arg3;
+  length = arg3;
   const first = arg1[0];
   let obj = dependencyMap;
   const name = NicknameUtilsDefault.getName(arg0, arg2, first);
@@ -59,7 +59,7 @@ export function summarizeUsernamesParticipating(arg0, arg1, arg2, arg3) {
   }
 }
 export function summarizeUsernamesParticipatingWithSpeakerNickname(arg0, name, arg2) {
-  let length = arg2;
+  length = arg2;
   if (arg2 == null) {
     length = arg0.length;
   }

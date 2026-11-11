@@ -1,7 +1,6 @@
 // discord_app/modules/guild_moderation/native/KickConfirm.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
-import removeConjureServerAppDefault from "../../conjure/projects/native/removeConjureServerApp.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -12,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   iconLabelBlock: null,
@@ -21,7 +20,7 @@ let obj = {
   conjureTitle: null,
   conjureServerName: null,
   blurb: null,
-  removeEverything: null,
+  conjureRemove: null,
   errorText: null,
   actions: null,
 };
@@ -74,8 +73,8 @@ let obj8 = {
 };
 obj.blurb = { marginVertical: nativeDefault.space.PX_16 };
 let obj9 = { marginVertical: nativeDefault.space.PX_16 };
-obj.removeEverything = { marginBottom: nativeDefault.space.PX_16 };
-let obj10 = { marginBottom: nativeDefault.space.PX_16 };
+obj.conjureRemove = { marginVertical: nativeDefault.space.PX_16 };
+let obj10 = { marginVertical: nativeDefault.space.PX_16 };
 obj.errorText = { marginBottom: nativeDefault.space.PX_16 };
 let obj11 = { marginBottom: nativeDefault.space.PX_16 };
 obj.actions = { marginBottom: nativeDefault.space.PX_16 };
@@ -89,12 +88,7 @@ export default noop.memo(function KickConfirm(guildId) {
   const userId = guildId.userId;
   const onKick = guildId.onKick;
   let stateFromStores1;
-  let conjureServerApp;
-  let items3;
-  let checked;
-  closure_8 = undefined;
-  c10 = undefined;
-  closure_11 = undefined;
+  c6 = undefined;
   const tmp = closure_12();
   let ref = stateFromStores1.useRef(null);
   const ref1 = stateFromStores1.useRef(null);
@@ -103,10 +97,10 @@ export default noop.memo(function KickConfirm(guildId) {
   items = [{ ref: ref1, offset: { type: "toBottom" } }];
   obj2.inputs = items;
   userId(onKick[9])(obj2);
-  const items1 = [checked];
+  const items1 = [GuildStore];
   const stateFromStores = guildId(onKick[10]).useStateFromStores(items1, () => GuildStore.getGuild(guildId));
   const obj3 = guildId(onKick[10]);
-  const items2 = [closure_8];
+  const items2 = [UserStore];
   stateFromStores1 = guildId(onKick[10]).useStateFromStores(items2, () => UserStore.getUser(userId));
   const obj4 = guildId(onKick[10]);
   let bot;
@@ -118,189 +112,136 @@ export default noop.memo(function KickConfirm(guildId) {
     result = tmp7(tmp5[11]).conjureApplicationIdForBot(userId);
     const tmp7Result = tmp7(tmp5[11]);
   }
-  conjureServerApp = guildId(onKick[11]).useConjureServerApp(guildId, result);
-  let rest;
-  if (conjureServerApp != null) {
-    rest = conjureServerApp.rest;
-  }
-  if (null == rest) {
-    items3 = [];
-  } else {
-    items3 = tmp7(tmp5[11]).conjureKickAppItems(conjureServerApp.rest);
-    const tmp7Result3 = tmp7(tmp5[11]);
-  }
-  const tmp14 = stateFromStores(stateFromStores1.useState(true), 2);
-  checked = tmp14[0];
-  const tmp16 = stateFromStores(stateFromStores1.useState(false), 2);
-  closure_8 = tmp16[1];
+  const conjureServerApp = guildId(onKick[11]).useConjureServerApp(guildId, result);
   ref = obj.useRef("");
   const obj5 = guildId(onKick[11]);
-  [tmp18, c10] = stateFromStores(
+  const tmp13 = null != conjureServerApp && !conjureServerApp.targetIsPreview;
+  [tmp15, c6] = stateFromStores(
     stateFromStores1.useState(() => ({ kicking: false, kickError: false })),
     2,
   );
-  const items4 = [stateFromStores, onKick, stateFromStores1];
-  closure_11 = obj.useCallback(() => {
-    let tmp2 = null != stateFromStores;
-    if (tmp2) {
-      tmp2 = null != stateFromStores1;
-    }
-    if (tmp2) {
-      _undefined({ kicking: true, kickError: false });
-      let id;
-      if (stateFromStores != null) {
-        id = stateFromStores.id;
-      }
-      let id1;
-      if (stateFromStores1 != null) {
-        id1 = stateFromStores1.id;
-      }
-      const kickUserResult = GuildActionCreatorsDefault.kickUser(id, id1, ref.current);
-      GuildActionCreatorsDefault.kickUser(id, id1, ref.current)
-        .then(onKick)
-        .catch(() => {
-          _undefined({ kicking: false, kickError: true });
-        });
-      const nextPromise = GuildActionCreatorsDefault.kickUser(id, id1, ref.current).then(onKick);
-    }
-  }, items4);
-  let tmp20Result6 = null;
+  const items3 = [stateFromStores, onKick, stateFromStores1];
+  let tmp18Result6 = null;
   if (null != stateFromStores1) {
-    tmp20Result6 = null;
+    tmp18Result6 = null;
     if (null != stateFromStores) {
       const obj6 = { style: tmp.container, ref, contentContainerStyle: null, children: null };
       const obj7 = { paddingHorizontal: tmp4(tmp5[7]).space.PX_24, paddingBottom: insets.bottom };
       obj6.contentContainerStyle = obj7;
       const obj8 = { style: tmp.iconLabelBlock, children: null };
       const obj9 = { style: tmp.iconStyles, source: tmp4(tmp5[14]), resizeMode: "contain" };
-      const items5 = [ref(tmp4(tmp5[13]), obj9)];
+      const items4 = [closure_9(tmp4(tmp5[13]), obj9)];
       if (null == conjureServerApp) {
         const obj10 = { children: null };
         const obj11 = { style: tmp.redText, variant: "body-md/semibold", children: null };
         const intl = tmp7(tmp5[16]).intl;
         const obj12 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
         obj11.children = intl.formatToPlainString(tmp7(tmp5[16]).t["1Ie87p"], obj12);
-        const items6 = [tmp20(tmp7(tmp5[15]).Text, obj11)];
+        const items5 = [closure_9(tmp7(tmp5[15]).Text, obj11)];
         const obj13 = { variant: "body-lg/semibold", color: "text-feedback-warning", children: stateFromStores.name };
-        items6[1] = tmp20(tmp7(tmp5[15]).Text, obj13);
-        obj10.children = items6;
+        items5[1] = closure_9(tmp7(tmp5[15]).Text, obj13);
+        obj10.children = items5;
         let obj14 = obj10;
-        const tmp4Result4 = tmp4(tmp5[17]);
+        const tmp4Result5 = tmp4(tmp5[17]);
       } else {
         obj14 = { children: null };
         const obj15 = {
           style: tmp.conjureTitle,
           variant: "body-lg/semibold",
           color: "mobile-text-heading-primary",
-          children: tmp7(tmp5[18]).formatWithAppTag(tmp4(tmp5[19]).wVNCN7, conjureServerApp.targetAppName),
+          children: tmp7(tmp5[18]).formatWithAppTag(tmp4(tmp5[19]).x6FvsZ, conjureServerApp.targetAppName),
         };
-        const items7 = [tmp20(tmp7(tmp5[15]).Text, obj15)];
+        const items6 = [closure_9(tmp7(tmp5[15]).Text, obj15)];
         const obj16 = {
           style: tmp.conjureServerName,
           variant: "body-md/semibold",
           color: "text-muted",
           children: stateFromStores.name,
         };
-        items7[1] = tmp20(tmp7(tmp5[15]).Text, obj16);
-        obj14.children = items7;
-        const tmp7Result4 = tmp7(tmp5[18]);
+        items6[1] = closure_9(tmp7(tmp5[15]).Text, obj16);
+        obj14.children = items6;
+        const tmp7Result3 = tmp7(tmp5[18]);
       }
-      items5[1] = closure_11(c10, obj14);
-      obj8.children = items5;
-      const items8 = [closure_11(conjureServerApp, obj8), , , , , ,];
-      const obj17 = { style: tmp.blurb, variant: "heading-sm/medium", color: "text-feedback-warning", children: null };
-      if (null == conjureServerApp) {
-        const intl3 = tmp7(tmp5[16]).intl;
-        const obj18 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
-        let formatResult = intl3.format(tmp7(tmp5[16]).t["/yH0UT"], obj18);
-        const tmp4Result5 = tmp4(tmp5[17]);
+      items4[1] = closure_11(closure_10, obj14);
+      obj8.children = items4;
+      const items7 = [closure_11(ref, obj8), ,];
+      if (tmp13) {
+        const obj17 = { style: tmp.conjureRemove, children: null };
+        const obj18 = { target: null, onRemoved: null };
+        const tmp4Result6 = tmp4(tmp5[20]);
+        obj18.target = tmp7(tmp5[21]).conjureRemoveTargetFromServerApp(conjureServerApp);
+        obj18.onRemoved = onKick;
+        obj17.children = closure_9(tmp4Result6, obj18);
+        let tmp20Result = closure_9(tmp22, obj17);
+        const tmp7Result4 = tmp7(tmp5[21]);
       } else {
-        const intl2 = tmp7(tmp5[16]).intl;
-        formatResult = intl2.string(tmp4(tmp5[19])["tw+iyx"]);
-      }
-      obj17.children = formatResult;
-      items8[1] = ref(tmp7(tmp5[15]).Text, obj17);
-      let tmp20Result = null;
-      if (items3.length > 0) {
-        const obj19 = { style: tmp.removeEverything, children: null };
-        const obj20 = { checked, onChange: tmp14[1], items: items3 };
-        obj19.children = tmp20(tmp7(tmp5[18]).ConjureRemoveEverythingField, obj20);
-        tmp20Result = tmp20(tmp24, obj19);
-      }
-      items8[2] = tmp20Result;
-      const obj21 = { ref: ref1, containerStyle: null, label: null, maxLength: 512, onChange: null };
-      const obj22 = { marginBottom: tmp4(tmp5[7]).space.PX_16 };
-      obj21.containerStyle = obj22;
-      const intl4 = tmp7(tmp5[16]).intl;
-      obj21.label = intl4.string(tmp7(tmp5[16]).t["+2QEPt"]);
-      obj21.onChange = function onChange(current) {
-        closure_9.current = current;
-      };
-      items8[3] = ref(tmp7(tmp5[20]).TextArea, obj21);
-      const obj23 = { style: tmp.actions, children: null };
-      const obj24 = { variant: "destructive", text: null, onPress: null, disabled: null };
-      const intl5 = tmp7(tmp5[16]).intl;
-      obj24.text = intl5.string(tmp7(tmp5[16]).t["3glT6Z"]);
-      obj24.onPress = function handleConfirm() {
-        if (null != conjureServerApp) {
-          if (0 !== items3.length) {
-            if (first) {
-              _undefined({ kicking: true, kickError: false });
-              closure_8(false);
-              removeConjureServerAppDefault(tmp).then(
-                (result) => {
-                  if (result) {
-                    onKick();
-                  } else {
-                    _undefined({ kicking: false, kickError: false });
-                    closure_1_8(true);
-                  }
-                },
-                () => {},
-              );
-              const promise = removeConjureServerAppDefault(tmp);
-            }
-          }
+        const obj19 = {
+          style: tmp.blurb,
+          variant: "heading-sm/medium",
+          color: "text-feedback-warning",
+          children: null,
+        };
+        if (null == conjureServerApp) {
+          const intl3 = tmp7(tmp5[16]).intl;
+          const obj20 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
+          let formatResult = intl3.format(tmp7(tmp5[16]).t["/yH0UT"], obj20);
+          const tmp4Result7 = tmp4(tmp5[17]);
+        } else {
+          const intl2 = tmp7(tmp5[16]).intl;
+          const obj21 = { server: stateFromStores.name };
+          formatResult = intl2.formatToPlainString(tmp4(tmp5[19]).f22PGK, obj21);
         }
-        closure_11();
-      };
-      obj24.disabled = tmp18.kicking;
-      obj23.children = ref(tmp7(tmp5[21]).Button, obj24);
-      items8[4] = ref(conjureServerApp, obj23);
-      let tmp20Result4 = null;
-      if (tmp16[0]) {
-        const obj25 = {
+        obj19.children = formatResult;
+        const items8 = [closure_9(tmp7(tmp5[15]).Text, obj19), ,];
+        let tmp18Result4 = null;
+        if (null == conjureServerApp) {
+          const obj22 = { ref: ref1, containerStyle: null, label: null, maxLength: 512, onChange: null };
+          const obj23 = { marginBottom: tmp4(tmp5[7]).space.PX_16 };
+          obj22.containerStyle = obj23;
+          const intl4 = tmp7(tmp5[16]).intl;
+          obj22.label = intl4.string(tmp7(tmp5[16]).t["+2QEPt"]);
+          obj22.onChange = function onChange(current) {
+            closure_5.current = current;
+          };
+          tmp18Result4 = closure_9(tmp7(tmp5[22]).TextArea, obj22);
+        }
+        items8[1] = tmp18Result4;
+        const obj24 = { style: tmp.actions, children: null };
+        const intl5 = tmp7(tmp5[16]).intl;
+        if (null == conjureServerApp) {
+          let BGF8VT = tmp7(tmp5[16]).t["3glT6Z"];
+        } else {
+          BGF8VT = tmp4(tmp5[19]).BGF8VT;
+        }
+        const obj25 = { children: null };
+        const obj26 = { variant: "destructive", text: intl5.string(BGF8VT), onPress: tmp16, disabled: tmp15.kicking };
+        obj24.children = closure_9(tmp7(tmp5[23]).Button, obj26);
+        items8[2] = closure_9(tmp22, obj24);
+        obj25.children = items8;
+        tmp20Result = closure_11(closure_10, obj25);
+      }
+      items7[1] = tmp20Result;
+      let tmp18Result5 = null;
+      if (tmp15.kickError) {
+        const obj27 = {
           style: tmp.errorText,
           variant: "body-md/semibold",
           color: "input-text-error-default",
           children: null,
         };
         const intl6 = tmp7(tmp5[16]).intl;
-        obj25.children = intl6.string(tmp4(tmp5[19]).PJ2Fkn);
-        tmp20Result4 = tmp20(tmp7(tmp5[15]).Text, obj25);
+        const obj28 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
+        obj27.children = intl6.format(tmp7(tmp5[16]).t.UktD5J, obj28);
+        tmp18Result5 = closure_9(tmp7(tmp5[15]).Text, obj27);
+        const tmp4Result8 = tmp4(tmp5[17]);
       }
-      items8[5] = tmp20Result4;
-      let tmp20Result5 = null;
-      if (tmp18.kickError) {
-        const obj26 = {
-          style: tmp.errorText,
-          variant: "body-md/semibold",
-          color: "input-text-error-default",
-          children: null,
-        };
-        const intl7 = tmp7(tmp5[16]).intl;
-        const obj27 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
-        obj26.children = intl7.format(tmp7(tmp5[16]).t.UktD5J, obj27);
-        tmp20Result5 = tmp20(tmp7(tmp5[15]).Text, obj26);
-        const tmp4Result6 = tmp4(tmp5[17]);
-      }
-      const obj28 = { children: null };
-      items8[6] = tmp20Result5;
-      obj28.children = items8;
-      obj6.children = closure_11(c10, obj28);
-      tmp20Result6 = tmp20(items3, obj6);
+      const obj29 = { children: null };
+      items7[2] = tmp18Result5;
+      obj29.children = items7;
+      obj6.children = closure_11(closure_10, obj29);
+      tmp18Result6 = closure_9(c6, obj6);
       const tmp4Result = tmp4(tmp5[13]);
     }
   }
-  return tmp20Result6;
+  return tmp18Result6;
 });

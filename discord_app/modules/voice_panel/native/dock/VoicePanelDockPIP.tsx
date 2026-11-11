@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockPIP.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3184 from "VoicePanelDock.messages.js";
+import _modDef3205 from "VoicePanelDock.messages.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import toastUtils from "../../../../design/mana/components/Toast/toastUtils.native.tsx";
 import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
 import ScreenIcon from "../../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
-import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import EmbeddedActivitiesActionCreatorsAll from "../../../activities/EmbeddedActivitiesActionCreators.tsx";
+import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import VoicePanelDockPIPOverlay from "VoicePanelDockPIPOverlay.tsx";
 import VoicePanelDockActionCreators from "VoicePanelDockActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -130,7 +130,7 @@ function VoicePanelDockPIP(stream) {
       StreamActionCreators.stopStream(tmp);
       const obj4 = { icon: ScreenIcon.ScreenIcon, text: null };
       const intl = util.intl;
-      obj4.text = intl.string(_modDef3184.gLoosj);
+      obj4.text = intl.string(_modDef3205.gLoosj);
       toastUtils.showToast(obj4);
     }
   }, items3);
@@ -210,12 +210,12 @@ function VoicePanelDockPIP(stream) {
           onAccessibilityAction: null,
         };
         const intl2 = util.intl;
-        const tmp16 = _modDef3184;
+        const tmp16 = _modDef3205;
         obj2.accessibilityHint = intl2.string(showVideo ? tmp16.qlWFBD : tmp16.IJMHj5);
         items = [{ name: "activate" }, ,];
         const obj3 = { name: openCall, label: null };
         const intl3 = util.intl;
-        obj3.label = intl3.string(_modDef3184.MPtef8);
+        obj3.label = intl3.string(_modDef3205.MPtef8);
         items[1] = obj3;
         const obj4 = { name: stopWatching, label: null };
         const intl4 = util.intl;
@@ -379,14 +379,14 @@ function VoicePanelDockPIP(stream) {
   return callback4(require("../../../../../_runtime/metro/01652__.js").View, obj5);
 }
 function renderVoicePanelDockPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
-  return closure_1_15(closure_22, { transitionState, transitionCleanUp }, arg0);
+  return colors(closure_22, { transitionState, transitionCleanUp }, arg0);
 }
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelModes = fn(11372).VoicePanelModes;
-const VoicePanelPIPModes = fn(19515).VoicePanelPIPModes;
-const ActivityPanelModes = fn(5783).ActivityPanelModes;
-const ParticipantTypes = fn(5807).ParticipantTypes;
-const isLaunched = fn(6905).isLaunched;
+const VoicePanelModes = fn(11925).VoicePanelModes;
+const VoicePanelPIPModes = fn(19704).VoicePanelPIPModes;
+const ActivityPanelModes = fn(5896).ActivityPanelModes;
+const ParticipantTypes = fn(5920).ParticipantTypes;
+const isLaunched = fn(6957).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = { width: 16, height: 9 };
@@ -398,10 +398,10 @@ let closure_20 = {
 let closure_22 = noop.memo(function VoicePanelDockPIPWrapper(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
-  const channelId = noop.useContext(transitionCleanUp(11371)).channelId;
-  const stream = transitionCleanUp(19722)(channelId);
-  const showVideo = transitionCleanUp(19724)(channelId);
-  const panelLayoutCommitted = transitionState(19709).usePIPTileHandoff().panelLayoutCommitted;
+  const channelId = noop.useContext(transitionCleanUp(11924)).channelId;
+  const stream = transitionCleanUp(19914)(channelId);
+  const showVideo = transitionCleanUp(19916)(channelId);
+  const panelLayoutCommitted = transitionState(19901).usePIPTileHandoff().panelLayoutCommitted;
   items = [transitionState, panelLayoutCommitted, transitionCleanUp];
   const effect = noop.useEffect(() => {
     if (tmp) {
@@ -415,8 +415,8 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockPIP.tsx");
 
 export default noop.memo(function VoicePanelDockPIPProvider() {
-  const channelId = IN_APP.useContext(pIPState(11371)).channelId;
-  const streamKey = pIPState(19722)(channelId).streamKey;
+  const channelId = IN_APP.useContext(pIPState(11924)).channelId;
+  const streamKey = pIPState(19914)(channelId).streamKey;
   pIPState = undefined;
   dependencyMap = undefined;
   IN_APP = undefined;
@@ -424,11 +424,11 @@ export default noop.memo(function VoicePanelDockPIPProvider() {
   let height;
   let containerHeight;
   let obj = IN_APP;
-  const tmp2 = pIPState(19722)(channelId);
-  const tmp3 = pIPState(19724)(channelId);
-  pIPState = streamKey(19604).usePIPState();
-  const layoutManager = IN_APP.useContext(pIPState(11371)).layoutManager;
-  const obj2 = streamKey(19604);
+  const tmp2 = pIPState(19914)(channelId);
+  const tmp3 = pIPState(19916)(channelId);
+  pIPState = streamKey(19793).usePIPState();
+  const layoutManager = IN_APP.useContext(pIPState(11924)).layoutManager;
+  const obj2 = streamKey(19793);
   [tmp7, c3] = IN_APP.useState(() => {
     let targetDimensions = layoutManager.getTargetDimensions(streamKey);
     if (targetDimensions === layoutManager.getDefaultTargetDimensions()) {
@@ -478,7 +478,7 @@ export default noop.memo(function VoicePanelDockPIPProvider() {
     }),
     2,
   );
-  const size = streamKey(19514).computePIPSize(closure_17, false, false, pIPState.showSecondaryPIP);
+  const size = streamKey(19703).computePIPSize(closure_17, false, false, pIPState.showSecondaryPIP);
   width = size.width;
   height = size.height;
   containerHeight = size.containerHeight;
@@ -504,9 +504,9 @@ export default noop.memo(function VoicePanelDockPIPProvider() {
     const obj4 = { pipMode: memo.mode };
     const tmp13 = obj4;
   }
-  obj3.children = closure_15(streamKey(5201).TransitionItem, {
+  obj3.children = closure_15(streamKey(5314).TransitionItem, {
     item: tmp13,
     renderItem: renderVoicePanelDockPIPWrapper,
   });
-  return closure_15(streamKey(19604).VoicePanelPIPStateContext.Provider, obj3);
+  return closure_15(streamKey(19793).VoicePanelPIPStateContext.Provider, obj3);
 });

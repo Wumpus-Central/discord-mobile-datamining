@@ -1,8 +1,8 @@
 // discord_app/modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import MarketingSurfaceType from "../../../../../../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx";
 import GiftPromotionReminderExperiment2 from "../../experiments/GiftPromotionReminderExperiment.tsx";
-import MarketingComponentType from "../../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PromotionsStore from "../../../promotions/PromotionsStore.tsx";
@@ -185,7 +185,7 @@ export function shouldShowGiftPromotionReminderNotice() {
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
     if (
       null ==
-      PromotionsStore.getMarketingComponentByType(MarketingComponentType.MarketingComponentType.GIFT_REMINDER_NAGBAR)
+      PromotionsStore.getMarketingComponentBySurface(MarketingSurfaceType.MarketingSurfaceType.GIFT_REMINDER_NAGBAR)
     ) {
       return false;
     } else {

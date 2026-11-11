@@ -3,8 +3,8 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import Constants from "../../Constants.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import FavoritesUtils from "../../modules/favorites/FavoritesUtils.tsx";
-import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions.tsx";
 import GuildChannelSubscriptions from "GuildChannelSubscriptions.tsx";
+import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions.tsx";
 import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

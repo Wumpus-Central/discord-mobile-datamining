@@ -1,23 +1,23 @@
 // discord_app/modules/user_profile/native/UserProfilePrimaryInfo.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import QuestTypes from "../../quests/QuestTypes.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import QuestTypes from "../../quests/QuestTypes.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import GuildTagUtils from "../../guild_tag/GuildTagUtils.tsx";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import useBadges from "../hooks/useBadges.tsx";
-import BotTagDefault from "../../applications/native/BotTag.tsx";
-import GuildTagDefault from "../../guild_tag/native/GuildTag.tsx";
 import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
+import UsernameWithEffectsDefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
+import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
-import UsernameWithEffectsDefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
+import GuildTagDefault from "../../guild_tag/native/GuildTag.tsx";
+import BotTagDefault from "../../applications/native/BotTag.tsx";
 import trackBadgeDirectoryActionDefault from "../../badges/trackBadgeDirectoryAction.tsx";
 import openBadgeDirectoryScreen from "../../badges/native/openBadgeDirectoryScreen.tsx";
-import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
@@ -46,12 +46,12 @@ class DisplayName {
     renderBotTag = function renderBotTag() {
       if (user.isSystemUser()) {
         const obj2 = { style: closure_1.botTag, type: BotTagDefault.Types.SYSTEM_DM, verified: user.isVerifiedBot() };
-        let tmp = closure_2_15(BotTagDefault, obj2);
+        let tmp = colors(BotTagDefault, obj2);
       } else {
         tmp = null;
         if (user.bot) {
           const obj3 = { style: closure_1.botTag, type: BotTagDefault.Types.BOT, verified: user.isVerifiedBot() };
-          tmp = closure_2_15(BotTagDefault, obj3);
+          tmp = colors(BotTagDefault, obj3);
         }
       }
       return tmp;
@@ -195,7 +195,7 @@ class UserTagAndPronouns {
           style: _undefined.text,
           children: userTag,
         };
-        const tmp10 = closure_2_15(Text_Text.Text, obj2);
+        const tmp10 = colors(Text_Text.Text, obj2);
         if (null != onPressUserTag) {
           const obj3 = {
             onPress: tmp11,
@@ -204,10 +204,10 @@ class UserTagAndPronouns {
             accessibilityHint: userTagAccessibilityHint,
             children: tmp10,
           };
-          let tmp5Result = closure_2_15(Pressables.PressableOpacity, obj3);
+          let tmp5Result = colors(Pressables.PressableOpacity, obj3);
         } else {
           const obj = { children: tmp10 };
-          tmp5Result = closure_2_15(timestampProducer, obj);
+          tmp5Result = colors(timestampProducer, obj);
         }
         return tmp5Result;
       }
@@ -459,7 +459,7 @@ function UnreadDotCutoutLayer(showDot) {
   const items1 = [tmp.cutoutLayerFill, showDot.style];
   obj2.style = items1;
   obj.children = closure_15(closure_6, obj2);
-  return closure_15(first(9599), obj);
+  return closure_15(first(9437), obj);
 }
 class ProfileBadgeRows {
   constructor(arg0) {
@@ -613,7 +613,7 @@ class ProfileBadgeRows {
       obj.badgeSize = badgeSize;
       obj.themeType = themeType;
       obj.showToastOnPress = flag;
-      return closure_2_15(ProfileBadge, obj, id.id);
+      return colors(ProfileBadge, obj, id.id);
     });
     closure_17 = mapped;
     if (isTryItOut) {
@@ -692,7 +692,7 @@ class ProfileBadgeRows {
           obj2.badgeSize = badgeSize;
           obj2.themeType = themeType;
           obj2.showToastOnPress = flag;
-          return closure_2_15(ProfileBadge, obj2, badge_id.badge_id);
+          return colors(ProfileBadge, obj2, badge_id.badge_id);
         });
       }
       if (mapped1 == null) {
@@ -854,7 +854,7 @@ class ProfileBadgeRows {
         const obj = { style: null, children };
         items = [badgeRow.badgeRow, { paddingHorizontal: badgeRowHorizontalPadding }, Text];
         obj.style = items;
-        return closure_2_15(timestampProducer, obj, index);
+        return colors(timestampProducer, obj, index);
       });
       return closure_15(badgeSize, obj37);
     }
@@ -907,25 +907,25 @@ function GuildTag(primaryGuildOverride) {
       obj4.textStyle = obj5;
       obj4.badgeSize = guildTagBadgeSize;
       obj4.textVariant = guildTagTextVariant;
-      obj2.children = closure_1_15(GuildTagDefault, obj4);
-      tmp10 = closure_1_15(timestampProducer, obj2);
+      obj2.children = colors(GuildTagDefault, obj4);
+      tmp10 = colors(timestampProducer, obj2);
     }
   }
   return tmp10;
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
-const getBadgeName = fn(8831).getBadgeName;
-const Constants = fn(7440);
+const getBadgeName = fn(8413).getBadgeName;
+const Constants = fn(7896);
 ({ DIVIDER_DOT: closure_10, PROFILE_SIDE_PADDING: closure_11, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const GuildTagBadgeSize = fn(8468).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8842).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8344).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8483).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 let closure_19 = PX_6 + 4;
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj2 = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -1021,7 +1021,7 @@ let dependencyMap2 = {
     guildTagHorizontalPadding: 6,
   },
 };
-createStyles = fn(5142);
+createStyles = fn(5243);
 dependencyMap2 = createStyles.createStyles((arg0) => {
   let sum = arg0;
   if (obj.isIOS()) {
@@ -1090,14 +1090,14 @@ export default function UserProfilePrimaryInfo(arg0) {
   obj5.displayNameAccessibilityRole = displayNameAccessibilityRole;
   obj5.showChevron = showChevron;
   obj5.pendingDisplayNameStyles = pendingDisplayNameStyles;
-  const items1 = [closure_1_15(DisplayName, obj5)];
+  const items1 = [colors(DisplayName, obj5)];
   const obj6 = { style: tmp.details, children: null };
   let tmp11 = null;
   if (!user.isProvisional) {
     tmp11 = userTag;
   }
   const items2 = [
-    closure_1_15(UserTagAndPronouns, {
+    colors(UserTagAndPronouns, {
       userTag: tmp11,
       pronouns,
       themeType,
@@ -1106,13 +1106,7 @@ export default function UserProfilePrimaryInfo(arg0) {
       onPressPronouns,
       pronounsAccessibilityHint,
     }),
-    closure_1_15(GuildTag, {
-      user,
-      themeType,
-      style: obj,
-      showToastOnPress: showBadgeToastOnPress,
-      primaryGuildOverride,
-    }),
+    colors(GuildTag, { user, themeType, style: obj, showToastOnPress: showBadgeToastOnPress, primaryGuildOverride }),
   ];
   let tmp6Result = !hideBadges;
   if (!hideBadges) {
@@ -1127,13 +1121,13 @@ export default function UserProfilePrimaryInfo(arg0) {
       themeType,
       showToastOnPress: showBadgeToastOnPress,
     };
-    tmp6Result = closure_1_15(ProfileBadgeRows, obj7);
+    tmp6Result = colors(ProfileBadgeRows, obj7);
   }
   items2[2] = tmp6Result;
   obj6.children = items2;
-  items1[1] = value2(timestampProducer, obj6);
+  items1[1] = closure_1_16(timestampProducer, obj6);
   obj4.children = items1;
-  return value2(timestampProducer, obj4);
+  return closure_1_16(timestampProducer, obj4);
 }
 export { DisplayName };
 export { UserTagAndPronouns };

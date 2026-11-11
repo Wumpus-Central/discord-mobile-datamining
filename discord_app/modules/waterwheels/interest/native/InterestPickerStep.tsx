@@ -10,12 +10,12 @@ const result = size.fileFinishedImporting("modules/waterwheels/interest/native/I
 export default function InterestPickerStep(navigation) {
   navigation = navigation.navigation;
   let onComplete = navigation.route.params.onComplete;
-  const interestPickerGameList = navigation(18790).useInterestPickerGameList("InterestPickerStep");
-  const tmp4 = onComplete(18789)("InterestPickerStep");
+  const interestPickerGameList = navigation(18980).useInterestPickerGameList("InterestPickerStep");
+  const tmp4 = onComplete(20189)("InterestPickerStep");
   dependencyMap = tmp4;
-  let obj = navigation(18790);
+  let obj = navigation(18980);
   const tmp3 = onComplete;
-  const setPicks = navigation(19992).useInterestPickerPicks().setPicks;
+  const setPicks = navigation(20186).useInterestPickerPicks().setPicks;
   jsx = setPicks.useRef(false);
   items = [navigation, onComplete, setPicks];
   onComplete = setPicks.useCallback((arg0, arg1) => {
@@ -42,7 +42,7 @@ export default function InterestPickerStep(navigation) {
     tmp7 = null;
     if (null != interestPickerGameList) {
       const obj3 = { arm: interestPickerGameList, catalog: tmp4, onComplete };
-      tmp7 = jsx(tmp3(19995), { arm: interestPickerGameList, catalog: tmp4, onComplete });
+      tmp7 = jsx(tmp3(20190), { arm: interestPickerGameList, catalog: tmp4, onComplete });
     }
   }
   return tmp7;

@@ -90,7 +90,6 @@ prototype["isDirty"] = function isDirty() {
   return this.dirty;
 };
 prototype["track"] = function track(arg0) {
-  let length;
   let maxSamples;
   let obj = arg1;
   if (arg1 === undefined) {

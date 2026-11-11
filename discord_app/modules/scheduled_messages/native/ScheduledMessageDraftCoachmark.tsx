@@ -9,7 +9,7 @@ function AttachedCoachmark(buttonRef) {
   const coachmark = useCoachmark.useCoachmark(buttonRef.buttonRef, merged);
   return null;
 }
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageDraftCoachmark.tsx");

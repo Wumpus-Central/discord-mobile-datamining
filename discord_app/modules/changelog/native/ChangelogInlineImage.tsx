@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import ChangelogImageUtils from "../../../../discord_common/js/shared/modules/changelog/ChangelogImageUtils.tsx";
 import GifTagDefault from "../../user_profile/native/GifTag.tsx";
+import ChangelogImageUtils from "../../../../discord_common/js/shared/modules/changelog/ChangelogImageUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 }, image: null, gifTag: null };
 let obj3 = { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 };
 obj2.image = { borderRadius: nativeDefault.radii.xs };

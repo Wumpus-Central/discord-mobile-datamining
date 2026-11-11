@@ -54,7 +54,7 @@ prototype["getState"] = function getState() {
   return { savedCustomThemes };
 };
 prototype["getSavedCustomTheme"] = function getSavedCustomTheme() {
-  let length;
+  length = undefined;
   if (closure_4 != null) {
     length = closure_4.length;
   }
@@ -71,7 +71,7 @@ prototype["getFetchState"] = function getFetchState() {
   return ERROR;
 };
 prototype["hasSavedCustomThemes"] = function hasSavedCustomThemes() {
-  let length;
+  length = undefined;
   if (closure_4 != null) {
     length = closure_4.length;
   }

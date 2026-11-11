@@ -2,8 +2,8 @@
 import Constants from "../../../Constants.tsx";
 import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
 import UserSettingsUtils from "../../../utils/UserSettingsUtils.tsx";
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils.tsx";
 import PremiumModal from "../../../components_native/premium/PremiumModal.tsx";
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const UserSettingsSections = Constants.UserSettingsSections;
@@ -69,9 +69,9 @@ export function launchPremiumPlanSelect(isBoostPurchaseFlow) {
       onPaymentSuccess,
       onPaymentDismiss,
     };
-    const obj3 = flag2(6801);
-    obj3.pushLazy(asyncRequireImpl(7674, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
-    const tmp7 = asyncRequireImpl(7674, dependencyMap.paths);
+    const obj3 = flag2(6785);
+    obj3.pushLazy(asyncRequireImpl(9514, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl(9514, dependencyMap.paths);
   }
   let result = UserSettingsUtils.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
 }

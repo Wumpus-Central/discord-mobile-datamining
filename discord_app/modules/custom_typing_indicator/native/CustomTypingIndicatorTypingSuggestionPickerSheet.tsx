@@ -1,7 +1,7 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorTypingSuggestionPickerSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4030 from "../intl/CustomTypingIndicator.messages.js";
+import _modDef4081 from "../intl/CustomTypingIndicator.messages.js";
 import TableRadioGroup from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -12,7 +12,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -34,10 +34,10 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(arg0) {
   };
   let obj2 = { title: null };
   let intl = util.intl;
-  obj2.title = intl.string(_modDef4030["X+ijyw"]);
+  obj2.title = intl.string(_modDef4081["X+ijyw"]);
   obj.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   const intl2 = util.intl;
-  obj.dismissAccessibilityLabel = intl2.string(_modDef4030.hrl2cG);
+  obj.dismissAccessibilityLabel = intl2.string(_modDef4081.hrl2cG);
   const tmp = closure_6();
   obj.children = jsx(TableRadioGroup.TableRadioGroup, {
     value: tmp2[0],

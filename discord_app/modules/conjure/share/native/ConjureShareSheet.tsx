@@ -37,10 +37,10 @@ function ShareLinkRow(project) {
   return closure_9(require("TableRow").TableRow, obj);
 }
 const View = fn(17).View;
-const isProjectOwner = fn(6902).isProjectOwner;
+const isProjectOwner = fn(6954).isProjectOwner;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { body: { gap: nativeDefault.space.PX_16 }, notice: null, noticeText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.notice = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -249,7 +249,7 @@ export default function ConjureShareSheet(projectId) {
   const callback1 = obj2.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(12429, dependencyMap.paths),
+      asyncRequireImpl(13235, dependencyMap.paths),
       ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY,
       {
         options: memo,

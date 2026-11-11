@@ -45,7 +45,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               );
             } else {
               [arr, tmp41] = result;
-              tmp4(5042)(arr);
+              tmp4(5143)(arr);
               if (Full !== tmp2.Basic) {
                 closure_35 = closure_35 + 1;
               }
@@ -502,14 +502,14 @@ function handleFavoritesUpdate() {
   }
 }
 function guildChannelCount(id) {
-  let length = null;
+  length = null;
   if (null != dependencyMap3[id]) {
     const _Object = Object;
     length = Object.keys(dependencyMap3[id]).length;
   }
   return length;
 }
-const ChannelRecord = fn(4995);
+const ChannelRecord = fn(5096);
 ({
   createChannelRecordFromServer: metroImportDefault,
   isPrivate: closure_8,
@@ -519,7 +519,7 @@ const ChannelRecord = fn(4995);
   castChannelRecord: closure_12,
 } = ChannelRecord);
 const ChannelTypes = fn(1072).ChannelTypes;
-const ChannelFlags = fn(4998).ChannelFlags;
+const ChannelFlags = fn(5099).ChannelFlags;
 let closure_18 = new LoggerDefault("ChannelStore");
 let closure_19 = {};
 let dependencyMap2 = {};
@@ -569,7 +569,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_32;
-      return tmp(5040).tryLoadOrResetCacheGatewayAsync(
+      return tmp(5141).tryLoadOrResetCacheGatewayAsync(
         "loadChannels",
         asyncGeneratorStep(async () => {
           if (c7 === 2) {
@@ -845,7 +845,7 @@ prototype2["getDebugInfo"] = function getDebugInfo() {
   const keys1 = Object.keys(dependencyMap);
   const sorted = keys1.sort(SnowflakeUtilsDefault.compare);
   obj.guildSizes = sorted.map((item) => {
-    let length = null;
+    length = null;
     if (null != dependencyMap[item]) {
       const _Object = Object;
       length = Object.keys(dependencyMap[item]).length;
@@ -867,7 +867,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       dependencyMap = data_mode;
       if ("unavailable" === data_mode.data_mode) {
         const id2 = data_mode.id;
-        let length = null;
+        length = null;
         if (null != dependencyMap2[id2]) {
           const _Object2 = Object;
           length = Object.keys(dependencyMap2[id2]).length;

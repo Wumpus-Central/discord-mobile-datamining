@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const useRef = fn(19).useRef;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
   const obj = { containerRefresh: null, animationRefresh: null };
   const size = {
@@ -88,7 +88,7 @@ export function PremiumAnimatedGiftButton(arg0) {
   const merged = Object.assign(accessibilityState);
   obj6.accessibilityState = { disabled };
   const merged1 = Object.assign(arg0);
-  obj6.children = jsx(tmp3(5747), {
+  obj6.children = jsx(tmp3(5860), {
     ref: tmp9,
     style: tmp7.animationRefresh,
     source: { uri: animationDataUrl },

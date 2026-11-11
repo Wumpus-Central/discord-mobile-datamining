@@ -90,17 +90,17 @@ export function computeActivityFlags(secrets) {
     }
   }
 }
-export function isContextlessEmbeddedActivity(remoteApplicationActivity) {
+export function isContextlessEmbeddedActivity(activity) {
   let num;
-  if (remoteApplicationActivity != null) {
-    num = remoteApplicationActivity.flags;
+  if (activity != null) {
+    num = activity.flags;
   }
   if (num == null) {
     num = 0;
   }
   let hasFlagResult = FlagUtils.hasFlag(num, constants.CONTEXTLESS);
   if (hasFlagResult) {
-    hasFlagResult = isEmbeddedActivityDefault(remoteApplicationActivity);
+    hasFlagResult = isEmbeddedActivityDefault(activity);
   }
   return hasFlagResult;
 }

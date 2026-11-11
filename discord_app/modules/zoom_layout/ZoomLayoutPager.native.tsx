@@ -1,7 +1,7 @@
 // discord_app/modules/zoom_layout/ZoomLayoutPager.native.tsx
 import _modDef1652 from "../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../_runtime/05422_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../_runtime/05535_LegacyBaseButton.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 let jsx = fn(21).jsx;
 let obj = {};
-let merged = Object.assign(fn(5764).springStandard);
+let merged = Object.assign(fn(5877).springStandard);
 obj.stiffness = 100;
 obj.overshootClamping = true;
 let closure_8 = {

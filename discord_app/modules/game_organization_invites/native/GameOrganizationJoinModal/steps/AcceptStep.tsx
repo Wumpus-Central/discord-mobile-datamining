@@ -4,12 +4,12 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const GameOrganizationJoinModalConstants = fn(13460);
+const GameOrganizationJoinModalConstants = fn(13974);
 ({ closeGameOrganizationJoinModal: closure_6, GameOrganizationJoinScenes: metroImportDefault } =
   GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" }, buttonGroup: { paddingVertical: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -71,8 +71,8 @@ export function AcceptStep(code) {
           if (2 === tmp8) {
             c4 = 1;
             const obj6 = { text: null };
-            const intl = characterName(tmp4[11]).intl;
-            obj6.text = intl.string(characterName(tmp4[11]).t.fEptJP);
+            const intl = character(tmp4[11]).intl;
+            obj6.text = intl.string(character(tmp4[11]).t.fEptJP);
             character(tmp4[10]).open("GAME_ORGANIZATION_INVITE_ACCEPT_ERROR", obj6);
             c4 = 0;
             closure_130_4(false);
@@ -90,17 +90,13 @@ export function AcceptStep(code) {
               joinStatus: closure_129_1,
               failureReason: closure_129_2,
               guildJoinStatus: guild_join_status,
-              characterName: null,
+              character: null,
             };
-            let name;
-            if (closure_130_1 != null) {
-              name = closure_130_1.name;
+            character = closure_130_1;
+            if (closure_130_1 == null) {
+              character = null;
             }
-            characterName = name;
-            if (name == null) {
-              characterName = null;
-            }
-            obj7.characterName = characterName;
+            obj7.character = character;
             closure_130_2.push(constants.OUTCOME, obj7);
             c4 = 1;
           }
@@ -110,12 +106,12 @@ export function AcceptStep(code) {
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp31) {
-        closure_3 = tmp31;
+      } catch (tmp30) {
+        closure_3 = tmp30;
         if (tmp5 === c4) {
           c6 = tmp3;
-          throw tmp31;
-        } else if (tmp2 === tmp33) {
+          throw tmp30;
+        } else if (tmp2 === tmp32) {
           c5 = tmp2;
         } else {
           c5 = tmp;

@@ -119,7 +119,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
         const tmp47 = setDifference(set1, set);
         const tmp49 = tmp47[Symbol.iterator]();
         while (tmp49 !== undefined) {
-          value2 = activeErrors1.get(tmp34);
+          let value2 = activeErrors1.get(tmp34);
           let tmp37 = value2;
           if (null != value2) {
             let _JSON = JSON;

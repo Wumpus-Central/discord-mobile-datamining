@@ -251,7 +251,7 @@ export function releaseConjureControlLeases(projectId) {
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timer);
   }
-  value2 = map.get(projectId);
+  const value2 = map.get(projectId);
   if (null != value2) {
     const timers = value2.timers;
     const tmp8 = timers[Symbol.iterator]();

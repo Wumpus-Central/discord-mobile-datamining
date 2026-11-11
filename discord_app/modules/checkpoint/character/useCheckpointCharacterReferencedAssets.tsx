@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let set = new Set([1]);
-const keys = Object.keys(fn(13719).CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET);
+const keys = Object.keys(fn(14200).CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET);
 let closure_4 = keys.map((name) => {
   const obj = { name, role: CheckpointCharacterTextureUtils.getCheckpointCharacterTextureRole(name), swapKey: null };
   let combined = name;

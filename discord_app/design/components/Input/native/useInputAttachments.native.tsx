@@ -53,6 +53,7 @@ class InputAttachmentContainer {
 get_ActivityIndicator = fn(17);
 ({ Platform, Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
+let c7 = "input-icon-default";
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/useInputAttachments.native.tsx");
 
@@ -64,129 +65,195 @@ export function estimateAttachmentWidth(arg0, arg1) {
   return num;
 }
 export function renderInputAttachment(BaseIconImage, leadingText, text) {
+  let tmp = arg3;
+  if (arg3 === undefined) {
+    tmp = c7;
+  }
   if (null != BaseIconImage) {
-    let tmp2 = <BaseIconImage size="xs" color="input-icon-default" />;
+    const obj2 = { size: "xs", color: tmp };
+    let tmp3 = <BaseIconImage size="xs" color={tmp} />;
   } else {
-    tmp2 = null;
+    tmp3 = null;
     if (null != leadingText) {
       const obj = { variant: "body-md/normal", style: text, children: leadingText };
-      tmp2 = jsx(Text_Text.Text, { variant: "body-md/normal", style: text, children: leadingText });
+      tmp3 = jsx(Text_Text.Text, { variant: "body-md/normal", style: text, children: leadingText });
     }
   }
-  return tmp2;
+  return tmp3;
 }
 export { InputAttachmentContainer };
-export function useInputAttachments(merged, leading) {
+export function useInputAttachments(merged, leadingPressableProps) {
   inputStyles = inputStyles(leadingIcon[6]).useInputStyles({
     size: merged.size,
     hasLeadingIcon: null != merged.leadingIcon,
   });
   leadingIcon = merged.leadingIcon;
-  ({ leadingText, trailingIcon } = merged);
+  ({ leadingText, leadingPressableProps, trailingIcon } = merged);
   const trailingText = merged.trailingText;
-  leading = undefined;
-  ({ leadingPressableProps, trailingPressableProps } = merged);
-  if (leading != null) {
-    leading = leading.leading;
+  let prop;
+  if (leadingPressableProps != null) {
+    prop = leadingPressableProps.leadingPressableProps;
   }
-  if (leading != null) {
+  if (prop == null) {
+    prop = leadingPressableProps;
+  }
+  noop = tmp5;
+  let tmp6 = null == leadingIcon;
+  if (tmp6) {
+    let leading;
+    if (leadingPressableProps != null) {
+      leading = leadingPressableProps.leading;
+    }
+    tmp6 = null == leading;
+  }
+  let tmp8 = tmp5;
+  if (null != prop) {
+    tmp8 = tmp6;
+  }
+  if (tmp8) {
+    tmp8 = null != leadingText;
+  }
+  closure_4 = tmp8;
+  items = [null != prop, , ,];
+  ({ text: arr[1], leadingDividerText: arr[2], placeholderText: arr[3] } = inputStyles);
+  let leading1;
+  const memo = noop.useMemo(() => {
+    items = [inputStyles.text];
+    if (closure_3) {
+      items[1] = inputStyles.leadingDividerText;
+      let tmp2 = items;
+    } else {
+      items[1] = inputStyles.placeholderText;
+      tmp2 = items;
+    }
+    return tmp2;
+  }, items);
+  if (leadingPressableProps != null) {
+    leading1 = leadingPressableProps.leading;
+  }
+  if (leading1 != null) {
     let trailing;
-    if (leading != null) {
-      trailing = leading.trailing;
+    if (leadingPressableProps != null) {
+      trailing = leadingPressableProps.trailing;
     }
     if (trailing != null) {
-      if (null == leadingIcon) {
-        let leading1;
-        if (leading != null) {
-          leading1 = leading.leading;
+      const tmp22 = tmp6 ? inputStyles.leadingText : inputStyles.leadingIcon;
+      closure_5 = tmp22;
+      const items1 = [tmp22, tmp8, inputStyles.leadingDivider];
+      if (null == trailingIcon) {
+        let trailing1;
+        if (leadingPressableProps != null) {
+          trailing1 = leadingPressableProps.trailing;
         }
-        if (null == leading1) {
-          let leadingIcon2 = inputStyles.leadingText;
+        if (null == trailing1) {
+          let trailingIcon2 = inputStyles.trailingText;
         }
-        if (null == trailingIcon) {
-          let trailing1;
-          if (leading != null) {
-            trailing1 = leading.trailing;
-          }
-          if (null == trailing1) {
-            let trailingIcon2 = inputStyles.trailingText;
-          }
-          [tmp21, tmp22] = trailingIcon(
-            noop.useState(() => {
-              let num = 0;
-              if (null != leadingIcon) {
-                num = IconSize.ICON_SIZE.xs + tmp;
-              }
-              return num;
-            }),
-            2,
-          );
-          const tmp23 = trailingIcon(
-            noop.useState(() => {
-              let num = 0;
-              if (null != trailingIcon) {
-                num = IconSize.ICON_SIZE.xs + tmp;
-              }
-              return num;
-            }),
-            2,
-          );
-          const first = tmp23[0];
-          const obj3 = { content: leading, setWidth: tmp22, pressableProps: null, style: null };
-          let prop;
-          if (leading != null) {
-            prop = leading.leadingPressableProps;
-          }
-          if (prop == null) {
-            prop = leadingPressableProps;
-          }
-          const obj4 = { leading: null, trailing: null, inputStyle: null };
-          obj3.pressableProps = prop;
-          obj3.style = leadingIcon2;
-          obj4.leading = (
-            <InputAttachmentContainer content={leading} setWidth={tmp22} pressableProps={null} style={null} />
-          );
-          const obj5 = { content: trailing, setWidth: tmp23[1], pressableProps: null, style: null };
-          let prop1;
-          if (leading != null) {
-            prop1 = leading.trailingPressableProps;
-          }
-          if (prop1 == null) {
-            prop1 = trailingPressableProps;
-          }
-          obj5.pressableProps = prop1;
-          obj5.style = trailingIcon2;
-          obj4.trailing = (
-            <InputAttachmentContainer content={trailing} setWidth={tmp23[1]} pressableProps={null} style={null} />
-          );
-          let diff;
-          if (0 !== tmp21) {
-            diff = tmp21 - inputStyles.padding.paddingHorizontal;
-          }
-          const obj6 = { marginStart: diff, marginEnd: null };
-          let diff1;
-          if (0 !== first) {
-            diff1 = first - inputStyles.padding.paddingHorizontal;
-          }
-          obj6.marginEnd = diff1;
-          obj4.inputStyle = obj6;
-          return obj4;
+        [tmp27, tmp28] = trailingIcon(
+          obj3.useState(() => {
+            let num = 0;
+            if (null != leadingIcon) {
+              num = IconSize.ICON_SIZE.xs + tmp;
+            }
+            return num;
+          }),
+          2,
+        );
+        const tmp26 = trailingIcon(
+          obj3.useState(() => {
+            let num = 0;
+            if (null != leadingIcon) {
+              num = IconSize.ICON_SIZE.xs + tmp;
+            }
+            return num;
+          }),
+          2,
+        );
+        let num3 = 0;
+        [tmp30, tmp31] = trailingIcon(
+          obj3.useState(() => {
+            let num = 0;
+            if (null != trailingIcon) {
+              num = IconSize.ICON_SIZE.xs + tmp;
+            }
+            return num;
+          }),
+          2,
+        );
+        if (tmp8) {
+          num3 = inputStyles.padding.paddingHorizontal;
         }
-        trailingIcon2 = inputStyles.trailingIcon;
+        let num4 = 0;
+        if (null != leading1) {
+          num4 = tmp27 + num3;
+        }
+        let num5 = 0;
+        if (null != trailing) {
+          num5 = tmp30;
+        }
+        const obj4 = { content: leading1, setWidth: tmp28, pressableProps: null, style: null };
+        let prop1;
+        if (leadingPressableProps != null) {
+          prop1 = leadingPressableProps.leadingPressableProps;
+        }
+        if (prop1 == null) {
+          prop1 = leadingPressableProps;
+        }
+        const obj5 = { leading: null, trailing: null, inputStyle: null };
+        obj4.pressableProps = prop1;
+        obj4.style = tmp23;
+        obj5.leading = (
+          <InputAttachmentContainer content={leading1} setWidth={tmp28} pressableProps={null} style={null} />
+        );
+        const obj6 = { content: trailing, setWidth: tmp31, pressableProps: null, style: null };
+        let prop2;
+        if (leadingPressableProps != null) {
+          prop2 = leadingPressableProps.trailingPressableProps;
+        }
+        if (prop2 == null) {
+          prop2 = merged.trailingPressableProps;
+        }
+        obj6.pressableProps = prop2;
+        obj6.style = trailingIcon2;
+        obj5.trailing = (
+          <InputAttachmentContainer content={trailing} setWidth={tmp31} pressableProps={null} style={null} />
+        );
+        let diff;
+        if (0 !== num4) {
+          diff = num4 - inputStyles.padding.paddingHorizontal;
+        }
+        const obj7 = { marginStart: diff, marginEnd: null };
+        let diff1;
+        if (0 !== num5) {
+          diff1 = num5 - inputStyles.padding.paddingHorizontal;
+        }
+        obj7.marginEnd = diff1;
+        obj5.inputStyle = obj7;
+        return obj5;
       }
-      leadingIcon2 = inputStyles.leadingIcon;
+      trailingIcon2 = inputStyles.trailingIcon;
     } else if (null != trailingIcon) {
-      let tmp12 = <trailingIcon size="xs" color="input-icon-default" />;
+      const obj8 = { size: "xs", color: tmp17 };
+      let tmp18 = <trailingIcon size="xs" color={tmp17} />;
     } else if (null != trailingText) {
-      const obj7 = { variant: "body-md/normal", style: tmp11, children: trailingText };
-      tmp12 = jsx(tmp(tmp2[5]).Text, { variant: "body-md/normal", style: tmp11, children: trailingText });
+      const obj9 = { variant: "body-md/normal", style: tmp16, children: trailingText };
+      tmp18 = jsx(tmp(tmp2[5]).Text, { variant: "body-md/normal", style: tmp16, children: trailingText });
     }
-  } else if (null != leadingIcon) {
-    let tmp6 = <leadingIcon size="xs" color="input-icon-default" />;
-  } else if (null != leadingText) {
-    const obj8 = { variant: "body-md/normal", style: tmp5, children: leadingText };
-    tmp6 = jsx(tmp(tmp2[5]).Text, { variant: "body-md/normal", style: tmp5, children: leadingText });
+  } else {
+    let str = "icon-default";
+    if (!tmp5) {
+      str = c7;
+    }
+    if (str === undefined) {
+      str = c7;
+    }
+    if (null != leadingIcon) {
+      const obj10 = { size: "xs", color: str };
+      let tmp11 = <leadingIcon size="xs" color={str} />;
+    } else if (null != leadingText) {
+      const obj11 = { variant: "body-md/normal", style: memo, children: leadingText };
+      tmp11 = jsx(tmp(tmp2[5]).Text, { variant: "body-md/normal", style: memo, children: leadingText });
+    }
   }
-  const obj = inputStyles(leadingIcon[6]);
+  let obj = inputStyles(leadingIcon[6]);
   const obj2 = { size: merged.size, hasLeadingIcon: null != merged.leadingIcon };
 }

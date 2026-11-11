@@ -2,134 +2,134 @@
 import Constants from "../Constants.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import UserApplicationIdentityConstants from "../modules/user_application_identity/UserApplicationIdentityConstants.tsx";
-import _mod6632 from "../../_runtime/metro/06632__.js";
-import _mod6633 from "../../_runtime/metro/06633__.js";
-import _mod6634 from "../../_runtime/metro/06634__.js";
-import _mod6635 from "../../_runtime/metro/06635__.js";
-import _mod6636 from "../../_runtime/metro/06636__.js";
-import _mod6637 from "../../_runtime/metro/06637__.js";
-import _mod6638 from "../../_runtime/metro/06638__.js";
-import _mod6639 from "../../_runtime/metro/06639__.js";
-import _mod6640 from "../../_runtime/metro/06640__.js";
-import _mod6641 from "../../_runtime/metro/06641__.js";
-import _mod6642 from "../../_runtime/metro/06642__.js";
-import _mod6643 from "../../_runtime/metro/06643__.js";
-import _mod6644 from "../../_runtime/metro/06644__.js";
-import _mod6645 from "../../_runtime/metro/06645__.js";
-import _mod6646 from "../../_runtime/metro/06646__.js";
-import _mod6647 from "../../_runtime/metro/06647__.js";
-import _mod6648 from "../../_runtime/metro/06648__.js";
-import _mod6649 from "../../_runtime/metro/06649__.js";
-import _mod6650 from "../../_runtime/metro/06650__.js";
-import _mod6651 from "../../_runtime/metro/06651__.js";
-import _mod6652 from "../../_runtime/metro/06652__.js";
-import _mod6653 from "../../_runtime/metro/06653__.js";
-import _mod6654 from "../../_runtime/metro/06654__.js";
-import _mod6655 from "../../_runtime/metro/06655__.js";
-import _mod6656 from "../../_runtime/metro/06656__.js";
-import _mod6657 from "../../_runtime/metro/06657__.js";
-import _mod6658 from "../../_runtime/metro/06658__.js";
-import _mod6659 from "../../_runtime/metro/06659__.js";
-import _mod6660 from "../../_runtime/metro/06660__.js";
-import _mod6661 from "../../_runtime/metro/06661__.js";
-import _mod6662 from "../../_runtime/metro/06662__.js";
-import _mod6663 from "../../_runtime/metro/06663__.js";
-import _mod6664 from "../../_runtime/metro/06664__.js";
-import _mod6665 from "../../_runtime/metro/06665__.js";
-import _mod6666 from "../../_runtime/metro/06666__.js";
-import _mod6667 from "../../_runtime/metro/06667__.js";
-import _mod6668 from "../../_runtime/metro/06668__.js";
-import _mod6669 from "../../_runtime/metro/06669__.js";
-import _mod6670 from "../../_runtime/metro/06670__.js";
-import _mod6671 from "../../_runtime/metro/06671__.js";
-import _mod6672 from "../../_runtime/metro/06672__.js";
-import _mod6673 from "../../_runtime/metro/06673__.js";
-import _mod6674 from "../../_runtime/metro/06674__.js";
-import _mod6675 from "../../_runtime/metro/06675__.js";
-import _mod6676 from "../../_runtime/metro/06676__.js";
-import _mod6677 from "../../_runtime/metro/06677__.js";
-import _mod6678 from "../../_runtime/metro/06678__.js";
-import _mod6679 from "../../_runtime/metro/06679__.js";
-import _mod6680 from "../../_runtime/metro/06680__.js";
-import _mod6681 from "../../_runtime/metro/06681__.js";
-import _mod6682 from "../../_runtime/metro/06682__.js";
-import _mod6683 from "../../_runtime/metro/06683__.js";
-import _mod6684 from "../../_runtime/metro/06684__.js";
-import _mod6685 from "../../_runtime/metro/06685__.js";
-import _mod6686 from "../../_runtime/metro/06686__.js";
-import _mod6687 from "../../_runtime/metro/06687__.js";
-import _mod6688 from "../../_runtime/metro/06688__.js";
-import _mod6689 from "../../_runtime/metro/06689__.js";
-import _mod6690 from "../../_runtime/metro/06690__.js";
-import _mod6691 from "../../_runtime/metro/06691__.js";
-import _mod6692 from "../../_runtime/metro/06692__.js";
-import _mod6693 from "../../_runtime/metro/06693__.js";
-import _mod6694 from "../../_runtime/metro/06694__.js";
-import _mod6695 from "../../_runtime/metro/06695__.js";
-import _mod6696 from "../../_runtime/metro/06696__.js";
-import _mod6697 from "../../_runtime/metro/06697__.js";
-import _mod6698 from "../../_runtime/metro/06698__.js";
-import _mod6699 from "../../_runtime/metro/06699__.js";
-import _mod6700 from "../../_runtime/metro/06700__.js";
-import _mod6701 from "../../_runtime/metro/06701__.js";
-import _mod6702 from "../../_runtime/metro/06702__.js";
-import _mod6703 from "../../_runtime/metro/06703__.js";
-import _mod6704 from "../../_runtime/metro/06704__.js";
-import _mod6705 from "../../_runtime/metro/06705__.js";
-import _mod6706 from "../../_runtime/metro/06706__.js";
-import _mod6707 from "../../_runtime/metro/06707__.js";
-import _mod6708 from "../../_runtime/metro/06708__.js";
-import _mod6709 from "../../_runtime/metro/06709__.js";
-import _mod6710 from "../../_runtime/metro/06710__.js";
-import _mod6711 from "../../_runtime/metro/06711__.js";
-import _mod6712 from "../../_runtime/metro/06712__.js";
-import _mod6713 from "../../_runtime/metro/06713__.js";
-import _mod6714 from "../../_runtime/metro/06714__.js";
-import _mod6715 from "../../_runtime/metro/06715__.js";
-import _mod6716 from "../../_runtime/metro/06716__.js";
-import _mod6717 from "../../_runtime/metro/06717__.js";
-import _mod6718 from "../../_runtime/metro/06718__.js";
-import _mod6719 from "../../_runtime/metro/06719__.js";
-import _mod6720 from "../../_runtime/metro/06720__.js";
-import _mod6721 from "../../_runtime/metro/06721__.js";
-import _mod6722 from "../../_runtime/metro/06722__.js";
-import _mod6723 from "../../_runtime/metro/06723__.js";
-import _mod6724 from "../../_runtime/metro/06724__.js";
-import _mod6725 from "../../_runtime/metro/06725__.js";
-import _mod6726 from "../../_runtime/metro/06726__.js";
-import _mod6727 from "../../_runtime/metro/06727__.js";
-import _mod6728 from "../../_runtime/metro/06728__.js";
-import _mod6729 from "../../_runtime/metro/06729__.js";
-import _mod6730 from "../../_runtime/metro/06730__.js";
-import _mod6731 from "../../_runtime/metro/06731__.js";
-import _mod6732 from "../../_runtime/metro/06732__.js";
-import _mod6733 from "../../_runtime/metro/06733__.js";
-import _mod6734 from "../../_runtime/metro/06734__.js";
-import _mod6735 from "../../_runtime/metro/06735__.js";
-import _mod6736 from "../../_runtime/metro/06736__.js";
-import _mod6737 from "../../_runtime/metro/06737__.js";
-import _mod6738 from "../../_runtime/metro/06738__.js";
-import _mod6739 from "../../_runtime/metro/06739__.js";
-import _mod6740 from "../../_runtime/metro/06740__.js";
-import _mod6741 from "../../_runtime/metro/06741__.js";
-import _mod6742 from "../../_runtime/metro/06742__.js";
-import _mod6743 from "../../_runtime/metro/06743__.js";
-import _mod6744 from "../../_runtime/metro/06744__.js";
-import _mod6745 from "../../_runtime/metro/06745__.js";
-import _mod6746 from "../../_runtime/metro/06746__.js";
-import _mod6747 from "../../_runtime/metro/06747__.js";
-import _mod6748 from "../../_runtime/metro/06748__.js";
-import _mod6749 from "../../_runtime/metro/06749__.js";
-import _mod6750 from "../../_runtime/metro/06750__.js";
-import _mod6751 from "../../_runtime/metro/06751__.js";
-import _mod6752 from "../../_runtime/metro/06752__.js";
-import _mod6753 from "../../_runtime/metro/06753__.js";
-import _mod6754 from "../../_runtime/metro/06754__.js";
-import _mod6755 from "../../_runtime/metro/06755__.js";
-import _mod6756 from "../../_runtime/metro/06756__.js";
-import _mod6757 from "../../_runtime/metro/06757__.js";
-import _mod6758 from "../../_runtime/metro/06758__.js";
-import _mod6759 from "../../_runtime/metro/06759__.js";
+import _mod7025 from "../../_runtime/metro/07025__.js";
+import _mod7026 from "../../_runtime/metro/07026__.js";
+import _mod7027 from "../../_runtime/metro/07027__.js";
+import _mod7028 from "../../_runtime/metro/07028__.js";
+import _mod7029 from "../../_runtime/metro/07029__.js";
+import _mod7030 from "../../_runtime/metro/07030__.js";
+import _mod7031 from "../../_runtime/metro/07031__.js";
+import _mod7032 from "../../_runtime/metro/07032__.js";
+import _mod7033 from "../../_runtime/metro/07033__.js";
+import _mod7034 from "../../_runtime/metro/07034__.js";
+import _mod7035 from "../../_runtime/metro/07035__.js";
+import _mod7036 from "../../_runtime/metro/07036__.js";
+import _mod7037 from "../../_runtime/metro/07037__.js";
+import _mod7038 from "../../_runtime/metro/07038__.js";
+import _mod7039 from "../../_runtime/metro/07039__.js";
+import _mod7040 from "../../_runtime/metro/07040__.js";
+import _mod7041 from "../../_runtime/metro/07041__.js";
+import _mod7042 from "../../_runtime/metro/07042__.js";
+import _mod7043 from "../../_runtime/metro/07043__.js";
+import _mod7044 from "../../_runtime/metro/07044__.js";
+import _mod7045 from "../../_runtime/metro/07045__.js";
+import _mod7046 from "../../_runtime/metro/07046__.js";
+import _mod7047 from "../../_runtime/metro/07047__.js";
+import _mod7048 from "../../_runtime/metro/07048__.js";
+import _mod7049 from "../../_runtime/metro/07049__.js";
+import _mod7050 from "../../_runtime/metro/07050__.js";
+import _mod7051 from "../../_runtime/metro/07051__.js";
+import _mod7052 from "../../_runtime/metro/07052__.js";
+import _mod7053 from "../../_runtime/metro/07053__.js";
+import _mod7054 from "../../_runtime/metro/07054__.js";
+import _mod7055 from "../../_runtime/metro/07055__.js";
+import _mod7056 from "../../_runtime/metro/07056__.js";
+import _mod7057 from "../../_runtime/metro/07057__.js";
+import _mod7058 from "../../_runtime/metro/07058__.js";
+import _mod7059 from "../../_runtime/metro/07059__.js";
+import _mod7060 from "../../_runtime/metro/07060__.js";
+import _mod7061 from "../../_runtime/metro/07061__.js";
+import _mod7062 from "../../_runtime/metro/07062__.js";
+import _mod7063 from "../../_runtime/metro/07063__.js";
+import _mod7064 from "../../_runtime/metro/07064__.js";
+import _mod7065 from "../../_runtime/metro/07065__.js";
+import _mod7066 from "../../_runtime/metro/07066__.js";
+import _mod7067 from "../../_runtime/metro/07067__.js";
+import _mod7068 from "../../_runtime/metro/07068__.js";
+import _mod7069 from "../../_runtime/metro/07069__.js";
+import _mod7070 from "../../_runtime/metro/07070__.js";
+import _mod7071 from "../../_runtime/metro/07071__.js";
+import _mod7072 from "../../_runtime/metro/07072__.js";
+import _mod7073 from "../../_runtime/metro/07073__.js";
+import _mod7074 from "../../_runtime/metro/07074__.js";
+import _mod7075 from "../../_runtime/metro/07075__.js";
+import _mod7076 from "../../_runtime/metro/07076__.js";
+import _mod7077 from "../../_runtime/metro/07077__.js";
+import _mod7078 from "../../_runtime/metro/07078__.js";
+import _mod7079 from "../../_runtime/metro/07079__.js";
+import _mod7080 from "../../_runtime/metro/07080__.js";
+import _mod7081 from "../../_runtime/metro/07081__.js";
+import _mod7082 from "../../_runtime/metro/07082__.js";
+import _mod7083 from "../../_runtime/metro/07083__.js";
+import _mod7084 from "../../_runtime/metro/07084__.js";
+import _mod7085 from "../../_runtime/metro/07085__.js";
+import _mod7086 from "../../_runtime/metro/07086__.js";
+import _mod7087 from "../../_runtime/metro/07087__.js";
+import _mod7088 from "../../_runtime/metro/07088__.js";
+import _mod7089 from "../../_runtime/metro/07089__.js";
+import _mod7090 from "../../_runtime/metro/07090__.js";
+import _mod7091 from "../../_runtime/metro/07091__.js";
+import _mod7092 from "../../_runtime/metro/07092__.js";
+import _mod7093 from "../../_runtime/metro/07093__.js";
+import _mod7094 from "../../_runtime/metro/07094__.js";
+import _mod7095 from "../../_runtime/metro/07095__.js";
+import _mod7096 from "../../_runtime/metro/07096__.js";
+import _mod7097 from "../../_runtime/metro/07097__.js";
+import _mod7098 from "../../_runtime/metro/07098__.js";
+import _mod7099 from "../../_runtime/metro/07099__.js";
+import _mod7100 from "../../_runtime/metro/07100__.js";
+import _mod7101 from "../../_runtime/metro/07101__.js";
+import _mod7102 from "../../_runtime/metro/07102__.js";
+import _mod7103 from "../../_runtime/metro/07103__.js";
+import _mod7104 from "../../_runtime/metro/07104__.js";
+import _mod7105 from "../../_runtime/metro/07105__.js";
+import _mod7106 from "../../_runtime/metro/07106__.js";
+import _mod7107 from "../../_runtime/metro/07107__.js";
+import _mod7108 from "../../_runtime/metro/07108__.js";
+import _mod7109 from "../../_runtime/metro/07109__.js";
+import _mod7110 from "../../_runtime/metro/07110__.js";
+import _mod7111 from "../../_runtime/metro/07111__.js";
+import _mod7112 from "../../_runtime/metro/07112__.js";
+import _mod7113 from "../../_runtime/metro/07113__.js";
+import _mod7114 from "../../_runtime/metro/07114__.js";
+import _mod7115 from "../../_runtime/metro/07115__.js";
+import _mod7116 from "../../_runtime/metro/07116__.js";
+import _mod7117 from "../../_runtime/metro/07117__.js";
+import _mod7118 from "../../_runtime/metro/07118__.js";
+import _mod7119 from "../../_runtime/metro/07119__.js";
+import _mod7120 from "../../_runtime/metro/07120__.js";
+import _mod7121 from "../../_runtime/metro/07121__.js";
+import _mod7122 from "../../_runtime/metro/07122__.js";
+import _mod7123 from "../../_runtime/metro/07123__.js";
+import _mod7124 from "../../_runtime/metro/07124__.js";
+import _mod7125 from "../../_runtime/metro/07125__.js";
+import _mod7126 from "../../_runtime/metro/07126__.js";
+import _mod7127 from "../../_runtime/metro/07127__.js";
+import _mod7128 from "../../_runtime/metro/07128__.js";
+import _mod7129 from "../../_runtime/metro/07129__.js";
+import _mod7130 from "../../_runtime/metro/07130__.js";
+import _mod7131 from "../../_runtime/metro/07131__.js";
+import _mod7132 from "../../_runtime/metro/07132__.js";
+import _mod7133 from "../../_runtime/metro/07133__.js";
+import _mod7134 from "../../_runtime/metro/07134__.js";
+import _mod7135 from "../../_runtime/metro/07135__.js";
+import _mod7136 from "../../_runtime/metro/07136__.js";
+import _mod7137 from "../../_runtime/metro/07137__.js";
+import _mod7138 from "../../_runtime/metro/07138__.js";
+import _mod7139 from "../../_runtime/metro/07139__.js";
+import _mod7140 from "../../_runtime/metro/07140__.js";
+import _mod7141 from "../../_runtime/metro/07141__.js";
+import _mod7142 from "../../_runtime/metro/07142__.js";
+import _mod7143 from "../../_runtime/metro/07143__.js";
+import _mod7144 from "../../_runtime/metro/07144__.js";
+import _mod7145 from "../../_runtime/metro/07145__.js";
+import _mod7146 from "../../_runtime/metro/07146__.js";
+import _mod7147 from "../../_runtime/metro/07147__.js";
+import _mod7148 from "../../_runtime/metro/07148__.js";
+import _mod7149 from "../../_runtime/metro/07149__.js";
+import _mod7150 from "../../_runtime/metro/07150__.js";
+import _mod7151 from "../../_runtime/metro/07151__.js";
+import _mod7152 from "../../_runtime/metro/07152__.js";
 import shims_mod from "../../discord_common/js/packages/tokens/shims.native.tsx";
 import apply from "../../_runtime/00012_apply.js";
 import size from "../../_runtime/metro/00002__.js";
@@ -148,12 +148,12 @@ let obj = {
 let shims = shims_mod;
 obj.color = shims.unsafe_getRawColor("PLATFORM_TWITCH");
 obj.icon = {
-  lightPNG: _mod6632,
-  darkPNG: _mod6632,
-  whitePNG: _mod6633,
-  lightSVG: _mod6634,
-  darkSVG: _mod6634,
-  whiteSVG: _mod6635,
+  lightPNG: _mod7025,
+  darkPNG: _mod7025,
+  whitePNG: _mod7026,
+  lightSVG: _mod7027,
+  darkSVG: _mod7027,
+  whiteSVG: _mod7028,
 };
 obj.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://www.twitch.tv/" + encodeURIComponent(name.name);
@@ -172,20 +172,20 @@ const obj3 = {
 let shims = shims_mod;
 obj3.color = shims.unsafe_getRawColor("PLATFORM_YOUTUBE");
 const obj2 = {
-  lightPNG: _mod6632,
-  darkPNG: _mod6632,
-  whitePNG: _mod6633,
-  lightSVG: _mod6634,
-  darkSVG: _mod6634,
-  whiteSVG: _mod6635,
+  lightPNG: _mod7025,
+  darkPNG: _mod7025,
+  whitePNG: _mod7026,
+  lightSVG: _mod7027,
+  darkSVG: _mod7027,
+  whiteSVG: _mod7028,
 };
 obj3.icon = {
-  lightPNG: _mod6636,
-  darkPNG: _mod6636,
-  whitePNG: _mod6637,
-  lightSVG: _mod6638,
-  darkSVG: _mod6638,
-  whiteSVG: _mod6639,
+  lightPNG: _mod7029,
+  darkPNG: _mod7029,
+  whitePNG: _mod7030,
+  lightSVG: _mod7031,
+  darkSVG: _mod7031,
+  whiteSVG: _mod7032,
 };
 obj3.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://www.youtube.com/channel/" + encodeURIComponent(id.id);
@@ -203,21 +203,21 @@ const obj5 = {
 let shims = shims_mod;
 obj5.color = shims.unsafe_getRawColor("PLATFORM_BATTLENET");
 const obj4 = {
-  lightPNG: _mod6636,
-  darkPNG: _mod6636,
-  whitePNG: _mod6637,
-  lightSVG: _mod6638,
-  darkSVG: _mod6638,
-  whiteSVG: _mod6639,
+  lightPNG: _mod7029,
+  darkPNG: _mod7029,
+  whitePNG: _mod7030,
+  lightSVG: _mod7031,
+  darkSVG: _mod7031,
+  whiteSVG: _mod7032,
 };
 obj5.icon = {
-  lightPNG: _mod6640,
-  darkPNG: _mod6640,
-  whitePNG: _mod6641,
-  lightSVG: _mod6642,
-  darkSVG: _mod6642,
-  whiteSVG: _mod6643,
-  blackSVG: _mod6642,
+  lightPNG: _mod7033,
+  darkPNG: _mod7033,
+  whitePNG: _mod7034,
+  lightSVG: _mod7035,
+  darkSVG: _mod7035,
+  whiteSVG: _mod7036,
+  blackSVG: _mod7035,
 };
 const obj7 = {
   replacedBy: ApplicationIdentityAppIds.BATTLENET,
@@ -225,13 +225,13 @@ const obj7 = {
   deprecationDate: null,
 };
 const obj6 = {
-  lightPNG: _mod6640,
-  darkPNG: _mod6640,
-  whitePNG: _mod6641,
-  lightSVG: _mod6642,
-  darkSVG: _mod6642,
-  whiteSVG: _mod6643,
-  blackSVG: _mod6642,
+  lightPNG: _mod7033,
+  darkPNG: _mod7033,
+  whitePNG: _mod7034,
+  lightSVG: _mod7035,
+  darkSVG: _mod7035,
+  whiteSVG: _mod7036,
+  blackSVG: _mod7035,
 };
 obj7.deprecationDate = new Date("2026-09-22Z-07:00");
 obj5.migrationData = obj7;
@@ -247,12 +247,12 @@ const obj8 = {
 };
 const date = new Date("2026-09-22Z-07:00");
 obj8.icon = {
-  lightPNG: _mod6644,
-  darkPNG: _mod6644,
-  whitePNG: _mod6645,
-  lightSVG: _mod6646,
-  darkSVG: _mod6646,
-  whiteSVG: _mod6647,
+  lightPNG: _mod7037,
+  darkPNG: _mod7037,
+  whitePNG: _mod7038,
+  lightSVG: _mod7039,
+  darkSVG: _mod7039,
+  whiteSVG: _mod7040,
 };
 obj8.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://bsky.app/profile/" + encodeURIComponent(id.id).replaceAll("%3A", ":");
@@ -262,20 +262,20 @@ const obj10 = { type: PlatformTypes.BUNGIE, name: "Bungie.net", color: null, ico
 let shims = shims_mod;
 obj10.color = shims.unsafe_getRawColor("PLATFORM_BUNGIE");
 const obj9 = {
-  lightPNG: _mod6644,
-  darkPNG: _mod6644,
-  whitePNG: _mod6645,
-  lightSVG: _mod6646,
-  darkSVG: _mod6646,
-  whiteSVG: _mod6647,
+  lightPNG: _mod7037,
+  darkPNG: _mod7037,
+  whitePNG: _mod7038,
+  lightSVG: _mod7039,
+  darkSVG: _mod7039,
+  whiteSVG: _mod7040,
 };
 obj10.icon = {
-  lightPNG: _mod6648,
-  darkPNG: _mod6649,
-  whitePNG: _mod6650,
-  lightSVG: _mod6651,
-  darkSVG: _mod6652,
-  whiteSVG: _mod6653,
+  lightPNG: _mod7041,
+  darkPNG: _mod7042,
+  whitePNG: _mod7043,
+  lightSVG: _mod7044,
+  darkSVG: _mod7045,
+  whiteSVG: _mod7046,
 };
 items[4] = obj10;
 const obj12 = {
@@ -289,20 +289,20 @@ const obj12 = {
 let shims = shims_mod;
 obj12.color = shims.unsafe_getRawColor("PLATFORM_SKYPE");
 const obj11 = {
-  lightPNG: _mod6648,
-  darkPNG: _mod6649,
-  whitePNG: _mod6650,
-  lightSVG: _mod6651,
-  darkSVG: _mod6652,
-  whiteSVG: _mod6653,
+  lightPNG: _mod7041,
+  darkPNG: _mod7042,
+  whitePNG: _mod7043,
+  lightSVG: _mod7044,
+  darkSVG: _mod7045,
+  whiteSVG: _mod7046,
 };
 obj12.icon = {
-  lightPNG: _mod6654,
-  darkPNG: _mod6654,
-  whitePNG: _mod6655,
-  lightSVG: _mod6656,
-  darkSVG: _mod6656,
-  whiteSVG: _mod6657,
+  lightPNG: _mod7047,
+  darkPNG: _mod7047,
+  whitePNG: _mod7048,
+  lightSVG: _mod7049,
+  darkSVG: _mod7049,
+  whiteSVG: _mod7050,
 };
 obj12.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "skype:" + encodeURIComponent(id.id) + "?userinfo";
@@ -319,20 +319,20 @@ const obj14 = {
 let shims = shims_mod;
 obj14.color = shims.unsafe_getRawColor("PLATFORM_LOL");
 const obj13 = {
-  lightPNG: _mod6654,
-  darkPNG: _mod6654,
-  whitePNG: _mod6655,
-  lightSVG: _mod6656,
-  darkSVG: _mod6656,
-  whiteSVG: _mod6657,
+  lightPNG: _mod7047,
+  darkPNG: _mod7047,
+  whitePNG: _mod7048,
+  lightSVG: _mod7049,
+  darkSVG: _mod7049,
+  whiteSVG: _mod7050,
 };
 obj14.icon = {
-  lightPNG: _mod6658,
-  darkPNG: _mod6658,
-  whitePNG: _mod6659,
-  lightSVG: _mod6660,
-  darkSVG: _mod6660,
-  whiteSVG: _mod6661,
+  lightPNG: _mod7051,
+  darkPNG: _mod7051,
+  whitePNG: _mod7052,
+  lightSVG: _mod7053,
+  darkSVG: _mod7053,
+  whiteSVG: _mod7054,
 };
 const obj16 = {
   replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
@@ -340,12 +340,12 @@ const obj16 = {
   deprecationDate: null,
 };
 const obj15 = {
-  lightPNG: _mod6658,
-  darkPNG: _mod6658,
-  whitePNG: _mod6659,
-  lightSVG: _mod6660,
-  darkSVG: _mod6660,
-  whiteSVG: _mod6661,
+  lightPNG: _mod7051,
+  darkPNG: _mod7051,
+  whitePNG: _mod7052,
+  lightSVG: _mod7053,
+  darkSVG: _mod7053,
+  whiteSVG: _mod7054,
 };
 obj16.deprecationDate = new Date("2026-07-10Z-07:00");
 obj14.migrationData = obj16;
@@ -363,12 +363,12 @@ let shims = shims_mod;
 obj17.color = shims.unsafe_getRawColor("PLATFORM_STEAM");
 const date1 = new Date("2026-07-10Z-07:00");
 obj17.icon = {
-  lightPNG: _mod6662,
-  darkPNG: _mod6663,
-  whitePNG: _mod6663,
-  lightSVG: _mod6664,
-  darkSVG: _mod6665,
-  whiteSVG: _mod6665,
+  lightPNG: _mod7055,
+  darkPNG: _mod7056,
+  whitePNG: _mod7056,
+  lightSVG: _mod7057,
+  darkSVG: _mod7058,
+  whiteSVG: _mod7058,
 };
 obj17.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://steamcommunity.com/profiles/" + encodeURIComponent(id.id);
@@ -387,20 +387,20 @@ const obj19 = {
 let shims = shims_mod;
 obj19.color = shims.unsafe_getRawColor("PLATFORM_REDDIT");
 const obj18 = {
-  lightPNG: _mod6662,
-  darkPNG: _mod6663,
-  whitePNG: _mod6663,
-  lightSVG: _mod6664,
-  darkSVG: _mod6665,
-  whiteSVG: _mod6665,
+  lightPNG: _mod7055,
+  darkPNG: _mod7056,
+  whitePNG: _mod7056,
+  lightSVG: _mod7057,
+  darkSVG: _mod7058,
+  whiteSVG: _mod7058,
 };
 obj19.icon = {
-  lightPNG: _mod6666,
-  darkPNG: _mod6666,
-  whitePNG: _mod6667,
-  lightSVG: _mod6668,
-  darkSVG: _mod6668,
-  whiteSVG: _mod6669,
+  lightPNG: _mod7059,
+  darkPNG: _mod7059,
+  whitePNG: _mod7060,
+  lightSVG: _mod7061,
+  darkSVG: _mod7061,
+  whiteSVG: _mod7062,
 };
 obj19.domains = ["reddit.com"];
 obj19.getPlatformUserUrl = function getPlatformUserUrl(name) {
@@ -411,20 +411,20 @@ const obj21 = { type: PlatformTypes.FACEBOOK, name: "Facebook", color: null, ico
 let shims = shims_mod;
 obj21.color = shims.unsafe_getRawColor("PLATFORM_FACEBOOK");
 const obj20 = {
-  lightPNG: _mod6666,
-  darkPNG: _mod6666,
-  whitePNG: _mod6667,
-  lightSVG: _mod6668,
-  darkSVG: _mod6668,
-  whiteSVG: _mod6669,
+  lightPNG: _mod7059,
+  darkPNG: _mod7059,
+  whitePNG: _mod7060,
+  lightSVG: _mod7061,
+  darkSVG: _mod7061,
+  whiteSVG: _mod7062,
 };
 obj21.icon = {
-  lightPNG: _mod6670,
-  darkPNG: _mod6670,
-  whitePNG: _mod6671,
-  lightSVG: _mod6672,
-  darkSVG: _mod6672,
-  whiteSVG: _mod6673,
+  lightPNG: _mod7063,
+  darkPNG: _mod7063,
+  whitePNG: _mod7064,
+  lightSVG: _mod7065,
+  darkSVG: _mod7065,
+  whiteSVG: _mod7066,
 };
 obj21.domains = ["facebook.com"];
 items[9] = obj21;
@@ -441,20 +441,20 @@ const obj23 = {
 let shims = shims_mod;
 obj23.color = shims.unsafe_getRawColor("PLATFORM_TWITTER");
 const obj22 = {
-  lightPNG: _mod6670,
-  darkPNG: _mod6670,
-  whitePNG: _mod6671,
-  lightSVG: _mod6672,
-  darkSVG: _mod6672,
-  whiteSVG: _mod6673,
+  lightPNG: _mod7063,
+  darkPNG: _mod7063,
+  whitePNG: _mod7064,
+  lightSVG: _mod7065,
+  darkSVG: _mod7065,
+  whiteSVG: _mod7066,
 };
 obj23.icon = {
-  lightPNG: _mod6674,
-  darkPNG: _mod6674,
-  whitePNG: _mod6675,
-  lightSVG: _mod6676,
-  darkSVG: _mod6676,
-  whiteSVG: _mod6677,
+  lightPNG: _mod7067,
+  darkPNG: _mod7067,
+  whitePNG: _mod7068,
+  lightSVG: _mod7069,
+  darkSVG: _mod7069,
+  whiteSVG: _mod7070,
 };
 obj23.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://twitter.com/" + encodeURIComponent(name.name);
@@ -474,20 +474,20 @@ const obj25 = {
 let shims = shims_mod;
 obj25.color = shims.unsafe_getRawColor("PLATFORM_TWITTER");
 const obj24 = {
-  lightPNG: _mod6674,
-  darkPNG: _mod6674,
-  whitePNG: _mod6675,
-  lightSVG: _mod6676,
-  darkSVG: _mod6676,
-  whiteSVG: _mod6677,
+  lightPNG: _mod7067,
+  darkPNG: _mod7067,
+  whitePNG: _mod7068,
+  lightSVG: _mod7069,
+  darkSVG: _mod7069,
+  whiteSVG: _mod7070,
 };
 obj25.icon = {
-  lightPNG: _mod6678,
-  darkPNG: _mod6679,
-  whitePNG: _mod6680,
-  lightSVG: _mod6681,
-  darkSVG: _mod6682,
-  whiteSVG: _mod6683,
+  lightPNG: _mod7071,
+  darkPNG: _mod7072,
+  whitePNG: _mod7073,
+  lightSVG: _mod7074,
+  darkSVG: _mod7075,
+  whiteSVG: _mod7076,
 };
 obj25.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://x.com/" + encodeURIComponent(name.name);
@@ -505,20 +505,20 @@ const obj27 = {
 let shims = shims_mod;
 obj27.color = shims.unsafe_getRawColor("PLATFORM_SPOTIFY");
 const obj26 = {
-  lightPNG: _mod6678,
-  darkPNG: _mod6679,
-  whitePNG: _mod6680,
-  lightSVG: _mod6681,
-  darkSVG: _mod6682,
-  whiteSVG: _mod6683,
+  lightPNG: _mod7071,
+  darkPNG: _mod7072,
+  whitePNG: _mod7073,
+  lightSVG: _mod7074,
+  darkSVG: _mod7075,
+  whiteSVG: _mod7076,
 };
 obj27.icon = {
-  lightPNG: _mod6684,
-  darkPNG: _mod6684,
-  whitePNG: _mod6685,
-  lightSVG: _mod6686,
-  darkSVG: _mod6686,
-  whiteSVG: _mod6687,
+  lightPNG: _mod7077,
+  darkPNG: _mod7077,
+  whitePNG: _mod7078,
+  lightSVG: _mod7079,
+  darkSVG: _mod7079,
+  whiteSVG: _mod7080,
 };
 obj27.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://open.spotify.com/user/" + encodeURIComponent(id.id);
@@ -528,42 +528,42 @@ const obj29 = { type: PlatformTypes.XBOX, name: "Xbox", color: null, icon: null,
 let shims = shims_mod;
 obj29.color = shims.unsafe_getRawColor("PLATFORM_XBOX");
 const obj28 = {
-  lightPNG: _mod6684,
-  darkPNG: _mod6684,
-  whitePNG: _mod6685,
-  lightSVG: _mod6686,
-  darkSVG: _mod6686,
-  whiteSVG: _mod6687,
+  lightPNG: _mod7077,
+  darkPNG: _mod7077,
+  whitePNG: _mod7078,
+  lightSVG: _mod7079,
+  darkSVG: _mod7079,
+  whiteSVG: _mod7080,
 };
 obj29.icon = {
-  lightPNG: _mod6688,
-  darkPNG: _mod6689,
-  whitePNG: _mod6689,
-  lightSVG: _mod6690,
-  darkSVG: _mod6691,
-  whiteSVG: _mod6691,
-  customPNG: _mod6692,
+  lightPNG: _mod7081,
+  darkPNG: _mod7082,
+  whitePNG: _mod7082,
+  lightSVG: _mod7083,
+  darkSVG: _mod7084,
+  whiteSVG: _mod7084,
+  customPNG: _mod7085,
 };
 items[13] = obj29;
 const obj31 = { type: PlatformTypes.SAMSUNG, name: "Samsung Galaxy", color: null, icon: null, enabled: false };
 let shims = shims_mod;
 obj31.color = shims.unsafe_getRawColor("PLATFORM_SAMSUNG");
 const obj30 = {
-  lightPNG: _mod6688,
-  darkPNG: _mod6689,
-  whitePNG: _mod6689,
-  lightSVG: _mod6690,
-  darkSVG: _mod6691,
-  whiteSVG: _mod6691,
-  customPNG: _mod6692,
+  lightPNG: _mod7081,
+  darkPNG: _mod7082,
+  whitePNG: _mod7082,
+  lightSVG: _mod7083,
+  darkSVG: _mod7084,
+  whiteSVG: _mod7084,
+  customPNG: _mod7085,
 };
 obj31.icon = {
-  lightPNG: _mod6693,
-  darkPNG: _mod6693,
-  whitePNG: _mod6694,
-  lightSVG: _mod6695,
-  darkSVG: _mod6695,
-  whiteSVG: _mod6696,
+  lightPNG: _mod7086,
+  darkPNG: _mod7086,
+  whitePNG: _mod7087,
+  lightSVG: _mod7088,
+  darkSVG: _mod7088,
+  whiteSVG: _mod7089,
 };
 items[14] = obj31;
 const obj33 = {
@@ -578,20 +578,20 @@ const obj33 = {
 let shims = shims_mod;
 obj33.color = shims.unsafe_getRawColor("PLATFORM_GITHUB");
 const obj32 = {
-  lightPNG: _mod6693,
-  darkPNG: _mod6693,
-  whitePNG: _mod6694,
-  lightSVG: _mod6695,
-  darkSVG: _mod6695,
-  whiteSVG: _mod6696,
+  lightPNG: _mod7086,
+  darkPNG: _mod7086,
+  whitePNG: _mod7087,
+  lightSVG: _mod7088,
+  darkSVG: _mod7088,
+  whiteSVG: _mod7089,
 };
 obj33.icon = {
-  lightPNG: _mod6697,
-  darkPNG: _mod6698,
-  whitePNG: _mod6698,
-  lightSVG: _mod6699,
-  darkSVG: _mod6700,
-  whiteSVG: _mod6700,
+  lightPNG: _mod7090,
+  darkPNG: _mod7091,
+  whitePNG: _mod7091,
+  lightSVG: _mod7092,
+  darkSVG: _mod7093,
+  whiteSVG: _mod7093,
 };
 obj33.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://github.com/" + encodeURIComponent(name.name);
@@ -602,20 +602,20 @@ const obj35 = { type: PlatformTypes.PLAYSTATION, name: "PlayStation Network", co
 let shims = shims_mod;
 obj35.color = shims.unsafe_getRawColor("PLATFORM_PLAYSTATION");
 const obj34 = {
-  lightPNG: _mod6697,
-  darkPNG: _mod6698,
-  whitePNG: _mod6698,
-  lightSVG: _mod6699,
-  darkSVG: _mod6700,
-  whiteSVG: _mod6700,
+  lightPNG: _mod7090,
+  darkPNG: _mod7091,
+  whitePNG: _mod7091,
+  lightSVG: _mod7092,
+  darkSVG: _mod7093,
+  whiteSVG: _mod7093,
 };
 obj35.icon = {
-  lightPNG: _mod6701,
-  darkPNG: _mod6702,
-  whitePNG: _mod6702,
-  lightSVG: _mod6703,
-  darkSVG: _mod6704,
-  whiteSVG: _mod6704,
+  lightPNG: _mod7094,
+  darkPNG: _mod7095,
+  whitePNG: _mod7095,
+  lightSVG: _mod7096,
+  darkSVG: _mod7097,
+  whiteSVG: _mod7097,
 };
 items[16] = obj35;
 const obj37 = {
@@ -628,57 +628,57 @@ const obj37 = {
 let shims = shims_mod;
 obj37.color = shims.unsafe_getRawColor("PLATFORM_PLAYSTATION");
 const obj36 = {
-  lightPNG: _mod6701,
-  darkPNG: _mod6702,
-  whitePNG: _mod6702,
-  lightSVG: _mod6703,
-  darkSVG: _mod6704,
-  whiteSVG: _mod6704,
+  lightPNG: _mod7094,
+  darkPNG: _mod7095,
+  whitePNG: _mod7095,
+  lightSVG: _mod7096,
+  darkSVG: _mod7097,
+  whiteSVG: _mod7097,
 };
 obj37.icon = {
-  lightPNG: _mod6702,
-  darkPNG: _mod6701,
-  whitePNG: _mod6701,
-  lightSVG: _mod6704,
-  darkSVG: _mod6703,
-  whiteSVG: _mod6703,
+  lightPNG: _mod7095,
+  darkPNG: _mod7094,
+  whitePNG: _mod7094,
+  lightSVG: _mod7097,
+  darkSVG: _mod7096,
+  whiteSVG: _mod7096,
 };
 items[17] = obj37;
 const obj39 = { type: PlatformTypes.EPIC_GAMES, name: "Epic Games", icon: null, enabled: true };
 const obj38 = {
-  lightPNG: _mod6702,
-  darkPNG: _mod6701,
-  whitePNG: _mod6701,
-  lightSVG: _mod6704,
-  darkSVG: _mod6703,
-  whiteSVG: _mod6703,
+  lightPNG: _mod7095,
+  darkPNG: _mod7094,
+  whitePNG: _mod7094,
+  lightSVG: _mod7097,
+  darkSVG: _mod7096,
+  whiteSVG: _mod7096,
 };
 obj39.icon = {
-  lightPNG: _mod6705,
-  darkPNG: _mod6706,
-  whitePNG: _mod6706,
-  lightSVG: _mod6707,
-  darkSVG: _mod6708,
-  whiteSVG: _mod6708,
+  lightPNG: _mod7098,
+  darkPNG: _mod7099,
+  whitePNG: _mod7099,
+  lightSVG: _mod7100,
+  darkSVG: _mod7101,
+  whiteSVG: _mod7101,
 };
 items[18] = obj39;
 const obj41 = { type: PlatformTypes.RIOT_GAMES, name: "Riot Games", icon: null, enabled: true, migrationData: null };
 const obj40 = {
-  lightPNG: _mod6705,
-  darkPNG: _mod6706,
-  whitePNG: _mod6706,
-  lightSVG: _mod6707,
-  darkSVG: _mod6708,
-  whiteSVG: _mod6708,
+  lightPNG: _mod7098,
+  darkPNG: _mod7099,
+  whitePNG: _mod7099,
+  lightSVG: _mod7100,
+  darkSVG: _mod7101,
+  whiteSVG: _mod7101,
 };
 obj41.icon = {
-  lightPNG: _mod6709,
-  darkPNG: _mod6709,
-  whitePNG: _mod6710,
-  lightSVG: _mod6711,
-  darkSVG: _mod6711,
-  whiteSVG: _mod6712,
-  blackSVG: _mod6713,
+  lightPNG: _mod7102,
+  darkPNG: _mod7102,
+  whitePNG: _mod7103,
+  lightSVG: _mod7104,
+  darkSVG: _mod7104,
+  whiteSVG: _mod7105,
+  blackSVG: _mod7106,
 };
 const obj43 = {
   replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
@@ -686,13 +686,13 @@ const obj43 = {
   deprecationDate: null,
 };
 const obj42 = {
-  lightPNG: _mod6709,
-  darkPNG: _mod6709,
-  whitePNG: _mod6710,
-  lightSVG: _mod6711,
-  darkSVG: _mod6711,
-  whiteSVG: _mod6712,
-  blackSVG: _mod6713,
+  lightPNG: _mod7102,
+  darkPNG: _mod7102,
+  whitePNG: _mod7103,
+  lightSVG: _mod7104,
+  darkSVG: _mod7104,
+  whiteSVG: _mod7105,
+  blackSVG: _mod7106,
 };
 obj43.deprecationDate = new Date("2026-07-10Z-07:00");
 obj41.migrationData = obj43;
@@ -700,12 +700,12 @@ items[19] = obj41;
 const obj44 = { type: PlatformTypes.ROBLOX, name: "Roblox", icon: null, enabled: true, getPlatformUserUrl: null };
 const date2 = new Date("2026-07-10Z-07:00");
 obj44.icon = {
-  lightPNG: _mod6714,
-  darkPNG: _mod6715,
-  whitePNG: _mod6716,
-  lightSVG: _mod6717,
-  darkSVG: _mod6718,
-  whiteSVG: _mod6719,
+  lightPNG: _mod7107,
+  darkPNG: _mod7108,
+  whitePNG: _mod7109,
+  lightSVG: _mod7110,
+  darkSVG: _mod7111,
+  whiteSVG: _mod7112,
 };
 obj44.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://roblox.com/users/" + encodeURIComponent(id.id) + "/profile";
@@ -713,20 +713,20 @@ obj44.getPlatformUserUrl = function getPlatformUserUrl(id) {
 items[20] = obj44;
 const obj46 = { type: PlatformTypes.PAYPAL, name: "PayPal", icon: null, enabled: true, hasMetadata: true };
 const obj45 = {
-  lightPNG: _mod6714,
-  darkPNG: _mod6715,
-  whitePNG: _mod6716,
-  lightSVG: _mod6717,
-  darkSVG: _mod6718,
-  whiteSVG: _mod6719,
+  lightPNG: _mod7107,
+  darkPNG: _mod7108,
+  whitePNG: _mod7109,
+  lightSVG: _mod7110,
+  darkSVG: _mod7111,
+  whiteSVG: _mod7112,
 };
 obj46.icon = {
-  lightPNG: _mod6720,
-  darkPNG: _mod6720,
-  whitePNG: _mod6721,
-  lightSVG: _mod6722,
-  darkSVG: _mod6722,
-  whiteSVG: _mod6723,
+  lightPNG: _mod7113,
+  darkPNG: _mod7113,
+  whitePNG: _mod7114,
+  lightSVG: _mod7115,
+  darkSVG: _mod7115,
+  whiteSVG: _mod7116,
 };
 items[21] = obj46;
 const obj48 = {
@@ -738,20 +738,20 @@ const obj48 = {
   getPlatformUserUrl: null,
 };
 const obj47 = {
-  lightPNG: _mod6720,
-  darkPNG: _mod6720,
-  whitePNG: _mod6721,
-  lightSVG: _mod6722,
-  darkSVG: _mod6722,
-  whiteSVG: _mod6723,
+  lightPNG: _mod7113,
+  darkPNG: _mod7113,
+  whitePNG: _mod7114,
+  lightSVG: _mod7115,
+  darkSVG: _mod7115,
+  whiteSVG: _mod7116,
 };
 obj48.icon = {
-  lightPNG: _mod6724,
-  darkPNG: _mod6724,
-  whitePNG: _mod6725,
-  lightSVG: _mod6726,
-  darkSVG: _mod6726,
-  whiteSVG: _mod6727,
+  lightPNG: _mod7117,
+  darkPNG: _mod7117,
+  whitePNG: _mod7118,
+  lightSVG: _mod7119,
+  darkSVG: _mod7119,
+  whiteSVG: _mod7120,
 };
 obj48.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://www.ebay.com/usr/" + encodeURIComponent(name.name);
@@ -767,20 +767,20 @@ const obj50 = {
   getPlatformUserUrl: null,
 };
 const obj49 = {
-  lightPNG: _mod6724,
-  darkPNG: _mod6724,
-  whitePNG: _mod6725,
-  lightSVG: _mod6726,
-  darkSVG: _mod6726,
-  whiteSVG: _mod6727,
+  lightPNG: _mod7117,
+  darkPNG: _mod7117,
+  whitePNG: _mod7118,
+  lightSVG: _mod7119,
+  darkSVG: _mod7119,
+  whiteSVG: _mod7120,
 };
 obj50.icon = {
-  lightPNG: _mod6728,
-  darkPNG: _mod6729,
-  whitePNG: _mod6729,
-  lightSVG: _mod6730,
-  darkSVG: _mod6731,
-  whiteSVG: _mod6731,
+  lightPNG: _mod7121,
+  darkPNG: _mod7122,
+  whitePNG: _mod7122,
+  lightSVG: _mod7123,
+  darkSVG: _mod7124,
+  whiteSVG: _mod7124,
 };
 obj50.domains = ["tiktok.com"];
 obj50.getPlatformUserUrl = function getPlatformUserUrl(name) {
@@ -796,20 +796,20 @@ const obj52 = {
   getPlatformUserUrl: null,
 };
 const obj51 = {
-  lightPNG: _mod6728,
-  darkPNG: _mod6729,
-  whitePNG: _mod6729,
-  lightSVG: _mod6730,
-  darkSVG: _mod6731,
-  whiteSVG: _mod6731,
+  lightPNG: _mod7121,
+  darkPNG: _mod7122,
+  whitePNG: _mod7122,
+  lightSVG: _mod7123,
+  darkSVG: _mod7124,
+  whiteSVG: _mod7124,
 };
 obj52.icon = {
-  lightPNG: _mod6732,
-  darkPNG: _mod6732,
-  whitePNG: _mod6733,
-  lightSVG: _mod6734,
-  darkSVG: _mod6734,
-  whiteSVG: _mod6735,
+  lightPNG: _mod7125,
+  darkPNG: _mod7125,
+  whitePNG: _mod7126,
+  lightSVG: _mod7127,
+  darkSVG: _mod7127,
+  whiteSVG: _mod7128,
 };
 obj52.domains = ["instagram.com"];
 obj52.getPlatformUserUrl = function getPlatformUserUrl(name) {
@@ -826,20 +826,20 @@ const obj54 = {
   getPlatformUserUrl: null,
 };
 const obj53 = {
-  lightPNG: _mod6732,
-  darkPNG: _mod6732,
-  whitePNG: _mod6733,
-  lightSVG: _mod6734,
-  darkSVG: _mod6734,
-  whiteSVG: _mod6735,
+  lightPNG: _mod7125,
+  darkPNG: _mod7125,
+  whitePNG: _mod7126,
+  lightSVG: _mod7127,
+  darkSVG: _mod7127,
+  whiteSVG: _mod7128,
 };
 obj54.icon = {
-  lightPNG: _mod6736,
-  darkPNG: _mod6737,
-  whitePNG: _mod6738,
-  lightSVG: _mod6739,
-  darkSVG: _mod6740,
-  whiteSVG: _mod6741,
+  lightPNG: _mod7129,
+  darkPNG: _mod7130,
+  whitePNG: _mod7131,
+  lightSVG: _mod7132,
+  darkSVG: _mod7133,
+  whiteSVG: _mod7134,
 };
 obj54.domains = ["letterboxd.com"];
 obj54.getPlatformUserUrl = function getPlatformUserUrl(name) {
@@ -856,20 +856,20 @@ const obj56 = {
   hasMetadata: true,
 };
 const obj55 = {
-  lightPNG: _mod6736,
-  darkPNG: _mod6737,
-  whitePNG: _mod6738,
-  lightSVG: _mod6739,
-  darkSVG: _mod6740,
-  whiteSVG: _mod6741,
+  lightPNG: _mod7129,
+  darkPNG: _mod7130,
+  whitePNG: _mod7131,
+  lightSVG: _mod7132,
+  darkSVG: _mod7133,
+  whiteSVG: _mod7134,
 };
 obj56.icon = {
-  lightPNG: _mod6742,
-  darkPNG: _mod6742,
-  whitePNG: _mod6743,
-  lightSVG: _mod6744,
-  darkSVG: _mod6744,
-  whiteSVG: _mod6745,
+  lightPNG: _mod7135,
+  darkPNG: _mod7135,
+  whitePNG: _mod7136,
+  lightSVG: _mod7137,
+  darkSVG: _mod7137,
+  whiteSVG: _mod7138,
 };
 obj56.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return id.id;
@@ -879,38 +879,38 @@ const obj58 = { type: PlatformTypes.CRUNCHYROLL, name: "Crunchyroll", color: nul
 let shims = shims_mod;
 obj58.color = shims.unsafe_getRawColor("PLATFORM_CRUNCHYROLL");
 const obj57 = {
-  lightPNG: _mod6742,
-  darkPNG: _mod6742,
-  whitePNG: _mod6743,
-  lightSVG: _mod6744,
-  darkSVG: _mod6744,
-  whiteSVG: _mod6745,
+  lightPNG: _mod7135,
+  darkPNG: _mod7135,
+  whitePNG: _mod7136,
+  lightSVG: _mod7137,
+  darkSVG: _mod7137,
+  whiteSVG: _mod7138,
 };
 obj58.icon = {
-  lightPNG: _mod6746,
-  darkPNG: _mod6746,
-  whitePNG: _mod6746,
-  lightSVG: _mod6747,
-  darkSVG: _mod6747,
-  whiteSVG: _mod6748,
+  lightPNG: _mod7139,
+  darkPNG: _mod7139,
+  whitePNG: _mod7139,
+  lightSVG: _mod7140,
+  darkSVG: _mod7140,
+  whiteSVG: _mod7141,
 };
 items[27] = obj58;
 const obj60 = { type: PlatformTypes.DOMAIN, name: "Domain", icon: null, getPlatformUserUrl: null, enabled: true };
 const obj59 = {
-  lightPNG: _mod6746,
-  darkPNG: _mod6746,
-  whitePNG: _mod6746,
-  lightSVG: _mod6747,
-  darkSVG: _mod6747,
-  whiteSVG: _mod6748,
+  lightPNG: _mod7139,
+  darkPNG: _mod7139,
+  whitePNG: _mod7139,
+  lightSVG: _mod7140,
+  darkSVG: _mod7140,
+  whiteSVG: _mod7141,
 };
 obj60.icon = {
-  lightPNG: _mod6749,
-  darkPNG: _mod6750,
-  whitePNG: _mod6750,
-  lightSVG: _mod6751,
-  darkSVG: _mod6752,
-  whiteSVG: _mod6752,
+  lightPNG: _mod7142,
+  darkPNG: _mod7143,
+  whitePNG: _mod7143,
+  lightSVG: _mod7144,
+  darkSVG: _mod7145,
+  whiteSVG: _mod7145,
 };
 obj60.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://" + id.id + "/";
@@ -918,38 +918,38 @@ obj60.getPlatformUserUrl = function getPlatformUserUrl(id) {
 items[28] = obj60;
 const obj62 = { type: PlatformTypes.AMAZON_MUSIC, name: "Amazon Music", icon: null, enabled: true };
 const obj61 = {
-  lightPNG: _mod6749,
-  darkPNG: _mod6750,
-  whitePNG: _mod6750,
-  lightSVG: _mod6751,
-  darkSVG: _mod6752,
-  whiteSVG: _mod6752,
+  lightPNG: _mod7142,
+  darkPNG: _mod7143,
+  whitePNG: _mod7143,
+  lightSVG: _mod7144,
+  darkSVG: _mod7145,
+  whiteSVG: _mod7145,
 };
 obj62.icon = {
-  lightPNG: _mod6753,
-  darkPNG: _mod6753,
-  whitePNG: _mod6753,
-  lightSVG: _mod6754,
-  darkSVG: _mod6754,
-  whiteSVG: _mod6754,
+  lightPNG: _mod7146,
+  darkPNG: _mod7146,
+  whitePNG: _mod7146,
+  lightSVG: _mod7147,
+  darkSVG: _mod7147,
+  whiteSVG: _mod7147,
 };
 items[29] = obj62;
 const obj64 = { type: PlatformTypes.META_QUEST_OR_HORIZON, name: "Meta Quest", icon: null, enabled: false };
 const obj63 = {
-  lightPNG: _mod6753,
-  darkPNG: _mod6753,
-  whitePNG: _mod6753,
-  lightSVG: _mod6754,
-  darkSVG: _mod6754,
-  whiteSVG: _mod6754,
+  lightPNG: _mod7146,
+  darkPNG: _mod7146,
+  whitePNG: _mod7146,
+  lightSVG: _mod7147,
+  darkSVG: _mod7147,
+  whiteSVG: _mod7147,
 };
 obj64.icon = {
-  lightPNG: _mod6755,
-  darkPNG: _mod6756,
-  whitePNG: _mod6757,
-  lightSVG: _mod6758,
-  darkSVG: _mod6759,
-  whiteSVG: _mod6759,
+  lightPNG: _mod7148,
+  darkPNG: _mod7149,
+  whitePNG: _mod7150,
+  lightSVG: _mod7151,
+  darkSVG: _mod7152,
+  whiteSVG: _mod7152,
 };
 items[30] = obj64;
 let closure_3 = apply.keyBy(items, "type");

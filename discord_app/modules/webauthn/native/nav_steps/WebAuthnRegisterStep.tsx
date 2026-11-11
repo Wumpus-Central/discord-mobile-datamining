@@ -40,7 +40,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = {
   scrollContent: { flexGrow: 1 },
   flexContainer: {
@@ -101,11 +101,11 @@ export default function WebAuthnRegisterStep() {
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const obj3 = navigation(1377);
-  const announceError = navigation(17033).useAnnounceError(tmp10);
+  const announceError = navigation(17196).useAnnounceError(tmp10);
   obj4 = { contentContainerStyle: tmp4.scrollContent, alwaysBounceVertical: false, children: null };
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj5 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_8(navigation(17034).KeyImage, {}), ,];
+  const items3 = [closure_8(navigation(17197).KeyImage, {}), ,];
   const obj6 = { style: tmp4.margin, variant: "body-md/normal", children: null };
   const intl = tmp(1113).intl;
   const string = intl.string;
@@ -116,11 +116,11 @@ export default function WebAuthnRegisterStep() {
     stringResult = string(t.Lh5vTW);
   }
   obj6.children = stringResult;
-  items3[1] = closure_8(navigation(5753).Text, obj6);
+  items3[1] = closure_8(navigation(5866).Text, obj6);
   let tmp17Result = "" !== tmp10;
   if (tmp17Result) {
     const obj7 = { variant: "body-md/normal", color: "text-feedback-critical", children: tmp10 };
-    tmp17Result = closure_8(tmp(5753).Text, obj7);
+    tmp17Result = closure_8(tmp(5866).Text, obj7);
   }
   items3[2] = tmp17Result;
   obj5.children = items3;
@@ -140,7 +140,7 @@ export default function WebAuthnRegisterStep() {
     string2Result = string2(t2.oibaQa);
   }
   const obj9 = {
-    children: closure_8(navigation(5760).Button, {
+    children: closure_8(navigation(5873).Button, {
       text: string2Result,
       disabled: tmp7,
       loading: tmp7,
@@ -150,8 +150,8 @@ export default function WebAuthnRegisterStep() {
       size: "lg",
     }),
   };
-  items4[2] = closure_8(navigation(6825).ButtonGroup, obj9);
+  items4[2] = closure_8(navigation(6888).ButtonGroup, obj9);
   rect.children = items4;
-  obj4.children = closure_9(navigation(7358).SafeAreaPaddingView, rect);
+  obj4.children = closure_9(navigation(7351).SafeAreaPaddingView, rect);
   return closure_8(closure_5, obj4);
 }

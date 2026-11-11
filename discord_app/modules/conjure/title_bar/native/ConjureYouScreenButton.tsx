@@ -2,18 +2,18 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Link from "../../../../../_runtime/01500_Link.js";
-import _modDef4028 from "../../intl/ConjureUntranslated.messages.js";
-import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
-import openConjureProjectsSheetDefault from "../../projects/native/openConjureProjectsSheet.tsx";
+import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import useConjureWandStatusDefault from "useConjureWandStatus.tsx";
 import YouScreenNavIconDefault from "../../../main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx";
 import getIconSize from "../../../../../discord_common/js/packages/design/components/Icon/getIconSize.tsx";
+import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
 import ConjureWorkingWandDefault from "ConjureWorkingWand.tsx";
+import openConjureProjectsSheetDefault from "../../projects/native/openConjureProjectsSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { dot: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_4 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -44,7 +44,7 @@ export default noop.memo(function ConjureYouScreenButton() {
   obj2.icon = tmp7Result;
   obj2.accessibilityLabel = accessibilityLabel;
   const intl = util.intl;
-  obj2.label = intl.string(_modDef4028.uk6jhJ);
+  obj2.label = intl.string(_modDef4079.uk6jhJ);
   obj2.onPress = openConjureProjectsSheetDefault;
   obj2.showRedDot = hasBadge;
   obj2.dotStyle = tmp.dot;

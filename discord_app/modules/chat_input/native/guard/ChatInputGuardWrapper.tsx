@@ -4,8 +4,8 @@ import AutomodPermissionUtils from "../../../guild_automod/AutomodPermissionUtil
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import MemberVerificationUtils from "../../../guild_member_verification/MemberVerificationUtils.tsx";
 import RelationshipActionCreatorsDefault from "../../../../actions/RelationshipActionCreators.tsx";
-import GuildRoleConnectionsModalActionCreators from "../../../connections/native/GuildRoleConnectionsModalActionCreators.tsx";
 import navigateToThreadCreation from "../../../threads/native/navigateToThreadCreation.tsx";
+import GuildRoleConnectionsModalActionCreators from "../../../connections/native/GuildRoleConnectionsModalActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LurkingStore from "../../../lurker_mode/LurkingStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
@@ -15,11 +15,11 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const isThread = fn(4995).isThread;
-const TextAreaCta = fn(13037).TextAreaCta;
+const isThread = fn(5096).isThread;
+const TextAreaCta = fn(13703).TextAreaCta;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = fn(7278).PHONE_VERIFICATION_MODAL_KEY;
+let closure_14 = fn(7752).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");

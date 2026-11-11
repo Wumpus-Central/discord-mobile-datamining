@@ -101,7 +101,7 @@ function hydrateRoleMention(roleId, guildId) {
     obj2.roleColor = role.color;
     let tmp11 = null;
     if (hasEnhancedRoleColorsForRole) {
-      const colors = role.colors;
+      colors = role.colors;
       let primary_color;
       if (colors != null) {
         primary_color = colors.primary_color;
@@ -249,8 +249,8 @@ const Constants = fn(1072);
   MARKDOWN_SPOILER_REGEXP: closure_10,
   MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11,
 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(6169).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(6170).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(6282).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(6283).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;

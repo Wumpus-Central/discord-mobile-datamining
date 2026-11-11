@@ -88,7 +88,7 @@ export default function useChannelSafeAreaHeightSharedValue() {
         return bound;
       }
     }
-    value2 = _undefined5.get();
+    let value2 = _undefined5.get();
     if (value2 <= 0) {
       const _Math2 = Math;
       value2 = Math.max(_undefined6.get().bottom, c1, value);
