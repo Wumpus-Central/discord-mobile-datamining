@@ -1,10 +1,13 @@
 // _runtime/metro/07094__.js
+import registerAsset from "01119__.js";
 
-export (width) => {
-  width = width.width;
-  let num = 360;
-  if (width - 56 <= 360) {
-    num = width - 56;
-  }
-  return num;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "0532db77ab79fc799b897b15ddfe70e2",
+  name: "img_account_sync_playstation_light",
+  type: "png",
+});

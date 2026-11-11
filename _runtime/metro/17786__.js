@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 160,
   scales: [1],
-  hash: "894cceea2dd5b523936930d1d7e333c5",
-  name: "pl",
+  hash: "539778d237b9fff9f8baff59e260a9fa",
+  name: "breaddog_1",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 433,
+  height: 231.5,
   scales: [2, 3],
-  hash: "8eabe75983473aecbcb03200bb7a397b",
-  name: "ic_alert",
+  hash: "91d00dd928cdd63a1c9619eb92ec080e",
+  name: "blocked_light",
   type: "png",
 });

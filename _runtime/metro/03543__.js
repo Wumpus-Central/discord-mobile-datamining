@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/tenure_reward",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3RlbnVyZV9yZXdhcmQ=",
   scales: [1],
-  hash: "4ce7db81a29e051a11be32b72852c173",
-  name: "TenureReward.compiled.messages",
+  hash: "682ce7932ae20c81a1d544bd2778bb9d",
+  name: "fr.messages.682ce7932ae20c81a1d544bd2778bb9d.compiled.messages",
   type: "jsona",
 });

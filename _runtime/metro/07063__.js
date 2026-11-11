@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "5a0d5d16e378eea1c4baa447014a7b8d",
-  name: "CheckmarkLargeIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "322f5aec10ee0e2c3d6aad9844b5f00f",
+  name: "img_account_sync_facebook_light_and_dark",
   type: "png",
 });

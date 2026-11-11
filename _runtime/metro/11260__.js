@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "a706a0d368e318c310cbc99fe4471213",
-  name: "ic_file_small_image",
+  height: 24,
+  scales: [2, 3],
+  hash: "aa86e9bedf9e29074b68adcd3222cf32",
+  name: "NatureIcon",
   type: "png",
 });

@@ -1,289 +1,109 @@
 // _runtime/metro/04948__.js
-import _mod2166 from "02166__.js";
+import _mod4527 from "04527__.js";
+import differenceInCalendarDays_mod from "../04684_differenceInCalendarDays.js";
+import startOfWeekYear_mod from "../04804_startOfWeekYear.js";
+import _typeof_mod from "04522__.js";
+import module_4526_mod from "04526__.js";
+import requiredArgs_mod from "../04523_requiredArgs.js";
 
-let fn = function _(moment) {
-  function relativeTimeWithPlural(arg0, arg1, arg2) {
-    if ("m" === arg2) {
-      let str7 = "\u0445\u0432\u0438\u043B\u0438\u043D\u0443";
-      if (arg1) {
-        str7 = "\u0445\u0432\u0438\u043B\u0438\u043D\u0430";
-      }
-      let sum = str7;
-    } else if ("h" === arg2) {
-      let str6 = "\u0433\u043E\u0434\u0438\u043D\u0443";
-      if (arg1) {
-        str6 = "\u0433\u043E\u0434\u0438\u043D\u0430";
-      }
-      sum = str6;
-    } else {
-      let str =
-        "\u0441\u0435\u043A\u0443\u043D\u0434\u0443_\u0441\u0435\u043A\u0443\u043D\u0434\u0438_\u0441\u0435\u043A\u0443\u043D\u0434";
-      const text = `${arg0} `;
-      if (arg1) {
-        str =
-          "\u0441\u0435\u043A\u0443\u043D\u0434\u0430_\u0441\u0435\u043A\u0443\u043D\u0434\u0438_\u0441\u0435\u043A\u0443\u043D\u0434";
-      }
-      const obj = {
-        ss: str,
-        mm: null,
-        hh: null,
-        dd: "\u0434\u0435\u043D\u044C_\u0434\u043D\u0456_\u0434\u043D\u0456\u0432",
-        MM: "\u043C\u0456\u0441\u044F\u0446\u044C_\u043C\u0456\u0441\u044F\u0446\u0456_\u043C\u0456\u0441\u044F\u0446\u0456\u0432",
-        yy: "\u0440\u0456\u043A_\u0440\u043E\u043A\u0438_\u0440\u043E\u043A\u0456\u0432",
-      };
-      let str2 =
-        "\u0445\u0432\u0438\u043B\u0438\u043D\u0443_\u0445\u0432\u0438\u043B\u0438\u043D\u0438_\u0445\u0432\u0438\u043B\u0438\u043D";
-      if (arg1) {
-        str2 =
-          "\u0445\u0432\u0438\u043B\u0438\u043D\u0430_\u0445\u0432\u0438\u043B\u0438\u043D\u0438_\u0445\u0432\u0438\u043B\u0438\u043D";
-      }
-      obj.mm = str2;
-      let str3 =
-        "\u0433\u043E\u0434\u0438\u043D\u0443_\u0433\u043E\u0434\u0438\u043D\u0438_\u0433\u043E\u0434\u0438\u043D";
-      if (arg1) {
-        str3 =
-          "\u0433\u043E\u0434\u0438\u043D\u0430_\u0433\u043E\u0434\u0438\u043D\u0438_\u0433\u043E\u0434\u0438\u043D";
-      }
-      obj.hh = str3;
-      const parts = obj[arg2].split("_");
-      const result = tmp % 10;
-      if (result === 1) {
-        if (tmp % 100 !== 11) {
-          let first = parts[0];
-        }
-        sum = text + first;
-      }
-      if (2 <= result) {
-        if (result <= 4) {
-          const result1 = tmp % 100;
-          first = parts[1];
-        }
-      }
-      first = parts[2];
-    }
-    return sum;
+let differenceInCalendarDays = differenceInCalendarDays_mod;
+if (!differenceInCalendarDays) {
+  const obj = { default: differenceInCalendarDays };
+  let tmp3 = obj;
+} else {
+  tmp3 = differenceInCalendarDays;
+}
+differenceInCalendarDays = tmp3;
+let startOfWeekYear = startOfWeekYear_mod;
+if (!startOfWeekYear) {
+  const obj2 = { default: startOfWeekYear };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfWeekYear;
+}
+startOfWeekYear = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
+} else {
+  tmp7 = _typeof;
+}
+_typeof = tmp7;
+let module_4526 = module_4526_mod;
+if (!module_4526) {
+  const obj4 = { default: module_4526 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_4526;
+}
+module_4526 = tmp9;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj5 = { default: requiredArgs };
+  let tmp11 = obj5;
+} else {
+  tmp11 = requiredArgs;
+}
+requiredArgs = tmp11;
+
+export default function setWeekYear(arg0, arg1, firstWeekContainsDate) {
+  requiredArgs.default(2, arguments);
+  const defaultOptions = _mod4527.getDefaultOptions();
+  let prop;
+  if (null != firstWeekContainsDate) {
+    prop = firstWeekContainsDate.firstWeekContainsDate;
   }
-  let obj = {
-    months: {
-      format:
-        "\u0441\u0456\u0447\u043D\u044F_\u043B\u044E\u0442\u043E\u0433\u043E_\u0431\u0435\u0440\u0435\u0437\u043D\u044F_\u043A\u0432\u0456\u0442\u043D\u044F_\u0442\u0440\u0430\u0432\u043D\u044F_\u0447\u0435\u0440\u0432\u043D\u044F_\u043B\u0438\u043F\u043D\u044F_\u0441\u0435\u0440\u043F\u043D\u044F_\u0432\u0435\u0440\u0435\u0441\u043D\u044F_\u0436\u043E\u0432\u0442\u043D\u044F_\u043B\u0438\u0441\u0442\u043E\u043F\u0430\u0434\u0430_\u0433\u0440\u0443\u0434\u043D\u044F".split(
-          "_",
-        ),
-      standalone:
-        "\u0441\u0456\u0447\u0435\u043D\u044C_\u043B\u044E\u0442\u0438\u0439_\u0431\u0435\u0440\u0435\u0437\u0435\u043D\u044C_\u043A\u0432\u0456\u0442\u0435\u043D\u044C_\u0442\u0440\u0430\u0432\u0435\u043D\u044C_\u0447\u0435\u0440\u0432\u0435\u043D\u044C_\u043B\u0438\u043F\u0435\u043D\u044C_\u0441\u0435\u0440\u043F\u0435\u043D\u044C_\u0432\u0435\u0440\u0435\u0441\u0435\u043D\u044C_\u0436\u043E\u0432\u0442\u0435\u043D\u044C_\u043B\u0438\u0441\u0442\u043E\u043F\u0430\u0434_\u0433\u0440\u0443\u0434\u0435\u043D\u044C".split(
-          "_",
-        ),
-    },
-    monthsShort:
-      "\u0441\u0456\u0447_\u043B\u044E\u0442_\u0431\u0435\u0440_\u043A\u0432\u0456\u0442_\u0442\u0440\u0430\u0432_\u0447\u0435\u0440\u0432_\u043B\u0438\u043F_\u0441\u0435\u0440\u043F_\u0432\u0435\u0440_\u0436\u043E\u0432\u0442_\u043B\u0438\u0441\u0442_\u0433\u0440\u0443\u0434".split(
-        "_",
-      ),
-    weekdays: function weekdaysCaseReplace(arg0, arg1) {
-      const obj = {
-        nominative:
-          "\u043D\u0435\u0434\u0456\u043B\u044F_\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A_\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A_\u0441\u0435\u0440\u0435\u0434\u0430_\u0447\u0435\u0442\u0432\u0435\u0440_\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044F_\u0441\u0443\u0431\u043E\u0442\u0430".split(
-            "_",
-          ),
-        accusative:
-          "\u043D\u0435\u0434\u0456\u043B\u044E_\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A_\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A_\u0441\u0435\u0440\u0435\u0434\u0443_\u0447\u0435\u0442\u0432\u0435\u0440_\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E_\u0441\u0443\u0431\u043E\u0442\u0443".split(
-            "_",
-          ),
-        genitive:
-          "\u043D\u0435\u0434\u0456\u043B\u0456_\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043A\u0430_\u0432\u0456\u0432\u0442\u043E\u0440\u043A\u0430_\u0441\u0435\u0440\u0435\u0434\u0438_\u0447\u0435\u0442\u0432\u0435\u0440\u0433\u0430_\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u0456_\u0441\u0443\u0431\u043E\u0442\u0438".split(
-            "_",
-          ),
-      };
-      if (true === arg0) {
-        const nominative1 = obj.nominative;
-        const substr = nominative1.slice(1, 7);
-        const nominative2 = obj.nominative;
-        let nominative = substr.concat(nominative2.slice(0, 1));
-      } else if (arg0) {
-        let str = "accusative";
-        if (!obj2.test(arg1)) {
-          let str2 = "nominative";
-          if (obj3.test(arg1)) {
-            str2 = "genitive";
-          }
-          str = str2;
-          obj3 = /\[?(?:минулої|наступної)? ?\] ?dddd/;
-        }
-        nominative = obj[str][arg0.day(arg0)];
-        obj2 = /(\[[ВвУу]\]) ?dddd/;
-      } else {
-        nominative = obj.nominative;
-      }
-      return nominative;
-    },
-    weekdaysShort: "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split(
-      "_",
-    ),
-    weekdaysMin: "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split(
-      "_",
-    ),
-    longDateFormat: {
-      LT: "HH:mm",
-      LTS: "HH:mm:ss",
-      L: "DD.MM.YYYY",
-      LL: "D MMMM YYYY \u0440.",
-      LLL: "D MMMM YYYY \u0440., HH:mm",
-      LLLL: "dddd, D MMMM YYYY \u0440., HH:mm",
-    },
-    calendar: {
-      sameDay: function () {
-        let str = "";
-        if (11 === this.hours()) {
-          str = "\u0431";
-        }
-        return c0 + "\u043E" + str + "] LT";
-      },
-      nextDay: function () {
-        let str = "";
-        if (11 === this.hours()) {
-          str = "\u0431";
-        }
-        return c0 + "\u043E" + str + "] LT";
-      },
-      lastDay: function () {
-        let str = "";
-        if (11 === this.hours()) {
-          str = "\u0431";
-        }
-        return c0 + "\u043E" + str + "] LT";
-      },
-      nextWeek: function () {
-        let str = "";
-        if (11 === this.hours()) {
-          str = "\u0431";
-        }
-        return c0 + "\u043E" + str + "] LT";
-      },
-      lastWeek() {
-        const self = this;
-        const dayResult = this.day();
-        if (0 !== dayResult) {
-          if (3 !== dayResult) {
-            if (5 !== dayResult) {
-              if (6 !== dayResult) {
-                c0 = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0433\u043E] dddd [";
-                const fn = function () {
-                  let str = "";
-                  if (11 === this.hours()) {
-                    str = "\u0431";
-                  }
-                  return c0 + "\u043E" + str + "] LT";
-                };
-                const call = fn.call;
-                if (typeof call === "unknown") {
-                  let str2 = "";
-                  if (11 === self.hours()) {
-                    str2 = "\u0431";
-                  }
-                  const _HermesInternal = HermesInternal;
-                  let combined = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0433\u043E] dddd [\u043E" + str2 + "] LT";
-                } else {
-                  combined = call(self);
-                }
-                return combined;
-              }
-            }
-          }
-        }
-        closure_129_0 = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0457] dddd [";
-        const fn2 = function () {
-          let str = "";
-          if (11 === this.hours()) {
-            str = "\u0431";
-          }
-          return c0 + "\u043E" + str + "] LT";
-        };
-        const call2 = fn2.call;
-        if (typeof call2 === "unknown") {
-          let str5 = "";
-          if (11 === self.hours()) {
-            str5 = "\u0431";
-          }
-          const _HermesInternal2 = HermesInternal;
-          let combined1 = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0457] dddd [\u043E" + str5 + "] LT";
-        } else {
-          combined1 = call2(self);
-        }
-        return combined1;
-      },
-      sameElse: "L",
-    },
-    relativeTime: {
-      future: "\u0437\u0430 %s",
-      past: "%s \u0442\u043E\u043C\u0443",
-      s: "\u0434\u0435\u043A\u0456\u043B\u044C\u043A\u0430 \u0441\u0435\u043A\u0443\u043D\u0434",
-      ss: relativeTimeWithPlural,
-      m: relativeTimeWithPlural,
-      mm: relativeTimeWithPlural,
-      h: "\u0433\u043E\u0434\u0438\u043D\u0443",
-      hh: relativeTimeWithPlural,
-      d: "\u0434\u0435\u043D\u044C",
-      dd: relativeTimeWithPlural,
-      M: "\u043C\u0456\u0441\u044F\u0446\u044C",
-      MM: relativeTimeWithPlural,
-      y: "\u0440\u0456\u043A",
-      yy: relativeTimeWithPlural,
-    },
-    meridiemParse: /ночі|ранку|дня|вечора/,
-    isPM(arg0) {
-      return /^(дня|вечора)$/.test(arg0);
-    },
-    meridiem(arg0, arg1, arg2) {
-      let str = "\u043D\u043E\u0447\u0456";
-      if (arg0 >= 4) {
-        let str2 = "\u0440\u0430\u043D\u043A\u0443";
-        if (arg0 >= 12) {
-          let str3 = "\u0432\u0435\u0447\u043E\u0440\u0430";
-          if (arg0 < 17) {
-            str3 = "\u0434\u043D\u044F";
-          }
-          str2 = str3;
-        }
-        str = str2;
-      }
-      return str;
-    },
-    dayOfMonthOrdinalParse: /\d{1,2}-(й|го)/,
-    ordinal(arg0, arg1) {
-      if ("M" !== arg1) {
-        if ("d" !== arg1) {
-          if ("DDD" !== arg1) {
-            if ("w" !== arg1) {
-              if ("W" !== arg1) {
-                if ("D" === arg1) {
-                  return arg0 + "-\u0433\u043E";
-                } else {
-                  return arg0;
-                }
-              }
+  if (null === prop) {
+    let prop1;
+    if (null != firstWeekContainsDate) {
+      const locale = firstWeekContainsDate.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              prop1 = options.firstWeekContainsDate;
             }
           }
         }
       }
-      return arg0 + "-\u0439";
-    },
-    week: { dow: 1, doy: 7 },
-  };
-  c0 = "[\u0421\u044C\u043E\u0433\u043E\u0434\u043D\u0456 ";
-  closure_129_0 = "[\u0417\u0430\u0432\u0442\u0440\u0430 ";
-  closure_130_0 = "[\u0412\u0447\u043E\u0440\u0430 ";
-  closure_131_0 = "[\u0423] dddd [";
-  return moment.defineLocale("uk", obj);
+    }
+    prop = prop1;
+  }
+  if (null === prop) {
+    prop = defaultOptions.firstWeekContainsDate;
+  }
+  if (null === prop) {
+    const locale2 = defaultOptions.locale;
+    let prop2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            prop2 = options2.firstWeekContainsDate;
+          }
+        }
+      }
+    }
+    prop = prop2;
+  }
+  let num = 1;
+  if (null !== prop) {
+    num = 1;
+    if (undefined !== prop) {
+      num = prop;
+    }
+  }
+  const defaultResult2 = _typeof.default(arg0);
+  const defaultResult1 = module_4526.default(num);
+  const defaultResult3 = module_4526.default(arg1);
+  const date = new Date(0);
+  date.setFullYear(defaultResult3, 0, defaultResult1);
+  date.setHours(0, 0, 0, 0);
+  const defaultResult5 = startOfWeekYear.default(date, firstWeekContainsDate);
+  defaultResult5.setDate(defaultResult5.getDate() + differenceInCalendarDays.default(defaultResult2, startOfWeekYear.default(defaultResult2, firstWeekContainsDate)));
+  return defaultResult5;
 };
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      fn(_mod2166);
-    }
-  }
-}
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], fn);
-  }
-}
-fn(this.moment);
+export default exports.default;

@@ -1,7 +1,13 @@
 // _runtime/metro/07422__.js
-import _mod7424 from "07424__.js";
+import registerAsset from "01119__.js";
 
-const require = globalThis.__r;
-
-export const useClipboard = require("07423__.js").useClipboard;
-export default _mod7424.Clipboard;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/consoles",
+  width: 254,
+  height: 127,
+  scales: [2, 3],
+  hash: "4d6a15fbe9eb4d6c66e3d9151f9a0183",
+  name: "link_failure",
+  type: "png",
+});

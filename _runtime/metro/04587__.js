@@ -1,36 +1,23 @@
 // _runtime/metro/04587__.js
-import module_4426_mod from "04426__.js";
-import module_4577_mod from "04577__.js";
-import requiredArgs_mod from "../04423_requiredArgs.js";
+let closure_0 = { lessThanXSeconds: { one: "meno di un secondo", other: "meno di {{count}} secondi" }, xSeconds: { one: "un secondo", other: "{{count}} secondi" }, halfAMinute: "alcuni secondi", lessThanXMinutes: { one: "meno di un minuto", other: "meno di {{count}} minuti" }, xMinutes: { one: "un minuto", other: "{{count}} minuti" }, aboutXHours: { one: "circa un'ora", other: "circa {{count}} ore" }, xHours: { one: "un'ora", other: "{{count}} ore" }, xDays: { one: "un giorno", other: "{{count}} giorni" }, aboutXWeeks: { one: "circa una settimana", other: "circa {{count}} settimane" }, xWeeks: { one: "una settimana", other: "{{count}} settimane" }, aboutXMonths: { one: "circa un mese", other: "circa {{count}} mesi" }, xMonths: { one: "un mese", other: "{{count}} mesi" }, aboutXYears: { one: "circa un anno", other: "circa {{count}} anni" }, xYears: { one: "un anno", other: "{{count}} anni" }, overXYears: { one: "pi\u00F9 di un anno", other: "pi\u00F9 di {{count}} anni" }, almostXYears: { one: "quasi un anno", other: "quasi {{count}} anni" } };
 
-let module_4426 = module_4426_mod;
-if (!module_4426) {
-  const obj = { default: module_4426 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4426;
-}
-module_4426 = tmp3;
-let module_4577 = module_4577_mod;
-if (!module_4577) {
-  const obj2 = { default: module_4577 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4577;
-}
-module_4577 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-let c3 = 60000;
-
-export default function addMinutes(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4577.default(interval, module_4426.default(arg1) * c3);
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp5 = tmp;
+    if (null != addSuffix) {
+      tmp5 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} fa`;
+        }
+        text = `tra ${tmp}`;
+      }
+    }
+    return tmp5;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    one = tmp.other.replace("{{count}}", arg1.toString());
+  }
 };
 export default exports.default;

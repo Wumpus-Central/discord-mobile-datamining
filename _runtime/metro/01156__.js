@@ -29,7 +29,6 @@ function isRichTextTag(arg0) {
   return "$" === arg0[0];
 }
 function bindFormatValuesWithBuilder(builder) {
-  let length;
   let sum;
   builder = builder.builder;
   ({ originalMessage: dependencyMap, nodes } = builder);
@@ -263,7 +262,6 @@ function bindFormatValuesWithBuilder(builder) {
   }
 }
 function bindFormatValues(Builder) {
-  let length;
   let sum;
   ({ nodes, keyPrefix } = Builder);
   ({ originalMessage, locales, dataFormatters, formatConfig, values, currentPluralValue } = Builder);

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "cc5db5ae696f6fff236bd5ec86149ea8",
-  name: "ClockWarningIcon",
+  httpServerLocation: "/assets/modules/conjure/chat/native/images",
+  width: 40,
+  height: 40,
+  scales: [1, 2, 3],
+  hash: "92675a57b5fd10ac5056ccc7a2fd5e34",
+  name: "conjure_agent_avatar",
   type: "png",
 });

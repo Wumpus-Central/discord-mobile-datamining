@@ -301,8 +301,8 @@ let closure_8 = async function _instrumentStream(arg0) {
                 responseModel: "",
                 responseTimestamp: 0,
                 promptTokens: "r",
-                completionTokens: "match",
-                totalTokens: "flexDirection",
+                completionTokens: "paddingHorizontal",
+                totalTokens: "container",
                 chatCompletionToolCalls: {},
                 responsesApiToolCalls: [],
               };
@@ -1056,7 +1056,7 @@ let closure_8 = async function _instrumentStream(arg0) {
                   );
                   closure_146_0.setAttributes(obj70);
                 }
-                let length = closure_146_1;
+                length = closure_146_1;
                 if (closure_146_1) {
                   length = closure_146_2.responseTexts.length;
                 }

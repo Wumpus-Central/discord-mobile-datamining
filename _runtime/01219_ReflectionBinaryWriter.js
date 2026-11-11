@@ -194,7 +194,6 @@ let items = [
   {
     key: "packed",
     value: function packed(tag, arg1, no, arg3) {
-      let length;
       if (arg3.length) {
         const obj = ReflectionBinaryWriter(1206);
         const self = this;

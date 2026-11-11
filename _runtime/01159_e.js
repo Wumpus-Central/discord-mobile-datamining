@@ -130,7 +130,7 @@ let fn = (fn) => {
     return obj;
   };
   closure_3 = function n(arg0, arg1, arg2, arg3) {
-    const length = arguments.length;
+    length = arguments.length;
     let tmp = arg3;
     let tmp2 = arg1;
     if (length >= 3) {
@@ -1183,7 +1183,6 @@ let fn = (fn) => {
     }
   }
   function b() {
-    let length;
     items = [];
     let num = 0;
     let tmp = items;
@@ -1198,7 +1197,7 @@ let fn = (fn) => {
     return tmp;
   }
   function v() {
-    const length = arguments.length;
+    length = arguments.length;
     let num = 0;
     let num2 = 0;
     let num3 = 0;
@@ -1973,9 +1972,9 @@ if (typeof obj === "object") {
           }
         }
         closure_0 = global;
-        const f123121 = (arg0, arg1) => {
+        const f124368 = (arg0, arg1) => {
           let tmp2Result = arg1;
-          if (f123121) {
+          if (f124368) {
             tmp2Result = tmp2(arg0, arg1);
           }
           closure_0[arg0] = tmp2Result;
@@ -1984,7 +1983,7 @@ if (typeof obj === "object") {
         // // eliminated: always false
         fn((arg0, arg1) => {
           let tmp2Result = arg1;
-          if (f123121) {
+          if (f124368) {
             tmp2Result = tmp2(arg0, arg1);
           }
           closure_0[arg0] = tmp2Result;
@@ -2009,7 +2008,7 @@ if (typeof obj === "object") {
       let closure_131_0 = obj;
       let closure_131_1 = (arg0, arg1) => {
         let tmp2Result = arg1;
-        if (f123121) {
+        if (f124368) {
           tmp2Result = tmp2(arg0, arg1);
         }
         closure_0[arg0] = tmp2Result;
@@ -2025,7 +2024,7 @@ if (typeof obj === "object") {
       }
       fn((arg0, arg1) => {
         let tmp2Result = arg1;
-        if (f123121) {
+        if (f124368) {
           tmp2Result = tmp2(arg0, arg1);
         }
         closure_0[arg0] = tmp2Result;
@@ -2044,7 +2043,7 @@ if (typeof obj === "object") {
   }
   fn((arg0, arg1) => {
     let tmp2Result = arg1;
-    if (f123121) {
+    if (f124368) {
       tmp2Result = tmp2(arg0, arg1);
     }
     closure_0[arg0] = tmp2Result;

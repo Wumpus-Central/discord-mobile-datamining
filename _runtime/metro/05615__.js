@@ -1,3 +1,12 @@
 // _runtime/metro/05615__.js
+import RNGestureHandlerModuleDefault from "../05564_RNGestureHandlerModule.js";
 
-export (arg0) => arg0
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export function getModuleId() {
+  if (moduleId == null) {
+    moduleId = RNGestureHandlerModuleDefault.getModuleId();
+  }
+  return moduleId;
+}

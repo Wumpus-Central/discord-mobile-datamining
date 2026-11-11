@@ -31,7 +31,6 @@ class BinaryWriter {
 const entry = {
   key: "finish",
   value: function finish() {
-    let length;
     let length2;
     const self = this;
     const chunks = this.chunks;

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
+  httpServerLocation: "/assets/images/native/main_tabs",
+  width: 192,
+  height: 144,
   scales: [1],
-  hash: "c9f51873ae719a6b4b8c6724362e999e",
-  name: "nl",
+  hash: "2bbd6220afd7d7de1fa25c481ae56a3d",
+  name: "ExampleSketchheadsActivity",
   type: "png",
 });

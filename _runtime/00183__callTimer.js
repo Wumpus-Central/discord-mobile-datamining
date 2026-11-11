@@ -72,7 +72,7 @@ let obj = {
     closure_0 = arg0;
     closure_1 = [...arguments].slice();
     closure_12 = tmp + 1;
-    let length = closure_8.pop();
+    length = closure_8.pop();
     if (undefined === length) {
       length = closure_7.length;
     }
@@ -92,7 +92,7 @@ let obj = {
     closure_0 = arg0;
     closure_1 = [...arguments].slice();
     closure_12 = tmp + 1;
-    let length = closure_8.pop();
+    length = closure_8.pop();
     if (undefined === length) {
       length = closure_7.length;
     }
@@ -112,7 +112,7 @@ let obj = {
     closure_0 = arg0;
     closure_1 = [...arguments].slice();
     closure_12 = tmp + 1;
-    let length = closure_8.pop();
+    length = closure_8.pop();
     if (undefined === length) {
       length = closure_7.length;
     }
@@ -124,7 +124,7 @@ let obj = {
   },
   requestAnimationFrame(arg0) {
     closure_12 = tmp + 1;
-    let length = closure_8.pop();
+    length = closure_8.pop();
     if (undefined === length) {
       length = closure_7.length;
     }
@@ -158,7 +158,7 @@ let obj = {
       };
     }
     closure_12 = tmp7 + 1;
-    let length = closure_8.pop();
+    length = closure_8.pop();
     if (undefined === length) {
       length = closure_7.length;
     }
@@ -297,7 +297,6 @@ let obj = {
     }
   },
   callTimers(arg0) {
-    let length;
     _mod38(0 !== arg0.length, "Cannot call `callTimers` with an empty list of IDs.");
     closure_13.length = 0;
     let num = 0;
@@ -328,7 +327,6 @@ let obj = {
     }
   },
   callIdleCallbacks(_performance) {
-    let length;
     if (c4 - (Date.now() - _performance) >= 1) {
       closure_13.length = 0;
       if (closure_10.length > 0) {
@@ -356,7 +354,6 @@ let obj = {
   },
   callReactNativeMicrotasks() {
     let flag2;
-    let length;
     closure_13.length = 0;
     let flag = false;
     if (0 !== closure_9.length) {

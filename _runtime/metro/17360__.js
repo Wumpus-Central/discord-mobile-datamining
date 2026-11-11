@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hexagon_campaign/images",
-  width: 32,
-  height: 32,
-  scales: [2, 3, 4],
-  hash: "4135aa1407cb9dccb86248e1e9e37285",
-  name: "hexagon_campaign_legal_logo",
+  httpServerLocation: "/assets/images/consoles",
+  width: 84,
+  height: 46,
+  scales: [2, 3],
+  hash: "1dc3d638940bcdf9b267c8229f603041",
+  name: "xbox_upsell",
   type: "png",
 });

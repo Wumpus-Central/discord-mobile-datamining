@@ -124,14 +124,14 @@ export function makeMultiplexedTransport(arg0, arg1) {
           envelope,
           getEvent(arg0) {
             items = arg0;
-            let length;
+            length = undefined;
             if (arg0 != null) {
               length = items.length;
             }
             if (!length) {
               items = ["event"];
             }
-            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F80682 */ function() { ... });
+            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F81467 */ function() { ... });
             return dependencyMap2;
           }
         }).map((dsn) => {

@@ -1,6 +1,42 @@
 // _runtime/metro/05624__.js
-import _mod17 from "00017__.js";
+import reanimatedWrapper from "../05579_reanimatedWrapper.js";
+import resolveInternalConfigProps from "../05606_resolveInternalConfigProps.js";
+import _mod5625 from "05625__.js";
+import useReanimatedEventHandler from "../05627_useReanimatedEventHandler.js";
 
-const StyleSheet = _mod17.StyleSheet;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });
+export function useGestureCallbacks(arg0, disableReanimated) {
+  const memoizedGestureCallbacks = resolveInternalConfigProps.useMemoizedGestureCallbacks(disableReanimated);
+  let reanimatedEventHandler;
+  if (!disableReanimated.disableReanimated) {
+    let tmp6 = memoizedGestureCallbacks;
+    if (true === disableReanimated.runOnJS) {
+      tmp6 = closure_2;
+    }
+    const Reanimated = reanimatedWrapper.Reanimated;
+    let handler;
+    if (Reanimated != null) {
+      handler = Reanimated.useHandler(tmp6);
+    }
+    const tmpResult = useReanimatedEventHandler;
+    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(
+      arg0,
+      tmp6,
+      handler,
+      disableReanimated.changeEventCalculator,
+      disableReanimated.fillInDefaultValues,
+    );
+  }
+  let animatedEventHandler;
+  if (disableReanimated.dispatchesAnimatedEvents) {
+    animatedEventHandler = disableReanimated.onUpdate;
+  }
+  return {
+    jsEventHandler: _mod5625.useGestureEventHandler(arg0, memoizedGestureCallbacks, disableReanimated),
+    reanimatedEventHandler,
+    animatedEventHandler,
+  };
+}

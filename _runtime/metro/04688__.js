@@ -1,24 +1,24 @@
 // _runtime/metro/04688__.js
-import _typeof_mod from "04422__.js";
-import module_4689_mod from "04689__.js";
-import requiredArgs_mod from "../04423_requiredArgs.js";
+import module_4526_mod from "04526__.js";
+import module_4671_mod from "04671__.js";
+import requiredArgs_mod from "../04523_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4526 = module_4526_mod;
+if (!module_4526) {
+  const obj = { default: module_4526 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4526;
 }
-_typeof = tmp3;
-let module_4689 = module_4689_mod;
-if (!module_4689) {
-  const obj2 = { default: module_4689 };
+module_4526 = tmp3;
+let module_4671 = module_4671_mod;
+if (!module_4671) {
+  const obj2 = { default: module_4671 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4689;
+  tmp5 = module_4671;
 }
-module_4689 = tmp5;
+module_4671 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -28,18 +28,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function getDaysInYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
-  } else {
-    let num = 365;
-    if (module_4689.default(defaultResult1)) {
-      num = 366;
-    }
-    return num;
-  }
-  date = new Date(defaultResult1);
+export default function addQuarters(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4671.default(arg0, 3 * module_4526.default(arg1));
 };
 export default exports.default;

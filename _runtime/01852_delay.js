@@ -15,8 +15,8 @@ let c0;
 let c1;
 let c2;
 [tmp2, tmp3, tmp4, tmp5] = items;
-function pnpm_delayTs2(c16, tmp5Result15, Never) {
-  items = [c1, tmp5Result15, c16, c2, Never];
+function pnpm_delayTs2(c16, tmp16Result2, Never) {
+  items = [c1, tmp16Result2, c16, c2, Never];
   [tmp, tmp2, tmp3, tmp4, tmp5] = items;
   function pnpm_delayTs1() {
     let tmpResult = closure_0;
@@ -76,7 +76,7 @@ function pnpm_delayTs2(c16, tmp5Result15, Never) {
   pnpm_delayTs1.__closure = items1;
   pnpm_delayTs1.__workletHash = 15588234640402;
   pnpm_delayTs1.__initData = tmp;
-  return _undefined(tmp5Result15, pnpm_delayTs1);
+  return _undefined(tmp16Result2, pnpm_delayTs1);
 }
 let items1 = [tmp3, tmp4, tmp5];
 pnpm_delayTs2.__closure = items1;

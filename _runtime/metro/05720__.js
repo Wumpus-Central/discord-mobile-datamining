@@ -1,29 +1,16 @@
 // _runtime/metro/05720__.js
-import pointsDiffer_mod from "../00078_pointsDiffer.js";
-import processColorElement_mod from "../00080_processColorElement.js";
-import 00065__ from "00065__.js";
+import _mod17 from "00017__.js";
+import value2 from "../05508_value2.js";
 
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-const obj = { startPoint: { diff: pointsDiffer }, endPoint: null, colors: null, locations: true, useAngle: true, angleCenter: null, angle: true, borderRadii: true };
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-obj.endPoint = { diff: pointsDiffer };
-let processColorElement = processColorElement_mod;
-if ("default" in processColorElement) {
-  processColorElement = processColorElement.default;
-}
-obj.colors = { process: processColorElement };
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-const obj2 = { uiViewClassName: "RNLinearGradient", validAttributes: obj };
-obj.angleCenter = { diff: pointsDiffer };
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
+const size = {
+  alignSelf: "center",
+  width: (7.5 * value2.WINDOW_WIDTH) / 100,
+  height: 4,
+  borderRadius: 4,
+  backgroundColor: "rgba(0, 0, 0, 0.75)",
+};
+obj.indicator = size;
 
-export default module_65.get("RNLinearGradient", () => obj2);
-export const __INTERNAL_VIEW_CONFIG = obj2;
+export const styles = StyleSheet.create(obj);

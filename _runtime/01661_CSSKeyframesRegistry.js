@@ -82,7 +82,7 @@ let items = [
           const result1 = cssTextToNames_2.set(name.cssText, set2);
         }
         const cssTextToNames_3 = self.cssTextToNames_;
-        value2 = cssTextToNames_3.get(name.cssText);
+        const value2 = cssTextToNames_3.get(name.cssText);
         if (value2 != null) {
           value2.add(name.name);
         }
@@ -111,7 +111,7 @@ let items = [
           const nameToKeyframes_2 = self.nameToKeyframes_;
           nameToKeyframes_2.delete(arg0);
           const cssTextToNames_ = self.cssTextToNames_;
-          value2 = cssTextToNames_.get(value.keyframesRule.cssText);
+          const value2 = cssTextToNames_.get(value.keyframesRule.cssText);
           if (value2) {
             value2.delete(arg0);
             if (0 === value2.size) {

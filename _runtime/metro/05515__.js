@@ -1,23 +1,15 @@
 // _runtime/metro/05515__.js
-import reanimatedWrapper from "../05466_reanimatedWrapper.js";
+import _mod19 from "00019__.js";
+import _mod5516 from "05516__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const useContext = _mod19.useContext;
 
-export function createLastUpdateEventMap() {
-  const Worklets = reanimatedWrapper.Worklets;
-  let createShareable;
-  if (Worklets != null) {
-    createShareable = Worklets.createShareable;
-  }
-  if (undefined !== createShareable) {
-    if (undefined !== reanimatedWrapper.Worklets.UIRuntimeId) {
-      if (undefined !== reanimatedWrapper.Reanimated) {
-        const Worklets2 = reanimatedWrapper.Worklets;
-        const _Map = Map;
-        const map = new Map();
-        return Worklets2.createShareable(reanimatedWrapper.Worklets.UIRuntimeId, map);
-      }
+export function useBottomSheetInternal(arg0) {
+  const tmp = useContext(_mod5516.BottomSheetInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'useBottomSheetInternal' cannot be used out of the BottomSheet!";
     }
   }
+  return tmp;
 }

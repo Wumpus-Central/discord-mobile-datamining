@@ -1,13 +1,55 @@
 // _runtime/metro/09691__.js
-import registerAsset from "01119__.js";
+import colorPropType from "../09676_colorPropType.js";
+import _mod9678 from "09678__.js";
+import _mod9692 from "09692__.js";
+import flattenStyle from "09681__.js";
+import emptyFunction_mod from "05294__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "856ae0fb80fb3c5e7cc40888f4bebb2b",
-  name: "YoutubeNeutralIcon",
-  type: "png",
-});
+const obj = {
+  ellipsizeMode: null,
+  numberOfLines: null,
+  textBreakStrategy: null,
+  onLayout: null,
+  onPress: null,
+  onLongPress: null,
+  pressRetentionOffset: null,
+  selectable: null,
+  selectionColor: null,
+  suppressHighlighting: null,
+  style: null,
+  testID: null,
+  nativeID: null,
+  allowFontScaling: null,
+  maxFontSizeMultiplier: null,
+  accessible: null,
+  adjustsFontSizeToFit: null,
+  minimumFontScale: null,
+  disabled: null,
+  dataDetectorType: null,
+};
+const module_9692 = flattenStyle(_mod9692);
+let emptyFunction = emptyFunction_mod;
+obj.ellipsizeMode = emptyFunction.oneOf(["head", "middle", "tail", "clip"]);
+obj.numberOfLines = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
+obj.onLayout = emptyFunction.func;
+obj.onPress = emptyFunction.func;
+obj.onLongPress = emptyFunction.func;
+obj.pressRetentionOffset = _mod9678;
+obj.selectable = emptyFunction.bool;
+obj.selectionColor = colorPropType;
+obj.suppressHighlighting = emptyFunction.bool;
+obj.style = module_9692;
+obj.testID = emptyFunction.string;
+obj.nativeID = emptyFunction.string;
+obj.allowFontScaling = emptyFunction.bool;
+obj.maxFontSizeMultiplier = emptyFunction.number;
+obj.accessible = emptyFunction.bool;
+obj.adjustsFontSizeToFit = emptyFunction.bool;
+obj.minimumFontScale = emptyFunction.number;
+obj.disabled = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.dataDetectorType = emptyFunction.oneOf(["phoneNumber", "link", "email", "none", "all"]);
+
+export default obj;

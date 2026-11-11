@@ -1,11 +1,11 @@
 // _runtime/metro/16520__.js
-import _mod16493 from "16493__.js";
+import registerAsset from "01119__.js";
 
-export default (arg0) => {
-  if (_mod16493(arg0)) {
-    return arg0;
-  } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/intl/messages",
+  scales: [1],
+  hash: "b076f35cb059256a96b9ed5a60c93c6b",
+  name: "international.compiled.messages",
+  type: "jsona",
+});

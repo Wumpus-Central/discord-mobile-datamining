@@ -1,47 +1,61 @@
 // _runtime/metro/05583__.js
-import noop from "00019__.js";
 
-const require = globalThis.__r;
-
-({ useEffect: c2, useRef: c3 } = noop);
-
-export (INITIAL_CONTAINER_HEIGHT) => {
-  const tmp = closure_3(null);
-  const tmp2 = closure_3(null);
-  _require = tmp2;
-  let tmp3 = INITIAL_CONTAINER_HEIGHT;
-  if (INITIAL_CONTAINER_HEIGHT) {
-    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
+export function assignRef(fn, current) {
+  if (typeof fn === "function") {
+    const tmp = fn(current);
+    let tmp2;
+    if (typeof tmp === "function") {
+      tmp2 = tmp;
+    }
+    return tmp2;
+  } else if (fn) {
+    fn.current = current;
   }
-  if (tmp3) {
-    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
+}
+export function isHostInstance(preferHostInstanceResult) {
+  let prop;
+  if (preferHostInstanceResult != null) {
+    prop = preferHostInstanceResult.__internalInstanceHandle;
   }
-  if (!tmp3) {
-    if (null === tmp2.current) {
-      tmp.current = INITIAL_CONTAINER_HEIGHT;
-      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
-        const obj2 = {};
-        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
-        let mutable = require("01652__.js").makeMutable(obj2);
-        let obj = require("01652__.js");
-      } else {
-        mutable = require("01652__.js").makeMutable(INITIAL_CONTAINER_HEIGHT);
-        const obj3 = require("01652__.js");
+  return undefined !== prop;
+}
+export function preferHostInstance(__internalInstanceHandle) {
+  if (null != __internalInstanceHandle) {
+    let prop;
+    if (__internalInstanceHandle != null) {
+      prop = __internalInstanceHandle.__internalInstanceHandle;
+    }
+    if (undefined === prop) {
+      const getNativeScrollRef = __internalInstanceHandle.getNativeScrollRef;
+      let nativeScrollRef;
+      if (getNativeScrollRef != null) {
+        nativeScrollRef = getNativeScrollRef();
       }
-      tmp2.current = mutable;
-    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
-      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+      let prop1;
+      if (nativeScrollRef != null) {
+        prop1 = nativeScrollRef.__internalInstanceHandle;
+      }
+      let tmp4 = __internalInstanceHandle;
+      if (undefined !== prop1) {
+        tmp4 = nativeScrollRef;
+      }
+      return tmp4;
     }
   }
-  closure_2(() => () => {
-    if (ref.current) {
-      ref(dependencyMap[1]).cancelAnimation(tmp.current);
-      const obj = ref(dependencyMap[1]);
-    }
-  }, []);
-  let current = tmp2.current;
-  if (current == null) {
-    current = INITIAL_CONTAINER_HEIGHT;
+  return __internalInstanceHandle;
+}
+export function resolveHostInstance(viewRef) {
+  let getHostInstance;
+  if (viewRef != null) {
+    getHostInstance = viewRef.getHostInstance;
   }
-  return current;
+  let tmp2 = viewRef;
+  if (typeof getHostInstance === "function") {
+    let hostInstance = viewRef.getHostInstance();
+    if (hostInstance == null) {
+      hostInstance = viewRef;
+    }
+    tmp2 = hostInstance;
+  }
+  return tmp2;
 }

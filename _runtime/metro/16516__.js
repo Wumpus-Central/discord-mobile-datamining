@@ -1,11 +1,11 @@
 // _runtime/metro/16516__.js
-import _mod16517 from "16517__.js";
+import registerAsset from "01119__.js";
 
-export default (arg0) => {
-  const tmp = _mod16517(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
-  }
-  return num;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/intl/messages",
+  scales: [1],
+  hash: "56049e6a573d48ca62b67583f3aa20ab",
+  name: "llm-pilot.compiled.messages",
+  type: "jsona",
+});

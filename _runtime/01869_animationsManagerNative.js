@@ -125,7 +125,7 @@ function createLayoutAnimationManager() {
         animations = obj2;
       }
       const result = arg1.set(arg0, animations);
-      value2 = map1.get(arg0);
+      let value2 = map1.get(arg0);
       closure_3 = value2;
       if (undefined === value2) {
         const tmp13 = map(tmp.initialValues);

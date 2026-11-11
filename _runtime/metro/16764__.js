@@ -1,94 +1,67 @@
 // _runtime/metro/16764__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import ReanimatedNativeStackScreenDefault from "../16765_ReanimatedNativeStackScreen.js";
-import ReanimatedScreenDefault from "../16768_ReanimatedScreen.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
 
-const ReanimatedScreenWrapper = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class ReanimatedScreenWrapper {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, ReanimatedScreenWrapper);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ReanimatedScreenWrapper);
-    tmp3 = closure_4;
-    if (metroImportDefault()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.ref = null;
-    tmp3Result.setRef = (ref) => {
-      props.ref = ref;
-      props = props.props;
-      const onComponentRef = props.onComponentRef;
-      if (onComponentRef != null) {
-        onComponentRef(ref);
+function getDevMenu() {}
+
+export default () => () => ({
+  onCommand(type) {
+    if ("devtools.open" === type.type) {
+      if ("devtools.open" === type.type) {
+        if (typeof closure_1_1 === "function") {
+          const obj = {
+            reload() {
+              console.warn("DevMenu." + "reload" + "() not available in this environment");
+            },
+            show() {
+              console.warn("DevMenu." + "show" + "() not available in this environment");
+            },
+            getConstants() {
+              return {};
+            },
+            debugRemotely() {
+              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
+            },
+            setHotLoadingEnabled() {
+              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
+            },
+            setProfilingEnabled() {
+              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
+            },
+          };
+          const OS = Platform.Platform.OS;
+          obj.show();
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
       }
-    };
-    return tmp3Result;
-  }
-}
-_inherits(ReanimatedScreenWrapper, noop.Component);
-const entry = {
-  key: "setNativeProps",
-  value: function setNativeProps(arg0) {
-    if (this.ref != null) {
-      ref.setNativeProps(arg0);
+      if ("devtools.reload" === type.type) {
+        if (typeof closure_1_1 === "function") {
+          const obj2 = {
+            reload() {
+              console.warn("DevMenu." + "reload" + "() not available in this environment");
+            },
+            show() {
+              console.warn("DevMenu." + "show" + "() not available in this environment");
+            },
+            getConstants() {
+              return {};
+            },
+            debugRemotely() {
+              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
+            },
+            setHotLoadingEnabled() {
+              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
+            },
+            setProfilingEnabled() {
+              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
+            },
+          };
+          const OS2 = Platform.Platform.OS;
+          obj2.reload();
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      }
     }
   },
-};
-let items = [
-  entry,
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      if (this.props.isNativeStack) {
-        let tmpResult = ReanimatedNativeStackScreenDefault;
-      } else {
-        tmpResult = ReanimatedScreenDefault;
-      }
-      const obj = {};
-      const merged = Object.assign(self.props);
-      obj.ref = self.setRef;
-      return <tmpResult />;
-    },
-  },
-];
-const value = _createClass(ReanimatedScreenWrapper, items);
-
-export default function ReanimatedScreenProvider(children) {
-  return jsx(ReanimatedScreenWrapper(6117).ScreenContext.Provider, { value, children: children.children });
-}
+});

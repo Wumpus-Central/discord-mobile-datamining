@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
-  width: 88,
-  height: 80,
-  scales: [2, 3],
-  hash: "b14cf67ed38d1ab1d1a28d6633250b87",
-  name: "safety_check_light",
+  httpServerLocation: "/assets/images/native/verification",
+  width: 180,
+  height: 160,
+  scales: [1],
+  hash: "39e83a7f9fd6f4ad0c8041d592ca008c",
+  name: "img_verify_phone_dark_theme",
   type: "png",
 });

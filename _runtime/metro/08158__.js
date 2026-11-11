@@ -1,7 +1,31 @@
 // _runtime/metro/08158__.js
-import 00065__ from "00065__.js";
+import get_ActivityIndicator from "00017__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeOffset", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, dx: true, dy: true } };
+const NativeModules = get_ActivityIndicator.NativeModules;
+const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(undefined);
+class WebViewProxy {
+  constructor(arg0) {
+    this.webViewKey = global;
+    return;
+  }
+  injectJavaScript(arg0) {
+    RNCWebView = NativeModules.RNCWebView;
+    return RNCWebView.injectJavaScriptWithWebViewKey(this.webViewKey, global);
+  }
+  addOnMessageListener(arg0) {
+    closure_0 = global;
+    self = this;
+    return closure_1.addListener("ReactNativeWebViewOnMessageWithWebViewKey", (webViewKey) => {
+      if (webViewKey.webViewKey === self.webViewKey) {
+        closure_0(webViewKey);
+      }
+    });
+  }
+  releaseWebView() {
+    RNCWebView = NativeModules.RNCWebView;
+    releaseWebViewResult = RNCWebView.releaseWebView(this.webViewKey);
+    return;
+  }
+}
 
-export default module_65.get("RNSVGFeOffset", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default WebViewProxy;

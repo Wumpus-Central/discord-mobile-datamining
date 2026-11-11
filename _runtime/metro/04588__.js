@@ -1,35 +1,12 @@
 // _runtime/metro/04588__.js
-import module_4426_mod from "04426__.js";
-import module_4571_mod from "04571__.js";
-import requiredArgs_mod from "../04423_requiredArgs.js";
+import 02191__ from "02191__.js";
 
-let module_4426 = module_4426_mod;
-if (!module_4426) {
-  const obj = { default: module_4426 };
-  let tmp3 = obj;
+if (!module_2191) {
+  const obj2 = { default: module_2191 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4426;
+  obj = module_2191;
 }
-module_4426 = tmp3;
-let module_4571 = module_4571_mod;
-if (!module_4571) {
-  const obj2 = { default: module_4571 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4571;
-}
-module_4571 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
 
-export default function addQuarters(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4571.default(arg0, 3 * module_4426.default(arg1));
-};
+export default { date: obj.default({ formats: { full: "EEEE d MMMM y", long: "d MMMM y", medium: "d MMM y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

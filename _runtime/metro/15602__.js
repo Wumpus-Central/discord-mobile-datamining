@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
-  scales: [2, 3],
-  hash: "337f717407aa04f32bdedf504de7310b",
-  name: "emoji",
+  httpServerLocation: "/assets/modules/conjure/presence/native/images",
+  width: 80,
+  height: 80,
+  scales: [1, 2, 3],
+  hash: "147a8fcf8f2b95ff7d26fea87214d381",
+  name: "conjure_activity_dark",
   type: "png",
 });

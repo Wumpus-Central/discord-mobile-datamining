@@ -81,7 +81,7 @@ export function registerComponentPropsBuilder(RNSVGCircle, SVG_CIRCLE_PROPERTIES
     separatelyInterpolatedNestedProperties: null,
   };
   const prop = obj.separatelyInterpolatedNestedProperties;
-  let length;
+  length = undefined;
   if (prop != null) {
     length = prop.length;
   }

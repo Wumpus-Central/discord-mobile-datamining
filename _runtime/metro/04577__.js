@@ -1,37 +1,40 @@
 // _runtime/metro/04577__.js
-import module_4426_mod from "04426__.js";
-import _typeof_mod from "04422__.js";
-import requiredArgs_mod from "../04423_requiredArgs.js";
+let closure_0 = {
+  lastWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      return "'pro\u0161lu nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'pro\u0161lu srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'pro\u0161lu subotu u' p";
+    } else {
+      return "'pro\u0161li' EEEE 'u' p";
+    }
+  },
+  yesterday: "'ju\u010Der u' p",
+  today: "'danas u' p",
+  tomorrow: "'sutra u' p",
+  nextWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      return "'idu\u0107u nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'idu\u0107u srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'idu\u0107u subotu u' p";
+    } else {
+      return "'pro\u0161li' EEEE 'u' p";
+    }
+  },
+  other: "P"
+};
 
-let module_4426 = module_4426_mod;
-if (!module_4426) {
-  const obj = { default: module_4426 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4426;
-}
-module_4426 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function addMilliseconds(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  return new Date(time + module_4426.default(arg1));
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_0[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
 };
 export default exports.default;

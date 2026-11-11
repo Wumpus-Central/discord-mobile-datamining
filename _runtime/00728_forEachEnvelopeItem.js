@@ -131,7 +131,7 @@ export function getSdkMetadataForEnvelopeHeader(sdk) {
 export function parseEnvelope(arr) {
   if (typeof arr !== "string") {
     function readJson() {
-      let length = closure_0.indexOf(10);
+      length = closure_0.indexOf(10);
       if (length < 0) {
         length = closure_0.length;
       }
@@ -152,7 +152,7 @@ export function parseEnvelope(arr) {
     const json = readJson();
     while (_require.length) {
       let json1 = readJson();
-      let length;
+      length = undefined;
       if (typeof json1.length === "number") {
         length = json1.length;
       }

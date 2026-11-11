@@ -1,31 +1,13 @@
 // _runtime/metro/10769__.js
-import Layouts5 from "../10770_Layouts.js";
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-
-export function useLayoutConfig(size) {
-  size = size.size;
-  const vertical = size.vertical;
-  items = [, , ,];
-  ({ mode: arr[0], modeConfig: arr[1] } = size);
-  items[2] = size;
-  items[3] = vertical;
-  return vertical.useMemo(() => {
-    const obj = { size, vertical };
-    const mode = size.mode;
-    if ("parallax" === mode) {
-      const Layouts4 = Layouts5.Layouts;
-      return Layouts4.parallax(obj, size.modeConfig);
-    } else if ("horizontal-stack" === mode) {
-      const Layouts3 = Layouts5.Layouts;
-      return Layouts3.horizontalStack(size.modeConfig);
-    } else if ("vertical-stack" === mode) {
-      const Layouts2 = Layouts5.Layouts;
-      return Layouts2.verticalStack(size.modeConfig);
-    } else {
-      const Layouts = Layouts5.Layouts;
-      return Layouts.normal(obj);
-    }
-  }, items);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/game_console/images",
+  width: 126,
+  height: 118,
+  scales: [2, 3],
+  hash: "02b1067b85b45dd047c8c944ed8c1d6e",
+  name: "devices_not_found",
+  type: "png",
+});

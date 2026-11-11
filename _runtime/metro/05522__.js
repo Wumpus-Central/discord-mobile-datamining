@@ -1,17 +1,15 @@
 // _runtime/metro/05522__.js
-import ComposedGestureName from "../05484_ComposedGestureName.js";
-import resolveInternalConfigProps from "../05493_resolveInternalConfigProps.js";
-import _mod5510 from "05510__.js";
+import _mod19 from "00019__.js";
+import BottomSheetContext from "../05518_BottomSheetContext.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+const useContext = _mod19.useContext;
 
-export function useNativeGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
+export function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
   }
-  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
-  return _mod5510.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
+  return tmp;
 }

@@ -152,7 +152,7 @@ class VirtualizedList {
         const onContentSizeChange = onRefresh.onContentSizeChange;
         const obj2 = {};
         const merged = Object.assign(hasOwnProperty(onRefresh, closure_4));
-        return collapsedCategories(value2, obj2);
+        return collapsedCategories(value, obj2);
       } else if (progressViewOffset) {
         let str = onRefresh.refreshing;
         if (str == null) {
@@ -173,13 +173,13 @@ class VirtualizedList {
           refreshControl = onRefresh.refreshControl;
         }
         obj3.refreshControl = refreshControl;
-        collapsedCategories(value, obj3);
+        collapsedCategories(gesture, obj3);
         const tmp13 = typeof onRefresh.refreshing === "boolean";
         const tmp8 = closure_1(38);
       } else {
         const obj = {};
         const merged2 = Object.assign(onRefresh);
-        return collapsedCategories(value, obj);
+        return collapsedCategories(gesture, obj);
       }
     };
     tmp3Result._onCellLayout = (layout, cellKey, cellIndex) => {
@@ -1102,7 +1102,7 @@ let items = [
             style: StyleSheet.compose(null, self.props.ListHeaderComponentStyle),
             children: tmp14,
           };
-          obj2.children = collapsedCategories(value2, obj3);
+          obj2.children = collapsedCategories(closure_1_16, obj3);
           items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj2, "$header"));
         }
         const props = self.props;
@@ -1155,7 +1155,7 @@ let items = [
                     cellMetricsApprox1.offset + cellMetricsApprox1.length - cellMetricsApprox.offset;
                   obj5.style = obj6;
                   let _HermesInternal = HermesInternal;
-                  let arr4 = items.push(collapsedCategories(value2, obj5, "$spacer-" + tmp36.first));
+                  let arr4 = items.push(collapsedCategories(closure_1_16, obj5, "$spacer-" + tmp36.first));
                 }
                 last = tmp36.last;
               }
@@ -1191,7 +1191,7 @@ let items = [
             style: StyleSheet.compose(null, self.props.ListFooterComponentStyle),
             children: tmp60,
           };
-          obj7.children = collapsedCategories(value2, obj8);
+          obj7.children = collapsedCategories(closure_1_16, obj8);
           items.push(collapsedCategories(VirtualizedList(322).VirtualizedListCellContextProvider, obj7, "$footer"));
         }
         const obj9 = {};
@@ -1265,7 +1265,7 @@ let items = [
           const obj29 = { style: debug.debug, children: null };
           const items3 = [tmp73Result, self._renderDebugOverlay()];
           obj29.children = items3;
-          tmp78 = expandedHeight(value2, obj29);
+          tmp78 = expandedHeight(closure_1_16, obj29);
         }
         return tmp78;
       } else {
@@ -1404,7 +1404,7 @@ let items = [
           ({ debugOverlayBase: arr[0], debugOverlayFrame: arr[1] } = closure_23);
           items[2] = { top: item.offset * result, height: item.length * result };
           obj.style = items;
-          return collapsedCategories(value2, obj, "f" + index);
+          return collapsedCategories(closure_2_16, obj, "f" + index);
         }),
         ,
       ];

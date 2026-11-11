@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/MatteDarkIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "5e2f785032385a803c0dd3d91ffe95da",
-  name: "MatteDarkIcon",
+  hash: "43b86c9ce273868bacca6aeb06ae392b",
+  name: "StarIcon",
   type: "png",
 });

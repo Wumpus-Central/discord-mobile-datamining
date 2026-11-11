@@ -1,7 +1,13 @@
 // _runtime/metro/08181__.js
-import 00065__ from "00065__.js";
+import registerAsset from "01119__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGLinearGradient", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, x1: true, y1: true, x2: true, y2: true, gradient: true, gradientUnits: true, gradientTransform: true } };
-
-export default module_65.get("RNSVGLinearGradient", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "48354bca4647923912a0392de88da6fa",
+  name: "IdCardIcon",
+  type: "png",
+});

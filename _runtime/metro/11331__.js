@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6fcffd29ade22a0f8e9e38ff473cdae7",
-  name: "ThemeDarkIcon",
+  hash: "efc7df36de437c3f1595567d5ebedccf",
+  name: "ic_sticker_24px",
   type: "png",
 });

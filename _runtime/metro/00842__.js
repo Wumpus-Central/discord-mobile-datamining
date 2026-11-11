@@ -32,9 +32,9 @@ export function createLangChainCallbackHandler() {
     lc_serializable: false,
     lc_namespace: ["langchain_core", "callbacks", "sentry"],
     lc_secrets: "r",
-    lc_attributes: "add",
-    lc_aliases: "useCallback",
-    lc_serializable_keys: "options",
+    lc_attributes: "paddingHorizontal",
+    lc_aliases: "ao",
+    lc_serializable_keys: "names",
     lc_id: ["langchain_core", "callbacks", "sentry"],
     lc_kwargs: {},
     name: false,
@@ -105,7 +105,7 @@ export function createLangChainCallbackHandler() {
           value.setAttributes(result);
         }
         if (typeof exitSpan === "function") {
-          value2 = map.get(arg1);
+          const value2 = map.get(arg1);
           let isRecordingResult1;
           if (value2 != null) {
             isRecordingResult1 = value2.isRecording();
@@ -129,7 +129,7 @@ export function createLangChainCallbackHandler() {
         obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "llm_error" };
         value.setStatus(obj2);
         if (typeof exitSpan === "function") {
-          value2 = map.get(arg1);
+          const value2 = map.get(arg1);
           let isRecordingResult1;
           if (value2 != null) {
             isRecordingResult1 = value2.isRecording();
@@ -186,7 +186,7 @@ export function createLangChainCallbackHandler() {
           value.setAttributes(obj2);
         }
         if (typeof exitSpan === "function") {
-          value2 = map.get(arg1);
+          const value2 = map.get(arg1);
           let isRecordingResult1;
           if (value2 != null) {
             isRecordingResult1 = value2.isRecording();
@@ -210,7 +210,7 @@ export function createLangChainCallbackHandler() {
         obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "chain_error" };
         value.setStatus(obj2);
         if (typeof exitSpan === "function") {
-          value2 = map.get(arg1);
+          const value2 = map.get(arg1);
           let isRecordingResult1;
           if (value2 != null) {
             isRecordingResult1 = value2.isRecording();
@@ -265,7 +265,7 @@ export function createLangChainCallbackHandler() {
           value.setAttributes(obj2);
         }
         if (typeof exitSpan === "function") {
-          value2 = map.get(arg1);
+          const value2 = map.get(arg1);
           let isRecordingResult1;
           if (value2 != null) {
             isRecordingResult1 = value2.isRecording();
@@ -289,7 +289,7 @@ export function createLangChainCallbackHandler() {
         obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "tool_error" };
         value.setStatus(obj2);
         if (typeof exitSpan === "function") {
-          value2 = map.get(arg1);
+          const value2 = map.get(arg1);
           let isRecordingResult1;
           if (value2 != null) {
             isRecordingResult1 = value2.isRecording();

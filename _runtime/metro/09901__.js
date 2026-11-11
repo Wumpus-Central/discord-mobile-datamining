@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/roadblocks/images",
-  width: 552,
-  height: 336,
-  scales: [1],
-  hash: "f59c66d6f542b08761b44d6d5de547c8",
-  name: "client_themes_upsell",
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 180,
+  height: 108,
+  scales: [2, 3],
+  hash: "ff9dd208f5a022cb1483def98770bc0b",
+  name: "img_what_you_lose_profile",
   type: "png",
 });

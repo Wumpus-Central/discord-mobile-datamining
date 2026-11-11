@@ -115,7 +115,7 @@ const items = [
         );
         throw typeError1;
       } else {
-        let length = arg1;
+        length = arg1;
         if (arg1 < 0) {
           length = data.length;
         }

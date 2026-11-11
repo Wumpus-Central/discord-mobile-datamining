@@ -1,13 +1,24 @@
 // _runtime/metro/12141__.js
-import registerAsset from "01119__.js";
+import _mod12142 from "12142__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "ac381080e803b7da0a8a3822cdf80aee",
-  name: "BlurBackgroundIcon",
-  type: "png",
-});
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+const mergeDefs = fn(_mod12142);
+
+export default function default_1() {
+  return mergeDefs.default();
+};
+export default exports.default;

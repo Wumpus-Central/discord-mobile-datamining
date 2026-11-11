@@ -1,33 +1,13 @@
 // _runtime/metro/09929__.js
-import nitroFetch from "../09930_nitroFetch.js";
-import NitroRequest from "../09933_NitroRequest.js";
-import normalizeName from "../09934_normalizeName.js";
-import decodeFormComponent from "../09938_decodeFormComponent.js";
-import NetworkInspectorImpl from "../09944_NetworkInspectorImpl.js";
-import shellEscape from "../09945_shellEscape.js";
-import hybridObject from "../09946_hybridObject.js";
-import _mod9953 from "09953__.js";
-import _mod9955 from "09955__.js";
-import _profileFetch from "../09956__profileFetch.js";
+import registerAsset from "01119__.js";
 
-export const fetch = nitroFetch.nitroFetch;
-export const nitroFetchOnWorklet = nitroFetch.nitroFetchOnWorklet;
-export const prefetch = nitroFetch.prefetch;
-export const prefetchOnAppStart = nitroFetch.prefetchOnAppStart;
-export const removeFromAutoPrefetch = nitroFetch.removeFromAutoPrefetch;
-export const removeAllFromAutoprefetch = nitroFetch.removeAllFromAutoprefetch;
-export const __readAutoPrefetchQueue = nitroFetch.__readAutoPrefetchQueue;
-export const Headers = normalizeName.NitroHeaders;
-export const Response = decodeFormComponent.NitroResponse;
-export const Request = NitroRequest.NitroRequest;
-export const XMLHttpRequest = _mod9953.NitroXMLHttpRequest;
-export const NitroFetch = hybridObject.NitroFetch;
-export const registerTokenRefresh = _mod9955.registerTokenRefresh;
-export const clearTokenRefresh = _mod9955.clearTokenRefresh;
-export const callRefreshEndpoint = _mod9955.callRefreshEndpoint;
-export const getStoredTokenRefreshConfig = _mod9955.getStoredTokenRefreshConfig;
-export const getNestedField = _mod9955.getNestedField;
-export const applyTemplate = _mod9955.applyTemplate;
-export const NetworkInspector = NetworkInspectorImpl.NetworkInspector;
-export const generateCurl = shellEscape.generateCurl;
-export const profileFetch = _profileFetch.profileFetch;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/premium/native/images/perks",
+  width: 300,
+  height: 175,
+  scales: [2, 3],
+  hash: "fe4737c3dd5ab570ff8c05c7dd4152ca",
+  name: "custom_icons",
+  type: "png",
+});

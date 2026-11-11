@@ -37,7 +37,7 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
           if (exception != null) {
             values = exception.values;
           }
-          let length;
+          length = undefined;
           if (values != null) {
             length = values.length;
           }

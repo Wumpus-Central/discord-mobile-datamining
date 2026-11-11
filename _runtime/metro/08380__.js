@@ -1,20 +1,13 @@
 // _runtime/metro/08380__.js
-import _mod8378 from "08378__.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const obj = {
-  1: "InteroperabilityIndex",
-  2: null,
-  4096: "RelatedImageFileFormat",
-  4097: "RelatedImageWidth",
-  4098: "RelatedImageHeight",
-};
-obj[2] = {
-  name: "InteroperabilityVersion",
-  description(value) {
-    return _mod8378.getStringValue(value);
-  },
-};
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 88,
+  height: 80,
+  scales: [2, 3],
+  hash: "cdacc9b330d74f767eb28d253e6930f0",
+  name: "stage-sparkles",
+  type: "png",
+});

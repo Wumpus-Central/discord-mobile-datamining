@@ -42,7 +42,6 @@ export default function memoizeOne(arg0, arg1) {
   items = [];
   c5 = false;
   return function memoized() {
-    let length;
     items = [];
     let num = 0;
     if (0 < arguments.length) {

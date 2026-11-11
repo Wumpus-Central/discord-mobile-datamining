@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 87,
+  height: 87,
   scales: [2, 3],
-  hash: "152a215f261a7892afe1032dd66353df",
-  name: "EmojiMoneyMouthFaceIcon",
+  hash: "d299e9311da17e9393089ebfa8d667b1",
+  name: "resubscribed_alert_header",
   type: "png",
 });

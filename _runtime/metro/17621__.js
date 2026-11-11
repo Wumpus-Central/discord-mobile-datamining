@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 160,
-  scales: [1],
-  hash: "539778d237b9fff9f8baff59e260a9fa",
-  name: "breaddog_1",
+  httpServerLocation: "/assets/modules/quests/native/images",
+  width: 375,
+  height: 58,
+  scales: [1, 2, 3],
+  hash: "e5d497e242dfffadb8102108e8df2b1a",
+  name: "clouds_background",
   type: "png",
 });

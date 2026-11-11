@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
+  httpServerLocation: "/assets/modules/media_viewer/native/images",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "010602d585dcc3b10c042380413a7a26",
-  name: "img_boost_error_mobile",
+  hash: "4d6296c901620eb3ce6d9e0093bbc96e",
+  name: "scrubber",
   type: "png",
 });

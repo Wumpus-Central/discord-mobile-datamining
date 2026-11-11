@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 33,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "981aef55993c2a089b56e9b3e929139e",
-  name: "ic_stage_channel_32px",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "cf48a47923589f64877ce012e03ba342",
+  name: "SettingsInfoIcon",
   type: "png",
 });

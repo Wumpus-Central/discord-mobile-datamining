@@ -11,7 +11,6 @@ function md5cmn(arg0, arg1, arg2, items, arg4, arg5) {
 }
 
 export default function md5(str) {
-  let length;
   let length2;
   let arr = str;
   if (typeof str === "string") {

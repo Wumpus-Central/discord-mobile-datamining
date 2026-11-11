@@ -45,7 +45,7 @@ function notifyIntersectionObservers() {
         while (obj2 !== undefined) {
           let tmp28 = _slicedToArray(tmp25, 2);
           let tmp29 = tmp28[1];
-          value2 = closure_1_7.get(tmp28[0]);
+          let value2 = closure_1_7.get(tmp28[0]);
           let tmp32 = value2;
           if (value2) {
             ({ observer, callback } = tmp32);

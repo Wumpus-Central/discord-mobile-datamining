@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/custom_app_icons/BlurpleTwilightIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "abe3edaf4092c8b2f7e822b6a96655d7",
-  name: "InboxIcon",
+  hash: "f385b38a044809a0b451d707fc7cd058",
+  name: "BlurpleTwilightIcon",
   type: "png",
 });

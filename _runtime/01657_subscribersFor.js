@@ -4,7 +4,7 @@ import _classCallCheck_mod from "metro/00041__classCallCheck.js";
 
 function subscribersFor(tag, subscribersByTag, retiringByTag) {
   value = subscribersByTag.get(tag);
-  value2 = retiringByTag.get(tag);
+  const value2 = retiringByTag.get(tag);
   let tmp3 = value;
   if (value2) {
     let set = value2;
@@ -39,7 +39,7 @@ const entry = {
       value.delete(arg1);
     }
     const subscribersByTag = this.subscribersByTag;
-    value2 = subscribersByTag.get(arg0);
+    const value2 = subscribersByTag.get(arg0);
     if (value2) {
       value2.add(arg1);
     } else {

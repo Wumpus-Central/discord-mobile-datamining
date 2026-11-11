@@ -309,7 +309,7 @@ function pnpm_backgroundImageTs14(arg0, arg1) {
   while (iter !== undefined) {
     ({ color, positions } = nextResult);
     if (null == color) {
-      let length;
+      length = undefined;
       if (positions != null) {
         length = positions.length;
       }

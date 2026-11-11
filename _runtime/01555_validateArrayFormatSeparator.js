@@ -359,7 +359,7 @@ export (arg0, merged) => {
           closure_0 = arg0;
           return (arg0, arg1) => {
             let encode = arg0;
-            let length = arg0.length;
+            length = arg0.length;
             let tmp = arg0;
             if (undefined !== arg1) {
               let items1 = closure_0;

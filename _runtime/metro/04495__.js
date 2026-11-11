@@ -1,7 +1,11 @@
 // _runtime/metro/04495__.js
-let closure_0 = { lastWeek: "\u5148\u9031\u306Eeeee\u306Ep", yesterday: "\u6628\u65E5\u306Ep", today: "\u4ECA\u65E5\u306Ep", tomorrow: "\u660E\u65E5\u306Ep", nextWeek: "\u7FCC\u9031\u306Eeeee\u306Ep", other: "P" };
+import registerAsset from "01119__.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/hexagon_campaign",
+  scales: [1],
+  hash: "43885154023dd96b16fe6091aeca270f",
+  name: "HexagonCampaign.compiled.messages",
+  type: "jsona",
+});

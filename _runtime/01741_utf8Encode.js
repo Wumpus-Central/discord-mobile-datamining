@@ -38,7 +38,6 @@ export function utf8Encode(data) {
   }
 }
 export function utf8Decode(__getBytesResult) {
-  let length;
   let sum2;
   let tmp9;
   items = [];

@@ -1,28 +1,13 @@
 // _runtime/metro/20297__.js
-import _mod625 from "00625__.js";
-import _mod20298 from "20298__.js";
-import stringToArray from "../20299_stringToArray.js";
-import castSlice from "../20302_castSlice.js";
+import registerAsset from "01119__.js";
 
-export default function createCaseFirst(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const str = _mod625(arg0);
-    let tmp3;
-    if (_mod20298(str)) {
-      tmp3 = stringToArray(str);
-    }
-    if (tmp3) {
-      let first = tmp3[0];
-    } else {
-      first = str.charAt(0);
-    }
-    if (tmp3) {
-      let joined = castSlice(tmp3, 1).join("");
-      const obj = castSlice(tmp3, 1);
-    } else {
-      joined = str.slice(1);
-    }
-    return first[closure_0]() + joined;
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
+  scales: [2, 3],
+  hash: "d505051fb36c757db4674831cf82260a",
+  name: "ic_image_upload",
+  type: "png",
+});

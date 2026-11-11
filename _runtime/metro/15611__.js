@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "7d09a15a2a5682035199dcfee2a26d08",
-  name: "badge",
+  hash: "5caaadc4fb41849c36d80e2425141f40",
+  name: "NewUserIcon",
   type: "png",
 });

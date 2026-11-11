@@ -1,15 +1,13 @@
 // _runtime/metro/05971__.js
-import identity from "../00549_identity.js";
-import _mod668 from "00668__.js";
-import constant from "../05972_constant.js";
+import registerAsset from "01119__.js";
 
-if (_mod668) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod668(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
-}
-
-export default fn;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "8d98f50d9f8bc155689b81a44d8b38ff",
+  name: "CopyIcon",
+  type: "png",
+});

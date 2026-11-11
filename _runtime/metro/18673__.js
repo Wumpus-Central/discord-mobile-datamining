@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 327,
-  height: 285,
-  scales: [2, 3],
-  hash: "21d9af173c2aa764d18866600cd204ee",
-  name: "onboarding_v2_upsell",
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  width: 64,
+  height: 64,
+  scales: [1],
+  hash: "99c427c3b3ea910fa2d3aeb72dd0f935",
+  name: "game-empty-state-controller",
   type: "png",
 });

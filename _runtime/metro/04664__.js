@@ -1,120 +1,42 @@
 // _runtime/metro/04664__.js
-import _mod4427 from "04427__.js";
-import _typeof_mod from "04422__.js";
-import requiredArgs_mod from "../04423_requiredArgs.js";
-import startOfUTCWeek_mod from "../04425_startOfUTCWeek.js";
-import module_4426_mod from "04426__.js";
+import 04665__ from "04665__.js";
+import 04666__ from "04666__.js";
+import 04667__ from "04667__.js";
+import date_mod from "04966__.js";
+import date_mod from "04967__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+if (!module_4665) {
+  const obj = { default: module_4665 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4665;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+if (!module_4666) {
+  const obj2 = { default: module_4666 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4666;
 }
-requiredArgs = tmp5;
-let startOfUTCWeek = startOfUTCWeek_mod;
-if (!startOfUTCWeek) {
-  const obj3 = { default: startOfUTCWeek };
+if (!module_4667) {
+  const obj3 = { default: module_4667 };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfUTCWeek;
+  tmp7 = module_4667;
 }
-startOfUTCWeek = tmp7;
-let module_4426 = module_4426_mod;
-if (!module_4426) {
-  const obj4 = { default: module_4426 };
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
   let tmp9 = obj4;
 } else {
-  tmp9 = module_4426;
+  tmp9 = date;
 }
-module_4426 = tmp9;
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function getUTCWeekYear(arg0, firstWeekContainsDate) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const uTCFullYear = defaultResult1.getUTCFullYear();
-  const defaultOptions = _mod4427.getDefaultOptions();
-  let prop;
-  if (null != firstWeekContainsDate) {
-    prop = firstWeekContainsDate.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    let prop1;
-    if (null != firstWeekContainsDate) {
-      const locale = firstWeekContainsDate.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              prop1 = options.firstWeekContainsDate;
-            }
-          }
-        }
-      }
-    }
-    prop = prop1;
-  }
-  if (null === prop) {
-    prop = defaultOptions.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    const locale2 = defaultOptions.locale;
-    let prop2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            prop2 = options2.firstWeekContainsDate;
-          }
-        }
-      }
-    }
-    prop = prop2;
-  }
-  let num = 1;
-  if (null !== prop) {
-    num = 1;
-    if (undefined !== prop) {
-      num = prop;
-    }
-  }
-  const defaultResult2 = module_4426.default(num);
-  if (defaultResult2 >= 1) {
-    if (defaultResult2 <= 7) {
-      const _Date = Date;
-      const date = new Date(0);
-      date.setUTCFullYear(uTCFullYear + 1, 0, defaultResult2);
-      date.setUTCHours(0, 0, 0, 0);
-      const _Date2 = Date;
-      const date1 = new Date(0);
-      date1.setUTCFullYear(uTCFullYear, 0, defaultResult2);
-      date1.setUTCHours(0, 0, 0, 0);
-      const defaultResult3 = startOfUTCWeek.default(date, firstWeekContainsDate);
-      const time = defaultResult1.getTime();
-      if (time >= defaultResult3.getTime()) {
-        let sum = uTCFullYear + 1;
-      } else {
-        const time1 = defaultResult1.getTime();
-        sum = uTCFullYear;
-        if (time1 < defaultResult4.getTime()) {
-          sum = uTCFullYear - 1;
-        }
-      }
-      return sum;
-    }
-  }
-  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  throw rangeError;
-};
+export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

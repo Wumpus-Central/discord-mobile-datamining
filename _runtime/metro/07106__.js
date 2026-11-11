@@ -1,24 +1,13 @@
 // _runtime/metro/07106__.js
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-const UIManager = fn(17).UIManager;
-const jsx = fn(21).jsx;
-try {
-  let closure_0 = fn(7107).default;
-  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
-  exports.MaskedView = function MaskedView(children) {
-    children = children.children;
-    const merged = Object.assign(children, Object.assign({ children: 0 }));
-    let tmp2 = children;
-    if (closure_2) {
-      tmp2 = children;
-      if (closure_0) {
-        const obj = {};
-        const merged1 = Object.assign(merged);
-        obj.children = children;
-        tmp2 = <tmp3 />;
-      }
-    }
-    return tmp2;
-  };
-} catch (err) {}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/platforms",
+  width: 24,
+  height: 24,
+  scales: [1],
+  hash: "21e0409db9760997b50efbaba2c83c02",
+  name: "img_account_sync_riot_black",
+  type: "svg",
+});

@@ -197,7 +197,7 @@ export function _INTERNAL_captureLog(attributes) {
         if (undefined === __sentry_template_values__) {
           __sentry_template_values__ = [];
         }
-        let length;
+        length = undefined;
         if (__sentry_template_values__ != null) {
           length = __sentry_template_values__.length;
         }

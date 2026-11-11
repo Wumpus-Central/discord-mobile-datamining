@@ -1,36 +1,42 @@
 // _runtime/metro/04604__.js
-import _typeof_mod from "04605__.js";
-import _typeof_mod from "04422__.js";
-import requiredArgs_mod from "../04423_requiredArgs.js";
+import translateSeconds from "../04605_translateSeconds.js";
+import 04606__ from "04606__.js";
+import 04607__ from "04607__.js";
+import date_mod from "04608__.js";
+import date_mod from "04609__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+if (!translateSeconds) {
+  const obj = { default: translateSeconds };
+  let tmp3 = obj;
+} else {
+  tmp3 = translateSeconds;
 }
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+if (!module_4606) {
+  const obj2 = { default: module_4606 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4606;
 }
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+if (!module_4607) {
+  const obj3 = { default: module_4607 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_4607;
 }
-requiredArgs = tmp7;
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function isValid(num) {
-  requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
-};
+export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

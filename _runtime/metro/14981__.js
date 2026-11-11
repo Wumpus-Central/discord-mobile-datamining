@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "1fa18e452308090b708bccf68d32d023",
-  name: "QuestsIcon",
+  httpServerLocation: "/assets/modules/hub/native/images",
+  width: 48,
+  height: 48,
+  scales: [1, 2, 3],
+  hash: "2d94b588ee7f10b120a153b69fc9d641",
+  name: "conversation",
   type: "png",
 });

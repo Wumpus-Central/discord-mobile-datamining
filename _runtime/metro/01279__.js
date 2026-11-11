@@ -1,7 +1,6 @@
 // _runtime/metro/01279__.js
 
 export default function sha1(str) {
-  let length;
   if (typeof str === "string") {
     const _unescape = unescape;
     const _encodeURIComponent = encodeURIComponent;

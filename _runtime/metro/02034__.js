@@ -19,7 +19,6 @@ SyntaxError.prototype = obj2;
 export default {
   SyntaxError,
   parse(str) {
-    let length;
     let sum;
     function peg$parsemessageFormatElement() {
       let num = 0;

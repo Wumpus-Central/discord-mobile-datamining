@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "31fe21f79423d8afd3dcadd61d04938b",
-  name: "ic_mail",
+  hash: "8f1bbba7f556b427515687c5a1498793",
+  name: "TrophyIcon",
   type: "png",
 });

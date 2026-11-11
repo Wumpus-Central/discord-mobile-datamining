@@ -1,35 +1,51 @@
 // _runtime/metro/04589__.js
-import module_4426_mod from "04426__.js";
-import module_4577_mod from "04577__.js";
-import requiredArgs_mod from "../04423_requiredArgs.js";
+import module_4524_mod from "04524__.js";
 
-let module_4426 = module_4426_mod;
-if (!module_4426) {
-  const obj = { default: module_4426 };
+let module_4524 = module_4524_mod;
+if (!module_4524) {
+  const obj = { default: module_4524 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4426;
+  tmp3 = module_4524;
 }
-module_4426 = tmp3;
-let module_4577 = module_4577_mod;
-if (!module_4577) {
-  const obj2 = { default: module_4577 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4577;
-}
-module_4577 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
+module_4524 = tmp3;
+const dependencyMap = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
+let closure_2 = {
+  lastWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (module_4524.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
+    } else {
+      str = "'domenica scorsa alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} scorso alle' p`;
+      }
+    }
+    return str;
+  },
+  yesterday: "'ieri alle' p",
+  today: "'oggi alle' p",
+  tomorrow: "'domani alle' p",
+  nextWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (module_4524.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
+    } else {
+      str = "'domenica prossima alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
+      }
+    }
+    return str;
+  },
+  other: "P"
+};
 
-export default function addSeconds(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4577.default(interval, 1000 * module_4426.default(arg1));
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_2[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
 };
 export default exports.default;

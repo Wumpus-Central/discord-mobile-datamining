@@ -140,7 +140,6 @@ export (str) => {
       closure_2 = 0;
       c3 = 0;
       return arr.map((arr) => {
-        let length;
         const formatted = str.toUpperCase();
         const substr = arr.slice(1);
         if (tmp2) {
@@ -243,7 +242,6 @@ export (str) => {
       closure_2 = 0;
       c3 = 0;
       return arr.map((arr) => {
-        let length;
         const formatted = str.toUpperCase();
         const substr = arr.slice(1);
         if (tmp2) {

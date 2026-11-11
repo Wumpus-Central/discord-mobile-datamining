@@ -1576,7 +1576,6 @@ const fn = function t(arg0) {
         }
       };
       obj.text = function () {
-        let length;
         const self = this;
         if (this._noBody) {
           if (!undefined) {

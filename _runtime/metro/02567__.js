@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_rooms",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==",
   scales: [1],
-  hash: "ba2c65822693400e26b3312ce422a7e4",
-  name: "GuildRooms.compiled.messages",
+  hash: "c0dadc6ad828d0ea2c8806eeb3a3f9bc",
+  name: "hr.messages.c0dadc6ad828d0ea2c8806eeb3a3f9bc.compiled.messages",
   type: "jsona",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/perks",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "e5fa0ec60fd37b3053a6ee815d7ed0e6",
-  name: "img_nitro_misc_perks_20px",
+  hash: "1e2c63f1ee26f8c3880e4c0e137e58ab",
+  name: "FandomNeutralIcon",
   type: "png",
 });

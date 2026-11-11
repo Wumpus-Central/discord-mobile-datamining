@@ -1,15 +1,23 @@
 // _runtime/metro/16531__.js
-import _mod16483 from "16483__.js";
-import _mod16490 from "16490__.js";
+const weakMap = new WeakMap();
 
-let closure_2 = _mod16483("keys");
-
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod16490(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
+export default function getInternalSlots(arg0, arg1) {
+  items = arg1;
+  if (undefined === arg1) {
+    items = [];
   }
-  return tmp2;
-};
+  value = weakMap.get(arg0);
+  if (!value) {
+    const _Object = Object;
+    const obj2 = Object.create(
+      null,
+      items.reduce((acc, item) => {
+        acc[item] = { enumerable: false, writable: true, configurable: true };
+        return acc;
+      }, {}),
+    );
+    const result = weakMap.set(arg0, obj2);
+    value = obj2;
+  }
+  return value;
+}

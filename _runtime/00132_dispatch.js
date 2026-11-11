@@ -118,7 +118,7 @@ function invoke(_null, type, arg2) {
     arr5[Symbol.iterator]();
   } else {
     const obj3 = getListenersForPhase(_null, tmp3);
-    value2 = undefined;
+    let value2;
     if (obj3 != null) {
       value2 = obj3.get(type.type);
     }
@@ -315,7 +315,7 @@ let items = [
           value = obj2.get(StringResult);
         }
         if (null != value) {
-          value2 = value.get(fn);
+          const value2 = value.get(fn);
           if (null != value2) {
             value2.removed = true;
             value.delete(fn);

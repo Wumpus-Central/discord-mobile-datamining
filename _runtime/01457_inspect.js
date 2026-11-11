@@ -422,7 +422,6 @@ function callbackifyOnRejected(reason, fn) {
   return fn(tmp);
 }
 let closure_1 = Object.getOwnPropertyDescriptors || (function getOwnPropertyDescriptors(_default) {
-  let length;
   const keys = Object.keys(_default);
   const obj = {};
   let num = 0;
@@ -537,7 +536,6 @@ if (typeof Symbol !== "undefined") {
 exports.promisify.custom = SymbolResult;
 
 export (str) => {
-  let length;
   let sum1;
   if (typeof str === "string") {
     closure_0 = 1;
@@ -791,7 +789,6 @@ export function promisify(fn) {
       }
     }
     value = function n() {
-      let length;
       const promise = new Promise((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
@@ -840,7 +837,6 @@ export function callbackify(fn) {
     throw typeError;
   } else {
     function callbackified() {
-      let length;
       items = [];
       let num = 0;
       if (0 < arguments.length) {

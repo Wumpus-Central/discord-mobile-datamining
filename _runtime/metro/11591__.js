@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
-  width: 99.66666666666667,
-  height: 66.66666666666667,
-  scales: [3],
-  hash: "0fef0a9d83d27dc691bf77b0bdae0680",
-  name: "asset_opal_badge_small",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 40,
+  height: 40,
+  scales: [2, 3],
+  hash: "d4d023fcd230d5f7401c0e512db37851",
+  name: "ic_checkmark",
   type: "png",
 });

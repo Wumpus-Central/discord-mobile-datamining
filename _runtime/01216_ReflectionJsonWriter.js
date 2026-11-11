@@ -58,7 +58,6 @@ let items = [
   {
     key: "field",
     value: function field(kind, obj, enumAsInteger) {
-      let length;
       let length2;
       const self = this;
       if ("map" == kind.kind) {

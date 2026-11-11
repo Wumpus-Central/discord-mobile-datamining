@@ -1,112 +1,130 @@
 // _runtime/metro/10559__.js
-import AbstractParserWithWordBoundaryChecking from "../10459_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+const dependencyMap = [];
+const dependencyMap2 = [];
+let closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
 
-const ZHHansDateParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export function byteLength(arr) {
+  if (0 < arr.length % 4) {
+    const _Error = Error;
+    const error = new Error("Invalid string. Length must be a multiple of 4");
+    throw error;
+  } else {
+    let index = arr.indexOf("=");
+    if (-1 === index) {
+      index = length;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class ZHHansDateParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ZHHansDateParser);
-    tmp2 = closure_4;
-    obj = closure_4(ZHHansDateParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+    items = [index];
+    let num2 = 0;
+    if (index !== length) {
+      num2 = 4 - (index % 4);
     }
-    return tmp3(self, constructResult);
+    items[1] = num2;
+    return (3 * (items[0] + items[1])) / 4 - items[1];
   }
 }
-_inherits(ZHHansDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const keys = Object.keys(ZHHansDateParser(10560).NUMBER);
-    const text = `(\\d{2,4}|[${obj.join("")}`;
-    const keys1 = Object.keys(ZHHansDateParser(10560).NUMBER);
-    const text1 = `${`(\\d{2,4}|[${obj.join("")}`}]{4}|[${obj2.join("")}`;
-    const keys2 = Object.keys(ZHHansDateParser(10560).NUMBER);
-    const text2 = `${tmp2}]{2})?(?:\\s*)(?:年)?(?:[\\s|,|，]*)(\\d{1,2}|[${obj3.join("")}`;
-    const keys3 = Object.keys(ZHHansDateParser(10560).NUMBER);
-    const regExp = new RegExp(
-      text2 + "]{1,3})(?:\\s*)(?:\u6708)(?:\\s*)(\\d{1,2}|[" + keys3.join("") + "]{1,3})?(?:\\s*)(?:\u65E5|\u53F7)?",
-    );
-    return regExp;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const parsed = parseInt(index[2]);
-      let zhStringToNumberResult = parsed;
-      if (isNaN(parsed)) {
-        zhStringToNumberResult = ZHHansDateParser(10560).zhStringToNumber(index[2]);
+export function toByteArray(arr) {
+  if (0 < arr.length % 4) {
+    const _Error = Error;
+    const error = new Error("Invalid string. Length must be a multiple of 4");
+    throw error;
+  } else {
+    let index = arr.indexOf("=");
+    if (-1 === index) {
+      index = length;
+    }
+    items = [index];
+    let num = 0;
+    if (index !== length) {
+      num = 4 - (index % 4);
+    }
+    items[1] = num;
+    [tmp2, tmp3] = items;
+    const tmp7 = new closure_2((3 * (tmp2 + tmp3)) / 4 - tmp3);
+    let diff = tmp2;
+    if (tmp3 > 0) {
+      diff = tmp2 - 4;
+    }
+    let num11 = 0;
+    let num12 = 0;
+    let num13 = 0;
+    let num14 = 0;
+    if (0 < diff) {
+      do {
+        let tmp11 = dependencyMap2[arr.charCodeAt(arr, num12)] << 18;
+        let tmp12 = dependencyMap2[arr.charCodeAt(arr, num12 + 1)] << 12;
+        let tmp13 = dependencyMap2[arr.charCodeAt(arr, num12 + 2)] << 6;
+        let tmp14 = tmp11 | tmp12 | tmp13 | dependencyMap2[arr.charCodeAt(arr, num12 + 3)];
+        let sum = num11 + 1;
+        tmp7[num11] = (tmp14 >> 16) & 255;
+        let sum1 = sum + 1;
+        tmp7[sum] = (tmp14 >> 8) & 255;
+        num11 = sum1 + 1;
+        tmp7[sum1] = 255 & tmp14;
+        num12 = num12 + 4;
+        num13 = num11;
+        num14 = num12;
+      } while (num12 < diff);
+    }
+    let sum2 = num13;
+    if (2 === tmp3) {
+      sum2 = num13 + 1;
+      tmp7[num13] =
+        255 &
+        ((dependencyMap2[arr.charCodeAt(arr, num14)] << 2) | (dependencyMap2[arr.charCodeAt(arr, num14 + 1)] >> 4));
+      const tmp19 = dependencyMap2[arr.charCodeAt(arr, num14)] << 2;
+    }
+    if (1 === tmp3) {
+      const tmp21 = dependencyMap2[arr.charCodeAt(arr, num14)] << 10;
+      const tmp23 =
+        tmp21 |
+        (dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4) |
+        (dependencyMap2[arr.charCodeAt(arr, num14 + 2)] >> 2);
+      tmp7[sum2] = (tmp23 >> 8) & 255;
+      tmp7[sum2 + 1] = 255 & tmp23;
+      const tmp22 = dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4;
+    }
+    return tmp7;
+  }
+}
+export function fromByteArray(uint8Array) {
+  let sum;
+  const result = length % 3;
+  items = [];
+  const diff = length - result;
+  let num = 0;
+  if (0 < diff) {
+    do {
+      sum = num + 16383;
+      let sum2 = num;
+      let tmp5 = sum;
+      if (diff < sum) {
+        tmp5 = diff;
       }
-      const start = parsingResult.start;
-      start.assign("month", zhStringToNumberResult);
-      if (index[3]) {
-        const _parseInt = parseInt;
-        const parsed1 = parseInt(index[3]);
-        const _isNaN = isNaN;
-        let zhStringToNumberResult1 = parsed1;
-        if (isNaN(parsed1)) {
-          zhStringToNumberResult1 = ZHHansDateParser(10560).zhStringToNumber(index[3]);
-        }
-        const start3 = parsingResult.start;
-        start3.assign("day", zhStringToNumberResult1);
-      } else {
-        const start2 = parsingResult.start;
-        const refDate = createParsingResult.refDate;
-        start2.imply("day", refDate.getDate());
+      let items1 = [];
+      if (sum2 < tmp5) {
+        do {
+          let sum1 =
+            ((uint8Array[sum2] << 16) & 16711680) +
+            ((uint8Array[sum2 + 1] << 8) & 65280) +
+            (255 & uint8Array[sum2 + 2]);
+          let arr = items1.push(
+            dependencyMap[(sum1 >> 18) & 63] +
+              dependencyMap[(sum1 >> 12) & 63] +
+              dependencyMap[(sum1 >> 6) & 63] +
+              dependencyMap[63 & sum1],
+          );
+          sum2 = sum2 + 3;
+        } while (sum2 < tmp5);
       }
-      if (index[1]) {
-        const _parseInt2 = parseInt;
-        let parsed2 = parseInt(index[1]);
-        const _isNaN2 = isNaN;
-        if (isNaN(parsed2)) {
-          parsed2 = ZHHansDateParser(10560).zhStringToYear(index[1]);
-        }
-        const start5 = parsingResult.start;
-        start5.assign("year", parsed2);
-      } else {
-        const start4 = parsingResult.start;
-        const refDate2 = createParsingResult.refDate;
-        start4.imply("year", refDate2.getFullYear());
-      }
-      return parsingResult;
-    },
-  },
-];
-
-export default _createClass(ZHHansDateParser, items);
+      let arr2 = items.push(items1.join(""));
+      num = sum;
+    } while (sum < diff);
+  }
+  if (1 === result) {
+    items.push(`${closure_0[uint8Array[length - 1] >> 2]}${closure_0[(uint8Array[length - 1] << 4) & 63]}==`);
+  } else if (2 === result) {
+    const sum3 = (uint8Array[length - 2] << 8) + uint8Array[length - 1];
+    items.push(`${closure_0[tmp13 >> 10]}${closure_0[(tmp13 >> 4) & 63]}${closure_0[(tmp13 << 2) & 63]}=`);
+  }
+  return items.join("");
+}

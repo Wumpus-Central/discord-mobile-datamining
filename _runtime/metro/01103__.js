@@ -52,7 +52,7 @@ export default function resolvePathname(str, arg1) {
       }
       flag = tmp5;
     }
-    let length = combined.length;
+    length = combined.length;
     let num7 = 0;
     let num8 = 0;
     while (0 <= length) {

@@ -930,7 +930,7 @@ items[25] = {
     integrations = integrations.integrations;
     let tmp2 = !integrations;
     if (!integrations) {
-      let length;
+      length = undefined;
       if (keys != null) {
         length = keys.length;
       }
@@ -1089,7 +1089,7 @@ items[27] = {
           if (self(sdkProcessingMetadata)) {
             if (beforeSendSpan) {
               const result = closure_0(combined[27]).convertTransactionEventToSpanJson(sdkProcessingMetadata);
-              let length;
+              length = undefined;
               if (ignoreSpans != null) {
                 length = ignoreSpans.length;
               }
@@ -1230,7 +1230,7 @@ items[27] = {
             if (self(sdkProcessingMetadata)) {
               if (beforeSendSpan) {
                 const result = closure_0(combined[27]).convertTransactionEventToSpanJson(sdkProcessingMetadata);
-                let length;
+                length = undefined;
                 if (ignoreSpans != null) {
                   length = ignoreSpans.length;
                 }

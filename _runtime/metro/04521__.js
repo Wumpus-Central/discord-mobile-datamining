@@ -1,69 +1,82 @@
 // _runtime/metro/04521__.js
-import 02196__ from "02196__.js";
-import 02197__ from "02197__.js";
+import _typeof_mod from "04522__.js";
+import module_4524_mod from "04524__.js";
 
-if (!module_2196) {
-  const obj2 = { default: module_2196 };
-  let obj = obj2;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  obj = module_2196;
+  tmp3 = _typeof;
 }
-if (!module_2197) {
-  const obj4 = { default: module_2197 };
-  let obj3 = obj4;
+_typeof = tmp3;
+let module_4524 = module_4524_mod;
+if (!module_4524) {
+  const obj2 = { default: module_4524 };
+  let tmp5 = obj2;
 } else {
-  obj3 = module_2197;
+  tmp5 = module_4524;
 }
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)\.?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
+module_4524 = tmp5;
+const dependencyMap = ["\u043D\u0435\u0434\u0435\u043B\u044F", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u044F\u0434\u0430", "\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A", "\u043F\u0435\u0442\u044A\u043A", "\u0441\u044A\u0431\u043E\u0442\u0430"];
+let closure_3 = {
+  lastWeek: function lastWeekFormatToken(arg0, arg1, arg2) {
+    const defaultResult = _typeof.default(arg0);
+    const uTCDay = defaultResult.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4524.default(defaultResult, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'във ${tmp2}`;
+        let text1 = `'във ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (6 !== uTCDay) {
+            let text2 = `${"'\u043C\u0438\u043D\u0430\u043B\u0438\u044F " + tmp2} в' p`;
+          }
+          return text2;
+        }
+      }
+      text2 = `${"'\u043C\u0438\u043D\u0430\u043B\u0430\u0442\u0430 " + tmp2} в' p`;
     }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
+  },
+  yesterday: "'\u0432\u0447\u0435\u0440\u0430 \u0432' p",
+  today: "'\u0434\u043D\u0435\u0441 \u0432' p",
+  tomorrow: "'\u0443\u0442\u0440\u0435 \u0432' p",
+  nextWeek: function nextWeekFormatToken(arg0, arg1, arg2) {
+    const defaultResult = _typeof.default(arg0);
+    const uTCDay = defaultResult.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4524.default(defaultResult, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'във ${tmp2}`;
+        let text1 = `'във ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (6 !== uTCDay) {
+            let text2 = `${"'\u0441\u043B\u0435\u0434\u0432\u0430\u0449\u0438\u044F " + tmp2} в' p`;
+          }
+          return text2;
+        }
+      }
+      text2 = `${"'\u0441\u043B\u0435\u0434\u0432\u0430\u0449\u0430\u0442\u0430 " + tmp2} в' p`;
+    }
+  },
+  other: "P"
 };
-const obj6 = { matchPatterns: { narrow: /^(f\.? ?Kr\.?|fvt\.?|e\.? ?Kr\.?|evt\.?)/i, abbreviated: /^(f\.? ?Kr\.?|fvt\.?|e\.? ?Kr\.?|evt\.?)/i, wide: /^(før Kristus|før vår tid|etter Kristus|vår tid)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^f/i, /^e/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](\.)? kvartal/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
-  }
-};
-const obj9 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(jan|feb|mars?|apr|mai|juni?|juli?|aug|sep|okt|nov|des)\.?/i, wide: /^(januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { narrow: null, any: null };
-const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj11.narrow = items2;
-const items3 = [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^mai/i, /^jun/i, /^jul/i, /^aug/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj11.any = items3;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[smtofl]/i, short: /^(sø|ma|ti|on|to|fr|lø)/i, abbreviated: /^(søn|man|tir|ons|tor|fre|lør)/i, wide: /^(søndag|mandag|tirsdag|onsdag|torsdag|fredag|lørdag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { any: null };
-const items4 = [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i];
-obj13.any = items4;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { narrow: /^(midnatt|middag|(på) (morgenen|ettermiddagen|kvelden|natten)|[ap])/i, any: /^([ap]\.?\s?m\.?|midnatt|middag|(på) (morgenen|ettermiddagen|kvelden|natten))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^a(\.?\s?m\.?)?$/i, pm: /^p(\.?\s?m\.?)?$/i, midnight: /^midn/i, noon: /^midd/i, morning: /morgen/i, afternoon: /ettermiddag/i, evening: /kveld/i, night: /natt/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
 
-export default date;
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_3[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
+};
 export default exports.default;

@@ -1,17 +1,7 @@
 // _runtime/metro/05516__.js
-import ComposedGestureName from "../05484_ComposedGestureName.js";
-import resolveInternalConfigProps from "../05493_resolveInternalConfigProps.js";
-import _mod5510 from "05510__.js";
+import _mod19 from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+const context = _mod19.createContext(null);
 
-export function useFlingGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
-  return _mod5510.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
-}
+export const BottomSheetInternalContext = context;
+export const BottomSheetInternalProvider = context.Provider;

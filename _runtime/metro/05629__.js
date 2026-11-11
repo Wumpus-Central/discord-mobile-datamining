@@ -1,48 +1,17 @@
 // _runtime/metro/05629__.js
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import noop_mod from "00019__.js";
+import ComposedGestureName from "../05597_ComposedGestureName.js";
+import resolveInternalConfigProps from "../05606_resolveInternalConfigProps.js";
+import _mod5623 from "05623__.js";
 
-let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
-let noop = fn(19);
-const forwardRef = noop.forwardRef;
-({ useMemo: closure_6, memo } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-try {
-  const FlashList = fn(5630);
-  const memoResult = memo(
-    forwardRef((focusHook, ref) => {
-      focusHook = focusHook.focusHook;
-      const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
-      const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
-      closure_6(() => {
-        if (!FlashList) {
-          throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
-        }
-      }, []);
-      items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
-      const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
-      let merged = Object.assign(tmp);
-      return (
-        <FlashList.FlashList
-          ref={ref}
-          renderScrollComponent={closure_6(
-            () =>
-              forwardRef((arg0, ref) => {
-                const merged = Object.assign(arg0, Object.assign({ data: 0 }));
-                const obj = { ref };
-                const merged1 = Object.assign(merged);
-                obj.focusHook = focusHook;
-                obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
-                obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
-                return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
-              }),
-            items,
-          )}
-        />
-      );
-    }),
-  );
-  exports.default = memoResult;
-  exports.BottomSheetFlashList = memoResult;
-} catch (err) {}
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
+
+export function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5623.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
+}

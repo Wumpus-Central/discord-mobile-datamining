@@ -1,7 +1,7 @@
 // _runtime/metro/01335__.js
 let length;
 function _createForOfIteratorHelper(iterable, arg1) {
-  let length = iterable;
+  length = iterable;
   let prop = typeof Symbol !== "undefined";
   if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
@@ -227,7 +227,7 @@ if (0 < items.length) {
     let tmp = items[num2];
     let closure_129_0 = tmp;
     Agent.prototype[tmp] = function () {
-      const length = arguments.length;
+      length = arguments.length;
       const array = new Array(length);
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];

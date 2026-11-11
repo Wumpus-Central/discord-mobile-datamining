@@ -21,7 +21,7 @@ export default (str, SEPARATOR, arg2, maxKeys) => {
       if (tmp) {
         num = maxKeys.maxKeys;
       }
-      let length = parts.length;
+      length = parts.length;
       if (tmp2) {
         length = num;
       }

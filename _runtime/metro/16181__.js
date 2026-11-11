@@ -3,9 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "42a20b8c34f5da51714fe4afb6b4ab7f",
-  name: "NitroGem6",
-  type: "lottie",
+  httpServerLocation: "/assets/images/native",
+  width: 120,
+  height: 120,
+  scales: [2, 3],
+  hash: "0242e2e3975e7ca5a2256573e276d96f",
+  name: "logo",
+  type: "png",
 });

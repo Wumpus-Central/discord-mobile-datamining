@@ -100,7 +100,7 @@ function withStyleAnimation(arg0, arg1) {
         while (items.length > 0) {
           let iter = items.pop();
           let _Array = Array;
-          value2 = iter.value;
+          let value2 = iter.value;
           if (Array.isArray(iter.value)) {
             let num = 0;
             let tmp2 = flag;
@@ -167,7 +167,7 @@ function withStyleAnimation(arg0, arg1) {
           do {
             let iter = items.pop();
             let _Array = Array;
-            value2 = iter.value;
+            let value2 = iter.value;
             if (Array.isArray(iter.value)) {
               let num = 0;
               if (0 < value2.length) {

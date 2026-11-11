@@ -1,40 +1,11 @@
 // _runtime/metro/04477__.js
-let closure_0 = {
-  lastWeek(getUTCDay) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (0 === uTCDay) {
-      return "'pro\u0161lu nedjelju u' p";
-    } else if (3 === uTCDay) {
-      return "'pro\u0161lu srijedu u' p";
-    } else if (6 === uTCDay) {
-      return "'pro\u0161lu subotu u' p";
-    } else {
-      return "'pro\u0161li' EEEE 'u' p";
-    }
-  },
-  yesterday: "'ju\u010Der u' p",
-  today: "'danas u' p",
-  tomorrow: "'sutra u' p",
-  nextWeek(getUTCDay) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (0 === uTCDay) {
-      return "'idu\u0107u nedjelju u' p";
-    } else if (3 === uTCDay) {
-      return "'idu\u0107u srijedu u' p";
-    } else if (6 === uTCDay) {
-      return "'idu\u0107u subotu u' p";
-    } else {
-      return "'pro\u0161li' EEEE 'u' p";
-    }
-  },
-  other: "P"
-};
+import registerAsset from "01119__.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_0[arg0] === "function") {
-    tmpResult = tmp(arg1);
-  }
-  return tmpResult;
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9oZXhhZ29uX2NhbXBhaWdu",
+  scales: [1],
+  hash: "1fbd8e4200e3e785fe106e644c1b2277",
+  name: "hu.messages.1fbd8e4200e3e785fe106e644c1b2277.compiled.messages",
+  type: "jsona",
+});

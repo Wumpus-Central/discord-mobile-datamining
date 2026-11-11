@@ -52,7 +52,7 @@ function _getGraphQLOperation(operationName) {
       } else {
         const match1 = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
         if (match1) {
-          const obj3 = { operationType: match1[1], operationName: "r" };
+          const obj3 = { operationType: match1[1], operationName: "Array" };
           obj = obj3;
         } else {
           obj = { operationType: "Array", operationName: "flexDirection" };
@@ -334,7 +334,7 @@ export function parseGraphQLQuery(str) {
   } else {
     const match1 = str.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
     if (match1) {
-      const obj3 = { operationType: match1[1], operationName: "r" };
+      const obj3 = { operationType: match1[1], operationName: "Array" };
       let obj = obj3;
     } else {
       obj = { operationType: "Array", operationName: "flexDirection" };

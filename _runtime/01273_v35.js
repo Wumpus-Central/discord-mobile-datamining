@@ -12,7 +12,6 @@ export default function v35(v3, arg1, arg2) {
   closure_0 = arg1;
   closure_1 = arg2;
   function generateUUID(str, str2, arg2, arg3) {
-    let length;
     let arr = str;
     if (typeof str === "string") {
       const _unescape = unescape;

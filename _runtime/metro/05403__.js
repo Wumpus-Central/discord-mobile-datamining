@@ -1,7 +1,11 @@
 // _runtime/metro/05403__.js
-import _mod19 from "00019__.js";
+import registerAsset from "01119__.js";
 
-const context = _mod19.createContext(null);
-
-export const BottomSheetInternalContext = context;
-export const BottomSheetInternalProvider = context.Provider;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/packages/design/components/Rive/native/generated/rives",
+  scales: [1],
+  hash: "1cf90953773f1995f76b7541cdaa4483",
+  name: "Microphone",
+  type: "riv",
+});

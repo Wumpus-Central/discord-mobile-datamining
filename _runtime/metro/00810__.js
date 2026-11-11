@@ -32,7 +32,7 @@ export function completeSpanWithResults(arg0, id, result, self) {
     result = weakMap.set(arg0, map);
     value = map;
   }
-  value2 = value.get(id);
+  const value2 = value.get(id);
   if (value2) {
     let protocolVersion = result;
     ({ span, method } = value2);

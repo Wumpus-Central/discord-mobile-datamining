@@ -1,30 +1,13 @@
 // _runtime/metro/05638__.js
-import _mod5639 from "05639__.js";
+import _mod17 from "00017__.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-export default function _unsupportedIterableToArray(str, arg1) {
-  if (str) {
-    if (typeof str === "string") {
-      return _mod5639(str, arg1);
-    } else {
-      const toString = {}.toString;
-      const call = toString.call;
-      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
-      let name = substr;
-      if (tmp3) {
-        name = str.constructor.name;
-      }
-      if ("Map" !== name) {
-        if ("Set" !== name) {
-          if ("Arguments" === name) {
-            let arr2 = _mod5639(str, arg1);
-          }
-        }
-        return arr2;
-      }
-      const _Array = Array;
-      arr2 = Array.from(str);
-      const arr = typeof call === "unknown" ? toString() : call(str);
-      tmp3 = "Object" === substr && "Object".constructor;
-    }
-  }
-}
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerButton", directEventTypes: { topButtonPress: { registrationName: "onButtonPress" }, topButtonPressIn: { registrationName: "onButtonPressIn" }, topButtonPressOut: { registrationName: "onButtonPressOut" }, topButtonLongPress: { registrationName: "onButtonLongPress" }, topButtonHoverIn: { registrationName: "onButtonHoverIn" }, topButtonHoverOut: { registrationName: "onButtonHoverOut" }, topButtonInteractionFinished: { registrationName: "onButtonInteractionFinished" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onButtonPress: true, onButtonPressIn: true, onButtonPressOut: true, onButtonLongPress: true, onButtonHoverIn: true, onButtonHoverOut: true, onButtonInteractionFinished: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { hasLongPressHandler: true, moduleId: true, handlerTag: true, cancelOnLeave: true, gestureTestID: true, gestureHitSlop: true, exclusive: true, foreground: true, borderless: true, enabled: true, rippleColor: _mod26.colorAttribute, rippleRadius: true, touchSoundDisabled: true, pointerEvents: true, tapAnimationInDuration: true, tapAnimationOutDuration: true, longPressDuration: true, immediatePressOut: true, longPressAnimationOutDuration: true, needsOffscreenAlphaCompositing: true, activeOpacity: true, activeScale: true, activeUnderlayOpacity: true, hoverOpacity: true, hoverScale: true, hoverUnderlayOpacity: true, hoverAnimationInDuration: true, hoverAnimationOutDuration: true, defaultOpacity: true, defaultScale: true, defaultUnderlayOpacity: true, underlayColor: _mod26.colorAttribute, borderWidth: true, borderColor: _mod26.colorAttribute, borderStyle: true, overflow: true, borderLeftWidth: true, borderRightWidth: true, borderTopWidth: true, borderBottomWidth: true, borderStartWidth: true, borderEndWidth: true, borderLeftColor: _mod26.colorAttribute, borderRightColor: _mod26.colorAttribute, borderTopColor: _mod26.colorAttribute, borderBottomColor: _mod26.colorAttribute, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomLeftRadius: true, borderBottomRightRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true };
+
+export default module_65.get("RNGestureHandlerButton", () => obj);
+export { __INTERNAL_VIEW_CONFIG };
